@@ -27,7 +27,8 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
   const [qrDataUrl, setQrDataUrl] = useState<string>("");
   const [qrDataUrlLarge, setQrDataUrlLarge] = useState<string>("");
   const [activeFormat, setActiveFormat] = useState<CardFormat>("business");
-  const profileUrl = `${process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000"}/taxi/${driver.slug}`;
+  const baseUrl = typeof window !== "undefined" ? window.location.origin : (process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000");
+  const profileUrl = `${baseUrl}/taxi/${driver.slug}`;
 
   const generateQrCode = useCallback(async () => {
     try {

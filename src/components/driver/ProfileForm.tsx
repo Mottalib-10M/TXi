@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useSearchParams } from "next/navigation";
 import { Icon } from "@iconify/react";
 import { CoverageZoneEditor } from "./CoverageZoneEditor";
@@ -630,6 +630,96 @@ function VehicleSection({
           ))}
         </div>
       </div>
+
+      {/* Vehicle photos */}
+      <VehiclePhotos
+        photos={vehicle.photos || []}
+        onPhotosChange={(photos) => updateVehicle(activeTab, "photos", photos)}
+      />
+    </div>
+  );
+}
+
+function VehiclePhotos({
+  photos,
+  onPhotosChange,
+}: {
+  photos: string[];
+  onPhotosChange: (photos: string[]) => void;
+}) {
+  const [uploading, setUploading] = useState(false);
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
+  async function handleUpload(e: React.ChangeEvent<HTMLInputElement>) {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    setUploading(true);
+    try {
+      const formData = new FormData();
+      formData.append("file", file);
+      formData.append("type", "vehicle");
+
+      const res = await fetch("/api/upload", { method: "POST", body: formData });
+      const data = await res.json();
+
+      if (data.url) {
+        onPhotosChange([...photos, data.url]);
+      }
+    } catch (err) {
+      console.error("Upload error:", err);
+    } finally {
+      setUploading(false);
+      if (fileInputRef.current) fileInputRef.current.value = "";
+    }
+  }
+
+  function removePhoto(index: number) {
+    onPhotosChange(photos.filter((_, i) => i !== index));
+  }
+
+  return (
+    <div>
+      <label className="block text-sm font-medium mb-3">Photos du véhicule</label>
+      <div className="grid grid-cols-3 sm:grid-cols-5 gap-3">
+        {photos.map((url, i) => (
+          <div key={i} className="relative group aspect-square rounded-xl overflow-hidden bg-neutral-100">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={url} alt={`Véhicule photo ${i + 1}`} className="w-full h-full object-cover" />
+            <button
+              type="button"
+              onClick={() => removePhoto(i)}
+              className="absolute top-1.5 right-1.5 w-6 h-6 bg-black/60 text-white rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+            >
+              <Icon icon="solar:close-circle-bold" className="text-sm" />
+            </button>
+          </div>
+        ))}
+        {photos.length < 5 && (
+          <button
+            type="button"
+            onClick={() => fileInputRef.current?.click()}
+            disabled={uploading}
+            className="aspect-square rounded-xl border-2 border-dashed border-neutral-300 hover:border-neutral-400 flex flex-col items-center justify-center gap-1 text-neutral-400 hover:text-neutral-500 transition-colors disabled:opacity-50"
+          >
+            {uploading ? (
+              <Icon icon="solar:refresh-linear" className="text-xl animate-spin" />
+            ) : (
+              <>
+                <Icon icon="solar:camera-add-linear" className="text-xl" />
+                <span className="text-[10px]">{photos.length}/5</span>
+              </>
+            )}
+          </button>
+        )}
+      </div>
+      <input
+        ref={fileInputRef}
+        type="file"
+        accept="image/*"
+        onChange={handleUpload}
+        className="hidden"
+      />
     </div>
   );
 }

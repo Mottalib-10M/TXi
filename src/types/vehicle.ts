@@ -6,6 +6,7 @@ export interface Vehicle {
   plate: string;
   capacity: number;
   features: string[];
+  photos: string[];
 }
 
 export const EMPTY_VEHICLE: Vehicle = {
@@ -16,4 +17,5 @@ export const EMPTY_VEHICLE: Vehicle = {
   plate: "",
   capacity: 4,
   features: [],
+  photos: [],
 };

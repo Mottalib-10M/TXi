@@ -11,6 +11,7 @@ export async function POST(request: Request) {
   try {
     const formData = await request.formData();
     const file = formData.get("file") as File;
+    const uploadType = (formData.get("type") as string) || "profile";
 
     if (!file) {
       return NextResponse.json({ error: "Aucun fichier" }, { status: 400 });
@@ -26,6 +27,11 @@ export async function POST(request: Request) {
       const buffer = Buffer.from(bytes);
       const base64 = buffer.toString("base64");
       const dataUrl = `data:${file.type};base64,${base64}`;
+
+      // For vehicle photos, just return the URL without saving to DB
+      if (uploadType === "vehicle") {
+        return NextResponse.json({ url: dataUrl });
+      }
 
       await prisma.driver.update({
         where: { id: session.user.id },
@@ -48,6 +54,11 @@ export async function POST(request: Request) {
     const data = await res.json();
 
     if (data.secure_url) {
+      // For vehicle photos, just return the URL without saving to DB
+      if (uploadType === "vehicle") {
+        return NextResponse.json({ url: data.secure_url });
+      }
+
       await prisma.driver.update({
         where: { id: session.user.id },
         data: { photoUrl: data.secure_url },

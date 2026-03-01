@@ -28,6 +28,7 @@ export default async function ProfilPage() {
         plate: driver.vehiclePlate || "",
         capacity: driver.vehicleCapacity,
         features: driver.vehicleFeatures,
+        photos: [],
       },
     ];
   }

@@ -28,6 +28,7 @@ export default async function CartePage() {
         plate: driver.vehiclePlate || "",
         capacity: driver.vehicleCapacity,
         features: driver.vehicleFeatures,
+        photos: [],
       },
     ];
   }

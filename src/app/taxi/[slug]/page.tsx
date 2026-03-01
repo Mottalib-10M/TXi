@@ -8,6 +8,7 @@ import { VehicleInfo } from "@/components/public-profile/VehicleInfo";
 import { PricingDisplay } from "@/components/public-profile/PricingDisplay";
 import { AvailabilityDisplay } from "@/components/public-profile/AvailabilityDisplay";
 import { DirectBookingForm } from "@/components/public-profile/DirectBookingForm";
+import { FareEstimator } from "@/components/public-profile/FareEstimator";
 import type { Vehicle } from "@/types/vehicle";
 
 interface Props {
@@ -58,6 +59,7 @@ export default async function TaxiProfilePage({ params }: Props) {
         plate: driver.vehiclePlate || "",
         capacity: driver.vehicleCapacity,
         features: driver.vehicleFeatures,
+        photos: [],
       },
     ];
   }
@@ -78,6 +80,8 @@ export default async function TaxiProfilePage({ params }: Props) {
                 photoUrl={driver.photoUrl}
                 zoneAddress={driver.zoneAddress}
                 isVerified={driver.isVerified}
+                email={driver.email}
+                phone={driver.phone}
               />
 
               {vehicles.length > 0 && (
@@ -91,6 +95,13 @@ export default async function TaxiProfilePage({ params }: Props) {
                 minimumFare={driver.minimumFare}
                 airportSupplement={driver.airportSupplement}
                 nightSupplement={driver.nightSupplement}
+              />
+
+              <FareEstimator
+                baseFare={driver.baseFare}
+                pricePerKm={driver.pricePerKm}
+                pricePerMinute={driver.pricePerMinute}
+                minimumFare={driver.minimumFare}
               />
 
               {availability && availability.length > 0 && (
