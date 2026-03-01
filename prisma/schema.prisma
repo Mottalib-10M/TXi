@@ -1,0 +1,118 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum BookingStatus {
+  PENDING
+  ACCEPTED
+  REJECTED
+  CANCELLED
+  COMPLETED
+}
+
+enum BookingSource {
+  LANDING
+  PROFILE
+}
+
+model Driver {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  passwordHash String
+  firstName    String
+  lastName     String
+  slug         String   @unique
+  phone        String   @default("")
+  photoUrl     String?
+  bio          String?
+
+  // Vehicle (flat fields = vehicle 1, kept for backward compat)
+  vehicleBrand    String?
+  vehicleModel    String?
+  vehicleYear     Int?
+  vehicleColor    String?
+  vehiclePlate    String?
+  vehicleCapacity Int      @default(4)
+  vehicleFeatures String[] @default([])
+
+  // Multi-vehicle support (JSON array of Vehicle objects, max 2)
+  vehicles Json?
+
+  // Coverage zone
+  zoneLat     Float?
+  zoneLng     Float?
+  zoneRadius  Float    @default(15)
+  zoneAddress String?
+
+  // Pricing
+  baseFare           Float @default(2.0)
+  pricePerKm         Float @default(1.5)
+  pricePerMinute     Float @default(0.5)
+  minimumFare        Float @default(7.0)
+  airportSupplement  Float @default(4.0)
+  nightSupplement    Float @default(0.0)
+  customPrices       Json?
+
+  // Availability (JSON: array of { day: 0-6, startTime: "HH:mm", endTime: "HH:mm" })
+  availability Json?
+
+  // Notification preferences
+  notifyEmail Boolean @default(true)
+  notifySms   Boolean @default(false)
+
+  // Status
+  isActive   Boolean @default(true)
+  isVerified Boolean @default(false)
+
+  bookings Booking[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("drivers")
+}
+
+model Booking {
+  id        String @id @default(cuid())
+  reference String @unique
+
+  // Client info
+  clientName     String
+  clientEmail    String
+  clientPhone    String   @default("")
+  clientComments String?
+
+  // Departure
+  departureName String
+  departureLat  Float
+  departureLng  Float
+
+  // Arrival
+  arrivalName String
+  arrivalLat  Float
+  arrivalLng  Float
+
+  // Trip details
+  requestedDate     DateTime
+  passengerCount    Int          @default(1)
+  estimatedDistance  Float?
+  estimatedDuration Float?
+  estimatedPrice    Float?
+
+  // Status
+  status BookingStatus @default(PENDING)
+  source BookingSource @default(LANDING)
+
+  // Driver relation
+  driver   Driver? @relation(fields: [driverId], references: [id])
+  driverId String?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("bookings")
+}
