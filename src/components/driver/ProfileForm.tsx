@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import { Icon } from "@iconify/react";
 import { CoverageZoneEditor } from "./CoverageZoneEditor";
 import { PricingGrid } from "./PricingGrid";
@@ -46,7 +46,6 @@ const vehicleFeatureOptions = [
 ];
 
 export function ProfileForm({ driver }: { driver: DriverData }) {
-  const router = useRouter();
   const searchParams = useSearchParams();
   const [saving, setSaving] = useState(false);
   const [success, setSuccess] = useState(false);
