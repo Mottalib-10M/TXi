@@ -1,8 +1,11 @@
+import Link from "next/link";
 import { Icon } from "@iconify/react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { BookingForm } from "@/components/booking/BookingForm";
 import { ScrollAnimation } from "@/components/ui/ScrollAnimation";
+import { popularCities, cities } from "@/data/cities";
+import { popularAirports, airports } from "@/data/airports";
 
 export default function HomePage() {
   return (
@@ -29,7 +32,7 @@ export default function HomePage() {
               </h1>
               <p className="text-base md:text-lg text-neutral-500 mb-8 max-w-md font-light leading-relaxed">
                 Le confort et la sécurité des professionnels réglementés, avec la simplicité
-                d&apos;une application moderne.
+                et la transparence des tarifs.
               </p>
 
               <BookingForm />
@@ -387,6 +390,121 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Cities Section */}
+      <section className="py-20 md:py-28" id="villes">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16 fade-up">
+            <p className="text-sm font-medium text-neutral-500 mb-2 uppercase tracking-wider">
+              Partout en France
+            </p>
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
+              Réservez un taxi dans votre ville
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+            {popularCities.map((city, i) => (
+              <Link
+                key={city.slug}
+                href={`/taxi-${city.slug}`}
+                className={`group bg-white border border-neutral-200 rounded-2xl p-5 card-hover fade-up fade-up-delay-${(i % 3) + 1}`}
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-9 h-9 bg-neutral-50 border border-neutral-200 rounded-lg flex items-center justify-center group-hover:bg-neutral-900 group-hover:border-neutral-900 transition-colors">
+                    <Icon icon="solar:map-point-linear" className="text-neutral-600 text-lg group-hover:text-white transition-colors" />
+                  </div>
+                  <h3 className="text-sm font-medium tracking-tight">Taxi {city.name}</h3>
+                </div>
+                <div className="flex items-center justify-between text-xs text-neutral-500 font-light">
+                  <span>{city.driverCount}+ chauffeurs</span>
+                  <span>{city.avgWaitTime} attente</span>
+                </div>
+              </Link>
+            ))}
+          </div>
+
+          <div className="flex flex-wrap gap-2 justify-center fade-up">
+            {cities
+              .filter((c) => !popularCities.some((p) => p.slug === c.slug))
+              .slice(0, 16)
+              .map((city) => (
+                <Link
+                  key={city.slug}
+                  href={`/taxi-${city.slug}`}
+                  className="text-xs text-neutral-500 font-light bg-neutral-50 border border-neutral-200 rounded-full px-3 py-1.5 hover:text-neutral-900 hover:border-neutral-400 transition-colors"
+                >
+                  Taxi {city.name}
+                </Link>
+              ))}
+            <Link
+              href="/villes"
+              className="text-xs font-medium text-neutral-900 bg-neutral-100 border border-neutral-300 rounded-full px-3 py-1.5 hover:bg-neutral-200 transition-colors inline-flex items-center gap-1"
+            >
+              Voir les {cities.length} villes <Icon icon="solar:arrow-right-linear" className="text-xs" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Airports Section */}
+      <section className="bg-neutral-50 border-t border-b border-neutral-100 py-20 md:py-28" id="aeroports">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16 fade-up">
+            <p className="text-sm font-medium text-neutral-500 mb-2 uppercase tracking-wider">
+              Transferts aéroport
+            </p>
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
+              Taxi vers les aéroports de France
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+            {popularAirports.map((ap, i) => (
+              <Link
+                key={ap.slug}
+                href={`/taxi-aeroport-${ap.slug}`}
+                className={`group bg-white border border-neutral-200 rounded-2xl p-5 card-hover fade-up fade-up-delay-${(i % 3) + 1}`}
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-9 h-9 bg-neutral-50 border border-neutral-200 rounded-lg flex items-center justify-center group-hover:bg-neutral-900 group-hover:border-neutral-900 transition-colors">
+                    <Icon icon="solar:airplane-linear" className="text-neutral-600 text-lg group-hover:text-white transition-colors" />
+                  </div>
+                  <div>
+                    <h3 className="text-sm font-medium tracking-tight">{ap.iata}</h3>
+                    <p className="text-xs text-neutral-500 font-light">{ap.city}</p>
+                  </div>
+                </div>
+                <div className="flex items-center justify-between text-xs text-neutral-500 font-light">
+                  <span>Dès {ap.transferPrice}</span>
+                  <span>{ap.transferTime}</span>
+                </div>
+              </Link>
+            ))}
+          </div>
+
+          <div className="flex flex-wrap gap-2 justify-center fade-up">
+            {airports
+              .filter((a) => !popularAirports.some((p) => p.slug === a.slug))
+              .slice(0, 12)
+              .map((ap) => (
+                <Link
+                  key={ap.slug}
+                  href={`/taxi-aeroport-${ap.slug}`}
+                  className="text-xs text-neutral-500 font-light bg-white border border-neutral-200 rounded-full px-3 py-1.5 hover:text-neutral-900 hover:border-neutral-400 transition-colors"
+                >
+                  {ap.name} ({ap.iata})
+                </Link>
+              ))}
+            <Link
+              href="/aeroports"
+              className="text-xs font-medium text-neutral-900 bg-neutral-100 border border-neutral-300 rounded-full px-3 py-1.5 hover:bg-neutral-200 transition-colors inline-flex items-center gap-1"
+            >
+              Voir les {airports.length} aéroports <Icon icon="solar:arrow-right-linear" className="text-xs" />
+            </Link>
           </div>
         </div>
       </section>
