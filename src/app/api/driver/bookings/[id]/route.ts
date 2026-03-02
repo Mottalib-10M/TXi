@@ -28,6 +28,33 @@ export async function PATCH(
       return NextResponse.json({ error: "Réservation non trouvée" }, { status: 404 });
     }
 
+    // If completing an org booking, credit the cagnotte
+    if (status === "COMPLETED" && booking.organizationId && booking.lockedPrice) {
+      const cagnotteAmount = booking.lockedPrice * 0.05;
+
+      await prisma.$transaction([
+        prisma.booking.update({
+          where: { id: params.id },
+          data: { status },
+        }),
+        prisma.cagnotteTransaction.create({
+          data: {
+            organizationId: booking.organizationId,
+            bookingId: booking.id,
+            amount: cagnotteAmount,
+          },
+        }),
+        prisma.organization.update({
+          where: { id: booking.organizationId },
+          data: {
+            cagnotteBalance: { increment: cagnotteAmount },
+          },
+        }),
+      ]);
+
+      return NextResponse.json({ message: "Statut mis à jour, cagnotte créditée" });
+    }
+
     await prisma.booking.update({
       where: { id: params.id },
       data: { status },

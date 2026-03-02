@@ -242,8 +242,8 @@ export default async function DashboardPage() {
                     {booking.departureName} → {booking.arrivalName}
                   </p>
                 </div>
-                <div className="flex items-center gap-2 shrink-0 ml-3">
-                  <span className="text-xs bg-amber-50 text-amber-700 px-2.5 py-1 rounded-full font-medium">
+                <div className="flex items-center gap-2 shrink-0 ml-2">
+                  <span className="hidden sm:inline text-xs bg-amber-50 text-amber-700 px-2.5 py-1 rounded-full font-medium">
                     En attente
                   </span>
                   <Icon

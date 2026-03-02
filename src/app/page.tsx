@@ -6,6 +6,7 @@ import { BookingForm } from "@/components/booking/BookingForm";
 import { ScrollAnimation } from "@/components/ui/ScrollAnimation";
 import { popularCities, cities } from "@/data/cities";
 import { popularAirports, airports } from "@/data/airports";
+import { popularStations, stations } from "@/data/stations";
 
 export default function HomePage() {
   return (
@@ -427,24 +428,12 @@ export default function HomePage() {
             ))}
           </div>
 
-          <div className="flex flex-wrap gap-2 justify-center fade-up">
-            {cities
-              .filter((c) => !popularCities.some((p) => p.slug === c.slug))
-              .slice(0, 16)
-              .map((city) => (
-                <Link
-                  key={city.slug}
-                  href={`/taxi-${city.slug}`}
-                  className="text-xs text-neutral-500 font-light bg-neutral-50 border border-neutral-200 rounded-full px-3 py-1.5 hover:text-neutral-900 hover:border-neutral-400 transition-colors"
-                >
-                  Taxi {city.name}
-                </Link>
-              ))}
+          <div className="flex justify-center fade-up">
             <Link
               href="/villes"
-              className="text-xs font-medium text-neutral-900 bg-neutral-100 border border-neutral-300 rounded-full px-3 py-1.5 hover:bg-neutral-200 transition-colors inline-flex items-center gap-1"
+              className="text-sm font-medium text-neutral-900 bg-neutral-100 border border-neutral-300 rounded-full px-5 py-2 hover:bg-neutral-200 transition-colors inline-flex items-center gap-1.5"
             >
-              Voir les {cities.length} villes <Icon icon="solar:arrow-right-linear" className="text-xs" />
+              Voir les {cities.length} villes <Icon icon="solar:arrow-right-linear" className="text-sm" />
             </Link>
           </div>
         </div>
@@ -471,7 +460,7 @@ export default function HomePage() {
               >
                 <div className="flex items-center gap-3 mb-3">
                   <div className="w-9 h-9 bg-neutral-50 border border-neutral-200 rounded-lg flex items-center justify-center group-hover:bg-neutral-900 group-hover:border-neutral-900 transition-colors">
-                    <Icon icon="solar:airplane-linear" className="text-neutral-600 text-lg group-hover:text-white transition-colors" />
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-neutral-600 group-hover:text-white transition-colors"><path d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
                   </div>
                   <div>
                     <h3 className="text-sm font-medium tracking-tight">{ap.iata}</h3>
@@ -486,24 +475,59 @@ export default function HomePage() {
             ))}
           </div>
 
-          <div className="flex flex-wrap gap-2 justify-center fade-up">
-            {airports
-              .filter((a) => !popularAirports.some((p) => p.slug === a.slug))
-              .slice(0, 12)
-              .map((ap) => (
-                <Link
-                  key={ap.slug}
-                  href={`/taxi-aeroport-${ap.slug}`}
-                  className="text-xs text-neutral-500 font-light bg-white border border-neutral-200 rounded-full px-3 py-1.5 hover:text-neutral-900 hover:border-neutral-400 transition-colors"
-                >
-                  {ap.name} ({ap.iata})
-                </Link>
-              ))}
+          <div className="flex justify-center fade-up">
             <Link
               href="/aeroports"
-              className="text-xs font-medium text-neutral-900 bg-neutral-100 border border-neutral-300 rounded-full px-3 py-1.5 hover:bg-neutral-200 transition-colors inline-flex items-center gap-1"
+              className="text-sm font-medium text-neutral-900 bg-neutral-100 border border-neutral-300 rounded-full px-5 py-2 hover:bg-neutral-200 transition-colors inline-flex items-center gap-1.5"
             >
-              Voir les {airports.length} aéroports <Icon icon="solar:arrow-right-linear" className="text-xs" />
+              Voir les {airports.length} aéroports <Icon icon="solar:arrow-right-linear" className="text-sm" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Stations Section */}
+      <section className="py-20 md:py-28" id="gares">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16 fade-up">
+            <p className="text-sm font-medium text-neutral-500 mb-2 uppercase tracking-wider">
+              Transferts gare
+            </p>
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
+              Taxi vers les gares de France
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+            {popularStations.map((st, i) => (
+              <Link
+                key={st.slug}
+                href={`/taxi-gare-${st.slug}`}
+                className={`group bg-white border border-neutral-200 rounded-2xl p-5 card-hover fade-up fade-up-delay-${(i % 3) + 1}`}
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-9 h-9 bg-neutral-50 border border-neutral-200 rounded-lg flex items-center justify-center group-hover:bg-neutral-900 group-hover:border-neutral-900 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-neutral-600 group-hover:text-white transition-colors"><rect x="4" y="3" width="16" height="16" rx="2"/><path d="M4 11h16"/><path d="M12 3v8"/><path d="m8 19-2 3"/><path d="m18 22-2-3"/><circle cx="9" cy="15" r="1"/><circle cx="15" cy="15" r="1"/></svg>
+                  </div>
+                  <div>
+                    <h3 className="text-sm font-medium tracking-tight">{st.name}</h3>
+                    <p className="text-xs text-neutral-500 font-light">{st.city}</p>
+                  </div>
+                </div>
+                <div className="flex items-center justify-between text-xs text-neutral-500 font-light">
+                  <span>Dès {st.transferPrice}</span>
+                  <span>{st.transferTime}</span>
+                </div>
+              </Link>
+            ))}
+          </div>
+
+          <div className="flex justify-center fade-up">
+            <Link
+              href="/gares"
+              className="text-sm font-medium text-neutral-900 bg-neutral-100 border border-neutral-300 rounded-full px-5 py-2 hover:bg-neutral-200 transition-colors inline-flex items-center gap-1.5"
+            >
+              Voir les {stations.length} gares <Icon icon="solar:arrow-right-linear" className="text-sm" />
             </Link>
           </div>
         </div>

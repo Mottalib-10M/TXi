@@ -1,0 +1,230 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import { Icon } from "@iconify/react";
+import { format } from "date-fns";
+import { fr } from "date-fns/locale";
+
+interface Booking {
+  id: string;
+  reference: string;
+  beneficiaryName: string | null;
+  departureName: string;
+  arrivalName: string;
+  requestedDate: string;
+  status: string;
+  lockedPrice: number | null;
+  driver: { firstName: string; lastName: string } | null;
+}
+
+interface Alternative {
+  id: string;
+  firstName: string;
+  lastName: string;
+  vehicleBrand: string | null;
+  vehicleModel: string | null;
+  distance: number;
+}
+
+const filters = ["Toutes", "En attente", "Acceptées", "Complétées", "Refusées"];
+const filterMap: Record<string, string | undefined> = {
+  "Toutes": undefined,
+  "En attente": "PENDING",
+  "Acceptées": "ACCEPTED",
+  "Complétées": "COMPLETED",
+  "Refusées": "REJECTED",
+};
+
+const statusColors: Record<string, string> = {
+  PENDING: "bg-amber-50 text-amber-700",
+  ACCEPTED: "bg-blue-50 text-blue-700",
+  COMPLETED: "bg-green-50 text-green-700",
+  REJECTED: "bg-red-50 text-red-700",
+  CANCELLED: "bg-neutral-100 text-neutral-500",
+};
+
+const statusLabels: Record<string, string> = {
+  PENDING: "En attente",
+  ACCEPTED: "Acceptée",
+  COMPLETED: "Complétée",
+  REJECTED: "Refusée",
+  CANCELLED: "Annulée",
+};
+
+export default function CoursesPage() {
+  const [bookings, setBookings] = useState<Booking[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [activeFilter, setActiveFilter] = useState("Toutes");
+  const [alternatives, setAlternatives] = useState<Record<string, Alternative[]>>({});
+  const [loadingAlts, setLoadingAlts] = useState<string | null>(null);
+
+  useEffect(() => {
+    fetchBookings();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [activeFilter]);
+
+  async function fetchBookings() {
+    setLoading(true);
+    try {
+      const status = filterMap[activeFilter];
+      const url = `/api/org/bookings?limit=50${status ? `&status=${status}` : ""}`;
+      const res = await fetch(url);
+      const data = await res.json();
+      setBookings(data.bookings || []);
+    } catch {
+      // Silently fail
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  async function loadAlternatives(bookingId: string) {
+    if (alternatives[bookingId]) {
+      // Toggle off
+      setAlternatives((prev) => {
+        const copy = { ...prev };
+        delete copy[bookingId];
+        return copy;
+      });
+      return;
+    }
+
+    setLoadingAlts(bookingId);
+    try {
+      const res = await fetch(`/api/org/bookings/${bookingId}/alternatives`);
+      const data = await res.json();
+      setAlternatives((prev) => ({ ...prev, [bookingId]: data.alternatives || [] }));
+    } catch {
+      // Silently fail
+    } finally {
+      setLoadingAlts(null);
+    }
+  }
+
+  async function reassign(bookingId: string, driverId: string) {
+    try {
+      const res = await fetch(`/api/org/bookings/${bookingId}/reassign`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ driverId }),
+      });
+      if (res.ok) {
+        // Remove alternatives and refresh
+        setAlternatives((prev) => {
+          const copy = { ...prev };
+          delete copy[bookingId];
+          return copy;
+        });
+        fetchBookings();
+      }
+    } catch {
+      // Silently fail
+    }
+  }
+
+  return (
+    <div className="max-w-5xl">
+      <div className="mb-8">
+        <h1 className="text-2xl font-semibold tracking-tight">Mes courses</h1>
+        <p className="text-sm text-neutral-500 mt-1">Historique et suivi de vos réservations</p>
+      </div>
+
+      {/* Filters */}
+      <div className="flex gap-2 mb-6 overflow-x-auto pb-1">
+        {filters.map((f) => (
+          <button
+            key={f}
+            onClick={() => setActiveFilter(f)}
+            className={`px-4 py-2 rounded-full text-sm whitespace-nowrap transition-colors ${
+              activeFilter === f
+                ? "bg-neutral-900 text-white font-medium"
+                : "bg-white border border-neutral-200 text-neutral-600 hover:bg-neutral-50"
+            }`}
+          >
+            {f}
+          </button>
+        ))}
+      </div>
+
+      {loading ? (
+        <div className="flex items-center justify-center py-20">
+          <Icon icon="solar:refresh-linear" className="text-2xl animate-spin text-neutral-400" />
+        </div>
+      ) : bookings.length === 0 ? (
+        <div className="bg-white rounded-2xl border border-neutral-200 p-8 text-center text-sm text-neutral-500">
+          Aucune course trouvée
+        </div>
+      ) : (
+        <div className="bg-white rounded-2xl border border-neutral-200 divide-y divide-neutral-100">
+          {bookings.map((b) => (
+            <div key={b.id}>
+              <div className="p-4 px-5 flex items-center justify-between gap-4">
+                <div className="min-w-0 flex-1">
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="text-sm font-medium">{b.beneficiaryName || "—"}</span>
+                    <span className="text-xs text-neutral-400">{b.reference}</span>
+                  </div>
+                  <p className="text-xs text-neutral-500 truncate">
+                    {b.departureName} → {b.arrivalName}
+                  </p>
+                  <p className="text-xs text-neutral-400 mt-0.5">
+                    {format(new Date(b.requestedDate), "dd MMM yyyy à HH:mm", { locale: fr })}
+                    {b.driver && ` · ${b.driver.firstName} ${b.driver.lastName}`}
+                  </p>
+                </div>
+                <div className="flex items-center gap-3 shrink-0">
+                  {b.lockedPrice != null && (
+                    <span className="text-sm font-semibold">{b.lockedPrice.toFixed(0)} €</span>
+                  )}
+                  <span className={`text-xs px-2.5 py-1 rounded-full font-medium ${statusColors[b.status] || ""}`}>
+                    {statusLabels[b.status] || b.status}
+                  </span>
+                  {b.status === "REJECTED" && (
+                    <button
+                      onClick={() => loadAlternatives(b.id)}
+                      disabled={loadingAlts === b.id}
+                      className="text-xs text-blue-600 hover:underline"
+                    >
+                      {loadingAlts === b.id ? "..." : alternatives[b.id] ? "Masquer" : "Alternatives"}
+                    </button>
+                  )}
+                </div>
+              </div>
+
+              {/* Alternatives panel */}
+              {alternatives[b.id] && (
+                <div className="px-5 pb-4">
+                  <div className="bg-neutral-50 rounded-xl p-4">
+                    <p className="text-xs font-medium text-neutral-500 mb-3">Chauffeurs alternatifs disponibles :</p>
+                    {alternatives[b.id].length === 0 ? (
+                      <p className="text-xs text-neutral-400">Aucun chauffeur disponible dans cette zone</p>
+                    ) : (
+                      <div className="space-y-2">
+                        {alternatives[b.id].map((alt) => (
+                          <div key={alt.id} className="flex items-center justify-between bg-white rounded-lg p-3 border border-neutral-200">
+                            <div>
+                              <p className="text-sm font-medium">{alt.firstName} {alt.lastName}</p>
+                              <p className="text-xs text-neutral-500">
+                                {alt.vehicleBrand} {alt.vehicleModel} · {alt.distance.toFixed(1)} km
+                              </p>
+                            </div>
+                            <button
+                              onClick={() => reassign(b.id, alt.id)}
+                              className="text-xs bg-neutral-900 text-white px-3 py-1.5 rounded-lg hover:bg-neutral-700 transition-colors"
+                            >
+                              Assigner
+                            </button>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}

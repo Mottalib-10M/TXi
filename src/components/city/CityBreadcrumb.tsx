@@ -6,7 +6,7 @@ export function CityBreadcrumb({ cityName }: { cityName: string }) {
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Accueil", item: "https://www.taxinoir.fr" },
-      { "@type": "ListItem", position: 2, name: "Taxi en France", item: "https://www.taxinoir.fr/#villes" },
+      { "@type": "ListItem", position: 2, name: "Taxi en France", item: "https://www.taxinoir.fr/villes" },
       { "@type": "ListItem", position: 3, name: `Taxi ${cityName}` },
     ],
   };
@@ -24,7 +24,7 @@ export function CityBreadcrumb({ cityName }: { cityName: string }) {
           </li>
           <li aria-hidden="true">/</li>
           <li>
-            <span className="hover:text-neutral-900 transition-colors">Taxi en France</span>
+            <Link href="/villes" className="hover:text-neutral-900 transition-colors">Taxi en France</Link>
           </li>
           <li aria-hidden="true">/</li>
           <li className="text-neutral-900 font-medium">Taxi {cityName}</li>

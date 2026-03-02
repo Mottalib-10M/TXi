@@ -14,24 +14,43 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
       async authorize(credentials) {
         if (!credentials?.email || !credentials?.password) return null;
 
+        const email = credentials.email as string;
+        const password = credentials.password as string;
+
+        // Check Driver table first
         const driver = await prisma.driver.findUnique({
-          where: { email: credentials.email as string },
+          where: { email },
         });
 
-        if (!driver) return null;
+        if (driver) {
+          const isValid = await compare(password, driver.passwordHash);
+          if (!isValid) return null;
+          return {
+            id: driver.id,
+            email: driver.email,
+            name: `${driver.firstName} ${driver.lastName}`,
+            role: "driver" as const,
+          };
+        }
 
-        const isValid = await compare(
-          credentials.password as string,
-          driver.passwordHash
-        );
+        // Check Organization table
+        const org = await prisma.organization.findUnique({
+          where: { email },
+        });
 
-        if (!isValid) return null;
+        if (org) {
+          const isValid = await compare(password, org.passwordHash);
+          if (!isValid) return null;
+          return {
+            id: org.id,
+            email: org.email,
+            name: org.name,
+            role: "organization" as const,
+            orgType: org.type,
+          };
+        }
 
-        return {
-          id: driver.id,
-          email: driver.email,
-          name: `${driver.firstName} ${driver.lastName}`,
-        };
+        return null;
       },
     }),
   ],
@@ -43,12 +62,16 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
     async jwt({ token, user }) {
       if (user) {
         token.id = user.id;
+        token.role = user.role;
+        token.orgType = user.orgType;
       }
       return token;
     },
     async session({ session, token }) {
-      if (session.user && token.id) {
+      if (session.user) {
         session.user.id = token.id as string;
+        session.user.role = (token.role as "driver" | "organization") || "driver";
+        session.user.orgType = token.orgType;
       }
       return session;
     },

@@ -51,6 +51,7 @@ export default async function CartePage() {
           vehicleBrand: vehicles[0]?.brand || driver.vehicleBrand || "",
           vehicleModel: vehicles[0]?.model || driver.vehicleModel || "",
           zoneAddress: driver.zoneAddress || "",
+          companyName: driver.companyName || "",
         }}
       />
     </div>

@@ -10,6 +10,7 @@ import { Logo } from "@/components/ui/Logo";
 const navItems = [
   { href: "/dashboard", label: "Tableau de bord", icon: "solar:chart-square-linear" },
   { href: "/dashboard/profil", label: "Profil", icon: "solar:user-linear" },
+  { href: "/dashboard/profil-public", label: "Page publique", icon: "solar:eye-linear" },
   { href: "/dashboard/reservations", label: "Réservations", icon: "solar:calendar-linear" },
   { href: "/dashboard/carte", label: "Carte de visite", icon: "solar:card-linear" },
 ];

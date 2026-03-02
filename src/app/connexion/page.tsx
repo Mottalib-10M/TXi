@@ -10,16 +10,17 @@ function ConnexionForm() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const registered = searchParams.get("registered");
-  const { status } = useSession();
+  const { data: session, status } = useSession();
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
-  // If already authenticated, redirect to dashboard
+  // If already authenticated, redirect based on role
   useEffect(() => {
-    if (status === "authenticated") {
-      router.replace("/dashboard");
+    if (status === "authenticated" && session?.user) {
+      const dest = session.user.role === "organization" ? "/org" : "/dashboard";
+      router.replace(dest);
     }
-  }, [status, router]);
+  }, [status, session, router]);
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -40,8 +41,13 @@ function ConnexionForm() {
         return;
       }
 
+      // Fetch updated session to get role
+      const res = await fetch("/api/auth/session");
+      const sessionData = await res.json();
+      const dest = sessionData?.user?.role === "organization" ? "/org" : "/dashboard";
+
       // Full page reload to ensure the session cookie is picked up
-      window.location.href = "/dashboard";
+      window.location.href = dest;
     } catch {
       setError("Erreur de connexion au serveur");
     } finally {
@@ -57,10 +63,10 @@ function ConnexionForm() {
             <span className="font-normal text-neutral-600">Taxi</span><span className="font-bold text-neutral-950">Noir</span>
           </Link>
           <h1 className="text-2xl font-semibold tracking-tight mt-6 mb-2">
-            Connexion chauffeur
+            Connexion
           </h1>
           <p className="text-sm text-neutral-500 font-light">
-            Accédez à votre espace chauffeur
+            Accédez à votre espace
           </p>
         </div>
 
@@ -87,7 +93,7 @@ function ConnexionForm() {
               type="email"
               required
               className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all"
-              placeholder="jean.dupont@email.com"
+              placeholder="votre@email.com"
             />
           </div>
 

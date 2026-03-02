@@ -4,12 +4,38 @@ import { haversineDistance, estimatePrice } from "@/lib/geo";
 
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
+  const q = searchParams.get("q");
   const departureLat = parseFloat(searchParams.get("departureLat") || "0");
   const departureLng = parseFloat(searchParams.get("departureLng") || "0");
   const arrivalLat = parseFloat(searchParams.get("arrivalLat") || "0");
   const arrivalLng = parseFloat(searchParams.get("arrivalLng") || "0");
 
   try {
+    // Text search mode (for favorites search)
+    if (q) {
+      const drivers = await prisma.driver.findMany({
+        where: {
+          isActive: true,
+          OR: [
+            { firstName: { contains: q, mode: "insensitive" } },
+            { lastName: { contains: q, mode: "insensitive" } },
+            { zoneAddress: { contains: q, mode: "insensitive" } },
+          ],
+        },
+        select: {
+          id: true,
+          firstName: true,
+          lastName: true,
+          slug: true,
+          vehicleBrand: true,
+          vehicleModel: true,
+          zoneAddress: true,
+        },
+        take: 10,
+      });
+      return NextResponse.json({ drivers });
+    }
+
     const drivers = await prisma.driver.findMany({
       where: {
         isActive: true,

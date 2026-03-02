@@ -116,30 +116,6 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mb-12 pt-8 border-t border-neutral-100">
-          <h4 className="text-sm font-medium mb-4 tracking-tight">Villes populaires</h4>
-          <div className="flex flex-wrap gap-2">
-            {[
-              { name: "Paris", slug: "paris" },
-              { name: "Marseille", slug: "marseille" },
-              { name: "Lyon", slug: "lyon" },
-              { name: "Toulouse", slug: "toulouse" },
-              { name: "Nice", slug: "nice" },
-              { name: "Nantes", slug: "nantes" },
-              { name: "Bordeaux", slug: "bordeaux" },
-              { name: "Lille", slug: "lille" },
-            ].map((city) => (
-              <Link
-                key={city.slug}
-                href={`/taxi-${city.slug}`}
-                className="text-xs text-neutral-500 font-light bg-neutral-50 border border-neutral-200 rounded-full px-3 py-1.5 hover:text-neutral-900 hover:border-neutral-400 transition-colors"
-              >
-                Taxi {city.name}
-              </Link>
-            ))}
-          </div>
-        </div>
-
         <div className="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-neutral-100 gap-4">
           <p className="text-xs text-neutral-400 font-light">
             &copy; 2026 TaxiNoir. Tous droits réservés.

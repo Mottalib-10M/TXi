@@ -48,15 +48,12 @@ export function CoverageZoneEditor({
         />
       </div>
 
-      {lat && lng && (
+      {lat && lng && address && (
         <div className="bg-neutral-50 border border-neutral-200 rounded-xl p-4">
-          <div className="flex items-center gap-2 text-sm text-neutral-600 mb-2">
+          <div className="flex items-center gap-2 text-sm text-neutral-600">
             <Icon icon="solar:map-point-linear" className="text-neutral-400" />
-            <span>
-              {lat.toFixed(4)}, {lng.toFixed(4)}
-            </span>
+            <span>{address}</span>
           </div>
-          <p className="text-xs text-neutral-500 font-light">{address}</p>
         </div>
       )}
 

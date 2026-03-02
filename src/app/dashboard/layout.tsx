@@ -13,6 +13,10 @@ export default async function DashboardLayout({
     redirect("/connexion");
   }
 
+  if (session.user.role === "organization") {
+    redirect("/org");
+  }
+
   return (
     <div className="min-h-screen bg-neutral-50">
       <DashboardSidebar userName={session.user.name || ""} />

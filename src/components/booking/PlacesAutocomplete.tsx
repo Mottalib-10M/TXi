@@ -124,7 +124,7 @@ export function PlacesAutocomplete({
   }, []);
 
   return (
-    <div ref={wrapperRef} className="relative z-10">
+    <div ref={wrapperRef} className={`relative ${showSuggestions && suggestions.length > 0 ? "z-50" : "z-10"}`}>
       <div className="flex items-center bg-neutral-100 rounded-xl px-4 py-3.5 focus-within:ring-2 focus-within:ring-neutral-900 focus-within:bg-white transition-all">
         <Icon icon={icon} className="text-neutral-400 text-lg mr-3 shrink-0" />
         <input

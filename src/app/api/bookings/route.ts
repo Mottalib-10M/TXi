@@ -112,7 +112,7 @@ export async function POST(request: Request) {
       }
     }
 
-    // Create booking
+    // Create booking (lock the price at creation time)
     const booking = await prisma.booking.create({
       data: {
         reference,
@@ -130,6 +130,7 @@ export async function POST(request: Request) {
         passengerCount: data.passengerCount,
         estimatedDistance,
         estimatedPrice,
+        lockedPrice: estimatedPrice || null,
         driverId,
         source: data.source,
       },

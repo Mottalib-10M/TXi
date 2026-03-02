@@ -17,6 +17,13 @@ enum BookingStatus {
 enum BookingSource {
   LANDING
   PROFILE
+  ORGANIZATION
+}
+
+enum OrgType {
+  HOTEL
+  HOSPITAL
+  ENTERPRISE
 }
 
 model Driver {
@@ -69,7 +76,8 @@ model Driver {
   isActive   Boolean @default(true)
   isVerified Boolean @default(false)
 
-  bookings Booking[]
+  bookings    Booking[]
+  favoritedBy FavoriteDriver[]
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -104,6 +112,9 @@ model Booking {
   estimatedDuration Float?
   estimatedPrice    Float?
 
+  // Prix verrouillé (figé à la création, ne change plus)
+  lockedPrice Float?
+
   // Status
   status BookingStatus @default(PENDING)
   source BookingSource @default(LANDING)
@@ -112,8 +123,65 @@ model Booking {
   driver   Driver? @relation(fields: [driverId], references: [id])
   driverId String?
 
+  // Organisation (optionnel - null = booking direct client)
+  organization   Organization? @relation(fields: [organizationId], references: [id])
+  organizationId String?
+
+  // Nom du bénéficiaire (patient, client hôtel, salarié)
+  beneficiaryName String?
+
+  // Cagnotte link
+  cagnotteTransaction CagnotteTransaction?
+
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
   @@map("bookings")
+}
+
+model Organization {
+  id           String  @id @default(cuid())
+  email        String  @unique
+  passwordHash String
+  name         String
+  type         OrgType
+  contactName  String
+  phone        String  @default("")
+  address      String?
+
+  // Cagnotte (5% des courses complétées)
+  cagnotteBalance Float @default(0)
+
+  bookings        Booking[]
+  favoriteDrivers FavoriteDriver[]
+  cagnotteHistory CagnotteTransaction[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("organizations")
+}
+
+model FavoriteDriver {
+  id             String       @id @default(cuid())
+  organization   Organization @relation(fields: [organizationId], references: [id])
+  organizationId String
+  driver         Driver       @relation(fields: [driverId], references: [id])
+  driverId       String
+  createdAt      DateTime     @default(now())
+
+  @@unique([organizationId, driverId])
+  @@map("favorite_drivers")
+}
+
+model CagnotteTransaction {
+  id             String       @id @default(cuid())
+  organization   Organization @relation(fields: [organizationId], references: [id])
+  organizationId String
+  booking        Booking      @relation(fields: [bookingId], references: [id])
+  bookingId      String       @unique
+  amount         Float
+  createdAt      DateTime     @default(now())
+
+  @@map("cagnotte_transactions")
 }

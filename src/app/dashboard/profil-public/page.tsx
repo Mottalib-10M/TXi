@@ -42,7 +42,7 @@ export default async function ProfilPublicPage() {
   return (
     <div>
       <div className="mb-8">
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>
             <h1 className="text-2xl font-semibold tracking-tight">
               Profil public
@@ -51,18 +51,18 @@ export default async function ProfilPublicPage() {
               Aperçu de votre page vue par les clients qui scannent votre QR code
             </p>
           </div>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 sm:gap-3">
             <Link
               href="/dashboard/profil"
-              className="inline-flex items-center gap-2 text-sm text-neutral-600 hover:text-neutral-900 border border-neutral-200 bg-white rounded-xl px-4 py-2.5 hover:border-neutral-300 transition-colors"
+              className="inline-flex items-center gap-2 text-sm text-neutral-600 hover:text-neutral-900 border border-neutral-200 bg-white rounded-xl px-3 sm:px-4 py-2.5 hover:border-neutral-300 transition-colors"
             >
               <Icon icon="solar:pen-linear" className="text-base" />
-              Modifier
+              <span className="hidden sm:inline">Modifier</span>
             </Link>
             <Link
               href={publicUrl}
               target="_blank"
-              className="inline-flex items-center gap-2 text-sm font-medium text-white bg-neutral-950 rounded-xl px-4 py-2.5 hover:bg-neutral-800 transition-colors"
+              className="inline-flex items-center gap-2 text-sm font-medium text-white bg-neutral-950 rounded-xl px-3 sm:px-4 py-2.5 hover:bg-neutral-800 transition-colors"
             >
               <Icon icon="solar:eye-linear" className="text-base" />
               Ouvrir la page
@@ -72,7 +72,7 @@ export default async function ProfilPublicPage() {
       </div>
 
       {/* URL banner */}
-      <div className="bg-neutral-950 rounded-2xl p-5 mb-8 flex items-center justify-between gap-4">
+      <div className="bg-neutral-950 rounded-2xl p-4 sm:p-5 mb-8 flex items-center justify-between gap-3 sm:gap-4">
         <div className="flex items-center gap-3 min-w-0">
           <div className="w-10 h-10 bg-neutral-800 rounded-xl flex items-center justify-center shrink-0">
             <Icon icon="solar:link-linear" className="text-neutral-400 text-xl" />

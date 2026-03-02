@@ -47,7 +47,7 @@ export function AvailabilityEditor({
           return (
             <div
               key={day}
-              className={`flex items-center gap-4 p-3 rounded-xl border transition-colors ${
+              className={`flex flex-wrap items-center gap-2 sm:gap-4 p-3 rounded-xl border transition-colors ${
                 isActive ? "border-neutral-200 bg-white" : "border-neutral-100 bg-neutral-50"
               }`}
             >
@@ -63,28 +63,28 @@ export function AvailabilityEditor({
                 <Icon icon={isActive ? "solar:check-read-linear" : "solar:close-circle-linear"} className="text-sm" />
               </button>
 
-              <span className={`text-sm w-24 ${isActive ? "font-medium" : "text-neutral-400"}`}>
+              <span className={`text-sm w-20 sm:w-24 ${isActive ? "font-medium" : "text-neutral-400"}`}>
                 {day}
               </span>
 
               {isActive && slot ? (
-                <div className="flex items-center gap-2 flex-1">
+                <div className="flex items-center gap-2 ml-auto">
                   <input
                     type="time"
                     value={slot.startTime}
                     onChange={(e) => updateSlot(index, "startTime", e.target.value)}
-                    className="bg-neutral-100 rounded-lg px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-neutral-900"
+                    className="bg-neutral-100 rounded-lg px-2 sm:px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-neutral-900 w-[5.5rem]"
                   />
                   <span className="text-neutral-400 text-xs">→</span>
                   <input
                     type="time"
                     value={slot.endTime}
                     onChange={(e) => updateSlot(index, "endTime", e.target.value)}
-                    className="bg-neutral-100 rounded-lg px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-neutral-900"
+                    className="bg-neutral-100 rounded-lg px-2 sm:px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-neutral-900 w-[5.5rem]"
                   />
                 </div>
               ) : (
-                <span className="text-xs text-neutral-400 font-light">Indisponible</span>
+                <span className="text-xs text-neutral-400 font-light ml-auto">Indisponible</span>
               )}
             </div>
           );

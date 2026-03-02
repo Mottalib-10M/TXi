@@ -128,13 +128,14 @@ export function ProfileBookingForm({
           <button
             type="button"
             onClick={() => setIsNow(false)}
-            className={`w-12 h-12 flex items-center justify-center rounded-xl transition-colors shrink-0 ${
+            className={`flex-1 flex items-center justify-center gap-2 rounded-xl px-4 py-3 text-sm font-medium transition-colors ${
               !isNow
                 ? "bg-neutral-900 text-white"
-                : "bg-neutral-100 text-neutral-400 hover:bg-neutral-200 hover:text-neutral-600"
+                : "bg-neutral-100 text-neutral-600 hover:bg-neutral-200"
             }`}
           >
             <Icon icon="solar:clock-circle-linear" className="text-lg" />
+            Planifier
           </button>
         </div>
 
@@ -143,6 +144,7 @@ export function ProfileBookingForm({
             type="datetime-local"
             value={scheduledDate}
             onChange={(e) => setScheduledDate(e.target.value)}
+            min={new Date().toISOString().slice(0, 16)}
             className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all"
           />
         )}

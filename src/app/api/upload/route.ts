@@ -1,6 +1,23 @@
 import { NextResponse } from "next/server";
 import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
+import sharp from "sharp";
+
+async function compressImage(
+  buffer: Buffer,
+  type: "profile" | "vehicle"
+): Promise<Buffer> {
+  const maxWidth = type === "profile" ? 400 : 1200;
+  const maxHeight = type === "profile" ? 400 : 800;
+
+  return sharp(buffer)
+    .resize(maxWidth, maxHeight, {
+      fit: "inside",
+      withoutEnlargement: true,
+    })
+    .jpeg({ quality: 80 })
+    .toBuffer();
+}
 
 export async function POST(request: Request) {
   const session = await auth();
@@ -17,16 +34,22 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Aucun fichier" }, { status: 400 });
     }
 
+    // Compress/resize the image
+    const bytes = await file.arrayBuffer();
+    const rawBuffer = Buffer.from(bytes);
+    const compressedBuffer = await compressImage(
+      rawBuffer,
+      uploadType === "vehicle" ? "vehicle" : "profile"
+    );
+
     const cloudName = process.env.CLOUDINARY_CLOUD_NAME;
     const apiKey = process.env.CLOUDINARY_API_KEY;
     const apiSecret = process.env.CLOUDINARY_API_SECRET;
 
     if (!cloudName || !apiKey || !apiSecret) {
       // Fallback: save as data URL for development
-      const bytes = await file.arrayBuffer();
-      const buffer = Buffer.from(bytes);
-      const base64 = buffer.toString("base64");
-      const dataUrl = `data:${file.type};base64,${base64}`;
+      const base64 = compressedBuffer.toString("base64");
+      const dataUrl = `data:image/jpeg;base64,${base64}`;
 
       // For vehicle photos, just return the URL without saving to DB
       if (uploadType === "vehicle") {
@@ -41,9 +64,12 @@ export async function POST(request: Request) {
       return NextResponse.json({ url: dataUrl });
     }
 
-    // Upload to Cloudinary
+    // Upload compressed image to Cloudinary
+    const uint8 = new Uint8Array(compressedBuffer);
+    const compressedFile = new File([uint8], "photo.jpg", { type: "image/jpeg" });
+
     const uploadFormData = new FormData();
-    uploadFormData.append("file", file);
+    uploadFormData.append("file", compressedFile);
     uploadFormData.append("upload_preset", "txi_photos");
 
     const res = await fetch(

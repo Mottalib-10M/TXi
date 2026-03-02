@@ -92,89 +92,91 @@ export function ReservationsTable({ bookings }: { bookings: Booking[] }) {
           {filtered.map((booking) => (
             <div
               key={booking.id}
-              className="bg-white border border-neutral-200 rounded-2xl p-5"
+              className="bg-white border border-neutral-200 rounded-2xl p-4 sm:p-5"
             >
-              <div className="flex items-start justify-between gap-4">
-                <div className="flex-1 min-w-0">
-                  <div className="flex items-center gap-3 mb-2">
-                    <p className="text-sm font-semibold">{booking.clientName}</p>
-                    <span
-                      className={`text-xs px-2.5 py-0.5 rounded-full font-medium ${
-                        statusConfig[booking.status]?.color || ""
-                      }`}
-                    >
-                      {statusConfig[booking.status]?.label || booking.status}
-                    </span>
-                    <span className="text-xs text-neutral-400">
-                      #{booking.reference}
-                    </span>
-                  </div>
+              {/* Header: name + status + ref */}
+              <div className="flex flex-wrap items-center gap-2 mb-2">
+                <p className="text-sm font-semibold">{booking.clientName}</p>
+                <span
+                  className={`text-xs px-2.5 py-0.5 rounded-full font-medium ${
+                    statusConfig[booking.status]?.color || ""
+                  }`}
+                >
+                  {statusConfig[booking.status]?.label || booking.status}
+                </span>
+                <span className="text-xs text-neutral-400">
+                  #{booking.reference}
+                </span>
+              </div>
 
-                  <div className="flex items-center gap-2 text-xs text-neutral-500 mb-1">
-                    <Icon icon="solar:map-point-linear" className="text-neutral-400" />
-                    <span>{booking.departureName}</span>
-                    <span>→</span>
-                    <span>{booking.arrivalName}</span>
-                  </div>
+              {/* Route */}
+              <div className="flex items-start gap-2 text-xs text-neutral-500 mb-1.5">
+                <Icon icon="solar:map-point-linear" className="text-neutral-400 shrink-0 mt-0.5" />
+                <span className="break-words min-w-0">
+                  {booking.departureName} → {booking.arrivalName}
+                </span>
+              </div>
 
-                  <div className="flex items-center gap-4 text-xs text-neutral-400">
-                    <span className="flex items-center gap-1">
-                      <Icon icon="solar:calendar-linear" />
-                      {format(new Date(booking.requestedDate), "dd MMM yyyy à HH:mm", {
-                        locale: fr,
-                      })}
-                    </span>
-                    <span className="flex items-center gap-1">
-                      <Icon icon="solar:users-group-rounded-linear" />
-                      {booking.passengerCount} passager{booking.passengerCount > 1 ? "s" : ""}
-                    </span>
-                    {booking.estimatedPrice && (
-                      <span className="flex items-center gap-1">
-                        <Icon icon="solar:tag-price-linear" />
-                        {booking.estimatedPrice.toFixed(2)} EUR
-                      </span>
-                    )}
-                    <span className="text-neutral-300">
-                      via {booking.source === "PROFILE" ? "Profil" : "Landing"}
-                    </span>
-                  </div>
-
-                  {booking.clientComments && (
-                    <p className="text-xs text-neutral-500 mt-2 bg-neutral-50 rounded-lg px-3 py-2">
-                      {booking.clientComments}
-                    </p>
-                  )}
-                </div>
-
-                {booking.status === "PENDING" && (
-                  <div className="flex gap-2 shrink-0">
-                    <button
-                      onClick={() => updateStatus(booking.id, "ACCEPTED")}
-                      disabled={updating === booking.id}
-                      className="bg-green-50 text-green-700 hover:bg-green-100 px-3 py-1.5 rounded-lg text-xs font-medium transition-colors disabled:opacity-50"
-                    >
-                      Accepter
-                    </button>
-                    <button
-                      onClick={() => updateStatus(booking.id, "REJECTED")}
-                      disabled={updating === booking.id}
-                      className="bg-red-50 text-red-700 hover:bg-red-100 px-3 py-1.5 rounded-lg text-xs font-medium transition-colors disabled:opacity-50"
-                    >
-                      Refuser
-                    </button>
-                  </div>
+              {/* Metadata */}
+              <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-neutral-400">
+                <span className="flex items-center gap-1">
+                  <Icon icon="solar:calendar-linear" />
+                  {format(new Date(booking.requestedDate), "dd MMM yyyy à HH:mm", {
+                    locale: fr,
+                  })}
+                </span>
+                <span className="flex items-center gap-1">
+                  <Icon icon="solar:users-group-rounded-linear" />
+                  {booking.passengerCount} passager{booking.passengerCount > 1 ? "s" : ""}
+                </span>
+                {booking.estimatedPrice && (
+                  <span className="flex items-center gap-1">
+                    <Icon icon="solar:tag-price-linear" />
+                    {booking.estimatedPrice.toFixed(2)} EUR
+                  </span>
                 )}
+                <span className="text-neutral-300">
+                  via {booking.source === "PROFILE" ? "Profil" : "Landing"}
+                </span>
+              </div>
 
-                {booking.status === "ACCEPTED" && (
+              {booking.clientComments && (
+                <p className="text-xs text-neutral-500 mt-2 bg-neutral-50 rounded-lg px-3 py-2">
+                  {booking.clientComments}
+                </p>
+              )}
+
+              {/* Actions */}
+              {booking.status === "PENDING" && (
+                <div className="flex gap-2 mt-3 pt-3 border-t border-neutral-100">
+                  <button
+                    onClick={() => updateStatus(booking.id, "ACCEPTED")}
+                    disabled={updating === booking.id}
+                    className="flex-1 sm:flex-none bg-green-50 text-green-700 hover:bg-green-100 px-4 py-2 rounded-lg text-xs font-medium transition-colors disabled:opacity-50"
+                  >
+                    Accepter
+                  </button>
+                  <button
+                    onClick={() => updateStatus(booking.id, "REJECTED")}
+                    disabled={updating === booking.id}
+                    className="flex-1 sm:flex-none bg-red-50 text-red-700 hover:bg-red-100 px-4 py-2 rounded-lg text-xs font-medium transition-colors disabled:opacity-50"
+                  >
+                    Refuser
+                  </button>
+                </div>
+              )}
+
+              {booking.status === "ACCEPTED" && (
+                <div className="mt-3 pt-3 border-t border-neutral-100">
                   <button
                     onClick={() => updateStatus(booking.id, "COMPLETED")}
                     disabled={updating === booking.id}
-                    className="bg-blue-50 text-blue-700 hover:bg-blue-100 px-3 py-1.5 rounded-lg text-xs font-medium transition-colors disabled:opacity-50 shrink-0"
+                    className="w-full sm:w-auto bg-blue-50 text-blue-700 hover:bg-blue-100 px-4 py-2 rounded-lg text-xs font-medium transition-colors disabled:opacity-50"
                   >
                     Terminer
                   </button>
-                )}
-              </div>
+                </div>
+              )}
             </div>
           ))}
         </div>

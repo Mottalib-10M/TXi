@@ -178,6 +178,7 @@ export function BookingForm() {
                 type="datetime-local"
                 value={scheduledDate}
                 onChange={(e) => setScheduledDate(e.target.value)}
+                min={new Date().toISOString().slice(0, 16)}
                 className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all"
               />
             </div>
@@ -207,9 +208,9 @@ export function BookingForm() {
             </button>
           </div>
 
-          <div className="text-xs text-neutral-500 mb-4 flex items-center gap-2">
-            <Icon icon="solar:map-point-linear" className="text-neutral-400" />
-            {departure} → {arrival}
+          <div className="text-xs text-neutral-500 mb-4 flex items-start gap-2">
+            <Icon icon="solar:map-point-linear" className="text-neutral-400 shrink-0 mt-0.5" />
+            <span className="break-words min-w-0">{departure} → {arrival}</span>
           </div>
 
           {results.length === 0 ? (
@@ -234,29 +235,29 @@ export function BookingForm() {
                       : "border-neutral-200"
                   }`}
                 >
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 bg-neutral-100 rounded-full flex items-center justify-center">
+                  <div className="flex items-center justify-between gap-3">
+                    <div className="flex items-center gap-3 min-w-0">
+                      <div className="w-10 h-10 bg-neutral-100 rounded-full flex items-center justify-center shrink-0">
                         <Icon icon="solar:user-linear" className="text-neutral-400" />
                       </div>
-                      <div>
-                        <p className="text-sm font-medium">
+                      <div className="min-w-0">
+                        <p className="text-sm font-medium truncate">
                           {taxi.firstName} {taxi.lastName.charAt(0)}.
                         </p>
-                        <p className="text-xs text-neutral-500 font-light">
+                        <p className="text-xs text-neutral-500 font-light truncate">
                           {taxi.vehicleBrand} {taxi.vehicleModel}
                           {taxi.zoneAddress && ` · ${taxi.zoneAddress}`}
                         </p>
                       </div>
                     </div>
-                    <div className="text-right">
+                    <div className="text-right shrink-0">
                       {taxi.estimatedPrice ? (
                         <p className="text-sm font-semibold">
                           {taxi.estimatedPrice.toFixed(2)} EUR
                         </p>
                       ) : (
                         <p className="text-xs text-neutral-500">
-                          À partir de {taxi.minimumFare.toFixed(2)} EUR
+                          Dès {taxi.minimumFare.toFixed(2)} EUR
                         </p>
                       )}
                     </div>

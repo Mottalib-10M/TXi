@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body
-        className={`${inter.className} bg-white text-neutral-900 antialiased selection:bg-neutral-200 selection:text-black`}
+        className={`${inter.className} bg-white text-neutral-900 antialiased selection:bg-neutral-200 selection:text-black overflow-x-hidden`}
       >
         <Providers>
           {children}

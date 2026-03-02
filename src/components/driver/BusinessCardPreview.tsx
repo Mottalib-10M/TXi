@@ -15,6 +15,7 @@ interface DriverInfo {
   vehicleBrand: string;
   vehicleModel: string;
   zoneAddress: string;
+  companyName?: string;
 }
 
 const formats: { id: CardFormat; label: string; description: string; icon: string }[] = [
@@ -27,8 +28,7 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
   const [qrDataUrl, setQrDataUrl] = useState<string>("");
   const [qrDataUrlLarge, setQrDataUrlLarge] = useState<string>("");
   const [activeFormat, setActiveFormat] = useState<CardFormat>("business");
-  const baseUrl = typeof window !== "undefined" ? window.location.origin : (process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000");
-  const profileUrl = `${baseUrl}/taxi/${driver.slug}`;
+  const profileUrl = `https://taxinoir.fr/taxi/${driver.slug}`;
 
   const generateQrCode = useCallback(async () => {
     try {
@@ -69,6 +69,7 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
 
   function buildPrintHtml(): string {
     const qr = activeFormat === "business" ? qrDataUrl : qrDataUrlLarge;
+    const displayName = driver.companyName || `${driver.firstName} ${driver.lastName}`;
     const name = `${driver.firstName} ${driver.lastName}`;
     const vehicle = driver.vehicleBrand && driver.vehicleModel ? `${driver.vehicleBrand} ${driver.vehicleModel}` : "";
 
@@ -79,12 +80,14 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
         .card { width: 85mm; height: 55mm; padding: 6mm; box-sizing: border-box; position: relative; }
         .brand { font-size: 14pt; font-weight: bold; margin-bottom: 4mm; }
         .brand .t { color: #525252; } .brand .n { color: #171717; }
+        .company { font-size: 8pt; color: #525252; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 1mm; }
         .name { font-size: 11pt; font-weight: bold; color: #171717; }
         .details { font-size: 7pt; color: #737373; margin-top: 2mm; line-height: 1.6; }
         .qr { position: absolute; top: 4mm; right: 5mm; width: 24mm; height: 24mm; }
         .footer { position: absolute; bottom: 4mm; left: 6mm; font-size: 7pt; color: #a3a3a3; }
       </style></head><body><div class="card">
         <div class="brand"><span class="t">Taxi</span><span class="n">Noir</span></div>
+        ${driver.companyName ? `<div class="company">${driver.companyName}</div>` : ""}
         <div class="name">${name}</div>
         <div class="details">${vehicle ? vehicle + "<br>" : ""}${driver.zoneAddress ? driver.zoneAddress + "<br>" : ""}${driver.phone}<br>${driver.email}</div>
         ${qr ? `<img class="qr" src="${qr}" />` : ""}
@@ -113,6 +116,7 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
       </style></head><body><div class="card">
         <div class="left">
           <div class="brand"><span class="t">Taxi</span><span class="n">Noir</span></div>
+          ${driver.companyName ? `<div style="font-size:8pt;color:#525252;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:1mm;">${driver.companyName}</div>` : ""}
           <div class="name">${name}</div>
           <div class="sub">Chauffeur de taxi</div>
           <div class="sep"></div>
@@ -150,6 +154,7 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
       <div class="header">
         <div>
           <div class="brand"><span class="t">Taxi</span><span class="n">Noir</span></div>
+          ${driver.companyName ? `<div style="font-size:9pt;color:#a3a3a3;text-transform:uppercase;letter-spacing:0.5px;">${driver.companyName}</div>` : ""}
           <div class="hname">${name}</div>
           <div class="hsub">Votre chauffeur de taxi</div>
         </div>
@@ -180,14 +185,21 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
     const tw = doc.getTextWidth("Taxi");
     doc.setTextColor(23, 23, 23); doc.text("Noir", 6 + tw, 10);
 
-    doc.setFontSize(11); doc.setFont("helvetica", "bold");
-    doc.text(`${driver.firstName} ${driver.lastName}`, 6, 20);
+    let y = 17;
+    if (driver.companyName) {
+      doc.setFontSize(8); doc.setFont("helvetica", "normal"); doc.setTextColor(82, 82, 82);
+      doc.text(driver.companyName.toUpperCase(), 6, y);
+      y += 5;
+    }
+    doc.setFontSize(11); doc.setFont("helvetica", "bold"); doc.setTextColor(23, 23, 23);
+    doc.text(`${driver.firstName} ${driver.lastName}`, 6, y);
+    y += 6;
 
     doc.setFontSize(7); doc.setFont("helvetica", "normal"); doc.setTextColor(115, 115, 115);
-    if (driver.vehicleBrand && driver.vehicleModel) doc.text(`${driver.vehicleBrand} ${driver.vehicleModel}`, 6, 26);
-    if (driver.zoneAddress) doc.text(driver.zoneAddress, 6, 31);
-    doc.text(driver.phone, 6, 36);
-    doc.text(driver.email, 6, 41);
+    if (driver.vehicleBrand && driver.vehicleModel) { doc.text(`${driver.vehicleBrand} ${driver.vehicleModel}`, 6, y); y += 5; }
+    if (driver.zoneAddress) { doc.text(driver.zoneAddress, 6, y); y += 5; }
+    doc.text(driver.phone, 6, y); y += 5;
+    doc.text(driver.email, 6, y);
 
     if (qrDataUrl) doc.addImage(qrDataUrl, "PNG", 57, 4, 24, 24);
 
@@ -212,12 +224,18 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
     const tw6 = doc.getTextWidth("Taxi");
     doc.setTextColor(23, 23, 23); doc.text("Noir", 10 + tw6, 16);
 
-    // Name
-    doc.setFontSize(17); doc.setFont("helvetica", "bold");
-    doc.text(`${driver.firstName} ${driver.lastName}`, 10, 30);
+    // Company name + Name
+    let y6 = 28;
+    if (driver.companyName) {
+      doc.setFontSize(8); doc.setFont("helvetica", "normal"); doc.setTextColor(82, 82, 82);
+      doc.text(driver.companyName.toUpperCase(), 10, y6);
+      y6 += 5;
+    }
+    doc.setFontSize(17); doc.setFont("helvetica", "bold"); doc.setTextColor(23, 23, 23);
+    doc.text(`${driver.firstName} ${driver.lastName}`, 10, y6 + 2);
 
     doc.setFontSize(9); doc.setFont("helvetica", "normal"); doc.setTextColor(160, 160, 160);
-    doc.text("Chauffeur de taxi", 10, 37);
+    doc.text("Chauffeur de taxi", 10, y6 + 9);
 
     doc.setDrawColor(230, 230, 230); doc.setLineWidth(0.3); doc.line(10, 42, 76, 42);
 
@@ -272,10 +290,16 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
     const tw5 = doc.getTextWidth("Taxi");
     doc.setTextColor(255, 255, 255); doc.text("Noir", 14 + tw5, 17);
 
+    let y5 = 26;
+    if (driver.companyName) {
+      doc.setFontSize(9); doc.setFont("helvetica", "normal"); doc.setTextColor(163, 163, 163);
+      doc.text(driver.companyName.toUpperCase(), 14, y5);
+      y5 += 5;
+    }
     doc.setFontSize(18); doc.setFont("helvetica", "bold"); doc.setTextColor(255, 255, 255);
-    doc.text(`${driver.firstName} ${driver.lastName}`, 14, 30);
+    doc.text(`${driver.firstName} ${driver.lastName}`, 14, y5 + 2);
     doc.setFontSize(10); doc.setFont("helvetica", "normal"); doc.setTextColor(150, 150, 150);
-    doc.text("Votre chauffeur de taxi", 14, 37);
+    doc.text("Votre chauffeur de taxi", 14, y5 + 9);
 
     if (driver.vehicleBrand && driver.vehicleModel) {
       doc.setFontSize(11); doc.setTextColor(180, 180, 180);
@@ -327,12 +351,12 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
   return (
     <div className="max-w-2xl">
       {/* Format selector */}
-      <div className="flex gap-2 mb-6">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 mb-6">
         {formats.map((f) => (
           <button
             key={f.id}
             onClick={() => setActiveFormat(f.id)}
-            className={`flex-1 px-3 py-3 rounded-xl border text-left transition-all ${
+            className={`px-3 py-3 rounded-xl border text-left transition-all ${
               activeFormat === f.id
                 ? "border-neutral-900 bg-neutral-50 shadow-sm"
                 : "border-neutral-200 hover:border-neutral-300"
@@ -357,6 +381,9 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
               <span className="text-neutral-600 font-normal">Taxi</span>
               <span className="text-neutral-950 font-bold">Noir</span>
             </p>
+            {driver.companyName && (
+              <p className="text-[10px] text-neutral-500 uppercase tracking-wider font-medium">{driver.companyName}</p>
+            )}
             <p className="text-base font-semibold">{driver.firstName} {driver.lastName}</p>
             <div className="text-xs text-neutral-500 space-y-0.5 mt-2">
               {driver.vehicleBrand && driver.vehicleModel && <p>{driver.vehicleBrand} {driver.vehicleModel}</p>}
@@ -384,6 +411,9 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
                 <span className="text-neutral-500 font-normal">Taxi</span>
                 <span className="text-neutral-950 font-bold">Noir</span>
               </p>
+              {driver.companyName && (
+                <p className="text-[9px] text-neutral-500 uppercase tracking-wider font-medium">{driver.companyName}</p>
+              )}
               <p className="text-lg font-bold text-neutral-900">{driver.firstName} {driver.lastName}</p>
               <p className="text-[10px] text-neutral-400 mt-0.5 uppercase tracking-wider">Chauffeur de taxi</p>
               <div className="w-8 h-px bg-neutral-200 my-3" />
@@ -434,6 +464,9 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
                   <span className="text-neutral-500 font-normal">Taxi</span>
                   <span className="text-white font-bold">Noir</span>
                 </p>
+                {driver.companyName && (
+                  <p className="text-neutral-400 text-[10px] uppercase tracking-wider mt-1">{driver.companyName}</p>
+                )}
                 <p className="text-white font-bold text-base mt-0.5">{driver.firstName} {driver.lastName}</p>
                 <p className="text-neutral-500 text-xs mt-0.5">Votre chauffeur de taxi</p>
               </div>
@@ -460,10 +493,10 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
             </div>
 
             {/* Footer */}
-            <div className="border-t border-neutral-200 px-6 py-2.5 flex items-center justify-between text-xs text-neutral-400 shrink-0">
+            <div className="border-t border-neutral-200 px-4 sm:px-6 py-2.5 flex flex-wrap items-center justify-center sm:justify-between gap-x-4 gap-y-0.5 text-xs text-neutral-400 shrink-0">
               <span>{driver.phone}</span>
-              <span>{driver.email}</span>
-              <span>{shortUrl}</span>
+              <span className="truncate">{driver.email}</span>
+              <span className="truncate">{shortUrl}</span>
             </div>
           </div>
         </div>
