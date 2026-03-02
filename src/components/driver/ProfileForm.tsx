@@ -9,6 +9,7 @@ import { AvailabilityEditor } from "./AvailabilityEditor";
 import type { Vehicle } from "@/types/vehicle";
 import { EMPTY_VEHICLE } from "@/types/vehicle";
 import { VehicleMiniature } from "@/components/ui/VehicleMiniature";
+import { VEHICLE_BRANDS, BRAND_NAMES, VEHICLE_COLORS } from "@/data/vehicle-models";
 
 interface DriverData {
   id: string;
@@ -52,6 +53,8 @@ export function ProfileForm({ driver }: { driver: DriverData }) {
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
   const [activeSection, setActiveSection] = useState("personal");
+  const [uploadingPhoto, setUploadingPhoto] = useState(false);
+  const photoInputRef = useRef<HTMLInputElement>(null);
 
   // Open the right section when coming from dashboard missing items
   useEffect(() => {
@@ -135,6 +138,30 @@ export function ProfileForm({ driver }: { driver: DriverData }) {
     }
   }
 
+  async function handlePhotoUpload(e: React.ChangeEvent<HTMLInputElement>) {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    setUploadingPhoto(true);
+    try {
+      const formData = new FormData();
+      formData.append("file", file);
+      formData.append("type", "profile");
+
+      const res = await fetch("/api/upload", { method: "POST", body: formData });
+      const data = await res.json();
+
+      if (data.url) {
+        updateField("photoUrl", data.url);
+      }
+    } catch (err) {
+      console.error("Photo upload error:", err);
+    } finally {
+      setUploadingPhoto(false);
+      if (photoInputRef.current) photoInputRef.current.value = "";
+    }
+  }
+
   const sections = [
     { id: "personal", label: "Infos personnelles", icon: "solar:user-linear" },
     { id: "vehicle", label: "Véhicule", icon: "mdi:car-outline" },
@@ -172,6 +199,55 @@ export function ProfileForm({ driver }: { driver: DriverData }) {
             <h2 className="text-lg font-semibold tracking-tight mb-4">
               Informations personnelles
             </h2>
+
+            {/* Profile photo */}
+            <div className="flex flex-col items-center gap-2 mb-2">
+              <button
+                type="button"
+                onClick={() => photoInputRef.current?.click()}
+                disabled={uploadingPhoto}
+                className="relative w-20 h-20 rounded-full overflow-hidden group"
+              >
+                {form.photoUrl ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={form.photoUrl}
+                    alt="Photo de profil"
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <div className="w-full h-full bg-neutral-200 flex items-center justify-center text-neutral-500 text-xl font-semibold">
+                    {form.firstName?.[0]?.toUpperCase() || ""}
+                    {form.lastName?.[0]?.toUpperCase() || ""}
+                  </div>
+                )}
+                <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                  {uploadingPhoto ? (
+                    <Icon icon="solar:refresh-linear" className="text-white text-xl animate-spin" />
+                  ) : (
+                    <Icon icon="solar:camera-linear" className="text-white text-xl" />
+                  )}
+                </div>
+              </button>
+              <span className="text-xs text-neutral-400">Cliquez pour modifier</span>
+              <input
+                ref={photoInputRef}
+                type="file"
+                accept="image/*"
+                onChange={handlePhotoUpload}
+                className="hidden"
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium mb-1.5">Nom de société</label>
+              <input
+                value={form.companyName}
+                onChange={(e) => updateField("companyName", e.target.value)}
+                className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all"
+                placeholder="Ex: Taxi Express Paris"
+              />
+            </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
                 <label className="block text-sm font-medium mb-1.5">Prénom</label>
@@ -193,19 +269,42 @@ export function ProfileForm({ driver }: { driver: DriverData }) {
             <div>
               <label className="block text-sm font-medium mb-1.5">Téléphone</label>
               <input
+                type="tel"
                 value={form.phone}
-                onChange={(e) => updateField("phone", e.target.value)}
+                onChange={(e) => {
+                  let raw = e.target.value.replace(/[^\d+]/g, "");
+                  if (raw.includes("+") && raw.indexOf("+") > 0) {
+                    raw = raw.replace(/\+/g, "");
+                  }
+                  let digits = raw.startsWith("+") ? raw.slice(1) : raw;
+                  if (raw.startsWith("+")) {
+                    // Format international: +33 6 12 34 56 78
+                    const formatted = digits.replace(/(\d{2})(?=\d)/g, "$1 ").trim();
+                    updateField("phone", "+" + formatted);
+                  } else {
+                    // Format français: 06 12 34 56 78
+                    digits = digits.slice(0, 10);
+                    const formatted = digits.replace(/(\d{2})(?=\d)/g, "$1 ").trim();
+                    updateField("phone", formatted);
+                  }
+                }}
                 className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all"
+                placeholder="06 12 34 56 78"
               />
-            </div>
-            <div>
-              <label className="block text-sm font-medium mb-1.5">Nom de société</label>
-              <input
-                value={form.companyName}
-                onChange={(e) => updateField("companyName", e.target.value)}
-                className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all"
-                placeholder="Ex: Taxi Express Paris"
-              />
+              {form.phone && (() => {
+                const digits = form.phone.replace(/[^\d]/g, "");
+                const isInternational = form.phone.startsWith("+");
+                const valid = isInternational ? digits.length >= 11 : digits.length === 10;
+                if (!valid) {
+                  return (
+                    <p className="text-xs text-amber-600 mt-1.5 flex items-center gap-1">
+                      <Icon icon="solar:info-circle-linear" className="text-sm shrink-0" />
+                      {isInternational ? "Format attendu : +33 6 12 34 56 78" : "Le numéro doit contenir 10 chiffres"}
+                    </p>
+                  );
+                }
+                return null;
+              })()}
             </div>
             <div>
               <label className="block text-sm font-medium mb-1.5">Bio</label>
@@ -228,7 +327,6 @@ export function ProfileForm({ driver }: { driver: DriverData }) {
             toggleVehicleFeature={toggleVehicleFeature}
             addVehicle={addVehicle}
             removeVehicle={removeVehicle}
-            setForm={setForm}
           />
         )}
 
@@ -360,56 +458,14 @@ function VehicleSection({
   toggleVehicleFeature,
   addVehicle,
   removeVehicle,
-  setForm,
 }: {
   vehicles: Vehicle[];
   updateVehicle: (index: number, field: keyof Vehicle, value: Vehicle[keyof Vehicle]) => void;
   toggleVehicleFeature: (index: number, feature: string) => void;
   addVehicle: () => void;
   removeVehicle: (index: number) => void;
-  setForm: React.Dispatch<React.SetStateAction<DriverData>>;
 }) {
   const [activeTab, setActiveTab] = useState(0);
-  const [plateInput, setPlateInput] = useState("");
-  const [lookupLoading, setLookupLoading] = useState(false);
-  const [lookupError, setLookupError] = useState("");
-  const [lookupSuccess, setLookupSuccess] = useState(false);
-
-  async function lookupPlate() {
-    if (!plateInput.trim()) return;
-    setLookupLoading(true);
-    setLookupError("");
-    setLookupSuccess(false);
-
-    try {
-      const res = await fetch(`/api/vehicle-lookup?plate=${encodeURIComponent(plateInput)}`);
-      const data = await res.json();
-
-      if (!res.ok) {
-        setLookupError(data.error || "Véhicule introuvable");
-        return;
-      }
-
-      setForm((prev) => {
-        const newVehicles = [...prev.vehicles];
-        newVehicles[activeTab] = {
-          ...newVehicles[activeTab],
-          plate: plateInput.toUpperCase(),
-          brand: data.brand || newVehicles[activeTab].brand,
-          model: data.model || newVehicles[activeTab].model,
-          year: data.year || newVehicles[activeTab].year,
-          color: data.color || newVehicles[activeTab].color,
-          capacity: data.capacity || newVehicles[activeTab].capacity,
-        };
-        return { ...prev, vehicles: newVehicles };
-      });
-      setLookupSuccess(true);
-    } catch {
-      setLookupError("Service indisponible");
-    } finally {
-      setLookupLoading(false);
-    }
-  }
 
   // Ensure at least one vehicle exists for the form
   if (vehicles.length === 0) {
@@ -447,12 +503,7 @@ function VehicleSection({
           <button
             key={i}
             type="button"
-            onClick={() => {
-              setActiveTab(i);
-              setPlateInput("");
-              setLookupError("");
-              setLookupSuccess(false);
-            }}
+            onClick={() => setActiveTab(i)}
             className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
               activeTab === i
                 ? "bg-neutral-900 text-white"
@@ -469,9 +520,6 @@ function VehicleSection({
             onClick={() => {
               addVehicle();
               setActiveTab(vehicles.length);
-              setPlateInput("");
-              setLookupError("");
-              setLookupSuccess(false);
             }}
             className="flex items-center gap-1 px-3 py-1.5 rounded-lg text-sm font-medium text-neutral-500 border border-dashed border-neutral-300 hover:border-neutral-400 hover:text-neutral-700 transition-colors"
           >
@@ -507,79 +555,42 @@ function VehicleSection({
         </button>
       )}
 
-      {/* Plate lookup */}
-      <div className="bg-neutral-50 border border-neutral-200 rounded-xl p-4 mb-2">
-        <label className="block text-sm font-medium mb-1.5">
-          Identification par plaque d&apos;immatriculation
-        </label>
-        <p className="text-xs text-neutral-500 font-light mb-3">
-          Entrez votre plaque pour remplir automatiquement les informations du véhicule
-        </p>
-        <div className="flex gap-2">
-          <div className="flex-1 relative">
-            <input
-              value={plateInput}
-              onChange={(e) => {
-                const raw = e.target.value.toUpperCase().replace(/[^A-Z0-9]/g, "");
-                let formatted = raw;
-                if (raw.length > 2) formatted = raw.slice(0, 2) + "-" + raw.slice(2);
-                if (raw.length > 5) formatted = raw.slice(0, 2) + "-" + raw.slice(2, 5) + "-" + raw.slice(5, 7);
-                setPlateInput(formatted);
-                setLookupError("");
-                setLookupSuccess(false);
-              }}
-              maxLength={9}
-              onKeyDown={(e) => e.key === "Enter" && lookupPlate()}
-              className="w-full bg-white border border-neutral-200 rounded-xl px-4 py-3 text-sm font-mono tracking-wider outline-none focus:ring-2 focus:ring-neutral-900 transition-all uppercase"
-              placeholder="AB-123-CD"
-            />
-          </div>
-          <button
-            type="button"
-            onClick={lookupPlate}
-            disabled={lookupLoading || !plateInput.trim()}
-            className="bg-neutral-900 text-white rounded-xl px-5 py-3 text-sm font-medium hover:bg-neutral-800 transition-colors disabled:opacity-50 flex items-center gap-2 shrink-0"
-          >
-            {lookupLoading ? (
-              <Icon icon="solar:refresh-linear" className="animate-spin" />
-            ) : (
-              <Icon icon="solar:magnifer-linear" />
-            )}
-            Identifier
-          </button>
-        </div>
-        {lookupError && (
-          <p className="text-xs text-red-500 mt-2 flex items-center gap-1">
-            <Icon icon="solar:danger-circle-linear" />
-            {lookupError}
-          </p>
-        )}
-        {lookupSuccess && (
-          <p className="text-xs text-green-600 mt-2 flex items-center gap-1">
-            <Icon icon="solar:check-circle-bold" />
-            Véhicule identifié et champs remplis automatiquement
-          </p>
-        )}
-      </div>
-
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
           <label className="block text-sm font-medium mb-1.5">Marque</label>
           <input
+            list="brand-list"
             value={vehicle.brand}
-            onChange={(e) => updateVehicle(activeTab, "brand", e.target.value)}
+            onChange={(e) => {
+              updateVehicle(activeTab, "brand", e.target.value);
+              // Reset model when brand changes
+              if (e.target.value !== vehicle.brand) {
+                updateVehicle(activeTab, "model", "");
+              }
+            }}
             className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all"
-            placeholder="Mercedes"
+            placeholder="Ex : Mercedes-Benz"
           />
+          <datalist id="brand-list">
+            {BRAND_NAMES.map((b) => (
+              <option key={b} value={b} />
+            ))}
+          </datalist>
         </div>
         <div>
           <label className="block text-sm font-medium mb-1.5">Modèle</label>
           <input
+            list={`model-list-${activeTab}`}
             value={vehicle.model}
             onChange={(e) => updateVehicle(activeTab, "model", e.target.value)}
             className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all"
-            placeholder="Classe E"
+            placeholder="Ex : Classe E"
           />
+          <datalist id={`model-list-${activeTab}`}>
+            {(VEHICLE_BRANDS[vehicle.brand] || []).map((m) => (
+              <option key={m} value={m} />
+            ))}
+          </datalist>
         </div>
         <div>
           <label className="block text-sm font-medium mb-1.5">Année</label>
@@ -593,18 +604,31 @@ function VehicleSection({
         <div>
           <label className="block text-sm font-medium mb-1.5">Couleur</label>
           <input
+            list="color-list"
             value={vehicle.color}
             onChange={(e) => updateVehicle(activeTab, "color", e.target.value)}
             className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all"
-            placeholder="Noir"
+            placeholder="Ex : Noir"
           />
+          <datalist id="color-list">
+            {VEHICLE_COLORS.map((c) => (
+              <option key={c} value={c} />
+            ))}
+          </datalist>
         </div>
         <div>
           <label className="block text-sm font-medium mb-1.5">Plaque</label>
           <input
             value={vehicle.plate}
-            onChange={(e) => updateVehicle(activeTab, "plate", e.target.value)}
-            className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all"
+            onChange={(e) => {
+              const raw = e.target.value.toUpperCase().replace(/[^A-Z0-9]/g, "");
+              let formatted = raw;
+              if (raw.length > 2) formatted = raw.slice(0, 2) + "-" + raw.slice(2);
+              if (raw.length > 5) formatted = raw.slice(0, 2) + "-" + raw.slice(2, 5) + "-" + raw.slice(5, 7);
+              updateVehicle(activeTab, "plate", formatted);
+            }}
+            maxLength={9}
+            className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm font-mono tracking-wider outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all uppercase"
             placeholder="AB-123-CD"
           />
         </div>

@@ -45,6 +45,14 @@ function haversineDistance(
   return R * c;
 }
 
+function formatDuration(minutes: number): string {
+  const rounded = Math.round(minutes);
+  if (rounded < 60) return `${rounded} min`;
+  const h = Math.floor(rounded / 60);
+  const m = rounded % 60;
+  return m > 0 ? `${h}h${m.toString().padStart(2, "0")}` : `${h}h`;
+}
+
 export function FareEstimator({
   baseFare,
   pricePerKm,
@@ -94,7 +102,9 @@ export function FareEstimator({
       destination.lng!
     );
     const distance = straightLine * 1.3; // Road factor
-    const duration = (distance / 30) * 60; // 30 km/h average → minutes
+    // Variable speed: city (short) → highway (long distance)
+    const avgSpeed = distance < 10 ? 25 : distance < 30 ? 40 : distance < 80 ? 60 : 80;
+    const duration = (distance / avgSpeed) * 60; // minutes
     const calculated = baseFare + distance * pricePerKm + duration * pricePerMinute;
     const price = Math.max(calculated, minimumFare);
     estimate = { distance, duration, price };
@@ -104,7 +114,7 @@ export function FareEstimator({
     <div className="bg-white border border-neutral-200 rounded-2xl p-6">
       <h2 className="text-base font-semibold tracking-tight mb-4 flex items-center gap-2">
         <Icon icon="solar:calculator-linear" className="text-neutral-400" />
-        Estimer le tarif
+        Estimation tarif et réservation
       </h2>
 
       <div className="space-y-3 mb-4">
@@ -137,7 +147,7 @@ export function FareEstimator({
               <Icon icon="solar:clock-circle-linear" className="text-neutral-400" />
               Duree estimee
             </span>
-            <span className="font-medium">{Math.round(estimate.duration)} min</span>
+            <span className="font-medium">{formatDuration(estimate.duration)}</span>
           </div>
           <div className="border-t border-neutral-200 pt-3 flex items-center justify-between">
             <span className="text-sm font-medium">Prix estime</span>

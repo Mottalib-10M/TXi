@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { Icon } from "@iconify/react";
 import type { Vehicle } from "@/types/vehicle";
 
@@ -109,7 +110,7 @@ const TYPE_CONFIG: Record<VehicleType, { icon: string; label: string }> = {
   van:    { icon: "fluent:vehicle-bus-20-filled", label: "Van" },
 };
 
-function VehicleCard({ vehicle, index, total }: { vehicle: Vehicle; index: number; total: number }) {
+function VehicleCard({ vehicle, index, total, onPhotoClick }: { vehicle: Vehicle; index: number; total: number; onPhotoClick: (url: string) => void }) {
   const type = detectType(vehicle.brand, vehicle.model);
   const config = TYPE_CONFIG[type];
   const colorHex = COLOR_MAP[vehicle.color.toLowerCase().trim()] || "#525252";
@@ -131,22 +132,27 @@ function VehicleCard({ vehicle, index, total }: { vehicle: Vehicle; index: numbe
 
       {/* Photos */}
       {hasPhotos && (
-        <div className="flex gap-2 overflow-x-auto pb-3 mb-4 scrollbar-hide">
+        <div className="flex justify-center gap-2 overflow-x-auto pb-3 mb-4 scrollbar-hide">
           {vehicle.photos.map((url, i) => (
-            <div key={i} className="w-36 h-28 rounded-xl overflow-hidden bg-neutral-100 shrink-0">
+            <button
+              key={i}
+              type="button"
+              onClick={() => onPhotoClick(url)}
+              className="w-36 h-28 rounded-xl overflow-hidden bg-neutral-100 shrink-0 cursor-zoom-in hover:opacity-90 transition-opacity"
+            >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={url} alt={`${fullName} - ${i + 1}`} className="w-full h-full object-cover" />
-            </div>
+            </button>
           ))}
         </div>
       )}
 
       {/* Vehicle card */}
-      <div className="flex items-center gap-4">
+      <div className="flex flex-col items-center gap-3 text-center">
         {/* Brand logo or car type icon */}
         <div
-          className="w-14 h-14 rounded-2xl flex items-center justify-center shrink-0"
-          style={{ backgroundColor: `${colorHex}12` }}
+          className="w-14 h-14 rounded-2xl flex items-center justify-center shrink-0 relative"
+          style={{ backgroundColor: `${colorHex}20` }}
         >
           {brandIcon ? (
             <Icon icon={brandIcon} className="text-2xl" style={{ color: colorHex }} />
@@ -156,11 +162,11 @@ function VehicleCard({ vehicle, index, total }: { vehicle: Vehicle; index: numbe
         </div>
 
         {/* Info */}
-        <div className="min-w-0 flex-1">
-          <p className="text-base font-semibold text-neutral-900 tracking-tight truncate">
+        <div className="min-w-0">
+          <p className="text-base font-semibold text-neutral-900 tracking-tight">
             {fullName}
           </p>
-          <div className="flex items-center gap-2 mt-1">
+          <div className="flex items-center justify-center gap-2 mt-1 flex-wrap">
             <span className="inline-flex items-center gap-1 text-[11px] font-medium text-neutral-500">
               <Icon icon={config.icon} className="text-xs text-neutral-400" />
               {config.label}
@@ -191,7 +197,7 @@ function VehicleCard({ vehicle, index, total }: { vehicle: Vehicle; index: numbe
 
       {/* Features */}
       {vehicle.features.length > 0 && (
-        <div className="flex flex-wrap gap-1.5 mt-4 pl-[72px]">
+        <div className="flex flex-wrap justify-center gap-1.5 mt-4">
           {vehicle.features.map((feature) => (
             <span
               key={feature}
@@ -215,15 +221,48 @@ function VehicleCard({ vehicle, index, total }: { vehicle: Vehicle; index: numbe
 }
 
 export function VehicleInfo({ vehicles }: VehicleInfoProps) {
+  const [lightboxUrl, setLightboxUrl] = useState<string | null>(null);
+
   if (vehicles.length === 0) return null;
 
   return (
-    <div className="bg-white border border-neutral-200 rounded-2xl p-6">
-      <div className="space-y-5">
-        {vehicles.map((vehicle, index) => (
-          <VehicleCard key={index} vehicle={vehicle} index={index} total={vehicles.length} />
-        ))}
+    <>
+      <div className="bg-white border border-neutral-200 rounded-2xl p-6">
+        <div className="space-y-5">
+          {vehicles.map((vehicle, index) => (
+            <VehicleCard
+              key={index}
+              vehicle={vehicle}
+              index={index}
+              total={vehicles.length}
+              onPhotoClick={setLightboxUrl}
+            />
+          ))}
+        </div>
       </div>
-    </div>
+
+      {/* Photo lightbox */}
+      {lightboxUrl && (
+        <div
+          className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4 cursor-zoom-out"
+          onClick={() => setLightboxUrl(null)}
+        >
+          <button
+            type="button"
+            onClick={() => setLightboxUrl(null)}
+            className="absolute top-4 right-4 w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center text-white transition-colors"
+          >
+            <Icon icon="solar:close-circle-bold" className="text-2xl" />
+          </button>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={lightboxUrl}
+            alt="Photo du véhicule"
+            className="max-w-full max-h-[85vh] object-contain rounded-2xl"
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
+    </>
   );
 }

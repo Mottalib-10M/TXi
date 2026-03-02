@@ -47,8 +47,8 @@ export function DriverHeader({
 
   return (
     <div className="bg-white border border-neutral-200 rounded-2xl p-6">
-      <div className="flex items-start gap-5">
-        <div className="w-20 h-20 rounded-2xl bg-neutral-100 flex items-center justify-center overflow-hidden shrink-0">
+      <div className="flex flex-col items-center text-center">
+        <div className="w-24 h-24 rounded-full bg-neutral-100 flex items-center justify-center overflow-hidden ring-4 ring-neutral-50">
           {photoUrl ? (
             /* eslint-disable-next-line @next/next/no-img-element */
             <img src={photoUrl} alt={firstName} className="w-full h-full object-cover" />
@@ -60,13 +60,13 @@ export function DriverHeader({
           )}
         </div>
 
-        <div className="flex-1">
+        <div className="mt-4 w-full">
           {companyName && (
             <p className="text-xs font-medium text-neutral-500 uppercase tracking-wider mb-1">
               {companyName}
             </p>
           )}
-          <div className="flex items-center gap-2 mb-1">
+          <div className="flex items-center justify-center gap-2 mb-1">
             <h1 className="text-xl font-semibold tracking-tight">
               {firstName} {lastName}
             </h1>
@@ -79,30 +79,30 @@ export function DriverHeader({
           </div>
 
           {zoneAddress && (
-            <div className="flex items-center gap-1.5 text-sm text-neutral-500 mb-3">
+            <div className="flex items-center justify-center gap-1.5 text-sm text-neutral-500 mb-3">
               <Icon icon="solar:map-point-linear" className="text-neutral-400" />
               {zoneAddress}
             </div>
           )}
 
           {bio && (
-            <p className="text-sm text-neutral-600 font-light leading-relaxed mb-3">
+            <p className="text-sm text-neutral-600 font-light leading-relaxed mb-4 max-w-md mx-auto">
               {bio}
             </p>
           )}
 
           {/* Contact info */}
           {(email || phone) && (
-            <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5 text-sm text-neutral-600 mb-3">
+            <div className="flex flex-col items-center gap-2 mb-4">
               {email && (
-                <a href={`mailto:${email}`} className="flex items-center gap-1.5 hover:text-neutral-900 transition-colors">
-                  <Icon icon="solar:letter-linear" className="text-neutral-400" />
+                <a href={`mailto:${email}`} className="flex items-center gap-2 text-base font-medium text-neutral-700 hover:text-neutral-900 transition-colors">
+                  <Icon icon="solar:letter-linear" className="text-lg text-neutral-400" />
                   {email}
                 </a>
               )}
               {phone && (
-                <a href={`tel:${phone}`} className="flex items-center gap-1.5 hover:text-neutral-900 transition-colors">
-                  <Icon icon="solar:phone-linear" className="text-neutral-400" />
+                <a href={`tel:${phone}`} className="flex items-center gap-2 text-lg font-semibold text-neutral-900 hover:text-neutral-700 transition-colors">
+                  <Icon icon="solar:phone-linear" className="text-lg text-neutral-400" />
                   {phone}
                 </a>
               )}
@@ -113,9 +113,9 @@ export function DriverHeader({
           {(email || phone) && (
             <button
               onClick={downloadVCard}
-              className="inline-flex items-center gap-2 text-xs font-medium text-neutral-600 bg-neutral-100 hover:bg-neutral-200 rounded-lg px-3 py-2 transition-colors"
+              className="inline-flex items-center justify-center gap-2 text-sm font-medium text-white bg-neutral-900 hover:bg-neutral-800 rounded-xl px-5 py-3 transition-colors btn-lift"
             >
-              <Icon icon="solar:user-plus-linear" className="text-sm" />
+              <Icon icon="solar:user-plus-linear" className="text-base" />
               Ajouter aux contacts
             </button>
           )}

@@ -105,7 +105,10 @@ export default async function DashboardPage() {
           <p className="text-3xl font-semibold">{pendingBookings}</p>
         </div>
 
-        <div className="bg-white border border-neutral-200 rounded-2xl p-6">
+        <Link
+          href="/dashboard/profil"
+          className="bg-white border border-neutral-200 rounded-2xl p-6 hover:border-neutral-300 transition-colors group"
+        >
           <div className="flex items-center gap-3 mb-3">
             <div className={`w-10 h-10 rounded-xl flex items-center justify-center ${
               completeness === 100 ? "bg-green-50" : "bg-blue-50"
@@ -115,7 +118,16 @@ export default async function DashboardPage() {
                 className={`text-xl ${completeness === 100 ? "text-green-600" : "text-blue-600"}`}
               />
             </div>
-            <span className="text-sm text-neutral-500 font-light">Profil complété</span>
+            <div className="flex-1 min-w-0">
+              <span className="text-sm text-neutral-500 font-light">Profil complété</span>
+              {completeness < 100 && (
+                <p className="text-[11px] text-neutral-400 font-light truncate">Complétez vos infos pour apparaître dans les recherches</p>
+              )}
+            </div>
+            <Icon
+              icon="solar:arrow-right-linear"
+              className="text-neutral-300 group-hover:text-neutral-600 transition-colors shrink-0"
+            />
           </div>
           <div className="flex items-center gap-3">
             <p className="text-3xl font-semibold">{completeness}%</p>
@@ -128,7 +140,7 @@ export default async function DashboardPage() {
               />
             </div>
           </div>
-        </div>
+        </Link>
       </div>
 
       {/* Missing profile items */}
@@ -169,14 +181,14 @@ export default async function DashboardPage() {
       {/* Quick actions */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
         <Link
-          href="/dashboard/profil"
+          href="/dashboard/profil-public"
           className="bg-white border border-neutral-200 rounded-2xl p-6 hover:border-neutral-300 transition-colors group"
         >
           <div className="flex items-center justify-between">
             <div>
-              <h3 className="font-medium text-sm">Compléter votre profil</h3>
+              <h3 className="font-medium text-sm">Voir votre page publique</h3>
               <p className="text-xs text-neutral-500 font-light mt-1">
-                Ajoutez vos informations pour apparaître dans les recherches
+                Prévisualisez ce que voient vos clients via le QR code
               </p>
             </div>
             <Icon
@@ -217,22 +229,29 @@ export default async function DashboardPage() {
               Tout voir
             </Link>
           </div>
-          <div className="space-y-3">
+          <div className="space-y-1">
             {driver.bookings.map((booking) => (
-              <div
+              <Link
                 key={booking.id}
-                className="flex items-center justify-between py-3 border-b border-neutral-100 last:border-0"
+                href={`/dashboard/reservations?id=${booking.id}`}
+                className="flex items-center justify-between py-3 px-3 -mx-3 rounded-xl border-b border-neutral-100 last:border-0 hover:bg-neutral-50 transition-colors group"
               >
-                <div>
+                <div className="min-w-0 flex-1">
                   <p className="text-sm font-medium">{booking.clientName}</p>
-                  <p className="text-xs text-neutral-500 font-light">
+                  <p className="text-xs text-neutral-500 font-light truncate">
                     {booking.departureName} → {booking.arrivalName}
                   </p>
                 </div>
-                <span className="text-xs bg-amber-50 text-amber-700 px-2.5 py-1 rounded-full font-medium">
-                  En attente
-                </span>
-              </div>
+                <div className="flex items-center gap-2 shrink-0 ml-3">
+                  <span className="text-xs bg-amber-50 text-amber-700 px-2.5 py-1 rounded-full font-medium">
+                    En attente
+                  </span>
+                  <Icon
+                    icon="solar:arrow-right-linear"
+                    className="text-neutral-300 group-hover:text-neutral-600 transition-colors"
+                  />
+                </div>
+              </Link>
             ))}
           </div>
         </div>
