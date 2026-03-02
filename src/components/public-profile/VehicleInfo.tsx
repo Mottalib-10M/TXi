@@ -18,6 +18,62 @@ const FEATURE_ICONS: Record<string, string> = {
   "Carte bancaire": "solar:card-linear",
 };
 
+// Brand → simple-icons slug
+const BRAND_ICONS: Record<string, string> = {
+  mercedes: "simple-icons:mercedes",
+  "mercedes-benz": "simple-icons:mercedes",
+  bmw: "simple-icons:bmw",
+  audi: "simple-icons:audi",
+  volkswagen: "simple-icons:volkswagen",
+  toyota: "simple-icons:toyota",
+  peugeot: "simple-icons:peugeot",
+  renault: "simple-icons:renault",
+  citroen: "simple-icons:citroen",
+  citroën: "simple-icons:citroen",
+  tesla: "simple-icons:tesla",
+  volvo: "simple-icons:volvo",
+  porsche: "simple-icons:porsche",
+  ford: "simple-icons:ford",
+  opel: "simple-icons:opel",
+  fiat: "simple-icons:fiat",
+  nissan: "simple-icons:nissan",
+  honda: "simple-icons:honda",
+  hyundai: "simple-icons:hyundai",
+  kia: "simple-icons:kia",
+  mazda: "simple-icons:mazda",
+  skoda: "simple-icons:skoda",
+  škoda: "simple-icons:skoda",
+  seat: "simple-icons:seat",
+  dacia: "simple-icons:dacia",
+  byd: "simple-icons:byd",
+  lexus: "simple-icons:lexus",
+  jaguar: "simple-icons:jaguar",
+  mini: "simple-icons:mini",
+  jeep: "simple-icons:jeep",
+  suzuki: "simple-icons:suzuki",
+  subaru: "simple-icons:subaru",
+  "alfa romeo": "simple-icons:alfaromeo",
+  "land rover": "simple-icons:landrover",
+  ds: "simple-icons:dsautomobiles",
+  mitsubishi: "simple-icons:mitsubishi",
+  chevrolet: "simple-icons:chevrolet",
+  genesis: "simple-icons:genesis",
+  cupra: "simple-icons:cupra",
+  bentley: "simple-icons:bentley",
+  "rolls-royce": "simple-icons:rollsroyce",
+  "rolls royce": "simple-icons:rollsroyce",
+  maserati: "simple-icons:maserati",
+  ferrari: "simple-icons:ferrari",
+  lamborghini: "simple-icons:lamborghini",
+  bugatti: "simple-icons:bugatti",
+  alpine: "simple-icons:alpine",
+};
+
+function getBrandIcon(brand: string): string | null {
+  const key = brand.toLowerCase().trim();
+  return BRAND_ICONS[key] || null;
+}
+
 const COLOR_MAP: Record<string, string> = {
   noir: "#171717", black: "#171717",
   blanc: "#d4d4d4", white: "#d4d4d4",
@@ -46,89 +102,20 @@ function detectType(brand: string, model: string): VehicleType {
   return "sedan";
 }
 
-const TYPE_LABEL: Record<VehicleType, string> = {
-  sedan: "Berline",
-  luxury: "Premium",
-  suv: "SUV",
-  van: "Van",
+const TYPE_CONFIG: Record<VehicleType, { icon: string; label: string }> = {
+  sedan:  { icon: "ph:car-profile-fill", label: "Berline" },
+  luxury: { icon: "ph:car-profile-fill", label: "Premium" },
+  suv:    { icon: "tabler:car-suv", label: "SUV" },
+  van:    { icon: "fluent:vehicle-bus-20-filled", label: "Van" },
 };
-
-function CarSilhouette({ type, color }: { type: VehicleType; color: string }) {
-  if (type === "van") {
-    return (
-      <svg viewBox="0 0 120 50" fill="none" className="w-full h-full">
-        <path
-          d="M10 38 C10 38 10 20 18 18 L55 14 C58 14 70 10 78 10 L95 10 C102 10 108 16 108 22 L108 34 C108 36 106 38 104 38 L10 38Z"
-          fill={color}
-          opacity="0.15"
-        />
-        <path
-          d="M10 38 C10 38 10 20 18 18 L55 14 C58 14 70 10 78 10 L95 10 C102 10 108 16 108 22 L108 34 C108 36 106 38 104 38 L10 38Z"
-          stroke={color}
-          strokeWidth="1.5"
-          opacity="0.4"
-        />
-        <circle cx="28" cy="40" r="6" fill={color} opacity="0.25" />
-        <circle cx="28" cy="40" r="3.5" fill="white" />
-        <circle cx="92" cy="40" r="6" fill={color} opacity="0.25" />
-        <circle cx="92" cy="40" r="3.5" fill="white" />
-        <rect x="62" y="14" width="12" height="10" rx="1.5" fill={color} stroke={color} strokeWidth="0.8" opacity="0.15" />
-        <rect x="78" y="14" width="12" height="10" rx="1.5" fill={color} stroke={color} strokeWidth="0.8" opacity="0.15" />
-      </svg>
-    );
-  }
-
-  if (type === "suv") {
-    return (
-      <svg viewBox="0 0 120 50" fill="none" className="w-full h-full">
-        <path
-          d="M12 36 C12 36 14 22 20 18 L42 12 C44 11 52 6 60 6 L88 8 C96 9 106 16 106 24 L106 32 C106 35 104 36 102 36 L12 36Z"
-          fill={color}
-          opacity="0.15"
-        />
-        <path
-          d="M12 36 C12 36 14 22 20 18 L42 12 C44 11 52 6 60 6 L88 8 C96 9 106 16 106 24 L106 32 C106 35 104 36 102 36 L12 36Z"
-          stroke={color}
-          strokeWidth="1.5"
-          opacity="0.4"
-        />
-        <circle cx="30" cy="39" r="7" fill={color} opacity="0.25" />
-        <circle cx="30" cy="39" r="4" fill="white" />
-        <circle cx="90" cy="39" r="7" fill={color} opacity="0.25" />
-        <circle cx="90" cy="39" r="4" fill="white" />
-        <path d="M44 12 L44 20 M68 8 L66 20" stroke={color} strokeWidth="0.8" opacity="0.2" />
-      </svg>
-    );
-  }
-
-  // sedan & luxury
-  return (
-    <svg viewBox="0 0 120 50" fill="none" className="w-full h-full">
-      <path
-        d="M8 36 C8 36 10 26 16 22 L38 18 C40 17 50 8 58 8 L82 10 C92 11 104 18 108 26 L110 32 C110 35 108 36 106 36 L8 36Z"
-        fill={color}
-        opacity="0.15"
-      />
-      <path
-        d="M8 36 C8 36 10 26 16 22 L38 18 C40 17 50 8 58 8 L82 10 C92 11 104 18 108 26 L110 32 C110 35 108 36 106 36 L8 36Z"
-        stroke={color}
-        strokeWidth="1.5"
-        opacity="0.4"
-      />
-      <circle cx="28" cy="39" r="7" fill={color} opacity="0.25" />
-      <circle cx="28" cy="39" r="4" fill="white" />
-      <circle cx="90" cy="39" r="7" fill={color} opacity="0.25" />
-      <circle cx="90" cy="39" r="4" fill="white" />
-      <path d="M42 18 L44 10 M72 10 L76 18" stroke={color} strokeWidth="0.8" opacity="0.2" />
-    </svg>
-  );
-}
 
 function VehicleCard({ vehicle, index, total }: { vehicle: Vehicle; index: number; total: number }) {
   const type = detectType(vehicle.brand, vehicle.model);
+  const config = TYPE_CONFIG[type];
   const colorHex = COLOR_MAP[vehicle.color.toLowerCase().trim()] || "#525252";
   const fullName = `${vehicle.brand} ${vehicle.model}`.trim();
   const hasPhotos = vehicle.photos && vehicle.photos.length > 0;
+  const brandIcon = getBrandIcon(vehicle.brand);
 
   const details: string[] = [];
   if (vehicle.year > 0) details.push(String(vehicle.year));
@@ -155,10 +142,17 @@ function VehicleCard({ vehicle, index, total }: { vehicle: Vehicle; index: numbe
       )}
 
       {/* Vehicle card */}
-      <div className="flex items-center gap-5">
-        {/* Silhouette */}
-        <div className="w-28 h-14 shrink-0">
-          <CarSilhouette type={type} color={colorHex} />
+      <div className="flex items-center gap-4">
+        {/* Brand logo or car type icon */}
+        <div
+          className="w-14 h-14 rounded-2xl flex items-center justify-center shrink-0"
+          style={{ backgroundColor: `${colorHex}12` }}
+        >
+          {brandIcon ? (
+            <Icon icon={brandIcon} className="text-2xl" style={{ color: colorHex }} />
+          ) : (
+            <Icon icon={config.icon} className="text-2xl" style={{ color: colorHex }} />
+          )}
         </div>
 
         {/* Info */}
@@ -166,39 +160,38 @@ function VehicleCard({ vehicle, index, total }: { vehicle: Vehicle; index: numbe
           <p className="text-base font-semibold text-neutral-900 tracking-tight truncate">
             {fullName}
           </p>
-          <div className="flex items-center gap-2 mt-0.5">
-            <span
-              className="text-[11px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-md"
-              style={{
-                color: colorHex,
-                backgroundColor: `${colorHex}15`,
-              }}
-            >
-              {TYPE_LABEL[type]}
+          <div className="flex items-center gap-2 mt-1">
+            <span className="inline-flex items-center gap-1 text-[11px] font-medium text-neutral-500">
+              <Icon icon={config.icon} className="text-xs text-neutral-400" />
+              {config.label}
             </span>
             {details.length > 0 && (
-              <span className="text-xs text-neutral-400">
-                {details.join(" · ")}
-              </span>
+              <>
+                <span className="text-neutral-300">·</span>
+                <span className="text-[11px] text-neutral-400">
+                  {details.join(" · ")}
+                </span>
+              </>
+            )}
+            {vehicle.color && (
+              <>
+                <span className="text-neutral-300">·</span>
+                <span className="inline-flex items-center gap-1.5 text-[11px] text-neutral-400">
+                  <span
+                    className="w-2.5 h-2.5 rounded-full ring-1 ring-neutral-200"
+                    style={{ backgroundColor: colorHex }}
+                  />
+                  <span className="capitalize">{vehicle.color}</span>
+                </span>
+              </>
             )}
           </div>
         </div>
-
-        {/* Color swatch */}
-        {vehicle.color && (
-          <div className="flex flex-col items-center gap-1 shrink-0">
-            <div
-              className="w-5 h-5 rounded-full ring-2 ring-offset-2 ring-neutral-200"
-              style={{ backgroundColor: colorHex }}
-            />
-            <span className="text-[10px] text-neutral-400 capitalize">{vehicle.color}</span>
-          </div>
-        )}
       </div>
 
       {/* Features */}
       {vehicle.features.length > 0 && (
-        <div className="flex flex-wrap gap-1.5 mt-4">
+        <div className="flex flex-wrap gap-1.5 mt-4 pl-[72px]">
           {vehicle.features.map((feature) => (
             <span
               key={feature}

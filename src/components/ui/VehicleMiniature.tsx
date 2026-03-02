@@ -90,11 +90,35 @@ function detectType(brand: string, model: string): VehicleType {
   return "sedan";
 }
 
+const BRAND_ICONS: Record<string, string> = {
+  mercedes: "simple-icons:mercedes", "mercedes-benz": "simple-icons:mercedes",
+  bmw: "simple-icons:bmw", audi: "simple-icons:audi",
+  volkswagen: "simple-icons:volkswagen", toyota: "simple-icons:toyota",
+  peugeot: "simple-icons:peugeot", renault: "simple-icons:renault",
+  citroen: "simple-icons:citroen", "citroën": "simple-icons:citroen",
+  tesla: "simple-icons:tesla", volvo: "simple-icons:volvo",
+  porsche: "simple-icons:porsche", ford: "simple-icons:ford",
+  opel: "simple-icons:opel", fiat: "simple-icons:fiat",
+  nissan: "simple-icons:nissan", honda: "simple-icons:honda",
+  hyundai: "simple-icons:hyundai", kia: "simple-icons:kia",
+  mazda: "simple-icons:mazda", skoda: "simple-icons:skoda",
+  "škoda": "simple-icons:skoda", seat: "simple-icons:seat",
+  dacia: "simple-icons:dacia", byd: "simple-icons:byd",
+  lexus: "simple-icons:lexus", jaguar: "simple-icons:jaguar",
+  mini: "simple-icons:mini", jeep: "simple-icons:jeep",
+  suzuki: "simple-icons:suzuki", subaru: "simple-icons:subaru",
+  "alfa romeo": "simple-icons:alfaromeo", "land rover": "simple-icons:landrover",
+  ds: "simple-icons:dsautomobiles", mitsubishi: "simple-icons:mitsubishi",
+  chevrolet: "simple-icons:chevrolet", genesis: "simple-icons:genesis",
+  cupra: "simple-icons:cupra", bentley: "simple-icons:bentley",
+  alpine: "simple-icons:alpine",
+};
+
 const TYPE_CONFIG: Record<VehicleType, { icon: string; label: string }> = {
-  sedan:  { icon: "mingcute:car-fill", label: "Berline" },
-  luxury: { icon: "mingcute:car-fill", label: "Berline Premium" },
-  suv:    { icon: "mingcute:car-3-fill", label: "SUV" },
-  van:    { icon: "mingcute:bus-2-fill", label: "Van" },
+  sedan:  { icon: "ph:car-profile-fill", label: "Berline" },
+  luxury: { icon: "ph:car-profile-fill", label: "Berline Premium" },
+  suv:    { icon: "tabler:car-suv", label: "SUV" },
+  van:    { icon: "fluent:vehicle-bus-20-filled", label: "Van" },
 };
 
 export function VehicleMiniature({
@@ -112,6 +136,7 @@ export function VehicleMiniature({
   const colorData = COLOR_MAP[colorLower];
   const colorHex = colorData?.hex || "#525252";
   const isLight = ["blanc", "white", "beige", "argent", "silver"].includes(colorLower);
+  const brandIcon = BRAND_ICONS[brand.toLowerCase().trim()];
 
   const sizeClasses = {
     sm: "p-2.5 gap-2.5",
@@ -141,7 +166,7 @@ export function VehicleMiniature({
           style={{ backgroundColor: colorHex }}
         >
           <Icon
-            icon={config.icon}
+            icon={brandIcon || config.icon}
             className={`${iconSizes[size]} ${isLight ? "text-neutral-400" : "text-white/40"}`}
           />
         </div>
