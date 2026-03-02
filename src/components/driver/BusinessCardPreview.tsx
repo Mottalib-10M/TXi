@@ -69,7 +69,6 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
 
   function buildPrintHtml(): string {
     const qr = activeFormat === "business" ? qrDataUrl : qrDataUrlLarge;
-    const displayName = driver.companyName || `${driver.firstName} ${driver.lastName}`;
     const name = `${driver.firstName} ${driver.lastName}`;
     const vehicle = driver.vehicleBrand && driver.vehicleModel ? `${driver.vehicleBrand} ${driver.vehicleModel}` : "";
 
