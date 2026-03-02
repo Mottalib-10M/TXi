@@ -40,6 +40,7 @@ export default async function ProfilPage() {
     email: driver.email,
     phone: driver.phone,
     bio: driver.bio || "",
+    companyName: driver.companyName || "",
     photoUrl: driver.photoUrl || "",
     vehicles,
     zoneLat: driver.zoneLat,

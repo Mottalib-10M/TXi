@@ -31,6 +31,7 @@ export async function PATCH(request: Request) {
         lastName: body.lastName,
         phone: body.phone,
         bio: body.bio || null,
+        companyName: body.companyName || null,
         photoUrl: body.photoUrl || null,
         vehicleBrand: v0?.brand || null,
         vehicleModel: v0?.model || null,

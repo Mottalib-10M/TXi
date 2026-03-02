@@ -29,6 +29,7 @@ model Driver {
   phone        String   @default("")
   photoUrl     String?
   bio          String?
+  companyName  String?
 
   // Vehicle (flat fields = vehicle 1, kept for backward compat)
   vehicleBrand    String?

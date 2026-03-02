@@ -5,8 +5,6 @@ import Link from "next/link";
 import { Icon } from "@iconify/react";
 import { DriverHeader } from "@/components/public-profile/DriverHeader";
 import { VehicleInfo } from "@/components/public-profile/VehicleInfo";
-import { PricingDisplay } from "@/components/public-profile/PricingDisplay";
-import { AvailabilityDisplay } from "@/components/public-profile/AvailabilityDisplay";
 import { FareEstimator } from "@/components/public-profile/FareEstimator";
 import type { Vehicle } from "@/types/vehicle";
 
@@ -38,12 +36,6 @@ export default async function ProfilPublicPage() {
       },
     ];
   }
-
-  const availability = driver.availability as Array<{
-    day: number;
-    startTime: string;
-    endTime: string;
-  }> | null;
 
   const publicUrl = `/taxi/${driver.slug}`;
 
@@ -119,58 +111,39 @@ export default async function ProfilPublicPage() {
 
         {/* Preview content */}
         <div className="p-6 lg:p-8">
-          <div className="max-w-4xl mx-auto">
-            <div className="grid lg:grid-cols-3 gap-6">
-              {/* Left column: Driver info */}
-              <div className="lg:col-span-2 space-y-6">
-                <DriverHeader
-                  firstName={driver.firstName}
-                  lastName={driver.lastName}
-                  bio={driver.bio}
-                  photoUrl={driver.photoUrl}
-                  zoneAddress={driver.zoneAddress}
-                  isVerified={driver.isVerified}
-                  email={driver.email}
-                  phone={driver.phone}
-                />
+          <div className="max-w-2xl mx-auto space-y-6">
+            <DriverHeader
+              firstName={driver.firstName}
+              lastName={driver.lastName}
+              bio={driver.bio}
+              photoUrl={driver.photoUrl}
+              zoneAddress={driver.zoneAddress}
+              isVerified={driver.isVerified}
+              email={driver.email}
+              phone={driver.phone}
+              companyName={driver.companyName}
+            />
 
-                {vehicles.length > 0 && <VehicleInfo vehicles={vehicles} />}
+            {vehicles.length > 0 && <VehicleInfo vehicles={vehicles} />}
 
-                <PricingDisplay
-                  baseFare={driver.baseFare}
-                  pricePerKm={driver.pricePerKm}
-                  pricePerMinute={driver.pricePerMinute}
-                  minimumFare={driver.minimumFare}
-                  airportSupplement={driver.airportSupplement}
-                  nightSupplement={driver.nightSupplement}
-                />
+            <FareEstimator
+              baseFare={driver.baseFare}
+              pricePerKm={driver.pricePerKm}
+              pricePerMinute={driver.pricePerMinute}
+              minimumFare={driver.minimumFare}
+            />
 
-                <FareEstimator
-                  baseFare={driver.baseFare}
-                  pricePerKm={driver.pricePerKm}
-                  pricePerMinute={driver.pricePerMinute}
-                  minimumFare={driver.minimumFare}
-                />
-
-                {availability && availability.length > 0 && (
-                  <AvailabilityDisplay availability={availability} />
-                )}
+            {/* Booking form placeholder */}
+            <div className="bg-neutral-50 border border-dashed border-neutral-300 rounded-2xl p-6 text-center">
+              <div className="w-12 h-12 bg-neutral-200 rounded-xl flex items-center justify-center mx-auto mb-3">
+                <Icon icon="solar:document-add-linear" className="text-neutral-400 text-2xl" />
               </div>
-
-              {/* Right column: Booking form placeholder */}
-              <div className="lg:col-span-1">
-                <div className="bg-neutral-50 border border-dashed border-neutral-300 rounded-2xl p-6 text-center">
-                  <div className="w-12 h-12 bg-neutral-200 rounded-xl flex items-center justify-center mx-auto mb-3">
-                    <Icon icon="solar:document-add-linear" className="text-neutral-400 text-2xl" />
-                  </div>
-                  <p className="text-sm font-medium text-neutral-600 mb-1">
-                    Formulaire de réservation
-                  </p>
-                  <p className="text-xs text-neutral-400 font-light">
-                    Les clients verront ici le formulaire pour réserver directement avec vous
-                  </p>
-                </div>
-              </div>
+              <p className="text-sm font-medium text-neutral-600 mb-1">
+                Formulaire de réservation
+              </p>
+              <p className="text-xs text-neutral-400 font-light">
+                Les clients verront ici le formulaire pour réserver directement avec vous
+              </p>
             </div>
           </div>
         </div>

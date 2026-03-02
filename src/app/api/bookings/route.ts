@@ -13,7 +13,7 @@ import { fr } from "date-fns/locale";
 
 const bookingSchema = z.object({
   clientName: z.string().min(2),
-  clientEmail: z.string().email(),
+  clientEmail: z.string().email().optional().default("noemail@taxinoir.fr"),
   clientPhone: z.string().optional().default(""),
   clientComments: z.string().optional(),
   departureName: z.string().min(1),

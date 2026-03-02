@@ -5,10 +5,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { DriverHeader } from "@/components/public-profile/DriverHeader";
 import { VehicleInfo } from "@/components/public-profile/VehicleInfo";
-import { PricingDisplay } from "@/components/public-profile/PricingDisplay";
-import { AvailabilityDisplay } from "@/components/public-profile/AvailabilityDisplay";
-import { DirectBookingForm } from "@/components/public-profile/DirectBookingForm";
-import { FareEstimator } from "@/components/public-profile/FareEstimator";
+import { PublicProfileClient } from "@/components/public-profile/PublicProfileClient";
 import type { Vehicle } from "@/types/vehicle";
 
 interface Props {
@@ -39,12 +36,6 @@ export default async function TaxiProfilePage({ params }: Props) {
 
   if (!driver) notFound();
 
-  const availability = driver.availability as Array<{
-    day: number;
-    startTime: string;
-    endTime: string;
-  }> | null;
-
   // Build vehicles array from JSON field, falling back to flat fields
   let vehicles: Vehicle[] = [];
   if (Array.isArray(driver.vehicles)) {
@@ -69,57 +60,31 @@ export default async function TaxiProfilePage({ params }: Props) {
       <Navbar />
 
       <main className="flex-grow pt-24 pb-16">
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="grid lg:grid-cols-3 gap-8">
-            {/* Left column: Driver info */}
-            <div className="lg:col-span-2 space-y-6">
-              <DriverHeader
-                firstName={driver.firstName}
-                lastName={driver.lastName}
-                bio={driver.bio}
-                photoUrl={driver.photoUrl}
-                zoneAddress={driver.zoneAddress}
-                isVerified={driver.isVerified}
-                email={driver.email}
-                phone={driver.phone}
-              />
+        <div className="max-w-2xl mx-auto px-6 space-y-6">
+          <DriverHeader
+            firstName={driver.firstName}
+            lastName={driver.lastName}
+            bio={driver.bio}
+            photoUrl={driver.photoUrl}
+            zoneAddress={driver.zoneAddress}
+            isVerified={driver.isVerified}
+            email={driver.email}
+            phone={driver.phone}
+            companyName={driver.companyName}
+          />
 
-              {vehicles.length > 0 && (
-                <VehicleInfo vehicles={vehicles} />
-              )}
+          {vehicles.length > 0 && (
+            <VehicleInfo vehicles={vehicles} />
+          )}
 
-              <PricingDisplay
-                baseFare={driver.baseFare}
-                pricePerKm={driver.pricePerKm}
-                pricePerMinute={driver.pricePerMinute}
-                minimumFare={driver.minimumFare}
-                airportSupplement={driver.airportSupplement}
-                nightSupplement={driver.nightSupplement}
-              />
-
-              <FareEstimator
-                baseFare={driver.baseFare}
-                pricePerKm={driver.pricePerKm}
-                pricePerMinute={driver.pricePerMinute}
-                minimumFare={driver.minimumFare}
-              />
-
-              {availability && availability.length > 0 && (
-                <AvailabilityDisplay availability={availability} />
-              )}
-            </div>
-
-            {/* Right column: Booking form */}
-            <div className="lg:col-span-1">
-              <div className="sticky top-24">
-                <DirectBookingForm
-                  driverId={driver.id}
-                  driverName={`${driver.firstName} ${driver.lastName}`}
-                  minimumFare={driver.minimumFare}
-                />
-              </div>
-            </div>
-          </div>
+          <PublicProfileClient
+            driverId={driver.id}
+            driverName={`${driver.firstName} ${driver.lastName}`}
+            baseFare={driver.baseFare}
+            pricePerKm={driver.pricePerKm}
+            pricePerMinute={driver.pricePerMinute}
+            minimumFare={driver.minimumFare}
+          />
         </div>
       </main>
 

@@ -9,6 +9,15 @@ interface FareEstimatorProps {
   pricePerKm: number;
   pricePerMinute: number;
   minimumFare: number;
+  onLocationsChange?: (locations: {
+    originAddress: string;
+    originLat: number | undefined;
+    originLng: number | undefined;
+    destinationAddress: string;
+    destinationLat: number | undefined;
+    destinationLng: number | undefined;
+  }) => void;
+  children?: React.ReactNode;
 }
 
 interface LocationState {
@@ -41,9 +50,37 @@ export function FareEstimator({
   pricePerKm,
   pricePerMinute,
   minimumFare,
+  onLocationsChange,
+  children,
 }: FareEstimatorProps) {
   const [origin, setOrigin] = useState<LocationState>({ address: "" });
   const [destination, setDestination] = useState<LocationState>({ address: "" });
+
+  function handleOriginChange(address: string, lat?: number, lng?: number) {
+    const newOrigin = { address, lat, lng };
+    setOrigin(newOrigin);
+    onLocationsChange?.({
+      originAddress: address,
+      originLat: lat,
+      originLng: lng,
+      destinationAddress: destination.address,
+      destinationLat: destination.lat,
+      destinationLng: destination.lng,
+    });
+  }
+
+  function handleDestinationChange(address: string, lat?: number, lng?: number) {
+    const newDest = { address, lat, lng };
+    setDestination(newDest);
+    onLocationsChange?.({
+      originAddress: origin.address,
+      originLat: origin.lat,
+      originLng: origin.lng,
+      destinationAddress: address,
+      destinationLat: lat,
+      destinationLng: lng,
+    });
+  }
 
   const canEstimate = origin.lat != null && destination.lat != null;
 
@@ -74,18 +111,14 @@ export function FareEstimator({
         <PlacesAutocomplete
           placeholder="Point de depart"
           value={origin.address}
-          onChange={(value, lat, lng) =>
-            setOrigin({ address: value, lat, lng })
-          }
+          onChange={handleOriginChange}
           icon="solar:map-point-linear"
           showGeolocation
         />
         <PlacesAutocomplete
           placeholder="Destination"
           value={destination.address}
-          onChange={(value, lat, lng) =>
-            setDestination({ address: value, lat, lng })
-          }
+          onChange={handleDestinationChange}
           icon="solar:flag-linear"
         />
       </div>
@@ -120,6 +153,12 @@ export function FareEstimator({
         <p className="text-xs text-neutral-400 text-center py-2">
           Selectionnez des adresses dans les suggestions pour estimer le tarif
         </p>
+      )}
+
+      {estimate && children && (
+        <div className="border-t border-neutral-200 mt-5 pt-5">
+          {children}
+        </div>
       )}
     </div>
   );

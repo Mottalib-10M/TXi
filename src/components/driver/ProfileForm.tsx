@@ -17,6 +17,7 @@ interface DriverData {
   email: string;
   phone: string;
   bio: string;
+  companyName: string;
   photoUrl: string;
   vehicles: Vehicle[];
   zoneLat: number | null;
@@ -195,6 +196,15 @@ export function ProfileForm({ driver }: { driver: DriverData }) {
                 value={form.phone}
                 onChange={(e) => updateField("phone", e.target.value)}
                 className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all"
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-medium mb-1.5">Nom de société</label>
+              <input
+                value={form.companyName}
+                onChange={(e) => updateField("companyName", e.target.value)}
+                className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all"
+                placeholder="Ex: Taxi Express Paris"
               />
             </div>
             <div>

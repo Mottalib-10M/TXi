@@ -11,6 +11,7 @@ interface DriverHeaderProps {
   isVerified: boolean;
   email?: string;
   phone?: string;
+  companyName?: string | null;
 }
 
 export function DriverHeader({
@@ -22,6 +23,7 @@ export function DriverHeader({
   isVerified,
   email,
   phone,
+  companyName,
 }: DriverHeaderProps) {
   function downloadVCard() {
     const lines = [
@@ -59,6 +61,11 @@ export function DriverHeader({
         </div>
 
         <div className="flex-1">
+          {companyName && (
+            <p className="text-xs font-medium text-neutral-500 uppercase tracking-wider mb-1">
+              {companyName}
+            </p>
+          )}
           <div className="flex items-center gap-2 mb-1">
             <h1 className="text-xl font-semibold tracking-tight">
               {firstName} {lastName}
