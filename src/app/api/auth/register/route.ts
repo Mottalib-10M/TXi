@@ -23,7 +23,16 @@ const orgSchema = z.object({
   password: z.string().min(6, "Minimum 6 caractères"),
 });
 
-const registerSchema = z.discriminatedUnion("profileType", [driverSchema, orgSchema]);
+const particulierSchema = z.object({
+  profileType: z.literal("particulier"),
+  firstName: z.string().min(2, "Minimum 2 caractères"),
+  lastName: z.string().min(2, "Minimum 2 caractères"),
+  email: z.string().email("Email invalide"),
+  phone: z.string().min(10, "Numéro invalide"),
+  password: z.string().min(6, "Minimum 6 caractères"),
+});
+
+const registerSchema = z.discriminatedUnion("profileType", [driverSchema, orgSchema, particulierSchema]);
 
 async function generateUniqueSlug(firstName: string, lastName: string) {
   const base = slugify(`${firstName}-${lastName}`, { lower: true, strict: true });
@@ -77,6 +86,27 @@ export async function POST(request: Request) {
 
       return NextResponse.json(
         { message: "Compte créé avec succès", slug: driver.slug },
+        { status: 201 }
+      );
+    }
+
+    // Particulier registration (individual using Organization table with type INDIVIDUAL)
+    if (data.profileType === "particulier") {
+      const fullName = `${data.firstName} ${data.lastName}`;
+
+      await prisma.organization.create({
+        data: {
+          name: fullName,
+          contactName: fullName,
+          email: data.email,
+          phone: data.phone,
+          passwordHash,
+          type: "INDIVIDUAL",
+        },
+      });
+
+      return NextResponse.json(
+        { message: "Compte créé avec succès", profileType: data.profileType },
         { status: 201 }
       );
     }

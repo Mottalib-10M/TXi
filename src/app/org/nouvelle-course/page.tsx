@@ -31,11 +31,20 @@ export default function NouvelleCourse() {
   const [driverChoice, setDriverChoice] = useState<"auto" | string>("auto");
   const [favorites, setFavorites] = useState<FavoriteDriver[]>([]);
   const [estimatedPrice, setEstimatedPrice] = useState<number | null>(null);
+  const [orgType, setOrgType] = useState<string>("");
 
   useEffect(() => {
-    fetch("/api/org/favorites")
-      .then((r) => r.json())
-      .then((data) => setFavorites(data.favorites || []))
+    Promise.all([
+      fetch("/api/org/favorites").then((r) => r.json()),
+      fetch("/api/org/profile").then((r) => r.json()),
+    ])
+      .then(([favData, profileData]) => {
+        setFavorites(favData.favorites || []);
+        setOrgType(profileData.type || "");
+        if (profileData.type === "INDIVIDUAL") {
+          setBeneficiaryName(profileData.name || "");
+        }
+      })
       .catch(() => {});
   }, []);
 
@@ -123,7 +132,9 @@ export default function NouvelleCourse() {
     <div className="max-w-2xl">
       <div className="mb-8">
         <h1 className="text-2xl font-semibold tracking-tight">Nouvelle course</h1>
-        <p className="text-sm text-neutral-500 mt-1">Réserver un taxi pour un bénéficiaire</p>
+        <p className="text-sm text-neutral-500 mt-1">
+          {orgType === "INDIVIDUAL" ? "Réserver un taxi" : "Réserver un taxi pour un bénéficiaire"}
+        </p>
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-5">
@@ -139,15 +150,19 @@ export default function NouvelleCourse() {
         )}
 
         <div className="bg-white rounded-2xl border border-neutral-200 p-5 space-y-4">
-          <h2 className="font-medium text-sm text-neutral-500 uppercase tracking-wider">Bénéficiaire</h2>
+          <h2 className="font-medium text-sm text-neutral-500 uppercase tracking-wider">
+            {orgType === "INDIVIDUAL" ? "Passager" : "Bénéficiaire"}
+          </h2>
           <div>
-            <label className="block text-sm font-medium mb-1.5">Nom du bénéficiaire</label>
+            <label className="block text-sm font-medium mb-1.5">
+              {orgType === "INDIVIDUAL" ? "Votre nom" : "Nom du bénéficiaire"}
+            </label>
             <input
               type="text"
               value={beneficiaryName}
               onChange={(e) => setBeneficiaryName(e.target.value)}
               className={inputClass}
-              placeholder="Nom du client, patient, ou salarié"
+              placeholder={orgType === "INDIVIDUAL" ? "Votre nom complet" : "Nom du client, patient, ou salarié"}
               required
             />
           </div>

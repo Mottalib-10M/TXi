@@ -20,7 +20,11 @@ export function OrgSidebar({ userName, orgType }: { userName: string; orgType?: 
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
 
-  const orgLabel = orgType === "HOTEL" ? "Hôtel" : orgType === "HOSPITAL" ? "Hôpital" : "Entreprise";
+  const orgLabel = orgType === "HOTEL" ? "Hôtel" : orgType === "HOSPITAL" ? "Hôpital" : orgType === "INDIVIDUAL" ? "Particulier" : "Entreprise";
+
+  const filteredNavItems = orgType === "INDIVIDUAL"
+    ? navItems.filter((item) => item.href !== "/org/cagnotte")
+    : navItems;
 
   return (
     <>
@@ -62,7 +66,7 @@ export function OrgSidebar({ userName, orgType }: { userName: string; orgType?: 
           </div>
 
           <nav className="flex-1 py-4 px-3">
-            {navItems.map((item) => {
+            {filteredNavItems.map((item) => {
               const isActive =
                 item.href === "/org"
                   ? pathname === "/org"

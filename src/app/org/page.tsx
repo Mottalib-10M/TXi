@@ -26,6 +26,7 @@ export default function OrgDashboard() {
   const [stats, setStats] = useState<Stats>({ total: 0, pending: 0, completed: 0, cagnotte: 0 });
   const [recent, setRecent] = useState<RecentBooking[]>([]);
   const [loading, setLoading] = useState(true);
+  const [orgType, setOrgType] = useState<string>("");
 
   useEffect(() => {
     async function load() {
@@ -37,6 +38,7 @@ export default function OrgDashboard() {
         const profile = await profileRes.json();
         const bookingsData = await bookingsRes.json();
 
+        setOrgType(profile.type || "");
         const bookings = bookingsData.bookings || [];
         setStats({
           total: bookingsData.total || 0,
@@ -54,11 +56,13 @@ export default function OrgDashboard() {
     load();
   }, []);
 
-  const statCards = [
+  const isIndividual = orgType === "INDIVIDUAL";
+
+  const allStatCards = [
     { label: "Total courses", value: stats.total, icon: "solar:calendar-linear", color: "bg-neutral-100 text-neutral-700" },
     { label: "En attente", value: stats.pending, icon: "solar:clock-circle-linear", color: "bg-amber-50 text-amber-700" },
     { label: "Complétées", value: stats.completed, icon: "solar:check-circle-linear", color: "bg-green-50 text-green-700" },
-    { label: "Cagnotte", value: `${stats.cagnotte.toFixed(2)} €`, icon: "solar:wallet-linear", color: "bg-blue-50 text-blue-700" },
+    ...(!isIndividual ? [{ label: "Cagnotte", value: `${stats.cagnotte.toFixed(2)} €`, icon: "solar:wallet-linear", color: "bg-blue-50 text-blue-700" }] : []),
   ];
 
   const statusColors: Record<string, string> = {
@@ -93,8 +97,8 @@ export default function OrgDashboard() {
       </div>
 
       {/* Stats */}
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-        {statCards.map((s) => (
+      <div className={`grid grid-cols-2 ${isIndividual ? "lg:grid-cols-3" : "lg:grid-cols-4"} gap-4 mb-8`}>
+        {allStatCards.map((s) => (
           <div key={s.label} className="bg-white rounded-2xl border border-neutral-200 p-5">
             <div className={`inline-flex p-2 rounded-xl ${s.color} mb-3`}>
               <Icon icon={s.icon} className="text-lg" />
@@ -114,7 +118,7 @@ export default function OrgDashboard() {
           <Icon icon="solar:add-circle-bold" className="text-2xl" />
           <div>
             <p className="font-medium">Nouvelle course</p>
-            <p className="text-xs text-neutral-400">Réserver un taxi maintenant</p>
+            <p className="text-xs text-neutral-400">{isIndividual ? "Réserver un taxi" : "Réserver un taxi maintenant"}</p>
           </div>
         </Link>
         <Link

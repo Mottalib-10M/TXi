@@ -14,6 +14,7 @@ export default function ParametresPage() {
   const [phone, setPhone] = useState("");
   const [address, setAddress] = useState("");
   const [newPassword, setNewPassword] = useState("");
+  const [orgType, setOrgType] = useState<string>("");
 
   useEffect(() => {
     async function load() {
@@ -24,6 +25,7 @@ export default function ParametresPage() {
         setContactName(data.contactName || "");
         setPhone(data.phone || "");
         setAddress(data.address || "");
+        setOrgType(data.type || "");
       } catch {
         // Silently fail
       } finally {
@@ -78,8 +80,12 @@ export default function ParametresPage() {
   return (
     <div className="max-w-2xl">
       <div className="mb-8">
-        <h1 className="text-2xl font-semibold tracking-tight">Paramètres</h1>
-        <p className="text-sm text-neutral-500 mt-1">Gérer les informations de votre établissement</p>
+        <h1 className="text-2xl font-semibold tracking-tight">
+          {orgType === "INDIVIDUAL" ? "Mon profil" : "Paramètres"}
+        </h1>
+        <p className="text-sm text-neutral-500 mt-1">
+          {orgType === "INDIVIDUAL" ? "Gérer vos informations personnelles" : "Gérer les informations de votre établissement"}
+        </p>
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-5">
@@ -95,27 +101,35 @@ export default function ParametresPage() {
         )}
 
         <div className="bg-white rounded-2xl border border-neutral-200 p-5 space-y-4">
-          <h2 className="font-medium text-sm text-neutral-500 uppercase tracking-wider">Établissement</h2>
+          <h2 className="font-medium text-sm text-neutral-500 uppercase tracking-wider">
+            {orgType === "INDIVIDUAL" ? "Informations personnelles" : "Établissement"}
+          </h2>
 
           <div>
-            <label className="block text-sm font-medium mb-1.5">Nom de l&apos;établissement</label>
+            <label className="block text-sm font-medium mb-1.5">
+              {orgType === "INDIVIDUAL" ? "Nom complet" : "Nom de l'établissement"}
+            </label>
             <input type="text" value={name} onChange={(e) => setName(e.target.value)} className={inputClass} required />
           </div>
 
-          <div>
-            <label className="block text-sm font-medium mb-1.5">Contact principal</label>
-            <input type="text" value={contactName} onChange={(e) => setContactName(e.target.value)} className={inputClass} required />
-          </div>
+          {orgType !== "INDIVIDUAL" && (
+            <div>
+              <label className="block text-sm font-medium mb-1.5">Contact principal</label>
+              <input type="text" value={contactName} onChange={(e) => setContactName(e.target.value)} className={inputClass} required />
+            </div>
+          )}
 
           <div>
             <label className="block text-sm font-medium mb-1.5">Téléphone</label>
             <input type="tel" value={phone} onChange={(e) => setPhone(e.target.value)} className={inputClass} />
           </div>
 
-          <div>
-            <label className="block text-sm font-medium mb-1.5">Adresse</label>
-            <input type="text" value={address} onChange={(e) => setAddress(e.target.value)} className={inputClass} />
-          </div>
+          {orgType !== "INDIVIDUAL" && (
+            <div>
+              <label className="block text-sm font-medium mb-1.5">Adresse</label>
+              <input type="text" value={address} onChange={(e) => setAddress(e.target.value)} className={inputClass} />
+            </div>
+          )}
         </div>
 
         <div className="bg-white rounded-2xl border border-neutral-200 p-5 space-y-4">

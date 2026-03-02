@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import { Icon } from "@iconify/react";
 import { format } from "date-fns";
 import { fr } from "date-fns/locale";
@@ -17,6 +18,7 @@ interface Transaction {
 }
 
 export default function CagnottePage() {
+  const router = useRouter();
   const [balance, setBalance] = useState(0);
   const [transactions, setTransactions] = useState<Transaction[]>([]);
   const [loading, setLoading] = useState(true);
@@ -26,6 +28,10 @@ export default function CagnottePage() {
       try {
         const res = await fetch("/api/org/profile");
         const profile = await res.json();
+        if (profile.type === "INDIVIDUAL") {
+          router.replace("/org");
+          return;
+        }
         setBalance(profile.cagnotteBalance || 0);
         setTransactions(profile.cagnotteHistory || []);
       } catch {
@@ -35,7 +41,7 @@ export default function CagnottePage() {
       }
     }
     load();
-  }, []);
+  }, [router]);
 
   if (loading) {
     return (
