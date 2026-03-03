@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Toaster } from "sonner";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Providers } from "@/components/Providers";
 import "./globals.css";
 
@@ -32,6 +33,7 @@ export default function RootLayout({
         <Providers>
           {children}
           <Toaster position="top-right" richColors />
+          <SpeedInsights />
         </Providers>
       </body>
     </html>

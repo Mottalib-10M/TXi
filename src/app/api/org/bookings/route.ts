@@ -108,12 +108,18 @@ export async function POST(request: Request) {
     // Lock the price
     const lockedPrice = estimatedPrice || null;
 
+    // Fetch org info for contact details
+    const org = await prisma.organization.findUnique({
+      where: { id: session.user.id },
+      select: { email: true, phone: true },
+    });
+
     const booking = await prisma.booking.create({
       data: {
         reference,
         clientName: data.beneficiaryName,
-        clientEmail: "org@taxinoir.fr",
-        clientPhone: "",
+        clientEmail: org?.email || session.user.email || "",
+        clientPhone: org?.phone || "",
         departureName: data.departureName,
         departureLat: data.departureLat,
         departureLng: data.departureLng,

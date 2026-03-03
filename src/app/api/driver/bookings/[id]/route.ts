@@ -27,7 +27,7 @@ export async function PATCH(
     // Verify the booking belongs to this driver
     const booking = await prisma.booking.findUnique({
       where: { id: params.id },
-      include: { organization: { select: { email: true, contactName: true } } },
+      include: { organization: { select: { email: true, phone: true, contactName: true, name: true } } },
     });
 
     if (!booking || booking.driverId !== session.user.id) {
@@ -92,13 +92,22 @@ export async function PATCH(
           });
           const driverFullName = `${driver.firstName} ${driver.lastName}`;
 
-          // Determine client email: org email or direct client email
-          const clientEmail = booking.organization?.email || booking.clientEmail;
-          const clientName = booking.organization?.contactName || booking.clientName;
+          // Determine contact info based on booking type
+          const isOrgBooking = Boolean(booking.organization);
+          const clientEmailTo = isOrgBooking ? booking.organization!.email : booking.clientEmail;
+          const clientDisplayName = isOrgBooking
+            ? booking.organization!.contactName
+            : booking.clientName;
+          const contactPhone = isOrgBooking
+            ? booking.organization!.phone
+            : booking.clientPhone;
+          const contactEmail = isOrgBooking
+            ? booking.organization!.email
+            : booking.clientEmail;
 
-          // Email to client
+          // Email to client/org
           const clientMail = buildBookingAcceptedClientEmail({
-            clientName,
+            clientName: clientDisplayName,
             departure: booking.departureName,
             arrival: booking.arrivalName,
             date: dateFormatted,
@@ -107,14 +116,16 @@ export async function PATCH(
             driverPhone: driver.phone,
             driverEmail: driver.email,
           });
-          await sendEmail({ to: clientEmail, ...clientMail });
+          await sendEmail({ to: clientEmailTo, ...clientMail });
 
-          // Email to driver
+          // Email to driver (with real client/org contact info)
           const driverMail = buildBookingAcceptedDriverEmail({
             driverName: driver.firstName,
-            clientName: booking.clientName,
-            clientPhone: booking.clientPhone,
-            clientEmail: booking.clientEmail,
+            clientName: isOrgBooking
+              ? `${booking.clientName} (${booking.organization!.name})`
+              : booking.clientName,
+            clientPhone: contactPhone,
+            clientEmail: contactEmail,
             departure: booking.departureName,
             arrival: booking.arrivalName,
             date: dateFormatted,
