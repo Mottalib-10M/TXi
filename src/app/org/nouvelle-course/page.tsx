@@ -38,11 +38,30 @@ export default function NouvelleCourse() {
       fetch("/api/org/favorites").then((r) => r.json()),
       fetch("/api/org/profile").then((r) => r.json()),
     ])
-      .then(([favData, profileData]) => {
+      .then(async ([favData, profileData]) => {
         setFavorites(favData.favorites || []);
         setOrgType(profileData.type || "");
         if (profileData.type === "INDIVIDUAL") {
           setBeneficiaryName(profileData.name || "");
+        }
+        // Pré-remplir l'adresse de départ avec l'adresse de l'établissement
+        if (profileData.address && profileData.type !== "INDIVIDUAL") {
+          setDeparture((prev) => ({ ...prev, name: profileData.address }));
+          // Géocoder l'adresse pour obtenir les coordonnées
+          try {
+            const acRes = await fetch(`/api/places/autocomplete?input=${encodeURIComponent(profileData.address)}`);
+            const acData = await acRes.json();
+            const firstPrediction = acData.predictions?.[0];
+            if (firstPrediction?.place_id && firstPrediction.place_id !== "mock_1") {
+              const detRes = await fetch(`/api/places/details?place_id=${firstPrediction.place_id}`);
+              const detData = await detRes.json();
+              if (detData.lat && detData.lng) {
+                setDeparture({ name: profileData.address, lat: detData.lat, lng: detData.lng });
+              }
+            }
+          } catch {
+            // Garder l'adresse texte sans coordonnées
+          }
         }
       })
       .catch(() => {});
