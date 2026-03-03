@@ -188,9 +188,6 @@ export default function HomePage() {
                     </p>
                   </div>
                 </div>
-                {i < 2 && (
-                  <div className="hidden md:block absolute top-6 left-[calc(100%+1rem)] w-[calc(100%-4rem)] border-t-2 border-dashed border-neutral-300" />
-                )}
               </div>
             ))}
           </div>
