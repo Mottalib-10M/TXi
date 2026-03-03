@@ -24,6 +24,9 @@ export default function InscriptionPage() {
   const [orgAddress, setOrgAddress] = useState("");
   const [formEmail, setFormEmail] = useState("");
   const [formPhone, setFormPhone] = useState("");
+  const [cityAddress, setCityAddress] = useState("");
+  const [cityLat, setCityLat] = useState<number | undefined>();
+  const [cityLng, setCityLng] = useState<number | undefined>();
 
   async function handleDriverSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -34,10 +37,13 @@ export default function InscriptionPage() {
     const data = {
       profileType: "driver",
       firstName: formData.get("firstName") as string,
-      lastName: formData.get("lastName") as string,
+      companyName: formData.get("companyName") as string,
       email: formData.get("email") as string,
       phone: formData.get("phone") as string,
       password: formData.get("password") as string,
+      cityAddress,
+      cityLat,
+      cityLng,
     };
 
     try {
@@ -209,7 +215,7 @@ export default function InscriptionPage() {
         {profileType === "driver" && (
           <>
             <button
-              onClick={() => { setProfileType(null); setError(""); setFormEmail(""); setFormPhone(""); }}
+              onClick={() => { setProfileType(null); setError(""); setFormEmail(""); setFormPhone(""); setCityAddress(""); setCityLat(undefined); setCityLng(undefined); }}
               className="flex items-center gap-1 text-sm text-neutral-500 hover:text-neutral-900 mb-4"
             >
               <Icon icon="solar:arrow-left-linear" />
@@ -223,19 +229,32 @@ export default function InscriptionPage() {
                 </div>
               )}
 
-              <div className="grid grid-cols-2 gap-3">
-                <div>
-                  <label htmlFor="firstName" className="block text-sm font-medium mb-1.5">
-                    Prénom
-                  </label>
-                  <input id="firstName" name="firstName" type="text" required className={inputClass} placeholder="Jean" />
-                </div>
-                <div>
-                  <label htmlFor="lastName" className="block text-sm font-medium mb-1.5">
-                    Nom
-                  </label>
-                  <input id="lastName" name="lastName" type="text" required className={inputClass} placeholder="Dupont" />
-                </div>
+              <div>
+                <label htmlFor="firstName" className="block text-sm font-medium mb-1.5">
+                  Prénom
+                </label>
+                <input id="firstName" name="firstName" type="text" required className={inputClass} placeholder="Jean" />
+              </div>
+
+              <div>
+                <label htmlFor="companyName" className="block text-sm font-medium mb-1.5">
+                  Nom de la société
+                </label>
+                <input id="companyName" name="companyName" type="text" required className={inputClass} placeholder="Taxi Jean Express" />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium mb-1.5">Ville d&apos;activité</label>
+                <PlacesAutocomplete
+                  placeholder="Paris, Lyon, Marseille..."
+                  value={cityAddress}
+                  onChange={(val, lat, lng) => {
+                    setCityAddress(val);
+                    if (lat && lng) { setCityLat(lat); setCityLng(lng); }
+                  }}
+                  icon="solar:map-point-linear"
+                />
+                <p className="text-xs text-neutral-400 mt-1">Rayon de 50 km couvert par défaut</p>
               </div>
 
               <div>

@@ -31,7 +31,11 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
           return {
             id: driver.id,
             email: driver.email,
-            name: `${driver.firstName} ${driver.lastName}`,
+            name: driver.lastName
+              ? `${driver.firstName} ${driver.lastName}`
+              : driver.companyName
+                ? `${driver.firstName} — ${driver.companyName}`
+                : driver.firstName,
             role: "driver" as const,
           };
         }

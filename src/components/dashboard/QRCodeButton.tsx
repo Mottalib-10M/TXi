@@ -67,14 +67,37 @@ export function QRCodeButton({ slug }: { slug: string }) {
                   <div className="w-56 h-56 bg-neutral-100 rounded-xl mx-auto mb-6 animate-pulse" />
                 )}
 
-                <Link
-                  href={`/taxi/${slug}`}
-                  onClick={() => setOpen(false)}
-                  className="w-full flex items-center justify-center gap-2 bg-neutral-950 text-white rounded-xl py-3 text-sm font-medium hover:bg-neutral-800 transition-colors"
-                >
-                  <Icon icon="solar:eye-linear" className="text-lg" />
-                  Voir profil publique
-                </Link>
+                <div className="space-y-2">
+                  <button
+                    onClick={async () => {
+                      if (!qrDataUrl) return;
+                      const res = await fetch(qrDataUrl);
+                      const blob = await res.blob();
+                      const file = new File([blob], `qrcode-${slug}.png`, { type: "image/png" });
+                      if (navigator.share && navigator.canShare?.({ files: [file] })) {
+                        navigator.share({ files: [file] });
+                      } else {
+                        const a = document.createElement("a");
+                        a.href = qrDataUrl;
+                        a.download = `qrcode-${slug}.png`;
+                        a.click();
+                      }
+                    }}
+                    className="w-full flex items-center justify-center gap-2 bg-neutral-950 text-white rounded-xl py-3 text-sm font-medium hover:bg-neutral-800 transition-colors"
+                  >
+                    <Icon icon="solar:download-minimalistic-linear" className="text-lg" />
+                    Enregistrer dans mes photos
+                  </button>
+
+                  <Link
+                    href={`/taxi/${slug}`}
+                    onClick={() => setOpen(false)}
+                    className="w-full flex items-center justify-center gap-2 bg-white border border-neutral-200 text-neutral-700 rounded-xl py-3 text-sm font-medium hover:bg-neutral-50 transition-colors"
+                  >
+                    <Icon icon="solar:eye-linear" className="text-lg" />
+                    Voir profil publique
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

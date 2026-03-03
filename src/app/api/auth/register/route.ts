@@ -8,10 +8,13 @@ import { sendEmail, buildVerificationEmail } from "@/lib/email";
 const driverSchema = z.object({
   profileType: z.literal("driver"),
   firstName: z.string().min(2, "Minimum 2 caractères"),
-  lastName: z.string().min(2, "Minimum 2 caractères"),
+  companyName: z.string().min(2, "Minimum 2 caractères"),
   email: z.string().email("Email invalide"),
   phone: z.string().min(10, "Numéro invalide"),
   password: z.string().min(6, "Minimum 6 caractères"),
+  cityAddress: z.string().optional(),
+  cityLat: z.number().optional(),
+  cityLng: z.number().optional(),
 });
 
 const orgSchema = z.object({
@@ -90,16 +93,21 @@ export async function POST(request: Request) {
     const passwordHash = await hash(data.password, 12);
 
     if (data.profileType === "driver") {
-      const slug = await generateUniqueSlug(data.firstName, data.lastName);
+      const slug = await generateUniqueSlug(data.firstName, data.companyName);
 
       const driver = await prisma.driver.create({
         data: {
           firstName: data.firstName,
-          lastName: data.lastName,
+          lastName: "",
+          companyName: data.companyName,
           email: data.email,
           phone: data.phone,
           passwordHash,
           slug,
+          zoneLat: data.cityLat,
+          zoneLng: data.cityLng,
+          zoneAddress: data.cityAddress || undefined,
+          zoneRadius: 50,
         },
       });
 

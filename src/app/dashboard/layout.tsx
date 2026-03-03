@@ -1,5 +1,6 @@
 import { redirect } from "next/navigation";
 import { auth } from "@/lib/auth";
+import { prisma } from "@/lib/prisma";
 import { DashboardSidebar } from "@/components/layout/DashboardSidebar";
 
 export default async function DashboardLayout({
@@ -17,9 +18,22 @@ export default async function DashboardLayout({
     redirect("/org");
   }
 
+  const driver = await prisma.driver.findUnique({
+    where: { id: session.user.id },
+    select: { firstName: true, lastName: true, companyName: true },
+  });
+
+  const userName = driver
+    ? driver.lastName
+      ? `${driver.firstName} ${driver.lastName}`
+      : driver.companyName
+        ? `${driver.firstName} — ${driver.companyName}`
+        : driver.firstName
+    : session.user.name || "";
+
   return (
     <div className="min-h-screen bg-neutral-50">
-      <DashboardSidebar userName={session.user.name || ""} />
+      <DashboardSidebar userName={userName} />
       <div className="lg:pl-64">
         <main className="p-6 lg:p-8">{children}</main>
       </div>
