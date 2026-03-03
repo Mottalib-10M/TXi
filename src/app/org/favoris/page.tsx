@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { Icon } from "@iconify/react";
 
 interface FavoriteDriver {
@@ -9,6 +10,7 @@ interface FavoriteDriver {
     id: string;
     firstName: string;
     lastName: string;
+    slug: string;
     vehicleBrand?: string | null;
     vehicleModel?: string | null;
     zoneAddress?: string | null;
@@ -20,6 +22,7 @@ interface SearchResult {
   id: string;
   firstName: string;
   lastName: string;
+  slug: string;
   vehicleBrand?: string | null;
   vehicleModel?: string | null;
   zoneAddress?: string | null;
@@ -143,12 +146,22 @@ export default function FavorisPage() {
                     {d.zoneAddress && ` · ${d.zoneAddress}`}
                   </p>
                 </div>
-                <button
-                  onClick={() => addFavorite(d.id)}
-                  className="text-xs bg-neutral-900 text-white px-3 py-1.5 rounded-lg hover:bg-neutral-700 transition-colors"
-                >
-                  Ajouter
-                </button>
+                <div className="flex items-center gap-2">
+                  <Link
+                    href={`/taxi/${d.slug}`}
+                    target="_blank"
+                    className="p-2 text-neutral-400 hover:text-neutral-700 hover:bg-neutral-100 rounded-lg transition-colors"
+                    title="Voir le profil"
+                  >
+                    <Icon icon="solar:eye-linear" className="text-lg" />
+                  </Link>
+                  <button
+                    onClick={() => addFavorite(d.id)}
+                    className="text-xs bg-neutral-900 text-white px-3 py-1.5 rounded-lg hover:bg-neutral-700 transition-colors"
+                  >
+                    Ajouter
+                  </button>
+                </div>
               </div>
             ))}
           </div>
@@ -182,13 +195,23 @@ export default function FavorisPage() {
                     </p>
                   </div>
                 </div>
-                <button
-                  onClick={() => removeFavorite(fav.id)}
-                  className="p-2 text-neutral-400 hover:text-red-600 hover:bg-red-50 rounded-lg transition-colors"
-                  title="Supprimer des favoris"
-                >
-                  <Icon icon="solar:trash-bin-minimalistic-linear" className="text-lg" />
-                </button>
+                <div className="flex items-center gap-1">
+                  <Link
+                    href={`/taxi/${fav.driver.slug}`}
+                    target="_blank"
+                    className="p-2 text-neutral-400 hover:text-neutral-700 hover:bg-neutral-100 rounded-lg transition-colors"
+                    title="Voir le profil"
+                  >
+                    <Icon icon="solar:eye-linear" className="text-lg" />
+                  </Link>
+                  <button
+                    onClick={() => removeFavorite(fav.id)}
+                    className="p-2 text-neutral-400 hover:text-red-600 hover:bg-red-50 rounded-lg transition-colors"
+                    title="Supprimer des favoris"
+                  >
+                    <Icon icon="solar:trash-bin-minimalistic-linear" className="text-lg" />
+                  </button>
+                </div>
               </div>
             ))}
           </div>
