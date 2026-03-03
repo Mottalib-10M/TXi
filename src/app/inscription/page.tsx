@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { Icon } from "@iconify/react";
+import { PlacesAutocomplete } from "@/components/booking/PlacesAutocomplete";
 
 type ProfileType = "driver" | "particulier" | "hotel" | "hospital" | "enterprise";
 
@@ -19,6 +20,7 @@ export default function InscriptionPage() {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const [profileType, setProfileType] = useState<ProfileType | null>(null);
+  const [orgAddress, setOrgAddress] = useState("");
 
   async function handleDriverSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -106,7 +108,7 @@ export default function InscriptionPage() {
       contactName: formData.get("contactName") as string,
       email: formData.get("email") as string,
       phone: formData.get("phone") as string,
-      address: formData.get("address") as string,
+      address: orgAddress,
       password: formData.get("password") as string,
     };
 
@@ -327,7 +329,7 @@ export default function InscriptionPage() {
         {profileType && !["driver", "particulier"].includes(profileType) && (
           <>
             <button
-              onClick={() => { setProfileType(null); setError(""); }}
+              onClick={() => { setProfileType(null); setError(""); setOrgAddress(""); }}
               className="flex items-center gap-1 text-sm text-neutral-500 hover:text-neutral-900 mb-4"
             >
               <Icon icon="solar:arrow-left-linear" />
@@ -376,8 +378,13 @@ export default function InscriptionPage() {
               </div>
 
               <div>
-                <label htmlFor="address" className="block text-sm font-medium mb-1.5">Adresse</label>
-                <input id="address" name="address" type="text" className={inputClass} placeholder="12 rue de la Paix, 75002 Paris" />
+                <label className="block text-sm font-medium mb-1.5">Adresse</label>
+                <PlacesAutocomplete
+                  placeholder="12 rue de la Paix, 75002 Paris"
+                  value={orgAddress}
+                  onChange={(val) => setOrgAddress(val)}
+                  icon="solar:map-point-linear"
+                />
               </div>
 
               <div>
