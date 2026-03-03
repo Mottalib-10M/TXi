@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { Icon } from "@iconify/react";
 import { PlacesAutocomplete } from "@/components/booking/PlacesAutocomplete";
+import { emailError, phoneError, isValidEmail, isValidPhone } from "@/lib/validation";
 
 type ProfileType = "driver" | "particulier" | "hotel" | "hospital" | "enterprise";
 
@@ -21,6 +22,8 @@ export default function InscriptionPage() {
   const [loading, setLoading] = useState(false);
   const [profileType, setProfileType] = useState<ProfileType | null>(null);
   const [orgAddress, setOrgAddress] = useState("");
+  const [formEmail, setFormEmail] = useState("");
+  const [formPhone, setFormPhone] = useState("");
 
   async function handleDriverSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -206,7 +209,7 @@ export default function InscriptionPage() {
         {profileType === "driver" && (
           <>
             <button
-              onClick={() => { setProfileType(null); setError(""); }}
+              onClick={() => { setProfileType(null); setError(""); setFormEmail(""); setFormPhone(""); }}
               className="flex items-center gap-1 text-sm text-neutral-500 hover:text-neutral-900 mb-4"
             >
               <Icon icon="solar:arrow-left-linear" />
@@ -237,12 +240,14 @@ export default function InscriptionPage() {
 
               <div>
                 <label htmlFor="email" className="block text-sm font-medium mb-1.5">Email</label>
-                <input id="email" name="email" type="email" required className={inputClass} placeholder="jean.dupont@email.com" />
+                <input id="email" name="email" type="email" required className={`${inputClass} ${emailError(formEmail) ? "ring-2 ring-red-300 bg-red-50/50" : ""}`} placeholder="jean.dupont@email.com" onChange={(e) => setFormEmail(e.target.value)} />
+                {emailError(formEmail) && <p className="text-xs text-red-500 mt-1">{emailError(formEmail)}</p>}
               </div>
 
               <div>
                 <label htmlFor="phone" className="block text-sm font-medium mb-1.5">Téléphone</label>
-                <input id="phone" name="phone" type="tel" required className={inputClass} placeholder="06 12 34 56 78" />
+                <input id="phone" name="phone" type="tel" required className={`${inputClass} ${phoneError(formPhone) ? "ring-2 ring-red-300 bg-red-50/50" : ""}`} placeholder="06 12 34 56 78" onChange={(e) => setFormPhone(e.target.value)} />
+                {phoneError(formPhone) && <p className="text-xs text-red-500 mt-1">{phoneError(formPhone)}</p>}
               </div>
 
               <div>
@@ -252,7 +257,7 @@ export default function InscriptionPage() {
 
               <button
                 type="submit"
-                disabled={loading}
+                disabled={loading || (!!formEmail && !isValidEmail(formEmail)) || (!!formPhone && !isValidPhone(formPhone))}
                 className="w-full bg-neutral-950 text-white rounded-xl py-3.5 text-sm font-medium hover:bg-neutral-800 transition-colors disabled:opacity-50 disabled:cursor-not-allowed btn-lift"
               >
                 {loading ? "Inscription en cours..." : "S'inscrire comme chauffeur"}
@@ -265,7 +270,7 @@ export default function InscriptionPage() {
         {profileType === "particulier" && (
           <>
             <button
-              onClick={() => { setProfileType(null); setError(""); }}
+              onClick={() => { setProfileType(null); setError(""); setFormEmail(""); setFormPhone(""); }}
               className="flex items-center gap-1 text-sm text-neutral-500 hover:text-neutral-900 mb-4"
             >
               <Icon icon="solar:arrow-left-linear" />
@@ -301,12 +306,14 @@ export default function InscriptionPage() {
 
               <div>
                 <label htmlFor="email" className="block text-sm font-medium mb-1.5">Email</label>
-                <input id="email" name="email" type="email" required className={inputClass} placeholder="marie.martin@email.com" />
+                <input id="email" name="email" type="email" required className={`${inputClass} ${emailError(formEmail) ? "ring-2 ring-red-300 bg-red-50/50" : ""}`} placeholder="marie.martin@email.com" onChange={(e) => setFormEmail(e.target.value)} />
+                {emailError(formEmail) && <p className="text-xs text-red-500 mt-1">{emailError(formEmail)}</p>}
               </div>
 
               <div>
                 <label htmlFor="phone" className="block text-sm font-medium mb-1.5">Téléphone</label>
-                <input id="phone" name="phone" type="tel" required className={inputClass} placeholder="06 12 34 56 78" />
+                <input id="phone" name="phone" type="tel" required className={`${inputClass} ${phoneError(formPhone) ? "ring-2 ring-red-300 bg-red-50/50" : ""}`} placeholder="06 12 34 56 78" onChange={(e) => setFormPhone(e.target.value)} />
+                {phoneError(formPhone) && <p className="text-xs text-red-500 mt-1">{phoneError(formPhone)}</p>}
               </div>
 
               <div>
@@ -316,7 +323,7 @@ export default function InscriptionPage() {
 
               <button
                 type="submit"
-                disabled={loading}
+                disabled={loading || (!!formEmail && !isValidEmail(formEmail)) || (!!formPhone && !isValidPhone(formPhone))}
                 className="w-full bg-neutral-950 text-white rounded-xl py-3.5 text-sm font-medium hover:bg-neutral-800 transition-colors disabled:opacity-50 disabled:cursor-not-allowed btn-lift"
               >
                 {loading ? "Inscription en cours..." : "Créer mon compte"}
@@ -369,12 +376,14 @@ export default function InscriptionPage() {
 
               <div>
                 <label htmlFor="email" className="block text-sm font-medium mb-1.5">Email</label>
-                <input id="email" name="email" type="email" required className={inputClass} placeholder="contact@hotel.com" />
+                <input id="email" name="email" type="email" required className={`${inputClass} ${emailError(formEmail) ? "ring-2 ring-red-300 bg-red-50/50" : ""}`} placeholder="contact@hotel.com" onChange={(e) => setFormEmail(e.target.value)} />
+                {emailError(formEmail) && <p className="text-xs text-red-500 mt-1">{emailError(formEmail)}</p>}
               </div>
 
               <div>
                 <label htmlFor="phone" className="block text-sm font-medium mb-1.5">Téléphone</label>
-                <input id="phone" name="phone" type="tel" required className={inputClass} placeholder="01 23 45 67 89" />
+                <input id="phone" name="phone" type="tel" required className={`${inputClass} ${phoneError(formPhone) ? "ring-2 ring-red-300 bg-red-50/50" : ""}`} placeholder="01 23 45 67 89" onChange={(e) => setFormPhone(e.target.value)} />
+                {phoneError(formPhone) && <p className="text-xs text-red-500 mt-1">{phoneError(formPhone)}</p>}
               </div>
 
               <div>
@@ -394,7 +403,7 @@ export default function InscriptionPage() {
 
               <button
                 type="submit"
-                disabled={loading}
+                disabled={loading || (!!formEmail && !isValidEmail(formEmail)) || (!!formPhone && !isValidPhone(formPhone))}
                 className="w-full bg-neutral-950 text-white rounded-xl py-3.5 text-sm font-medium hover:bg-neutral-800 transition-colors disabled:opacity-50 disabled:cursor-not-allowed btn-lift"
               >
                 {loading ? "Inscription en cours..." : "Créer le compte"}

@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 import { prisma } from "@/lib/prisma";
 import { haversineDistance, estimatePrice } from "@/lib/geo";
+import { generateUniqueReference } from "@/lib/reference";
 import {
   sendEmail,
   buildDriverNotificationEmail,
@@ -29,21 +30,12 @@ const bookingSchema = z.object({
   source: z.enum(["LANDING", "PROFILE"]).optional().default("LANDING"),
 });
 
-function generateReference(): string {
-  const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-  let result = "TN-";
-  for (let i = 0; i < 6; i++) {
-    result += chars.charAt(Math.floor(Math.random() * chars.length));
-  }
-  return result;
-}
-
 export async function POST(request: Request) {
   try {
     const body = await request.json();
     const data = bookingSchema.parse(body);
 
-    const reference = generateReference();
+    const reference = await generateUniqueReference();
     const requestedDate = new Date(data.requestedDate);
 
     // Calculate distance between departure and arrival

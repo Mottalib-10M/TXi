@@ -110,7 +110,7 @@ export default function ConfirmationPage({
 }) {
   return (
     <div className="min-h-screen bg-white">
-      <Navbar />
+      <Navbar minimal />
       <div className="pt-32 pb-20 px-6">
         <Suspense
           fallback={

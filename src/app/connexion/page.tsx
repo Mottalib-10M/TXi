@@ -5,6 +5,7 @@ import { signIn, useSession } from "next-auth/react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { Suspense } from "react";
+import { emailError, isValidEmail } from "@/lib/validation";
 
 function ConnexionForm() {
   const router = useRouter();
@@ -20,6 +21,7 @@ function ConnexionForm() {
   const [resendLoading, setResendLoading] = useState(false);
   const [resendSuccess, setResendSuccess] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [formEmail, setFormEmail] = useState("");
 
   // If already authenticated, redirect based on role
   useEffect(() => {
@@ -162,9 +164,12 @@ function ConnexionForm() {
               name="email"
               type="email"
               required
-              className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all"
+              value={formEmail}
+              onChange={(e) => setFormEmail(e.target.value)}
+              className={`w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all ${emailError(formEmail) ? "ring-2 ring-red-300 bg-red-50/50" : ""}`}
               placeholder="votre@email.com"
             />
+            {emailError(formEmail) && <p className="text-xs text-red-500 mt-1">{emailError(formEmail)}</p>}
           </div>
 
           <div>
@@ -188,7 +193,7 @@ function ConnexionForm() {
 
           <button
             type="submit"
-            disabled={loading}
+            disabled={loading || (!!formEmail && !isValidEmail(formEmail))}
             className="w-full bg-neutral-950 text-white rounded-xl py-3.5 text-sm font-medium hover:bg-neutral-800 transition-colors disabled:opacity-50 disabled:cursor-not-allowed btn-lift"
           >
             {loading ? "Connexion en cours..." : "Se connecter"}

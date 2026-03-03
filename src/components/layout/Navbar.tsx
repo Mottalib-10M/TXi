@@ -6,7 +6,7 @@ import { useSession, signOut } from "next-auth/react";
 import { Icon } from "@iconify/react";
 import { Logo } from "@/components/ui/Logo";
 
-export function Navbar() {
+export function Navbar({ minimal = false }: { minimal?: boolean }) {
   const { data: session, status } = useSession();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -38,29 +38,31 @@ export function Navbar() {
           <Link href="/">
             <Logo />
           </Link>
-          <nav className="hidden md:flex items-center gap-6">
-            <a href="#reserver" className="text-sm font-medium text-neutral-900">
-              Commander
-            </a>
-            <a
-              href="#comment-ca-marche"
-              className="text-sm font-medium text-neutral-500 hover:text-neutral-900 transition-colors"
-            >
-              Comment ça marche
-            </a>
-            <a
-              href="#chauffeurs"
-              className="text-sm font-medium text-neutral-500 hover:text-neutral-900 transition-colors"
-            >
-              Chauffeurs
-            </a>
-            <a
-              href="#business"
-              className="text-sm font-medium text-neutral-500 hover:text-neutral-900 transition-colors"
-            >
-              Business
-            </a>
-          </nav>
+          {!minimal && (
+            <nav className="hidden md:flex items-center gap-6">
+              <Link href="/#reserver" className="text-sm font-medium text-neutral-900">
+                Commander
+              </Link>
+              <Link
+                href="/#comment-ca-marche"
+                className="text-sm font-medium text-neutral-500 hover:text-neutral-900 transition-colors"
+              >
+                Comment ça marche
+              </Link>
+              <Link
+                href="/#chauffeurs"
+                className="text-sm font-medium text-neutral-500 hover:text-neutral-900 transition-colors"
+              >
+                Chauffeurs
+              </Link>
+              <Link
+                href="/#business"
+                className="text-sm font-medium text-neutral-500 hover:text-neutral-900 transition-colors"
+              >
+                Business
+              </Link>
+            </nav>
+          )}
         </div>
 
         <div className="flex items-center gap-4">
@@ -159,34 +161,38 @@ export function Navbar() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 py-4 space-y-1">
-          <a
-            href="#reserver"
-            onClick={() => setMobileOpen(false)}
-            className="block py-3 text-sm font-medium text-neutral-900 hover:bg-neutral-50 rounded-lg px-3 transition-colors"
-          >
-            Commander
-          </a>
-          <a
-            href="#comment-ca-marche"
-            onClick={() => setMobileOpen(false)}
-            className="block py-3 text-sm font-medium text-neutral-500 hover:bg-neutral-50 hover:text-neutral-900 rounded-lg px-3 transition-colors"
-          >
-            Comment ça marche
-          </a>
-          <a
-            href="#chauffeurs"
-            onClick={() => setMobileOpen(false)}
-            className="block py-3 text-sm font-medium text-neutral-500 hover:bg-neutral-50 hover:text-neutral-900 rounded-lg px-3 transition-colors"
-          >
-            Chauffeurs
-          </a>
-          <a
-            href="#business"
-            onClick={() => setMobileOpen(false)}
-            className="block py-3 text-sm font-medium text-neutral-500 hover:bg-neutral-50 hover:text-neutral-900 rounded-lg px-3 transition-colors"
-          >
-            Business
-          </a>
+          {!minimal && (
+            <>
+              <Link
+                href="/#reserver"
+                onClick={() => setMobileOpen(false)}
+                className="block py-3 text-sm font-medium text-neutral-900 hover:bg-neutral-50 rounded-lg px-3 transition-colors"
+              >
+                Commander
+              </Link>
+              <Link
+                href="/#comment-ca-marche"
+                onClick={() => setMobileOpen(false)}
+                className="block py-3 text-sm font-medium text-neutral-500 hover:bg-neutral-50 hover:text-neutral-900 rounded-lg px-3 transition-colors"
+              >
+                Comment ça marche
+              </Link>
+              <Link
+                href="/#chauffeurs"
+                onClick={() => setMobileOpen(false)}
+                className="block py-3 text-sm font-medium text-neutral-500 hover:bg-neutral-50 hover:text-neutral-900 rounded-lg px-3 transition-colors"
+              >
+                Chauffeurs
+              </Link>
+              <Link
+                href="/#business"
+                onClick={() => setMobileOpen(false)}
+                className="block py-3 text-sm font-medium text-neutral-500 hover:bg-neutral-50 hover:text-neutral-900 rounded-lg px-3 transition-colors"
+              >
+                Business
+              </Link>
+            </>
+          )}
           {isLoggedIn ? (
             <div className="pt-3 border-t border-neutral-100 space-y-1">
               <Link

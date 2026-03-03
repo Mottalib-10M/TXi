@@ -62,7 +62,7 @@ export function DriverHeader({
 
         <div className="mt-4 w-full">
           {companyName && (
-            <p className="text-xs font-medium text-neutral-500 uppercase tracking-wider mb-1">
+            <p className="text-sm font-medium text-neutral-400 mb-1">
               {companyName}
             </p>
           )}
@@ -95,14 +95,14 @@ export function DriverHeader({
           {(email || phone) && (
             <div className="flex flex-col items-center gap-2 mb-4">
               {email && (
-                <a href={`mailto:${email}`} className="flex items-center gap-2 text-base font-medium text-neutral-700 hover:text-neutral-900 transition-colors">
-                  <Icon icon="solar:letter-linear" className="text-lg text-neutral-400" />
+                <a href={`mailto:${email}`} className="flex items-center gap-2 text-sm text-neutral-500 hover:text-neutral-900 transition-colors">
+                  <Icon icon="solar:letter-linear" className="text-sm text-neutral-400" />
                   {email}
                 </a>
               )}
               {phone && (
-                <a href={`tel:${phone}`} className="flex items-center gap-2 text-lg font-semibold text-neutral-900 hover:text-neutral-700 transition-colors">
-                  <Icon icon="solar:phone-linear" className="text-lg text-neutral-400" />
+                <a href={`tel:${phone}`} className="flex items-center gap-2 text-sm font-medium text-neutral-700 hover:text-neutral-900 transition-colors">
+                  <Icon icon="solar:phone-linear" className="text-sm text-neutral-400" />
                   {phone}
                 </a>
               )}

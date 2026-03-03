@@ -5,7 +5,7 @@ import { Navbar } from "@/components/layout/Navbar";
 export default function TaxiNotFound() {
   return (
     <div className="min-h-screen bg-white">
-      <Navbar />
+      <Navbar minimal />
       <div className="pt-32 pb-20 px-6 text-center">
         <div className="max-w-md mx-auto">
           <div className="w-16 h-16 bg-neutral-100 rounded-full flex items-center justify-center mx-auto mb-6">

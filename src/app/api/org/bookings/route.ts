@@ -3,6 +3,7 @@ import { z } from "zod";
 import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
 import { haversineDistance, estimatePrice } from "@/lib/geo";
+import { generateUniqueReference } from "@/lib/reference";
 
 const createBookingSchema = z.object({
   beneficiaryName: z.string().min(1, "Nom du bénéficiaire requis"),
@@ -18,15 +19,6 @@ const createBookingSchema = z.object({
   estimatedPrice: z.number().optional(),
 });
 
-function generateReference(): string {
-  const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-  let result = "TN-";
-  for (let i = 0; i < 6; i++) {
-    result += chars.charAt(Math.floor(Math.random() * chars.length));
-  }
-  return result;
-}
-
 export async function POST(request: Request) {
   const session = await auth();
   if (!session?.user?.id || session.user.role !== "organization") {
@@ -37,7 +29,7 @@ export async function POST(request: Request) {
     const body = await request.json();
     const data = createBookingSchema.parse(body);
 
-    const reference = generateReference();
+    const reference = await generateUniqueReference();
     const requestedDate = new Date(data.requestedDate);
 
     // Calculate distance

@@ -19,60 +19,62 @@ const FEATURE_ICONS: Record<string, string> = {
   "Carte bancaire": "solar:card-linear",
 };
 
-// Brand → simple-icons slug
-const BRAND_ICONS: Record<string, string> = {
-  mercedes: "simple-icons:mercedes",
-  "mercedes-benz": "simple-icons:mercedes",
-  bmw: "simple-icons:bmw",
-  audi: "simple-icons:audi",
-  volkswagen: "simple-icons:volkswagen",
-  toyota: "simple-icons:toyota",
-  peugeot: "simple-icons:peugeot",
-  renault: "simple-icons:renault",
-  citroen: "simple-icons:citroen",
-  citroën: "simple-icons:citroen",
-  tesla: "simple-icons:tesla",
-  volvo: "simple-icons:volvo",
-  porsche: "simple-icons:porsche",
-  ford: "simple-icons:ford",
-  opel: "simple-icons:opel",
-  fiat: "simple-icons:fiat",
-  nissan: "simple-icons:nissan",
-  honda: "simple-icons:honda",
-  hyundai: "simple-icons:hyundai",
-  kia: "simple-icons:kia",
-  mazda: "simple-icons:mazda",
-  skoda: "simple-icons:skoda",
-  škoda: "simple-icons:skoda",
-  seat: "simple-icons:seat",
-  dacia: "simple-icons:dacia",
-  byd: "simple-icons:byd",
-  lexus: "simple-icons:lexus",
-  jaguar: "simple-icons:jaguar",
-  mini: "simple-icons:mini",
-  jeep: "simple-icons:jeep",
-  suzuki: "simple-icons:suzuki",
-  subaru: "simple-icons:subaru",
-  "alfa romeo": "simple-icons:alfaromeo",
-  "land rover": "simple-icons:landrover",
-  ds: "simple-icons:dsautomobiles",
-  mitsubishi: "simple-icons:mitsubishi",
-  chevrolet: "simple-icons:chevrolet",
-  genesis: "simple-icons:genesis",
-  cupra: "simple-icons:cupra",
-  bentley: "simple-icons:bentley",
-  "rolls-royce": "simple-icons:rollsroyce",
-  "rolls royce": "simple-icons:rollsroyce",
-  maserati: "simple-icons:maserati",
-  ferrari: "simple-icons:ferrari",
-  lamborghini: "simple-icons:lamborghini",
-  bugatti: "simple-icons:bugatti",
-  alpine: "simple-icons:alpine",
+// Brand → SVG URL from Iconify API (reliable direct loading)
+const BRAND_LOGOS: Record<string, string> = {
+  mercedes: "mercedes",
+  "mercedes-benz": "mercedes",
+  bmw: "bmw",
+  audi: "audi",
+  volkswagen: "volkswagen",
+  toyota: "toyota",
+  peugeot: "peugeot",
+  renault: "renault",
+  citroen: "citroen",
+  citroën: "citroen",
+  tesla: "tesla",
+  volvo: "volvo",
+  porsche: "porsche",
+  ford: "ford",
+  opel: "opel",
+  fiat: "fiat",
+  nissan: "nissan",
+  honda: "honda",
+  hyundai: "hyundai",
+  kia: "kia",
+  mazda: "mazda",
+  skoda: "skoda",
+  škoda: "skoda",
+  seat: "seat",
+  dacia: "dacia",
+  byd: "byd",
+  lexus: "lexus",
+  jaguar: "jaguar",
+  mini: "mini",
+  jeep: "jeep",
+  suzuki: "suzuki",
+  subaru: "subaru",
+  "alfa romeo": "alfaromeo",
+  "land rover": "landrover",
+  ds: "dsautomobiles",
+  mitsubishi: "mitsubishi",
+  chevrolet: "chevrolet",
+  genesis: "genesis",
+  cupra: "cupra",
+  bentley: "bentley",
+  "rolls-royce": "rollsroyce",
+  "rolls royce": "rollsroyce",
+  maserati: "maserati",
+  ferrari: "ferrari",
+  lamborghini: "lamborghini",
+  bugatti: "bugatti",
+  alpine: "alpine",
 };
 
-function getBrandIcon(brand: string): string | null {
+function getBrandLogoUrl(brand: string): string | null {
   const key = brand.toLowerCase().trim();
-  return BRAND_ICONS[key] || null;
+  const slug = BRAND_LOGOS[key];
+  if (!slug) return null;
+  return `https://api.iconify.design/simple-icons/${slug}.svg?color=%23171717`;
 }
 
 const COLOR_MAP: Record<string, string> = {
@@ -116,7 +118,7 @@ function VehicleCard({ vehicle, index, total, onPhotoClick }: { vehicle: Vehicle
   const colorHex = COLOR_MAP[vehicle.color.toLowerCase().trim()] || "#525252";
   const fullName = `${vehicle.brand} ${vehicle.model}`.trim();
   const hasPhotos = vehicle.photos && vehicle.photos.length > 0;
-  const brandIcon = getBrandIcon(vehicle.brand);
+  const brandLogoUrl = getBrandLogoUrl(vehicle.brand);
 
   const details: string[] = [];
   if (vehicle.year > 0) details.push(String(vehicle.year));
@@ -151,13 +153,13 @@ function VehicleCard({ vehicle, index, total, onPhotoClick }: { vehicle: Vehicle
       <div className="flex flex-col items-center gap-3 text-center">
         {/* Brand logo or car type icon */}
         <div
-          className="w-14 h-14 rounded-2xl flex items-center justify-center shrink-0 relative"
-          style={{ backgroundColor: `${colorHex}20` }}
+          className="w-14 h-14 rounded-2xl flex items-center justify-center shrink-0 relative bg-neutral-100"
         >
-          {brandIcon ? (
-            <Icon icon={brandIcon} className="text-2xl" style={{ color: colorHex }} />
+          {brandLogoUrl ? (
+            /* eslint-disable-next-line @next/next/no-img-element */
+            <img src={brandLogoUrl} alt={vehicle.brand} className="w-7 h-7 object-contain" />
           ) : (
-            <Icon icon={config.icon} className="text-2xl" style={{ color: colorHex }} />
+            <Icon icon={config.icon} className="text-2xl text-neutral-600" />
           )}
         </div>
 

@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Icon } from "@iconify/react";
 import { PlacesAutocomplete } from "@/components/booking/PlacesAutocomplete";
+import { emailError, phoneError, isValidEmail } from "@/lib/validation";
 
 interface DirectBookingFormProps {
   driverId: string;
@@ -150,21 +151,31 @@ export function DirectBookingForm({
             required
             className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all"
           />
-          <input
-            type="email"
-            value={clientEmail}
-            onChange={(e) => setClientEmail(e.target.value)}
-            placeholder="Votre email *"
-            required
-            className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all"
-          />
-          <input
-            type="tel"
-            value={clientPhone}
-            onChange={(e) => setClientPhone(e.target.value)}
-            placeholder="Votre téléphone"
-            className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all"
-          />
+          <div>
+            <input
+              type="email"
+              value={clientEmail}
+              onChange={(e) => setClientEmail(e.target.value)}
+              placeholder="Votre email *"
+              required
+              className={`w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all ${emailError(clientEmail) ? "ring-2 ring-red-300 bg-red-50/50" : ""}`}
+            />
+            {emailError(clientEmail) && (
+              <p className="text-xs text-red-500 mt-1">{emailError(clientEmail)}</p>
+            )}
+          </div>
+          <div>
+            <input
+              type="tel"
+              value={clientPhone}
+              onChange={(e) => setClientPhone(e.target.value)}
+              placeholder="Votre téléphone"
+              className={`w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all ${phoneError(clientPhone) ? "ring-2 ring-red-300 bg-red-50/50" : ""}`}
+            />
+            {phoneError(clientPhone) && (
+              <p className="text-xs text-red-500 mt-1">{phoneError(clientPhone)}</p>
+            )}
+          </div>
           <textarea
             value={clientComments}
             onChange={(e) => setClientComments(e.target.value)}
@@ -176,7 +187,7 @@ export function DirectBookingForm({
 
         <button
           type="submit"
-          disabled={!departure || !arrival || !clientName || !clientEmail || submitting}
+          disabled={!departure || !arrival || !clientName || !clientEmail || !isValidEmail(clientEmail) || !!phoneError(clientPhone) || submitting}
           className="w-full bg-neutral-950 text-white rounded-xl py-3.5 text-sm font-medium hover:bg-neutral-800 transition-colors btn-lift disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {submitting ? "Réservation en cours..." : "Réserver maintenant"}

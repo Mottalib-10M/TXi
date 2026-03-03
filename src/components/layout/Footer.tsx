@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { Icon } from "@iconify/react";
 import { Logo } from "@/components/ui/Logo";
 
 export function Footer() {
@@ -15,50 +14,30 @@ export function Footer() {
               L&apos;application qui remet les professionnels de la route au centre de la
               mobilité urbaine.
             </p>
-            <div className="flex gap-3 mt-5">
-              <a
-                href="#"
-                className="w-9 h-9 bg-neutral-100 rounded-full flex items-center justify-center hover:bg-neutral-200 transition-colors"
-              >
-                <Icon icon="mdi:twitter" className="text-neutral-600 text-sm" />
-              </a>
-              <a
-                href="#"
-                className="w-9 h-9 bg-neutral-100 rounded-full flex items-center justify-center hover:bg-neutral-200 transition-colors"
-              >
-                <Icon icon="mdi:instagram" className="text-neutral-600 text-sm" />
-              </a>
-              <a
-                href="#"
-                className="w-9 h-9 bg-neutral-100 rounded-full flex items-center justify-center hover:bg-neutral-200 transition-colors"
-              >
-                <Icon icon="mdi:linkedin" className="text-neutral-600 text-sm" />
-              </a>
-            </div>
           </div>
 
           <div>
             <h4 className="text-sm font-medium mb-4 tracking-tight">Services</h4>
             <ul className="space-y-3 text-sm text-neutral-500 font-light">
               <li>
-                <a href="#reserver" className="hover:text-neutral-900 transition-colors">
+                <Link href="/#reserver" className="hover:text-neutral-900 transition-colors">
                   Commander un taxi
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-neutral-900 transition-colors">
-                  Réserver à l&apos;avance
-                </a>
+                <Link href="/gares" className="hover:text-neutral-900 transition-colors">
+                  Gares
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-neutral-900 transition-colors">
-                  Gares et Aéroports
-                </a>
+                <Link href="/aeroports" className="hover:text-neutral-900 transition-colors">
+                  Aéroports
+                </Link>
               </li>
               <li>
-                <a href="#business" className="hover:text-neutral-900 transition-colors">
+                <Link href="/#business" className="hover:text-neutral-900 transition-colors">
                   TaxiNoir Business
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -72,45 +51,35 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <a href="#chauffeurs" className="hover:text-neutral-900 transition-colors">
+                <Link href="/#chauffeurs" className="hover:text-neutral-900 transition-colors">
                   Avantages
-                </a>
+                </Link>
               </li>
               <li>
                 <Link href="/connexion" className="hover:text-neutral-900 transition-colors">
                   Application Chauffeur
                 </Link>
               </li>
-              <li>
-                <a href="#" className="hover:text-neutral-900 transition-colors">
-                  Support
-                </a>
-              </li>
             </ul>
           </div>
 
           <div>
-            <h4 className="text-sm font-medium mb-4 tracking-tight">Entreprise</h4>
+            <h4 className="text-sm font-medium mb-4 tracking-tight">Contact</h4>
             <ul className="space-y-3 text-sm text-neutral-500 font-light">
               <li>
-                <a href="#" className="hover:text-neutral-900 transition-colors">
-                  À propos
-                </a>
+                <Link href="/contact" className="hover:text-neutral-900 transition-colors">
+                  Nous contacter
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-neutral-900 transition-colors">
-                  Carrières
-                </a>
+                <Link href="/contact?sujet=demo" className="hover:text-neutral-900 transition-colors">
+                  Demander une démo
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-neutral-900 transition-colors">
-                  Presse
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-neutral-900 transition-colors">
-                  Contact
-                </a>
+                <Link href="/contact?sujet=aide" className="hover:text-neutral-900 transition-colors">
+                  Support
+                </Link>
               </li>
             </ul>
           </div>
@@ -120,17 +89,6 @@ export function Footer() {
           <p className="text-xs text-neutral-400 font-light">
             &copy; 2026 TaxiNoir. Tous droits réservés.
           </p>
-          <div className="flex items-center gap-6 text-xs text-neutral-400 font-light">
-            <a href="#" className="hover:text-neutral-900 transition-colors">
-              Confidentialité
-            </a>
-            <a href="#" className="hover:text-neutral-900 transition-colors">
-              Conditions générales
-            </a>
-            <a href="#" className="hover:text-neutral-900 transition-colors">
-              Mentions légales
-            </a>
-          </div>
         </div>
       </div>
     </footer>

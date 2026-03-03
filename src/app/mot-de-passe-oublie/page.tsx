@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { emailError, isValidEmail } from "@/lib/validation";
 
 export default function ForgotPasswordPage() {
   const [email, setEmail] = useState("");
@@ -80,14 +81,15 @@ export default function ForgotPasswordPage() {
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all"
+                  className={`w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all ${emailError(email) ? "ring-2 ring-red-300 bg-red-50/50" : ""}`}
                   placeholder="votre@email.com"
                 />
+                {emailError(email) && <p className="text-xs text-red-500 mt-1">{emailError(email)}</p>}
               </div>
 
               <button
                 type="submit"
-                disabled={loading}
+                disabled={loading || (!!email && !isValidEmail(email))}
                 className="w-full bg-neutral-950 text-white rounded-xl py-3.5 text-sm font-medium hover:bg-neutral-800 transition-colors disabled:opacity-50 disabled:cursor-not-allowed btn-lift"
               >
                 {loading ? "Envoi en cours..." : "Envoyer le lien"}

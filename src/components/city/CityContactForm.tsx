@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Icon } from "@iconify/react";
+import { emailError, phoneError, isValidEmail } from "@/lib/validation";
 
 export function CityContactForm({ cityName }: { cityName: string }) {
   const [form, setForm] = useState({
@@ -75,21 +76,31 @@ export function CityContactForm({ cityName }: { cityName: string }) {
             className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all"
           />
           <div className="grid grid-cols-2 gap-4">
-            <input
-              type="email"
-              value={form.email}
-              onChange={(e) => setForm({ ...form, email: e.target.value })}
-              placeholder="Email"
-              required
-              className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all"
-            />
-            <input
-              type="tel"
-              value={form.phone}
-              onChange={(e) => setForm({ ...form, phone: e.target.value })}
-              placeholder="Téléphone"
-              className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all"
-            />
+            <div>
+              <input
+                type="email"
+                value={form.email}
+                onChange={(e) => setForm({ ...form, email: e.target.value })}
+                placeholder="Email"
+                required
+                className={`w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all ${emailError(form.email) ? "ring-2 ring-red-300 bg-red-50/50" : ""}`}
+              />
+              {emailError(form.email) && (
+                <p className="text-xs text-red-500 mt-1">{emailError(form.email)}</p>
+              )}
+            </div>
+            <div>
+              <input
+                type="tel"
+                value={form.phone}
+                onChange={(e) => setForm({ ...form, phone: e.target.value })}
+                placeholder="Téléphone"
+                className={`w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all ${phoneError(form.phone) ? "ring-2 ring-red-300 bg-red-50/50" : ""}`}
+              />
+              {phoneError(form.phone) && (
+                <p className="text-xs text-red-500 mt-1">{phoneError(form.phone)}</p>
+              )}
+            </div>
           </div>
           <textarea
             value={form.message}
@@ -111,7 +122,7 @@ export function CityContactForm({ cityName }: { cityName: string }) {
           </select>
           <button
             type="submit"
-            disabled={submitting || !form.name || !form.email || !form.message}
+            disabled={submitting || !form.name || !form.email || !isValidEmail(form.email) || !!phoneError(form.phone) || !form.message}
             className="w-full bg-neutral-950 text-white rounded-xl py-4 text-sm font-medium hover:bg-neutral-800 transition-colors btn-lift disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {submitting ? "Envoi en cours..." : "Envoyer"}

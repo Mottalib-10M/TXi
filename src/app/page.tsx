@@ -335,7 +335,7 @@ export default function HomePage() {
                 ))}
               </ul>
               <a
-                href="#"
+                href="/contact?sujet=demo"
                 className="inline-flex items-center gap-2 bg-neutral-950 text-white text-sm font-medium px-6 py-3 rounded-full hover:bg-neutral-800 transition-colors btn-lift"
               >
                 Demander une démo

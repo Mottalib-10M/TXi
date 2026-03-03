@@ -57,7 +57,7 @@ export default async function TaxiProfilePage({ params }: Props) {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <Navbar />
+      <Navbar minimal />
 
       <main className="flex-grow pt-24 pb-16">
         <div className="max-w-2xl mx-auto px-6 space-y-6">

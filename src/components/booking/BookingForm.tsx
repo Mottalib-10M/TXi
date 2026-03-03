@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Icon } from "@iconify/react";
 import { PlacesAutocomplete } from "./PlacesAutocomplete";
+import { emailError, phoneError, isValidEmail } from "@/lib/validation";
 
 interface TaxiResult {
   id: string;
@@ -127,6 +128,22 @@ export function BookingForm() {
               icon="solar:record-circle-linear"
               showGeolocation
             />
+
+            <button
+              type="button"
+              onClick={() => {
+                setDeparture(arrival);
+                setDepartureLat(arrivalLat);
+                setDepartureLng(arrivalLng);
+                setArrival(departure);
+                setArrivalLat(departureLat);
+                setArrivalLng(departureLng);
+              }}
+              className="absolute right-3 top-1/2 -translate-y-1/2 z-20 w-8 h-8 bg-white border border-neutral-200 rounded-full flex items-center justify-center hover:bg-neutral-50 hover:border-neutral-400 transition-all shadow-sm"
+              title="Inverser départ et destination"
+            >
+              <Icon icon="solar:sort-vertical-linear" className="text-neutral-500 text-base" />
+            </button>
 
             <PlacesAutocomplete
               placeholder="Destination"
@@ -311,20 +328,30 @@ export function BookingForm() {
               placeholder="Votre nom complet"
               className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all"
             />
-            <input
-              type="email"
-              value={clientEmail}
-              onChange={(e) => setClientEmail(e.target.value)}
-              placeholder="Votre email"
-              className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all"
-            />
-            <input
-              type="tel"
-              value={clientPhone}
-              onChange={(e) => setClientPhone(e.target.value)}
-              placeholder="Votre téléphone"
-              className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all"
-            />
+            <div>
+              <input
+                type="email"
+                value={clientEmail}
+                onChange={(e) => setClientEmail(e.target.value)}
+                placeholder="Votre email"
+                className={`w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all ${emailError(clientEmail) ? "ring-2 ring-red-300 bg-red-50/50" : ""}`}
+              />
+              {emailError(clientEmail) && (
+                <p className="text-xs text-red-500 mt-1">{emailError(clientEmail)}</p>
+              )}
+            </div>
+            <div>
+              <input
+                type="tel"
+                value={clientPhone}
+                onChange={(e) => setClientPhone(e.target.value)}
+                placeholder="Votre téléphone"
+                className={`w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all ${phoneError(clientPhone) ? "ring-2 ring-red-300 bg-red-50/50" : ""}`}
+              />
+              {phoneError(clientPhone) && (
+                <p className="text-xs text-red-500 mt-1">{phoneError(clientPhone)}</p>
+              )}
+            </div>
             <textarea
               value={clientComments}
               onChange={(e) => setClientComments(e.target.value)}
@@ -336,7 +363,7 @@ export function BookingForm() {
 
           <button
             onClick={handleBooking}
-            disabled={!clientName || !clientEmail || submitting}
+            disabled={!clientName || !clientEmail || !isValidEmail(clientEmail) || !!phoneError(clientPhone) || submitting}
             className="w-full mt-6 bg-neutral-950 text-white rounded-xl py-4 text-sm font-medium hover:bg-neutral-800 transition-colors btn-lift disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {submitting ? "Réservation en cours..." : "Confirmer la réservation"}
