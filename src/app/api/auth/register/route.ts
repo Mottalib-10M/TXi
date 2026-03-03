@@ -57,17 +57,21 @@ async function isEmailTaken(email: string): Promise<boolean> {
 }
 
 async function sendVerificationEmail(email: string, name: string) {
-  const token = crypto.randomUUID();
-  const expiresAt = new Date(Date.now() + 24 * 60 * 60 * 1000); // 24h
+  try {
+    const token = crypto.randomUUID();
+    const expiresAt = new Date(Date.now() + 24 * 60 * 60 * 1000); // 24h
 
-  await prisma.emailVerificationToken.create({
-    data: { token, email, expiresAt },
-  });
+    await prisma.emailVerificationToken.create({
+      data: { token, email, expiresAt },
+    });
 
-  const baseUrl = process.env.NEXTAUTH_URL || "http://localhost:3000";
-  const verifyUrl = `${baseUrl}/api/auth/verify-email?token=${token}`;
-  const { subject, html } = buildVerificationEmail(name, verifyUrl);
-  await sendEmail({ to: email, subject, html });
+    const baseUrl = process.env.NEXTAUTH_URL || "http://localhost:3000";
+    const verifyUrl = `${baseUrl}/api/auth/verify-email?token=${token}`;
+    const { subject, html } = buildVerificationEmail(name, verifyUrl);
+    await sendEmail({ to: email, subject, html });
+  } catch (error) {
+    console.error("Failed to send verification email:", error);
+  }
 }
 
 export async function POST(request: Request) {
