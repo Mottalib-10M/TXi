@@ -1,6 +1,8 @@
 import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
 import { redirect } from "next/navigation";
+import Link from "next/link";
+import { Icon } from "@iconify/react";
 import { ProfileForm } from "@/components/driver/ProfileForm";
 import type { Vehicle } from "@/types/vehicle";
 
@@ -67,6 +69,43 @@ export default async function ProfilPage() {
         </p>
       </div>
       <ProfileForm driver={driverData} />
+
+      {/* Actions rapides */}
+      <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <Link
+          href="/dashboard/profil-public"
+          className="flex items-center gap-4 bg-white border border-neutral-200 rounded-2xl p-5 hover:border-neutral-300 transition-colors group"
+        >
+          <div className="w-11 h-11 bg-blue-50 rounded-xl flex items-center justify-center shrink-0">
+            <Icon icon="solar:eye-linear" className="text-blue-600 text-xl" />
+          </div>
+          <div>
+            <h3 className="text-sm font-medium group-hover:text-neutral-900 transition-colors">
+              Voir votre page publique
+            </h3>
+            <p className="text-xs text-neutral-500 font-light mt-0.5">
+              Prévisualisez ce que voient vos clients via le QR code
+            </p>
+          </div>
+        </Link>
+
+        <Link
+          href="/dashboard/carte"
+          className="flex items-center gap-4 bg-white border border-neutral-200 rounded-2xl p-5 hover:border-neutral-300 transition-colors group"
+        >
+          <div className="w-11 h-11 bg-amber-50 rounded-xl flex items-center justify-center shrink-0">
+            <Icon icon="solar:qr-code-linear" className="text-amber-600 text-xl" />
+          </div>
+          <div>
+            <h3 className="text-sm font-medium group-hover:text-neutral-900 transition-colors">
+              Générer votre carte de visite
+            </h3>
+            <p className="text-xs text-neutral-500 font-light mt-0.5">
+              Créez un QR code pour recevoir des réservations directes
+            </p>
+          </div>
+        </Link>
+      </div>
     </div>
   );
 }

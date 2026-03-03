@@ -14,9 +14,8 @@ export default async function DashboardPage() {
         select: { bookings: true },
       },
       bookings: {
-        where: { status: "PENDING" },
-        orderBy: { createdAt: "desc" },
-        take: 5,
+        where: { status: { in: ["PENDING", "ACCEPTED"] } },
+        orderBy: { requestedDate: "asc" },
       },
     },
   });
@@ -24,204 +23,93 @@ export default async function DashboardPage() {
   if (!driver) return null;
 
   const totalBookings = driver._count.bookings;
-  const pendingBookings = driver.bookings.length;
+  const pendingBookings = driver.bookings.filter((b) => b.status === "PENDING");
+  const acceptedBookings = driver.bookings.filter((b) => b.status === "ACCEPTED");
 
-  // Profile completeness (use vehicles JSON if available, else flat fields)
+  // Profile completeness
   const vehicles = Array.isArray(driver.vehicles) ? (driver.vehicles as Array<{ brand?: string; plate?: string }>) : [];
   const v0 = vehicles[0];
 
   const profileChecks = [
-    {
-      label: "Numéro de téléphone",
-      description: "Ajoutez votre téléphone pour que les clients puissent vous contacter",
-      icon: "solar:phone-linear",
-      section: "personal",
-      done: Boolean(driver.phone),
-    },
-    {
-      label: "Bio / Description",
-      description: "Présentez-vous en quelques lignes pour rassurer vos futurs clients",
-      icon: "solar:document-text-linear",
-      section: "personal",
-      done: Boolean(driver.bio),
-    },
-    {
-      label: "Marque du véhicule",
-      description: "Renseignez votre véhicule pour apparaître dans les résultats de recherche",
-      icon: "mdi:car-outline",
-      section: "vehicle",
-      done: Boolean(v0?.brand || driver.vehicleBrand),
-    },
-    {
-      label: "Plaque d'immatriculation",
-      description: "Ajoutez votre plaque pour identifier votre véhicule",
-      icon: "solar:license-linear",
-      section: "vehicle",
-      done: Boolean(v0?.plate || driver.vehiclePlate),
-    },
-    {
-      label: "Zone de couverture",
-      description: "Définissez votre zone d'activité sur la carte pour être trouvé par les clients à proximité",
-      icon: "solar:map-point-linear",
-      section: "zone",
-      done: Boolean(driver.zoneLat),
-    },
+    { label: "Téléphone", icon: "solar:phone-linear", section: "personal", done: Boolean(driver.phone) },
+    { label: "Bio", icon: "solar:document-text-linear", section: "personal", done: Boolean(driver.bio) },
+    { label: "Véhicule", icon: "mdi:car-outline", section: "vehicle", done: Boolean(v0?.brand || driver.vehicleBrand) },
+    { label: "Plaque", icon: "solar:license-linear", section: "vehicle", done: Boolean(v0?.plate || driver.vehiclePlate) },
+    { label: "Zone", icon: "solar:map-point-linear", section: "zone", done: Boolean(driver.zoneLat) },
   ];
 
   const completedFields = profileChecks.filter((c) => c.done).length;
   const completeness = Math.round((completedFields / profileChecks.length) * 100);
   const missingChecks = profileChecks.filter((c) => !c.done);
 
+  function formatDate(date: Date) {
+    return new Date(date).toLocaleDateString("fr-FR", {
+      weekday: "short",
+      day: "numeric",
+      month: "short",
+      hour: "2-digit",
+      minute: "2-digit",
+    });
+  }
+
   return (
     <div>
-      <div className="mb-8">
+      <div className="mb-6">
         <h1 className="text-2xl font-semibold tracking-tight">
           Bonjour, {driver.firstName} !
         </h1>
-        <p className="text-sm text-neutral-500 font-light mt-1">
-          Voici un résumé de votre activité
-        </p>
       </div>
 
-      {/* Stats */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-        <div className="bg-white border border-neutral-200 rounded-2xl p-6">
-          <div className="flex items-center gap-3 mb-3">
-            <div className="w-10 h-10 bg-neutral-100 rounded-xl flex items-center justify-center">
-              <Icon icon="solar:calendar-linear" className="text-neutral-600 text-xl" />
-            </div>
-            <span className="text-sm text-neutral-500 font-light">Total réservations</span>
-          </div>
-          <p className="text-3xl font-semibold">{totalBookings}</p>
-        </div>
+      {/* Stats bar - compact */}
+      <div className="flex items-center gap-3 mb-6 overflow-x-auto">
+        <Link
+          href="/dashboard/reservations"
+          className="flex items-center gap-2.5 bg-white border border-neutral-200 rounded-xl px-4 py-2.5 hover:border-neutral-300 transition-colors shrink-0"
+        >
+          <Icon icon="solar:calendar-linear" className="text-neutral-500 text-lg" />
+          <span className="text-sm text-neutral-500">Total</span>
+          <span className="text-sm font-semibold">{totalBookings}</span>
+        </Link>
 
-        <div className="bg-white border border-neutral-200 rounded-2xl p-6">
-          <div className="flex items-center gap-3 mb-3">
-            <div className="w-10 h-10 bg-amber-50 rounded-xl flex items-center justify-center">
-              <Icon icon="solar:clock-circle-linear" className="text-amber-600 text-xl" />
-            </div>
-            <span className="text-sm text-neutral-500 font-light">En attente</span>
-          </div>
-          <p className="text-3xl font-semibold">{pendingBookings}</p>
-        </div>
+        <Link
+          href="/dashboard/reservations"
+          className="flex items-center gap-2.5 bg-white border border-neutral-200 rounded-xl px-4 py-2.5 hover:border-neutral-300 transition-colors shrink-0"
+        >
+          <Icon icon="solar:clock-circle-linear" className="text-amber-500 text-lg" />
+          <span className="text-sm text-neutral-500">En attente</span>
+          <span className="text-sm font-semibold">{pendingBookings.length}</span>
+        </Link>
+
+        <Link
+          href="/dashboard/reservations"
+          className="flex items-center gap-2.5 bg-white border border-neutral-200 rounded-xl px-4 py-2.5 hover:border-neutral-300 transition-colors shrink-0"
+        >
+          <Icon icon="solar:check-circle-linear" className="text-green-500 text-lg" />
+          <span className="text-sm text-neutral-500">Acceptées</span>
+          <span className="text-sm font-semibold">{acceptedBookings.length}</span>
+        </Link>
 
         <Link
           href="/dashboard/profil"
-          className="bg-white border border-neutral-200 rounded-2xl p-6 hover:border-neutral-300 transition-colors group"
+          className="flex items-center gap-2.5 bg-white border border-neutral-200 rounded-xl px-4 py-2.5 hover:border-neutral-300 transition-colors shrink-0"
         >
-          <div className="flex items-center gap-3 mb-3">
-            <div className={`w-10 h-10 rounded-xl flex items-center justify-center ${
-              completeness === 100 ? "bg-green-50" : "bg-blue-50"
-            }`}>
-              <Icon
-                icon={completeness === 100 ? "solar:check-circle-bold" : "solar:user-check-linear"}
-                className={`text-xl ${completeness === 100 ? "text-green-600" : "text-blue-600"}`}
-              />
-            </div>
-            <div className="flex-1 min-w-0">
-              <span className="text-sm text-neutral-500 font-light">Profil complété</span>
-              {completeness < 100 && (
-                <p className="text-[11px] text-neutral-400 font-light truncate">Complétez vos infos pour apparaître dans les recherches</p>
-              )}
-            </div>
-            <Icon
-              icon="solar:arrow-right-linear"
-              className="text-neutral-300 group-hover:text-neutral-600 transition-colors shrink-0"
-            />
-          </div>
-          <div className="flex items-center gap-3">
-            <p className="text-3xl font-semibold">{completeness}%</p>
-            <div className="flex-1 bg-neutral-100 h-2 rounded-full overflow-hidden">
-              <div
-                className={`h-full rounded-full transition-all ${
-                  completeness === 100 ? "bg-green-500" : completeness >= 60 ? "bg-neutral-900" : "bg-amber-500"
-                }`}
-                style={{ width: `${completeness}%` }}
-              />
-            </div>
-          </div>
+          <Icon
+            icon={completeness === 100 ? "solar:check-circle-bold" : "solar:user-check-linear"}
+            className={`text-lg ${completeness === 100 ? "text-green-500" : "text-blue-500"}`}
+          />
+          <span className="text-sm text-neutral-500">Profil</span>
+          <span className="text-sm font-semibold">{completeness}%</span>
         </Link>
       </div>
 
-      {/* Missing profile items */}
-      {missingChecks.length > 0 && (
-        <div className="bg-white border border-neutral-200 rounded-2xl p-6 mb-8">
-          <div className="flex items-center gap-2 mb-4">
-            <Icon icon="solar:info-circle-linear" className="text-amber-500 text-lg" />
-            <h2 className="text-sm font-semibold">
-              {missingChecks.length === 1
-                ? "1 information manquante"
-                : `${missingChecks.length} informations manquantes`}
-            </h2>
-          </div>
-          <div className="space-y-2">
-            {missingChecks.map((check) => (
-              <Link
-                key={check.label}
-                href={`/dashboard/profil?section=${check.section}`}
-                className="flex items-center gap-4 p-3 rounded-xl hover:bg-neutral-50 transition-colors group"
-              >
-                <div className="w-9 h-9 bg-amber-50 rounded-lg flex items-center justify-center shrink-0">
-                  <Icon icon={check.icon} className="text-amber-600 text-lg" />
-                </div>
-                <div className="flex-1 min-w-0">
-                  <p className="text-sm font-medium text-neutral-900">{check.label}</p>
-                  <p className="text-xs text-neutral-500 font-light truncate">{check.description}</p>
-                </div>
-                <Icon
-                  icon="solar:arrow-right-linear"
-                  className="text-neutral-300 group-hover:text-neutral-600 transition-colors shrink-0"
-                />
-              </Link>
-            ))}
-          </div>
-        </div>
-      )}
-
-      {/* Quick actions */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-        <Link
-          href="/dashboard/profil-public"
-          className="bg-white border border-neutral-200 rounded-2xl p-6 hover:border-neutral-300 transition-colors group"
-        >
-          <div className="flex items-center justify-between">
-            <div>
-              <h3 className="font-medium text-sm">Voir votre page publique</h3>
-              <p className="text-xs text-neutral-500 font-light mt-1">
-                Prévisualisez ce que voient vos clients via le QR code
-              </p>
+      {/* Pending bookings - priority */}
+      {pendingBookings.length > 0 && (
+        <div className="bg-white border border-amber-200 rounded-2xl p-5 mb-4">
+          <div className="flex items-center justify-between mb-3">
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 bg-amber-400 rounded-full animate-pulse" />
+              <h2 className="font-semibold text-sm">En attente de réponse</h2>
             </div>
-            <Icon
-              icon="solar:arrow-right-linear"
-              className="text-neutral-400 group-hover:text-neutral-900 transition-colors"
-            />
-          </div>
-        </Link>
-
-        <Link
-          href="/dashboard/carte"
-          className="bg-white border border-neutral-200 rounded-2xl p-6 hover:border-neutral-300 transition-colors group"
-        >
-          <div className="flex items-center justify-between">
-            <div>
-              <h3 className="font-medium text-sm">Générer votre carte de visite</h3>
-              <p className="text-xs text-neutral-500 font-light mt-1">
-                Créez un QR code pour recevoir des réservations directes
-              </p>
-            </div>
-            <Icon
-              icon="solar:arrow-right-linear"
-              className="text-neutral-400 group-hover:text-neutral-900 transition-colors"
-            />
-          </div>
-        </Link>
-      </div>
-
-      {/* Recent pending bookings */}
-      {pendingBookings > 0 && (
-        <div className="bg-white border border-neutral-200 rounded-2xl p-6">
-          <div className="flex items-center justify-between mb-4">
-            <h2 className="font-semibold text-sm">Réservations en attente</h2>
             <Link
               href="/dashboard/reservations"
               className="text-xs text-neutral-500 hover:text-neutral-900 transition-colors"
@@ -230,7 +118,7 @@ export default async function DashboardPage() {
             </Link>
           </div>
           <div className="space-y-1">
-            {driver.bookings.map((booking) => (
+            {pendingBookings.map((booking) => (
               <Link
                 key={booking.id}
                 href={`/dashboard/reservations?id=${booking.id}`}
@@ -243,9 +131,7 @@ export default async function DashboardPage() {
                   </p>
                 </div>
                 <div className="flex items-center gap-2 shrink-0 ml-2">
-                  <span className="hidden sm:inline text-xs bg-amber-50 text-amber-700 px-2.5 py-1 rounded-full font-medium">
-                    En attente
-                  </span>
+                  <span className="text-xs text-neutral-400 font-light">{formatDate(booking.requestedDate)}</span>
                   <Icon
                     icon="solar:arrow-right-linear"
                     className="text-neutral-300 group-hover:text-neutral-600 transition-colors"
@@ -256,6 +142,104 @@ export default async function DashboardPage() {
           </div>
         </div>
       )}
+
+      {/* Accepted bookings - upcoming rides */}
+      {acceptedBookings.length > 0 && (
+        <div className="bg-white border border-green-200 rounded-2xl p-5 mb-6">
+          <div className="flex items-center justify-between mb-3">
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 bg-green-500 rounded-full" />
+              <h2 className="font-semibold text-sm">Courses à venir</h2>
+            </div>
+            <Link
+              href="/dashboard/reservations"
+              className="text-xs text-neutral-500 hover:text-neutral-900 transition-colors"
+            >
+              Tout voir
+            </Link>
+          </div>
+          <div className="space-y-1">
+            {acceptedBookings.map((booking) => (
+              <Link
+                key={booking.id}
+                href={`/dashboard/reservations?id=${booking.id}`}
+                className="flex items-center justify-between py-3 px-3 -mx-3 rounded-xl border-b border-neutral-100 last:border-0 hover:bg-neutral-50 transition-colors group"
+              >
+                <div className="min-w-0 flex-1">
+                  <p className="text-sm font-medium">{booking.clientName}</p>
+                  <p className="text-xs text-neutral-500 font-light truncate">
+                    {booking.departureName} → {booking.arrivalName}
+                  </p>
+                </div>
+                <div className="flex items-center gap-2 shrink-0 ml-2">
+                  <span className="text-xs text-green-600 font-medium">{formatDate(booking.requestedDate)}</span>
+                  <Icon
+                    icon="solar:arrow-right-linear"
+                    className="text-neutral-300 group-hover:text-neutral-600 transition-colors"
+                  />
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Missing profile items */}
+      {missingChecks.length > 0 && (
+        <div className="bg-white border border-neutral-200 rounded-2xl p-5 mb-6">
+          <div className="flex items-center gap-2 mb-3">
+            <Icon icon="solar:info-circle-linear" className="text-amber-500 text-lg" />
+            <h2 className="text-sm font-semibold">
+              {missingChecks.length === 1
+                ? "1 info manquante"
+                : `${missingChecks.length} infos manquantes`}
+            </h2>
+          </div>
+          <div className="space-y-1">
+            {missingChecks.map((check) => (
+              <Link
+                key={check.label}
+                href={`/dashboard/profil?section=${check.section}`}
+                className="flex items-center gap-3 p-2.5 rounded-xl hover:bg-neutral-50 transition-colors group"
+              >
+                <div className="w-8 h-8 bg-amber-50 rounded-lg flex items-center justify-center shrink-0">
+                  <Icon icon={check.icon} className="text-amber-600 text-base" />
+                </div>
+                <span className="text-sm text-neutral-700 flex-1">{check.label}</span>
+                <Icon
+                  icon="solar:arrow-right-linear"
+                  className="text-neutral-300 group-hover:text-neutral-600 transition-colors shrink-0 text-sm"
+                />
+              </Link>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Quick actions */}
+      <div className="grid grid-cols-2 gap-3">
+        <Link
+          href="/dashboard/profil-public"
+          className="bg-white border border-neutral-200 rounded-2xl p-4 hover:border-neutral-300 transition-colors"
+        >
+          <div className="w-9 h-9 bg-blue-50 rounded-lg flex items-center justify-center mb-2.5">
+            <Icon icon="solar:eye-linear" className="text-blue-600 text-lg" />
+          </div>
+          <h3 className="font-medium text-sm">Page publique</h3>
+          <p className="text-xs text-neutral-500 font-light mt-0.5">Voir votre profil client</p>
+        </Link>
+
+        <Link
+          href="/dashboard/carte"
+          className="bg-white border border-neutral-200 rounded-2xl p-4 hover:border-neutral-300 transition-colors"
+        >
+          <div className="w-9 h-9 bg-amber-50 rounded-lg flex items-center justify-center mb-2.5">
+            <Icon icon="solar:qr-code-linear" className="text-amber-600 text-lg" />
+          </div>
+          <h3 className="font-medium text-sm">Carte de visite</h3>
+          <p className="text-xs text-neutral-500 font-light mt-0.5">Générer votre QR code</p>
+        </Link>
+      </div>
     </div>
   );
 }

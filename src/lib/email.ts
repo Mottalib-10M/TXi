@@ -134,3 +134,146 @@ export function buildClientConfirmationEmail(data: {
     `,
   };
 }
+
+// --- Emails envoyés quand une course est ACCEPTÉE ---
+
+export function buildBookingAcceptedClientEmail(data: {
+  clientName: string;
+  departure: string;
+  arrival: string;
+  date: string;
+  reference: string;
+  driverName: string;
+  driverPhone: string;
+  driverEmail: string;
+}) {
+  return {
+    subject: `Course confirmée — #${data.reference}`,
+    html: `
+      <div style="font-family: Inter, sans-serif; max-width: 600px; margin: 0 auto;">
+        <h2 style="color: #171717;">Votre course est confirmée !</h2>
+        <p>Bonjour ${data.clientName},</p>
+        <p>Bonne nouvelle ! Votre chauffeur a accepté votre demande de course. Voici le récapitulatif :</p>
+        <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">Départ</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.departure}</td></tr>
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">Arrivée</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.arrival}</td></tr>
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">Date & heure</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.date}</td></tr>
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">Référence</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">#${data.reference}</td></tr>
+        </table>
+        <h3 style="color: #171717; font-size: 15px; margin-top: 24px;">Votre chauffeur</h3>
+        <table style="width: 100%; border-collapse: collapse; margin: 12px 0 20px;">
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">Nom</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.driverName}</td></tr>
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">Téléphone</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;"><a href="tel:${data.driverPhone}" style="color: #171717; text-decoration: none;">${data.driverPhone}</a></td></tr>
+          <tr><td style="padding: 8px; color: #737373;">Email</td><td style="padding: 8px; font-weight: 500;"><a href="mailto:${data.driverEmail}" style="color: #171717; text-decoration: none;">${data.driverEmail}</a></td></tr>
+        </table>
+        <p style="color: #737373; font-size: 13px;">N'hésitez pas à contacter votre chauffeur pour toute question.</p>
+        <p style="color: #a3a3a3; font-size: 12px;">— L'équipe TaxiNoir</p>
+      </div>
+    `,
+  };
+}
+
+function toICSDate(date: Date): string {
+  return date.toISOString().replace(/[-:]/g, "").replace(/\.\d{3}/, "");
+}
+
+function buildCalendarUrl(data: {
+  title: string;
+  startDate: Date;
+  endDate: Date;
+  location: string;
+  description: string;
+}): string {
+  const ics = [
+    "BEGIN:VCALENDAR",
+    "VERSION:2.0",
+    "PRODID:-//TaxiNoir//Booking//FR",
+    "BEGIN:VEVENT",
+    `DTSTART:${toICSDate(data.startDate)}`,
+    `DTEND:${toICSDate(data.endDate)}`,
+    `SUMMARY:${data.title}`,
+    `LOCATION:${data.location}`,
+    `DESCRIPTION:${data.description.replace(/\n/g, "\\n")}`,
+    "END:VEVENT",
+    "END:VCALENDAR",
+  ].join("\r\n");
+
+  return `data:text/calendar;charset=utf-8,${encodeURIComponent(ics)}`;
+}
+
+export function buildBookingAcceptedDriverEmail(data: {
+  driverName: string;
+  clientName: string;
+  clientPhone: string;
+  clientEmail: string;
+  departure: string;
+  arrival: string;
+  date: string;
+  reference: string;
+  requestedDate: Date;
+  estimatedDuration?: number | null;
+  estimatedPrice?: number | null;
+  passengerCount?: number;
+  clientComments?: string | null;
+}) {
+  const endDate = new Date(data.requestedDate.getTime() + (data.estimatedDuration || 60) * 60 * 1000);
+
+  const descriptionLines = [
+    `Référence: #${data.reference}`,
+    ``,
+    `CLIENT`,
+    `Nom: ${data.clientName}`,
+    `Tél: ${data.clientPhone}`,
+    `Email: ${data.clientEmail}`,
+    ``,
+    `TRAJET`,
+    `Départ: ${data.departure}`,
+    `Arrivée: ${data.arrival}`,
+    `Passagers: ${data.passengerCount || 1}`,
+  ];
+  if (data.estimatedPrice) {
+    descriptionLines.push(`Prix estimé: ${data.estimatedPrice.toFixed(2)}€`);
+  }
+  if (data.clientComments) {
+    descriptionLines.push(``, `Commentaires: ${data.clientComments}`);
+  }
+
+  const calendarUrl = buildCalendarUrl({
+    title: `Course #${data.reference} — ${data.clientName}`,
+    startDate: data.requestedDate,
+    endDate,
+    location: data.departure,
+    description: descriptionLines.join("\\n"),
+  });
+
+  return {
+    subject: `Course confirmée — #${data.reference}`,
+    html: `
+      <div style="font-family: Inter, sans-serif; max-width: 600px; margin: 0 auto;">
+        <h2 style="color: #171717;">Course confirmée</h2>
+        <p>Bonjour ${data.driverName},</p>
+        <p>Vous avez accepté la course <strong>#${data.reference}</strong>. Voici le récapitulatif :</p>
+        <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">Départ</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.departure}</td></tr>
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">Arrivée</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.arrival}</td></tr>
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">Date & heure</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.date}</td></tr>
+          <tr><td style="padding: 8px; color: #737373;">Référence</td><td style="padding: 8px; font-weight: 500;">#${data.reference}</td></tr>
+        </table>
+
+        <div style="text-align: center; margin: 24px 0;">
+          <a href="${calendarUrl}" style="background-color: #171717; color: #ffffff; padding: 14px 28px; border-radius: 12px; text-decoration: none; font-weight: 500; font-size: 14px; display: inline-block;">
+            Ajouter à mon calendrier
+          </a>
+        </div>
+
+        <h3 style="color: #171717; font-size: 15px; margin-top: 24px;">Coordonnées du client</h3>
+        <table style="width: 100%; border-collapse: collapse; margin: 12px 0 20px;">
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">Nom</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.clientName}</td></tr>
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">Téléphone</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;"><a href="tel:${data.clientPhone}" style="color: #171717; text-decoration: none;">${data.clientPhone}</a></td></tr>
+          <tr><td style="padding: 8px; color: #737373;">Email</td><td style="padding: 8px; font-weight: 500;"><a href="mailto:${data.clientEmail}" style="color: #171717; text-decoration: none;">${data.clientEmail}</a></td></tr>
+        </table>
+        <p style="color: #a3a3a3; font-size: 12px;">— L'équipe TaxiNoir</p>
+      </div>
+    `,
+  };
+}

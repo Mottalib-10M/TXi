@@ -1,6 +1,11 @@
 import { NextResponse } from "next/server";
 import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
+import {
+  sendEmail,
+  buildBookingAcceptedClientEmail,
+  buildBookingAcceptedDriverEmail,
+} from "@/lib/email";
 
 export async function PATCH(
   request: Request,
@@ -22,6 +27,7 @@ export async function PATCH(
     // Verify the booking belongs to this driver
     const booking = await prisma.booking.findUnique({
       where: { id: params.id },
+      include: { organization: { select: { email: true, contactName: true } } },
     });
 
     if (!booking || booking.driverId !== session.user.id) {
@@ -66,6 +72,65 @@ export async function PATCH(
       where: { id: params.id },
       data: { status },
     });
+
+    // Send notification emails when booking is accepted
+    if (status === "ACCEPTED") {
+      try {
+        const driver = await prisma.driver.findUnique({
+          where: { id: session.user.id },
+          select: { firstName: true, lastName: true, phone: true, email: true },
+        });
+
+        if (driver) {
+          const dateFormatted = new Date(booking.requestedDate).toLocaleDateString("fr-FR", {
+            weekday: "long",
+            day: "numeric",
+            month: "long",
+            year: "numeric",
+            hour: "2-digit",
+            minute: "2-digit",
+          });
+          const driverFullName = `${driver.firstName} ${driver.lastName}`;
+
+          // Determine client email: org email or direct client email
+          const clientEmail = booking.organization?.email || booking.clientEmail;
+          const clientName = booking.organization?.contactName || booking.clientName;
+
+          // Email to client
+          const clientMail = buildBookingAcceptedClientEmail({
+            clientName,
+            departure: booking.departureName,
+            arrival: booking.arrivalName,
+            date: dateFormatted,
+            reference: booking.reference,
+            driverName: driverFullName,
+            driverPhone: driver.phone,
+            driverEmail: driver.email,
+          });
+          await sendEmail({ to: clientEmail, ...clientMail });
+
+          // Email to driver
+          const driverMail = buildBookingAcceptedDriverEmail({
+            driverName: driver.firstName,
+            clientName: booking.clientName,
+            clientPhone: booking.clientPhone,
+            clientEmail: booking.clientEmail,
+            departure: booking.departureName,
+            arrival: booking.arrivalName,
+            date: dateFormatted,
+            reference: booking.reference,
+            requestedDate: booking.requestedDate,
+            estimatedDuration: booking.estimatedDuration,
+            estimatedPrice: booking.lockedPrice || booking.estimatedPrice,
+            passengerCount: booking.passengerCount,
+            clientComments: booking.clientComments,
+          });
+          await sendEmail({ to: driver.email, ...driverMail });
+        }
+      } catch (error) {
+        console.error("Failed to send acceptance emails:", error);
+      }
+    }
 
     return NextResponse.json({ message: "Statut mis à jour" });
   } catch (error) {
