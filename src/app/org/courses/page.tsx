@@ -10,11 +10,18 @@ interface Booking {
   reference: string;
   beneficiaryName: string | null;
   departureName: string;
+  departureLat: number;
+  departureLng: number;
   arrivalName: string;
   requestedDate: string;
   status: string;
   lockedPrice: number | null;
-  driver: { firstName: string; lastName: string } | null;
+  driver: {
+    firstName: string;
+    lastName: string;
+    zoneLat: number | null;
+    zoneLng: number | null;
+  } | null;
 }
 
 interface Alternative {
@@ -51,12 +58,39 @@ const statusLabels: Record<string, string> = {
   CANCELLED: "Annulée",
 };
 
+function estimateEtaMinutes(
+  driverLat: number,
+  driverLng: number,
+  departureLat: number,
+  departureLng: number
+): number {
+  const R = 6371;
+  const dLat = ((departureLat - driverLat) * Math.PI) / 180;
+  const dLng = ((departureLng - driverLng) * Math.PI) / 180;
+  const a =
+    Math.sin(dLat / 2) ** 2 +
+    Math.cos((driverLat * Math.PI) / 180) *
+      Math.cos((departureLat * Math.PI) / 180) *
+      Math.sin(dLng / 2) ** 2;
+  const distKm = R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+  // Estimation : ~40 km/h en moyenne en ville
+  return Math.max(Math.round((distKm / 40) * 60), 1);
+}
+
+function isAsapBooking(requestedDate: string): boolean {
+  const requested = new Date(requestedDate).getTime();
+  const now = Date.now();
+  // Considéré "au plus vite" si réservé pour dans moins de 30 min
+  return requested - now < 30 * 60 * 1000;
+}
+
 export default function CoursesPage() {
   const [bookings, setBookings] = useState<Booking[]>([]);
   const [loading, setLoading] = useState(true);
   const [activeFilter, setActiveFilter] = useState("Toutes");
   const [alternatives, setAlternatives] = useState<Record<string, Alternative[]>>({});
   const [loadingAlts, setLoadingAlts] = useState<string | null>(null);
+  const [cancellingId, setCancellingId] = useState<string | null>(null);
 
   useEffect(() => {
     fetchBookings();
@@ -122,6 +156,24 @@ export default function CoursesPage() {
     }
   }
 
+  async function cancelBooking(bookingId: string) {
+    setCancellingId(bookingId);
+    try {
+      const res = await fetch(`/api/org/bookings/${bookingId}`, {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ status: "CANCELLED" }),
+      });
+      if (res.ok) {
+        fetchBookings();
+      }
+    } catch {
+      // Silently fail
+    } finally {
+      setCancellingId(null);
+    }
+  }
+
   return (
     <div className="max-w-5xl">
       <div className="mb-8">
@@ -171,6 +223,14 @@ export default function CoursesPage() {
                     {format(new Date(b.requestedDate), "dd MMM yyyy à HH:mm", { locale: fr })}
                     {b.driver && ` · ${b.driver.firstName} ${b.driver.lastName}`}
                   </p>
+                  {(b.status === "PENDING" || b.status === "ACCEPTED") &&
+                    b.driver?.zoneLat && b.driver?.zoneLng &&
+                    isAsapBooking(b.requestedDate) && (
+                    <p className="text-xs text-blue-600 font-medium mt-0.5 flex items-center gap-1">
+                      <Icon icon="solar:clock-circle-linear" className="text-xs" />
+                      Arrivée estimée dans ~{estimateEtaMinutes(b.driver.zoneLat, b.driver.zoneLng, b.departureLat, b.departureLng)} min
+                    </p>
+                  )}
                 </div>
                 <div className="flex items-center gap-3 shrink-0">
                   {b.lockedPrice != null && (
@@ -179,6 +239,15 @@ export default function CoursesPage() {
                   <span className={`text-xs px-2.5 py-1 rounded-full font-medium ${statusColors[b.status] || ""}`}>
                     {statusLabels[b.status] || b.status}
                   </span>
+                  {b.status === "PENDING" && (
+                    <button
+                      onClick={() => cancelBooking(b.id)}
+                      disabled={cancellingId === b.id}
+                      className="text-xs text-red-600 hover:text-red-700 hover:underline disabled:opacity-50"
+                    >
+                      {cancellingId === b.id ? "..." : "Annuler"}
+                    </button>
+                  )}
                   {b.status === "REJECTED" && (
                     <button
                       onClick={() => loadAlternatives(b.id)}

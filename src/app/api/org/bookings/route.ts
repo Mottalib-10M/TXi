@@ -163,7 +163,14 @@ export async function GET(request: NextRequest) {
       prisma.booking.findMany({
         where,
         include: {
-          driver: { select: { firstName: true, lastName: true } },
+          driver: {
+            select: {
+              firstName: true,
+              lastName: true,
+              zoneLat: true,
+              zoneLng: true,
+            },
+          },
         },
         orderBy: { createdAt: "desc" },
         take: limit,
