@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { Icon } from "@iconify/react";
+import { PlacesAutocomplete } from "@/components/booking/PlacesAutocomplete";
 
 export default function ParametresPage() {
   const [loading, setLoading] = useState(true);
@@ -127,7 +128,12 @@ export default function ParametresPage() {
           {orgType !== "INDIVIDUAL" && (
             <div>
               <label className="block text-sm font-medium mb-1.5">Adresse</label>
-              <input type="text" value={address} onChange={(e) => setAddress(e.target.value)} className={inputClass} />
+              <PlacesAutocomplete
+                placeholder="Adresse de l'établissement"
+                value={address}
+                onChange={(val) => setAddress(val)}
+                icon="solar:map-point-linear"
+              />
             </div>
           )}
         </div>
