@@ -146,7 +146,11 @@ export function buildBookingAcceptedClientEmail(data: {
   driverName: string;
   driverPhone: string;
   driverEmail: string;
+  bookingId: string;
+  isOrgBooking?: boolean;
 }) {
+  const baseUrl = process.env.NEXTAUTH_URL || "https://taxinoir.fr";
+  const reservationsUrl = `${baseUrl}/mes-reservations`;
   return {
     subject: `Course confirmée — #${data.reference}`,
     html: `
@@ -166,39 +170,16 @@ export function buildBookingAcceptedClientEmail(data: {
           <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">Téléphone</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;"><a href="tel:${data.driverPhone}" style="color: #171717; text-decoration: none;">${data.driverPhone}</a></td></tr>
           <tr><td style="padding: 8px; color: #737373;">Email</td><td style="padding: 8px; font-weight: 500;"><a href="mailto:${data.driverEmail}" style="color: #171717; text-decoration: none;">${data.driverEmail}</a></td></tr>
         </table>
+        <div style="text-align: center; margin: 24px 0;">
+          <a href="${reservationsUrl}" style="background-color: #171717; color: #ffffff; padding: 14px 28px; border-radius: 12px; text-decoration: none; font-weight: 500; font-size: 14px; display: inline-block;">
+            Voir mes réservations
+          </a>
+        </div>
         <p style="color: #737373; font-size: 13px;">N'hésitez pas à contacter votre chauffeur pour toute question.</p>
         <p style="color: #a3a3a3; font-size: 12px;">— L'équipe TaxiNoir</p>
       </div>
     `,
   };
-}
-
-function toICSDate(date: Date): string {
-  return date.toISOString().replace(/[-:]/g, "").replace(/\.\d{3}/, "");
-}
-
-function buildCalendarUrl(data: {
-  title: string;
-  startDate: Date;
-  endDate: Date;
-  location: string;
-  description: string;
-}): string {
-  const ics = [
-    "BEGIN:VCALENDAR",
-    "VERSION:2.0",
-    "PRODID:-//TaxiNoir//Booking//FR",
-    "BEGIN:VEVENT",
-    `DTSTART:${toICSDate(data.startDate)}`,
-    `DTEND:${toICSDate(data.endDate)}`,
-    `SUMMARY:${data.title}`,
-    `LOCATION:${data.location}`,
-    `DESCRIPTION:${data.description.replace(/\n/g, "\\n")}`,
-    "END:VEVENT",
-    "END:VCALENDAR",
-  ].join("\r\n");
-
-  return `data:text/calendar;charset=utf-8,${encodeURIComponent(ics)}`;
 }
 
 export function buildBookingAcceptedDriverEmail(data: {
@@ -210,41 +191,11 @@ export function buildBookingAcceptedDriverEmail(data: {
   arrival: string;
   date: string;
   reference: string;
-  requestedDate: Date;
-  estimatedDuration?: number | null;
-  estimatedPrice?: number | null;
-  passengerCount?: number;
-  clientComments?: string | null;
+  bookingId: string;
 }) {
-  const endDate = new Date(data.requestedDate.getTime() + (data.estimatedDuration || 60) * 60 * 1000);
-
-  const descriptionLines = [
-    `Référence: #${data.reference}`,
-    ``,
-    `CLIENT`,
-    `Nom: ${data.clientName}`,
-    `Tél: ${data.clientPhone}`,
-    `Email: ${data.clientEmail}`,
-    ``,
-    `TRAJET`,
-    `Départ: ${data.departure}`,
-    `Arrivée: ${data.arrival}`,
-    `Passagers: ${data.passengerCount || 1}`,
-  ];
-  if (data.estimatedPrice) {
-    descriptionLines.push(`Prix estimé: ${data.estimatedPrice.toFixed(2)}€`);
-  }
-  if (data.clientComments) {
-    descriptionLines.push(``, `Commentaires: ${data.clientComments}`);
-  }
-
-  const calendarUrl = buildCalendarUrl({
-    title: `Course #${data.reference} — ${data.clientName}`,
-    startDate: data.requestedDate,
-    endDate,
-    location: data.departure,
-    description: descriptionLines.join("\\n"),
-  });
+  const baseUrl = process.env.NEXTAUTH_URL || "https://taxinoir.fr";
+  const calendarUrl = `${baseUrl}/api/calendar?id=${data.bookingId}`;
+  const reservationUrl = `${baseUrl}/dashboard/reservations?id=${data.bookingId}`;
 
   return {
     subject: `Course confirmée — #${data.reference}`,
@@ -263,6 +214,11 @@ export function buildBookingAcceptedDriverEmail(data: {
         <div style="text-align: center; margin: 24px 0;">
           <a href="${calendarUrl}" style="background-color: #171717; color: #ffffff; padding: 14px 28px; border-radius: 12px; text-decoration: none; font-weight: 500; font-size: 14px; display: inline-block;">
             Ajouter à mon calendrier
+          </a>
+        </div>
+        <div style="text-align: center; margin: 0 0 24px;">
+          <a href="${reservationUrl}" style="background-color: #ffffff; color: #171717; padding: 14px 28px; border-radius: 12px; text-decoration: none; font-weight: 500; font-size: 14px; display: inline-block; border: 1px solid #e5e5e5;">
+            Voir la réservation
           </a>
         </div>
 

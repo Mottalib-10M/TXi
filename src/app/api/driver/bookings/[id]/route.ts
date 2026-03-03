@@ -115,6 +115,8 @@ export async function PATCH(
             driverName: driverFullName,
             driverPhone: driver.phone,
             driverEmail: driver.email,
+            bookingId: booking.id,
+            isOrgBooking,
           });
           await sendEmail({ to: clientEmailTo, ...clientMail });
 
@@ -130,11 +132,7 @@ export async function PATCH(
             arrival: booking.arrivalName,
             date: dateFormatted,
             reference: booking.reference,
-            requestedDate: booking.requestedDate,
-            estimatedDuration: booking.estimatedDuration,
-            estimatedPrice: booking.lockedPrice || booking.estimatedPrice,
-            passengerCount: booking.passengerCount,
-            clientComments: booking.clientComments,
+            bookingId: booking.id,
           });
           await sendEmail({ to: driver.email, ...driverMail });
         }

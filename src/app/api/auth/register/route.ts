@@ -115,7 +115,7 @@ export async function POST(request: Request) {
     if (data.profileType === "particulier") {
       const fullName = `${data.firstName} ${data.lastName}`;
 
-      await prisma.organization.create({
+      const org = await prisma.organization.create({
         data: {
           name: fullName,
           contactName: fullName,
@@ -123,6 +123,17 @@ export async function POST(request: Request) {
           phone: data.phone,
           passwordHash,
           type: "INDIVIDUAL",
+        },
+      });
+
+      // Attach existing bookings made with this email (direct bookings without org)
+      await prisma.booking.updateMany({
+        where: {
+          clientEmail: data.email,
+          organizationId: null,
+        },
+        data: {
+          organizationId: org.id,
         },
       });
 

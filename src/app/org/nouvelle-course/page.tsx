@@ -267,7 +267,7 @@ export default function NouvelleCourse() {
                 setDate(now.toISOString().slice(0, 10));
                 setTime(now.toTimeString().slice(0, 5));
               }}
-              className="flex items-center gap-1.5 text-xs font-medium text-neutral-900 bg-neutral-100 hover:bg-neutral-200 px-3 py-1.5 rounded-lg transition-colors"
+              className="flex items-center gap-1.5 text-sm font-medium text-white bg-neutral-900 hover:bg-neutral-800 px-4 py-2 rounded-xl transition-colors shadow-sm"
             >
               <Icon icon="solar:bolt-linear" className="text-sm" />
               Au plus vite
