@@ -25,6 +25,9 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         if (driver) {
           const isValid = await compare(password, driver.passwordHash);
           if (!isValid) return null;
+          if (!driver.emailVerified) {
+            throw new Error("EMAIL_NOT_VERIFIED");
+          }
           return {
             id: driver.id,
             email: driver.email,
@@ -41,6 +44,9 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         if (org) {
           const isValid = await compare(password, org.passwordHash);
           if (!isValid) return null;
+          if (!org.emailVerified) {
+            throw new Error("EMAIL_NOT_VERIFIED");
+          }
           return {
             id: org.id,
             email: org.email,

@@ -10,8 +10,15 @@ function ConnexionForm() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const registered = searchParams.get("registered");
+  const verified = searchParams.get("verified");
+  const resetSuccess = searchParams.get("reset");
+  const tokenError = searchParams.get("error");
   const { data: session, status } = useSession();
   const [error, setError] = useState("");
+  const [emailNotVerified, setEmailNotVerified] = useState(false);
+  const [resendEmail, setResendEmail] = useState("");
+  const [resendLoading, setResendLoading] = useState(false);
+  const [resendSuccess, setResendSuccess] = useState(false);
   const [loading, setLoading] = useState(false);
 
   // If already authenticated, redirect based on role
@@ -22,21 +29,48 @@ function ConnexionForm() {
     }
   }, [status, session, router]);
 
+  async function handleResend() {
+    if (!resendEmail) return;
+    setResendLoading(true);
+    setResendSuccess(false);
+    try {
+      const res = await fetch("/api/auth/resend-verification", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: resendEmail }),
+      });
+      if (res.ok) {
+        setResendSuccess(true);
+      }
+    } catch {
+      // silently fail
+    } finally {
+      setResendLoading(false);
+    }
+  }
+
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setError("");
     setLoading(true);
 
     const formData = new FormData(e.currentTarget);
+    const email = formData.get("email") as string;
 
     try {
       const result = await signIn("credentials", {
-        email: formData.get("email") as string,
+        email,
         password: formData.get("password") as string,
         redirect: false,
       });
 
       if (result?.error) {
+        if (result.error.includes("EMAIL_NOT_VERIFIED")) {
+          setEmailNotVerified(true);
+          setResendEmail(email);
+          setError("");
+          return;
+        }
         setError("Email ou mot de passe incorrect");
         return;
       }
@@ -72,8 +106,44 @@ function ConnexionForm() {
 
         <form onSubmit={handleSubmit} className="space-y-4">
           {registered && (
+            <div className="bg-blue-50 border border-blue-200 text-blue-700 text-sm px-4 py-3 rounded-xl">
+              Compte créé ! Un email de confirmation vous a été envoyé. Vérifiez votre boîte de réception.
+            </div>
+          )}
+
+          {verified && (
             <div className="bg-green-50 border border-green-200 text-green-700 text-sm px-4 py-3 rounded-xl">
-              Compte créé avec succès ! Connectez-vous.
+              Email confirmé avec succès ! Vous pouvez maintenant vous connecter.
+            </div>
+          )}
+
+          {resetSuccess && (
+            <div className="bg-green-50 border border-green-200 text-green-700 text-sm px-4 py-3 rounded-xl">
+              Mot de passe modifié avec succès ! Connectez-vous avec votre nouveau mot de passe.
+            </div>
+          )}
+
+          {tokenError === "expired_token" && (
+            <div className="bg-red-50 border border-red-200 text-red-700 text-sm px-4 py-3 rounded-xl">
+              Le lien de vérification a expiré. Connectez-vous pour recevoir un nouveau lien.
+            </div>
+          )}
+
+          {emailNotVerified && (
+            <div className="bg-amber-50 border border-amber-200 text-amber-700 text-sm px-4 py-3 rounded-xl">
+              <p>Veuillez confirmer votre adresse email. Vérifiez votre boîte de réception.</p>
+              {resendSuccess ? (
+                <p className="mt-2 font-medium">Email renvoyé avec succès !</p>
+              ) : (
+                <button
+                  type="button"
+                  onClick={handleResend}
+                  disabled={resendLoading}
+                  className="mt-2 underline font-medium hover:no-underline disabled:opacity-50"
+                >
+                  {resendLoading ? "Envoi en cours..." : "Renvoyer l'email de confirmation"}
+                </button>
+              )}
             </div>
           )}
 
@@ -98,9 +168,14 @@ function ConnexionForm() {
           </div>
 
           <div>
-            <label htmlFor="password" className="block text-sm font-medium mb-1.5">
-              Mot de passe
-            </label>
+            <div className="flex items-center justify-between mb-1.5">
+              <label htmlFor="password" className="block text-sm font-medium">
+                Mot de passe
+              </label>
+              <Link href="/mot-de-passe-oublie" className="text-xs text-neutral-500 hover:text-neutral-900 transition-colors">
+                Mot de passe oublié ?
+              </Link>
+            </div>
             <input
               id="password"
               name="password"

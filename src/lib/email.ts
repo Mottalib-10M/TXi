@@ -33,6 +33,50 @@ export async function sendEmail({ to, subject, html }: EmailOptions) {
   }
 }
 
+export function buildVerificationEmail(name: string, verifyUrl: string) {
+  return {
+    subject: "Confirmez votre adresse email",
+    html: `
+      <div style="font-family: Inter, sans-serif; max-width: 600px; margin: 0 auto;">
+        <h2 style="color: #171717;">Confirmez votre adresse email</h2>
+        <p>Bonjour ${name},</p>
+        <p>Merci de vous être inscrit sur TaxiNoir. Cliquez sur le bouton ci-dessous pour confirmer votre adresse email :</p>
+        <div style="text-align: center; margin: 30px 0;">
+          <a href="${verifyUrl}" style="background-color: #171717; color: #ffffff; padding: 14px 28px; border-radius: 12px; text-decoration: none; font-weight: 500; font-size: 14px; display: inline-block;">
+            Confirmer mon email
+          </a>
+        </div>
+        <p style="color: #737373; font-size: 13px;">Si le bouton ne fonctionne pas, copiez ce lien dans votre navigateur :</p>
+        <p style="color: #737373; font-size: 13px; word-break: break-all;">${verifyUrl}</p>
+        <p style="color: #a3a3a3; font-size: 12px;">Ce lien expire dans 24 heures.</p>
+        <p style="color: #a3a3a3; font-size: 12px;">— L'équipe TaxiNoir</p>
+      </div>
+    `,
+  };
+}
+
+export function buildPasswordResetEmail(name: string, resetUrl: string) {
+  return {
+    subject: "Réinitialisation de votre mot de passe",
+    html: `
+      <div style="font-family: Inter, sans-serif; max-width: 600px; margin: 0 auto;">
+        <h2 style="color: #171717;">Réinitialisation du mot de passe</h2>
+        <p>Bonjour ${name},</p>
+        <p>Vous avez demandé la réinitialisation de votre mot de passe. Cliquez sur le bouton ci-dessous pour choisir un nouveau mot de passe :</p>
+        <div style="text-align: center; margin: 30px 0;">
+          <a href="${resetUrl}" style="background-color: #171717; color: #ffffff; padding: 14px 28px; border-radius: 12px; text-decoration: none; font-weight: 500; font-size: 14px; display: inline-block;">
+            Réinitialiser mon mot de passe
+          </a>
+        </div>
+        <p style="color: #737373; font-size: 13px;">Si le bouton ne fonctionne pas, copiez ce lien dans votre navigateur :</p>
+        <p style="color: #737373; font-size: 13px; word-break: break-all;">${resetUrl}</p>
+        <p style="color: #a3a3a3; font-size: 12px;">Ce lien expire dans 1 heure. Si vous n'avez pas demandé cette réinitialisation, ignorez cet email.</p>
+        <p style="color: #a3a3a3; font-size: 12px;">— L'équipe TaxiNoir</p>
+      </div>
+    `,
+  };
+}
+
 export function buildDriverNotificationEmail(data: {
   driverName: string;
   clientName: string;

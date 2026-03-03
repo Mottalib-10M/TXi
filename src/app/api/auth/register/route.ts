@@ -3,6 +3,7 @@ import { hash } from "bcryptjs";
 import slugify from "slugify";
 import { prisma } from "@/lib/prisma";
 import { z } from "zod";
+import { sendEmail, buildVerificationEmail } from "@/lib/email";
 
 const driverSchema = z.object({
   profileType: z.literal("driver"),
@@ -55,6 +56,20 @@ async function isEmailTaken(email: string): Promise<boolean> {
   return !!(driver || org);
 }
 
+async function sendVerificationEmail(email: string, name: string) {
+  const token = crypto.randomUUID();
+  const expiresAt = new Date(Date.now() + 24 * 60 * 60 * 1000); // 24h
+
+  await prisma.emailVerificationToken.create({
+    data: { token, email, expiresAt },
+  });
+
+  const baseUrl = process.env.NEXTAUTH_URL || "http://localhost:3000";
+  const verifyUrl = `${baseUrl}/api/auth/verify-email?token=${token}`;
+  const { subject, html } = buildVerificationEmail(name, verifyUrl);
+  await sendEmail({ to: email, subject, html });
+}
+
 export async function POST(request: Request) {
   try {
     const body = await request.json();
@@ -84,8 +99,10 @@ export async function POST(request: Request) {
         },
       });
 
+      await sendVerificationEmail(data.email, data.firstName);
+
       return NextResponse.json(
-        { message: "Compte créé avec succès", slug: driver.slug },
+        { message: "Compte créé avec succès. Vérifiez votre email.", slug: driver.slug },
         { status: 201 }
       );
     }
@@ -105,8 +122,10 @@ export async function POST(request: Request) {
         },
       });
 
+      await sendVerificationEmail(data.email, data.firstName);
+
       return NextResponse.json(
-        { message: "Compte créé avec succès", profileType: data.profileType },
+        { message: "Compte créé avec succès. Vérifiez votre email.", profileType: data.profileType },
         { status: 201 }
       );
     }
@@ -130,8 +149,10 @@ export async function POST(request: Request) {
       },
     });
 
+    await sendVerificationEmail(data.email, data.contactName);
+
     return NextResponse.json(
-      { message: "Compte créé avec succès", profileType: data.profileType },
+      { message: "Compte créé avec succès. Vérifiez votre email.", profileType: data.profileType },
       { status: 201 }
     );
   } catch (error) {

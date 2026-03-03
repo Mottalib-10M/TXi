@@ -74,8 +74,9 @@ model Driver {
   notifySms   Boolean @default(false)
 
   // Status
-  isActive   Boolean @default(true)
-  isVerified Boolean @default(false)
+  isActive      Boolean @default(true)
+  isVerified    Boolean @default(false)
+  emailVerified Boolean @default(false)
 
   bookings    Booking[]
   favoritedBy FavoriteDriver[]
@@ -153,6 +154,8 @@ model Organization {
   // Cagnotte (5% des courses complétées)
   cagnotteBalance Float @default(0)
 
+  emailVerified Boolean @default(false)
+
   bookings        Booking[]
   favoriteDrivers FavoriteDriver[]
   cagnotteHistory CagnotteTransaction[]
@@ -185,4 +188,24 @@ model CagnotteTransaction {
   createdAt      DateTime     @default(now())
 
   @@map("cagnotte_transactions")
+}
+
+model EmailVerificationToken {
+  id        String   @id @default(cuid())
+  token     String   @unique
+  email     String
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+
+  @@map("email_verification_tokens")
+}
+
+model PasswordResetToken {
+  id        String   @id @default(cuid())
+  token     String   @unique
+  email     String
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+
+  @@map("password_reset_tokens")
 }
