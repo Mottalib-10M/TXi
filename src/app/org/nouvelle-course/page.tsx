@@ -60,7 +60,7 @@ export default function NouvelleCourse() {
           Math.cos((arrival.lat * Math.PI) / 180) *
           Math.sin(dLng / 2) ** 2;
       const dist = R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-      // Use default pricing: base 2€ + 1.5€/km, min 7€
+      // Prise en charge 2€ + 1.5€/km, minimum 7€
       const price = Math.max(2 + dist * 1.5, 7);
       setEstimatedPrice(Math.round(price * 100) / 100);
     }
@@ -200,7 +200,7 @@ export default function NouvelleCourse() {
               <span className="text-sm">
                 Prix estimé : <strong>{estimatedPrice.toFixed(0)} €</strong>
               </span>
-              <span className="text-xs text-neutral-400 ml-1">(verrouillé à la réservation)</span>
+              <span className="text-xs text-neutral-400 ml-1">(tarif fixe garanti)</span>
             </div>
           )}
         </div>

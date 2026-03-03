@@ -113,7 +113,7 @@ model Booking {
   estimatedDuration Float?
   estimatedPrice    Float?
 
-  // Prix verrouillé (figé à la création, ne change plus)
+  // Tarif fixe garanti (figé à la création, ne change plus)
   lockedPrice Float?
 
   // Status
