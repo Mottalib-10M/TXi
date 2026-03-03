@@ -2,6 +2,7 @@ import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
 import { Icon } from "@iconify/react";
 import Link from "next/link";
+import { QRCodeButton } from "@/components/dashboard/QRCodeButton";
 
 export default async function DashboardPage() {
   const session = await auth();
@@ -54,10 +55,11 @@ export default async function DashboardPage() {
 
   return (
     <div>
-      <div className="mb-6">
+      <div className="flex items-center justify-between mb-6">
         <h1 className="text-2xl font-semibold tracking-tight">
           Bonjour, {driver.firstName} !
         </h1>
+        <QRCodeButton slug={driver.slug} />
       </div>
 
       {/* Stats bar - compact */}
