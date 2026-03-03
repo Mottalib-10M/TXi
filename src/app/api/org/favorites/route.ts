@@ -20,6 +20,8 @@ export async function GET() {
             vehicleBrand: true,
             vehicleModel: true,
             zoneAddress: true,
+            zoneLat: true,
+            zoneLng: true,
             phone: true,
           },
         },

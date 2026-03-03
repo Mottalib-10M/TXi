@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { useRouter } from "next/navigation";
 import { Icon } from "@iconify/react";
 import { PlacesAutocomplete } from "@/components/booking/PlacesAutocomplete";
@@ -13,6 +13,9 @@ interface FavoriteDriver {
     lastName: string;
     vehicleBrand?: string;
     vehicleModel?: string;
+    zoneAddress?: string;
+    zoneLat?: number;
+    zoneLng?: number;
   };
 }
 
@@ -84,6 +87,36 @@ export default function NouvelleCourse() {
       setEstimatedPrice(Math.round(price * 100) / 100);
     }
   }, [departure.lat, departure.lng, arrival.lat, arrival.lng]);
+
+  // Trier les favoris par distance au point de départ, le plus proche en premier
+  const sortedFavorites = useMemo((): (FavoriteDriver & { distance: number })[] => {
+    if (!departure.lat || !departure.lng || favorites.length === 0)
+      return favorites.map((f) => ({ ...f, distance: Infinity }));
+    return [...favorites]
+      .map((fav) => {
+        let dist = Infinity;
+        if (fav.driver.zoneLat && fav.driver.zoneLng) {
+          const R = 6371;
+          const dLat = ((fav.driver.zoneLat - departure.lat) * Math.PI) / 180;
+          const dLng = ((fav.driver.zoneLng - departure.lng) * Math.PI) / 180;
+          const a =
+            Math.sin(dLat / 2) ** 2 +
+            Math.cos((departure.lat * Math.PI) / 180) *
+              Math.cos((fav.driver.zoneLat * Math.PI) / 180) *
+              Math.sin(dLng / 2) ** 2;
+          dist = R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+        }
+        return { ...fav, distance: dist };
+      })
+      .sort((a, b) => a.distance - b.distance);
+  }, [favorites, departure.lat, departure.lng]);
+
+  // Pré-sélectionner le premier favori (le plus proche) s'il y en a
+  useEffect(() => {
+    if (sortedFavorites.length > 0 && driverChoice === "auto") {
+      setDriverChoice(sortedFavorites[0].driver.id);
+    }
+  }, [sortedFavorites, driverChoice]);
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -278,52 +311,64 @@ export default function NouvelleCourse() {
 
         <div className="bg-white rounded-2xl border border-neutral-200 p-5 space-y-4">
           <h2 className="font-medium text-sm text-neutral-500 uppercase tracking-wider">Chauffeur</h2>
-          <div className="space-y-2">
-            <label className="flex items-center gap-3 p-3 rounded-xl border-2 border-neutral-200 cursor-pointer hover:border-neutral-400 transition-colors has-[:checked]:border-neutral-900">
-              <input
-                type="radio"
-                name="driver"
-                value="auto"
-                checked={driverChoice === "auto"}
-                onChange={() => setDriverChoice("auto")}
-                className="accent-neutral-900"
-              />
-              <div>
-                <p className="text-sm font-medium">Automatique</p>
-                <p className="text-xs text-neutral-500">Attribution au chauffeur le plus proche</p>
-              </div>
-            </label>
-            {favorites.map((fav) => (
-              <label
-                key={fav.id}
-                className="flex items-center gap-3 p-3 rounded-xl border-2 border-neutral-200 cursor-pointer hover:border-neutral-400 transition-colors has-[:checked]:border-neutral-900"
-              >
-                <input
-                  type="radio"
-                  name="driver"
-                  value={fav.driver.id}
-                  checked={driverChoice === fav.driver.id}
-                  onChange={() => setDriverChoice(fav.driver.id)}
-                  className="accent-neutral-900"
-                />
-                <div>
-                  <p className="text-sm font-medium">
-                    {fav.driver.firstName} {fav.driver.lastName}
-                  </p>
-                  {fav.driver.vehicleBrand && (
-                    <p className="text-xs text-neutral-500">
-                      {fav.driver.vehicleBrand} {fav.driver.vehicleModel}
-                    </p>
-                  )}
-                </div>
-              </label>
-            ))}
-            {favorites.length === 0 && (
-              <p className="text-xs text-neutral-400 px-1">
-                Ajoutez des chauffeurs favoris pour les sélectionner ici
-              </p>
-            )}
-          </div>
+          {sortedFavorites.length === 0 ? (
+            <div className="text-center py-4">
+              <Icon icon="solar:star-linear" className="text-2xl text-neutral-300 mx-auto mb-2" />
+              <p className="text-sm text-neutral-500">Aucun chauffeur favori</p>
+              <a href="/org/favoris" className="text-xs text-neutral-900 font-medium hover:underline mt-1 inline-block">
+                Ajouter des chauffeurs favoris
+              </a>
+            </div>
+          ) : (
+            <div className="space-y-2">
+              {sortedFavorites.map((fav, index) => {
+                const isClosest = index === 0 && departure.lat !== 0 && fav.distance !== Infinity;
+                return (
+                  <label
+                    key={fav.id}
+                    className={`flex items-center gap-3 p-3 rounded-xl border-2 cursor-pointer transition-colors has-[:checked]:border-neutral-900 ${
+                      isClosest
+                        ? "border-green-300 bg-green-50/50 hover:border-green-400"
+                        : "border-neutral-200 hover:border-neutral-400"
+                    }`}
+                  >
+                    <input
+                      type="radio"
+                      name="driver"
+                      value={fav.driver.id}
+                      checked={driverChoice === fav.driver.id}
+                      onChange={() => setDriverChoice(fav.driver.id)}
+                      className="accent-neutral-900"
+                    />
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center gap-2">
+                        <p className="text-sm font-medium">
+                          {fav.driver.firstName} {fav.driver.lastName}
+                        </p>
+                        {isClosest && (
+                          <span className="text-[10px] font-semibold bg-green-100 text-green-700 px-1.5 py-0.5 rounded-full whitespace-nowrap">
+                            Le plus proche
+                          </span>
+                        )}
+                      </div>
+                      {(fav.driver.vehicleBrand || fav.driver.zoneAddress) && (
+                        <p className="text-xs text-neutral-500 truncate">
+                          {fav.driver.vehicleBrand && `${fav.driver.vehicleBrand} ${fav.driver.vehicleModel}`}
+                          {fav.driver.vehicleBrand && fav.driver.zoneAddress && " · "}
+                          {fav.driver.zoneAddress}
+                        </p>
+                      )}
+                    </div>
+                    {isClosest && fav.distance < 100 && (
+                      <span className="text-xs text-neutral-400 shrink-0">
+                        {fav.distance < 1 ? `${Math.round(fav.distance * 1000)} m` : `${fav.distance.toFixed(0)} km`}
+                      </span>
+                    )}
+                  </label>
+                );
+              })}
+            </div>
+          )}
         </div>
 
         <button
