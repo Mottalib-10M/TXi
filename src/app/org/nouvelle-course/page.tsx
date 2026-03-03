@@ -206,7 +206,21 @@ export default function NouvelleCourse() {
         </div>
 
         <div className="bg-white rounded-2xl border border-neutral-200 p-5 space-y-4">
-          <h2 className="font-medium text-sm text-neutral-500 uppercase tracking-wider">Date & passagers</h2>
+          <div className="flex items-center justify-between">
+            <h2 className="font-medium text-sm text-neutral-500 uppercase tracking-wider">Date & passagers</h2>
+            <button
+              type="button"
+              onClick={() => {
+                const now = new Date();
+                setDate(now.toISOString().slice(0, 10));
+                setTime(now.toTimeString().slice(0, 5));
+              }}
+              className="flex items-center gap-1.5 text-xs font-medium text-neutral-900 bg-neutral-100 hover:bg-neutral-200 px-3 py-1.5 rounded-lg transition-colors"
+            >
+              <Icon icon="solar:bolt-linear" className="text-sm" />
+              Au plus vite
+            </button>
+          </div>
           <div className="grid grid-cols-2 gap-3">
             <div>
               <label className="block text-sm font-medium mb-1.5">Date</label>
