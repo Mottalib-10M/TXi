@@ -110,7 +110,7 @@ export function BookingForm() {
   }
 
   return (
-    <div className="bg-white border border-neutral-200 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.06)] p-4 md:p-6 overflow-hidden">
+    <div className="bg-white border border-neutral-200 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.06)] p-4 md:p-6 overflow-hidden max-w-full">
       {step === "search" && (
         <>
           <h2 className="text-lg font-semibold tracking-tight mb-5">

@@ -43,9 +43,9 @@ export function Navbar({ minimal = false }: { minimal?: boolean }) {
   return (
     <header
       ref={headerRef}
-      className={`fixed top-0 w-full bg-white/80 backdrop-blur-md border-b border-neutral-100 z-50 transition-all duration-300 ${
-        scrolled ? "shadow-sm" : ""
-      }`}
+      className={`fixed top-0 w-full border-b border-neutral-100 z-50 transition-all duration-300 ${
+        mobileOpen ? "bg-white" : "bg-white/80 backdrop-blur-md"
+      } ${scrolled ? "shadow-sm" : ""}`}
     >
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         <div className="flex items-center gap-8">
