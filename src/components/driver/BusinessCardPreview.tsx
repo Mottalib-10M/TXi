@@ -178,25 +178,25 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
     doc.rect(0, 0, 85, 55, "F");
 
     const m = 5; // margin
-    doc.setFontSize(10); doc.setFont("helvetica", "bold");
+    doc.setFontSize(12); doc.setFont("helvetica", "bold");
     doc.setTextColor(82, 82, 82); doc.text("Taxi", m, 9);
     const tw = doc.getTextWidth("Taxi");
     doc.setTextColor(23, 23, 23); doc.text("Noir", m + tw, 9);
 
-    let y = 15;
+    let y = 16;
     if (driver.companyName) {
-      doc.setFontSize(9); doc.setFont("helvetica", "bold"); doc.setTextColor(23, 23, 23);
+      doc.setFontSize(10); doc.setFont("helvetica", "bold"); doc.setTextColor(23, 23, 23);
       doc.text(driver.companyName, m, y);
-      y += 4;
-      doc.setFontSize(7); doc.setFont("helvetica", "normal"); doc.setTextColor(82, 82, 82);
+      y += 4.5;
+      doc.setFontSize(8); doc.setFont("helvetica", "normal"); doc.setTextColor(82, 82, 82);
       doc.text(`${driver.firstName} ${driver.lastName}`, m, y);
     } else {
-      doc.setFontSize(9); doc.setFont("helvetica", "bold"); doc.setTextColor(23, 23, 23);
+      doc.setFontSize(10); doc.setFont("helvetica", "bold"); doc.setTextColor(23, 23, 23);
       doc.text(`${driver.firstName} ${driver.lastName}`, m, y);
     }
-    y += 5;
+    y += 5.5;
 
-    doc.setFontSize(6); doc.setFont("helvetica", "normal"); doc.setTextColor(115, 115, 115);
+    doc.setFontSize(7); doc.setFont("helvetica", "normal"); doc.setTextColor(115, 115, 115);
     if (driver.vehicleBrand && driver.vehicleModel) { doc.text(`${driver.vehicleBrand} ${driver.vehicleModel}`, m, y); y += 3.5; }
     if (driver.zoneAddress) { doc.text(driver.zoneAddress, m, y); y += 3.5; }
     doc.text(driver.email, m, y); y += 3.5;
@@ -204,7 +204,7 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
 
     if (qrDataUrl) doc.addImage(qrDataUrl, "PNG", 58, 5, 22, 22);
 
-    doc.setFontSize(5.5); doc.setTextColor(163, 163, 163);
+    doc.setFontSize(6); doc.setTextColor(163, 163, 163);
     doc.text("Scannez pour réserver directement", m, 51);
     doc.save(`carte-visite-${driver.slug}.pdf`);
   }
@@ -221,48 +221,48 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
 
     const mL = 8; // left margin
     // Brand
-    doc.setFontSize(16); doc.setFont("helvetica", "bold");
-    doc.setTextColor(82, 82, 82); doc.text("Taxi", mL, 13);
+    doc.setFontSize(18); doc.setFont("helvetica", "bold");
+    doc.setTextColor(82, 82, 82); doc.text("Taxi", mL, 14);
     const tw6 = doc.getTextWidth("Taxi");
-    doc.setTextColor(23, 23, 23); doc.text("Noir", mL + tw6, 13);
+    doc.setTextColor(23, 23, 23); doc.text("Noir", mL + tw6, 14);
 
     // Company name + Name
-    let y6 = 22;
+    let y6 = 24;
     if (driver.companyName) {
-      doc.setFontSize(14); doc.setFont("helvetica", "bold"); doc.setTextColor(23, 23, 23);
+      doc.setFontSize(15); doc.setFont("helvetica", "bold"); doc.setTextColor(23, 23, 23);
       doc.text(driver.companyName, mL, y6);
-      y6 += 5;
-      doc.setFontSize(9); doc.setFont("helvetica", "normal"); doc.setTextColor(115, 115, 115);
+      y6 += 5.5;
+      doc.setFontSize(10); doc.setFont("helvetica", "normal"); doc.setTextColor(115, 115, 115);
       doc.text(`${driver.firstName} ${driver.lastName}`, mL, y6);
     } else {
-      doc.setFontSize(14); doc.setFont("helvetica", "bold"); doc.setTextColor(23, 23, 23);
+      doc.setFontSize(15); doc.setFont("helvetica", "bold"); doc.setTextColor(23, 23, 23);
       doc.text(`${driver.firstName} ${driver.lastName}`, mL, y6);
     }
-    y6 += 4;
+    y6 += 5;
 
-    doc.setFontSize(7); doc.setFont("helvetica", "normal"); doc.setTextColor(160, 160, 160);
+    doc.setFontSize(8); doc.setFont("helvetica", "normal"); doc.setTextColor(160, 160, 160);
     doc.text("Chauffeur de taxi", mL, y6);
 
     doc.setDrawColor(230, 230, 230); doc.setLineWidth(0.3); doc.line(mL, y6 + 3, panelX - 10, y6 + 3);
 
     let y = y6 + 9;
     if (driver.vehicleBrand && driver.vehicleModel) {
-      doc.setFont("helvetica", "bold"); doc.setFontSize(6); doc.setTextColor(170, 170, 170);
+      doc.setFont("helvetica", "bold"); doc.setFontSize(7); doc.setTextColor(170, 170, 170);
       doc.text("VÉHICULE", mL, y);
-      doc.setFont("helvetica", "normal"); doc.setFontSize(9); doc.setTextColor(50, 50, 50);
+      doc.setFont("helvetica", "normal"); doc.setFontSize(10); doc.setTextColor(50, 50, 50);
       doc.text(`${driver.vehicleBrand} ${driver.vehicleModel}`, mL, y + 5);
       y += 12;
     }
     if (driver.zoneAddress) {
-      doc.setFont("helvetica", "bold"); doc.setFontSize(6); doc.setTextColor(170, 170, 170);
+      doc.setFont("helvetica", "bold"); doc.setFontSize(7); doc.setTextColor(170, 170, 170);
       doc.text("ZONE", mL, y);
-      doc.setFont("helvetica", "normal"); doc.setFontSize(9); doc.setTextColor(50, 50, 50);
+      doc.setFont("helvetica", "normal"); doc.setFontSize(10); doc.setTextColor(50, 50, 50);
       doc.text(driver.zoneAddress, mL, y + 5);
       y += 12;
     }
-    doc.setFont("helvetica", "bold"); doc.setFontSize(6); doc.setTextColor(170, 170, 170);
+    doc.setFont("helvetica", "bold"); doc.setFontSize(7); doc.setTextColor(170, 170, 170);
     doc.text("CONTACT", mL, y);
-    doc.setFont("helvetica", "normal"); doc.setFontSize(9); doc.setTextColor(50, 50, 50);
+    doc.setFont("helvetica", "normal"); doc.setFontSize(10); doc.setTextColor(50, 50, 50);
     doc.text(driver.email, mL, y + 5);
     doc.text(driver.phone, mL, y + 10);
 
@@ -270,11 +270,11 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
     const cx = panelX + (W - panelX) / 2;
     if (qrDataUrlLarge) doc.addImage(qrDataUrlLarge, "PNG", cx - 16, 10, 32, 32);
 
-    doc.setFontSize(14); doc.setFont("helvetica", "bold"); doc.setTextColor(255, 255, 255);
+    doc.setFontSize(16); doc.setFont("helvetica", "bold"); doc.setTextColor(255, 255, 255);
     doc.text("Restons en", cx, 52, { align: "center" });
     doc.text("contact !", cx, 59, { align: "center" });
 
-    doc.setFontSize(8); doc.setFont("helvetica", "normal"); doc.setTextColor(180, 180, 180);
+    doc.setFontSize(9); doc.setFont("helvetica", "normal"); doc.setTextColor(180, 180, 180);
     const cta = doc.splitTextToSize("Scannez pour enregistrer mes coordonnées et réserver facilement.", W - panelX - 14);
     doc.text(cta, cx, 68, { align: "center" });
 
@@ -292,32 +292,32 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
     const mH = 16; // horizontal margin in header
     doc.setFillColor(23, 23, 23); doc.rect(0, 0, W, hH, "F");
 
-    doc.setFontSize(20); doc.setFont("helvetica", "bold");
+    doc.setFontSize(22); doc.setFont("helvetica", "bold");
     doc.setTextColor(100, 100, 100); doc.text("Taxi", mH, 15);
     const tw5 = doc.getTextWidth("Taxi");
     doc.setTextColor(255, 255, 255); doc.text("Noir", mH + tw5, 15);
 
-    let y5 = 24;
+    let y5 = 25;
     if (driver.companyName) {
-      doc.setFontSize(16); doc.setFont("helvetica", "bold"); doc.setTextColor(255, 255, 255);
+      doc.setFontSize(18); doc.setFont("helvetica", "bold"); doc.setTextColor(255, 255, 255);
       doc.text(driver.companyName, mH, y5);
-      y5 += 6;
-      doc.setFontSize(10); doc.setFont("helvetica", "normal"); doc.setTextColor(170, 170, 170);
+      y5 += 7;
+      doc.setFontSize(11); doc.setFont("helvetica", "normal"); doc.setTextColor(170, 170, 170);
       doc.text(`${driver.firstName} ${driver.lastName}`, mH, y5);
     } else {
-      doc.setFontSize(16); doc.setFont("helvetica", "bold"); doc.setTextColor(255, 255, 255);
+      doc.setFontSize(18); doc.setFont("helvetica", "bold"); doc.setTextColor(255, 255, 255);
       doc.text(`${driver.firstName} ${driver.lastName}`, mH, y5);
     }
-    y5 += 5;
-    doc.setFontSize(9); doc.setFont("helvetica", "normal"); doc.setTextColor(130, 130, 130);
+    y5 += 6;
+    doc.setFontSize(10); doc.setFont("helvetica", "normal"); doc.setTextColor(130, 130, 130);
     doc.text("Votre chauffeur de taxi", mH, y5);
 
     if (driver.vehicleBrand && driver.vehicleModel) {
-      doc.setFontSize(10); doc.setTextColor(180, 180, 180);
+      doc.setFontSize(11); doc.setTextColor(180, 180, 180);
       doc.text(`${driver.vehicleBrand} ${driver.vehicleModel}`, W - mH, 28, { align: "right" });
     }
     if (driver.zoneAddress) {
-      doc.setFontSize(10); doc.setTextColor(140, 140, 140);
+      doc.setFontSize(11); doc.setTextColor(140, 140, 140);
       doc.text(driver.zoneAddress, W - mH, 36, { align: "right" });
     }
 
@@ -333,17 +333,17 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
 
     // CTA
     const ctaY = qrY + qrS + 8;
-    doc.setFontSize(18); doc.setFont("helvetica", "bold"); doc.setTextColor(23, 23, 23);
+    doc.setFontSize(20); doc.setFont("helvetica", "bold"); doc.setTextColor(23, 23, 23);
     doc.text("Restons en contact !", W / 2, ctaY, { align: "center" });
 
-    doc.setFontSize(11); doc.setFont("helvetica", "normal"); doc.setTextColor(90, 90, 90);
+    doc.setFontSize(12); doc.setFont("helvetica", "normal"); doc.setTextColor(90, 90, 90);
     const cta = doc.splitTextToSize("Scannez ce QR code pour enregistrer mes coordonnées et réserver votre prochaine course encore plus facilement.", 160);
-    doc.text(cta, W / 2, ctaY + 7, { align: "center" });
+    doc.text(cta, W / 2, ctaY + 8, { align: "center" });
 
     // Footer
     const fY = H - 8;
     doc.setDrawColor(235, 235, 235); doc.setLineWidth(0.3); doc.line(mH, fY - 5, W - mH, fY - 5);
-    doc.setFontSize(8); doc.setFont("helvetica", "normal"); doc.setTextColor(140, 140, 140);
+    doc.setFontSize(9); doc.setFont("helvetica", "normal"); doc.setTextColor(140, 140, 140);
     doc.text(driver.phone, mH, fY);
     doc.text(driver.email, W / 2, fY, { align: "center" });
     doc.text(profileUrl.replace("https://", "").replace("http://", ""), W - mH, fY, { align: "right" });
