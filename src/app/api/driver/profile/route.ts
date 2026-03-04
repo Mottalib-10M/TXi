@@ -47,6 +47,7 @@ export async function PATCH(request: Request) {
         zoneAddress: body.zoneAddress || null,
         baseFare: toFloat(body.baseFare, 2.0),
         pricePerKm: toFloat(body.pricePerKm, 1.5),
+        pricePerKmNight: toFloat(body.pricePerKmNight, 2.0),
         pricePerMinute: toFloat(body.pricePerMinute, 0.5),
         minimumFare: toFloat(body.minimumFare, 7.0),
         airportSupplement: toFloat(body.airportSupplement, 4.0),

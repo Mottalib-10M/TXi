@@ -3,29 +3,24 @@ import { Icon } from "@iconify/react";
 interface PricingDisplayProps {
   baseFare: number;
   pricePerKm: number;
+  pricePerKmNight: number;
   pricePerMinute: number;
   minimumFare: number;
-  airportSupplement: number;
-  nightSupplement: number;
 }
 
 export function PricingDisplay({
   baseFare,
   pricePerKm,
+  pricePerKmNight,
   pricePerMinute,
   minimumFare,
-  airportSupplement,
-  nightSupplement,
 }: PricingDisplayProps) {
   const items = [
     { label: "Prise en charge", value: `${baseFare.toFixed(2).replace(".", ",")} €` },
-    { label: "Prix au km", value: `${pricePerKm.toFixed(2).replace(".", ",")} €/km` },
+    { label: "Prix au km jour", value: `${pricePerKm.toFixed(2).replace(".", ",")} €/km` },
+    { label: "Prix au km nuit", value: `${pricePerKmNight.toFixed(2).replace(".", ",")} €/km` },
     { label: "Prix à la minute", value: `${pricePerMinute.toFixed(2).replace(".", ",")} €/min` },
     { label: "Course minimum", value: `${minimumFare.toFixed(2).replace(".", ",")} €` },
-    { label: "Supplément aéroport", value: `${airportSupplement.toFixed(2).replace(".", ",")} €` },
-    ...(nightSupplement > 0
-      ? [{ label: "Supplément nuit", value: `${nightSupplement.toFixed(2).replace(".", ",")} €` }]
-      : []),
   ];
 
   return (

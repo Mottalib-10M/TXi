@@ -51,6 +51,7 @@ export default async function ProfilPage() {
     zoneAddress: driver.zoneAddress || "",
     baseFare: driver.baseFare,
     pricePerKm: driver.pricePerKm,
+    pricePerKmNight: driver.pricePerKmNight,
     pricePerMinute: driver.pricePerMinute,
     minimumFare: driver.minimumFare,
     airportSupplement: driver.airportSupplement,

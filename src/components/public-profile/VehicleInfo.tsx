@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useCallback, useEffect } from "react";
 import { Icon } from "@iconify/react";
 import type { Vehicle } from "@/types/vehicle";
 
@@ -112,7 +112,7 @@ const TYPE_CONFIG: Record<VehicleType, { icon: string; label: string }> = {
   van:    { icon: "fluent:vehicle-bus-20-filled", label: "Van" },
 };
 
-function VehicleCard({ vehicle, index, total, onPhotoClick }: { vehicle: Vehicle; index: number; total: number; onPhotoClick: (url: string) => void }) {
+function VehicleCard({ vehicle, index, total, onPhotoClick, photoIndexOffset }: { vehicle: Vehicle; index: number; total: number; onPhotoClick: (index: number) => void; photoIndexOffset: number }) {
   const type = detectType(vehicle.brand, vehicle.model);
   const config = TYPE_CONFIG[type];
   const colorHex = COLOR_MAP[vehicle.color.toLowerCase().trim()] || "#525252";
@@ -139,7 +139,7 @@ function VehicleCard({ vehicle, index, total, onPhotoClick }: { vehicle: Vehicle
             <button
               key={i}
               type="button"
-              onClick={() => onPhotoClick(url)}
+              onClick={() => onPhotoClick(photoIndexOffset + i)}
               className="w-36 h-28 rounded-xl overflow-hidden bg-neutral-100 shrink-0 cursor-zoom-in hover:opacity-90 transition-opacity"
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -223,7 +223,42 @@ function VehicleCard({ vehicle, index, total, onPhotoClick }: { vehicle: Vehicle
 }
 
 export function VehicleInfo({ vehicles }: VehicleInfoProps) {
-  const [lightboxUrl, setLightboxUrl] = useState<string | null>(null);
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+
+  // Collect all photos from all vehicles
+  const allPhotos = vehicles.flatMap((v) => v.photos || []);
+
+  // Calculate photo index offsets per vehicle
+  const photoOffsets: number[] = [];
+  let offset = 0;
+  for (const v of vehicles) {
+    photoOffsets.push(offset);
+    offset += (v.photos || []).length;
+  }
+
+  const goToNext = useCallback(() => {
+    if (lightboxIndex !== null && lightboxIndex < allPhotos.length - 1) {
+      setLightboxIndex(lightboxIndex + 1);
+    }
+  }, [lightboxIndex, allPhotos.length]);
+
+  const goToPrev = useCallback(() => {
+    if (lightboxIndex !== null && lightboxIndex > 0) {
+      setLightboxIndex(lightboxIndex - 1);
+    }
+  }, [lightboxIndex]);
+
+  // Keyboard navigation
+  useEffect(() => {
+    if (lightboxIndex === null) return;
+    function handleKey(e: KeyboardEvent) {
+      if (e.key === "ArrowRight") goToNext();
+      else if (e.key === "ArrowLeft") goToPrev();
+      else if (e.key === "Escape") setLightboxIndex(null);
+    }
+    window.addEventListener("keydown", handleKey);
+    return () => window.removeEventListener("keydown", handleKey);
+  }, [lightboxIndex, goToNext, goToPrev]);
 
   if (vehicles.length === 0) return null;
 
@@ -237,32 +272,65 @@ export function VehicleInfo({ vehicles }: VehicleInfoProps) {
               vehicle={vehicle}
               index={index}
               total={vehicles.length}
-              onPhotoClick={setLightboxUrl}
+              onPhotoClick={setLightboxIndex}
+              photoIndexOffset={photoOffsets[index]}
             />
           ))}
         </div>
       </div>
 
-      {/* Photo lightbox */}
-      {lightboxUrl && (
+      {/* Photo lightbox with navigation */}
+      {lightboxIndex !== null && allPhotos[lightboxIndex] && (
         <div
-          className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4 cursor-zoom-out"
-          onClick={() => setLightboxUrl(null)}
+          className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4"
+          onClick={() => setLightboxIndex(null)}
         >
+          {/* Close button */}
           <button
             type="button"
-            onClick={() => setLightboxUrl(null)}
-            className="absolute top-4 right-4 w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center text-white transition-colors"
+            onClick={() => setLightboxIndex(null)}
+            className="absolute top-4 right-4 w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center text-white transition-colors z-10"
           >
             <Icon icon="solar:close-circle-bold" className="text-2xl" />
           </button>
+
+          {/* Photo counter */}
+          {allPhotos.length > 1 && (
+            <div className="absolute top-5 left-1/2 -translate-x-1/2 text-white/70 text-sm font-medium z-10">
+              {lightboxIndex + 1} / {allPhotos.length}
+            </div>
+          )}
+
+          {/* Previous button */}
+          {lightboxIndex > 0 && (
+            <button
+              type="button"
+              onClick={(e) => { e.stopPropagation(); goToPrev(); }}
+              className="absolute left-3 md:left-6 top-1/2 -translate-y-1/2 w-11 h-11 bg-white/10 hover:bg-white/25 rounded-full flex items-center justify-center text-white transition-colors z-10"
+            >
+              <Icon icon="solar:alt-arrow-left-bold" className="text-2xl" />
+            </button>
+          )}
+
+          {/* Image */}
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src={lightboxUrl}
+            src={allPhotos[lightboxIndex]}
             alt="Photo du véhicule"
             className="max-w-full max-h-[85vh] object-contain rounded-2xl"
             onClick={(e) => e.stopPropagation()}
           />
+
+          {/* Next button */}
+          {lightboxIndex < allPhotos.length - 1 && (
+            <button
+              type="button"
+              onClick={(e) => { e.stopPropagation(); goToNext(); }}
+              className="absolute right-3 md:right-6 top-1/2 -translate-y-1/2 w-11 h-11 bg-white/10 hover:bg-white/25 rounded-full flex items-center justify-center text-white transition-colors z-10"
+            >
+              <Icon icon="solar:alt-arrow-right-bold" className="text-2xl" />
+            </button>
+          )}
         </div>
       )}
     </>

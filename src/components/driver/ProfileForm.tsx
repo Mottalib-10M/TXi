@@ -27,6 +27,7 @@ interface DriverData {
   zoneAddress: string;
   baseFare: number;
   pricePerKm: number;
+  pricePerKmNight: number;
   pricePerMinute: number;
   minimumFare: number;
   airportSupplement: number;
@@ -35,6 +36,12 @@ interface DriverData {
   notifyEmail: boolean;
   notifySms: boolean;
 }
+
+const DEFAULT_AVAILABILITY = Array.from({ length: 7 }, (_, i) => ({
+  day: i,
+  startTime: "07:00",
+  endTime: "20:00",
+}));
 
 const vehicleFeatureOptions = [
   "Climatisation",
@@ -46,6 +53,56 @@ const vehicleFeatureOptions = [
   "Coffre XL",
   "Carte bancaire",
 ];
+
+/**
+ * Client-side image compression using Canvas API.
+ * Handles EXIF rotation (modern browsers auto-rotate), resizes large images,
+ * and compresses to JPEG to reduce upload size on mobile.
+ */
+async function compressImageClient(
+  file: File,
+  maxWidth = 1200,
+  maxHeight = 800,
+  quality = 0.8
+): Promise<File> {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    img.onload = () => {
+      let { width, height } = img;
+
+      // Only resize if larger than max dimensions
+      if (width > maxWidth || height > maxHeight) {
+        const ratio = Math.min(maxWidth / width, maxHeight / height);
+        width = Math.round(width * ratio);
+        height = Math.round(height * ratio);
+      }
+
+      const canvas = document.createElement("canvas");
+      canvas.width = width;
+      canvas.height = height;
+      const ctx = canvas.getContext("2d");
+      if (!ctx) {
+        resolve(file); // Fallback to original
+        return;
+      }
+      ctx.drawImage(img, 0, 0, width, height);
+
+      canvas.toBlob(
+        (blob) => {
+          if (blob) {
+            resolve(new File([blob], "photo.jpg", { type: "image/jpeg" }));
+          } else {
+            resolve(file); // Fallback to original
+          }
+        },
+        "image/jpeg",
+        quality
+      );
+    };
+    img.onerror = () => reject(new Error("Failed to load image"));
+    img.src = URL.createObjectURL(file);
+  });
+}
 
 export function ProfileForm({ driver }: { driver: DriverData }) {
   const searchParams = useSearchParams();
@@ -64,7 +121,11 @@ export function ProfileForm({ driver }: { driver: DriverData }) {
     }
   }, [searchParams]);
 
-  const [form, setForm] = useState(driver);
+  const [form, setForm] = useState({
+    ...driver,
+    // Default availability for new registrants: all 7 days, 07:00-20:00
+    availability: driver.availability || DEFAULT_AVAILABILITY,
+  });
 
   function updateField<K extends keyof DriverData>(key: K, value: DriverData[K]) {
     setForm((prev) => ({ ...prev, [key]: value }));
@@ -144,8 +205,11 @@ export function ProfileForm({ driver }: { driver: DriverData }) {
 
     setUploadingPhoto(true);
     try {
+      // Compress image client-side before upload
+      const compressed = await compressImageClient(file, 400, 400, 0.85);
+
       const formData = new FormData();
-      formData.append("file", file);
+      formData.append("file", compressed);
       formData.append("type", "profile");
 
       const res = await fetch("/api/upload", { method: "POST", body: formData });
@@ -355,10 +419,9 @@ export function ProfileForm({ driver }: { driver: DriverData }) {
             pricing={{
               baseFare: form.baseFare,
               pricePerKm: form.pricePerKm,
+              pricePerKmNight: form.pricePerKmNight,
               pricePerMinute: form.pricePerMinute,
               minimumFare: form.minimumFare,
-              airportSupplement: form.airportSupplement,
-              nightSupplement: form.nightSupplement,
             }}
             onChange={(pricing) => setForm((prev) => ({ ...prev, ...pricing }))}
           />
@@ -690,8 +753,11 @@ function VehiclePhotos({
 
     setUploading(true);
     try {
+      // Compress image client-side before upload (handles large mobile photos + EXIF rotation)
+      const compressed = await compressImageClient(file, 1200, 800, 0.8);
+
       const formData = new FormData();
-      formData.append("file", file);
+      formData.append("file", compressed);
       formData.append("type", "vehicle");
 
       const res = await fetch("/api/upload", { method: "POST", body: formData });

@@ -60,6 +60,7 @@ model Driver {
   // Pricing
   baseFare           Float @default(2.0)
   pricePerKm         Float @default(1.5)
+  pricePerKmNight    Float @default(2.0)
   pricePerMinute     Float @default(0.5)
   minimumFare        Float @default(7.0)
   airportSupplement  Float @default(4.0)

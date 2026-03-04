@@ -10,6 +10,12 @@ interface Slot {
 
 const dayNames = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"];
 
+const DEFAULT_SLOTS: Slot[] = dayNames.map((_, i) => ({
+  day: i,
+  startTime: "07:00",
+  endTime: "20:00",
+}));
+
 export function AvailabilityEditor({
   availability,
   onChange,
@@ -17,6 +23,8 @@ export function AvailabilityEditor({
   availability: Slot[];
   onChange: (slots: Slot[]) => void;
 }) {
+  const allActive = availability.length === 7;
+
   function toggleDay(dayIndex: number) {
     const existing = availability.find((s) => s.day === dayIndex);
     if (existing) {
@@ -32,12 +40,31 @@ export function AvailabilityEditor({
     );
   }
 
+  function toggleAll() {
+    if (allActive) {
+      onChange([]);
+    } else {
+      onChange([...DEFAULT_SLOTS]);
+    }
+  }
+
   return (
     <div className="space-y-4">
       <h2 className="text-lg font-semibold tracking-tight mb-4">Disponibilités</h2>
       <p className="text-sm text-neutral-500 font-light mb-6">
         Indiquez vos créneaux de disponibilité habituels.
       </p>
+
+      <div className="flex justify-end mb-2">
+        <button
+          type="button"
+          onClick={toggleAll}
+          className="text-xs font-medium text-neutral-500 hover:text-neutral-900 transition-colors flex items-center gap-1.5"
+        >
+          <Icon icon={allActive ? "solar:close-circle-linear" : "solar:check-read-linear"} className="text-sm" />
+          {allActive ? "Tout désactiver" : "Tout activer"}
+        </button>
+      </div>
 
       <div className="space-y-2">
         {dayNames.map((day, index) => {

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { Icon } from "@iconify/react";
 import { PlacesAutocomplete } from "./PlacesAutocomplete";
 import { emailError, phoneError, isValidEmail, formatPrice } from "@/lib/validation";
@@ -12,6 +13,7 @@ interface TaxiResult {
   lastName: string;
   companyName: string | null;
   slug: string;
+  photoUrl: string | null;
   vehicleBrand: string | null;
   vehicleModel: string | null;
   zoneAddress: string | null;
@@ -108,7 +110,7 @@ export function BookingForm() {
   }
 
   return (
-    <div className="bg-white border border-neutral-200 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.06)] p-4 md:p-6">
+    <div className="bg-white border border-neutral-200 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.06)] p-4 md:p-6 overflow-hidden">
       {step === "search" && (
         <>
           <h2 className="text-lg font-semibold tracking-tight mb-5">
@@ -162,13 +164,17 @@ export function BookingForm() {
             <button
               type="button"
               onClick={() => setScheduleLater(!scheduleLater)}
-              className="flex-1 flex items-center justify-center gap-2 bg-neutral-50 border border-neutral-200 rounded-xl py-3 hover:bg-neutral-100 transition-colors"
+              className={`flex-1 flex items-center justify-center gap-2 border rounded-xl py-3 transition-colors ${
+                scheduleLater
+                  ? "bg-neutral-900 text-white border-neutral-900"
+                  : "bg-neutral-50 border-neutral-200 hover:bg-neutral-100"
+              }`}
             >
-              <Icon icon="solar:clock-circle-linear" className="text-neutral-600 text-base" />
+              <Icon icon="solar:clock-circle-linear" className={scheduleLater ? "text-white" : "text-neutral-600"} />
               <span className="text-sm font-medium">
                 {scheduleLater ? "Planifié" : "Maintenant"}
               </span>
-              <Icon icon="solar:alt-arrow-down-linear" className="text-neutral-400" />
+              <Icon icon="solar:alt-arrow-down-linear" className={scheduleLater ? "text-neutral-300" : "text-neutral-400"} />
             </button>
 
             <div className="w-24 flex items-center justify-center gap-2 bg-neutral-50 border border-neutral-200 rounded-xl py-3">
@@ -192,13 +198,24 @@ export function BookingForm() {
 
           {scheduleLater && (
             <div className="mt-3">
-              <input
-                type="datetime-local"
-                value={scheduledDate}
-                onChange={(e) => setScheduledDate(e.target.value)}
-                min={new Date().toISOString().slice(0, 16)}
-                className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all"
-              />
+              <div className="relative">
+                <Icon
+                  icon="solar:calendar-linear"
+                  className="absolute left-4 top-1/2 -translate-y-1/2 text-neutral-400 text-lg z-10 pointer-events-none"
+                />
+                <input
+                  type="datetime-local"
+                  value={scheduledDate}
+                  onChange={(e) => setScheduledDate(e.target.value)}
+                  min={new Date().toISOString().slice(0, 16)}
+                  className="w-full max-w-full box-border bg-neutral-100 rounded-xl pl-11 pr-4 py-3.5 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all appearance-none"
+                />
+              </div>
+              {!scheduledDate && (
+                <p className="text-xs text-neutral-400 mt-1.5 ml-1">
+                  Sélectionnez une date et heure pour votre course
+                </p>
+              )}
             </div>
           )}
 
@@ -228,7 +245,7 @@ export function BookingForm() {
 
           <div className="text-xs text-neutral-500 mb-4 flex items-start gap-2">
             <Icon icon="solar:map-point-linear" className="text-neutral-400 shrink-0 mt-0.5" />
-            <span className="break-words min-w-0">{departure} → {arrival}</span>
+            <span className="break-words min-w-0 break-all">{departure} → {arrival}</span>
           </div>
 
           {results.length === 0 ? (
@@ -239,48 +256,68 @@ export function BookingForm() {
               </p>
             </div>
           ) : (
-            <div className="space-y-2 max-h-[300px] overflow-y-auto">
+            <div className="space-y-2 max-h-[400px] overflow-y-auto">
               {results.map((taxi) => (
-                <button
+                <div
                   key={taxi.id}
-                  onClick={() => {
-                    setSelectedTaxi(taxi);
-                    setStep("booking");
-                  }}
-                  className={`w-full text-left p-4 border rounded-xl transition-all hover:border-neutral-400 ${
-                    selectedTaxi?.id === taxi.id
-                      ? "border-neutral-900 bg-neutral-50"
-                      : "border-neutral-200"
-                  }`}
+                  className="w-full text-left p-4 border rounded-xl transition-all border-neutral-200 hover:border-neutral-300"
                 >
-                  <div className="flex items-center justify-between gap-3">
-                    <div className="flex items-center gap-3 min-w-0">
-                      <div className="w-10 h-10 bg-neutral-100 rounded-full flex items-center justify-center shrink-0">
-                        <Icon icon="solar:user-linear" className="text-neutral-400" />
+                  <div className="flex items-center gap-3">
+                    {/* Avatar - clickable to see profile */}
+                    <Link
+                      href={`/taxi/${taxi.slug}`}
+                      target="_blank"
+                      onClick={(e) => e.stopPropagation()}
+                      className="shrink-0"
+                      title="Voir le profil"
+                    >
+                      <div className="w-10 h-10 bg-neutral-100 rounded-full flex items-center justify-center overflow-hidden hover:ring-2 hover:ring-neutral-900 transition-all cursor-pointer">
+                        {taxi.photoUrl ? (
+                          // eslint-disable-next-line @next/next/no-img-element
+                          <img src={taxi.photoUrl} alt={taxi.firstName} className="w-full h-full object-cover" />
+                        ) : (
+                          <Icon icon="solar:user-linear" className="text-neutral-400" />
+                        )}
                       </div>
-                      <div className="min-w-0">
-                        <p className="text-sm font-medium truncate">
-                          {taxi.companyName || `${taxi.firstName} ${taxi.lastName ? taxi.lastName.charAt(0) + "." : ""}`.trim()}
-                        </p>
-                        <p className="text-xs text-neutral-500 font-light truncate">
-                          {taxi.vehicleBrand} {taxi.vehicleModel}
-                          {taxi.zoneAddress && ` · ${taxi.zoneAddress}`}
-                        </p>
-                      </div>
+                    </Link>
+
+                    {/* Driver info */}
+                    <div className="min-w-0 flex-1">
+                      <p className="text-sm font-medium truncate">
+                        {taxi.companyName || `${taxi.firstName} ${taxi.lastName ? taxi.lastName.charAt(0) + "." : ""}`.trim()}
+                      </p>
+                      <p className="text-xs text-neutral-500 font-light truncate">
+                        {taxi.vehicleBrand} {taxi.vehicleModel}
+                        {taxi.zoneAddress && ` · ${taxi.zoneAddress}`}
+                      </p>
                     </div>
-                    <div className="text-right shrink-0">
-                      {taxi.estimatedPrice ? (
-                        <p className="text-sm font-semibold">
-                          {formatPrice(taxi.estimatedPrice)}
-                        </p>
-                      ) : (
-                        <p className="text-xs text-neutral-500">
-                          Dès {formatPrice(taxi.minimumFare)}
-                        </p>
-                      )}
+
+                    {/* Price + Choose button */}
+                    <div className="flex items-center gap-3 shrink-0">
+                      <div className="text-right">
+                        {taxi.estimatedPrice ? (
+                          <p className="text-sm font-semibold">
+                            {formatPrice(taxi.estimatedPrice)}
+                          </p>
+                        ) : (
+                          <p className="text-xs text-neutral-500">
+                            Dès {formatPrice(taxi.minimumFare)}
+                          </p>
+                        )}
+                      </div>
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setSelectedTaxi(taxi);
+                          setStep("booking");
+                        }}
+                        className="bg-neutral-900 text-white text-xs font-medium px-3.5 py-2 rounded-lg hover:bg-neutral-700 transition-colors whitespace-nowrap"
+                      >
+                        Choisir
+                      </button>
                     </div>
                   </div>
-                </button>
+                </div>
               ))}
             </div>
           )}
