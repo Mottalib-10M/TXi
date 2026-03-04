@@ -79,17 +79,17 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
         @page { size: 85mm 55mm; margin: 0; }
         body { margin: 0; font-family: Helvetica, Arial, sans-serif; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; color-adjust: exact !important; }
         .card { width: 85mm; height: 55mm; display: flex; }
-        .left { flex: 3; padding: 5mm; display: flex; flex-direction: column; justify-content: center; }
-        .right { flex: 1.2; background: #171717; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 3mm; }
-        .brand { font-size: 14pt; font-weight: bold; margin-bottom: 3mm; }
+        .left { flex: 3; padding: 5mm; display: flex; flex-direction: column; justify-content: space-between; }
+        .right { flex: 1.6; background: #171717; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 3mm; }
+        .brand { font-size: 16pt; font-weight: bold; }
         .brand .t { color: #525252; } .brand .n { color: #171717; }
         .company { font-size: 11pt; font-weight: bold; color: #171717; margin-bottom: 1mm; }
         .name { font-size: 8pt; color: #525252; }
         .name-solo { font-size: 11pt; font-weight: bold; color: #171717; }
         .details { font-size: 7pt; color: #737373; margin-top: 2mm; line-height: 1.6; }
-        .qr { width: 18mm; height: 18mm; background: #fff; border-radius: 2mm; padding: 1.5mm; box-sizing: border-box; margin-bottom: 2mm; }
+        .qr { width: 24mm; height: 24mm; background: #fff; border-radius: 2mm; padding: 1.5mm; box-sizing: border-box; margin-bottom: 2mm; }
         .qr img { width: 100%; height: 100%; }
-        .scan { color: #a3a3a3; font-size: 6pt; text-align: center; line-height: 1.3; }
+        .scan { color: #a3a3a3; font-size: 7.5pt; text-align: center; line-height: 1.3; }
       </style></head><body><div class="card">
         <div class="left">
           <div class="brand"><span class="t">Taxi</span><span class="n">Noir</span></div>
@@ -186,7 +186,7 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
     const doc = new jsPDF({ orientation: "landscape", unit: "mm", format: [W, H] });
 
     // White left zone
-    const panelX = 57;
+    const panelX = 52;
     doc.setFillColor(255, 255, 255);
     doc.rect(0, 0, panelX, H, "F");
 
@@ -195,36 +195,40 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
     doc.rect(panelX, 0, W - panelX, H, "F");
 
     const m = 5;
-    doc.setFontSize(12); doc.setFont("helvetica", "bold");
-    doc.setTextColor(82, 82, 82); doc.text("Taxi", m, 9);
-    const tw = doc.getTextWidth("Taxi");
-    doc.setTextColor(23, 23, 23); doc.text("Noir", m + tw, 9);
 
-    let y = 16;
+    // Top: TaxiNoir brand
+    doc.setFontSize(16); doc.setFont("helvetica", "bold");
+    doc.setTextColor(82, 82, 82); doc.text("Taxi", m, 10);
+    const tw = doc.getTextWidth("Taxi");
+    doc.setTextColor(23, 23, 23); doc.text("Noir", m + tw, 10);
+
+    // Middle: Name
+    const midY = H / 2;
     if (driver.companyName) {
       doc.setFontSize(10); doc.setFont("helvetica", "bold"); doc.setTextColor(23, 23, 23);
-      doc.text(driver.companyName, m, y);
-      y += 4.5;
+      doc.text(driver.companyName, m, midY - 2);
       doc.setFontSize(8); doc.setFont("helvetica", "normal"); doc.setTextColor(82, 82, 82);
-      doc.text(`${driver.firstName} ${driver.lastName}`, m, y);
+      doc.text(`${driver.firstName} ${driver.lastName}`, m, midY + 3);
     } else {
       doc.setFontSize(10); doc.setFont("helvetica", "bold"); doc.setTextColor(23, 23, 23);
-      doc.text(`${driver.firstName} ${driver.lastName}`, m, y);
+      doc.text(`${driver.firstName} ${driver.lastName}`, m, midY);
     }
-    y += 5.5;
 
+    // Bottom: Details
     doc.setFontSize(7); doc.setFont("helvetica", "normal"); doc.setTextColor(115, 115, 115);
-    if (driver.vehicleBrand && driver.vehicleModel) { doc.text(`${driver.vehicleBrand} ${driver.vehicleModel}`, m, y); y += 3.5; }
-    if (driver.zoneAddress) { doc.text(driver.zoneAddress, m, y); y += 3.5; }
-    doc.text(driver.email, m, y); y += 3.5;
-    doc.text(driver.phone, m, y);
+    let yBottom = H - 5;
+    doc.text(driver.phone, m, yBottom); yBottom -= 3.5;
+    doc.text(driver.email, m, yBottom); yBottom -= 3.5;
+    if (driver.zoneAddress) { doc.text(driver.zoneAddress, m, yBottom); yBottom -= 3.5; }
+    if (driver.vehicleBrand && driver.vehicleModel) { doc.text(`${driver.vehicleBrand} ${driver.vehicleModel}`, m, yBottom); }
 
     // QR on black panel
     const cx = panelX + (W - panelX) / 2;
-    if (qrDataUrl) doc.addImage(qrDataUrl, "PNG", cx - 9, 10, 18, 18);
+    if (qrDataUrl) doc.addImage(qrDataUrl, "PNG", cx - 11, 8, 22, 22);
 
-    doc.setFontSize(5.5); doc.setFont("helvetica", "normal"); doc.setTextColor(163, 163, 163);
-    doc.text(t("scanToBook"), cx, 35, { align: "center" });
+    doc.setFontSize(6.5); doc.setFont("helvetica", "normal"); doc.setTextColor(163, 163, 163);
+    const scanLines = doc.splitTextToSize(t("scanToBook"), W - panelX - 6);
+    doc.text(scanLines, cx, 36, { align: "center" });
 
     doc.save(`carte-visite-${driver.slug}.pdf`);
   }
@@ -407,30 +411,32 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
       {activeFormat === "business" && (
         <div className="bg-white border border-neutral-200 rounded-2xl p-8 mb-6">
           <div className="aspect-[85/55] border border-neutral-200 rounded-xl shadow-lg max-w-md mx-auto overflow-hidden flex">
-            <div className="flex-[3] bg-white p-5 flex flex-col justify-center">
-              <p className="text-lg tracking-tight mb-3">
+            <div className="flex-[3] bg-white p-5 flex flex-col justify-between">
+              <p className="text-2xl tracking-tight">
                 <span className="text-neutral-500 font-normal">Taxi</span>
                 <span className="text-neutral-950 font-bold">Noir</span>
               </p>
-              {driver.companyName && (
-                <p className="text-sm font-bold tracking-tight">{driver.companyName}</p>
-              )}
-              <p className={driver.companyName ? "text-[11px] text-neutral-500 font-medium" : "text-sm font-semibold"}>{driver.firstName} {driver.lastName}</p>
-              <div className="text-[10px] text-neutral-500 space-y-0.5 mt-2 leading-relaxed">
+              <div>
+                {driver.companyName && (
+                  <p className="text-sm font-bold tracking-tight">{driver.companyName}</p>
+                )}
+                <p className={driver.companyName ? "text-xs text-neutral-500 font-medium mt-0.5" : "text-sm font-semibold"}>{driver.firstName} {driver.lastName}</p>
+              </div>
+              <div className="text-[11px] text-neutral-500 space-y-0.5 leading-relaxed">
                 {driver.vehicleBrand && driver.vehicleModel && <p>{driver.vehicleBrand} {driver.vehicleModel}</p>}
                 {driver.zoneAddress && <p>{driver.zoneAddress}</p>}
                 <p>{driver.email}</p>
                 <p>{driver.phone}</p>
               </div>
             </div>
-            <div className="flex-[1.2] bg-neutral-950 flex flex-col items-center justify-center p-3">
+            <div className="flex-[1.6] bg-neutral-950 flex flex-col items-center justify-center p-3">
               {qrDataUrl && (
-                <div className="w-14 h-14 bg-white rounded-lg p-1 mb-2">
+                <div className="w-20 h-20 bg-white rounded-lg p-1.5 mb-2">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src={qrDataUrl} alt="QR Code" className="w-full h-full object-cover rounded" />
                 </div>
               )}
-              <p className="text-[8px] text-neutral-400 text-center leading-tight">{t("scanToBook")}</p>
+              <p className="text-[10px] text-neutral-400 text-center leading-snug">{t("scanToBook")}</p>
             </div>
           </div>
         </div>
