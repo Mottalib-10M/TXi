@@ -18,6 +18,16 @@ export interface StationFAQ {
   answer: string;
 }
 
+export interface StationI18n {
+  metaTitle: string;
+  metaDescription: string;
+  heroTitle: string;
+  heroSubtitle: string;
+  intro: string;
+  testimonials: StationTestimonial[];
+  faq: StationFAQ[];
+}
+
 export interface Station {
   name: string;
   slug: string;
@@ -30,16 +40,13 @@ export interface Station {
   transferPrice: string;
   lines: string[];
   annualPassengers: string;
-  metaTitle: string;
-  metaDescription: string;
-  heroTitle: string;
-  heroSubtitle: string;
-  intro: string;
   destinations: StationDestination[];
-  testimonials: StationTestimonial[];
-  faq: StationFAQ[];
   nearbyStations: string[];
   practicalInfo: string[];
+  i18n: {
+    fr: StationI18n;
+    en: StationI18n;
+  };
 }
 
 // ─── Helper ─────────────────────────────────────────────────
@@ -74,30 +81,57 @@ function station(
     transferPrice,
     lines,
     annualPassengers,
-    metaTitle: `Taxi Gare ${name} - Transfert 24h/24 | TaxiNoir`,
-    metaDescription: `Réservez votre taxi pour la gare ${name}. Transfert fiable, tarifs forfaitaires, suivi des trains, aide aux bagages. Disponible 24h/24.`,
-    heroTitle: `Taxi Gare ${name}`,
-    heroSubtitle: `Transfert taxi vers et depuis la gare ${name}. Tarifs forfaitaires, chauffeur qui vous attend à la sortie de la gare, suivi des trains en temps réel.`,
-    intro: `Besoin d'un taxi pour la gare ${name} ? TaxiNoir vous propose un service de transfert professionnel, ponctuel et au meilleur prix. Nos chauffeurs suivent votre train en temps réel et vous attendent à la sortie de la gare. En cas de retard de votre train, l'attente est gratuite.`,
     destinations,
-    testimonials,
-    faq: [
-      {
-        question: `Comment réserver un taxi pour la gare ${name} ?`,
-        answer: `Utilisez le formulaire de réservation sur cette page. Entrez votre adresse de départ (ou d'arrivée), sélectionnez votre horaire et confirmez. Vous recevrez une confirmation par email avec les coordonnées de votre chauffeur.`,
-      },
-      {
-        question: `Le chauffeur m'attend-il à l'arrivée à la gare ${name} ?`,
-        answer: `Oui, votre chauffeur vous attend à la sortie de la gare. Il suit votre train en temps réel et adapte son heure d'arrivée. En cas de retard, l'attente est gratuite jusqu'à 30 minutes.`,
-      },
-      {
-        question: `Les tarifs sont-ils forfaitaires pour la gare ${name} ?`,
-        answer: `Oui, tous nos transferts gare sont au forfait. Le prix est fixé à la réservation et ne change pas, quels que soient les embouteillages ou le temps de trajet réel.`,
-      },
-      ...extraFaq,
-    ],
     nearbyStations,
     practicalInfo,
+    i18n: {
+      fr: {
+        metaTitle: `Taxi Gare ${name} - Transfert 24h/24 | TaxiNoir`,
+        metaDescription: `Réservez votre taxi pour la gare ${name}. Transfert fiable, tarifs forfaitaires, suivi des trains, aide aux bagages. Disponible 24h/24.`,
+        heroTitle: `Taxi Gare ${name}`,
+        heroSubtitle: `Transfert taxi vers et depuis la gare ${name}. Tarifs forfaitaires, chauffeur qui vous attend à la sortie de la gare, suivi des trains en temps réel.`,
+        intro: `Besoin d'un taxi pour la gare ${name} ? TaxiNoir vous propose un service de transfert professionnel, ponctuel et au meilleur prix. Nos chauffeurs suivent votre train en temps réel et vous attendent à la sortie de la gare. En cas de retard de votre train, l'attente est gratuite.`,
+        testimonials,
+        faq: [
+          {
+            question: `Comment réserver un taxi pour la gare ${name} ?`,
+            answer: `Utilisez le formulaire de réservation sur cette page. Entrez votre adresse de départ (ou d'arrivée), sélectionnez votre horaire et confirmez. Vous recevrez une confirmation par email avec les coordonnées de votre chauffeur.`,
+          },
+          {
+            question: `Le chauffeur m'attend-il à l'arrivée à la gare ${name} ?`,
+            answer: `Oui, votre chauffeur vous attend à la sortie de la gare. Il suit votre train en temps réel et adapte son heure d'arrivée. En cas de retard, l'attente est gratuite jusqu'à 30 minutes.`,
+          },
+          {
+            question: `Les tarifs sont-ils forfaitaires pour la gare ${name} ?`,
+            answer: `Oui, tous nos transferts gare sont au forfait. Le prix est fixé à la réservation et ne change pas, quels que soient les embouteillages ou le temps de trajet réel.`,
+          },
+          ...extraFaq,
+        ],
+      },
+      en: {
+        metaTitle: `Taxi ${name} Station - 24/7 Transfer | TaxiNoir`,
+        metaDescription: `Book your taxi to ${name} station. Reliable transfer, flat-rate fares, real-time train tracking, luggage assistance. Available 24/7.`,
+        heroTitle: `Taxi ${name} Station`,
+        heroSubtitle: `Taxi transfer to and from ${name} station. Flat-rate fares, driver waiting for you at the station exit, real-time train tracking.`,
+        intro: `Need a taxi to ${name} station? TaxiNoir offers a professional, punctual transfer service at the best price. Our drivers track your train in real time and wait for you at the station exit. If your train is delayed, the waiting time is free of charge.`,
+        testimonials,
+        faq: [
+          {
+            question: `How do I book a taxi to ${name} station?`,
+            answer: `Use the booking form on this page. Enter your pickup (or drop-off) address, select your time slot and confirm. You will receive a confirmation email with your driver's details.`,
+          },
+          {
+            question: `Does the driver wait for me when I arrive at ${name} station?`,
+            answer: `Yes, your driver waits for you at the station exit. They track your train in real time and adjust their arrival accordingly. In case of delay, the wait is free for up to 30 minutes.`,
+          },
+          {
+            question: `Are the fares flat-rate for ${name} station?`,
+            answer: `Yes, all our station transfers are at a flat rate. The price is fixed at the time of booking and does not change, regardless of traffic or actual travel time.`,
+          },
+          ...extraFaq,
+        ],
+      },
+    },
   };
 }
 

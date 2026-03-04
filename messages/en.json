@@ -658,7 +658,11 @@
     "estimatedPrice": "Estimated price",
     "nightFare": "Night fare",
     "fareDisclaimer": "Indicative estimate based on straight-line distance. Actual price may vary.",
-    "selectAddresses": "Select addresses from suggestions to estimate the fare"
+    "selectAddresses": "Select addresses from suggestions to estimate the fare",
+    "metaNotFound": "Taxi not found - TaxiNoir",
+    "metaDescription": "Book directly with {name}, taxi driver{zone}. {bio}",
+    "metaOgTitle": "{name} - Taxi Driver",
+    "metaOgDescription": "Book directly with {firstName}. {vehicle}"
   },
   "publicProfile": {
     "addToContacts": "Add to contacts",
@@ -766,7 +770,9 @@
     "breadcrumbCities": "Taxi in France",
     "badge": "{count} cities · 13 regions",
     "title": "Your taxi anywhere in France",
-    "subtitle": "TaxiNoir is available in the {count} largest cities in France, spread across 13 regions. Hover over a region to locate it on the map."
+    "subtitle": "TaxiNoir is available in the {count} largest cities in France, spread across 13 regions. Hover over a region to locate it on the map.",
+    "metaTitle": "Taxi in the 50 largest cities in France | TaxiNoir",
+    "metaDescription": "Book your taxi in the 50 largest French cities. Professional drivers, regulated fares, available 24/7 across France."
   },
   "city": {
     "breadcrumbHome": "Home",
@@ -809,13 +815,27 @@
     "contactSend": "Send",
     "servicesSubtitle": "Our services",
     "servicesTitle": "Taxi services in {cityName}",
+    "service1Title": "City rides",
+    "service1Desc": "Quick and comfortable trips across the metropolitan area, 24/7.",
+    "service2Title": "Airport transfer",
+    "service2Desc": "Reliable transfers to airports with flight tracking and luggage assistance.",
+    "service3Title": "Private driver",
+    "service3Desc": "A dedicated driver for your appointments, events and evenings out.",
+    "service4Title": "Chauffeur hire",
+    "service4Desc": "Vehicle with driver at your disposal for as long as you need.",
+    "service5Title": "Long distance",
+    "service5Desc": "Comfortable intercity journeys with pre-negotiated fares.",
+    "service6Title": "Medical transport",
+    "service6Desc": "Adapted transport to hospitals and clinics, with attentive care.",
     "faqSubtitle": "FAQ",
     "faqTitle": "Frequently asked questions about taxis in {cityName}",
     "nearbyCities": "Taxi in nearby cities",
     "taxiPrefix": "Taxi ",
     "city": "city",
     "cities": "cities",
-    "drivers": "drivers"
+    "drivers": "drivers",
+    "testimonialsSubtitle": "Testimonials",
+    "testimonialsTitle": "What our customers say in {cityName}"
   },
   "businessCard": {
     "businessCardLabel": "Business card",
@@ -840,14 +860,18 @@
     "breadcrumbAirport": "Airport Taxi",
     "badge": "{count} airports · {regions} regions",
     "title": "Airport taxi transfer",
-    "subtitle": "Fixed fares, real-time flight tracking, meet and greet in the arrivals area. Hover over a region to locate its airports on the map."
+    "subtitle": "Fixed fares, real-time flight tracking, meet and greet in the arrivals area. Hover over a region to locate its airports on the map.",
+    "metaTitle": "Airport Taxi - Transfers to 50 airports in France | TaxiNoir",
+    "metaDescription": "Book your taxi transfer to and from the 50 main airports in France. Fixed fares, flight tracking, personalised meet and greet. Available 24/7."
   },
   "stations": {
     "breadcrumbHome": "Home",
     "breadcrumbStation": "Station Taxi",
     "badge": "{count} stations · {regions} regions",
     "title": "Train station taxi transfer",
-    "subtitle": "Fixed fares, real-time train tracking, meet at the station exit. Hover over a region to locate its stations on the map."
+    "subtitle": "Fixed fares, real-time train tracking, meet at the station exit. Hover over a region to locate its stations on the map.",
+    "metaTitle": "Station Taxi - Transfers to 50 train stations in France | TaxiNoir",
+    "metaDescription": "Book your taxi transfer to and from the 50 main train stations in France. Fixed fares, train tracking, personalised meet and greet. Available 24/7."
   },
   "airport": {
     "breadcrumbHome": "Home",
@@ -884,9 +908,31 @@
       "personalWelcomeTitle": "Personalized welcome",
       "personalWelcomeDesc": "Your driver meets you at the arrivals area at {name} with a sign bearing your name and helps you with your luggage. Premium service."
     },
+    "infoIata": "IATA Code",
+    "infoTransferTime": "Transfer time",
+    "infoFlatRateFrom": "Flat rate from",
+    "infoAvailability": "Availability",
+    "infoTerminals": "Terminals",
+    "infoAirlines": "Major airlines",
+    "servicesSubtitle": "Our services",
+    "servicesTitle": "Transfer services for {name}",
+    "service1Title": "Arrival transfer",
+    "service1Desc": "Your driver waits for you in the arrivals area with a sign bearing your name. Real-time flight tracking.",
+    "service2Title": "Departure transfer",
+    "service2Desc": "Pickup from your home or hotel, drop-off at the exact terminal of your flight.",
+    "service3Title": "Group shuttle",
+    "service3Desc": "Spacious vehicles for families and groups. MPV and van for up to 8 passengers.",
+    "service4Title": "Business & VIP",
+    "service4Desc": "Premium vehicles, suited driver, bottled water, newspapers. High-end service.",
+    "service5Title": "Chauffeur hire",
+    "service5Desc": "Driver at your disposal for the day: transfer + waiting + return.",
+    "service6Title": "Medical transport",
+    "service6Desc": "Adapted transfer to or from the airport for people with reduced mobility.",
     "nearbyAirports": "Other nearby airports",
     "airport": "airport",
-    "airports": "airports"
+    "airports": "airports",
+    "testimonialsSubtitle": "Testimonials",
+    "testimonialsTitle": "Reviews of {name} transfers"
   },
   "station": {
     "breadcrumbHome": "Home",
@@ -923,9 +969,30 @@
       "stationWelcomeTitle": "Station welcome",
       "stationWelcomeDesc": "Your driver meets you at the exit of {name} station and helps you with your luggage. Premium and punctual service."
     },
+    "infoPassengers": "Travellers / year",
+    "infoTransferTime": "Transfer time",
+    "infoFlatRateFrom": "Flat rate from",
+    "infoAvailability": "Availability",
+    "infoLines": "Lines served",
+    "servicesSubtitle": "Our services",
+    "servicesTitle": "Transfer services for {name} station",
+    "service1Title": "Arrival transfer",
+    "service1Desc": "Your driver waits for you at the station exit. Real-time train tracking.",
+    "service2Title": "Departure transfer",
+    "service2Desc": "Pickup from your home or hotel, drop-off at the station entrance.",
+    "service3Title": "Group shuttle",
+    "service3Desc": "Spacious vehicles for families and groups. MPV and van for up to 8 passengers.",
+    "service4Title": "Business & VIP",
+    "service4Desc": "Premium vehicles, suited driver, bottled water, newspapers. High-end service.",
+    "service5Title": "Chauffeur hire",
+    "service5Desc": "Driver at your disposal for the day: transfer + waiting + return.",
+    "service6Title": "Medical transport",
+    "service6Desc": "Adapted transfer to or from the station for people with reduced mobility.",
     "nearbyStations": "Other nearby stations",
     "stationPrefix": "Station ",
     "station": "station",
-    "stations": "stations"
+    "stations": "stations",
+    "testimonialsSubtitle": "Testimonials",
+    "testimonialsTitle": "Reviews of {name} station transfers"
   }
 }

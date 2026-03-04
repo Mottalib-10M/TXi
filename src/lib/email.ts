@@ -75,9 +75,8 @@ const t = {
     contactDriver: "N'hésitez pas à contacter votre chauffeur pour toute question.",
     rejectedSubject: (ref: string) => `Réservation #${ref} — non disponible`,
     rejectedTitle: "Mise à jour de votre réservation",
-    rejectedBody: "Malheureusement, le chauffeur n'est pas disponible pour votre demande de course :",
-    rejectedAction: "Nous vous invitons à effectuer une nouvelle recherche sur",
-    rejectedActionEnd: "pour trouver un autre chauffeur disponible.",
+    rejectedBody: (driverName: string) => `Nous sommes désolés, mais <strong>${driverName}</strong> est actuellement occupé(e) sur une autre course et ne peut pas accepter votre demande :`,
+    rejectedApology: "Nous vous prions de bien vouloir refaire une demande et choisir un autre taxi disponible.",
     acceptedDriverSubject: (ref: string) => `Course confirmée — #${ref}`,
     acceptedDriverTitle: "Course confirmée",
     acceptedDriverBody: (ref: string) => `Vous avez accepté la course <strong>#${ref}</strong>. Voici le récapitulatif :`,
@@ -128,9 +127,8 @@ const t = {
     contactDriver: "Don't hesitate to contact your driver for any questions.",
     rejectedSubject: (ref: string) => `Booking #${ref} — unavailable`,
     rejectedTitle: "Update on your booking",
-    rejectedBody: "Unfortunately, the driver is not available for your ride request:",
-    rejectedAction: "We invite you to search again on",
-    rejectedActionEnd: "to find another available driver.",
+    rejectedBody: (driverName: string) => `We are sorry, but <strong>${driverName}</strong> is currently busy with another ride and cannot accept your request:`,
+    rejectedApology: "Please submit a new request and choose another available taxi.",
     acceptedDriverSubject: (ref: string) => `Ride confirmed — #${ref}`,
     acceptedDriverTitle: "Ride confirmed",
     acceptedDriverBody: (ref: string) => `You have accepted ride <strong>#${ref}</strong>. Here's the summary:`,
@@ -328,6 +326,7 @@ export function buildBookingAcceptedClientEmail(data: {
 
 export function buildBookingRejectedClientEmail(data: {
   clientName: string;
+  driverName: string;
   departure: string;
   arrival: string;
   date: string;
@@ -343,7 +342,7 @@ export function buildBookingRejectedClientEmail(data: {
       <div style="font-family: Inter, sans-serif; max-width: 600px; margin: 0 auto;">
         <h2 style="color: #171717;">${l.rejectedTitle}</h2>
         <p>${l.hello} ${data.clientName},</p>
-        <p>${l.rejectedBody}</p>
+        <p>${l.rejectedBody(data.driverName)}</p>
         <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
           <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.departure}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.departure}</td></tr>
           <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.arrival}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.arrival}</td></tr>
@@ -351,7 +350,7 @@ export function buildBookingRejectedClientEmail(data: {
           ${data.price ? `<tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.estimatedPrice}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${formatEmailPrice(data.price, locale)}</td></tr>` : ""}
           <tr><td style="padding: 8px; color: #737373;">${l.reference}</td><td style="padding: 8px; font-weight: 500;">#${data.reference}</td></tr>
         </table>
-        <p>${l.rejectedAction} ${l.rejectedActionEnd}</p>
+        <p>${l.rejectedApology}</p>
         <div style="text-align: center; margin: 24px 0;">
           <a href="https://taxinoir.fr" style="background-color: #171717; color: #ffffff; padding: 14px 28px; border-radius: 12px; text-decoration: none; font-weight: 500; font-size: 14px; display: inline-block;">
             ${l.searchAgain}

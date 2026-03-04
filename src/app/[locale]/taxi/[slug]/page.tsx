@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { prisma } from "@/lib/prisma";
+import { getTranslations } from "next-intl/server";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { DriverHeader } from "@/components/public-profile/DriverHeader";
@@ -9,29 +10,38 @@ import { PublicProfileClient } from "@/components/public-profile/PublicProfileCl
 import type { Vehicle } from "@/types/vehicle";
 
 interface Props {
-  params: { slug: string };
+  params: Promise<{ locale: string; slug: string }>;
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale, slug } = await params;
+  const t = await getTranslations({ locale, namespace: "driverProfile" });
+
   const driver = await prisma.driver.findUnique({
-    where: { slug: params.slug },
+    where: { slug },
   });
 
-  if (!driver) return { title: "Taxi non trouvé - TaxiNoir" };
+  if (!driver) return { title: t("metaNotFound") };
+
+  const fullName = `${driver.firstName} ${driver.lastName}`;
+  const zone = driver.zoneAddress ? ` ${locale === "en" ? "in" : "à"} ${driver.zoneAddress}` : "";
+  const vehicle = `${driver.vehicleBrand || ""} ${driver.vehicleModel || ""}`.trim();
 
   return {
-    title: `${driver.firstName} ${driver.lastName} - Taxi ${driver.zoneAddress || ""} | TaxiNoir`,
-    description: `Réservez directement avec ${driver.firstName} ${driver.lastName}, chauffeur de taxi ${driver.zoneAddress ? `à ${driver.zoneAddress}` : ""}. ${driver.bio || ""}`,
+    title: `${fullName} - Taxi ${driver.zoneAddress || ""} | TaxiNoir`,
+    description: t("metaDescription", { name: fullName, zone, bio: driver.bio || "" }),
     openGraph: {
-      title: `${driver.firstName} ${driver.lastName} - Chauffeur Taxi`,
-      description: `Réservez directement avec ${driver.firstName}. ${driver.vehicleBrand || ""} ${driver.vehicleModel || ""}`,
+      title: t("metaOgTitle", { name: fullName }),
+      description: t("metaOgDescription", { firstName: driver.firstName, vehicle }),
     },
   };
 }
 
 export default async function TaxiProfilePage({ params }: Props) {
+  const { slug } = await params;
+
   const driver = await prisma.driver.findUnique({
-    where: { slug: params.slug, isActive: true },
+    where: { slug, isActive: true },
   });
 
   if (!driver) notFound();

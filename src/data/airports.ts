@@ -18,6 +18,17 @@ export interface AirportFAQ {
   answer: string;
 }
 
+export interface AirportI18n {
+  metaTitle: string;
+  metaDescription: string;
+  heroTitle: string;
+  heroSubtitle: string;
+  intro: string;
+  testimonials: AirportTestimonial[];
+  faq: AirportFAQ[];
+  practicalInfo: string[];
+}
+
 export interface Airport {
   name: string;
   slug: string;
@@ -31,17 +42,13 @@ export interface Airport {
   transferPrice: string;
   terminals: string[];
   airlines: string[];
-  metaTitle: string;
-  metaDescription: string;
-  heroTitle: string;
-  heroSubtitle: string;
-  intro: string;
   destinations: AirportDestination[];
-  testimonials: AirportTestimonial[];
-  faq: AirportFAQ[];
   nearbyAirports: string[];
-  practicalInfo: string[];
   annualPassengers: string;
+  i18n: {
+    fr: AirportI18n;
+    en: AirportI18n;
+  };
 }
 
 // ─── Helper ─────────────────────────────────────────────────
@@ -80,30 +87,58 @@ function airport(
     terminals,
     airlines,
     annualPassengers,
-    metaTitle: `Taxi Aéroport ${name} (${iata}) - Transfert 24h/24 | TaxiNoir`,
-    metaDescription: `Réservez votre taxi pour l'aéroport ${name}. Transfert fiable, tarifs forfaitaires, suivi des vols, aide aux bagages. Disponible 24h/24.`,
-    heroTitle: `Taxi Aéroport ${name}`,
-    heroSubtitle: `Transfert taxi vers et depuis l'aéroport ${name} (${iata}). Tarifs forfaitaires, chauffeur qui vous attend en zone d'arrivée, suivi des vols en temps réel.`,
-    intro: `Besoin d'un taxi pour l'aéroport ${name} ? TaxiNoir vous propose un service de transfert professionnel, ponctuel et au meilleur prix. Nos chauffeurs suivent votre vol en temps réel et vous attendent avec une pancarte nominative en zone d'arrivée. En cas de retard de votre vol, l'attente est gratuite.`,
     destinations,
-    testimonials,
-    faq: [
-      {
-        question: `Comment réserver un taxi pour l'aéroport ${name} ?`,
-        answer: `Utilisez le formulaire de réservation sur cette page. Entrez votre adresse de départ (ou d'arrivée), sélectionnez votre horaire et confirmez. Vous recevrez une confirmation par email avec les coordonnées de votre chauffeur.`,
-      },
-      {
-        question: `Le chauffeur m'attend-il à l'arrivée à ${name} ?`,
-        answer: `Oui, votre chauffeur vous attend en zone d'arrivée avec une pancarte à votre nom. Il suit votre vol en temps réel et adapte son heure d'arrivée. En cas de retard, l'attente est gratuite jusqu'à 45 minutes.`,
-      },
-      {
-        question: `Les tarifs sont-ils forfaitaires pour ${name} ?`,
-        answer: `Oui, tous nos transferts aéroport sont au forfait. Le prix est fixé à la réservation et ne change pas, quels que soient les embouteillages ou le temps de trajet réel.`,
-      },
-      ...extraFaq,
-    ],
     nearbyAirports,
-    practicalInfo,
+    i18n: {
+      fr: {
+        metaTitle: `Taxi Aéroport ${name} (${iata}) - Transfert 24h/24 | TaxiNoir`,
+        metaDescription: `Réservez votre taxi pour l'aéroport ${name}. Transfert fiable, tarifs forfaitaires, suivi des vols, aide aux bagages. Disponible 24h/24.`,
+        heroTitle: `Taxi Aéroport ${name}`,
+        heroSubtitle: `Transfert taxi vers et depuis l'aéroport ${name} (${iata}). Tarifs forfaitaires, chauffeur qui vous attend en zone d'arrivée, suivi des vols en temps réel.`,
+        intro: `Besoin d'un taxi pour l'aéroport ${name} ? TaxiNoir vous propose un service de transfert professionnel, ponctuel et au meilleur prix. Nos chauffeurs suivent votre vol en temps réel et vous attendent avec une pancarte nominative en zone d'arrivée. En cas de retard de votre vol, l'attente est gratuite.`,
+        testimonials,
+        faq: [
+          {
+            question: `Comment réserver un taxi pour l'aéroport ${name} ?`,
+            answer: `Utilisez le formulaire de réservation sur cette page. Entrez votre adresse de départ (ou d'arrivée), sélectionnez votre horaire et confirmez. Vous recevrez une confirmation par email avec les coordonnées de votre chauffeur.`,
+          },
+          {
+            question: `Le chauffeur m'attend-il à l'arrivée à ${name} ?`,
+            answer: `Oui, votre chauffeur vous attend en zone d'arrivée avec une pancarte à votre nom. Il suit votre vol en temps réel et adapte son heure d'arrivée. En cas de retard, l'attente est gratuite jusqu'à 45 minutes.`,
+          },
+          {
+            question: `Les tarifs sont-ils forfaitaires pour ${name} ?`,
+            answer: `Oui, tous nos transferts aéroport sont au forfait. Le prix est fixé à la réservation et ne change pas, quels que soient les embouteillages ou le temps de trajet réel.`,
+          },
+          ...extraFaq,
+        ],
+        practicalInfo,
+      },
+      en: {
+        metaTitle: `Taxi ${name} Airport (${iata}) - 24/7 Transfer | TaxiNoir`,
+        metaDescription: `Book your taxi to ${name} Airport. Reliable transfer, fixed fares, flight tracking, luggage assistance. Available 24/7.`,
+        heroTitle: `Taxi ${name} Airport`,
+        heroSubtitle: `Taxi transfer to and from ${name} Airport (${iata}). Fixed fares, driver waiting in the arrivals area, real-time flight tracking.`,
+        intro: `Need a taxi to ${name} Airport? TaxiNoir offers a professional, punctual transfer service at the best price. Our drivers track your flight in real time and greet you with a name board in the arrivals area. If your flight is delayed, the waiting time is free of charge.`,
+        testimonials,
+        faq: [
+          {
+            question: `How do I book a taxi to ${name} Airport?`,
+            answer: `Use the booking form on this page. Enter your pickup (or drop-off) address, select your time and confirm. You will receive a confirmation email with your driver's details.`,
+          },
+          {
+            question: `Does the driver wait for me on arrival at ${name}?`,
+            answer: `Yes, your driver waits in the arrivals area with a sign bearing your name. They track your flight in real time and adjust their arrival time. In case of delay, waiting is free for up to 45 minutes.`,
+          },
+          {
+            question: `Are the fares fixed for ${name} Airport?`,
+            answer: `Yes, all our airport transfers are at a fixed rate. The price is set at booking and does not change, regardless of traffic or actual travel time.`,
+          },
+          ...extraFaq,
+        ],
+        practicalInfo,
+      },
+    },
   };
 }
 

@@ -28,16 +28,17 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const { slug } = await params;
+  const { locale, slug } = await params;
   const city = getCityBySlug(slug);
   if (!city) return {};
+  const loc = locale === "en" ? "en" : "fr";
 
   return {
-    title: city.metaTitle,
-    description: city.metaDescription,
+    title: city.i18n[loc].metaTitle,
+    description: city.i18n[loc].metaDescription,
     openGraph: {
-      title: city.metaTitle,
-      description: city.metaDescription,
+      title: city.i18n[loc].metaTitle,
+      description: city.i18n[loc].metaDescription,
       url: `https://www.taxinoir.fr/taxi-${city.slug}`,
       siteName: "TaxiNoir",
       type: "website",
@@ -49,9 +50,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 }
 
 export default async function CityPage({ params }: PageProps) {
-  const { slug } = await params;
+  const { locale, slug } = await params;
   const city = getCityBySlug(slug);
   if (!city) notFound();
+  const loc = locale === "en" ? "en" : "fr";
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -70,7 +72,7 @@ export default async function CityPage({ params }: PageProps) {
         <CityLandmarks city={city} />
         <CityWhyUs cityName={city.name} />
         <CityTestimonials city={city} />
-        <CityFAQ cityName={city.name} faq={city.faq} />
+        <CityFAQ cityName={city.name} faq={city.i18n[loc].faq} />
         <CityContactForm cityName={city.name} />
         <CityCTA cityName={city.name} />
         <CityInternalLinks city={city} />

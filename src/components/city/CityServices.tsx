@@ -1,6 +1,14 @@
 import { Icon } from "@iconify/react";
-import { services } from "@/data/cities";
 import { getTranslations } from "next-intl/server";
+
+const serviceIcons = [
+  "solar:city-linear",
+  "mdi:airplane",
+  "solar:user-check-linear",
+  "solar:clock-circle-linear",
+  "solar:routing-2-linear",
+  "solar:heart-pulse-linear",
+];
 
 export async function CityServices({ cityName }: { cityName: string }) {
   const t = await getTranslations("city");
@@ -17,17 +25,19 @@ export async function CityServices({ cityName }: { cityName: string }) {
           </h2>
         </div>
         <div className="grid md:grid-cols-3 gap-8">
-          {services.map((service, i) => (
+          {serviceIcons.map((icon, i) => (
             <div
-              key={service.title}
+              key={i}
               className={`bg-white border border-neutral-200 rounded-2xl p-6 card-hover fade-up fade-up-delay-${(i % 3) + 1}`}
             >
               <div className="w-12 h-12 bg-neutral-50 border border-neutral-200 rounded-xl flex items-center justify-center mb-5">
-                <Icon icon={service.icon} className="text-neutral-900 text-2xl" />
+                <Icon icon={icon} className="text-neutral-900 text-2xl" />
               </div>
-              <h3 className="text-lg font-medium tracking-tight mb-2">{service.title}</h3>
+              <h3 className="text-lg font-medium tracking-tight mb-2">
+                {t(`service${i + 1}Title`)}
+              </h3>
               <p className="text-sm text-neutral-500 font-light leading-relaxed">
-                {service.description}
+                {t(`service${i + 1}Desc`)}
               </p>
             </div>
           ))}

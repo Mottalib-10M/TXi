@@ -1,33 +1,36 @@
 import { Icon } from "@iconify/react";
 import type { Station } from "@/data/stations";
+import { getTranslations } from "next-intl/server";
 
-export function StationInfo({ station }: { station: Station }) {
+export async function StationInfo({ station }: { station: Station }) {
+  const t = await getTranslations("station");
+
   return (
     <section className="border-t border-neutral-100 py-16 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 mb-12">
           <div className="text-center fade-up">
             <p className="text-3xl md:text-4xl font-semibold tracking-tight">{station.annualPassengers}</p>
-            <p className="text-sm text-neutral-500 font-light mt-1">Voyageurs / an</p>
+            <p className="text-sm text-neutral-500 font-light mt-1">{t("infoPassengers")}</p>
           </div>
           <div className="text-center fade-up fade-up-delay-1">
             <p className="text-3xl md:text-4xl font-semibold tracking-tight">{station.transferTime}</p>
-            <p className="text-sm text-neutral-500 font-light mt-1">Temps de transfert</p>
+            <p className="text-sm text-neutral-500 font-light mt-1">{t("infoTransferTime")}</p>
           </div>
           <div className="text-center fade-up fade-up-delay-2">
             <p className="text-3xl md:text-4xl font-semibold tracking-tight">{station.transferPrice}</p>
-            <p className="text-sm text-neutral-500 font-light mt-1">Forfait depuis</p>
+            <p className="text-sm text-neutral-500 font-light mt-1">{t("infoFlatRateFrom")}</p>
           </div>
           <div className="text-center fade-up fade-up-delay-3">
             <p className="text-3xl md:text-4xl font-semibold tracking-tight">24/7</p>
-            <p className="text-sm text-neutral-500 font-light mt-1">Disponibilité</p>
+            <p className="text-sm text-neutral-500 font-light mt-1">{t("infoAvailability")}</p>
           </div>
         </div>
 
         <div className="bg-white border border-neutral-200 rounded-2xl p-6 fade-up">
           <h3 className="text-sm font-medium mb-4 flex items-center gap-2">
             <Icon icon="solar:train-linear" className="text-neutral-400" />
-            Lignes desservies
+            {t("infoLines")}
           </h3>
           <div className="flex flex-wrap gap-2">
             {station.lines.map((line) => (

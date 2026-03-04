@@ -658,7 +658,11 @@
     "estimatedPrice": "Prix estimé",
     "nightFare": "Tarif nuit",
     "fareDisclaimer": "Estimation indicative basée sur la distance à vol d'oiseau. Le prix réel peut varier.",
-    "selectAddresses": "Sélectionnez des adresses dans les suggestions pour estimer le tarif"
+    "selectAddresses": "Sélectionnez des adresses dans les suggestions pour estimer le tarif",
+    "metaNotFound": "Taxi non trouvé - TaxiNoir",
+    "metaDescription": "Réservez directement avec {name}, chauffeur de taxi{zone}. {bio}",
+    "metaOgTitle": "{name} - Chauffeur Taxi",
+    "metaOgDescription": "Réservez directement avec {firstName}. {vehicle}"
   },
   "publicProfile": {
     "addToContacts": "Ajouter aux contacts",
@@ -766,7 +770,9 @@
     "breadcrumbCities": "Taxi en France",
     "badge": "{count} villes · 13 régions",
     "title": "Votre taxi partout en France",
-    "subtitle": "TaxiNoir est présent dans les {count} plus grandes villes de France, réparties dans 13 régions. Survolez une région pour la localiser sur la carte."
+    "subtitle": "TaxiNoir est présent dans les {count} plus grandes villes de France, réparties dans 13 régions. Survolez une région pour la localiser sur la carte.",
+    "metaTitle": "Taxi dans les 50 plus grandes villes de France | TaxiNoir",
+    "metaDescription": "Réservez votre taxi dans les 50 plus grandes villes françaises. Chauffeurs professionnels, tarifs réglementés, disponible 24h/24 partout en France."
   },
   "city": {
     "breadcrumbHome": "Accueil",
@@ -809,13 +815,27 @@
     "contactSend": "Envoyer",
     "servicesSubtitle": "Nos services",
     "servicesTitle": "Services taxi à {cityName}",
+    "service1Title": "Courses en ville",
+    "service1Desc": "Déplacements rapides et confortables dans toute l'agglomération, 24h/24 et 7j/7.",
+    "service2Title": "Transfert aéroport",
+    "service2Desc": "Transferts fiables vers les aéroports avec suivi des vols et aide aux bagages.",
+    "service3Title": "Chauffeur privé",
+    "service3Desc": "Un chauffeur dédié pour vos rendez-vous, événements et soirées.",
+    "service4Title": "Mise à disposition",
+    "service4Desc": "Véhicule avec chauffeur à votre disposition pour la durée de votre choix.",
+    "service5Title": "Longue distance",
+    "service5Desc": "Trajets interurbains confortables avec tarifs négociés à l'avance.",
+    "service6Title": "Transport médical",
+    "service6Desc": "Transport adapté vers les hôpitaux et cliniques, avec prise en charge attentionnée.",
     "faqSubtitle": "FAQ",
     "faqTitle": "Questions fréquentes sur les taxis à {cityName}",
     "nearbyCities": "Taxi dans les villes proches",
     "taxiPrefix": "Taxi ",
     "city": "ville",
     "cities": "villes",
-    "drivers": "chauffeurs"
+    "drivers": "chauffeurs",
+    "testimonialsSubtitle": "Témoignages",
+    "testimonialsTitle": "Ce que disent nos clients à {cityName}"
   },
   "businessCard": {
     "businessCardLabel": "Carte de visite",
@@ -840,14 +860,18 @@
     "breadcrumbAirport": "Taxi Aéroport",
     "badge": "{count} aéroports · {regions} régions",
     "title": "Transfert taxi aéroport",
-    "subtitle": "Tarifs forfaitaires, suivi de vol en temps réel, accueil avec pancarte en zone d'arrivée. Survolez une région pour localiser ses aéroports sur la carte."
+    "subtitle": "Tarifs forfaitaires, suivi de vol en temps réel, accueil avec pancarte en zone d'arrivée. Survolez une région pour localiser ses aéroports sur la carte.",
+    "metaTitle": "Taxi Aéroport - Transferts vers les 50 aéroports de France | TaxiNoir",
+    "metaDescription": "Réservez votre transfert taxi vers et depuis les 50 principaux aéroports de France. Tarifs forfaitaires, suivi de vol, accueil personnalisé. Disponible 24h/24."
   },
   "stations": {
     "breadcrumbHome": "Accueil",
     "breadcrumbStation": "Taxi Gare",
     "badge": "{count} gares · {regions} régions",
     "title": "Transfert taxi gare",
-    "subtitle": "Tarifs forfaitaires, suivi de train en temps réel, accueil à la sortie de la gare. Survolez une région pour localiser ses gares sur la carte."
+    "subtitle": "Tarifs forfaitaires, suivi de train en temps réel, accueil à la sortie de la gare. Survolez une région pour localiser ses gares sur la carte.",
+    "metaTitle": "Taxi Gare - Transferts vers les 50 gares de France | TaxiNoir",
+    "metaDescription": "Réservez votre transfert taxi vers et depuis les 50 principales gares de France. Tarifs forfaitaires, suivi de train, accueil personnalisé. Disponible 24h/24."
   },
   "airport": {
     "breadcrumbHome": "Accueil",
@@ -884,9 +908,31 @@
       "personalWelcomeTitle": "Accueil personnalisé",
       "personalWelcomeDesc": "Votre chauffeur vous attend en zone d'arrivée à {name} avec une pancarte à votre nom et vous aide avec vos bagages. Service premium."
     },
+    "infoIata": "Code IATA",
+    "infoTransferTime": "Temps de transfert",
+    "infoFlatRateFrom": "Forfait depuis",
+    "infoAvailability": "Disponibilité",
+    "infoTerminals": "Terminaux",
+    "infoAirlines": "Compagnies principales",
+    "servicesSubtitle": "Nos services",
+    "servicesTitle": "Services transfert {name}",
+    "service1Title": "Transfert arrivée",
+    "service1Desc": "Votre chauffeur vous attend en zone d'arrivée avec une pancarte à votre nom. Suivi de vol en temps réel.",
+    "service2Title": "Transfert départ",
+    "service2Desc": "Prise en charge à domicile ou à l'hôtel, dépose au terminal exact de votre vol.",
+    "service3Title": "Navette groupe",
+    "service3Desc": "Véhicules spacieux pour les familles et groupes. Monospace et van jusqu'à 8 passagers.",
+    "service4Title": "Business & VIP",
+    "service4Desc": "Véhicules premium, chauffeur en costume, bouteille d'eau, journaux. Service haut de gamme.",
+    "service5Title": "Mise à disposition",
+    "service5Desc": "Chauffeur à votre disposition pour la journée : transfert + attente + retour.",
+    "service6Title": "Transport médical",
+    "service6Desc": "Transfert adapté vers ou depuis l'aéroport pour les personnes à mobilité réduite.",
     "nearbyAirports": "Autres aéroports à proximité",
     "airport": "aéroport",
-    "airports": "aéroports"
+    "airports": "aéroports",
+    "testimonialsSubtitle": "Témoignages",
+    "testimonialsTitle": "Avis sur les transferts {name}"
   },
   "station": {
     "breadcrumbHome": "Accueil",
@@ -923,9 +969,30 @@
       "stationWelcomeTitle": "Accueil en gare",
       "stationWelcomeDesc": "Votre chauffeur vous attend à la sortie de la gare {name} et vous aide avec vos bagages. Service premium et ponctuel."
     },
+    "infoPassengers": "Voyageurs / an",
+    "infoTransferTime": "Temps de transfert",
+    "infoFlatRateFrom": "Forfait depuis",
+    "infoAvailability": "Disponibilité",
+    "infoLines": "Lignes desservies",
+    "servicesSubtitle": "Nos services",
+    "servicesTitle": "Services transfert gare {name}",
+    "service1Title": "Transfert arrivée",
+    "service1Desc": "Votre chauffeur vous attend à la sortie de la gare. Suivi de train en temps réel.",
+    "service2Title": "Transfert départ",
+    "service2Desc": "Prise en charge à domicile ou à l'hôtel, dépose devant l'entrée de la gare.",
+    "service3Title": "Navette groupe",
+    "service3Desc": "Véhicules spacieux pour les familles et groupes. Monospace et van jusqu'à 8 passagers.",
+    "service4Title": "Business & VIP",
+    "service4Desc": "Véhicules premium, chauffeur en costume, bouteille d'eau, journaux. Service haut de gamme.",
+    "service5Title": "Mise à disposition",
+    "service5Desc": "Chauffeur à votre disposition pour la journée : transfert + attente + retour.",
+    "service6Title": "Transport médical",
+    "service6Desc": "Transfert adapté vers ou depuis la gare pour les personnes à mobilité réduite.",
     "nearbyStations": "Autres gares à proximité",
     "stationPrefix": "Gare ",
     "station": "gare",
-    "stations": "gares"
+    "stations": "gares",
+    "testimonialsSubtitle": "Témoignages",
+    "testimonialsTitle": "Avis sur les transferts gare {name}"
   }
 }

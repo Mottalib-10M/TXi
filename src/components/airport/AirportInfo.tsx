@@ -1,26 +1,29 @@
 import { Icon } from "@iconify/react";
 import type { Airport } from "@/data/airports";
+import { getTranslations } from "next-intl/server";
 
-export function AirportInfo({ airport }: { airport: Airport }) {
+export async function AirportInfo({ airport }: { airport: Airport }) {
+  const t = await getTranslations("airport");
+
   return (
     <section className="border-t border-neutral-100 py-16 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 mb-12">
           <div className="text-center fade-up">
             <p className="text-3xl md:text-4xl font-semibold tracking-tight">{airport.iata}</p>
-            <p className="text-sm text-neutral-500 font-light mt-1">Code IATA</p>
+            <p className="text-sm text-neutral-500 font-light mt-1">{t("infoIata")}</p>
           </div>
           <div className="text-center fade-up fade-up-delay-1">
             <p className="text-3xl md:text-4xl font-semibold tracking-tight">{airport.transferTime}</p>
-            <p className="text-sm text-neutral-500 font-light mt-1">Temps de transfert</p>
+            <p className="text-sm text-neutral-500 font-light mt-1">{t("infoTransferTime")}</p>
           </div>
           <div className="text-center fade-up fade-up-delay-2">
             <p className="text-3xl md:text-4xl font-semibold tracking-tight">{airport.transferPrice}</p>
-            <p className="text-sm text-neutral-500 font-light mt-1">Forfait depuis</p>
+            <p className="text-sm text-neutral-500 font-light mt-1">{t("infoFlatRateFrom")}</p>
           </div>
           <div className="text-center fade-up fade-up-delay-3">
             <p className="text-3xl md:text-4xl font-semibold tracking-tight">24/7</p>
-            <p className="text-sm text-neutral-500 font-light mt-1">Disponibilité</p>
+            <p className="text-sm text-neutral-500 font-light mt-1">{t("infoAvailability")}</p>
           </div>
         </div>
 
@@ -28,12 +31,12 @@ export function AirportInfo({ airport }: { airport: Airport }) {
           <div className="bg-white border border-neutral-200 rounded-2xl p-6 fade-up">
             <h3 className="text-sm font-medium mb-4 flex items-center gap-2">
               <Icon icon="solar:buildings-linear" className="text-neutral-400" />
-              Terminaux
+              {t("infoTerminals")}
             </h3>
             <div className="flex flex-wrap gap-2">
-              {airport.terminals.map((t) => (
-                <span key={t} className="text-xs text-neutral-600 font-light bg-neutral-50 border border-neutral-200 rounded-full px-3 py-1.5">
-                  {t}
+              {airport.terminals.map((term) => (
+                <span key={term} className="text-xs text-neutral-600 font-light bg-neutral-50 border border-neutral-200 rounded-full px-3 py-1.5">
+                  {term}
                 </span>
               ))}
             </div>
@@ -41,7 +44,7 @@ export function AirportInfo({ airport }: { airport: Airport }) {
           <div className="bg-white border border-neutral-200 rounded-2xl p-6 fade-up fade-up-delay-1">
             <h3 className="text-sm font-medium mb-4 flex items-center gap-2">
               <Icon icon="mdi:airplane" className="text-neutral-400" />
-              Compagnies principales
+              {t("infoAirlines")}
             </h3>
             <div className="flex flex-wrap gap-2">
               {airport.airlines.map((a) => (

@@ -7,16 +7,25 @@ import { ScrollAnimation } from "@/components/ui/ScrollAnimation";
 import { FranceMapSection } from "@/components/city/FranceMapSection";
 import { cities } from "@/data/cities";
 
-export const metadata: Metadata = {
-  title: "Taxi dans les 50 plus grandes villes de France | TaxiNoir",
-  description: "Réservez votre taxi dans les 50 plus grandes villes françaises. Chauffeurs professionnels, tarifs réglementés, disponible 24h/24 partout en France.",
-  openGraph: {
-    title: "Taxi dans les 50 plus grandes villes de France | TaxiNoir",
-    description: "Réservez votre taxi dans les 50 plus grandes villes françaises. Chauffeurs professionnels, tarifs réglementés, disponible 24h/24.",
-    url: "https://www.taxinoir.fr/villes",
-  },
-  alternates: { canonical: "https://www.taxinoir.fr/villes" },
-};
+interface PageProps {
+  params: Promise<{ locale: string }>;
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "cities" });
+
+  return {
+    title: t("metaTitle"),
+    description: t("metaDescription"),
+    openGraph: {
+      title: t("metaTitle"),
+      description: t("metaDescription"),
+      url: "https://www.taxinoir.fr/villes",
+    },
+    alternates: { canonical: "https://www.taxinoir.fr/villes" },
+  };
+}
 
 export default async function VillesPage() {
   const t = await getTranslations("cities");

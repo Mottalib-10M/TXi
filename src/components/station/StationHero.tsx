@@ -1,9 +1,11 @@
 import type { Station } from "@/data/stations";
 import { BookingForm } from "@/components/booking/BookingForm";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, getLocale } from "next-intl/server";
 
 export async function StationHero({ station }: { station: Station }) {
   const t = await getTranslations("station");
+  const locale = await getLocale();
+  const loc = locale === "en" ? "en" : "fr";
 
   return (
     <section className="pt-24 pb-12 md:pt-32 md:pb-20">
@@ -17,10 +19,10 @@ export async function StationHero({ station }: { station: Station }) {
               </span>
             </div>
             <h1 className="text-4xl md:text-5xl font-semibold tracking-tight leading-[1.1] mb-4">
-              {station.heroTitle}
+              {station.i18n[loc].heroTitle}
             </h1>
             <p className="text-base md:text-lg text-neutral-500 mb-6 max-w-md font-light leading-relaxed">
-              {station.heroSubtitle}
+              {station.i18n[loc].heroSubtitle}
             </p>
             <div className="flex flex-wrap gap-4 text-xs text-neutral-500 font-light mb-2">
               <span className="bg-neutral-50 border border-neutral-200 rounded-full px-3 py-1">

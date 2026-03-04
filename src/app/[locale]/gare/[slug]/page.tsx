@@ -19,7 +19,7 @@ import { StationInternalLinks } from "@/components/station/StationInternalLinks"
 import { stations, getStationBySlug } from "@/data/stations";
 
 interface PageProps {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ locale: string; slug: string }>;
 }
 
 export async function generateStaticParams() {
@@ -29,16 +29,17 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const { slug } = await params;
+  const { locale, slug } = await params;
   const st = getStationBySlug(slug);
   if (!st) return {};
+  const loc = locale === "en" ? "en" : "fr";
 
   return {
-    title: st.metaTitle,
-    description: st.metaDescription,
+    title: st.i18n[loc].metaTitle,
+    description: st.i18n[loc].metaDescription,
     openGraph: {
-      title: st.metaTitle,
-      description: st.metaDescription,
+      title: st.i18n[loc].metaTitle,
+      description: st.i18n[loc].metaDescription,
       url: `https://www.taxinoir.fr/taxi-gare-${st.slug}`,
       siteName: "TaxiNoir",
       type: "website",
@@ -50,9 +51,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 }
 
 export default async function StationPage({ params }: PageProps) {
-  const { slug } = await params;
+  const { locale, slug } = await params;
   const st = getStationBySlug(slug);
   if (!st) notFound();
+  const loc = locale === "en" ? "en" : "fr";
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -72,7 +74,7 @@ export default async function StationPage({ params }: PageProps) {
         <StationPractical station={st} />
         <StationWhyUs stationName={st.name} />
         <StationTestimonials station={st} />
-        <CityFAQ cityName={`la gare ${st.name}`} faq={st.faq} />
+        <CityFAQ cityName={`la gare ${st.name}`} faq={st.i18n[loc].faq} />
         <CityContactForm cityName={`la gare ${st.name}`} />
         <CityCTA cityName={`la gare ${st.name}`} />
         <StationInternalLinks station={st} />

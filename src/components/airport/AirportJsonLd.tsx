@@ -1,11 +1,15 @@
 import type { Airport } from "@/data/airports";
+import { getLocale } from "next-intl/server";
 
-export function AirportJsonLd({ airport }: { airport: Airport }) {
+export async function AirportJsonLd({ airport }: { airport: Airport }) {
+  const locale = await getLocale();
+  const loc = locale === "en" ? "en" : "fr";
+
   const localBusiness = {
     "@context": "https://schema.org",
     "@type": "TaxiService",
     name: `TaxiNoir - Transfert Aéroport ${airport.name}`,
-    description: airport.metaDescription,
+    description: airport.i18n[loc].metaDescription,
     url: `https://www.taxinoir.fr/taxi-aeroport-${airport.slug}`,
     telephone: "+33 1 00 00 00 00",
     areaServed: {
@@ -34,7 +38,7 @@ export function AirportJsonLd({ airport }: { airport: Airport }) {
   const faqPage = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: airport.faq.map((item) => ({
+    mainEntity: airport.i18n[loc].faq.map((item) => ({
       "@type": "Question",
       name: item.question,
       acceptedAnswer: {

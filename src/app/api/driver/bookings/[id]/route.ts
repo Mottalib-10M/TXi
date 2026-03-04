@@ -151,6 +151,11 @@ export async function PATCH(
     // Send rejection notification to client
     if (status === "REJECTED" && booking.clientEmail && booking.clientEmail !== "noemail@taxinoir.fr") {
       try {
+        const rejectDriver = await prisma.driver.findUnique({
+          where: { id: session.user.id },
+          select: { firstName: true, lastName: true, companyName: true },
+        });
+
         const rejectDateLocale = locale === "en" ? "en-US" : "fr-FR";
         const dateFormatted = new Date(booking.requestedDate).toLocaleDateString(rejectDateLocale, {
           weekday: "long",
@@ -163,9 +168,13 @@ export async function PATCH(
 
         const clientEmailTo = booking.organization ? booking.organization.email : booking.clientEmail;
         const clientDisplayName = booking.organization ? booking.organization.contactName : booking.clientName;
+        const driverDisplayName = rejectDriver
+          ? (rejectDriver.companyName || `${rejectDriver.firstName} ${rejectDriver.lastName}`)
+          : "le chauffeur";
 
         const rejectionMail = buildBookingRejectedClientEmail({
           clientName: clientDisplayName,
+          driverName: driverDisplayName,
           departure: booking.departureName,
           arrival: booking.arrivalName,
           date: dateFormatted,

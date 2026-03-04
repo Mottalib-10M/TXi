@@ -12,24 +12,31 @@ export interface CityFAQ {
   answer: string;
 }
 
+export interface CityI18n {
+  metaTitle: string;
+  metaDescription: string;
+  heroTitle: string;
+  heroSubtitle: string;
+  intro: string;
+  testimonials: CityTestimonial[];
+  faq: CityFAQ[];
+}
+
 export interface City {
   name: string;
   slug: string;
   lat: number;
   lng: number;
   population: number;
-  metaTitle: string;
-  metaDescription: string;
-  heroTitle: string;
-  heroSubtitle: string;
-  intro: string;
   landmarks: string[];
-  testimonials: CityTestimonial[];
-  faq: CityFAQ[];
   nearbyCities: string[];
   driverCount: number;
   avgWaitTime: string;
   rating: number;
+  i18n: {
+    fr: CityI18n;
+    en: CityI18n;
+  };
 }
 
 // ─── Helper ─────────────────────────────────────────────────
@@ -53,36 +60,67 @@ function city(
     lat,
     lng,
     population,
-    metaTitle: `Taxi ${name} - Réservation en ligne 24h/24 | TaxiNoir`,
-    metaDescription: `Réservez votre taxi à ${name} en quelques clics. Chauffeurs professionnels, tarifs réglementés, disponible 24h/24. Transfert aéroport, gare et courses en ville.`,
-    heroTitle: `Votre taxi à ${name}`,
-    heroSubtitle: `Réservez un taxi professionnel à ${name} en quelques secondes. Tarifs réglementés, chauffeurs agréés, disponible 24h/24.`,
-    intro: `TaxiNoir vous connecte avec les meilleurs chauffeurs de taxi à ${name}. Que ce soit pour une course en ville, un transfert vers la gare ou l'aéroport, ou un déplacement professionnel, nos chauffeurs partenaires sont disponibles jour et nuit pour vous transporter en toute sécurité.`,
     landmarks,
-    testimonials,
-    faq: [
-      {
-        question: `Quel est le prix d'un taxi à ${name} ?`,
-        answer: `Les taxis à ${name} appliquent les tarifs réglementés par la préfecture. Le prix dépend de la distance, de l'heure et du jour (tarif A, B ou C). Avec TaxiNoir, vous obtenez une estimation avant de réserver.`,
-      },
-      {
-        question: `Comment réserver un taxi à ${name} ?`,
-        answer: `Utilisez le formulaire de réservation sur cette page. Entrez votre point de départ et votre destination, choisissez votre horaire et confirmez. Un chauffeur vous sera attribué en quelques minutes.`,
-      },
-      {
-        question: `Les taxis TaxiNoir à ${name} sont-ils disponibles la nuit ?`,
-        answer: `Oui, nos chauffeurs partenaires à ${name} sont disponibles 24h/24 et 7j/7, y compris les nuits, week-ends et jours fériés.`,
-      },
-      {
-        question: `Peut-on réserver un taxi à l'avance à ${name} ?`,
-        answer: `Absolument. Vous pouvez réserver votre taxi à ${name} jusqu'à 30 jours à l'avance via notre formulaire. Idéal pour les transferts aéroport ou les rendez-vous importants.`,
-      },
-      ...faq,
-    ],
     nearbyCities,
     driverCount,
     avgWaitTime,
     rating: 4.8,
+    i18n: {
+      fr: {
+        metaTitle: `Taxi ${name} - Réservation en ligne 24h/24 | TaxiNoir`,
+        metaDescription: `Réservez votre taxi à ${name} en quelques clics. Chauffeurs professionnels, tarifs réglementés, disponible 24h/24. Transfert aéroport, gare et courses en ville.`,
+        heroTitle: `Votre taxi à ${name}`,
+        heroSubtitle: `Réservez un taxi professionnel à ${name} en quelques secondes. Tarifs réglementés, chauffeurs agréés, disponible 24h/24.`,
+        intro: `TaxiNoir vous connecte avec les meilleurs chauffeurs de taxi à ${name}. Que ce soit pour une course en ville, un transfert vers la gare ou l'aéroport, ou un déplacement professionnel, nos chauffeurs partenaires sont disponibles jour et nuit pour vous transporter en toute sécurité.`,
+        testimonials,
+        faq: [
+          {
+            question: `Quel est le prix d'un taxi à ${name} ?`,
+            answer: `Les taxis à ${name} appliquent les tarifs réglementés par la préfecture. Le prix dépend de la distance, de l'heure et du jour (tarif A, B ou C). Avec TaxiNoir, vous obtenez une estimation avant de réserver.`,
+          },
+          {
+            question: `Comment réserver un taxi à ${name} ?`,
+            answer: `Utilisez le formulaire de réservation sur cette page. Entrez votre point de départ et votre destination, choisissez votre horaire et confirmez. Un chauffeur vous sera attribué en quelques minutes.`,
+          },
+          {
+            question: `Les taxis TaxiNoir à ${name} sont-ils disponibles la nuit ?`,
+            answer: `Oui, nos chauffeurs partenaires à ${name} sont disponibles 24h/24 et 7j/7, y compris les nuits, week-ends et jours fériés.`,
+          },
+          {
+            question: `Peut-on réserver un taxi à l'avance à ${name} ?`,
+            answer: `Absolument. Vous pouvez réserver votre taxi à ${name} jusqu'à 30 jours à l'avance via notre formulaire. Idéal pour les transferts aéroport ou les rendez-vous importants.`,
+          },
+          ...faq,
+        ],
+      },
+      en: {
+        metaTitle: `Taxi ${name} - Book online 24/7 | TaxiNoir`,
+        metaDescription: `Book your taxi in ${name} in a few clicks. Professional drivers, regulated fares, available 24/7. Airport, station and city transfers.`,
+        heroTitle: `Your taxi in ${name}`,
+        heroSubtitle: `Book a professional taxi in ${name} in seconds. Regulated fares, licensed drivers, available 24/7.`,
+        intro: `TaxiNoir connects you with the best taxi drivers in ${name}. Whether for a city ride, a transfer to the station or airport, or a business trip, our partner drivers are available day and night to transport you safely.`,
+        testimonials,
+        faq: [
+          {
+            question: `How much does a taxi cost in ${name}?`,
+            answer: `Taxis in ${name} follow fares regulated by the local prefecture. The price depends on distance, time and day (fare A, B or C). With TaxiNoir, you get an estimate before booking.`,
+          },
+          {
+            question: `How do I book a taxi in ${name}?`,
+            answer: `Use the booking form on this page. Enter your pickup point and destination, choose your time and confirm. A driver will be assigned to you within minutes.`,
+          },
+          {
+            question: `Are TaxiNoir taxis in ${name} available at night?`,
+            answer: `Yes, our partner drivers in ${name} are available 24/7, including nights, weekends and public holidays.`,
+          },
+          {
+            question: `Can I book a taxi in advance in ${name}?`,
+            answer: `Absolutely. You can book your taxi in ${name} up to 30 days in advance through our form. Ideal for airport transfers or important appointments.`,
+          },
+          ...faq,
+        ],
+      },
+    },
   };
 }
 

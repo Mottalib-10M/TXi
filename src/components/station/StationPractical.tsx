@@ -1,9 +1,11 @@
 import { Icon } from "@iconify/react";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, getLocale } from "next-intl/server";
 import type { Station } from "@/data/stations";
 
 export async function StationPractical({ station }: { station: Station }) {
   const t = await getTranslations("station");
+  const locale = await getLocale();
+  const loc = locale === "en" ? "en" : "fr";
 
   return (
     <section className="bg-neutral-50 border-t border-b border-neutral-100 py-20 md:py-28">
@@ -17,7 +19,7 @@ export async function StationPractical({ station }: { station: Station }) {
               {t("practical.title", { name: station.name })}
             </h2>
             <p className="text-neutral-500 font-light leading-relaxed mb-8">
-              {station.intro}
+              {station.i18n[loc].intro}
             </p>
             <ul className="space-y-4">
               {station.practicalInfo.map((info) => (

@@ -1,11 +1,15 @@
 import type { Station } from "@/data/stations";
+import { getLocale } from "next-intl/server";
 
-export function StationJsonLd({ station }: { station: Station }) {
+export async function StationJsonLd({ station }: { station: Station }) {
+  const locale = await getLocale();
+  const loc = locale === "en" ? "en" : "fr";
+
   const localBusiness = {
     "@context": "https://schema.org",
     "@type": "TaxiService",
     name: `TaxiNoir - Transfert Gare ${station.name}`,
-    description: station.metaDescription,
+    description: station.i18n[loc].metaDescription,
     url: `https://www.taxinoir.fr/taxi-gare-${station.slug}`,
     telephone: "+33 1 00 00 00 00",
     areaServed: {
@@ -33,7 +37,7 @@ export function StationJsonLd({ station }: { station: Station }) {
   const faqPage = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: station.faq.map((item) => ({
+    mainEntity: station.i18n[loc].faq.map((item) => ({
       "@type": "Question",
       name: item.question,
       acceptedAnswer: {

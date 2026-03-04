@@ -7,16 +7,25 @@ import { FranceMapStations } from "@/components/station/FranceMapStations";
 import { stations } from "@/data/stations";
 import { getTranslations } from "next-intl/server";
 
-export const metadata: Metadata = {
-  title: "Taxi Gare - Transferts vers les 50 gares de France | TaxiNoir",
-  description: "Réservez votre transfert taxi vers et depuis les 50 principales gares de France. Tarifs forfaitaires, suivi de train, accueil personnalisé. Disponible 24h/24.",
-  openGraph: {
-    title: "Taxi Gare - Transferts vers les 50 gares de France | TaxiNoir",
-    description: "Réservez votre transfert taxi vers et depuis les 50 principales gares de France. Tarifs forfaitaires, suivi de train.",
-    url: "https://www.taxinoir.fr/gares",
-  },
-  alternates: { canonical: "https://www.taxinoir.fr/gares" },
-};
+interface PageProps {
+  params: Promise<{ locale: string }>;
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "stations" });
+
+  return {
+    title: t("metaTitle"),
+    description: t("metaDescription"),
+    openGraph: {
+      title: t("metaTitle"),
+      description: t("metaDescription"),
+      url: "https://www.taxinoir.fr/gares",
+    },
+    alternates: { canonical: "https://www.taxinoir.fr/gares" },
+  };
+}
 
 export default async function GaresPage() {
   const t = await getTranslations("stations");

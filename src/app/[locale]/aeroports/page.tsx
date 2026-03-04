@@ -7,16 +7,25 @@ import { FranceMapAirports } from "@/components/airport/FranceMapAirports";
 import { airports } from "@/data/airports";
 import { getTranslations } from "next-intl/server";
 
-export const metadata: Metadata = {
-  title: "Taxi Aéroport - Transferts vers les 50 aéroports de France | TaxiNoir",
-  description: "Réservez votre transfert taxi vers et depuis les 50 principaux aéroports de France. Tarifs forfaitaires, suivi de vol, accueil personnalisé. Disponible 24h/24.",
-  openGraph: {
-    title: "Taxi Aéroport - Transferts vers les 50 aéroports de France | TaxiNoir",
-    description: "Réservez votre transfert taxi vers et depuis les 50 principaux aéroports de France. Tarifs forfaitaires, suivi de vol.",
-    url: "https://www.taxinoir.fr/aeroports",
-  },
-  alternates: { canonical: "https://www.taxinoir.fr/aeroports" },
-};
+interface PageProps {
+  params: Promise<{ locale: string }>;
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "airports" });
+
+  return {
+    title: t("metaTitle"),
+    description: t("metaDescription"),
+    openGraph: {
+      title: t("metaTitle"),
+      description: t("metaDescription"),
+      url: "https://www.taxinoir.fr/aeroports",
+    },
+    alternates: { canonical: "https://www.taxinoir.fr/aeroports" },
+  };
+}
 
 export default async function AeroportsPage() {
   const t = await getTranslations("airports");

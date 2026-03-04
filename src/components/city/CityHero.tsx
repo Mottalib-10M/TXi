@@ -1,9 +1,11 @@
 import type { City } from "@/data/cities";
 import { BookingForm } from "@/components/booking/BookingForm";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, getLocale } from "next-intl/server";
 
 export async function CityHero({ city }: { city: City }) {
   const t = await getTranslations("city");
+  const locale = await getLocale();
+  const loc = locale === "en" ? "en" : "fr";
 
   return (
     <section className="pt-24 pb-12 md:pt-32 md:pb-20">
@@ -17,10 +19,10 @@ export async function CityHero({ city }: { city: City }) {
               </span>
             </div>
             <h1 className="text-4xl md:text-5xl font-semibold tracking-tight leading-[1.1] mb-4">
-              {city.heroTitle}
+              {city.i18n[loc].heroTitle}
             </h1>
             <p className="text-base md:text-lg text-neutral-500 mb-8 max-w-md font-light leading-relaxed">
-              {city.heroSubtitle}
+              {city.i18n[loc].heroSubtitle}
             </p>
           </div>
           <div className="fade-up fade-up-delay-1">

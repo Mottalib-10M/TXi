@@ -1,11 +1,15 @@
 import type { City } from "@/data/cities";
+import { getLocale } from "next-intl/server";
 
-export function CityJsonLd({ city }: { city: City }) {
+export async function CityJsonLd({ city }: { city: City }) {
+  const locale = await getLocale();
+  const loc = locale === "en" ? "en" : "fr";
+
   const localBusiness = {
     "@context": "https://schema.org",
     "@type": "TaxiService",
     name: `TaxiNoir ${city.name}`,
-    description: city.metaDescription,
+    description: city.i18n[loc].metaDescription,
     url: `https://www.taxinoir.fr/taxi-${city.slug}`,
     telephone: "+33 1 00 00 00 00",
     areaServed: {
@@ -39,7 +43,7 @@ export function CityJsonLd({ city }: { city: City }) {
   const faqPage = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: city.faq.map((item) => ({
+    mainEntity: city.i18n[loc].faq.map((item) => ({
       "@type": "Question",
       name: item.question,
       acceptedAnswer: {

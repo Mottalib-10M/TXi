@@ -24,18 +24,37 @@ export async function middleware(req: NextRequest) {
     (p) => pathnameWithoutLocale.startsWith(p)
   );
 
-  if (isProtected) {
-    const token = await getToken({ req, secret: process.env.NEXTAUTH_SECRET });
-    if (!token) {
-      const locale = routing.locales.find(
-        (l) => pathname.startsWith(`/${l}/`) || pathname === `/${l}`
-      ) || routing.defaultLocale;
-      const signInUrl = new URL(
-        locale === routing.defaultLocale ? "/connexion" : `/${locale}/connexion`,
-        req.nextUrl.origin
-      );
-      return NextResponse.redirect(signInUrl);
-    }
+  const authPages = ["/connexion", "/inscription"];
+  const isAuthPage = authPages.some(
+    (p) => pathnameWithoutLocale === p || pathnameWithoutLocale.startsWith(p + "/")
+  );
+
+  const token = isProtected || isAuthPage
+    ? await getToken({ req, secret: process.env.NEXTAUTH_SECRET })
+    : null;
+
+  if (isProtected && !token) {
+    const locale = routing.locales.find(
+      (l) => pathname.startsWith(`/${l}/`) || pathname === `/${l}`
+    ) || routing.defaultLocale;
+    const signInUrl = new URL(
+      locale === routing.defaultLocale ? "/connexion" : `/${locale}/connexion`,
+      req.nextUrl.origin
+    );
+    return NextResponse.redirect(signInUrl);
+  }
+
+  // Redirect authenticated users away from login/register pages
+  if (isAuthPage && token) {
+    const locale = routing.locales.find(
+      (l) => pathname.startsWith(`/${l}/`) || pathname === `/${l}`
+    ) || routing.defaultLocale;
+    const dest = (token as { role?: string }).role === "organization" ? "/org" : "/dashboard";
+    const dashUrl = new URL(
+      locale === routing.defaultLocale ? dest : `/${locale}${dest}`,
+      req.nextUrl.origin
+    );
+    return NextResponse.redirect(dashUrl);
   }
 
   return intlMiddleware(req);

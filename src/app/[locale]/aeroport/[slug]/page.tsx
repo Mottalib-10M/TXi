@@ -19,7 +19,7 @@ import { AirportInternalLinks } from "@/components/airport/AirportInternalLinks"
 import { airports, getAirportBySlug } from "@/data/airports";
 
 interface PageProps {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ locale: string; slug: string }>;
 }
 
 export async function generateStaticParams() {
@@ -29,16 +29,17 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const { slug } = await params;
+  const { locale, slug } = await params;
   const ap = getAirportBySlug(slug);
   if (!ap) return {};
+  const loc = locale === "en" ? "en" : "fr";
 
   return {
-    title: ap.metaTitle,
-    description: ap.metaDescription,
+    title: ap.i18n[loc].metaTitle,
+    description: ap.i18n[loc].metaDescription,
     openGraph: {
-      title: ap.metaTitle,
-      description: ap.metaDescription,
+      title: ap.i18n[loc].metaTitle,
+      description: ap.i18n[loc].metaDescription,
       url: `https://www.taxinoir.fr/taxi-aeroport-${ap.slug}`,
       siteName: "TaxiNoir",
       type: "website",
@@ -50,9 +51,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 }
 
 export default async function AirportPage({ params }: PageProps) {
-  const { slug } = await params;
+  const { locale, slug } = await params;
   const ap = getAirportBySlug(slug);
   if (!ap) notFound();
+  const loc = locale === "en" ? "en" : "fr";
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -72,7 +74,7 @@ export default async function AirportPage({ params }: PageProps) {
         <AirportPractical airport={ap} />
         <AirportWhyUs airportName={ap.name} />
         <AirportTestimonials airport={ap} />
-        <CityFAQ cityName={ap.name} faq={ap.faq} />
+        <CityFAQ cityName={ap.name} faq={ap.i18n[loc].faq} />
         <CityContactForm cityName={`l'aéroport ${ap.name}`} />
         <CityCTA cityName={`l'aéroport ${ap.name}`} />
         <AirportInternalLinks airport={ap} />

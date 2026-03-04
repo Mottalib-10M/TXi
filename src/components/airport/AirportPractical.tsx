@@ -1,9 +1,11 @@
 import { Icon } from "@iconify/react";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, getLocale } from "next-intl/server";
 import type { Airport } from "@/data/airports";
 
 export async function AirportPractical({ airport }: { airport: Airport }) {
   const t = await getTranslations("airport");
+  const locale = await getLocale();
+  const loc = locale === "en" ? "en" : "fr";
 
   return (
     <section className="bg-neutral-50 border-t border-b border-neutral-100 py-20 md:py-28">
@@ -17,10 +19,10 @@ export async function AirportPractical({ airport }: { airport: Airport }) {
               {t("practical.title", { name: airport.name })}
             </h2>
             <p className="text-neutral-500 font-light leading-relaxed mb-8">
-              {airport.intro}
+              {airport.i18n[loc].intro}
             </p>
             <ul className="space-y-4">
-              {airport.practicalInfo.map((info) => (
+              {airport.i18n[loc].practicalInfo.map((info) => (
                 <li key={info} className="flex items-center gap-3">
                   <div className="w-6 h-6 bg-neutral-900 rounded-full flex items-center justify-center shrink-0">
                     <Icon icon="solar:check-read-linear" className="text-white text-xs" />

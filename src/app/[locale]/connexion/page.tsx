@@ -35,6 +35,15 @@ function ConnexionForm() {
     }
   }, [status, session, router]);
 
+  // Show loading while checking session (middleware handles redirect, this is a fallback)
+  if (status === "loading" || status === "authenticated") {
+    return (
+      <div className="min-h-screen bg-white flex items-center justify-center">
+        <div className="w-5 h-5 border-2 border-neutral-300 border-t-neutral-900 rounded-full animate-spin" />
+      </div>
+    );
+  }
+
   async function handleResend() {
     if (!resendEmail) return;
     setResendLoading(true);

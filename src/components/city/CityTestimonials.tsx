@@ -1,20 +1,25 @@
 import { Icon } from "@iconify/react";
 import type { City } from "@/data/cities";
+import { getTranslations, getLocale } from "next-intl/server";
 
-export function CityTestimonials({ city }: { city: City }) {
+export async function CityTestimonials({ city }: { city: City }) {
+  const t = await getTranslations("city");
+  const locale = await getLocale();
+  const loc = locale === "en" ? "en" : "fr";
+
   return (
     <section className="py-20 md:py-28">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16 fade-up">
           <p className="text-sm font-medium text-neutral-500 mb-2 uppercase tracking-wider">
-            Témoignages
+            {t("testimonialsSubtitle")}
           </p>
           <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
-            Ce que disent nos clients à {city.name}
+            {t("testimonialsTitle", { cityName: city.name })}
           </h2>
         </div>
         <div className="grid md:grid-cols-3 gap-8">
-          {city.testimonials.map((t, i) => (
+          {city.i18n[loc].testimonials.map((t, i) => (
             <div
               key={t.name}
               className={`bg-white border border-neutral-200 rounded-2xl p-6 card-hover fade-up fade-up-delay-${i + 1}`}
