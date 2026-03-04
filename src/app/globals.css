@@ -39,7 +39,8 @@ html {
   opacity: 0;
 }
 .mobile-menu.open {
-  max-height: 300px;
+  max-height: 80vh;
+  overflow-y: auto;
   opacity: 1;
 }
 

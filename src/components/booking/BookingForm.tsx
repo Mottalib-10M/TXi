@@ -197,8 +197,8 @@ export function BookingForm() {
           </div>
 
           {scheduleLater && (
-            <div className="mt-3">
-              <div className="relative">
+            <div className="mt-3 w-full">
+              <div className="relative w-full">
                 <Icon
                   icon="solar:calendar-linear"
                   className="absolute left-4 top-1/2 -translate-y-1/2 text-neutral-400 text-lg z-10 pointer-events-none"
@@ -208,7 +208,8 @@ export function BookingForm() {
                   value={scheduledDate}
                   onChange={(e) => setScheduledDate(e.target.value)}
                   min={new Date().toISOString().slice(0, 16)}
-                  className="w-full max-w-full box-border bg-neutral-100 rounded-xl pl-11 pr-4 py-3.5 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all appearance-none"
+                  className="block w-full bg-neutral-100 border border-neutral-200 rounded-xl pl-11 pr-4 py-3.5 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all"
+                  style={{ WebkitAppearance: "none", MozAppearance: "none" }}
                 />
               </div>
               {!scheduledDate && (
@@ -256,18 +257,16 @@ export function BookingForm() {
               </p>
             </div>
           ) : (
-            <div className="space-y-2 max-h-[400px] overflow-y-auto">
+            <div className="space-y-2 max-h-[400px] overflow-y-auto -mx-1 px-1">
               {results.map((taxi) => (
                 <div
                   key={taxi.id}
-                  className="w-full text-left p-4 border rounded-xl transition-all border-neutral-200 hover:border-neutral-300"
+                  className="w-full text-left p-3 border rounded-xl transition-all border-neutral-200 hover:border-neutral-300"
                 >
                   <div className="flex items-center gap-3">
                     {/* Avatar - clickable to see profile */}
                     <Link
                       href={`/taxi/${taxi.slug}`}
-                      target="_blank"
-                      onClick={(e) => e.stopPropagation()}
                       className="shrink-0"
                       title="Voir le profil"
                     >
@@ -288,35 +287,34 @@ export function BookingForm() {
                       </p>
                       <p className="text-xs text-neutral-500 font-light truncate">
                         {taxi.vehicleBrand} {taxi.vehicleModel}
-                        {taxi.zoneAddress && ` · ${taxi.zoneAddress}`}
                       </p>
                     </div>
 
-                    {/* Price + Choose button */}
-                    <div className="flex items-center gap-3 shrink-0">
-                      <div className="text-right">
-                        {taxi.estimatedPrice ? (
-                          <p className="text-sm font-semibold">
-                            {formatPrice(taxi.estimatedPrice)}
-                          </p>
-                        ) : (
-                          <p className="text-xs text-neutral-500">
-                            Dès {formatPrice(taxi.minimumFare)}
-                          </p>
-                        )}
-                      </div>
-                      <button
-                        type="button"
-                        onClick={() => {
-                          setSelectedTaxi(taxi);
-                          setStep("booking");
-                        }}
-                        className="bg-neutral-900 text-white text-xs font-medium px-3.5 py-2 rounded-lg hover:bg-neutral-700 transition-colors whitespace-nowrap"
-                      >
-                        Choisir
-                      </button>
+                    {/* Price */}
+                    <div className="text-right shrink-0">
+                      {taxi.estimatedPrice ? (
+                        <p className="text-sm font-semibold">
+                          {formatPrice(taxi.estimatedPrice)}
+                        </p>
+                      ) : (
+                        <p className="text-xs text-neutral-500">
+                          Dès {formatPrice(taxi.minimumFare)}
+                        </p>
+                      )}
                     </div>
                   </div>
+
+                  {/* Choose button - full width below */}
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setSelectedTaxi(taxi);
+                      setStep("booking");
+                    }}
+                    className="w-full mt-2.5 bg-neutral-900 text-white text-xs font-medium py-2.5 rounded-lg hover:bg-neutral-700 transition-colors"
+                  >
+                    Choisir
+                  </button>
                 </div>
               ))}
             </div>

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { useSession, signOut } from "next-auth/react";
 import { Icon } from "@iconify/react";
@@ -11,6 +11,7 @@ export function Navbar({ minimal = false }: { minimal?: boolean }) {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const headerRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     function handleScroll() {
@@ -19,6 +20,18 @@ export function Navbar({ minimal = false }: { minimal?: boolean }) {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Close mobile menu when clicking outside
+  useEffect(() => {
+    if (!mobileOpen) return;
+    function handleClickOutside(e: MouseEvent) {
+      if (headerRef.current && !headerRef.current.contains(e.target as Node)) {
+        setMobileOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [mobileOpen]);
 
   const isLoggedIn = status === "authenticated" && session?.user;
   const initials = session?.user?.name
@@ -29,6 +42,7 @@ export function Navbar({ minimal = false }: { minimal?: boolean }) {
 
   return (
     <header
+      ref={headerRef}
       className={`fixed top-0 w-full bg-white/80 backdrop-blur-md border-b border-neutral-100 z-50 transition-all duration-300 ${
         scrolled ? "shadow-sm" : ""
       }`}
@@ -202,6 +216,20 @@ export function Navbar({ minimal = false }: { minimal?: boolean }) {
               >
                 Tableau de bord
               </Link>
+              <Link
+                href="/dashboard/profil"
+                onClick={() => setMobileOpen(false)}
+                className="block py-3 text-sm font-medium text-neutral-500 hover:bg-neutral-50 hover:text-neutral-900 rounded-lg px-3 transition-colors"
+              >
+                Mon profil
+              </Link>
+              <Link
+                href="/dashboard/reservations"
+                onClick={() => setMobileOpen(false)}
+                className="block py-3 text-sm font-medium text-neutral-500 hover:bg-neutral-50 hover:text-neutral-900 rounded-lg px-3 transition-colors"
+              >
+                Réservations
+              </Link>
               <button
                 onClick={() => { setMobileOpen(false); signOut({ callbackUrl: "/" }); }}
                 className="block w-full text-left py-3 text-sm font-medium text-red-600 hover:bg-red-50 rounded-lg px-3 transition-colors"
@@ -210,16 +238,18 @@ export function Navbar({ minimal = false }: { minimal?: boolean }) {
               </button>
             </div>
           ) : (
-            <div className="pt-3 border-t border-neutral-100 flex gap-3">
+            <div className="pt-4 pb-2 border-t border-neutral-100 space-y-3">
               <Link
                 href="/connexion"
-                className="flex-1 text-center py-3 text-sm font-medium text-neutral-900 border border-neutral-200 rounded-full hover:bg-neutral-50 transition-colors"
+                onClick={() => setMobileOpen(false)}
+                className="block text-center py-3 text-sm font-medium text-neutral-900 border border-neutral-200 rounded-xl hover:bg-neutral-50 transition-colors"
               >
                 Connexion
               </Link>
               <Link
                 href="/inscription"
-                className="flex-1 text-center py-3 text-sm font-medium text-white bg-neutral-950 rounded-full hover:bg-neutral-800 transition-colors"
+                onClick={() => setMobileOpen(false)}
+                className="block text-center py-3 text-sm font-medium text-white bg-neutral-950 rounded-xl hover:bg-neutral-800 transition-colors"
               >
                 S&apos;inscrire
               </Link>
