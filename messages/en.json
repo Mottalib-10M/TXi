@@ -810,7 +810,12 @@
     "servicesSubtitle": "Our services",
     "servicesTitle": "Taxi services in {cityName}",
     "faqSubtitle": "FAQ",
-    "faqTitle": "Frequently asked questions about taxis in {cityName}"
+    "faqTitle": "Frequently asked questions about taxis in {cityName}",
+    "nearbyCities": "Taxi in nearby cities",
+    "taxiPrefix": "Taxi ",
+    "city": "city",
+    "cities": "cities",
+    "drivers": "drivers"
   },
   "businessCard": {
     "businessCardLabel": "Business card",
@@ -878,7 +883,10 @@
       "guaranteedRatesDesc": "The price is set at booking and never changes. No meter, no surprises from traffic jams. Clear flat rates from {name}.",
       "personalWelcomeTitle": "Personalized welcome",
       "personalWelcomeDesc": "Your driver meets you at the arrivals area at {name} with a sign bearing your name and helps you with your luggage. Premium service."
-    }
+    },
+    "nearbyAirports": "Other nearby airports",
+    "airport": "airport",
+    "airports": "airports"
   },
   "station": {
     "breadcrumbHome": "Home",
@@ -914,6 +922,10 @@
       "guaranteedRatesDesc": "The price is set at booking and never changes. No meter, no surprises from traffic jams. Clear flat rates from {name} station.",
       "stationWelcomeTitle": "Station welcome",
       "stationWelcomeDesc": "Your driver meets you at the exit of {name} station and helps you with your luggage. Premium and punctual service."
-    }
+    },
+    "nearbyStations": "Other nearby stations",
+    "stationPrefix": "Station ",
+    "station": "station",
+    "stations": "stations"
   }
 }

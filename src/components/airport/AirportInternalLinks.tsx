@@ -2,8 +2,10 @@ import { Link } from "@/i18n/navigation";
 import { Icon } from "@iconify/react";
 import type { Airport } from "@/data/airports";
 import { getNearbyAirports } from "@/data/airports";
+import { getTranslations } from "next-intl/server";
 
-export function AirportInternalLinks({ airport }: { airport: Airport }) {
+export async function AirportInternalLinks({ airport }: { airport: Airport }) {
+  const t = await getTranslations("airport");
   const nearby = getNearbyAirports(airport);
 
   return (
@@ -11,7 +13,7 @@ export function AirportInternalLinks({ airport }: { airport: Airport }) {
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-10 fade-up">
           <h2 className="text-2xl font-semibold tracking-tight">
-            Autres aéroports à proximité
+            {t("nearbyAirports")}
           </h2>
         </div>
         <div className="flex flex-wrap gap-4 justify-center fade-up">

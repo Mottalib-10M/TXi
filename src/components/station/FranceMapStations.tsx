@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useRouter } from "@/i18n/navigation";
 import { Link } from "@/i18n/navigation";
 import { Icon } from "@iconify/react";
+import { useTranslations } from "next-intl";
 import { stations } from "@/data/stations";
 
 const regions = [
@@ -32,6 +33,7 @@ const franceOutline =
   "277,33 251,39 233,97 202,119 145,109 136,166 50,178 60,211 106,222 119,243 124,258 161,305 164,336 159,389 146,454 140,461 176,486 222,500 268,512 300,498 321,459 377,466 395,475 422,456 447,439 448,417 422,370 427,322 402,303 425,258 448,228 457,170 462,144 430,133 409,116 357,86 329,75 300,55";
 
 export function FranceMapStations() {
+  const t = useTranslations("station");
   const router = useRouter();
   const [activeRegion, setActiveRegion] = useState<string | null>(null);
 
@@ -145,7 +147,7 @@ export function FranceMapStations() {
                     isActive ? "text-neutral-500" : "text-neutral-400"
                   }`}
                 >
-                  {region.slugs.length} gare{region.slugs.length > 1 ? "s" : ""}
+                  {region.slugs.length} {region.slugs.length > 1 ? t("stations") : t("station")}
                 </span>
               </div>
               <div className="flex flex-wrap gap-1.5">
@@ -163,7 +165,7 @@ export function FranceMapStations() {
                       }`}
                       onClick={(e) => e.stopPropagation()}
                     >
-                      Gare {st.name}
+                      {t("stationPrefix")}{st.name}
                     </Link>
                   );
                 })}

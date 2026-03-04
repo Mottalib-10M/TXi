@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useRouter } from "@/i18n/navigation";
 import { Link } from "@/i18n/navigation";
 import { Icon } from "@iconify/react";
+import { useTranslations } from "next-intl";
 import { airports } from "@/data/airports";
 
 const regions = [
@@ -43,6 +44,7 @@ const franceOutline =
 const corseOutline = "395,380 385,395 383,420 388,445 400,455 410,445 412,420 408,395";
 
 export function FranceMapAirports() {
+  const t = useTranslations("airport");
   const router = useRouter();
   const [activeRegion, setActiveRegion] = useState<string | null>(null);
 
@@ -161,7 +163,7 @@ export function FranceMapAirports() {
                     isActive ? "text-neutral-500" : "text-neutral-400"
                   }`}
                 >
-                  {region.slugs.length} aéroport{region.slugs.length > 1 ? "s" : ""}
+                  {region.slugs.length} {region.slugs.length > 1 ? t("airports") : t("airport")}
                 </span>
               </div>
               <div className="flex flex-wrap gap-1.5">

@@ -810,7 +810,12 @@
     "servicesSubtitle": "Nos services",
     "servicesTitle": "Services taxi à {cityName}",
     "faqSubtitle": "FAQ",
-    "faqTitle": "Questions fréquentes sur les taxis à {cityName}"
+    "faqTitle": "Questions fréquentes sur les taxis à {cityName}",
+    "nearbyCities": "Taxi dans les villes proches",
+    "taxiPrefix": "Taxi ",
+    "city": "ville",
+    "cities": "villes",
+    "drivers": "chauffeurs"
   },
   "businessCard": {
     "businessCardLabel": "Carte de visite",
@@ -878,7 +883,10 @@
       "guaranteedRatesDesc": "Le prix est fixé à la réservation et ne change jamais. Pas de compteur, pas de surprise liée aux embouteillages. Forfaits clairs depuis {name}.",
       "personalWelcomeTitle": "Accueil personnalisé",
       "personalWelcomeDesc": "Votre chauffeur vous attend en zone d'arrivée à {name} avec une pancarte à votre nom et vous aide avec vos bagages. Service premium."
-    }
+    },
+    "nearbyAirports": "Autres aéroports à proximité",
+    "airport": "aéroport",
+    "airports": "aéroports"
   },
   "station": {
     "breadcrumbHome": "Accueil",
@@ -914,6 +922,10 @@
       "guaranteedRatesDesc": "Le prix est fixé à la réservation et ne change jamais. Pas de compteur, pas de surprise liée aux embouteillages. Forfaits clairs depuis la gare {name}.",
       "stationWelcomeTitle": "Accueil en gare",
       "stationWelcomeDesc": "Votre chauffeur vous attend à la sortie de la gare {name} et vous aide avec vos bagages. Service premium et ponctuel."
-    }
+    },
+    "nearbyStations": "Autres gares à proximité",
+    "stationPrefix": "Gare ",
+    "station": "gare",
+    "stations": "gares"
   }
 }

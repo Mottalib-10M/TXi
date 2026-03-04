@@ -18,11 +18,13 @@ import { CityInternalLinks } from "@/components/city/CityInternalLinks";
 import { cities, getCityBySlug } from "@/data/cities";
 
 interface PageProps {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ locale: string; slug: string }>;
 }
 
 export async function generateStaticParams() {
-  return cities.map((city) => ({ locale: "fr", slug: city.slug }));
+  return ["fr", "en"].flatMap((locale) =>
+    cities.map((city) => ({ locale, slug: city.slug }))
+  );
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {

@@ -2,8 +2,10 @@ import { Link } from "@/i18n/navigation";
 import { Icon } from "@iconify/react";
 import type { City } from "@/data/cities";
 import { getNearbyCities } from "@/data/cities";
+import { getTranslations } from "next-intl/server";
 
-export function CityInternalLinks({ city }: { city: City }) {
+export async function CityInternalLinks({ city }: { city: City }) {
+  const t = await getTranslations("city");
   const nearby = getNearbyCities(city);
   if (nearby.length === 0) return null;
 
@@ -12,7 +14,7 @@ export function CityInternalLinks({ city }: { city: City }) {
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-10 fade-up">
           <h2 className="text-2xl font-semibold tracking-tight">
-            Taxi dans les villes proches
+            {t("nearbyCities")}
           </h2>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-5 gap-4 fade-up">
@@ -23,7 +25,7 @@ export function CityInternalLinks({ city }: { city: City }) {
               className="flex items-center justify-center gap-2 bg-white border border-neutral-200 rounded-xl p-4 hover:border-neutral-400 transition-colors card-hover"
             >
               <Icon icon="solar:map-point-linear" className="text-neutral-400" />
-              <span className="text-sm font-medium">Taxi {c.name}</span>
+              <span className="text-sm font-medium">{t("taxiPrefix")}{c.name}</span>
             </Link>
           ))}
         </div>
