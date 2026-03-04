@@ -4,6 +4,7 @@ import { redirect } from "next/navigation";
 import Link from "next/link";
 import { Icon } from "@iconify/react";
 import { ProfileForm } from "@/components/driver/ProfileForm";
+import { QRCodeButton } from "@/components/dashboard/QRCodeButton";
 import type { Vehicle } from "@/types/vehicle";
 
 export default async function ProfilPage() {
@@ -63,11 +64,14 @@ export default async function ProfilPage() {
 
   return (
     <div>
-      <div className="mb-8">
-        <h1 className="text-2xl font-semibold tracking-tight">Mon profil</h1>
-        <p className="text-sm text-neutral-500 font-light mt-1">
-          Gérez vos informations, votre véhicule et vos tarifs
-        </p>
+      <div className="flex items-center justify-between mb-8">
+        <div>
+          <h1 className="text-2xl font-semibold tracking-tight">Mon profil</h1>
+          <p className="text-sm text-neutral-500 font-light mt-1">
+            Gérez vos informations, votre véhicule et vos tarifs
+          </p>
+        </div>
+        <QRCodeButton slug={driver.slug} />
       </div>
       <ProfileForm driver={driverData} />
 

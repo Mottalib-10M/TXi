@@ -2,6 +2,7 @@ import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
 import { redirect } from "next/navigation";
 import { BusinessCardPreview } from "@/components/driver/BusinessCardPreview";
+import { QRCodeButton } from "@/components/dashboard/QRCodeButton";
 import type { Vehicle } from "@/types/vehicle";
 
 export default async function CartePage() {
@@ -35,11 +36,14 @@ export default async function CartePage() {
 
   return (
     <div>
-      <div className="mb-8">
-        <h1 className="text-2xl font-semibold tracking-tight">Carte de visite</h1>
-        <p className="text-sm text-neutral-500 font-light mt-1">
-          Générez votre carte avec QR code pour recevoir des réservations directes
-        </p>
+      <div className="flex items-center justify-between mb-8">
+        <div>
+          <h1 className="text-2xl font-semibold tracking-tight">Carte de visite</h1>
+          <p className="text-sm text-neutral-500 font-light mt-1">
+            Générez votre carte avec QR code pour recevoir des réservations directes
+          </p>
+        </div>
+        <QRCodeButton slug={driver.slug} />
       </div>
       <BusinessCardPreview
         driver={{
