@@ -1,7 +1,12 @@
-import Link from "next/link";
+"use client";
+
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { Logo } from "@/components/ui/Logo";
 
 export function Footer() {
+  const t = useTranslations("footer");
+
   return (
     <footer className="bg-white border-t border-neutral-200 pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-6">
@@ -11,74 +16,73 @@ export function Footer() {
               <Logo />
             </Link>
             <p className="text-xs text-neutral-500 font-light pr-4 leading-relaxed">
-              L&apos;application qui remet les professionnels de la route au centre de la
-              mobilité urbaine.
+              {t("tagline")}
             </p>
           </div>
 
           <div>
-            <h4 className="text-sm font-medium mb-4 tracking-tight">Services</h4>
+            <h4 className="text-sm font-medium mb-4 tracking-tight">{t("services")}</h4>
             <ul className="space-y-3 text-sm text-neutral-500 font-light">
               <li>
                 <Link href="/#reserver" className="hover:text-neutral-900 transition-colors">
-                  Commander un taxi
+                  {t("orderTaxi")}
                 </Link>
               </li>
               <li>
                 <Link href="/gares" className="hover:text-neutral-900 transition-colors">
-                  Gares
+                  {t("stations")}
                 </Link>
               </li>
               <li>
                 <Link href="/aeroports" className="hover:text-neutral-900 transition-colors">
-                  Aéroports
+                  {t("airports")}
                 </Link>
               </li>
               <li>
                 <Link href="/#business" className="hover:text-neutral-900 transition-colors">
-                  TaxiNoir Business
+                  {t("taxinoirBusiness")}
                 </Link>
               </li>
             </ul>
           </div>
 
           <div>
-            <h4 className="text-sm font-medium mb-4 tracking-tight">Chauffeurs</h4>
+            <h4 className="text-sm font-medium mb-4 tracking-tight">{t("driversSection")}</h4>
             <ul className="space-y-3 text-sm text-neutral-500 font-light">
               <li>
                 <Link href="/inscription" className="hover:text-neutral-900 transition-colors">
-                  Devenir partenaire
+                  {t("becomePartner")}
                 </Link>
               </li>
               <li>
                 <Link href="/#chauffeurs" className="hover:text-neutral-900 transition-colors">
-                  Avantages
+                  {t("advantages")}
                 </Link>
               </li>
               <li>
                 <Link href="/connexion" className="hover:text-neutral-900 transition-colors">
-                  Application Chauffeur
+                  {t("driverApp")}
                 </Link>
               </li>
             </ul>
           </div>
 
           <div>
-            <h4 className="text-sm font-medium mb-4 tracking-tight">Contact</h4>
+            <h4 className="text-sm font-medium mb-4 tracking-tight">{t("contactSection")}</h4>
             <ul className="space-y-3 text-sm text-neutral-500 font-light">
               <li>
                 <Link href="/contact" className="hover:text-neutral-900 transition-colors">
-                  Nous contacter
+                  {t("contactUs")}
                 </Link>
               </li>
               <li>
                 <Link href="/contact?sujet=demo" className="hover:text-neutral-900 transition-colors">
-                  Demander une démo
+                  {t("requestDemo")}
                 </Link>
               </li>
               <li>
                 <Link href="/contact?sujet=aide" className="hover:text-neutral-900 transition-colors">
-                  Support
+                  {t("support")}
                 </Link>
               </li>
             </ul>
@@ -87,7 +91,7 @@ export function Footer() {
 
         <div className="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-neutral-100 gap-4">
           <p className="text-xs text-neutral-400 font-light">
-            &copy; 2026 TaxiNoir. Tous droits réservés.
+            {t("copyright")}
           </p>
         </div>
       </div>

@@ -2,6 +2,7 @@
 
 import { useEffect, useCallback, useState } from "react";
 import { Icon } from "@iconify/react";
+import { useTranslations } from "next-intl";
 import QRCode from "qrcode";
 
 type CardFormat = "business" | "a6" | "a5";
@@ -18,17 +19,18 @@ interface DriverInfo {
   companyName?: string;
 }
 
-const formats: { id: CardFormat; label: string; description: string; icon: string }[] = [
-  { id: "business", label: "Carte de visite", description: "85 x 55 mm", icon: "solar:card-linear" },
-  { id: "a6", label: "Format A6", description: "148 x 105 mm", icon: "solar:document-linear" },
-  { id: "a5", label: "Format A5", description: "210 x 148 mm — Dossier siège", icon: "solar:monitor-linear" },
-];
-
 export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
+  const t = useTranslations("businessCard");
   const [qrDataUrl, setQrDataUrl] = useState<string>("");
   const [qrDataUrlLarge, setQrDataUrlLarge] = useState<string>("");
   const [activeFormat, setActiveFormat] = useState<CardFormat>("business");
   const profileUrl = `https://taxinoir.fr/taxi/${driver.slug}`;
+
+  const formats: { id: CardFormat; label: string; description: string; icon: string }[] = [
+    { id: "business", label: t("businessCardLabel"), description: "85 x 55 mm", icon: "solar:card-linear" },
+    { id: "a6", label: t("a6Label"), description: "148 x 105 mm", icon: "solar:document-linear" },
+    { id: "a5", label: t("a5Label"), description: t("a5Desc"), icon: "solar:monitor-linear" },
+  ];
 
   const generateQrCode = useCallback(async () => {
     try {
@@ -75,22 +77,29 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
     if (activeFormat === "business") {
       return `<!DOCTYPE html><html><head><style>
         @page { size: 85mm 55mm; margin: 0; }
-        body { margin: 0; font-family: Helvetica, Arial, sans-serif; }
-        .card { width: 85mm; height: 55mm; padding: 6mm; box-sizing: border-box; position: relative; }
-        .brand { font-size: 14pt; font-weight: bold; margin-bottom: 4mm; }
+        body { margin: 0; font-family: Helvetica, Arial, sans-serif; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; color-adjust: exact !important; }
+        .card { width: 85mm; height: 55mm; display: flex; }
+        .left { flex: 3; padding: 5mm; display: flex; flex-direction: column; justify-content: center; }
+        .right { flex: 1.2; background: #171717; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 3mm; }
+        .brand { font-size: 14pt; font-weight: bold; margin-bottom: 3mm; }
         .brand .t { color: #525252; } .brand .n { color: #171717; }
         .company { font-size: 11pt; font-weight: bold; color: #171717; margin-bottom: 1mm; }
         .name { font-size: 8pt; color: #525252; }
         .name-solo { font-size: 11pt; font-weight: bold; color: #171717; }
         .details { font-size: 7pt; color: #737373; margin-top: 2mm; line-height: 1.6; }
-        .qr { position: absolute; top: 4mm; right: 5mm; width: 24mm; height: 24mm; }
-        .footer { position: absolute; bottom: 4mm; left: 6mm; font-size: 7pt; color: #a3a3a3; }
+        .qr { width: 18mm; height: 18mm; background: #fff; border-radius: 2mm; padding: 1.5mm; box-sizing: border-box; margin-bottom: 2mm; }
+        .qr img { width: 100%; height: 100%; }
+        .scan { color: #a3a3a3; font-size: 6pt; text-align: center; line-height: 1.3; }
       </style></head><body><div class="card">
-        <div class="brand"><span class="t">Taxi</span><span class="n">Noir</span></div>
-        ${driver.companyName ? `<div class="company">${driver.companyName}</div><div class="name">${name}</div>` : `<div class="name-solo">${name}</div>`}
-        <div class="details">${vehicle ? vehicle + "<br>" : ""}${driver.zoneAddress ? driver.zoneAddress + "<br>" : ""}${driver.email}<br>${driver.phone}</div>
-        ${qr ? `<img class="qr" src="${qr}" />` : ""}
-        <div class="footer">Scannez pour réserver directement</div>
+        <div class="left">
+          <div class="brand"><span class="t">Taxi</span><span class="n">Noir</span></div>
+          ${driver.companyName ? `<div class="company">${driver.companyName}</div><div class="name">${name}</div>` : `<div class="name-solo">${name}</div>`}
+          <div class="details">${vehicle ? vehicle + "<br>" : ""}${driver.zoneAddress ? driver.zoneAddress + "<br>" : ""}${driver.email}<br>${driver.phone}</div>
+        </div>
+        <div class="right">
+          ${qr ? `<div class="qr"><img src="${qr}" /></div>` : ""}
+          <div class="scan">${t("scanToBook")}</div>
+        </div>
       </div></body></html>`;
     }
 
@@ -116,17 +125,17 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
         <div class="left">
           <div class="brand"><span class="t">Taxi</span><span class="n">Noir</span></div>
           ${driver.companyName ? `<div class="name">${driver.companyName}</div><div style="font-size:9pt;color:#737373;margin-top:1mm;">${name}</div>` : `<div class="name">${name}</div>`}
-          <div class="sub">Chauffeur de taxi</div>
+          <div class="sub">${t("taxiDriver")}</div>
           <div class="sep"></div>
-          ${vehicle ? `<div class="label">Véhicule</div><div class="val">${vehicle}</div>` : ""}
-          ${driver.zoneAddress ? `<div class="label">Zone</div><div class="val">${driver.zoneAddress}</div>` : ""}
-          <div class="label">Contact</div>
+          ${vehicle ? `<div class="label">${t("vehicle").toUpperCase()}</div><div class="val">${vehicle}</div>` : ""}
+          ${driver.zoneAddress ? `<div class="label">${t("zone").toUpperCase()}</div><div class="val">${driver.zoneAddress}</div>` : ""}
+          <div class="label">${t("contact").toUpperCase()}</div>
           <div class="val">${driver.email}<br>${driver.phone}</div>
         </div>
         <div class="right">
           ${qr ? `<div class="qr"><img src="${qr}" /></div>` : ""}
-          <div class="cta">Restons en<br>contact !</div>
-          <div class="ctasub">Scannez pour enregistrer mes<br>coordonnées et réserver facilement.</div>
+          <div class="cta">${t("stayInTouch")}</div>
+          <div class="ctasub">${t("scanToSave")}</div>
         </div>
       </div></body></html>`;
     }
@@ -153,14 +162,14 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
         <div>
           <div class="brand"><span class="t">Taxi</span><span class="n">Noir</span></div>
           ${driver.companyName ? `<div class="hname">${driver.companyName}</div><div class="hsub">${name}</div>` : `<div class="hname">${name}</div>`}
-          <div class="hsub">Votre chauffeur de taxi</div>
+          <div class="hsub">${t("yourTaxiDriver")}</div>
         </div>
         <div class="hright">${vehicle ? vehicle + "<br>" : ""}${driver.zoneAddress || ""}</div>
       </div>
       <div class="center">
         ${qr ? `<div class="qr"><img src="${qr}" /></div>` : ""}
-        <div class="cta">Restons en contact !</div>
-        <div class="ctasub">Scannez ce QR code pour enregistrer mes coordonnées et réserver votre prochaine course encore plus facilement.</div>
+        <div class="cta">${t("stayInTouch")}</div>
+        <div class="ctasub">${t("scanToSaveLong")}</div>
       </div>
       <div class="footer">
         <span>${driver.phone}</span>
@@ -173,11 +182,19 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
   // ── PDF downloads ──
   async function downloadBusinessCard() {
     const { jsPDF } = await import("jspdf");
-    const doc = new jsPDF({ orientation: "landscape", unit: "mm", format: [85, 55] });
-    doc.setFillColor(255, 255, 255);
-    doc.rect(0, 0, 85, 55, "F");
+    const W = 85, H = 55;
+    const doc = new jsPDF({ orientation: "landscape", unit: "mm", format: [W, H] });
 
-    const m = 5; // margin
+    // White left zone
+    const panelX = 57;
+    doc.setFillColor(255, 255, 255);
+    doc.rect(0, 0, panelX, H, "F");
+
+    // Black right panel
+    doc.setFillColor(23, 23, 23);
+    doc.rect(panelX, 0, W - panelX, H, "F");
+
+    const m = 5;
     doc.setFontSize(12); doc.setFont("helvetica", "bold");
     doc.setTextColor(82, 82, 82); doc.text("Taxi", m, 9);
     const tw = doc.getTextWidth("Taxi");
@@ -202,10 +219,13 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
     doc.text(driver.email, m, y); y += 3.5;
     doc.text(driver.phone, m, y);
 
-    if (qrDataUrl) doc.addImage(qrDataUrl, "PNG", 58, 5, 22, 22);
+    // QR on black panel
+    const cx = panelX + (W - panelX) / 2;
+    if (qrDataUrl) doc.addImage(qrDataUrl, "PNG", cx - 9, 10, 18, 18);
 
-    doc.setFontSize(6); doc.setTextColor(163, 163, 163);
-    doc.text("Scannez pour réserver directement", m, 51);
+    doc.setFontSize(5.5); doc.setFont("helvetica", "normal"); doc.setTextColor(163, 163, 163);
+    doc.text(t("scanToBook"), cx, 35, { align: "center" });
+
     doc.save(`carte-visite-${driver.slug}.pdf`);
   }
 
@@ -241,27 +261,27 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
     y6 += 5;
 
     doc.setFontSize(8); doc.setFont("helvetica", "normal"); doc.setTextColor(160, 160, 160);
-    doc.text("Chauffeur de taxi", mL, y6);
+    doc.text(t("taxiDriver"), mL, y6);
 
     doc.setDrawColor(230, 230, 230); doc.setLineWidth(0.3); doc.line(mL, y6 + 3, panelX - 10, y6 + 3);
 
     let y = y6 + 9;
     if (driver.vehicleBrand && driver.vehicleModel) {
       doc.setFont("helvetica", "bold"); doc.setFontSize(7); doc.setTextColor(170, 170, 170);
-      doc.text("VÉHICULE", mL, y);
+      doc.text(t("vehicle").toUpperCase(), mL, y);
       doc.setFont("helvetica", "normal"); doc.setFontSize(10); doc.setTextColor(50, 50, 50);
       doc.text(`${driver.vehicleBrand} ${driver.vehicleModel}`, mL, y + 5);
       y += 12;
     }
     if (driver.zoneAddress) {
       doc.setFont("helvetica", "bold"); doc.setFontSize(7); doc.setTextColor(170, 170, 170);
-      doc.text("ZONE", mL, y);
+      doc.text(t("zone").toUpperCase(), mL, y);
       doc.setFont("helvetica", "normal"); doc.setFontSize(10); doc.setTextColor(50, 50, 50);
       doc.text(driver.zoneAddress, mL, y + 5);
       y += 12;
     }
     doc.setFont("helvetica", "bold"); doc.setFontSize(7); doc.setTextColor(170, 170, 170);
-    doc.text("CONTACT", mL, y);
+    doc.text(t("contact").toUpperCase(), mL, y);
     doc.setFont("helvetica", "normal"); doc.setFontSize(10); doc.setTextColor(50, 50, 50);
     doc.text(driver.email, mL, y + 5);
     doc.text(driver.phone, mL, y + 10);
@@ -271,12 +291,11 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
     if (qrDataUrlLarge) doc.addImage(qrDataUrlLarge, "PNG", cx - 16, 10, 32, 32);
 
     doc.setFontSize(16); doc.setFont("helvetica", "bold"); doc.setTextColor(255, 255, 255);
-    doc.text("Restons en", cx, 52, { align: "center" });
-    doc.text("contact !", cx, 59, { align: "center" });
+    doc.text(t("stayInTouch"), cx, 55, { align: "center" });
 
     doc.setFontSize(9); doc.setFont("helvetica", "normal"); doc.setTextColor(180, 180, 180);
-    const cta = doc.splitTextToSize("Scannez pour enregistrer mes coordonnées et réserver facilement.", W - panelX - 14);
-    doc.text(cta, cx, 68, { align: "center" });
+    const cta = doc.splitTextToSize(t("scanToSave"), W - panelX - 14);
+    doc.text(cta, cx, 65, { align: "center" });
 
     doc.save(`carte-a6-${driver.slug}.pdf`);
   }
@@ -310,7 +329,7 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
     }
     y5 += 6;
     doc.setFontSize(10); doc.setFont("helvetica", "normal"); doc.setTextColor(130, 130, 130);
-    doc.text("Votre chauffeur de taxi", mH, y5);
+    doc.text(t("yourTaxiDriver"), mH, y5);
 
     if (driver.vehicleBrand && driver.vehicleModel) {
       doc.setFontSize(11); doc.setTextColor(180, 180, 180);
@@ -334,10 +353,10 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
     // CTA
     const ctaY = qrY + qrS + 8;
     doc.setFontSize(20); doc.setFont("helvetica", "bold"); doc.setTextColor(23, 23, 23);
-    doc.text("Restons en contact !", W / 2, ctaY, { align: "center" });
+    doc.text(t("stayInTouch"), W / 2, ctaY, { align: "center" });
 
     doc.setFontSize(12); doc.setFont("helvetica", "normal"); doc.setTextColor(90, 90, 90);
-    const cta = doc.splitTextToSize("Scannez ce QR code pour enregistrer mes coordonnées et réserver votre prochaine course encore plus facilement.", 160);
+    const cta = doc.splitTextToSize(t("scanToSaveLong"), 160);
     doc.text(cta, W / 2, ctaY + 8, { align: "center" });
 
     // Footer
@@ -387,28 +406,32 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
       {/* ── Business card preview ── */}
       {activeFormat === "business" && (
         <div className="bg-white border border-neutral-200 rounded-2xl p-8 mb-6">
-          <div className="aspect-[85/55] bg-white border border-neutral-200 rounded-xl p-6 relative shadow-lg max-w-md mx-auto">
-            <p className="text-lg tracking-tight mb-4">
-              <span className="text-neutral-600 font-normal">Taxi</span>
-              <span className="text-neutral-950 font-bold">Noir</span>
-            </p>
-            {driver.companyName && (
-              <p className="text-base font-bold tracking-tight">{driver.companyName}</p>
-            )}
-            <p className={driver.companyName ? "text-xs text-neutral-500 font-medium" : "text-base font-semibold"}>{driver.firstName} {driver.lastName}</p>
-            <div className="text-xs text-neutral-500 space-y-0.5 mt-2">
-              {driver.vehicleBrand && driver.vehicleModel && <p>{driver.vehicleBrand} {driver.vehicleModel}</p>}
-              {driver.zoneAddress && <p>{driver.zoneAddress}</p>}
-              <p>{driver.email}</p>
-              <p>{driver.phone}</p>
-            </div>
-            {qrDataUrl && (
-              <div className="absolute top-6 right-6 w-20 h-20 rounded-lg overflow-hidden">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={qrDataUrl} alt="QR Code" className="w-full h-full object-cover" />
+          <div className="aspect-[85/55] border border-neutral-200 rounded-xl shadow-lg max-w-md mx-auto overflow-hidden flex">
+            <div className="flex-[3] bg-white p-5 flex flex-col justify-center">
+              <p className="text-lg tracking-tight mb-3">
+                <span className="text-neutral-500 font-normal">Taxi</span>
+                <span className="text-neutral-950 font-bold">Noir</span>
+              </p>
+              {driver.companyName && (
+                <p className="text-sm font-bold tracking-tight">{driver.companyName}</p>
+              )}
+              <p className={driver.companyName ? "text-[11px] text-neutral-500 font-medium" : "text-sm font-semibold"}>{driver.firstName} {driver.lastName}</p>
+              <div className="text-[10px] text-neutral-500 space-y-0.5 mt-2 leading-relaxed">
+                {driver.vehicleBrand && driver.vehicleModel && <p>{driver.vehicleBrand} {driver.vehicleModel}</p>}
+                {driver.zoneAddress && <p>{driver.zoneAddress}</p>}
+                <p>{driver.email}</p>
+                <p>{driver.phone}</p>
               </div>
-            )}
-            <p className="absolute bottom-4 left-6 text-xs text-neutral-400">Scannez pour réserver directement</p>
+            </div>
+            <div className="flex-[1.2] bg-neutral-950 flex flex-col items-center justify-center p-3">
+              {qrDataUrl && (
+                <div className="w-14 h-14 bg-white rounded-lg p-1 mb-2">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={qrDataUrl} alt="QR Code" className="w-full h-full object-cover rounded" />
+                </div>
+              )}
+              <p className="text-[8px] text-neutral-400 text-center leading-tight">{t("scanToBook")}</p>
+            </div>
           </div>
         </div>
       )}
@@ -426,23 +449,23 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
                 <p className="text-lg font-bold text-neutral-900">{driver.companyName}</p>
               )}
               <p className={driver.companyName ? "text-sm text-neutral-500 font-medium" : "text-lg font-bold text-neutral-900"}>{driver.firstName} {driver.lastName}</p>
-              <p className="text-[10px] text-neutral-400 mt-0.5 uppercase tracking-wider">Chauffeur de taxi</p>
+              <p className="text-[10px] text-neutral-400 mt-0.5 uppercase tracking-wider">{t("taxiDriver")}</p>
               <div className="w-8 h-px bg-neutral-200 my-3" />
               <div className="space-y-2">
                 {driver.vehicleBrand && driver.vehicleModel && (
                   <div>
-                    <p className="text-[8px] text-neutral-400 uppercase tracking-wider font-medium">Véhicule</p>
+                    <p className="text-[8px] text-neutral-400 uppercase tracking-wider font-medium">{t("vehicle")}</p>
                     <p className="text-sm text-neutral-700 font-medium">{driver.vehicleBrand} {driver.vehicleModel}</p>
                   </div>
                 )}
                 {driver.zoneAddress && (
                   <div>
-                    <p className="text-[8px] text-neutral-400 uppercase tracking-wider font-medium">Zone</p>
+                    <p className="text-[8px] text-neutral-400 uppercase tracking-wider font-medium">{t("zone")}</p>
                     <p className="text-sm text-neutral-700 font-medium">{driver.zoneAddress}</p>
                   </div>
                 )}
                 <div>
-                  <p className="text-[8px] text-neutral-400 uppercase tracking-wider font-medium">Contact</p>
+                  <p className="text-[8px] text-neutral-400 uppercase tracking-wider font-medium">{t("contact")}</p>
                   <p className="text-sm text-neutral-700">{driver.email}</p>
                   <p className="text-sm text-neutral-700">{driver.phone}</p>
                 </div>
@@ -455,9 +478,9 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
                   <img src={qrDataUrl} alt="QR Code" className="w-full h-full object-cover rounded" />
                 </div>
               )}
-              <p className="text-white text-base font-bold leading-tight">Restons en<br />contact !</p>
+              <p className="text-white text-base font-bold leading-tight">{t("stayInTouch")}</p>
               <p className="text-neutral-400 text-xs mt-2 leading-relaxed px-1">
-                Scannez pour enregistrer mes<br />coordonnées et réserver facilement.
+                {t("scanToSave")}
               </p>
             </div>
           </div>
@@ -479,7 +502,7 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
                   <p className="text-white font-bold text-base mt-0.5">{driver.companyName}</p>
                 )}
                 <p className={driver.companyName ? "text-neutral-400 text-sm mt-0.5" : "text-white font-bold text-base mt-0.5"}>{driver.firstName} {driver.lastName}</p>
-                <p className="text-neutral-500 text-xs mt-0.5">Votre chauffeur de taxi</p>
+                <p className="text-neutral-500 text-xs mt-0.5">{t("yourTaxiDriver")}</p>
               </div>
               <div className="text-right">
                 {driver.vehicleBrand && driver.vehicleModel && (
@@ -497,9 +520,9 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
                   <img src={qrDataUrl} alt="QR Code" className="w-full h-full object-cover rounded-lg" />
                 </div>
               )}
-              <h3 className="text-xl font-bold text-neutral-900 mt-1">Restons en contact !</h3>
+              <h3 className="text-xl font-bold text-neutral-900 mt-1">{t("stayInTouch")}</h3>
               <p className="text-sm text-neutral-500 text-center mt-2 max-w-sm leading-relaxed">
-                Scannez ce QR code pour enregistrer mes coordonnées et réserver votre prochaine course encore plus facilement.
+                {t("scanToSaveLong")}
               </p>
             </div>
 
@@ -515,7 +538,7 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
 
       {/* Profile URL */}
       <div className="bg-neutral-50 border border-neutral-200 rounded-xl p-4 mb-6">
-        <label className="block text-xs text-neutral-500 font-light mb-1.5">Lien de votre profil public</label>
+        <label className="block text-xs text-neutral-500 font-light mb-1.5">{t("profileLink")}</label>
         <div className="flex items-center gap-2">
           <input readOnly value={profileUrl} className="flex-1 bg-white border border-neutral-200 rounded-lg px-3 py-2 text-sm outline-none" />
           <button onClick={() => navigator.clipboard.writeText(profileUrl)} className="bg-neutral-900 text-white rounded-lg px-3 py-2 text-sm hover:bg-neutral-800 transition-colors">
@@ -531,14 +554,14 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
           className="flex-1 bg-neutral-950 text-white rounded-xl py-3 text-sm font-medium hover:bg-neutral-800 transition-colors flex items-center justify-center gap-2 btn-lift"
         >
           <Icon icon="solar:document-linear" />
-          Télécharger PDF
+          {t("downloadPdf")}
         </button>
         <button
           onClick={handlePrint}
           className="flex-1 bg-white text-neutral-900 border border-neutral-200 rounded-xl py-3 text-sm font-medium hover:bg-neutral-50 transition-colors flex items-center justify-center gap-2 btn-lift"
         >
           <Icon icon="solar:printer-linear" />
-          Imprimer
+          {t("print")}
         </button>
       </div>
     </div>

@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TXI. - La nouvelle référence Taxi</title>
+    <meta name="description" content="TXI - Réservez un taxi professionnel en quelques secondes. Chauffeurs agréés, tarifs réglementés, voies réservées.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        neutral: {
+                            50: '#fafafa',
+                            100: '#f5f5f5',
+                            200: '#e5e5e5',
+                            300: '#d4d4d4',
+                            400: '#a3a3a3',
+                            500: '#737373',
+                            600: '#525252',
+                            700: '#404040',
+                            800: '#262626',
+                            900: '#171717',
+                            950: '#0a0a0a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Smooth scrolling */
+        html { scroll-behavior: smooth; }
+
+        /* Scroll animations */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+        }
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .fade-up-delay-1 { transition-delay: 0.1s; }
+        .fade-up-delay-2 { transition-delay: 0.2s; }
+        .fade-up-delay-3 { transition-delay: 0.3s; }
+
+        /* Ping animation for location dot */
+        @keyframes ping-slow {
+            0% { transform: scale(1); opacity: 0.4; }
+            100% { transform: scale(2.5); opacity: 0; }
+        }
+        .animate-ping-slow {
+            animation: ping-slow 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+        }
+
+        /* Gradient text */
+        .gradient-text {
+            background: linear-gradient(135deg, #171717 0%, #525252 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Counter animation */
+        .counter { font-variant-numeric: tabular-nums; }
+
+        /* Mobile menu */
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+            opacity: 0;
+        }
+        .mobile-menu.open {
+            max-height: 300px;
+            opacity: 1;
+        }
+
+        /* Button hover lift */
+        .btn-lift {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .btn-lift:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        /* Card hover */
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+        }
+
+        /* Floating animation */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-12px); }
+        }
+        .animate-float {
+            animation: float 4s ease-in-out infinite;
+        }
+        .animate-float-delayed {
+            animation: float 4s ease-in-out 1s infinite;
+        }
+
+        /* Marquee for trusted by */
+        @keyframes scroll-left {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .marquee {
+            animation: scroll-left 20s linear infinite;
+        }
+    </style>
+</head>
+<body class="bg-white text-neutral-900 font-sans antialiased selection:bg-neutral-200 selection:text-black flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <header id="navbar" class="fixed top-0 w-full bg-white/80 backdrop-blur-md border-b border-neutral-100 z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-8">
+                <a href="#" class="text-xl font-semibold tracking-tighter">TXI.</a>
+                <nav class="hidden md:flex items-center gap-6">
+                    <a href="#reserver" class="text-sm font-medium text-neutral-900">Commander</a>
+                    <a href="#comment-ca-marche" class="text-sm font-medium text-neutral-500 hover:text-neutral-900 transition-colors">Comment ça marche</a>
+                    <a href="#chauffeurs" class="text-sm font-medium text-neutral-500 hover:text-neutral-900 transition-colors">Chauffeurs</a>
+                    <a href="#business" class="text-sm font-medium text-neutral-500 hover:text-neutral-900 transition-colors">Business</a>
+                </nav>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <a href="#" class="hidden md:block text-sm font-medium text-neutral-900 hover:text-neutral-600 transition-colors">Connexion</a>
+                <a href="#" class="hidden md:inline-flex bg-neutral-950 text-white text-sm font-medium px-5 py-2.5 rounded-full hover:bg-neutral-800 transition-colors btn-lift">S'inscrire</a>
+                <!-- Mobile menu button -->
+                <button id="menu-toggle" class="md:hidden p-2 hover:bg-neutral-100 rounded-lg transition-colors" aria-label="Menu">
+                    <iconify-icon icon="solar:hamburger-menu-linear" class="text-2xl block" id="menu-icon-open"></iconify-icon>
+                    <iconify-icon icon="solar:close-circle-linear" class="text-2xl hidden" id="menu-icon-close"></iconify-icon>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="mobile-menu md:hidden bg-white border-t border-neutral-100">
+            <div class="max-w-7xl mx-auto px-6 py-4 space-y-1">
+                <a href="#reserver" class="block py-3 text-sm font-medium text-neutral-900 hover:bg-neutral-50 rounded-lg px-3 transition-colors">Commander</a>
+                <a href="#comment-ca-marche" class="block py-3 text-sm font-medium text-neutral-500 hover:bg-neutral-50 hover:text-neutral-900 rounded-lg px-3 transition-colors">Comment ça marche</a>
+                <a href="#chauffeurs" class="block py-3 text-sm font-medium text-neutral-500 hover:bg-neutral-50 hover:text-neutral-900 rounded-lg px-3 transition-colors">Chauffeurs</a>
+                <a href="#business" class="block py-3 text-sm font-medium text-neutral-500 hover:bg-neutral-50 hover:text-neutral-900 rounded-lg px-3 transition-colors">Business</a>
+                <div class="pt-3 border-t border-neutral-100 flex gap-3">
+                    <a href="#" class="flex-1 text-center py-3 text-sm font-medium text-neutral-900 border border-neutral-200 rounded-full hover:bg-neutral-50 transition-colors">Connexion</a>
+                    <a href="#" class="flex-1 text-center py-3 text-sm font-medium text-white bg-neutral-950 rounded-full hover:bg-neutral-800 transition-colors">S'inscrire</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Hero Section -->
+    <main class="flex-grow pt-24 pb-12 md:pt-32 md:pb-24" id="reserver">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+
+                <!-- Left: Booking Form -->
+                <div class="max-w-xl fade-up">
+                    <div class="inline-flex items-center gap-2 bg-neutral-100 rounded-full px-4 py-1.5 mb-6">
+                        <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+                        <span class="text-xs font-medium text-neutral-600">Disponible 24h/24 dans toute la France</span>
+                    </div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.1] mb-4">
+                        Allez partout,<br><span class="gradient-text">avec un vrai taxi.</span>
+                    </h1>
+                    <p class="text-base md:text-lg text-neutral-500 mb-8 max-w-md font-light leading-relaxed">
+                        Le confort et la sécurité des professionnels réglementés, avec la simplicité d'une application moderne.
+                    </p>
+
+                    <!-- Form Container -->
+                    <div class="bg-white border border-neutral-200 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.06)] p-4 md:p-6">
+                        <h2 class="text-lg font-semibold tracking-tight mb-5">Réserver une course</h2>
+
+                        <div class="relative space-y-3">
+                            <div class="absolute left-[1.15rem] top-6 bottom-6 w-0.5 bg-neutral-200 z-0"></div>
+
+                            <!-- Pickup Input -->
+                            <div class="relative z-10 flex items-center bg-neutral-100 rounded-xl px-4 py-3.5 focus-within:ring-2 focus-within:ring-neutral-900 focus-within:bg-white transition-all">
+                                <iconify-icon icon="solar:record-circle-linear" class="text-neutral-400 text-lg mr-3 shrink-0"></iconify-icon>
+                                <input type="text" placeholder="Lieu de départ" class="bg-transparent w-full text-sm font-medium outline-none text-neutral-900 placeholder:text-neutral-500 placeholder:font-light">
+                                <button class="p-1.5 hover:bg-neutral-200 rounded-lg transition-colors" title="Ma position">
+                                    <iconify-icon icon="solar:crosshair-linear" class="text-neutral-500 block"></iconify-icon>
+                                </button>
+                            </div>
+
+                            <!-- Dropoff Input -->
+                            <div class="relative z-10 flex items-center bg-neutral-100 rounded-xl px-4 py-3.5 focus-within:ring-2 focus-within:ring-neutral-900 focus-within:bg-white transition-all">
+                                <iconify-icon icon="solar:stop-linear" class="text-neutral-900 text-lg mr-3 shrink-0"></iconify-icon>
+                                <input type="text" placeholder="Destination" class="bg-transparent w-full text-sm font-medium outline-none text-neutral-900 placeholder:text-neutral-500 placeholder:font-light">
+                            </div>
+                        </div>
+
+                        <div class="flex gap-3 mt-4">
+                            <button class="flex-1 flex items-center justify-center gap-2 bg-neutral-50 border border-neutral-200 rounded-xl py-3 hover:bg-neutral-100 transition-colors">
+                                <iconify-icon icon="solar:clock-circle-linear" class="text-neutral-600 text-base"></iconify-icon>
+                                <span class="text-sm font-medium">Maintenant</span>
+                                <iconify-icon icon="solar:alt-arrow-down-linear" class="text-neutral-400"></iconify-icon>
+                            </button>
+                            <button class="w-24 flex items-center justify-center gap-2 bg-neutral-50 border border-neutral-200 rounded-xl py-3 hover:bg-neutral-100 transition-colors">
+                                <iconify-icon icon="solar:users-group-rounded-linear" class="text-neutral-600 text-base"></iconify-icon>
+                                <span class="text-sm font-medium">1-4</span>
+                            </button>
+                        </div>
+
+                        <button class="w-full mt-6 bg-neutral-950 text-white rounded-xl py-4 text-sm font-medium hover:bg-neutral-800 transition-colors focus:ring-4 focus:ring-neutral-200 btn-lift">
+                            Voir les tarifs
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right: Visual/Map Representation -->
+                <div class="hidden md:flex h-full min-h-[520px] rounded-3xl bg-neutral-50 border border-neutral-100 relative overflow-hidden items-center justify-center" style="background-image: radial-gradient(#e5e5e5 1px, transparent 1px); background-size: 24px 24px;">
+                    <div class="absolute w-80 h-80 bg-white/60 blur-3xl rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
+
+                    <!-- Route line -->
+                    <svg class="absolute inset-0 w-full h-full z-0" viewBox="0 0 500 500">
+                        <path d="M160 170 Q 250 220 300 300 Q 340 360 350 380" stroke="#d4d4d4" stroke-width="2" fill="none" stroke-dasharray="6 4"/>
+                    </svg>
+
+                    <!-- Driver card -->
+                    <div class="relative bg-white border border-neutral-200 rounded-2xl p-4 shadow-xl shadow-black/5 w-64 animate-float z-10">
+                        <div class="flex items-center gap-4 mb-3">
+                            <div class="w-10 h-10 rounded-full bg-neutral-100 flex items-center justify-center overflow-hidden">
+                                <iconify-icon icon="solar:user-linear" class="text-neutral-400 text-xl"></iconify-icon>
+                            </div>
+                            <div>
+                                <p class="text-sm font-medium">Marc L.</p>
+                                <div class="flex items-center text-xs text-neutral-500 gap-1 font-light">
+                                    <iconify-icon icon="solar:star-bold" class="text-amber-500"></iconify-icon> 4.9 <span class="text-neutral-300">|</span> Taxi Parisien
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center text-sm">
+                            <span class="text-neutral-500 font-light">Arrivée estimée</span>
+                            <span class="font-semibold text-neutral-900">4 min</span>
+                        </div>
+                        <div class="w-full bg-neutral-100 h-1.5 rounded-full mt-2 overflow-hidden">
+                            <div class="bg-neutral-900 h-full w-2/3 rounded-full transition-all duration-1000"></div>
+                        </div>
+                    </div>
+
+                    <!-- Price badge -->
+                    <div class="absolute bottom-24 right-12 bg-white border border-neutral-200 rounded-xl p-3 shadow-lg shadow-black/5 animate-float-delayed z-10">
+                        <div class="flex items-center gap-2">
+                            <iconify-icon icon="solar:tag-price-linear" class="text-neutral-600"></iconify-icon>
+                            <div>
+                                <p class="text-xs text-neutral-500 font-light">Estimation</p>
+                                <p class="text-sm font-semibold">18,50 EUR</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Location Pins -->
+                    <div class="absolute top-[33%] left-[30%] z-10">
+                        <div class="w-4 h-4 bg-neutral-900 rounded-full border-4 border-white shadow-md relative">
+                            <div class="absolute inset-0 bg-neutral-900 rounded-full animate-ping-slow"></div>
+                        </div>
+                        <span class="absolute -bottom-6 left-1/2 -translate-x-1/2 text-[10px] font-medium text-neutral-500 whitespace-nowrap bg-white/80 px-1.5 py-0.5 rounded">Départ</span>
+                    </div>
+
+                    <div class="absolute bottom-[22%] right-[28%] z-10">
+                        <div class="w-4 h-4 bg-neutral-900 rounded-sm border-4 border-white shadow-md"></div>
+                        <span class="absolute -bottom-6 left-1/2 -translate-x-1/2 text-[10px] font-medium text-neutral-500 whitespace-nowrap bg-white/80 px-1.5 py-0.5 rounded">Arrivée</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Stats Section -->
+    <section class="border-t border-neutral-100 py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+                <div class="text-center fade-up">
+                    <p class="text-3xl md:text-4xl font-semibold tracking-tight counter" data-target="25000">25 000+</p>
+                    <p class="text-sm text-neutral-500 font-light mt-1">Chauffeurs partenaires</p>
+                </div>
+                <div class="text-center fade-up fade-up-delay-1">
+                    <p class="text-3xl md:text-4xl font-semibold tracking-tight counter">120+</p>
+                    <p class="text-sm text-neutral-500 font-light mt-1">Villes couvertes</p>
+                </div>
+                <div class="text-center fade-up fade-up-delay-2">
+                    <p class="text-3xl md:text-4xl font-semibold tracking-tight counter">4.8</p>
+                    <p class="text-sm text-neutral-500 font-light mt-1">Note moyenne</p>
+                </div>
+                <div class="text-center fade-up fade-up-delay-3">
+                    <p class="text-3xl md:text-4xl font-semibold tracking-tight counter">3 min</p>
+                    <p class="text-sm text-neutral-500 font-light mt-1">Temps d'attente moyen</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it Works Section -->
+    <section class="bg-neutral-50 border-t border-b border-neutral-100 py-20 md:py-28" id="comment-ca-marche">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 fade-up">
+                <p class="text-sm font-medium text-neutral-500 mb-2 uppercase tracking-wider">Simple et rapide</p>
+                <h2 class="text-3xl md:text-4xl font-semibold tracking-tight">Comment ça marche</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 md:gap-12">
+                <!-- Step 1 -->
+                <div class="relative fade-up fade-up-delay-1">
+                    <div class="flex items-start gap-5">
+                        <div class="w-12 h-12 bg-neutral-900 text-white rounded-2xl flex items-center justify-center shrink-0 text-lg font-semibold">1</div>
+                        <div>
+                            <h3 class="text-lg font-medium tracking-tight mb-2">Entrez votre destination</h3>
+                            <p class="text-sm text-neutral-500 font-light leading-relaxed">
+                                Renseignez votre point de départ et votre destination. L'application vous propose instantanément les taxis disponibles autour de vous.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Connector line (desktop) -->
+                    <div class="hidden md:block absolute top-6 left-[calc(100%+1rem)] w-[calc(100%-4rem)] border-t-2 border-dashed border-neutral-300"></div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="relative fade-up fade-up-delay-2">
+                    <div class="flex items-start gap-5">
+                        <div class="w-12 h-12 bg-neutral-900 text-white rounded-2xl flex items-center justify-center shrink-0 text-lg font-semibold">2</div>
+                        <div>
+                            <h3 class="text-lg font-medium tracking-tight mb-2">Choisissez votre taxi</h3>
+                            <p class="text-sm text-neutral-500 font-light leading-relaxed">
+                                Comparez les tarifs, consultez les avis et sélectionnez le chauffeur qui vous convient. Prix fixe, pas de surprise.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="hidden md:block absolute top-6 left-[calc(100%+1rem)] w-[calc(100%-4rem)] border-t-2 border-dashed border-neutral-300"></div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="fade-up fade-up-delay-3">
+                    <div class="flex items-start gap-5">
+                        <div class="w-12 h-12 bg-neutral-900 text-white rounded-2xl flex items-center justify-center shrink-0 text-lg font-semibold">3</div>
+                        <div>
+                            <h3 class="text-lg font-medium tracking-tight mb-2">Profitez du trajet</h3>
+                            <p class="text-sm text-neutral-500 font-light leading-relaxed">
+                                Suivez l'approche de votre chauffeur en temps réel, montez à bord et profitez. Le paiement est automatique via l'application.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20 md:py-28" id="chauffeurs">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 fade-up">
+                <p class="text-sm font-medium text-neutral-500 mb-2 uppercase tracking-wider">Nos avantages</p>
+                <h2 class="text-3xl md:text-4xl font-semibold tracking-tight">Pourquoi choisir TXI.</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="card-hover bg-white border border-neutral-200 rounded-2xl p-6 fade-up fade-up-delay-1">
+                    <div class="w-12 h-12 bg-neutral-50 border border-neutral-200 rounded-xl flex items-center justify-center mb-5">
+                        <iconify-icon icon="solar:shield-check-linear" class="text-neutral-900 text-2xl"></iconify-icon>
+                    </div>
+                    <h3 class="text-lg font-medium tracking-tight mb-2">Chauffeurs professionnels</h3>
+                    <p class="text-sm text-neutral-500 font-light leading-relaxed">
+                        Uniquement des chauffeurs de taxi agréés, formés et connaissant parfaitement leur ville. Votre sécurité est notre priorité.
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="card-hover bg-white border border-neutral-200 rounded-2xl p-6 fade-up fade-up-delay-2">
+                    <div class="w-12 h-12 bg-neutral-50 border border-neutral-200 rounded-xl flex items-center justify-center mb-5">
+                        <iconify-icon icon="solar:tag-price-linear" class="text-neutral-900 text-2xl"></iconify-icon>
+                    </div>
+                    <h3 class="text-lg font-medium tracking-tight mb-2">Tarification réglementée</h3>
+                    <p class="text-sm text-neutral-500 font-light leading-relaxed">
+                        Fini les prix qui explosent lors des fortes demandes. Profitez de la stabilité des tarifs réglementés par l'État.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="card-hover bg-white border border-neutral-200 rounded-2xl p-6 fade-up fade-up-delay-3">
+                    <div class="w-12 h-12 bg-neutral-50 border border-neutral-200 rounded-xl flex items-center justify-center mb-5">
+                        <iconify-icon icon="solar:routing-linear" class="text-neutral-900 text-2xl"></iconify-icon>
+                    </div>
+                    <h3 class="text-lg font-medium tracking-tight mb-2">Voies réservées</h3>
+                    <p class="text-sm text-neutral-500 font-light leading-relaxed">
+                        En tant que taxis officiels, nos véhicules utilisent les couloirs de bus pour vous faire gagner un temps précieux.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="bg-neutral-50 border-t border-b border-neutral-100 py-20 md:py-28">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 fade-up">
+                <p class="text-sm font-medium text-neutral-500 mb-2 uppercase tracking-wider">Témoignages</p>
+                <h2 class="text-3xl md:text-4xl font-semibold tracking-tight">Ce que disent nos clients</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white border border-neutral-200 rounded-2xl p-6 card-hover fade-up fade-up-delay-1">
+                    <div class="flex items-center gap-1 mb-4">
+                        <iconify-icon icon="solar:star-bold" class="text-amber-500"></iconify-icon>
+                        <iconify-icon icon="solar:star-bold" class="text-amber-500"></iconify-icon>
+                        <iconify-icon icon="solar:star-bold" class="text-amber-500"></iconify-icon>
+                        <iconify-icon icon="solar:star-bold" class="text-amber-500"></iconify-icon>
+                        <iconify-icon icon="solar:star-bold" class="text-amber-500"></iconify-icon>
+                    </div>
+                    <p class="text-sm text-neutral-600 font-light leading-relaxed mb-6">
+                        "Fini les mauvaises surprises sur le tarif. Avec TXI, je sais exactement combien je vais payer, même aux heures de pointe. Le chauffeur connaissait parfaitement le chemin."
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-9 h-9 rounded-full bg-neutral-200 flex items-center justify-center text-xs font-semibold text-neutral-600">SL</div>
+                        <div>
+                            <p class="text-sm font-medium">Sophie L.</p>
+                            <p class="text-xs text-neutral-500 font-light">Paris</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-white border border-neutral-200 rounded-2xl p-6 card-hover fade-up fade-up-delay-2">
+                    <div class="flex items-center gap-1 mb-4">
+                        <iconify-icon icon="solar:star-bold" class="text-amber-500"></iconify-icon>
+                        <iconify-icon icon="solar:star-bold" class="text-amber-500"></iconify-icon>
+                        <iconify-icon icon="solar:star-bold" class="text-amber-500"></iconify-icon>
+                        <iconify-icon icon="solar:star-bold" class="text-amber-500"></iconify-icon>
+                        <iconify-icon icon="solar:star-bold" class="text-amber-500"></iconify-icon>
+                    </div>
+                    <p class="text-sm text-neutral-600 font-light leading-relaxed mb-6">
+                        "J'utilise TXI pour tous mes déplacements professionnels. L'option Business avec facturation automatique me fait gagner un temps fou. Service impeccable."
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-9 h-9 rounded-full bg-neutral-200 flex items-center justify-center text-xs font-semibold text-neutral-600">TM</div>
+                        <div>
+                            <p class="text-sm font-medium">Thomas M.</p>
+                            <p class="text-xs text-neutral-500 font-light">Lyon</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-white border border-neutral-200 rounded-2xl p-6 card-hover fade-up fade-up-delay-3">
+                    <div class="flex items-center gap-1 mb-4">
+                        <iconify-icon icon="solar:star-bold" class="text-amber-500"></iconify-icon>
+                        <iconify-icon icon="solar:star-bold" class="text-amber-500"></iconify-icon>
+                        <iconify-icon icon="solar:star-bold" class="text-amber-500"></iconify-icon>
+                        <iconify-icon icon="solar:star-bold" class="text-amber-500"></iconify-icon>
+                        <iconify-icon icon="solar:star-bold" class="text-amber-500"></iconify-icon>
+                    </div>
+                    <p class="text-sm text-neutral-600 font-light leading-relaxed mb-6">
+                        "En tant que maman, la sécurité est essentielle. Savoir que les chauffeurs TXI sont des professionnels agréés me rassure complètement. Je recommande !"
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-9 h-9 rounded-full bg-neutral-200 flex items-center justify-center text-xs font-semibold text-neutral-600">AB</div>
+                        <div>
+                            <p class="text-sm font-medium">Amina B.</p>
+                            <p class="text-xs text-neutral-500 font-light">Marseille</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Section -->
+    <section class="py-20 md:py-28" id="business">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="fade-up">
+                    <p class="text-sm font-medium text-neutral-500 mb-2 uppercase tracking-wider">Pour les entreprises</p>
+                    <h2 class="text-3xl md:text-4xl font-semibold tracking-tight mb-4">TXI Business</h2>
+                    <p class="text-neutral-500 font-light leading-relaxed mb-8">
+                        Simplifiez la mobilité de vos collaborateurs. Tableau de bord centralisé, facturation consolidée, politiques de déplacement personnalisables.
+                    </p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center gap-3">
+                            <div class="w-6 h-6 bg-neutral-900 rounded-full flex items-center justify-center shrink-0">
+                                <iconify-icon icon="solar:check-read-linear" class="text-white text-xs"></iconify-icon>
+                            </div>
+                            <span class="text-sm font-light text-neutral-600">Facturation centralisée et automatisée</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <div class="w-6 h-6 bg-neutral-900 rounded-full flex items-center justify-center shrink-0">
+                                <iconify-icon icon="solar:check-read-linear" class="text-white text-xs"></iconify-icon>
+                            </div>
+                            <span class="text-sm font-light text-neutral-600">Tableau de bord et reporting en temps réel</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <div class="w-6 h-6 bg-neutral-900 rounded-full flex items-center justify-center shrink-0">
+                                <iconify-icon icon="solar:check-read-linear" class="text-white text-xs"></iconify-icon>
+                            </div>
+                            <span class="text-sm font-light text-neutral-600">Gestion des politiques de déplacement</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <div class="w-6 h-6 bg-neutral-900 rounded-full flex items-center justify-center shrink-0">
+                                <iconify-icon icon="solar:check-read-linear" class="text-white text-xs"></iconify-icon>
+                            </div>
+                            <span class="text-sm font-light text-neutral-600">Support dédié et account manager</span>
+                        </li>
+                    </ul>
+                    <a href="#" class="inline-flex items-center gap-2 bg-neutral-950 text-white text-sm font-medium px-6 py-3 rounded-full hover:bg-neutral-800 transition-colors btn-lift">
+                        Demander une démo
+                        <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
+                    </a>
+                </div>
+
+                <!-- Business visual -->
+                <div class="hidden md:block fade-up fade-up-delay-2">
+                    <div class="bg-neutral-950 rounded-3xl p-8 relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-64 h-64 bg-neutral-800 rounded-full blur-3xl opacity-50"></div>
+                        <!-- Dashboard mockup -->
+                        <div class="relative space-y-4">
+                            <div class="flex items-center justify-between mb-6">
+                                <p class="text-white text-sm font-medium">Dashboard TXI Business</p>
+                                <span class="text-xs text-neutral-500 font-light">Mars 2026</span>
+                            </div>
+                            <div class="grid grid-cols-3 gap-3">
+                                <div class="bg-neutral-900 border border-neutral-800 rounded-xl p-4">
+                                    <p class="text-xs text-neutral-500 font-light">Courses</p>
+                                    <p class="text-xl font-semibold text-white mt-1">342</p>
+                                    <p class="text-xs text-green-400 mt-1">+12%</p>
+                                </div>
+                                <div class="bg-neutral-900 border border-neutral-800 rounded-xl p-4">
+                                    <p class="text-xs text-neutral-500 font-light">Budget</p>
+                                    <p class="text-xl font-semibold text-white mt-1">8 420 EUR</p>
+                                    <p class="text-xs text-green-400 mt-1">-5%</p>
+                                </div>
+                                <div class="bg-neutral-900 border border-neutral-800 rounded-xl p-4">
+                                    <p class="text-xs text-neutral-500 font-light">Employés</p>
+                                    <p class="text-xl font-semibold text-white mt-1">47</p>
+                                    <p class="text-xs text-neutral-500 mt-1">actifs</p>
+                                </div>
+                            </div>
+                            <!-- Chart bars mockup -->
+                            <div class="bg-neutral-900 border border-neutral-800 rounded-xl p-4">
+                                <p class="text-xs text-neutral-500 font-light mb-3">Courses par semaine</p>
+                                <div class="flex items-end gap-2 h-24">
+                                    <div class="flex-1 bg-neutral-700 rounded-t-sm" style="height: 40%"></div>
+                                    <div class="flex-1 bg-neutral-700 rounded-t-sm" style="height: 65%"></div>
+                                    <div class="flex-1 bg-neutral-700 rounded-t-sm" style="height: 45%"></div>
+                                    <div class="flex-1 bg-neutral-700 rounded-t-sm" style="height: 80%"></div>
+                                    <div class="flex-1 bg-white rounded-t-sm" style="height: 100%"></div>
+                                    <div class="flex-1 bg-neutral-700 rounded-t-sm" style="height: 55%"></div>
+                                    <div class="flex-1 bg-neutral-700 rounded-t-sm" style="height: 70%"></div>
+                                </div>
+                                <div class="flex justify-between mt-2 text-[10px] text-neutral-600">
+                                    <span>Lun</span><span>Mar</span><span>Mer</span><span>Jeu</span><span>Ven</span><span>Sam</span><span>Dim</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- App CTA -->
+    <section class="border-t border-neutral-100 py-20 md:py-28">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="bg-neutral-950 rounded-3xl p-8 md:p-16 flex flex-col md:flex-row items-center justify-between gap-10 relative overflow-hidden">
+                <!-- Background gradient -->
+                <div class="absolute top-0 right-0 w-96 h-96 bg-neutral-800 rounded-full blur-3xl opacity-30"></div>
+                <div class="absolute bottom-0 left-0 w-64 h-64 bg-neutral-800 rounded-full blur-3xl opacity-20"></div>
+
+                <div class="max-w-lg relative z-10 fade-up">
+                    <h2 class="text-2xl md:text-4xl font-semibold tracking-tight text-white mb-4">Votre taxi, dans votre poche.</h2>
+                    <p class="text-neutral-400 text-sm md:text-base font-light mb-8 leading-relaxed">
+                        Téléchargez l'application TXI pour réserver, suivre l'approche de votre chauffeur et payer sans contact, le tout depuis votre smartphone.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <button class="bg-white text-neutral-950 px-6 py-3 rounded-full text-sm font-medium hover:bg-neutral-100 transition-colors flex items-center gap-2 btn-lift">
+                            <iconify-icon icon="mdi:apple" class="text-lg"></iconify-icon> App Store
+                        </button>
+                        <button class="bg-neutral-800 text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-neutral-700 transition-colors flex items-center gap-2 border border-neutral-700 btn-lift">
+                            <iconify-icon icon="mdi:google-play" class="text-lg"></iconify-icon> Google Play
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Phone mockup -->
+                <div class="hidden md:block w-64 h-[440px] border-[6px] border-neutral-800 rounded-[2.5rem] bg-neutral-900 relative overflow-hidden shadow-2xl z-10 fade-up fade-up-delay-2">
+                    <!-- Notch -->
+                    <div class="absolute top-0 inset-x-0 h-7 bg-neutral-800 rounded-b-2xl w-28 mx-auto z-20"></div>
+                    <!-- Screen content -->
+                    <div class="p-4 mt-10 space-y-3">
+                        <!-- Status bar mockup -->
+                        <div class="flex justify-between items-center px-1 mb-2">
+                            <span class="text-[10px] text-neutral-500">9:41</span>
+                            <div class="flex gap-1 items-center">
+                                <div class="w-3 h-2 bg-neutral-600 rounded-sm"></div>
+                                <div class="w-4 h-2 bg-neutral-600 rounded-sm"></div>
+                            </div>
+                        </div>
+                        <!-- App header -->
+                        <div class="flex items-center justify-between">
+                            <span class="text-white text-xs font-semibold">TXI.</span>
+                            <div class="w-6 h-6 bg-neutral-800 rounded-full"></div>
+                        </div>
+                        <!-- Search bar -->
+                        <div class="h-10 bg-neutral-800 rounded-xl w-full flex items-center px-3 gap-2">
+                            <div class="w-3 h-3 bg-neutral-600 rounded-full"></div>
+                            <div class="h-2 bg-neutral-700 rounded w-24"></div>
+                        </div>
+                        <!-- Map area -->
+                        <div class="h-28 bg-neutral-800 rounded-xl w-full relative overflow-hidden" style="background-image: radial-gradient(#404040 1px, transparent 1px); background-size: 12px 12px;">
+                            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 bg-white rounded-full shadow-lg"></div>
+                        </div>
+                        <!-- Driver card -->
+                        <div class="bg-neutral-800 rounded-xl p-3 space-y-2">
+                            <div class="flex items-center gap-2">
+                                <div class="w-7 h-7 bg-neutral-700 rounded-full"></div>
+                                <div class="space-y-1">
+                                    <div class="h-2 bg-neutral-700 rounded w-16"></div>
+                                    <div class="h-1.5 bg-neutral-700 rounded w-12"></div>
+                                </div>
+                            </div>
+                            <div class="h-1 bg-neutral-700 rounded-full">
+                                <div class="h-full bg-white rounded-full w-3/4"></div>
+                            </div>
+                        </div>
+                        <!-- Bottom button -->
+                        <div class="h-10 bg-white rounded-xl w-full"></div>
+                    </div>
+                    <!-- Home indicator -->
+                    <div class="absolute bottom-2 inset-x-0 flex justify-center">
+                        <div class="w-28 h-1 bg-neutral-600 rounded-full"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-neutral-200 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+                <div class="col-span-2 md:col-span-1">
+                    <a href="#" class="text-xl font-semibold tracking-tighter mb-4 block">TXI.</a>
+                    <p class="text-xs text-neutral-500 font-light pr-4 leading-relaxed">L'application qui remet les professionnels de la route au centre de la mobilité urbaine.</p>
+                    <div class="flex gap-3 mt-5">
+                        <a href="#" class="w-9 h-9 bg-neutral-100 rounded-full flex items-center justify-center hover:bg-neutral-200 transition-colors">
+                            <iconify-icon icon="mdi:twitter" class="text-neutral-600 text-sm"></iconify-icon>
+                        </a>
+                        <a href="#" class="w-9 h-9 bg-neutral-100 rounded-full flex items-center justify-center hover:bg-neutral-200 transition-colors">
+                            <iconify-icon icon="mdi:instagram" class="text-neutral-600 text-sm"></iconify-icon>
+                        </a>
+                        <a href="#" class="w-9 h-9 bg-neutral-100 rounded-full flex items-center justify-center hover:bg-neutral-200 transition-colors">
+                            <iconify-icon icon="mdi:linkedin" class="text-neutral-600 text-sm"></iconify-icon>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-sm font-medium mb-4 tracking-tight">Services</h4>
+                    <ul class="space-y-3 text-sm text-neutral-500 font-light">
+                        <li><a href="#" class="hover:text-neutral-900 transition-colors">Commander un taxi</a></li>
+                        <li><a href="#" class="hover:text-neutral-900 transition-colors">Réserver à l'avance</a></li>
+                        <li><a href="#" class="hover:text-neutral-900 transition-colors">Gares et Aéroports</a></li>
+                        <li><a href="#" class="hover:text-neutral-900 transition-colors">TXI Business</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-sm font-medium mb-4 tracking-tight">Chauffeurs</h4>
+                    <ul class="space-y-3 text-sm text-neutral-500 font-light">
+                        <li><a href="#" class="hover:text-neutral-900 transition-colors">Devenir partenaire</a></li>
+                        <li><a href="#" class="hover:text-neutral-900 transition-colors">Avantages</a></li>
+                        <li><a href="#" class="hover:text-neutral-900 transition-colors">Application Chauffeur</a></li>
+                        <li><a href="#" class="hover:text-neutral-900 transition-colors">Support</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-sm font-medium mb-4 tracking-tight">Entreprise</h4>
+                    <ul class="space-y-3 text-sm text-neutral-500 font-light">
+                        <li><a href="#" class="hover:text-neutral-900 transition-colors">À propos</a></li>
+                        <li><a href="#" class="hover:text-neutral-900 transition-colors">Carrières</a></li>
+                        <li><a href="#" class="hover:text-neutral-900 transition-colors">Presse</a></li>
+                        <li><a href="#" class="hover:text-neutral-900 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-neutral-100 gap-4">
+                <p class="text-xs text-neutral-400 font-light">&copy; 2026 TXI. Tous droits réservés.</p>
+                <div class="flex items-center gap-6 text-xs text-neutral-400 font-light">
+                    <a href="#" class="hover:text-neutral-900 transition-colors">Confidentialité</a>
+                    <a href="#" class="hover:text-neutral-900 transition-colors">Conditions générales</a>
+                    <a href="#" class="hover:text-neutral-900 transition-colors">Mentions légales</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIconOpen = document.getElementById('menu-icon-open');
+        const menuIconClose = document.getElementById('menu-icon-close');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('open');
+            menuIconOpen.classList.toggle('hidden');
+            menuIconClose.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('open');
+                menuIconOpen.classList.remove('hidden');
+                menuIconClose.classList.add('hidden');
+            });
+        });
+
+        // Scroll animations (Intersection Observer)
+        const fadeElements = document.querySelectorAll('.fade-up');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        fadeElements.forEach(el => observer.observe(el));
+
+        // Navbar shadow on scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 10) {
+                navbar.classList.add('shadow-sm');
+            } else {
+                navbar.classList.remove('shadow-sm');
+            }
+        });
+    </script>
+
+</body>
+</html>

@@ -3,8 +3,10 @@
 import { useState } from "react";
 import { Icon } from "@iconify/react";
 import { emailError, phoneError, isValidEmail } from "@/lib/validation";
+import { useTranslations } from "next-intl";
 
 export function CityContactForm({ cityName }: { cityName: string }) {
+  const t = useTranslations("city");
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -44,9 +46,9 @@ export function CityContactForm({ cityName }: { cityName: string }) {
           <div className="w-16 h-16 bg-green-50 border border-green-200 rounded-full flex items-center justify-center mx-auto mb-6">
             <Icon icon="solar:check-circle-linear" className="text-green-600 text-3xl" />
           </div>
-          <h3 className="text-2xl font-semibold tracking-tight mb-2">Message envoyé</h3>
+          <h3 className="text-2xl font-semibold tracking-tight mb-2">{t("contactMessageSent")}</h3>
           <p className="text-sm text-neutral-500 font-light">
-            Nous avons bien reçu votre demande et vous recontacterons dans les plus brefs délais.
+            {t("contactMessageSentDesc")}
           </p>
         </div>
       </section>
@@ -58,20 +60,20 @@ export function CityContactForm({ cityName }: { cityName: string }) {
       <div className="max-w-xl mx-auto px-6">
         <div className="text-center mb-12 fade-up">
           <p className="text-sm font-medium text-neutral-500 mb-2 uppercase tracking-wider">
-            Contact
+            {t("contactSubtitle")}
           </p>
           <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
-            Besoin d&apos;un renseignement ?
+            {t("contactTitle")}
           </h2>
           <p className="text-sm text-neutral-500 font-light mt-3">
-            Notre équipe à {cityName} vous rappelle gratuitement.
+            {t("contactDesc", { cityName })}
           </p>
         </div>
         <form onSubmit={handleSubmit} className="space-y-4 fade-up">
           <input
             value={form.name}
             onChange={(e) => setForm({ ...form, name: e.target.value })}
-            placeholder="Votre nom"
+            placeholder={t("contactName")}
             required
             className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all"
           />
@@ -81,7 +83,7 @@ export function CityContactForm({ cityName }: { cityName: string }) {
                 type="email"
                 value={form.email}
                 onChange={(e) => setForm({ ...form, email: e.target.value })}
-                placeholder="Email"
+                placeholder={t("contactEmail")}
                 required
                 className={`w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all ${emailError(form.email) ? "ring-2 ring-red-300 bg-red-50/50" : ""}`}
               />
@@ -94,7 +96,7 @@ export function CityContactForm({ cityName }: { cityName: string }) {
                 type="tel"
                 value={form.phone}
                 onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                placeholder="Téléphone"
+                placeholder={t("contactPhone")}
                 className={`w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all ${phoneError(form.phone) ? "ring-2 ring-red-300 bg-red-50/50" : ""}`}
               />
               {phoneError(form.phone) && (
@@ -105,7 +107,7 @@ export function CityContactForm({ cityName }: { cityName: string }) {
           <textarea
             value={form.message}
             onChange={(e) => setForm({ ...form, message: e.target.value })}
-            placeholder="Votre message"
+            placeholder={t("contactMessage")}
             required
             rows={4}
             className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all resize-none"
@@ -115,17 +117,17 @@ export function CityContactForm({ cityName }: { cityName: string }) {
             onChange={(e) => setForm({ ...form, callbackTime: e.target.value })}
             className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all text-neutral-500"
           >
-            <option value="">Heure de rappel souhaitée (optionnel)</option>
-            <option value="matin">Le matin (8h - 12h)</option>
-            <option value="apres-midi">L&apos;après-midi (12h - 18h)</option>
-            <option value="soir">Le soir (18h - 20h)</option>
+            <option value="">{t("contactCallbackTime")}</option>
+            <option value="matin">{t("contactMorning")}</option>
+            <option value="apres-midi">{t("contactAfternoon")}</option>
+            <option value="soir">{t("contactEvening")}</option>
           </select>
           <button
             type="submit"
             disabled={submitting || !form.name || !form.email || !isValidEmail(form.email) || !!phoneError(form.phone) || !form.message}
             className="w-full bg-neutral-950 text-white rounded-xl py-4 text-sm font-medium hover:bg-neutral-800 transition-colors btn-lift disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            {submitting ? "Envoi en cours..." : "Envoyer"}
+            {submitting ? t("contactSending") : t("contactSend")}
           </button>
         </form>
       </div>

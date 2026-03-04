@@ -62,7 +62,7 @@ async function isEmailTaken(email: string): Promise<boolean> {
   return !!(driver || org);
 }
 
-async function sendVerificationEmail(email: string, name: string) {
+async function sendVerificationEmail(email: string, name: string, locale: "fr" | "en" = "fr") {
   try {
     const token = crypto.randomUUID();
     const expiresAt = new Date(Date.now() + 24 * 60 * 60 * 1000); // 24h
@@ -73,7 +73,7 @@ async function sendVerificationEmail(email: string, name: string) {
 
     const baseUrl = process.env.NEXTAUTH_URL || "http://localhost:3000";
     const verifyUrl = `${baseUrl}/api/auth/verify-email?token=${token}`;
-    const { subject, html } = buildVerificationEmail(name, verifyUrl);
+    const { subject, html } = buildVerificationEmail(name, verifyUrl, locale);
     await sendEmail({ to: email, subject, html });
   } catch (error) {
     console.error("Failed to send verification email:", error);
@@ -84,6 +84,7 @@ export async function POST(request: Request) {
   try {
     const body = await request.json();
     const data = registerSchema.parse(body);
+    const locale: "fr" | "en" = body.locale === "en" ? "en" : "fr";
 
     // Check email uniqueness across both tables
     if (await isEmailTaken(data.email)) {
@@ -124,7 +125,7 @@ export async function POST(request: Request) {
         },
       });
 
-      await sendVerificationEmail(data.email, data.firstName);
+      await sendVerificationEmail(data.email, data.firstName, locale);
 
       return NextResponse.json(
         { message: "Compte créé avec succès. Vérifiez votre email.", slug: driver.slug },
@@ -158,7 +159,7 @@ export async function POST(request: Request) {
         },
       });
 
-      await sendVerificationEmail(data.email, data.firstName);
+      await sendVerificationEmail(data.email, data.firstName, locale);
 
       return NextResponse.json(
         { message: "Compte créé avec succès. Vérifiez votre email.", profileType: data.profileType },
@@ -185,7 +186,7 @@ export async function POST(request: Request) {
       },
     });
 
-    await sendVerificationEmail(data.email, data.contactName);
+    await sendVerificationEmail(data.email, data.contactName, locale);
 
     return NextResponse.json(
       { message: "Compte créé avec succès. Vérifiez votre email.", profileType: data.profileType },

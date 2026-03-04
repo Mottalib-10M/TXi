@@ -4,7 +4,9 @@ import { sendEmail, buildPasswordResetEmail } from "@/lib/email";
 
 export async function POST(request: Request) {
   try {
-    const { email } = await request.json();
+    const body = await request.json();
+    const { email } = body;
+    const locale: "fr" | "en" = body.locale === "en" ? "en" : "fr";
 
     if (!email) {
       return NextResponse.json({ error: "Email requis" }, { status: 400 });
@@ -34,7 +36,7 @@ export async function POST(request: Request) {
     const baseUrl = process.env.NEXTAUTH_URL || "http://localhost:3000";
     const resetUrl = `${baseUrl}/reset-password?token=${token}`;
     const name = driver ? driver.firstName : (org?.contactName ?? "");
-    const { subject, html } = buildPasswordResetEmail(name, resetUrl);
+    const { subject, html } = buildPasswordResetEmail(name, resetUrl, locale);
     await sendEmail({ to: email, subject, html });
 
     return NextResponse.json({ message: "OK" });

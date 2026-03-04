@@ -1,10 +1,10 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useRouter } from "next/navigation";
 import { useSession } from "next-auth/react";
-import Link from "next/link";
 import { Icon } from "@iconify/react";
+import { useTranslations, useLocale } from "next-intl";
+import { Link, useRouter } from "@/i18n/navigation";
 import { PlacesAutocomplete } from "./PlacesAutocomplete";
 import { emailError, phoneError, isValidEmail, formatPrice } from "@/lib/validation";
 
@@ -26,6 +26,9 @@ interface TaxiResult {
 }
 
 export function BookingForm() {
+  const t = useTranslations("booking");
+  const tc = useTranslations("common");
+  const locale = useLocale();
   const router = useRouter();
   const { data: session } = useSession();
   const [departure, setDeparture] = useState("");
@@ -122,12 +125,13 @@ export function BookingForm() {
           driverId: selectedTaxi.id,
           estimatedPrice: selectedTaxi.estimatedPrice,
           source: "LANDING",
+          locale,
         }),
       });
 
       const data = await res.json();
       if (res.ok) {
-        router.push(`/confirmation?ref=${data.reference}`);
+        router.push(`/confirmation?ref=${data.reference}` as never);
       }
     } catch {
       // Error
@@ -141,14 +145,14 @@ export function BookingForm() {
       {step === "search" && (
         <>
           <h2 className="text-lg font-semibold tracking-tight mb-5">
-            Réserver une course
+            {t("title")}
           </h2>
 
           <div className="relative space-y-3">
             <div className="absolute left-[1.15rem] top-6 bottom-6 w-0.5 bg-neutral-200 z-0" />
 
             <PlacesAutocomplete
-              placeholder="Lieu de départ"
+              placeholder={t("departurePlaceholder")}
               value={departure}
               onChange={(val, lat, lng) => {
                 setDeparture(val);
@@ -170,20 +174,20 @@ export function BookingForm() {
                 setArrivalLng(departureLng);
               }}
               className="absolute right-3 top-1/2 -translate-y-1/2 z-20 w-8 h-8 bg-white border border-neutral-200 rounded-full flex items-center justify-center hover:bg-neutral-50 hover:border-neutral-400 transition-all shadow-sm"
-              title="Inverser départ et destination"
+              title={t("swapTooltip")}
             >
               <Icon icon="solar:sort-vertical-linear" className="text-neutral-500 text-base" />
             </button>
 
             <PlacesAutocomplete
-              placeholder="Destination"
+              placeholder={t("destinationPlaceholder")}
               value={arrival}
               onChange={(val, lat, lng) => {
                 setArrival(val);
                 if (lat) setArrivalLat(lat);
                 if (lng) setArrivalLng(lng);
               }}
-              icon="solar:stop-linear"
+              icon="solar:map-point-linear"
             />
           </div>
 
@@ -199,7 +203,7 @@ export function BookingForm() {
             >
               <Icon icon="solar:clock-circle-linear" className={scheduleLater ? "text-white" : "text-neutral-600"} />
               <span className="text-sm font-medium">
-                {scheduleLater ? "Planifié" : "Maintenant"}
+                {scheduleLater ? t("scheduled") : t("now")}
               </span>
               <Icon icon="solar:alt-arrow-down-linear" className={scheduleLater ? "text-neutral-300" : "text-neutral-400"} />
             </button>
@@ -241,7 +245,7 @@ export function BookingForm() {
               </div>
               {!scheduledDate && (
                 <p className="text-xs text-neutral-400 mt-1.5 ml-1">
-                  Sélectionnez une date et heure pour votre course
+                  {t("selectDateTime")}
                 </p>
               )}
             </div>
@@ -252,7 +256,7 @@ export function BookingForm() {
             disabled={!departure || !arrival || loading}
             className="w-full mt-6 bg-neutral-950 text-white rounded-xl py-4 text-sm font-medium hover:bg-neutral-800 transition-colors focus:ring-4 focus:ring-neutral-200 btn-lift disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            {loading ? "Recherche en cours..." : "Voir les tarifs"}
+            {loading ? t("searching") : t("seePrices")}
           </button>
         </>
       )}
@@ -261,13 +265,13 @@ export function BookingForm() {
         <>
           <div className="flex items-center justify-between mb-5">
             <h2 className="text-lg font-semibold tracking-tight">
-              Taxis disponibles
+              {t("availableTaxis")}
             </h2>
             <button
               onClick={() => setStep("search")}
               className="text-xs text-neutral-500 hover:text-neutral-900 transition-colors"
             >
-              Modifier
+              {tc("edit")}
             </button>
           </div>
 
@@ -280,10 +284,10 @@ export function BookingForm() {
               <Icon icon="solar:clock-circle-linear" className="text-neutral-400 shrink-0" />
               <span>
                 {scheduleLater && scheduledDate
-                  ? new Date(scheduledDate).toLocaleDateString("fr-FR", { weekday: "short", day: "numeric", month: "long" }) +
-                    " à " +
-                    new Date(scheduledDate).toLocaleTimeString("fr-FR", { hour: "2-digit", minute: "2-digit" })
-                  : "Maintenant"}
+                  ? new Date(scheduledDate).toLocaleDateString(locale === "en" ? "en-US" : "fr-FR", { weekday: "short", day: "numeric", month: "long" }) +
+                    (locale === "en" ? " at " : " à ") +
+                    new Date(scheduledDate).toLocaleTimeString(locale === "en" ? "en-US" : "fr-FR", { hour: "2-digit", minute: "2-digit" })
+                  : t("now")}
               </span>
             </div>
           </div>
@@ -292,7 +296,7 @@ export function BookingForm() {
             <div className="text-center py-8">
               <Icon icon="solar:car-linear" className="text-3xl text-neutral-300 mx-auto mb-2" />
               <p className="text-sm text-neutral-500 font-light">
-                Aucun taxi disponible dans cette zone
+                {t("noTaxisAvailable")}
               </p>
             </div>
           ) : (
@@ -308,7 +312,7 @@ export function BookingForm() {
                       <Link
                         href={`/taxi/${taxi.slug}`}
                         className="shrink-0"
-                        title="Voir le profil"
+                        title={t("viewProfile")}
                       >
                         <div className="w-10 h-10 bg-neutral-100 rounded-full flex items-center justify-center overflow-hidden hover:ring-2 hover:ring-neutral-900 transition-all cursor-pointer">
                           {taxi.photoUrl ? (
@@ -338,7 +342,7 @@ export function BookingForm() {
                           </p>
                         ) : (
                           <p className="text-xs text-neutral-500">
-                            Dès {formatPrice(taxi.minimumFare)}
+                            {tc("from")} {formatPrice(taxi.minimumFare)}
                           </p>
                         )}
                       </div>
@@ -353,7 +357,7 @@ export function BookingForm() {
                       }}
                       className="w-full mt-2.5 bg-neutral-900 text-white text-xs font-medium py-2.5 rounded-lg hover:bg-neutral-700 transition-colors"
                     >
-                      Choisir
+                      {tc("choose")}
                     </button>
                   </div>
                 ))}
@@ -361,7 +365,7 @@ export function BookingForm() {
 
               <div className="flex items-center justify-center gap-1.5 mt-4 text-xs text-neutral-400">
                 <Icon icon="solar:shield-check-linear" className="text-green-500" />
-                <span>Tarif fixe garanti</span>
+                <span>{t("fixedPriceGuaranteed")}</span>
               </div>
             </>
           )}
@@ -372,13 +376,13 @@ export function BookingForm() {
         <>
           <div className="flex items-center justify-between mb-5">
             <h2 className="text-lg font-semibold tracking-tight">
-              {isLoggedIn ? "Confirmation" : "Vos coordonnées"}
+              {isLoggedIn ? t("confirmation") : t("yourDetails")}
             </h2>
             <button
               onClick={() => setStep("results")}
               className="text-xs text-neutral-500 hover:text-neutral-900 transition-colors"
             >
-              Retour
+              {tc("back")}
             </button>
           </div>
 
@@ -419,7 +423,7 @@ export function BookingForm() {
               <textarea
                 value={clientComments}
                 onChange={(e) => setClientComments(e.target.value)}
-                placeholder="Note pour le chauffeur (optionnel)"
+                placeholder={t("driverNote")}
                 rows={2}
                 className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all resize-none"
               />
@@ -429,7 +433,7 @@ export function BookingForm() {
               <input
                 value={clientName}
                 onChange={(e) => setClientName(e.target.value)}
-                placeholder="Votre nom complet"
+                placeholder={t("fullName")}
                 className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all"
               />
               <div>
@@ -437,7 +441,7 @@ export function BookingForm() {
                   type="email"
                   value={clientEmail}
                   onChange={(e) => setClientEmail(e.target.value)}
-                  placeholder="Votre email"
+                  placeholder={t("yourEmail")}
                   className={`w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all ${emailError(clientEmail) ? "ring-2 ring-red-300 bg-red-50/50" : ""}`}
                 />
                 {emailError(clientEmail) && (
@@ -449,7 +453,7 @@ export function BookingForm() {
                   type="tel"
                   value={clientPhone}
                   onChange={(e) => setClientPhone(e.target.value)}
-                  placeholder="Votre téléphone"
+                  placeholder={t("yourPhone")}
                   className={`w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all ${phoneError(clientPhone) ? "ring-2 ring-red-300 bg-red-50/50" : ""}`}
                 />
                 {phoneError(clientPhone) && (
@@ -459,7 +463,7 @@ export function BookingForm() {
               <textarea
                 value={clientComments}
                 onChange={(e) => setClientComments(e.target.value)}
-                placeholder="Commentaires (optionnel)"
+                placeholder={t("comments")}
                 rows={2}
                 className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all resize-none"
               />
@@ -471,7 +475,7 @@ export function BookingForm() {
             disabled={!clientName || !clientEmail || !isValidEmail(clientEmail) || !!phoneError(clientPhone) || submitting}
             className="w-full mt-6 bg-neutral-950 text-white rounded-xl py-4 text-sm font-medium hover:bg-neutral-800 transition-colors btn-lift disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            {submitting ? "Réservation en cours..." : "Confirmer la réservation"}
+            {submitting ? t("bookingInProgress") : t("confirmBooking")}
           </button>
         </>
       )}

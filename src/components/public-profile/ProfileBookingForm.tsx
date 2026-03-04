@@ -1,8 +1,9 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter } from "@/i18n/navigation";
 import { useSession } from "next-auth/react";
+import { useTranslations, useLocale } from "next-intl";
 import { Icon } from "@iconify/react";
 import { phoneError } from "@/lib/validation";
 
@@ -29,6 +30,8 @@ export function ProfileBookingForm({
 }: ProfileBookingFormProps) {
   const router = useRouter();
   const { data: session } = useSession();
+  const t = useTranslations("booking");
+  const locale = useLocale();
   const [clientName, setClientName] = useState("");
   const [clientPhone, setClientPhone] = useState("");
   const [isNow, setIsNow] = useState(true);
@@ -89,6 +92,7 @@ export function ProfileBookingForm({
           passengerCount: passengers,
           driverId,
           source: "PROFILE",
+          locale,
         }),
       });
 
@@ -96,10 +100,10 @@ export function ProfileBookingForm({
       if (res.ok) {
         router.push(`/confirmation?ref=${data.reference}`);
       } else {
-        setError(data.error || "Erreur lors de la réservation");
+        setError(data.error || t("bookingError"));
       }
     } catch {
-      setError("Erreur de connexion");
+      setError(t("connectionError"));
     } finally {
       setSubmitting(false);
     }
@@ -108,7 +112,7 @@ export function ProfileBookingForm({
   return (
     <div>
       <h3 className="text-sm font-semibold tracking-tight mb-3 flex items-center gap-2">
-        Réserver avec {driverName.split(" ")[0]}
+        {t("bookWith", { name: driverName.split(" ")[0] })}
       </h3>
 
       <form onSubmit={handleSubmit} className="space-y-3">
@@ -133,7 +137,7 @@ export function ProfileBookingForm({
             <input
               value={clientName}
               onChange={(e) => setClientName(e.target.value)}
-              placeholder="Votre nom complet *"
+              placeholder={t("fullNameRequired")}
               required
               className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all"
             />
@@ -143,7 +147,7 @@ export function ProfileBookingForm({
                 type="tel"
                 value={clientPhone}
                 onChange={(e) => setClientPhone(e.target.value)}
-                placeholder="Votre téléphone *"
+                placeholder={t("phoneRequired")}
                 required
                 className={`w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all ${phoneError(clientPhone) ? "ring-2 ring-red-300 bg-red-50/50" : ""}`}
               />
@@ -164,7 +168,7 @@ export function ProfileBookingForm({
                 : "bg-neutral-100 text-neutral-600 hover:bg-neutral-200"
             }`}
           >
-            Maintenant
+            {t("now")}
           </button>
           <button
             type="button"
@@ -176,7 +180,7 @@ export function ProfileBookingForm({
             }`}
           >
             <Icon icon="solar:clock-circle-linear" className="text-lg" />
-            Planifier
+            {t("schedule")}
           </button>
         </div>
 
@@ -191,7 +195,7 @@ export function ProfileBookingForm({
         )}
 
         <div className="flex items-center justify-between bg-neutral-100 rounded-xl px-4 py-3">
-          <span className="text-sm text-neutral-500">Passagers</span>
+          <span className="text-sm text-neutral-500">{t("passengers")}</span>
           <div className="flex items-center gap-3">
             <button
               type="button"
@@ -218,7 +222,7 @@ export function ProfileBookingForm({
           disabled={!clientName || !clientPhone || !!phoneError(clientPhone) || !hasLocations || (!isNow && !scheduledDate) || submitting}
           className="w-full bg-neutral-950 text-white rounded-xl py-3.5 text-sm font-medium hover:bg-neutral-800 transition-colors btn-lift disabled:opacity-50 disabled:cursor-not-allowed"
         >
-          {submitting ? "Réservation en cours..." : "Réserver maintenant"}
+          {submitting ? t("bookingInProgress") : t("bookNow")}
         </button>
       </form>
     </div>

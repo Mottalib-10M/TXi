@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Icon } from "@iconify/react";
+import { useTranslations } from "next-intl";
 
 type Platform = "ios" | "android" | "desktop-mac" | "desktop-other";
 
@@ -14,42 +15,10 @@ function detectPlatform(): Platform {
   return "desktop-other";
 }
 
-const instructions: Record<Platform, { icon: string; steps: string[] }> = {
-  ios: {
-    icon: "solar:share-linear",
-    steps: [
-      "Appuyez sur le bouton Partager en bas de l'écran",
-      "Faites défiler et appuyez sur « Sur l'écran d'accueil »",
-      "Appuyez sur « Ajouter »",
-    ],
-  },
-  android: {
-    icon: "solar:menu-dots-bold",
-    steps: [
-      "Appuyez sur le menu (⋮) en haut à droite",
-      "Appuyez sur « Ajouter à l'écran d'accueil »",
-      "Confirmez en appuyant sur « Ajouter »",
-    ],
-  },
-  "desktop-mac": {
-    icon: "solar:bookmark-linear",
-    steps: [
-      "Appuyez sur ⌘ + D pour ajouter aux favoris",
-      "Choisissez un dossier et cliquez sur « Ajouter »",
-    ],
-  },
-  "desktop-other": {
-    icon: "solar:bookmark-linear",
-    steps: [
-      "Appuyez sur Ctrl + D pour ajouter aux favoris",
-      "Choisissez un dossier et cliquez sur « Ajouter »",
-    ],
-  },
-};
-
 const STORAGE_KEY = "taxinoir_favorites_dismissed";
 
 export function AddToFavoritesPopup() {
+  const t = useTranslations("favorites");
   const [dismissed, setDismissed] = useState(true);
   const [open, setOpen] = useState(false);
   const [platform, setPlatform] = useState<Platform>("desktop-other");
@@ -62,6 +31,39 @@ export function AddToFavoritesPopup() {
 
   if (dismissed) return null;
 
+  const instructions: Record<Platform, { icon: string; steps: string[] }> = {
+    ios: {
+      icon: "solar:share-linear",
+      steps: [
+        t("iosStep1"),
+        t("iosStep2"),
+        t("iosStep3"),
+      ],
+    },
+    android: {
+      icon: "solar:menu-dots-bold",
+      steps: [
+        t("androidStep1"),
+        t("androidStep2"),
+        t("androidStep3"),
+      ],
+    },
+    "desktop-mac": {
+      icon: "solar:bookmark-linear",
+      steps: [
+        t("desktopMacStep1"),
+        t("desktopMacStep2"),
+      ],
+    },
+    "desktop-other": {
+      icon: "solar:bookmark-linear",
+      steps: [
+        t("desktopOtherStep1"),
+        t("desktopOtherStep2"),
+      ],
+    },
+  };
+
   const info = instructions[platform];
 
   return (
@@ -71,7 +73,7 @@ export function AddToFavoritesPopup() {
         <button
           onClick={() => setOpen(true)}
           className="fixed bottom-6 right-6 z-40 bg-white border border-neutral-200 shadow-lg rounded-full p-3 hover:bg-neutral-50 transition-colors"
-          aria-label="Ajouter aux favoris"
+          aria-label={t("title")}
         >
           <Icon icon="solar:star-linear" className="text-neutral-600 text-xl" />
         </button>
@@ -97,9 +99,9 @@ export function AddToFavoritesPopup() {
                 <Icon icon={info.icon} className="text-neutral-700 text-xl" />
               </div>
               <div>
-                <h3 className="text-sm font-semibold">Accès rapide</h3>
+                <h3 className="text-sm font-semibold">{t("title")}</h3>
                 <p className="text-xs text-neutral-500 font-light">
-                  Ajoutez TaxiNoir à vos favoris
+                  {t("description")}
                 </p>
               </div>
             </div>
@@ -123,7 +125,7 @@ export function AddToFavoritesPopup() {
               }}
               className="w-full bg-neutral-950 text-white rounded-xl py-3 text-sm font-medium hover:bg-neutral-800 transition-colors"
             >
-              J&apos;ai compris
+              {t("gotIt")}
             </button>
           </div>
         </div>

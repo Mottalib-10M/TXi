@@ -2,20 +2,22 @@
 
 import { useState } from "react";
 import { Icon } from "@iconify/react";
+import { useTranslations } from "next-intl";
 import type { CityFAQ as CityFAQType } from "@/data/cities";
 
 export function CityFAQ({ cityName, faq }: { cityName: string; faq: CityFAQType[] }) {
   const [open, setOpen] = useState<number | null>(0);
+  const t = useTranslations("city");
 
   return (
     <section className="bg-neutral-50 border-t border-b border-neutral-100 py-20 md:py-28">
       <div className="max-w-3xl mx-auto px-6">
         <div className="text-center mb-16 fade-up">
           <p className="text-sm font-medium text-neutral-500 mb-2 uppercase tracking-wider">
-            FAQ
+            {t("faqSubtitle")}
           </p>
           <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
-            Questions fréquentes sur les taxis à {cityName}
+            {t("faqTitle", { cityName })}
           </h2>
         </div>
         <div className="space-y-3 fade-up">

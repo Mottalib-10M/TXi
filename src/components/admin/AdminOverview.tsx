@@ -1,9 +1,10 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { Icon } from "@iconify/react";
 import { format } from "date-fns";
-import { fr } from "date-fns/locale";
+import { enUS, fr } from "date-fns/locale";
+import { useLocale, useTranslations } from "next-intl";
 
 interface OverviewData {
   totalDrivers: number;
@@ -29,22 +30,26 @@ interface OverviewData {
   }[];
 }
 
-const statusConfig: Record<string, { label: string; color: string; dot: string }> = {
-  PENDING: { label: "En attente", color: "bg-amber-50 text-amber-700 ring-1 ring-amber-200", dot: "bg-amber-400" },
-  ACCEPTED: { label: "Acceptée", color: "bg-green-50 text-green-700 ring-1 ring-green-200", dot: "bg-green-500" },
-  REJECTED: { label: "Refusée", color: "bg-red-50 text-red-700 ring-1 ring-red-200", dot: "bg-red-400" },
-  CANCELLED: { label: "Annulée", color: "bg-neutral-50 text-neutral-500 ring-1 ring-neutral-200", dot: "bg-neutral-400" },
-  COMPLETED: { label: "Terminée", color: "bg-blue-50 text-blue-700 ring-1 ring-blue-200", dot: "bg-blue-500" },
-};
-
-const orgTypeConfig: Record<string, { label: string; color: string }> = {
-  HOTEL: { label: "Hôtel", color: "bg-blue-50 text-blue-700" },
-  HOSPITAL: { label: "Hôpital", color: "bg-red-50 text-red-700" },
-  ENTERPRISE: { label: "Entreprise", color: "bg-neutral-800 text-white" },
-  INDIVIDUAL: { label: "Individuel", color: "bg-neutral-100 text-neutral-600" },
-};
-
 export function AdminOverview({ data }: { data: OverviewData }) {
+  const t = useTranslations("admin");
+  const tc = useTranslations("common");
+  const locale = useLocale();
+
+  const statusConfig: Record<string, { label: string; color: string; dot: string }> = {
+    PENDING: { label: t("statusPending"), color: "bg-amber-50 text-amber-700 ring-1 ring-amber-200", dot: "bg-amber-400" },
+    ACCEPTED: { label: t("statusAccepted"), color: "bg-green-50 text-green-700 ring-1 ring-green-200", dot: "bg-green-500" },
+    REJECTED: { label: t("statusRejected"), color: "bg-red-50 text-red-700 ring-1 ring-red-200", dot: "bg-red-400" },
+    CANCELLED: { label: t("statusCancelled"), color: "bg-neutral-50 text-neutral-500 ring-1 ring-neutral-200", dot: "bg-neutral-400" },
+    COMPLETED: { label: t("statusCompleted"), color: "bg-blue-50 text-blue-700 ring-1 ring-blue-200", dot: "bg-blue-500" },
+  };
+
+  const orgTypeConfig: Record<string, { label: string; color: string }> = {
+    HOTEL: { label: t("typeHotel"), color: "bg-blue-50 text-blue-700" },
+    HOSPITAL: { label: t("typeHospital"), color: "bg-red-50 text-red-700" },
+    ENTERPRISE: { label: t("typeEnterprise"), color: "bg-neutral-800 text-white" },
+    INDIVIDUAL: { label: t("typeIndividual"), color: "bg-neutral-100 text-neutral-600" },
+  };
+
   return (
     <div>
       {/* Header */}
@@ -54,9 +59,9 @@ export function AdminOverview({ data }: { data: OverviewData }) {
             <Icon icon="solar:chart-square-bold" className="text-violet-600 text-xl" />
           </div>
           <div>
-            <h1 className="text-2xl font-semibold tracking-tight">Vue d&apos;ensemble</h1>
+            <h1 className="text-2xl font-semibold tracking-tight">{t("overview")}</h1>
             <p className="text-sm text-neutral-500 font-light">
-              Tableau de bord administrateur
+              {t("adminDashboard")}
             </p>
           </div>
         </div>
@@ -75,15 +80,15 @@ export function AdminOverview({ data }: { data: OverviewData }) {
             <Icon icon="solar:arrow-right-up-linear" className="text-white/50 group-hover:text-white/80 transition-colors" />
           </div>
           <p className="text-3xl font-bold">{data.totalDrivers}</p>
-          <p className="text-sm text-blue-100 mt-1">Chauffeurs</p>
+          <p className="text-sm text-blue-100 mt-1">{t("drivers")}</p>
           <div className="flex gap-3 mt-3 pt-3 border-t border-white/20">
             <span className="text-xs text-blue-100 flex items-center gap-1">
               <span className="w-1.5 h-1.5 bg-green-300 rounded-full" />
-              {data.activeDrivers} actifs
+              {t("activeDrivers", { count: data.activeDrivers })}
             </span>
             <span className="text-xs text-blue-200 flex items-center gap-1">
               <span className="w-1.5 h-1.5 bg-white/40 rounded-full" />
-              {data.inactiveDrivers} inactifs
+              {t("inactiveDrivers", { count: data.inactiveDrivers })}
             </span>
           </div>
         </Link>
@@ -99,7 +104,7 @@ export function AdminOverview({ data }: { data: OverviewData }) {
             <Icon icon="solar:arrow-right-up-linear" className="text-white/50 group-hover:text-white/80 transition-colors" />
           </div>
           <p className="text-3xl font-bold">{data.totalOrgs}</p>
-          <p className="text-sm text-violet-100 mt-1">Organisations</p>
+          <p className="text-sm text-violet-100 mt-1">{t("organisations")}</p>
         </Link>
 
         <Link
@@ -113,15 +118,15 @@ export function AdminOverview({ data }: { data: OverviewData }) {
             <Icon icon="solar:arrow-right-up-linear" className="text-white/50 group-hover:text-white/80 transition-colors" />
           </div>
           <p className="text-3xl font-bold">{data.totalBookings}</p>
-          <p className="text-sm text-amber-100 mt-1">Réservations</p>
+          <p className="text-sm text-amber-100 mt-1">{t("reservations")}</p>
           <div className="flex gap-3 mt-3 pt-3 border-t border-white/20">
             <span className="text-xs text-amber-100 flex items-center gap-1">
               <span className="w-1.5 h-1.5 bg-yellow-300 rounded-full animate-pulse" />
-              {data.bookingsByStatus.PENDING || 0} en attente
+              {t("pendingCount", { count: data.bookingsByStatus.PENDING || 0 })}
             </span>
             <span className="text-xs text-amber-100 flex items-center gap-1">
               <span className="w-1.5 h-1.5 bg-green-300 rounded-full" />
-              {data.bookingsByStatus.ACCEPTED || 0} acceptées
+              {t("acceptedCount", { count: data.bookingsByStatus.ACCEPTED || 0 })}
             </span>
           </div>
         </Link>
@@ -133,10 +138,10 @@ export function AdminOverview({ data }: { data: OverviewData }) {
             </div>
           </div>
           <p className="text-3xl font-bold">{data.totalRevenue.toFixed(0)}<span className="text-lg ml-1">&euro;</span></p>
-          <p className="text-sm text-green-100 mt-1">Revenu total</p>
+          <p className="text-sm text-green-100 mt-1">{t("totalRevenue")}</p>
           <div className="mt-3 pt-3 border-t border-white/20">
             <span className="text-xs text-green-100">
-              {data.bookingsByStatus.COMPLETED || 0} courses terminées
+              {t("completedRides", { count: data.bookingsByStatus.COMPLETED || 0 })}
             </span>
           </div>
         </div>
@@ -145,7 +150,7 @@ export function AdminOverview({ data }: { data: OverviewData }) {
       {/* Status breakdown bar */}
       {data.totalBookings > 0 && (
         <div className="bg-white border border-neutral-200 rounded-2xl p-5 mb-8">
-          <h3 className="text-sm font-semibold mb-3">Répartition des réservations</h3>
+          <h3 className="text-sm font-semibold mb-3">{t("bookingsBreakdown")}</h3>
           <div className="flex rounded-full overflow-hidden h-3 bg-neutral-100">
             {Object.entries(statusConfig).map(([key, config]) => {
               const count = data.bookingsByStatus[key] || 0;
@@ -183,10 +188,10 @@ export function AdminOverview({ data }: { data: OverviewData }) {
           <div className="flex items-center justify-between px-5 py-4 border-b border-neutral-100">
             <div className="flex items-center gap-2">
               <Icon icon="solar:user-hands-linear" className="text-blue-500" />
-              <h2 className="font-semibold text-sm">Derniers chauffeurs</h2>
+              <h2 className="font-semibold text-sm">{t("recentDrivers")}</h2>
             </div>
             <Link href="/admin/chauffeurs" className="text-xs text-neutral-500 hover:text-neutral-900 transition-colors flex items-center gap-1">
-              Tout voir
+              {tc("seeAll")}
               <Icon icon="solar:arrow-right-linear" className="text-xs" />
             </Link>
           </div>
@@ -194,7 +199,7 @@ export function AdminOverview({ data }: { data: OverviewData }) {
             {data.recentDrivers.length === 0 ? (
               <div className="px-5 py-8 text-center">
                 <Icon icon="solar:user-cross-linear" className="text-3xl text-neutral-200 mx-auto mb-2" />
-                <p className="text-sm text-neutral-400 font-light">Aucun chauffeur</p>
+                <p className="text-sm text-neutral-400 font-light">{t("noDrivers")}</p>
               </div>
             ) : (
               data.recentDrivers.map((driver) => (
@@ -209,7 +214,7 @@ export function AdminOverview({ data }: { data: OverviewData }) {
                   <div className="flex items-center gap-2 shrink-0">
                     <span className={`w-2 h-2 rounded-full ${driver.isActive ? "bg-green-500" : "bg-neutral-300"}`} />
                     <span className="text-xs text-neutral-400 hidden sm:inline">
-                      {format(new Date(driver.createdAt), "dd MMM", { locale: fr })}
+                      {format(new Date(driver.createdAt), "dd MMM", { locale: locale === "en" ? enUS : fr })}
                     </span>
                   </div>
                 </div>
@@ -223,10 +228,10 @@ export function AdminOverview({ data }: { data: OverviewData }) {
           <div className="flex items-center justify-between px-5 py-4 border-b border-neutral-100">
             <div className="flex items-center gap-2">
               <Icon icon="solar:buildings-2-linear" className="text-violet-500" />
-              <h2 className="font-semibold text-sm">Dernières organisations</h2>
+              <h2 className="font-semibold text-sm">{t("recentOrgs")}</h2>
             </div>
             <Link href="/admin/organisations" className="text-xs text-neutral-500 hover:text-neutral-900 transition-colors flex items-center gap-1">
-              Tout voir
+              {tc("seeAll")}
               <Icon icon="solar:arrow-right-linear" className="text-xs" />
             </Link>
           </div>
@@ -234,7 +239,7 @@ export function AdminOverview({ data }: { data: OverviewData }) {
             {data.recentOrgs.length === 0 ? (
               <div className="px-5 py-8 text-center">
                 <Icon icon="solar:buildings-2-linear" className="text-3xl text-neutral-200 mx-auto mb-2" />
-                <p className="text-sm text-neutral-400 font-light">Aucune organisation</p>
+                <p className="text-sm text-neutral-400 font-light">{t("noOrgs")}</p>
               </div>
             ) : (
               data.recentOrgs.map((org) => (
@@ -252,7 +257,7 @@ export function AdminOverview({ data }: { data: OverviewData }) {
                     <p className="text-xs text-neutral-400 truncate">{org.email}</p>
                   </div>
                   <span className="text-xs text-neutral-400 shrink-0 hidden sm:inline">
-                    {format(new Date(org.createdAt), "dd MMM", { locale: fr })}
+                    {format(new Date(org.createdAt), "dd MMM", { locale: locale === "en" ? enUS : fr })}
                   </span>
                 </div>
               ))
@@ -266,17 +271,17 @@ export function AdminOverview({ data }: { data: OverviewData }) {
         <div className="flex items-center justify-between px-5 py-4 border-b border-neutral-100">
           <div className="flex items-center gap-2">
             <Icon icon="solar:calendar-linear" className="text-amber-500" />
-            <h2 className="font-semibold text-sm">Dernières réservations</h2>
+            <h2 className="font-semibold text-sm">{t("recentBookings")}</h2>
           </div>
           <Link href="/admin/reservations" className="text-xs text-neutral-500 hover:text-neutral-900 transition-colors flex items-center gap-1">
-            Tout voir
+            {tc("seeAll")}
             <Icon icon="solar:arrow-right-linear" className="text-xs" />
           </Link>
         </div>
         {data.recentBookings.length === 0 ? (
           <div className="px-5 py-8 text-center">
             <Icon icon="solar:calendar-linear" className="text-3xl text-neutral-200 mx-auto mb-2" />
-            <p className="text-sm text-neutral-400 font-light">Aucune réservation</p>
+            <p className="text-sm text-neutral-400 font-light">{t("noBookings")}</p>
           </div>
         ) : (
           <div className="divide-y divide-neutral-100">
@@ -319,7 +324,7 @@ export function AdminOverview({ data }: { data: OverviewData }) {
                     </p>
                   )}
                   <p className="text-xs text-neutral-400">
-                    {format(new Date(booking.createdAt), "dd MMM yyyy", { locale: fr })}
+                    {format(new Date(booking.createdAt), "dd MMM yyyy", { locale: locale === "en" ? enUS : fr })}
                   </p>
                 </div>
               </div>

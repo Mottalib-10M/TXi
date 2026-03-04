@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Icon } from "@iconify/react";
 import { PlacesAutocomplete } from "@/components/booking/PlacesAutocomplete";
+import { useTranslations } from "next-intl";
 
 interface FareEstimatorProps {
   baseFare: number;
@@ -63,6 +64,7 @@ export function FareEstimator({
   onLocationsChange,
   children,
 }: FareEstimatorProps) {
+  const t = useTranslations("driverProfile");
   const [origin, setOrigin] = useState<LocationState>({ address: "" });
   const [destination, setDestination] = useState<LocationState>({ address: "" });
   const [scheduledDate, setScheduledDate] = useState("");
@@ -105,7 +107,7 @@ export function FareEstimator({
       destination.lng!
     );
     const distance = straightLine * 1.3; // Road factor
-    // Variable speed: city (short) → highway (long distance)
+    // Variable speed: city (short) -> highway (long distance)
     const avgSpeed = distance < 10 ? 25 : distance < 30 ? 40 : distance < 80 ? 60 : 80;
     const duration = (distance / avgSpeed) * 60; // minutes
     // Determine night/day based on scheduled time (night = 19h-7h)
@@ -124,19 +126,19 @@ export function FareEstimator({
     <div className="bg-white border border-neutral-200 rounded-2xl p-6">
       <h2 className="text-base font-semibold tracking-tight mb-4 flex items-center gap-2">
         <Icon icon="solar:calculator-linear" className="text-neutral-400" />
-        Estimation tarif et réservation
+        {t("fareTitle")}
       </h2>
 
       <div className="space-y-3 mb-4">
         <PlacesAutocomplete
-          placeholder="Point de depart"
+          placeholder={t("departurePlaceholder")}
           value={origin.address}
           onChange={handleOriginChange}
           icon="solar:map-point-linear"
           showGeolocation
         />
         <PlacesAutocomplete
-          placeholder="Destination"
+          placeholder={t("destinationPlaceholder")}
           value={destination.address}
           onChange={handleDestinationChange}
           icon="solar:flag-linear"
@@ -158,7 +160,7 @@ export function FareEstimator({
         />
         {!scheduledDate && (
           <p className="text-xs text-neutral-400 mt-1.5 ml-1">
-            Date et heure de la course
+            {t("rideDateTime")}
           </p>
         )}
       </div>
@@ -168,37 +170,37 @@ export function FareEstimator({
           <div className="flex items-center justify-between text-sm">
             <span className="text-neutral-500 flex items-center gap-1.5">
               <Icon icon="solar:route-linear" className="text-neutral-400" />
-              Distance estimee
+              {t("estimatedDistance")}
             </span>
             <span className="font-medium">{estimate.distance.toFixed(1)} km</span>
           </div>
           <div className="flex items-center justify-between text-sm">
             <span className="text-neutral-500 flex items-center gap-1.5">
               <Icon icon="solar:clock-circle-linear" className="text-neutral-400" />
-              Duree estimee
+              {t("estimatedDuration")}
             </span>
             <span className="font-medium">{formatDuration(estimate.duration)}</span>
           </div>
           <div className="border-t border-neutral-200 pt-3 flex items-center justify-between">
             <div>
-              <span className="text-sm font-medium">Prix estime</span>
+              <span className="text-sm font-medium">{t("estimatedPrice")}</span>
               {estimate.isNight && (
                 <span className="ml-2 text-[10px] bg-neutral-900 text-white px-1.5 py-0.5 rounded-full">
-                  Tarif nuit
+                  {t("nightFare")}
                 </span>
               )}
             </div>
             <span className="text-lg font-semibold">{estimate.price.toFixed(2)} &euro;</span>
           </div>
           <p className="text-[10px] text-neutral-400 font-light">
-            Estimation indicative basee sur la distance a vol d&apos;oiseau. Le prix reel peut varier.
+            {t("fareDisclaimer")}
           </p>
         </div>
       )}
 
       {!canEstimate && origin.address && destination.address && (
         <p className="text-xs text-neutral-400 text-center py-2">
-          Selectionnez des adresses dans les suggestions pour estimer le tarif
+          {t("selectAddresses")}
         </p>
       )}
 

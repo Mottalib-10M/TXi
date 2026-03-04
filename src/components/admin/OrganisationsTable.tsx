@@ -1,10 +1,11 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter } from "@/i18n/navigation";
 import { Icon } from "@iconify/react";
 import { format } from "date-fns";
-import { fr } from "date-fns/locale";
+import { enUS, fr } from "date-fns/locale";
+import { useLocale, useTranslations } from "next-intl";
 
 interface Organisation {
   id: string;
@@ -18,26 +19,28 @@ interface Organisation {
   createdAt: string;
 }
 
-const typeConfig: Record<string, { label: string; color: string }> = {
-  HOTEL: { label: "Hôtel", color: "bg-blue-50 text-blue-700" },
-  HOSPITAL: { label: "Hôpital", color: "bg-red-50 text-red-700" },
-  ENTERPRISE: { label: "Entreprise", color: "bg-neutral-900 text-white" },
-  INDIVIDUAL: { label: "Individuel", color: "bg-neutral-100 text-neutral-600" },
-};
-
-const typeFilters: { key: string | null; label: string }[] = [
-  { key: null, label: "Tous" },
-  { key: "INDIVIDUAL", label: "Particuliers" },
-  { key: "HOTEL", label: "Hôtels" },
-  { key: "HOSPITAL", label: "Hôpitaux" },
-  { key: "ENTERPRISE", label: "Entreprises" },
-];
-
 export function OrganisationsTable({ organisations }: { organisations: Organisation[] }) {
+  const t = useTranslations("admin");
+  const locale = useLocale();
   const router = useRouter();
   const [search, setSearch] = useState("");
   const [selectedType, setSelectedType] = useState<string | null>(null);
   const [impersonating, setImpersonating] = useState<string | null>(null);
+
+  const typeConfig: Record<string, { label: string; color: string }> = {
+    HOTEL: { label: t("typeHotel"), color: "bg-blue-50 text-blue-700" },
+    HOSPITAL: { label: t("typeHospital"), color: "bg-red-50 text-red-700" },
+    ENTERPRISE: { label: t("typeEnterprise"), color: "bg-neutral-900 text-white" },
+    INDIVIDUAL: { label: t("typeIndividual"), color: "bg-neutral-100 text-neutral-600" },
+  };
+
+  const typeFilters: { key: string | null; label: string }[] = [
+    { key: null, label: t("filterAll") },
+    { key: "INDIVIDUAL", label: t("filterIndividuals") },
+    { key: "HOTEL", label: t("filterHotels") },
+    { key: "HOSPITAL", label: t("filterHospitals") },
+    { key: "ENTERPRISE", label: t("filterEnterprises") },
+  ];
 
   const filtered = useMemo(() => {
     return organisations.filter((o) => {
@@ -87,7 +90,7 @@ export function OrganisationsTable({ organisations }: { organisations: Organisat
           type="text"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          placeholder="Rechercher par nom ou email..."
+          placeholder={t("searchOrgs")}
           className="w-full pl-10 pr-4 py-2.5 bg-white border border-neutral-200 rounded-xl text-sm focus:outline-none focus:border-neutral-400 transition-colors"
         />
       </div>
@@ -118,7 +121,7 @@ export function OrganisationsTable({ organisations }: { organisations: Organisat
       {filtered.length === 0 ? (
         <div className="bg-white border border-neutral-200 rounded-2xl p-12 text-center">
           <Icon icon="solar:buildings-2-linear" className="text-4xl text-neutral-300 mx-auto mb-3" />
-          <p className="text-sm text-neutral-500 font-light">Aucune organisation trouvée</p>
+          <p className="text-sm text-neutral-500 font-light">{t("noOrgsFound")}</p>
         </div>
       ) : (
         <div className="space-y-3">
@@ -162,14 +165,14 @@ export function OrganisationsTable({ organisations }: { organisations: Organisat
                 <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-neutral-400">
                   <span className="flex items-center gap-1">
                     <Icon icon="solar:wallet-money-linear" />
-                    Cagnotte : {org.cagnotteBalance.toFixed(2)} &euro;
+                    {t("wallet", { amount: org.cagnotteBalance.toFixed(2) })}
                   </span>
                   <span className="flex items-center gap-1">
                     <Icon icon="solar:calendar-linear" />
-                    {org.bookingsCount} course{org.bookingsCount > 1 ? "s" : ""}
+                    {t("ridesCount", { count: org.bookingsCount })}
                   </span>
                   <span>
-                    Inscrite le {format(new Date(org.createdAt), "dd MMM yyyy", { locale: fr })}
+                    {t("registeredOnFem", { date: format(new Date(org.createdAt), "dd MMM yyyy", { locale: locale === "en" ? enUS : fr }) })}
                   </span>
                 </div>
                 <button
@@ -178,7 +181,7 @@ export function OrganisationsTable({ organisations }: { organisations: Organisat
                   className="px-3 py-1.5 rounded-lg text-xs font-medium bg-amber-50 text-amber-700 hover:bg-amber-100 transition-colors flex items-center gap-1 disabled:opacity-50"
                 >
                   <Icon icon="solar:login-3-linear" />
-                  {impersonating === org.id ? "..." : "Se connecter en tant que"}
+                  {impersonating === org.id ? "..." : t("loginAs")}
                 </button>
               </div>
             </div>

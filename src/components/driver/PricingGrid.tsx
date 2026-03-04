@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 
 interface Pricing {
   baseFare: number;
@@ -15,22 +16,23 @@ interface PricingGridProps {
   onChange: (pricing: Pricing) => void;
 }
 
-const pricingFields = [
-  { key: "baseFare" as const, label: "Prise en charge", suffix: "€", description: "Montant au démarrage du compteur" },
-  { key: "pricePerKm" as const, label: "Prix au km jour", suffix: "€/km", description: "Tarif kilométrique en journée" },
-  { key: "pricePerKmNight" as const, label: "Prix au km nuit", suffix: "€/km", description: "Tarif kilométrique de nuit (19h-7h)" },
-  { key: "pricePerMinute" as const, label: "Prix à la minute", suffix: "€/min", description: "Tarif d'attente/embouteillage" },
-  { key: "minimumFare" as const, label: "Course minimum", suffix: "€", description: "Montant minimum facturé" },
-];
-
 export function PricingGrid({ pricing, onChange }: PricingGridProps) {
+  const t = useTranslations("pricingGrid");
   const [rawValues, setRawValues] = useState<Record<string, string>>({});
+
+  const pricingFields = [
+    { key: "baseFare" as const, label: t("baseFare"), suffix: "\u20AC", description: t("baseFareDesc") },
+    { key: "pricePerKm" as const, label: t("dayRate"), suffix: "\u20AC/km", description: t("dayRateDesc") },
+    { key: "pricePerKmNight" as const, label: t("nightRate"), suffix: "\u20AC/km", description: t("nightRateDesc") },
+    { key: "pricePerMinute" as const, label: t("waitRate"), suffix: "\u20AC/min", description: t("waitRateDesc") },
+    { key: "minimumFare" as const, label: t("minFare"), suffix: "\u20AC", description: t("minFareDesc") },
+  ];
 
   return (
     <div className="space-y-4">
-      <h2 className="text-lg font-semibold tracking-tight mb-4">Tarification</h2>
+      <h2 className="text-lg font-semibold tracking-tight mb-4">{t("title")}</h2>
       <p className="text-sm text-neutral-500 font-light mb-6">
-        Définissez vos tarifs. Ces informations seront visibles sur votre profil public.
+        {t("subtitle")}
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

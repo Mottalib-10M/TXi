@@ -10,6 +10,7 @@ import type { Vehicle } from "@/types/vehicle";
 import { EMPTY_VEHICLE } from "@/types/vehicle";
 import { VehicleMiniature } from "@/components/ui/VehicleMiniature";
 import { VEHICLE_BRANDS, BRAND_NAMES, VEHICLE_COLORS } from "@/data/vehicle-models";
+import { useTranslations } from "next-intl";
 
 interface DriverData {
   id: string;
@@ -105,6 +106,7 @@ async function compressImageClient(
 }
 
 export function ProfileForm({ driver }: { driver: DriverData }) {
+  const t = useTranslations("profileForm");
   const searchParams = useSearchParams();
   const [saving, setSaving] = useState(false);
   const [success, setSuccess] = useState(false);
@@ -227,12 +229,12 @@ export function ProfileForm({ driver }: { driver: DriverData }) {
   }
 
   const sections = [
-    { id: "personal", label: "Infos personnelles", icon: "solar:user-linear" },
-    { id: "vehicle", label: "Véhicule", icon: "mdi:car-outline" },
-    { id: "zone", label: "Zone de couverture", icon: "solar:map-point-linear" },
-    { id: "pricing", label: "Tarification", icon: "solar:tag-price-linear" },
-    { id: "availability", label: "Disponibilités", icon: "solar:clock-circle-linear" },
-    { id: "notifications", label: "Notifications", icon: "solar:bell-linear" },
+    { id: "personal", label: t("tabs.personal"), icon: "solar:user-linear" },
+    { id: "vehicle", label: t("tabs.vehicle"), icon: "mdi:car-outline" },
+    { id: "zone", label: t("tabs.coverage"), icon: "solar:map-point-linear" },
+    { id: "pricing", label: t("tabs.pricing"), icon: "solar:tag-price-linear" },
+    { id: "availability", label: t("tabs.availability"), icon: "solar:clock-circle-linear" },
+    { id: "notifications", label: t("tabs.notifications"), icon: "solar:bell-linear" },
   ];
 
   return (
@@ -261,7 +263,7 @@ export function ProfileForm({ driver }: { driver: DriverData }) {
         {activeSection === "personal" && (
           <div className="space-y-4">
             <h2 className="text-lg font-semibold tracking-tight mb-4">
-              Informations personnelles
+              {t("personalInfo")}
             </h2>
 
             {/* Profile photo */}
@@ -293,7 +295,7 @@ export function ProfileForm({ driver }: { driver: DriverData }) {
                   )}
                 </div>
               </button>
-              <span className="text-xs text-neutral-400">Cliquez pour modifier</span>
+              <span className="text-xs text-neutral-400">{t("clickToEdit")}</span>
               <input
                 ref={photoInputRef}
                 type="file"
@@ -304,17 +306,17 @@ export function ProfileForm({ driver }: { driver: DriverData }) {
             </div>
 
             <div>
-              <label className="block text-sm font-medium mb-1.5">Nom de société</label>
+              <label className="block text-sm font-medium mb-1.5">{t("companyName")}</label>
               <input
                 value={form.companyName}
                 onChange={(e) => updateField("companyName", e.target.value)}
                 className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all"
-                placeholder="Ex: Taxi Express Paris"
+                placeholder={t("companyPlaceholder")}
               />
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
-                <label className="block text-sm font-medium mb-1.5">Prénom</label>
+                <label className="block text-sm font-medium mb-1.5">{t("firstName")}</label>
                 <input
                   value={form.firstName}
                   onChange={(e) => updateField("firstName", e.target.value)}
@@ -322,7 +324,7 @@ export function ProfileForm({ driver }: { driver: DriverData }) {
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium mb-1.5">Nom</label>
+                <label className="block text-sm font-medium mb-1.5">{t("lastName")}</label>
                 <input
                   value={form.lastName}
                   onChange={(e) => updateField("lastName", e.target.value)}
@@ -331,7 +333,7 @@ export function ProfileForm({ driver }: { driver: DriverData }) {
               </div>
             </div>
             <div>
-              <label className="block text-sm font-medium mb-1.5">Téléphone</label>
+              <label className="block text-sm font-medium mb-1.5">{t("phone")}</label>
               <input
                 type="tel"
                 value={form.phone}
@@ -353,7 +355,7 @@ export function ProfileForm({ driver }: { driver: DriverData }) {
                   }
                 }}
                 className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all"
-                placeholder="06 12 34 56 78"
+                placeholder={t("phonePlaceholder")}
               />
               {form.phone && (() => {
                 const digits = form.phone.replace(/[^\d]/g, "");
@@ -363,7 +365,7 @@ export function ProfileForm({ driver }: { driver: DriverData }) {
                   return (
                     <p className="text-xs text-amber-600 mt-1.5 flex items-center gap-1">
                       <Icon icon="solar:info-circle-linear" className="text-sm shrink-0" />
-                      {isInternational ? "Format attendu : +33 6 12 34 56 78" : "Le numéro doit contenir 10 chiffres"}
+                      {isInternational ? t("phoneFormatError") : t("phoneDigitsError")}
                     </p>
                   );
                 }
@@ -371,13 +373,13 @@ export function ProfileForm({ driver }: { driver: DriverData }) {
               })()}
             </div>
             <div>
-              <label className="block text-sm font-medium mb-1.5">Bio</label>
+              <label className="block text-sm font-medium mb-1.5">{t("bio")}</label>
               <textarea
                 value={form.bio}
                 onChange={(e) => updateField("bio", e.target.value)}
                 rows={3}
                 className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all resize-none"
-                placeholder="Décrivez votre expérience, vos spécialités..."
+                placeholder={t("bioPlaceholder")}
               />
             </div>
           </div>
@@ -439,13 +441,13 @@ export function ProfileForm({ driver }: { driver: DriverData }) {
         {activeSection === "notifications" && (
           <div className="space-y-4">
             <h2 className="text-lg font-semibold tracking-tight mb-4">
-              Préférences de notification
+              {t("notificationPrefs")}
             </h2>
             <label className="flex items-center justify-between py-3 border-b border-neutral-100">
               <div>
-                <p className="text-sm font-medium">Notifications par email</p>
+                <p className="text-sm font-medium">{t("emailNotifications")}</p>
                 <p className="text-xs text-neutral-500 font-light">
-                  Recevoir un email pour chaque nouvelle réservation
+                  {t("emailNotificationsDesc")}
                 </p>
               </div>
               <button
@@ -464,9 +466,9 @@ export function ProfileForm({ driver }: { driver: DriverData }) {
             </label>
             <label className="flex items-center justify-between py-3">
               <div>
-                <p className="text-sm font-medium">Notifications par SMS</p>
+                <p className="text-sm font-medium">{t("smsNotifications")}</p>
                 <p className="text-xs text-neutral-500 font-light">
-                  Recevoir un SMS pour les réservations urgentes
+                  {t("smsNotificationsDesc")}
                 </p>
               </div>
               <button
@@ -491,7 +493,7 @@ export function ProfileForm({ driver }: { driver: DriverData }) {
           {error && (
             <span className="flex items-center gap-1.5 text-red-500 text-sm">
               <Icon icon="solar:danger-circle-linear" />
-              Erreur, réessayez
+              {t("errorRetry")}
             </span>
           )}
           <span
@@ -500,14 +502,14 @@ export function ProfileForm({ driver }: { driver: DriverData }) {
             }`}
           >
             <Icon icon="solar:check-circle-bold" />
-            Enregistré !
+            {t("saved")}
           </span>
           <button
             onClick={handleSave}
             disabled={saving}
             className="bg-neutral-950 text-white rounded-xl w-36 py-2.5 text-sm font-medium hover:bg-neutral-800 transition-colors disabled:opacity-50 btn-lift text-center"
           >
-            {saving ? "Enregistrement..." : "Enregistrer"}
+            {saving ? t("saving") : t("saveButton")}
           </button>
         </div>
       </div>
@@ -528,23 +530,24 @@ function VehicleSection({
   addVehicle: () => void;
   removeVehicle: (index: number) => void;
 }) {
+  const t = useTranslations("profileForm");
   const [activeTab, setActiveTab] = useState(0);
 
   // Ensure at least one vehicle exists for the form
   if (vehicles.length === 0) {
     return (
       <div className="space-y-4">
-        <h2 className="text-lg font-semibold tracking-tight mb-4">Véhicule</h2>
+        <h2 className="text-lg font-semibold tracking-tight mb-4">{t("vehicleTitle")}</h2>
         <div className="text-center py-8">
           <Icon icon="mdi:car-outline" className="text-4xl text-neutral-300 mx-auto mb-3" />
-          <p className="text-sm text-neutral-500 mb-4">Aucun véhicule enregistré</p>
+          <p className="text-sm text-neutral-500 mb-4">{t("noVehicle")}</p>
           <button
             type="button"
             onClick={addVehicle}
             className="bg-neutral-950 text-white rounded-xl px-5 py-2.5 text-sm font-medium hover:bg-neutral-800 transition-colors inline-flex items-center gap-2"
           >
             <Icon icon="solar:add-circle-linear" />
-            Ajouter un véhicule
+            {t("addVehicle")}
           </button>
         </div>
       </div>
@@ -556,7 +559,7 @@ function VehicleSection({
   return (
     <div className="space-y-4">
       <div className="flex items-center justify-between mb-4">
-        <h2 className="text-lg font-semibold tracking-tight">Véhicule</h2>
+        <h2 className="text-lg font-semibold tracking-tight">{t("vehicleTitle")}</h2>
         <span className="text-xs text-neutral-400">{vehicles.length}/2</span>
       </div>
 
@@ -574,7 +577,7 @@ function VehicleSection({
             }`}
           >
             <Icon icon="mdi:car-outline" className="text-base" />
-            Véhicule {i + 1}
+            {t("vehicleNumber", { number: i + 1 })}
           </button>
         ))}
         {vehicles.length < 2 && (
@@ -587,7 +590,7 @@ function VehicleSection({
             className="flex items-center gap-1 px-3 py-1.5 rounded-lg text-sm font-medium text-neutral-500 border border-dashed border-neutral-300 hover:border-neutral-400 hover:text-neutral-700 transition-colors"
           >
             <Icon icon="solar:add-circle-linear" className="text-base" />
-            Ajouter un véhicule
+            {t("addVehicle")}
           </button>
         )}
       </div>
@@ -614,13 +617,13 @@ function VehicleSection({
           className="flex items-center gap-1 text-xs text-red-500 hover:text-red-700 transition-colors"
         >
           <Icon icon="solar:trash-bin-trash-linear" className="text-sm" />
-          Supprimer ce véhicule
+          {t("deleteVehicle")}
         </button>
       )}
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <label className="block text-sm font-medium mb-1.5">Marque</label>
+          <label className="block text-sm font-medium mb-1.5">{t("brand")}</label>
           <input
             list="brand-list"
             value={vehicle.brand}
@@ -632,7 +635,7 @@ function VehicleSection({
               }
             }}
             className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all"
-            placeholder="Ex : Mercedes-Benz"
+            placeholder={t("brandPlaceholder")}
           />
           <datalist id="brand-list">
             {BRAND_NAMES.map((b) => (
@@ -641,13 +644,13 @@ function VehicleSection({
           </datalist>
         </div>
         <div>
-          <label className="block text-sm font-medium mb-1.5">Modèle</label>
+          <label className="block text-sm font-medium mb-1.5">{t("model")}</label>
           <input
             list={`model-list-${activeTab}`}
             value={vehicle.model}
             onChange={(e) => updateVehicle(activeTab, "model", e.target.value)}
             className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all"
-            placeholder="Ex : Classe E"
+            placeholder={t("modelPlaceholder")}
           />
           <datalist id={`model-list-${activeTab}`}>
             {(VEHICLE_BRANDS[vehicle.brand] || []).map((m) => (
@@ -656,7 +659,7 @@ function VehicleSection({
           </datalist>
         </div>
         <div>
-          <label className="block text-sm font-medium mb-1.5">Année</label>
+          <label className="block text-sm font-medium mb-1.5">{t("year")}</label>
           <input
             type="number"
             value={vehicle.year}
@@ -665,13 +668,13 @@ function VehicleSection({
           />
         </div>
         <div>
-          <label className="block text-sm font-medium mb-1.5">Couleur</label>
+          <label className="block text-sm font-medium mb-1.5">{t("color")}</label>
           <input
             list="color-list"
             value={vehicle.color}
             onChange={(e) => updateVehicle(activeTab, "color", e.target.value)}
             className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all"
-            placeholder="Ex : Noir"
+            placeholder={t("colorPlaceholder")}
           />
           <datalist id="color-list">
             {VEHICLE_COLORS.map((c) => (
@@ -680,7 +683,7 @@ function VehicleSection({
           </datalist>
         </div>
         <div>
-          <label className="block text-sm font-medium mb-1.5">Plaque</label>
+          <label className="block text-sm font-medium mb-1.5">{t("plate")}</label>
           <input
             value={vehicle.plate}
             onChange={(e) => {
@@ -696,7 +699,7 @@ function VehicleSection({
           />
         </div>
         <div>
-          <label className="block text-sm font-medium mb-1.5">Capacité passagers</label>
+          <label className="block text-sm font-medium mb-1.5">{t("passengerCapacity")}</label>
           <input
             type="number"
             min={1}
@@ -709,7 +712,7 @@ function VehicleSection({
       </div>
 
       <div>
-        <label className="block text-sm font-medium mb-3">Options du véhicule</label>
+        <label className="block text-sm font-medium mb-3">{t("vehicleOptions")}</label>
         <div className="flex flex-wrap gap-2">
           {vehicleFeatureOptions.map((feature) => (
             <button
@@ -744,6 +747,7 @@ function VehiclePhotos({
   photos: string[];
   onPhotosChange: (photos: string[]) => void;
 }) {
+  const t = useTranslations("profileForm");
   const [uploading, setUploading] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
@@ -780,12 +784,12 @@ function VehiclePhotos({
 
   return (
     <div>
-      <label className="block text-sm font-medium mb-3">Photos du véhicule</label>
+      <label className="block text-sm font-medium mb-3">{t("vehiclePhotos")}</label>
       <div className="grid grid-cols-3 sm:grid-cols-5 gap-3">
         {photos.map((url, i) => (
           <div key={i} className="relative group aspect-square rounded-xl overflow-hidden bg-neutral-100">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={url} alt={`Véhicule photo ${i + 1}`} className="w-full h-full object-cover" />
+            <img src={url} alt={t("vehiclePhotoAlt", { number: i + 1 })} className="w-full h-full object-cover" />
             <button
               type="button"
               onClick={() => removePhoto(i)}

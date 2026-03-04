@@ -1,19 +1,22 @@
 import { Icon } from "@iconify/react";
+import { getTranslations } from "next-intl/server";
 import type { Airport } from "@/data/airports";
 
-export function AirportPricing({ airport }: { airport: Airport }) {
+export async function AirportPricing({ airport }: { airport: Airport }) {
+  const t = await getTranslations("airport");
+
   return (
     <section className="bg-neutral-50 border-t border-b border-neutral-100 py-20 md:py-28">
       <div className="max-w-4xl mx-auto px-6">
         <div className="text-center mb-16 fade-up">
           <p className="text-sm font-medium text-neutral-500 mb-2 uppercase tracking-wider">
-            Tarifs forfaitaires
+            {t("pricing.flatRates")}
           </p>
           <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
-            Prix taxi depuis {airport.name}
+            {t("pricing.title", { name: airport.name })}
           </h2>
           <p className="text-sm text-neutral-500 font-light mt-3 max-w-lg mx-auto">
-            Tous nos transferts sont au forfait. Le prix est fixé à la réservation, sans surprise.
+            {t("pricing.subtitle")}
           </p>
         </div>
         <div className="space-y-3 fade-up">
@@ -36,7 +39,7 @@ export function AirportPricing({ airport }: { airport: Airport }) {
           ))}
         </div>
         <p className="text-xs text-neutral-400 font-light text-center mt-6">
-          * Prix indicatifs TTC. Tarif exact communiqué à la réservation. Pas de supplément bagage.
+          {t("pricing.disclaimer")}
         </p>
       </div>
     </section>

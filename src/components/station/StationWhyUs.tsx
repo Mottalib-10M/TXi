@@ -1,21 +1,24 @@
 import { Icon } from "@iconify/react";
+import { getTranslations } from "next-intl/server";
 
-export function StationWhyUs({ stationName }: { stationName: string }) {
+export async function StationWhyUs({ stationName }: { stationName: string }) {
+  const t = await getTranslations("station");
+
   const advantages = [
     {
       icon: "solar:eye-scan-linear",
-      title: "Suivi de train en temps réel",
-      desc: `Votre chauffeur suit votre train en temps réel. Si votre train a du retard à la gare ${stationName}, il adapte son heure d'arrivée. Attente gratuite jusqu'à 30 minutes.`,
+      title: t("whyUs.trainTrackingTitle"),
+      desc: t("whyUs.trainTrackingDesc", { name: stationName }),
     },
     {
       icon: "solar:tag-price-linear",
-      title: "Tarifs forfaitaires garantis",
-      desc: `Le prix est fixé à la réservation et ne change jamais. Pas de compteur, pas de surprise liée aux embouteillages. Forfaits clairs depuis la gare ${stationName}.`,
+      title: t("whyUs.guaranteedRatesTitle"),
+      desc: t("whyUs.guaranteedRatesDesc", { name: stationName }),
     },
     {
       icon: "solar:user-id-linear",
-      title: "Accueil en gare",
-      desc: `Votre chauffeur vous attend à la sortie de la gare ${stationName} et vous aide avec vos bagages. Service premium et ponctuel.`,
+      title: t("whyUs.stationWelcomeTitle"),
+      desc: t("whyUs.stationWelcomeDesc", { name: stationName }),
     },
   ];
 
@@ -24,10 +27,10 @@ export function StationWhyUs({ stationName }: { stationName: string }) {
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16 fade-up">
           <p className="text-sm font-medium text-neutral-500 mb-2 uppercase tracking-wider">
-            Nos avantages
+            {t("whyUs.subtitle")}
           </p>
           <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
-            Pourquoi choisir TaxiNoir pour la gare {stationName}
+            {t("whyUs.title", { name: stationName })}
           </h2>
         </div>
         <div className="grid md:grid-cols-3 gap-8">

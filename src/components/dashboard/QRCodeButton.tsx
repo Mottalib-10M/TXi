@@ -2,10 +2,12 @@
 
 import { useState, useEffect, useCallback } from "react";
 import { Icon } from "@iconify/react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 import QRCode from "qrcode";
 
 export function QRCodeButton({ slug }: { slug: string }) {
+  const t = useTranslations("dashboard");
   const [open, setOpen] = useState(false);
   const [qrDataUrl, setQrDataUrl] = useState("");
 
@@ -35,7 +37,7 @@ export function QRCodeButton({ slug }: { slug: string }) {
         className="flex items-center gap-2 bg-neutral-900 text-white px-4 py-2 rounded-xl text-sm font-medium hover:bg-neutral-800 transition-colors"
       >
         <Icon icon="solar:qr-code-linear" className="text-lg" />
-        Mon QR code
+        {t("qrCode")}
       </button>
 
       {open && (
@@ -54,9 +56,9 @@ export function QRCodeButton({ slug }: { slug: string }) {
               </button>
 
               <div className="text-center">
-                <h3 className="text-lg font-semibold tracking-tight mb-1">Mon QR code</h3>
+                <h3 className="text-lg font-semibold tracking-tight mb-1">{t("qrCode")}</h3>
                 <p className="text-xs text-neutral-500 font-light mb-6">
-                  Partagez ce code pour recevoir des réservations directes
+                  {t("qrCodeShareDesc")}
                 </p>
 
                 {qrDataUrl ? (
@@ -86,7 +88,7 @@ export function QRCodeButton({ slug }: { slug: string }) {
                     className="w-full flex items-center justify-center gap-2 bg-neutral-950 text-white rounded-xl py-3 text-sm font-medium hover:bg-neutral-800 transition-colors"
                   >
                     <Icon icon="solar:download-minimalistic-linear" className="text-lg" />
-                    Enregistrer dans mes photos
+                    {t("qrCodeSavePhoto")}
                   </button>
 
                   <Link
@@ -95,7 +97,7 @@ export function QRCodeButton({ slug }: { slug: string }) {
                     className="w-full flex items-center justify-center gap-2 bg-white border border-neutral-200 text-neutral-700 rounded-xl py-3 text-sm font-medium hover:bg-neutral-50 transition-colors"
                   >
                     <Icon icon="solar:eye-linear" className="text-lg" />
-                    Voir profil publique
+                    {t("qrCodeViewProfile")}
                   </Link>
                 </div>
               </div>

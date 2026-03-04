@@ -1,7 +1,10 @@
 import type { City } from "@/data/cities";
 import { BookingForm } from "@/components/booking/BookingForm";
+import { getTranslations } from "next-intl/server";
 
-export function CityHero({ city }: { city: City }) {
+export async function CityHero({ city }: { city: City }) {
+  const t = await getTranslations("city");
+
   return (
     <section className="pt-24 pb-12 md:pt-32 md:pb-20">
       <div className="max-w-7xl mx-auto px-6">
@@ -10,7 +13,7 @@ export function CityHero({ city }: { city: City }) {
             <div className="inline-flex items-center gap-2 bg-neutral-100 rounded-full px-4 py-1.5 mb-6">
               <span className="w-2 h-2 bg-green-500 rounded-full" />
               <span className="text-xs font-medium text-neutral-600">
-                Disponible 24h/24 à {city.name}
+                {t("heroAvailable", { cityName: city.name })}
               </span>
             </div>
             <h1 className="text-4xl md:text-5xl font-semibold tracking-tight leading-[1.1] mb-4">

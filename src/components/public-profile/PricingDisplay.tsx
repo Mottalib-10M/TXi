@@ -1,4 +1,7 @@
+"use client";
+
 import { Icon } from "@iconify/react";
+import { useTranslations } from "next-intl";
 
 interface PricingDisplayProps {
   baseFare: number;
@@ -15,19 +18,21 @@ export function PricingDisplay({
   pricePerMinute,
   minimumFare,
 }: PricingDisplayProps) {
+  const t = useTranslations("pricingGrid");
+
   const items = [
-    { label: "Prise en charge", value: `${baseFare.toFixed(2).replace(".", ",")} €` },
-    { label: "Prix au km jour", value: `${pricePerKm.toFixed(2).replace(".", ",")} €/km` },
-    { label: "Prix au km nuit", value: `${pricePerKmNight.toFixed(2).replace(".", ",")} €/km` },
-    { label: "Prix à la minute", value: `${pricePerMinute.toFixed(2).replace(".", ",")} €/min` },
-    { label: "Course minimum", value: `${minimumFare.toFixed(2).replace(".", ",")} €` },
+    { label: t("baseFare"), value: `${baseFare.toFixed(2).replace(".", ",")} €` },
+    { label: t("dayRate"), value: `${pricePerKm.toFixed(2).replace(".", ",")} €/km` },
+    { label: t("nightRate"), value: `${pricePerKmNight.toFixed(2).replace(".", ",")} €/km` },
+    { label: t("waitRate"), value: `${pricePerMinute.toFixed(2).replace(".", ",")} €/min` },
+    { label: t("minFare"), value: `${minimumFare.toFixed(2).replace(".", ",")} €` },
   ];
 
   return (
     <div className="bg-white border border-neutral-200 rounded-2xl p-6">
       <h2 className="text-base font-semibold tracking-tight mb-4 flex items-center gap-2">
         <Icon icon="solar:tag-price-linear" className="text-neutral-400" />
-        Tarification
+        {t("title")}
       </h2>
 
       <div className="space-y-3">

@@ -10,7 +10,7 @@ import {
 } from "@/lib/email";
 import { sendSms } from "@/lib/sms";
 import { format } from "date-fns";
-import { fr } from "date-fns/locale";
+import { fr, enUS } from "date-fns/locale";
 
 const bookingSchema = z.object({
   clientName: z.string().min(2),
@@ -28,6 +28,7 @@ const bookingSchema = z.object({
   driverId: z.string().optional(),
   estimatedPrice: z.number().optional(),
   source: z.enum(["LANDING", "PROFILE"]).optional().default("LANDING"),
+  locale: z.enum(["fr", "en"]).optional().default("fr"),
 });
 
 export async function POST(request: Request) {
@@ -131,7 +132,10 @@ export async function POST(request: Request) {
       include: { driver: true },
     });
 
-    const dateFormatted = format(requestedDate, "dd MMMM yyyy à HH:mm", { locale: fr });
+    const locale = data.locale || "fr";
+    const dateFnsLocale = locale === "en" ? enUS : fr;
+    const dateFormat = locale === "en" ? "dd MMMM yyyy 'at' HH:mm" : "dd MMMM yyyy 'à' HH:mm";
+    const dateFormatted = format(requestedDate, dateFormat, { locale: dateFnsLocale });
 
     // Send notifications to driver
     if (booking.driver) {
@@ -143,15 +147,18 @@ export async function POST(request: Request) {
           arrival: data.arrivalName,
           date: dateFormatted,
           reference,
+          bookingId: booking.id,
+          price: booking.lockedPrice,
+          locale,
         });
         await sendEmail({ to: booking.driver.email, ...emailData });
       }
 
       if (booking.driver.notifySms && booking.driver.phone) {
-        await sendSms(
-          booking.driver.phone,
-          `TaxiNoir - Nouvelle réservation #${reference} de ${data.clientName}. ${data.departureName} → ${data.arrivalName}. Connectez-vous pour accepter.`
-        );
+        const smsText = locale === "en"
+          ? `TaxiNoir - New booking #${reference} from ${data.clientName}. ${data.departureName} → ${data.arrivalName}. Log in to accept.`
+          : `TaxiNoir - Nouvelle réservation #${reference} de ${data.clientName}. ${data.departureName} → ${data.arrivalName}. Connectez-vous pour accepter.`;
+        await sendSms(booking.driver.phone, smsText);
       }
     }
 
@@ -166,6 +173,8 @@ export async function POST(request: Request) {
         driverName: booking.driver
           ? `${booking.driver.firstName} ${booking.driver.lastName}`
           : undefined,
+        price: booking.lockedPrice,
+        locale,
       });
       await sendEmail({ to: data.clientEmail, ...clientEmailData });
     }

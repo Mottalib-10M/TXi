@@ -1,6 +1,7 @@
 "use client";
 
 import { Icon } from "@iconify/react";
+import { useTranslations } from "next-intl";
 
 interface DriverHeaderProps {
   firstName: string;
@@ -25,6 +26,8 @@ export function DriverHeader({
   phone,
   companyName,
 }: DriverHeaderProps) {
+  const t = useTranslations("publicProfile");
+
   function downloadVCard() {
     const lines = [
       "BEGIN:VCARD",
@@ -116,7 +119,7 @@ export function DriverHeader({
               className="inline-flex items-center justify-center gap-2 text-sm font-medium text-white bg-neutral-900 hover:bg-neutral-800 rounded-xl px-5 py-3 transition-colors btn-lift"
             >
               <Icon icon="solar:user-plus-linear" className="text-base" />
-              Ajouter aux contacts
+              {t("addToContacts")}
             </button>
           )}
         </div>

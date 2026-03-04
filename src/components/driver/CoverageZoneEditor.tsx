@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Icon } from "@iconify/react";
 import { PlacesAutocomplete } from "@/components/booking/PlacesAutocomplete";
+import { useTranslations } from "next-intl";
 
 interface CoverageZoneEditorProps {
   lat: number | null;
@@ -19,6 +20,7 @@ export function CoverageZoneEditor({
   address,
   onChange,
 }: CoverageZoneEditorProps) {
+  const t = useTranslations("coverageZone");
   const [localAddress, setLocalAddress] = useState(address);
   const [localRadius, setLocalRadius] = useState(radius);
 
@@ -36,12 +38,12 @@ export function CoverageZoneEditor({
 
   return (
     <div className="space-y-4">
-      <h2 className="text-lg font-semibold tracking-tight mb-4">Zone de couverture</h2>
+      <h2 className="text-lg font-semibold tracking-tight mb-4">{t("title")}</h2>
 
       <div>
-        <label className="block text-sm font-medium mb-1.5">Adresse du centre</label>
+        <label className="block text-sm font-medium mb-1.5">{t("centerAddress")}</label>
         <PlacesAutocomplete
-          placeholder="Ex: Paris 9e, Gare du Nord..."
+          placeholder={t("centerPlaceholder")}
           value={localAddress}
           onChange={handlePlaceChange}
           icon="solar:map-point-search-linear"
@@ -59,7 +61,7 @@ export function CoverageZoneEditor({
 
       <div>
         <label className="block text-sm font-medium mb-1.5">
-          Rayon de couverture : {localRadius} km
+          {t("radius", { radius: localRadius })}
         </label>
         <input
           type="range"

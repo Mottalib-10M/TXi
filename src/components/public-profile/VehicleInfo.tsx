@@ -2,6 +2,7 @@
 
 import { useState, useCallback, useEffect } from "react";
 import { Icon } from "@iconify/react";
+import { useTranslations } from "next-intl";
 import type { Vehicle } from "@/types/vehicle";
 
 interface VehicleInfoProps {
@@ -113,6 +114,7 @@ const TYPE_CONFIG: Record<VehicleType, { icon: string; label: string }> = {
 };
 
 function VehicleCard({ vehicle, index, total, onPhotoClick, photoIndexOffset }: { vehicle: Vehicle; index: number; total: number; onPhotoClick: (index: number) => void; photoIndexOffset: number }) {
+  const t = useTranslations("publicProfile");
   const type = detectType(vehicle.brand, vehicle.model);
   const config = TYPE_CONFIG[type];
   const colorHex = COLOR_MAP[vehicle.color.toLowerCase().trim()] || "#525252";
@@ -128,7 +130,7 @@ function VehicleCard({ vehicle, index, total, onPhotoClick, photoIndexOffset }: 
     <div>
       {total > 1 && (
         <p className="text-[10px] text-neutral-400 uppercase tracking-widest mb-3 font-semibold">
-          Véhicule {index + 1}
+          {t("vehicleNumber", { number: index + 1 })}
         </p>
       )}
 

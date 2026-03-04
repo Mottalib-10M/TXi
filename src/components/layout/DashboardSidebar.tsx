@@ -1,23 +1,24 @@
 "use client";
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { signOut } from "next-auth/react";
 import { Icon } from "@iconify/react";
+import { useTranslations } from "next-intl";
+import { Link, usePathname } from "@/i18n/navigation";
 import { Logo } from "@/components/ui/Logo";
 
-const navItems = [
-  { href: "/dashboard", label: "Tableau de bord", icon: "solar:chart-square-linear" },
-  { href: "/dashboard/profil", label: "Profil", icon: "solar:user-linear" },
-  { href: "/dashboard/profil-public", label: "Page publique", icon: "solar:eye-linear" },
-  { href: "/dashboard/reservations", label: "Réservations", icon: "solar:calendar-linear" },
-  { href: "/dashboard/carte", label: "Carte de visite", icon: "solar:card-linear" },
-];
-
 export function DashboardSidebar({ userName }: { userName: string }) {
+  const t = useTranslations("dashboard.sidebar");
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
+
+  const navItems = [
+    { href: "/dashboard", label: t("dashboard"), icon: "solar:chart-square-linear" },
+    { href: "/dashboard/profil", label: t("profile"), icon: "solar:user-linear" },
+    { href: "/dashboard/profil-public", label: t("publicProfile"), icon: "solar:eye-linear" },
+    { href: "/dashboard/reservations", label: t("reservations"), icon: "solar:calendar-linear" },
+    { href: "/dashboard/carte", label: t("map"), icon: "solar:card-linear" },
+  ];
 
   return (
     <>
@@ -68,7 +69,7 @@ export function DashboardSidebar({ userName }: { userName: string }) {
               return (
                 <Link
                   key={item.href}
-                  href={item.href}
+                  href={item.href as "/dashboard"}
                   onClick={() => setMobileOpen(false)}
                   className={`flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm mb-1 transition-colors ${
                     isActive
@@ -101,7 +102,7 @@ export function DashboardSidebar({ userName }: { userName: string }) {
               className="w-full flex items-center gap-2 px-3 py-2 text-sm text-neutral-500 hover:text-red-600 hover:bg-red-50 rounded-xl transition-colors"
             >
               <Icon icon="solar:logout-2-linear" className="text-lg" />
-              Déconnexion
+              {t("logout")}
             </button>
           </div>
         </div>

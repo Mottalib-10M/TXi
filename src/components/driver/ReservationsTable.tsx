@@ -1,10 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter } from "@/i18n/navigation";
 import { Icon } from "@iconify/react";
 import { format } from "date-fns";
-import { fr } from "date-fns/locale";
+import { fr, enUS } from "date-fns/locale";
+import { useTranslations, useLocale } from "next-intl";
 
 interface Booking {
   id: string;
@@ -23,18 +24,21 @@ interface Booking {
   createdAt: string;
 }
 
-const statusConfig: Record<string, { label: string; color: string }> = {
-  PENDING: { label: "En attente", color: "bg-amber-50 text-amber-700" },
-  ACCEPTED: { label: "Acceptée", color: "bg-green-50 text-green-700" },
-  REJECTED: { label: "Refusée", color: "bg-red-50 text-red-700" },
-  CANCELLED: { label: "Annulée", color: "bg-neutral-100 text-neutral-500" },
-  COMPLETED: { label: "Terminée", color: "bg-blue-50 text-blue-700" },
-};
-
 export function ReservationsTable({ bookings }: { bookings: Booking[] }) {
+  const t = useTranslations("dashboard");
+  const tc = useTranslations("common");
+  const locale = useLocale();
   const router = useRouter();
   const [filter, setFilter] = useState<string>("ALL");
   const [updating, setUpdating] = useState<string | null>(null);
+
+  const statusConfig: Record<string, { label: string; color: string }> = {
+    PENDING: { label: t("pending"), color: "bg-amber-50 text-amber-700" },
+    ACCEPTED: { label: t("accepted"), color: "bg-green-50 text-green-700" },
+    REJECTED: { label: t("rejected"), color: "bg-red-50 text-red-700" },
+    CANCELLED: { label: t("cancelled"), color: "bg-neutral-100 text-neutral-500" },
+    COMPLETED: { label: t("completed"), color: "bg-blue-50 text-blue-700" },
+  };
 
   const filtered = filter === "ALL" ? bookings : bookings.filter((b) => b.status === filter);
 
@@ -44,7 +48,7 @@ export function ReservationsTable({ bookings }: { bookings: Booking[] }) {
       await fetch(`/api/driver/bookings/${bookingId}`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ status }),
+        body: JSON.stringify({ status, locale }),
       });
       router.refresh();
     } catch (e) {
@@ -59,11 +63,11 @@ export function ReservationsTable({ bookings }: { bookings: Booking[] }) {
       {/* Filters */}
       <div className="flex gap-2 mb-6 overflow-x-auto pb-2">
         {[
-          { key: "ALL", label: "Toutes" },
-          { key: "PENDING", label: "En attente" },
-          { key: "ACCEPTED", label: "Acceptées" },
-          { key: "COMPLETED", label: "Terminées" },
-          { key: "REJECTED", label: "Refusées" },
+          { key: "ALL", label: tc("all") },
+          { key: "PENDING", label: t("pending") },
+          { key: "ACCEPTED", label: t("acceptedPlural") },
+          { key: "COMPLETED", label: t("completed") },
+          { key: "REJECTED", label: t("rejected") },
         ].map((f) => (
           <button
             key={f.key}
@@ -85,7 +89,7 @@ export function ReservationsTable({ bookings }: { bookings: Booking[] }) {
       {filtered.length === 0 ? (
         <div className="bg-white border border-neutral-200 rounded-2xl p-12 text-center">
           <Icon icon="solar:calendar-linear" className="text-4xl text-neutral-300 mx-auto mb-3" />
-          <p className="text-sm text-neutral-500 font-light">Aucune réservation</p>
+          <p className="text-sm text-neutral-500 font-light">{t("noReservations")}</p>
         </div>
       ) : (
         <div className="space-y-3">
@@ -121,13 +125,13 @@ export function ReservationsTable({ bookings }: { bookings: Booking[] }) {
               <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-neutral-400">
                 <span className="flex items-center gap-1">
                   <Icon icon="solar:calendar-linear" />
-                  {format(new Date(booking.requestedDate), "dd MMM yyyy à HH:mm", {
-                    locale: fr,
+                  {format(new Date(booking.requestedDate), locale === "en" ? "dd MMM yyyy 'at' HH:mm" : "dd MMM yyyy 'à' HH:mm", {
+                    locale: locale === "en" ? enUS : fr,
                   })}
                 </span>
                 <span className="flex items-center gap-1">
                   <Icon icon="solar:users-group-rounded-linear" />
-                  {booking.passengerCount} passager{booking.passengerCount > 1 ? "s" : ""}
+                  {booking.passengerCount} {booking.passengerCount > 1 ? tc("passengers") : tc("passenger")}
                 </span>
                 {booking.estimatedPrice && (
                   <span className="flex items-center gap-1">
@@ -136,7 +140,7 @@ export function ReservationsTable({ bookings }: { bookings: Booking[] }) {
                   </span>
                 )}
                 <span className="text-neutral-300">
-                  via {booking.source === "PROFILE" ? "Profil" : "Landing"}
+                  via {booking.source === "PROFILE" ? t("fromProfile") : "Landing"}
                 </span>
               </div>
 
@@ -154,14 +158,14 @@ export function ReservationsTable({ bookings }: { bookings: Booking[] }) {
                     disabled={updating === booking.id}
                     className="flex-1 sm:flex-none bg-green-50 text-green-700 hover:bg-green-100 px-4 py-2 rounded-lg text-xs font-medium transition-colors disabled:opacity-50"
                   >
-                    Accepter
+                    {t("accept")}
                   </button>
                   <button
                     onClick={() => updateStatus(booking.id, "REJECTED")}
                     disabled={updating === booking.id}
                     className="flex-1 sm:flex-none bg-red-50 text-red-700 hover:bg-red-100 px-4 py-2 rounded-lg text-xs font-medium transition-colors disabled:opacity-50"
                   >
-                    Refuser
+                    {t("reject")}
                   </button>
                 </div>
               )}
@@ -173,7 +177,7 @@ export function ReservationsTable({ bookings }: { bookings: Booking[] }) {
                     disabled={updating === booking.id}
                     className="w-full sm:w-auto bg-blue-50 text-blue-700 hover:bg-blue-100 px-4 py-2 rounded-lg text-xs font-medium transition-colors disabled:opacity-50"
                   >
-                    Terminer
+                    {t("complete")}
                   </button>
                 </div>
               )}

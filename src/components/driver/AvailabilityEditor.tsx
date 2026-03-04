@@ -1,6 +1,7 @@
 "use client";
 
 import { Icon } from "@iconify/react";
+import { useTranslations } from "next-intl";
 
 interface Slot {
   day: number;
@@ -8,9 +9,7 @@ interface Slot {
   endTime: string;
 }
 
-const dayNames = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"];
-
-const DEFAULT_SLOTS: Slot[] = dayNames.map((_, i) => ({
+const DEFAULT_SLOTS: Slot[] = Array.from({ length: 7 }, (_, i) => ({
   day: i,
   startTime: "07:00",
   endTime: "20:00",
@@ -23,6 +22,18 @@ export function AvailabilityEditor({
   availability: Slot[];
   onChange: (slots: Slot[]) => void;
 }) {
+  const t = useTranslations("availability");
+
+  const dayNames = [
+    t("monday"),
+    t("tuesday"),
+    t("wednesday"),
+    t("thursday"),
+    t("friday"),
+    t("saturday"),
+    t("sunday"),
+  ];
+
   const allActive = availability.length === 7;
 
   function toggleDay(dayIndex: number) {
@@ -50,9 +61,9 @@ export function AvailabilityEditor({
 
   return (
     <div className="space-y-4">
-      <h2 className="text-lg font-semibold tracking-tight mb-4">Disponibilités</h2>
+      <h2 className="text-lg font-semibold tracking-tight mb-4">{t("title")}</h2>
       <p className="text-sm text-neutral-500 font-light mb-6">
-        Indiquez vos créneaux de disponibilité habituels.
+        {t("subtitle")}
       </p>
 
       <div className="flex justify-end mb-2">
@@ -62,7 +73,7 @@ export function AvailabilityEditor({
           className="text-xs font-medium text-neutral-500 hover:text-neutral-900 transition-colors flex items-center gap-1.5"
         >
           <Icon icon={allActive ? "solar:close-circle-linear" : "solar:check-read-linear"} className="text-sm" />
-          {allActive ? "Tout désactiver" : "Tout activer"}
+          {allActive ? t("disableAll") : t("enableAll")}
         </button>
       </div>
 
@@ -102,7 +113,7 @@ export function AvailabilityEditor({
                     onChange={(e) => updateSlot(index, "startTime", e.target.value)}
                     className="bg-neutral-100 rounded-lg px-2 sm:px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-neutral-900 w-[5.5rem]"
                   />
-                  <span className="text-neutral-400 text-xs">→</span>
+                  <span className="text-neutral-400 text-xs">&rarr;</span>
                   <input
                     type="time"
                     value={slot.endTime}
@@ -111,7 +122,7 @@ export function AvailabilityEditor({
                   />
                 </div>
               ) : (
-                <span className="text-xs text-neutral-400 font-light ml-auto">Indisponible</span>
+                <span className="text-xs text-neutral-400 font-light ml-auto">{t("unavailable")}</span>
               )}
             </div>
           );

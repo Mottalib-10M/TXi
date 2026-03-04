@@ -1,26 +1,28 @@
 "use client";
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { signOut } from "next-auth/react";
 import { Icon } from "@iconify/react";
+import { useTranslations } from "next-intl";
+import { Link, usePathname } from "@/i18n/navigation";
 import { Logo } from "@/components/ui/Logo";
 
-const navItems = [
-  { href: "/org", label: "Tableau de bord", icon: "solar:chart-square-linear" },
-  { href: "/org/nouvelle-course", label: "Nouvelle course", icon: "solar:add-circle-linear" },
-  { href: "/org/courses", label: "Mes courses", icon: "solar:calendar-linear" },
-  { href: "/org/favoris", label: "Chauffeurs favoris", icon: "solar:star-linear" },
-  { href: "/org/cagnotte", label: "Cagnotte", icon: "solar:wallet-linear" },
-  { href: "/org/parametres", label: "Paramètres", icon: "solar:settings-linear" },
-];
-
 export function OrgSidebar({ userName, orgType }: { userName: string; orgType?: string }) {
+  const t = useTranslations("org.sidebar");
+  const ta = useTranslations("auth");
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
 
-  const orgLabel = orgType === "HOTEL" ? "Hôtel" : orgType === "HOSPITAL" ? "Hôpital" : orgType === "INDIVIDUAL" ? "Particulier" : "Entreprise";
+  const orgLabel = orgType === "HOTEL" ? ta("hotel") : orgType === "HOSPITAL" ? ta("hospital") : orgType === "INDIVIDUAL" ? ta("particulier") : ta("enterprise");
+
+  const navItems = [
+    { href: "/org", label: t("dashboard"), icon: "solar:chart-square-linear" },
+    { href: "/org/nouvelle-course", label: t("newRide"), icon: "solar:add-circle-linear" },
+    { href: "/org/courses", label: t("rides"), icon: "solar:calendar-linear" },
+    { href: "/org/favoris", label: t("favorites"), icon: "solar:star-linear" },
+    { href: "/org/cagnotte", label: t("wallet"), icon: "solar:wallet-linear" },
+    { href: "/org/parametres", label: t("settings"), icon: "solar:settings-linear" },
+  ];
 
   const filteredNavItems = orgType === "INDIVIDUAL"
     ? navItems.filter((item) => item.href !== "/org/cagnotte")
@@ -75,7 +77,7 @@ export function OrgSidebar({ userName, orgType }: { userName: string; orgType?: 
               return (
                 <Link
                   key={item.href}
-                  href={item.href}
+                  href={item.href as "/org"}
                   onClick={() => setMobileOpen(false)}
                   className={`flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm mb-1 transition-colors ${
                     isActive
@@ -109,7 +111,7 @@ export function OrgSidebar({ userName, orgType }: { userName: string; orgType?: 
               className="w-full flex items-center gap-2 px-3 py-2 text-sm text-neutral-500 hover:text-red-600 hover:bg-red-50 rounded-xl transition-colors"
             >
               <Icon icon="solar:logout-2-linear" className="text-lg" />
-              Déconnexion
+              {t("logout")}
             </button>
           </div>
         </div>

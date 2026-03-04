@@ -1,3 +1,7 @@
+import createNextIntlPlugin from "next-intl/plugin";
+
+const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
@@ -10,6 +14,7 @@ const nextConfig = {
   },
   async rewrites() {
     return [
+      // Default locale (fr, no prefix)
       {
         source: "/taxi-aeroport-:slug",
         destination: "/aeroport/:slug",
@@ -22,8 +27,21 @@ const nextConfig = {
         source: "/taxi-:slug",
         destination: "/:slug",
       },
+      // English locale
+      {
+        source: "/en/taxi-aeroport-:slug",
+        destination: "/en/aeroport/:slug",
+      },
+      {
+        source: "/en/taxi-gare-:slug",
+        destination: "/en/gare/:slug",
+      },
+      {
+        source: "/en/taxi-:slug",
+        destination: "/en/:slug",
+      },
     ];
   },
 };
 
-export default nextConfig;
+export default withNextIntl(nextConfig);

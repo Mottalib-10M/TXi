@@ -1,21 +1,24 @@
 import { Icon } from "@iconify/react";
+import { getTranslations } from "next-intl/server";
 
-export function CityWhyUs({ cityName }: { cityName: string }) {
+export async function CityWhyUs({ cityName }: { cityName: string }) {
+  const t = await getTranslations("city");
+
   const advantages = [
     {
       icon: "solar:shield-check-linear",
-      title: "Chauffeurs professionnels",
-      desc: `Tous nos chauffeurs à ${cityName} sont des professionnels agréés, formés et connaissant parfaitement leur ville. Votre sécurité est notre priorité absolue.`,
+      title: t("whyUsAdvantage1Title"),
+      desc: t("whyUsAdvantage1Desc", { cityName }),
     },
     {
       icon: "solar:tag-price-linear",
-      title: "Tarifs réglementés",
-      desc: `Fini les prix qui explosent lors des fortes demandes. À ${cityName}, profitez de la stabilité des tarifs réglementés par la préfecture.`,
+      title: t("whyUsAdvantage2Title"),
+      desc: t("whyUsAdvantage2Desc", { cityName }),
     },
     {
       icon: "solar:routing-linear",
-      title: "Voies réservées",
-      desc: `En tant que taxis officiels, nos véhicules à ${cityName} utilisent les couloirs de bus pour vous faire gagner un temps précieux sur chaque trajet.`,
+      title: t("whyUsAdvantage3Title"),
+      desc: t("whyUsAdvantage3Desc", { cityName }),
     },
   ];
 
@@ -24,10 +27,10 @@ export function CityWhyUs({ cityName }: { cityName: string }) {
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16 fade-up">
           <p className="text-sm font-medium text-neutral-500 mb-2 uppercase tracking-wider">
-            Nos avantages
+            {t("whyUsSubtitle")}
           </p>
           <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
-            Pourquoi choisir TaxiNoir à {cityName}
+            {t("whyUsTitle", { cityName })}
           </h2>
         </div>
         <div className="grid md:grid-cols-3 gap-8">

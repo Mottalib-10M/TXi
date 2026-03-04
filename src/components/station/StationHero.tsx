@@ -1,7 +1,10 @@
 import type { Station } from "@/data/stations";
 import { BookingForm } from "@/components/booking/BookingForm";
+import { getTranslations } from "next-intl/server";
 
-export function StationHero({ station }: { station: Station }) {
+export async function StationHero({ station }: { station: Station }) {
+  const t = await getTranslations("station");
+
   return (
     <section className="pt-24 pb-12 md:pt-32 md:pb-20">
       <div className="max-w-7xl mx-auto px-6">
@@ -10,7 +13,7 @@ export function StationHero({ station }: { station: Station }) {
             <div className="inline-flex items-center gap-2 bg-neutral-100 rounded-full px-4 py-1.5 mb-6">
               <span className="w-2 h-2 bg-green-500 rounded-full" />
               <span className="text-xs font-medium text-neutral-600">
-                Transfert 24h/24 · {station.lines[0]}
+                {t("heroBadge", { line: station.lines[0] })}
               </span>
             </div>
             <h1 className="text-4xl md:text-5xl font-semibold tracking-tight leading-[1.1] mb-4">
@@ -24,10 +27,10 @@ export function StationHero({ station }: { station: Station }) {
                 {station.distanceFromCity}
               </span>
               <span className="bg-neutral-50 border border-neutral-200 rounded-full px-3 py-1">
-                Forfait dès {station.transferPrice}
+                {t("heroFlatRate", { price: station.transferPrice })}
               </span>
               <span className="bg-neutral-50 border border-neutral-200 rounded-full px-3 py-1">
-                {station.annualPassengers} voyageurs/an
+                {t("heroPassengers", { count: station.annualPassengers })}
               </span>
             </div>
           </div>

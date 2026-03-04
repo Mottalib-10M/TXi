@@ -1,11 +1,12 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter } from "@/i18n/navigation";
 import { Icon } from "@iconify/react";
 import { format } from "date-fns";
-import { fr } from "date-fns/locale";
-import Link from "next/link";
+import { enUS, fr } from "date-fns/locale";
+import { Link } from "@/i18n/navigation";
+import { useLocale, useTranslations } from "next-intl";
 
 interface Driver {
   id: string;
@@ -22,18 +23,19 @@ interface Driver {
   createdAt: string;
 }
 
-function extractCity(zone: string | null): string {
-  if (!zone) return "Non renseignée";
-  // "Nice - Côte d'Azur" → "Nice", "Paris 9e" → "Paris 9e", "Clermont-Ferrand, France" → "Clermont-Ferrand"
-  return zone.split(/\s*[-,]\s*/)[0].trim() || "Non renseignée";
-}
-
 export function DriversTable({ drivers }: { drivers: Driver[] }) {
+  const t = useTranslations("admin");
+  const locale = useLocale();
   const router = useRouter();
   const [search, setSearch] = useState("");
   const [updating, setUpdating] = useState<string | null>(null);
   const [selectedCity, setSelectedCity] = useState<string | null>(null);
   const [impersonating, setImpersonating] = useState<string | null>(null);
+
+  function extractCity(zone: string | null): string {
+    if (!zone) return t("notSpecified");
+    return zone.split(/\s*[-,]\s*/)[0].trim() || t("notSpecified");
+  }
 
   const filtered = useMemo(() => {
     return drivers.filter((d) => {
@@ -49,6 +51,7 @@ export function DriversTable({ drivers }: { drivers: Driver[] }) {
 
   // Group by city
   const grouped = useMemo(() => {
+    const notSpecifiedLabel = t("notSpecified");
     const map = new Map<string, Driver[]>();
     for (const d of filtered) {
       const city = extractCity(d.zone);
@@ -57,11 +60,12 @@ export function DriversTable({ drivers }: { drivers: Driver[] }) {
     }
     // Sort: cities with most drivers first, "Non renseignée" always last
     return Array.from(map.entries()).sort(([a, driversA], [b, driversB]) => {
-      if (a === "Non renseignée") return 1;
-      if (b === "Non renseignée") return -1;
+      if (a === notSpecifiedLabel) return 1;
+      if (b === notSpecifiedLabel) return -1;
       return driversB.length - driversA.length;
     });
-  }, [filtered]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [filtered, t]);
 
   const cities = useMemo(() => grouped.map(([city]) => city), [grouped]);
 
@@ -104,6 +108,8 @@ export function DriversTable({ drivers }: { drivers: Driver[] }) {
     }
   }
 
+  const notSpecifiedLabel = t("notSpecified");
+
   return (
     <div>
       {/* Search */}
@@ -113,7 +119,7 @@ export function DriversTable({ drivers }: { drivers: Driver[] }) {
           type="text"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          placeholder="Rechercher par nom, email ou ville..."
+          placeholder={t("searchDrivers")}
           className="w-full pl-10 pr-4 py-2.5 bg-white border border-neutral-200 rounded-xl text-sm focus:outline-none focus:border-neutral-400 transition-colors"
         />
       </div>
@@ -129,7 +135,7 @@ export function DriversTable({ drivers }: { drivers: Driver[] }) {
                 : "bg-white border border-neutral-200 text-neutral-600 hover:border-neutral-300"
             }`}
           >
-            Toutes les villes
+            {t("allCities")}
             <span className="ml-1.5 opacity-60">({filtered.length})</span>
           </button>
           {cities.map((city) => {
@@ -156,7 +162,7 @@ export function DriversTable({ drivers }: { drivers: Driver[] }) {
       {filtered.length === 0 ? (
         <div className="bg-white border border-neutral-200 rounded-2xl p-12 text-center">
           <Icon icon="solar:user-cross-linear" className="text-4xl text-neutral-300 mx-auto mb-3" />
-          <p className="text-sm text-neutral-500 font-light">Aucun chauffeur trouvé</p>
+          <p className="text-sm text-neutral-500 font-light">{t("noDriversFound")}</p>
         </div>
       ) : (
         <div className="space-y-8">
@@ -166,8 +172,8 @@ export function DriversTable({ drivers }: { drivers: Driver[] }) {
               <div className="flex items-center gap-3 mb-3">
                 <div className="flex items-center gap-2 bg-white border border-neutral-200 rounded-xl px-4 py-2">
                   <Icon
-                    icon={city === "Non renseignée" ? "solar:map-point-wave-linear" : "solar:map-point-bold"}
-                    className={city === "Non renseignée" ? "text-neutral-400" : "text-blue-500"}
+                    icon={city === notSpecifiedLabel ? "solar:map-point-wave-linear" : "solar:map-point-bold"}
+                    className={city === notSpecifiedLabel ? "text-neutral-400" : "text-blue-500"}
                   />
                   <span className="text-sm font-semibold">{city}</span>
                   <span className="text-xs text-neutral-400 bg-neutral-100 px-2 py-0.5 rounded-full">
@@ -199,7 +205,7 @@ export function DriversTable({ drivers }: { drivers: Driver[] }) {
                             : "bg-neutral-100 text-neutral-500 ring-1 ring-neutral-200"
                         }`}
                       >
-                        {driver.isActive ? "Actif" : "Inactif"}
+                        {driver.isActive ? t("active") : t("inactive")}
                       </span>
                       <span
                         className={`text-xs px-2.5 py-0.5 rounded-full font-medium ${
@@ -208,11 +214,11 @@ export function DriversTable({ drivers }: { drivers: Driver[] }) {
                             : "bg-amber-50 text-amber-700 ring-1 ring-amber-200"
                         }`}
                       >
-                        {driver.emailVerified ? "Email vérifié" : "Non vérifié"}
+                        {driver.emailVerified ? t("emailVerified") : t("emailNotVerified")}
                       </span>
                       {driver.isVerified && (
                         <span className="text-xs px-2.5 py-0.5 rounded-full font-medium bg-violet-50 text-violet-700 ring-1 ring-violet-200">
-                          Vérifié
+                          {t("verified")}
                         </span>
                       )}
                     </div>
@@ -242,7 +248,7 @@ export function DriversTable({ drivers }: { drivers: Driver[] }) {
                         </span>
                       )}
                       <span className="text-neutral-400">
-                        Inscrit le {format(new Date(driver.createdAt), "dd MMM yyyy", { locale: fr })}
+                        {t("registeredOn", { date: format(new Date(driver.createdAt), "dd MMM yyyy", { locale: locale === "en" ? enUS : fr }) })}
                       </span>
                     </div>
 
@@ -257,7 +263,7 @@ export function DriversTable({ drivers }: { drivers: Driver[] }) {
                             : "bg-green-50 text-green-700 hover:bg-green-100"
                         }`}
                       >
-                        {driver.isActive ? "Désactiver" : "Activer"}
+                        {driver.isActive ? t("deactivate") : t("activate")}
                       </button>
                       <button
                         onClick={() => toggleField(driver.id, "isVerified", !driver.isVerified)}
@@ -268,7 +274,7 @@ export function DriversTable({ drivers }: { drivers: Driver[] }) {
                             : "bg-violet-50 text-violet-700 hover:bg-violet-100"
                         }`}
                       >
-                        {driver.isVerified ? "Retirer vérification" : "Vérifier"}
+                        {driver.isVerified ? t("removeVerification") : t("verify")}
                       </button>
                       <Link
                         href={`/taxi/${driver.slug}`}
@@ -276,7 +282,7 @@ export function DriversTable({ drivers }: { drivers: Driver[] }) {
                         className="px-3 py-1.5 rounded-lg text-xs font-medium bg-blue-50 text-blue-700 hover:bg-blue-100 transition-colors flex items-center gap-1"
                       >
                         <Icon icon="solar:eye-linear" />
-                        Page publique
+                        {t("publicPage")}
                       </Link>
                       <button
                         onClick={() => impersonate(driver.id)}
@@ -284,7 +290,7 @@ export function DriversTable({ drivers }: { drivers: Driver[] }) {
                         className="px-3 py-1.5 rounded-lg text-xs font-medium bg-amber-50 text-amber-700 hover:bg-amber-100 transition-colors flex items-center gap-1 disabled:opacity-50"
                       >
                         <Icon icon="solar:login-3-linear" />
-                        {impersonating === driver.id ? "..." : "Se connecter en tant que"}
+                        {impersonating === driver.id ? "..." : t("loginAs")}
                       </button>
                     </div>
                   </div>

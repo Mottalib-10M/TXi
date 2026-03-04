@@ -1,21 +1,24 @@
 import { Icon } from "@iconify/react";
+import { getTranslations } from "next-intl/server";
 
-export function AirportWhyUs({ airportName }: { airportName: string }) {
+export async function AirportWhyUs({ airportName }: { airportName: string }) {
+  const t = await getTranslations("airport");
+
   const advantages = [
     {
       icon: "solar:eye-scan-linear",
-      title: "Suivi de vol en temps réel",
-      desc: `Votre chauffeur suit votre vol en temps réel. Si votre avion a du retard à ${airportName}, il adapte son heure d'arrivée. Attente gratuite jusqu'à 45 minutes.`,
+      title: t("whyUs.flightTrackingTitle"),
+      desc: t("whyUs.flightTrackingDesc", { name: airportName }),
     },
     {
       icon: "solar:tag-price-linear",
-      title: "Tarifs forfaitaires garantis",
-      desc: `Le prix est fixé à la réservation et ne change jamais. Pas de compteur, pas de surprise liée aux embouteillages. Forfaits clairs depuis ${airportName}.`,
+      title: t("whyUs.guaranteedRatesTitle"),
+      desc: t("whyUs.guaranteedRatesDesc", { name: airportName }),
     },
     {
       icon: "solar:user-id-linear",
-      title: "Accueil personnalisé",
-      desc: `Votre chauffeur vous attend en zone d'arrivée à ${airportName} avec une pancarte à votre nom et vous aide avec vos bagages. Service premium.`,
+      title: t("whyUs.personalWelcomeTitle"),
+      desc: t("whyUs.personalWelcomeDesc", { name: airportName }),
     },
   ];
 
@@ -24,10 +27,10 @@ export function AirportWhyUs({ airportName }: { airportName: string }) {
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16 fade-up">
           <p className="text-sm font-medium text-neutral-500 mb-2 uppercase tracking-wider">
-            Nos avantages
+            {t("whyUs.subtitle")}
           </p>
           <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
-            Pourquoi choisir TaxiNoir pour {airportName}
+            {t("whyUs.title", { name: airportName })}
           </h2>
         </div>
         <div className="grid md:grid-cols-3 gap-8">

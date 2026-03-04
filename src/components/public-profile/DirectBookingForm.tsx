@@ -1,8 +1,9 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter } from "@/i18n/navigation";
 import { useSession } from "next-auth/react";
+import { useTranslations, useLocale } from "next-intl";
 import { Icon } from "@iconify/react";
 import { PlacesAutocomplete } from "@/components/booking/PlacesAutocomplete";
 import { emailError, phoneError, isValidEmail } from "@/lib/validation";
@@ -20,6 +21,8 @@ export function DirectBookingForm({
 }: DirectBookingFormProps) {
   const router = useRouter();
   const { data: session } = useSession();
+  const t = useTranslations("booking");
+  const locale = useLocale();
   const [departure, setDeparture] = useState("");
   const [departureLat, setDepartureLat] = useState<number>(0);
   const [departureLng, setDepartureLng] = useState<number>(0);
@@ -82,6 +85,7 @@ export function DirectBookingForm({
           passengerCount: passengers,
           driverId,
           source: "PROFILE",
+          locale,
         }),
       });
 
@@ -89,10 +93,10 @@ export function DirectBookingForm({
       if (res.ok) {
         router.push(`/confirmation?ref=${data.reference}`);
       } else {
-        setError(data.error || "Erreur lors de la réservation");
+        setError(data.error || t("bookingError"));
       }
     } catch {
-      setError("Erreur de connexion");
+      setError(t("connectionError"));
     } finally {
       setSubmitting(false);
     }
@@ -101,10 +105,10 @@ export function DirectBookingForm({
   return (
     <div className="bg-white border border-neutral-200 rounded-2xl p-6">
       <h2 className="text-base font-semibold tracking-tight mb-1">
-        Réserver avec {driverName.split(" ")[0]}
+        {t("bookWith", { name: driverName.split(" ")[0] })}
       </h2>
       <p className="text-xs text-neutral-500 font-light mb-5">
-        À partir de {minimumFare.toFixed(2).replace(".", ",")} €
+        {t("startingFrom", { fare: minimumFare.toFixed(2).replace(".", ",") })}
       </p>
 
       <form onSubmit={handleSubmit} className="space-y-3">
@@ -115,7 +119,7 @@ export function DirectBookingForm({
         )}
 
         <PlacesAutocomplete
-          placeholder="Lieu de départ"
+          placeholder={t("departurePlaceholder")}
           value={departure}
           onChange={(val, lat, lng) => {
             setDeparture(val);
@@ -127,7 +131,7 @@ export function DirectBookingForm({
         />
 
         <PlacesAutocomplete
-          placeholder="Destination"
+          placeholder={t("destinationPlaceholder")}
           value={arrival}
           onChange={(val, lat, lng) => {
             setArrival(val);
@@ -145,7 +149,7 @@ export function DirectBookingForm({
         />
 
         <div className="flex items-center justify-between bg-neutral-100 rounded-xl px-4 py-3">
-          <span className="text-sm text-neutral-500">Passagers</span>
+          <span className="text-sm text-neutral-500">{t("passengers")}</span>
           <div className="flex items-center gap-3">
             <button
               type="button"
@@ -180,7 +184,7 @@ export function DirectBookingForm({
             <textarea
               value={clientComments}
               onChange={(e) => setClientComments(e.target.value)}
-              placeholder="Note pour le chauffeur (optionnel)"
+              placeholder={t("driverNote")}
               rows={2}
               className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all resize-none"
             />
@@ -190,7 +194,7 @@ export function DirectBookingForm({
             <input
               value={clientName}
               onChange={(e) => setClientName(e.target.value)}
-              placeholder="Votre nom complet *"
+              placeholder={t("fullNameRequired")}
               required
               className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all"
             />
@@ -199,7 +203,7 @@ export function DirectBookingForm({
                 type="email"
                 value={clientEmail}
                 onChange={(e) => setClientEmail(e.target.value)}
-                placeholder="Votre email *"
+                placeholder={t("emailRequired")}
                 required
                 className={`w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all ${emailError(clientEmail) ? "ring-2 ring-red-300 bg-red-50/50" : ""}`}
               />
@@ -212,7 +216,7 @@ export function DirectBookingForm({
                 type="tel"
                 value={clientPhone}
                 onChange={(e) => setClientPhone(e.target.value)}
-                placeholder="Votre téléphone"
+                placeholder={t("yourPhone")}
                 className={`w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all ${phoneError(clientPhone) ? "ring-2 ring-red-300 bg-red-50/50" : ""}`}
               />
               {phoneError(clientPhone) && (
@@ -222,7 +226,7 @@ export function DirectBookingForm({
             <textarea
               value={clientComments}
               onChange={(e) => setClientComments(e.target.value)}
-              placeholder="Commentaires (optionnel)"
+              placeholder={t("comments")}
               rows={2}
               className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all resize-none"
             />
@@ -234,7 +238,7 @@ export function DirectBookingForm({
           disabled={!departure || !arrival || !clientName || !clientEmail || !isValidEmail(clientEmail) || !!phoneError(clientPhone) || submitting}
           className="w-full bg-neutral-950 text-white rounded-xl py-3.5 text-sm font-medium hover:bg-neutral-800 transition-colors btn-lift disabled:opacity-50 disabled:cursor-not-allowed"
         >
-          {submitting ? "Réservation en cours..." : "Réserver maintenant"}
+          {submitting ? t("bookingInProgress") : t("bookNow")}
         </button>
       </form>
     </div>

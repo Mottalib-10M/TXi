@@ -3,8 +3,9 @@
 import { useState } from "react";
 import { Icon } from "@iconify/react";
 import { format } from "date-fns";
-import { fr } from "date-fns/locale";
-import Link from "next/link";
+import { enUS, fr } from "date-fns/locale";
+import { Link } from "@/i18n/navigation";
+import { useLocale, useTranslations } from "next-intl";
 
 interface Booking {
   id: string;
@@ -27,21 +28,26 @@ interface Booking {
   createdAt: string;
 }
 
-const statusConfig: Record<string, { label: string; color: string }> = {
-  PENDING: { label: "En attente", color: "bg-amber-50 text-amber-700" },
-  ACCEPTED: { label: "Acceptée", color: "bg-green-50 text-green-700" },
-  REJECTED: { label: "Refusée", color: "bg-red-50 text-red-700" },
-  CANCELLED: { label: "Annulée", color: "bg-neutral-100 text-neutral-500" },
-  COMPLETED: { label: "Terminée", color: "bg-blue-50 text-blue-700" },
-};
-
-const sourceLabels: Record<string, string> = {
-  LANDING: "Landing",
-  PROFILE: "Profil",
-  ORGANIZATION: "Organisation",
-};
-
 export function AdminBookingsTable({ bookings }: { bookings: Booking[] }) {
+  const t = useTranslations("admin");
+  const tc = useTranslations("common");
+  const td = useTranslations("dashboard");
+  const locale = useLocale();
+
+  const statusConfig: Record<string, { label: string; color: string }> = {
+    PENDING: { label: t("statusPending"), color: "bg-amber-50 text-amber-700" },
+    ACCEPTED: { label: t("statusAccepted"), color: "bg-green-50 text-green-700" },
+    REJECTED: { label: t("statusRejected"), color: "bg-red-50 text-red-700" },
+    CANCELLED: { label: t("statusCancelled"), color: "bg-neutral-100 text-neutral-500" },
+    COMPLETED: { label: t("statusCompleted"), color: "bg-blue-50 text-blue-700" },
+  };
+
+  const sourceLabels: Record<string, string> = {
+    LANDING: "Landing",
+    PROFILE: td("fromProfile"),
+    ORGANIZATION: t("organisations"),
+  };
+
   const [filter, setFilter] = useState<string>("ALL");
   const [search, setSearch] = useState("");
   const [expandedId, setExpandedId] = useState<string | null>(null);
@@ -62,12 +68,12 @@ export function AdminBookingsTable({ bookings }: { bookings: Booking[] }) {
       {/* Filters */}
       <div className="flex gap-2 mb-4 overflow-x-auto pb-2">
         {[
-          { key: "ALL", label: "Toutes" },
-          { key: "PENDING", label: "En attente" },
-          { key: "ACCEPTED", label: "Acceptées" },
-          { key: "COMPLETED", label: "Terminées" },
-          { key: "REJECTED", label: "Refusées" },
-          { key: "CANCELLED", label: "Annulées" },
+          { key: "ALL", label: t("filterAll") },
+          { key: "PENDING", label: t("filterPending") },
+          { key: "ACCEPTED", label: t("filterAccepted") },
+          { key: "COMPLETED", label: t("filterCompleted") },
+          { key: "REJECTED", label: t("filterRejected") },
+          { key: "CANCELLED", label: t("filterCancelled") },
         ].map((f) => (
           <button
             key={f.key}
@@ -93,7 +99,7 @@ export function AdminBookingsTable({ bookings }: { bookings: Booking[] }) {
           type="text"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          placeholder="Rechercher par référence, client ou chauffeur..."
+          placeholder={t("searchBookings")}
           className="w-full pl-10 pr-4 py-2.5 bg-white border border-neutral-200 rounded-xl text-sm focus:outline-none focus:border-neutral-400 transition-colors"
         />
       </div>
@@ -101,7 +107,7 @@ export function AdminBookingsTable({ bookings }: { bookings: Booking[] }) {
       {filtered.length === 0 ? (
         <div className="bg-white border border-neutral-200 rounded-2xl p-12 text-center">
           <Icon icon="solar:calendar-linear" className="text-4xl text-neutral-300 mx-auto mb-3" />
-          <p className="text-sm text-neutral-500 font-light">Aucune réservation trouvée</p>
+          <p className="text-sm text-neutral-500 font-light">{t("noBookingsFound")}</p>
         </div>
       ) : (
         <div className="space-y-3">
@@ -148,7 +154,7 @@ export function AdminBookingsTable({ bookings }: { bookings: Booking[] }) {
                 <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-neutral-400">
                   <span className="flex items-center gap-1">
                     <Icon icon="solar:calendar-linear" />
-                    {format(new Date(booking.requestedDate), "dd MMM yyyy à HH:mm", { locale: fr })}
+                    {format(new Date(booking.requestedDate), locale === "en" ? "dd MMM yyyy 'at' HH:mm" : "dd MMM yyyy 'à' HH:mm", { locale: locale === "en" ? enUS : fr })}
                   </span>
                   {booking.driver && (
                     <span className="flex items-center gap-1">
@@ -173,14 +179,14 @@ export function AdminBookingsTable({ bookings }: { bookings: Booking[] }) {
                 <div className="mt-3 pt-3 border-t border-neutral-100 space-y-2 text-xs text-neutral-500">
                   <div className="grid sm:grid-cols-2 gap-2">
                     <div>
-                      <p className="text-neutral-400 mb-0.5">Client</p>
+                      <p className="text-neutral-400 mb-0.5">{t("client")}</p>
                       <p>{booking.clientName}</p>
                       <p>{booking.clientEmail}</p>
                       {booking.clientPhone && <p>{booking.clientPhone}</p>}
                     </div>
                     {booking.driver && (
                       <div>
-                        <p className="text-neutral-400 mb-0.5">Chauffeur</p>
+                        <p className="text-neutral-400 mb-0.5">{t("driver")}</p>
                         <Link
                           href={`/taxi/${booking.driver.slug}`}
                           target="_blank"
@@ -193,19 +199,19 @@ export function AdminBookingsTable({ bookings }: { bookings: Booking[] }) {
                   </div>
                   {booking.beneficiaryName && (
                     <div>
-                      <p className="text-neutral-400 mb-0.5">Bénéficiaire</p>
+                      <p className="text-neutral-400 mb-0.5">{t("beneficiary")}</p>
                       <p>{booking.beneficiaryName}</p>
                     </div>
                   )}
                   {booking.clientComments && (
                     <div>
-                      <p className="text-neutral-400 mb-0.5">Commentaires</p>
+                      <p className="text-neutral-400 mb-0.5">{td("comments")}</p>
                       <p className="bg-neutral-50 rounded-lg px-3 py-2">{booking.clientComments}</p>
                     </div>
                   )}
                   <div className="flex flex-wrap gap-x-4 gap-y-1 text-neutral-400">
-                    <span>{booking.passengerCount} passager{booking.passengerCount > 1 ? "s" : ""}</span>
-                    <span>Créée le {format(new Date(booking.createdAt), "dd MMM yyyy à HH:mm", { locale: fr })}</span>
+                    <span>{booking.passengerCount} {booking.passengerCount > 1 ? tc("passengers") : tc("passenger")}</span>
+                    <span>{t("createdOn", { date: format(new Date(booking.createdAt), locale === "en" ? "dd MMM yyyy 'at' HH:mm" : "dd MMM yyyy 'à' HH:mm", { locale: locale === "en" ? enUS : fr }) })}</span>
                   </div>
                 </div>
               )}

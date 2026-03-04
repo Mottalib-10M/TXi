@@ -1,16 +1,19 @@
 import { Icon } from "@iconify/react";
 import type { City } from "@/data/cities";
+import { getTranslations } from "next-intl/server";
 
-export function CityLandmarks({ city }: { city: City }) {
+export async function CityLandmarks({ city }: { city: City }) {
+  const t = await getTranslations("city");
+
   return (
     <section className="py-20 md:py-28">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16 fade-up">
           <p className="text-sm font-medium text-neutral-500 mb-2 uppercase tracking-wider">
-            Destinations populaires
+            {t("landmarksSubtitle")}
           </p>
           <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
-            Lieux desservis à {city.name}
+            {t("landmarksTitle", { cityName: city.name })}
           </h2>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">

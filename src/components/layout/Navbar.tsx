@@ -1,12 +1,15 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import Link from "next/link";
 import { useSession, signOut } from "next-auth/react";
 import { Icon } from "@iconify/react";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { Logo } from "@/components/ui/Logo";
+import { LanguageSwitcher } from "@/components/ui/LanguageSwitcher";
 
 export function Navbar({ minimal = false }: { minimal?: boolean }) {
+  const t = useTranslations("nav");
   const { data: session, status } = useSession();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -55,31 +58,32 @@ export function Navbar({ minimal = false }: { minimal?: boolean }) {
           {!minimal && (
             <nav className="hidden md:flex items-center gap-6">
               <Link href="/#reserver" className="text-sm font-medium text-neutral-900">
-                Commander
+                {t("order")}
               </Link>
               <Link
                 href="/#comment-ca-marche"
                 className="text-sm font-medium text-neutral-500 hover:text-neutral-900 transition-colors"
               >
-                Comment ça marche
+                {t("howItWorks")}
               </Link>
               <Link
                 href="/#chauffeurs"
                 className="text-sm font-medium text-neutral-500 hover:text-neutral-900 transition-colors"
               >
-                Chauffeurs
+                {t("drivers")}
               </Link>
               <Link
                 href="/#business"
                 className="text-sm font-medium text-neutral-500 hover:text-neutral-900 transition-colors"
               >
-                Business
+                {t("business")}
               </Link>
             </nav>
           )}
         </div>
 
         <div className="flex items-center gap-4">
+          <LanguageSwitcher />
           {isLoggedIn ? (
             <div className="relative">
               <button
@@ -108,7 +112,7 @@ export function Navbar({ minimal = false }: { minimal?: boolean }) {
                       className="flex items-center gap-2.5 px-4 py-2.5 text-sm text-neutral-700 hover:bg-neutral-50 transition-colors"
                     >
                       <Icon icon="solar:chart-square-linear" className="text-lg text-neutral-400" />
-                      Tableau de bord
+                      {t("dashboard")}
                     </Link>
                     <Link
                       href="/dashboard/profil"
@@ -116,7 +120,7 @@ export function Navbar({ minimal = false }: { minimal?: boolean }) {
                       className="flex items-center gap-2.5 px-4 py-2.5 text-sm text-neutral-700 hover:bg-neutral-50 transition-colors"
                     >
                       <Icon icon="solar:user-linear" className="text-lg text-neutral-400" />
-                      Mon profil
+                      {t("myProfile")}
                     </Link>
                     <Link
                       href="/dashboard/reservations"
@@ -124,7 +128,7 @@ export function Navbar({ minimal = false }: { minimal?: boolean }) {
                       className="flex items-center gap-2.5 px-4 py-2.5 text-sm text-neutral-700 hover:bg-neutral-50 transition-colors"
                     >
                       <Icon icon="solar:calendar-linear" className="text-lg text-neutral-400" />
-                      Réservations
+                      {t("reservations")}
                     </Link>
                     <div className="border-t border-neutral-100 mt-1.5 pt-1.5">
                       <button
@@ -132,7 +136,7 @@ export function Navbar({ minimal = false }: { minimal?: boolean }) {
                         className="flex items-center gap-2.5 px-4 py-2.5 text-sm text-red-600 hover:bg-red-50 transition-colors w-full"
                       >
                         <Icon icon="solar:logout-2-linear" className="text-lg" />
-                        Déconnexion
+                        {t("logout")}
                       </button>
                     </div>
                   </div>
@@ -145,20 +149,20 @@ export function Navbar({ minimal = false }: { minimal?: boolean }) {
                 href="/connexion"
                 className="hidden md:block text-sm font-medium text-neutral-900 hover:text-neutral-600 transition-colors"
               >
-                Connexion
+                {t("login")}
               </Link>
               <Link
                 href="/inscription"
                 className="hidden md:inline-flex bg-neutral-950 text-white text-sm font-medium px-5 py-2.5 rounded-full hover:bg-neutral-800 transition-colors btn-lift"
               >
-                S&apos;inscrire
+                {t("signup")}
               </Link>
             </>
           )}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             className="md:hidden p-2 hover:bg-neutral-100 rounded-lg transition-colors"
-            aria-label="Menu"
+            aria-label={t("menu")}
           >
             <Icon
               icon={mobileOpen ? "solar:close-circle-linear" : "solar:hamburger-menu-linear"}
@@ -182,28 +186,28 @@ export function Navbar({ minimal = false }: { minimal?: boolean }) {
                 onClick={() => setMobileOpen(false)}
                 className="block py-3 text-sm font-medium text-neutral-900 hover:bg-neutral-50 rounded-lg px-3 transition-colors"
               >
-                Commander
+                {t("order")}
               </Link>
               <Link
                 href="/#comment-ca-marche"
                 onClick={() => setMobileOpen(false)}
                 className="block py-3 text-sm font-medium text-neutral-500 hover:bg-neutral-50 hover:text-neutral-900 rounded-lg px-3 transition-colors"
               >
-                Comment ça marche
+                {t("howItWorks")}
               </Link>
               <Link
                 href="/#chauffeurs"
                 onClick={() => setMobileOpen(false)}
                 className="block py-3 text-sm font-medium text-neutral-500 hover:bg-neutral-50 hover:text-neutral-900 rounded-lg px-3 transition-colors"
               >
-                Chauffeurs
+                {t("drivers")}
               </Link>
               <Link
                 href="/#business"
                 onClick={() => setMobileOpen(false)}
                 className="block py-3 text-sm font-medium text-neutral-500 hover:bg-neutral-50 hover:text-neutral-900 rounded-lg px-3 transition-colors"
               >
-                Business
+                {t("business")}
               </Link>
             </>
           )}
@@ -214,27 +218,27 @@ export function Navbar({ minimal = false }: { minimal?: boolean }) {
                 onClick={() => setMobileOpen(false)}
                 className="block py-3 text-sm font-medium text-neutral-900 hover:bg-neutral-50 rounded-lg px-3 transition-colors"
               >
-                Tableau de bord
+                {t("dashboard")}
               </Link>
               <Link
                 href="/dashboard/profil"
                 onClick={() => setMobileOpen(false)}
                 className="block py-3 text-sm font-medium text-neutral-500 hover:bg-neutral-50 hover:text-neutral-900 rounded-lg px-3 transition-colors"
               >
-                Mon profil
+                {t("myProfile")}
               </Link>
               <Link
                 href="/dashboard/reservations"
                 onClick={() => setMobileOpen(false)}
                 className="block py-3 text-sm font-medium text-neutral-500 hover:bg-neutral-50 hover:text-neutral-900 rounded-lg px-3 transition-colors"
               >
-                Réservations
+                {t("reservations")}
               </Link>
               <button
                 onClick={() => { setMobileOpen(false); signOut({ callbackUrl: "/" }); }}
                 className="block w-full text-left py-3 text-sm font-medium text-red-600 hover:bg-red-50 rounded-lg px-3 transition-colors"
               >
-                Déconnexion
+                {t("logout")}
               </button>
             </div>
           ) : (
@@ -244,14 +248,14 @@ export function Navbar({ minimal = false }: { minimal?: boolean }) {
                 onClick={() => setMobileOpen(false)}
                 className="block text-center py-3 text-sm font-medium text-neutral-900 border border-neutral-200 rounded-xl hover:bg-neutral-50 transition-colors"
               >
-                Connexion
+                {t("login")}
               </Link>
               <Link
                 href="/inscription"
                 onClick={() => setMobileOpen(false)}
                 className="block text-center py-3 text-sm font-medium text-white bg-neutral-950 rounded-xl hover:bg-neutral-800 transition-colors"
               >
-                S&apos;inscrire
+                {t("signup")}
               </Link>
             </div>
           )}

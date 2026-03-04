@@ -19,7 +19,8 @@ export async function PATCH(
 
   try {
     const body = await request.json();
-    const { status } = body;
+    const { status, locale: reqLocale } = body;
+    const locale: "fr" | "en" = reqLocale === "en" ? "en" : "fr";
 
     if (!["ACCEPTED", "REJECTED", "COMPLETED"].includes(status)) {
       return NextResponse.json({ error: "Statut invalide" }, { status: 400 });
@@ -83,7 +84,8 @@ export async function PATCH(
         });
 
         if (driver) {
-          const dateFormatted = new Date(booking.requestedDate).toLocaleDateString("fr-FR", {
+          const dateLocale = locale === "en" ? "en-US" : "fr-FR";
+          const dateFormatted = new Date(booking.requestedDate).toLocaleDateString(dateLocale, {
             weekday: "long",
             day: "numeric",
             month: "long",
@@ -118,6 +120,8 @@ export async function PATCH(
             driverEmail: driver.email,
             bookingId: booking.id,
             isOrgBooking,
+            price: booking.lockedPrice,
+            locale,
           });
           await sendEmail({ to: clientEmailTo, ...clientMail });
 
@@ -134,6 +138,8 @@ export async function PATCH(
             date: dateFormatted,
             reference: booking.reference,
             bookingId: booking.id,
+            price: booking.lockedPrice,
+            locale,
           });
           await sendEmail({ to: driver.email, ...driverMail });
         }
@@ -145,7 +151,8 @@ export async function PATCH(
     // Send rejection notification to client
     if (status === "REJECTED" && booking.clientEmail && booking.clientEmail !== "noemail@taxinoir.fr") {
       try {
-        const dateFormatted = new Date(booking.requestedDate).toLocaleDateString("fr-FR", {
+        const rejectDateLocale = locale === "en" ? "en-US" : "fr-FR";
+        const dateFormatted = new Date(booking.requestedDate).toLocaleDateString(rejectDateLocale, {
           weekday: "long",
           day: "numeric",
           month: "long",
@@ -163,6 +170,8 @@ export async function PATCH(
           arrival: booking.arrivalName,
           date: dateFormatted,
           reference: booking.reference,
+          price: booking.lockedPrice,
+          locale,
         });
         await sendEmail({ to: clientEmailTo, ...rejectionMail });
       } catch (error) {

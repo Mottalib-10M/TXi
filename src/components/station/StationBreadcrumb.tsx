@@ -1,13 +1,16 @@
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
+import { getTranslations } from "next-intl/server";
 
-export function StationBreadcrumb({ stationName }: { stationName: string }) {
+export async function StationBreadcrumb({ stationName }: { stationName: string }) {
+  const t = await getTranslations("station");
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Accueil", item: "https://www.taxinoir.fr" },
-      { "@type": "ListItem", position: 2, name: "Taxi Gare", item: "https://www.taxinoir.fr/gares" },
-      { "@type": "ListItem", position: 3, name: `Taxi Gare ${stationName}` },
+      { "@type": "ListItem", position: 1, name: t("breadcrumbHome"), item: "https://www.taxinoir.fr" },
+      { "@type": "ListItem", position: 2, name: t("breadcrumbStations"), item: "https://www.taxinoir.fr/gares" },
+      { "@type": "ListItem", position: 3, name: t("breadcrumbTaxi", { stationName }) },
     ],
   };
 
@@ -17,17 +20,17 @@ export function StationBreadcrumb({ stationName }: { stationName: string }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <nav className="text-sm text-neutral-500 font-light mb-6" aria-label="Fil d'ariane">
+      <nav className="text-sm text-neutral-500 font-light mb-6" aria-label={t("breadcrumbLabel")}>
         <ol className="flex items-center gap-1.5 flex-wrap">
           <li>
-            <Link href="/" className="hover:text-neutral-900 transition-colors">Accueil</Link>
+            <Link href="/" className="hover:text-neutral-900 transition-colors">{t("breadcrumbHome")}</Link>
           </li>
           <li aria-hidden="true">/</li>
           <li>
-            <Link href="/gares" className="hover:text-neutral-900 transition-colors">Taxi Gare</Link>
+            <Link href="/gares" className="hover:text-neutral-900 transition-colors">{t("breadcrumbStations")}</Link>
           </li>
           <li aria-hidden="true">/</li>
-          <li className="text-neutral-900 font-medium">Taxi Gare {stationName}</li>
+          <li className="text-neutral-900 font-medium">{t("breadcrumbTaxi", { stationName })}</li>
         </ol>
       </nav>
     </>

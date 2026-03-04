@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { Icon } from "@iconify/react";
 import type { Airport } from "@/data/airports";
 import { getNearbyAirports } from "@/data/airports";
