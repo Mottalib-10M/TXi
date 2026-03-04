@@ -15,6 +15,9 @@ const driverSchema = z.object({
   cityAddress: z.string().optional(),
   cityLat: z.number().optional(),
   cityLng: z.number().optional(),
+  vehicleBrand: z.string().optional(),
+  vehiclePlate: z.string().optional(),
+  vehiclePhotoBase64: z.string().optional(),
 });
 
 const orgSchema = z.object({
@@ -95,6 +98,13 @@ export async function POST(request: Request) {
     if (data.profileType === "driver") {
       const slug = await generateUniqueSlug(data.firstName, data.companyName);
 
+      // Handle vehicle photo if provided
+      let photoUrl: string | undefined;
+      if (data.vehiclePhotoBase64) {
+        // Store as data URI (base64) — works without external storage
+        photoUrl = data.vehiclePhotoBase64;
+      }
+
       const driver = await prisma.driver.create({
         data: {
           firstName: data.firstName,
@@ -108,6 +118,9 @@ export async function POST(request: Request) {
           zoneLng: data.cityLng,
           zoneAddress: data.cityAddress || undefined,
           zoneRadius: 50,
+          vehicleBrand: data.vehicleBrand || undefined,
+          vehiclePlate: data.vehiclePlate || undefined,
+          photoUrl,
         },
       });
 

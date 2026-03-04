@@ -129,6 +129,7 @@ export default async function ProfilPublicPage() {
             <FareEstimator
               baseFare={driver.baseFare}
               pricePerKm={driver.pricePerKm}
+              pricePerKmNight={driver.pricePerKmNight}
               pricePerMinute={driver.pricePerMinute}
               minimumFare={driver.minimumFare}
             />

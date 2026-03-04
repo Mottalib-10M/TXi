@@ -40,14 +40,14 @@ export function PricingGrid({ pricing, onChange }: PricingGridProps) {
             <p className="text-xs text-neutral-400 mb-1.5">{field.description}</p>
             <div className="relative">
               <input
-                type="number"
-                min={0}
-                step={0.1}
-                value={rawValues[field.key] ?? pricing[field.key]}
+                type="text"
+                inputMode="decimal"
+                value={rawValues[field.key] ?? pricing[field.key].toString().replace(".", ",")}
                 onChange={(e) => {
                   const val = e.target.value;
+                  if (val !== "" && !/^\d*[.,]?\d*$/.test(val)) return;
                   setRawValues((prev) => ({ ...prev, [field.key]: val }));
-                  const num = parseFloat(val);
+                  const num = parseFloat(val.replace(",", "."));
                   if (!isNaN(num)) {
                     onChange({ ...pricing, [field.key]: num });
                   } else if (val === "") {

@@ -182,6 +182,33 @@ export function buildBookingAcceptedClientEmail(data: {
   };
 }
 
+export function buildBookingRejectedClientEmail(data: {
+  clientName: string;
+  departure: string;
+  arrival: string;
+  date: string;
+  reference: string;
+}) {
+  return {
+    subject: `Réservation #${data.reference} — non disponible`,
+    html: `
+      <div style="font-family: Inter, sans-serif; max-width: 600px; margin: 0 auto;">
+        <h2 style="color: #171717;">Mise à jour de votre réservation</h2>
+        <p>Bonjour ${data.clientName},</p>
+        <p>Malheureusement, le chauffeur n'est pas disponible pour votre demande de course :</p>
+        <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">Départ</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.departure}</td></tr>
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">Arrivée</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.arrival}</td></tr>
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">Date</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.date}</td></tr>
+          <tr><td style="padding: 8px; color: #737373;">Référence</td><td style="padding: 8px; font-weight: 500;">#${data.reference}</td></tr>
+        </table>
+        <p>Nous vous invitons à effectuer une nouvelle recherche sur <a href="https://taxinoir.fr" style="color: #171717; font-weight: 500;">taxinoir.fr</a> pour trouver un autre chauffeur disponible.</p>
+        <p style="color: #a3a3a3; font-size: 12px;">— L'équipe TaxiNoir</p>
+      </div>
+    `,
+  };
+}
+
 export function buildBookingAcceptedDriverEmail(data: {
   driverName: string;
   clientName: string;

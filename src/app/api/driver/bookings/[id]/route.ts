@@ -5,6 +5,7 @@ import {
   sendEmail,
   buildBookingAcceptedClientEmail,
   buildBookingAcceptedDriverEmail,
+  buildBookingRejectedClientEmail,
 } from "@/lib/email";
 
 export async function PATCH(
@@ -138,6 +139,34 @@ export async function PATCH(
         }
       } catch (error) {
         console.error("Failed to send acceptance emails:", error);
+      }
+    }
+
+    // Send rejection notification to client
+    if (status === "REJECTED" && booking.clientEmail && booking.clientEmail !== "noemail@taxinoir.fr") {
+      try {
+        const dateFormatted = new Date(booking.requestedDate).toLocaleDateString("fr-FR", {
+          weekday: "long",
+          day: "numeric",
+          month: "long",
+          year: "numeric",
+          hour: "2-digit",
+          minute: "2-digit",
+        });
+
+        const clientEmailTo = booking.organization ? booking.organization.email : booking.clientEmail;
+        const clientDisplayName = booking.organization ? booking.organization.contactName : booking.clientName;
+
+        const rejectionMail = buildBookingRejectedClientEmail({
+          clientName: clientDisplayName,
+          departure: booking.departureName,
+          arrival: booking.arrivalName,
+          date: dateFormatted,
+          reference: booking.reference,
+        });
+        await sendEmail({ to: clientEmailTo, ...rejectionMail });
+      } catch (error) {
+        console.error("Failed to send rejection email:", error);
       }
     }
 

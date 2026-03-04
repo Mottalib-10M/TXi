@@ -4,6 +4,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { BookingForm } from "@/components/booking/BookingForm";
 import { ScrollAnimation } from "@/components/ui/ScrollAnimation";
+import { AddToFavoritesPopup } from "@/components/ui/AddToFavoritesPopup";
 import { popularCities, cities } from "@/data/cities";
 import { popularAirports, airports } from "@/data/airports";
 import { popularStations, stations } from "@/data/stations";
@@ -530,80 +531,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* App CTA */}
-      <section className="border-t border-neutral-100 py-20 md:py-28">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="bg-neutral-950 rounded-3xl p-8 md:p-16 flex flex-col md:flex-row items-center justify-between gap-10 relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-96 h-96 bg-neutral-800 rounded-full blur-3xl opacity-30" />
-            <div className="absolute bottom-0 left-0 w-64 h-64 bg-neutral-800 rounded-full blur-3xl opacity-20" />
-
-            <div className="max-w-lg relative z-10 fade-up">
-              <h2 className="text-2xl md:text-4xl font-semibold tracking-tight text-white mb-4">
-                Votre taxi, dans votre poche.
-              </h2>
-              <p className="text-neutral-400 text-sm md:text-base font-light mb-8 leading-relaxed">
-                Téléchargez l&apos;application TaxiNoir pour réserver, suivre l&apos;approche de votre
-                chauffeur et payer sans contact, le tout depuis votre smartphone.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <button className="bg-white text-neutral-950 px-6 py-3 rounded-full text-sm font-medium hover:bg-neutral-100 transition-colors flex items-center gap-2 btn-lift">
-                  <Icon icon="mdi:apple" className="text-lg" /> App Store
-                </button>
-                <button className="bg-neutral-800 text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-neutral-700 transition-colors flex items-center gap-2 border border-neutral-700 btn-lift">
-                  <Icon icon="mdi:google-play" className="text-lg" /> Google Play
-                </button>
-              </div>
-            </div>
-
-            {/* Phone mockup */}
-            <div className="hidden md:block w-64 h-[440px] border-[6px] border-neutral-800 rounded-[2.5rem] bg-neutral-900 relative overflow-hidden shadow-2xl z-10 fade-up fade-up-delay-2">
-              <div className="absolute top-0 inset-x-0 h-7 bg-neutral-800 rounded-b-2xl w-28 mx-auto z-20" />
-              <div className="p-4 mt-10 space-y-3">
-                <div className="flex justify-between items-center px-1 mb-2">
-                  <span className="text-[10px] text-neutral-500">9:41</span>
-                  <div className="flex gap-1 items-center">
-                    <div className="w-3 h-2 bg-neutral-600 rounded-sm" />
-                    <div className="w-4 h-2 bg-neutral-600 rounded-sm" />
-                  </div>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-xs font-semibold"><span className="text-neutral-500">Taxi</span><span className="text-white">Noir</span></span>
-                  <div className="w-6 h-6 bg-neutral-800 rounded-full" />
-                </div>
-                <div className="h-10 bg-neutral-800 rounded-xl w-full flex items-center px-3 gap-2">
-                  <div className="w-3 h-3 bg-neutral-600 rounded-full" />
-                  <div className="h-2 bg-neutral-700 rounded w-24" />
-                </div>
-                <div
-                  className="h-28 bg-neutral-800 rounded-xl w-full relative overflow-hidden"
-                  style={{
-                    backgroundImage: "radial-gradient(#404040 1px, transparent 1px)",
-                    backgroundSize: "12px 12px",
-                  }}
-                >
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 bg-white rounded-full shadow-lg" />
-                </div>
-                <div className="bg-neutral-800 rounded-xl p-3 space-y-2">
-                  <div className="flex items-center gap-2">
-                    <div className="w-7 h-7 bg-neutral-700 rounded-full" />
-                    <div className="space-y-1">
-                      <div className="h-2 bg-neutral-700 rounded w-16" />
-                      <div className="h-1.5 bg-neutral-700 rounded w-12" />
-                    </div>
-                  </div>
-                  <div className="h-1 bg-neutral-700 rounded-full">
-                    <div className="h-full bg-white rounded-full w-3/4" />
-                  </div>
-                </div>
-                <div className="h-10 bg-white rounded-xl w-full" />
-              </div>
-              <div className="absolute bottom-2 inset-x-0 flex justify-center">
-                <div className="w-28 h-1 bg-neutral-600 rounded-full" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <AddToFavoritesPopup />
 
       <Footer />
     </div>

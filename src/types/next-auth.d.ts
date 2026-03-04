@@ -2,6 +2,12 @@ import { OrgType } from "@prisma/client";
 import "next-auth";
 import "next-auth/jwt";
 
+interface ImpersonatingFrom {
+  id: string;
+  email: string;
+  name: string;
+}
+
 declare module "next-auth" {
   interface User {
     role?: "driver" | "organization";
@@ -15,6 +21,7 @@ declare module "next-auth" {
       name: string;
       role: "driver" | "organization";
       orgType?: OrgType;
+      impersonatingFrom?: ImpersonatingFrom;
     };
   }
 }
@@ -24,5 +31,6 @@ declare module "next-auth/jwt" {
     id?: string;
     role?: "driver" | "organization";
     orgType?: OrgType;
+    impersonatingFrom?: ImpersonatingFrom;
   }
 }

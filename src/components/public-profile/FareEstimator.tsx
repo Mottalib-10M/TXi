@@ -7,6 +7,7 @@ import { PlacesAutocomplete } from "@/components/booking/PlacesAutocomplete";
 interface FareEstimatorProps {
   baseFare: number;
   pricePerKm: number;
+  pricePerKmNight?: number;
   pricePerMinute: number;
   minimumFare: number;
   onLocationsChange?: (locations: {
@@ -56,6 +57,7 @@ function formatDuration(minutes: number): string {
 export function FareEstimator({
   baseFare,
   pricePerKm,
+  pricePerKmNight,
   pricePerMinute,
   minimumFare,
   onLocationsChange,
@@ -63,6 +65,7 @@ export function FareEstimator({
 }: FareEstimatorProps) {
   const [origin, setOrigin] = useState<LocationState>({ address: "" });
   const [destination, setDestination] = useState<LocationState>({ address: "" });
+  const [isNight, setIsNight] = useState(false);
 
   function handleOriginChange(address: string, lat?: number, lng?: number) {
     const newOrigin = { address, lat, lng };
@@ -105,7 +108,8 @@ export function FareEstimator({
     // Variable speed: city (short) → highway (long distance)
     const avgSpeed = distance < 10 ? 25 : distance < 30 ? 40 : distance < 80 ? 60 : 80;
     const duration = (distance / avgSpeed) * 60; // minutes
-    const calculated = baseFare + distance * pricePerKm + duration * pricePerMinute;
+    const activeRate = isNight && pricePerKmNight ? pricePerKmNight : pricePerKm;
+    const calculated = baseFare + distance * activeRate + duration * pricePerMinute;
     const price = Math.max(calculated, minimumFare);
     estimate = { distance, duration, price };
   }
@@ -132,6 +136,35 @@ export function FareEstimator({
           icon="solar:flag-linear"
         />
       </div>
+
+      {pricePerKmNight != null && pricePerKmNight > 0 && (
+        <div className="flex items-center gap-2 mb-4">
+          <button
+            type="button"
+            onClick={() => setIsNight(false)}
+            className={`flex-1 flex items-center justify-center gap-1.5 py-2 rounded-lg text-xs font-medium transition-colors ${
+              !isNight
+                ? "bg-neutral-900 text-white"
+                : "bg-neutral-100 text-neutral-500 hover:bg-neutral-200"
+            }`}
+          >
+            <Icon icon="solar:sun-2-linear" className="text-sm" />
+            Jour
+          </button>
+          <button
+            type="button"
+            onClick={() => setIsNight(true)}
+            className={`flex-1 flex items-center justify-center gap-1.5 py-2 rounded-lg text-xs font-medium transition-colors ${
+              isNight
+                ? "bg-neutral-900 text-white"
+                : "bg-neutral-100 text-neutral-500 hover:bg-neutral-200"
+            }`}
+          >
+            <Icon icon="solar:moon-linear" className="text-sm" />
+            Nuit (19h-7h)
+          </button>
+        </div>
+      )}
 
       {estimate && (
         <div className="bg-neutral-50 rounded-xl p-4 space-y-3">

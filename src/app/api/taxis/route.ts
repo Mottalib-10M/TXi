@@ -9,6 +9,8 @@ export async function GET(request: NextRequest) {
   const departureLng = parseFloat(searchParams.get("departureLng") || "0");
   const arrivalLat = parseFloat(searchParams.get("arrivalLat") || "0");
   const arrivalLng = parseFloat(searchParams.get("arrivalLng") || "0");
+  const requestedTimeParam = searchParams.get("requestedTime");
+  const bookingTime = requestedTimeParam ? new Date(requestedTimeParam) : new Date();
 
   try {
     // Text search mode (for favorites search)
@@ -61,6 +63,7 @@ export async function GET(request: NextRequest) {
         zoneRadius: true,
         baseFare: true,
         pricePerKm: true,
+        pricePerKmNight: true,
         pricePerMinute: true,
         minimumFare: true,
       },
@@ -87,7 +90,7 @@ export async function GET(request: NextRequest) {
           distance: distanceToDriver,
           estimatedPrice:
             tripDistance > 0
-              ? estimatePrice(tripDistance, driver.baseFare, driver.pricePerKm, driver.minimumFare)
+              ? estimatePrice(tripDistance, driver.baseFare, driver.pricePerKm, driver.minimumFare, driver.pricePerKmNight, bookingTime)
               : undefined,
         };
       })

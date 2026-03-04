@@ -57,6 +57,10 @@ export function BookingForm() {
       if (departureLng) params.set("departureLng", departureLng.toString());
       if (arrivalLat) params.set("arrivalLat", arrivalLat.toString());
       if (arrivalLng) params.set("arrivalLng", arrivalLng.toString());
+      const requestedTime = scheduleLater && scheduledDate
+        ? new Date(scheduledDate).toISOString()
+        : new Date().toISOString();
+      params.set("requestedTime", requestedTime);
 
       const res = await fetch(`/api/taxis?${params}`);
       const data = await res.json();
@@ -208,7 +212,7 @@ export function BookingForm() {
                   value={scheduledDate}
                   onChange={(e) => setScheduledDate(e.target.value)}
                   min={new Date().toISOString().slice(0, 16)}
-                  className="block w-full bg-neutral-100 border border-neutral-200 rounded-xl pl-11 pr-4 py-3.5 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all"
+                  className="block w-full bg-neutral-50 border border-neutral-200 rounded-xl pl-11 pr-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all"
                   style={{ WebkitAppearance: "none", MozAppearance: "none" }}
                 />
               </div>

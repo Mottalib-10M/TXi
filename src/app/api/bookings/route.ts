@@ -98,7 +98,9 @@ export async function POST(request: Request) {
             estimatedDistance,
             nearbyDrivers[0].baseFare,
             nearbyDrivers[0].pricePerKm,
-            nearbyDrivers[0].minimumFare
+            nearbyDrivers[0].minimumFare,
+            nearbyDrivers[0].pricePerKmNight,
+            requestedDate,
           );
         }
       }
@@ -153,18 +155,20 @@ export async function POST(request: Request) {
       }
     }
 
-    // Send confirmation to client
-    const clientEmail = buildClientConfirmationEmail({
-      clientName: data.clientName,
-      departure: data.departureName,
-      arrival: data.arrivalName,
-      date: dateFormatted,
-      reference,
-      driverName: booking.driver
-        ? `${booking.driver.firstName} ${booking.driver.lastName}`
-        : undefined,
-    });
-    await sendEmail({ to: data.clientEmail, ...clientEmail });
+    // Send confirmation to client (skip placeholder emails)
+    if (data.clientEmail !== "noemail@taxinoir.fr") {
+      const clientEmailData = buildClientConfirmationEmail({
+        clientName: data.clientName,
+        departure: data.departureName,
+        arrival: data.arrivalName,
+        date: dateFormatted,
+        reference,
+        driverName: booking.driver
+          ? `${booking.driver.firstName} ${booking.driver.lastName}`
+          : undefined,
+      });
+      await sendEmail({ to: data.clientEmail, ...clientEmailData });
+    }
 
     return NextResponse.json(
       { message: "Réservation créée", reference, bookingId: booking.id },

@@ -82,6 +82,9 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         session.user.id = token.id as string;
         session.user.role = (token.role as "driver" | "organization") || "driver";
         session.user.orgType = token.orgType;
+        if (token.impersonatingFrom) {
+          session.user.impersonatingFrom = token.impersonatingFrom;
+        }
       }
       return session;
     },

@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import { Toaster } from "sonner";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Providers } from "@/components/Providers";
+import { ImpersonationBanner } from "@/components/ui/ImpersonationBanner";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -31,6 +32,7 @@ export default function RootLayout({
         className={`${inter.className} bg-white text-neutral-900 antialiased selection:bg-neutral-200 selection:text-black overflow-x-hidden`}
       >
         <Providers>
+          <ImpersonationBanner />
           {children}
           <Toaster position="top-right" richColors />
           <SpeedInsights />

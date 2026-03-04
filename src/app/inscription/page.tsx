@@ -27,23 +27,79 @@ export default function InscriptionPage() {
   const [cityAddress, setCityAddress] = useState("");
   const [cityLat, setCityLat] = useState<number | undefined>();
   const [cityLng, setCityLng] = useState<number | undefined>();
+  const [driverStep, setDriverStep] = useState<1 | 2>(1);
+  const [driverFirstName, setDriverFirstName] = useState("");
+  const [driverCompanyName, setDriverCompanyName] = useState("");
+  const [driverPassword, setDriverPassword] = useState("");
+  const [vehicleBrand, setVehicleBrand] = useState("");
+  const [vehiclePlate, setVehiclePlate] = useState("");
+  const [vehiclePhotoBase64, setVehiclePhotoBase64] = useState("");
+  const [vehiclePhotoPreview, setVehiclePhotoPreview] = useState("");
+
+  function handleDriverStep1(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setError("");
+    const formData = new FormData(e.currentTarget);
+    setDriverFirstName(formData.get("firstName") as string);
+    setDriverCompanyName(formData.get("companyName") as string);
+    setFormEmail(formData.get("email") as string);
+    setFormPhone(formData.get("phone") as string);
+    setDriverPassword(formData.get("password") as string);
+    setDriverStep(2);
+  }
+
+  async function compressImage(file: File): Promise<string> {
+    return new Promise((resolve) => {
+      const reader = new FileReader();
+      reader.onload = (ev) => {
+        const img = new Image();
+        img.onload = () => {
+          const canvas = document.createElement("canvas");
+          const MAX = 800;
+          let w = img.width;
+          let h = img.height;
+          if (w > MAX || h > MAX) {
+            if (w > h) { h = (h / w) * MAX; w = MAX; }
+            else { w = (w / h) * MAX; h = MAX; }
+          }
+          canvas.width = w;
+          canvas.height = h;
+          const ctx = canvas.getContext("2d")!;
+          ctx.drawImage(img, 0, 0, w, h);
+          resolve(canvas.toDataURL("image/jpeg", 0.7));
+        };
+        img.src = ev.target?.result as string;
+      };
+      reader.readAsDataURL(file);
+    });
+  }
+
+  async function handleVehiclePhoto(e: React.ChangeEvent<HTMLInputElement>) {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    const compressed = await compressImage(file);
+    setVehiclePhotoBase64(compressed);
+    setVehiclePhotoPreview(compressed);
+  }
 
   async function handleDriverSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setError("");
     setLoading(true);
 
-    const formData = new FormData(e.currentTarget);
     const data = {
       profileType: "driver",
-      firstName: formData.get("firstName") as string,
-      companyName: formData.get("companyName") as string,
-      email: formData.get("email") as string,
-      phone: formData.get("phone") as string,
-      password: formData.get("password") as string,
+      firstName: driverFirstName,
+      companyName: driverCompanyName,
+      email: formEmail,
+      phone: formPhone,
+      password: driverPassword,
       cityAddress,
       cityLat,
       cityLng,
+      vehicleBrand: vehicleBrand || undefined,
+      vehiclePlate: vehiclePlate || undefined,
+      vehiclePhotoBase64: vehiclePhotoBase64 || undefined,
     };
 
     try {
@@ -211,18 +267,26 @@ export default function InscriptionPage() {
           </div>
         )}
 
-        {/* Driver form */}
-        {profileType === "driver" && (
+        {/* Driver form - Step 1 */}
+        {profileType === "driver" && driverStep === 1 && (
           <>
             <button
-              onClick={() => { setProfileType(null); setError(""); setFormEmail(""); setFormPhone(""); setCityAddress(""); setCityLat(undefined); setCityLng(undefined); }}
+              onClick={() => { setProfileType(null); setError(""); setFormEmail(""); setFormPhone(""); setCityAddress(""); setCityLat(undefined); setCityLng(undefined); setDriverStep(1); }}
               className="flex items-center gap-1 text-sm text-neutral-500 hover:text-neutral-900 mb-4"
             >
               <Icon icon="solar:arrow-left-linear" />
               Retour au choix du profil
             </button>
 
-            <form onSubmit={handleDriverSubmit} className="space-y-4">
+            <div className="flex items-center gap-2 mb-4">
+              <div className="w-6 h-6 bg-neutral-900 text-white rounded-full flex items-center justify-center text-xs font-semibold">1</div>
+              <div className="flex-1 h-1 bg-neutral-200 rounded-full">
+                <div className="h-full w-1/2 bg-neutral-900 rounded-full" />
+              </div>
+              <span className="text-xs text-neutral-400">Étape 1/2</span>
+            </div>
+
+            <form onSubmit={handleDriverStep1} className="space-y-4">
               {error && (
                 <div className="bg-red-50 border border-red-200 text-red-700 text-sm px-4 py-3 rounded-xl">
                   {error}
@@ -233,15 +297,67 @@ export default function InscriptionPage() {
                 <label htmlFor="firstName" className="block text-sm font-medium mb-1.5">
                   Prénom
                 </label>
-                <input id="firstName" name="firstName" type="text" required className={inputClass} placeholder="Jean" />
+                <input id="firstName" name="firstName" type="text" required className={inputClass} placeholder="Jean" defaultValue={driverFirstName} />
               </div>
 
               <div>
                 <label htmlFor="companyName" className="block text-sm font-medium mb-1.5">
                   Nom de la société
                 </label>
-                <input id="companyName" name="companyName" type="text" required className={inputClass} placeholder="Taxi Jean Express" />
+                <input id="companyName" name="companyName" type="text" required className={inputClass} placeholder="Taxi Jean Express" defaultValue={driverCompanyName} />
               </div>
+
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium mb-1.5">Email</label>
+                <input id="email" name="email" type="email" required className={`${inputClass} ${emailError(formEmail) ? "ring-2 ring-red-300 bg-red-50/50" : ""}`} placeholder="jean.dupont@email.com" defaultValue={formEmail} onChange={(e) => setFormEmail(e.target.value)} />
+                {emailError(formEmail) && <p className="text-xs text-red-500 mt-1">{emailError(formEmail)}</p>}
+              </div>
+
+              <div>
+                <label htmlFor="phone" className="block text-sm font-medium mb-1.5">Téléphone</label>
+                <input id="phone" name="phone" type="tel" required className={`${inputClass} ${phoneError(formPhone) ? "ring-2 ring-red-300 bg-red-50/50" : ""}`} placeholder="06 12 34 56 78" defaultValue={formPhone} onChange={(e) => setFormPhone(e.target.value)} />
+                {phoneError(formPhone) && <p className="text-xs text-red-500 mt-1">{phoneError(formPhone)}</p>}
+              </div>
+
+              <div>
+                <label htmlFor="password" className="block text-sm font-medium mb-1.5">Mot de passe</label>
+                <input id="password" name="password" type="password" required minLength={6} className={inputClass} placeholder="Minimum 6 caractères" defaultValue={driverPassword} />
+              </div>
+
+              <button
+                type="submit"
+                disabled={(!!formEmail && !isValidEmail(formEmail)) || (!!formPhone && !isValidPhone(formPhone))}
+                className="w-full bg-neutral-950 text-white rounded-xl py-3.5 text-sm font-medium hover:bg-neutral-800 transition-colors disabled:opacity-50 disabled:cursor-not-allowed btn-lift"
+              >
+                Suivant
+              </button>
+            </form>
+          </>
+        )}
+
+        {/* Driver form - Step 2 */}
+        {profileType === "driver" && driverStep === 2 && (
+          <>
+            <button
+              onClick={() => { setDriverStep(1); setError(""); }}
+              className="flex items-center gap-1 text-sm text-neutral-500 hover:text-neutral-900 mb-4"
+            >
+              <Icon icon="solar:arrow-left-linear" />
+              Retour
+            </button>
+
+            <div className="flex items-center gap-2 mb-4">
+              <div className="w-6 h-6 bg-neutral-900 text-white rounded-full flex items-center justify-center text-xs font-semibold">2</div>
+              <div className="flex-1 h-1 bg-neutral-900 rounded-full" />
+              <span className="text-xs text-neutral-400">Étape 2/2</span>
+            </div>
+
+            <form onSubmit={handleDriverSubmit} className="space-y-4">
+              {error && (
+                <div className="bg-red-50 border border-red-200 text-red-700 text-sm px-4 py-3 rounded-xl">
+                  {error}
+                </div>
+              )}
 
               <div>
                 <label className="block text-sm font-medium mb-1.5">Ville d&apos;activité</label>
@@ -258,25 +374,54 @@ export default function InscriptionPage() {
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium mb-1.5">Email</label>
-                <input id="email" name="email" type="email" required className={`${inputClass} ${emailError(formEmail) ? "ring-2 ring-red-300 bg-red-50/50" : ""}`} placeholder="jean.dupont@email.com" onChange={(e) => setFormEmail(e.target.value)} />
-                {emailError(formEmail) && <p className="text-xs text-red-500 mt-1">{emailError(formEmail)}</p>}
+                <label htmlFor="vehicleBrand" className="block text-sm font-medium mb-1.5">
+                  Marque du véhicule
+                </label>
+                <input
+                  id="vehicleBrand"
+                  type="text"
+                  className={inputClass}
+                  placeholder="Mercedes, Toyota, Peugeot..."
+                  value={vehicleBrand}
+                  onChange={(e) => setVehicleBrand(e.target.value)}
+                />
               </div>
 
               <div>
-                <label htmlFor="phone" className="block text-sm font-medium mb-1.5">Téléphone</label>
-                <input id="phone" name="phone" type="tel" required className={`${inputClass} ${phoneError(formPhone) ? "ring-2 ring-red-300 bg-red-50/50" : ""}`} placeholder="06 12 34 56 78" onChange={(e) => setFormPhone(e.target.value)} />
-                {phoneError(formPhone) && <p className="text-xs text-red-500 mt-1">{phoneError(formPhone)}</p>}
+                <label htmlFor="vehiclePlate" className="block text-sm font-medium mb-1.5">
+                  Plaque d&apos;immatriculation
+                </label>
+                <input
+                  id="vehiclePlate"
+                  type="text"
+                  className={inputClass}
+                  placeholder="AB-123-CD"
+                  value={vehiclePlate}
+                  onChange={(e) => setVehiclePlate(e.target.value)}
+                />
               </div>
 
               <div>
-                <label htmlFor="password" className="block text-sm font-medium mb-1.5">Mot de passe</label>
-                <input id="password" name="password" type="password" required minLength={6} className={inputClass} placeholder="Minimum 6 caractères" />
+                <label className="block text-sm font-medium mb-1.5">
+                  Photo (optionnel)
+                </label>
+                <div className="relative">
+                  <input
+                    type="file"
+                    accept="image/*"
+                    onChange={handleVehiclePhoto}
+                    className="w-full text-sm text-neutral-500 file:mr-4 file:py-2.5 file:px-4 file:rounded-lg file:border-0 file:text-xs file:font-medium file:bg-neutral-100 file:text-neutral-700 hover:file:bg-neutral-200 cursor-pointer"
+                  />
+                </div>
+                {vehiclePhotoPreview && (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img src={vehiclePhotoPreview} alt="Aperçu" className="mt-2 w-full h-32 object-cover rounded-xl border border-neutral-200" />
+                )}
               </div>
 
               <button
                 type="submit"
-                disabled={loading || (!!formEmail && !isValidEmail(formEmail)) || (!!formPhone && !isValidPhone(formPhone))}
+                disabled={loading}
                 className="w-full bg-neutral-950 text-white rounded-xl py-3.5 text-sm font-medium hover:bg-neutral-800 transition-colors disabled:opacity-50 disabled:cursor-not-allowed btn-lift"
               >
                 {loading ? "Inscription en cours..." : "S'inscrire comme chauffeur"}

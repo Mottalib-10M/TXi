@@ -9,6 +9,7 @@ interface PublicProfileClientProps {
   driverName: string;
   baseFare: number;
   pricePerKm: number;
+  pricePerKmNight?: number;
   pricePerMinute: number;
   minimumFare: number;
 }
@@ -18,6 +19,7 @@ export function PublicProfileClient({
   driverName,
   baseFare,
   pricePerKm,
+  pricePerKmNight,
   pricePerMinute,
   minimumFare,
 }: PublicProfileClientProps) {
@@ -34,6 +36,7 @@ export function PublicProfileClient({
     <FareEstimator
       baseFare={baseFare}
       pricePerKm={pricePerKm}
+      pricePerKmNight={pricePerKmNight}
       pricePerMinute={pricePerMinute}
       minimumFare={minimumFare}
       onLocationsChange={setLocations}

@@ -82,6 +82,7 @@ export default async function TaxiProfilePage({ params }: Props) {
             driverName={`${driver.firstName} ${driver.lastName}`}
             baseFare={driver.baseFare}
             pricePerKm={driver.pricePerKm}
+            pricePerKmNight={driver.pricePerKmNight}
             pricePerMinute={driver.pricePerMinute}
             minimumFare={driver.minimumFare}
           />
