@@ -27,9 +27,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const zone = driver.zoneAddress ? ` ${locale === "en" ? "in" : "à"} ${driver.zoneAddress}` : "";
   const vehicle = `${driver.vehicleBrand || ""} ${driver.vehicleModel || ""}`.trim();
 
+  const title = locale === "en"
+    ? `${fullName} - Licensed taxi driver${zone} | Fixed fares`
+    : `${fullName} - Chauffeur de taxi${zone} | Tarif fixe`;
+
   return {
-    title: `${fullName} - Taxi ${driver.zoneAddress || ""} | TaxiNoir`,
-    description: t("metaDescription", { name: fullName, zone, bio: driver.bio || "" }),
+    title,
+    description: t("metaDescription", { name: fullName, zone }),
     openGraph: {
       title: t("metaOgTitle", { name: fullName }),
       description: t("metaOgDescription", { firstName: driver.firstName, vehicle }),

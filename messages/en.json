@@ -60,6 +60,8 @@
     "copyright": "© 2026 TaxiNoir. All rights reserved."
   },
   "home": {
+    "metaTitle": "Book a taxi in France - Licensed drivers, fixed prices 24/7",
+    "metaDescription": "Book a taxi in seconds. Licensed drivers, regulated fares, dedicated bus lanes, available 24/7 in 50 French cities. Fixed prices guaranteed before booking.",
     "badge": "Available 24/7 across France",
     "heroTitle1": "Go anywhere,",
     "heroTitle2": "with a real taxi.",
@@ -266,6 +268,8 @@
     "resetSuccess": "Password changed successfully! You can now log in."
   },
   "contact": {
+    "metaTitle": "Contact us - Help, Business demo and taxi driver partnership",
+    "metaDescription": "Contact our team for a Business demo, to become a licensed partner driver or to get help with your booking. Guaranteed response within 24 hours, Mon-Fri.",
     "subtitle": "Contact",
     "title": "How can we help you?",
     "intro": "Choose a topic below or fill out the contact form directly.",
@@ -660,9 +664,9 @@
     "fareDisclaimer": "Indicative estimate based on straight-line distance. Actual price may vary.",
     "selectAddresses": "Select addresses from suggestions to estimate the fare",
     "metaNotFound": "Taxi not found - TaxiNoir",
-    "metaDescription": "Book directly with {name}, taxi driver{zone}. {bio}",
-    "metaOgTitle": "{name} - Taxi Driver",
-    "metaOgDescription": "Book directly with {firstName}. {vehicle}"
+    "metaDescription": "Book directly with {name}, licensed professional taxi driver{zone}. Regulated fares, comfortable vehicle, online booking 24/7. Fixed price guaranteed.",
+    "metaOgTitle": "{name} - Licensed professional taxi driver | Fixed fares",
+    "metaOgDescription": "Book directly with {firstName}, professional taxi driver. {vehicle}. Regulated fares, simple and fast online booking available 24/7."
   },
   "publicProfile": {
     "addToContacts": "Add to contacts",
@@ -771,8 +775,8 @@
     "badge": "{count} cities · 13 regions",
     "title": "Your taxi anywhere in France",
     "subtitle": "TaxiNoir is available in the {count} largest cities in France, spread across 13 regions. Hover over a region to locate it on the map.",
-    "metaTitle": "Taxi in the 50 largest cities in France | TaxiNoir",
-    "metaDescription": "Book your taxi in the 50 largest French cities. Professional drivers, regulated fares, available 24/7 across France."
+    "metaTitle": "Taxi in the 50 largest French cities | Fixed fares 24/7",
+    "metaDescription": "Book your taxi in the 50 largest French cities. Licensed drivers, regulated fares, available 24/7 across France. Fixed prices, airport and station transfers."
   },
   "city": {
     "breadcrumbHome": "Home",
@@ -861,8 +865,8 @@
     "badge": "{count} airports · {regions} regions",
     "title": "Airport taxi transfer",
     "subtitle": "Fixed fares, real-time flight tracking, meet and greet in the arrivals area. Hover over a region to locate its airports on the map.",
-    "metaTitle": "Airport Taxi - Transfers to 50 airports in France | TaxiNoir",
-    "metaDescription": "Book your taxi transfer to and from the 50 main airports in France. Fixed fares, flight tracking, personalised meet and greet. Available 24/7."
+    "metaTitle": "Airport Taxi - Fixed-fare transfers to 50 French airports",
+    "metaDescription": "Book your taxi transfer to and from the 50 main airports in France. Fixed fares, real-time flight tracking, personalised meet and greet. Available 24/7."
   },
   "stations": {
     "breadcrumbHome": "Home",
@@ -870,8 +874,8 @@
     "badge": "{count} stations · {regions} regions",
     "title": "Train station taxi transfer",
     "subtitle": "Fixed fares, real-time train tracking, meet at the station exit. Hover over a region to locate its stations on the map.",
-    "metaTitle": "Station Taxi - Transfers to 50 train stations in France | TaxiNoir",
-    "metaDescription": "Book your taxi transfer to and from the 50 main train stations in France. Fixed fares, train tracking, personalised meet and greet. Available 24/7."
+    "metaTitle": "Station Taxi - Fixed-fare transfers to 50 French stations",
+    "metaDescription": "Book your taxi transfer to and from the 50 main train stations in France. Fixed fares, real-time train tracking, personalised meet and greet. Available 24/7."
   },
   "airport": {
     "breadcrumbHome": "Home",

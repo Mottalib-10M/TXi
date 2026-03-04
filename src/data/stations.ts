@@ -86,8 +86,8 @@ function station(
     practicalInfo,
     i18n: {
       fr: {
-        metaTitle: `Taxi Gare ${name} - Transfert 24h/24 | TaxiNoir`,
-        metaDescription: `Réservez votre taxi pour la gare ${name}. Transfert fiable, tarifs forfaitaires, suivi des trains, aide aux bagages. Disponible 24h/24.`,
+        metaTitle: `Taxi ${name} - Transfert gare forfaitaire 24h/24`,
+        metaDescription: `Réservez votre taxi pour la gare ${name}. Transfert ponctuel, tarifs forfaitaires garantis, suivi des trains et aide aux bagages. Disponible 24h/24.`,
         heroTitle: `Taxi Gare ${name}`,
         heroSubtitle: `Transfert taxi vers et depuis la gare ${name}. Tarifs forfaitaires, chauffeur qui vous attend à la sortie de la gare, suivi des trains en temps réel.`,
         intro: `Besoin d'un taxi pour la gare ${name} ? TaxiNoir vous propose un service de transfert professionnel, ponctuel et au meilleur prix. Nos chauffeurs suivent votre train en temps réel et vous attendent à la sortie de la gare. En cas de retard de votre train, l'attente est gratuite.`,
@@ -109,8 +109,8 @@ function station(
         ],
       },
       en: {
-        metaTitle: `Taxi ${name} Station - 24/7 Transfer | TaxiNoir`,
-        metaDescription: `Book your taxi to ${name} station. Reliable transfer, flat-rate fares, real-time train tracking, luggage assistance. Available 24/7.`,
+        metaTitle: `Taxi ${name} Station - 24/7 fixed-fare transfer`,
+        metaDescription: `Book your taxi to ${name} station. Reliable transfer with guaranteed fixed fares, real-time train tracking and luggage assistance at the exit. 24/7.`,
         heroTitle: `Taxi ${name} Station`,
         heroSubtitle: `Taxi transfer to and from ${name} station. Flat-rate fares, driver waiting for you at the station exit, real-time train tracking.`,
         intro: `Need a taxi to ${name} station? TaxiNoir offers a professional, punctual transfer service at the best price. Our drivers track your train in real time and wait for you at the station exit. If your train is delayed, the waiting time is free of charge.`,

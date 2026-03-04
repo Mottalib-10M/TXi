@@ -67,8 +67,8 @@ function city(
     rating: 4.8,
     i18n: {
       fr: {
-        metaTitle: `Taxi ${name} - Réservation en ligne 24h/24 | TaxiNoir`,
-        metaDescription: `Réservez votre taxi à ${name} en quelques clics. Chauffeurs professionnels, tarifs réglementés, disponible 24h/24. Transfert aéroport, gare et courses en ville.`,
+        metaTitle: `Taxi à ${name} - Réservez en ligne 24h/24 | Tarif fixe`,
+        metaDescription: `Réservez votre taxi à ${name} en quelques clics. Chauffeurs professionnels, tarifs réglementés, disponible 24h/24 pour vos transferts et courses en ville.`,
         heroTitle: `Votre taxi à ${name}`,
         heroSubtitle: `Réservez un taxi professionnel à ${name} en quelques secondes. Tarifs réglementés, chauffeurs agréés, disponible 24h/24.`,
         intro: `TaxiNoir vous connecte avec les meilleurs chauffeurs de taxi à ${name}. Que ce soit pour une course en ville, un transfert vers la gare ou l'aéroport, ou un déplacement professionnel, nos chauffeurs partenaires sont disponibles jour et nuit pour vous transporter en toute sécurité.`,
@@ -94,8 +94,8 @@ function city(
         ],
       },
       en: {
-        metaTitle: `Taxi ${name} - Book online 24/7 | TaxiNoir`,
-        metaDescription: `Book your taxi in ${name} in a few clicks. Professional drivers, regulated fares, available 24/7. Airport, station and city transfers.`,
+        metaTitle: `Taxi ${name} - Book your ride online 24/7 | Fixed fares`,
+        metaDescription: `Book your taxi in ${name} in a few clicks. Licensed professional drivers, regulated fares, available 24/7 for all airport, station and city transfers.`,
         heroTitle: `Your taxi in ${name}`,
         heroSubtitle: `Book a professional taxi in ${name} in seconds. Regulated fares, licensed drivers, available 24/7.`,
         intro: `TaxiNoir connects you with the best taxi drivers in ${name}. Whether for a city ride, a transfer to the station or airport, or a business trip, our partner drivers are available day and night to transport you safely.`,

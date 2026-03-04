@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "TaxiNoir - La nouvelle référence Taxi",
+  title: "Réserver un taxi en France - Tarif fixe, chauffeur agréé",
   description:
-    "TaxiNoir - Réservez un taxi professionnel en quelques secondes. Chauffeurs agréés, tarifs réglementés, voies réservées.",
+    "Réservez un taxi en quelques secondes. Chauffeurs agréés, tarifs réglementés, voies réservées, disponible 24h/24 et 7j/7 partout en France. Prix fixe garanti.",
   openGraph: {
-    title: "TaxiNoir - La nouvelle référence Taxi",
+    title: "Réserver un taxi en France - Tarif fixe, chauffeur agréé",
     description:
-      "Réservez un taxi professionnel en quelques secondes. Chauffeurs agréés, tarifs réglementés.",
+      "Réservez un taxi en quelques secondes. Chauffeurs agréés, tarifs réglementés, voies réservées, disponible 24h/24 et 7j/7 partout en France. Prix fixe garanti.",
     locale: "fr_FR",
     type: "website",
   },

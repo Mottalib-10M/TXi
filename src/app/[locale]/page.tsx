@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Icon } from "@iconify/react";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
@@ -9,6 +10,24 @@ import { AddToFavoritesPopup } from "@/components/ui/AddToFavoritesPopup";
 import { popularCities, cities } from "@/data/cities";
 import { popularAirports, airports } from "@/data/airports";
 import { popularStations, stations } from "@/data/stations";
+
+interface Props {
+  params: Promise<{ locale: string }>;
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "home" });
+
+  return {
+    title: t("metaTitle"),
+    description: t("metaDescription"),
+    openGraph: {
+      title: t("metaTitle"),
+      description: t("metaDescription"),
+    },
+  };
+}
 
 export default async function HomePage() {
   const t = await getTranslations("home");

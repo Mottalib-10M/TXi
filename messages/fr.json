@@ -60,6 +60,8 @@
     "copyright": "© 2026 TaxiNoir. Tous droits réservés."
   },
   "home": {
+    "metaTitle": "Réserver un taxi en France - Tarif fixe, chauffeur agréé",
+    "metaDescription": "Réservez un taxi en quelques secondes. Chauffeurs agréés, tarifs réglementés, voies réservées, disponible 24h/24 et 7j/7 partout en France. Prix fixe garanti.",
     "badge": "Disponible 24h/24 dans toute la France",
     "heroTitle1": "Allez partout,",
     "heroTitle2": "avec un vrai taxi.",
@@ -266,6 +268,8 @@
     "resetSuccess": "Mot de passe modifié avec succès ! Vous pouvez maintenant vous connecter."
   },
   "contact": {
+    "metaTitle": "Contactez-nous - Aide, démo Business et partenariat taxi",
+    "metaDescription": "Contactez notre équipe pour une démo Business, devenir chauffeur partenaire ou obtenir de l'aide sur votre réservation taxi. Réponse garantie sous 24h.",
     "subtitle": "Contact",
     "title": "Comment pouvons-nous vous aider ?",
     "intro": "Choisissez un sujet ci-dessous ou remplissez directement le formulaire de contact.",
@@ -660,9 +664,9 @@
     "fareDisclaimer": "Estimation indicative basée sur la distance à vol d'oiseau. Le prix réel peut varier.",
     "selectAddresses": "Sélectionnez des adresses dans les suggestions pour estimer le tarif",
     "metaNotFound": "Taxi non trouvé - TaxiNoir",
-    "metaDescription": "Réservez directement avec {name}, chauffeur de taxi{zone}. {bio}",
-    "metaOgTitle": "{name} - Chauffeur Taxi",
-    "metaOgDescription": "Réservez directement avec {firstName}. {vehicle}"
+    "metaDescription": "Réservez directement avec {name}, chauffeur de taxi professionnel{zone}. Tarifs réglementés, véhicule confortable, réservation en ligne 24h/24. Tarif fixe.",
+    "metaOgTitle": "{name} - Chauffeur de taxi professionnel | Tarif fixe",
+    "metaOgDescription": "Réservez directement avec {firstName}, chauffeur de taxi professionnel. {vehicle}. Tarifs réglementés, réservation en ligne simple et rapide."
   },
   "publicProfile": {
     "addToContacts": "Ajouter aux contacts",
@@ -771,8 +775,8 @@
     "badge": "{count} villes · 13 régions",
     "title": "Votre taxi partout en France",
     "subtitle": "TaxiNoir est présent dans les {count} plus grandes villes de France, réparties dans 13 régions. Survolez une région pour la localiser sur la carte.",
-    "metaTitle": "Taxi dans les 50 plus grandes villes de France | TaxiNoir",
-    "metaDescription": "Réservez votre taxi dans les 50 plus grandes villes françaises. Chauffeurs professionnels, tarifs réglementés, disponible 24h/24 partout en France."
+    "metaTitle": "Taxi dans les 50 plus grandes villes de France | Tarif fixe",
+    "metaDescription": "Réservez votre taxi dans les 50 plus grandes villes françaises. Chauffeurs professionnels, tarifs réglementés, disponible 24h/24 et 7j/7 partout en France."
   },
   "city": {
     "breadcrumbHome": "Accueil",
@@ -861,7 +865,7 @@
     "badge": "{count} aéroports · {regions} régions",
     "title": "Transfert taxi aéroport",
     "subtitle": "Tarifs forfaitaires, suivi de vol en temps réel, accueil avec pancarte en zone d'arrivée. Survolez une région pour localiser ses aéroports sur la carte.",
-    "metaTitle": "Taxi Aéroport - Transferts vers les 50 aéroports de France | TaxiNoir",
+    "metaTitle": "Taxi Aéroport - Transfert forfaitaire vers 50 aéroports",
     "metaDescription": "Réservez votre transfert taxi vers et depuis les 50 principaux aéroports de France. Tarifs forfaitaires, suivi de vol, accueil personnalisé. Disponible 24h/24."
   },
   "stations": {
@@ -870,7 +874,7 @@
     "badge": "{count} gares · {regions} régions",
     "title": "Transfert taxi gare",
     "subtitle": "Tarifs forfaitaires, suivi de train en temps réel, accueil à la sortie de la gare. Survolez une région pour localiser ses gares sur la carte.",
-    "metaTitle": "Taxi Gare - Transferts vers les 50 gares de France | TaxiNoir",
+    "metaTitle": "Taxi Gare - Transfert forfaitaire vers 50 gares en France",
     "metaDescription": "Réservez votre transfert taxi vers et depuis les 50 principales gares de France. Tarifs forfaitaires, suivi de train, accueil personnalisé. Disponible 24h/24."
   },
   "airport": {

@@ -91,8 +91,8 @@ function airport(
     nearbyAirports,
     i18n: {
       fr: {
-        metaTitle: `Taxi Aéroport ${name} (${iata}) - Transfert 24h/24 | TaxiNoir`,
-        metaDescription: `Réservez votre taxi pour l'aéroport ${name}. Transfert fiable, tarifs forfaitaires, suivi des vols, aide aux bagages. Disponible 24h/24.`,
+        metaTitle: `Taxi Aéroport ${name} - Transfert forfaitaire 24h/24`,
+        metaDescription: `Réservez votre taxi pour l'aéroport ${name}. Transfert ponctuel, tarifs forfaitaires garantis, suivi des vols et aide aux bagages. Disponible 24h/24.`,
         heroTitle: `Taxi Aéroport ${name}`,
         heroSubtitle: `Transfert taxi vers et depuis l'aéroport ${name} (${iata}). Tarifs forfaitaires, chauffeur qui vous attend en zone d'arrivée, suivi des vols en temps réel.`,
         intro: `Besoin d'un taxi pour l'aéroport ${name} ? TaxiNoir vous propose un service de transfert professionnel, ponctuel et au meilleur prix. Nos chauffeurs suivent votre vol en temps réel et vous attendent avec une pancarte nominative en zone d'arrivée. En cas de retard de votre vol, l'attente est gratuite.`,
@@ -115,8 +115,8 @@ function airport(
         practicalInfo,
       },
       en: {
-        metaTitle: `Taxi ${name} Airport (${iata}) - 24/7 Transfer | TaxiNoir`,
-        metaDescription: `Book your taxi to ${name} Airport. Reliable transfer, fixed fares, flight tracking, luggage assistance. Available 24/7.`,
+        metaTitle: `Taxi ${name} Airport - 24/7 fixed-fare transfer`,
+        metaDescription: `Book your taxi to ${name} Airport. Reliable transfer, guaranteed fixed fares, real-time flight tracking, luggage assistance and meet and greet. 24/7.`,
         heroTitle: `Taxi ${name} Airport`,
         heroSubtitle: `Taxi transfer to and from ${name} Airport (${iata}). Fixed fares, driver waiting in the arrivals area, real-time flight tracking.`,
         intro: `Need a taxi to ${name} Airport? TaxiNoir offers a professional, punctual transfer service at the best price. Our drivers track your flight in real time and greet you with a name board in the arrivals area. If your flight is delayed, the waiting time is free of charge.`,
