@@ -79,16 +79,16 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
         .card { width: 85mm; height: 55mm; padding: 6mm; box-sizing: border-box; position: relative; }
         .brand { font-size: 14pt; font-weight: bold; margin-bottom: 4mm; }
         .brand .t { color: #525252; } .brand .n { color: #171717; }
-        .company { font-size: 8pt; color: #525252; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 1mm; }
-        .name { font-size: 11pt; font-weight: bold; color: #171717; }
+        .company { font-size: 11pt; font-weight: bold; color: #171717; margin-bottom: 1mm; }
+        .name { font-size: 8pt; color: #525252; }
+        .name-solo { font-size: 11pt; font-weight: bold; color: #171717; }
         .details { font-size: 7pt; color: #737373; margin-top: 2mm; line-height: 1.6; }
         .qr { position: absolute; top: 4mm; right: 5mm; width: 24mm; height: 24mm; }
         .footer { position: absolute; bottom: 4mm; left: 6mm; font-size: 7pt; color: #a3a3a3; }
       </style></head><body><div class="card">
         <div class="brand"><span class="t">Taxi</span><span class="n">Noir</span></div>
-        ${driver.companyName ? `<div class="company">${driver.companyName}</div>` : ""}
-        <div class="name">${name}</div>
-        <div class="details">${vehicle ? vehicle + "<br>" : ""}${driver.zoneAddress ? driver.zoneAddress + "<br>" : ""}${driver.phone}<br>${driver.email}</div>
+        ${driver.companyName ? `<div class="company">${driver.companyName}</div><div class="name">${name}</div>` : `<div class="name-solo">${name}</div>`}
+        <div class="details">${vehicle ? vehicle + "<br>" : ""}${driver.zoneAddress ? driver.zoneAddress + "<br>" : ""}${driver.email}<br>${driver.phone}</div>
         ${qr ? `<img class="qr" src="${qr}" />` : ""}
         <div class="footer">Scannez pour réserver directement</div>
       </div></body></html>`;
@@ -115,14 +115,13 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
       </style></head><body><div class="card">
         <div class="left">
           <div class="brand"><span class="t">Taxi</span><span class="n">Noir</span></div>
-          ${driver.companyName ? `<div style="font-size:8pt;color:#525252;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:1mm;">${driver.companyName}</div>` : ""}
-          <div class="name">${name}</div>
+          ${driver.companyName ? `<div class="name">${driver.companyName}</div><div style="font-size:9pt;color:#737373;margin-top:1mm;">${name}</div>` : `<div class="name">${name}</div>`}
           <div class="sub">Chauffeur de taxi</div>
           <div class="sep"></div>
           ${vehicle ? `<div class="label">Véhicule</div><div class="val">${vehicle}</div>` : ""}
           ${driver.zoneAddress ? `<div class="label">Zone</div><div class="val">${driver.zoneAddress}</div>` : ""}
           <div class="label">Contact</div>
-          <div class="val">${driver.phone}<br>${driver.email}</div>
+          <div class="val">${driver.email}<br>${driver.phone}</div>
         </div>
         <div class="right">
           ${qr ? `<div class="qr"><img src="${qr}" /></div>` : ""}
@@ -153,8 +152,7 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
       <div class="header">
         <div>
           <div class="brand"><span class="t">Taxi</span><span class="n">Noir</span></div>
-          ${driver.companyName ? `<div style="font-size:9pt;color:#a3a3a3;text-transform:uppercase;letter-spacing:0.5px;">${driver.companyName}</div>` : ""}
-          <div class="hname">${name}</div>
+          ${driver.companyName ? `<div class="hname">${driver.companyName}</div><div class="hsub">${name}</div>` : `<div class="hname">${name}</div>`}
           <div class="hsub">Votre chauffeur de taxi</div>
         </div>
         <div class="hright">${vehicle ? vehicle + "<br>" : ""}${driver.zoneAddress || ""}</div>
@@ -179,31 +177,35 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
     doc.setFillColor(255, 255, 255);
     doc.rect(0, 0, 85, 55, "F");
 
-    doc.setFontSize(14); doc.setFont("helvetica", "bold");
-    doc.setTextColor(82, 82, 82); doc.text("Taxi", 6, 10);
+    const m = 5; // margin
+    doc.setFontSize(10); doc.setFont("helvetica", "bold");
+    doc.setTextColor(82, 82, 82); doc.text("Taxi", m, 9);
     const tw = doc.getTextWidth("Taxi");
-    doc.setTextColor(23, 23, 23); doc.text("Noir", 6 + tw, 10);
+    doc.setTextColor(23, 23, 23); doc.text("Noir", m + tw, 9);
 
-    let y = 17;
+    let y = 15;
     if (driver.companyName) {
-      doc.setFontSize(8); doc.setFont("helvetica", "normal"); doc.setTextColor(82, 82, 82);
-      doc.text(driver.companyName.toUpperCase(), 6, y);
-      y += 5;
+      doc.setFontSize(9); doc.setFont("helvetica", "bold"); doc.setTextColor(23, 23, 23);
+      doc.text(driver.companyName, m, y);
+      y += 4;
+      doc.setFontSize(7); doc.setFont("helvetica", "normal"); doc.setTextColor(82, 82, 82);
+      doc.text(`${driver.firstName} ${driver.lastName}`, m, y);
+    } else {
+      doc.setFontSize(9); doc.setFont("helvetica", "bold"); doc.setTextColor(23, 23, 23);
+      doc.text(`${driver.firstName} ${driver.lastName}`, m, y);
     }
-    doc.setFontSize(11); doc.setFont("helvetica", "bold"); doc.setTextColor(23, 23, 23);
-    doc.text(`${driver.firstName} ${driver.lastName}`, 6, y);
-    y += 6;
+    y += 5;
 
-    doc.setFontSize(7); doc.setFont("helvetica", "normal"); doc.setTextColor(115, 115, 115);
-    if (driver.vehicleBrand && driver.vehicleModel) { doc.text(`${driver.vehicleBrand} ${driver.vehicleModel}`, 6, y); y += 5; }
-    if (driver.zoneAddress) { doc.text(driver.zoneAddress, 6, y); y += 5; }
-    doc.text(driver.phone, 6, y); y += 5;
-    doc.text(driver.email, 6, y);
+    doc.setFontSize(6); doc.setFont("helvetica", "normal"); doc.setTextColor(115, 115, 115);
+    if (driver.vehicleBrand && driver.vehicleModel) { doc.text(`${driver.vehicleBrand} ${driver.vehicleModel}`, m, y); y += 3.5; }
+    if (driver.zoneAddress) { doc.text(driver.zoneAddress, m, y); y += 3.5; }
+    doc.text(driver.email, m, y); y += 3.5;
+    doc.text(driver.phone, m, y);
 
-    if (qrDataUrl) doc.addImage(qrDataUrl, "PNG", 57, 4, 24, 24);
+    if (qrDataUrl) doc.addImage(qrDataUrl, "PNG", 58, 5, 22, 22);
 
-    doc.setFontSize(7); doc.setTextColor(163, 163, 163);
-    doc.text("Scannez pour réserver directement", 6, 50);
+    doc.setFontSize(5.5); doc.setTextColor(163, 163, 163);
+    doc.text("Scannez pour réserver directement", m, 51);
     doc.save(`carte-visite-${driver.slug}.pdf`);
   }
 
@@ -214,62 +216,67 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
     doc.setFillColor(255, 255, 255); doc.rect(0, 0, W, H, "F");
 
     // Dark panel
-    const panelX = 88;
+    const panelX = 90;
     doc.setFillColor(23, 23, 23); doc.rect(panelX, 0, W - panelX, H, "F");
 
+    const mL = 8; // left margin
     // Brand
-    doc.setFontSize(20); doc.setFont("helvetica", "bold");
-    doc.setTextColor(82, 82, 82); doc.text("Taxi", 10, 16);
+    doc.setFontSize(16); doc.setFont("helvetica", "bold");
+    doc.setTextColor(82, 82, 82); doc.text("Taxi", mL, 13);
     const tw6 = doc.getTextWidth("Taxi");
-    doc.setTextColor(23, 23, 23); doc.text("Noir", 10 + tw6, 16);
+    doc.setTextColor(23, 23, 23); doc.text("Noir", mL + tw6, 13);
 
     // Company name + Name
-    let y6 = 28;
+    let y6 = 22;
     if (driver.companyName) {
-      doc.setFontSize(8); doc.setFont("helvetica", "normal"); doc.setTextColor(82, 82, 82);
-      doc.text(driver.companyName.toUpperCase(), 10, y6);
+      doc.setFontSize(14); doc.setFont("helvetica", "bold"); doc.setTextColor(23, 23, 23);
+      doc.text(driver.companyName, mL, y6);
       y6 += 5;
+      doc.setFontSize(9); doc.setFont("helvetica", "normal"); doc.setTextColor(115, 115, 115);
+      doc.text(`${driver.firstName} ${driver.lastName}`, mL, y6);
+    } else {
+      doc.setFontSize(14); doc.setFont("helvetica", "bold"); doc.setTextColor(23, 23, 23);
+      doc.text(`${driver.firstName} ${driver.lastName}`, mL, y6);
     }
-    doc.setFontSize(17); doc.setFont("helvetica", "bold"); doc.setTextColor(23, 23, 23);
-    doc.text(`${driver.firstName} ${driver.lastName}`, 10, y6 + 2);
+    y6 += 4;
 
-    doc.setFontSize(9); doc.setFont("helvetica", "normal"); doc.setTextColor(160, 160, 160);
-    doc.text("Chauffeur de taxi", 10, y6 + 9);
+    doc.setFontSize(7); doc.setFont("helvetica", "normal"); doc.setTextColor(160, 160, 160);
+    doc.text("Chauffeur de taxi", mL, y6);
 
-    doc.setDrawColor(230, 230, 230); doc.setLineWidth(0.3); doc.line(10, 42, 76, 42);
+    doc.setDrawColor(230, 230, 230); doc.setLineWidth(0.3); doc.line(mL, y6 + 3, panelX - 10, y6 + 3);
 
-    let y = 50;
+    let y = y6 + 9;
     if (driver.vehicleBrand && driver.vehicleModel) {
-      doc.setFont("helvetica", "bold"); doc.setFontSize(7); doc.setTextColor(170, 170, 170);
-      doc.text("VÉHICULE", 10, y - 3);
-      doc.setFont("helvetica", "normal"); doc.setFontSize(11); doc.setTextColor(50, 50, 50);
-      doc.text(`${driver.vehicleBrand} ${driver.vehicleModel}`, 10, y + 3);
-      y += 14;
+      doc.setFont("helvetica", "bold"); doc.setFontSize(6); doc.setTextColor(170, 170, 170);
+      doc.text("VÉHICULE", mL, y);
+      doc.setFont("helvetica", "normal"); doc.setFontSize(9); doc.setTextColor(50, 50, 50);
+      doc.text(`${driver.vehicleBrand} ${driver.vehicleModel}`, mL, y + 5);
+      y += 12;
     }
     if (driver.zoneAddress) {
-      doc.setFont("helvetica", "bold"); doc.setFontSize(7); doc.setTextColor(170, 170, 170);
-      doc.text("ZONE", 10, y - 3);
-      doc.setFont("helvetica", "normal"); doc.setFontSize(11); doc.setTextColor(50, 50, 50);
-      doc.text(driver.zoneAddress, 10, y + 3);
-      y += 14;
+      doc.setFont("helvetica", "bold"); doc.setFontSize(6); doc.setTextColor(170, 170, 170);
+      doc.text("ZONE", mL, y);
+      doc.setFont("helvetica", "normal"); doc.setFontSize(9); doc.setTextColor(50, 50, 50);
+      doc.text(driver.zoneAddress, mL, y + 5);
+      y += 12;
     }
-    doc.setFont("helvetica", "bold"); doc.setFontSize(7); doc.setTextColor(170, 170, 170);
-    doc.text("CONTACT", 10, y - 3);
-    doc.setFont("helvetica", "normal"); doc.setFontSize(11); doc.setTextColor(50, 50, 50);
-    doc.text(driver.phone, 10, y + 3);
-    doc.text(driver.email, 10, y + 10);
+    doc.setFont("helvetica", "bold"); doc.setFontSize(6); doc.setTextColor(170, 170, 170);
+    doc.text("CONTACT", mL, y);
+    doc.setFont("helvetica", "normal"); doc.setFontSize(9); doc.setTextColor(50, 50, 50);
+    doc.text(driver.email, mL, y + 5);
+    doc.text(driver.phone, mL, y + 10);
 
     // Right panel
     const cx = panelX + (W - panelX) / 2;
-    if (qrDataUrlLarge) doc.addImage(qrDataUrlLarge, "PNG", cx - 18, 10, 36, 36);
+    if (qrDataUrlLarge) doc.addImage(qrDataUrlLarge, "PNG", cx - 16, 10, 32, 32);
 
-    doc.setFontSize(16); doc.setFont("helvetica", "bold"); doc.setTextColor(255, 255, 255);
-    doc.text("Restons en", cx, 56, { align: "center" });
-    doc.text("contact !", cx, 64, { align: "center" });
+    doc.setFontSize(14); doc.setFont("helvetica", "bold"); doc.setTextColor(255, 255, 255);
+    doc.text("Restons en", cx, 52, { align: "center" });
+    doc.text("contact !", cx, 59, { align: "center" });
 
-    doc.setFontSize(10); doc.setFont("helvetica", "normal"); doc.setTextColor(180, 180, 180);
-    const cta = doc.splitTextToSize("Scannez pour enregistrer mes coordonnées et réserver facilement.", W - panelX - 10);
-    doc.text(cta, cx, 74, { align: "center" });
+    doc.setFontSize(8); doc.setFont("helvetica", "normal"); doc.setTextColor(180, 180, 180);
+    const cta = doc.splitTextToSize("Scannez pour enregistrer mes coordonnées et réserver facilement.", W - panelX - 14);
+    doc.text(cta, cx, 68, { align: "center" });
 
     doc.save(`carte-a6-${driver.slug}.pdf`);
   }
@@ -281,60 +288,65 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
     doc.setFillColor(255, 255, 255); doc.rect(0, 0, W, H, "F");
 
     // Header
-    const hH = 40;
+    const hH = 44;
+    const mH = 16; // horizontal margin in header
     doc.setFillColor(23, 23, 23); doc.rect(0, 0, W, hH, "F");
 
-    doc.setFontSize(24); doc.setFont("helvetica", "bold");
-    doc.setTextColor(100, 100, 100); doc.text("Taxi", 14, 17);
+    doc.setFontSize(20); doc.setFont("helvetica", "bold");
+    doc.setTextColor(100, 100, 100); doc.text("Taxi", mH, 15);
     const tw5 = doc.getTextWidth("Taxi");
-    doc.setTextColor(255, 255, 255); doc.text("Noir", 14 + tw5, 17);
+    doc.setTextColor(255, 255, 255); doc.text("Noir", mH + tw5, 15);
 
-    let y5 = 26;
+    let y5 = 24;
     if (driver.companyName) {
-      doc.setFontSize(9); doc.setFont("helvetica", "normal"); doc.setTextColor(163, 163, 163);
-      doc.text(driver.companyName.toUpperCase(), 14, y5);
-      y5 += 5;
+      doc.setFontSize(16); doc.setFont("helvetica", "bold"); doc.setTextColor(255, 255, 255);
+      doc.text(driver.companyName, mH, y5);
+      y5 += 6;
+      doc.setFontSize(10); doc.setFont("helvetica", "normal"); doc.setTextColor(170, 170, 170);
+      doc.text(`${driver.firstName} ${driver.lastName}`, mH, y5);
+    } else {
+      doc.setFontSize(16); doc.setFont("helvetica", "bold"); doc.setTextColor(255, 255, 255);
+      doc.text(`${driver.firstName} ${driver.lastName}`, mH, y5);
     }
-    doc.setFontSize(18); doc.setFont("helvetica", "bold"); doc.setTextColor(255, 255, 255);
-    doc.text(`${driver.firstName} ${driver.lastName}`, 14, y5 + 2);
-    doc.setFontSize(10); doc.setFont("helvetica", "normal"); doc.setTextColor(150, 150, 150);
-    doc.text("Votre chauffeur de taxi", 14, y5 + 9);
+    y5 += 5;
+    doc.setFontSize(9); doc.setFont("helvetica", "normal"); doc.setTextColor(130, 130, 130);
+    doc.text("Votre chauffeur de taxi", mH, y5);
 
     if (driver.vehicleBrand && driver.vehicleModel) {
-      doc.setFontSize(11); doc.setTextColor(180, 180, 180);
-      doc.text(`${driver.vehicleBrand} ${driver.vehicleModel}`, W - 14, 28, { align: "right" });
+      doc.setFontSize(10); doc.setTextColor(180, 180, 180);
+      doc.text(`${driver.vehicleBrand} ${driver.vehicleModel}`, W - mH, 28, { align: "right" });
     }
     if (driver.zoneAddress) {
-      doc.setFontSize(11); doc.setTextColor(140, 140, 140);
-      doc.text(driver.zoneAddress, W - 14, 37, { align: "right" });
+      doc.setFontSize(10); doc.setTextColor(140, 140, 140);
+      doc.text(driver.zoneAddress, W - mH, 36, { align: "right" });
     }
 
     // QR large
-    const qrS = 50;
+    const qrS = 45;
     const qrX = W / 2 - qrS / 2;
-    const qrY = hH + 8;
+    const qrY = hH + 6;
     if (qrDataUrlLarge) {
-      doc.setDrawColor(230, 230, 230); doc.setLineWidth(0.5);
+      doc.setDrawColor(230, 230, 230); doc.setLineWidth(0.4);
       doc.roundedRect(qrX - 3, qrY - 3, qrS + 6, qrS + 6, 3, 3, "S");
       doc.addImage(qrDataUrlLarge, "PNG", qrX, qrY, qrS, qrS);
     }
 
     // CTA
-    const ctaY = qrY + qrS + 10;
-    doc.setFontSize(22); doc.setFont("helvetica", "bold"); doc.setTextColor(23, 23, 23);
+    const ctaY = qrY + qrS + 8;
+    doc.setFontSize(18); doc.setFont("helvetica", "bold"); doc.setTextColor(23, 23, 23);
     doc.text("Restons en contact !", W / 2, ctaY, { align: "center" });
 
-    doc.setFontSize(13); doc.setFont("helvetica", "normal"); doc.setTextColor(90, 90, 90);
-    const cta = doc.splitTextToSize("Scannez ce QR code pour enregistrer mes coordonnées et réserver votre prochaine course encore plus facilement.", 170);
-    doc.text(cta, W / 2, ctaY + 9, { align: "center" });
+    doc.setFontSize(11); doc.setFont("helvetica", "normal"); doc.setTextColor(90, 90, 90);
+    const cta = doc.splitTextToSize("Scannez ce QR code pour enregistrer mes coordonnées et réserver votre prochaine course encore plus facilement.", 160);
+    doc.text(cta, W / 2, ctaY + 7, { align: "center" });
 
     // Footer
-    const fY = H - 10;
-    doc.setDrawColor(235, 235, 235); doc.setLineWidth(0.3); doc.line(14, fY - 4, W - 14, fY - 4);
-    doc.setFontSize(10); doc.setFont("helvetica", "normal"); doc.setTextColor(140, 140, 140);
-    doc.text(driver.phone, 14, fY);
+    const fY = H - 8;
+    doc.setDrawColor(235, 235, 235); doc.setLineWidth(0.3); doc.line(mH, fY - 5, W - mH, fY - 5);
+    doc.setFontSize(8); doc.setFont("helvetica", "normal"); doc.setTextColor(140, 140, 140);
+    doc.text(driver.phone, mH, fY);
     doc.text(driver.email, W / 2, fY, { align: "center" });
-    doc.text(profileUrl.replace("https://", "").replace("http://", ""), W - 14, fY, { align: "right" });
+    doc.text(profileUrl.replace("https://", "").replace("http://", ""), W - mH, fY, { align: "right" });
 
     doc.save(`carte-a5-siege-${driver.slug}.pdf`);
   }
@@ -381,14 +393,14 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
               <span className="text-neutral-950 font-bold">Noir</span>
             </p>
             {driver.companyName && (
-              <p className="text-[10px] text-neutral-500 uppercase tracking-wider font-medium">{driver.companyName}</p>
+              <p className="text-base font-bold tracking-tight">{driver.companyName}</p>
             )}
-            <p className="text-base font-semibold">{driver.firstName} {driver.lastName}</p>
+            <p className={driver.companyName ? "text-xs text-neutral-500 font-medium" : "text-base font-semibold"}>{driver.firstName} {driver.lastName}</p>
             <div className="text-xs text-neutral-500 space-y-0.5 mt-2">
               {driver.vehicleBrand && driver.vehicleModel && <p>{driver.vehicleBrand} {driver.vehicleModel}</p>}
               {driver.zoneAddress && <p>{driver.zoneAddress}</p>}
-              <p>{driver.phone}</p>
               <p>{driver.email}</p>
+              <p>{driver.phone}</p>
             </div>
             {qrDataUrl && (
               <div className="absolute top-6 right-6 w-20 h-20 rounded-lg overflow-hidden">
@@ -411,9 +423,9 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
                 <span className="text-neutral-950 font-bold">Noir</span>
               </p>
               {driver.companyName && (
-                <p className="text-[9px] text-neutral-500 uppercase tracking-wider font-medium">{driver.companyName}</p>
+                <p className="text-lg font-bold text-neutral-900">{driver.companyName}</p>
               )}
-              <p className="text-lg font-bold text-neutral-900">{driver.firstName} {driver.lastName}</p>
+              <p className={driver.companyName ? "text-sm text-neutral-500 font-medium" : "text-lg font-bold text-neutral-900"}>{driver.firstName} {driver.lastName}</p>
               <p className="text-[10px] text-neutral-400 mt-0.5 uppercase tracking-wider">Chauffeur de taxi</p>
               <div className="w-8 h-px bg-neutral-200 my-3" />
               <div className="space-y-2">
@@ -431,8 +443,8 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
                 )}
                 <div>
                   <p className="text-[8px] text-neutral-400 uppercase tracking-wider font-medium">Contact</p>
-                  <p className="text-sm text-neutral-700">{driver.phone}</p>
                   <p className="text-sm text-neutral-700">{driver.email}</p>
+                  <p className="text-sm text-neutral-700">{driver.phone}</p>
                 </div>
               </div>
             </div>
@@ -464,9 +476,9 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
                   <span className="text-white font-bold">Noir</span>
                 </p>
                 {driver.companyName && (
-                  <p className="text-neutral-400 text-[10px] uppercase tracking-wider mt-1">{driver.companyName}</p>
+                  <p className="text-white font-bold text-base mt-0.5">{driver.companyName}</p>
                 )}
-                <p className="text-white font-bold text-base mt-0.5">{driver.firstName} {driver.lastName}</p>
+                <p className={driver.companyName ? "text-neutral-400 text-sm mt-0.5" : "text-white font-bold text-base mt-0.5"}>{driver.firstName} {driver.lastName}</p>
                 <p className="text-neutral-500 text-xs mt-0.5">Votre chauffeur de taxi</p>
               </div>
               <div className="text-right">

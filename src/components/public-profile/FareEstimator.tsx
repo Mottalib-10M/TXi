@@ -65,7 +65,7 @@ export function FareEstimator({
 }: FareEstimatorProps) {
   const [origin, setOrigin] = useState<LocationState>({ address: "" });
   const [destination, setDestination] = useState<LocationState>({ address: "" });
-  const [isNight, setIsNight] = useState(false);
+  const [scheduledDate, setScheduledDate] = useState("");
 
   function handleOriginChange(address: string, lat?: number, lng?: number) {
     const newOrigin = { address, lat, lng };
@@ -95,7 +95,7 @@ export function FareEstimator({
 
   const canEstimate = origin.lat != null && destination.lat != null;
 
-  let estimate: { distance: number; duration: number; price: number } | null = null;
+  let estimate: { distance: number; duration: number; price: number; isNight: boolean } | null = null;
 
   if (canEstimate) {
     const straightLine = haversineDistance(
@@ -108,10 +108,16 @@ export function FareEstimator({
     // Variable speed: city (short) → highway (long distance)
     const avgSpeed = distance < 10 ? 25 : distance < 30 ? 40 : distance < 80 ? 60 : 80;
     const duration = (distance / avgSpeed) * 60; // minutes
+    // Determine night/day based on scheduled time (night = 19h-7h)
+    let isNight = false;
+    if (scheduledDate) {
+      const hour = new Date(scheduledDate).getHours();
+      isNight = hour >= 19 || hour < 7;
+    }
     const activeRate = isNight && pricePerKmNight ? pricePerKmNight : pricePerKm;
     const calculated = baseFare + distance * activeRate + duration * pricePerMinute;
     const price = Math.max(calculated, minimumFare);
-    estimate = { distance, duration, price };
+    estimate = { distance, duration, price, isNight };
   }
 
   return (
@@ -137,34 +143,25 @@ export function FareEstimator({
         />
       </div>
 
-      {pricePerKmNight != null && pricePerKmNight > 0 && (
-        <div className="flex items-center gap-2 mb-4">
-          <button
-            type="button"
-            onClick={() => setIsNight(false)}
-            className={`flex-1 flex items-center justify-center gap-1.5 py-2 rounded-lg text-xs font-medium transition-colors ${
-              !isNight
-                ? "bg-neutral-900 text-white"
-                : "bg-neutral-100 text-neutral-500 hover:bg-neutral-200"
-            }`}
-          >
-            <Icon icon="solar:sun-2-linear" className="text-sm" />
-            Jour
-          </button>
-          <button
-            type="button"
-            onClick={() => setIsNight(true)}
-            className={`flex-1 flex items-center justify-center gap-1.5 py-2 rounded-lg text-xs font-medium transition-colors ${
-              isNight
-                ? "bg-neutral-900 text-white"
-                : "bg-neutral-100 text-neutral-500 hover:bg-neutral-200"
-            }`}
-          >
-            <Icon icon="solar:moon-linear" className="text-sm" />
-            Nuit (19h-7h)
-          </button>
-        </div>
-      )}
+      <div className="relative mb-4">
+        <Icon
+          icon="solar:calendar-linear"
+          className="absolute left-3 top-1/2 -translate-y-1/2 text-neutral-400 text-lg z-10 pointer-events-none"
+        />
+        <input
+          type="datetime-local"
+          value={scheduledDate}
+          onChange={(e) => setScheduledDate(e.target.value)}
+          min={new Date().toISOString().slice(0, 16)}
+          className="w-full bg-neutral-100 border border-neutral-200 rounded-xl pl-10 pr-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all"
+          style={{ WebkitAppearance: "none", MozAppearance: "none" }}
+        />
+        {!scheduledDate && (
+          <p className="text-xs text-neutral-400 mt-1.5 ml-1">
+            Date et heure de la course
+          </p>
+        )}
+      </div>
 
       {estimate && (
         <div className="bg-neutral-50 rounded-xl p-4 space-y-3">
@@ -183,7 +180,14 @@ export function FareEstimator({
             <span className="font-medium">{formatDuration(estimate.duration)}</span>
           </div>
           <div className="border-t border-neutral-200 pt-3 flex items-center justify-between">
-            <span className="text-sm font-medium">Prix estime</span>
+            <div>
+              <span className="text-sm font-medium">Prix estime</span>
+              {estimate.isNight && (
+                <span className="ml-2 text-[10px] bg-neutral-900 text-white px-1.5 py-0.5 rounded-full">
+                  Tarif nuit
+                </span>
+              )}
+            </div>
             <span className="text-lg font-semibold">{estimate.price.toFixed(2)} &euro;</span>
           </div>
           <p className="text-[10px] text-neutral-400 font-light">

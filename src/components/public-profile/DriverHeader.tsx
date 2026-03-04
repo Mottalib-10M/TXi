@@ -62,14 +62,14 @@ export function DriverHeader({
 
         <div className="mt-4 w-full">
           {companyName && (
-            <p className="text-sm font-medium text-neutral-400 mb-1">
+            <h1 className="text-xl font-bold tracking-tight mb-1">
               {companyName}
-            </p>
+            </h1>
           )}
           <div className="flex items-center justify-center gap-2 mb-1">
-            <h1 className="text-xl font-semibold tracking-tight">
+            <p className={companyName ? "text-sm text-neutral-500 font-medium" : "text-xl font-semibold tracking-tight"}>
               {firstName} {lastName}
-            </h1>
+            </p>
             {isVerified && (
               <Icon
                 icon="solar:verified-check-bold"

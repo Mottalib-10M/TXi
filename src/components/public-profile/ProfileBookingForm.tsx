@@ -1,7 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
+import { useSession } from "next-auth/react";
 import { Icon } from "@iconify/react";
 import { phoneError } from "@/lib/validation";
 
@@ -27,6 +28,7 @@ export function ProfileBookingForm({
   destinationLng,
 }: ProfileBookingFormProps) {
   const router = useRouter();
+  const { data: session } = useSession();
   const [clientName, setClientName] = useState("");
   const [clientPhone, setClientPhone] = useState("");
   const [isNow, setIsNow] = useState(true);
@@ -34,6 +36,25 @@ export function ProfileBookingForm({
   const [passengers, setPassengers] = useState(1);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState("");
+
+  const isLoggedIn = Boolean(session?.user?.email);
+
+  // Pre-fill client info from session + fetch phone
+  useEffect(() => {
+    if (session?.user) {
+      if (session.user.name) setClientName(session.user.name);
+
+      const role = (session.user as { role?: string }).role;
+      const endpoint = role === "organization" ? "/api/org/profile" : "/api/driver/profile";
+      fetch(endpoint)
+        .then((r) => r.ok ? r.json() : null)
+        .then((data) => {
+          if (data?.phone && !clientPhone) setClientPhone(data.phone);
+        })
+        .catch(() => {});
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [session]);
 
   const hasLocations =
     departureLat != null &&
@@ -97,27 +118,41 @@ export function ProfileBookingForm({
           </div>
         )}
 
-        <input
-          value={clientName}
-          onChange={(e) => setClientName(e.target.value)}
-          placeholder="Votre nom complet *"
-          required
-          className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all"
-        />
+        {isLoggedIn ? (
+          <div className="bg-neutral-50 border border-neutral-200 rounded-xl p-3">
+            <div className="flex items-center gap-2 text-sm">
+              <Icon icon="solar:user-check-linear" className="text-green-500" />
+              <span className="font-medium">{clientName}</span>
+            </div>
+            {clientPhone && (
+              <p className="text-xs text-neutral-500 mt-1 pl-6">{clientPhone}</p>
+            )}
+          </div>
+        ) : (
+          <>
+            <input
+              value={clientName}
+              onChange={(e) => setClientName(e.target.value)}
+              placeholder="Votre nom complet *"
+              required
+              className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all"
+            />
 
-        <div>
-          <input
-            type="tel"
-            value={clientPhone}
-            onChange={(e) => setClientPhone(e.target.value)}
-            placeholder="Votre téléphone *"
-            required
-            className={`w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all ${phoneError(clientPhone) ? "ring-2 ring-red-300 bg-red-50/50" : ""}`}
-          />
-          {phoneError(clientPhone) && (
-            <p className="text-xs text-red-500 mt-1">{phoneError(clientPhone)}</p>
-          )}
-        </div>
+            <div>
+              <input
+                type="tel"
+                value={clientPhone}
+                onChange={(e) => setClientPhone(e.target.value)}
+                placeholder="Votre téléphone *"
+                required
+                className={`w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all ${phoneError(clientPhone) ? "ring-2 ring-red-300 bg-red-50/50" : ""}`}
+              />
+              {phoneError(clientPhone) && (
+                <p className="text-xs text-red-500 mt-1">{phoneError(clientPhone)}</p>
+              )}
+            </div>
+          </>
+        )}
 
         <div className="flex items-center gap-2">
           <button

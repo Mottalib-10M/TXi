@@ -1,7 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
+import { useSession } from "next-auth/react";
 import { Icon } from "@iconify/react";
 import { PlacesAutocomplete } from "@/components/booking/PlacesAutocomplete";
 import { emailError, phoneError, isValidEmail } from "@/lib/validation";
@@ -18,6 +19,7 @@ export function DirectBookingForm({
   minimumFare,
 }: DirectBookingFormProps) {
   const router = useRouter();
+  const { data: session } = useSession();
   const [departure, setDeparture] = useState("");
   const [departureLat, setDepartureLat] = useState<number>(0);
   const [departureLng, setDepartureLng] = useState<number>(0);
@@ -32,6 +34,26 @@ export function DirectBookingForm({
   const [scheduledDate, setScheduledDate] = useState("");
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState("");
+
+  const isLoggedIn = Boolean(session?.user?.email);
+
+  // Pre-fill client info from session + fetch phone
+  useEffect(() => {
+    if (session?.user) {
+      if (session.user.name) setClientName(session.user.name);
+      if (session.user.email) setClientEmail(session.user.email);
+
+      const role = (session.user as { role?: string }).role;
+      const endpoint = role === "organization" ? "/api/org/profile" : "/api/driver/profile";
+      fetch(endpoint)
+        .then((r) => r.ok ? r.json() : null)
+        .then((data) => {
+          if (data?.phone) setClientPhone(data.phone);
+        })
+        .catch(() => {});
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [session]);
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -143,47 +165,69 @@ export function DirectBookingForm({
           </div>
         </div>
 
-        <div className="border-t border-neutral-100 pt-3 space-y-3">
-          <input
-            value={clientName}
-            onChange={(e) => setClientName(e.target.value)}
-            placeholder="Votre nom complet *"
-            required
-            className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all"
-          />
-          <div>
+        {isLoggedIn ? (
+          <div className="border-t border-neutral-100 pt-3 space-y-3">
+            <div className="bg-neutral-50 border border-neutral-200 rounded-xl p-3">
+              <div className="flex items-center gap-2 text-sm">
+                <Icon icon="solar:user-check-linear" className="text-green-500" />
+                <span className="font-medium">{clientName}</span>
+              </div>
+              <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs text-neutral-500 mt-1.5 pl-6">
+                <span>{clientEmail}</span>
+                {clientPhone && <span>{clientPhone}</span>}
+              </div>
+            </div>
+            <textarea
+              value={clientComments}
+              onChange={(e) => setClientComments(e.target.value)}
+              placeholder="Note pour le chauffeur (optionnel)"
+              rows={2}
+              className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all resize-none"
+            />
+          </div>
+        ) : (
+          <div className="border-t border-neutral-100 pt-3 space-y-3">
             <input
-              type="email"
-              value={clientEmail}
-              onChange={(e) => setClientEmail(e.target.value)}
-              placeholder="Votre email *"
+              value={clientName}
+              onChange={(e) => setClientName(e.target.value)}
+              placeholder="Votre nom complet *"
               required
-              className={`w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all ${emailError(clientEmail) ? "ring-2 ring-red-300 bg-red-50/50" : ""}`}
+              className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all"
             />
-            {emailError(clientEmail) && (
-              <p className="text-xs text-red-500 mt-1">{emailError(clientEmail)}</p>
-            )}
-          </div>
-          <div>
-            <input
-              type="tel"
-              value={clientPhone}
-              onChange={(e) => setClientPhone(e.target.value)}
-              placeholder="Votre téléphone"
-              className={`w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all ${phoneError(clientPhone) ? "ring-2 ring-red-300 bg-red-50/50" : ""}`}
+            <div>
+              <input
+                type="email"
+                value={clientEmail}
+                onChange={(e) => setClientEmail(e.target.value)}
+                placeholder="Votre email *"
+                required
+                className={`w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all ${emailError(clientEmail) ? "ring-2 ring-red-300 bg-red-50/50" : ""}`}
+              />
+              {emailError(clientEmail) && (
+                <p className="text-xs text-red-500 mt-1">{emailError(clientEmail)}</p>
+              )}
+            </div>
+            <div>
+              <input
+                type="tel"
+                value={clientPhone}
+                onChange={(e) => setClientPhone(e.target.value)}
+                placeholder="Votre téléphone"
+                className={`w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all ${phoneError(clientPhone) ? "ring-2 ring-red-300 bg-red-50/50" : ""}`}
+              />
+              {phoneError(clientPhone) && (
+                <p className="text-xs text-red-500 mt-1">{phoneError(clientPhone)}</p>
+              )}
+            </div>
+            <textarea
+              value={clientComments}
+              onChange={(e) => setClientComments(e.target.value)}
+              placeholder="Commentaires (optionnel)"
+              rows={2}
+              className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all resize-none"
             />
-            {phoneError(clientPhone) && (
-              <p className="text-xs text-red-500 mt-1">{phoneError(clientPhone)}</p>
-            )}
           </div>
-          <textarea
-            value={clientComments}
-            onChange={(e) => setClientComments(e.target.value)}
-            placeholder="Commentaires (optionnel)"
-            rows={2}
-            className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all resize-none"
-          />
-        </div>
+        )}
 
         <button
           type="submit"

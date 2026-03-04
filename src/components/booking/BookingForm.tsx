@@ -1,7 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
+import { useSession } from "next-auth/react";
 import Link from "next/link";
 import { Icon } from "@iconify/react";
 import { PlacesAutocomplete } from "./PlacesAutocomplete";
@@ -26,6 +27,7 @@ interface TaxiResult {
 
 export function BookingForm() {
   const router = useRouter();
+  const { data: session } = useSession();
   const [departure, setDeparture] = useState("");
   const [departureLat, setDepartureLat] = useState<number | undefined>();
   const [departureLng, setDepartureLng] = useState<number | undefined>();
@@ -46,6 +48,27 @@ export function BookingForm() {
   const [clientPhone, setClientPhone] = useState("");
   const [clientComments, setClientComments] = useState("");
   const [submitting, setSubmitting] = useState(false);
+
+  const isLoggedIn = Boolean(session?.user?.email);
+
+  // Pre-fill client info from session + fetch phone
+  useEffect(() => {
+    if (session?.user) {
+      if (session.user.name) setClientName(session.user.name);
+      if (session.user.email) setClientEmail(session.user.email);
+
+      // Fetch phone from profile
+      const role = (session.user as { role?: string }).role;
+      const endpoint = role === "organization" ? "/api/org/profile" : "/api/driver/profile";
+      fetch(endpoint)
+        .then((r) => r.ok ? r.json() : null)
+        .then((data) => {
+          if (data?.phone) setClientPhone(data.phone);
+        })
+        .catch(() => {});
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [session]);
 
   async function searchTaxis() {
     if (!departure || !arrival) return;
@@ -248,9 +271,21 @@ export function BookingForm() {
             </button>
           </div>
 
-          <div className="text-xs text-neutral-500 mb-4 flex items-start gap-2">
-            <Icon icon="solar:map-point-linear" className="text-neutral-400 shrink-0 mt-0.5" />
-            <span className="break-words min-w-0 break-all">{departure} → {arrival}</span>
+          <div className="text-xs text-neutral-500 mb-4 space-y-1">
+            <div className="flex items-start gap-2">
+              <Icon icon="solar:map-point-linear" className="text-neutral-400 shrink-0 mt-0.5" />
+              <span className="break-words min-w-0 break-all">{departure} → {arrival}</span>
+            </div>
+            <div className="flex items-center gap-2 pl-[18px]">
+              <Icon icon="solar:clock-circle-linear" className="text-neutral-400 shrink-0" />
+              <span>
+                {scheduleLater && scheduledDate
+                  ? new Date(scheduledDate).toLocaleDateString("fr-FR", { weekday: "short", day: "numeric", month: "long" }) +
+                    " à " +
+                    new Date(scheduledDate).toLocaleTimeString("fr-FR", { hour: "2-digit", minute: "2-digit" })
+                  : "Maintenant"}
+              </span>
+            </div>
           </div>
 
           {results.length === 0 ? (
@@ -261,67 +296,74 @@ export function BookingForm() {
               </p>
             </div>
           ) : (
-            <div className="space-y-2 max-h-[400px] overflow-y-auto -mx-1 px-1">
-              {results.map((taxi) => (
-                <div
-                  key={taxi.id}
-                  className="w-full text-left p-3 border rounded-xl transition-all border-neutral-200 hover:border-neutral-300"
-                >
-                  <div className="flex items-center gap-3">
-                    {/* Avatar - clickable to see profile */}
-                    <Link
-                      href={`/taxi/${taxi.slug}`}
-                      className="shrink-0"
-                      title="Voir le profil"
-                    >
-                      <div className="w-10 h-10 bg-neutral-100 rounded-full flex items-center justify-center overflow-hidden hover:ring-2 hover:ring-neutral-900 transition-all cursor-pointer">
-                        {taxi.photoUrl ? (
-                          // eslint-disable-next-line @next/next/no-img-element
-                          <img src={taxi.photoUrl} alt={taxi.firstName} className="w-full h-full object-cover" />
+            <>
+              <div className="space-y-2 max-h-[400px] overflow-y-auto -mx-1 px-1">
+                {results.map((taxi) => (
+                  <div
+                    key={taxi.id}
+                    className="w-full text-left p-3 border rounded-xl transition-all border-neutral-200 hover:border-neutral-300"
+                  >
+                    <div className="flex items-center gap-3">
+                      {/* Avatar - clickable to see profile */}
+                      <Link
+                        href={`/taxi/${taxi.slug}`}
+                        className="shrink-0"
+                        title="Voir le profil"
+                      >
+                        <div className="w-10 h-10 bg-neutral-100 rounded-full flex items-center justify-center overflow-hidden hover:ring-2 hover:ring-neutral-900 transition-all cursor-pointer">
+                          {taxi.photoUrl ? (
+                            // eslint-disable-next-line @next/next/no-img-element
+                            <img src={taxi.photoUrl} alt={taxi.firstName} className="w-full h-full object-cover" />
+                          ) : (
+                            <Icon icon="solar:user-linear" className="text-neutral-400" />
+                          )}
+                        </div>
+                      </Link>
+
+                      {/* Driver info */}
+                      <div className="min-w-0 flex-1">
+                        <p className="text-sm font-medium truncate">
+                          {taxi.companyName || `${taxi.firstName} ${taxi.lastName ? taxi.lastName.charAt(0) + "." : ""}`.trim()}
+                        </p>
+                        <p className="text-xs text-neutral-500 font-light truncate">
+                          {taxi.vehicleBrand} {taxi.vehicleModel}
+                        </p>
+                      </div>
+
+                      {/* Price */}
+                      <div className="text-right shrink-0">
+                        {taxi.estimatedPrice ? (
+                          <p className="text-sm font-semibold">
+                            {formatPrice(taxi.estimatedPrice)}
+                          </p>
                         ) : (
-                          <Icon icon="solar:user-linear" className="text-neutral-400" />
+                          <p className="text-xs text-neutral-500">
+                            Dès {formatPrice(taxi.minimumFare)}
+                          </p>
                         )}
                       </div>
-                    </Link>
-
-                    {/* Driver info */}
-                    <div className="min-w-0 flex-1">
-                      <p className="text-sm font-medium truncate">
-                        {taxi.companyName || `${taxi.firstName} ${taxi.lastName ? taxi.lastName.charAt(0) + "." : ""}`.trim()}
-                      </p>
-                      <p className="text-xs text-neutral-500 font-light truncate">
-                        {taxi.vehicleBrand} {taxi.vehicleModel}
-                      </p>
                     </div>
 
-                    {/* Price */}
-                    <div className="text-right shrink-0">
-                      {taxi.estimatedPrice ? (
-                        <p className="text-sm font-semibold">
-                          {formatPrice(taxi.estimatedPrice)}
-                        </p>
-                      ) : (
-                        <p className="text-xs text-neutral-500">
-                          Dès {formatPrice(taxi.minimumFare)}
-                        </p>
-                      )}
-                    </div>
+                    {/* Choose button - full width below */}
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setSelectedTaxi(taxi);
+                        setStep("booking");
+                      }}
+                      className="w-full mt-2.5 bg-neutral-900 text-white text-xs font-medium py-2.5 rounded-lg hover:bg-neutral-700 transition-colors"
+                    >
+                      Choisir
+                    </button>
                   </div>
+                ))}
+              </div>
 
-                  {/* Choose button - full width below */}
-                  <button
-                    type="button"
-                    onClick={() => {
-                      setSelectedTaxi(taxi);
-                      setStep("booking");
-                    }}
-                    className="w-full mt-2.5 bg-neutral-900 text-white text-xs font-medium py-2.5 rounded-lg hover:bg-neutral-700 transition-colors"
-                  >
-                    Choisir
-                  </button>
-                </div>
-              ))}
-            </div>
+              <div className="flex items-center justify-center gap-1.5 mt-4 text-xs text-neutral-400">
+                <Icon icon="solar:shield-check-linear" className="text-green-500" />
+                <span>Tarif fixe garanti</span>
+              </div>
+            </>
           )}
         </>
       )}
@@ -330,7 +372,7 @@ export function BookingForm() {
         <>
           <div className="flex items-center justify-between mb-5">
             <h2 className="text-lg font-semibold tracking-tight">
-              Vos coordonnées
+              {isLoggedIn ? "Confirmation" : "Vos coordonnées"}
             </h2>
             <button
               onClick={() => setStep("results")}
@@ -361,45 +403,68 @@ export function BookingForm() {
             </div>
           </div>
 
-          <div className="space-y-3">
-            <input
-              value={clientName}
-              onChange={(e) => setClientName(e.target.value)}
-              placeholder="Votre nom complet"
-              className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all"
-            />
-            <div>
-              <input
-                type="email"
-                value={clientEmail}
-                onChange={(e) => setClientEmail(e.target.value)}
-                placeholder="Votre email"
-                className={`w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all ${emailError(clientEmail) ? "ring-2 ring-red-300 bg-red-50/50" : ""}`}
+          {isLoggedIn ? (
+            <div className="space-y-3">
+              <div className="bg-neutral-50 border border-neutral-200 rounded-xl p-3">
+                <div className="flex items-center gap-2 text-sm">
+                  <Icon icon="solar:user-check-linear" className="text-green-500" />
+                  <span className="font-medium">{clientName}</span>
+                </div>
+                <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs text-neutral-500 mt-1.5 pl-6">
+                  <span>{clientEmail}</span>
+                  {clientPhone && <span>{clientPhone}</span>}
+                </div>
+              </div>
+
+              <textarea
+                value={clientComments}
+                onChange={(e) => setClientComments(e.target.value)}
+                placeholder="Note pour le chauffeur (optionnel)"
+                rows={2}
+                className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all resize-none"
               />
-              {emailError(clientEmail) && (
-                <p className="text-xs text-red-500 mt-1">{emailError(clientEmail)}</p>
-              )}
             </div>
-            <div>
+          ) : (
+            <div className="space-y-3">
               <input
-                type="tel"
-                value={clientPhone}
-                onChange={(e) => setClientPhone(e.target.value)}
-                placeholder="Votre téléphone"
-                className={`w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all ${phoneError(clientPhone) ? "ring-2 ring-red-300 bg-red-50/50" : ""}`}
+                value={clientName}
+                onChange={(e) => setClientName(e.target.value)}
+                placeholder="Votre nom complet"
+                className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all"
               />
-              {phoneError(clientPhone) && (
-                <p className="text-xs text-red-500 mt-1">{phoneError(clientPhone)}</p>
-              )}
+              <div>
+                <input
+                  type="email"
+                  value={clientEmail}
+                  onChange={(e) => setClientEmail(e.target.value)}
+                  placeholder="Votre email"
+                  className={`w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all ${emailError(clientEmail) ? "ring-2 ring-red-300 bg-red-50/50" : ""}`}
+                />
+                {emailError(clientEmail) && (
+                  <p className="text-xs text-red-500 mt-1">{emailError(clientEmail)}</p>
+                )}
+              </div>
+              <div>
+                <input
+                  type="tel"
+                  value={clientPhone}
+                  onChange={(e) => setClientPhone(e.target.value)}
+                  placeholder="Votre téléphone"
+                  className={`w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all ${phoneError(clientPhone) ? "ring-2 ring-red-300 bg-red-50/50" : ""}`}
+                />
+                {phoneError(clientPhone) && (
+                  <p className="text-xs text-red-500 mt-1">{phoneError(clientPhone)}</p>
+                )}
+              </div>
+              <textarea
+                value={clientComments}
+                onChange={(e) => setClientComments(e.target.value)}
+                placeholder="Commentaires (optionnel)"
+                rows={2}
+                className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all resize-none"
+              />
             </div>
-            <textarea
-              value={clientComments}
-              onChange={(e) => setClientComments(e.target.value)}
-              placeholder="Commentaires (optionnel)"
-              rows={2}
-              className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all resize-none"
-            />
-          </div>
+          )}
 
           <button
             onClick={handleBooking}
