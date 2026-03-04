@@ -23,7 +23,9 @@ interface PageProps {
 }
 
 export async function generateStaticParams() {
-  return airports.map((a) => ({ slug: a.slug }));
+  return ["fr", "en"].flatMap((locale) =>
+    airports.map((a) => ({ locale, slug: a.slug }))
+  );
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {

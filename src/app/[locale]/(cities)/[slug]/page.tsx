@@ -22,7 +22,9 @@ interface PageProps {
 }
 
 export async function generateStaticParams() {
-  return cities.map((city) => ({ slug: city.slug }));
+  return ["fr", "en"].flatMap((locale) =>
+    cities.map((city) => ({ locale, slug: city.slug }))
+  );
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
