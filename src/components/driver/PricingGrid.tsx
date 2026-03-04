@@ -15,12 +15,12 @@ interface PricingGridProps {
 }
 
 const pricingFields = [
-  { key: "baseFare" as const, label: "Prise en charge", suffix: "EUR", description: "Montant au démarrage du compteur" },
-  { key: "pricePerKm" as const, label: "Prix au km", suffix: "EUR/km", description: "Tarif kilométrique" },
-  { key: "pricePerMinute" as const, label: "Prix à la minute", suffix: "EUR/min", description: "Tarif d'attente/embouteillage" },
-  { key: "minimumFare" as const, label: "Course minimum", suffix: "EUR", description: "Montant minimum facturé" },
-  { key: "airportSupplement" as const, label: "Supplément aéroport", suffix: "EUR", description: "Supplément prise en charge aéroport" },
-  { key: "nightSupplement" as const, label: "Supplément nuit", suffix: "EUR", description: "Supplément horaire de nuit (19h-7h)" },
+  { key: "baseFare" as const, label: "Prise en charge", suffix: "€", description: "Montant au démarrage du compteur" },
+  { key: "pricePerKm" as const, label: "Prix au km", suffix: "€/km", description: "Tarif kilométrique" },
+  { key: "pricePerMinute" as const, label: "Prix à la minute", suffix: "€/min", description: "Tarif d'attente/embouteillage" },
+  { key: "minimumFare" as const, label: "Course minimum", suffix: "€", description: "Montant minimum facturé" },
+  { key: "airportSupplement" as const, label: "Supplément aéroport", suffix: "€", description: "Supplément prise en charge aéroport" },
+  { key: "nightSupplement" as const, label: "Supplément nuit", suffix: "€", description: "Supplément horaire de nuit (19h-7h)" },
 ];
 
 export function PricingGrid({ pricing, onChange }: PricingGridProps) {

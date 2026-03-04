@@ -4,12 +4,13 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Icon } from "@iconify/react";
 import { PlacesAutocomplete } from "./PlacesAutocomplete";
-import { emailError, phoneError, isValidEmail } from "@/lib/validation";
+import { emailError, phoneError, isValidEmail, formatPrice } from "@/lib/validation";
 
 interface TaxiResult {
   id: string;
   firstName: string;
   lastName: string;
+  companyName: string | null;
   slug: string;
   vehicleBrand: string | null;
   vehicleModel: string | null;
@@ -259,7 +260,7 @@ export function BookingForm() {
                       </div>
                       <div className="min-w-0">
                         <p className="text-sm font-medium truncate">
-                          {taxi.firstName} {taxi.lastName.charAt(0)}.
+                          {taxi.companyName || `${taxi.firstName} ${taxi.lastName ? taxi.lastName.charAt(0) + "." : ""}`.trim()}
                         </p>
                         <p className="text-xs text-neutral-500 font-light truncate">
                           {taxi.vehicleBrand} {taxi.vehicleModel}
@@ -270,11 +271,11 @@ export function BookingForm() {
                     <div className="text-right shrink-0">
                       {taxi.estimatedPrice ? (
                         <p className="text-sm font-semibold">
-                          {taxi.estimatedPrice.toFixed(2)} EUR
+                          {formatPrice(taxi.estimatedPrice)}
                         </p>
                       ) : (
                         <p className="text-xs text-neutral-500">
-                          Dès {taxi.minimumFare.toFixed(2)} EUR
+                          Dès {formatPrice(taxi.minimumFare)}
                         </p>
                       )}
                     </div>
@@ -307,7 +308,7 @@ export function BookingForm() {
               </div>
               <div>
                 <p className="text-sm font-medium">
-                  {selectedTaxi.firstName} {selectedTaxi.lastName.charAt(0)}.
+                  {selectedTaxi.companyName || `${selectedTaxi.firstName} ${selectedTaxi.lastName ? selectedTaxi.lastName.charAt(0) + "." : ""}`.trim()}
                 </p>
                 <p className="text-xs text-neutral-500 font-light">
                   {selectedTaxi.vehicleBrand} {selectedTaxi.vehicleModel}
@@ -315,7 +316,7 @@ export function BookingForm() {
               </div>
               {selectedTaxi.estimatedPrice && (
                 <p className="ml-auto text-sm font-semibold">
-                  {selectedTaxi.estimatedPrice.toFixed(2)} EUR
+                  {formatPrice(selectedTaxi.estimatedPrice)}
                 </p>
               )}
             </div>

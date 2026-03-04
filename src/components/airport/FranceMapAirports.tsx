@@ -153,7 +153,7 @@ export function FranceMapAirports() {
                     isActive ? "text-white" : "text-neutral-900"
                   }`}
                 >
-                  <Icon icon="solar:airplane-linear" className={`text-base ${isActive ? "text-neutral-400" : "text-neutral-400"}`} />
+                  <Icon icon="mdi:airplane" className={`text-base ${isActive ? "text-neutral-400" : "text-neutral-400"}`} />
                   {region.name}
                 </h3>
                 <span

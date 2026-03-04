@@ -21,7 +21,7 @@ export function AirportInternalLinks({ airport }: { airport: Airport }) {
               href={`/taxi-aeroport-${a.slug}`}
               className="flex items-center gap-2 bg-white border border-neutral-200 rounded-xl px-4 py-3 hover:border-neutral-400 transition-colors card-hover"
             >
-              <Icon icon="solar:airplane-linear" className="text-neutral-400" />
+              <Icon icon="mdi:airplane" className="text-neutral-400" />
               <span className="text-sm font-medium">Taxi {a.name}</span>
               <span className="text-xs text-neutral-400">({a.iata})</span>
             </Link>

@@ -82,7 +82,7 @@ export function DirectBookingForm({
         Réserver avec {driverName.split(" ")[0]}
       </h2>
       <p className="text-xs text-neutral-500 font-light mb-5">
-        À partir de {minimumFare.toFixed(2)} EUR
+        À partir de {minimumFare.toFixed(2).replace(".", ",")} €
       </p>
 
       <form onSubmit={handleSubmit} className="space-y-3">

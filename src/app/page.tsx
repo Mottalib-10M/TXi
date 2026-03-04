@@ -19,7 +19,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Left: Booking Form */}
-            <div className="max-w-xl fade-up">
+            <div className="md:max-w-xl fade-up">
               <div className="inline-flex items-center gap-2 bg-neutral-100 rounded-full px-4 py-1.5 mb-6">
                 <span className="w-2 h-2 bg-green-500 rounded-full" />
                 <span className="text-xs font-medium text-neutral-600">
@@ -89,7 +89,7 @@ export default function HomePage() {
                   <Icon icon="solar:tag-price-linear" className="text-neutral-600" />
                   <div>
                     <p className="text-xs text-neutral-500 font-light">Estimation</p>
-                    <p className="text-sm font-semibold">18,50 EUR</p>
+                    <p className="text-sm font-semibold">18,50 €</p>
                   </div>
                 </div>
               </div>
@@ -121,22 +121,22 @@ export default function HomePage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
             <div className="text-center fade-up">
               <p className="text-3xl md:text-4xl font-semibold tracking-tight counter">
-                25 000+
+                50+
               </p>
-              <p className="text-sm text-neutral-500 font-light mt-1">Chauffeurs partenaires</p>
-            </div>
-            <div className="text-center fade-up fade-up-delay-1">
-              <p className="text-3xl md:text-4xl font-semibold tracking-tight counter">120+</p>
               <p className="text-sm text-neutral-500 font-light mt-1">Villes couvertes</p>
             </div>
+            <div className="text-center fade-up fade-up-delay-1">
+              <p className="text-3xl md:text-4xl font-semibold tracking-tight counter">24/7</p>
+              <p className="text-sm text-neutral-500 font-light mt-1">Disponibilité</p>
+            </div>
             <div className="text-center fade-up fade-up-delay-2">
-              <p className="text-3xl md:text-4xl font-semibold tracking-tight counter">4.8</p>
-              <p className="text-sm text-neutral-500 font-light mt-1">Note moyenne</p>
+              <p className="text-3xl md:text-4xl font-semibold tracking-tight counter">Prix fixe</p>
+              <p className="text-sm text-neutral-500 font-light mt-1">Garanti avant réservation</p>
             </div>
             <div className="text-center fade-up fade-up-delay-3">
-              <p className="text-3xl md:text-4xl font-semibold tracking-tight counter">3 min</p>
+              <p className="text-3xl md:text-4xl font-semibold tracking-tight counter">100%</p>
               <p className="text-sm text-neutral-500 font-light mt-1">
-                Temps d&apos;attente moyen
+                Taxis agréés
               </p>
             </div>
           </div>
@@ -357,7 +357,7 @@ export default function HomePage() {
                     </div>
                     <div className="bg-neutral-900 border border-neutral-800 rounded-xl p-4">
                       <p className="text-xs text-neutral-500 font-light">Budget</p>
-                      <p className="text-xl font-semibold text-white mt-1">8 420 EUR</p>
+                      <p className="text-xl font-semibold text-white mt-1">8 420 €</p>
                       <p className="text-xs text-green-400 mt-1">-5%</p>
                     </div>
                     <div className="bg-neutral-900 border border-neutral-800 rounded-xl p-4">

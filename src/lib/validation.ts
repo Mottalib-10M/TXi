@@ -18,3 +18,7 @@ export function phoneError(phone: string): string | null {
   if (!phone) return null;
   return isValidPhone(phone) ? null : "Numéro invalide (10 chiffres ou format +33)";
 }
+
+export function formatPrice(amount: number): string {
+  return amount.toLocaleString("fr-FR", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + " €";
+}

@@ -40,7 +40,7 @@ export function AirportInfo({ airport }: { airport: Airport }) {
           </div>
           <div className="bg-white border border-neutral-200 rounded-2xl p-6 fade-up fade-up-delay-1">
             <h3 className="text-sm font-medium mb-4 flex items-center gap-2">
-              <Icon icon="solar:airplane-linear" className="text-neutral-400" />
+              <Icon icon="mdi:airplane" className="text-neutral-400" />
               Compagnies principales
             </h3>
             <div className="flex flex-wrap gap-2">

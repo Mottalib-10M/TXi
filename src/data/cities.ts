@@ -97,7 +97,7 @@ export const cities: City[] = [
     { text: "Transfert Orly parfait à 5h du matin. Ponctuel, véhicule propre, prix fixe annoncé respecté.", name: "Marc D.", initials: "MD", role: "Voyageur fréquent" },
     { text: "Je réserve chaque semaine pour mes rendez-vous médicaux. Chauffeurs toujours patients et serviables.", name: "Jeanne P.", initials: "JP", role: "Retraitée, Paris 5e" },
   ], [
-    { question: "Combien coûte un taxi Paris-CDG ?", answer: "Le trajet Paris-CDG est au forfait réglementé : 56 EUR depuis la rive droite, 65 EUR depuis la rive gauche. Pas de surprise avec TaxiNoir." },
+    { question: "Combien coûte un taxi Paris-CDG ?", answer: "Le trajet Paris-CDG est au forfait réglementé : 56 € depuis la rive droite, 65 € depuis la rive gauche. Pas de surprise avec TaxiNoir." },
     { question: "Les taxis TaxiNoir utilisent-ils les voies de bus à Paris ?", answer: "Oui, en tant que taxis officiels, nos chauffeurs ont accès aux couloirs de bus parisiens, ce qui réduit considérablement les temps de trajet." },
   ], 2500, "4 min"),
 
@@ -109,7 +109,7 @@ export const cities: City[] = [
     { text: "Transfert fiable vers l'aéroport Provence. Le chauffeur m'a aidé avec mes bagages sans hésiter.", name: "Claire M.", initials: "CM", role: "Entrepreneuse" },
     { text: "J'utilise TaxiNoir pour mes déplacements entre la Timone et mon domicile. Rapide et ponctuel.", name: "Dr. Farid A.", initials: "FA", role: "Médecin hospitalier" },
   ], [
-    { question: "Combien coûte un taxi Marseille-Aéroport Provence ?", answer: "Le trajet entre le centre de Marseille et l'aéroport Provence coûte environ 50-60 EUR selon la circulation. Estimation disponible avant réservation." },
+    { question: "Combien coûte un taxi Marseille-Aéroport Provence ?", answer: "Le trajet entre le centre de Marseille et l'aéroport Provence coûte environ 50-60 € selon la circulation. Estimation disponible avant réservation." },
   ], 800, "5 min"),
 
   city("Lyon", "lyon", 45.7640, 4.8357, 522250, [
@@ -120,7 +120,7 @@ export const cities: City[] = [
     { text: "Service Business parfait pour notre entreprise à Confluence. Facturation simplifiée.", name: "Nathalie G.", initials: "NG", role: "Directrice administrative" },
     { text: "Réservation simple, chauffeur ponctuel, véhicule confortable. Je recommande à tous les Lyonnais.", name: "Pierre V.", initials: "PV", role: "Architecte, Lyon 6e" },
   ], [
-    { question: "Combien coûte un taxi Lyon-Saint Exupéry ?", answer: "Le forfait taxi Lyon centre – Aéroport Saint Exupéry est d'environ 60-70 EUR. Le prix exact est estimé avant votre réservation sur TaxiNoir." },
+    { question: "Combien coûte un taxi Lyon-Saint Exupéry ?", answer: "Le forfait taxi Lyon centre – Aéroport Saint Exupéry est d'environ 60-70 €. Le prix exact est estimé avant votre réservation sur TaxiNoir." },
   ], 650, "4 min"),
 
   city("Toulouse", "toulouse", 43.6047, 1.4442, 504078, [
@@ -131,7 +131,7 @@ export const cities: City[] = [
     { text: "Transfert aéroport Blagnac rapide et agréable. Le chauffeur connaît tous les raccourcis.", name: "Isabelle C.", initials: "IC", role: "Commerciale" },
     { text: "Super service pour mes déplacements médicaux vers Purpan. Chauffeurs très attentionnés.", name: "André M.", initials: "AM", role: "Retraité, Toulouse" },
   ], [
-    { question: "Combien coûte un taxi Toulouse-Blagnac ?", answer: "Le trajet Toulouse centre – Aéroport Blagnac coûte environ 25-35 EUR selon l'heure. Prix estimé avant réservation." },
+    { question: "Combien coûte un taxi Toulouse-Blagnac ?", answer: "Le trajet Toulouse centre – Aéroport Blagnac coûte environ 25-35 € selon l'heure. Prix estimé avant réservation." },
   ], 450, "5 min"),
 
   city("Nice", "nice", 43.7102, 7.2620, 342669, [
@@ -142,7 +142,7 @@ export const cities: City[] = [
     { text: "Transfert aéroport Nice – Monaco en toute sérénité. Chauffeur professionnel et discret.", name: "Maxime L.", initials: "ML", role: "Homme d'affaires" },
     { text: "Utilisation régulière pour mes déplacements à Sophia Antipolis. Fiable et ponctuel.", name: "Julie D.", initials: "JD", role: "Développeuse, Nice" },
   ], [
-    { question: "Combien coûte un taxi Nice-Aéroport ?", answer: "Le forfait taxi Nice centre – Aéroport Côte d'Azur est d'environ 25-35 EUR. Estimation disponible sur TaxiNoir avant réservation." },
+    { question: "Combien coûte un taxi Nice-Aéroport ?", answer: "Le forfait taxi Nice centre – Aéroport Côte d'Azur est d'environ 25-35 €. Estimation disponible sur TaxiNoir avant réservation." },
   ], 400, "4 min"),
 
   city("Nantes", "nantes", 47.2184, -1.5536, 320732, [
@@ -153,7 +153,7 @@ export const cities: City[] = [
     { text: "Chauffeur sympa et efficace pour mes déplacements sur l'Île de Nantes.", name: "Marine K.", initials: "MK", role: "Designer, Nantes" },
     { text: "TaxiNoir est devenu indispensable pour mes rendez-vous d'affaires à Euronantes.", name: "François H.", initials: "FH", role: "Avocat, Nantes" },
   ], [
-    { question: "Combien coûte un taxi Nantes-Aéroport ?", answer: "Le trajet Nantes centre – Aéroport Atlantique coûte environ 30-40 EUR. Estimation précise disponible avant réservation." },
+    { question: "Combien coûte un taxi Nantes-Aéroport ?", answer: "Le trajet Nantes centre – Aéroport Atlantique coûte environ 30-40 €. Estimation précise disponible avant réservation." },
   ], 350, "5 min"),
 
   city("Montpellier", "montpellier", 43.6108, 3.8767, 299096, [
@@ -164,7 +164,7 @@ export const cities: City[] = [
     { text: "Transfert gare Saint-Roch vers Lapeyronie rapide et confortable.", name: "Michel R.", initials: "MR", role: "Patient régulier" },
     { text: "Service pro pour mes déplacements d'affaires à Antigone. Je recommande.", name: "Sandrine L.", initials: "SaL", role: "Consultante" },
   ], [
-    { question: "Combien coûte un taxi à Montpellier ?", answer: "Les courses en ville à Montpellier coûtent en moyenne 10-20 EUR. Le trajet vers l'aéroport environ 25-35 EUR." },
+    { question: "Combien coûte un taxi à Montpellier ?", answer: "Les courses en ville à Montpellier coûtent en moyenne 10-20 €. Le trajet vers l'aéroport environ 25-35 €." },
   ], 300, "5 min"),
 
   city("Strasbourg", "strasbourg", 48.5734, 7.7521, 287228, [
@@ -175,7 +175,7 @@ export const cities: City[] = [
     { text: "Transfert gare – aéroport Entzheim rapide. Chauffeur très agréable.", name: "Catherine W.", initials: "CW", role: "Voyageuse, Strasbourg" },
     { text: "Service fiable pour mes déplacements médicaux aux Hôpitaux Universitaires.", name: "René K.", initials: "RK", role: "Retraité, Strasbourg" },
   ], [
-    { question: "Combien coûte un taxi Strasbourg-Entzheim ?", answer: "Le trajet Strasbourg centre – Aéroport Entzheim coûte environ 25-35 EUR, selon l'heure et la circulation." },
+    { question: "Combien coûte un taxi Strasbourg-Entzheim ?", answer: "Le trajet Strasbourg centre – Aéroport Entzheim coûte environ 25-35 €, selon l'heure et la circulation." },
   ], 300, "5 min"),
 
   city("Bordeaux", "bordeaux", 44.8378, -0.5792, 260958, [
@@ -186,7 +186,7 @@ export const cities: City[] = [
     { text: "Taxi disponible rapidement un soir de match au Matmut Atlantique. Très pratique.", name: "Alexis D.", initials: "AD", role: "Étudiant, Bordeaux" },
     { text: "Service régulier pour mes trajets vers Pellegrin. Chauffeurs attentionnés.", name: "Monique V.", initials: "MV", role: "Patiente, Bordeaux" },
   ], [
-    { question: "Combien coûte un taxi Bordeaux-Mérignac ?", answer: "Le forfait taxi Bordeaux centre – Aéroport Mérignac est d'environ 30-45 EUR selon l'heure." },
+    { question: "Combien coûte un taxi Bordeaux-Mérignac ?", answer: "Le forfait taxi Bordeaux centre – Aéroport Mérignac est d'environ 30-45 € selon l'heure." },
   ], 400, "5 min"),
 
   city("Lille", "lille", 50.6292, 3.0573, 236234, [
@@ -197,7 +197,7 @@ export const cities: City[] = [
     { text: "Parfait pour mes déplacements à Euralille. Chauffeurs professionnels.", name: "Valérie T.", initials: "VT", role: "Cadre, Lille" },
     { text: "Transfert vers Lesquin toujours impeccable, même tôt le matin.", name: "Damien C.", initials: "DC", role: "Commercial, Lille" },
   ], [
-    { question: "Combien coûte un taxi Lille-Lesquin ?", answer: "Le trajet Lille centre – Aéroport Lesquin coûte environ 20-30 EUR selon l'heure de la journée." },
+    { question: "Combien coûte un taxi Lille-Lesquin ?", answer: "Le trajet Lille centre – Aéroport Lesquin coûte environ 20-30 € selon l'heure de la journée." },
   ], 350, "4 min"),
 
   city("Rennes", "rennes", 48.1173, -1.6778, 222485, [
@@ -208,7 +208,7 @@ export const cities: City[] = [
     { text: "Service parfait pour mes trajets CHU Pontchaillou. Merci TaxiNoir !", name: "Anne-Marie F.", initials: "AMF", role: "Infirmière, Rennes" },
     { text: "Chauffeur agréable et véhicule propre pour tous mes déplacements rennais.", name: "Julien N.", initials: "JN", role: "Développeur, Rennes" },
   ], [
-    { question: "Y a-t-il un aéroport à Rennes ?", answer: "Oui, l'aéroport Rennes-Bretagne se trouve à 15 minutes du centre. TaxiNoir assure les transferts pour environ 20-30 EUR." },
+    { question: "Y a-t-il un aéroport à Rennes ?", answer: "Oui, l'aéroport Rennes-Bretagne se trouve à 15 minutes du centre. TaxiNoir assure les transferts pour environ 20-30 €." },
   ], 250, "5 min"),
 
   city("Reims", "reims", 49.2583, 4.0317, 187181, [
@@ -230,7 +230,7 @@ export const cities: City[] = [
     { text: "Transfert fiable Saint-Étienne – Lyon Saint Exupéry pour mes vols.", name: "Sylvie A.", initials: "SA", role: "Cadre commerciale" },
     { text: "Chauffeur ponctuel les soirs de match au Chaudron. Merci !", name: "Nicolas J.", initials: "NJ", role: "Supporter stéphanois" },
   ], [
-    { question: "Peut-on prendre un taxi Saint-Étienne – Lyon ?", answer: "Oui, nos chauffeurs assurent les trajets Saint-Étienne – Lyon (environ 60 km). Comptez 70-90 EUR selon la circulation." },
+    { question: "Peut-on prendre un taxi Saint-Étienne – Lyon ?", answer: "Oui, nos chauffeurs assurent les trajets Saint-Étienne – Lyon (environ 60 km). Comptez 70-90 € selon la circulation." },
   ], 200, "5 min"),
 
   city("Le Havre", "le-havre", 49.4944, 0.1079, 172366, [
@@ -285,7 +285,7 @@ export const cities: City[] = [
     { text: "Service parfait pour mes trajets vers le CHU. Merci TaxiNoir.", name: "Françoise M.", initials: "FM", role: "Patiente, Angers" },
     { text: "Chauffeur ponctuel pour mes rendez-vous au Parc des Expositions.", name: "Benoît L.", initials: "BL", role: "Commercial, Angers" },
   ], [
-    { question: "Y a-t-il un aéroport à Angers ?", answer: "L'aéroport Angers-Loire se trouve à 20 minutes du centre. TaxiNoir assure les transferts pour environ 25-35 EUR." },
+    { question: "Y a-t-il un aéroport à Angers ?", answer: "L'aéroport Angers-Loire se trouve à 20 minutes du centre. TaxiNoir assure les transferts pour environ 25-35 €." },
   ], 160, "5 min"),
 
   city("Nîmes", "nimes", 43.8367, 4.3601, 151001, [
@@ -318,7 +318,7 @@ export const cities: City[] = [
     { text: "Service fiable pour mes trajets vers le CHU Montpied chaque semaine.", name: "Hélène A.", initials: "HA", role: "Patiente, Clermont" },
     { text: "Transfert aéroport Aulnat ponctuel et professionnel.", name: "Xavier B.", initials: "XB", role: "Cadre, Clermont" },
   ], [
-    { question: "Combien coûte un taxi Clermont – Vulcania ?", answer: "Le trajet Clermont-Ferrand – Vulcania (environ 25 km) coûte entre 35 et 45 EUR. Idéal pour une sortie en famille." },
+    { question: "Combien coûte un taxi Clermont – Vulcania ?", answer: "Le trajet Clermont-Ferrand – Vulcania (environ 25 km) coûte entre 35 et 45 €. Idéal pour une sortie en famille." },
   ], 170, "5 min"),
 
   city("Aix-en-Provence", "aix-en-provence", 43.5297, 5.4474, 147122, [
@@ -329,7 +329,7 @@ export const cities: City[] = [
     { text: "Mise à disposition idéale pour visiter la Provence avec des amis étrangers.", name: "Robert T.", initials: "RoT", role: "Retraité, Aix" },
     { text: "Service pro pour mes déplacements universitaires. Je recommande.", name: "Camille F.", initials: "CF", role: "Professeure, Aix" },
   ], [
-    { question: "La gare TGV d'Aix est-elle loin du centre ?", answer: "La gare TGV est à 15 km du centre d'Aix. Le taxi TaxiNoir vous y conduit en 15-20 minutes pour environ 30-40 EUR." },
+    { question: "La gare TGV d'Aix est-elle loin du centre ?", answer: "La gare TGV est à 15 km du centre d'Aix. Le taxi TaxiNoir vous y conduit en 15-20 minutes pour environ 30-40 €." },
   ], 180, "5 min"),
 
   city("Le Mans", "le-mans", 47.9960, 0.1996, 146105, [
@@ -351,7 +351,7 @@ export const cities: City[] = [
     { text: "Transfert port – gare sans problème. Chauffeur arrangeant.", name: "Nolwenn R.", initials: "NR", role: "Voyageuse, Brest" },
     { text: "Service de qualité pour mes trajets CHU de Brest.", name: "Jean-Pierre M.", initials: "JPM", role: "Patient, Brest" },
   ], [
-    { question: "Combien coûte un taxi Brest-Aéroport ?", answer: "Le trajet Brest centre – Aéroport Guipavas coûte environ 15-25 EUR. Estimation avant réservation sur TaxiNoir." },
+    { question: "Combien coûte un taxi Brest-Aéroport ?", answer: "Le trajet Brest centre – Aéroport Guipavas coûte environ 15-25 €. Estimation avant réservation sur TaxiNoir." },
   ], 140, "6 min"),
 
   city("Tours", "tours", 47.3941, 0.6848, 138588, [
@@ -384,7 +384,7 @@ export const cities: City[] = [
     { text: "Transfert aéroport Bellegarde rapide et abordable.", name: "Pauline G.", initials: "PG", role: "Étudiante, Limoges" },
     { text: "Service de qualité pour mes trajets CHU Dupuytren.", name: "Odette V.", initials: "OV", role: "Patiente, Limoges" },
   ], [
-    { question: "Combien coûte un taxi Limoges-Aéroport ?", answer: "Le trajet Limoges centre – Aéroport Bellegarde coûte environ 15-25 EUR. Disponible 24h/24." },
+    { question: "Combien coûte un taxi Limoges-Aéroport ?", answer: "Le trajet Limoges centre – Aéroport Bellegarde coûte environ 15-25 €. Disponible 24h/24." },
   ], 120, "6 min"),
 
   city("Annecy", "annecy", 45.8992, 6.1294, 132654, [
@@ -395,7 +395,7 @@ export const cities: City[] = [
     { text: "Transfert Annecy – Genève Aéroport confortable et ponctuel.", name: "Isabelle K.", initials: "IK", role: "Cadre, Annecy" },
     { text: "Service fiable pour mes trajets médicaux au CHANGE.", name: "Roger B.", initials: "RoB", role: "Patient, Annecy" },
   ], [
-    { question: "Peut-on prendre un taxi Annecy – Genève ?", answer: "Oui, nos chauffeurs assurent les transferts Annecy – Genève (aéroport ou centre). Comptez 80-100 EUR pour environ 45 minutes." },
+    { question: "Peut-on prendre un taxi Annecy – Genève ?", answer: "Oui, nos chauffeurs assurent les transferts Annecy – Genève (aéroport ou centre). Comptez 80-100 € pour environ 45 minutes." },
   ], 140, "5 min"),
 
   city("Perpignan", "perpignan", 42.6988, 2.8954, 121875, [
@@ -406,7 +406,7 @@ export const cities: City[] = [
     { text: "Transfert aéroport Rivesaltes rapide et ponctuel.", name: "Luis P.", initials: "LP", role: "Voyageur" },
     { text: "Service de qualité pour mes visites médicales. Merci TaxiNoir.", name: "Marie-Thérèse D.", initials: "MTD", role: "Patiente, Perpignan" },
   ], [
-    { question: "Peut-on prendre un taxi Perpignan – plages ?", answer: "Oui, nos chauffeurs assurent les transferts vers Canet-en-Roussillon, Saint-Cyprien et les plages environnantes (10-20 EUR)." },
+    { question: "Peut-on prendre un taxi Perpignan – plages ?", answer: "Oui, nos chauffeurs assurent les transferts vers Canet-en-Roussillon, Saint-Cyprien et les plages environnantes (10-20 €)." },
   ], 120, "6 min"),
 
   city("Besançon", "besancon", 47.2378, 6.0241, 120271, [
@@ -417,7 +417,7 @@ export const cities: City[] = [
     { text: "Service fiable pour mes déplacements vers le CHU Jean Minjoz.", name: "Annick L.", initials: "AnL", role: "Patiente, Besançon" },
     { text: "Chauffeur ponctuel pour visiter la Citadelle. Très pro.", name: "Fabrice R.", initials: "FaR", role: "Touriste" },
   ], [
-    { question: "La gare TGV de Besançon est-elle loin du centre ?", answer: "La gare TGV Besançon Franche-Comté est à 10 km du centre. Le taxi TaxiNoir vous y conduit en 15 minutes pour environ 20-30 EUR." },
+    { question: "La gare TGV de Besançon est-elle loin du centre ?", answer: "La gare TGV Besançon Franche-Comté est à 10 km du centre. Le taxi TaxiNoir vous y conduit en 15 minutes pour environ 20-30 €." },
   ], 110, "6 min"),
 
   city("Metz", "metz", 49.1193, 6.1757, 119962, [
@@ -428,7 +428,7 @@ export const cities: City[] = [
     { text: "Service fiable pour mes trajets Metz – Luxembourg. Chauffeur pro.", name: "Marie B.", initials: "MaB", role: "Frontalière" },
     { text: "Transfert régulier vers le CHR. Toujours satisfait.", name: "Georges N.", initials: "GN", role: "Patient, Metz" },
   ], [
-    { question: "Peut-on prendre un taxi Metz – Luxembourg ?", answer: "Oui, nos chauffeurs assurent les transferts Metz – Luxembourg (environ 60 km). Comptez 80-100 EUR pour le trajet." },
+    { question: "Peut-on prendre un taxi Metz – Luxembourg ?", answer: "Oui, nos chauffeurs assurent les transferts Metz – Luxembourg (environ 60 km). Comptez 80-100 € pour le trajet." },
   ], 130, "5 min"),
 
   city("Orléans", "orleans", 47.9029, 1.9039, 116238, [
@@ -439,7 +439,7 @@ export const cities: City[] = [
     { text: "Service fiable pour mes allers-retours Paris – Orléans.", name: "Christophe V.", initials: "ChV", role: "Cadre" },
     { text: "Transfert CHR ponctuel et chauffeur aimable.", name: "Josette P.", initials: "JoP", role: "Patiente, Orléans" },
   ], [
-    { question: "Combien de temps met un taxi Orléans – Paris ?", answer: "Le trajet Orléans – Paris en taxi dure environ 1h30. Comptez 150-180 EUR. Idéal si vous avez beaucoup de bagages." },
+    { question: "Combien de temps met un taxi Orléans – Paris ?", answer: "Le trajet Orléans – Paris en taxi dure environ 1h30. Comptez 150-180 €. Idéal si vous avez beaucoup de bagages." },
   ], 130, "5 min"),
 
   city("Rouen", "rouen", 49.4432, 1.0993, 114007, [
@@ -450,7 +450,7 @@ export const cities: City[] = [
     { text: "Chauffeur ponctuel pour mes déplacements dans le centre historique.", name: "Brigitte L.", initials: "BrL", role: "Rouennaise" },
     { text: "Transfert Rouen – Le Havre confortable. Je recommande.", name: "Arnaud D.", initials: "ArD", role: "Commercial" },
   ], [
-    { question: "Peut-on prendre un taxi Rouen – Paris ?", answer: "Oui, nos chauffeurs assurent les transferts Rouen – Paris (environ 130 km). Comptez 170-200 EUR pour le trajet." },
+    { question: "Peut-on prendre un taxi Rouen – Paris ?", answer: "Oui, nos chauffeurs assurent les transferts Rouen – Paris (environ 130 km). Comptez 170-200 € pour le trajet." },
   ], 140, "5 min"),
 
   city("Mulhouse", "mulhouse", 47.7508, 7.3359, 112063, [
@@ -461,7 +461,7 @@ export const cities: City[] = [
     { text: "Taxi pour la Cité de l'Automobile. Service impeccable.", name: "Joëlle S.", initials: "JoS", role: "Touriste" },
     { text: "Chauffeur ponctuel pour mes rendez-vous médicaux.", name: "Albert W.", initials: "AW", role: "Patient, Mulhouse" },
   ], [
-    { question: "Combien coûte un taxi Mulhouse – Aéroport Bâle ?", answer: "Le trajet Mulhouse – Aéroport Bâle-Mulhouse coûte environ 35-45 EUR. Réservez à l'avance pour un service garanti." },
+    { question: "Combien coûte un taxi Mulhouse – Aéroport Bâle ?", answer: "Le trajet Mulhouse – Aéroport Bâle-Mulhouse coûte environ 35-45 €. Réservez à l'avance pour un service garanti." },
   ], 120, "6 min"),
 
   city("Caen", "caen", 49.1829, -0.3707, 108365, [
@@ -483,7 +483,7 @@ export const cities: City[] = [
     { text: "Service fiable pour mes trajets Nancy – Metz quotidiens.", name: "Éliane M.", initials: "ElM", role: "Frontalière" },
     { text: "Chauffeur ponctuel pour le CHU. Merci TaxiNoir.", name: "Marcel R.", initials: "MaR", role: "Patient, Nancy" },
   ], [
-    { question: "Peut-on prendre un taxi Nancy – Metz ?", answer: "Oui, nos chauffeurs assurent les transferts Nancy – Metz (environ 55 km). Comptez 70-85 EUR pour le trajet." },
+    { question: "Peut-on prendre un taxi Nancy – Metz ?", answer: "Oui, nos chauffeurs assurent les transferts Nancy – Metz (environ 55 km). Comptez 70-85 € pour le trajet." },
   ], 120, "5 min"),
 
   city("Argenteuil", "argenteuil", 48.9472, 2.2467, 113748, [
@@ -505,7 +505,7 @@ export const cities: City[] = [
     { text: "Service fiable pour mes trajets vers l'hôpital Duffaut.", name: "Henri M.", initials: "HeM", role: "Patient, Avignon" },
     { text: "Mise à disposition pour visiter les vignobles du Lubéron. Superbe expérience.", name: "Diana K.", initials: "DK", role: "Touriste" },
   ], [
-    { question: "La gare TGV d'Avignon est-elle loin du centre ?", answer: "La gare TGV est à 5 km du centre historique. Le taxi TaxiNoir vous y conduit en 10 minutes pour environ 15-20 EUR." },
+    { question: "La gare TGV d'Avignon est-elle loin du centre ?", answer: "La gare TGV est à 5 km du centre historique. Le taxi TaxiNoir vous y conduit en 10 minutes pour environ 15-20 €." },
   ], 100, "6 min"),
 
   city("Poitiers", "poitiers", 46.5802, 0.3404, 90340, [
@@ -516,7 +516,7 @@ export const cities: City[] = [
     { text: "Transfert gare – CHU toujours fiable. Merci.", name: "Régine S.", initials: "ReS", role: "Patiente, Poitiers" },
     { text: "Service pro pour mes déplacements vers le Technopôle.", name: "Karine D.", initials: "KD", role: "Ingénieure" },
   ], [
-    { question: "Combien coûte un taxi Poitiers – Futuroscope ?", answer: "Le trajet Poitiers centre – Futuroscope coûte environ 20-30 EUR. Nos chauffeurs connaissent bien le site." },
+    { question: "Combien coûte un taxi Poitiers – Futuroscope ?", answer: "Le trajet Poitiers centre – Futuroscope coûte environ 20-30 €. Nos chauffeurs connaissent bien le site." },
   ], 100, "6 min"),
 
   city("Dunkerque", "dunkerque", 51.0343, 2.3768, 88108, [
@@ -538,7 +538,7 @@ export const cities: City[] = [
     { text: "Service fiable pour mes trajets gare – domicile quotidiens.", name: "Geneviève L.", initials: "GeL", role: "Versaillaise" },
     { text: "Transfert vers CDG confortable. Prix raisonnable.", name: "Youssef A.", initials: "YA", role: "Voyageur, Versailles" },
   ], [
-    { question: "Combien coûte un taxi Paris – Versailles ?", answer: "Le trajet Paris centre – Versailles coûte environ 40-55 EUR selon la circulation et le point de départ." },
+    { question: "Combien coûte un taxi Paris – Versailles ?", answer: "Le trajet Paris centre – Versailles coûte environ 40-55 € selon la circulation et le point de départ." },
   ], 100, "5 min"),
 
   city("Pau", "pau", 43.2951, -0.3708, 78506, [
@@ -560,7 +560,7 @@ export const cities: City[] = [
     { text: "Service disponible même en plein été. Très appréciable.", name: "Roland P.", initials: "RoP", role: "Rochelais" },
     { text: "Transfert aéroport fiable et ponctuel.", name: "Corinne J.", initials: "CoJ", role: "Voyageuse" },
   ], [
-    { question: "Peut-on prendre un taxi La Rochelle – Île de Ré ?", answer: "Oui, nos chauffeurs assurent les transferts vers l'Île de Ré via le pont. Comptez 25-35 EUR depuis le centre." },
+    { question: "Peut-on prendre un taxi La Rochelle – Île de Ré ?", answer: "Oui, nos chauffeurs assurent les transferts vers l'Île de Ré via le pont. Comptez 25-35 € depuis le centre." },
   ], 80, "6 min"),
 
   city("Calais", "calais", 50.9513, 1.8587, 73911, [
@@ -582,7 +582,7 @@ export const cities: City[] = [
     { text: "Transfert aéroport Nice – Cannes confortable et ponctuel.", name: "Roberto F.", initials: "RF", role: "Homme d'affaires" },
     { text: "Service impeccable sur la Croisette. Chauffeur discret et pro.", name: "Léa M.", initials: "LeM", role: "Résidente, Cannes" },
   ], [
-    { question: "Combien coûte un taxi Nice Aéroport – Cannes ?", answer: "Le forfait taxi Nice Aéroport – Cannes est d'environ 70-90 EUR. Réservez à l'avance pendant le Festival." },
+    { question: "Combien coûte un taxi Nice Aéroport – Cannes ?", answer: "Le forfait taxi Nice Aéroport – Cannes est d'environ 70-90 €. Réservez à l'avance pendant le Festival." },
   ], 100, "5 min"),
 
   city("Antibes", "antibes", 43.5804, 7.1254, 74875, [
@@ -593,7 +593,7 @@ export const cities: City[] = [
     { text: "Service parfait pour rejoindre Juan-les-Pins depuis la gare.", name: "Magali R.", initials: "MgR", role: "Antiboise" },
     { text: "Transfert vers l'aéroport de Nice ponctuel et confortable.", name: "Patrick D.", initials: "PaD", role: "Voyageur" },
   ], [
-    { question: "Combien coûte un taxi Antibes – Sophia Antipolis ?", answer: "Le trajet Antibes – Sophia Antipolis coûte environ 20-30 EUR selon votre destination exacte dans le technopôle." },
+    { question: "Combien coûte un taxi Antibes – Sophia Antipolis ?", answer: "Le trajet Antibes – Sophia Antipolis coûte environ 20-30 € selon votre destination exacte dans le technopôle." },
   ], 90, "5 min"),
 
   city("Colmar", "colmar", 48.0794, 7.3588, 70284, [
@@ -615,7 +615,7 @@ export const cities: City[] = [
     { text: "Mise à disposition parfaite pour les Fêtes de Bayonne.", name: "Hélène S.", initials: "HeS", role: "Festivalière" },
     { text: "Transfert Bayonne – Saint-Jean-de-Luz confortable.", name: "Pierre-Jean L.", initials: "PJL", role: "Touriste" },
   ], [
-    { question: "Combien coûte un taxi Bayonne – Biarritz Aéroport ?", answer: "Le trajet Bayonne – Aéroport Biarritz coûte environ 20-30 EUR. Service disponible 24h/24." },
+    { question: "Combien coûte un taxi Bayonne – Biarritz Aéroport ?", answer: "Le trajet Bayonne – Aéroport Biarritz coûte environ 20-30 €. Service disponible 24h/24." },
   ], 70, "6 min"),
 
   city("Chambéry", "chambery", 45.5646, 5.9178, 60466, [
@@ -637,7 +637,7 @@ export const cities: City[] = [
     { text: "Service fiable pour mes déplacements au CH de Valence.", name: "Robert N.", initials: "RoN", role: "Patient, Valence" },
     { text: "Taxi ponctuel pour mes rendez-vous professionnels.", name: "Chantal M.", initials: "ChM2", role: "Cadre, Valence" },
   ], [
-    { question: "La gare TGV de Valence est-elle loin du centre ?", answer: "La gare TGV Valence est à 10 km du centre. Le taxi TaxiNoir vous y conduit en 15 minutes pour environ 20-25 EUR." },
+    { question: "La gare TGV de Valence est-elle loin du centre ?", answer: "La gare TGV Valence est à 10 km du centre. Le taxi TaxiNoir vous y conduit en 15 minutes pour environ 20-25 €." },
   ], 80, "6 min"),
 ];
 
@@ -664,7 +664,7 @@ export const services = [
     description: "Déplacements rapides et confortables dans toute l'agglomération, 24h/24 et 7j/7.",
   },
   {
-    icon: "solar:airplane-linear",
+    icon: "mdi:airplane",
     title: "Transfert aéroport",
     description: "Transferts fiables vers les aéroports avec suivi des vols et aide aux bagages.",
   },

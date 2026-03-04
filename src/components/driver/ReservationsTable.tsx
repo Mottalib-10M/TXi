@@ -132,7 +132,7 @@ export function ReservationsTable({ bookings }: { bookings: Booking[] }) {
                 {booking.estimatedPrice && (
                   <span className="flex items-center gap-1">
                     <Icon icon="solar:tag-price-linear" />
-                    {booking.estimatedPrice.toFixed(2)} EUR
+                    {booking.estimatedPrice.toFixed(2).replace(".", ",")} €
                   </span>
                 )}
                 <span className="text-neutral-300">

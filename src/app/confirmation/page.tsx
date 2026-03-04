@@ -83,7 +83,7 @@ async function ConfirmationContent({ reference }: { reference: string }) {
                 <div>
                   <p className="text-xs text-neutral-400">Prix estimé</p>
                   <p className="text-sm font-semibold">
-                    {booking.estimatedPrice.toFixed(2)} EUR
+                    {booking.estimatedPrice.toFixed(2).replace(".", ",")} €
                   </p>
                 </div>
               </div>
