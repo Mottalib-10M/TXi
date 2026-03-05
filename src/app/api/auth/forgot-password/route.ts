@@ -34,7 +34,7 @@ export async function POST(request: Request) {
     });
 
     const baseUrl = process.env.NEXTAUTH_URL || "http://localhost:3000";
-    const resetUrl = `${baseUrl}/reset-password?token=${token}`;
+    const resetUrl = `${baseUrl}/${locale}/reset-password?token=${token}`;
     const name = driver ? driver.firstName : (org?.contactName ?? "");
     const { subject, html } = buildPasswordResetEmail(name, resetUrl, locale);
     await sendEmail({ to: email, subject, html });

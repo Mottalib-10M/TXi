@@ -1,10 +1,13 @@
 "use server";
 
-import { signIn } from "@/lib/auth";
 import { compare } from "bcryptjs";
 import { prisma } from "@/lib/prisma";
 
-export async function login(email: string, password: string, locale: string) {
+/**
+ * Validate credentials server-side and return specific error codes.
+ * Does NOT create a session — the client handles that with signIn().
+ */
+export async function validateCredentials(email: string, password: string) {
   // 1. Check Driver table
   const driver = await prisma.driver.findUnique({ where: { email } });
 
@@ -12,14 +15,7 @@ export async function login(email: string, password: string, locale: string) {
     const isValid = await compare(password, driver.passwordHash);
     if (!isValid) return { error: "INVALID_CREDENTIALS" as const };
     if (!driver.emailVerified) return { error: "EMAIL_NOT_VERIFIED" as const };
-
-    // Credentials valid — signIn creates session and redirects
-    await signIn("credentials", {
-      email,
-      password,
-      redirectTo: `/${locale}/dashboard`,
-    });
-    return; // never reached — signIn redirects
+    return { ok: true as const, role: "driver" as const };
   }
 
   // 2. Check Organization table
@@ -29,13 +25,7 @@ export async function login(email: string, password: string, locale: string) {
     const isValid = await compare(password, org.passwordHash);
     if (!isValid) return { error: "INVALID_CREDENTIALS" as const };
     if (!org.emailVerified) return { error: "EMAIL_NOT_VERIFIED" as const };
-
-    await signIn("credentials", {
-      email,
-      password,
-      redirectTo: `/${locale}/org`,
-    });
-    return;
+    return { ok: true as const, role: "organization" as const };
   }
 
   // 3. Email not found

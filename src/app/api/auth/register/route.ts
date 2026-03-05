@@ -88,10 +88,10 @@ export async function POST(request: Request) {
 
     // Check email uniqueness across both tables
     if (await isEmailTaken(data.email)) {
-      return NextResponse.json(
-        { error: "Un compte existe déjà avec cet email" },
-        { status: 409 }
-      );
+      const msg = locale === "en"
+        ? "An account already exists with this email"
+        : "Un compte existe déjà avec cet email";
+      return NextResponse.json({ error: msg }, { status: 409 });
     }
 
     const passwordHash = await hash(data.password, 12);
@@ -128,7 +128,7 @@ export async function POST(request: Request) {
       await sendVerificationEmail(data.email, data.firstName, locale);
 
       return NextResponse.json(
-        { message: "Compte créé avec succès. Vérifiez votre email.", slug: driver.slug },
+        { message: "OK", slug: driver.slug },
         { status: 201 }
       );
     }
@@ -162,7 +162,7 @@ export async function POST(request: Request) {
       await sendVerificationEmail(data.email, data.firstName, locale);
 
       return NextResponse.json(
-        { message: "Compte créé avec succès. Vérifiez votre email.", profileType: data.profileType },
+        { message: "OK", profileType: data.profileType },
         { status: 201 }
       );
     }
@@ -189,7 +189,7 @@ export async function POST(request: Request) {
     await sendVerificationEmail(data.email, data.contactName, locale);
 
     return NextResponse.json(
-      { message: "Compte créé avec succès. Vérifiez votre email.", profileType: data.profileType },
+      { message: "OK", profileType: data.profileType },
       { status: 201 }
     );
   } catch (error) {
@@ -201,7 +201,7 @@ export async function POST(request: Request) {
     }
     console.error("Registration error:", error);
     return NextResponse.json(
-      { error: "Erreur lors de l'inscription" },
+      { error: "Server error" },
       { status: 500 }
     );
   }

@@ -5,7 +5,7 @@ export async function GET(request: NextRequest) {
   const token = request.nextUrl.searchParams.get("token");
 
   if (!token) {
-    return NextResponse.redirect(new URL("/connexion?error=invalid_token", request.url));
+    return NextResponse.redirect(new URL("/fr/connexion?error=invalid_token", request.url));
   }
 
   const record = await prisma.emailVerificationToken.findUnique({
@@ -17,7 +17,7 @@ export async function GET(request: NextRequest) {
     if (record) {
       await prisma.emailVerificationToken.delete({ where: { id: record.id } });
     }
-    return NextResponse.redirect(new URL("/connexion?error=expired_token", request.url));
+    return NextResponse.redirect(new URL("/fr/connexion?error=expired_token", request.url));
   }
 
   // Mark email as verified on Driver or Organization
@@ -40,5 +40,5 @@ export async function GET(request: NextRequest) {
   // Delete the used token
   await prisma.emailVerificationToken.delete({ where: { id: record.id } });
 
-  return NextResponse.redirect(new URL("/connexion?verified=true", request.url));
+  return NextResponse.redirect(new URL("/fr/connexion?verified=true", request.url));
 }
