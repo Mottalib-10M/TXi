@@ -4,10 +4,8 @@ import { useState } from "react";
 import { Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { useTranslations, useLocale } from "next-intl";
-import { signIn } from "next-auth/react";
 import { Link } from "@/i18n/navigation";
 import { emailError, isValidEmail } from "@/lib/validation";
-import { validateCredentials } from "@/lib/actions/auth";
 
 function ConnexionForm() {
   const t = useTranslations("auth");
@@ -57,37 +55,29 @@ function ConnexionForm() {
     const password = formData.get("password") as string;
 
     try {
-      // Step 1: Validate credentials server-side (for specific error messages)
-      const validation = await validateCredentials(email, password);
+      const res = await fetch("/api/auth/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password }),
+      });
 
-      if (validation.error === "EMAIL_NOT_VERIFIED") {
+      const data = await res.json();
+
+      if (data.error === "EMAIL_NOT_VERIFIED") {
         setEmailNotVerified(true);
         setResendEmail(email);
         setLoading(false);
         return;
       }
 
-      if (validation.error) {
+      if (data.error) {
         setError(t("wrongCredentials"));
         setLoading(false);
         return;
       }
 
-      // Step 2: Create session via client-side signIn
-      const result = await signIn("credentials", {
-        redirect: false,
-        email,
-        password,
-      });
-
-      if (result?.error) {
-        setError(t("wrongCredentials"));
-        setLoading(false);
-        return;
-      }
-
-      // Step 3: Redirect with full page load (avoids stale state issues)
-      const dest = validation.role === "organization" ? "/org" : "/dashboard";
+      // Success — redirect with full page load
+      const dest = data.role === "organization" ? "/org" : "/dashboard";
       window.location.href = `/${locale}${dest}`;
     } catch {
       setError(tc("serverError"));
