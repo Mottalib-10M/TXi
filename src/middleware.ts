@@ -37,10 +37,7 @@ export async function middleware(req: NextRequest) {
     const locale = routing.locales.find(
       (l) => pathname.startsWith(`/${l}/`) || pathname === `/${l}`
     ) || routing.defaultLocale;
-    const signInUrl = new URL(
-      locale === routing.defaultLocale ? "/connexion" : `/${locale}/connexion`,
-      req.nextUrl.origin
-    );
+    const signInUrl = new URL(`/${locale}/connexion`, req.nextUrl.origin);
     return NextResponse.redirect(signInUrl);
   }
 
@@ -50,10 +47,7 @@ export async function middleware(req: NextRequest) {
       (l) => pathname.startsWith(`/${l}/`) || pathname === `/${l}`
     ) || routing.defaultLocale;
     const dest = (token as { role?: string }).role === "organization" ? "/org" : "/dashboard";
-    const dashUrl = new URL(
-      locale === routing.defaultLocale ? dest : `/${locale}${dest}`,
-      req.nextUrl.origin
-    );
+    const dashUrl = new URL(`/${locale}${dest}`, req.nextUrl.origin);
     return NextResponse.redirect(dashUrl);
   }
 
