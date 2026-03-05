@@ -14,7 +14,19 @@ export async function login(email: string, password: string, locale: string) {
 
   try {
     await signIn("credentials", { email, password, redirectTo: dest });
-  } catch (error) {
+  } catch (error: unknown) {
+    // NEXT_REDIRECT from successful signIn — must re-throw for Next.js to handle
+    if (
+      error &&
+      typeof error === "object" &&
+      "digest" in error &&
+      typeof (error as { digest: unknown }).digest === "string" &&
+      (error as { digest: string }).digest.startsWith("NEXT_REDIRECT")
+    ) {
+      throw error;
+    }
+
+    // Auth errors (wrong credentials, email not verified, etc.)
     if (error instanceof AuthError) {
       const cause = error.cause as
         | { err?: { message?: string }; message?: string }
@@ -28,6 +40,8 @@ export async function login(email: string, password: string, locale: string) {
       }
       return { error: "INVALID_CREDENTIALS" as const };
     }
-    throw error; // Re-throw NEXT_REDIRECT (expected on successful signIn)
+
+    // Unknown error — re-throw
+    throw error;
   }
 }
