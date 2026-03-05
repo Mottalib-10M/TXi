@@ -1,24 +1,22 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { signIn, useSession } from "next-auth/react";
+import { useState } from "react";
 import { Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { useTranslations, useLocale } from "next-intl";
-import { Link, useRouter } from "@/i18n/navigation";
+import { Link } from "@/i18n/navigation";
 import { emailError, isValidEmail } from "@/lib/validation";
+import { login } from "@/lib/actions/auth";
 
 function ConnexionForm() {
   const t = useTranslations("auth");
   const tc = useTranslations("common");
   const locale = useLocale();
-  const router = useRouter();
   const searchParams = useSearchParams();
   const registered = searchParams.get("registered");
   const verified = searchParams.get("verified");
   const resetSuccess = searchParams.get("reset");
   const tokenError = searchParams.get("error");
-  const { data: session, status } = useSession();
   const [error, setError] = useState("");
   const [emailNotVerified, setEmailNotVerified] = useState(false);
   const [resendEmail, setResendEmail] = useState("");
@@ -26,23 +24,6 @@ function ConnexionForm() {
   const [resendSuccess, setResendSuccess] = useState(false);
   const [loading, setLoading] = useState(false);
   const [formEmail, setFormEmail] = useState("");
-
-  // If already authenticated, redirect based on role
-  useEffect(() => {
-    if (status === "authenticated" && session?.user) {
-      const dest = session.user.role === "organization" ? "/org" : "/dashboard";
-      router.replace(dest);
-    }
-  }, [status, session, router]);
-
-  // Show loading while checking session (middleware handles redirect, this is a fallback)
-  if (status === "loading" || status === "authenticated") {
-    return (
-      <div className="min-h-screen bg-white flex items-center justify-center">
-        <div className="w-5 h-5 border-2 border-neutral-300 border-t-neutral-900 rounded-full animate-spin" />
-      </div>
-    );
-  }
 
   async function handleResend() {
     if (!resendEmail) return;
@@ -67,32 +48,23 @@ function ConnexionForm() {
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setError("");
+    setEmailNotVerified(false);
     setLoading(true);
 
     const formData = new FormData(e.currentTarget);
     const email = formData.get("email") as string;
+    const password = formData.get("password") as string;
 
     try {
-      const result = await signIn("credentials", {
-        email,
-        password: formData.get("password") as string,
-        redirect: false,
-      });
+      const result = await login(email, password, locale);
 
-      if (result?.error) {
-        if (result.error.includes("EMAIL_NOT_VERIFIED")) {
-          setEmailNotVerified(true);
-          setResendEmail(email);
-          setError("");
-          return;
-        }
+      // If we reach here, login returned an error (success redirects via server action)
+      if (result?.error === "EMAIL_NOT_VERIFIED") {
+        setEmailNotVerified(true);
+        setResendEmail(email);
+      } else {
         setError(t("wrongCredentials"));
-        return;
       }
-
-      // Reload — middleware redirects authenticated users from /connexion to /dashboard or /org
-      window.location.reload();
-      return;
     } catch {
       setError(tc("serverError"));
     } finally {
