@@ -156,8 +156,8 @@ export async function POST(request: Request) {
 
       if (booking.driver.notifySms && booking.driver.phone) {
         const smsText = locale === "en"
-          ? `TaxiNoir - New booking #${reference} from ${data.clientName}. ${data.departureName} → ${data.arrivalName}. Log in to accept.`
-          : `TaxiNoir - Nouvelle réservation #${reference} de ${data.clientName}. ${data.departureName} → ${data.arrivalName}. Connectez-vous pour accepter.`;
+          ? `TaxiNeo - New booking #${reference} from ${data.clientName}. ${data.departureName} → ${data.arrivalName}. Log in to accept.`
+          : `TaxiNeo - Nouvelle réservation #${reference} de ${data.clientName}. ${data.departureName} → ${data.arrivalName}. Connectez-vous pour accepter.`;
         await sendSms(booking.driver.phone, smsText);
       }
     }

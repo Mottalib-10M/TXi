@@ -36,7 +36,7 @@ export async function POST(req: Request) {
             <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">Rappel souhaité</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${callbackLabel}</td></tr>
             <tr><td style="padding: 8px; color: #737373;">Message</td><td style="padding: 8px; font-weight: 500;">${data.message}</td></tr>
           </table>
-          <p style="color: #a3a3a3; font-size: 12px;">— TaxiNoir Contact Form</p>
+          <p style="color: #a3a3a3; font-size: 12px;">— TaxiNeo Contact Form</p>
         </div>
       `,
     });

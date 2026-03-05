@@ -41,7 +41,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       title: st.i18n[loc].metaTitle,
       description: st.i18n[loc].metaDescription,
       url: `https://www.taxinoir.fr/taxi-gare-${st.slug}`,
-      siteName: "TaxiNoir",
+      siteName: "TaxiNeo",
       type: "website",
     },
     alternates: {

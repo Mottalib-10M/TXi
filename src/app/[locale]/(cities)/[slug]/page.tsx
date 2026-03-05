@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       title: city.i18n[loc].metaTitle,
       description: city.i18n[loc].metaDescription,
       url: `https://www.taxinoir.fr/taxi-${city.slug}`,
-      siteName: "TaxiNoir",
+      siteName: "TaxiNeo",
       type: "website",
     },
     alternates: {

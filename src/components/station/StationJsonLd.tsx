@@ -8,7 +8,7 @@ export async function StationJsonLd({ station }: { station: Station }) {
   const localBusiness = {
     "@context": "https://schema.org",
     "@type": "TaxiService",
-    name: `TaxiNoir - Transfert Gare ${station.name}`,
+    name: `TaxiNeo - Transfert Gare ${station.name}`,
     description: station.i18n[loc].metaDescription,
     url: `https://www.taxinoir.fr/taxi-gare-${station.slug}`,
     telephone: "+33 1 00 00 00 00",
@@ -23,7 +23,7 @@ export async function StationJsonLd({ station }: { station: Station }) {
     },
     provider: {
       "@type": "Organization",
-      name: "TaxiNoir",
+      name: "TaxiNeo",
       url: "https://www.taxinoir.fr",
     },
     openingHoursSpecification: {

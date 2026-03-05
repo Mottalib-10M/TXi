@@ -39,6 +39,11 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/covoiturage" className="hover:text-neutral-900 transition-colors">
+                  {t("taxiPool")}
+                </Link>
+              </li>
+              <li>
                 <Link href="/#business" className="hover:text-neutral-900 transition-colors">
                   {t("taxinoirBusiness")}
                 </Link>
@@ -52,6 +57,11 @@ export function Footer() {
               <li>
                 <Link href="/inscription" className="hover:text-neutral-900 transition-colors">
                   {t("becomePartner")}
+                </Link>
+              </li>
+              <li>
+                <Link href="/devenir-chauffeur" className="hover:text-neutral-900 transition-colors">
+                  {t("whyTaxineo")}
                 </Link>
               </li>
               <li>

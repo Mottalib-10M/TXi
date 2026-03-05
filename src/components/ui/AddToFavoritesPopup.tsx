@@ -15,7 +15,7 @@ function detectPlatform(): Platform {
   return "desktop-other";
 }
 
-const STORAGE_KEY = "taxinoir_favorites_dismissed";
+const STORAGE_KEY = "taxineo_favorites_dismissed";
 
 export function AddToFavoritesPopup() {
   const t = useTranslations("favorites");

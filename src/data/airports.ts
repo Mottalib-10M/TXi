@@ -95,7 +95,7 @@ function airport(
         metaDescription: `Réservez votre taxi pour l'aéroport ${name}. Transfert ponctuel, tarifs forfaitaires garantis, suivi des vols et aide aux bagages. Disponible 24h/24.`,
         heroTitle: `Taxi Aéroport ${name}`,
         heroSubtitle: `Transfert taxi vers et depuis l'aéroport ${name} (${iata}). Tarifs forfaitaires, chauffeur qui vous attend en zone d'arrivée, suivi des vols en temps réel.`,
-        intro: `Besoin d'un taxi pour l'aéroport ${name} ? TaxiNoir vous propose un service de transfert professionnel, ponctuel et au meilleur prix. Nos chauffeurs suivent votre vol en temps réel et vous attendent avec une pancarte nominative en zone d'arrivée. En cas de retard de votre vol, l'attente est gratuite.`,
+        intro: `Besoin d'un taxi pour l'aéroport ${name} ? TaxiNeo vous propose un service de transfert professionnel, ponctuel et au meilleur prix. Nos chauffeurs suivent votre vol en temps réel et vous attendent avec une pancarte nominative en zone d'arrivée. En cas de retard de votre vol, l'attente est gratuite.`,
         testimonials,
         faq: [
           {
@@ -119,7 +119,7 @@ function airport(
         metaDescription: `Book your taxi to ${name} Airport. Reliable transfer, guaranteed fixed fares, real-time flight tracking, luggage assistance and meet and greet. 24/7.`,
         heroTitle: `Taxi ${name} Airport`,
         heroSubtitle: `Taxi transfer to and from ${name} Airport (${iata}). Fixed fares, driver waiting in the arrivals area, real-time flight tracking.`,
-        intro: `Need a taxi to ${name} Airport? TaxiNoir offers a professional, punctual transfer service at the best price. Our drivers track your flight in real time and greet you with a name board in the arrivals area. If your flight is delayed, the waiting time is free of charge.`,
+        intro: `Need a taxi to ${name} Airport? TaxiNeo offers a professional, punctual transfer service at the best price. Our drivers track your flight in real time and greet you with a name board in the arrivals area. If your flight is delayed, the waiting time is free of charge.`,
         testimonials,
         faq: [
           {
@@ -190,7 +190,7 @@ export const airports: Airport[] = [
     [
       { text: "Retour de vacances à Orly 3, taxi réservé la veille. Le chauffeur était là pile à l'heure, trajet fluide vers le 15e.", name: "Karim B.", initials: "KB", role: "Parisien" },
       { text: "Transfert Orly-Versailles parfait pour mon séminaire. Prix fixe annoncé, pas de mauvaise surprise.", name: "Claire M.", initials: "CM", role: "Cadre, Versailles" },
-      { text: "Je prends TaxiNoir à chaque vol depuis Orly. Toujours fiable, même à 4h du matin.", name: "Farid A.", initials: "FA", role: "Entrepreneur" },
+      { text: "Je prends TaxiNeo à chaque vol depuis Orly. Toujours fiable, même à 4h du matin.", name: "Farid A.", initials: "FA", role: "Entrepreneur" },
     ],
     [
       { question: "Quel est le forfait taxi Paris-Orly ?", answer: "Le forfait réglementé est de 38 € vers la rive gauche et 44 € vers la rive droite. Prix fixe garanti." },
@@ -248,7 +248,7 @@ export const airports: Airport[] = [
     ],
     [
       { question: "Combien coûte un taxi Lyon centre – Saint Exupéry ?", answer: "Le forfait taxi Lyon centre – Aéroport Saint Exupéry est de 65-70 € selon votre point de départ. Prix fixe garanti." },
-      { question: "Le Rhônexpress est-il plus avantageux ?", answer: "Le Rhônexpress coûte 16,90 €/personne. Dès 2 passagers, le taxi TaxiNoir devient plus économique, avec l'avantage du porte-à-porte et de l'aide aux bagages." },
+      { question: "Le Rhônexpress est-il plus avantageux ?", answer: "Le Rhônexpress coûte 16,90 €/personne. Dès 2 passagers, le taxi TaxiNeo devient plus économique, avec l'avantage du porte-à-porte et de l'aide aux bagages." },
     ],
     ["grenoble-isere", "chambery-savoie-mont-blanc"],
     ["Gare TGV intégrée à l'aéroport", "Attente gratuite en cas de retard", "Transferts vers les stations de ski en hiver", "Véhicules équipés pneus neige en saison"],
@@ -269,7 +269,7 @@ export const airports: Airport[] = [
       { name: "Avignon", price: "120 €", time: "1h-1h15" },
     ],
     [
-      { text: "Arrivée tardive à 23h, le chauffeur était présent. Trajet vers le Vieux-Port impeccable. Merci TaxiNoir.", name: "Karim B.", initials: "KB", role: "Marseillais" },
+      { text: "Arrivée tardive à 23h, le chauffeur était présent. Trajet vers le Vieux-Port impeccable. Merci TaxiNeo.", name: "Karim B.", initials: "KB", role: "Marseillais" },
       { text: "Transfert aéroport vers Aix-en-Provence rapide et agréable. Le chauffeur m'a même recommandé un restaurant.", name: "Véronique M.", initials: "VM", role: "Touriste" },
       { text: "Service pro pour l'équipe commerciale : 3 véhicules coordonnés pour le même vol. Parfait.", name: "Pascal D.", initials: "PD", role: "Directeur commercial" },
     ],
@@ -373,7 +373,7 @@ export const airports: Airport[] = [
       { name: "Amiens", price: "90 €", time: "45 min-1h" },
     ],
     [
-      { text: "Vol Ryanair arrivé à 23h30, aucun bus. Le taxi TaxiNoir m'a sauvé la mise. Chauffeur efficace.", name: "Pierre V.", initials: "PV", role: "Voyageur" },
+      { text: "Vol Ryanair arrivé à 23h30, aucun bus. Le taxi TaxiNeo m'a sauvé la mise. Chauffeur efficace.", name: "Pierre V.", initials: "PV", role: "Voyageur" },
       { text: "À 4 passagers le taxi revient moins cher que 4 billets de navette. Et c'est du porte-à-porte.", name: "Julie D.", initials: "JD", role: "Étudiante" },
       { text: "Réservé pour un vol à 6h du matin. Le chauffeur est venu me chercher à Paris à 3h. Pro.", name: "Damien C.", initials: "DC", role: "Commercial" },
     ],
@@ -456,7 +456,7 @@ export const airports: Airport[] = [
       { text: "Direction Colmar pour le marché de Noël. Le chauffeur connaissait le meilleur itinéraire.", name: "René K.", initials: "RK", role: "Touriste" },
     ],
     [
-      { question: "Y a-t-il un train pour le centre depuis Entzheim ?", answer: "Oui, mais le taxi TaxiNoir est plus rapide (15 min vs 25 min) et vous dépose devant votre destination. Idéal avec des bagages." },
+      { question: "Y a-t-il un train pour le centre depuis Entzheim ?", answer: "Oui, mais le taxi TaxiNeo est plus rapide (15 min vs 25 min) et vous dépose devant votre destination. Idéal avec des bagages." },
     ],
     ["bale-mulhouse", "metz-nancy-lorraine"],
     ["Proche du centre et du Parlement européen", "Transferts vers l'Alsace et l'Allemagne", "Idéal pour les marchés de Noël"],
@@ -632,7 +632,7 @@ export const airports: Airport[] = [
       { text: "Taxi fiable à Rennes. Je l'utilise pour tous mes vols.", name: "Julien N.", initials: "JN", role: "Développeur, Rennes" },
     ],
     [
-      { question: "L'aéroport de Rennes dessert-il Saint-Malo ?", answer: "Oui, un taxi TaxiNoir vous conduit de l'aéroport à Saint-Malo en 50 min-1h pour environ 85 €." },
+      { question: "L'aéroport de Rennes dessert-il Saint-Malo ?", answer: "Oui, un taxi TaxiNeo vous conduit de l'aéroport à Saint-Malo en 50 min-1h pour environ 85 €." },
     ],
     ["brest-bretagne", "nantes-atlantique", "dinard-bretagne", "lorient-bretagne-sud"],
     ["Proche du centre-ville (7 km)", "Connexion facile avec la gare TGV", "Transferts vers Saint-Malo et la côte bretonne"],
@@ -657,7 +657,7 @@ export const airports: Airport[] = [
       { text: "Service fiable pour mon vol hebdomadaire vers Paris.", name: "Hélène A.", initials: "HA", role: "Consultante" },
     ],
     [
-      { question: "L'aéroport est-il bien desservi par les taxis ?", answer: "Oui, TaxiNoir couvre l'aéroport de Clermont-Ferrand avec des chauffeurs disponibles pour tous les vols, même tôt le matin." },
+      { question: "L'aéroport est-il bien desservi par les taxis ?", answer: "Oui, TaxiNeo couvre l'aéroport de Clermont-Ferrand avec des chauffeurs disponibles pour tous les vols, même tôt le matin." },
     ],
     ["lyon-saint-exupery"],
     ["Proche du centre (7 km)", "Porte d'entrée de l'Auvergne", "Transferts vers Vulcania et les volcans"],
@@ -702,7 +702,7 @@ export const airports: Airport[] = [
       { name: "Font-Romeu", price: "95 €", time: "1h-1h15" },
     ],
     [
-      { text: "Petit aéroport mais taxi TaxiNoir toujours disponible. Direction Collioure.", name: "Carmen S.", initials: "CS", role: "Touriste" },
+      { text: "Petit aéroport mais taxi TaxiNeo toujours disponible. Direction Collioure.", name: "Carmen S.", initials: "CS", role: "Touriste" },
       { text: "Transfert vers Canet pour les vacances. Rapide et pratique.", name: "Luis P.", initials: "LP", role: "Vacancier" },
       { text: "Vol Ryanair de Londres, taxi à la sortie. Parfait.", name: "Peter H.", initials: "PH", role: "Touriste britannique" },
     ],
@@ -727,7 +727,7 @@ export const airports: Airport[] = [
       { name: "Royan", price: "75 €", time: "50 min-1h" },
     ],
     [
-      { text: "L'aéroport est minuscule mais le taxi TaxiNoir était là. Direction l'Île de Ré !", name: "Mathilde F.", initials: "MF", role: "Vacancière" },
+      { text: "L'aéroport est minuscule mais le taxi TaxiNeo était là. Direction l'Île de Ré !", name: "Mathilde F.", initials: "MF", role: "Vacancière" },
       { text: "Transfert vers le Vieux Port en 8 minutes. Parfait pour les week-ends.", name: "Roland P.", initials: "RP", role: "Touriste" },
       { text: "Service fiable pour nos vols easyJet depuis Londres.", name: "Andrew B.", initials: "AB", role: "Britannique" },
     ],
@@ -1025,7 +1025,7 @@ export const airports: Airport[] = [
     ],
     [
       { text: "Direction le viaduc de Millau. Le chauffeur a fait un arrêt photo. Magnifique.", name: "Patrick O.", initials: "PO", role: "Touriste" },
-      { text: "Transfert vers Conques pour le chemin de Compostelle. Merci TaxiNoir.", name: "Simone D.", initials: "SD", role: "Pèlerine" },
+      { text: "Transfert vers Conques pour le chemin de Compostelle. Merci TaxiNeo.", name: "Simone D.", initials: "SD", role: "Pèlerine" },
       { text: "Service rapide vers le centre de Rodez et le musée Soulages.", name: "Frédéric W.", initials: "FW", role: "Amateur d'art" },
     ],
     [
@@ -1102,7 +1102,7 @@ export const airports: Airport[] = [
     [
       { text: "Transfert vers les bords du lac. En 10 minutes, les pieds dans l'eau.", name: "Éric L.", initials: "EL", role: "Touriste" },
       { text: "Direction La Clusaz pour les vacances au ski. Service parfait.", name: "Isabelle K.", initials: "IK", role: "Skieuse" },
-      { text: "Petit aéroport mais taxi TaxiNoir toujours disponible.", name: "Roger B.", initials: "RB", role: "Annécien" },
+      { text: "Petit aéroport mais taxi TaxiNeo toujours disponible.", name: "Roger B.", initials: "RB", role: "Annécien" },
     ],
     [
       { question: "Mieux vaut-il arriver à Annecy ou Genève ?", answer: "Si un vol direct existe vers Annecy, c'est plus rapide. Sinon, Genève offre plus de vols et n'est qu'à 45-55 min en taxi." },

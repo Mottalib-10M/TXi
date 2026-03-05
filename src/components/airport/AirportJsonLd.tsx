@@ -8,7 +8,7 @@ export async function AirportJsonLd({ airport }: { airport: Airport }) {
   const localBusiness = {
     "@context": "https://schema.org",
     "@type": "TaxiService",
-    name: `TaxiNoir - Transfert Aéroport ${airport.name}`,
+    name: `TaxiNeo - Transfert Aéroport ${airport.name}`,
     description: airport.i18n[loc].metaDescription,
     url: `https://www.taxinoir.fr/taxi-aeroport-${airport.slug}`,
     telephone: "+33 1 00 00 00 00",
@@ -24,7 +24,7 @@ export async function AirportJsonLd({ airport }: { airport: Airport }) {
     },
     provider: {
       "@type": "Organization",
-      name: "TaxiNoir",
+      name: "TaxiNeo",
       url: "https://www.taxinoir.fr",
     },
     openingHoursSpecification: {

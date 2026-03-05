@@ -67,7 +67,7 @@ export function Navbar({ minimal = false }: { minimal?: boolean }) {
                 {t("howItWorks")}
               </Link>
               <Link
-                href="/#chauffeurs"
+                href="/devenir-chauffeur"
                 className="text-sm font-medium text-neutral-500 hover:text-neutral-900 transition-colors"
               >
                 {t("drivers")}
@@ -196,7 +196,7 @@ export function Navbar({ minimal = false }: { minimal?: boolean }) {
                 {t("howItWorks")}
               </Link>
               <Link
-                href="/#chauffeurs"
+                href="/devenir-chauffeur"
                 onClick={() => setMobileOpen(false)}
                 className="block py-3 text-sm font-medium text-neutral-500 hover:bg-neutral-50 hover:text-neutral-900 rounded-lg px-3 transition-colors"
               >

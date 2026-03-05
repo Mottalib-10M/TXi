@@ -45,7 +45,7 @@ export default function ForgotPasswordPage() {
         <div className="text-center mb-8">
           <Link href="/" className="text-2xl">
             <span className="font-normal text-neutral-600">Taxi</span>
-            <span className="font-bold text-neutral-950">Noir</span>
+            <span className="font-bold text-neutral-950">Neo</span>
           </Link>
           <h1 className="text-2xl font-semibold tracking-tight mt-6 mb-2">
             {t("forgotPasswordTitle")}

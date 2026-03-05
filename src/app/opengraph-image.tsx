@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "TaxiNoir";
+export const alt = "TaxiNeo";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -69,7 +69,7 @@ export default function OGImage() {
           }}
         >
           <span style={{ color: "#a3a3a3" }}>Taxi</span>
-          <span style={{ color: "#ffffff", fontWeight: 700 }}>Noir</span>
+          <span style={{ color: "#ffffff", fontWeight: 700 }}>Neo</span>
         </div>
 
         {/* Tagline */}

@@ -17,7 +17,7 @@ export function Logo({ className = "text-xl" }: { className?: string }) {
       </svg>
       <span className="font-semibold tracking-tight">
         <span className="text-neutral-600 font-normal">Taxi</span>
-        <span className="text-neutral-950 font-bold">Noir</span>
+        <span className="text-neutral-950 font-bold">Neo</span>
       </span>
     </span>
   );

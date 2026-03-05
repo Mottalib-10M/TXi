@@ -38,11 +38,11 @@ type Locale = "fr" | "en";
 const t = {
   fr: {
     hello: "Bonjour",
-    team: "— L'équipe TaxiNoir",
+    team: "— L'équipe TaxiNeo",
     buttonFallback: "Si le bouton ne fonctionne pas, copiez ce lien dans votre navigateur :",
     verifySubject: "Confirmez votre adresse email",
     verifyTitle: "Confirmez votre adresse email",
-    verifyBody: "Merci de vous être inscrit sur TaxiNoir. Cliquez sur le bouton ci-dessous pour confirmer votre adresse email :",
+    verifyBody: "Merci de vous être inscrit sur TaxiNeo. Cliquez sur le bouton ci-dessous pour confirmer votre adresse email :",
     verifyButton: "Confirmer mon email",
     verifyExpires: "Ce lien expire dans 24 heures.",
     resetSubject: "Réinitialisation de votre mot de passe",
@@ -90,11 +90,11 @@ const t = {
   },
   en: {
     hello: "Hello",
-    team: "— The TaxiNoir Team",
+    team: "— The TaxiNeo Team",
     buttonFallback: "If the button doesn't work, copy this link into your browser:",
     verifySubject: "Confirm your email address",
     verifyTitle: "Confirm your email address",
-    verifyBody: "Thank you for signing up on TaxiNoir. Click the button below to confirm your email address:",
+    verifyBody: "Thank you for signing up on TaxiNeo. Click the button below to confirm your email address:",
     verifyButton: "Confirm my email",
     verifyExpires: "This link expires in 24 hours.",
     resetSubject: "Reset your password",

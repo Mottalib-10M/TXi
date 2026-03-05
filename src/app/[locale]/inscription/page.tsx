@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useSearchParams } from "next/navigation";
 import { Icon } from "@iconify/react";
 import { useTranslations, useLocale } from "next-intl";
 import { Link, useRouter } from "@/i18n/navigation";
@@ -14,9 +15,11 @@ export default function InscriptionPage() {
   const tc = useTranslations("common");
   const locale = useLocale();
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const initialType = searchParams.get("type") as ProfileType | null;
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
-  const [profileType, setProfileType] = useState<ProfileType | null>(null);
+  const [profileType, setProfileType] = useState<ProfileType | null>(initialType);
   const [orgAddress, setOrgAddress] = useState("");
   const [formEmail, setFormEmail] = useState("");
   const [formPhone, setFormPhone] = useState("");
@@ -214,7 +217,7 @@ export default function InscriptionPage() {
         <div className="text-center mb-8">
           <Link href="/" className="text-2xl">
             <span className="font-normal text-neutral-600">Taxi</span>
-            <span className="font-bold text-neutral-950">Noir</span>
+            <span className="font-bold text-neutral-950">Neo</span>
           </Link>
           <h1 className="text-2xl font-semibold tracking-tight mt-6 mb-2">
             {t("signupTitle")}
@@ -276,13 +279,15 @@ export default function InscriptionPage() {
         {/* Driver form - Step 1 */}
         {profileType === "driver" && driverStep === 1 && (
           <>
-            <button
-              onClick={() => { setProfileType(null); setError(""); setFormEmail(""); setFormPhone(""); setCityAddress(""); setCityLat(undefined); setCityLng(undefined); setDriverStep(1); }}
-              className="flex items-center gap-1 text-sm text-neutral-500 hover:text-neutral-900 mb-4"
-            >
-              <Icon icon="solar:arrow-left-linear" />
-              {t("backToProfileChoice")}
-            </button>
+            {!initialType && (
+              <button
+                onClick={() => { setProfileType(null); setError(""); setFormEmail(""); setFormPhone(""); setCityAddress(""); setCityLat(undefined); setCityLng(undefined); setDriverStep(1); }}
+                className="flex items-center gap-1 text-sm text-neutral-500 hover:text-neutral-900 mb-4"
+              >
+                <Icon icon="solar:arrow-left-linear" />
+                {t("backToProfileChoice")}
+              </button>
+            )}
 
             <div className="flex items-center gap-2 mb-4">
               <div className="w-6 h-6 bg-neutral-900 text-white rounded-full flex items-center justify-center text-xs font-semibold">1</div>

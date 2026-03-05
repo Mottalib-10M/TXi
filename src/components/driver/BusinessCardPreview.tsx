@@ -92,7 +92,7 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
         .scan { color: #a3a3a3; font-size: 7.5pt; text-align: center; line-height: 1.3; }
       </style></head><body><div class="card">
         <div class="left">
-          <div class="brand"><span class="t">Taxi</span><span class="n">Noir</span></div>
+          <div class="brand"><span class="t">Taxi</span><span class="n">Neo</span></div>
           ${driver.companyName ? `<div class="company">${driver.companyName}</div><div class="name">${name}</div>` : `<div class="name-solo">${name}</div>`}
           <div class="details">${vehicle ? vehicle + "<br>" : ""}${driver.zoneAddress ? driver.zoneAddress + "<br>" : ""}${driver.email}<br>${driver.phone}</div>
         </div>
@@ -123,7 +123,7 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
         .ctasub { color: #a3a3a3; font-size: 11pt; margin-top: 3mm; line-height: 1.5; }
       </style></head><body><div class="card">
         <div class="left">
-          <div class="brand"><span class="t">Taxi</span><span class="n">Noir</span></div>
+          <div class="brand"><span class="t">Taxi</span><span class="n">Neo</span></div>
           ${driver.companyName ? `<div class="name">${driver.companyName}</div><div style="font-size:9pt;color:#737373;margin-top:1mm;">${name}</div>` : `<div class="name">${name}</div>`}
           <div class="sub">${t("taxiDriver")}</div>
           <div class="sep"></div>
@@ -160,7 +160,7 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
     </style></head><body><div class="card">
       <div class="header">
         <div>
-          <div class="brand"><span class="t">Taxi</span><span class="n">Noir</span></div>
+          <div class="brand"><span class="t">Taxi</span><span class="n">Neo</span></div>
           ${driver.companyName ? `<div class="hname">${driver.companyName}</div><div class="hsub">${name}</div>` : `<div class="hname">${name}</div>`}
           <div class="hsub">${t("yourTaxiDriver")}</div>
         </div>
@@ -196,11 +196,11 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
 
     const m = 5;
 
-    // Top: TaxiNoir brand
+    // Top: TaxiNeo brand
     doc.setFontSize(16); doc.setFont("helvetica", "bold");
     doc.setTextColor(82, 82, 82); doc.text("Taxi", m, 10);
     const tw = doc.getTextWidth("Taxi");
-    doc.setTextColor(23, 23, 23); doc.text("Noir", m + tw, 10);
+    doc.setTextColor(23, 23, 23); doc.text("Neo", m + tw, 10);
 
     // Middle: Name
     const midY = H / 2;
@@ -248,7 +248,7 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
     doc.setFontSize(18); doc.setFont("helvetica", "bold");
     doc.setTextColor(82, 82, 82); doc.text("Taxi", mL, 14);
     const tw6 = doc.getTextWidth("Taxi");
-    doc.setTextColor(23, 23, 23); doc.text("Noir", mL + tw6, 14);
+    doc.setTextColor(23, 23, 23); doc.text("Neo", mL + tw6, 14);
 
     // Company name + Name
     let y6 = 24;
@@ -318,7 +318,7 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
     doc.setFontSize(22); doc.setFont("helvetica", "bold");
     doc.setTextColor(100, 100, 100); doc.text("Taxi", mH, 15);
     const tw5 = doc.getTextWidth("Taxi");
-    doc.setTextColor(255, 255, 255); doc.text("Noir", mH + tw5, 15);
+    doc.setTextColor(255, 255, 255); doc.text("Neo", mH + tw5, 15);
 
     let y5 = 25;
     if (driver.companyName) {
@@ -414,7 +414,7 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
             <div className="flex-[3] bg-white p-5 flex flex-col justify-between">
               <p className="text-2xl tracking-tight">
                 <span className="text-neutral-500 font-normal">Taxi</span>
-                <span className="text-neutral-950 font-bold">Noir</span>
+                <span className="text-neutral-950 font-bold">Neo</span>
               </p>
               <div>
                 {driver.companyName && (
@@ -449,7 +449,7 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
             <div className="flex-[3] p-5 flex flex-col justify-center">
               <p className="text-xl tracking-tight mb-3">
                 <span className="text-neutral-500 font-normal">Taxi</span>
-                <span className="text-neutral-950 font-bold">Noir</span>
+                <span className="text-neutral-950 font-bold">Neo</span>
               </p>
               {driver.companyName && (
                 <p className="text-lg font-bold text-neutral-900">{driver.companyName}</p>
@@ -502,7 +502,7 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
               <div>
                 <p className="text-xl tracking-tight">
                   <span className="text-neutral-500 font-normal">Taxi</span>
-                  <span className="text-white font-bold">Noir</span>
+                  <span className="text-white font-bold">Neo</span>
                 </p>
                 {driver.companyName && (
                   <p className="text-white font-bold text-base mt-0.5">{driver.companyName}</p>

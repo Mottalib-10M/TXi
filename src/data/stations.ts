@@ -90,7 +90,7 @@ function station(
         metaDescription: `Réservez votre taxi pour la gare ${name}. Transfert ponctuel, tarifs forfaitaires garantis, suivi des trains et aide aux bagages. Disponible 24h/24.`,
         heroTitle: `Taxi Gare ${name}`,
         heroSubtitle: `Transfert taxi vers et depuis la gare ${name}. Tarifs forfaitaires, chauffeur qui vous attend à la sortie de la gare, suivi des trains en temps réel.`,
-        intro: `Besoin d'un taxi pour la gare ${name} ? TaxiNoir vous propose un service de transfert professionnel, ponctuel et au meilleur prix. Nos chauffeurs suivent votre train en temps réel et vous attendent à la sortie de la gare. En cas de retard de votre train, l'attente est gratuite.`,
+        intro: `Besoin d'un taxi pour la gare ${name} ? TaxiNeo vous propose un service de transfert professionnel, ponctuel et au meilleur prix. Nos chauffeurs suivent votre train en temps réel et vous attendent à la sortie de la gare. En cas de retard de votre train, l'attente est gratuite.`,
         testimonials,
         faq: [
           {
@@ -113,7 +113,7 @@ function station(
         metaDescription: `Book your taxi to ${name} station. Reliable transfer with guaranteed fixed fares, real-time train tracking and luggage assistance at the exit. 24/7.`,
         heroTitle: `Taxi ${name} Station`,
         heroSubtitle: `Taxi transfer to and from ${name} station. Flat-rate fares, driver waiting for you at the station exit, real-time train tracking.`,
-        intro: `Need a taxi to ${name} station? TaxiNoir offers a professional, punctual transfer service at the best price. Our drivers track your train in real time and wait for you at the station exit. If your train is delayed, the waiting time is free of charge.`,
+        intro: `Need a taxi to ${name} station? TaxiNeo offers a professional, punctual transfer service at the best price. Our drivers track your train in real time and wait for you at the station exit. If your train is delayed, the waiting time is free of charge.`,
         testimonials,
         faq: [
           {
@@ -153,7 +153,7 @@ export const stations: Station[] = [
     ],
     [
       { text: "Arrivée Eurostar à 22h, le chauffeur était là à la sortie. Transfert rapide vers le 16e. Parfait.", name: "James T.", initials: "JT", role: "Voyageur Eurostar" },
-      { text: "Je prends le Thalys chaque semaine. TaxiNoir me récupère à chaque fois sans faille. Service pro.", name: "Pierre V.", initials: "PV", role: "Consultant, Bruxelles" },
+      { text: "Je prends le Thalys chaque semaine. TaxiNeo me récupère à chaque fois sans faille. Service pro.", name: "Pierre V.", initials: "PV", role: "Consultant, Bruxelles" },
       { text: "Famille avec 3 valises, le chauffeur nous a aidés et déposés à l'hôtel en 12 minutes.", name: "Anna K.", initials: "AK", role: "Touriste allemande" },
     ],
     [
@@ -180,7 +180,7 @@ export const stations: Station[] = [
     [
       { text: "TGV en retard de 40 min, le chauffeur avait suivi et m'attendait calmement. Service impeccable.", name: "Nathalie F.", initials: "NF", role: "Avocate, Lyon" },
       { text: "Transfert gare de Lyon vers Orly pour un vol. Ponctualité parfaite malgré la circulation.", name: "Romain P.", initials: "RP", role: "Cadre commercial" },
-      { text: "Habitué des TGV Lyon-Paris, TaxiNoir est mon réflexe à l'arrivée. Toujours là.", name: "Laurent B.", initials: "LB", role: "Entrepreneur" },
+      { text: "Habitué des TGV Lyon-Paris, TaxiNeo est mon réflexe à l'arrivée. Toujours là.", name: "Laurent B.", initials: "LB", role: "Entrepreneur" },
     ],
     [
       { question: "Quel est le forfait taxi Gare de Lyon – Orly ?", answer: "Le forfait taxi Gare de Lyon – Aéroport d'Orly est d'environ 35 €. Trajet de 20-35 minutes." },
@@ -254,7 +254,7 @@ export const stations: Station[] = [
     ],
     [
       { text: "ICE depuis Francfort, arrivée à 21h. Le chauffeur parlait allemand, ça m'a facilité la vie.", name: "Klaus M.", initials: "KM", role: "Homme d'affaires, Munich" },
-      { text: "TGV Est vers Strasbourg chaque semaine. TaxiNoir me dépose à la gare sans stress.", name: "Céline R.", initials: "CR", role: "Consultante" },
+      { text: "TGV Est vers Strasbourg chaque semaine. TaxiNeo me dépose à la gare sans stress.", name: "Céline R.", initials: "CR", role: "Consultante" },
       { text: "Transfert rapide vers le Marais après un train de nuit. Service parfait même à 6h du matin.", name: "Hugo B.", initials: "HB", role: "Étudiant" },
     ],
     [
@@ -280,7 +280,7 @@ export const stations: Station[] = [
     [
       { text: "Train de nuit depuis Toulouse, arrivée à 7h. Le chauffeur était là, café à la main. Quel service !", name: "Philippe T.", initials: "PT", role: "Toulousain" },
       { text: "Transfert vers Orly très rapide depuis Austerlitz. Prix imbattable.", name: "Fatima Z.", initials: "FZ", role: "Étudiante" },
-      { text: "Gare moins connue mais très bien desservie par TaxiNoir. Chauffeur ponctuel et aimable.", name: "Bernard C.", initials: "BC", role: "Retraité" },
+      { text: "Gare moins connue mais très bien desservie par TaxiNeo. Chauffeur ponctuel et aimable.", name: "Bernard C.", initials: "BC", role: "Retraité" },
     ],
     [
       { question: "Quels trains partent de la Gare d'Austerlitz ?", answer: "La Gare d'Austerlitz dessert le Centre et le Sud-Ouest de la France (Limoges, Toulouse, Cahors) ainsi que les trains de nuit." },
@@ -1030,7 +1030,7 @@ export const stations: Station[] = [
     [
       { text: "TGV depuis Paris, taxi vers le château en 4 minutes. Angers est une pépite.", name: "Diane L.", initials: "DL", role: "Touriste" },
       { text: "Transfert vers Saumur et ses caves. Chauffeur ponctuel et sympathique.", name: "Hervé G.", initials: "HG", role: "Œnologue" },
-      { text: "Habituée du TGV, le taxi TaxiNoir est mon réflexe en arrivant à Angers.", name: "Florence B.", initials: "FB", role: "Cadre" },
+      { text: "Habituée du TGV, le taxi TaxiNeo est mon réflexe en arrivant à Angers.", name: "Florence B.", initials: "FB", role: "Cadre" },
     ],
     [
       { question: "Combien de temps met le TGV Paris-Angers ?", answer: "Le TGV Paris-Angers met environ 1h30. La gare Saint-Laud est en plein centre d'Angers." },
@@ -1205,7 +1205,7 @@ export const stations: Station[] = [
     [
       { text: "Train depuis Paris, taxi vers la cathédrale. Amiens est une ville magnifique.", name: "Thierry L.", initials: "TL", role: "Touriste" },
       { text: "Transfert vers la Baie de Somme, le chauffeur connaissait les bons spots.", name: "Brigitte M.", initials: "BM", role: "Nature lover" },
-      { text: "Déplacement pro, taxi ponctuel. Bonne couverture TaxiNoir dans la Somme.", name: "Vincent C.", initials: "VC", role: "Commercial" },
+      { text: "Déplacement pro, taxi ponctuel. Bonne couverture TaxiNeo dans la Somme.", name: "Vincent C.", initials: "VC", role: "Commercial" },
     ],
     [
       { question: "Comment visiter la Baie de Somme ?", answer: "Le forfait taxi Amiens – Baie de Somme est d'environ 60 €, trajet de 40-50 minutes. Idéal pour voir les phoques." },

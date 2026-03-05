@@ -8,7 +8,7 @@ export async function CityJsonLd({ city }: { city: City }) {
   const localBusiness = {
     "@context": "https://schema.org",
     "@type": "TaxiService",
-    name: `TaxiNoir ${city.name}`,
+    name: `TaxiNeo ${city.name}`,
     description: city.i18n[loc].metaDescription,
     url: `https://www.taxinoir.fr/taxi-${city.slug}`,
     telephone: "+33 1 00 00 00 00",
@@ -23,7 +23,7 @@ export async function CityJsonLd({ city }: { city: City }) {
     },
     provider: {
       "@type": "Organization",
-      name: "TaxiNoir",
+      name: "TaxiNeo",
       url: "https://www.taxinoir.fr",
     },
     aggregateRating: {

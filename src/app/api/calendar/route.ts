@@ -63,7 +63,7 @@ export async function GET(request: NextRequest) {
   const ics = [
     "BEGIN:VCALENDAR",
     "VERSION:2.0",
-    "PRODID:-//TaxiNoir//Booking//FR",
+    "PRODID:-//TaxiNeo//Booking//FR",
     "METHOD:PUBLISH",
     "BEGIN:VEVENT",
     `UID:${booking.id}@taxinoir.fr`,

@@ -71,19 +71,19 @@ function city(
         metaDescription: `Réservez votre taxi à ${name} en quelques clics. Chauffeurs professionnels, tarifs réglementés, disponible 24h/24 pour vos transferts et courses en ville.`,
         heroTitle: `Votre taxi à ${name}`,
         heroSubtitle: `Réservez un taxi professionnel à ${name} en quelques secondes. Tarifs réglementés, chauffeurs agréés, disponible 24h/24.`,
-        intro: `TaxiNoir vous connecte avec les meilleurs chauffeurs de taxi à ${name}. Que ce soit pour une course en ville, un transfert vers la gare ou l'aéroport, ou un déplacement professionnel, nos chauffeurs partenaires sont disponibles jour et nuit pour vous transporter en toute sécurité.`,
+        intro: `TaxiNeo vous connecte avec les meilleurs chauffeurs de taxi à ${name}. Que ce soit pour une course en ville, un transfert vers la gare ou l'aéroport, ou un déplacement professionnel, nos chauffeurs partenaires sont disponibles jour et nuit pour vous transporter en toute sécurité.`,
         testimonials,
         faq: [
           {
             question: `Quel est le prix d'un taxi à ${name} ?`,
-            answer: `Les taxis à ${name} appliquent les tarifs réglementés par la préfecture. Le prix dépend de la distance, de l'heure et du jour (tarif A, B ou C). Avec TaxiNoir, vous obtenez une estimation avant de réserver.`,
+            answer: `Les taxis à ${name} appliquent les tarifs réglementés par la préfecture. Le prix dépend de la distance, de l'heure et du jour (tarif A, B ou C). Avec TaxiNeo, vous obtenez une estimation avant de réserver.`,
           },
           {
             question: `Comment réserver un taxi à ${name} ?`,
             answer: `Utilisez le formulaire de réservation sur cette page. Entrez votre point de départ et votre destination, choisissez votre horaire et confirmez. Un chauffeur vous sera attribué en quelques minutes.`,
           },
           {
-            question: `Les taxis TaxiNoir à ${name} sont-ils disponibles la nuit ?`,
+            question: `Les taxis TaxiNeo à ${name} sont-ils disponibles la nuit ?`,
             answer: `Oui, nos chauffeurs partenaires à ${name} sont disponibles 24h/24 et 7j/7, y compris les nuits, week-ends et jours fériés.`,
           },
           {
@@ -98,19 +98,19 @@ function city(
         metaDescription: `Book your taxi in ${name} in a few clicks. Licensed professional drivers, regulated fares, available 24/7 for all airport, station and city transfers.`,
         heroTitle: `Your taxi in ${name}`,
         heroSubtitle: `Book a professional taxi in ${name} in seconds. Regulated fares, licensed drivers, available 24/7.`,
-        intro: `TaxiNoir connects you with the best taxi drivers in ${name}. Whether for a city ride, a transfer to the station or airport, or a business trip, our partner drivers are available day and night to transport you safely.`,
+        intro: `TaxiNeo connects you with the best taxi drivers in ${name}. Whether for a city ride, a transfer to the station or airport, or a business trip, our partner drivers are available day and night to transport you safely.`,
         testimonials,
         faq: [
           {
             question: `How much does a taxi cost in ${name}?`,
-            answer: `Taxis in ${name} follow fares regulated by the local prefecture. The price depends on distance, time and day (fare A, B or C). With TaxiNoir, you get an estimate before booking.`,
+            answer: `Taxis in ${name} follow fares regulated by the local prefecture. The price depends on distance, time and day (fare A, B or C). With TaxiNeo, you get an estimate before booking.`,
           },
           {
             question: `How do I book a taxi in ${name}?`,
             answer: `Use the booking form on this page. Enter your pickup point and destination, choose your time and confirm. A driver will be assigned to you within minutes.`,
           },
           {
-            question: `Are TaxiNoir taxis in ${name} available at night?`,
+            question: `Are TaxiNeo taxis in ${name} available at night?`,
             answer: `Yes, our partner drivers in ${name} are available 24/7, including nights, weekends and public holidays.`,
           },
           {
@@ -135,8 +135,8 @@ export const cities: City[] = [
     { text: "Transfert Orly parfait à 5h du matin. Ponctuel, véhicule propre, prix fixe annoncé respecté.", name: "Marc D.", initials: "MD", role: "Voyageur fréquent" },
     { text: "Je réserve chaque semaine pour mes rendez-vous médicaux. Chauffeurs toujours patients et serviables.", name: "Jeanne P.", initials: "JP", role: "Retraitée, Paris 5e" },
   ], [
-    { question: "Combien coûte un taxi Paris-CDG ?", answer: "Le trajet Paris-CDG est au forfait réglementé : 56 € depuis la rive droite, 65 € depuis la rive gauche. Pas de surprise avec TaxiNoir." },
-    { question: "Les taxis TaxiNoir utilisent-ils les voies de bus à Paris ?", answer: "Oui, en tant que taxis officiels, nos chauffeurs ont accès aux couloirs de bus parisiens, ce qui réduit considérablement les temps de trajet." },
+    { question: "Combien coûte un taxi Paris-CDG ?", answer: "Le trajet Paris-CDG est au forfait réglementé : 56 € depuis la rive droite, 65 € depuis la rive gauche. Pas de surprise avec TaxiNeo." },
+    { question: "Les taxis TaxiNeo utilisent-ils les voies de bus à Paris ?", answer: "Oui, en tant que taxis officiels, nos chauffeurs ont accès aux couloirs de bus parisiens, ce qui réduit considérablement les temps de trajet." },
   ], 2500, "4 min"),
 
   city("Marseille", "marseille", 43.2965, 5.3698, 873076, [
@@ -145,7 +145,7 @@ export const cities: City[] = [
   ], ["aix-en-provence", "toulon", "nimes", "avignon", "montpellier"], [
     { text: "Taxi toujours disponible même à la sortie du Vélodrome un soir de match. Service au top !", name: "Karim B.", initials: "KB", role: "Habitant, 13e arrondissement" },
     { text: "Transfert fiable vers l'aéroport Provence. Le chauffeur m'a aidé avec mes bagages sans hésiter.", name: "Claire M.", initials: "CM", role: "Entrepreneuse" },
-    { text: "J'utilise TaxiNoir pour mes déplacements entre la Timone et mon domicile. Rapide et ponctuel.", name: "Dr. Farid A.", initials: "FA", role: "Médecin hospitalier" },
+    { text: "J'utilise TaxiNeo pour mes déplacements entre la Timone et mon domicile. Rapide et ponctuel.", name: "Dr. Farid A.", initials: "FA", role: "Médecin hospitalier" },
   ], [
     { question: "Combien coûte un taxi Marseille-Aéroport Provence ?", answer: "Le trajet entre le centre de Marseille et l'aéroport Provence coûte environ 50-60 € selon la circulation. Estimation disponible avant réservation." },
   ], 800, "5 min"),
@@ -158,7 +158,7 @@ export const cities: City[] = [
     { text: "Service Business parfait pour notre entreprise à Confluence. Facturation simplifiée.", name: "Nathalie G.", initials: "NG", role: "Directrice administrative" },
     { text: "Réservation simple, chauffeur ponctuel, véhicule confortable. Je recommande à tous les Lyonnais.", name: "Pierre V.", initials: "PV", role: "Architecte, Lyon 6e" },
   ], [
-    { question: "Combien coûte un taxi Lyon-Saint Exupéry ?", answer: "Le forfait taxi Lyon centre – Aéroport Saint Exupéry est d'environ 60-70 €. Le prix exact est estimé avant votre réservation sur TaxiNoir." },
+    { question: "Combien coûte un taxi Lyon-Saint Exupéry ?", answer: "Le forfait taxi Lyon centre – Aéroport Saint Exupéry est d'environ 60-70 €. Le prix exact est estimé avant votre réservation sur TaxiNeo." },
   ], 650, "4 min"),
 
   city("Toulouse", "toulouse", 43.6047, 1.4442, 504078, [
@@ -180,7 +180,7 @@ export const cities: City[] = [
     { text: "Transfert aéroport Nice – Monaco en toute sérénité. Chauffeur professionnel et discret.", name: "Maxime L.", initials: "ML", role: "Homme d'affaires" },
     { text: "Utilisation régulière pour mes déplacements à Sophia Antipolis. Fiable et ponctuel.", name: "Julie D.", initials: "JD", role: "Développeuse, Nice" },
   ], [
-    { question: "Combien coûte un taxi Nice-Aéroport ?", answer: "Le forfait taxi Nice centre – Aéroport Côte d'Azur est d'environ 25-35 €. Estimation disponible sur TaxiNoir avant réservation." },
+    { question: "Combien coûte un taxi Nice-Aéroport ?", answer: "Le forfait taxi Nice centre – Aéroport Côte d'Azur est d'environ 25-35 €. Estimation disponible sur TaxiNeo avant réservation." },
   ], 400, "4 min"),
 
   city("Nantes", "nantes", 47.2184, -1.5536, 320732, [
@@ -189,7 +189,7 @@ export const cities: City[] = [
   ], ["rennes", "angers", "le-mans", "tours", "la-rochelle"], [
     { text: "Service excellent pour mes trajets vers l'aéroport Atlantique. Jamais en retard.", name: "Yann B.", initials: "YB", role: "Entrepreneur, Nantes" },
     { text: "Chauffeur sympa et efficace pour mes déplacements sur l'Île de Nantes.", name: "Marine K.", initials: "MK", role: "Designer, Nantes" },
-    { text: "TaxiNoir est devenu indispensable pour mes rendez-vous d'affaires à Euronantes.", name: "François H.", initials: "FH", role: "Avocat, Nantes" },
+    { text: "TaxiNeo est devenu indispensable pour mes rendez-vous d'affaires à Euronantes.", name: "François H.", initials: "FH", role: "Avocat, Nantes" },
   ], [
     { question: "Combien coûte un taxi Nantes-Aéroport ?", answer: "Le trajet Nantes centre – Aéroport Atlantique coûte environ 30-40 €. Estimation précise disponible avant réservation." },
   ], 350, "5 min"),
@@ -243,10 +243,10 @@ export const cities: City[] = [
     "Université Rennes 1", "Les Champs Libres", "Centre commercial Alma", "Parc des Gayeulles",
   ], ["nantes", "brest", "le-mans", "angers", "caen"], [
     { text: "Taxi rapide depuis la gare TGV. En 10 minutes j'étais à mon hôtel.", name: "Olivier G.", initials: "OG", role: "Voyageur, Rennes" },
-    { text: "Service parfait pour mes trajets CHU Pontchaillou. Merci TaxiNoir !", name: "Anne-Marie F.", initials: "AMF", role: "Infirmière, Rennes" },
+    { text: "Service parfait pour mes trajets CHU Pontchaillou. Merci TaxiNeo !", name: "Anne-Marie F.", initials: "AMF", role: "Infirmière, Rennes" },
     { text: "Chauffeur agréable et véhicule propre pour tous mes déplacements rennais.", name: "Julien N.", initials: "JN", role: "Développeur, Rennes" },
   ], [
-    { question: "Y a-t-il un aéroport à Rennes ?", answer: "Oui, l'aéroport Rennes-Bretagne se trouve à 15 minutes du centre. TaxiNoir assure les transferts pour environ 20-30 €." },
+    { question: "Y a-t-il un aéroport à Rennes ?", answer: "Oui, l'aéroport Rennes-Bretagne se trouve à 15 minutes du centre. TaxiNeo assure les transferts pour environ 20-30 €." },
   ], 250, "5 min"),
 
   city("Reims", "reims", 49.2583, 4.0317, 187181, [
@@ -288,7 +288,7 @@ export const cities: City[] = [
   ], ["marseille", "aix-en-provence", "nice", "cannes"], [
     { text: "Taxi fiable depuis la gare vers le port. Idéal avant l'embarquement pour la Corse.", name: "Jean-Marc D.", initials: "JMD", role: "Voyageur, Toulon" },
     { text: "Service rapide pour mes déplacements vers l'hôpital Sainte-Musse.", name: "Martine C.", initials: "MC", role: "Patiente, Toulon" },
-    { text: "Chauffeur ponctuel et véhicule propre. Je recommande TaxiNoir à Toulon.", name: "Fabien S.", initials: "FS", role: "Militaire, Toulon" },
+    { text: "Chauffeur ponctuel et véhicule propre. Je recommande TaxiNeo à Toulon.", name: "Fabien S.", initials: "FS", role: "Militaire, Toulon" },
   ], [
     { question: "Peut-on prendre un taxi pour le port de Toulon ?", answer: "Oui, nos chauffeurs assurent les transferts vers le port pour les ferries vers la Corse et les îles d'Hyères." },
   ], 180, "5 min"),
@@ -320,10 +320,10 @@ export const cities: City[] = [
     "Université d'Angers", "Château d'Angers", "Terra Botanica", "Parc des Expositions",
   ], ["nantes", "le-mans", "tours", "rennes"], [
     { text: "Taxi depuis la gare Saint-Laud toujours disponible et rapide.", name: "Guillaume R.", initials: "GR", role: "Voyageur, Angers" },
-    { text: "Service parfait pour mes trajets vers le CHU. Merci TaxiNoir.", name: "Françoise M.", initials: "FM", role: "Patiente, Angers" },
+    { text: "Service parfait pour mes trajets vers le CHU. Merci TaxiNeo.", name: "Françoise M.", initials: "FM", role: "Patiente, Angers" },
     { text: "Chauffeur ponctuel pour mes rendez-vous au Parc des Expositions.", name: "Benoît L.", initials: "BL", role: "Commercial, Angers" },
   ], [
-    { question: "Y a-t-il un aéroport à Angers ?", answer: "L'aéroport Angers-Loire se trouve à 20 minutes du centre. TaxiNoir assure les transferts pour environ 25-35 €." },
+    { question: "Y a-t-il un aéroport à Angers ?", answer: "L'aéroport Angers-Loire se trouve à 20 minutes du centre. TaxiNeo assure les transferts pour environ 25-35 €." },
   ], 160, "5 min"),
 
   city("Nîmes", "nimes", 43.8367, 4.3601, 151001, [
@@ -334,7 +334,7 @@ export const cities: City[] = [
     { text: "Transfert gare TGV fiable après chaque voyage depuis Paris.", name: "Agnès S.", initials: "AS", role: "Cadre, Nîmes" },
     { text: "Service régulier pour mes consultations au CHU. Toujours satisfaite.", name: "Mireille V.", initials: "MiV", role: "Patiente, Nîmes" },
   ], [
-    { question: "Y a-t-il un aéroport à Nîmes ?", answer: "Oui, l'aéroport Nîmes-Garons (Alès-Camargue-Cévennes) est à 15 minutes. Transferts assurés par TaxiNoir." },
+    { question: "Y a-t-il un aéroport à Nîmes ?", answer: "Oui, l'aéroport Nîmes-Garons (Alès-Camargue-Cévennes) est à 15 minutes. Transferts assurés par TaxiNeo." },
   ], 150, "6 min"),
 
   city("Villeurbanne", "villeurbanne", 45.7660, 4.8795, 154781, [
@@ -345,7 +345,7 @@ export const cities: City[] = [
     { text: "Service ponctuel pour mes déplacements depuis les Gratte-Ciel.", name: "Alain B.", initials: "AB", role: "Cadre, Villeurbanne" },
     { text: "Chauffeur agréable pour mes trajets vers l'hôpital. Merci.", name: "Denise P.", initials: "DeP", role: "Retraitée, Villeurbanne" },
   ], [
-    { question: "Villeurbanne est-elle couverte par TaxiNoir Lyon ?", answer: "Oui, Villeurbanne est entièrement couverte. Nos chauffeurs assurent toutes les courses dans la métropole lyonnaise." },
+    { question: "Villeurbanne est-elle couverte par TaxiNeo Lyon ?", answer: "Oui, Villeurbanne est entièrement couverte. Nos chauffeurs assurent toutes les courses dans la métropole lyonnaise." },
   ], 200, "4 min"),
 
   city("Clermont-Ferrand", "clermont-ferrand", 45.7772, 3.0870, 147865, [
@@ -367,7 +367,7 @@ export const cities: City[] = [
     { text: "Mise à disposition idéale pour visiter la Provence avec des amis étrangers.", name: "Robert T.", initials: "RoT", role: "Retraité, Aix" },
     { text: "Service pro pour mes déplacements universitaires. Je recommande.", name: "Camille F.", initials: "CF", role: "Professeure, Aix" },
   ], [
-    { question: "La gare TGV d'Aix est-elle loin du centre ?", answer: "La gare TGV est à 15 km du centre d'Aix. Le taxi TaxiNoir vous y conduit en 15-20 minutes pour environ 30-40 €." },
+    { question: "La gare TGV d'Aix est-elle loin du centre ?", answer: "La gare TGV est à 15 km du centre d'Aix. Le taxi TaxiNeo vous y conduit en 15-20 minutes pour environ 30-40 €." },
   ], 180, "5 min"),
 
   city("Le Mans", "le-mans", 47.9960, 0.1996, 146105, [
@@ -389,7 +389,7 @@ export const cities: City[] = [
     { text: "Transfert port – gare sans problème. Chauffeur arrangeant.", name: "Nolwenn R.", initials: "NR", role: "Voyageuse, Brest" },
     { text: "Service de qualité pour mes trajets CHU de Brest.", name: "Jean-Pierre M.", initials: "JPM", role: "Patient, Brest" },
   ], [
-    { question: "Combien coûte un taxi Brest-Aéroport ?", answer: "Le trajet Brest centre – Aéroport Guipavas coûte environ 15-25 €. Estimation avant réservation sur TaxiNoir." },
+    { question: "Combien coûte un taxi Brest-Aéroport ?", answer: "Le trajet Brest centre – Aéroport Guipavas coûte environ 15-25 €. Estimation avant réservation sur TaxiNeo." },
   ], 140, "6 min"),
 
   city("Tours", "tours", 47.3941, 0.6848, 138588, [
@@ -409,16 +409,16 @@ export const cities: City[] = [
   ], ["lille", "paris", "reims", "rouen", "calais"], [
     { text: "Taxi rapide depuis la gare pour mes rendez-vous au CHU.", name: "Christophe M.", initials: "ChM", role: "Médecin, Amiens" },
     { text: "Service fiable pour mes trajets professionnels dans Amiens.", name: "Delphine B.", initials: "DeB", role: "Cadre, Amiens" },
-    { text: "Chauffeur sympa et ponctuel. Je recommande TaxiNoir.", name: "Thierry R.", initials: "ThR", role: "Amiénois" },
+    { text: "Chauffeur sympa et ponctuel. Je recommande TaxiNeo.", name: "Thierry R.", initials: "ThR", role: "Amiénois" },
   ], [
-    { question: "Amiens est-elle bien desservie par les taxis ?", answer: "Oui, TaxiNoir couvre toute l'agglomération d'Amiens avec des chauffeurs disponibles 24h/24. Temps d'attente moyen : 6 minutes." },
+    { question: "Amiens est-elle bien desservie par les taxis ?", answer: "Oui, TaxiNeo couvre toute l'agglomération d'Amiens avec des chauffeurs disponibles 24h/24. Temps d'attente moyen : 6 minutes." },
   ], 130, "6 min"),
 
   city("Limoges", "limoges", 45.8336, 1.2611, 133968, [
     "Aéroport Limoges-Bellegarde", "Gare des Bénédictins", "CHU Dupuytren",
     "Université de Limoges", "Quartier de la Cathédrale", "Musée de la Porcelaine", "Zénith de Limoges",
   ], ["clermont-ferrand", "poitiers", "bordeaux", "tours"], [
-    { text: "La gare des Bénédictins est magnifique et le taxi TaxiNoir m'attendait à la sortie.", name: "Daniel F.", initials: "DF", role: "Voyageur" },
+    { text: "La gare des Bénédictins est magnifique et le taxi TaxiNeo m'attendait à la sortie.", name: "Daniel F.", initials: "DF", role: "Voyageur" },
     { text: "Transfert aéroport Bellegarde rapide et abordable.", name: "Pauline G.", initials: "PG", role: "Étudiante, Limoges" },
     { text: "Service de qualité pour mes trajets CHU Dupuytren.", name: "Odette V.", initials: "OV", role: "Patiente, Limoges" },
   ], [
@@ -442,7 +442,7 @@ export const cities: City[] = [
   ], ["montpellier", "toulouse", "nimes", "narbonne"], [
     { text: "Taxi fiable pour mes trajets gare – plage de Canet. Chauffeur sympa.", name: "Carmen S.", initials: "CS", role: "Perpignanaise" },
     { text: "Transfert aéroport Rivesaltes rapide et ponctuel.", name: "Luis P.", initials: "LP", role: "Voyageur" },
-    { text: "Service de qualité pour mes visites médicales. Merci TaxiNoir.", name: "Marie-Thérèse D.", initials: "MTD", role: "Patiente, Perpignan" },
+    { text: "Service de qualité pour mes visites médicales. Merci TaxiNeo.", name: "Marie-Thérèse D.", initials: "MTD", role: "Patiente, Perpignan" },
   ], [
     { question: "Peut-on prendre un taxi Perpignan – plages ?", answer: "Oui, nos chauffeurs assurent les transferts vers Canet-en-Roussillon, Saint-Cyprien et les plages environnantes (10-20 €)." },
   ], 120, "6 min"),
@@ -455,7 +455,7 @@ export const cities: City[] = [
     { text: "Service fiable pour mes déplacements vers le CHU Jean Minjoz.", name: "Annick L.", initials: "AnL", role: "Patiente, Besançon" },
     { text: "Chauffeur ponctuel pour visiter la Citadelle. Très pro.", name: "Fabrice R.", initials: "FaR", role: "Touriste" },
   ], [
-    { question: "La gare TGV de Besançon est-elle loin du centre ?", answer: "La gare TGV Besançon Franche-Comté est à 10 km du centre. Le taxi TaxiNoir vous y conduit en 15 minutes pour environ 20-30 €." },
+    { question: "La gare TGV de Besançon est-elle loin du centre ?", answer: "La gare TGV Besançon Franche-Comté est à 10 km du centre. Le taxi TaxiNeo vous y conduit en 15 minutes pour environ 20-30 €." },
   ], 110, "6 min"),
 
   city("Metz", "metz", 49.1193, 6.1757, 119962, [
@@ -519,7 +519,7 @@ export const cities: City[] = [
   ], ["metz", "strasbourg", "reims", "dijon"], [
     { text: "Taxi rapide depuis la gare vers la Place Stanislas. Chauffeur au top.", name: "Sébastien L.", initials: "SeL", role: "Touriste" },
     { text: "Service fiable pour mes trajets Nancy – Metz quotidiens.", name: "Éliane M.", initials: "ElM", role: "Frontalière" },
-    { text: "Chauffeur ponctuel pour le CHU. Merci TaxiNoir.", name: "Marcel R.", initials: "MaR", role: "Patient, Nancy" },
+    { text: "Chauffeur ponctuel pour le CHU. Merci TaxiNeo.", name: "Marcel R.", initials: "MaR", role: "Patient, Nancy" },
   ], [
     { question: "Peut-on prendre un taxi Nancy – Metz ?", answer: "Oui, nos chauffeurs assurent les transferts Nancy – Metz (environ 55 km). Comptez 70-85 € pour le trajet." },
   ], 120, "5 min"),
@@ -543,7 +543,7 @@ export const cities: City[] = [
     { text: "Service fiable pour mes trajets vers l'hôpital Duffaut.", name: "Henri M.", initials: "HeM", role: "Patient, Avignon" },
     { text: "Mise à disposition pour visiter les vignobles du Lubéron. Superbe expérience.", name: "Diana K.", initials: "DK", role: "Touriste" },
   ], [
-    { question: "La gare TGV d'Avignon est-elle loin du centre ?", answer: "La gare TGV est à 5 km du centre historique. Le taxi TaxiNoir vous y conduit en 10 minutes pour environ 15-20 €." },
+    { question: "La gare TGV d'Avignon est-elle loin du centre ?", answer: "La gare TGV est à 5 km du centre historique. Le taxi TaxiNeo vous y conduit en 10 minutes pour environ 15-20 €." },
   ], 100, "6 min"),
 
   city("Poitiers", "poitiers", 46.5802, 0.3404, 90340, [
@@ -675,7 +675,7 @@ export const cities: City[] = [
     { text: "Service fiable pour mes déplacements au CH de Valence.", name: "Robert N.", initials: "RoN", role: "Patient, Valence" },
     { text: "Taxi ponctuel pour mes rendez-vous professionnels.", name: "Chantal M.", initials: "ChM2", role: "Cadre, Valence" },
   ], [
-    { question: "La gare TGV de Valence est-elle loin du centre ?", answer: "La gare TGV Valence est à 10 km du centre. Le taxi TaxiNoir vous y conduit en 15 minutes pour environ 20-25 €." },
+    { question: "La gare TGV de Valence est-elle loin du centre ?", answer: "La gare TGV Valence est à 10 km du centre. Le taxi TaxiNeo vous y conduit en 15 minutes pour environ 20-25 €." },
   ], 80, "6 min"),
 ];
 

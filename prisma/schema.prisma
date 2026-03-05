@@ -14,6 +14,24 @@ enum BookingStatus {
   COMPLETED
 }
 
+enum SharedRouteStatus {
+  ACTIVE
+  FULL
+  DEPARTED
+  CANCELLED
+}
+
+enum PassengerStatus {
+  CONFIRMED
+  CANCELLED
+}
+
+enum LuggageType {
+  NONE
+  SMALL
+  LARGE
+}
+
 enum BookingSource {
   LANDING
   PROFILE
@@ -79,8 +97,9 @@ model Driver {
   isVerified    Boolean @default(false)
   emailVerified Boolean @default(false)
 
-  bookings    Booking[]
-  favoritedBy FavoriteDriver[]
+  bookings     Booking[]
+  favoritedBy  FavoriteDriver[]
+  sharedRoutes SharedRoute[]
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -189,6 +208,42 @@ model CagnotteTransaction {
   createdAt      DateTime     @default(now())
 
   @@map("cagnotte_transactions")
+}
+
+model SharedRoute {
+  id                  String            @id @default(cuid())
+  driver              Driver            @relation(fields: [driverId], references: [id])
+  driverId            String
+  departureLocationId String
+  departureName       String
+  departureLat        Float
+  departureLng        Float
+  destinationName     String
+  destinationLat      Float
+  destinationLng      Float
+  departureTime       DateTime
+  totalSeats          Int
+  status              SharedRouteStatus @default(ACTIVE)
+  passengers          SharedRoutePassenger[]
+  createdAt           DateTime          @default(now())
+  updatedAt           DateTime          @updatedAt
+
+  @@map("shared_routes")
+}
+
+model SharedRoutePassenger {
+  id              String          @id @default(cuid())
+  sharedRoute     SharedRoute     @relation(fields: [sharedRouteId], references: [id])
+  sharedRouteId   String
+  passengerName   String
+  passengerEmail  String
+  passengerPhone  String          @default("")
+  seatCount       Int             @default(1)
+  luggageType     LuggageType     @default(NONE)
+  status          PassengerStatus @default(CONFIRMED)
+  createdAt       DateTime        @default(now())
+
+  @@map("shared_route_passengers")
 }
 
 model EmailVerificationToken {
