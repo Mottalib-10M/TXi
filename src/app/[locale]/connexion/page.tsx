@@ -90,13 +90,9 @@ function ConnexionForm() {
         return;
       }
 
-      // Fetch updated session to get role
-      const res = await fetch("/api/auth/session");
-      const sessionData = await res.json();
-      const dest = sessionData?.user?.role === "organization" ? "/org" : "/dashboard";
-
-      // Full page reload to ensure the session cookie is picked up
-      window.location.href = dest;
+      // Reload — middleware redirects authenticated users from /connexion to /dashboard or /org
+      window.location.reload();
+      return;
     } catch {
       setError(tc("serverError"));
     } finally {
