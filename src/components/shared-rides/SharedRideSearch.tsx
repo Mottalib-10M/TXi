@@ -73,7 +73,7 @@ function getMonthName(dateStr: string, locale: string): string {
   return d.toLocaleDateString(locale, { month: "short" }).replace(".", "");
 }
 
-export function SharedRideSearch({ departureId: controlledDepartureId, onDepartureIdChange }: { departureId?: string; onDepartureIdChange?: (id: string) => void } = {}) {
+export function SharedRideSearch({ departureId: controlledDepartureId }: { departureId?: string } = {}) {
   const t = useTranslations("sharedRides");
   const { data: session } = useSession();
   const router = useRouter();

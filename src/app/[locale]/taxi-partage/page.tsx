@@ -88,7 +88,7 @@ export default function SharedTaxiPage() {
         {/* Calendar + Results — full width */}
         <section className="pb-24 px-6">
           <div className="max-w-6xl mx-auto fade-up">
-            <SharedRideSearch departureId={departureId} onDepartureIdChange={setDepartureId} />
+            <SharedRideSearch departureId={departureId} />
           </div>
         </section>
       </main>
