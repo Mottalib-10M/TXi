@@ -62,10 +62,25 @@ export async function GET(request: Request) {
     const { searchParams } = new URL(request.url);
     const departureLocationId = searchParams.get("departureLocationId");
     const destinationLocationId = searchParams.get("destinationLocationId");
+    const dateParam = searchParams.get("date");
+
+    const now = new Date();
+    const departureTimeFilter: Record<string, Date> = { gte: now };
+
+    if (dateParam) {
+      const dayStart = new Date(`${dateParam}T00:00:00`);
+      const dayEnd = new Date(`${dateParam}T00:00:00`);
+      dayEnd.setDate(dayEnd.getDate() + 1);
+
+      if (dayStart > now) {
+        departureTimeFilter.gte = dayStart;
+      }
+      departureTimeFilter.lt = dayEnd;
+    }
 
     const where: Record<string, unknown> = {
       status: "ACTIVE",
-      departureTime: { gte: new Date() },
+      departureTime: departureTimeFilter,
     };
 
     if (departureLocationId) {

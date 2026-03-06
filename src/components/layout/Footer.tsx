@@ -24,11 +24,16 @@ export function Footer() {
             <h4 className="text-sm font-medium mb-4 tracking-tight">{t("services")}</h4>
             <ul className="space-y-3 text-sm text-neutral-500 font-light">
               <li>
-                <Link href="/#reserver" className="hover:text-neutral-900 transition-colors">
-                  {t("orderTaxi")}
+                <Link href="/#reserver" className="hover:text-neutral-900 transition-colors font-medium text-neutral-700">
+                  {t("taxiFixed")}
                 </Link>
               </li>
               <li>
+                <Link href="/taxi-partage" className="hover:text-neutral-900 transition-colors font-medium text-neutral-700">
+                  {t("taxiPool")}
+                </Link>
+              </li>
+              <li className="border-t border-neutral-100 pt-3">
                 <Link href="/gares" className="hover:text-neutral-900 transition-colors">
                   {t("stations")}
                 </Link>
@@ -39,13 +44,28 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/covoiturage" className="hover:text-neutral-900 transition-colors">
-                  {t("taxiPool")}
+                <Link href="/solutions/hotel" className="hover:text-neutral-900 transition-colors">
+                  {t("solutionHotel")}
                 </Link>
               </li>
               <li>
-                <Link href="/#business" className="hover:text-neutral-900 transition-colors">
-                  {t("taxinoirBusiness")}
+                <Link href="/solutions/hopital" className="hover:text-neutral-900 transition-colors">
+                  {t("solutionHospital")}
+                </Link>
+              </li>
+              <li>
+                <Link href="/solutions/entreprise" className="hover:text-neutral-900 transition-colors">
+                  {t("solutionEnterprise")}
+                </Link>
+              </li>
+              <li>
+                <Link href="/solutions/particulier" className="hover:text-neutral-900 transition-colors">
+                  {t("solutionParticulier")}
+                </Link>
+              </li>
+              <li>
+                <Link href="/solutions/mise-a-disposition" className="hover:text-neutral-900 transition-colors">
+                  {t("solutionMiseADispo")}
                 </Link>
               </li>
             </ul>

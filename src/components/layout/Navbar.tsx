@@ -14,7 +14,13 @@ export function Navbar({ minimal = false }: { minimal?: boolean }) {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [solutionsOpen, setSolutionsOpen] = useState(false);
+  const [mobileSolutionsOpen, setMobileSolutionsOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const headerRef = useRef<HTMLElement>(null);
+  const solutionsTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const servicesTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     function handleScroll() {
@@ -57,9 +63,60 @@ export function Navbar({ minimal = false }: { minimal?: boolean }) {
           </Link>
           {!minimal && (
             <nav className="hidden md:flex items-center gap-6">
-              <Link href="/#reserver" className="text-sm font-medium text-neutral-900">
-                {t("order")}
-              </Link>
+              {/* Nos services mega-menu */}
+              <div
+                className="relative"
+                onMouseEnter={() => {
+                  if (servicesTimeoutRef.current) clearTimeout(servicesTimeoutRef.current);
+                  setServicesOpen(true);
+                }}
+                onMouseLeave={() => {
+                  servicesTimeoutRef.current = setTimeout(() => setServicesOpen(false), 150);
+                }}
+              >
+                <button
+                  onClick={() => setServicesOpen(!servicesOpen)}
+                  className="flex items-center gap-1 text-sm font-medium text-neutral-900 hover:text-neutral-600 transition-colors"
+                >
+                  {t("servicesMenu")}
+                  <Icon
+                    icon="solar:alt-arrow-down-linear"
+                    className={`text-xs transition-transform ${servicesOpen ? "rotate-180" : ""}`}
+                  />
+                </button>
+                {servicesOpen && (
+                  <div className="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-[480px] bg-white border border-neutral-200 rounded-2xl shadow-lg shadow-black/5 z-50 p-3">
+                    <div className="grid grid-cols-2 gap-3">
+                      <Link
+                        href="/#reserver"
+                        onClick={() => setServicesOpen(false)}
+                        className="flex items-start gap-3 p-4 rounded-xl hover:bg-neutral-50 transition-colors group"
+                      >
+                        <div className="w-10 h-10 bg-neutral-900 rounded-full flex items-center justify-center shrink-0">
+                          <Icon icon="solar:routing-linear" className="text-white text-lg" />
+                        </div>
+                        <div>
+                          <p className="text-sm font-medium text-neutral-900">{t("taxiFixedTitle")}</p>
+                          <p className="text-xs text-neutral-500 font-light mt-0.5">{t("taxiFixedDesc")}</p>
+                        </div>
+                      </Link>
+                      <Link
+                        href="/taxi-partage"
+                        onClick={() => setServicesOpen(false)}
+                        className="flex items-start gap-3 p-4 rounded-xl hover:bg-neutral-50 transition-colors group"
+                      >
+                        <div className="w-10 h-10 bg-emerald-600 rounded-full flex items-center justify-center shrink-0">
+                          <Icon icon="solar:users-group-rounded-linear" className="text-white text-lg" />
+                        </div>
+                        <div>
+                          <p className="text-sm font-medium text-neutral-900">{t("taxiPool")}</p>
+                          <p className="text-xs text-neutral-500 font-light mt-0.5">{t("taxiPoolDesc")}</p>
+                        </div>
+                      </Link>
+                    </div>
+                  </div>
+                )}
+              </div>
               <Link
                 href="/#comment-ca-marche"
                 className="text-sm font-medium text-neutral-500 hover:text-neutral-900 transition-colors"
@@ -72,12 +129,66 @@ export function Navbar({ minimal = false }: { minimal?: boolean }) {
               >
                 {t("drivers")}
               </Link>
-              <Link
-                href="/#business"
-                className="text-sm font-medium text-neutral-500 hover:text-neutral-900 transition-colors"
+              <div
+                className="relative"
+                onMouseEnter={() => {
+                  if (solutionsTimeoutRef.current) clearTimeout(solutionsTimeoutRef.current);
+                  setSolutionsOpen(true);
+                }}
+                onMouseLeave={() => {
+                  solutionsTimeoutRef.current = setTimeout(() => setSolutionsOpen(false), 150);
+                }}
               >
-                {t("business")}
-              </Link>
+                <button
+                  onClick={() => setSolutionsOpen(!solutionsOpen)}
+                  className="flex items-center gap-1 text-sm font-medium text-neutral-500 hover:text-neutral-900 transition-colors"
+                >
+                  {t("solutions")}
+                  <Icon
+                    icon="solar:alt-arrow-down-linear"
+                    className={`text-xs transition-transform ${solutionsOpen ? "rotate-180" : ""}`}
+                  />
+                </button>
+                {solutionsOpen && (
+                  <div className="absolute left-0 top-full mt-2 w-48 bg-white border border-neutral-200 rounded-xl shadow-lg shadow-black/5 z-50 py-1.5 overflow-hidden">
+                    <Link
+                      href="/solutions/hotel"
+                      onClick={() => setSolutionsOpen(false)}
+                      className="block px-4 py-2.5 text-sm text-neutral-700 hover:bg-neutral-50 transition-colors"
+                    >
+                      {t("solutionHotel")}
+                    </Link>
+                    <Link
+                      href="/solutions/hopital"
+                      onClick={() => setSolutionsOpen(false)}
+                      className="block px-4 py-2.5 text-sm text-neutral-700 hover:bg-neutral-50 transition-colors"
+                    >
+                      {t("solutionHospital")}
+                    </Link>
+                    <Link
+                      href="/solutions/entreprise"
+                      onClick={() => setSolutionsOpen(false)}
+                      className="block px-4 py-2.5 text-sm text-neutral-700 hover:bg-neutral-50 transition-colors"
+                    >
+                      {t("solutionEnterprise")}
+                    </Link>
+                    <Link
+                      href="/solutions/particulier"
+                      onClick={() => setSolutionsOpen(false)}
+                      className="block px-4 py-2.5 text-sm text-neutral-700 hover:bg-neutral-50 transition-colors"
+                    >
+                      {t("solutionParticulier")}
+                    </Link>
+                    <Link
+                      href="/solutions/mise-a-disposition"
+                      onClick={() => setSolutionsOpen(false)}
+                      className="block px-4 py-2.5 text-sm text-neutral-700 hover:bg-neutral-50 transition-colors"
+                    >
+                      {t("solutionMiseADispo")}
+                    </Link>
+                  </div>
+                )}
+              </div>
             </nav>
           )}
         </div>
@@ -181,13 +292,47 @@ export function Navbar({ minimal = false }: { minimal?: boolean }) {
         <div className="max-w-7xl mx-auto px-6 py-4 space-y-1">
           {!minimal && (
             <>
-              <Link
-                href="/#reserver"
-                onClick={() => setMobileOpen(false)}
-                className="block py-3 text-sm font-medium text-neutral-900 hover:bg-neutral-50 rounded-lg px-3 transition-colors"
+              {/* Nos services toggle */}
+              <button
+                onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+                className="flex items-center justify-between w-full py-3 text-sm font-medium text-neutral-900 hover:bg-neutral-50 rounded-lg px-3 transition-colors"
               >
-                {t("order")}
-              </Link>
+                {t("servicesMenu")}
+                <Icon
+                  icon="solar:alt-arrow-down-linear"
+                  className={`text-xs transition-transform ${mobileServicesOpen ? "rotate-180" : ""}`}
+                />
+              </button>
+              {mobileServicesOpen && (
+                <div className="pl-2 space-y-1">
+                  <Link
+                    href="/#reserver"
+                    onClick={() => setMobileOpen(false)}
+                    className="flex items-start gap-3 p-3 rounded-xl hover:bg-neutral-50 transition-colors"
+                  >
+                    <div className="w-9 h-9 bg-neutral-900 rounded-full flex items-center justify-center shrink-0">
+                      <Icon icon="solar:routing-linear" className="text-white text-base" />
+                    </div>
+                    <div>
+                      <p className="text-sm font-medium text-neutral-900">{t("taxiFixedTitle")}</p>
+                      <p className="text-xs text-neutral-500 font-light mt-0.5">{t("taxiFixedDesc")}</p>
+                    </div>
+                  </Link>
+                  <Link
+                    href="/taxi-partage"
+                    onClick={() => setMobileOpen(false)}
+                    className="flex items-start gap-3 p-3 rounded-xl hover:bg-neutral-50 transition-colors"
+                  >
+                    <div className="w-9 h-9 bg-emerald-600 rounded-full flex items-center justify-center shrink-0">
+                      <Icon icon="solar:users-group-rounded-linear" className="text-white text-base" />
+                    </div>
+                    <div>
+                      <p className="text-sm font-medium text-neutral-900">{t("taxiPool")}</p>
+                      <p className="text-xs text-neutral-500 font-light mt-0.5">{t("taxiPoolDesc")}</p>
+                    </div>
+                  </Link>
+                </div>
+              )}
               <Link
                 href="/#comment-ca-marche"
                 onClick={() => setMobileOpen(false)}
@@ -202,13 +347,55 @@ export function Navbar({ minimal = false }: { minimal?: boolean }) {
               >
                 {t("drivers")}
               </Link>
-              <Link
-                href="/#business"
-                onClick={() => setMobileOpen(false)}
-                className="block py-3 text-sm font-medium text-neutral-500 hover:bg-neutral-50 hover:text-neutral-900 rounded-lg px-3 transition-colors"
+              <button
+                onClick={() => setMobileSolutionsOpen(!mobileSolutionsOpen)}
+                className="flex items-center justify-between w-full py-3 text-sm font-medium text-neutral-500 hover:bg-neutral-50 hover:text-neutral-900 rounded-lg px-3 transition-colors"
               >
-                {t("business")}
-              </Link>
+                {t("solutions")}
+                <Icon
+                  icon="solar:alt-arrow-down-linear"
+                  className={`text-xs transition-transform ${mobileSolutionsOpen ? "rotate-180" : ""}`}
+                />
+              </button>
+              {mobileSolutionsOpen && (
+                <div className="pl-4 space-y-0.5">
+                  <Link
+                    href="/solutions/hotel"
+                    onClick={() => setMobileOpen(false)}
+                    className="block py-2.5 text-sm text-neutral-500 hover:bg-neutral-50 hover:text-neutral-900 rounded-lg px-3 transition-colors"
+                  >
+                    {t("solutionHotel")}
+                  </Link>
+                  <Link
+                    href="/solutions/hopital"
+                    onClick={() => setMobileOpen(false)}
+                    className="block py-2.5 text-sm text-neutral-500 hover:bg-neutral-50 hover:text-neutral-900 rounded-lg px-3 transition-colors"
+                  >
+                    {t("solutionHospital")}
+                  </Link>
+                  <Link
+                    href="/solutions/entreprise"
+                    onClick={() => setMobileOpen(false)}
+                    className="block py-2.5 text-sm text-neutral-500 hover:bg-neutral-50 hover:text-neutral-900 rounded-lg px-3 transition-colors"
+                  >
+                    {t("solutionEnterprise")}
+                  </Link>
+                  <Link
+                    href="/solutions/particulier"
+                    onClick={() => setMobileOpen(false)}
+                    className="block py-2.5 text-sm text-neutral-500 hover:bg-neutral-50 hover:text-neutral-900 rounded-lg px-3 transition-colors"
+                  >
+                    {t("solutionParticulier")}
+                  </Link>
+                  <Link
+                    href="/solutions/mise-a-disposition"
+                    onClick={() => setMobileOpen(false)}
+                    className="block py-2.5 text-sm text-neutral-500 hover:bg-neutral-50 hover:text-neutral-900 rounded-lg px-3 transition-colors"
+                  >
+                    {t("solutionMiseADispo")}
+                  </Link>
+                </div>
+              )}
             </>
           )}
           {isLoggedIn ? (

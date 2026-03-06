@@ -14,7 +14,7 @@ import { fr, enUS } from "date-fns/locale";
 
 const bookingSchema = z.object({
   clientName: z.string().min(2),
-  clientEmail: z.string().email().optional().default("noemail@taxinoir.fr"),
+  clientEmail: z.string().email().optional().default("noemail@taxineo.fr"),
   clientPhone: z.string().optional().default(""),
   clientComments: z.string().optional(),
   departureName: z.string().min(1),
@@ -163,7 +163,7 @@ export async function POST(request: Request) {
     }
 
     // Send confirmation to client (skip placeholder emails)
-    if (data.clientEmail !== "noemail@taxinoir.fr") {
+    if (data.clientEmail !== "noemail@taxineo.fr") {
       const clientEmailData = buildClientConfirmationEmail({
         clientName: data.clientName,
         departure: data.departureName,

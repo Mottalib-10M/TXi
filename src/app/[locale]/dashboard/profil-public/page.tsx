@@ -86,7 +86,7 @@ export default async function ProfilPublicPage() {
               {t("profileLink")}
             </p>
             <p className="text-sm text-white font-medium truncate">
-              taxinoir.fr/taxi/{driver.slug}
+              taxineo.fr/taxi/{driver.slug}
             </p>
           </div>
         </div>
@@ -109,7 +109,7 @@ export default async function ProfilPublicPage() {
             <div className="w-3 h-3 rounded-full bg-neutral-300" />
           </div>
           <div className="flex-1 bg-white rounded-lg px-3 py-1.5 text-xs text-neutral-500 font-light border border-neutral-200">
-            taxinoir.fr/taxi/{driver.slug}
+            taxineo.fr/taxi/{driver.slug}
           </div>
         </div>
 

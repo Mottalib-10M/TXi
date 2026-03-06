@@ -20,6 +20,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default function CovoiturageLayout({ children }: Props) {
+export default function SharedTaxiLayout({ children }: Props) {
   return children;
 }

@@ -23,7 +23,7 @@ export async function POST(req: Request) {
     }[data.callbackTime || ""] || "Non précisé";
 
     await sendEmail({
-      to: process.env.CONTACT_EMAIL || "contact@taxinoir.fr",
+      to: process.env.CONTACT_EMAIL || "contact@taxineo.fr",
       subject: `Nouveau message de contact${data.city ? ` - Taxi ${data.city}` : ""}`,
       html: `
         <div style="font-family: Inter, sans-serif; max-width: 600px; margin: 0 auto;">

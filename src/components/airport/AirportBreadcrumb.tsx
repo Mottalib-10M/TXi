@@ -8,8 +8,8 @@ export async function AirportBreadcrumb({ airportName }: { airportName: string }
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: t("breadcrumbHome"), item: "https://www.taxinoir.fr" },
-      { "@type": "ListItem", position: 2, name: t("breadcrumbAirports"), item: "https://www.taxinoir.fr/aeroports" },
+      { "@type": "ListItem", position: 1, name: t("breadcrumbHome"), item: "https://www.taxineo.fr" },
+      { "@type": "ListItem", position: 2, name: t("breadcrumbAirports"), item: "https://www.taxineo.fr/aeroports" },
       { "@type": "ListItem", position: 3, name: t("breadcrumbTaxi", { airportName }) },
     ],
   };

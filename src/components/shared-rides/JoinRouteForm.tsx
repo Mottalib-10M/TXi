@@ -169,7 +169,7 @@ export function JoinRouteForm({
           onClick={onCancel}
           className="text-sm text-neutral-500 hover:text-neutral-700 transition-colors"
         >
-          {t("cancel") || "Annuler"}
+          {t("cancel")}
         </button>
       </div>
     </form>

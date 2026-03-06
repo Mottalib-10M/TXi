@@ -30,6 +30,7 @@ interface SerializedRoute {
 }
 
 const STATUS_COLORS: Record<string, string> = {
+  PENDING_DRIVER: "bg-amber-100 text-amber-700",
   ACTIVE: "bg-green-100 text-green-700",
   FULL: "bg-blue-100 text-blue-700",
   DEPARTED: "bg-neutral-100 text-neutral-500",
@@ -131,7 +132,15 @@ export function SharedRoutesManager({
   }
 
   const statusLabel = (s: string) => {
-    const key = `status${s.charAt(0) + s.slice(1).toLowerCase()}` as
+    const map: Record<string, string> = {
+      PENDING_DRIVER: "statusPendingDriver",
+      ACTIVE: "statusActive",
+      FULL: "statusFull",
+      DEPARTED: "statusDeparted",
+      CANCELLED: "statusCancelled",
+    };
+    const key = (map[s] || "statusActive") as
+      | "statusPendingDriver"
       | "statusActive"
       | "statusFull"
       | "statusDeparted"
@@ -139,13 +148,13 @@ export function SharedRoutesManager({
     return t(key);
   };
 
-  const luggageLabel = (l: string) => {
-    const map: Record<string, string> = {
-      NONE: t("luggageNone"),
-      SMALL: t("luggageSmall"),
-      LARGE: t("luggageLarge"),
+  const luggageIcon = (l: string) => {
+    const map: Record<string, { icon: string; label: string; color: string }> = {
+      NONE: { icon: "solar:close-circle-linear", label: t("luggageNone"), color: "text-neutral-300" },
+      SMALL: { icon: "solar:backpack-linear", label: t("luggageSmall"), color: "text-amber-500" },
+      LARGE: { icon: "solar:suitcase-linear", label: t("luggageLarge"), color: "text-blue-500" },
     };
-    return map[l] || l;
+    return map[l] || { icon: "solar:close-circle-linear", label: l, color: "text-neutral-300" };
   };
 
   return (
@@ -317,22 +326,37 @@ export function SharedRoutesManager({
                       <p className="text-xs font-medium text-neutral-500 mb-1">
                         {t("passengers")}
                       </p>
-                      {confirmedPassengers.map((p) => (
-                        <div
-                          key={p.id}
-                          className="flex items-center justify-between text-xs bg-neutral-50 rounded-lg px-3 py-2"
-                        >
-                          <span className="font-medium">{p.passengerName}</span>
-                          <div className="flex items-center gap-3 text-neutral-400">
-                            <span>
-                              {p.seatCount} {p.seatCount > 1 ? t("seats") : t("seat")}
-                            </span>
-                            <span>
-                              {t("luggage")}: {luggageLabel(p.luggageType)}
-                            </span>
+                      {confirmedPassengers.map((p) => {
+                        const luggage = luggageIcon(p.luggageType);
+                        return (
+                          <div
+                            key={p.id}
+                            className="flex items-center justify-between text-xs bg-neutral-50 rounded-lg px-3 py-2"
+                          >
+                            <div className="flex items-center gap-2">
+                              <span className="font-medium">{p.passengerName}</span>
+                              {p.passengerPhone && (
+                                <a
+                                  href={`tel:${p.passengerPhone}`}
+                                  className="flex items-center gap-1 text-neutral-400 hover:text-neutral-600 transition-colors"
+                                >
+                                  <Icon icon="solar:phone-linear" className="text-sm" />
+                                  <span>{p.passengerPhone}</span>
+                                </a>
+                              )}
+                            </div>
+                            <div className="flex items-center gap-3 text-neutral-400">
+                              <span>
+                                {p.seatCount} {p.seatCount > 1 ? t("seats") : t("seat")}
+                              </span>
+                              <span className="flex items-center gap-1" title={luggage.label}>
+                                <Icon icon={luggage.icon} className={`text-base ${luggage.color}`} />
+                                <span className="hidden sm:inline">{luggage.label}</span>
+                              </span>
+                            </div>
                           </div>
-                        </div>
-                      ))}
+                        );
+                      })}
                     </div>
                   )}
 

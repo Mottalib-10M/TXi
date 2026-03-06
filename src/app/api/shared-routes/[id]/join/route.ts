@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { prisma } from "@/lib/prisma";
-import { sendEmail } from "@/lib/email";
+import { sendEmail, buildSharedTaxiPassengerConfirmEmail } from "@/lib/email";
 
 const joinSchema = z.object({
   passengerName: z.string().min(2),
@@ -66,16 +66,18 @@ export async function POST(
       return { passenger, route };
     });
 
-    // Send notification email to driver
-    if (result.route.driver.notifyEmail) {
-      const departureDate = result.route.departureTime.toLocaleDateString("fr-FR", {
-        day: "numeric",
-        month: "long",
-        year: "numeric",
-        hour: "2-digit",
-        minute: "2-digit",
-      });
+    const departureDate = result.route.departureTime.toLocaleDateString("fr-FR", {
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+    });
 
+    const luggageLabels: Record<string, string> = { NONE: "Aucun", SMALL: "Petit (sac à dos)", LARGE: "Grand (valise)" };
+
+    // Send notification email to driver
+    if (result.route.driver?.notifyEmail) {
       await sendEmail({
         to: result.route.driver.email,
         subject: `Nouveau passager — ${result.route.departureName} → ${result.route.destinationName}`,
@@ -88,7 +90,9 @@ export async function POST(
               <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">Trajet</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${result.route.departureName} → ${result.route.destinationName}</td></tr>
               <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">Départ</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${departureDate}</td></tr>
               <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">Passager</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.passengerName}</td></tr>
+              ${data.passengerPhone ? `<tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">Téléphone</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;"><a href="tel:${data.passengerPhone}" style="color: #171717; text-decoration: none;">${data.passengerPhone}</a></td></tr>` : ""}
               <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">Places</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.seatCount}</td></tr>
+              <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">Bagage</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${luggageLabels[data.luggageType || "NONE"] || "Aucun"}</td></tr>
               <tr><td style="padding: 8px; color: #737373;">Email</td><td style="padding: 8px; font-weight: 500;">${data.passengerEmail}</td></tr>
             </table>
             <p style="color: #a3a3a3; font-size: 12px;">— L'équipe TaxiNeo</p>
@@ -96,6 +100,23 @@ export async function POST(
         `,
       });
     }
+
+    // Send confirmation email to passenger
+    const driverFullName = result.route.driver ? `${result.route.driver.firstName} ${result.route.driver.lastName}` : "Chauffeur";
+    const confirmEmail = buildSharedTaxiPassengerConfirmEmail({
+      passengerName: data.passengerName,
+      departure: result.route.departureName,
+      destination: result.route.destinationName,
+      departureDate,
+      seatCount: data.seatCount,
+      luggageType: data.luggageType || "NONE",
+      driverName: driverFullName,
+    });
+    await sendEmail({
+      to: data.passengerEmail,
+      subject: confirmEmail.subject,
+      html: confirmEmail.html,
+    });
 
     return NextResponse.json({ message: "Inscription confirmée" }, { status: 201 });
   } catch (error) {

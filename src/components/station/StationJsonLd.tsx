@@ -10,7 +10,7 @@ export async function StationJsonLd({ station }: { station: Station }) {
     "@type": "TaxiService",
     name: `TaxiNeo - Transfert Gare ${station.name}`,
     description: station.i18n[loc].metaDescription,
-    url: `https://www.taxinoir.fr/taxi-gare-${station.slug}`,
+    url: `https://www.taxineo.fr/taxi-gare-${station.slug}`,
     telephone: "+33 1 00 00 00 00",
     areaServed: {
       "@type": "TrainStation",
@@ -24,7 +24,7 @@ export async function StationJsonLd({ station }: { station: Station }) {
     provider: {
       "@type": "Organization",
       name: "TaxiNeo",
-      url: "https://www.taxinoir.fr",
+      url: "https://www.taxineo.fr",
     },
     openingHoursSpecification: {
       "@type": "OpeningHoursSpecification",

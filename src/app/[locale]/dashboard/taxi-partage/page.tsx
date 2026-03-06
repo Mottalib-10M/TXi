@@ -3,12 +3,39 @@ import { prisma } from "@/lib/prisma";
 import { redirect } from "next/navigation";
 import { SharedRoutesManager } from "@/components/driver/SharedRoutesManager";
 import { getTranslations } from "next-intl/server";
+import { AcceptProposedRoute } from "@/components/driver/AcceptProposedRoute";
 
-export default async function CovoituragePage() {
+export default async function SharedTaxiDashboardPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ accept?: string }>;
+}) {
   const session = await auth();
   if (!session?.user?.id) redirect("/connexion");
 
   const t = await getTranslations("dashboard");
+  const { accept: acceptRouteId } = await searchParams;
+
+  // Fetch proposed route if accept param is present
+  let proposedRoute = null;
+  if (acceptRouteId) {
+    const route = await prisma.sharedRoute.findUnique({
+      where: { id: acceptRouteId },
+      include: { passengers: true },
+    });
+    if (route && route.status === "PENDING_DRIVER") {
+      proposedRoute = {
+        id: route.id,
+        departureName: route.departureName,
+        destinationName: route.destinationName,
+        departureTime: route.departureTime.toISOString(),
+        totalSeats: route.totalSeats,
+        proposerName: route.proposerName,
+        proposerEmail: route.proposerEmail,
+        passengerCount: route.passengers.filter((p) => p.status === "CONFIRMED").length,
+      };
+    }
+  }
 
   const routes = await prisma.sharedRoute.findMany({
     where: { driverId: session.user.id },
@@ -39,6 +66,11 @@ export default async function CovoituragePage() {
           {t("sharedRidesSubtitle")}
         </p>
       </div>
+
+      {proposedRoute && (
+        <AcceptProposedRoute route={proposedRoute} />
+      )}
+
       <SharedRoutesManager initialRoutes={serialized} />
     </div>
   );

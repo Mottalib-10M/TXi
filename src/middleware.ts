@@ -30,7 +30,14 @@ export async function middleware(req: NextRequest) {
   );
 
   const token = isProtected || isAuthPage
-    ? await getToken({ req, secret: process.env.NEXTAUTH_SECRET, secureCookie: true })
+    ? await getToken({
+        req,
+        secret: process.env.NEXTAUTH_SECRET,
+        secureCookie: process.env.NODE_ENV === "production",
+        cookieName: process.env.NODE_ENV === "production"
+          ? "__Secure-authjs.session-token"
+          : "authjs.session-token",
+      })
     : null;
 
   if (isProtected && !token) {

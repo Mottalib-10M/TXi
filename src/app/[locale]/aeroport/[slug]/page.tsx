@@ -40,12 +40,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     openGraph: {
       title: ap.i18n[loc].metaTitle,
       description: ap.i18n[loc].metaDescription,
-      url: `https://www.taxinoir.fr/taxi-aeroport-${ap.slug}`,
+      url: `https://www.taxineo.fr/taxi-aeroport-${ap.slug}`,
       siteName: "TaxiNeo",
       type: "website",
     },
     alternates: {
-      canonical: `https://www.taxinoir.fr/taxi-aeroport-${ap.slug}`,
+      canonical: `https://www.taxineo.fr/taxi-aeroport-${ap.slug}`,
     },
   };
 }

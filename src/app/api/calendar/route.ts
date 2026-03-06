@@ -66,7 +66,7 @@ export async function GET(request: NextRequest) {
     "PRODID:-//TaxiNeo//Booking//FR",
     "METHOD:PUBLISH",
     "BEGIN:VEVENT",
-    `UID:${booking.id}@taxinoir.fr`,
+    `UID:${booking.id}@taxineo.fr`,
     `DTSTART:${toICSDate(startDate)}`,
     `DTEND:${toICSDate(endDate)}`,
     `SUMMARY:Course #${booking.reference} — ${contactName}`,

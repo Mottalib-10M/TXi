@@ -15,6 +15,7 @@ enum BookingStatus {
 }
 
 enum SharedRouteStatus {
+  PENDING_DRIVER
   ACTIVE
   FULL
   DEPARTED
@@ -212,8 +213,11 @@ model CagnotteTransaction {
 
 model SharedRoute {
   id                  String            @id @default(cuid())
-  driver              Driver            @relation(fields: [driverId], references: [id])
-  driverId            String
+  driver              Driver?           @relation(fields: [driverId], references: [id])
+  driverId            String?
+  proposerName        String?
+  proposerEmail       String?
+  proposerPhone       String?
   departureLocationId String
   departureName       String
   departureLat        Float

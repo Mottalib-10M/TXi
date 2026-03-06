@@ -8,8 +8,8 @@ export async function CityBreadcrumb({ cityName }: { cityName: string }) {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: t("breadcrumbHome"), item: "https://www.taxinoir.fr" },
-      { "@type": "ListItem", position: 2, name: t("breadcrumbCities"), item: "https://www.taxinoir.fr/villes" },
+      { "@type": "ListItem", position: 1, name: t("breadcrumbHome"), item: "https://www.taxineo.fr" },
+      { "@type": "ListItem", position: 2, name: t("breadcrumbCities"), item: "https://www.taxineo.fr/villes" },
       { "@type": "ListItem", position: 3, name: t("breadcrumbTaxi", { cityName }) },
     ],
   };

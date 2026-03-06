@@ -4,7 +4,7 @@ import { airports } from "@/data/airports";
 import { stations } from "@/data/stations";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://www.taxinoir.fr";
+  const baseUrl = "https://www.taxineo.fr";
 
   function localizedUrls(path: string): { url: string; alternates: { languages: Record<string, string> } } {
     return {

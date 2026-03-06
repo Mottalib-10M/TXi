@@ -21,9 +21,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     openGraph: {
       title: t("metaTitle"),
       description: t("metaDescription"),
-      url: "https://www.taxinoir.fr/aeroports",
+      url: "https://www.taxineo.fr/aeroports",
     },
-    alternates: { canonical: "https://www.taxinoir.fr/aeroports" },
+    alternates: { canonical: "https://www.taxineo.fr/aeroports" },
   };
 }
 

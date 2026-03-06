@@ -67,6 +67,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
     }),
   ],
   session: { strategy: "jwt" },
+  useSecureCookies: process.env.NODE_ENV === "production",
   pages: {
     signIn: "/connexion",
   },

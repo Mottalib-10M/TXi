@@ -21,9 +21,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     openGraph: {
       title: t("metaTitle"),
       description: t("metaDescription"),
-      url: "https://www.taxinoir.fr/villes",
+      url: "https://www.taxineo.fr/villes",
     },
-    alternates: { canonical: "https://www.taxinoir.fr/villes" },
+    alternates: { canonical: "https://www.taxineo.fr/villes" },
   };
 }
 

@@ -149,7 +149,7 @@ export async function PATCH(
     }
 
     // Send rejection notification to client
-    if (status === "REJECTED" && booking.clientEmail && booking.clientEmail !== "noemail@taxinoir.fr") {
+    if (status === "REJECTED" && booking.clientEmail && booking.clientEmail !== "noemail@taxineo.fr") {
       try {
         const rejectDriver = await prisma.driver.findUnique({
           where: { id: session.user.id },

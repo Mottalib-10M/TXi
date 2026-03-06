@@ -4,7 +4,8 @@ import { prisma } from "@/lib/prisma";
 import { encode } from "@auth/core/jwt";
 import { cookies } from "next/headers";
 
-const COOKIE_NAME = "__Secure-authjs.session-token";
+const IS_PROD = process.env.NODE_ENV === "production";
+const COOKIE_NAME = IS_PROD ? "__Secure-authjs.session-token" : "authjs.session-token";
 
 export async function POST(request: Request) {
   try {
@@ -56,7 +57,7 @@ export async function POST(request: Request) {
       const cookieStore = await cookies();
       cookieStore.set(COOKIE_NAME, token, {
         httpOnly: true,
-        secure: true,
+        secure: IS_PROD,
         sameSite: "lax",
         path: "/",
         maxAge: 30 * 24 * 60 * 60,
@@ -95,7 +96,7 @@ export async function POST(request: Request) {
       const cookieStore = await cookies();
       cookieStore.set(COOKIE_NAME, token, {
         httpOnly: true,
-        secure: true,
+        secure: IS_PROD,
         sameSite: "lax",
         path: "/",
         maxAge: 30 * 24 * 60 * 60,

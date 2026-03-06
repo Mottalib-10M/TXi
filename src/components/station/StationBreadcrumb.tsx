@@ -8,8 +8,8 @@ export async function StationBreadcrumb({ stationName }: { stationName: string }
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: t("breadcrumbHome"), item: "https://www.taxinoir.fr" },
-      { "@type": "ListItem", position: 2, name: t("breadcrumbStations"), item: "https://www.taxinoir.fr/gares" },
+      { "@type": "ListItem", position: 1, name: t("breadcrumbHome"), item: "https://www.taxineo.fr" },
+      { "@type": "ListItem", position: 2, name: t("breadcrumbStations"), item: "https://www.taxineo.fr/gares" },
       { "@type": "ListItem", position: 3, name: t("breadcrumbTaxi", { stationName }) },
     ],
   };

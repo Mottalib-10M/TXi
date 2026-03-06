@@ -17,7 +17,7 @@ export function DashboardSidebar({ userName }: { userName: string }) {
     { href: "/dashboard/profil", label: t("profile"), icon: "solar:user-linear" },
     { href: "/dashboard/profil-public", label: t("publicProfile"), icon: "solar:eye-linear" },
     { href: "/dashboard/reservations", label: t("reservations"), icon: "solar:calendar-linear" },
-    { href: "/dashboard/covoiturage", label: t("sharedRides"), icon: "solar:users-group-two-rounded-linear" },
+    { href: "/dashboard/taxi-partage", label: t("sharedRides"), icon: "solar:users-group-two-rounded-linear" },
     { href: "/dashboard/carte", label: t("map"), icon: "solar:card-linear" },
   ];
 

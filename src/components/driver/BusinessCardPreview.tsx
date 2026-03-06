@@ -24,7 +24,7 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
   const [qrDataUrl, setQrDataUrl] = useState<string>("");
   const [qrDataUrlLarge, setQrDataUrlLarge] = useState<string>("");
   const [activeFormat, setActiveFormat] = useState<CardFormat>("business");
-  const profileUrl = `https://taxinoir.fr/taxi/${driver.slug}`;
+  const profileUrl = `https://taxineo.fr/taxi/${driver.slug}`;
 
   const formats: { id: CardFormat; label: string; description: string; icon: string }[] = [
     { id: "business", label: t("businessCardLabel"), description: "85 x 55 mm", icon: "solar:card-linear" },

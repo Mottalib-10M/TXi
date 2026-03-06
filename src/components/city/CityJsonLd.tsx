@@ -10,7 +10,7 @@ export async function CityJsonLd({ city }: { city: City }) {
     "@type": "TaxiService",
     name: `TaxiNeo ${city.name}`,
     description: city.i18n[loc].metaDescription,
-    url: `https://www.taxinoir.fr/taxi-${city.slug}`,
+    url: `https://www.taxineo.fr/taxi-${city.slug}`,
     telephone: "+33 1 00 00 00 00",
     areaServed: {
       "@type": "City",
@@ -24,7 +24,7 @@ export async function CityJsonLd({ city }: { city: City }) {
     provider: {
       "@type": "Organization",
       name: "TaxiNeo",
-      url: "https://www.taxinoir.fr",
+      url: "https://www.taxineo.fr",
     },
     aggregateRating: {
       "@type": "AggregateRating",
