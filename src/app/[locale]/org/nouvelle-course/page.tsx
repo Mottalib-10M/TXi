@@ -283,7 +283,8 @@ export default function NouvelleCourse() {
                 type="date"
                 value={date}
                 onChange={(e) => setDate(e.target.value)}
-                className={inputClass}
+                onClick={(e) => (e.target as HTMLInputElement).showPicker()}
+                className={`${inputClass} cursor-pointer`}
                 required
               />
             </div>
@@ -293,7 +294,8 @@ export default function NouvelleCourse() {
                 type="time"
                 value={time}
                 onChange={(e) => setTime(e.target.value)}
-                className={inputClass}
+                onClick={(e) => (e.target as HTMLInputElement).showPicker()}
+                className={`${inputClass} cursor-pointer`}
                 required
               />
             </div>

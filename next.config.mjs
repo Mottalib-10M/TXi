@@ -24,7 +24,7 @@ const nextConfig = {
         destination: "/gare/:slug",
       },
       {
-        source: "/taxi-:slug",
+        source: "/taxi-:slug((?!partage).*)",
         destination: "/:slug",
       },
       // English locale
@@ -37,7 +37,7 @@ const nextConfig = {
         destination: "/en/gare/:slug",
       },
       {
-        source: "/en/taxi-:slug",
+        source: "/en/taxi-:slug((?!partage).*)",
         destination: "/en/:slug",
       },
     ];

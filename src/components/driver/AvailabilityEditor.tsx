@@ -111,14 +111,16 @@ export function AvailabilityEditor({
                     type="time"
                     value={slot.startTime}
                     onChange={(e) => updateSlot(index, "startTime", e.target.value)}
-                    className="bg-neutral-100 rounded-lg px-2 sm:px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-neutral-900 w-[5.5rem]"
+                    onClick={(e) => (e.target as HTMLInputElement).showPicker()}
+                    className="bg-neutral-100 rounded-lg px-2 sm:px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-neutral-900 w-[5.5rem] cursor-pointer"
                   />
                   <span className="text-neutral-400 text-xs">&rarr;</span>
                   <input
                     type="time"
                     value={slot.endTime}
                     onChange={(e) => updateSlot(index, "endTime", e.target.value)}
-                    className="bg-neutral-100 rounded-lg px-2 sm:px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-neutral-900 w-[5.5rem]"
+                    onClick={(e) => (e.target as HTMLInputElement).showPicker()}
+                    className="bg-neutral-100 rounded-lg px-2 sm:px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-neutral-900 w-[5.5rem] cursor-pointer"
                   />
                 </div>
               ) : (

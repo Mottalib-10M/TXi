@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback, useMemo, useRef } from "react";
 import { Icon } from "@iconify/react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { predefinedLocations } from "@/data/predefined-locations";
@@ -17,6 +17,10 @@ interface RouteResult {
   occupiedSeats: number;
   availableSeats: number;
   status: string;
+  estimatedPrice?: number;
+  pricePerPassenger?: number;
+  distanceKm?: number;
+  isNightRate?: boolean;
   driver: {
     firstName: string;
     lastName: string;
@@ -75,6 +79,7 @@ function getMonthName(dateStr: string, locale: string): string {
 
 export function SharedRideSearch({ departureId: controlledDepartureId }: { departureId?: string } = {}) {
   const t = useTranslations("sharedRides");
+  const currentLocale = useLocale();
   const { data: session } = useSession();
   const router = useRouter();
   const [internalDepartureId, setInternalDepartureId] = useState("");
@@ -290,6 +295,7 @@ export function SharedRideSearch({ departureId: controlledDepartureId }: { depar
                       proposerName: formData.get("proposerName"),
                       proposerEmail: formData.get("proposerEmail"),
                       proposerPhone: formData.get("proposerPhone") || "",
+                      locale: currentLocale,
                     }),
                   });
                   if (res.ok) {
@@ -350,7 +356,8 @@ export function SharedRideSearch({ departureId: controlledDepartureId }: { depar
                     type="datetime-local"
                     name="departureTime"
                     required
-                    className="w-full border border-neutral-200 rounded-xl px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-neutral-900"
+                    onClick={(e) => (e.target as HTMLInputElement).showPicker()}
+                    className="w-full border border-neutral-200 rounded-xl px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-neutral-900 cursor-pointer"
                   />
                 </div>
                 <div>
@@ -366,32 +373,36 @@ export function SharedRideSearch({ departureId: controlledDepartureId }: { depar
                     ))}
                   </select>
                 </div>
-                <div>
-                  <label className="block text-xs text-neutral-500 mb-1">{t("proposeName")}</label>
-                  <input
-                    type="text"
-                    name="proposerName"
-                    required
-                    className="w-full border border-neutral-200 rounded-xl px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-neutral-900"
-                  />
-                </div>
-                <div>
-                  <label className="block text-xs text-neutral-500 mb-1">{t("proposeEmail")}</label>
-                  <input
-                    type="email"
-                    name="proposerEmail"
-                    required
-                    className="w-full border border-neutral-200 rounded-xl px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-neutral-900"
-                  />
-                </div>
-                <div className="sm:col-span-2">
-                  <label className="block text-xs text-neutral-500 mb-1">{t("proposePhone")}</label>
-                  <input
-                    type="tel"
-                    name="proposerPhone"
-                    className="w-full border border-neutral-200 rounded-xl px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-neutral-900"
-                  />
-                </div>
+                {!session && (
+                  <>
+                    <div>
+                      <label className="block text-xs text-neutral-500 mb-1">{t("proposeName")}</label>
+                      <input
+                        type="text"
+                        name="proposerName"
+                        required
+                        className="w-full border border-neutral-200 rounded-xl px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-neutral-900"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-xs text-neutral-500 mb-1">{t("proposeEmail")}</label>
+                      <input
+                        type="email"
+                        name="proposerEmail"
+                        required
+                        className="w-full border border-neutral-200 rounded-xl px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-neutral-900"
+                      />
+                    </div>
+                    <div className="sm:col-span-2">
+                      <label className="block text-xs text-neutral-500 mb-1">{t("proposePhone")}</label>
+                      <input
+                        type="tel"
+                        name="proposerPhone"
+                        className="w-full border border-neutral-200 rounded-xl px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-neutral-900"
+                      />
+                    </div>
+                  </>
+                )}
               </div>
 
               <div className="flex gap-3 mt-4">
@@ -556,6 +567,14 @@ export function SharedRideSearch({ departureId: controlledDepartureId }: { depar
             </div>
           ) : (
             <>
+              {departureId && (
+                <div className="flex items-center gap-2 mb-3 bg-neutral-100 rounded-xl px-4 py-2.5">
+                  <Icon icon="solar:map-point-bold" className="text-neutral-900 text-lg flex-shrink-0" />
+                  <span className="text-sm font-medium text-neutral-900">
+                    {t("departure")} : {predefinedLocations.find((l) => l.id === departureId)?.name}
+                  </span>
+                </div>
+              )}
               <div className="flex items-center justify-between mb-4">
                 <h3 className="text-lg font-medium">
                   {t("destinationsTitle")}
@@ -684,19 +703,35 @@ export function SharedRideSearch({ departureId: controlledDepartureId }: { depar
                     </span>
                   </div>
 
-                  {/* Seats visualization */}
-                  <div className="flex items-center gap-1.5 mb-4">
-                    {Array.from({ length: route.totalSeats }).map((_, i) => (
-                      <Icon
-                        key={i}
-                        icon={
-                          i < route.occupiedSeats
-                            ? "solar:user-bold"
-                            : "solar:user-linear"
-                        }
-                        className={`text-lg ${i < route.occupiedSeats ? "text-neutral-900" : "text-neutral-300"}`}
-                      />
-                    ))}
+                  {/* Seats visualization + price */}
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center gap-1.5">
+                      {Array.from({ length: route.totalSeats }).map((_, i) => (
+                        <Icon
+                          key={i}
+                          icon={
+                            i < route.occupiedSeats
+                              ? "solar:user-bold"
+                              : "solar:user-linear"
+                          }
+                          className={`text-lg ${i < route.occupiedSeats ? "text-neutral-900" : "text-neutral-300"}`}
+                        />
+                      ))}
+                    </div>
+                    {route.pricePerPassenger != null && (
+                      <div className="flex items-center gap-2">
+                        {route.isNightRate && (
+                          <span className="text-[10px] font-medium text-amber-600 bg-amber-50 px-2 py-0.5 rounded-full flex items-center gap-1">
+                            <Icon icon="solar:moon-linear" className="text-xs" />
+                            {t("nightRate")}
+                          </span>
+                        )}
+                        <span className="text-lg font-semibold text-neutral-900">
+                          {route.pricePerPassenger.toFixed(2)} €
+                          <span className="text-xs font-normal text-neutral-400 ml-0.5">{t("pricePerPerson")}</span>
+                        </span>
+                      </div>
+                    )}
                   </div>
 
                   {/* Join form or button */}

@@ -294,6 +294,15 @@ export default async function HomePage() {
               </div>
             ))}
           </div>
+
+          <div className="flex justify-center mt-12 fade-up">
+            <Link
+              href="/comment-ca-marche"
+              className="text-sm font-medium text-neutral-900 bg-neutral-100 border border-neutral-300 rounded-full px-5 py-2 hover:bg-neutral-200 transition-colors inline-flex items-center gap-1.5"
+            >
+              {t("howItWorksLearnMore")} <Icon icon="solar:arrow-right-linear" className="text-sm" />
+            </Link>
+          </div>
         </div>
       </section>
 

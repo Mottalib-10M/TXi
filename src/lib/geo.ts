@@ -52,6 +52,26 @@ export function calculateNightFraction(startTime: Date, durationMinutes: number)
 }
 
 /**
+ * Calculate shared ride price based on distance and time of day.
+ * Day rate: 1.50 €/km (before 19h), Night rate: 2.50 €/km (from 19h).
+ * Total price is always divided by 3 to get price per passenger.
+ */
+export function calculateSharedRidePrice(
+  departureLat: number,
+  departureLng: number,
+  destinationLat: number,
+  destinationLng: number,
+  departureTime: Date
+): { totalPrice: number; pricePerPassenger: number; distanceKm: number; isNight: boolean } {
+  const distanceKm = haversineDistance(departureLat, departureLng, destinationLat, destinationLng);
+  const isNight = isNightTime(departureTime);
+  const ratePerKm = isNight ? 2.5 : 1.5;
+  const totalPrice = Math.round(distanceKm * ratePerKm * 100) / 100;
+  const pricePerPassenger = Math.ceil((totalPrice / 3) * 100) / 100;
+  return { totalPrice, pricePerPassenger, distanceKm, isNight };
+}
+
+/**
  * Estimate price based on distance and driver pricing, with day/night proportional split.
  */
 export function estimatePrice(

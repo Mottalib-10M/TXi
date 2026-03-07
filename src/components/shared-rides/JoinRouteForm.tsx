@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import { Icon } from "@iconify/react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
+import { useSession } from "next-auth/react";
 
 interface JoinRouteFormProps {
   routeId: string;
@@ -18,6 +19,8 @@ export function JoinRouteForm({
   onCancel,
 }: JoinRouteFormProps) {
   const t = useTranslations("sharedRides");
+  const locale = useLocale();
+  const { data: session } = useSession();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -37,11 +40,10 @@ export function JoinRouteForm({
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          passengerName: name,
-          passengerEmail: email,
-          passengerPhone: phone,
+          ...(session ? {} : { passengerName: name, passengerEmail: email, passengerPhone: phone }),
           seatCount,
           luggageType,
+          locale,
         }),
       });
 
@@ -83,44 +85,48 @@ export function JoinRouteForm({
         </div>
       )}
 
-      <div>
-        <label className="block text-sm text-neutral-500 mb-1">
-          {t("yourName")} *
-        </label>
-        <input
-          type="text"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          required
-          minLength={2}
-          className="w-full border border-neutral-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-neutral-900"
-        />
-      </div>
+      {!session && (
+        <>
+          <div>
+            <label className="block text-sm text-neutral-500 mb-1">
+              {t("yourName")} *
+            </label>
+            <input
+              type="text"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              required
+              minLength={2}
+              className="w-full border border-neutral-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-neutral-900"
+            />
+          </div>
 
-      <div>
-        <label className="block text-sm text-neutral-500 mb-1">
-          {t("yourEmail")} *
-        </label>
-        <input
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-          className="w-full border border-neutral-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-neutral-900"
-        />
-      </div>
+          <div>
+            <label className="block text-sm text-neutral-500 mb-1">
+              {t("yourEmail")} *
+            </label>
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+              className="w-full border border-neutral-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-neutral-900"
+            />
+          </div>
 
-      <div>
-        <label className="block text-sm text-neutral-500 mb-1">
-          {t("yourPhone")}
-        </label>
-        <input
-          type="tel"
-          value={phone}
-          onChange={(e) => setPhone(e.target.value)}
-          className="w-full border border-neutral-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-neutral-900"
-        />
-      </div>
+          <div>
+            <label className="block text-sm text-neutral-500 mb-1">
+              {t("yourPhone")}
+            </label>
+            <input
+              type="tel"
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+              className="w-full border border-neutral-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-neutral-900"
+            />
+          </div>
+        </>
+      )}
 
       <div className="grid grid-cols-2 gap-4">
         <div>

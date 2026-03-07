@@ -15,15 +15,16 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "airports" });
 
+  const canonical = `https://www.taxineo.fr/${locale}/aeroports`;
   return {
     title: t("metaTitle"),
     description: t("metaDescription"),
     openGraph: {
       title: t("metaTitle"),
       description: t("metaDescription"),
-      url: "https://www.taxineo.fr/aeroports",
+      url: canonical,
     },
-    alternates: { canonical: "https://www.taxineo.fr/aeroports" },
+    alternates: { canonical },
   };
 }
 

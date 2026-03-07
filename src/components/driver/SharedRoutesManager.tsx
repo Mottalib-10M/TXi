@@ -221,8 +221,9 @@ export function SharedRoutesManager({
               type="datetime-local"
               value={departureTime}
               onChange={(e) => setDepartureTime(e.target.value)}
+              onClick={(e) => (e.target as HTMLInputElement).showPicker()}
               required
-              className="w-full border border-neutral-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-neutral-900"
+              className="w-full border border-neutral-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-neutral-900 cursor-pointer"
             />
           </div>
 

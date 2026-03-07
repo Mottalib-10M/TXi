@@ -3,7 +3,7 @@ import { z } from "zod";
 import { prisma } from "@/lib/prisma";
 import { auth } from "@/lib/auth";
 import { getLocationById } from "@/data/predefined-locations";
-import { haversineDistance } from "@/lib/geo";
+import { haversineDistance, calculateSharedRidePrice } from "@/lib/geo";
 
 const createSchema = z.object({
   departureLocationId: z.string().min(1),
@@ -122,10 +122,21 @@ export async function GET(request: Request) {
 
     const results = filtered.map((r) => {
       const occupiedSeats = r.passengers.reduce((sum, p) => sum + p.seatCount, 0);
+      const pricing = calculateSharedRidePrice(
+        r.departureLat,
+        r.departureLng,
+        r.destinationLat,
+        r.destinationLng,
+        r.departureTime
+      );
       return {
         ...r,
         occupiedSeats,
         availableSeats: r.totalSeats - occupiedSeats,
+        estimatedPrice: pricing.totalPrice,
+        pricePerPassenger: pricing.pricePerPassenger,
+        distanceKm: Math.round(pricing.distanceKm * 10) / 10,
+        isNightRate: pricing.isNight,
       };
     });
 

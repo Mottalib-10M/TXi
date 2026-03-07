@@ -117,6 +117,7 @@ const t = {
     sharedTaxiDriverFoundVehicle: "Véhicule",
     sharedTaxiDriverFoundReminder: "Pour que le trajet soit définitivement confirmé, 3 passagers au total doivent réserver.",
     sharedTaxiDriverFoundCta: "Voir les trajets partagés",
+    sharedTaxiProposalComment: "Commentaire",
   },
   en: {
     hello: "Hello",
@@ -199,6 +200,7 @@ const t = {
     sharedTaxiDriverFoundVehicle: "Vehicle",
     sharedTaxiDriverFoundReminder: "The ride will be confirmed once 3 passengers in total have booked.",
     sharedTaxiDriverFoundCta: "View shared rides",
+    sharedTaxiProposalComment: "Comment",
   },
 } as const;
 
@@ -571,6 +573,7 @@ export function buildSharedTaxiProposalEmail(data: {
   departureDate: string;
   totalSeats: number;
   routeId: string;
+  comment?: string;
   locale?: Locale;
 }) {
   const l = t[data.locale || "fr"];
@@ -588,7 +591,8 @@ export function buildSharedTaxiProposalEmail(data: {
         <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
           <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.sharedTaxiRoute}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${routeLabel}</td></tr>
           <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.sharedTaxiDeparture}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.departureDate}</td></tr>
-          <tr><td style="padding: 8px; color: #737373;">${l.sharedTaxiProposalSeats}</td><td style="padding: 8px; font-weight: 500;">${data.totalSeats}</td></tr>
+          <tr><td style="padding: 8px; ${data.comment ? 'border-bottom: 1px solid #e5e5e5; ' : ''}color: #737373;">${l.sharedTaxiProposalSeats}</td><td style="padding: 8px; ${data.comment ? 'border-bottom: 1px solid #e5e5e5; ' : ''}font-weight: 500;">${data.totalSeats}</td></tr>
+          ${data.comment ? `<tr><td style="padding: 8px; color: #737373;">${l.sharedTaxiProposalComment}</td><td style="padding: 8px; font-weight: 500;">${data.comment}</td></tr>` : ''}
         </table>
         <div style="text-align: center; margin: 24px 0;">
           <a href="${acceptUrl}" style="background-color: #171717; color: #ffffff; padding: 14px 28px; border-radius: 12px; text-decoration: none; font-weight: 500; font-size: 14px; display: inline-block;">

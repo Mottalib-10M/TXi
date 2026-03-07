@@ -238,8 +238,9 @@ export function BookingForm() {
                   type="datetime-local"
                   value={scheduledDate}
                   onChange={(e) => setScheduledDate(e.target.value)}
+                  onClick={(e) => (e.target as HTMLInputElement).showPicker()}
                   min={new Date().toISOString().slice(0, 16)}
-                  className="block w-full bg-neutral-50 border border-neutral-200 rounded-xl pl-11 pr-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all"
+                  className="block w-full bg-neutral-50 border border-neutral-200 rounded-xl pl-11 pr-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all cursor-pointer"
                   style={{ WebkitAppearance: "none", MozAppearance: "none" }}
                 />
               </div>

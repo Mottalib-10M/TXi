@@ -145,7 +145,8 @@ export function DirectBookingForm({
           type="datetime-local"
           value={scheduledDate}
           onChange={(e) => setScheduledDate(e.target.value)}
-          className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all"
+          onClick={(e) => (e.target as HTMLInputElement).showPicker()}
+          className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all cursor-pointer"
         />
 
         <div className="flex items-center justify-between bg-neutral-100 rounded-xl px-4 py-3">

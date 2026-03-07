@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { prisma } from "@/lib/prisma";
+import { auth } from "@/lib/auth";
 import { getLocationById } from "@/data/predefined-locations";
 import { haversineDistance } from "@/lib/geo";
 import { sendEmail, buildSharedTaxiProposalEmail } from "@/lib/email";
@@ -10,15 +11,41 @@ const proposeSchema = z.object({
   destinationLocationId: z.string().min(1),
   departureTime: z.string(),
   totalSeats: z.number().min(1).max(4),
-  proposerName: z.string().min(1),
-  proposerEmail: z.string().email(),
+  proposerName: z.string().min(1).optional(),
+  proposerEmail: z.string().email().optional(),
   proposerPhone: z.string().optional().default(""),
+  comment: z.string().max(500).optional().default(""),
+  locale: z.enum(["fr", "en"]).optional().default("fr"),
 });
 
 export async function POST(request: Request) {
   try {
     const body = await request.json();
     const data = proposeSchema.parse(body);
+
+    // Check auth — if session exists, use session user info
+    const session = await auth();
+    let proposerName = data.proposerName || "";
+    let proposerEmail = data.proposerEmail || "";
+    let proposerPhone = data.proposerPhone || "";
+
+    if (session?.user) {
+      proposerName = session.user.name || proposerName;
+      proposerEmail = session.user.email || proposerEmail;
+      // Try to get phone from driver record if available
+      if (session.user.id) {
+        const driver = await prisma.driver.findUnique({
+          where: { id: session.user.id },
+          select: { phone: true },
+        });
+        if (driver?.phone) proposerPhone = driver.phone;
+      }
+    }
+
+    // Require name and email (either from session or body)
+    if (!proposerName || !proposerEmail) {
+      return NextResponse.json({ error: "Nom et email requis" }, { status: 400 });
+    }
 
     const departure = getLocationById(data.departureLocationId);
     if (!departure) {
@@ -44,9 +71,9 @@ export async function POST(request: Request) {
         departureTime: new Date(data.departureTime),
         totalSeats: data.totalSeats,
         status: "PENDING_DRIVER",
-        proposerName: data.proposerName,
-        proposerEmail: data.proposerEmail,
-        proposerPhone: data.proposerPhone,
+        proposerName,
+        proposerEmail,
+        proposerPhone,
       },
     });
 
@@ -54,9 +81,9 @@ export async function POST(request: Request) {
     await prisma.sharedRoutePassenger.create({
       data: {
         sharedRouteId: route.id,
-        passengerName: data.proposerName,
-        passengerEmail: data.proposerEmail,
-        passengerPhone: data.proposerPhone,
+        passengerName: proposerName,
+        passengerEmail: proposerEmail,
+        passengerPhone: proposerPhone,
         seatCount: 1,
       },
     });
@@ -78,7 +105,8 @@ export async function POST(request: Request) {
       },
     });
 
-    const departureDate = new Date(data.departureTime).toLocaleDateString("fr-FR", {
+    const dateLocale = data.locale === "en" ? "en-GB" : "fr-FR";
+    const departureDate = new Date(data.departureTime).toLocaleDateString(dateLocale, {
       weekday: "long",
       day: "numeric",
       month: "long",
@@ -100,12 +128,14 @@ export async function POST(request: Request) {
 
       const emailData = buildSharedTaxiProposalEmail({
         driverName,
-        proposerName: data.proposerName,
+        proposerName,
         departure: departure.name,
         destination: destination.name,
         departureDate,
         totalSeats: data.totalSeats,
         routeId: route.id,
+        comment: data.comment || undefined,
+        locale: data.locale,
       });
 
       sendEmail({
@@ -115,7 +145,7 @@ export async function POST(request: Request) {
       });
     }
 
-    console.log(`[SharedRoute] Proposed route ${route.id} by ${data.proposerName}, notified ${eligibleDrivers.length} drivers`);
+    console.log(`[SharedRoute] Proposed route ${route.id} by ${proposerName}, notified ${eligibleDrivers.length} drivers`);
 
     return NextResponse.json({ id: route.id, driversNotified: eligibleDrivers.length }, { status: 201 });
   } catch (error) {

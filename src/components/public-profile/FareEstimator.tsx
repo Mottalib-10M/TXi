@@ -154,8 +154,9 @@ export function FareEstimator({
           type="datetime-local"
           value={scheduledDate}
           onChange={(e) => setScheduledDate(e.target.value)}
+          onClick={(e) => (e.target as HTMLInputElement).showPicker()}
           min={new Date().toISOString().slice(0, 16)}
-          className="w-full bg-neutral-100 border border-neutral-200 rounded-xl pl-10 pr-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all"
+          className="w-full bg-neutral-100 border border-neutral-200 rounded-xl pl-10 pr-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all cursor-pointer"
           style={{ WebkitAppearance: "none", MozAppearance: "none" }}
         />
         {!scheduledDate && (

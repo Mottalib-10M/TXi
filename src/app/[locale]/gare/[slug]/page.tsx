@@ -34,18 +34,19 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!st) return {};
   const loc = locale === "en" ? "en" : "fr";
 
+  const canonical = `https://www.taxineo.fr/${locale}/taxi-gare-${st.slug}`;
   return {
     title: st.i18n[loc].metaTitle,
     description: st.i18n[loc].metaDescription,
     openGraph: {
       title: st.i18n[loc].metaTitle,
       description: st.i18n[loc].metaDescription,
-      url: `https://www.taxineo.fr/taxi-gare-${st.slug}`,
+      url: canonical,
       siteName: "TaxiNeo",
       type: "website",
     },
     alternates: {
-      canonical: `https://www.taxineo.fr/taxi-gare-${st.slug}`,
+      canonical,
     },
   };
 }

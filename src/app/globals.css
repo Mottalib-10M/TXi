@@ -13,6 +13,22 @@ body {
   width: 100%;
 }
 
+/* Global container breathing room on desktop */
+@media (min-width: 1024px) {
+  .max-w-7xl.px-6,
+  .max-w-6xl.px-6 {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+@media (min-width: 1280px) {
+  .max-w-7xl.px-6,
+  .max-w-6xl.px-6 {
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+  }
+}
+
 /* Scroll animations */
 .fade-up {
   opacity: 0;

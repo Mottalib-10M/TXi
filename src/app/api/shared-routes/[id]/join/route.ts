@@ -1,14 +1,16 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { prisma } from "@/lib/prisma";
+import { auth } from "@/lib/auth";
 import { sendEmail, buildSharedTaxiPassengerConfirmEmail } from "@/lib/email";
 
 const joinSchema = z.object({
-  passengerName: z.string().min(2),
-  passengerEmail: z.string().email(),
+  passengerName: z.string().min(2).optional(),
+  passengerEmail: z.string().email().optional(),
   passengerPhone: z.string().optional().default(""),
   seatCount: z.number().min(1).max(8),
   luggageType: z.enum(["NONE", "SMALL", "LARGE"]).optional().default("NONE"),
+  locale: z.enum(["fr", "en"]).optional().default("fr"),
 });
 
 export async function POST(
@@ -19,6 +21,28 @@ export async function POST(
     const { id } = await params;
     const body = await request.json();
     const data = joinSchema.parse(body);
+
+    // Check auth — if session exists, use session user info
+    const session = await auth();
+    let passengerName = data.passengerName || "";
+    let passengerEmail = data.passengerEmail || "";
+    let passengerPhone = data.passengerPhone || "";
+
+    if (session?.user) {
+      passengerName = session.user.name || passengerName;
+      passengerEmail = session.user.email || passengerEmail;
+      if (session.user.id) {
+        const driver = await prisma.driver.findUnique({
+          where: { id: session.user.id },
+          select: { phone: true },
+        });
+        if (driver?.phone) passengerPhone = driver.phone;
+      }
+    }
+
+    if (!passengerName || !passengerEmail) {
+      return NextResponse.json({ error: "Nom et email requis" }, { status: 400 });
+    }
 
     const result = await prisma.$transaction(async (tx) => {
       const route = await tx.sharedRoute.findUnique({
@@ -47,9 +71,9 @@ export async function POST(
       const passenger = await tx.sharedRoutePassenger.create({
         data: {
           sharedRouteId: id,
-          passengerName: data.passengerName,
-          passengerEmail: data.passengerEmail,
-          passengerPhone: data.passengerPhone || "",
+          passengerName,
+          passengerEmail,
+          passengerPhone,
           seatCount: data.seatCount,
           luggageType: data.luggageType as "NONE" | "SMALL" | "LARGE",
         },
@@ -66,7 +90,8 @@ export async function POST(
       return { passenger, route };
     });
 
-    const departureDate = result.route.departureTime.toLocaleDateString("fr-FR", {
+    const dateLocale = data.locale === "en" ? "en-GB" : "fr-FR";
+    const departureDate = result.route.departureTime.toLocaleDateString(dateLocale, {
       day: "numeric",
       month: "long",
       year: "numeric",
@@ -74,7 +99,10 @@ export async function POST(
       minute: "2-digit",
     });
 
-    const luggageLabels: Record<string, string> = { NONE: "Aucun", SMALL: "Petit (sac à dos)", LARGE: "Grand (valise)" };
+    const luggageLabels: Record<string, Record<string, string>> = {
+      fr: { NONE: "Aucun", SMALL: "Petit (sac à dos)", LARGE: "Grand (valise)" },
+      en: { NONE: "None", SMALL: "Small (backpack)", LARGE: "Large (suitcase)" },
+    };
 
     // Send notification email to driver
     if (result.route.driver?.notifyEmail) {
@@ -85,15 +113,15 @@ export async function POST(
           <div style="font-family: Inter, sans-serif; max-width: 600px; margin: 0 auto;">
             <h2 style="color: #171717;">Nouveau passager pour votre trajet</h2>
             <p>Bonjour ${result.route.driver.firstName},</p>
-            <p><strong>${data.passengerName}</strong> a rejoint votre trajet partagé :</p>
+            <p><strong>${passengerName}</strong> a rejoint votre trajet partagé :</p>
             <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
               <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">Trajet</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${result.route.departureName} → ${result.route.destinationName}</td></tr>
               <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">Départ</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${departureDate}</td></tr>
-              <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">Passager</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.passengerName}</td></tr>
-              ${data.passengerPhone ? `<tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">Téléphone</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;"><a href="tel:${data.passengerPhone}" style="color: #171717; text-decoration: none;">${data.passengerPhone}</a></td></tr>` : ""}
+              <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">Passager</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${passengerName}</td></tr>
+              ${passengerPhone ? `<tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">Téléphone</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;"><a href="tel:${passengerPhone}" style="color: #171717; text-decoration: none;">${passengerPhone}</a></td></tr>` : ""}
               <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">Places</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.seatCount}</td></tr>
-              <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">Bagage</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${luggageLabels[data.luggageType || "NONE"] || "Aucun"}</td></tr>
-              <tr><td style="padding: 8px; color: #737373;">Email</td><td style="padding: 8px; font-weight: 500;">${data.passengerEmail}</td></tr>
+              <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">Bagage</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${luggageLabels.fr[data.luggageType || "NONE"] || "Aucun"}</td></tr>
+              <tr><td style="padding: 8px; color: #737373;">Email</td><td style="padding: 8px; font-weight: 500;">${passengerEmail}</td></tr>
             </table>
             <p style="color: #a3a3a3; font-size: 12px;">— L'équipe TaxiNeo</p>
           </div>
@@ -104,16 +132,17 @@ export async function POST(
     // Send confirmation email to passenger
     const driverFullName = result.route.driver ? `${result.route.driver.firstName} ${result.route.driver.lastName}` : "Chauffeur";
     const confirmEmail = buildSharedTaxiPassengerConfirmEmail({
-      passengerName: data.passengerName,
+      passengerName,
       departure: result.route.departureName,
       destination: result.route.destinationName,
       departureDate,
       seatCount: data.seatCount,
       luggageType: data.luggageType || "NONE",
       driverName: driverFullName,
+      locale: data.locale,
     });
     await sendEmail({
-      to: data.passengerEmail,
+      to: passengerEmail,
       subject: confirmEmail.subject,
       html: confirmEmail.html,
     });

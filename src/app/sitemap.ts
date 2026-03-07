@@ -7,12 +7,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.taxineo.fr";
 
   function localizedUrls(path: string): { url: string; alternates: { languages: Record<string, string> } } {
+    const frPath = path === "/" ? "/fr" : `/fr${path}`;
+    const enPath = path === "/" ? "/en" : `/en${path}`;
     return {
-      url: `${baseUrl}${path}`,
+      url: `${baseUrl}${frPath}`,
       alternates: {
         languages: {
-          fr: `${baseUrl}${path}`,
-          en: `${baseUrl}/en${path}`,
+          fr: `${baseUrl}${frPath}`,
+          en: `${baseUrl}${enPath}`,
         },
       },
     };
