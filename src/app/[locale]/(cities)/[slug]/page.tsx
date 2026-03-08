@@ -7,8 +7,11 @@ import { CityBreadcrumb } from "@/components/city/CityBreadcrumb";
 import { CityJsonLd } from "@/components/city/CityJsonLd";
 import { CityHero } from "@/components/city/CityHero";
 import { CityStats } from "@/components/city/CityStats";
+import { CityIntro } from "@/components/city/CityIntro";
 import { CityServices } from "@/components/city/CityServices";
+import { CityPopularRoutes } from "@/components/city/CityPopularRoutes";
 import { CityLandmarks } from "@/components/city/CityLandmarks";
+import { CityQuartiers } from "@/components/city/CityQuartiers";
 import { CityWhyUs } from "@/components/city/CityWhyUs";
 import { CityTestimonials } from "@/components/city/CityTestimonials";
 import { CityFAQ } from "@/components/city/CityFAQ";
@@ -69,8 +72,11 @@ export default async function CityPage({ params }: PageProps) {
 
         <CityHero city={city} />
         <CityStats city={city} />
+        <CityIntro city={city} />
         <CityServices cityName={city.name} />
+        <CityPopularRoutes city={city} />
         <CityLandmarks city={city} />
+        <CityQuartiers city={city} />
         <CityWhyUs cityName={city.name} />
         <CityTestimonials city={city} />
         <CityFAQ cityName={city.name} faq={city.i18n[loc].faq} />

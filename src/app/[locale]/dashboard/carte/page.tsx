@@ -46,7 +46,12 @@ export default async function CartePage() {
             {t("mapCardDesc")}
           </p>
         </div>
-        <QRCodeButton slug={driver.slug} />
+        <QRCodeButton
+          slug={driver.slug}
+          driverName={`${driver.firstName} ${driver.lastName}`}
+          companyName={driver.companyName || ""}
+          vehicleModel={vehicles[0] ? `${vehicles[0].brand} ${vehicles[0].model}`.trim() : `${driver.vehicleBrand || ""} ${driver.vehicleModel || ""}`.trim()}
+        />
       </div>
       <BusinessCardPreview
         driver={{

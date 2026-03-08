@@ -6,7 +6,14 @@ import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 import QRCode from "qrcode";
 
-export function QRCodeButton({ slug }: { slug: string }) {
+interface QRCodeButtonProps {
+  slug: string;
+  driverName?: string;
+  companyName?: string;
+  vehicleModel?: string;
+}
+
+export function QRCodeButton({ slug, driverName, companyName, vehicleModel }: QRCodeButtonProps) {
   const t = useTranslations("dashboard");
   const [open, setOpen] = useState(false);
   const [qrDataUrl, setQrDataUrl] = useState("");
@@ -62,11 +69,24 @@ export function QRCodeButton({ slug }: { slug: string }) {
                 </p>
 
                 {qrDataUrl ? (
-                  <div className="bg-neutral-50 border border-neutral-200 rounded-xl p-4 inline-block mb-6">
+                  <div className="bg-neutral-50 border border-neutral-200 rounded-xl p-4 inline-block mb-4">
                     <img src={qrDataUrl} alt="QR Code" className="w-56 h-56" />
+                    {(companyName || driverName || vehicleModel) && (
+                      <div className="mt-3 pt-3 border-t border-neutral-200 space-y-0.5">
+                        {companyName && (
+                          <p className="text-sm font-semibold text-neutral-900 tracking-tight">{companyName}</p>
+                        )}
+                        {driverName && (
+                          <p className="text-xs text-neutral-600">{driverName}</p>
+                        )}
+                        {vehicleModel && (
+                          <p className="text-xs text-neutral-400 font-light">{vehicleModel}</p>
+                        )}
+                      </div>
+                    )}
                   </div>
                 ) : (
-                  <div className="w-56 h-56 bg-neutral-100 rounded-xl mx-auto mb-6 animate-pulse" />
+                  <div className="w-56 h-56 bg-neutral-100 rounded-xl mx-auto mb-4 animate-pulse" />
                 )}
 
                 <div className="space-y-2">

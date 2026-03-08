@@ -63,7 +63,12 @@ export default async function DashboardPage() {
         <h1 className="text-2xl font-semibold tracking-tight">
           {td("hello", { name: driver.firstName })}
         </h1>
-        <QRCodeButton slug={driver.slug} />
+        <QRCodeButton
+          slug={driver.slug}
+          driverName={`${driver.firstName} ${driver.lastName}`}
+          companyName={driver.companyName || ""}
+          vehicleModel={v0?.brand ? `${(v0 as { brand?: string; model?: string }).brand || ""} ${(v0 as { brand?: string; model?: string }).model || ""}`.trim() : `${driver.vehicleBrand || ""} ${driver.vehicleModel || ""}`.trim()}
+        />
       </div>
 
       {/* Stats bar - compact */}

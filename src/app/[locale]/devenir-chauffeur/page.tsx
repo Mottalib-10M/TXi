@@ -5,6 +5,7 @@ import { Link } from "@/i18n/navigation";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { ScrollAnimation } from "@/components/ui/ScrollAnimation";
+import { QRCodeAnimation } from "@/components/driver/QRCodeAnimation";
 
 interface Props {
   params: Promise<{ locale: string }>;
@@ -247,8 +248,47 @@ export default async function WhyJoinPage() {
         </div>
       </section>
 
-      {/* How It Works — 3 steps */}
+      {/* QR Code Section */}
       <section className="bg-neutral-50 border-t border-b border-neutral-100 py-20 md:py-28">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="order-2 md:order-1 flex justify-center fade-up">
+              <QRCodeAnimation />
+            </div>
+            <div className="order-1 md:order-2 fade-up fade-up-delay-1">
+              <p className="text-sm font-medium text-neutral-500 mb-2 uppercase tracking-wider">
+                {t("qrSectionSubtitle")}
+              </p>
+              <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-4">
+                {t("qrSectionTitle")}
+              </h2>
+              <p className="text-neutral-500 font-light leading-relaxed mb-8">
+                {t("qrSectionDesc")}
+              </p>
+              <div className="space-y-4">
+                {[
+                  { icon: "solar:card-2-linear", title: t("qrBenefit1Title"), desc: t("qrBenefit1Desc") },
+                  { icon: "mdi:car-outline", title: t("qrBenefit2Title"), desc: t("qrBenefit2Desc") },
+                  { icon: "solar:buildings-linear", title: t("qrBenefit3Title"), desc: t("qrBenefit3Desc") },
+                ].map((item, i) => (
+                  <div key={i} className={`flex items-start gap-4 fade-up fade-up-delay-${i + 1}`}>
+                    <div className="w-10 h-10 bg-white border border-neutral-200 rounded-xl flex items-center justify-center shrink-0">
+                      <Icon icon={item.icon} className="text-neutral-900 text-lg" />
+                    </div>
+                    <div>
+                      <h3 className="text-sm font-medium mb-0.5">{item.title}</h3>
+                      <p className="text-xs text-neutral-500 font-light leading-relaxed">{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works — 3 steps */}
+      <section className="py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16 fade-up">
             <p className="text-sm font-medium text-neutral-500 mb-2 uppercase tracking-wider">

@@ -86,8 +86,16 @@ function station(
     practicalInfo,
     i18n: {
       fr: {
-        metaTitle: `Taxi ${name} - Transfert gare forfaitaire 24h/24`,
-        metaDescription: `Réservez votre taxi pour la gare ${name}. Transfert ponctuel, tarifs forfaitaires garantis, suivi des trains et aide aux bagages. Disponible 24h/24.`,
+        metaTitle: name.length <= 10
+          ? `Taxi Gare ${name} — Forfait garanti, réservation en ligne`
+          : name.length <= 20
+            ? `Taxi ${name} — Transfert gare forfaitaire 24/7`
+            : `Taxi ${name} — Transfert gare au forfait`,
+        metaDescription: name.length <= 13
+          ? `Réservez votre taxi pour la gare de ${name}. Transfert ponctuel au forfait garanti, suivi des trains en temps réel et aide aux bagages. Disponible 24h/24.`
+          : name.length <= 19
+            ? `Réservez votre taxi pour la gare ${name}. Transfert ponctuel, tarifs forfaitaires garantis, suivi des trains et aide aux bagages. Disponible 24h/24.`
+            : `Taxi pour la gare ${name}. Forfait garanti, suivi des trains en temps réel, aide aux bagages et chauffeur à la sortie. Disponible 24h/24.`,
         heroTitle: `Taxi Gare ${name}`,
         heroSubtitle: `Transfert taxi vers et depuis la gare ${name}. Tarifs forfaitaires, chauffeur qui vous attend à la sortie de la gare, suivi des trains en temps réel.`,
         intro: `Besoin d'un taxi pour la gare ${name} ? TaxiNeo vous propose un service de transfert professionnel, ponctuel et au meilleur prix. Nos chauffeurs suivent votre train en temps réel et vous attendent à la sortie de la gare. En cas de retard de votre train, l'attente est gratuite.`,
@@ -109,8 +117,20 @@ function station(
         ],
       },
       en: {
-        metaTitle: `Taxi ${name} Station - 24/7 fixed-fare transfer`,
-        metaDescription: `Book your taxi to ${name} station. Reliable transfer with guaranteed fixed fares, real-time train tracking and luggage assistance at the exit. 24/7.`,
+        metaTitle: name.length <= 10
+          ? `Taxi ${name} Station — Book your fixed-fare transfer 24/7`
+          : name.length <= 20
+            ? `Taxi ${name} — Fixed-fare station transfer 24/7`
+            : `Taxi ${name} — Fixed-fare transfer 24/7`,
+        metaDescription: name.length <= 5
+          ? `Book your taxi to ${name} station. Fixed-fare transfer guaranteed, real-time train tracking, luggage assistance and your driver waiting at the station exit. 24/7.`
+          : name.length <= 9
+            ? `Book your taxi to ${name} station. Guaranteed fixed fares, real-time train tracking, luggage assistance and your driver waiting at the station exit. 24/7.`
+            : name.length <= 15
+              ? `Book your taxi to ${name} station. Reliable transfer with guaranteed fixed fares, real-time train tracking and luggage assistance at the exit. 24/7.`
+              : name.length <= 20
+                ? `Taxi to ${name}: book your fixed-fare station transfer. Real-time train tracking, luggage assistance and driver waiting at exit. Available 24/7.`
+                : `Taxi to ${name}: fixed-fare transfer, train tracking, luggage help and driver waiting at the exit. Book your station transfer online 24/7.`,
         heroTitle: `Taxi ${name} Station`,
         heroSubtitle: `Taxi transfer to and from ${name} station. Flat-rate fares, driver waiting for you at the station exit, real-time train tracking.`,
         intro: `Need a taxi to ${name} station? TaxiNeo offers a professional, punctual transfer service at the best price. Our drivers track your train in real time and wait for you at the station exit. If your train is delayed, the waiting time is free of charge.`,

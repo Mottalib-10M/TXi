@@ -11,7 +11,7 @@ export default async function ReservationsPage() {
 
   const driver = await prisma.driver.findUnique({
     where: { id: session.user.id },
-    select: { slug: true },
+    select: { slug: true, firstName: true, lastName: true, companyName: true, vehicleBrand: true, vehicleModel: true, vehicles: true },
   });
 
   if (!driver) redirect("/connexion");
@@ -39,7 +39,15 @@ export default async function ReservationsPage() {
             {t("reservationsSubtitle")}
           </p>
         </div>
-        <QRCodeButton slug={driver.slug} />
+        <QRCodeButton
+          slug={driver.slug}
+          driverName={`${driver.firstName} ${driver.lastName}`}
+          companyName={driver.companyName || ""}
+          vehicleModel={(() => {
+            const v = Array.isArray(driver.vehicles) ? (driver.vehicles as Array<{ brand?: string; model?: string }>)[0] : null;
+            return v ? `${v.brand || ""} ${v.model || ""}`.trim() : `${driver.vehicleBrand || ""} ${driver.vehicleModel || ""}`.trim();
+          })()}
+        />
       </div>
       <ReservationsTable bookings={serialized} />
     </div>

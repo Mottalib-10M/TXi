@@ -14,18 +14,18 @@ const nextConfig = {
   },
   async rewrites() {
     return [
-      // Default locale (fr, no prefix)
+      // French locale
       {
-        source: "/taxi-aeroport-:slug",
-        destination: "/aeroport/:slug",
+        source: "/fr/taxi-aeroport-:slug",
+        destination: "/fr/aeroport/:slug",
       },
       {
-        source: "/taxi-gare-:slug",
-        destination: "/gare/:slug",
+        source: "/fr/taxi-gare-:slug",
+        destination: "/fr/gare/:slug",
       },
       {
-        source: "/taxi-:slug((?!partage).*)",
-        destination: "/:slug",
+        source: "/fr/taxi-:slug((?!partage).*)",
+        destination: "/fr/:slug",
       },
       // English locale
       {
@@ -39,6 +39,19 @@ const nextConfig = {
       {
         source: "/en/taxi-:slug((?!partage).*)",
         destination: "/en/:slug",
+      },
+      // No prefix (fallback)
+      {
+        source: "/taxi-aeroport-:slug",
+        destination: "/aeroport/:slug",
+      },
+      {
+        source: "/taxi-gare-:slug",
+        destination: "/gare/:slug",
+      },
+      {
+        source: "/taxi-:slug((?!partage).*)",
+        destination: "/:slug",
       },
     ];
   },
