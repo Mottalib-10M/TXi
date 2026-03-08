@@ -16,6 +16,8 @@ interface ProfileBookingFormProps {
   destinationAddress: string;
   destinationLat?: number;
   destinationLng?: number;
+  isNow: boolean;
+  scheduledDate: string;
 }
 
 export function ProfileBookingForm({
@@ -27,15 +29,16 @@ export function ProfileBookingForm({
   destinationAddress,
   destinationLat,
   destinationLng,
+  isNow,
+  scheduledDate,
 }: ProfileBookingFormProps) {
   const router = useRouter();
   const { data: session } = useSession();
   const t = useTranslations("booking");
   const locale = useLocale();
-  const [clientName, setClientName] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
   const [clientPhone, setClientPhone] = useState("");
-  const [isNow, setIsNow] = useState(true);
-  const [scheduledDate, setScheduledDate] = useState("");
   const [passengers, setPassengers] = useState(1);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState("");
@@ -45,7 +48,11 @@ export function ProfileBookingForm({
   // Pre-fill client info from session + fetch phone
   useEffect(() => {
     if (session?.user) {
-      if (session.user.name) setClientName(session.user.name);
+      if (session.user.name) {
+        const parts = session.user.name.trim().split(/\s+/);
+        setFirstName(parts[0] || "");
+        setLastName(parts.slice(1).join(" ") || "");
+      }
 
       const role = (session.user as { role?: string }).role;
       const endpoint = role === "organization" ? "/api/org/profile" : "/api/driver/profile";
@@ -59,6 +66,8 @@ export function ProfileBookingForm({
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [session]);
 
+  const clientName = `${firstName} ${lastName}`.trim();
+
   const hasLocations =
     departureLat != null &&
     departureLng != null &&
@@ -69,7 +78,7 @@ export function ProfileBookingForm({
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    if (!clientName || !clientPhone || !hasLocations || (!isNow && !scheduledDate)) return;
+    if (!firstName || !lastName || !clientPhone || !hasLocations || (!isNow && !scheduledDate)) return;
     setSubmitting(true);
     setError("");
 
@@ -134,13 +143,22 @@ export function ProfileBookingForm({
           </div>
         ) : (
           <>
-            <input
-              value={clientName}
-              onChange={(e) => setClientName(e.target.value)}
-              placeholder={t("fullNameRequired")}
-              required
-              className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all"
-            />
+            <div className="flex gap-2">
+              <input
+                value={firstName}
+                onChange={(e) => setFirstName(e.target.value)}
+                placeholder={t("firstNameRequired")}
+                required
+                className="flex-1 bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all"
+              />
+              <input
+                value={lastName}
+                onChange={(e) => setLastName(e.target.value)}
+                placeholder={t("lastNameRequired")}
+                required
+                className="flex-1 bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all"
+              />
+            </div>
 
             <div>
               <input
@@ -156,43 +174,6 @@ export function ProfileBookingForm({
               )}
             </div>
           </>
-        )}
-
-        <div className="flex items-center gap-2">
-          <button
-            type="button"
-            onClick={() => { setIsNow(true); setScheduledDate(""); }}
-            className={`flex-1 flex items-center justify-center gap-2 rounded-xl px-4 py-3 text-sm font-medium transition-colors ${
-              isNow
-                ? "bg-neutral-900 text-white"
-                : "bg-neutral-100 text-neutral-600 hover:bg-neutral-200"
-            }`}
-          >
-            {t("now")}
-          </button>
-          <button
-            type="button"
-            onClick={() => setIsNow(false)}
-            className={`flex-1 flex items-center justify-center gap-2 rounded-xl px-4 py-3 text-sm font-medium transition-colors ${
-              !isNow
-                ? "bg-neutral-900 text-white"
-                : "bg-neutral-100 text-neutral-600 hover:bg-neutral-200"
-            }`}
-          >
-            <Icon icon="solar:clock-circle-linear" className="text-lg" />
-            {t("schedule")}
-          </button>
-        </div>
-
-        {!isNow && (
-          <input
-            type="datetime-local"
-            value={scheduledDate}
-            onChange={(e) => setScheduledDate(e.target.value)}
-            onClick={(e) => (e.target as HTMLInputElement).showPicker()}
-            min={new Date().toISOString().slice(0, 16)}
-            className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all cursor-pointer"
-          />
         )}
 
         <div className="flex items-center justify-between bg-neutral-100 rounded-xl px-4 py-3">
@@ -220,7 +201,7 @@ export function ProfileBookingForm({
 
         <button
           type="submit"
-          disabled={!clientName || !clientPhone || !!phoneError(clientPhone) || !hasLocations || (!isNow && !scheduledDate) || submitting}
+          disabled={!firstName || !lastName || !clientPhone || !!phoneError(clientPhone) || !hasLocations || (!isNow && !scheduledDate) || submitting}
           className="w-full bg-neutral-950 text-white rounded-xl py-3.5 text-sm font-medium hover:bg-neutral-800 transition-colors btn-lift disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {submitting ? t("bookingInProgress") : t("bookNow")}

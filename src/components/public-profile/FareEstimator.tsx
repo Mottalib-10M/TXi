@@ -11,6 +11,10 @@ interface FareEstimatorProps {
   pricePerKmNight?: number;
   pricePerMinute: number;
   minimumFare: number;
+  isNow?: boolean;
+  scheduledDate?: string;
+  onIsNowChange?: (isNow: boolean) => void;
+  onScheduledDateChange?: (date: string) => void;
   onLocationsChange?: (locations: {
     originAddress: string;
     originLat: number | undefined;
@@ -61,13 +65,20 @@ export function FareEstimator({
   pricePerKmNight,
   pricePerMinute,
   minimumFare,
+  isNow: isNowProp = true,
+  scheduledDate: scheduledDateProp = "",
+  onIsNowChange,
+  onScheduledDateChange,
   onLocationsChange,
   children,
 }: FareEstimatorProps) {
   const t = useTranslations("driverProfile");
+  const tBooking = useTranslations("booking");
+  const isNow = isNowProp;
+  const scheduledDate = scheduledDateProp;
+  const hasScheduleControl = Boolean(onIsNowChange && onScheduledDateChange);
   const [origin, setOrigin] = useState<LocationState>({ address: "" });
   const [destination, setDestination] = useState<LocationState>({ address: "" });
-  const [scheduledDate, setScheduledDate] = useState("");
 
   function handleOriginChange(address: string, lat?: number, lng?: number) {
     const newOrigin = { address, lat, lng };
@@ -110,12 +121,11 @@ export function FareEstimator({
     // Variable speed: city (short) -> highway (long distance)
     const avgSpeed = distance < 10 ? 25 : distance < 30 ? 40 : distance < 80 ? 60 : 80;
     const duration = (distance / avgSpeed) * 60; // minutes
-    // Determine night/day based on scheduled time (night = 19h-7h)
+    // Determine night/day based on selected time (night = 19h-7h)
     let isNight = false;
-    if (scheduledDate) {
-      const hour = new Date(scheduledDate).getHours();
-      isNight = hour >= 19 || hour < 7;
-    }
+    const referenceDate = !isNow && scheduledDate ? new Date(scheduledDate) : new Date();
+    const hour = referenceDate.getHours();
+    isNight = hour >= 19 || hour < 7;
     const activeRate = isNight && pricePerKmNight ? pricePerKmNight : pricePerKm;
     const calculated = baseFare + distance * activeRate + duration * pricePerMinute;
     const price = Math.max(calculated, minimumFare);
@@ -145,26 +155,49 @@ export function FareEstimator({
         />
       </div>
 
-      <div className="relative mb-4">
-        <Icon
-          icon="solar:calendar-linear"
-          className="absolute left-3 top-1/2 -translate-y-1/2 text-neutral-400 text-lg z-10 pointer-events-none"
-        />
-        <input
-          type="datetime-local"
-          value={scheduledDate}
-          onChange={(e) => setScheduledDate(e.target.value)}
-          onClick={(e) => (e.target as HTMLInputElement).showPicker()}
-          min={new Date().toISOString().slice(0, 16)}
-          className="w-full bg-neutral-100 border border-neutral-200 rounded-xl pl-10 pr-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all cursor-pointer"
-          style={{ WebkitAppearance: "none", MozAppearance: "none" }}
-        />
-        {!scheduledDate && (
-          <p className="text-xs text-neutral-400 mt-1.5 ml-1">
-            {t("rideDateTime")}
-          </p>
-        )}
-      </div>
+      {/* Now / Schedule toggle */}
+      {hasScheduleControl && (
+        <>
+          <div className="flex items-center gap-2 mb-3">
+            <button
+              type="button"
+              onClick={() => { onIsNowChange!(true); onScheduledDateChange!(""); }}
+              className={`flex-1 flex items-center justify-center gap-2 rounded-xl px-4 py-3 text-sm font-medium transition-colors ${
+                isNow
+                  ? "bg-neutral-900 text-white"
+                  : "bg-neutral-100 text-neutral-600 hover:bg-neutral-200"
+              }`}
+            >
+              {tBooking("now")}
+            </button>
+            <button
+              type="button"
+              onClick={() => onIsNowChange!(false)}
+              className={`flex-1 flex items-center justify-center gap-2 rounded-xl px-4 py-3 text-sm font-medium transition-colors ${
+                !isNow
+                  ? "bg-neutral-900 text-white"
+                  : "bg-neutral-100 text-neutral-600 hover:bg-neutral-200"
+              }`}
+            >
+              <Icon icon="solar:clock-circle-linear" className="text-lg" />
+              {tBooking("schedule")}
+            </button>
+          </div>
+
+          {!isNow && (
+            <div className="mb-4">
+              <input
+                type="datetime-local"
+                value={scheduledDate}
+                onChange={(e) => onScheduledDateChange!(e.target.value)}
+                onClick={(e) => (e.target as HTMLInputElement).showPicker()}
+                min={new Date().toISOString().slice(0, 16)}
+                className="w-full bg-neutral-100 border border-neutral-200 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all cursor-pointer"
+              />
+            </div>
+          )}
+        </>
+      )}
 
       {estimate && (
         <div className="bg-neutral-50 rounded-xl p-4 space-y-3">

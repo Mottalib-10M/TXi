@@ -32,6 +32,9 @@ export function PublicProfileClient({
     destinationLng: undefined as number | undefined,
   });
 
+  const [isNow, setIsNow] = useState(true);
+  const [scheduledDate, setScheduledDate] = useState("");
+
   return (
     <FareEstimator
       baseFare={baseFare}
@@ -40,6 +43,10 @@ export function PublicProfileClient({
       pricePerMinute={pricePerMinute}
       minimumFare={minimumFare}
       onLocationsChange={setLocations}
+      isNow={isNow}
+      scheduledDate={scheduledDate}
+      onIsNowChange={setIsNow}
+      onScheduledDateChange={setScheduledDate}
     >
       <ProfileBookingForm
         driverId={driverId}
@@ -50,6 +57,8 @@ export function PublicProfileClient({
         destinationAddress={locations.destinationAddress}
         destinationLat={locations.destinationLat}
         destinationLng={locations.destinationLng}
+        isNow={isNow}
+        scheduledDate={scheduledDate}
       />
     </FareEstimator>
   );

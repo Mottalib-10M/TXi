@@ -204,6 +204,8 @@
     "bookingError": "Error during booking",
     "connectionError": "Connection error",
     "fullNameRequired": "Your full name *",
+    "firstNameRequired": "First name *",
+    "lastNameRequired": "Last name *",
     "emailRequired": "Your email *",
     "phoneRequired": "Your phone *",
     "bookNow": "Book now",

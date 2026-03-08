@@ -204,6 +204,8 @@
     "bookingError": "Erreur lors de la réservation",
     "connectionError": "Erreur de connexion",
     "fullNameRequired": "Votre nom complet *",
+    "firstNameRequired": "Prénom *",
+    "lastNameRequired": "Nom *",
     "emailRequired": "Votre email *",
     "phoneRequired": "Votre téléphone *",
     "bookNow": "Réserver maintenant",
