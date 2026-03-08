@@ -132,15 +132,32 @@ export function ProfileBookingForm({
         )}
 
         {isLoggedIn ? (
-          <div className="bg-neutral-50 border border-neutral-200 rounded-xl p-3">
-            <div className="flex items-center gap-2 text-sm">
-              <Icon icon="solar:user-check-linear" className="text-green-500" />
-              <span className="font-medium">{clientName}</span>
+          <>
+            <div className="bg-neutral-50 border border-neutral-200 rounded-xl p-3">
+              <div className="flex items-center gap-2 text-sm">
+                <Icon icon="solar:user-check-linear" className="text-green-500" />
+                <span className="font-medium">{clientName}</span>
+              </div>
+              {clientPhone && (
+                <p className="text-xs text-neutral-500 mt-1 pl-6">{clientPhone}</p>
+              )}
             </div>
-            {clientPhone && (
-              <p className="text-xs text-neutral-500 mt-1 pl-6">{clientPhone}</p>
+            {!clientPhone && (
+              <div>
+                <input
+                  type="tel"
+                  value={clientPhone}
+                  onChange={(e) => setClientPhone(e.target.value)}
+                  placeholder={t("phoneRequired")}
+                  required
+                  className={`w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all ${phoneError(clientPhone) ? "ring-2 ring-red-300 bg-red-50/50" : ""}`}
+                />
+                {phoneError(clientPhone) && (
+                  <p className="text-xs text-red-500 mt-1">{phoneError(clientPhone)}</p>
+                )}
+              </div>
             )}
-          </div>
+          </>
         ) : (
           <>
             <div className="flex gap-2">
