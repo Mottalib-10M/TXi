@@ -314,23 +314,14 @@ export function ProfileForm({ driver }: { driver: DriverData }) {
                 placeholder={t("companyPlaceholder")}
               />
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                <label className="block text-sm font-medium mb-1.5">{t("firstName")}</label>
-                <input
-                  value={form.firstName}
-                  onChange={(e) => updateField("firstName", e.target.value)}
-                  className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium mb-1.5">{t("lastName")}</label>
-                <input
-                  value={form.lastName}
-                  onChange={(e) => updateField("lastName", e.target.value)}
-                  className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all"
-                />
-              </div>
+            <div>
+              <label className="block text-sm font-medium mb-1.5">{t("firstName")}</label>
+              <input
+                value={form.firstName}
+                onChange={(e) => updateField("firstName", e.target.value)}
+                className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all"
+                placeholder="Jean Dupont"
+              />
             </div>
             <div>
               <label className="block text-sm font-medium mb-1.5">{t("phone")}</label>

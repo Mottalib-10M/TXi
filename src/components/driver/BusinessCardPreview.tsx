@@ -431,12 +431,21 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
             </div>
             <div className="flex-[1.6] bg-neutral-950 flex flex-col items-center justify-center p-3">
               {qrDataUrl && (
-                <div className="w-20 h-20 bg-white rounded-lg p-1.5 mb-2">
+                <div className="w-20 h-20 bg-white rounded-lg p-1.5 mb-1.5">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src={qrDataUrl} alt="QR Code" className="w-full h-full object-cover rounded" />
                 </div>
               )}
-              <p className="text-[10px] text-neutral-400 text-center leading-snug">{t("scanToBook")}</p>
+              <div className="text-center space-y-0 mb-1">
+                {driver.companyName && (
+                  <p className="text-[9px] text-neutral-300 font-semibold leading-tight truncate max-w-[5.5rem]">{driver.companyName}</p>
+                )}
+                <p className="text-[8px] text-neutral-400 leading-tight truncate max-w-[5.5rem]">{driver.firstName} {driver.lastName}</p>
+                {driver.vehicleBrand && driver.vehicleModel && (
+                  <p className="text-[7px] text-neutral-500 leading-tight truncate max-w-[5.5rem]">{driver.vehicleBrand} {driver.vehicleModel}</p>
+                )}
+              </div>
+              <p className="text-[8px] text-neutral-500 text-center leading-snug">{t("scanToBook")}</p>
             </div>
           </div>
         </div>
@@ -479,13 +488,22 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
             </div>
             <div className="flex-[2] bg-neutral-950 flex flex-col items-center justify-center p-4 text-center">
               {qrDataUrl && (
-                <div className="w-[5.5rem] h-[5.5rem] bg-white rounded-lg p-1.5 mb-3">
+                <div className="w-[5.5rem] h-[5.5rem] bg-white rounded-lg p-1.5 mb-2">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src={qrDataUrl} alt="QR Code" className="w-full h-full object-cover rounded" />
                 </div>
               )}
-              <p className="text-white text-base font-bold leading-tight">{t("stayInTouch")}</p>
-              <p className="text-neutral-400 text-xs mt-2 leading-relaxed px-1">
+              <div className="mb-2 space-y-0">
+                {driver.companyName && (
+                  <p className="text-[11px] text-white font-semibold leading-tight">{driver.companyName}</p>
+                )}
+                <p className="text-[10px] text-neutral-300 leading-tight">{driver.firstName} {driver.lastName}</p>
+                {driver.vehicleBrand && driver.vehicleModel && (
+                  <p className="text-[9px] text-neutral-500 leading-tight">{driver.vehicleBrand} {driver.vehicleModel}</p>
+                )}
+              </div>
+              <p className="text-white text-sm font-bold leading-tight">{t("stayInTouch")}</p>
+              <p className="text-neutral-400 text-[10px] mt-1 leading-relaxed px-1">
                 {t("scanToSave")}
               </p>
             </div>
@@ -521,13 +539,22 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
             {/* Center — QR + CTA large */}
             <div className="flex-1 flex flex-col items-center justify-center px-6 py-3">
               {qrDataUrl && (
-                <div className="w-32 h-32 border-2 border-neutral-200 rounded-xl p-2 mb-3">
+                <div className="w-32 h-32 border-2 border-neutral-200 rounded-xl p-2 mb-2">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src={qrDataUrl} alt="QR Code" className="w-full h-full object-cover rounded-lg" />
                 </div>
               )}
-              <h3 className="text-xl font-bold text-neutral-900 mt-1">{t("stayInTouch")}</h3>
-              <p className="text-sm text-neutral-500 text-center mt-2 max-w-sm leading-relaxed">
+              <div className="text-center mb-1">
+                {driver.companyName && (
+                  <p className="text-sm font-semibold text-neutral-900 leading-tight">{driver.companyName}</p>
+                )}
+                <p className="text-xs text-neutral-600 leading-tight">{driver.firstName} {driver.lastName}</p>
+                {driver.vehicleBrand && driver.vehicleModel && (
+                  <p className="text-[11px] text-neutral-400 leading-tight">{driver.vehicleBrand} {driver.vehicleModel}</p>
+                )}
+              </div>
+              <h3 className="text-lg font-bold text-neutral-900 mt-1">{t("stayInTouch")}</h3>
+              <p className="text-xs text-neutral-500 text-center mt-1 max-w-sm leading-relaxed">
                 {t("scanToSaveLong")}
               </p>
             </div>

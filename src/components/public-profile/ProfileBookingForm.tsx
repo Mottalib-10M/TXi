@@ -36,12 +36,13 @@ export function ProfileBookingForm({
   const { data: session } = useSession();
   const t = useTranslations("booking");
   const locale = useLocale();
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
+  const [clientName, setClientName] = useState("");
   const [clientPhone, setClientPhone] = useState("");
+  const [clientEmail, setClientEmail] = useState("");
   const [passengers, setPassengers] = useState(1);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState("");
+  const [editingPhone, setEditingPhone] = useState(false);
 
   const isLoggedIn = Boolean(session?.user?.email);
 
@@ -49,9 +50,10 @@ export function ProfileBookingForm({
   useEffect(() => {
     if (session?.user) {
       if (session.user.name) {
-        const parts = session.user.name.trim().split(/\s+/);
-        setFirstName(parts[0] || "");
-        setLastName(parts.slice(1).join(" ") || "");
+        setClientName(session.user.name.trim());
+      }
+      if (session.user.email) {
+        setClientEmail(session.user.email);
       }
 
       const role = (session.user as { role?: string }).role;
@@ -66,8 +68,6 @@ export function ProfileBookingForm({
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [session]);
 
-  const clientName = `${firstName} ${lastName}`.trim();
-
   const hasLocations =
     departureLat != null &&
     departureLng != null &&
@@ -78,7 +78,7 @@ export function ProfileBookingForm({
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    if (!firstName || !lastName || !clientPhone || !hasLocations || (!isNow && !scheduledDate)) return;
+    if (!clientName || !clientPhone || !hasLocations || (!isNow && !scheduledDate)) return;
     setSubmitting(true);
     setError("");
 
@@ -89,6 +89,7 @@ export function ProfileBookingForm({
         body: JSON.stringify({
           clientName,
           clientPhone,
+          clientEmail: clientEmail || "noemail@taxineo.fr",
           departureName: departureAddress,
           departureLat,
           departureLng,
@@ -107,7 +108,17 @@ export function ProfileBookingForm({
 
       const data = await res.json();
       if (res.ok) {
-        router.push(`/confirmation?ref=${data.reference}`);
+        if (isLoggedIn) {
+          router.push(`/confirmation?ref=${data.reference}`);
+        } else {
+          const params = new URLSearchParams({
+            type: "particulier",
+            name: clientName,
+            phone: clientPhone,
+            ...(clientEmail && { email: clientEmail }),
+          });
+          router.push(`/inscription?${params.toString()}`);
+        }
       } else {
         setError(data.error || t("bookingError"));
       }
@@ -138,16 +149,26 @@ export function ProfileBookingForm({
                 <Icon icon="solar:user-check-linear" className="text-green-500" />
                 <span className="font-medium">{clientName}</span>
               </div>
-              {clientPhone && (
-                <p className="text-xs text-neutral-500 mt-1 pl-6">{clientPhone}</p>
+              {clientPhone && !phoneError(clientPhone) && !editingPhone && (
+                <button
+                  type="button"
+                  onClick={() => setEditingPhone(true)}
+                  className="text-xs text-neutral-500 mt-1 pl-6 hover:text-neutral-700 transition-colors"
+                >
+                  {clientPhone}
+                </button>
               )}
             </div>
-            {!clientPhone && (
+            {(!clientPhone || !!phoneError(clientPhone) || editingPhone) && (
               <div>
                 <input
                   type="tel"
                   value={clientPhone}
                   onChange={(e) => setClientPhone(e.target.value)}
+                  onBlur={() => {
+                    if (clientPhone && !phoneError(clientPhone)) setEditingPhone(false);
+                  }}
+                  autoFocus={editingPhone}
                   placeholder={t("phoneRequired")}
                   required
                   className={`w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all ${phoneError(clientPhone) ? "ring-2 ring-red-300 bg-red-50/50" : ""}`}
@@ -160,22 +181,13 @@ export function ProfileBookingForm({
           </>
         ) : (
           <>
-            <div className="flex gap-2">
-              <input
-                value={firstName}
-                onChange={(e) => setFirstName(e.target.value)}
-                placeholder={t("firstNameRequired")}
-                required
-                className="flex-1 bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all"
-              />
-              <input
-                value={lastName}
-                onChange={(e) => setLastName(e.target.value)}
-                placeholder={t("lastNameRequired")}
-                required
-                className="flex-1 bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all"
-              />
-            </div>
+            <input
+              value={clientName}
+              onChange={(e) => setClientName(e.target.value)}
+              placeholder={t("nameRequired")}
+              required
+              className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all"
+            />
 
             <div>
               <input
@@ -189,6 +201,17 @@ export function ProfileBookingForm({
               {phoneError(clientPhone) && (
                 <p className="text-xs text-red-500 mt-1">{phoneError(clientPhone)}</p>
               )}
+            </div>
+
+            <div>
+              <input
+                type="email"
+                value={clientEmail}
+                onChange={(e) => setClientEmail(e.target.value)}
+                placeholder={t("emailRequired")}
+                className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all"
+              />
+              <p className="text-xs text-neutral-400 mt-1">{t("emailForConfirmation")}</p>
             </div>
           </>
         )}
@@ -218,7 +241,7 @@ export function ProfileBookingForm({
 
         <button
           type="submit"
-          disabled={!firstName || !lastName || !clientPhone || !!phoneError(clientPhone) || !hasLocations || (!isNow && !scheduledDate) || submitting}
+          disabled={!clientName || !clientPhone || !!phoneError(clientPhone) || !hasLocations || (!isNow && !scheduledDate) || submitting}
           className="w-full bg-neutral-950 text-white rounded-xl py-3.5 text-sm font-medium hover:bg-neutral-800 transition-colors btn-lift disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {submitting ? t("bookingInProgress") : t("bookNow")}

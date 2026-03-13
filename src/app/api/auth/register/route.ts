@@ -32,8 +32,7 @@ const orgSchema = z.object({
 
 const particulierSchema = z.object({
   profileType: z.literal("particulier"),
-  firstName: z.string().min(2, "Minimum 2 caractères"),
-  lastName: z.string().min(2, "Minimum 2 caractères"),
+  name: z.string().min(2, "Minimum 2 caractères"),
   email: z.string().email("Email invalide"),
   phone: z.string().min(10, "Numéro invalide"),
   password: z.string().min(6, "Minimum 6 caractères"),
@@ -135,12 +134,10 @@ export async function POST(request: Request) {
 
     // Particulier registration (individual using Organization table with type INDIVIDUAL)
     if (data.profileType === "particulier") {
-      const fullName = `${data.firstName} ${data.lastName}`;
-
       const org = await prisma.organization.create({
         data: {
-          name: fullName,
-          contactName: fullName,
+          name: data.name,
+          contactName: data.name,
           email: data.email,
           phone: data.phone,
           passwordHash,
@@ -159,7 +156,7 @@ export async function POST(request: Request) {
         },
       });
 
-      await sendVerificationEmail(data.email, data.firstName, locale);
+      await sendVerificationEmail(data.email, data.name, locale);
 
       return NextResponse.json(
         { message: "OK", profileType: data.profileType },

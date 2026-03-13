@@ -54,6 +54,21 @@ export async function POST(request: Request) {
 
     let driverId = data.driverId;
 
+    // If a specific driver is provided (e.g. from PROFILE), calculate price using their rates
+    if (driverId && estimatedDistance && !estimatedPrice) {
+      const driver = await prisma.driver.findUnique({ where: { id: driverId } });
+      if (driver) {
+        estimatedPrice = estimatePrice(
+          estimatedDistance,
+          driver.baseFare,
+          driver.pricePerKm,
+          driver.minimumFare,
+          driver.pricePerKmNight,
+          requestedDate,
+        );
+      }
+    }
+
     // If LANDING source without a specific driver, find nearby drivers
     if (data.source === "LANDING" && !driverId) {
       const drivers = await prisma.driver.findMany({

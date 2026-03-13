@@ -142,6 +142,9 @@ export default async function DashboardPage() {
                   </p>
                 </div>
                 <div className="flex items-center gap-2 shrink-0 ml-2">
+                  {booking.lockedPrice != null && (
+                    <span className="text-xs font-semibold">{booking.lockedPrice.toFixed(0)} €</span>
+                  )}
                   <span className="text-xs text-neutral-400 font-light">{formatDate(booking.requestedDate)}</span>
                   <Icon
                     icon="solar:arrow-right-linear"
@@ -183,6 +186,9 @@ export default async function DashboardPage() {
                   </p>
                 </div>
                 <div className="flex items-center gap-2 shrink-0 ml-2">
+                  {booking.lockedPrice != null && (
+                    <span className="text-xs font-semibold text-green-700">{booking.lockedPrice.toFixed(0)} €</span>
+                  )}
                   <span className="text-xs text-green-600 font-medium">{formatDate(booking.requestedDate)}</span>
                   <Icon
                     icon="solar:arrow-right-linear"

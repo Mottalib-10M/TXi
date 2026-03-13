@@ -17,12 +17,16 @@ export default function InscriptionPage() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const initialType = searchParams.get("type") as ProfileType | null;
+  const prefillName = searchParams.get("name") || "";
+  const prefillPhone = searchParams.get("phone") || "";
+  const prefillEmail = searchParams.get("email") || "";
+  const isFromBooking = initialType === "particulier" && (prefillName || prefillPhone || prefillEmail);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const [profileType, setProfileType] = useState<ProfileType | null>(initialType);
   const [orgAddress, setOrgAddress] = useState("");
-  const [formEmail, setFormEmail] = useState("");
-  const [formPhone, setFormPhone] = useState("");
+  const [formEmail, setFormEmail] = useState(prefillEmail);
+  const [formPhone, setFormPhone] = useState(prefillPhone);
   const [cityAddress, setCityAddress] = useState("");
   const [cityLat, setCityLat] = useState<number | undefined>();
   const [cityLng, setCityLng] = useState<number | undefined>();
@@ -139,8 +143,7 @@ export default function InscriptionPage() {
     const formData = new FormData(e.currentTarget);
     const data = {
       profileType: "particulier",
-      firstName: formData.get("firstName") as string,
-      lastName: formData.get("lastName") as string,
+      name: formData.get("name") as string,
       email: formData.get("email") as string,
       phone: formData.get("phone") as string,
       password: formData.get("password") as string,
@@ -308,7 +311,7 @@ export default function InscriptionPage() {
                 <label htmlFor="firstName" className="block text-sm font-medium mb-1.5">
                   {t("firstName")}
                 </label>
-                <input id="firstName" name="firstName" type="text" required className={inputClass} placeholder="Jean" defaultValue={driverFirstName} />
+                <input id="firstName" name="firstName" type="text" required className={inputClass} placeholder="Jean Dupont" defaultValue={driverFirstName} />
               </div>
 
               <div>
@@ -444,13 +447,28 @@ export default function InscriptionPage() {
         {/* Particulier form */}
         {profileType === "particulier" && (
           <>
-            <button
-              onClick={() => { setProfileType(null); setError(""); setFormEmail(""); setFormPhone(""); }}
-              className="flex items-center gap-1 text-sm text-neutral-500 hover:text-neutral-900 mb-4"
-            >
-              <Icon icon="solar:arrow-left-linear" />
-              {t("backToProfileChoice")}
-            </button>
+            {!isFromBooking && (
+              <button
+                onClick={() => { setProfileType(null); setError(""); setFormEmail(""); setFormPhone(""); }}
+                className="flex items-center gap-1 text-sm text-neutral-500 hover:text-neutral-900 mb-4"
+              >
+                <Icon icon="solar:arrow-left-linear" />
+                {t("backToProfileChoice")}
+              </button>
+            )}
+
+            {isFromBooking && (
+              <div className="space-y-3 mb-4">
+                <div className="bg-green-50 border border-green-200 text-green-700 text-sm px-4 py-3 rounded-xl flex items-center gap-2">
+                  <Icon icon="solar:check-circle-linear" className="text-lg shrink-0" />
+                  <span>{t("bookingConfirmedMessage")}</span>
+                </div>
+                <div className="bg-blue-50 border border-blue-200 text-blue-700 text-sm px-4 py-3 rounded-xl flex items-center gap-2">
+                  <Icon icon="solar:info-circle-linear" className="text-lg shrink-0" />
+                  <span>{t("signupToTrack")}</span>
+                </div>
+              </div>
+            )}
 
             <div className="flex items-center gap-2 mb-4 px-1">
               <Icon icon="solar:user-linear" className="text-lg text-neutral-600" />
@@ -464,30 +482,22 @@ export default function InscriptionPage() {
                 </div>
               )}
 
-              <div className="grid grid-cols-2 gap-3">
-                <div>
-                  <label htmlFor="firstName" className="block text-sm font-medium mb-1.5">
-                    {t("firstName")}
-                  </label>
-                  <input id="firstName" name="firstName" type="text" required className={inputClass} placeholder="Marie" />
-                </div>
-                <div>
-                  <label htmlFor="lastName" className="block text-sm font-medium mb-1.5">
-                    {t("lastName")}
-                  </label>
-                  <input id="lastName" name="lastName" type="text" required className={inputClass} placeholder="Martin" />
-                </div>
+              <div>
+                <label htmlFor="name" className="block text-sm font-medium mb-1.5">
+                  {t("firstName")}
+                </label>
+                <input id="name" name="name" type="text" required className={inputClass} placeholder="Marie Martin" defaultValue={prefillName} />
               </div>
 
               <div>
                 <label htmlFor="email" className="block text-sm font-medium mb-1.5">{t("email")}</label>
-                <input id="email" name="email" type="email" required className={`${inputClass} ${emailError(formEmail) ? "ring-2 ring-red-300 bg-red-50/50" : ""}`} placeholder="marie.martin@email.com" onChange={(e) => setFormEmail(e.target.value)} />
+                <input id="email" name="email" type="email" required className={`${inputClass} ${emailError(formEmail) ? "ring-2 ring-red-300 bg-red-50/50" : ""}`} placeholder="marie.martin@email.com" defaultValue={prefillEmail} onChange={(e) => setFormEmail(e.target.value)} />
                 {emailError(formEmail) && <p className="text-xs text-red-500 mt-1">{emailError(formEmail)}</p>}
               </div>
 
               <div>
                 <label htmlFor="phone" className="block text-sm font-medium mb-1.5">{t("phone")}</label>
-                <input id="phone" name="phone" type="tel" required className={`${inputClass} ${phoneError(formPhone) ? "ring-2 ring-red-300 bg-red-50/50" : ""}`} placeholder="06 12 34 56 78" onChange={(e) => setFormPhone(e.target.value)} />
+                <input id="phone" name="phone" type="tel" required className={`${inputClass} ${phoneError(formPhone) ? "ring-2 ring-red-300 bg-red-50/50" : ""}`} placeholder="06 12 34 56 78" defaultValue={prefillPhone} onChange={(e) => setFormPhone(e.target.value)} />
                 {phoneError(formPhone) && <p className="text-xs text-red-500 mt-1">{phoneError(formPhone)}</p>}
               </div>
 

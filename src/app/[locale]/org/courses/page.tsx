@@ -11,8 +11,6 @@ interface Booking {
   reference: string;
   beneficiaryName: string | null;
   departureName: string;
-  departureLat: number;
-  departureLng: number;
   arrivalName: string;
   requestedDate: string;
   status: string;
@@ -20,8 +18,6 @@ interface Booking {
   driver: {
     firstName: string;
     lastName: string;
-    zoneLat: number | null;
-    zoneLng: number | null;
   } | null;
 }
 
@@ -51,30 +47,10 @@ const statusColors: Record<string, string> = {
   CANCELLED: "bg-neutral-100 text-neutral-500",
 };
 
-function estimateEtaMinutes(
-  driverLat: number,
-  driverLng: number,
-  departureLat: number,
-  departureLng: number
-): number {
-  const R = 6371;
-  const dLat = ((departureLat - driverLat) * Math.PI) / 180;
-  const dLng = ((departureLng - driverLng) * Math.PI) / 180;
-  const a =
-    Math.sin(dLat / 2) ** 2 +
-    Math.cos((driverLat * Math.PI) / 180) *
-      Math.cos((departureLat * Math.PI) / 180) *
-      Math.sin(dLng / 2) ** 2;
-  const distKm = R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-  // Estimation : ~40 km/h en moyenne en ville
-  return Math.max(Math.round((distKm / 40) * 60), 1);
-}
-
-function isAsapBooking(requestedDate: string): boolean {
+function isBookingSoon(requestedDate: string): boolean {
   const requested = new Date(requestedDate).getTime();
   const now = Date.now();
-  // Considéré "au plus vite" si réservé pour dans moins de 30 min
-  return requested - now < 30 * 60 * 1000;
+  return requested - now < 2 * 60 * 60 * 1000; // less than 2 hours
 }
 
 export default function CoursesPage() {
@@ -224,23 +200,19 @@ export default function CoursesPage() {
             <div key={b.id}>
               <div className="p-4 px-5 flex items-center justify-between gap-4">
                 <div className="min-w-0 flex-1">
-                  <div className="flex items-center gap-2 mb-1">
-                    <span className="text-sm font-medium">{b.beneficiaryName || "—"}</span>
-                    <span className="text-xs text-neutral-400">{b.reference}</span>
-                  </div>
-                  <p className="text-xs text-neutral-500 truncate">
+                  <p className="text-sm font-medium truncate mb-0.5">
                     {b.departureName} → {b.arrivalName}
                   </p>
-                  <p className="text-xs text-neutral-400 mt-0.5">
+                  <p className="text-xs text-neutral-500">
                     {format(new Date(b.requestedDate), locale === "en" ? "dd MMM yyyy 'at' HH:mm" : "dd MMM yyyy 'à' HH:mm", { locale: locale === "en" ? enUS : fr })}
                     {b.driver && ` · ${b.driver.firstName} ${b.driver.lastName}`}
                   </p>
-                  {(b.status === "PENDING" || b.status === "ACCEPTED") &&
-                    b.driver?.zoneLat && b.driver?.zoneLng &&
-                    isAsapBooking(b.requestedDate) && (
+                  {(b.status === "PENDING" || b.status === "ACCEPTED") && (
                     <p className="text-xs text-blue-600 font-medium mt-0.5 flex items-center gap-1">
-                      <Icon icon="solar:clock-circle-linear" className="text-xs" />
-                      {t("estimatedArrival", { minutes: estimateEtaMinutes(b.driver.zoneLat, b.driver.zoneLng, b.departureLat, b.departureLng) })}
+                      <Icon icon="solar:phone-calling-linear" className="text-xs" />
+                      {isBookingSoon(b.requestedDate)
+                        ? t("driverWillContactSoon")
+                        : t("driverWillContactHour")}
                     </p>
                   )}
                 </div>
