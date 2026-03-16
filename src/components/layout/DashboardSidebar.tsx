@@ -6,6 +6,7 @@ import { Icon } from "@iconify/react";
 import { useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
 import { Logo } from "@/components/ui/Logo";
+import { LanguageSwitcher } from "@/components/ui/LanguageSwitcher";
 
 export function DashboardSidebar({ userName }: { userName: string }) {
   const t = useTranslations("dashboard.sidebar");
@@ -14,11 +15,11 @@ export function DashboardSidebar({ userName }: { userName: string }) {
 
   const navItems = [
     { href: "/dashboard", label: t("dashboard"), icon: "solar:chart-square-linear" },
+    { href: "/dashboard/carte", label: t("freeCard"), icon: "solar:card-linear" },
     { href: "/dashboard/profil", label: t("profile"), icon: "solar:user-linear" },
     { href: "/dashboard/profil-public", label: t("publicProfile"), icon: "solar:eye-linear" },
     { href: "/dashboard/reservations", label: t("reservations"), icon: "solar:calendar-linear" },
     { href: "/dashboard/taxi-partage", label: t("sharedRides"), icon: "solar:users-group-two-rounded-linear" },
-    { href: "/dashboard/carte", label: t("map"), icon: "solar:card-linear" },
   ];
 
   return (
@@ -98,6 +99,7 @@ export function DashboardSidebar({ userName }: { userName: string }) {
                 <p className="text-sm font-medium truncate">{userName}</p>
               </div>
             </div>
+            <LanguageSwitcher variant="full" />
             <button
               onClick={() => signOut({ callbackUrl: "/" })}
               className="w-full flex items-center gap-2 px-3 py-2 text-sm text-neutral-500 hover:text-red-600 hover:bg-red-50 rounded-xl transition-colors"

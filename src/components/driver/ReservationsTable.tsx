@@ -40,6 +40,24 @@ export function ReservationsTable({ bookings }: { bookings: Booking[] }) {
     COMPLETED: { label: t("completed"), color: "bg-blue-50 text-blue-700" },
   };
 
+  const now = new Date();
+  const todayEnd = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1);
+  const tomorrowEnd = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 2);
+
+  function isToday(date: string) {
+    const d = new Date(date);
+    return d >= now && d < todayEnd;
+  }
+  function isTomorrow(date: string) {
+    const d = new Date(date);
+    return d >= todayEnd && d < tomorrowEnd;
+  }
+  function isUrgent(date: string) {
+    const d = new Date(date);
+    const hoursLeft = (d.getTime() - now.getTime()) / (1000 * 60 * 60);
+    return hoursLeft > 0 && hoursLeft < 10;
+  }
+
   const filtered = filter === "ALL" ? bookings : bookings.filter((b) => b.status === filter);
 
   async function updateStatus(bookingId: string, status: "ACCEPTED" | "REJECTED" | "COMPLETED") {
@@ -93,14 +111,40 @@ export function ReservationsTable({ bookings }: { bookings: Booking[] }) {
         </div>
       ) : (
         <div className="space-y-3">
-          {filtered.map((booking) => (
+          {filtered.map((booking) => {
+            const today = isToday(booking.requestedDate);
+            const tomorrow = isTomorrow(booking.requestedDate);
+            const urgent = isUrgent(booking.requestedDate);
+            const isPending = booking.status === "PENDING";
+            const isAccepted = booking.status === "ACCEPTED";
+            const highlight =
+              (isPending && (today || tomorrow || urgent))
+                ? "border-2 border-amber-300 bg-amber-50/40"
+                : (isAccepted && today)
+                  ? "border-2 border-green-300 bg-green-50/40"
+                  : (isAccepted && tomorrow)
+                    ? "border border-green-200 bg-green-50/20"
+                    : "border border-neutral-200 bg-white";
+
+            return (
             <div
               key={booking.id}
-              className="bg-white border border-neutral-200 rounded-2xl p-4 sm:p-5"
+              className={`rounded-2xl p-4 sm:p-5 ${highlight}`}
             >
-              {/* Header: name + status + ref */}
+              {/* Header: name + phone + status + ref */}
               <div className="flex flex-wrap items-center gap-2 mb-2">
                 <p className="text-sm font-semibold">{booking.clientName}</p>
+                {booking.clientPhone && (
+                  <a
+                    href={`tel:${booking.clientPhone}`}
+                    onClick={(e) => e.stopPropagation()}
+                    className="inline-flex items-center gap-1 text-xs text-neutral-500 hover:text-neutral-900 font-medium transition-colors"
+                    title={t("callClient")}
+                  >
+                    <Icon icon="solar:phone-bold" className="text-sm" />
+                    {booking.clientPhone}
+                  </a>
+                )}
                 <span
                   className={`text-xs px-2.5 py-0.5 rounded-full font-medium ${
                     statusConfig[booking.status]?.color || ""
@@ -142,6 +186,24 @@ export function ReservationsTable({ bookings }: { bookings: Booking[] }) {
                 <span className="text-neutral-300">
                   via {booking.source === "PROFILE" ? t("fromProfile") : "Landing"}
                 </span>
+                {today && (isPending || isAccepted) && (
+                  <span className="inline-flex items-center gap-1 bg-red-100 text-red-700 text-xs font-semibold px-2 py-0.5 rounded-full">
+                    <Icon icon="solar:alarm-bold" className="text-xs" />
+                    {t("rideToday")}
+                  </span>
+                )}
+                {tomorrow && (isPending || isAccepted) && (
+                  <span className="inline-flex items-center gap-1 bg-amber-100 text-amber-700 text-xs font-semibold px-2 py-0.5 rounded-full">
+                    <Icon icon="solar:clock-circle-bold" className="text-xs" />
+                    {t("rideTomorrow")}
+                  </span>
+                )}
+                {urgent && !today && (isPending || isAccepted) && (
+                  <span className="inline-flex items-center gap-1 bg-red-100 text-red-700 text-xs font-semibold px-2 py-0.5 rounded-full">
+                    <Icon icon="solar:alarm-bold" className="text-xs" />
+                    {t("inXHours", { hours: Math.round((new Date(booking.requestedDate).getTime() - now.getTime()) / (1000 * 60 * 60)) })}
+                  </span>
+                )}
               </div>
 
               {booking.clientComments && (
@@ -182,7 +244,8 @@ export function ReservationsTable({ bookings }: { bookings: Booking[] }) {
                 </div>
               )}
             </div>
-          ))}
+            );
+          })}
         </div>
       )}
     </div>

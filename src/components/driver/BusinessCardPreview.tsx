@@ -409,9 +409,9 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
 
       {/* ── Business card preview ── */}
       {activeFormat === "business" && (
-        <div className="bg-white border border-neutral-200 rounded-2xl p-8 mb-6">
-          <div className="aspect-[85/55] border border-neutral-200 rounded-xl shadow-lg max-w-md mx-auto overflow-hidden flex">
-            <div className="flex-[3] bg-white p-5 flex flex-col justify-between">
+        <div className="bg-white border border-neutral-200 rounded-2xl p-4 sm:p-8 mb-6">
+          <div className="sm:aspect-[85/55] border border-neutral-200 rounded-xl shadow-lg max-w-md mx-auto overflow-hidden flex flex-col sm:flex-row">
+            <div className="flex-[3] bg-white p-4 sm:p-5 flex flex-col justify-between gap-3 sm:gap-0">
               <p className="text-2xl tracking-tight">
                 <span className="text-neutral-500 font-normal">Taxi</span>
                 <span className="text-neutral-950 font-bold">Neo</span>
@@ -422,30 +422,30 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
                 )}
                 <p className={driver.companyName ? "text-xs text-neutral-500 font-medium mt-0.5" : "text-sm font-semibold"}>{driver.firstName} {driver.lastName}</p>
               </div>
-              <div className="text-[11px] text-neutral-500 space-y-0.5 leading-relaxed">
+              <div className="text-xs sm:text-[11px] text-neutral-500 space-y-0.5 leading-relaxed">
                 {driver.vehicleBrand && driver.vehicleModel && <p>{driver.vehicleBrand} {driver.vehicleModel}</p>}
                 {driver.zoneAddress && <p>{driver.zoneAddress}</p>}
                 <p>{driver.email}</p>
                 <p>{driver.phone}</p>
               </div>
             </div>
-            <div className="flex-[1.6] bg-neutral-950 flex flex-col items-center justify-center p-3">
+            <div className="sm:flex-[1.6] bg-neutral-950 flex flex-col items-center justify-center p-4 sm:p-3">
               {qrDataUrl && (
-                <div className="w-20 h-20 bg-white rounded-lg p-1.5 mb-1.5">
+                <div className="w-24 h-24 sm:w-20 sm:h-20 bg-white rounded-lg p-1.5 mb-1.5">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src={qrDataUrl} alt="QR Code" className="w-full h-full object-cover rounded" />
                 </div>
               )}
               <div className="text-center space-y-0 mb-1">
                 {driver.companyName && (
-                  <p className="text-[9px] text-neutral-300 font-semibold leading-tight truncate max-w-[5.5rem]">{driver.companyName}</p>
+                  <p className="text-xs sm:text-[9px] text-neutral-300 font-semibold leading-tight">{driver.companyName}</p>
                 )}
-                <p className="text-[8px] text-neutral-400 leading-tight truncate max-w-[5.5rem]">{driver.firstName} {driver.lastName}</p>
+                <p className="text-[11px] sm:text-[8px] text-neutral-400 leading-tight">{driver.firstName} {driver.lastName}</p>
                 {driver.vehicleBrand && driver.vehicleModel && (
-                  <p className="text-[7px] text-neutral-500 leading-tight truncate max-w-[5.5rem]">{driver.vehicleBrand} {driver.vehicleModel}</p>
+                  <p className="text-[10px] sm:text-[7px] text-neutral-500 leading-tight">{driver.vehicleBrand} {driver.vehicleModel}</p>
                 )}
               </div>
-              <p className="text-[8px] text-neutral-500 text-center leading-snug">{t("scanToBook")}</p>
+              <p className="text-[10px] sm:text-[8px] text-neutral-500 text-center leading-snug">{t("scanToBook")}</p>
             </div>
           </div>
         </div>
@@ -453,9 +453,9 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
 
       {/* ── A6 preview ── */}
       {activeFormat === "a6" && (
-        <div className="bg-white border border-neutral-200 rounded-2xl p-6 mb-6">
-          <div className="aspect-[148/105] bg-white border border-neutral-200 rounded-xl relative shadow-lg max-w-xl mx-auto overflow-hidden flex">
-            <div className="flex-[3] p-5 flex flex-col justify-center">
+        <div className="bg-white border border-neutral-200 rounded-2xl p-4 sm:p-6 mb-6">
+          <div className="sm:aspect-[148/105] bg-white border border-neutral-200 rounded-xl relative shadow-lg max-w-xl mx-auto overflow-hidden flex flex-col sm:flex-row">
+            <div className="flex-[3] p-4 sm:p-5 flex flex-col justify-center">
               <p className="text-xl tracking-tight mb-3">
                 <span className="text-neutral-500 font-normal">Taxi</span>
                 <span className="text-neutral-950 font-bold">Neo</span>
@@ -486,20 +486,20 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
                 </div>
               </div>
             </div>
-            <div className="flex-[2] bg-neutral-950 flex flex-col items-center justify-center p-4 text-center">
+            <div className="sm:flex-[2] bg-neutral-950 flex flex-col items-center justify-center p-5 sm:p-4 text-center">
               {qrDataUrl && (
-                <div className="w-[5.5rem] h-[5.5rem] bg-white rounded-lg p-1.5 mb-2">
+                <div className="w-28 h-28 sm:w-[5.5rem] sm:h-[5.5rem] bg-white rounded-lg p-1.5 mb-2">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src={qrDataUrl} alt="QR Code" className="w-full h-full object-cover rounded" />
                 </div>
               )}
               <div className="mb-2 space-y-0">
                 {driver.companyName && (
-                  <p className="text-[11px] text-white font-semibold leading-tight">{driver.companyName}</p>
+                  <p className="text-xs sm:text-[11px] text-white font-semibold leading-tight">{driver.companyName}</p>
                 )}
-                <p className="text-[10px] text-neutral-300 leading-tight">{driver.firstName} {driver.lastName}</p>
+                <p className="text-[11px] sm:text-[10px] text-neutral-300 leading-tight">{driver.firstName} {driver.lastName}</p>
                 {driver.vehicleBrand && driver.vehicleModel && (
-                  <p className="text-[9px] text-neutral-500 leading-tight">{driver.vehicleBrand} {driver.vehicleModel}</p>
+                  <p className="text-[10px] sm:text-[9px] text-neutral-500 leading-tight">{driver.vehicleBrand} {driver.vehicleModel}</p>
                 )}
               </div>
               <p className="text-white text-sm font-bold leading-tight">{t("stayInTouch")}</p>
@@ -513,10 +513,10 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
 
       {/* ── A5 preview — Behind driver seat ── */}
       {activeFormat === "a5" && (
-        <div className="bg-white border border-neutral-200 rounded-2xl p-6 mb-6">
-          <div className="aspect-[210/148] bg-white border border-neutral-200 rounded-xl relative shadow-lg mx-auto overflow-hidden flex flex-col">
+        <div className="bg-white border border-neutral-200 rounded-2xl p-4 sm:p-6 mb-6">
+          <div className="bg-white border border-neutral-200 rounded-xl relative shadow-lg mx-auto overflow-hidden flex flex-col">
             {/* Header */}
-            <div className="bg-neutral-950 px-6 py-4 flex items-center justify-between shrink-0">
+            <div className="bg-neutral-950 px-4 sm:px-6 py-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 shrink-0">
               <div>
                 <p className="text-xl tracking-tight">
                   <span className="text-neutral-500 font-normal">Taxi</span>
@@ -528,7 +528,7 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
                 <p className={driver.companyName ? "text-neutral-400 text-sm mt-0.5" : "text-white font-bold text-base mt-0.5"}>{driver.firstName} {driver.lastName}</p>
                 <p className="text-neutral-500 text-xs mt-0.5">{t("yourTaxiDriver")}</p>
               </div>
-              <div className="text-right">
+              <div className="sm:text-right">
                 {driver.vehicleBrand && driver.vehicleModel && (
                   <p className="text-neutral-400 text-xs">{driver.vehicleBrand} {driver.vehicleModel}</p>
                 )}
@@ -537,7 +537,7 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
             </div>
 
             {/* Center — QR + CTA large */}
-            <div className="flex-1 flex flex-col items-center justify-center px-6 py-3">
+            <div className="flex-1 flex flex-col items-center justify-center px-4 sm:px-6 py-6 sm:py-8">
               {qrDataUrl && (
                 <div className="w-32 h-32 border-2 border-neutral-200 rounded-xl p-2 mb-2">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -560,7 +560,7 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
             </div>
 
             {/* Footer */}
-            <div className="border-t border-neutral-200 px-4 sm:px-6 py-2.5 flex flex-wrap items-center justify-center sm:justify-between gap-x-4 gap-y-0.5 text-xs text-neutral-400 shrink-0">
+            <div className="border-t border-neutral-200 px-4 sm:px-6 py-2.5 flex flex-wrap items-center justify-center gap-x-4 gap-y-0.5 text-xs text-neutral-400 shrink-0">
               <span>{driver.phone}</span>
               <span className="truncate">{driver.email}</span>
               <span className="truncate">{shortUrl}</span>
@@ -581,7 +581,7 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
       </div>
 
       {/* Actions */}
-      <div className="flex gap-3">
+      <div className="flex flex-col sm:flex-row gap-3">
         <button
           onClick={handleDownload}
           className="flex-1 bg-neutral-950 text-white rounded-xl py-3 text-sm font-medium hover:bg-neutral-800 transition-colors flex items-center justify-center gap-2 btn-lift"

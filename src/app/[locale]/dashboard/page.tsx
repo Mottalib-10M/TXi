@@ -3,11 +3,22 @@ import { prisma } from "@/lib/prisma";
 import { Icon } from "@iconify/react";
 import { Link } from "@/i18n/navigation";
 import { QRCodeButton } from "@/components/dashboard/QRCodeButton";
+import { PhoneLink } from "@/components/ui/PhoneLink";
 import { getTranslations, getLocale } from "next-intl/server";
 
 export default async function DashboardPage() {
   const session = await auth();
   if (!session?.user?.id) return null;
+
+  // Auto-cancel expired PENDING bookings
+  await prisma.booking.updateMany({
+    where: {
+      driverId: session.user.id,
+      status: "PENDING",
+      requestedDate: { lt: new Date() },
+    },
+    data: { status: "CANCELLED" },
+  });
 
   const driver = await prisma.driver.findUnique({
     where: { id: session.user.id },
@@ -16,7 +27,10 @@ export default async function DashboardPage() {
         select: { bookings: true },
       },
       bookings: {
-        where: { status: { in: ["PENDING", "ACCEPTED"] } },
+        where: {
+          status: { in: ["PENDING", "ACCEPTED"] },
+          requestedDate: { gte: new Date() },
+        },
         orderBy: { requestedDate: "asc" },
       },
     },
@@ -47,6 +61,8 @@ export default async function DashboardPage() {
   const completeness = Math.round((completedFields / profileChecks.length) * 100);
   const missingChecks = profileChecks.filter((c) => !c.done);
 
+  const now = new Date();
+
   function formatDate(date: Date) {
     return new Date(date).toLocaleDateString(locale === "en" ? "en-US" : "fr-FR", {
       weekday: "short",
@@ -57,65 +73,78 @@ export default async function DashboardPage() {
     });
   }
 
+  function hoursUntil(date: Date) {
+    return Math.max(0, Math.round((new Date(date).getTime() - now.getTime()) / (1000 * 60 * 60)));
+  }
+
   return (
-    <div>
-      <div className="flex items-center justify-between mb-6">
+    <div className="min-w-0">
+      <div className="flex flex-wrap items-center justify-between gap-2 mb-6">
         <h1 className="text-2xl font-semibold tracking-tight">
           {td("hello", { name: driver.firstName })}
         </h1>
-        <QRCodeButton
-          slug={driver.slug}
-          driverName={`${driver.firstName} ${driver.lastName}`}
-          companyName={driver.companyName || ""}
-          vehicleModel={v0?.brand ? `${(v0 as { brand?: string; model?: string }).brand || ""} ${(v0 as { brand?: string; model?: string }).model || ""}`.trim() : `${driver.vehicleBrand || ""} ${driver.vehicleModel || ""}`.trim()}
-        />
+        <div className="flex items-center gap-2">
+          <Link
+            href="/dashboard/carte"
+            className="inline-flex items-center gap-2 bg-amber-500 text-white text-sm font-semibold px-4 py-2 rounded-xl hover:bg-amber-600 shadow-sm transition-colors whitespace-nowrap"
+          >
+            <Icon icon="solar:card-2-linear" className="text-base" />
+            {td("freeCard")}
+          </Link>
+          <QRCodeButton
+            slug={driver.slug}
+            driverName={`${driver.firstName} ${driver.lastName}`}
+            companyName={driver.companyName || ""}
+            vehicleModel={v0?.brand ? `${(v0 as { brand?: string; model?: string }).brand || ""} ${(v0 as { brand?: string; model?: string }).model || ""}`.trim() : `${driver.vehicleBrand || ""} ${driver.vehicleModel || ""}`.trim()}
+          />
+        </div>
       </div>
 
       {/* Stats bar - compact */}
-      <div className="flex items-center gap-3 mb-6 overflow-x-auto">
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-6">
         <Link
           href="/dashboard/reservations"
-          className="flex items-center gap-2.5 bg-white border border-neutral-200 rounded-xl px-4 py-2.5 hover:border-neutral-300 transition-colors shrink-0"
+          className="flex items-center gap-2 bg-white border border-neutral-200 rounded-xl px-3 py-2.5 hover:border-neutral-300 transition-colors min-w-0"
         >
-          <Icon icon="solar:calendar-linear" className="text-neutral-500 text-lg" />
-          <span className="text-sm text-neutral-500">{td("total")}</span>
-          <span className="text-sm font-semibold">{totalBookings}</span>
+          <Icon icon="solar:calendar-linear" className="text-neutral-500 text-lg shrink-0" />
+          <span className="text-xs text-neutral-500 truncate">{td("total")}</span>
+          <span className="text-sm font-semibold ml-auto">{totalBookings}</span>
         </Link>
 
         <Link
           href="/dashboard/reservations"
-          className="flex items-center gap-2.5 bg-white border border-neutral-200 rounded-xl px-4 py-2.5 hover:border-neutral-300 transition-colors shrink-0"
+          className="flex items-center gap-2 bg-white border border-neutral-200 rounded-xl px-3 py-2.5 hover:border-neutral-300 transition-colors min-w-0"
         >
-          <Icon icon="solar:clock-circle-linear" className="text-amber-500 text-lg" />
-          <span className="text-sm text-neutral-500">{td("pending")}</span>
-          <span className="text-sm font-semibold">{pendingBookings.length}</span>
+          <Icon icon="solar:clock-circle-linear" className="text-amber-500 text-lg shrink-0" />
+          <span className="text-xs text-neutral-500 truncate">{td("pending")}</span>
+          <span className="text-sm font-semibold ml-auto">{pendingBookings.length}</span>
         </Link>
 
         <Link
           href="/dashboard/reservations"
-          className="flex items-center gap-2.5 bg-white border border-neutral-200 rounded-xl px-4 py-2.5 hover:border-neutral-300 transition-colors shrink-0"
+          className="flex items-center gap-2 bg-white border border-neutral-200 rounded-xl px-3 py-2.5 hover:border-neutral-300 transition-colors min-w-0"
         >
-          <Icon icon="solar:check-circle-linear" className="text-green-500 text-lg" />
-          <span className="text-sm text-neutral-500">{td("acceptedPlural")}</span>
-          <span className="text-sm font-semibold">{acceptedBookings.length}</span>
+          <Icon icon="solar:check-circle-linear" className="text-green-500 text-lg shrink-0" />
+          <span className="text-xs text-neutral-500 truncate">{td("acceptedPlural")}</span>
+          <span className="text-sm font-semibold ml-auto">{acceptedBookings.length}</span>
         </Link>
 
         <Link
           href="/dashboard/profil"
-          className="flex items-center gap-2.5 bg-white border border-neutral-200 rounded-xl px-4 py-2.5 hover:border-neutral-300 transition-colors shrink-0"
+          className="flex items-center gap-2 bg-white border border-neutral-200 rounded-xl px-3 py-2.5 hover:border-neutral-300 transition-colors min-w-0"
         >
           <Icon
             icon={completeness === 100 ? "solar:check-circle-bold" : "solar:user-check-linear"}
-            className={`text-lg ${completeness === 100 ? "text-green-500" : "text-blue-500"}`}
+            className={`text-lg shrink-0 ${completeness === 100 ? "text-green-500" : "text-blue-500"}`}
           />
-          <span className="text-sm text-neutral-500">{td("fromProfile")}</span>
-          <span className="text-sm font-semibold">{completeness}%</span>
+          <span className="text-xs text-neutral-500 truncate">{td("fromProfile")}</span>
+          <span className="text-sm font-semibold ml-auto">{completeness}%</span>
         </Link>
       </div>
 
       {/* Pending bookings - priority */}
       {pendingBookings.length > 0 && (
-        <div className="bg-white border border-amber-200 rounded-2xl p-5 mb-4">
+        <div className="mb-4">
           <div className="flex items-center justify-between mb-3">
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-amber-400 rounded-full animate-pulse" />
@@ -128,38 +157,65 @@ export default async function DashboardPage() {
               {td("seeAll")}
             </Link>
           </div>
-          <div className="space-y-1">
-            {pendingBookings.map((booking) => (
-              <Link
-                key={booking.id}
-                href={`/dashboard/reservations?id=${booking.id}`}
-                className="flex items-center justify-between py-3 px-3 -mx-3 rounded-xl border-b border-neutral-100 last:border-0 hover:bg-neutral-50 transition-colors group"
-              >
-                <div className="min-w-0 flex-1">
-                  <p className="text-sm font-medium">{booking.clientName}</p>
-                  <p className="text-xs text-neutral-500 font-light truncate">
-                    {booking.departureName} → {booking.arrivalName}
-                  </p>
-                </div>
-                <div className="flex items-center gap-2 shrink-0 ml-2">
-                  {booking.lockedPrice != null && (
-                    <span className="text-xs font-semibold">{booking.lockedPrice.toFixed(0)} €</span>
-                  )}
-                  <span className="text-xs text-neutral-400 font-light">{formatDate(booking.requestedDate)}</span>
-                  <Icon
-                    icon="solar:arrow-right-linear"
-                    className="text-neutral-300 group-hover:text-neutral-600 transition-colors"
-                  />
-                </div>
-              </Link>
-            ))}
+          <div className="space-y-3">
+            {pendingBookings.map((booking) => {
+              const h = hoursUntil(booking.requestedDate);
+              const urgent = h > 0 && h < 10;
+              return (
+                <Link
+                  key={booking.id}
+                  href={`/dashboard/reservations?id=${booking.id}`}
+                  className="block bg-amber-50/60 border-2 border-amber-300 rounded-2xl p-4 hover:border-amber-400 hover:bg-amber-50 transition-colors group"
+                >
+                  <div className="flex items-start justify-between gap-3 mb-2">
+                    <div className="min-w-0 flex-1">
+                      <p className="text-sm font-semibold text-neutral-900 leading-snug">
+                        {booking.departureName}
+                      </p>
+                      <p className="text-sm font-semibold text-neutral-900 leading-snug">
+                        → {booking.arrivalName}
+                      </p>
+                    </div>
+                    {booking.lockedPrice != null && (
+                      <span className="text-lg font-bold text-amber-700 shrink-0">
+                        {booking.lockedPrice.toFixed(0)}&nbsp;€
+                      </span>
+                    )}
+                  </div>
+                  <div className="flex items-center gap-2 flex-wrap">
+                    <span className="inline-flex items-center gap-1 text-sm text-neutral-600">
+                      <Icon icon="solar:calendar-linear" className="text-sm" />
+                      {formatDate(booking.requestedDate)}
+                    </span>
+                    {urgent && (
+                      <span className="inline-flex items-center gap-1 bg-red-100 text-red-700 text-xs font-semibold px-2 py-0.5 rounded-full">
+                        <Icon icon="solar:alarm-bold" className="text-xs" />
+                        {td("inXHours", { hours: h })}
+                      </span>
+                    )}
+                  </div>
+                  <div className="flex items-center justify-between mt-2">
+                    <div className="flex items-center gap-2 min-w-0">
+                      <span className="text-sm text-neutral-500">{booking.clientName}</span>
+                      {booking.clientPhone && (
+                        <PhoneLink phone={booking.clientPhone} label={td("callClient")} className="text-amber-600 hover:text-amber-800" />
+                      )}
+                    </div>
+                    <Icon
+                      icon="solar:arrow-right-linear"
+                      className="text-amber-400 group-hover:text-amber-600 transition-colors shrink-0"
+                    />
+                  </div>
+                </Link>
+              );
+            })}
           </div>
         </div>
       )}
 
       {/* Accepted bookings - upcoming rides */}
       {acceptedBookings.length > 0 && (
-        <div className="bg-white border border-green-200 rounded-2xl p-5 mb-6">
+        <div className="mb-6">
           <div className="flex items-center justify-between mb-3">
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-green-500 rounded-full" />
@@ -172,31 +228,58 @@ export default async function DashboardPage() {
               {td("seeAll")}
             </Link>
           </div>
-          <div className="space-y-1">
-            {acceptedBookings.map((booking) => (
-              <Link
-                key={booking.id}
-                href={`/dashboard/reservations?id=${booking.id}`}
-                className="flex items-center justify-between py-3 px-3 -mx-3 rounded-xl border-b border-neutral-100 last:border-0 hover:bg-neutral-50 transition-colors group"
-              >
-                <div className="min-w-0 flex-1">
-                  <p className="text-sm font-medium">{booking.clientName}</p>
-                  <p className="text-xs text-neutral-500 font-light truncate">
-                    {booking.departureName} → {booking.arrivalName}
-                  </p>
-                </div>
-                <div className="flex items-center gap-2 shrink-0 ml-2">
-                  {booking.lockedPrice != null && (
-                    <span className="text-xs font-semibold text-green-700">{booking.lockedPrice.toFixed(0)} €</span>
-                  )}
-                  <span className="text-xs text-green-600 font-medium">{formatDate(booking.requestedDate)}</span>
-                  <Icon
-                    icon="solar:arrow-right-linear"
-                    className="text-neutral-300 group-hover:text-neutral-600 transition-colors"
-                  />
-                </div>
-              </Link>
-            ))}
+          <div className="space-y-3">
+            {acceptedBookings.map((booking) => {
+              const h = hoursUntil(booking.requestedDate);
+              const urgent = h > 0 && h < 10;
+              return (
+                <Link
+                  key={booking.id}
+                  href={`/dashboard/reservations?id=${booking.id}`}
+                  className="block bg-green-50/60 border border-green-200 rounded-2xl p-4 hover:border-green-300 hover:bg-green-50 transition-colors group"
+                >
+                  <div className="flex items-start justify-between gap-3 mb-2">
+                    <div className="min-w-0 flex-1">
+                      <p className="text-sm font-semibold text-neutral-900 leading-snug">
+                        {booking.departureName}
+                      </p>
+                      <p className="text-sm font-semibold text-neutral-900 leading-snug">
+                        → {booking.arrivalName}
+                      </p>
+                    </div>
+                    {booking.lockedPrice != null && (
+                      <span className="text-lg font-bold text-green-700 shrink-0">
+                        {booking.lockedPrice.toFixed(0)}&nbsp;€
+                      </span>
+                    )}
+                  </div>
+                  <div className="flex items-center gap-2 flex-wrap">
+                    <span className="inline-flex items-center gap-1 text-sm text-neutral-600">
+                      <Icon icon="solar:calendar-linear" className="text-sm" />
+                      {formatDate(booking.requestedDate)}
+                    </span>
+                    {urgent && (
+                      <span className="inline-flex items-center gap-1 bg-red-100 text-red-700 text-xs font-semibold px-2 py-0.5 rounded-full">
+                        <Icon icon="solar:alarm-bold" className="text-xs" />
+                        {td("inXHours", { hours: h })}
+                      </span>
+                    )}
+                  </div>
+                  <div className="flex items-center justify-between mt-2">
+                    <div className="flex items-center gap-2 min-w-0">
+                      <span className="text-sm text-neutral-500">{booking.clientName}</span>
+                      {booking.clientPhone && (
+                        <PhoneLink phone={booking.clientPhone} label={td("callClient")} className="text-green-600 hover:text-green-800" />
+                      )}
+                    </div>
+                    <Icon
+                      icon="solar:arrow-right-linear"
+                      className="text-green-400 group-hover:text-green-600 transition-colors shrink-0"
+                    />
+                  </div>
+                </Link>
+              );
+            })}
           </div>
         </div>
       )}
