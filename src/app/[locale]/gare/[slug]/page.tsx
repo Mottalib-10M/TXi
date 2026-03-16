@@ -17,6 +17,7 @@ import { CityContactForm } from "@/components/city/CityContactForm";
 import { CityCTA } from "@/components/city/CityCTA";
 import { StationInternalLinks } from "@/components/station/StationInternalLinks";
 import { stations, getStationBySlug } from "@/data/stations";
+import { ILE_DE_FRANCE_SLUGS } from "@/data/regions";
 
 interface PageProps {
   params: Promise<{ locale: string; slug: string }>;
@@ -74,7 +75,7 @@ export default async function StationPage({ params }: PageProps) {
         <StationServices stationName={st.name} />
         <StationPractical station={st} />
         <StationWhyUs stationName={st.name} />
-        <StationTestimonials station={st} />
+        {ILE_DE_FRANCE_SLUGS.has(st.citySlug) && <StationTestimonials station={st} />}
         <CityFAQ cityName={`la gare ${st.name}`} faq={st.i18n[loc].faq} />
         <CityContactForm cityName={`la gare ${st.name}`} />
         <CityCTA cityName={`la gare ${st.name}`} />

@@ -18,6 +18,7 @@ import { CityFAQ } from "@/components/city/CityFAQ";
 import { CityContactForm } from "@/components/city/CityContactForm";
 import { CityCTA } from "@/components/city/CityCTA";
 import { CityInternalLinks } from "@/components/city/CityInternalLinks";
+import { ILE_DE_FRANCE_SLUGS } from "@/data/regions";
 import { cities, getCityBySlug } from "@/data/cities";
 
 interface PageProps {
@@ -78,7 +79,7 @@ export default async function CityPage({ params }: PageProps) {
         <CityLandmarks city={city} />
         <CityQuartiers city={city} />
         <CityWhyUs cityName={city.name} />
-        <CityTestimonials city={city} />
+        {ILE_DE_FRANCE_SLUGS.has(city.slug) && <CityTestimonials city={city} />}
         <CityFAQ cityName={city.name} faq={city.i18n[loc].faq} />
         <CityContactForm cityName={city.name} />
         <CityCTA cityName={city.name} />

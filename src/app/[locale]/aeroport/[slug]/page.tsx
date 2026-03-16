@@ -17,6 +17,7 @@ import { CityContactForm } from "@/components/city/CityContactForm";
 import { CityCTA } from "@/components/city/CityCTA";
 import { AirportInternalLinks } from "@/components/airport/AirportInternalLinks";
 import { airports, getAirportBySlug } from "@/data/airports";
+import { ILE_DE_FRANCE_SLUGS } from "@/data/regions";
 
 interface PageProps {
   params: Promise<{ locale: string; slug: string }>;
@@ -74,7 +75,7 @@ export default async function AirportPage({ params }: PageProps) {
         <AirportServices airportName={ap.name} />
         <AirportPractical airport={ap} />
         <AirportWhyUs airportName={ap.name} />
-        <AirportTestimonials airport={ap} />
+        {ILE_DE_FRANCE_SLUGS.has(ap.citySlug) && <AirportTestimonials airport={ap} />}
         <CityFAQ cityName={ap.name} faq={ap.i18n[loc].faq} />
         <CityContactForm cityName={`l'aéroport ${ap.name}`} />
         <CityCTA cityName={`l'aéroport ${ap.name}`} />
