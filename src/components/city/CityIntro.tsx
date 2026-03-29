@@ -18,6 +18,11 @@ export async function CityIntro({ city }: { city: City }) {
           <p className="text-base text-neutral-600 font-light leading-relaxed mb-4">
             {city.i18n[loc].intro}
           </p>
+          {city.i18n[loc].description && (
+            <p className="text-base text-neutral-600 font-light leading-relaxed mb-4">
+              {city.i18n[loc].description}
+            </p>
+          )}
           <p className="text-sm text-neutral-500 font-light">
             {t("introPopulation", { cityName: city.name, population: formattedPopulation })}
           </p>

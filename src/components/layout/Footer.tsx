@@ -69,6 +69,21 @@ export function Footer() {
                   {t("solutionMiseADispo")}
                 </Link>
               </li>
+              <li className="border-t border-neutral-100 pt-3">
+                <Link href="/taxi-vs-vtc" className="hover:text-neutral-900 transition-colors">
+                  {t("taxiVsVtc")}
+                </Link>
+              </li>
+              <li>
+                <Link href="/chauffeur-prive" className="hover:text-neutral-900 transition-colors">
+                  {t("chauffeurPrive")}
+                </Link>
+              </li>
+              <li>
+                <Link href="/alternative-vtc-prix-fixe" className="hover:text-neutral-900 transition-colors">
+                  {t("alternativeVtc")}
+                </Link>
+              </li>
             </ul>
           </div>
 

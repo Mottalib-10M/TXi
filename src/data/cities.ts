@@ -18,6 +18,7 @@ export interface CityI18n {
   heroTitle: string;
   heroSubtitle: string;
   intro: string;
+  description: string;
   testimonials: CityTestimonial[];
   faq: CityFAQ[];
 }
@@ -88,6 +89,7 @@ function city(
         heroTitle: `Votre taxi à ${name}`,
         heroSubtitle: `Réservez un taxi professionnel à ${name} en quelques secondes. Tarifs réglementés, chauffeurs agréés, disponible 24h/24.`,
         intro: `TaxiNeo vous connecte avec les meilleurs chauffeurs de taxi à ${name}. Que ce soit pour une course en ville, un transfert vers la gare ou l'aéroport, ou un déplacement professionnel, nos chauffeurs partenaires sont disponibles jour et nuit pour vous transporter en toute sécurité.`,
+        description: `Avec TaxiNeo à ${name}, profitez de tarifs réglementés sans surprise, de l'accès aux voies de bus pour des trajets plus rapides, et d'une réservation en ligne en quelques clics. Nos chauffeurs partenaires connaissent ${name} par cœur et vous garantissent ponctualité, confort et sécurité à chaque course.`,
         testimonials,
         faq: [
           {
@@ -119,6 +121,7 @@ function city(
         heroTitle: `Your taxi in ${name}`,
         heroSubtitle: `Book a professional taxi in ${name} in seconds. Regulated fares, licensed drivers, available 24/7.`,
         intro: `TaxiNeo connects you with the best taxi drivers in ${name}. Whether for a city ride, a transfer to the station or airport, or a business trip, our partner drivers are available day and night to transport you safely.`,
+        description: `With TaxiNeo in ${name}, enjoy regulated fares with no surprises, bus lane access for faster rides, and online booking in just a few clicks. Our partner drivers know ${name} inside out and guarantee punctuality, comfort and safety on every trip.`,
         testimonials,
         faq: [
           {
@@ -1381,6 +1384,322 @@ export const cities: City[] = [
     { question: "Combien coûte un taxi Valence – Montélimar ?", answer: "Le trajet Valence – Montélimar dure environ 40 minutes. Comptez 45-60 € pour un transfert direct." },
   ], 80, "6 min"),
 ];
+
+// ─── Per-city unique content overrides ──────────────────────
+
+const cityContent: Record<string, { introFr: string; introEn: string; descriptionFr: string; descriptionEn: string }> = {
+  paris: {
+    introFr: "Paris, capitale mondiale du tourisme et centre économique majeur, génère des millions de déplacements quotidiens entre ses 20 arrondissements, ses 6 grandes gares (Gare du Nord, Gare de Lyon, Montparnasse, Saint-Lazare, Gare de l'Est, Austerlitz) et ses 2 aéroports internationaux. TaxiNeo vous connecte avec les meilleurs taxis parisiens pour tous vos trajets : transferts aéroport CDG et Orly au forfait réglementé, courses vers La Défense, navettes médicales ou sorties nocturnes.",
+    introEn: "Paris, the world tourism capital and major economic hub, generates millions of daily trips between its 20 arrondissements, 6 major stations (Gare du Nord, Gare de Lyon, Montparnasse, Saint-Lazare, Gare de l'Est, Austerlitz) and 2 international airports. TaxiNeo connects you with the best Parisian taxis for all your journeys: regulated flat-rate CDG and Orly airport transfers, rides to La Défense, medical shuttles or late-night outings.",
+    descriptionFr: "Avec TaxiNeo à Paris, profitez de l'accès exclusif aux couloirs de bus qui permet à nos chauffeurs de traverser la capitale bien plus rapidement qu'un VTC classique. Forfaits aéroport réglementés (56 € rive droite vers CDG, 37 € vers Orly), paiement par carte garanti, et chauffeurs qui connaissent chaque raccourci parisien. Réservez en 30 secondes et recevez une estimation de prix avant de confirmer.",
+    descriptionEn: "With TaxiNeo in Paris, enjoy exclusive bus lane access that lets our drivers cross the capital much faster than a standard rideshare. Regulated airport flat rates (€56 right bank to CDG, €37 to Orly), guaranteed card payment, and drivers who know every Parisian shortcut. Book in 30 seconds and get a price estimate before confirming.",
+  },
+  marseille: {
+    introFr: "Deuxième ville de France, Marseille est un carrefour méditerranéen dynamique entre le Vieux-Port, le quartier d'affaires Euroméditerranée, l'aéroport Marseille-Provence et la gare Saint-Charles. TaxiNeo vous met en relation avec des chauffeurs marseillais expérimentés pour vos transferts aéroport, vos déplacements vers les Calanques, le Stade Vélodrome ou les hôpitaux de la Timone et Nord.",
+    introEn: "France's second largest city, Marseille is a dynamic Mediterranean crossroads between the Vieux-Port, the Euroméditerranée business district, Marseille-Provence Airport and Gare Saint-Charles. TaxiNeo connects you with experienced Marseille drivers for airport transfers, trips to the Calanques, the Stade Vélodrome or the Timone and Nord hospitals.",
+    descriptionFr: "Nos chauffeurs à Marseille connaissent parfaitement la topographie unique de la ville, ses quartiers vallonnés et les itinéraires les plus efficaces pour éviter les embouteillages sur l'autoroute du Littoral et la Corniche. Tarifs réglementés, forfait aéroport Provence compétitif et service disponible jusque dans les quartiers Nord et les calanques les plus reculées.",
+    descriptionEn: "Our drivers in Marseille perfectly know the city's unique topography, its hilly neighbourhoods and the most efficient routes to avoid traffic on the Autoroute du Littoral and the Corniche. Regulated fares, competitive Provence airport flat rate and service available all the way to the northern districts and the most remote calanques.",
+  },
+  lyon: {
+    introFr: "Troisième ville de France et capitale de la gastronomie, Lyon est un pôle économique majeur articulé autour du quartier d'affaires de la Part-Dieu, du quartier Confluence, et de l'aéroport Lyon-Saint Exupéry. TaxiNeo dessert l'ensemble de la métropole lyonnaise : transferts vers Saint-Exupéry, navettes Part-Dieu – Perrache, courses vers Eurexpo ou les Hôpitaux Est.",
+    introEn: "France's third largest city and gastronomy capital, Lyon is a major economic hub centred around the Part-Dieu business district, the Confluence quarter, and Lyon-Saint Exupéry Airport. TaxiNeo serves the entire Lyon metropolitan area: Saint-Exupéry transfers, Part-Dieu – Perrache shuttles, rides to Eurexpo or the Eastern Hospitals.",
+    descriptionFr: "À Lyon, nos chauffeurs partenaires empruntent les voies de bus sur les grands axes (cours Gambetta, rue de la République) pour vous faire gagner un temps précieux. Que ce soit pendant la Fête des Lumières, les salons professionnels à Eurexpo ou pour rejoindre le campus LyonTech, TaxiNeo garantit un service fiable avec prix fixe annoncé avant réservation.",
+    descriptionEn: "In Lyon, our partner drivers use bus lanes on major roads (Cours Gambetta, Rue de la République) to save you valuable time. Whether during the Festival of Lights, trade shows at Eurexpo or getting to the LyonTech campus, TaxiNeo guarantees reliable service with a fixed price quoted before booking.",
+  },
+  toulouse: {
+    introFr: "Toulouse, capitale européenne de l'aéronautique avec Airbus et le CNES, est une métropole en pleine croissance desservie par l'aéroport Toulouse-Blagnac et la gare Matabiau. TaxiNeo couvre l'ensemble de l'agglomération toulousaine : transferts aéroport, navettes vers le centre de congrès, déplacements vers les sites industriels d'Airbus à Blagnac et Colomiers, ou courses vers le Capitole.",
+    introEn: "Toulouse, the European aerospace capital home to Airbus and CNES, is a fast-growing metropolis served by Toulouse-Blagnac Airport and Gare Matabiau. TaxiNeo covers the entire Toulouse area: airport transfers, congress centre shuttles, rides to Airbus industrial sites in Blagnac and Colomiers, or trips to the Capitole.",
+    descriptionFr: "La ville rose bénéficie d'un réseau de taxis TaxiNeo couvrant tous les quartiers, de Saint-Cyprien au Mirail en passant par les Carmes et Compans-Caffarelli. Nos chauffeurs maîtrisent les périphériques et connaissent les alternatives quand le métro ne suffit pas. Prix fixe garanti même les soirs de match au Stadium.",
+    descriptionEn: "The Pink City benefits from a TaxiNeo taxi network covering all districts, from Saint-Cyprien to Mirail via Les Carmes and Compans-Caffarelli. Our drivers master the ring roads and know alternatives when the metro isn't enough. Fixed price guaranteed even on match nights at the Stadium.",
+  },
+  nice: {
+    introFr: "Nice, joyau de la Côte d'Azur et cinquième ville de France, accueille chaque année des millions de touristes et de voyageurs d'affaires via l'aéroport Nice Côte d'Azur, le troisième de France. TaxiNeo propose des taxis professionnels pour vos transferts aéroport, vos déplacements vers Monaco, Cannes ou Antibes, et vos courses le long de la Promenade des Anglais.",
+    introEn: "Nice, jewel of the French Riviera and France's fifth largest city, welcomes millions of tourists and business travellers each year through Nice Côte d'Azur Airport, the third busiest in France. TaxiNeo offers professional taxis for airport transfers, trips to Monaco, Cannes or Antibes, and rides along the Promenade des Anglais.",
+    descriptionFr: "Sur la Côte d'Azur, les prix de taxi sont réglementés et bien plus avantageux que les VTC, surtout en haute saison estivale quand la tarification dynamique explose. Nos chauffeurs niçois connaissent chaque raccourci entre l'aéroport, le Vieux Nice, le port et les collines de Cimiez. Service renforcé pendant le Carnaval, le Festival de Jazz et le Grand Prix de Monaco.",
+    descriptionEn: "On the French Riviera, taxi fares are regulated and much more competitive than rideshare services, especially in peak summer season when surge pricing soars. Our Nice drivers know every shortcut between the airport, Old Nice, the port and the Cimiez hills. Enhanced service during Carnival, the Jazz Festival and the Monaco Grand Prix.",
+  },
+  nantes: {
+    introFr: "Nantes, métropole de l'Ouest et sixième ville de France, rayonne autour de sa gare TGV (à 2h15 de Paris), de l'aéroport Nantes-Atlantique et du quartier d'affaires Euronantes. TaxiNeo dessert toute l'agglomération nantaise : transferts aéroport, courses vers le CHU, le campus universitaire, le Zénith ou le parc des expositions de la Beaujoire.",
+    introEn: "Nantes, western France's metropolis and sixth largest city, revolves around its TGV station (2h15 from Paris), Nantes-Atlantique Airport and the Euronantes business district. TaxiNeo serves the entire Nantes area: airport transfers, rides to the university hospital, campus, Zénith arena or the Beaujoire exhibition centre.",
+    descriptionFr: "Capitale verte de l'Europe, Nantes est une ville à taille humaine où nos chauffeurs circulent efficacement grâce aux voies réservées le long du tramway. TaxiNeo couvre aussi bien l'île de Nantes que les communes limitrophes (Rezé, Saint-Herblain, Orvault). Forfait aéroport Atlantique compétitif et service garanti même pendant le festival Voyage à Nantes.",
+    descriptionEn: "Europe's green capital, Nantes is a human-scale city where our drivers navigate efficiently using reserved lanes along the tramway. TaxiNeo covers both the Île de Nantes and surrounding communes (Rezé, Saint-Herblain, Orvault). Competitive Atlantique airport flat rate and guaranteed service even during the Voyage à Nantes festival.",
+  },
+  montpellier: {
+    introFr: "Montpellier, ville universitaire et technologique du sud de la France, connaît une croissance démographique parmi les plus fortes d'Europe. Desservie par l'aéroport Montpellier-Méditerranée et la gare Saint-Roch, TaxiNeo assure vos transferts aéroport, vos courses vers les hôpitaux (Lapeyronie, Arnaud de Villeneuve), le quartier Antigone ou le Parc des Expositions.",
+    introEn: "Montpellier, a university and tech city in southern France, has one of Europe's fastest-growing populations. Served by Montpellier-Méditerranée Airport and Gare Saint-Roch, TaxiNeo handles your airport transfers, rides to hospitals (Lapeyronie, Arnaud de Villeneuve), the Antigone district or the Exhibition Centre.",
+    descriptionFr: "Avec un réseau de tramway étendu mais des zones mal couvertes en périphérie, le taxi reste indispensable à Montpellier. Nos chauffeurs connaissent les raccourcis entre l'Écusson, la Mosson et les plages de Palavas. Tarifs préfectoraux sans surprise et service renforcé pendant le festival de Radio France et les rentrées universitaires.",
+    descriptionEn: "With an extensive tramway network but underserved peripheral areas, taxis remain essential in Montpellier. Our drivers know the shortcuts between L'Écusson, La Mosson and the Palavas beaches. Regulated fares with no surprises and enhanced service during the Radio France festival and university terms.",
+  },
+  strasbourg: {
+    introFr: "Strasbourg, capitale européenne et siège du Parlement européen, est un carrefour international à la frontière franco-allemande. Desservie par l'aéroport de Strasbourg-Entzheim, la gare TGV et la gare routière internationale, TaxiNeo propose des taxis pour vos déplacements vers les institutions européennes, l'hôpital universitaire, le quartier d'affaires Wacken et la Petite France.",
+    introEn: "Strasbourg, European capital and seat of the European Parliament, is an international crossroads on the Franco-German border. Served by Strasbourg-Entzheim Airport, the TGV station and the international coach terminal, TaxiNeo offers taxis for trips to European institutions, the university hospital, the Wacken business district and Petite France.",
+    descriptionFr: "Ville transfrontalière, Strasbourg voit transiter quotidiennement des milliers de navetteurs vers Kehl et le Bade-Wurtemberg. Nos chauffeurs assurent aussi les transferts vers l'aéroport de Baden-Baden et la gare de Kehl. Service multilingue (français, allemand, anglais) et couverture de toute l'Eurométropole, y compris Schiltigheim, Illkirch et Lingolsheim.",
+    descriptionEn: "A cross-border city, Strasbourg sees thousands of daily commuters heading to Kehl and Baden-Württemberg. Our drivers also handle transfers to Baden-Baden Airport and Kehl station. Multilingual service (French, German, English) and coverage across the entire Eurometropolis, including Schiltigheim, Illkirch and Lingolsheim.",
+  },
+  bordeaux: {
+    introFr: "Bordeaux, capitale mondiale du vin et métropole en pleine transformation, est désormais à 2h04 de Paris en TGV grâce à la LGV Sud Europe Atlantique. TaxiNeo dessert la gare Saint-Jean, l'aéroport Bordeaux-Mérignac, le quartier d'affaires Euratlantique, le CHU Pellegrin, les Bassins à Flot et toute la rive droite de la Garonne.",
+    introEn: "Bordeaux, world wine capital and fast-transforming metropolis, is now just 2h04 from Paris by TGV thanks to the LGV Sud Europe Atlantique. TaxiNeo serves Gare Saint-Jean, Bordeaux-Mérignac Airport, the Euratlantique business district, CHU Pellegrin, Bassins à Flot and the entire right bank of the Garonne.",
+    descriptionFr: "Bordeaux a connu un boom touristique depuis l'arrivée de la LGV, et nos chauffeurs sont parfaitement rodés aux transferts gare Saint-Jean – aéroport Mérignac. Couverture complète de la métropole (Pessac, Mérignac, Talence, Bègles) avec tarifs réglementés. Service renforcé pendant la Fête du Vin, Vinexpo et les matchs au Matmut Atlantique.",
+    descriptionEn: "Bordeaux has seen a tourism boom since the LGV high-speed line arrived, and our drivers are perfectly experienced with Gare Saint-Jean – Mérignac Airport transfers. Full metropolitan coverage (Pessac, Mérignac, Talence, Bègles) with regulated fares. Enhanced service during the Wine Festival, Vinexpo and matches at Matmut Atlantique.",
+  },
+  lille: {
+    introFr: "Lille, métropole du nord de la France et carrefour européen, est connectée à Paris (1h TGV), Londres (1h20 Eurostar) et Bruxelles (35 min). TaxiNeo couvre les gares Lille-Flandres et Lille-Europe, l'aéroport de Lesquin, le quartier d'affaires Euralille, le CHR de Lille, le Grand Palais et le stade Pierre-Mauroy.",
+    introEn: "Lille, northern France's metropolis and European crossroads, is connected to Paris (1h TGV), London (1h20 Eurostar) and Brussels (35 min). TaxiNeo covers Lille-Flandres and Lille-Europe stations, Lesquin Airport, the Euralille business district, Lille Regional Hospital, the Grand Palais and Pierre-Mauroy Stadium.",
+    descriptionFr: "Avec deux gares majeures (Flandres et Europe) et un trafic Eurostar/Thalys important, Lille nécessite des taxis disponibles à toute heure. Nos chauffeurs lillois connaissent le Vieux-Lille, Wazemmes et toute la MEL (Roubaix, Tourcoing, Villeneuve-d'Ascq). Prix fixe garanti même pendant la Braderie de Lille, le plus grand marché aux puces d'Europe.",
+    descriptionEn: "With two major stations (Flandres and Europe) and heavy Eurostar/Thalys traffic, Lille requires taxis available around the clock. Our Lille drivers know the Vieux-Lille, Wazemmes and the entire MEL area (Roubaix, Tourcoing, Villeneuve-d'Ascq). Fixed price guaranteed even during the Braderie de Lille, Europe's largest flea market.",
+  },
+  rennes: {
+    introFr: "Rennes, capitale de la Bretagne et ville numérique en plein essor, est à 1h25 de Paris en TGV. TaxiNeo dessert la gare TGV, l'aéroport Rennes-Saint-Jacques, le technopole Atalante, le campus universitaire de Villejean, le CHU Pontchaillou et le centre de congrès Le Couvent des Jacobins.",
+    introEn: "Rennes, Brittany's capital and booming digital city, is 1h25 from Paris by TGV. TaxiNeo serves the TGV station, Rennes-Saint-Jacques Airport, the Atalante technology park, the Villejean university campus, CHU Pontchaillou and Le Couvent des Jacobins convention centre.",
+    descriptionFr: "Pôle d'innovation et d'enseignement supérieur (université Rennes 1, Rennes 2, grandes écoles), Rennes attire étudiants et entrepreneurs. Nos chauffeurs assurent les navettes entre la gare, le technopole et l'aéroport toute l'année. Service renforcé pendant les Trans Musicales et le festival Yaouank.",
+    descriptionEn: "An innovation and higher education hub (University Rennes 1, Rennes 2, grandes écoles), Rennes attracts students and entrepreneurs. Our drivers provide shuttles between the station, technology park and airport year-round. Enhanced service during the Trans Musicales and Yaouank festivals.",
+  },
+  reims: {
+    introFr: "Reims, capitale du champagne et ville d'art et d'histoire, accueille chaque année des millions de visiteurs dans ses caves prestigieuses et sa cathédrale gothique. Desservie par la gare TGV Champagne-Ardenne (45 min de Paris) et la gare centre, TaxiNeo assure vos transferts vers les maisons de champagne, le Parc des Expositions et le CHU Reims.",
+    introEn: "Reims, champagne capital and city of art and history, welcomes millions of visitors yearly to its prestigious cellars and Gothic cathedral. Served by Champagne-Ardenne TGV station (45 min from Paris) and the city centre station, TaxiNeo handles transfers to champagne houses, the Exhibition Centre and Reims University Hospital.",
+    descriptionFr: "La gare TGV Champagne-Ardenne est excentrée (à Bezannes) et le taxi est le moyen le plus simple de rejoindre le centre ou les caves de champagne. Nos chauffeurs rémois connaissent toutes les maisons (Veuve Clicquot, Taittinger, Pommery) et les circuits œnotouristiques. Forfait gare TGV – centre-ville compétitif.",
+    descriptionEn: "Champagne-Ardenne TGV station is outside the city (in Bezannes) and a taxi is the simplest way to reach the centre or champagne cellars. Our Reims drivers know every house (Veuve Clicquot, Taittinger, Pommery) and wine tourism routes. Competitive TGV station – city centre flat rate.",
+  },
+  "saint-etienne": {
+    introFr: "Saint-Étienne, ville du design classée UNESCO et berceau industriel de la Loire, se réinvente autour de la Cité du Design, du Zénith et du quartier créatif Manufacture-Plaine-Achille. TaxiNeo dessert la gare de Châteaucreux (TGV vers Paris), le CHU de Saint-Étienne, le stade Geoffroy-Guichard et toute l'agglomération stéphanoise.",
+    introEn: "Saint-Étienne, UNESCO City of Design and the Loire's industrial heartland, is reinventing itself around the Cité du Design, the Zénith and the Manufacture-Plaine-Achille creative quarter. TaxiNeo serves Châteaucreux station (TGV to Paris), Saint-Étienne University Hospital, Geoffroy-Guichard Stadium and the entire metropolitan area.",
+    descriptionFr: "Située à 50 km de Lyon, Saint-Étienne est reliée à la métropole lyonnaise par l'A47. Nos chauffeurs assurent les navettes Saint-Étienne – aéroport Lyon-Saint Exupéry et les transferts vers les stations de ski du Pilat. Service renforcé les soirs de match de l'ASSE au chaudron Geoffroy-Guichard.",
+    descriptionEn: "Located 50 km from Lyon, Saint-Étienne is connected to the Lyon metropolis via the A47. Our drivers provide Saint-Étienne – Lyon-Saint Exupéry Airport shuttles and transfers to Pilat ski resorts. Enhanced service on ASSE match evenings at Geoffroy-Guichard.",
+  },
+  "le-havre": {
+    introFr: "Le Havre, plus grand port de France sur la Manche et ville reconstruite par Auguste Perret (classée UNESCO), est la porte d'entrée maritime de la Normandie. TaxiNeo dessert le terminal croisières, la gare SNCF, le port ferry vers l'Angleterre, la plage du Havre, le quartier Saint-François et la zone industrielle portuaire.",
+    introEn: "Le Havre, France's largest Channel port and Auguste Perret's reconstructed city (UNESCO-listed), is Normandy's maritime gateway. TaxiNeo serves the cruise terminal, the SNCF station, the England ferry port, Le Havre beach, the Saint-François quarter and the port industrial zone.",
+    descriptionFr: "Port d'escale majeur pour les croisières transatlantiques et transmanche, Le Havre génère un fort besoin de transferts vers la gare, Étretat et Honfleur. Nos chauffeurs connaissent les horaires des ferries et des paquebots pour assurer des prises en charge ponctuelles. Tarifs réglementés pour tous les trajets portuaires.",
+    descriptionEn: "A major cruise and cross-Channel port of call, Le Havre generates strong demand for transfers to the station, Étretat and Honfleur. Our drivers know ferry and cruise ship schedules for punctual pickups. Regulated fares for all port journeys.",
+  },
+  toulon: {
+    introFr: "Toulon, premier port militaire français et porte d'entrée vers les îles d'Hyères, est une ville méditerranéenne dynamique entre mer et montagne. TaxiNeo assure vos transferts vers l'aéroport de Toulon-Hyères, la gare SNCF, l'Arsenal, le port de commerce et les embarcadères vers Porquerolles et Port-Cros.",
+    introEn: "Toulon, France's main naval port and gateway to the Hyères Islands, is a dynamic Mediterranean city between sea and mountains. TaxiNeo handles transfers to Toulon-Hyères Airport, the SNCF station, the Arsenal, the commercial port and the jetties to Porquerolles and Port-Cros.",
+    descriptionFr: "Nos chauffeurs toulonnais assurent les navettes vers l'embarcadère de La Tour Fondue (Porquerolles) et les plages du Mourillon. Service renforcé en été pour les transferts aéroport et les liaisons gare – port. La topographie vallonnée de Toulon rend le taxi indispensable pour se déplacer confortablement entre le port et le Mont Faron.",
+    descriptionEn: "Our Toulon drivers provide shuttles to La Tour Fondue pier (Porquerolles) and Mourillon beaches. Enhanced summer service for airport transfers and station – port connections. Toulon's hilly terrain makes taxis essential for comfortable travel between the port and Mont Faron.",
+  },
+  grenoble: {
+    introFr: "Grenoble, capitale des Alpes françaises et pôle scientifique majeur (CNRS, CEA, ESRF), est nichée au cœur des montagnes entre Vercors, Chartreuse et Belledonne. TaxiNeo dessert la gare de Grenoble, l'aéroport Grenoble-Isère, le campus universitaire, le CHU Grenoble Alpes et les stations de ski environnantes.",
+    introEn: "Grenoble, capital of the French Alps and major scientific hub (CNRS, CEA, ESRF), is nestled in the heart of the mountains between Vercors, Chartreuse and Belledonne. TaxiNeo serves Grenoble station, Grenoble-Isère Airport, the university campus, Grenoble Alpes University Hospital and surrounding ski resorts.",
+    descriptionFr: "En hiver, nos chauffeurs assurent les transferts vers les stations de l'Alpe d'Huez, les Deux Alpes et Chamrousse. En été, déplacements vers les parcs naturels du Vercors et de la Chartreuse. Les chauffeurs grenoblois sont équipés de pneus neige et chaînes pour une sécurité maximale toute l'année. Forfait aéroport Isère disponible.",
+    descriptionEn: "In winter, our drivers handle transfers to Alpe d'Huez, Les Deux Alpes and Chamrousse resorts. In summer, rides to the Vercors and Chartreuse natural parks. Grenoble drivers are equipped with snow tyres and chains for maximum safety year-round. Isère airport flat rate available.",
+  },
+  dijon: {
+    introFr: "Dijon, capitale de la Bourgogne et ville gastronomique inscrite au patrimoine UNESCO, est un carrefour ferroviaire entre Paris (1h40 TGV), Lyon et Strasbourg. TaxiNeo dessert la gare Dijon-Ville, le CHU Dijon Bourgogne, le campus universitaire, la Cité de la Gastronomie et les domaines viticoles de la Côte de Nuits.",
+    introEn: "Dijon, Burgundy's capital and UNESCO-listed gastronomic city, is a railway junction between Paris (1h40 TGV), Lyon and Strasbourg. TaxiNeo serves Gare Dijon-Ville, Dijon Burgundy University Hospital, the university campus, the Cité de la Gastronomie and the Côte de Nuits wine estates.",
+    descriptionFr: "Nos chauffeurs dijonnais connaissent la Route des Grands Crus et peuvent organiser vos transferts vers les domaines viticoles de Gevrey-Chambertin, Vougeot et Nuits-Saint-Georges. Service idéal pour les dégustations sans se soucier de la conduite. Couverture de toute la métropole dijonnaise avec tarifs réglementés.",
+    descriptionEn: "Our Dijon drivers know the Route des Grands Crus and can arrange transfers to the wine estates of Gevrey-Chambertin, Vougeot and Nuits-Saint-Georges. Ideal service for tastings without worrying about driving. Coverage of the entire Dijon metropolitan area with regulated fares.",
+  },
+  angers: {
+    introFr: "Angers, cœur du Val de Loire et première ville verte de France, combine patrimoine historique (château médiéval, tenture de l'Apocalypse) et innovation (quartier numérique Angers French Tech). TaxiNeo dessert la gare Saint-Laud (TGV vers Paris en 1h30), le CHU d'Angers, le Parc des Expositions et l'aéroport Angers-Loire.",
+    introEn: "Angers, heart of the Loire Valley and France's greenest city, combines historic heritage (medieval castle, Apocalypse Tapestry) and innovation (Angers French Tech digital quarter). TaxiNeo serves Gare Saint-Laud (TGV to Paris in 1h30), Angers University Hospital, the Exhibition Centre and Angers-Loire Airport.",
+    descriptionFr: "Angers bénéficie d'un cadre de vie exceptionnel avec ses parcs, ses bords de Maine et sa douceur angevine. Nos chauffeurs assurent les liaisons gare – centre, les transferts vers Saumur et les châteaux de la Loire, ainsi que le service pour les événements au Parc Expo et au Centre de Congrès.",
+    descriptionEn: "Angers enjoys an exceptional quality of life with its parks, Maine riverbanks and gentle Angevin climate. Our drivers provide station – centre connections, transfers to Saumur and the Loire castles, and event service at the Exhibition Centre and Convention Centre.",
+  },
+  nimes: {
+    introFr: "Nîmes, cité romaine aux monuments exceptionnels (Arènes, Maison Carrée, Pont du Gard), est une ville touristique majeure du sud de la France. TaxiNeo dessert la gare Nîmes-Centre, la gare TGV Nîmes-Pont du Gard, l'aéroport Nîmes-Garons, les Arènes et les sites touristiques de la région.",
+    introEn: "Nîmes, a Roman city with exceptional monuments (Arena, Maison Carrée, Pont du Gard), is a major tourist destination in southern France. TaxiNeo serves Nîmes-Centre station, Nîmes-Pont du Gard TGV station, Nîmes-Garons Airport, the Arena and the region's tourist sites.",
+    descriptionFr: "La gare TGV Nîmes-Pont du Gard est excentrée et le taxi est indispensable pour rejoindre le centre-ville ou les sites romains. Nos chauffeurs nîmois assurent aussi les transferts vers le Pont du Gard, Uzès et les Cévennes. Service renforcé pendant les Férias et les spectacles aux Arènes.",
+    descriptionEn: "Nîmes-Pont du Gard TGV station is outside the city and a taxi is essential to reach the centre or Roman sites. Our Nîmes drivers also handle transfers to the Pont du Gard, Uzès and the Cévennes. Enhanced service during the Férias and Arena events.",
+  },
+  villeurbanne: {
+    introFr: "Villeurbanne, commune la plus peuplée de la métropole lyonnaise après Lyon, abrite le campus de La Doua (INSA, université Claude Bernard Lyon 1), le Théâtre National Populaire et le quartier Gratte-Ciel. TaxiNeo assure vos déplacements dans toute l'agglomération : navettes campus, transferts vers la Part-Dieu et Saint-Exupéry.",
+    introEn: "Villeurbanne, the Lyon metropolitan area's most populous commune after Lyon, is home to La Doua campus (INSA, Claude Bernard University Lyon 1), the Théâtre National Populaire and the Gratte-Ciel quarter. TaxiNeo handles trips across the area: campus shuttles, transfers to Part-Dieu and Saint-Exupéry.",
+    descriptionFr: "Intégrée à la métropole lyonnaise, Villeurbanne bénéficie du même réseau de chauffeurs TaxiNeo que Lyon. Nos taxis assurent les liaisons campus – gare Part-Dieu – aéroport Saint-Exupéry avec des tarifs réglementés identiques. Idéal pour les étudiants internationaux et les chercheurs du campus scientifique.",
+    descriptionEn: "Integrated into the Lyon metropolitan area, Villeurbanne benefits from the same TaxiNeo driver network as Lyon. Our taxis provide campus – Part-Dieu station – Saint-Exupéry airport connections at identical regulated rates. Ideal for international students and researchers at the science campus.",
+  },
+  "clermont-ferrand": {
+    introFr: "Clermont-Ferrand, capitale de l'Auvergne et berceau de Michelin, est une ville universitaire dynamique au pied de la Chaîne des Puys (patrimoine UNESCO). TaxiNeo dessert l'aéroport Clermont-Ferrand Auvergne, la gare SNCF, le CHU Gabriel Montpied, le campus universitaire des Cézeaux et le Zénith d'Auvergne.",
+    introEn: "Clermont-Ferrand, Auvergne's capital and Michelin's birthplace, is a dynamic university city at the foot of the Chaîne des Puys (UNESCO World Heritage). TaxiNeo serves Clermont-Ferrand Auvergne Airport, the SNCF station, Gabriel Montpied University Hospital, the Cézeaux university campus and the Zénith d'Auvergne.",
+    descriptionFr: "La topographie volcanique de Clermont rend certains quartiers difficiles d'accès en transport en commun. Nos chauffeurs connaissent chaque rue du plateau central et assurent les transferts vers la station thermale de Royat, Vulcania et le sommet du Puy de Dôme. Tarifs réglementés toute l'année.",
+    descriptionEn: "Clermont's volcanic topography makes some districts hard to reach by public transport. Our drivers know every street of the central plateau and handle transfers to the Royat spa, Vulcania and the Puy de Dôme summit. Regulated fares year-round.",
+  },
+  "aix-en-provence": {
+    introFr: "Aix-en-Provence, ville d'art et d'eau thermale, est un pôle culturel et universitaire majeur de la Provence. Située à 25 km de Marseille, elle est desservie par la gare TGV d'Aix et bénéficie de la proximité de l'aéroport Marseille-Provence. TaxiNeo assure vos transferts aéroport, vos courses vers le cours Mirabeau, le Festival d'Aix et le Camp des Milles.",
+    introEn: "Aix-en-Provence, city of art and thermal springs, is a major cultural and university hub in Provence. Located 25 km from Marseille, it is served by Aix TGV station and benefits from nearby Marseille-Provence Airport. TaxiNeo handles airport transfers, rides to Cours Mirabeau, the Aix Festival and Camp des Milles.",
+    descriptionFr: "La gare TGV d'Aix est excentrée (à l'Arbois) et le taxi est le moyen le plus pratique de rejoindre le centre historique. Nos chauffeurs assurent aussi la liaison Aix – aéroport Marseille-Provence à tarif compétitif. Service renforcé pendant le Festival International d'Art Lyrique en juillet.",
+    descriptionEn: "Aix TGV station is located outside the city (at L'Arbois) and a taxi is the most convenient way to reach the historic centre. Our drivers also provide Aix – Marseille-Provence Airport connections at competitive rates. Enhanced service during the International Opera Festival in July.",
+  },
+  "le-mans": {
+    introFr: "Le Mans, mondialement connue pour ses 24 Heures et sa vieille ville médiévale (cité Plantagenêt), est un carrefour ferroviaire stratégique à 54 minutes de Paris en TGV. TaxiNeo dessert la gare du Mans, le circuit des 24 Heures, le Centre des Congrès, le CH du Mans et l'aéroport Le Mans-Arnage.",
+    introEn: "Le Mans, world-famous for its 24 Hours race and medieval old town (Plantagenêt city), is a strategic railway junction 54 minutes from Paris by TGV. TaxiNeo serves Le Mans station, the 24 Hours circuit, the Convention Centre, Le Mans Hospital and Le Mans-Arnage Airport.",
+    descriptionFr: "Pendant les 24 Heures du Mans et le Grand Prix moto, nos chauffeurs assurent les navettes entre la gare, les hôtels et le circuit. Service disponible 24h/24 même pendant les courses de nuit. Couverture de toute l'agglomération mancelle avec tarifs préfectoraux garantis.",
+    descriptionEn: "During the 24 Hours of Le Mans and the MotoGP, our drivers provide shuttles between the station, hotels and the circuit. Service available 24/7 even during night racing. Coverage of the entire Le Mans area with guaranteed regulated fares.",
+  },
+  brest: {
+    introFr: "Brest, ville portuaire à la pointe de la Bretagne, est un pôle maritime et scientifique majeur (Ifremer, pôle mer Bretagne Atlantique). TaxiNeo dessert l'aéroport Brest Bretagne, la gare SNCF, le port militaire, le technopôle Brest-Iroise, le CHU de la Cavale Blanche et le château de Brest.",
+    introEn: "Brest, a port city at the tip of Brittany, is a major maritime and scientific hub (Ifremer, Pôle Mer Bretagne Atlantique). TaxiNeo serves Brest Bretagne Airport, the SNCF station, the naval port, Brest-Iroise technology park, La Cavale Blanche University Hospital and Brest Castle.",
+    descriptionFr: "Au bout de la Bretagne, Brest est éloignée des grandes lignes TGV et l'aéroport est essentiel pour les liaisons nationales. Nos chauffeurs assurent les transferts aéroport – centre-ville et les navettes vers Océanopolis, la rade de Brest et la presqu'île de Crozon. Service garanti même par grand vent !",
+    descriptionEn: "At the tip of Brittany, Brest is far from TGV high-speed lines and the airport is essential for domestic connections. Our drivers handle airport – city centre transfers and shuttles to Océanopolis, the Brest harbour and the Crozon peninsula. Service guaranteed even in strong winds!",
+  },
+  tours: {
+    introFr: "Tours, jardin de la France au cœur du Val de Loire (patrimoine UNESCO), est le point de départ idéal pour visiter les châteaux de Chenonceau, Amboise, Chambord et Villandry. TaxiNeo dessert la gare Tours-Centre, la gare TGV Saint-Pierre-des-Corps, le CHU Trousseau et l'aéroport Tours Val de Loire.",
+    introEn: "Tours, the Garden of France in the heart of the Loire Valley (UNESCO World Heritage), is the ideal starting point for visiting the châteaux of Chenonceau, Amboise, Chambord and Villandry. TaxiNeo serves Tours-Centre station, Saint-Pierre-des-Corps TGV station, Trousseau University Hospital and Tours Val de Loire Airport.",
+    descriptionFr: "La gare TGV de Saint-Pierre-des-Corps est à 3 km du centre de Tours et le taxi est le moyen le plus rapide de rejoindre la ville. Nos chauffeurs proposent aussi des circuits châteaux de la Loire avec mise à disposition à la journée. Tarifs réglementés et estimation avant réservation.",
+    descriptionEn: "Saint-Pierre-des-Corps TGV station is 3 km from Tours city centre and a taxi is the fastest way into town. Our drivers also offer Loire Valley château tours with full-day hire. Regulated fares and estimates before booking.",
+  },
+  amiens: {
+    introFr: "Amiens, capitale de la Picardie et ville de Jules Verne, possède la plus grande cathédrale gothique de France (patrimoine UNESCO). Desservie par la gare d'Amiens (1h10 de Paris), TaxiNeo assure vos transferts vers le CHU d'Amiens, le Zénith, le quartier Saint-Leu, l'université de Picardie et le parc zoologique.",
+    introEn: "Amiens, Picardy's capital and Jules Verne's city, boasts France's largest Gothic cathedral (UNESCO World Heritage). Served by Amiens station (1h10 from Paris), TaxiNeo handles transfers to Amiens University Hospital, the Zénith, the Saint-Leu quarter, the University of Picardy and the zoo.",
+    descriptionFr: "Amiens est une ville compacte mais ses quartiers périphériques et la zone industrielle nord sont mal desservis par les transports en commun. Nos chauffeurs amiénois assurent les navettes gare – hôpital – université et les transferts vers la baie de Somme, un des plus beaux sites naturels de France.",
+    descriptionEn: "Amiens is a compact city but its outer districts and northern industrial zone are poorly served by public transport. Our Amiens drivers provide station – hospital – university shuttles and transfers to the Somme Bay, one of France's most beautiful natural sites.",
+  },
+  limoges: {
+    introFr: "Limoges, capitale de la porcelaine et des arts du feu, est le cœur économique de la Haute-Vienne. Desservie par l'aéroport Limoges-Bellegarde et la gare de Limoges-Bénédictins (une des plus belles de France), TaxiNeo assure vos déplacements vers le CHU Dupuytren, l'université et le centre-ville historique.",
+    introEn: "Limoges, capital of porcelain and fire arts, is the economic heart of Haute-Vienne. Served by Limoges-Bellegarde Airport and Gare de Limoges-Bénédictins (one of France's most beautiful stations), TaxiNeo handles rides to Dupuytren University Hospital, the university and the historic city centre.",
+    descriptionFr: "La gare des Bénédictins est un joyau architectural mais sa situation excentrée rend le taxi pratique pour rejoindre le centre. L'aéroport Bellegarde dessert des lignes low-cost vers le Royaume-Uni et nos chauffeurs sont présents à chaque arrivée. Couverture de toute l'agglomération limougeaude.",
+    descriptionEn: "Bénédictins station is an architectural gem but its location makes a taxi convenient for reaching the centre. Bellegarde Airport serves low-cost routes to the UK and our drivers are present at every arrival. Coverage of the entire Limoges metropolitan area.",
+  },
+  annecy: {
+    introFr: "Annecy, la Venise des Alpes, enchante par son lac cristallin, sa vieille ville médiévale et ses montagnes environnantes. Station touristique internationale été comme hiver, Annecy est desservie par la gare SNCF et bénéficie de la proximité de l'aéroport de Genève (40 min). TaxiNeo assure transferts aéroport, courses lacustres et navettes vers les stations de ski.",
+    introEn: "Annecy, the Venice of the Alps, enchants with its crystal-clear lake, medieval old town and surrounding mountains. An international tourist resort in summer and winter, Annecy is served by the SNCF station and benefits from nearby Geneva Airport (40 min). TaxiNeo handles airport transfers, lakeside rides and ski resort shuttles.",
+    descriptionFr: "Nos chauffeurs annéciens assurent les transferts vers l'aéroport de Genève-Cointrin, les stations de ski de la Clusaz, le Grand-Bornand et Megève, ainsi que les déplacements autour du lac. Véhicules équipés pneus neige en hiver. Service renforcé pendant le Festival du Film d'Animation et la Fête du Lac.",
+    descriptionEn: "Our Annecy drivers handle transfers to Geneva-Cointrin Airport, ski resorts at La Clusaz, Le Grand-Bornand and Megève, and lakeside trips. Vehicles equipped with snow tyres in winter. Enhanced service during the Animation Film Festival and the Fête du Lac.",
+  },
+  perpignan: {
+    introFr: "Perpignan, capitale du Roussillon aux portes de l'Espagne, est une ville méditerranéenne ensoleillée entre mer et montagne. Desservie par la gare TGV (à 5h de Paris, 1h20 de Barcelone) et l'aéroport Perpignan-Rivesaltes, TaxiNeo vous transporte vers les plages de Canet, Collioure, le Canigou et la frontière espagnole.",
+    introEn: "Perpignan, capital of Roussillon at Spain's doorstep, is a sunny Mediterranean city between sea and mountains. Served by the TGV station (5h from Paris, 1h20 from Barcelona) and Perpignan-Rivesaltes Airport, TaxiNeo takes you to Canet beaches, Collioure, Mount Canigou and the Spanish border.",
+    descriptionFr: "Ville frontalière, Perpignan est le point de passage entre la France et la Catalogne espagnole. Nos chauffeurs assurent les transferts vers Le Perthus, la Côte Vermeille (Collioure, Banyuls) et les stations thermales des Pyrénées-Orientales. Tarifs réglementés et service bilingue français-catalan.",
+    descriptionEn: "A border city, Perpignan is the crossing point between France and Spanish Catalonia. Our drivers handle transfers to Le Perthus, the Côte Vermeille (Collioure, Banyuls) and Pyrénées-Orientales spa resorts. Regulated fares and French-Catalan bilingual service.",
+  },
+  besancon: {
+    introFr: "Besançon, capitale de l'horlogerie française et ville fortifiée par Vauban (patrimoine UNESCO), est nichée dans une boucle du Doubs. TaxiNeo dessert la gare Besançon Viotte, la gare TGV Franche-Comté, le CHU Jean Minjoz, la Citadelle et le campus universitaire de la Bouloie.",
+    introEn: "Besançon, capital of French watchmaking and Vauban-fortified city (UNESCO World Heritage), is nestled in a loop of the Doubs river. TaxiNeo serves Besançon Viotte station, Franche-Comté TGV station, Jean Minjoz University Hospital, the Citadel and the Bouloie university campus.",
+    descriptionFr: "La gare TGV Franche-Comté est excentrée (à Auxon-Dessus) et le taxi est le moyen le plus pratique de rejoindre le centre. Nos chauffeurs assurent aussi les transferts vers les stations de Métabief, les salines d'Arc-et-Senans et la Citadelle Vauban. Couverture complète du Grand Besançon.",
+    descriptionEn: "Franche-Comté TGV station is outside the city (at Auxon-Dessus) and a taxi is the most convenient way to reach the centre. Our drivers also handle transfers to Métabief resorts, Arc-et-Senans saltworks and the Vauban Citadel. Full coverage of Greater Besançon.",
+  },
+  metz: {
+    introFr: "Metz, ville d'art et d'histoire au confluent de la Moselle et de la Seille, rayonne avec son Centre Pompidou-Metz et sa cathédrale aux vitraux exceptionnels. Desservie par la gare TGV (1h24 de Paris), TaxiNeo assure vos transferts vers le CHR Metz-Thionville, le technopôle et l'aéroport Metz-Nancy-Lorraine.",
+    introEn: "Metz, city of art and history at the confluence of the Moselle and Seille, shines with its Centre Pompidou-Metz and cathedral with exceptional stained glass. Served by the TGV station (1h24 from Paris), TaxiNeo handles transfers to Metz-Thionville Regional Hospital, the technology park and Metz-Nancy-Lorraine Airport.",
+    descriptionFr: "Située à un carrefour franco-luxembourgeois, Metz voit transiter des milliers de travailleurs frontaliers chaque jour. Nos chauffeurs assurent les transferts vers le Luxembourg, l'aéroport Metz-Nancy-Lorraine et les zones d'activités de Technopôle. Service fiable les jours de match au stade Saint-Symphorien.",
+    descriptionEn: "Located at a Franco-Luxembourgish crossroads, Metz sees thousands of cross-border workers commuting daily. Our drivers handle transfers to Luxembourg, Metz-Nancy-Lorraine Airport and Technopôle business parks. Reliable service on match days at Saint-Symphorien Stadium.",
+  },
+  orleans: {
+    introFr: "Orléans, cité johannique au cœur du Val de Loire, est une ville dynamique à 1h10 de Paris. Desservie par la gare d'Orléans et la gare des Aubrais-Orléans (TGV), TaxiNeo assure vos transferts vers le CHR d'Orléans, le campus universitaire, la cathédrale et les châteaux de la Loire voisins.",
+    introEn: "Orléans, Joan of Arc's city in the heart of the Loire Valley, is a dynamic city 1h10 from Paris. Served by Orléans station and Aubrais-Orléans station (TGV), TaxiNeo handles transfers to Orléans Regional Hospital, the university campus, the cathedral and nearby Loire châteaux.",
+    descriptionFr: "La gare des Aubrais est excentrée par rapport au centre d'Orléans et le taxi est le lien le plus direct. Nos chauffeurs orléanais proposent aussi des excursions vers Chambord, Cheverny et Beaugency. Service renforcé pendant les Fêtes de Jeanne d'Arc en mai.",
+    descriptionEn: "Les Aubrais station is outside central Orléans and a taxi is the most direct link. Our Orléans drivers also offer excursions to Chambord, Cheverny and Beaugency. Enhanced service during the Joan of Arc Festival in May.",
+  },
+  rouen: {
+    introFr: "Rouen, capitale de la Normandie et ville aux cent clochers, est un trésor d'architecture médiévale le long de la Seine. Desservie par la gare Rouen-Rive-Droite (1h15 de Paris), TaxiNeo assure vos transferts vers le CHU Charles Nicolle, le quartier d'affaires Saint-Sever, le port maritime et le Panorama XXL.",
+    introEn: "Rouen, Normandy's capital and city of a hundred spires, is a treasure of medieval architecture along the Seine. Served by Rouen-Rive-Droite station (1h15 from Paris), TaxiNeo handles transfers to Charles Nicolle University Hospital, the Saint-Sever business district, the maritime port and the Panorama XXL.",
+    descriptionFr: "Rouen est une ville aux ruelles médiévales étroites où le taxi est souvent le moyen le plus pratique de se déplacer. Nos chauffeurs assurent aussi les liaisons vers l'aéroport Paris-CDG (2h) et les plages normandes. Service renforcé pendant l'Armada de Rouen, grand rassemblement de voiliers.",
+    descriptionEn: "Rouen is a city of narrow medieval streets where taxis are often the most practical way to get around. Our drivers also provide connections to Paris-CDG Airport (2h) and the Normandy beaches. Enhanced service during the Armada de Rouen, a major tall ships gathering.",
+  },
+  mulhouse: {
+    introFr: "Mulhouse, capitale européenne des musées techniques (Cité de l'Automobile, Cité du Train), est une ville industrielle dynamique au cœur du triangle Bâle-Fribourg-Strasbourg. TaxiNeo dessert la gare de Mulhouse, l'aéroport international EuroAirport Bâle-Mulhouse, le campus universitaire et les musées.",
+    introEn: "Mulhouse, European capital of technical museums (Cité de l'Automobile, Cité du Train), is a dynamic industrial city at the heart of the Basel-Freiburg-Strasbourg triangle. TaxiNeo serves Mulhouse station, EuroAirport Basel-Mulhouse international airport, the university campus and the museums.",
+    descriptionFr: "L'EuroAirport Bâle-Mulhouse est un aéroport trinational unique en Europe, et nos chauffeurs maîtrisent les accès côté français, suisse et allemand. Navettes disponibles vers Bâle, Fribourg-en-Brisgau et Colmar. Service multilingue et tarifs réglementés pour tous les transferts.",
+    descriptionEn: "EuroAirport Basel-Mulhouse is a unique trinational airport in Europe, and our drivers master the French, Swiss and German access points. Shuttles available to Basel, Freiburg and Colmar. Multilingual service and regulated fares for all transfers.",
+  },
+  caen: {
+    introFr: "Caen, cité de Guillaume le Conquérant et mémorial du Débarquement, est la capitale de la Normandie occidentale. Desservie par la gare SNCF (2h de Paris), l'aéroport Caen-Carpiquet et le port ferry d'Ouistreham, TaxiNeo assure vos transferts vers le CHU, le Mémorial, les plages du Débarquement et le campus universitaire.",
+    introEn: "Caen, William the Conqueror's city and D-Day memorial site, is the capital of western Normandy. Served by the SNCF station (2h from Paris), Caen-Carpiquet Airport and the Ouistreham ferry port, TaxiNeo handles transfers to the university hospital, the Memorial, the D-Day beaches and the university campus.",
+    descriptionFr: "Le port ferry d'Ouistreham relie Caen à Portsmouth (Angleterre) et génère un flux important de voyageurs. Nos chauffeurs assurent les transferts port – centre-ville – gare et les excursions vers les plages du Débarquement (Omaha, Juno, Sword). Service en anglais disponible pour les visiteurs britanniques.",
+    descriptionEn: "Ouistreham ferry port connects Caen to Portsmouth (England) and generates significant passenger traffic. Our drivers handle port – city centre – station transfers and excursions to the D-Day beaches (Omaha, Juno, Sword). English-speaking service available for British visitors.",
+  },
+  nancy: {
+    introFr: "Nancy, joyau de l'Art Nouveau et ville universitaire de renom, est célèbre pour sa Place Stanislas (patrimoine UNESCO). Desservie par la gare TGV (1h30 de Paris), TaxiNeo assure vos transferts vers le CHU de Nancy, le campus ARTEM, le technopôle de Brabois et l'aéroport Metz-Nancy-Lorraine.",
+    introEn: "Nancy, Art Nouveau gem and renowned university city, is famous for its Place Stanislas (UNESCO World Heritage). Served by the TGV station (1h30 from Paris), TaxiNeo handles transfers to Nancy University Hospital, the ARTEM campus, the Brabois technology park and Metz-Nancy-Lorraine Airport.",
+    descriptionFr: "Nancy est une ville élégante avec un patrimoine architectural exceptionnel. Nos chauffeurs connaissent chaque ruelle de la Vieille Ville et du quartier Art Nouveau. L'aéroport Metz-Nancy est partagé entre les deux villes et nos chauffeurs assurent la navette à tarif compétitif. Couverture de tout le Grand Nancy.",
+    descriptionEn: "Nancy is an elegant city with exceptional architectural heritage. Our drivers know every lane of the Old Town and the Art Nouveau quarter. Metz-Nancy Airport is shared between both cities and our drivers provide competitive shuttle service. Coverage of the entire Greater Nancy area.",
+  },
+  argenteuil: {
+    introFr: "Argenteuil, plus grande ville du Val-d'Oise et troisième commune d'Île-de-France, est une porte d'entrée vers Paris située à seulement 15 minutes de la Gare Saint-Lazare. TaxiNeo dessert les gares d'Argenteuil, le centre commercial Côté Seine, l'hôpital Victor Dupouy et les quartiers résidentiels des bords de Seine.",
+    introEn: "Argenteuil, Val-d'Oise's largest city and Île-de-France's third most populous commune, is a gateway to Paris just 15 minutes from Gare Saint-Lazare. TaxiNeo serves Argenteuil stations, the Côté Seine shopping centre, Victor Dupouy Hospital and the residential neighbourhoods along the Seine.",
+    descriptionFr: "En pleine transformation urbaine, Argenteuil bénéficie d'un accès direct vers La Défense et les aéroports parisiens. Nos chauffeurs assurent les transferts Argenteuil – CDG et Argenteuil – Orly aux tarifs franciliens réglementés. Service idéal pour les déplacements domicile – gare aux heures de pointe.",
+    descriptionEn: "Undergoing major urban transformation, Argenteuil has direct access to La Défense and Parisian airports. Our drivers provide Argenteuil – CDG and Argenteuil – Orly transfers at regulated Île-de-France rates. Ideal service for home – station commutes during rush hour.",
+  },
+  avignon: {
+    introFr: "Avignon, cité des Papes et capitale mondiale du théâtre en juillet, est une ville touristique majeure de Provence. Desservie par la gare TGV d'Avignon (2h40 de Paris) et la gare centre, TaxiNeo assure vos transferts vers le Palais des Papes, le Pont d'Avignon, le Festival d'Avignon et les villages du Luberon.",
+    introEn: "Avignon, City of the Popes and world theatre capital in July, is a major tourist city in Provence. Served by Avignon TGV station (2h40 from Paris) and the city centre station, TaxiNeo handles transfers to the Palais des Papes, the Pont d'Avignon, the Avignon Festival and Luberon villages.",
+    descriptionFr: "La gare TGV d'Avignon est excentrée (à Courtine) et le taxi est indispensable pour rejoindre les remparts. Pendant le Festival d'Avignon en juillet, nos chauffeurs connaissent tous les théâtres et assurent un service renforcé jour et nuit. Excursions vers le Pont du Gard, les Baux-de-Provence et le Luberon disponibles.",
+    descriptionEn: "Avignon TGV station is outside the city (at Courtine) and a taxi is essential to reach the ramparts. During the Avignon Festival in July, our drivers know every theatre and provide enhanced day and night service. Excursions to the Pont du Gard, Les Baux-de-Provence and the Luberon available.",
+  },
+  poitiers: {
+    introFr: "Poitiers, ville d'art et d'histoire aux portes du Futuroscope, est un important centre universitaire du centre-ouest de la France. Desservie par la gare TGV (1h40 de Paris), TaxiNeo assure vos transferts vers le Futuroscope, le CHU de Poitiers, le campus universitaire et l'aéroport Poitiers-Biard.",
+    introEn: "Poitiers, city of art and history at the gateway to Futuroscope, is a major university centre in central-western France. Served by the TGV station (1h40 from Paris), TaxiNeo handles transfers to Futuroscope, Poitiers University Hospital, the university campus and Poitiers-Biard Airport.",
+    descriptionFr: "Le Futuroscope attire 2 millions de visiteurs par an et le taxi est le moyen le plus simple de s'y rendre depuis la gare ou l'aéroport. Nos chauffeurs poitevins assurent aussi les liaisons vers la Vallée des Singes et le Marais Poitevin. Tarifs réglementés et service adapté aux familles.",
+    descriptionEn: "Futuroscope attracts 2 million visitors annually and a taxi is the simplest way to get there from the station or airport. Our Poitiers drivers also provide connections to the Vallée des Singes and Marais Poitevin. Regulated fares and family-friendly service.",
+  },
+  dunkerque: {
+    introFr: "Dunkerque, troisième port de France sur la mer du Nord, est une ville portuaire et industrielle à la frontière belge. TaxiNeo dessert la gare SNCF, le port ferry vers Douvres, la plage de Malo-les-Bains, le musée portuaire et les zones industrielles du Grand Port Maritime.",
+    introEn: "Dunkirk, France's third largest North Sea port, is an industrial port city on the Belgian border. TaxiNeo serves the SNCF station, the Dover ferry port, Malo-les-Bains beach, the port museum and the Grand Port Maritime industrial zones.",
+    descriptionFr: "Le port ferry de Dunkerque relie la France à Douvres (Angleterre) et génère un flux constant de voyageurs. Nos chauffeurs assurent les transferts port – gare – centre-ville et les navettes vers la frontière belge. Service renforcé pendant le célèbre Carnaval de Dunkerque.",
+    descriptionEn: "Dunkirk ferry port connects France to Dover (England) and generates constant passenger traffic. Our drivers handle port – station – city centre transfers and shuttles to the Belgian border. Enhanced service during the famous Dunkirk Carnival.",
+  },
+  versailles: {
+    introFr: "Versailles, ville du château le plus visité au monde, accueille chaque année 15 millions de visiteurs dans son domaine royal. Desservie par les gares Versailles-Chantiers et Versailles-Rive-Gauche, TaxiNeo assure vos transferts vers le Château de Versailles, le Trianon, le centre de congrès et les quartiers résidentiels.",
+    introEn: "Versailles, home to the world's most visited palace, welcomes 15 million visitors yearly to its royal estate. Served by Versailles-Chantiers and Versailles-Rive-Gauche stations, TaxiNeo handles transfers to the Palace of Versailles, the Trianon, the convention centre and residential areas.",
+    descriptionFr: "Située à 20 km de Paris, Versailles est facilement accessible mais les transports en commun sont souvent saturés par les touristes. Nos chauffeurs proposent des forfaits Paris – Versailles à tarif réglementé et assurent les retours depuis le château. Service idéal pour les visiteurs qui veulent éviter le RER bondé.",
+    descriptionEn: "Located 20 km from Paris, Versailles is easily accessible but public transport is often overwhelmed by tourists. Our drivers offer regulated Paris – Versailles flat rates and handle returns from the palace. Ideal service for visitors wanting to avoid the crowded RER.",
+  },
+  pau: {
+    introFr: "Pau, ville royale au pied des Pyrénées avec sa vue légendaire sur la chaîne montagneuse, est la capitale du Béarn. Desservie par l'aéroport Pau-Pyrénées et la gare SNCF, TaxiNeo assure vos transferts vers les stations de ski pyrénéennes, le Boulevard des Pyrénées, le circuit automobile et le centre hospitalier.",
+    introEn: "Pau, royal city at the foot of the Pyrenees with its legendary mountain views, is the capital of Béarn. Served by Pau-Pyrénées Airport and the SNCF station, TaxiNeo handles transfers to Pyrenean ski resorts, the Boulevard des Pyrénées, the racing circuit and the hospital.",
+    descriptionFr: "Porte d'entrée des Pyrénées, Pau est le point de départ vers les stations de Gourette, La Pierre Saint-Martin et les thermes de Bétharram. Nos chauffeurs connaissent les routes de montagne et sont équipés en hiver. Service renforcé pendant le Grand Prix de Pau automobile.",
+    descriptionEn: "Gateway to the Pyrenees, Pau is the starting point for Gourette and La Pierre Saint-Martin resorts and Bétharram spa. Our drivers know the mountain roads and are winter-equipped. Enhanced service during the Pau Grand Prix motor race.",
+  },
+  "la-rochelle": {
+    introFr: "La Rochelle, perle de l'Atlantique et ville portuaire historique, est une destination touristique prisée entre ses tours médiévales, le Vieux-Port et l'île de Ré. TaxiNeo dessert la gare SNCF, l'aéroport La Rochelle-Île de Ré, le port des Minimes, l'Aquarium et le pont vers l'île de Ré.",
+    introEn: "La Rochelle, pearl of the Atlantic and historic port city, is a popular tourist destination between its medieval towers, the Vieux-Port and the Île de Ré. TaxiNeo serves the SNCF station, La Rochelle-Île de Ré Airport, the Minimes harbour, the Aquarium and the bridge to Île de Ré.",
+    descriptionFr: "En été, La Rochelle et l'île de Ré connaissent un afflux touristique massif qui sature les transports. Nos chauffeurs assurent les transferts vers l'île de Ré via le pont, les navettes gare – Vieux-Port et les liaisons aéroport. Service renforcé pendant les Francofolies et le Grand Pavois.",
+    descriptionEn: "In summer, La Rochelle and Île de Ré experience massive tourist influx that overwhelms transport. Our drivers handle Île de Ré transfers via the bridge, station – Vieux-Port shuttles and airport connections. Enhanced service during the Francofolies and Grand Pavois.",
+  },
+  calais: {
+    introFr: "Calais, porte d'entrée du continent européen et première ville portuaire voyageurs de France, relie la France à l'Angleterre via le tunnel sous la Manche et les ferries transmanche. TaxiNeo dessert la gare Calais-Fréthun (Eurostar), le terminal ferry, le centre-ville et la Cité de la Dentelle.",
+    introEn: "Calais, gateway to continental Europe and France's busiest passenger port, connects France to England via the Channel Tunnel and cross-Channel ferries. TaxiNeo serves Calais-Fréthun station (Eurostar), the ferry terminal, the city centre and the Cité de la Dentelle.",
+    descriptionFr: "Avec le tunnel sous la Manche et les ferries, Calais accueille des millions de voyageurs britanniques chaque année. Nos chauffeurs assurent les transferts terminal ferry – gare Fréthun – centre-ville et les navettes vers les plages de la Côte d'Opale. Service bilingue français-anglais garanti.",
+    descriptionEn: "With the Channel Tunnel and ferries, Calais welcomes millions of British travellers yearly. Our drivers handle ferry terminal – Fréthun station – city centre transfers and shuttles to the Opal Coast beaches. French-English bilingual service guaranteed.",
+  },
+  cannes: {
+    introFr: "Cannes, ville du festival international du cinéma et station balnéaire de la Côte d'Azur, accueille des millions de visiteurs pour ses événements (Festival du Film, MIPIM, MIPCOM, Lions). TaxiNeo dessert l'aéroport Nice Côte d'Azur, la gare de Cannes, le Palais des Festivals, la Croisette et les îles de Lérins.",
+    introEn: "Cannes, home to the international film festival and a French Riviera resort, welcomes millions of visitors for its events (Film Festival, MIPIM, MIPCOM, Lions). TaxiNeo serves Nice Côte d'Azur Airport, Cannes station, the Palais des Festivals, the Croisette and the Lérins Islands.",
+    descriptionFr: "Pendant les grands événements cannois, la demande de transport explose et les VTC pratiquent des tarifs exorbitants. Les taxis TaxiNeo maintiennent leurs tarifs réglementés quelle que soit la période. Nos chauffeurs assurent les navettes aéroport Nice – Cannes et connaissent tous les hôtels de la Croisette.",
+    descriptionEn: "During major Cannes events, transport demand soars and rideshare services charge exorbitant rates. TaxiNeo taxis maintain regulated fares regardless of the period. Our drivers provide Nice Airport – Cannes shuttles and know every Croisette hotel.",
+  },
+  antibes: {
+    introFr: "Antibes et son quartier Juan-les-Pins forment une station balnéaire emblématique de la Côte d'Azur, entre Nice et Cannes. TaxiNeo dessert l'aéroport Nice Côte d'Azur, la gare d'Antibes, le Fort Carré, Marineland, le cap d'Antibes et le port Vauban, plus grand port de plaisance d'Europe.",
+    introEn: "Antibes and its Juan-les-Pins quarter form an iconic French Riviera resort between Nice and Cannes. TaxiNeo serves Nice Côte d'Azur Airport, Antibes station, Fort Carré, Marineland, Cap d'Antibes and Port Vauban, Europe's largest marina.",
+    descriptionFr: "Entre Nice et Cannes, Antibes est idéalement située mais souffre d'embouteillages estivaux importants. Nos chauffeurs connaissent les alternatives à la bord de mer et les raccourcis locaux. Transferts aéroport Nice – Antibes à tarif réglementé, même en pleine saison. Service renforcé pendant Jazz à Juan.",
+    descriptionEn: "Between Nice and Cannes, Antibes is ideally located but suffers from heavy summer traffic. Our drivers know the alternatives to the seafront and local shortcuts. Regulated Nice Airport – Antibes transfers, even in peak season. Enhanced service during Jazz à Juan.",
+  },
+  colmar: {
+    introFr: "Colmar, joyau de l'Alsace et ville du vin, enchante avec sa Petite Venise, ses maisons à colombages et ses caves viticoles. TaxiNeo dessert la gare de Colmar, l'aéroport EuroAirport Bâle-Mulhouse, la Route des Vins d'Alsace, le musée Unterlinden et les marchés de Noël.",
+    introEn: "Colmar, jewel of Alsace and wine city, enchants with its Petite Venise, half-timbered houses and wine cellars. TaxiNeo serves Colmar station, EuroAirport Basel-Mulhouse, the Alsace Wine Route, the Unterlinden Museum and the Christmas markets.",
+    descriptionFr: "Capitale de la Route des Vins d'Alsace, Colmar est le point de départ idéal pour les dégustations dans les villages viticoles (Riquewihr, Ribeauvillé, Eguisheim). Nos chauffeurs proposent des circuits vignobles avec mise à disposition. Service renforcé pendant les marchés de Noël, parmi les plus beaux d'Europe.",
+    descriptionEn: "Capital of the Alsace Wine Route, Colmar is the ideal starting point for tastings in wine villages (Riquewihr, Ribeauvillé, Eguisheim). Our drivers offer vineyard tours with hourly hire. Enhanced service during the Christmas markets, among the finest in Europe.",
+  },
+  bayonne: {
+    introFr: "Bayonne, capitale du Pays Basque français et ville du chocolat, est une cité historique au confluent de la Nive et de l'Adour. TaxiNeo dessert la gare de Bayonne (TGV vers Paris), l'aéroport Biarritz-Pays Basque, le centre historique, les Arènes et les plages de la côte basque.",
+    introEn: "Bayonne, capital of the French Basque Country and city of chocolate, is a historic city at the confluence of the Nive and Adour rivers. TaxiNeo serves Bayonne station (TGV to Paris), Biarritz-Pays Basque Airport, the historic centre, the Arenas and the Basque coast beaches.",
+    descriptionFr: "Porte d'entrée du Pays Basque, Bayonne est le point de départ vers Biarritz, Saint-Jean-de-Luz et la frontière espagnole (Hendaye, Irun). Nos chauffeurs basques connaissent chaque village de la côte et de l'intérieur. Service renforcé pendant les Fêtes de Bayonne, plus grande fête populaire de France.",
+    descriptionEn: "Gateway to the Basque Country, Bayonne is the starting point to Biarritz, Saint-Jean-de-Luz and the Spanish border (Hendaye, Irun). Our Basque drivers know every coastal and inland village. Enhanced service during the Fêtes de Bayonne, France's largest popular festival.",
+  },
+  chambery: {
+    introFr: "Chambéry, ancienne capitale des ducs de Savoie et porte des Alpes, est un carrefour entre la France, l'Italie et la Suisse. Desservie par la gare TGV et l'aéroport Chambéry-Savoie, TaxiNeo assure vos transferts vers les stations de ski (Courchevel, Méribel, Val Thorens), le lac du Bourget et la Chartreuse.",
+    introEn: "Chambéry, former capital of the Dukes of Savoy and gateway to the Alps, is a crossroads between France, Italy and Switzerland. Served by the TGV station and Chambéry-Savoie Airport, TaxiNeo handles transfers to ski resorts (Courchevel, Méribel, Val Thorens), Lac du Bourget and the Chartreuse.",
+    descriptionFr: "Plaque tournante du ski alpin, Chambéry est le passage obligé vers les Trois Vallées, le plus grand domaine skiable du monde. Nos chauffeurs sont équipés 4x4 et pneus neige pour les transferts en montagne. Forfaits aéroport – station disponibles. Service renforcé pendant la saison hivernale.",
+    descriptionEn: "Hub for alpine skiing, Chambéry is the gateway to the Three Valleys, the world's largest ski area. Our drivers are equipped with 4x4 vehicles and snow tyres for mountain transfers. Airport – resort packages available. Enhanced service during the winter season.",
+  },
+  valence: {
+    introFr: "Valence, porte du Midi de la France et carrefour entre la vallée du Rhône et les Alpes, est desservie par la gare TGV Valence (à mi-chemin entre Paris et Marseille) et la gare Valence-Ville. TaxiNeo assure vos transferts gare TGV – centre-ville, vos courses vers le CH de Valence, et vos déplacements dans toute la Drôme.",
+    introEn: "Valence, gateway to southern France and crossroads between the Rhône Valley and the Alps, is served by Valence TGV station (halfway between Paris and Marseille) and Valence-Ville station. TaxiNeo handles TGV station – city centre transfers, rides to Valence Hospital, and trips throughout the Drôme.",
+    descriptionFr: "La gare TGV de Valence est excentrée et le taxi est le moyen le plus direct de rejoindre le centre historique ou les communes voisines (Bourg-lès-Valence, Portes-lès-Valence). Nos chauffeurs connaissent la route de la Drôme provençale et assurent les transferts vers Montélimar, Crest et le Vercors.",
+    descriptionEn: "Valence TGV station is outside the city and a taxi is the most direct way to reach the historic centre or neighbouring communes (Bourg-lès-Valence, Portes-lès-Valence). Our drivers know the Drôme Provençale route and handle transfers to Montélimar, Crest and the Vercors.",
+  },
+};
+
+// Apply per-city unique content
+for (const c of cities) {
+  const content = cityContent[c.slug];
+  if (content) {
+    c.i18n.fr.intro = content.introFr;
+    c.i18n.fr.description = content.descriptionFr;
+    c.i18n.en.intro = content.introEn;
+    c.i18n.en.description = content.descriptionEn;
+  }
+}
 
 // ─── Helpers ────────────────────────────────────────────────
 
