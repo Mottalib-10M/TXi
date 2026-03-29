@@ -24,7 +24,7 @@ const nextConfig = {
         destination: "/fr/gare/:slug",
       },
       {
-        source: "/fr/taxi-:slug((?!partage).*)",
+        source: "/fr/taxi-:slug((?!partage|vs-vtc).*)",
         destination: "/fr/:slug",
       },
       // English locale
@@ -37,7 +37,7 @@ const nextConfig = {
         destination: "/en/gare/:slug",
       },
       {
-        source: "/en/taxi-:slug((?!partage).*)",
+        source: "/en/taxi-:slug((?!partage|vs-vtc).*)",
         destination: "/en/:slug",
       },
       // No prefix (fallback)
@@ -50,7 +50,7 @@ const nextConfig = {
         destination: "/gare/:slug",
       },
       {
-        source: "/taxi-:slug((?!partage).*)",
+        source: "/taxi-:slug((?!partage|vs-vtc).*)",
         destination: "/:slug",
       },
     ];
