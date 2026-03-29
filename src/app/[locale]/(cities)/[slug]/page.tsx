@@ -25,6 +25,8 @@ interface PageProps {
   params: Promise<{ locale: string; slug: string }>;
 }
 
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
   return ["fr", "en"].flatMap((locale) =>
     cities.map((city) => ({ locale, slug: city.slug }))
