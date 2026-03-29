@@ -25,6 +25,7 @@ export function PlacesAutocomplete({
 }: PlacesAutocompleteProps) {
   const [suggestions, setSuggestions] = useState<Prediction[]>([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
+  const [geoLoading, setGeoLoading] = useState(false);
   const wrapperRef = useRef<HTMLDivElement>(null);
   const debounceRef = useRef<NodeJS.Timeout>();
 
@@ -85,6 +86,7 @@ export function PlacesAutocomplete({
   function handleGeolocation() {
     if (!navigator.geolocation) return;
 
+    setGeoLoading(true);
     navigator.geolocation.getCurrentPosition(
       async (position) => {
         const { latitude, longitude } = position.coords;
@@ -93,11 +95,12 @@ export function PlacesAutocomplete({
         if (apiKey) {
           try {
             const res = await fetch(
-              `https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&key=${apiKey}`
+              `https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&key=${apiKey}&result_type=street_address|route|premise`
             );
             const data = await res.json();
             if (data.results?.[0]) {
               onChange(data.results[0].formatted_address, latitude, longitude);
+              setGeoLoading(false);
               return;
             }
           } catch {
@@ -106,10 +109,12 @@ export function PlacesAutocomplete({
         }
 
         onChange(`${latitude.toFixed(4)}, ${longitude.toFixed(4)}`, latitude, longitude);
+        setGeoLoading(false);
       },
       () => {
-        // Geolocation error
-      }
+        setGeoLoading(false);
+      },
+      { enableHighAccuracy: true, timeout: 10000 }
     );
   }
 
@@ -139,10 +144,20 @@ export function PlacesAutocomplete({
           <button
             type="button"
             onClick={handleGeolocation}
-            className="p-1.5 hover:bg-neutral-200 rounded-lg transition-colors"
-            title="Ma position"
+            disabled={geoLoading}
+            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all shrink-0 ${
+              geoLoading
+                ? "bg-neutral-100 text-neutral-500 cursor-wait"
+                : "bg-neutral-900 text-white hover:bg-neutral-700 active:bg-neutral-800"
+            }`}
+            title="Me localiser"
           >
-            <Icon icon="solar:crosshair-linear" className="text-neutral-500 block" />
+            {geoLoading ? (
+              <Icon icon="solar:refresh-circle-linear" className="animate-spin text-sm" />
+            ) : (
+              <Icon icon="solar:point-on-map-bold" className="text-sm" />
+            )}
+            <span className="hidden sm:inline">{geoLoading ? "..." : "Localiser"}</span>
           </button>
         )}
       </div>

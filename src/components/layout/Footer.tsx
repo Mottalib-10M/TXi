@@ -1,6 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import { Icon } from "@iconify/react";
 import { Link } from "@/i18n/navigation";
 import { Logo } from "@/components/ui/Logo";
 
@@ -101,6 +102,18 @@ export function Footer() {
             <h4 className="text-sm font-medium mb-4 tracking-tight">{t("contactSection")}</h4>
             <ul className="space-y-3 text-sm text-neutral-500 font-light">
               <li>
+                <a href="tel:0759592934" className="flex items-center gap-2 hover:text-neutral-900 transition-colors">
+                  <Icon icon="solar:phone-linear" className="text-base" />
+                  {t("phone")}
+                </a>
+              </li>
+              <li>
+                <a href="mailto:support@taxineo.fr" className="flex items-center gap-2 hover:text-neutral-900 transition-colors">
+                  <Icon icon="solar:letter-linear" className="text-base" />
+                  {t("email")}
+                </a>
+              </li>
+              <li>
                 <Link href="/contact" className="hover:text-neutral-900 transition-colors">
                   {t("contactUs")}
                 </Link>
@@ -115,6 +128,11 @@ export function Footer() {
                   {t("support")}
                 </Link>
               </li>
+              <li className="border-t border-neutral-100 pt-3">
+                <Link href="/blog" className="hover:text-neutral-900 transition-colors">
+                  {t("blog")}
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
@@ -123,6 +141,15 @@ export function Footer() {
           <p className="text-xs text-neutral-400 font-light">
             {t("copyright")}
           </p>
+          <div className="flex items-center gap-3">
+            <span className="text-xs text-neutral-400 font-light">{t("paymentMethods")}</span>
+            <div className="flex items-center gap-2 text-neutral-400">
+              <Icon icon="logos:visa" className="text-2xl" />
+              <Icon icon="logos:mastercard" className="text-2xl" />
+              <Icon icon="logos:apple-pay" className="text-2xl" />
+              <Icon icon="logos:google-pay" className="text-2xl" />
+            </div>
+          </div>
         </div>
       </div>
     </footer>

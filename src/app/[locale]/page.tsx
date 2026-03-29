@@ -25,6 +25,23 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: t("metaTitle"),
       description: t("metaDescription"),
+      url: `https://taxineo.fr/${locale === "fr" ? "" : locale}`,
+      siteName: "TaxiNeo",
+      type: "website",
+      images: [
+        {
+          url: "https://taxineo.fr/og-image.png",
+          width: 1200,
+          height: 630,
+          alt: "TaxiNeo",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("metaTitle"),
+      description: t("metaDescription"),
+      images: ["https://taxineo.fr/og-image.png"],
     },
   };
 }
@@ -33,8 +50,70 @@ export default async function HomePage() {
   const t = await getTranslations("home");
   const tc = await getTranslations("common");
 
+  const faqItems = [
+    { q: t("faq1Q"), a: t("faq1A") },
+    { q: t("faq2Q"), a: t("faq2A") },
+    { q: t("faq3Q"), a: t("faq3A") },
+    { q: t("faq4Q"), a: t("faq4A") },
+    { q: t("faq5Q"), a: t("faq5A") },
+    { q: t("faq6Q"), a: t("faq6A") },
+  ];
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        name: "TaxiNeo",
+        url: "https://taxineo.fr",
+        logo: "https://taxineo.fr/logo.png",
+        contactPoint: {
+          "@type": "ContactPoint",
+          telephone: "+33759592934",
+          contactType: "customer service",
+          availableLanguage: ["French", "English"],
+        },
+        sameAs: [],
+      },
+      {
+        "@type": "TaxiService",
+        name: "TaxiNeo",
+        description: t("metaDescription"),
+        url: "https://taxineo.fr",
+        areaServed: {
+          "@type": "Country",
+          name: "France",
+        },
+        provider: {
+          "@type": "Organization",
+          name: "TaxiNeo",
+        },
+        offers: {
+          "@type": "Offer",
+          priceCurrency: "EUR",
+          availability: "https://schema.org/InStock",
+        },
+      },
+      {
+        "@type": "FAQPage",
+        mainEntity: faqItems.map((item) => ({
+          "@type": "Question",
+          name: item.q,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: item.a,
+          },
+        })),
+      },
+    ],
+  };
+
   return (
     <div className="flex flex-col min-h-screen overflow-x-hidden">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Navbar />
       <ScrollAnimation />
 
@@ -637,6 +716,37 @@ export default async function HomePage() {
             >
               {t("seeAllStations", { count: stations.length })} <Icon icon="solar:arrow-right-linear" className="text-sm" />
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 md:py-28 bg-neutral-50 border-t border-neutral-100" id="faq">
+        <div className="max-w-3xl mx-auto px-6">
+          <div className="text-center mb-12 fade-up">
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
+              {t("faqTitle")}
+            </h2>
+          </div>
+
+          <div className="space-y-3 fade-up">
+            {faqItems.map((item, i) => (
+              <details
+                key={i}
+                className="group bg-white border border-neutral-200 rounded-xl overflow-hidden"
+              >
+                <summary className="flex items-center justify-between cursor-pointer px-6 py-4 text-sm font-medium text-neutral-900 hover:bg-neutral-50 transition-colors list-none">
+                  {item.q}
+                  <Icon
+                    icon="solar:alt-arrow-down-linear"
+                    className="text-neutral-400 text-base shrink-0 ml-4 transition-transform group-open:rotate-180"
+                  />
+                </summary>
+                <div className="px-6 pb-4 text-sm text-neutral-500 font-light leading-relaxed">
+                  {item.a}
+                </div>
+              </details>
+            ))}
           </div>
         </div>
       </section>

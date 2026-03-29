@@ -2,15 +2,32 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Réserver un taxi en France - Tarif fixe, chauffeur agréé",
+  title: "TaxiNeo — Taxi prix fixe 24h/24 | Chauffeurs agréés | France",
   description:
-    "Réservez un taxi en quelques secondes. Chauffeurs agréés, tarifs réglementés, voies réservées, disponible 24h/24 et 7j/7 partout en France. Prix fixe garanti.",
+    "Réservez un taxi agréé en quelques secondes. Prix fixe garanti, chauffeurs professionnels, disponible 24h/24 dans 50+ villes françaises. Pas de mauvaise surprise.",
   openGraph: {
-    title: "Réserver un taxi en France - Tarif fixe, chauffeur agréé",
+    title: "TaxiNeo — Taxi prix fixe 24h/24 | Chauffeurs agréés | France",
     description:
-      "Réservez un taxi en quelques secondes. Chauffeurs agréés, tarifs réglementés, voies réservées, disponible 24h/24 et 7j/7 partout en France. Prix fixe garanti.",
+      "Réservez un taxi agréé en quelques secondes. Prix fixe garanti, chauffeurs professionnels, disponible 24h/24 dans 50+ villes françaises. Pas de mauvaise surprise.",
+    url: "https://taxineo.fr",
+    siteName: "TaxiNeo",
     locale: "fr_FR",
     type: "website",
+    images: [
+      {
+        url: "https://taxineo.fr/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "TaxiNeo — Taxi prix fixe en France",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "TaxiNeo — Taxi prix fixe 24h/24 | Chauffeurs agréés | France",
+    description:
+      "Réservez un taxi agréé en quelques secondes. Prix fixe garanti, chauffeurs professionnels, disponible 24h/24 dans 50+ villes françaises.",
+    images: ["https://taxineo.fr/og-image.png"],
   },
 };
 

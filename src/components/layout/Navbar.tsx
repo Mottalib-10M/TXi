@@ -78,6 +78,12 @@ export function Navbar({ minimal = false }: { minimal?: boolean }) {
               >
                 {t("drivers")}
               </Link>
+              <Link
+                href="/blog"
+                className="text-sm font-medium text-neutral-500 hover:text-neutral-900 transition-colors"
+              >
+                {t("blog")}
+              </Link>
               <div
                 className="relative"
                 onMouseEnter={() => {
@@ -143,6 +149,13 @@ export function Navbar({ minimal = false }: { minimal?: boolean }) {
         </div>
 
         <div className="flex items-center gap-4">
+          <a
+            href="tel:0759592934"
+            className="hidden md:flex items-center gap-1.5 text-sm font-medium text-neutral-500 hover:text-neutral-900 transition-colors"
+          >
+            <Icon icon="solar:phone-linear" className="text-base" />
+            07 59 59 29 34
+          </a>
           <LanguageSwitcher />
           {isLoggedIn ? (
             <div className="relative">
@@ -268,6 +281,13 @@ export function Navbar({ minimal = false }: { minimal?: boolean }) {
                 className="block py-3 text-sm font-medium text-neutral-500 hover:bg-neutral-50 hover:text-neutral-900 rounded-lg px-3 transition-colors"
               >
                 {t("drivers")}
+              </Link>
+              <Link
+                href="/blog"
+                onClick={() => setMobileOpen(false)}
+                className="block py-3 text-sm font-medium text-neutral-500 hover:bg-neutral-50 hover:text-neutral-900 rounded-lg px-3 transition-colors"
+              >
+                {t("blog")}
               </Link>
               <button
                 onClick={() => setMobileSolutionsOpen(!mobileSolutionsOpen)}
