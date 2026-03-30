@@ -32,12 +32,12 @@ export const blogArticles: BlogArticle[] = [
       en: "Taxi fares in France: official rates, price calculation and tips to pay less",
     },
     metaTitle: {
-      fr: "Tarifs taxi en France : barème officiel et astuces | TaxiNeo Blog",
+      fr: "Tarifs taxi en France : barème officiel 2026 | TaxiNeo",
       en: "Taxi fares in France: official rates and tips | TaxiNeo Blog",
     },
     metaDescription: {
       fr: "Découvrez le barème officiel des tarifs taxi en France (A, B, C, D), le calcul du prix au compteur, les forfaits aéroport et 5 astuces pour payer moins cher.",
-      en: "Discover the official taxi fare schedule in France (A, B, C, D), meter price calculation, airport flat rates and 5 tips to pay less.",
+      en: "Discover the official taxi fare schedule in France (A, B, C, D), meter price calculation, airport flat rates and 5 smart tips to pay less on every ride.",
     },
     excerpt: {
       fr: "Barème officiel des tarifs taxi en France, calcul du prix au compteur, forfaits aéroport et 5 astuces pour payer moins cher votre course.",
@@ -485,12 +485,12 @@ At TaxiNeo, we wanted to solve the main problem with taxi fares: **uncertainty**
       en: "Paris Orly taxi: official flat rates, routes and practical tips",
     },
     metaTitle: {
-      fr: "Taxi Paris Orly : tarifs forfaitaires 2026 et conseils | TaxiNeo Blog",
+      fr: "Taxi Paris-Orly : tarifs forfaitaires 2026 | TaxiNeo",
       en: "Paris Orly taxi: 2026 flat rates and tips | TaxiNeo Blog",
     },
     metaDescription: {
       fr: "Tarifs forfaitaires taxi Paris-Orly (32€ à 37€), terminaux, itinéraires, comparaison avec les autres transports et conseils pratiques pour votre transfert.",
-      en: "Paris-Orly taxi flat rates (32 to 37 euros), terminals, routes, comparison with other transport and practical tips for your transfer.",
+      en: "Paris-Orly taxi flat rates from 32 to 37 euros, terminal pickup details, route options, transport alternatives and practical booking tips for your trip.",
     },
     excerpt: {
       fr: "Tarifs forfaitaires taxi Paris-Orly, terminaux, itinéraires et comparaison avec les autres transports pour un transfert réussi.",
@@ -864,12 +864,12 @@ TaxiNeo simplifies your Orly transfer with several exclusive advantages:
       en: "How to become a taxi driver in France: complete 2026 guide",
     },
     metaTitle: {
-      fr: "Devenir chauffeur de taxi en France : guide complet 2026 | TaxiNeo Blog",
-      en: "Become a taxi driver in France: complete 2026 guide | TaxiNeo Blog",
+      fr: "Devenir chauffeur de taxi en France 2026 | TaxiNeo",
+      en: "Become a taxi driver in France: 2026 guide | TaxiNeo",
     },
     metaDescription: {
-      fr: "Conditions, examen, formation, licence ADS, statut, revenus : le guide complet pour devenir chauffeur de taxi en France en 2026.",
-      en: "Requirements, exam, training, ADS license, status, income: the complete guide to becoming a taxi driver in France in 2026.",
+      fr: "Conditions, examen, formation, licence ADS, statut et revenus : le guide complet et détaillé pour devenir chauffeur de taxi en France en 2026 avec TaxiNeo.",
+      en: "Requirements, exam, training, ADS license, legal status, income: the complete and detailed guide to becoming a taxi driver in France in 2026 with TaxiNeo.",
     },
     excerpt: {
       fr: "Conditions, examen, formation, licence ADS, statut et revenus : tout ce qu'il faut savoir pour devenir chauffeur de taxi en France.",
@@ -1449,12 +1449,12 @@ If you are already a taxi driver or about to become one, TaxiNeo offers you an o
       en: "Long distance taxi in France: fares, comfort and everything you need to know",
     },
     metaTitle: {
-      fr: "Taxi longue distance en France : tarifs et conseils | TaxiNeo Blog",
+      fr: "Taxi longue distance : tarifs intercités | TaxiNeo",
       en: "Long distance taxi in France: fares and tips | TaxiNeo Blog",
     },
     metaDescription: {
-      fr: "Taxi longue distance en France : calcul du prix, exemples de tarifs, comparaison train/covoiturage et conseils pour un trajet intercité réussi.",
-      en: "Long distance taxi in France: price calculation, fare examples, train/carpooling comparison and tips for a successful intercity trip.",
+      fr: "Taxi longue distance en France : calcul du prix au kilomètre, exemples de tarifs, comparaison train et covoiturage, conseils pour un trajet intercité réussi.",
+      en: "Long distance taxi in France: per-kilometre price calculation, fare examples, train and carpooling comparison, and tips for a successful intercity journey.",
     },
     excerpt: {
       fr: "Taxi longue distance en France : calcul du prix, exemples de tarifs intercités et conseils pour un trajet longue distance réussi.",
@@ -1924,12 +1924,12 @@ TaxiNeo is the ideal platform for booking a long distance taxi in France. Our se
       en: "Taxi vs Rideshare: 7 real differences you need to know",
     },
     metaTitle: {
-      fr: "Taxi vs VTC : 7 différences clés | TaxiNeo Blog",
+      fr: "Taxi vs VTC : 7 différences clés en France | TaxiNeo",
       en: "Taxi vs Rideshare: 7 key differences | TaxiNeo Blog",
     },
     metaDescription: {
-      fr: "Tarifs, réglementation, voies de bus, assurance... Découvrez les 7 vraies différences entre un taxi et un VTC en France pour faire le bon choix.",
-      en: "Fares, regulation, bus lanes, insurance... Discover the 7 real differences between a taxi and a rideshare in France to make the right choice.",
+      fr: "Tarifs, réglementation, voies de bus, assurance, disponibilité... Découvrez les 7 vraies différences entre un taxi et un VTC en France pour bien choisir.",
+      en: "Fares, regulation, bus lanes, insurance, availability... Discover the 7 real differences between a taxi and a rideshare in France to make the right choice.",
     },
     excerpt: {
       fr: "Tarifs, réglementation, voies de bus, assurance... Découvrez les 7 vraies différences entre un taxi et un VTC en France.",
@@ -2022,7 +2022,7 @@ With TaxiNeo, you combine the advantages of a regulated taxi with the transparen
     },
     metaDescription: {
       fr: "Combien coûte un taxi entre Paris et l'aéroport CDG ? Découvrez les tarifs forfaitaires officiels 2026, de jour comme de nuit, et réservez au meilleur prix.",
-      en: "How much does a taxi cost between Paris and CDG airport? Discover the official 2026 flat rates, day and night, and book at the best price.",
+      en: "How much does a taxi cost between Paris and CDG airport? Discover official 2026 flat rates by day and by night, and book your transfer at the best price.",
     },
     excerpt: {
       fr: "Combien coûte un taxi entre Paris et l'aéroport CDG ? Découvrez les tarifs forfaitaires officiels 2026, de jour comme de nuit.",
@@ -2134,12 +2134,12 @@ With TaxiNeo, book your Paris-CDG taxi in seconds with a **guaranteed fixed pric
       en: "Airport taxi: 10 tips for a stress-free transfer",
     },
     metaTitle: {
-      fr: "Taxi aéroport : 10 conseils pour un transfert réussi | TaxiNeo",
+      fr: "Taxi aéroport : 10 conseils transfert réussi | TaxiNeo",
       en: "Airport taxi: 10 tips for a successful transfer | TaxiNeo",
     },
     metaDescription: {
-      fr: "Réservation, horaires, bagages, point de rencontre... 10 conseils pratiques pour réussir votre transfert aéroport en taxi en France.",
-      en: "Booking, timing, luggage, meeting point... 10 practical tips for a successful airport taxi transfer in France.",
+      fr: "Réservation, horaires, bagages, point de rencontre, tarifs... 10 conseils pratiques et indispensables pour réussir votre transfert aéroport en taxi en France.",
+      en: "Booking, timing, luggage, meeting point, fares... 10 practical and essential tips for a smooth and successful airport taxi transfer anywhere in France.",
     },
     excerpt: {
       fr: "Réservation, horaires, bagages, point de rencontre... 10 conseils pratiques pour réussir votre transfert aéroport en taxi.",
@@ -2251,12 +2251,12 @@ In case of problems (forgotten item, questions), you can **easily recontact** yo
       en: "Business taxi: simplify your team's mobility",
     },
     metaTitle: {
-      fr: "Taxi entreprise B2B : solution mobilité professionnelle | TaxiNeo",
+      fr: "Taxi entreprise B2B : votre mobilité pro | TaxiNeo",
       en: "Business taxi B2B: professional mobility solution | TaxiNeo",
     },
     metaDescription: {
       fr: "TaxiNeo Business simplifie la gestion des courses taxi de votre entreprise : facturation centralisée, reporting, politiques de déplacement. Demandez une démo.",
-      en: "TaxiNeo Business simplifies managing your company's taxi rides: centralized billing, reporting, travel policies. Request a demo.",
+      en: "TaxiNeo Business simplifies managing your company's taxi rides: centralized billing, detailed reporting, custom travel policies. Request a free demo today.",
     },
     excerpt: {
       fr: "TaxiNeo Business simplifie la gestion des courses taxi de votre entreprise : facturation centralisée, reporting, politiques de déplacement.",
@@ -2374,12 +2374,12 @@ Companies using TaxiNeo Business see on average:
       en: "Night taxi in Paris: fares, availability and tips",
     },
     metaTitle: {
-      fr: "Taxi de nuit Paris : tarifs et disponibilité 24h/24 | TaxiNeo",
+      fr: "Taxi de nuit à Paris : tarifs et dispo 24h/24 | TaxiNeo",
       en: "Night taxi Paris: 24/7 fares and availability | TaxiNeo",
     },
     metaDescription: {
-      fr: "Besoin d'un taxi à Paris après minuit ? Découvrez les tarifs de nuit, les zones couvertes et comment réserver un taxi fiable 24h/24 avec TaxiNeo.",
-      en: "Need a taxi in Paris after midnight? Discover night fares, covered areas and how to book a reliable 24/7 taxi with TaxiNeo.",
+      fr: "Besoin d'un taxi à Paris après minuit ? Découvrez les tarifs de nuit, les zones couvertes et comment réserver facilement un taxi fiable 24h/24 avec TaxiNeo.",
+      en: "Need a taxi in Paris after midnight? Discover night fares, areas covered, booking options and how to get a reliable 24/7 taxi anywhere in Paris with TaxiNeo.",
     },
     excerpt: {
       fr: "Besoin d'un taxi à Paris après minuit ? Découvrez les tarifs de nuit, les zones couvertes et comment réserver facilement.",
@@ -2489,7 +2489,7 @@ Taking a taxi at night is one of the safest options:
       en: "Medical taxi: hospital transport and healthcare rides",
     },
     metaTitle: {
-      fr: "Taxi conventionné hôpital : transport médical remboursé | TaxiNeo",
+      fr: "Taxi conventionné : transport médical remboursé | TaxiNeo",
       en: "Medical taxi: reimbursed hospital transport | TaxiNeo",
     },
     metaDescription: {
@@ -2602,8 +2602,8 @@ Our approved partner drivers provide your **medical transport** with professiona
       en: "Fixed price vs taxi meter: complete comparison | TaxiNeo",
     },
     metaDescription: {
-      fr: "Prix fixe ou compteur ? Découvrez les avantages et inconvénients de chaque mode de tarification taxi et pourquoi le prix fixe TaxiNeo est souvent plus avantageux.",
-      en: "Fixed price or meter? Discover the pros and cons of each taxi pricing mode and why TaxiNeo fixed pricing is often more advantageous.",
+      fr: "Prix fixe ou compteur ? Découvrez les avantages et inconvénients de chaque mode de tarification taxi et pourquoi le prix fixe TaxiNeo est plus avantageux.",
+      en: "Fixed price or meter? Discover the pros and cons of each taxi pricing mode and why choosing TaxiNeo fixed pricing is often the more advantageous option.",
     },
     excerpt: {
       fr: "Prix fixe ou compteur ? Découvrez les avantages de chaque mode de tarification taxi et pourquoi le prix fixe est souvent préférable.",
@@ -3257,7 +3257,7 @@ Our team is available to assist you with your PMR bookings and answer all your q
     },
     metaDescription: {
       fr: "Organisez le transport de vos événements : mariage, séminaire, soirée. Navettes, mise à disposition, forfaits groupe. Guide complet et devis avec TaxiNeo.",
-      en: "Organize transport for your events: wedding, seminar, party. Shuttles, chauffeur service, group packages. Complete guide and quotes with TaxiNeo.",
+      en: "Organize transport for your events: wedding, seminar, party. Shuttles, chauffeur service, group packages. Get your complete guide and free quotes with TaxiNeo.",
     },
     excerpt: {
       fr: "Organisez le transport de vos événements : mariage, séminaire, soirée. Navettes, mise à disposition, forfaits groupe. Le guide complet.",
@@ -3762,11 +3762,11 @@ Contact us with the details of your event and receive a **personalized quote wit
     },
     metaTitle: {
       fr: "Droits des passagers de taxi en France | TaxiNeo Blog",
-      en: "Taxi passenger rights in France | TaxiNeo Blog",
+      en: "Taxi passenger rights in France: full guide | TaxiNeo",
     },
     metaDescription: {
-      fr: "Tarifs réglementés, paiement par carte, choix de l'itinéraire, reçu obligatoire... Découvrez tous vos droits en tant que passager de taxi en France et comment les faire valoir.",
-      en: "Regulated fares, card payment, route choice, mandatory receipt... Discover all your rights as a taxi passenger in France and how to enforce them.",
+      fr: "Tarifs réglementés, paiement par carte, choix de l'itinéraire, reçu obligatoire... Découvrez vos droits en tant que passager de taxi en France avec TaxiNeo.",
+      en: "Regulated fares, card payment, route choice, mandatory receipt... Discover all your rights as a taxi passenger in France and learn how to enforce them easily.",
     },
     excerpt: {
       fr: "Tarifs réglementés, paiement par carte, choix de l'itinéraire, reçu obligatoire... Tous vos droits en tant que passager de taxi en France.",
@@ -4370,12 +4370,12 @@ All TaxiNeo partner drivers are **licensed taxi operators**, holding a valid ADS
       en: "Taxi or public transport: which is the best choice for your situation?",
     },
     metaTitle: {
-      fr: "Taxi ou transport en commun : comparatif complet | TaxiNeo Blog",
+      fr: "Taxi ou transport en commun : le comparatif | TaxiNeo",
       en: "Taxi or public transport: complete comparison | TaxiNeo Blog",
     },
     metaDescription: {
-      fr: "Budget, temps, confort, bagages... Découvrez quand le taxi est plus avantageux que les transports en commun et inversement. Guide comparatif complet.",
-      en: "Budget, time, comfort, luggage... Find out when a taxi is more advantageous than public transport and vice versa. Complete comparison guide.",
+      fr: "Budget, temps, confort, bagages... Découvrez quand le taxi est plus avantageux que les transports en commun et inversement. Le guide comparatif complet 2026.",
+      en: "Budget, time, comfort, luggage... Find out when a taxi is more advantageous than public transport and vice versa. Your complete 2026 comparison guide is here.",
     },
     excerpt: {
       fr: "Budget, temps, confort, bagages... Découvrez quand le taxi est plus avantageux que les transports en commun et inversement.",
@@ -4897,8 +4897,8 @@ All TaxiNeo drivers are **licensed taxi operators**, rated by passengers. A guar
       en: "Booking a taxi in advance: complete guide | TaxiNeo Blog",
     },
     metaDescription: {
-      fr: "Découvrez pourquoi réserver un taxi à l'avance est indispensable et comment optimiser votre réservation pour un trajet serein.",
-      en: "Find out why booking a taxi in advance is essential and how to optimize your booking for a smooth ride.",
+      fr: "Découvrez pourquoi réserver un taxi à l'avance est indispensable et comment optimiser votre réservation pour un trajet serein. Conseils pratiques sur TaxiNeo.",
+      en: "Find out why booking a taxi in advance is essential and how to optimize your reservation for a smooth, stress-free ride. Practical tips and advice on TaxiNeo.",
     },
     excerpt: {
       fr: "Découvrez pourquoi réserver un taxi à l'avance est indispensable et comment optimiser votre réservation pour un trajet serein.",
@@ -5302,12 +5302,12 @@ Need to cancel? With TaxiNeo, cancellation is **free** up to a reasonable time b
       en: "Eco-friendly taxis in France: the green transition of the sector in 2026",
     },
     metaTitle: {
-      fr: "Taxi écologique : la transition verte en France | TaxiNeo Blog",
-      en: "Eco-friendly taxi: the green transition in France | TaxiNeo Blog",
+      fr: "Taxi écologique : transition verte en France | TaxiNeo",
+      en: "Eco-friendly taxi: green transition in France | TaxiNeo",
     },
     metaDescription: {
       fr: "Véhicules électriques, hybrides, ZFE, aides à la conversion... Découvrez comment le secteur du taxi en France se transforme pour devenir plus écologique.",
-      en: "Electric vehicles, hybrids, low emission zones, conversion grants... Discover how France's taxi sector is transforming to become greener.",
+      en: "Electric vehicles, hybrids, low emission zones, conversion grants... Discover how France's taxi sector is transforming to become greener and more sustainable.",
     },
     excerpt: {
       fr: "Véhicules électriques, hybrides, ZFE, aides à la conversion... Comment le secteur du taxi en France se transforme pour devenir plus écologique.",

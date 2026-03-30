@@ -88,7 +88,7 @@
   },
   "home": {
     "metaTitle": "TaxiNeo — Fixed-Price Taxi 24/7 | Licensed Drivers | France",
-    "metaDescription": "Book a licensed taxi in seconds. Fixed price guaranteed, professional drivers, available 24/7 in 50+ French cities. No surprises.",
+    "metaDescription": "Book a licensed taxi in seconds. Fixed price guaranteed, professional drivers, available 24/7 in over 50 French cities. No surprises — try TaxiNeo today.",
     "badge": "Available 24/7 across France",
     "heroTitle1": "Book a taxi.",
     "heroTitle2": "Fixed price, known before you ride.",
@@ -1368,7 +1368,7 @@
   },
   "solutionHotel": {
     "metaTitle": "TaxiNeo for Hotels — Guaranteed-fare taxi for your guests",
-    "metaDescription": "Offer a guaranteed-fare taxi service to your guests. Centralized dashboard, book in 2 clicks, 5% commission paid back. 100% free solution.",
+    "metaDescription": "Offer a guaranteed-fare taxi service to your hotel guests. Centralized dashboard, book in 2 clicks, earn 5% commission back. 100% free solution for hotels.",
     "badge": "Free hotel solution",
     "heroTitle": "Guaranteed-fare taxi for your guests",
     "heroSubtitle": "Book a taxi for your guests in 2 clicks from your centralized dashboard. Guaranteed fixed fare, real-time tracking of every ride, and 5% commission paid back to your hotel on each trip.",
@@ -1830,7 +1830,7 @@
   },
   "solutionAssistance": {
     "metaTitle": "TaxiNeo for Roadside Assistance — 24/7 Insured Transport",
-    "metaDescription": "Transport your policyholders after a breakdown or accident with a guaranteed-fare taxi. Available 24/7, nationwide coverage, billing per claim.",
+    "metaDescription": "Transport your policyholders after a breakdown or accident with a guaranteed-fare taxi. Available 24/7, nationwide coverage, billing per claim. Try TaxiNeo.",
     "badge": "Roadside assistance solution",
     "heroTitle": "Assistance taxi for your policyholders",
     "heroSubtitle": "Rapid pickup of your policyholders after breakdown, accident or vehicle immobilisation. Guaranteed fare, available 24/7 across France.",
@@ -1913,8 +1913,8 @@
     "ctaButton": "Request partner access"
   },
   "howItWorksPage": {
-    "metaTitle": "How it works — Fixed-price taxi | TaxiNeo",
-    "metaDescription": "Discover how fixed-price taxi booking works. Simple, transparent and no surprises.",
+    "metaTitle": "How it works — Book a fixed-price taxi in minutes | TaxiNeo",
+    "metaDescription": "Discover how fixed-price taxi booking works with TaxiNeo. Choose your route, get an instant fare quote and pay only the announced price. Simple and transparent.",
     "heroTitle": "How it works",
     "heroSubtitle": "Book a fixed-price taxi in seconds. Simple and transparent.",
     "fixedTitle": "Fixed-price taxi",
@@ -2020,7 +2020,7 @@
   },
   "chauffeurPrive": {
     "metaTitle": "Private Chauffeur TaxiNeo — Premium service at taxi rates",
-    "metaDescription": "Enjoy a private chauffeur service with taxi advantages: regulated fares, bus lane access, airport flat rates. Book your driver in 2 clicks.",
+    "metaDescription": "Enjoy a private chauffeur service with taxi advantages: regulated fares, bus lane access, airport flat rates. Book your personal driver with TaxiNeo today.",
     "badge": "Private chauffeur service",
     "heroTitle": "Your private chauffeur, at taxi rates",
     "heroSubtitle": "Enjoy the comfort and discretion of a private chauffeur, combined with exclusive taxi advantages: regulated fares without surge pricing, bus lane access for faster rides, and guaranteed airport flat rates. Premium service without the premium price.",
@@ -2079,7 +2079,7 @@
   },
   "alternativeVtc": {
     "metaTitle": "Fixed-Price Rideshare Alternative — TaxiNeo, next-gen taxis",
-    "metaDescription": "Tired of variable rideshare prices? TaxiNeo offers a reliable fixed-price alternative. Regulated fares, licensed drivers, bus lanes. Book now.",
+    "metaDescription": "Tired of variable rideshare prices? TaxiNeo offers a reliable fixed-price alternative with regulated fares, licensed drivers and bus lane access. Book now.",
     "badge": "Fixed-price rideshare alternative",
     "heroTitle": "The fixed-price rideshare alternative",
     "heroSubtitle": "No more fare surprises. TaxiNeo gives you all the benefits of a premium rideshare — online booking, professional drivers, comfortable vehicles — plus the exclusive advantages of taxis: guaranteed fixed price, bus lane access and regulated airport flat rates.",
@@ -2138,7 +2138,7 @@
   },
   "blog": {
     "metaTitle": "TaxiNeo Blog — Tips, fares and taxi news in France",
-    "metaDescription": "Read our articles on taxi fares, taxi vs rideshare differences, airport transfers and all our tips for traveling in France.",
+    "metaDescription": "Read our articles on taxi fares, taxi vs rideshare differences, airport transfers and practical tips for traveling in France. Stay informed with TaxiNeo.",
     "title": "Blog",
     "subtitle": "Tips, fares and taxi news",
     "readMore": "Read article",
@@ -2148,7 +2148,7 @@
     "relatedArticles": "Related articles"
   },
   "miseADisposition": {
-    "metaTitle": "TaxiNeo — Chauffeur Hire | Licensed taxi driver for a full or half day",
+    "metaTitle": "Chauffeur Hire — Licensed taxi for a full day | TaxiNeo",
     "metaDescription": "Hire a licensed taxi for a full or half day. Perfect for seminars, events and business travel. Professional driver, fixed price, available across France.",
     "breadcrumbServices": "Services",
     "breadcrumbCurrent": "Chauffeur hire",

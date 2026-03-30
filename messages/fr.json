@@ -88,7 +88,7 @@
   },
   "home": {
     "metaTitle": "TaxiNeo — Taxi prix fixe 24h/24 | Chauffeurs agréés | France",
-    "metaDescription": "Réservez un taxi agréé en quelques secondes. Prix fixe garanti, chauffeurs professionnels, disponible 24h/24 dans 50+ villes françaises. Pas de mauvaise surprise.",
+    "metaDescription": "Réservez un taxi agréé en quelques secondes. Prix fixe garanti, chauffeurs professionnels, disponible 24h/24 dans 50+ villes françaises. Essayez TaxiNeo.",
     "badge": "Disponible 24h/24 dans toute la France",
     "heroTitle1": "Réservez un taxi.",
     "heroTitle2": "Prix fixe, annoncé avant de monter.",
@@ -1829,7 +1829,7 @@
     "ctaButton": "Demander un devis"
   },
   "solutionAssistance": {
-    "metaTitle": "TaxiNeo pour l'Assistance & Dépannage — Transport d'assurés 24h/24",
+    "metaTitle": "TaxiNeo Assistance & Dépannage — Transport assuré 24h/24",
     "metaDescription": "Transportez vos assurés en panne ou accidentés avec un taxi à tarif garanti. Disponible 24h/24, couverture nationale, facturation par dossier sinistre.",
     "badge": "Solution assistance & dépannage",
     "heroTitle": "Taxi d'assistance pour vos assurés",
@@ -1913,8 +1913,8 @@
     "ctaButton": "Demander un accès partenaire"
   },
   "howItWorksPage": {
-    "metaTitle": "Comment ça marche — Taxi à prix fixe | TaxiNeo",
-    "metaDescription": "Découvrez comment fonctionne la réservation de taxi à prix fixe garanti. Simple, transparent et sans surprise.",
+    "metaTitle": "Comment ça marche — Réservez un taxi prix fixe | TaxiNeo",
+    "metaDescription": "Découvrez comment réserver un taxi à prix fixe garanti avec TaxiNeo. Choisissez votre trajet, obtenez un tarif immédiat, payez le prix annoncé. Transparent.",
     "heroTitle": "Comment ça marche",
     "heroSubtitle": "Réservez un taxi à prix fixe en quelques secondes. Simple et transparent.",
     "fixedTitle": "Taxi à prix fixe",
@@ -1952,8 +1952,8 @@
     "learnMore": "En savoir plus"
   },
   "taxiVsVtc": {
-    "metaTitle": "Taxi vs VTC — Comparatif complet 2026 | TaxiNeo",
-    "metaDescription": "Taxi ou VTC ? Découvrez les différences de tarifs, réglementation, disponibilité et qualité de service. Pourquoi le taxi reste le choix le plus fiable en France.",
+    "metaTitle": "Taxi vs VTC — Comparatif tarifs et services 2026 | TaxiNeo",
+    "metaDescription": "Taxi ou VTC ? Comparez tarifs, réglementation, disponibilité et qualité de service. Découvrez pourquoi le taxi reste le choix le plus fiable en France.",
     "badge": "Comparatif complet",
     "heroTitle": "Taxi vs VTC : le comparatif complet",
     "heroSubtitle": "Tarifs réglementés ou dynamiques, voies de bus ou pas, disponibilité garantie ou dépendante de la demande — les différences entre taxi et VTC sont nombreuses. Découvrez pourquoi de plus en plus de Français reviennent au taxi pour leurs déplacements quotidiens et leurs transferts aéroport.",
@@ -2078,8 +2078,8 @@
     "ctaButton": "Réserver mon chauffeur"
   },
   "alternativeVtc": {
-    "metaTitle": "Alternative VTC au prix fixe — TaxiNeo, le taxi nouvelle génération",
-    "metaDescription": "Marre des prix variables des VTC ? TaxiNeo propose une alternative fiable au prix fixe. Tarifs réglementés, chauffeurs licenciés, voies de bus. Réservez maintenant.",
+    "metaTitle": "Alternative VTC prix fixe — Taxi nouvelle génération",
+    "metaDescription": "Marre des prix variables des VTC ? TaxiNeo propose une alternative fiable avec prix fixe garanti. Tarifs réglementés, chauffeurs licenciés et voies de bus.",
     "badge": "Alternative VTC prix fixe",
     "heroTitle": "L'alternative VTC au prix fixe",
     "heroSubtitle": "Fini les mauvaises surprises tarifaires. TaxiNeo vous offre tous les avantages d'un VTC premium — réservation en ligne, chauffeurs professionnels, véhicules confortables — avec en plus les bénéfices exclusifs du taxi : prix fixe garanti, voies de bus et forfaits aéroport réglementés.",
@@ -2138,7 +2138,7 @@
   },
   "blog": {
     "metaTitle": "Blog TaxiNeo — Conseils, tarifs et actualités taxi en France",
-    "metaDescription": "Retrouvez nos articles sur les tarifs taxi, les différences taxi/VTC, les transferts aéroport et tous nos conseils pour vos déplacements en France.",
+    "metaDescription": "Retrouvez nos articles sur les tarifs taxi, les différences taxi/VTC, les transferts aéroport et tous nos conseils pratiques pour vos déplacements en France.",
     "title": "Blog",
     "subtitle": "Conseils, tarifs et actualités taxi",
     "readMore": "Lire l'article",
@@ -2148,8 +2148,8 @@
     "relatedArticles": "Articles similaires"
   },
   "miseADisposition": {
-    "metaTitle": "TaxiNeo — Taxi à disposition | Chauffeur agréé à la journée ou demi-journée",
-    "metaDescription": "Réservez un taxi agréé à la journée ou demi-journée. Idéal pour séminaires, événements, déplacements professionnels. Chauffeur professionnel, prix fixe, disponible partout en France.",
+    "metaTitle": "Taxi à disposition — Chauffeur à la journée | TaxiNeo",
+    "metaDescription": "Réservez un taxi agréé à la journée ou demi-journée avec TaxiNeo. Idéal pour séminaires, événements et déplacements professionnels. Prix fixe garanti.",
     "breadcrumbServices": "Services",
     "breadcrumbCurrent": "Taxi à disposition",
     "badge": "Service premium",
