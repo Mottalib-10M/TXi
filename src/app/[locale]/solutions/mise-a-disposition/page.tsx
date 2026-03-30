@@ -5,6 +5,7 @@ import { Link } from "@/i18n/navigation";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { ScrollAnimation } from "@/components/ui/ScrollAnimation";
+import { ContactFormSection } from "@/components/solutions/ContactFormSection";
 
 interface Props {
   params: Promise<{ locale: string }>;
@@ -496,6 +497,9 @@ export default async function MiseADispositionPage() {
           </div>
         </div>
       </section>
+
+      {/* Contact Form */}
+      <ContactFormSection />
 
       {/* 10. Final CTA */}
       <section className="bg-neutral-950 py-20 md:py-28">

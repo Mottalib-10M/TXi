@@ -81,6 +81,12 @@ export function Navbar({ minimal = false }: { minimal?: boolean }) {
               >
                 {t("blog")}
               </Link>
+              <Link
+                href="/contact"
+                className="text-sm font-medium text-neutral-500 hover:text-neutral-900 transition-colors"
+              >
+                {t("contact")}
+              </Link>
               <div
                 className="relative"
                 onMouseEnter={() => {
@@ -285,6 +291,13 @@ export function Navbar({ minimal = false }: { minimal?: boolean }) {
                 className="block py-3 text-sm font-medium text-neutral-500 hover:bg-neutral-50 hover:text-neutral-900 rounded-lg px-3 transition-colors"
               >
                 {t("blog")}
+              </Link>
+              <Link
+                href="/contact"
+                onClick={() => setMobileOpen(false)}
+                className="block py-3 text-sm font-medium text-neutral-500 hover:bg-neutral-50 hover:text-neutral-900 rounded-lg px-3 transition-colors"
+              >
+                {t("contact")}
               </Link>
               <button
                 onClick={() => setMobileSolutionsOpen(!mobileSolutionsOpen)}

@@ -101,7 +101,7 @@ export default function ContactPage() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <Navbar minimal />
+      <Navbar />
 
       {/* Header */}
       <main className="flex-grow pt-28 pb-20">
@@ -140,45 +140,8 @@ export default function ContactPage() {
             ))}
           </div>
 
-          {/* FAQ */}
-          <div className="mb-20">
-            <div className="text-center mb-10">
-              <h2 className="text-2xl font-semibold tracking-tight">{t("faqTitle")}</h2>
-            </div>
-            <div className="max-w-2xl mx-auto space-y-2">
-              {faqItems.map((item, i) => (
-                <div
-                  key={i}
-                  className="border border-neutral-200 rounded-xl overflow-hidden"
-                >
-                  <button
-                    onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                    className="w-full flex items-center justify-between px-5 py-4 text-left hover:bg-neutral-50 transition-colors"
-                  >
-                    <span className="text-sm font-medium pr-4">{item.q}</span>
-                    <Icon
-                      icon="solar:alt-arrow-down-linear"
-                      className={`text-neutral-400 text-lg shrink-0 transition-transform duration-200 ${
-                        openFaq === i ? "rotate-180" : ""
-                      }`}
-                    />
-                  </button>
-                  <div
-                    className={`overflow-hidden transition-all duration-200 ${
-                      openFaq === i ? "max-h-40 pb-4" : "max-h-0"
-                    }`}
-                  >
-                    <p className="px-5 text-sm text-neutral-500 font-light leading-relaxed">
-                      {item.a}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
           {/* Contact Form */}
-          <div id="formulaire" className="scroll-mt-24">
+          <div id="formulaire" className="scroll-mt-24 mb-20">
             {success ? (
               <div className="max-w-xl mx-auto text-center py-16">
                 <div className="w-16 h-16 bg-green-50 border border-green-200 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -262,6 +225,43 @@ export default function ContactPage() {
                 </form>
               </div>
             )}
+          </div>
+
+          {/* FAQ */}
+          <div className="mb-20">
+            <div className="text-center mb-10">
+              <h2 className="text-2xl font-semibold tracking-tight">{t("faqTitle")}</h2>
+            </div>
+            <div className="max-w-2xl mx-auto space-y-2">
+              {faqItems.map((item, i) => (
+                <div
+                  key={i}
+                  className="border border-neutral-200 rounded-xl overflow-hidden"
+                >
+                  <button
+                    onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                    className="w-full flex items-center justify-between px-5 py-4 text-left hover:bg-neutral-50 transition-colors"
+                  >
+                    <span className="text-sm font-medium pr-4">{item.q}</span>
+                    <Icon
+                      icon="solar:alt-arrow-down-linear"
+                      className={`text-neutral-400 text-lg shrink-0 transition-transform duration-200 ${
+                        openFaq === i ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+                  <div
+                    className={`overflow-hidden transition-all duration-200 ${
+                      openFaq === i ? "max-h-40 pb-4" : "max-h-0"
+                    }`}
+                  >
+                    <p className="px-5 text-sm text-neutral-500 font-light leading-relaxed">
+                      {item.a}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* Contact Info */}

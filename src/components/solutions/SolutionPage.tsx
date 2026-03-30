@@ -4,6 +4,7 @@ import { Link } from "@/i18n/navigation";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { ScrollAnimation } from "@/components/ui/ScrollAnimation";
+import { ContactFormSection } from "@/components/solutions/ContactFormSection";
 
 interface SolutionPageProps {
   namespace: string;
@@ -371,6 +372,9 @@ export async function SolutionPage({
           </div>
         </div>
       </section>
+
+      {/* Contact Form Section */}
+      <ContactFormSection />
 
       {/* Final CTA Section */}
       <section className="bg-neutral-950 py-20 md:py-28">
