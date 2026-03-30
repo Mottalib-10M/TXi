@@ -1,26 +1,40 @@
 import { Icon } from "@iconify/react";
 import { getTranslations } from "next-intl/server";
+import { getLocale } from "next-intl/server";
+import type { City } from "@/data/cities";
 
-export async function CityWhyUs({ cityName }: { cityName: string }) {
+const ICONS = [
+  "solar:shield-check-linear",
+  "solar:tag-price-linear",
+  "solar:routing-linear",
+];
+
+export async function CityWhyUs({ city }: { city: City }) {
   const t = await getTranslations("city");
+  const locale = await getLocale();
+  const loc = locale === "en" ? "en" : "fr";
+  const whyUs = city.i18n[loc].whyUs;
 
-  const advantages = [
-    {
-      icon: "solar:shield-check-linear",
-      title: t("whyUsAdvantage1Title"),
-      desc: t("whyUsAdvantage1Desc", { cityName }),
-    },
-    {
-      icon: "solar:tag-price-linear",
-      title: t("whyUsAdvantage2Title"),
-      desc: t("whyUsAdvantage2Desc", { cityName }),
-    },
-    {
-      icon: "solar:routing-linear",
-      title: t("whyUsAdvantage3Title"),
-      desc: t("whyUsAdvantage3Desc", { cityName }),
-    },
-  ];
+  // Fallback to i18n if no unique content
+  const advantages = whyUs.length === 3
+    ? whyUs.map((w, i) => ({ icon: ICONS[i], title: w.title, desc: w.desc }))
+    : [
+        {
+          icon: ICONS[0],
+          title: t("whyUsAdvantage1Title"),
+          desc: t("whyUsAdvantage1Desc", { cityName: city.name }),
+        },
+        {
+          icon: ICONS[1],
+          title: t("whyUsAdvantage2Title"),
+          desc: t("whyUsAdvantage2Desc", { cityName: city.name }),
+        },
+        {
+          icon: ICONS[2],
+          title: t("whyUsAdvantage3Title"),
+          desc: t("whyUsAdvantage3Desc", { cityName: city.name }),
+        },
+      ];
 
   return (
     <section className="bg-neutral-50 border-t border-b border-neutral-100 py-20 md:py-28">
@@ -30,7 +44,7 @@ export async function CityWhyUs({ cityName }: { cityName: string }) {
             {t("whyUsSubtitle")}
           </p>
           <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
-            {t("whyUsTitle", { cityName })}
+            {t("whyUsTitle", { cityName: city.name })}
           </h2>
         </div>
         <div className="grid md:grid-cols-3 gap-8">

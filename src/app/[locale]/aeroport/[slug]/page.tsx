@@ -7,6 +7,7 @@ import { AirportBreadcrumb } from "@/components/airport/AirportBreadcrumb";
 import { AirportJsonLd } from "@/components/airport/AirportJsonLd";
 import { AirportHero } from "@/components/airport/AirportHero";
 import { AirportInfo } from "@/components/airport/AirportInfo";
+import { AirportIntro } from "@/components/airport/AirportIntro";
 import { AirportPricing } from "@/components/airport/AirportPricing";
 import { AirportServices } from "@/components/airport/AirportServices";
 import { AirportPractical } from "@/components/airport/AirportPractical";
@@ -70,11 +71,12 @@ export default async function AirportPage({ params }: PageProps) {
         </div>
 
         <AirportHero airport={ap} />
+        <AirportIntro airport={ap} />
         <AirportInfo airport={ap} />
         <AirportPricing airport={ap} />
         <AirportServices airportName={ap.name} />
         <AirportPractical airport={ap} />
-        <AirportWhyUs airportName={ap.name} />
+        <AirportWhyUs airport={ap} />
         {ILE_DE_FRANCE_SLUGS.has(ap.citySlug) && <AirportTestimonials airport={ap} />}
         <CityFAQ cityName={ap.name} faq={ap.i18n[loc].faq} />
         <CityContactForm cityName={`l'aéroport ${ap.name}`} />

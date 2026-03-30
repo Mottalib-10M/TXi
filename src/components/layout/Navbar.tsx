@@ -63,9 +63,6 @@ export function Navbar({ minimal = false }: { minimal?: boolean }) {
               <Link href="/#reserver" className="text-sm font-medium text-neutral-900 hover:text-neutral-600 transition-colors">
                 {t("taxiFixedTitle")}
               </Link>
-              <Link href="/taxi-partage" className="text-sm font-medium text-neutral-500 hover:text-neutral-900 transition-colors">
-                {t("taxiPool")}
-              </Link>
               <Link
                 href="/comment-ca-marche"
                 className="text-sm font-medium text-neutral-500 hover:text-neutral-900 transition-colors"
@@ -140,6 +137,13 @@ export function Navbar({ minimal = false }: { minimal?: boolean }) {
                       className="block px-4 py-2.5 text-sm text-neutral-700 hover:bg-neutral-50 transition-colors"
                     >
                       {t("solutionMiseADispo")}
+                    </Link>
+                    <Link
+                      href="/solutions/assistance"
+                      onClick={() => setSolutionsOpen(false)}
+                      className="block px-4 py-2.5 text-sm text-neutral-700 hover:bg-neutral-50 transition-colors"
+                    >
+                      {t("solutionAssistance")}
                     </Link>
                   </div>
                 )}
@@ -262,13 +266,6 @@ export function Navbar({ minimal = false }: { minimal?: boolean }) {
                 {t("taxiFixedTitle")}
               </Link>
               <Link
-                href="/taxi-partage"
-                onClick={() => setMobileOpen(false)}
-                className="block py-3 text-sm font-medium text-neutral-500 hover:bg-neutral-50 hover:text-neutral-900 rounded-lg px-3 transition-colors"
-              >
-                {t("taxiPool")}
-              </Link>
-              <Link
                 href="/comment-ca-marche"
                 onClick={() => setMobileOpen(false)}
                 className="block py-3 text-sm font-medium text-neutral-500 hover:bg-neutral-50 hover:text-neutral-900 rounded-lg px-3 transition-colors"
@@ -335,6 +332,13 @@ export function Navbar({ minimal = false }: { minimal?: boolean }) {
                     className="block py-2.5 text-sm text-neutral-500 hover:bg-neutral-50 hover:text-neutral-900 rounded-lg px-3 transition-colors"
                   >
                     {t("solutionMiseADispo")}
+                  </Link>
+                  <Link
+                    href="/solutions/assistance"
+                    onClick={() => setMobileOpen(false)}
+                    className="block py-2.5 text-sm text-neutral-500 hover:bg-neutral-50 hover:text-neutral-900 rounded-lg px-3 transition-colors"
+                  >
+                    {t("solutionAssistance")}
                   </Link>
                 </div>
               )}

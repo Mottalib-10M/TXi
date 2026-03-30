@@ -265,7 +265,7 @@ export default async function BlogArticlePage({ params }: PageProps) {
             {t("backToList")}
           </Link>
 
-          <div className="fade-up">
+          <div>
             <div className="flex items-center gap-3 text-xs text-neutral-400 font-light mb-4">
               <time dateTime={article.date}>
                 {t("publishedOn")}{" "}

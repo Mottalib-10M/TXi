@@ -57,13 +57,6 @@ export default async function HowItWorksPage() {
                   {t("ctaFixed")}
                   <Icon icon="solar:arrow-right-linear" />
                 </Link>
-                <Link
-                  href="/taxi-partage"
-                  className="inline-flex items-center justify-center gap-2 border border-neutral-200 text-neutral-900 text-sm font-medium px-6 py-3 rounded-full hover:bg-neutral-50 transition-colors"
-                >
-                  {t("ctaPool")}
-                  <Icon icon="solar:arrow-right-linear" />
-                </Link>
               </div>
             </div>
 
@@ -246,132 +239,7 @@ export default async function HowItWorksPage() {
         </div>
       </section>
 
-      {/* Section 2 — Taxi partagé (dark bg, like homepage) */}
-      <section className="bg-neutral-950 py-20 md:py-28 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-emerald-900/20 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 left-0 w-64 h-64 bg-neutral-800 rounded-full blur-3xl opacity-50" />
-        <div className="max-w-7xl mx-auto px-6 relative">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            {/* Left: Visual mockup */}
-            <div className="hidden md:block fade-up">
-              <div className="bg-neutral-900 border border-neutral-800 rounded-3xl p-6 max-w-sm mx-auto">
-                <div className="flex items-center gap-3 mb-5">
-                  <div className="w-10 h-10 bg-emerald-600 rounded-full flex items-center justify-center">
-                    <Icon icon="solar:users-group-rounded-linear" className="text-white text-xl" />
-                  </div>
-                  <div>
-                    <p className="text-sm font-semibold text-white">{t("poolTitle")}</p>
-                    <p className="text-xs text-neutral-500 font-light">{t("comparePoolBooking")}</p>
-                  </div>
-                </div>
-                <div className="bg-neutral-800 border border-neutral-700 rounded-xl p-4 mb-3">
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="text-xs text-neutral-400">CDG T2 &rarr; Paris centre</span>
-                    <span className="text-xs text-emerald-400 font-medium">-50%</span>
-                  </div>
-                  <div className="flex items-center gap-2 mb-3">
-                    <div className="flex -space-x-2">
-                      <div className="w-6 h-6 rounded-full bg-neutral-600 border-2 border-neutral-800 flex items-center justify-center text-[8px] text-white font-medium">SL</div>
-                      <div className="w-6 h-6 rounded-full bg-neutral-600 border-2 border-neutral-800 flex items-center justify-center text-[8px] text-white font-medium">TM</div>
-                      <div className="w-6 h-6 rounded-full bg-neutral-700 border-2 border-neutral-800 flex items-center justify-center text-[8px] text-neutral-400">+1</div>
-                    </div>
-                    <span className="text-[10px] text-neutral-500">3/4 places</span>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-1.5 text-xs text-neutral-400">
-                      <Icon icon="solar:clock-circle-linear" className="text-xs" />
-                      08:30
-                    </div>
-                    <span className="text-sm font-semibold text-white">18,00 &euro;</span>
-                  </div>
-                </div>
-                <div className="bg-neutral-800 border border-neutral-700 rounded-xl p-4 mb-3">
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="text-xs text-neutral-400">Orly &rarr; Paris 14e</span>
-                    <span className="text-xs text-emerald-400 font-medium">-45%</span>
-                  </div>
-                  <div className="flex items-center gap-2 mb-3">
-                    <div className="flex -space-x-2">
-                      <div className="w-6 h-6 rounded-full bg-neutral-600 border-2 border-neutral-800 flex items-center justify-center text-[8px] text-white font-medium">AB</div>
-                      <div className="w-6 h-6 rounded-full bg-neutral-600 border-2 border-neutral-800 flex items-center justify-center text-[8px] text-white font-medium">NL</div>
-                    </div>
-                    <span className="text-[10px] text-neutral-500">2/4 places</span>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-1.5 text-xs text-neutral-400">
-                      <Icon icon="solar:clock-circle-linear" className="text-xs" />
-                      14:00
-                    </div>
-                    <span className="text-sm font-semibold text-white">14,50 &euro;</span>
-                  </div>
-                </div>
-                <div className="bg-neutral-800 border border-neutral-700 rounded-xl p-4 mb-4">
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="text-xs text-neutral-400">Beauvais &rarr; Paris Nord</span>
-                    <span className="text-xs text-emerald-400 font-medium">-40%</span>
-                  </div>
-                  <div className="flex items-center gap-2 mb-3">
-                    <div className="flex -space-x-2">
-                      <div className="w-6 h-6 rounded-full bg-neutral-600 border-2 border-neutral-800 flex items-center justify-center text-[8px] text-white font-medium">PR</div>
-                    </div>
-                    <span className="text-[10px] text-neutral-500">1/4 places</span>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-1.5 text-xs text-neutral-400">
-                      <Icon icon="solar:clock-circle-linear" className="text-xs" />
-                      17:15
-                    </div>
-                    <span className="text-sm font-semibold text-white">22,00 &euro;</span>
-                  </div>
-                </div>
-                <Link href="/taxi-partage" className="block w-full bg-emerald-600 text-white text-sm font-medium py-3 rounded-xl text-center hover:bg-emerald-700 transition-colors">
-                  {t("poolCta")}
-                </Link>
-              </div>
-            </div>
-
-            {/* Right: Steps */}
-            <div className="fade-up">
-              <p className="text-sm font-medium text-emerald-400 mb-2 uppercase tracking-wider">
-                {t("poolTitle")}
-              </p>
-              <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-white mb-4">
-                {t("poolDesc")}
-              </h2>
-              <div className="space-y-6 mt-8">
-                {[
-                  { step: "1", title: t("poolStep1Title"), desc: t("poolStep1Desc") },
-                  { step: "2", title: t("poolStep2Title"), desc: t("poolStep2Desc") },
-                  { step: "3", title: t("poolStep3Title"), desc: t("poolStep3Desc") },
-                ].map((item, i) => (
-                  <div key={item.step} className={`flex items-start gap-4 fade-up fade-up-delay-${i + 1}`}>
-                    <div className="w-10 h-10 bg-emerald-600 text-white rounded-xl flex items-center justify-center shrink-0 text-sm font-semibold">
-                      {item.step}
-                    </div>
-                    <div>
-                      <h3 className="text-base font-medium tracking-tight text-white mb-1">{item.title}</h3>
-                      <p className="text-sm text-neutral-400 font-light leading-relaxed">
-                        {item.desc}
-                      </p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              <div className="mt-8 fade-up">
-                <Link
-                  href="/taxi-partage"
-                  className="inline-flex items-center gap-2 bg-emerald-600 text-white text-sm font-medium px-6 py-3 rounded-full hover:bg-emerald-700 transition-colors btn-lift"
-                >
-                  {t("poolCta")}
-                  <Icon icon="solar:arrow-right-linear" />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Section 3 — Comparatif */}
+      {/* Section 2 — Comparatif */}
       <section className="py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16 fade-up">
@@ -383,8 +251,7 @@ export default async function HowItWorksPage() {
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
-            {/* Card Taxi fixe — white */}
+          <div className="max-w-2xl mx-auto">
             <div className="bg-white border border-neutral-200 rounded-2xl p-8 card-hover fade-up fade-up-delay-1">
               <div className="flex items-center gap-3 mb-8">
                 <div className="w-12 h-12 bg-neutral-900 rounded-full flex items-center justify-center">
@@ -418,45 +285,6 @@ export default async function HowItWorksPage() {
                   className="inline-flex items-center gap-2 bg-neutral-950 text-white text-sm font-medium px-6 py-3 rounded-full hover:bg-neutral-800 transition-colors btn-lift w-full justify-center"
                 >
                   {t("fixedCta")}
-                  <Icon icon="solar:arrow-right-linear" />
-                </Link>
-              </div>
-            </div>
-
-            {/* Card Taxi partagé — dark */}
-            <div className="bg-neutral-950 rounded-2xl p-8 card-hover fade-up fade-up-delay-2">
-              <div className="flex items-center gap-3 mb-8">
-                <div className="w-12 h-12 bg-emerald-600 rounded-full flex items-center justify-center">
-                  <Icon icon="solar:users-group-rounded-linear" className="text-white text-2xl" />
-                </div>
-                <h3 className="text-xl font-semibold tracking-tight text-white">{t("poolTitle")}</h3>
-              </div>
-              <div className="space-y-6">
-                {[
-                  { icon: "solar:tag-price-linear", label: t("compareCriteriaPrice"), value: t("comparePoolPrice") },
-                  { icon: "solar:routing-linear", label: t("compareCriteriaRoute"), value: t("comparePoolRoute") },
-                  { icon: "solar:star-linear", label: t("compareCriteriaIdeal"), value: t("comparePoolIdeal") },
-                  { icon: "solar:calendar-linear", label: t("compareCriteriaBooking"), value: t("comparePoolBooking") },
-                ].map((item) => (
-                  <div key={item.label} className="flex items-start gap-3">
-                    <div className="w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center shrink-0 mt-0.5">
-                      <Icon icon={item.icon} className="text-emerald-400 text-base" />
-                    </div>
-                    <div>
-                      <p className="text-xs font-medium text-neutral-500 uppercase tracking-wider mb-0.5">
-                        {item.label}
-                      </p>
-                      <p className="text-sm text-neutral-300">{item.value}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              <div className="mt-8">
-                <Link
-                  href="/taxi-partage"
-                  className="inline-flex items-center gap-2 bg-white text-neutral-900 text-sm font-medium px-6 py-3 rounded-full hover:bg-neutral-100 transition-colors btn-lift w-full justify-center"
-                >
-                  {t("poolCta")}
                   <Icon icon="solar:arrow-right-linear" />
                 </Link>
               </div>
@@ -511,19 +339,12 @@ export default async function HowItWorksPage() {
           <p className="text-neutral-400 font-light mb-8 max-w-lg mx-auto fade-up fade-up-delay-1">
             {t("ctaSubtitle")}
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 fade-up fade-up-delay-2">
+          <div className="flex items-center justify-center fade-up fade-up-delay-2">
             <Link
               href="/#reserver"
               className="inline-flex items-center gap-2 bg-white text-neutral-900 text-sm font-medium px-6 py-3 rounded-full hover:bg-neutral-100 transition-colors btn-lift"
             >
               {t("ctaFixed")}
-              <Icon icon="solar:arrow-right-linear" />
-            </Link>
-            <Link
-              href="/taxi-partage"
-              className="inline-flex items-center gap-2 border border-white/20 text-white text-sm font-medium px-6 py-3 rounded-full hover:bg-white/10 transition-colors"
-            >
-              {t("ctaPool")}
               <Icon icon="solar:arrow-right-linear" />
             </Link>
           </div>

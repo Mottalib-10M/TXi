@@ -257,8 +257,8 @@ export default async function HomePage() {
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
-            {/* Card 1 — Taxi à prix fixe */}
+          <div className="max-w-2xl mx-auto">
+            {/* Card — Taxi à prix fixe */}
             <div className="bg-white border border-neutral-200 rounded-2xl p-8 fade-up fade-up-delay-1">
               <div className="w-12 h-12 bg-neutral-900 rounded-full flex items-center justify-center mb-5">
                 <Icon icon="solar:routing-linear" className="text-white text-2xl" />
@@ -286,38 +286,6 @@ export default async function HomePage() {
                 className="inline-flex items-center gap-2 bg-neutral-950 text-white text-sm font-medium px-6 py-3 rounded-full hover:bg-neutral-800 transition-colors btn-lift"
               >
                 {t("serviceFixedCta")}
-                <Icon icon="solar:arrow-right-linear" />
-              </Link>
-            </div>
-
-            {/* Card 2 — Taxi partagé */}
-            <div className="bg-neutral-950 rounded-2xl p-8 fade-up fade-up-delay-2">
-              <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center mb-5">
-                <Icon icon="solar:users-group-rounded-linear" className="text-white text-2xl" />
-              </div>
-              <h3 className="text-xl font-semibold tracking-tight mb-2 text-white">
-                {t("servicePoolTitle")}
-              </h3>
-              <p className="text-sm text-neutral-400 font-light leading-relaxed mb-6">
-                {t("servicePoolDesc")}
-              </p>
-              <ul className="space-y-3 mb-8">
-                {[t("servicePoolPoint1"), t("servicePoolPoint2"), t("servicePoolPoint3")].map(
-                  (point) => (
-                    <li key={point} className="flex items-center gap-3">
-                      <div className="w-5 h-5 bg-white/10 rounded-full flex items-center justify-center shrink-0">
-                        <Icon icon="solar:check-read-linear" className="text-emerald-400 text-xs" />
-                      </div>
-                      <span className="text-sm font-light text-neutral-300">{point}</span>
-                    </li>
-                  )
-                )}
-              </ul>
-              <Link
-                href="/taxi-partage"
-                className="inline-flex items-center gap-2 bg-white text-neutral-900 text-sm font-medium px-6 py-3 rounded-full hover:bg-neutral-100 transition-colors btn-lift"
-              >
-                {t("servicePoolCta")}
                 <Icon icon="solar:arrow-right-linear" />
               </Link>
             </div>

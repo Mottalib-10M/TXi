@@ -1,26 +1,39 @@
 import { Icon } from "@iconify/react";
 import { getTranslations } from "next-intl/server";
+import { getLocale } from "next-intl/server";
+import type { Station } from "@/data/stations";
 
-export async function StationWhyUs({ stationName }: { stationName: string }) {
+const ICONS = [
+  "solar:eye-scan-linear",
+  "solar:tag-price-linear",
+  "solar:user-id-linear",
+];
+
+export async function StationWhyUs({ station }: { station: Station }) {
   const t = await getTranslations("station");
+  const locale = await getLocale();
+  const loc = locale === "en" ? "en" : "fr";
+  const whyUs = station.i18n[loc].whyUs;
 
-  const advantages = [
-    {
-      icon: "solar:eye-scan-linear",
-      title: t("whyUs.trainTrackingTitle"),
-      desc: t("whyUs.trainTrackingDesc", { name: stationName }),
-    },
-    {
-      icon: "solar:tag-price-linear",
-      title: t("whyUs.guaranteedRatesTitle"),
-      desc: t("whyUs.guaranteedRatesDesc", { name: stationName }),
-    },
-    {
-      icon: "solar:user-id-linear",
-      title: t("whyUs.stationWelcomeTitle"),
-      desc: t("whyUs.stationWelcomeDesc", { name: stationName }),
-    },
-  ];
+  const advantages = whyUs.length === 3
+    ? whyUs.map((w, i) => ({ icon: ICONS[i], title: w.title, desc: w.desc }))
+    : [
+        {
+          icon: ICONS[0],
+          title: t("whyUs.trainTrackingTitle"),
+          desc: t("whyUs.trainTrackingDesc", { name: station.name }),
+        },
+        {
+          icon: ICONS[1],
+          title: t("whyUs.guaranteedRatesTitle"),
+          desc: t("whyUs.guaranteedRatesDesc", { name: station.name }),
+        },
+        {
+          icon: ICONS[2],
+          title: t("whyUs.stationWelcomeTitle"),
+          desc: t("whyUs.stationWelcomeDesc", { name: station.name }),
+        },
+      ];
 
   return (
     <section className="py-20 md:py-28">
@@ -30,7 +43,7 @@ export async function StationWhyUs({ stationName }: { stationName: string }) {
             {t("whyUs.subtitle")}
           </p>
           <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
-            {t("whyUs.title", { name: stationName })}
+            {t("whyUs.title", { name: station.name })}
           </h2>
         </div>
         <div className="grid md:grid-cols-3 gap-8">

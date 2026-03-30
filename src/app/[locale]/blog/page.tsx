@@ -40,7 +40,7 @@ export default async function BlogPage({ params }: PageProps) {
 
       <main className="flex-grow pt-24 pb-12 md:pt-32 md:pb-24">
         <div className="max-w-4xl mx-auto px-6">
-          <div className="text-center mb-16 fade-up">
+          <div className="text-center mb-10 fade-up">
             <h1 className="text-3xl md:text-4xl font-semibold tracking-tight mb-3">
               {t("title")}
             </h1>
@@ -49,7 +49,7 @@ export default async function BlogPage({ params }: PageProps) {
             </p>
           </div>
 
-          <div className="grid gap-6 fade-up">
+          <div className="grid gap-6">
             {blogArticles.map((article, i) => (
               <Link
                 key={article.slug}

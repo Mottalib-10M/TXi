@@ -7,6 +7,7 @@ import { StationBreadcrumb } from "@/components/station/StationBreadcrumb";
 import { StationJsonLd } from "@/components/station/StationJsonLd";
 import { StationHero } from "@/components/station/StationHero";
 import { StationInfo } from "@/components/station/StationInfo";
+import { StationIntro } from "@/components/station/StationIntro";
 import { StationPricing } from "@/components/station/StationPricing";
 import { StationServices } from "@/components/station/StationServices";
 import { StationPractical } from "@/components/station/StationPractical";
@@ -70,11 +71,12 @@ export default async function StationPage({ params }: PageProps) {
         </div>
 
         <StationHero station={st} />
+        <StationIntro station={st} />
         <StationInfo station={st} />
         <StationPricing station={st} />
         <StationServices stationName={st.name} />
         <StationPractical station={st} />
-        <StationWhyUs stationName={st.name} />
+        <StationWhyUs station={st} />
         {ILE_DE_FRANCE_SLUGS.has(st.citySlug) && <StationTestimonials station={st} />}
         <CityFAQ cityName={`la gare ${st.name}`} faq={st.i18n[loc].faq} />
         <CityContactForm cityName={`la gare ${st.name}`} />

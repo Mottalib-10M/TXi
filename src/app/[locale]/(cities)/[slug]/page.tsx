@@ -80,7 +80,7 @@ export default async function CityPage({ params }: PageProps) {
         <CityPopularRoutes city={city} />
         <CityLandmarks city={city} />
         <CityQuartiers city={city} />
-        <CityWhyUs cityName={city.name} />
+        <CityWhyUs city={city} />
         {ILE_DE_FRANCE_SLUGS.has(city.slug) && <CityTestimonials city={city} />}
         <CityFAQ cityName={city.name} faq={city.i18n[loc].faq} />
         <CityContactForm cityName={city.name} />

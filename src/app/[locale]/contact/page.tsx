@@ -268,11 +268,6 @@ export default function ContactPage() {
           <div className="mt-16 text-center">
             <div className="inline-flex items-center gap-6 text-sm text-neutral-500 font-light">
               <span className="flex items-center gap-2">
-                <Icon icon="solar:letter-linear" className="text-lg text-neutral-400" />
-                {t("contactEmail")}
-              </span>
-              <span className="text-neutral-300">|</span>
-              <span className="flex items-center gap-2">
                 <Icon icon="solar:clock-circle-linear" className="text-lg text-neutral-400" />
                 {t("schedule")}
               </span>

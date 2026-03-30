@@ -29,11 +29,6 @@ export function Footer() {
                   {t("taxiFixed")}
                 </Link>
               </li>
-              <li>
-                <Link href="/taxi-partage" className="hover:text-neutral-900 transition-colors font-medium text-neutral-700">
-                  {t("taxiPool")}
-                </Link>
-              </li>
               <li className="border-t border-neutral-100 pt-3">
                 <Link href="/gares" className="hover:text-neutral-900 transition-colors">
                   {t("stations")}
@@ -69,6 +64,11 @@ export function Footer() {
                   {t("solutionMiseADispo")}
                 </Link>
               </li>
+              <li>
+                <Link href="/solutions/assistance" className="hover:text-neutral-900 transition-colors">
+                  {t("solutionAssistance")}
+                </Link>
+              </li>
               <li className="border-t border-neutral-100 pt-3">
                 <Link href="/taxi-vs-vtc" className="hover:text-neutral-900 transition-colors">
                   {t("taxiVsVtc")}
@@ -82,6 +82,11 @@ export function Footer() {
               <li>
                 <Link href="/alternative-vtc-prix-fixe" className="hover:text-neutral-900 transition-colors">
                   {t("alternativeVtc")}
+                </Link>
+              </li>
+              <li>
+                <Link href="/mise-a-disposition-chauffeur" className="hover:text-neutral-900 transition-colors">
+                  {t("miseADisposChauffeur")}
                 </Link>
               </li>
             </ul>
@@ -120,12 +125,6 @@ export function Footer() {
                 <a href="tel:0759592934" className="flex items-center gap-2 hover:text-neutral-900 transition-colors">
                   <Icon icon="solar:phone-linear" className="text-base" />
                   {t("phone")}
-                </a>
-              </li>
-              <li>
-                <a href="mailto:support@taxineo.fr" className="flex items-center gap-2 hover:text-neutral-900 transition-colors">
-                  <Icon icon="solar:letter-linear" className="text-base" />
-                  {t("email")}
                 </a>
               </li>
               <li>
