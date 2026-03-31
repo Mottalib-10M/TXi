@@ -45,12 +45,12 @@ export default async function SharedTaxiDashboardPage({
     orderBy: { createdAt: "desc" },
   });
 
-  const serialized = routes.map((r) => ({
+  const serialized = routes.map((r: typeof routes[number]) => ({
     ...r,
     departureTime: r.departureTime.toISOString(),
     createdAt: r.createdAt.toISOString(),
     updatedAt: r.updatedAt.toISOString(),
-    passengers: r.passengers.map((p) => ({
+    passengers: r.passengers.map((p: typeof r.passengers[number]) => ({
       ...p,
       createdAt: p.createdAt.toISOString(),
     })),

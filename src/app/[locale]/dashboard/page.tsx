@@ -42,8 +42,8 @@ export default async function DashboardPage() {
   const locale = await getLocale();
 
   const totalBookings = driver._count.bookings;
-  const pendingBookings = driver.bookings.filter((b) => b.status === "PENDING");
-  const acceptedBookings = driver.bookings.filter((b) => b.status === "ACCEPTED");
+  const pendingBookings = driver.bookings.filter((b: typeof driver.bookings[number]) => b.status === "PENDING");
+  const acceptedBookings = driver.bookings.filter((b: typeof driver.bookings[number]) => b.status === "ACCEPTED");
 
   // Profile completeness
   const vehicles = Array.isArray(driver.vehicles) ? (driver.vehicles as Array<{ brand?: string; plate?: string }>) : [];

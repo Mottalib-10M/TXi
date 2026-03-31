@@ -12,6 +12,8 @@ interface PageProps {
   params: Promise<{ locale: string; slug: string }>;
 }
 
+export const dynamic = "force-dynamic";
+
 export async function generateStaticParams() {
   return getArticleSlugs().map((slug) => ({ slug }));
 }

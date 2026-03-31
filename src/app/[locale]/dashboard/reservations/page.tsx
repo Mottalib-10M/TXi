@@ -23,7 +23,7 @@ export default async function ReservationsPage() {
     orderBy: { createdAt: "desc" },
   });
 
-  const serialized = bookings.map((b) => ({
+  const serialized = bookings.map((b: typeof bookings[number]) => ({
     ...b,
     createdAt: b.createdAt.toISOString(),
     updatedAt: b.updatedAt.toISOString(),

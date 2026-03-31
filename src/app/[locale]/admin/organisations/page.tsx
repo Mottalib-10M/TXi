@@ -20,7 +20,7 @@ export default async function AdminOrganisationsPage() {
     },
   });
 
-  const serialized = organizations.map((o) => ({
+  const serialized = organizations.map((o: typeof organizations[number]) => ({
     id: o.id,
     name: o.name,
     type: o.type,

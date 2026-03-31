@@ -13,7 +13,7 @@ export default async function AdminReservationsPage() {
     },
   });
 
-  const serialized = bookings.map((b) => ({
+  const serialized = bookings.map((b: typeof bookings[number]) => ({
     id: b.id,
     reference: b.reference,
     clientName: b.clientName,

@@ -25,7 +25,7 @@ export default async function AdminDriversPage() {
     },
   });
 
-  const serialized = drivers.map((d) => {
+  const serialized = drivers.map((d: typeof drivers[number]) => {
     const vehicles = Array.isArray(d.vehicles) ? (d.vehicles as Array<{ brand?: string; model?: string }>) : [];
     const v0 = vehicles[0];
     return {

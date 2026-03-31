@@ -32,7 +32,7 @@ export default async function AdminOverviewPage() {
     }),
   ]);
 
-  const activeDrivers = drivers.filter((d) => d.isActive).length;
+  const activeDrivers = drivers.filter((d: typeof drivers[number]) => d.isActive).length;
 
   const bookingsByStatus: Record<string, number> = {};
   for (const b of bookings) {
@@ -47,7 +47,7 @@ export default async function AdminOverviewPage() {
     totalBookings: bookings.length,
     bookingsByStatus,
     totalRevenue: revenue._sum.lockedPrice || 0,
-    recentDrivers: drivers.slice(0, 5).map((d) => ({
+    recentDrivers: drivers.slice(0, 5).map((d: typeof drivers[number]) => ({
       id: d.id,
       firstName: d.firstName,
       lastName: d.lastName,
@@ -55,14 +55,14 @@ export default async function AdminOverviewPage() {
       isActive: d.isActive,
       createdAt: d.createdAt.toISOString(),
     })),
-    recentOrgs: organizations.slice(0, 5).map((o) => ({
+    recentOrgs: organizations.slice(0, 5).map((o: typeof organizations[number]) => ({
       id: o.id,
       name: o.name,
       email: o.email,
       type: o.type,
       createdAt: o.createdAt.toISOString(),
     })),
-    recentBookings: bookings.slice(0, 10).map((b) => ({
+    recentBookings: bookings.slice(0, 10).map((b: typeof bookings[number]) => ({
       id: b.id,
       reference: b.reference,
       clientName: b.clientName,
