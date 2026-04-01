@@ -26,12 +26,6 @@ export async function CityJsonLd({ city }: { city: City }) {
       name: "TaxiNeo",
       url: "https://www.taxineo.fr",
     },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: city.rating.toString(),
-      reviewCount: (city.driverCount * 12).toString(),
-      bestRating: "5",
-    },
     openingHoursSpecification: {
       "@type": "OpeningHoursSpecification",
       dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
