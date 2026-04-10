@@ -6,6 +6,7 @@ import { Icon } from "@iconify/react";
 import { format } from "date-fns";
 import { fr, enUS } from "date-fns/locale";
 import { useTranslations, useLocale } from "next-intl";
+import { trackBookingAction } from "@/lib/analytics";
 
 interface Booking {
   id: string;
@@ -61,6 +62,8 @@ export function ReservationsTable({ bookings }: { bookings: Booking[] }) {
   const filtered = filter === "ALL" ? bookings : bookings.filter((b) => b.status === filter);
 
   async function updateStatus(bookingId: string, status: "ACCEPTED" | "REJECTED" | "COMPLETED") {
+    const actionMap = { ACCEPTED: "accept", REJECTED: "reject", COMPLETED: "complete" } as const;
+    trackBookingAction({ action: actionMap[status], bookingId });
     setUpdating(bookingId);
     try {
       await fetch(`/api/driver/bookings/${bookingId}`, {

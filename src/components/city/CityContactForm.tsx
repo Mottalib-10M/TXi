@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Icon } from "@iconify/react";
 import { emailError, phoneError, isValidEmail } from "@/lib/validation";
 import { useTranslations } from "next-intl";
+import { trackContact } from "@/lib/analytics";
 
 export function CityContactForm({ cityName }: { cityName: string }) {
   const t = useTranslations("city");
@@ -29,6 +30,7 @@ export function CityContactForm({ cityName }: { cityName: string }) {
         body: JSON.stringify({ ...form, city: cityName }),
       });
       if (res.ok) {
+        trackContact({ formName: "city_contact", subject: cityName });
         setSuccess(true);
         setForm({ name: "", email: "", phone: "", message: "", callbackTime: "" });
       }

@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Icon } from "@iconify/react";
 import { useTranslations } from "next-intl";
 import { emailError, phoneError, isValidEmail } from "@/lib/validation";
+import { trackContact } from "@/lib/analytics";
 
 export function ContactFormSection() {
   const t = useTranslations("contact");
@@ -34,6 +35,7 @@ export function ContactFormSection() {
         }),
       });
       if (res.ok) {
+        trackContact({ formName: "solutions_contact" });
         setSuccess(true);
         setForm({ name: "", email: "", phone: "", message: "" });
       }

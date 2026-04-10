@@ -7,6 +7,7 @@ import { useTranslations, useLocale } from "next-intl";
 import { Link, useRouter } from "@/i18n/navigation";
 import { PlacesAutocomplete } from "./PlacesAutocomplete";
 import { emailError, phoneError, isValidEmail, formatPrice } from "@/lib/validation";
+import { trackSearch, trackViewResults, trackSelectTaxi, trackBeginBooking, trackBookingComplete } from "@/lib/analytics";
 
 interface TaxiResult {
   id: string;
@@ -88,10 +89,13 @@ export function BookingForm() {
         : new Date().toISOString();
       params.set("requestedTime", requestedTime);
 
+      trackSearch({ departure, arrival, passengers });
       const res = await fetch(`/api/taxis?${params}`);
       const data = await res.json();
-      setResults(data.drivers || []);
+      const drivers = data.drivers || [];
+      setResults(drivers);
       setStep("results");
+      trackViewResults({ departure, arrival, resultCount: drivers.length });
     } catch {
       // Error
     } finally {
@@ -131,6 +135,7 @@ export function BookingForm() {
 
       const data = await res.json();
       if (res.ok) {
+        trackBookingComplete({ reference: data.reference, price: selectedTaxi.estimatedPrice, driverName: `${selectedTaxi.firstName} ${selectedTaxi.lastName}`, source: "landing" });
         router.push(`/confirmation?ref=${data.reference}` as never);
       }
     } catch {
@@ -353,6 +358,8 @@ export function BookingForm() {
                     <button
                       type="button"
                       onClick={() => {
+                        trackSelectTaxi({ driverName: `${taxi.firstName} ${taxi.lastName}`, price: taxi.estimatedPrice, slug: taxi.slug });
+                        trackBeginBooking({ driverName: `${taxi.firstName} ${taxi.lastName}`, departure, arrival, price: taxi.estimatedPrice });
                         setSelectedTaxi(taxi);
                         setStep("booking");
                       }}

@@ -6,6 +6,7 @@ import { useSession } from "next-auth/react";
 import { useTranslations, useLocale } from "next-intl";
 import { Icon } from "@iconify/react";
 import { phoneError } from "@/lib/validation";
+import { trackBeginBooking, trackBookingComplete } from "@/lib/analytics";
 
 interface ProfileBookingFormProps {
   driverId: string;
@@ -79,6 +80,7 @@ export function ProfileBookingForm({
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     if (!clientName || !clientPhone || !hasLocations || (!isNow && !scheduledDate)) return;
+    trackBeginBooking({ driverName, departure: departureAddress, arrival: destinationAddress });
     setSubmitting(true);
     setError("");
 
@@ -108,6 +110,7 @@ export function ProfileBookingForm({
 
       const data = await res.json();
       if (res.ok) {
+        trackBookingComplete({ reference: data.reference, driverName, source: "profile" });
         if (isLoggedIn) {
           router.push(`/confirmation?ref=${data.reference}`);
         } else {

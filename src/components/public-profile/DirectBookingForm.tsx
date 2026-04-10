@@ -7,6 +7,7 @@ import { useTranslations, useLocale } from "next-intl";
 import { Icon } from "@iconify/react";
 import { PlacesAutocomplete } from "@/components/booking/PlacesAutocomplete";
 import { emailError, phoneError, isValidEmail } from "@/lib/validation";
+import { trackBeginBooking, trackBookingComplete } from "@/lib/analytics";
 
 interface DirectBookingFormProps {
   driverId: string;
@@ -61,6 +62,7 @@ export function DirectBookingForm({
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     if (!departure || !arrival || !clientName || !clientEmail) return;
+    trackBeginBooking({ driverName, departure, arrival });
     setSubmitting(true);
     setError("");
 
@@ -91,6 +93,7 @@ export function DirectBookingForm({
 
       const data = await res.json();
       if (res.ok) {
+        trackBookingComplete({ reference: data.reference, driverName, source: "profile" });
         router.push(`/confirmation?ref=${data.reference}`);
       } else {
         setError(data.error || t("bookingError"));

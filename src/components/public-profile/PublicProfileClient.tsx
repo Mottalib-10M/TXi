@@ -1,8 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FareEstimator } from "./FareEstimator";
 import { ProfileBookingForm } from "./ProfileBookingForm";
+import { trackViewDriverProfile } from "@/lib/analytics";
 
 interface PublicProfileClientProps {
   driverId: string;
@@ -34,6 +35,10 @@ export function PublicProfileClient({
 
   const [isNow, setIsNow] = useState(true);
   const [scheduledDate, setScheduledDate] = useState("");
+
+  useEffect(() => {
+    trackViewDriverProfile({ slug: driverId, driverName });
+  }, [driverId, driverName]);
 
   return (
     <FareEstimator

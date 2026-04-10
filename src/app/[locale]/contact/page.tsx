@@ -7,6 +7,7 @@ import { useTranslations } from "next-intl";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { emailError, phoneError, isValidEmail } from "@/lib/validation";
+import { trackContact } from "@/lib/analytics";
 
 export default function ContactPage() {
   const t = useTranslations("contact");
@@ -89,6 +90,7 @@ export default function ContactPage() {
         }),
       });
       if (res.ok) {
+        trackContact({ formName: "contact_page", subject: form.sujet });
         setSuccess(true);
         setForm({ sujet: "", name: "", email: "", phone: "", message: "" });
       }

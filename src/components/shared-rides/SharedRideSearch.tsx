@@ -7,6 +7,7 @@ import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { predefinedLocations } from "@/data/predefined-locations";
 import { JoinRouteForm } from "./JoinRouteForm";
+import { trackSharedRideSearch } from "@/lib/analytics";
 
 interface RouteResult {
   id: string;
@@ -124,6 +125,7 @@ export function SharedRideSearch({ departureId: controlledDepartureId }: { depar
   }, [allRoutes, selectedDate]);
 
   const fetchRoutes = useCallback(async (depId: string) => {
+    trackSharedRideSearch({ departure: depId });
     setLoading(true);
     setSearched(false);
     setSelectedDestination(null);

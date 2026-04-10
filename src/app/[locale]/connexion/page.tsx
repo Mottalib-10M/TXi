@@ -6,6 +6,7 @@ import { useSearchParams } from "next/navigation";
 import { useTranslations, useLocale } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { emailError, isValidEmail } from "@/lib/validation";
+import { trackLogin } from "@/lib/analytics";
 
 function ConnexionForm() {
   const t = useTranslations("auth");
@@ -77,6 +78,7 @@ function ConnexionForm() {
       }
 
       // Success — redirect with full page load
+      trackLogin(data.role === "organization" ? "organization" : "driver");
       const dest = data.role === "organization" ? "/org" : "/dashboard";
       window.location.href = `/${locale}${dest}`;
     } catch {

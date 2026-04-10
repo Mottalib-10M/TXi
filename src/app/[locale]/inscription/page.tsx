@@ -7,6 +7,7 @@ import { useTranslations, useLocale } from "next-intl";
 import { Link, useRouter } from "@/i18n/navigation";
 import { PlacesAutocomplete } from "@/components/booking/PlacesAutocomplete";
 import { emailError, phoneError, isValidEmail, isValidPhone } from "@/lib/validation";
+import { trackSignUp } from "@/lib/analytics";
 
 type ProfileType = "driver" | "particulier" | "hotel" | "hospital" | "enterprise";
 
@@ -127,6 +128,7 @@ export default function InscriptionPage() {
         return;
       }
 
+      trackSignUp({ method: "credentials", role: "driver" });
       router.push("/connexion?registered=true");
     } catch {
       setError(tc("serverError"));
@@ -164,6 +166,7 @@ export default function InscriptionPage() {
         return;
       }
 
+      trackSignUp({ method: "credentials", role: "particulier" });
       router.push("/connexion?registered=true");
     } catch {
       setError(tc("serverError"));
@@ -203,6 +206,7 @@ export default function InscriptionPage() {
         return;
       }
 
+      trackSignUp({ method: "credentials", role: profileType });
       router.push("/connexion?registered=true");
     } catch {
       setError(tc("serverError"));

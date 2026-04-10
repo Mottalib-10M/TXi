@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Icon } from "@iconify/react";
 import { useTranslations, useLocale } from "next-intl";
 import { useSession } from "next-auth/react";
+import { trackJoinSharedRide } from "@/lib/analytics";
 
 interface JoinRouteFormProps {
   routeId: string;
@@ -53,6 +54,7 @@ export function JoinRouteForm({
         return;
       }
 
+      trackJoinSharedRide({ routeId, seats: seatCount });
       setSuccess(true);
       onSuccess();
     } catch {
