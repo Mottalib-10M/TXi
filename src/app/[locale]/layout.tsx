@@ -42,6 +42,10 @@ export default async function LocaleLayout({
             gtag('config', 'G-2Z22GS67QY');
           `}
         </Script>
+        <Script
+          src="https://t.contentsquare.net/uxa/57182d25bfaa1.js"
+          strategy="afterInteractive"
+        />
       </head>
       <body
         className={`${inter.className} bg-white text-neutral-900 antialiased selection:bg-neutral-200 selection:text-black overflow-x-hidden`}
