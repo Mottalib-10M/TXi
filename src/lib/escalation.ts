@@ -16,6 +16,8 @@ export async function runEscalation(): Promise<{ phase1: number; phase2: number 
   const now = new Date();
   const fiveMinAgo = new Date(now.getTime() - ESCALATION_DELAY_MS);
 
+  console.log(`[Escalation] Running at ${now.toISOString()}, checking bookings before ${fiveMinAgo.toISOString()}`);
+
   // --- Phase 1: Bookings pending > 5 min, not yet escalated ---
   const phase1Bookings = await prisma.booking.findMany({
     where: {
@@ -27,6 +29,8 @@ export async function runEscalation(): Promise<{ phase1: number; phase2: number 
       driver: { select: { id: true, firstName: true, lastName: true } },
     },
   });
+
+  console.log(`[Escalation] Phase 1: found ${phase1Bookings.length} booking(s) to escalate`);
 
   for (const booking of phase1Bookings) {
     const allDrivers = await prisma.driver.findMany({
@@ -57,6 +61,7 @@ export async function runEscalation(): Promise<{ phase1: number; phase2: number 
       .slice(0, 3);
 
     if (nearbyDrivers.length === 0) {
+      console.log(`[Escalation] Booking #${booking.reference}: no nearby drivers found, notifying admin directly`);
       await notifyAdmin(booking);
       await prisma.booking.update({
         where: { id: booking.id },
@@ -66,6 +71,7 @@ export async function runEscalation(): Promise<{ phase1: number; phase2: number 
     }
 
     const invitedIds = nearbyDrivers.map((d) => d.id);
+    console.log(`[Escalation] Booking #${booking.reference}: inviting ${nearbyDrivers.length} drivers → Phase 1`);
     await prisma.booking.update({
       where: { id: booking.id },
       data: {
@@ -113,7 +119,10 @@ export async function runEscalation(): Promise<{ phase1: number; phase2: number 
     },
   });
 
+  console.log(`[Escalation] Phase 2: found ${phase2Bookings.length} booking(s) without response`);
+
   for (const booking of phase2Bookings) {
+    console.log(`[Escalation] Booking #${booking.reference}: no response after escalation, notifying admin`);
     await notifyAdmin(booking);
     await prisma.booking.update({
       where: { id: booking.id },
@@ -121,6 +130,7 @@ export async function runEscalation(): Promise<{ phase1: number; phase2: number 
     });
   }
 
+  console.log(`[Escalation] Done. Phase1=${phase1Bookings.length}, Phase2=${phase2Bookings.length}`);
   return { phase1: phase1Bookings.length, phase2: phase2Bookings.length };
 }
 
@@ -177,9 +187,11 @@ async function notifyAdmin(booking: {
     </div>
   `;
 
+  console.log(`[Escalation] Sending admin alert email for #${booking.reference} to amradif@gmail.com`);
   await sendEmail({
     to: "amradif@gmail.com",
     subject: `[ALERTE] Course #${booking.reference} sans chauffeur`,
     html,
   });
+  console.log(`[Escalation] Admin alert email sent for #${booking.reference}`);
 }

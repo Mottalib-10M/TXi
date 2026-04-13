@@ -226,18 +226,19 @@ export function ReservationsTable({ bookings }: { bookings: Booking[] }) {
 
               {/* Actions */}
               {booking.status === "PENDING" && (
-                <div className="flex gap-2 mt-3 pt-3 border-t border-neutral-100">
+                <div className="flex items-center gap-3 mt-3 pt-3 border-t border-neutral-100">
                   <button
                     onClick={() => updateStatus(booking.id, "ACCEPTED")}
                     disabled={updating === booking.id}
-                    className="flex-1 sm:flex-none bg-green-50 text-green-700 hover:bg-green-100 px-4 py-2 rounded-lg text-xs font-medium transition-colors disabled:opacity-50"
+                    className="inline-flex items-center gap-1.5 bg-green-600 text-white hover:bg-green-700 px-5 py-2 rounded-lg text-xs font-semibold transition-colors disabled:opacity-50"
                   >
+                    <Icon icon="solar:check-circle-linear" className="text-sm" />
                     {t("accept")}
                   </button>
                   <button
                     onClick={() => updateStatus(booking.id, "REJECTED")}
                     disabled={updating === booking.id}
-                    className="flex-1 sm:flex-none bg-red-50 text-red-700 hover:bg-red-100 px-4 py-2 rounded-lg text-xs font-medium transition-colors disabled:opacity-50"
+                    className="text-xs text-neutral-400 hover:text-red-600 transition-colors disabled:opacity-50"
                   >
                     {t("reject")}
                   </button>

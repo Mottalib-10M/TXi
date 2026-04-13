@@ -3,6 +3,7 @@ import { prisma } from "@/lib/prisma";
 import { Icon } from "@iconify/react";
 import { Link } from "@/i18n/navigation";
 import { QRCodeButton } from "@/components/dashboard/QRCodeButton";
+import { BookingQuickActions } from "@/components/dashboard/BookingQuickActions";
 import { PhoneLink } from "@/components/ui/PhoneLink";
 import { getTranslations, getLocale } from "next-intl/server";
 
@@ -10,7 +11,7 @@ export default async function DashboardPage() {
   const session = await auth();
   if (!session?.user?.id) return null;
 
-  // Auto-cancel expired PENDING bookings (assigned or invited)
+  // Auto-cancel expired PENDING bookings ONLY if fully escalated (phase 2 = admin already notified)
   await prisma.booking.updateMany({
     where: {
       OR: [
@@ -19,6 +20,7 @@ export default async function DashboardPage() {
       ],
       status: "PENDING",
       requestedDate: { lt: new Date() },
+      escalationPhase: 2,
     },
     data: { status: "CANCELLED" },
   });
@@ -226,6 +228,7 @@ export default async function DashboardPage() {
                       className="text-amber-400 group-hover:text-amber-600 transition-colors shrink-0"
                     />
                   </span>
+                  <BookingQuickActions bookingId={booking.id} />
                 </Link>
               );
             })}

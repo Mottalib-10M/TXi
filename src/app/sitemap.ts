@@ -3,6 +3,11 @@ import { cities } from "@/data/cities";
 import { airports } from "@/data/airports";
 import { stations } from "@/data/stations";
 import { blogArticles } from "@/data/blog";
+import { trajets } from "@/data/trajets";
+import { tarifs } from "@/data/tarifs";
+import { services } from "@/data/services-seo";
+import { departements } from "@/data/departements";
+import { guides } from "@/data/guides";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.taxineo.fr";
@@ -33,6 +38,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { ...localizedUrls("/aeroports"), lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
     { ...localizedUrls("/gares"), lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
     { ...localizedUrls("/blog"), lastModified: new Date(), changeFrequency: "weekly", priority: 0.7 },
+    { ...localizedUrls("/trajets"), lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
+    { ...localizedUrls("/tarifs"), lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
+    { ...localizedUrls("/services"), lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
+    { ...localizedUrls("/departements"), lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
+    { ...localizedUrls("/guides"), lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
     // Solutions
     { ...localizedUrls("/solutions/hotel"), lastModified: new Date(), changeFrequency: "monthly", priority: 0.6 },
     { ...localizedUrls("/solutions/hopital"), lastModified: new Date(), changeFrequency: "monthly", priority: 0.6 },
@@ -78,5 +88,40 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticPages, ...cityPages, ...airportPages, ...stationPages, ...blogPages];
+  const trajetPages: MetadataRoute.Sitemap = trajets.map((trajet) => ({
+    ...localizedUrls(`/trajet/${trajet.slug}`),
+    lastModified: new Date(),
+    changeFrequency: "monthly",
+    priority: 0.8,
+  }));
+
+  const tarifPages: MetadataRoute.Sitemap = tarifs.map((tarif) => ({
+    ...localizedUrls(`/tarif/${tarif.slug}`),
+    lastModified: new Date(),
+    changeFrequency: "monthly",
+    priority: 0.7,
+  }));
+
+  const servicePages: MetadataRoute.Sitemap = services.map((s) => ({
+    ...localizedUrls(`/service/${s.slug}`),
+    lastModified: new Date(),
+    changeFrequency: "monthly",
+    priority: 0.7,
+  }));
+
+  const departementPages: MetadataRoute.Sitemap = departements.map((d) => ({
+    ...localizedUrls(`/departement/${d.slug}`),
+    lastModified: new Date(),
+    changeFrequency: "monthly",
+    priority: 0.7,
+  }));
+
+  const guidePages: MetadataRoute.Sitemap = guides.map((g) => ({
+    ...localizedUrls(`/guide/${g.slug}`),
+    lastModified: new Date(),
+    changeFrequency: "monthly",
+    priority: 0.6,
+  }));
+
+  return [...staticPages, ...cityPages, ...airportPages, ...stationPages, ...blogPages, ...trajetPages, ...tarifPages, ...servicePages, ...departementPages, ...guidePages];
 }

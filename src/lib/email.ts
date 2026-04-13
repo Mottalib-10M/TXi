@@ -15,6 +15,7 @@ export async function sendEmail({ to, subject, html }: EmailOptions) {
   }
 
   try {
+    console.log(`[Email] Sending to ${to}: ${subject}`);
     const res = await fetch("https://api.resend.com/emails", {
       method: "POST",
       headers: {
@@ -26,7 +27,9 @@ export async function sendEmail({ to, subject, html }: EmailOptions) {
 
     if (!res.ok) {
       const error = await res.text();
-      console.error("[Email] Send failed:", error);
+      console.error(`[Email] Send failed (${res.status}):`, error);
+    } else {
+      console.log(`[Email] Sent OK to ${to}`);
     }
   } catch (error) {
     console.error("[Email] Error:", error);

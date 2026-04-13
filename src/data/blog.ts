@@ -5902,6 +5902,4305 @@ TaxiNeo displays the **estimated CO2 emissions** for each journey. Passengers ca
 **The ecological transition of taxis in France is irreversible.** Driven by regulation, financial incentives and passenger demand, it is profoundly transforming a sector historically dependent on diesel. Drivers who anticipate this transition — by switching to electric now — benefit from substantial savings and a decisive competitive advantage. With TaxiNeo, choose a clean taxi and contribute to more sustainable mobility.`,
     },
   },
+  {
+    slug: "comment-choisir-son-taxi",
+    title: {
+      fr: "Comment choisir son taxi : le guide complet",
+      en: "How to choose your taxi: the complete guide",
+    },
+    metaTitle: {
+      fr: "Comment choisir son taxi : guide complet 2026 | TaxiNeo",
+      en: "How to choose your taxi: complete guide 2026 | TaxiNeo",
+    },
+    metaDescription: {
+      fr: "Découvrez comment bien choisir votre taxi en France : application vs rue, avis clients, type de véhicule, tarifs et conseils pratiques pour une course réussie.",
+      en: "Learn how to choose the right taxi in France: app vs street hailing, customer reviews, vehicle types, fares and practical tips for a great ride.",
+    },
+    excerpt: {
+      fr: "Guide complet pour bien choisir votre taxi : comparaison des méthodes de réservation, critères de sélection et conseils pratiques.",
+      en: "Complete guide to choosing your taxi: booking methods compared, selection criteria and practical tips.",
+    },
+    date: "2026-03-01",
+    readingTime: 10,
+    content: {
+      fr: `## Comment choisir son taxi : le guide complet
+
+Choisir un taxi peut sembler anodin, mais un mauvais choix peut transformer un simple déplacement en expérience désagréable. Entre les applications de réservation, les taxis en station et ceux hélés dans la rue, les options sont nombreuses. Ce guide vous aide à faire le meilleur choix selon votre situation, votre budget et vos exigences de confort.
+
+## Les différentes façons de réserver un taxi
+
+### Héler un taxi dans la rue
+
+C'est la méthode la plus ancienne et la plus spontanée. Vous repérez un taxi libre — identifiable par son **lumineux vert** — et vous lui faites signe. Cette méthode fonctionne bien dans les grandes villes comme Paris, Lyon ou Marseille, où la densité de taxis est élevée.
+
+**Avantages :**
+- Aucune planification nécessaire
+- Pas besoin de smartphone ou d'application
+- Disponibilité immédiate si un taxi passe
+
+**Inconvénients :**
+- Impossible de connaître le temps d'attente à l'avance
+- Aucune garantie sur le type de véhicule
+- Pas de traçabilité de la course
+- Difficile en zone rurale ou périurbaine
+
+### Les stations de taxi
+
+Les stations de taxi sont des emplacements dédiés, généralement situés près des gares, des aéroports, des hôpitaux et des centres commerciaux. Vous faites la queue et montez dans le premier taxi disponible.
+
+**Avantages :**
+- Lieu identifié et sécurisé
+- File d'attente organisée
+- Taxis vérifiés et licenciés
+
+**Inconvénients :**
+- Temps d'attente variable, surtout aux heures de pointe
+- Pas de choix du véhicule ou du chauffeur
+- Localisation parfois éloignée de votre point de départ
+
+### Réserver par téléphone
+
+Appeler une centrale de réservation reste une option classique. Vous communiquez votre adresse, votre destination et l'heure souhaitée.
+
+**Avantages :**
+- Réservation confirmée à l'avance
+- Possibilité de demander un véhicule spécifique
+- Contact humain pour les demandes particulières
+
+**Inconvénients :**
+- Temps d'attente au téléphone
+- Pas de suivi en temps réel
+- Supplément de réservation fréquent
+
+### Réserver via une application
+
+C'est la méthode la plus moderne et la plus pratique. Des plateformes comme **TaxiNeo** permettent de comparer les taxis disponibles, consulter les avis, choisir le type de véhicule et réserver en quelques clics.
+
+**Avantages :**
+- Comparaison des chauffeurs et des véhicules
+- Avis clients vérifiés
+- Estimation du prix avant la course
+- Suivi en temps réel du véhicule
+- Historique des courses et facturation automatique
+
+**Inconvénients :**
+- Nécessite un smartphone et une connexion internet
+- Certaines zones rurales ont une couverture limitée
+
+## Les critères essentiels pour choisir son taxi
+
+### 1. Les avis et la note du chauffeur
+
+Sur TaxiNeo, chaque chauffeur dispose d'une **note moyenne basée sur les avis clients**. C'est le critère numéro un à vérifier. Un chauffeur noté 4,5/5 ou plus offre généralement une excellente expérience. Lisez les commentaires récents pour repérer d'éventuels problèmes récurrents (conduite brusque, véhicule sale, détours).
+
+### 2. Le type de véhicule
+
+Selon votre besoin, le type de véhicule fait toute la différence :
+
+- **Berline standard** : parfait pour 1 à 3 passagers avec peu de bagages
+- **Monospace ou van** : idéal pour les familles ou les groupes de 4 à 7 personnes
+- **Véhicule électrique** : pour les passagers soucieux de l'environnement
+- **Véhicule adapté PMR** : indispensable pour les personnes à mobilité réduite
+- **Véhicule premium** : pour les occasions spéciales ou les déplacements professionnels
+
+Sur TaxiNeo, vous pouvez **filtrer par type de véhicule** avant de réserver.
+
+### 3. Le tarif et la transparence des prix
+
+Un bon taxi, c'est aussi un taxi dont le tarif est clair. Vérifiez :
+
+- Que le **compteur horokilométrique** est bien visible et en marche
+- Que le chauffeur applique le **bon tarif** (A, B, C ou D selon l'heure et la zone)
+- Que les **suppléments** (bagages, 5e passager, réservation) sont annoncés avant le départ
+
+TaxiNeo affiche une **estimation du prix** avant la réservation, ce qui vous permet de comparer et d'éviter les mauvaises surprises.
+
+### 4. La propreté et l'état du véhicule
+
+Un véhicule propre et bien entretenu est le signe d'un chauffeur professionnel. Vérifiez :
+
+- La propreté extérieure et intérieure
+- L'état des sièges et de la climatisation
+- La présence du lumineux réglementaire sur le toit
+- L'affichage des tarifs à l'intérieur du véhicule
+
+### 5. Les langues parlées
+
+Si vous êtes touriste ou si vous voyagez avec des personnes ne parlant pas français, un chauffeur parlant anglais (ou une autre langue) est un atout majeur. Sur TaxiNeo, les profils des chauffeurs indiquent les **langues parlées**.
+
+## Taxi ou VTC : comment choisir ?
+
+La question revient souvent. Voici les différences clés :
+
+| Critère | Taxi | VTC |
+|---|---|---|
+| **Réservation** | Rue, station ou appli | Application uniquement |
+| **Tarif** | Réglementé (compteur) | Libre (fixé à l'avance) |
+| **Lumineux** | Oui (obligatoire) | Non |
+| **Voies de bus** | Autorisé | Interdit |
+| **Prise en charge immédiate** | Oui | Non (délai minimum) |
+| **Convention CPAM** | Possible | Non |
+
+**Notre conseil** : pour les courses urbaines courtes et les trajets médicaux conventionnés, le taxi reste le choix le plus avantageux. Pour les longues distances à tarif fixe, le VTC peut être intéressant.
+
+## Les pièges à éviter
+
+### Les taxis clandestins
+
+Méfiez-vous des véhicules sans **lumineux réglementaire** ni **plaque professionnelle**. Un vrai taxi français affiche toujours :
+- Un lumineux sur le toit avec le mot "TAXI"
+- Une plaque d'immatriculation professionnelle
+- Un compteur horokilométrique visible
+- Une carte professionnelle du chauffeur
+
+### Les détours injustifiés
+
+Si vous connaissez l'itinéraire, n'hésitez pas à le signaler au chauffeur. Utilisez votre GPS pour vérifier que le trajet est cohérent. Sur TaxiNeo, le **trajet estimé** est affiché avant la réservation.
+
+### Les suppléments abusifs
+
+Les seuls suppléments autorisés sont :
+- La prise en charge (environ 4,18 € en 2026)
+- Le supplément 5e passager
+- Le supplément bagages volumineux (selon la réglementation locale)
+- Le supplément réservation (si applicable)
+
+Tout autre supplément est **illégal**. En cas de doute, demandez un reçu détaillé.
+
+## Checklist avant de monter dans un taxi
+
+Voici une liste rapide à vérifier avant chaque course :
+
+- [ ] Le lumineux est allumé et vert (taxi libre)
+- [ ] Le compteur est visible et se met en marche au départ
+- [ ] Le tarif affiché correspond à l'heure et à la zone
+- [ ] Le véhicule est propre et en bon état
+- [ ] La carte professionnelle du chauffeur est visible
+- [ ] Vous avez convenu de l'itinéraire ou de l'estimation du prix
+
+## Pourquoi utiliser TaxiNeo pour choisir son taxi
+
+TaxiNeo simplifie le choix de votre taxi en centralisant toutes les informations utiles :
+
+- **Comparaison instantanée** des chauffeurs disponibles dans votre zone
+- **Avis vérifiés** et notes détaillées
+- **Filtres avancés** : type de véhicule, langues, options PMR, véhicule électrique
+- **Estimation du prix** avant réservation
+- **Suivi en temps réel** de votre chauffeur
+- **Facturation automatique** et historique des courses
+
+En utilisant TaxiNeo, vous passez d'un choix au hasard à un **choix éclairé**. Vous savez exactement quel chauffeur va vous prendre en charge, dans quel véhicule, et à quel prix estimé.
+
+---
+
+**Choisir son taxi ne devrait jamais être une source de stress.** Avec les bons critères et les bons outils, chaque course devient une expérience agréable et maîtrisée. TaxiNeo met la transparence et la qualité au cœur de votre déplacement.`,
+      en: `## How to choose your taxi: the complete guide
+
+Choosing a taxi might seem straightforward, but a poor choice can turn a simple trip into an unpleasant experience. Between booking apps, taxi ranks and street hailing, there are many options. This guide helps you make the best choice based on your situation, budget and comfort requirements.
+
+## The different ways to book a taxi
+
+### Hailing a taxi on the street
+
+This is the oldest and most spontaneous method. You spot a free taxi — identifiable by its **green roof light** — and wave it down. This method works well in major cities like Paris, Lyon or Marseille, where taxi density is high.
+
+**Advantages:**
+- No planning required
+- No smartphone or app needed
+- Immediate availability if a taxi passes by
+
+**Disadvantages:**
+- Impossible to know waiting time in advance
+- No guarantee on vehicle type
+- No ride traceability
+- Difficult in rural or suburban areas
+
+### Taxi ranks
+
+Taxi ranks are dedicated spots, usually located near train stations, airports, hospitals and shopping centres. You queue up and get into the first available taxi.
+
+**Advantages:**
+- Identified and secure location
+- Organised queue
+- Verified and licensed taxis
+
+**Disadvantages:**
+- Variable waiting time, especially during peak hours
+- No choice of vehicle or driver
+- Sometimes located far from your starting point
+
+### Booking by phone
+
+Calling a dispatch centre remains a classic option. You provide your address, destination and desired time.
+
+**Advantages:**
+- Confirmed advance booking
+- Possibility to request a specific vehicle
+- Human contact for special requests
+
+**Disadvantages:**
+- Phone waiting time
+- No real-time tracking
+- Frequent booking surcharge
+
+### Booking via an app
+
+This is the most modern and convenient method. Platforms like **TaxiNeo** allow you to compare available taxis, read reviews, choose the vehicle type and book in just a few clicks.
+
+**Advantages:**
+- Compare drivers and vehicles
+- Verified customer reviews
+- Price estimate before the ride
+- Real-time vehicle tracking
+- Ride history and automatic invoicing
+
+**Disadvantages:**
+- Requires a smartphone and internet connection
+- Some rural areas have limited coverage
+
+## Essential criteria for choosing your taxi
+
+### 1. Reviews and driver rating
+
+On TaxiNeo, each driver has an **average rating based on customer reviews**. This is the number one criterion to check. A driver rated 4.5/5 or higher generally provides an excellent experience. Read recent comments to spot any recurring issues (rough driving, dirty vehicle, unnecessary detours).
+
+### 2. Vehicle type
+
+Depending on your needs, the vehicle type makes all the difference:
+
+- **Standard saloon**: perfect for 1 to 3 passengers with little luggage
+- **MPV or van**: ideal for families or groups of 4 to 7 people
+- **Electric vehicle**: for environmentally conscious passengers
+- **Wheelchair-accessible vehicle**: essential for passengers with reduced mobility
+- **Premium vehicle**: for special occasions or business travel
+
+On TaxiNeo, you can **filter by vehicle type** before booking.
+
+### 3. Fare and price transparency
+
+A good taxi also means a taxi with clear pricing. Check that:
+
+- The **taximeter** is clearly visible and running
+- The driver is applying the **correct tariff** (A, B, C or D depending on time and zone)
+- Any **surcharges** (luggage, 5th passenger, booking fee) are announced before departure
+
+TaxiNeo displays a **price estimate** before booking, allowing you to compare and avoid unpleasant surprises.
+
+### 4. Cleanliness and vehicle condition
+
+A clean, well-maintained vehicle is the sign of a professional driver. Check:
+
+- External and internal cleanliness
+- Seat condition and air conditioning
+- The regulatory roof light
+- Fare display inside the vehicle
+
+### 5. Languages spoken
+
+If you are a tourist or travelling with people who do not speak French, a driver who speaks English (or another language) is a major asset. On TaxiNeo, driver profiles indicate **languages spoken**.
+
+## Taxi or private hire car: how to choose?
+
+This question comes up often. Here are the key differences:
+
+| Criterion | Taxi | Private hire (VTC) |
+|---|---|---|
+| **Booking** | Street, rank or app | App only |
+| **Fare** | Regulated (meter) | Free (set in advance) |
+| **Roof light** | Yes (mandatory) | No |
+| **Bus lanes** | Allowed | Not allowed |
+| **Immediate pickup** | Yes | No (minimum delay) |
+| **CPAM convention** | Possible | No |
+
+**Our advice**: for short urban rides and insured medical trips, taxis remain the most advantageous choice. For long distances at a fixed rate, private hire cars can be interesting.
+
+## Pitfalls to avoid
+
+### Unlicensed taxis
+
+Beware of vehicles without a **regulatory roof light** or **professional licence plate**. A genuine French taxi always displays:
+- A roof light with the word "TAXI"
+- A professional registration plate
+- A visible taximeter
+- The driver's professional card
+
+### Unjustified detours
+
+If you know the route, do not hesitate to mention it to the driver. Use your GPS to verify that the journey is consistent. On TaxiNeo, the **estimated route** is displayed before booking.
+
+### Abusive surcharges
+
+The only authorised surcharges are:
+- The pick-up fee (approximately EUR 4.18 in 2026)
+- The 5th passenger surcharge
+- The bulky luggage surcharge (according to local regulations)
+- The booking surcharge (if applicable)
+
+Any other surcharge is **illegal**. If in doubt, ask for a detailed receipt.
+
+## Checklist before getting into a taxi
+
+Here is a quick list to check before every ride:
+
+- [ ] The roof light is on and green (taxi available)
+- [ ] The meter is visible and starts at departure
+- [ ] The displayed tariff matches the time and zone
+- [ ] The vehicle is clean and in good condition
+- [ ] The driver's professional card is visible
+- [ ] You have agreed on the route or estimated price
+
+## Why use TaxiNeo to choose your taxi
+
+TaxiNeo simplifies your taxi choice by centralising all useful information:
+
+- **Instant comparison** of available drivers in your area
+- **Verified reviews** and detailed ratings
+- **Advanced filters**: vehicle type, languages, wheelchair access, electric vehicle
+- **Price estimate** before booking
+- **Real-time tracking** of your driver
+- **Automatic invoicing** and ride history
+
+By using TaxiNeo, you move from a random choice to an **informed choice**. You know exactly which driver will pick you up, in which vehicle, and at what estimated price.
+
+---
+
+**Choosing your taxi should never be a source of stress.** With the right criteria and the right tools, every ride becomes a pleasant and controlled experience. TaxiNeo puts transparency and quality at the heart of your journey.`,
+    },
+  },
+  {
+    slug: "10-erreurs-vtc",
+    title: {
+      fr: "Les 10 erreurs à éviter quand on prend un VTC",
+      en: "10 mistakes to avoid when taking a private hire car",
+    },
+    metaTitle: {
+      fr: "10 erreurs à éviter en VTC : guide pratique | TaxiNeo",
+      en: "10 mistakes to avoid with private hire cars | TaxiNeo",
+    },
+    metaDescription: {
+      fr: "Découvrez les 10 erreurs les plus fréquentes quand on prend un VTC et comment les éviter pour des trajets sereins et au meilleur prix.",
+      en: "Discover the 10 most common mistakes when using a private hire car and how to avoid them for stress-free rides at the best price.",
+    },
+    excerpt: {
+      fr: "Les 10 erreurs les plus courantes en VTC et les solutions pour des trajets sereins, sûrs et économiques.",
+      en: "The 10 most common private hire car mistakes and solutions for stress-free, safe and affordable rides.",
+    },
+    date: "2026-03-04",
+    readingTime: 9,
+    content: {
+      fr: `## Les 10 erreurs à éviter quand on prend un VTC
+
+Le marché des VTC (Voitures de Transport avec Chauffeur) a explosé en France ces dernières années. Si la réservation via application a simplifié la mobilité, elle a aussi créé de nouvelles sources d'erreurs pour les passagers. Voici les 10 erreurs les plus fréquentes et comment les éviter.
+
+## Erreur n°1 : ne pas comparer les prix entre plateformes
+
+Beaucoup de passagers ouvrent une seule application et acceptent le premier prix affiché. C'est une erreur coûteuse. Les tarifs VTC varient considérablement d'une plateforme à l'autre, et même d'une minute à l'autre sur la même application en raison du **tarif dynamique** (surge pricing).
+
+**Comment l'éviter :**
+- Comparez systématiquement les prix sur au moins deux ou trois applications
+- Vérifiez également le tarif d'un **taxi classique** sur TaxiNeo : pour les courses courtes en ville, le taxi au compteur est souvent moins cher
+- Attendez quelques minutes si le tarif dynamique est actif — les prix peuvent baisser rapidement
+
+## Erreur n°2 : ignorer le tarif dynamique
+
+Le tarif dynamique (ou surge pricing) est le mécanisme par lequel les plateformes VTC **multiplient les prix** en période de forte demande. Un trajet qui coûte habituellement 15 € peut atteindre 30 € ou plus un vendredi soir ou après un événement.
+
+**Comment l'éviter :**
+- Repérez l'indicateur de majoration sur l'application (multiplicateur x1.5, x2, etc.)
+- Décalez votre course de 10 à 15 minutes si possible
+- Utilisez un taxi classique : les tarifs sont **réglementés et ne varient pas** selon la demande
+- Réservez à l'avance pour verrouiller un tarif fixe
+
+## Erreur n°3 : ne pas vérifier l'identité du chauffeur
+
+Monter dans le mauvais véhicule est plus fréquent qu'on ne le croit, surtout dans les zones à forte affluence (gares, aéroports, concerts). Les conséquences vont du simple désagrément à un risque réel pour votre sécurité.
+
+**Comment l'éviter :**
+- Vérifiez **systématiquement** la plaque d'immatriculation avant de monter
+- Confirmez le prénom du chauffeur et votre nom
+- Ne montez jamais dans un véhicule qui vous aborde spontanément sans que vous ayez commandé une course
+
+## Erreur n°4 : oublier de préciser le nombre de passagers
+
+Si vous êtes plus de trois, un véhicule standard ne suffira pas toujours. Certains VTC refusent de prendre en charge un groupe qui dépasse la capacité annoncée lors de la réservation.
+
+**Comment l'éviter :**
+- Indiquez toujours le **nombre exact de passagers** lors de la réservation
+- Si vous êtes 4 ou plus, réservez un véhicule de catégorie Van ou XL
+- Précisez la présence éventuelle d'un siège enfant
+
+## Erreur n°5 : ne pas signaler les bagages volumineux
+
+Arriver avec deux valises grand format et un sac de golf devant une berline compacte, c'est la garantie d'un problème. Le chauffeur peut légitimement refuser la course si les bagages ne rentrent pas.
+
+**Comment l'éviter :**
+- Mentionnez vos bagages dans les commentaires de réservation
+- Choisissez un véhicule adapté (Van, SUV) pour les bagages volumineux
+- Sur TaxiNeo, vous pouvez filtrer les véhicules par **capacité de coffre**
+
+## Erreur n°6 : se fier uniquement à la note globale
+
+Une note de 4.8/5 est rassurante, mais elle peut masquer des problèmes récents. Un chauffeur qui était excellent il y a un an peut avoir baissé en qualité.
+
+**Comment l'éviter :**
+- Lisez les **avis récents** (dernier mois) plutôt que la note globale
+- Recherchez des commentaires spécifiques sur la propreté, la conduite et la ponctualité
+- Sur TaxiNeo, les avis sont datés et vérifiés, ce qui facilite l'analyse
+
+## Erreur n°7 : ne pas partager son trajet
+
+Que vous soyez un voyageur régulier ou occasionnel, ne pas partager votre trajet avec un proche est une erreur de sécurité.
+
+**Comment l'éviter :**
+- Activez la **fonction de partage de trajet** disponible sur la plupart des applications
+- Envoyez un message à un proche avec le nom du chauffeur, la plaque et votre heure d'arrivée estimée
+- C'est particulièrement important pour les courses de nuit ou dans des zones isolées
+
+## Erreur n°8 : ne pas vérifier l'itinéraire
+
+Certains chauffeurs, qu'ils soient de bonne ou mauvaise foi, empruntent des itinéraires plus longs. Avec un VTC à tarif fixe, cela ne change pas le prix, mais cela rallonge le temps de trajet. Avec un taxi au compteur, cela augmente directement la facture.
+
+**Comment l'éviter :**
+- Suivez le trajet sur votre propre GPS
+- Si l'itinéraire semble anormal, mentionnez-le poliment au chauffeur
+- Avec un VTC à tarif fixe, demandez l'heure d'arrivée estimée
+
+## Erreur n°9 : oublier de réclamer une facture
+
+Pour les déplacements professionnels, la facture est indispensable pour le remboursement. Beaucoup de passagers oublient de la demander ou ne savent pas comment l'obtenir.
+
+**Comment l'éviter :**
+- Demandez la facture **avant de quitter le véhicule**
+- Sur les applications, la facture est généralement disponible dans l'historique des courses
+- Conservez une capture d'écran du récapitulatif de course en attendant
+- Sur TaxiNeo, la facturation est **automatique** et disponible dans votre espace personnel
+
+## Erreur n°10 : ne pas connaître ses droits
+
+En tant que passager, vous avez des droits que beaucoup ignorent :
+
+- Le chauffeur **ne peut pas refuser** une course en raison de votre destination (pour les taxis)
+- Vous avez le droit de demander un **reçu détaillé**
+- Le chauffeur doit emprunter l'**itinéraire le plus court** ou le plus rapide, sauf accord contraire
+- En cas de litige, vous pouvez contacter la **DGCCRF** (Direction générale de la concurrence, de la consommation et de la répression des fraudes)
+
+**Comment l'éviter :**
+- Informez-vous sur vos droits avant de voyager
+- En cas de problème, notez le numéro de licence du chauffeur et l'heure de la course
+- Déposez un avis détaillé sur la plateforme utilisée
+
+## Taxi classique vs VTC : et si le taxi était la meilleure option ?
+
+Avec toutes ces erreurs potentielles, il est légitime de se demander si le taxi classique n'est pas plus simple. En réalité, le taxi offre plusieurs avantages que le VTC ne peut pas égaler :
+
+- **Tarifs réglementés** : pas de surge pricing, pas de mauvaise surprise
+- **Prise en charge immédiate** : pas de délai d'attente minimum
+- **Voies de bus autorisées** : trajets souvent plus rapides en ville
+- **Convention CPAM** : prise en charge des frais de transport médical
+- **Contrôle strict** : licence préfectorale, inspection régulière du véhicule
+
+Sur **TaxiNeo**, vous bénéficiez de tous les avantages du taxi classique avec la praticité d'une application moderne : réservation en ligne, avis vérifiés, estimation du prix et suivi en temps réel.
+
+---
+
+**Prendre un VTC ne devrait pas être un parcours d'obstacles.** En évitant ces 10 erreurs, vous transformez chaque course en expérience agréable. Et si vous voulez la simplicité du numérique avec la fiabilité du taxi réglementé, essayez TaxiNeo : le meilleur des deux mondes.`,
+      en: `## 10 mistakes to avoid when taking a private hire car
+
+The private hire car (VTC) market has boomed in France in recent years. While app-based booking has simplified mobility, it has also created new sources of mistakes for passengers. Here are the 10 most common mistakes and how to avoid them.
+
+## Mistake 1: not comparing prices across platforms
+
+Many passengers open a single app and accept the first price displayed. This is a costly mistake. VTC fares vary considerably from one platform to another, and even from one minute to the next on the same app due to **surge pricing**.
+
+**How to avoid it:**
+- Systematically compare prices on at least two or three apps
+- Also check the fare for a **standard taxi** on TaxiNeo: for short city rides, a metered taxi is often cheaper
+- Wait a few minutes if surge pricing is active — prices can drop quickly
+
+## Mistake 2: ignoring surge pricing
+
+Surge pricing is the mechanism by which VTC platforms **multiply prices** during periods of high demand. A journey that normally costs EUR 15 can reach EUR 30 or more on a Friday evening or after an event.
+
+**How to avoid it:**
+- Look for the surge indicator on the app (multiplier x1.5, x2, etc.)
+- Delay your ride by 10 to 15 minutes if possible
+- Use a standard taxi: fares are **regulated and do not vary** with demand
+- Book in advance to lock in a fixed rate
+
+## Mistake 3: not verifying the driver's identity
+
+Getting into the wrong vehicle is more common than you might think, especially in busy areas (stations, airports, concerts). The consequences range from minor inconvenience to a real safety risk.
+
+**How to avoid it:**
+- **Systematically** check the registration plate before getting in
+- Confirm the driver's first name and your name
+- Never get into a vehicle that approaches you spontaneously without you having ordered a ride
+
+## Mistake 4: forgetting to specify the number of passengers
+
+If there are more than three of you, a standard vehicle may not always be sufficient. Some VTC drivers refuse to carry a group that exceeds the capacity stated during booking.
+
+**How to avoid it:**
+- Always indicate the **exact number of passengers** when booking
+- If there are 4 or more of you, book a Van or XL category vehicle
+- Mention if a child seat is needed
+
+## Mistake 5: not mentioning bulky luggage
+
+Arriving with two large suitcases and a golf bag in front of a compact saloon is a guaranteed problem. The driver can legitimately refuse the ride if the luggage does not fit.
+
+**How to avoid it:**
+- Mention your luggage in the booking comments
+- Choose a suitable vehicle (Van, SUV) for bulky luggage
+- On TaxiNeo, you can filter vehicles by **boot capacity**
+
+## Mistake 6: relying solely on the overall rating
+
+A rating of 4.8/5 is reassuring, but it can mask recent problems. A driver who was excellent a year ago may have declined in quality.
+
+**How to avoid it:**
+- Read **recent reviews** (last month) rather than the overall rating
+- Look for specific comments on cleanliness, driving and punctuality
+- On TaxiNeo, reviews are dated and verified, making analysis easier
+
+## Mistake 7: not sharing your trip
+
+Whether you are a regular or occasional traveller, not sharing your journey with someone close to you is a safety mistake.
+
+**How to avoid it:**
+- Enable the **trip sharing feature** available on most apps
+- Send a message to someone close with the driver's name, plate number and estimated arrival time
+- This is particularly important for night rides or in isolated areas
+
+## Mistake 8: not checking the route
+
+Some drivers, whether in good or bad faith, take longer routes. With a fixed-rate VTC, this does not change the price but extends travel time. With a metered taxi, it directly increases the bill.
+
+**How to avoid it:**
+- Follow the route on your own GPS
+- If the route seems abnormal, politely mention it to the driver
+- With a fixed-rate VTC, ask for the estimated arrival time
+
+## Mistake 9: forgetting to request an invoice
+
+For business trips, an invoice is essential for reimbursement. Many passengers forget to request one or do not know how to obtain it.
+
+**How to avoid it:**
+- Request the invoice **before leaving the vehicle**
+- On apps, the invoice is usually available in the ride history
+- Keep a screenshot of the ride summary in the meantime
+- On TaxiNeo, invoicing is **automatic** and available in your personal area
+
+## Mistake 10: not knowing your rights
+
+As a passenger, you have rights that many people are unaware of:
+
+- The driver **cannot refuse** a ride because of your destination (for taxis)
+- You have the right to request a **detailed receipt**
+- The driver must take the **shortest** or fastest route, unless otherwise agreed
+- In case of dispute, you can contact the **DGCCRF** (Directorate-General for Competition, Consumer Affairs and Fraud Prevention)
+
+**How to avoid it:**
+- Learn about your rights before travelling
+- In case of a problem, note the driver's licence number and the time of the ride
+- Leave a detailed review on the platform used
+
+## Standard taxi vs VTC: what if the taxi is the better option?
+
+With all these potential mistakes, it is legitimate to wonder whether a standard taxi is not simpler. In reality, taxis offer several advantages that VTCs cannot match:
+
+- **Regulated fares**: no surge pricing, no unpleasant surprises
+- **Immediate pickup**: no minimum waiting delay
+- **Bus lanes allowed**: often faster journeys in the city
+- **CPAM convention**: coverage of medical transport costs
+- **Strict oversight**: prefectural licence, regular vehicle inspection
+
+On **TaxiNeo**, you get all the advantages of a standard taxi with the convenience of a modern app: online booking, verified reviews, price estimates and real-time tracking.
+
+---
+
+**Taking a private hire car should not be an obstacle course.** By avoiding these 10 mistakes, you turn every ride into a pleasant experience. And if you want digital simplicity with the reliability of a regulated taxi, try TaxiNeo: the best of both worlds.`,
+    },
+  },
+  {
+    slug: "taxi-vs-covoiturage",
+    title: {
+      fr: "Taxi vs covoiturage : quel transport choisir ?",
+      en: "Taxi vs carpooling: which transport to choose?",
+    },
+    metaTitle: {
+      fr: "Taxi vs covoiturage : comparatif complet 2026 | TaxiNeo",
+      en: "Taxi vs carpooling: complete comparison 2026 | TaxiNeo",
+    },
+    metaDescription: {
+      fr: "Comparatif détaillé entre taxi et covoiturage : prix, confort, sécurité, flexibilité. Découvrez quelle solution de transport est la meilleure selon votre situation.",
+      en: "Detailed comparison between taxi and carpooling: price, comfort, safety, flexibility. Find out which transport solution is best for your situation.",
+    },
+    excerpt: {
+      fr: "Comparatif complet taxi vs covoiturage : prix, confort, sécurité et flexibilité pour choisir le bon mode de transport.",
+      en: "Complete taxi vs carpooling comparison: price, comfort, safety and flexibility to choose the right transport mode.",
+    },
+    date: "2026-03-07",
+    readingTime: 10,
+    content: {
+      fr: `## Taxi vs covoiturage : quel transport choisir ?
+
+Face à la multiplication des offres de mobilité, choisir entre un taxi et le covoiturage peut s'avérer compliqué. Ces deux modes de transport répondent à des besoins différents, et le meilleur choix dépend de votre situation : distance, budget, horaire, confort souhaité et urgence du déplacement. Ce comparatif détaillé vous aide à trancher.
+
+## Le prix : avantage covoiturage sur longue distance
+
+### Covoiturage : le champion du prix au kilomètre
+
+Le covoiturage est imbattable sur les **longues distances**. Un trajet Paris-Lyon (environ 460 km) coûte en moyenne **25 à 35 €** par passager sur les principales plateformes. Le principe est simple : le conducteur partage les frais de son trajet (carburant, péage) avec ses passagers.
+
+**Tarifs indicatifs en covoiturage (2026) :**
+- Paris-Lyon : 25-35 €
+- Paris-Bordeaux : 30-40 €
+- Lyon-Marseille : 20-30 €
+- Trajet de 100 km : 8-15 €
+
+### Taxi : tarif réglementé, idéal sur courte distance
+
+Le taxi fonctionne au compteur, avec un tarif au kilomètre réglementé. Pour les **courses courtes et moyennes** (jusqu'à 30-40 km), le taxi est compétitif et offre un service bien supérieur. Au-delà, le prix augmente proportionnellement à la distance.
+
+**Tarifs indicatifs en taxi (2026) :**
+- Course de 5 km en ville : 12-18 €
+- Course de 15 km : 25-35 €
+- Trajet aéroport (forfait Paris-CDG) : 56 €
+- Course de 50 km : 70-90 €
+
+### Verdict prix
+
+Pour les trajets **courts et urbains** (moins de 20 km), le taxi est raisonnable et le service est incomparable. Pour les **longs trajets interurbains** (plus de 100 km), le covoiturage est nettement moins cher. La zone intermédiaire (20-100 km) dépend du nombre de passagers et de l'urgence.
+
+## Le confort : avantage taxi
+
+### Confort en taxi
+
+Le taxi offre un niveau de confort que le covoiturage ne peut pas égaler :
+
+- **Véhicule professionnel** : entretenu, climatisé, inspecté régulièrement
+- **Chauffeur professionnel** : formé, licencié, connaissant les itinéraires
+- **Trajet direct** : pas de détours pour récupérer d'autres passagers
+- **Espace personnel** : vous ne partagez pas la banquette arrière avec un inconnu
+- **Bagages** : espace coffre dédié, pas de négociation
+- **Silence ou conversation** : vous choisissez
+
+Sur **TaxiNeo**, vous pouvez même choisir le type de véhicule (berline, monospace, premium) pour un confort adapté à vos besoins.
+
+### Confort en covoiturage
+
+Le confort en covoiturage est variable et imprévisible :
+
+- **Véhicule personnel** du conducteur : état et propreté variables
+- **Conducteur amateur** : pas de formation professionnelle
+- **Passagers multiples** : vous partagez l'espace avec des inconnus
+- **Détours possibles** : le conducteur peut faire des arrêts pour prendre ou déposer d'autres passagers
+- **Musique et température** : négociées avec le groupe
+- **Conversation obligée** : certains conducteurs sont très bavards
+
+## La sécurité : avantage taxi
+
+### Sécurité en taxi
+
+Le cadre réglementaire du taxi offre des garanties de sécurité solides :
+
+- **Licence préfectorale** obligatoire
+- **Carte professionnelle** avec photo visible dans le véhicule
+- **Contrôle technique** renforcé et plus fréquent
+- **Assurance professionnelle** couvrant les passagers
+- **Traçabilité** : le véhicule est identifiable (plaque, lumineux)
+- **Responsabilité professionnelle** du chauffeur
+
+### Sécurité en covoiturage
+
+Le covoiturage présente des risques spécifiques :
+
+- **Conducteur non professionnel** : pas de formation obligatoire à la conduite de passagers
+- **Véhicule personnel** : le contrôle technique est celui d'un véhicule particulier
+- **Vérification d'identité limitée** : les plateformes vérifient le permis mais pas le casier judiciaire
+- **Assurance limitée** : l'assurance auto personnelle ne couvre pas toujours les passagers payants
+- **Fatigue** : le conducteur peut être fatigué après une journée de travail
+
+**Important** : les plateformes de covoiturage ont amélioré leurs systèmes de vérification, mais le niveau de sécurité reste inférieur à celui d'un taxi professionnel.
+
+## La flexibilité : avantage taxi
+
+### Flexibilité du taxi
+
+- **Disponible 24h/24, 7j/7** : taxis de nuit, week-ends, jours fériés
+- **Réservation immédiate** : pas besoin de planifier à l'avance
+- **Trajet porte-à-porte** : départ et arrivée exactement où vous le souhaitez
+- **Modification possible** : vous pouvez changer de destination en cours de route
+- **Pas de dépendance** : vous ne dépendez pas de l'emploi du temps d'un conducteur particulier
+
+### Flexibilité du covoiturage
+
+- **Planification nécessaire** : les trajets doivent être réservés à l'avance (parfois plusieurs jours)
+- **Horaires fixes** : le conducteur part quand il le décide
+- **Points de rendez-vous** : souvent des parkings ou des arrêts intermédiaires, pas votre porte
+- **Annulations fréquentes** : un conducteur peut annuler son trajet à la dernière minute
+- **Disponibilité variable** : peu de trajets disponibles en soirée, la nuit ou le week-end
+
+## La rapidité : avantage taxi
+
+Le taxi est généralement plus rapide que le covoiturage pour plusieurs raisons :
+
+- **Pas d'attente au point de rendez-vous** : le taxi vient vous chercher
+- **Trajet direct** : pas de détours pour les autres passagers
+- **Voies de bus autorisées** : les taxis peuvent emprunter les couloirs de bus, réduisant le temps de trajet en ville
+- **Connaissance du terrain** : les chauffeurs professionnels connaissent les raccourcis et les embouteillages
+
+Le covoiturage ajoute en moyenne **30 à 60 minutes** au temps de trajet pur, entre le déplacement jusqu'au point de rendez-vous, l'attente du conducteur et les détours éventuels.
+
+## La dimension écologique
+
+### Covoiturage : réduire les voitures sur la route
+
+Le covoiturage a un impact écologique positif évident : il permet de **remplir des sièges vides** dans des voitures qui feraient le trajet de toute façon. Au lieu de 4 voitures avec un seul occupant, une seule voiture transporte 4 personnes.
+
+### Taxi : la transition électrique
+
+Les taxis français sont en pleine transition écologique. En 2026, **plus de 30% des taxis parisiens sont électriques**. Les nouvelles licences encouragent les véhicules propres. Sur TaxiNeo, vous pouvez **filtrer les taxis électriques** pour un trajet à faible empreinte carbone.
+
+## Quand choisir le taxi ?
+
+Le taxi est le meilleur choix dans ces situations :
+
+- **Trajet urbain** court à moyen (moins de 30 km)
+- **Urgence** : rendez-vous médical, train à prendre, réunion importante
+- **Trajet nocturne** : sécurité et disponibilité garanties
+- **Bagages volumineux** : espace coffre dédié
+- **Transport médical conventionné** : seuls les taxis sont conventionnés CPAM
+- **Voyage d'affaires** : confort, facture automatique, ponctualité
+- **Personnes à mobilité réduite** : véhicules adaptés disponibles
+- **Aéroport** : forfaits réglementés, pas de surprise
+
+## Quand choisir le covoiturage ?
+
+Le covoiturage est le meilleur choix dans ces situations :
+
+- **Long trajet interurbain** (plus de 100 km)
+- **Budget serré** et temps flexible
+- **Voyage planifié à l'avance** (au moins 24-48h)
+- **Envie de rencontres** et de partage
+- **Trajet régulier** (domicile-travail) avec un conducteur fiable
+
+## Le meilleur des deux mondes avec TaxiNeo
+
+TaxiNeo vous permet de profiter de la **fiabilité et du confort du taxi** avec la **praticité du numérique**. Comparez les chauffeurs, consultez les avis, estimez le prix et réservez en quelques secondes. Pour vos trajets quotidiens, vos déplacements professionnels ou vos courses urgentes, TaxiNeo est votre allié mobilité.
+
+---
+
+**Taxi et covoiturage ne sont pas des concurrents directs : ce sont des solutions complémentaires pour des besoins différents.** Le covoiturage excelle sur les longs trajets planifiés à budget serré. Le taxi est imbattable pour la flexibilité, le confort, la sécurité et la rapidité des trajets courts et moyens. Avec TaxiNeo, trouvez le taxi idéal en quelques clics.`,
+      en: `## Taxi vs carpooling: which transport to choose?
+
+With the multiplication of mobility options, choosing between a taxi and carpooling can be complicated. These two transport modes meet different needs, and the best choice depends on your situation: distance, budget, schedule, desired comfort and urgency of travel. This detailed comparison helps you decide.
+
+## Price: advantage carpooling for long distances
+
+### Carpooling: the champion of cost per kilometre
+
+Carpooling is unbeatable for **long distances**. A Paris-Lyon journey (approximately 460 km) costs an average of **EUR 25-35** per passenger on the main platforms. The principle is simple: the driver shares the costs of their journey (fuel, tolls) with passengers.
+
+**Indicative carpooling fares (2026):**
+- Paris-Lyon: EUR 25-35
+- Paris-Bordeaux: EUR 30-40
+- Lyon-Marseille: EUR 20-30
+- 100 km journey: EUR 8-15
+
+### Taxi: regulated fare, ideal for short distances
+
+The taxi runs on a meter, with a regulated per-kilometre fare. For **short to medium rides** (up to 30-40 km), the taxi is competitive and offers a far superior service. Beyond that, the price increases proportionally with distance.
+
+**Indicative taxi fares (2026):**
+- 5 km city ride: EUR 12-18
+- 15 km ride: EUR 25-35
+- Airport transfer (Paris-CDG flat rate): EUR 56
+- 50 km ride: EUR 70-90
+
+### Price verdict
+
+For **short urban journeys** (less than 20 km), taxis are reasonable and the service is incomparable. For **long intercity journeys** (more than 100 km), carpooling is significantly cheaper. The intermediate zone (20-100 km) depends on the number of passengers and urgency.
+
+## Comfort: advantage taxi
+
+### Taxi comfort
+
+The taxi offers a level of comfort that carpooling simply cannot match:
+
+- **Professional vehicle**: maintained, air-conditioned, regularly inspected
+- **Professional driver**: trained, licensed, knows the routes
+- **Direct journey**: no detours to pick up other passengers
+- **Personal space**: you do not share the back seat with a stranger
+- **Luggage**: dedicated boot space, no negotiation
+- **Silence or conversation**: you choose
+
+On **TaxiNeo**, you can even choose the vehicle type (saloon, MPV, premium) for comfort adapted to your needs.
+
+### Carpooling comfort
+
+Comfort in carpooling is variable and unpredictable:
+
+- **Driver's personal vehicle**: condition and cleanliness vary
+- **Amateur driver**: no professional training
+- **Multiple passengers**: you share the space with strangers
+- **Possible detours**: the driver may make stops to pick up or drop off other passengers
+- **Music and temperature**: negotiated with the group
+- **Forced conversation**: some drivers are very chatty
+
+## Safety: advantage taxi
+
+### Taxi safety
+
+The regulatory framework for taxis offers solid safety guarantees:
+
+- **Mandatory prefectural licence**
+- **Professional card** with visible photo in the vehicle
+- **Enhanced technical inspection**, more frequent
+- **Professional insurance** covering passengers
+- **Traceability**: the vehicle is identifiable (plate, roof light)
+- **Professional liability** of the driver
+
+### Carpooling safety
+
+Carpooling presents specific risks:
+
+- **Non-professional driver**: no mandatory passenger transport training
+- **Personal vehicle**: the technical inspection is that of a private vehicle
+- **Limited identity verification**: platforms check the licence but not the criminal record
+- **Limited insurance**: personal car insurance does not always cover paying passengers
+- **Fatigue**: the driver may be tired after a day of work
+
+**Important**: carpooling platforms have improved their verification systems, but the level of safety remains lower than that of a professional taxi.
+
+## Flexibility: advantage taxi
+
+### Taxi flexibility
+
+- **Available 24/7**: night taxis, weekends, public holidays
+- **Immediate booking**: no need to plan in advance
+- **Door-to-door journey**: departure and arrival exactly where you want
+- **Modifications possible**: you can change your destination en route
+- **No dependency**: you do not depend on a particular driver's schedule
+
+### Carpooling flexibility
+
+- **Planning required**: journeys must be booked in advance (sometimes several days)
+- **Fixed schedules**: the driver leaves when they decide
+- **Meeting points**: often car parks or intermediate stops, not your door
+- **Frequent cancellations**: a driver can cancel their journey at the last minute
+- **Variable availability**: few journeys available in the evening, at night or at weekends
+
+## Speed: advantage taxi
+
+Taxis are generally faster than carpooling for several reasons:
+
+- **No waiting at the meeting point**: the taxi comes to you
+- **Direct journey**: no detours for other passengers
+- **Bus lanes allowed**: taxis can use bus lanes, reducing travel time in the city
+- **Local knowledge**: professional drivers know shortcuts and traffic patterns
+
+Carpooling adds an average of **30 to 60 minutes** to the pure travel time, between getting to the meeting point, waiting for the driver and possible detours.
+
+## The ecological dimension
+
+### Carpooling: reducing cars on the road
+
+Carpooling has an obvious positive ecological impact: it fills **empty seats** in cars that would make the journey anyway. Instead of 4 cars with a single occupant, one car carries 4 people.
+
+### Taxis: the electric transition
+
+French taxis are in the midst of an ecological transition. In 2026, **more than 30% of Parisian taxis are electric**. New licences encourage clean vehicles. On TaxiNeo, you can **filter electric taxis** for a low-carbon journey.
+
+## When to choose a taxi?
+
+A taxi is the best choice in these situations:
+
+- **Short to medium urban journey** (less than 30 km)
+- **Urgency**: medical appointment, train to catch, important meeting
+- **Night journey**: guaranteed safety and availability
+- **Bulky luggage**: dedicated boot space
+- **Insured medical transport**: only taxis are CPAM-approved
+- **Business travel**: comfort, automatic invoicing, punctuality
+- **Passengers with reduced mobility**: adapted vehicles available
+- **Airport**: regulated flat rates, no surprises
+
+## When to choose carpooling?
+
+Carpooling is the best choice in these situations:
+
+- **Long intercity journey** (more than 100 km)
+- **Tight budget** and flexible schedule
+- **Journey planned in advance** (at least 24-48 hours)
+- **Desire for social interaction** and sharing
+- **Regular commute** (home to work) with a reliable driver
+
+## The best of both worlds with TaxiNeo
+
+TaxiNeo lets you enjoy the **reliability and comfort of a taxi** with the **convenience of digital**. Compare drivers, read reviews, estimate the price and book in seconds. For your daily journeys, business trips or urgent rides, TaxiNeo is your mobility ally.
+
+---
+
+**Taxis and carpooling are not direct competitors: they are complementary solutions for different needs.** Carpooling excels for long planned journeys on a tight budget. Taxis are unbeatable for flexibility, comfort, safety and speed on short to medium journeys. With TaxiNeo, find the ideal taxi in just a few clicks.`,
+    },
+  },
+  {
+    slug: "guide-taxi-conventionne",
+    title: {
+      fr: "Guide complet du taxi conventionné CPAM",
+      en: "Complete guide to CPAM-approved taxis",
+    },
+    metaTitle: {
+      fr: "Taxi conventionné CPAM : guide complet 2026 | TaxiNeo",
+      en: "CPAM-approved taxi: complete guide 2026 | TaxiNeo",
+    },
+    metaDescription: {
+      fr: "Tout savoir sur le taxi conventionné CPAM : conditions, remboursement, démarches, droits des patients et comment trouver un taxi conventionné près de chez vous.",
+      en: "Everything about CPAM-approved taxis: conditions, reimbursement, procedures, patient rights and how to find an approved taxi near you.",
+    },
+    excerpt: {
+      fr: "Tout comprendre sur le taxi conventionné CPAM : conditions d'éligibilité, démarches de remboursement et droits des patients.",
+      en: "Understand CPAM-approved taxis: eligibility conditions, reimbursement procedures and patient rights.",
+    },
+    date: "2026-03-10",
+    readingTime: 11,
+    content: {
+      fr: `## Guide complet du taxi conventionné CPAM
+
+Le transport médical en taxi est un droit pour des millions de Français. Chaque année, la Sécurité sociale rembourse des millions de courses en taxi pour des patients qui ne peuvent pas se déplacer par leurs propres moyens vers un établissement de santé. Pourtant, le système reste mal compris. Ce guide détaillé vous explique tout : les conditions, les démarches, le remboursement et comment trouver un taxi conventionné.
+
+## Qu'est-ce qu'un taxi conventionné ?
+
+Un taxi conventionné est un taxi dont le chauffeur a signé une **convention avec la Caisse Primaire d'Assurance Maladie (CPAM)**. Cette convention l'autorise à effectuer des transports sanitaires remboursés par la Sécurité sociale. Le chauffeur s'engage à respecter certaines conditions (tarifs, disponibilité, qualité de service) en échange de la garantie de paiement par l'Assurance Maladie.
+
+### Ce que le conventionnement implique pour le chauffeur
+
+- **Tarifs plafonnés** : le chauffeur applique les tarifs réglementés, sans majoration abusive
+- **Disponibilité** : il s'engage à assurer un service régulier pour les patients
+- **Véhicule adapté** : le véhicule doit être confortable, propre et accessible
+- **Tiers payant** : le chauffeur pratique le tiers payant, ce qui signifie que le patient ne paie pas (ou très peu) au moment de la course
+
+### Ce que le conventionnement implique pour le patient
+
+- **Pas d'avance de frais** : grâce au tiers payant, vous ne payez pas la course — la CPAM règle directement le chauffeur
+- **Participation forfaitaire** : dans certains cas, une participation de 2 € reste à votre charge
+- **Franchise médicale** : une franchise de 2 € par trajet s'applique (plafonnée à 50 € par an)
+
+## Les conditions pour bénéficier d'un taxi conventionné
+
+Tout le monde ne peut pas bénéficier d'un remboursement de transport en taxi. Plusieurs conditions doivent être réunies.
+
+### 1. La prescription médicale
+
+C'est la condition sine qua non. Votre médecin doit établir une **prescription médicale de transport** (imprimé Cerfa S3138) **avant** le trajet. Cette prescription indique :
+
+- Le motif du transport
+- Le mode de transport prescrit (taxi, ambulance, VSL)
+- La destination (hôpital, clinique, centre de soins)
+- Le nombre de trajets prévus
+
+**Attention** : sans prescription médicale préalable, le remboursement est impossible, même si le transport était médicalement justifié.
+
+### 2. L'incapacité de se déplacer seul
+
+Le transport en taxi est prescrit lorsque le patient **ne peut pas se déplacer par ses propres moyens** ou par les transports en commun. Les situations les plus courantes sont :
+
+- **Déficience physique** : impossibilité de marcher, de conduire ou de prendre les transports en commun
+- **Traitement lourd** : chimiothérapie, dialyse, radiothérapie
+- **Hospitalisation** : entrée et sortie d'hôpital
+- **Grossesse à risque** : suivi médical régulier
+- **Affection de longue durée (ALD)** : suivi régulier pour une maladie chronique
+
+### 3. La destination : un établissement de santé
+
+Le taxi conventionné est remboursé pour les trajets vers :
+
+- Les hôpitaux et cliniques
+- Les centres de dialyse
+- Les cabinets médicaux (pour certains soins spécifiques)
+- Les centres de rééducation
+- Les laboratoires d'analyses (dans certains cas)
+
+Le trajet doit respecter la **règle de l'établissement le plus proche** : la Sécurité sociale rembourse sur la base du trajet vers l'établissement de santé approprié le plus proche de votre domicile, sauf si un autre établissement est médicalement justifié.
+
+### 4. Le mode de transport adapté
+
+Le médecin prescrit le mode de transport le plus adapté à votre état de santé :
+
+| Mode de transport | Quand ? | Remboursement |
+|---|---|---|
+| **Ambulance** | Patient couché ou sous surveillance médicale | 65% (100% en ALD) |
+| **VSL** (Véhicule Sanitaire Léger) | Patient assis, nécessitant une aide | 65% (100% en ALD) |
+| **Taxi conventionné** | Patient autonome assis, sans aide médicale nécessaire | 65% (100% en ALD) |
+| **Transport en commun** | Patient autonome | Remboursement du ticket |
+| **Véhicule personnel** | Patient autonome conduisant | Indemnités kilométriques |
+
+Le taxi est prescrit lorsque le patient peut voyager assis sans assistance médicale, mais ne peut pas utiliser les transports en commun ni conduire.
+
+## Le remboursement : comment ça marche ?
+
+### Taux de remboursement
+
+Le taux de remboursement de base est de **65%** du tarif conventionné. Les 35% restants sont généralement pris en charge par votre **mutuelle** (complémentaire santé).
+
+**Cas de prise en charge à 100% :**
+- Affection de longue durée (ALD) exonérante
+- Accident du travail ou maladie professionnelle
+- Maternité (à partir du 6e mois de grossesse)
+- Invalidité
+- Soins en rapport avec un acte chirurgical avec un coefficient supérieur ou égal à 60
+
+### Le tiers payant
+
+Dans la plupart des cas, le taxi conventionné pratique le **tiers payant** : vous ne payez rien au moment de la course. Le chauffeur envoie directement la facture à la CPAM et à votre mutuelle.
+
+### Les franchises et participations
+
+- **Franchise médicale** : 2 € par trajet (aller ou retour), plafonnée à 50 € par an
+- **Participation forfaitaire** : 2 € par transport (dans certains cas)
+- **Exonérations** : les femmes enceintes (à partir du 6e mois), les bénéficiaires de la CSS et les mineurs sont exonérés des franchises
+
+## Les démarches étape par étape
+
+### Étape 1 : Obtenez la prescription médicale
+
+Consultez votre médecin et demandez-lui d'établir le formulaire Cerfa S3138. Assurez-vous que le mode "taxi" est coché et que toutes les informations sont complètes.
+
+### Étape 2 : Trouvez un taxi conventionné
+
+Plusieurs moyens s'offrent à vous :
+
+- **TaxiNeo** : la plateforme permet de filtrer les taxis conventionnés dans votre zone. Vous voyez directement quels chauffeurs sont conventionnés CPAM
+- **Votre CPAM** : appelez le 3646 pour obtenir la liste des taxis conventionnés dans votre secteur
+- **Votre hôpital** : le service social de l'hôpital peut vous orienter
+
+### Étape 3 : Effectuez votre trajet
+
+Le jour du trajet :
+- Présentez votre **prescription médicale** au chauffeur
+- Présentez votre **carte Vitale** et votre **attestation de mutuelle**
+- Signez le **bon de transport** (formulaire que le chauffeur vous remet)
+- Conservez une copie de tous les documents
+
+### Étape 4 : Le remboursement
+
+Si le tiers payant est pratiqué, vous n'avez rien à faire. Le chauffeur gère directement le remboursement avec la CPAM.
+
+Si le tiers payant n'est pas pratiqué (cas rare), vous devez :
+1. Payer la course
+2. Envoyer la facture et le bon de transport à votre CPAM
+3. Le remboursement intervient sous 1 à 3 semaines
+
+## Les droits des patients
+
+En tant que patient utilisant un taxi conventionné, vous avez des droits importants :
+
+- **Liberté de choix** : vous choisissez le taxi conventionné que vous souhaitez
+- **Pas de refus** : un taxi conventionné ne peut pas refuser un transport prescrit
+- **Ponctualité** : le chauffeur doit respecter l'horaire convenu
+- **Confort** : le véhicule doit être propre, climatisé et confortable
+- **Confidentialité** : le chauffeur est tenu au secret professionnel concernant votre état de santé
+- **Accompagnant** : un accompagnant peut voyager avec vous si médicalement justifié
+
+## Trouver un taxi conventionné avec TaxiNeo
+
+TaxiNeo simplifie la recherche de taxis conventionnés :
+
+- **Filtre "Conventionné CPAM"** : identifiez immédiatement les chauffeurs conventionnés
+- **Avis vérifiés** : choisissez un chauffeur bien noté par d'autres patients
+- **Réservation à l'avance** : planifiez vos trajets médicaux réguliers (dialyse, chimio)
+- **Trajet récurrent** : enregistrez vos trajets habituels pour réserver en un clic
+- **Facture automatique** : simplifiez vos démarches administratives
+
+---
+
+**Le taxi conventionné est un droit, pas un privilège.** Des millions de patients en France en bénéficient chaque année pour accéder aux soins dont ils ont besoin. Grâce à TaxiNeo, trouver un taxi conventionné fiable et bien noté devient simple et rapide. N'hésitez pas à utiliser ce droit pour vos déplacements médicaux.`,
+      en: `## Complete guide to CPAM-approved taxis
+
+Medical transport by taxi is a right for millions of French people. Every year, the Social Security system reimburses millions of taxi rides for patients who cannot travel to healthcare facilities on their own. Yet the system remains poorly understood. This detailed guide explains everything: conditions, procedures, reimbursement and how to find an approved taxi.
+
+## What is a CPAM-approved taxi?
+
+A CPAM-approved taxi is a taxi whose driver has signed a **convention with the Caisse Primaire d'Assurance Maladie (CPAM)**, the French primary health insurance fund. This convention authorises them to carry out medical transports reimbursed by Social Security. The driver agrees to comply with certain conditions (fares, availability, service quality) in exchange for guaranteed payment by the Health Insurance fund.
+
+### What the agreement means for the driver
+
+- **Capped fares**: the driver applies regulated fares without abusive surcharges
+- **Availability**: they commit to providing regular service for patients
+- **Suitable vehicle**: the vehicle must be comfortable, clean and accessible
+- **Third-party payment**: the driver uses the third-party payment system, meaning the patient pays nothing (or very little) at the time of the ride
+
+### What the agreement means for the patient
+
+- **No upfront payment**: thanks to third-party payment, you do not pay for the ride — the CPAM pays the driver directly
+- **Fixed contribution**: in some cases, a EUR 2 contribution remains your responsibility
+- **Medical excess**: a EUR 2 excess per journey applies (capped at EUR 50 per year)
+
+## Conditions for using a CPAM-approved taxi
+
+Not everyone can receive taxi transport reimbursement. Several conditions must be met.
+
+### 1. Medical prescription
+
+This is the essential condition. Your doctor must issue a **medical transport prescription** (Cerfa form S3138) **before** the journey. This prescription states:
+
+- The reason for transport
+- The prescribed transport mode (taxi, ambulance, medical transport vehicle)
+- The destination (hospital, clinic, care centre)
+- The number of planned journeys
+
+**Warning**: without a prior medical prescription, reimbursement is impossible, even if the transport was medically justified.
+
+### 2. Inability to travel alone
+
+Taxi transport is prescribed when the patient **cannot travel by their own means** or by public transport. The most common situations are:
+
+- **Physical disability**: inability to walk, drive or take public transport
+- **Heavy treatment**: chemotherapy, dialysis, radiotherapy
+- **Hospitalisation**: hospital admission and discharge
+- **High-risk pregnancy**: regular medical monitoring
+- **Long-term condition (ALD)**: regular monitoring for a chronic disease
+
+### 3. Destination: a healthcare facility
+
+The approved taxi is reimbursed for journeys to:
+
+- Hospitals and clinics
+- Dialysis centres
+- Medical practices (for certain specific treatments)
+- Rehabilitation centres
+- Medical laboratories (in certain cases)
+
+The journey must comply with the **nearest facility rule**: Social Security reimburses based on the journey to the nearest appropriate healthcare facility from your home, unless another facility is medically justified.
+
+### 4. Appropriate transport mode
+
+The doctor prescribes the transport mode most suited to your health condition:
+
+| Transport mode | When? | Reimbursement |
+|---|---|---|
+| **Ambulance** | Patient lying down or under medical supervision | 65% (100% for ALD) |
+| **Medical transport vehicle (VSL)** | Patient seated, requiring assistance | 65% (100% for ALD) |
+| **Approved taxi** | Autonomous seated patient, no medical assistance needed | 65% (100% for ALD) |
+| **Public transport** | Autonomous patient | Ticket reimbursement |
+| **Personal vehicle** | Autonomous patient driving | Mileage allowance |
+
+The taxi is prescribed when the patient can travel seated without medical assistance but cannot use public transport or drive.
+
+## Reimbursement: how does it work?
+
+### Reimbursement rate
+
+The basic reimbursement rate is **65%** of the approved fare. The remaining 35% is usually covered by your **supplementary health insurance** (mutuelle).
+
+**Cases of 100% coverage:**
+- Qualifying long-term condition (ALD)
+- Work accident or occupational disease
+- Maternity (from the 6th month of pregnancy)
+- Disability
+- Care related to a surgical procedure with a coefficient of 60 or above
+
+### Third-party payment
+
+In most cases, the approved taxi uses the **third-party payment** system: you pay nothing at the time of the ride. The driver sends the invoice directly to the CPAM and your supplementary insurer.
+
+### Excesses and contributions
+
+- **Medical excess**: EUR 2 per journey (outward or return), capped at EUR 50 per year
+- **Fixed contribution**: EUR 2 per transport (in certain cases)
+- **Exemptions**: pregnant women (from the 6th month), CSS beneficiaries and minors are exempt from excesses
+
+## Step-by-step procedures
+
+### Step 1: Obtain the medical prescription
+
+See your doctor and ask them to complete the Cerfa S3138 form. Make sure the "taxi" mode is ticked and all information is complete.
+
+### Step 2: Find an approved taxi
+
+Several options are available:
+
+- **TaxiNeo**: the platform lets you filter CPAM-approved taxis in your area. You can see directly which drivers are CPAM-approved
+- **Your CPAM**: call 3646 to obtain the list of approved taxis in your area
+- **Your hospital**: the hospital social service can guide you
+
+### Step 3: Make your journey
+
+On the day of the journey:
+- Present your **medical prescription** to the driver
+- Present your **Carte Vitale** and your **supplementary insurance certificate**
+- Sign the **transport voucher** (form given to you by the driver)
+- Keep a copy of all documents
+
+### Step 4: Reimbursement
+
+If third-party payment is used, you have nothing to do. The driver manages the reimbursement directly with the CPAM.
+
+If third-party payment is not used (rare case), you must:
+1. Pay for the ride
+2. Send the invoice and transport voucher to your CPAM
+3. Reimbursement occurs within 1 to 3 weeks
+
+## Patient rights
+
+As a patient using an approved taxi, you have important rights:
+
+- **Freedom of choice**: you choose the approved taxi you wish to use
+- **No refusal**: an approved taxi cannot refuse a prescribed transport
+- **Punctuality**: the driver must respect the agreed schedule
+- **Comfort**: the vehicle must be clean, air-conditioned and comfortable
+- **Confidentiality**: the driver is bound by professional secrecy regarding your health condition
+- **Companion**: a companion can travel with you if medically justified
+
+## Finding an approved taxi with TaxiNeo
+
+TaxiNeo simplifies the search for approved taxis:
+
+- **"CPAM Approved" filter**: immediately identify approved drivers
+- **Verified reviews**: choose a driver well rated by other patients
+- **Advance booking**: plan your regular medical journeys (dialysis, chemo)
+- **Recurring journey**: save your usual journeys to book in one click
+- **Automatic invoicing**: simplify your administrative procedures
+
+---
+
+**An approved taxi is a right, not a privilege.** Millions of patients in France benefit from it every year to access the care they need. Thanks to TaxiNeo, finding a reliable and well-rated approved taxi becomes simple and fast. Do not hesitate to use this right for your medical journeys.`,
+    },
+  },
+  {
+    slug: "taxi-et-handicap-guide",
+    title: {
+      fr: "Taxi et handicap : guide pratique du transport adapté",
+      en: "Taxis and disability: practical guide to accessible transport",
+    },
+    metaTitle: {
+      fr: "Taxi et handicap : guide du transport adapté 2026 | TaxiNeo",
+      en: "Taxis and disability: accessible transport guide 2026 | TaxiNeo",
+    },
+    metaDescription: {
+      fr: "Guide complet du transport en taxi pour les personnes en situation de handicap : véhicules adaptés, aides financières, droits et réservation sur TaxiNeo.",
+      en: "Complete taxi transport guide for people with disabilities: adapted vehicles, financial aid, rights and booking on TaxiNeo.",
+    },
+    excerpt: {
+      fr: "Guide pratique pour les personnes en situation de handicap : véhicules adaptés, aides financières, droits et conseils pour voyager en taxi.",
+      en: "Practical guide for people with disabilities: adapted vehicles, financial aid, rights and tips for travelling by taxi.",
+    },
+    date: "2026-03-13",
+    readingTime: 10,
+    content: {
+      fr: `## Taxi et handicap : guide pratique du transport adapté
+
+La mobilité est un droit fondamental. Pour les personnes en situation de handicap, le taxi représente souvent la solution de transport la plus adaptée et la plus fiable. Véhicules accessibles, aides financières, droits spécifiques : ce guide complet répond à toutes vos questions sur le transport en taxi pour les personnes handicapées.
+
+## Les différents types de handicap et les besoins de transport
+
+### Handicap moteur
+
+Les personnes en fauteuil roulant ou ayant des difficultés de mobilité ont besoin de véhicules spécifiquement équipés :
+
+- **Rampe d'accès** ou **hayon élévateur** pour le fauteuil roulant
+- **Espace intérieur suffisant** pour accueillir le fauteuil sans le plier
+- **Système d'arrimage** homologué pour sécuriser le fauteuil pendant le trajet
+- **Sièges pivotants** pour faciliter le transfert
+
+### Handicap visuel
+
+Les personnes malvoyantes ou non-voyantes ont besoin d'un accompagnement spécifique :
+
+- **Prise en charge à la porte** : le chauffeur vient chercher le passager à son domicile
+- **Aide à l'installation** dans le véhicule
+- **Acceptation du chien guide** : c'est une obligation légale
+- **Communication claire** : annonce de l'itinéraire, des arrêts et de l'arrivée
+
+### Handicap auditif
+
+Les personnes sourdes ou malentendantes ont des besoins de communication adaptés :
+
+- **Communication écrite** : SMS, application, tableau de bord avec adresse écrite
+- **Confirmation visuelle** de la destination et du prix
+- **Patience et adaptation** du chauffeur
+
+### Handicap cognitif ou psychique
+
+Les personnes atteintes de handicap cognitif ou psychique peuvent nécessiter :
+
+- **Accompagnement bienveillant** et patient
+- **Trajet régulier** et rassurant (même chauffeur si possible)
+- **Communication simplifiée** et rassurante
+
+## Les véhicules adaptés PMR
+
+### Qu'est-ce qu'un taxi PMR ?
+
+Un taxi PMR (Personnes à Mobilité Réduite) est un véhicule spécialement aménagé pour accueillir des passagers en fauteuil roulant ou ayant des difficultés de mobilité importantes. Ces véhicules répondent à des **normes strictes d'accessibilité**.
+
+### Les équipements obligatoires
+
+Un taxi PMR doit disposer de :
+
+- **Rampe d'accès** ou **hayon élévateur** : pour permettre l'entrée du fauteuil roulant
+- **Espace intérieur normé** : hauteur sous plafond, largeur de passage et espace de retournement suffisants
+- **Système d'arrimage** : sangles ou crochets homologués pour fixer le fauteuil au sol
+- **Ceinture de sécurité adaptée** : compatible avec le fauteuil roulant
+- **Marches rétractables ou surbaissées** : pour les personnes ayant des difficultés à monter
+
+### Les normes en vigueur
+
+En France, les taxis PMR doivent respecter les normes de la **directive européenne 2001/85/CE** et de la **loi du 11 février 2005** pour l'égalité des droits et des chances. Le véhicule doit être homologué par un organisme agréé.
+
+## Les aides financières
+
+### La Prestation de Compensation du Handicap (PCH)
+
+La **PCH** est la principale aide financière pour les frais de transport des personnes handicapées. Elle peut couvrir :
+
+- Les surcoûts de transport liés au handicap
+- L'aménagement du véhicule personnel
+- Les frais de transport régulier (dans certains cas)
+
+**Conditions** : avoir un handicap reconnu par la MDPH (Maison Départementale des Personnes Handicapées) et résider en France.
+
+### L'Allocation Adulte Handicapé (AAH)
+
+L'**AAH** ne couvre pas directement les frais de transport, mais elle contribue au budget global de la personne handicapée, facilitant indirectement l'accès au taxi.
+
+### Le transport médical conventionné
+
+Pour les trajets vers des établissements de santé, les personnes handicapées bénéficient du **transport médical remboursé par la CPAM** (voir notre guide sur le taxi conventionné). Les conditions sont souvent plus favorables pour les personnes en ALD (Affection de Longue Durée) avec une prise en charge à 100%.
+
+### Les aides locales
+
+De nombreuses collectivités locales proposent des **aides complémentaires** :
+
+- **Chèques-taxi** : certaines mairies ou départements fournissent des chèques d'une valeur de 5 à 20 € pour les courses en taxi
+- **Services de transport adapté** (type PAM en Île-de-France) : transport à la demande pour les personnes handicapées
+- **Réductions tarifaires** : certains départements négocient des tarifs préférentiels avec les compagnies de taxi
+
+## Les droits des passagers handicapés
+
+### Le droit au transport
+
+La **loi du 11 février 2005** garantit le droit au transport pour toutes les personnes en situation de handicap. Ce droit inclut :
+
+- L'accès à tous les modes de transport, y compris le taxi
+- L'adaptation des véhicules et des services
+- La formation des chauffeurs à l'accueil des personnes handicapées
+
+### Le refus de prise en charge : c'est illégal
+
+Un taxi **ne peut pas refuser** de prendre en charge une personne handicapée en raison de son handicap. Ce refus constitue une **discrimination** punie par la loi (article 225-2 du Code pénal). Les sanctions peuvent aller jusqu'à **3 ans d'emprisonnement et 45 000 € d'amende**.
+
+### Le chien guide : une obligation légale
+
+Les taxis ont l'obligation légale d'accepter les **chiens guides d'aveugle** et les **chiens d'assistance**. Aucun supplément ne peut être facturé pour le transport d'un chien guide. Le refus est passible de sanctions pénales.
+
+### Les suppléments interdits
+
+Aucun supplément ne peut être facturé en raison du handicap du passager :
+
+- Pas de supplément pour le fauteuil roulant
+- Pas de supplément pour le chien guide
+- Pas de supplément pour le temps de montée et descente
+- Pas de supplément pour l'accompagnant médical
+
+## Comment réserver un taxi adapté
+
+### Sur TaxiNeo
+
+TaxiNeo facilite la réservation de taxis adaptés :
+
+1. **Filtrez par "Accessible PMR"** : identifiez immédiatement les véhicules équipés
+2. **Consultez les avis** : les patients handicapés partagent leur expérience
+3. **Précisez vos besoins** : type de fauteuil, chien guide, accompagnant
+4. **Réservez à l'avance** : garantissez la disponibilité d'un véhicule adapté
+5. **Trajet récurrent** : enregistrez vos trajets réguliers (dialyse, kiné, travail)
+
+### Par téléphone
+
+Si vous préférez le contact téléphonique :
+- Appelez une compagnie de taxi et précisez votre besoin en véhicule PMR
+- Contactez le **PAM** (Pour Aider à la Mobilité) en Île-de-France au 01 41 29 01 11
+- Renseignez-vous auprès de votre MDPH locale
+
+### Les informations à communiquer
+
+Lors de la réservation, précisez toujours :
+- Le **type de handicap** et vos besoins spécifiques
+- Les **dimensions du fauteuil roulant** (largeur, type : manuel ou électrique)
+- La présence d'un **chien guide** ou d'un **accompagnant**
+- L'adresse exacte et les éventuelles **difficultés d'accès** (escaliers, absence de rampe)
+- Les **horaires précis** et la marge de temps nécessaire
+
+## Conseils pratiques pour les chauffeurs de taxi
+
+Si vous êtes chauffeur de taxi, voici comment améliorer l'accueil des passagers handicapés :
+
+- **Formez-vous** : suivez les formations à l'accueil des personnes handicapées proposées par les chambres de métiers
+- **Soyez patient** : le temps de montée et de descente peut être plus long
+- **Communiquez clairement** : adaptez votre communication au type de handicap
+- **Assistez sans infantiliser** : proposez votre aide mais respectez l'autonomie du passager
+- **Entretenez vos équipements** : vérifiez régulièrement le bon fonctionnement de la rampe et des arrimages
+
+## Le futur du transport adapté
+
+Le transport adapté évolue rapidement en France :
+
+- **Augmentation du nombre de taxis PMR** : les nouvelles licences encouragent l'acquisition de véhicules accessibles
+- **Véhicules autonomes** : à terme, les véhicules autonomes adaptés pourraient révolutionner la mobilité des personnes handicapées
+- **Applications spécialisées** : TaxiNeo et d'autres plateformes développent des fonctionnalités dédiées à l'accessibilité
+- **Formation obligatoire** : les chauffeurs de taxi doivent de plus en plus se former à l'accueil des personnes handicapées
+
+---
+
+**La mobilité est un droit pour tous, sans exception.** Les personnes en situation de handicap méritent un accès simple, digne et fiable au transport en taxi. Grâce à TaxiNeo, trouvez facilement un taxi adapté à vos besoins, consultez les avis d'autres passagers et réservez en toute confiance. Parce que le handicap ne devrait jamais être un obstacle à la mobilité.`,
+      en: `## Taxis and disability: practical guide to accessible transport
+
+Mobility is a fundamental right. For people with disabilities, taxis often represent the most suitable and reliable transport solution. Accessible vehicles, financial aid, specific rights: this comprehensive guide answers all your questions about taxi transport for disabled people.
+
+## Different types of disability and transport needs
+
+### Physical disability
+
+People in wheelchairs or with mobility difficulties need specifically equipped vehicles:
+
+- **Access ramp** or **tail lift** for the wheelchair
+- **Sufficient interior space** to accommodate the wheelchair without folding it
+- **Approved securing system** to secure the wheelchair during the journey
+- **Swivel seats** to facilitate transfer
+
+### Visual impairment
+
+People with visual impairments or who are blind need specific support:
+
+- **Door-to-door pickup**: the driver comes to collect the passenger from their home
+- **Assistance getting into** the vehicle
+- **Acceptance of guide dogs**: this is a legal obligation
+- **Clear communication**: announcing the route, stops and arrival
+
+### Hearing impairment
+
+Deaf or hard-of-hearing people have adapted communication needs:
+
+- **Written communication**: SMS, app, dashboard with written address
+- **Visual confirmation** of destination and price
+- **Patience and adaptation** from the driver
+
+### Cognitive or mental disability
+
+People with cognitive or mental disabilities may require:
+
+- **Caring and patient** support
+- **Regular and reassuring** journeys (same driver if possible)
+- **Simplified and reassuring** communication
+
+## Wheelchair-accessible vehicles (PMR)
+
+### What is a PMR taxi?
+
+A PMR taxi (Personnes a Mobilite Reduite, or People with Reduced Mobility) is a vehicle specially adapted to accommodate passengers in wheelchairs or with significant mobility difficulties. These vehicles meet **strict accessibility standards**.
+
+### Mandatory equipment
+
+A PMR taxi must have:
+
+- **Access ramp** or **tail lift**: to allow wheelchair entry
+- **Standardised interior space**: sufficient ceiling height, passage width and turning space
+- **Securing system**: approved straps or hooks to fix the wheelchair to the floor
+- **Adapted seat belt**: compatible with the wheelchair
+- **Retractable or lowered steps**: for people with difficulty boarding
+
+### Current regulations
+
+In France, PMR taxis must comply with **European directive 2001/85/EC** and the **law of 11 February 2005** on equal rights and opportunities. The vehicle must be approved by an accredited body.
+
+## Financial assistance
+
+### Disability Compensation Benefit (PCH)
+
+The **PCH** is the main financial aid for transport costs of disabled people. It can cover:
+
+- Extra transport costs related to the disability
+- Adaptation of personal vehicles
+- Regular transport costs (in certain cases)
+
+**Conditions**: having a disability recognised by the MDPH (Departmental House for Disabled People) and residing in France.
+
+### Adult Disability Allowance (AAH)
+
+The **AAH** does not directly cover transport costs, but it contributes to the overall budget of the disabled person, indirectly facilitating access to taxis.
+
+### Approved medical transport
+
+For journeys to healthcare facilities, disabled people benefit from **medical transport reimbursed by the CPAM** (see our guide on approved taxis). Conditions are often more favourable for people with long-term conditions (ALD) with 100% coverage.
+
+### Local assistance
+
+Many local authorities offer **supplementary aid**:
+
+- **Taxi vouchers**: some municipalities or departments provide vouchers worth EUR 5 to EUR 20 for taxi rides
+- **Adapted transport services** (such as PAM in Ile-de-France): on-demand transport for disabled people
+- **Reduced fares**: some departments negotiate preferential rates with taxi companies
+
+## Rights of disabled passengers
+
+### The right to transport
+
+The **law of 11 February 2005** guarantees the right to transport for all people with disabilities. This right includes:
+
+- Access to all transport modes, including taxis
+- Adaptation of vehicles and services
+- Training of drivers in welcoming disabled people
+
+### Refusal of service: it is illegal
+
+A taxi **cannot refuse** to serve a disabled person because of their disability. This refusal constitutes **discrimination** punishable by law (article 225-2 of the Penal Code). Penalties can be up to **3 years imprisonment and EUR 45,000 fine**.
+
+### Guide dogs: a legal obligation
+
+Taxis have a legal obligation to accept **guide dogs** and **assistance dogs**. No surcharge may be applied for transporting a guide dog. Refusal is subject to criminal penalties.
+
+### Prohibited surcharges
+
+No surcharge may be applied because of the passenger's disability:
+
+- No surcharge for the wheelchair
+- No surcharge for the guide dog
+- No surcharge for boarding and alighting time
+- No surcharge for the medical companion
+
+## How to book an accessible taxi
+
+### On TaxiNeo
+
+TaxiNeo makes booking accessible taxis easy:
+
+1. **Filter by "PMR Accessible"**: immediately identify equipped vehicles
+2. **Read reviews**: disabled passengers share their experience
+3. **Specify your needs**: wheelchair type, guide dog, companion
+4. **Book in advance**: guarantee the availability of an adapted vehicle
+5. **Recurring journey**: save your regular trips (dialysis, physiotherapy, work)
+
+### By phone
+
+If you prefer phone contact:
+- Call a taxi company and specify your need for a PMR vehicle
+- Contact **PAM** (Pour Aider a la Mobilite) in Ile-de-France on 01 41 29 01 11
+- Enquire at your local MDPH
+
+### Information to provide
+
+When booking, always specify:
+- The **type of disability** and your specific needs
+- The **wheelchair dimensions** (width, type: manual or electric)
+- The presence of a **guide dog** or **companion**
+- The exact address and any **access difficulties** (stairs, no ramp)
+- **Precise times** and the time margin needed
+
+## Practical tips for taxi drivers
+
+If you are a taxi driver, here is how to improve the welcome for disabled passengers:
+
+- **Get trained**: take the training courses on welcoming disabled people offered by trade chambers
+- **Be patient**: boarding and alighting may take longer
+- **Communicate clearly**: adapt your communication to the type of disability
+- **Assist without patronising**: offer your help but respect the passenger's autonomy
+- **Maintain your equipment**: regularly check the proper functioning of the ramp and securing systems
+
+## The future of accessible transport
+
+Accessible transport is evolving rapidly in France:
+
+- **Increase in PMR taxis**: new licences encourage the acquisition of accessible vehicles
+- **Autonomous vehicles**: in the long term, adapted autonomous vehicles could revolutionise mobility for disabled people
+- **Specialist apps**: TaxiNeo and other platforms are developing features dedicated to accessibility
+- **Mandatory training**: taxi drivers increasingly need training in welcoming disabled people
+
+---
+
+**Mobility is a right for everyone, without exception.** People with disabilities deserve simple, dignified and reliable access to taxi transport. Thanks to TaxiNeo, easily find a taxi adapted to your needs, read reviews from other passengers and book with confidence. Because disability should never be an obstacle to mobility.`,
+    },
+  },
+  {
+    slug: "comment-reclamer-facture-taxi",
+    title: {
+      fr: "Comment réclamer une facture à un taxi ?",
+      en: "How to request an invoice from a taxi?",
+    },
+    metaTitle: {
+      fr: "Comment réclamer une facture taxi : guide complet | TaxiNeo",
+      en: "How to request a taxi invoice: complete guide | TaxiNeo",
+    },
+    metaDescription: {
+      fr: "Découvrez comment obtenir une facture de taxi : obligations légales du chauffeur, mentions obligatoires, note de frais et solutions en cas de refus.",
+      en: "Learn how to get a taxi invoice: driver legal obligations, mandatory details, expense reports and solutions if refused.",
+    },
+    excerpt: {
+      fr: "Guide complet pour obtenir une facture de taxi : obligations légales, mentions obligatoires et solutions en cas de refus.",
+      en: "Complete guide to getting a taxi invoice: legal obligations, mandatory details and solutions if refused.",
+    },
+    date: "2026-03-16",
+    readingTime: 8,
+    content: {
+      fr: `## Comment réclamer une facture à un taxi ?
+
+Que ce soit pour une note de frais professionnelle, un remboursement par votre employeur ou une déclaration fiscale, la facture de taxi est un document essentiel. Pourtant, beaucoup de passagers ne savent pas qu'ils ont le **droit légal** de la réclamer. Ce guide vous explique tout : les obligations du chauffeur, les mentions légales requises et les recours en cas de refus.
+
+## Votre droit à la facture : ce que dit la loi
+
+### L'obligation légale du chauffeur
+
+En France, tout chauffeur de taxi est **légalement tenu** de fournir une note (facture ou reçu) à tout passager qui en fait la demande. Cette obligation découle de l'**article L441-9 du Code de commerce** et de l'**arrêté du 3 mars 2009** relatif aux taxis.
+
+Concrètement :
+- Le chauffeur **ne peut pas refuser** de délivrer une facture
+- La facture doit être remise **immédiatement** à la fin de la course, sur demande
+- Le refus de délivrance constitue une **infraction** passible d'une amende
+
+### Les différents types de documents
+
+Il existe deux types de documents qu'un taxi peut délivrer :
+
+1. **La note** (ou reçu) : document simplifié pour les courses de faible montant
+2. **La facture** : document comptable complet avec TVA, obligatoire pour les montants supérieurs à 25 € ou sur demande du client
+
+Pour les notes de frais professionnelles, demandez systématiquement une **facture complète**.
+
+## Les mentions obligatoires sur une facture de taxi
+
+### Pour une note simplifiée
+
+La note doit comporter au minimum :
+- La date et l'heure de la course
+- Le numéro du taxi (numéro de licence)
+- Le lieu de départ et la destination
+- Le montant total TTC
+- Le mode de paiement
+
+### Pour une facture complète
+
+La facture complète doit inclure toutes les mentions suivantes :
+
+- **Identification du chauffeur** :
+  - Nom et prénom (ou raison sociale)
+  - Adresse professionnelle
+  - Numéro SIREN/SIRET
+  - Numéro de licence de taxi
+
+- **Identification du client** (si professionnel) :
+  - Nom ou raison sociale
+  - Adresse
+
+- **Détails de la course** :
+  - Date et heure de prise en charge
+  - Lieu de départ
+  - Destination
+  - Distance parcourue (en km)
+  - Durée de la course
+  - Tarif appliqué (A, B, C ou D)
+
+- **Montants** :
+  - Prise en charge
+  - Prix au compteur
+  - Suppléments détaillés (bagages, réservation, etc.)
+  - Montant HT
+  - TVA (taux de 10% pour les taxis)
+  - Montant TTC
+
+- **Numéro de facture** : numérotation séquentielle et continue
+
+## Comment demander sa facture au bon moment
+
+### Avant la course
+
+Le meilleur moment pour prévenir est **avant le départ**. Dites simplement au chauffeur : "J'aurai besoin d'une facture à la fin de la course." Cela lui laisse le temps de préparer le document et évite toute discussion à l'arrivée.
+
+### Pendant la course
+
+Si vous oubliez de le mentionner au départ, demandez pendant le trajet. Certains chauffeurs utilisent un **terminal de paiement** qui génère automatiquement un reçu. Précisez que vous avez besoin d'une **facture détaillée** et non d'un simple ticket de carte bancaire.
+
+### Après la course
+
+Si le chauffeur ne vous a pas remis de facture spontanément, demandez-la **avant de quitter le véhicule**. C'est votre droit le plus strict. Le chauffeur peut la rédiger manuellement sur un carnet à souche ou l'imprimer depuis son terminal.
+
+### En cas d'oubli
+
+Si vous avez oublié de demander la facture, plusieurs solutions existent :
+- **Application TaxiNeo** : la facture est automatiquement générée et disponible dans votre historique de courses. Vous pouvez la télécharger à tout moment.
+- **Centrale de réservation** : si vous avez réservé par téléphone, contactez la centrale pour obtenir un duplicata.
+- **Paiement par carte** : le relevé bancaire peut servir de justificatif complémentaire (mais ne remplace pas la facture).
+
+## La facture pour les notes de frais professionnelles
+
+### Ce que votre employeur exige
+
+Pour un remboursement par votre employeur, la facture doit généralement contenir :
+
+- **La date et l'heure** exactes de la course
+- **Le trajet** (départ et arrivée)
+- **Le montant TTC** clairement indiqué
+- **Le nom du passager** (si possible)
+- **Le mode de paiement**
+
+Certaines entreprises exigent des mentions supplémentaires, comme le **motif du déplacement**. Renseignez-vous auprès de votre service comptabilité.
+
+### La TVA récupérable
+
+Pour les entreprises assujetties à la TVA, le taxi est soumis à un taux de **TVA de 10%**. Cette TVA est **récupérable** si la facture est correctement établie avec toutes les mentions obligatoires, notamment le numéro de TVA intracommunautaire du chauffeur.
+
+### Les plafonds de remboursement
+
+Beaucoup d'entreprises fixent des **plafonds de remboursement** pour les courses en taxi. Vérifiez la politique de frais de votre entreprise avant de voyager. Certaines entreprises imposent l'utilisation de plateformes comme TaxiNeo pour centraliser la facturation.
+
+## Que faire en cas de refus ?
+
+### Les recours immédiats
+
+Si le chauffeur refuse de vous remettre une facture :
+
+1. **Rappeler la loi** : informez-le poliment que c'est une obligation légale
+2. **Noter les informations** : relevez le numéro de licence, la plaque d'immatriculation, la date, l'heure et le montant
+3. **Photographier le compteur** : prenez une photo du montant affiché avant de quitter le véhicule
+
+### Les recours administratifs
+
+En cas de refus persistant, vous pouvez :
+
+- **Contacter la préfecture** de votre département : elle gère les licences de taxi et peut sanctionner le chauffeur
+- **Saisir la DGCCRF** (Direction générale de la concurrence, de la consommation et de la répression des fraudes) : pour infraction aux règles de facturation
+- **Déposer un avis** sur la plateforme utilisée : cela alerte les futurs passagers
+
+### Les sanctions pour le chauffeur
+
+Le refus de délivrer une facture expose le chauffeur à :
+
+- Une **amende administrative** pouvant aller jusqu'à 75 000 € pour les personnes physiques
+- Un **avertissement** de la préfecture
+- En cas de récidive, une **suspension ou un retrait de licence**
+
+## La solution TaxiNeo : facture automatique
+
+Sur TaxiNeo, la question de la facture ne se pose plus :
+
+- **Facture générée automatiquement** après chaque course
+- **Envoyée par email** directement dans votre boîte de réception
+- **Disponible dans votre espace personnel** à tout moment
+- **Mentions légales complètes** : TVA, SIRET, détails du trajet
+- **Format PDF** téléchargeable pour vos notes de frais
+- **Historique complet** de toutes vos courses
+
+Pour les entreprises, TaxiNeo propose également un **tableau de bord de facturation** permettant de centraliser toutes les courses de vos collaborateurs.
+
+---
+
+**La facture de taxi est un droit, pas une faveur.** Que vous en ayez besoin pour une note de frais, un remboursement médical ou une déclaration fiscale, vous êtes en droit de l'exiger. Avec TaxiNeo, la facturation est automatique, complète et toujours disponible. Fini les discussions à la fin de la course.`,
+      en: `## How to request an invoice from a taxi?
+
+Whether for a professional expense report, employer reimbursement or tax return, a taxi invoice is an essential document. Yet many passengers do not know they have a **legal right** to request one. This guide explains everything: the driver's obligations, required legal details and remedies if refused.
+
+## Your right to an invoice: what the law says
+
+### The driver's legal obligation
+
+In France, every taxi driver is **legally required** to provide a receipt (invoice or note) to any passenger who requests one. This obligation stems from **Article L441-9 of the Commercial Code** and the **decree of 3 March 2009** relating to taxis.
+
+In practice:
+- The driver **cannot refuse** to issue an invoice
+- The invoice must be provided **immediately** at the end of the ride, upon request
+- Refusal to issue constitutes an **offence** punishable by fine
+
+### The different types of documents
+
+There are two types of documents a taxi can issue:
+
+1. **The receipt** (note): simplified document for low-value rides
+2. **The invoice**: complete accounting document with VAT, mandatory for amounts over EUR 25 or upon client request
+
+For professional expense reports, always request a **full invoice**.
+
+## Mandatory details on a taxi invoice
+
+### For a simplified receipt
+
+The receipt must include at minimum:
+- The date and time of the ride
+- The taxi number (licence number)
+- The departure point and destination
+- The total amount including tax
+- The payment method
+
+### For a full invoice
+
+The full invoice must include all of the following:
+
+- **Driver identification**:
+  - Full name (or company name)
+  - Business address
+  - SIREN/SIRET number
+  - Taxi licence number
+
+- **Client identification** (if professional):
+  - Name or company name
+  - Address
+
+- **Ride details**:
+  - Date and time of pickup
+  - Departure point
+  - Destination
+  - Distance travelled (in km)
+  - Journey duration
+  - Tariff applied (A, B, C or D)
+
+- **Amounts**:
+  - Pickup charge
+  - Meter price
+  - Itemised surcharges (luggage, booking, etc.)
+  - Amount excluding tax
+  - VAT (10% rate for taxis)
+  - Total amount including tax
+
+- **Invoice number**: sequential and continuous numbering
+
+## How to request your invoice at the right time
+
+### Before the ride
+
+The best time to mention it is **before departure**. Simply tell the driver: "I will need an invoice at the end of the ride." This gives them time to prepare the document and avoids any discussion upon arrival.
+
+### During the ride
+
+If you forget to mention it at the start, ask during the journey. Some drivers use a **payment terminal** that automatically generates a receipt. Specify that you need a **detailed invoice** and not just a card payment slip.
+
+### After the ride
+
+If the driver has not spontaneously given you an invoice, ask for it **before leaving the vehicle**. This is your strict right. The driver can write it manually on a counterfoil book or print it from their terminal.
+
+### If you forget
+
+If you forgot to ask for the invoice, several solutions exist:
+- **TaxiNeo app**: the invoice is automatically generated and available in your ride history. You can download it at any time.
+- **Dispatch centre**: if you booked by phone, contact the centre for a duplicate.
+- **Card payment**: the bank statement can serve as supplementary proof (but does not replace the invoice).
+
+## The invoice for professional expense reports
+
+### What your employer requires
+
+For reimbursement by your employer, the invoice generally must contain:
+
+- **Exact date and time** of the ride
+- **Journey** (departure and arrival)
+- **Total amount including tax** clearly stated
+- **Passenger name** (if possible)
+- **Payment method**
+
+Some companies require additional details, such as the **reason for travel**. Check with your accounting department.
+
+### Recoverable VAT
+
+For companies subject to VAT, taxis are charged at a **10% VAT rate**. This VAT is **recoverable** if the invoice is correctly issued with all mandatory details, including the driver's intra-community VAT number.
+
+### Reimbursement limits
+
+Many companies set **reimbursement limits** for taxi rides. Check your company's expense policy before travelling. Some companies require the use of platforms like TaxiNeo to centralise invoicing.
+
+## What to do if refused?
+
+### Immediate remedies
+
+If the driver refuses to give you an invoice:
+
+1. **Remind them of the law**: politely inform them it is a legal obligation
+2. **Note the information**: record the licence number, registration plate, date, time and amount
+3. **Photograph the meter**: take a photo of the displayed amount before leaving the vehicle
+
+### Administrative remedies
+
+In case of persistent refusal, you can:
+
+- **Contact the prefecture** of your department: it manages taxi licences and can sanction the driver
+- **Report to the DGCCRF** (Directorate-General for Competition, Consumer Affairs and Fraud Prevention): for breach of invoicing rules
+- **Leave a review** on the platform used: this alerts future passengers
+
+### Penalties for the driver
+
+Refusal to issue an invoice exposes the driver to:
+
+- An **administrative fine** of up to EUR 75,000 for individuals
+- A **warning** from the prefecture
+- In case of repeat offence, **suspension or withdrawal of licence**
+
+## The TaxiNeo solution: automatic invoicing
+
+On TaxiNeo, the invoice question no longer arises:
+
+- **Invoice automatically generated** after every ride
+- **Sent by email** directly to your inbox
+- **Available in your personal area** at any time
+- **Complete legal details**: VAT, SIRET, journey details
+- **Downloadable PDF format** for your expense reports
+- **Complete history** of all your rides
+
+For companies, TaxiNeo also offers an **invoicing dashboard** to centralise all rides for your employees.
+
+---
+
+**A taxi invoice is a right, not a favour.** Whether you need it for an expense report, medical reimbursement or tax return, you are entitled to demand it. With TaxiNeo, invoicing is automatic, complete and always available. No more discussions at the end of the ride.`,
+    },
+  },
+  {
+    slug: "pourboire-taxi-france",
+    title: {
+      fr: "Pourboire taxi en France : combien donner ?",
+      en: "Taxi tipping in France: how much to give?",
+    },
+    metaTitle: {
+      fr: "Pourboire taxi en France : guide complet 2026 | TaxiNeo",
+      en: "Taxi tipping in France: complete guide 2026 | TaxiNeo",
+    },
+    metaDescription: {
+      fr: "Tout savoir sur le pourboire en taxi en France : montants conseillés, usages, étiquette et comparaison avec les pratiques internationales.",
+      en: "Everything about taxi tipping in France: recommended amounts, customs, etiquette and comparison with international practices.",
+    },
+    excerpt: {
+      fr: "Guide du pourboire en taxi en France : combien donner, quand et comment, avec les usages et l'étiquette à connaître.",
+      en: "Taxi tipping guide in France: how much to give, when and how, with customs and etiquette to know.",
+    },
+    date: "2026-03-18",
+    readingTime: 8,
+    content: {
+      fr: `## Pourboire taxi en France : combien donner ?
+
+Le pourboire en taxi est un sujet qui génère beaucoup de questions, surtout pour les touristes et les voyageurs occasionnels. Contrairement aux États-Unis où le pourboire est quasi obligatoire, la France a ses propres codes. Ce guide vous explique les usages, les montants conseillés et l'étiquette à respecter.
+
+## Le pourboire en taxi : obligatoire ou pas ?
+
+### La règle en France
+
+En France, le pourboire en taxi n'est **jamais obligatoire**. Le prix affiché au compteur inclut la totalité de la prestation. Le chauffeur est rémunéré par le tarif réglementé et ne dépend pas des pourboires pour vivre.
+
+Cependant, le pourboire reste un **geste de courtoisie** apprécié et courant. Il exprime votre satisfaction pour un service de qualité.
+
+### Ce que dit la loi
+
+Aucune loi française n'impose le pourboire dans les taxis. Le **Code du tourisme** et le **Code des transports** ne mentionnent pas le pourboire. C'est un acte volontaire et discrétionnaire du passager.
+
+## Combien donner ? Les montants recommandés
+
+### La règle générale : arrondir au supérieur
+
+La pratique la plus courante en France est d'**arrondir le montant de la course** au chiffre supérieur. C'est simple, rapide et universellement accepté.
+
+**Exemples :**
+- Course à 13,40 € → donner 14 € ou 15 €
+- Course à 27,80 € → donner 28 € ou 30 €
+- Course à 45,20 € → donner 46 € ou 48 €
+
+### Les pourcentages indicatifs
+
+Si vous préférez raisonner en pourcentage, voici les repères habituels :
+
+| Niveau de service | Pourboire conseillé | Exemple (course de 20 €) |
+|---|---|---|
+| **Service standard** | 5 à 10% | 1 € à 2 € |
+| **Bon service** | 10 à 15% | 2 € à 3 € |
+| **Service exceptionnel** | 15 à 20% | 3 € à 4 € |
+| **Service insatisfaisant** | Rien | 0 € |
+
+### Cas particuliers
+
+Certaines situations méritent un pourboire plus généreux :
+
+- **Aide avec les bagages lourds** : le chauffeur qui vous aide à charger et décharger plusieurs valises mérite un geste supplémentaire (+2 à 5 €)
+- **Attente prolongée** : si le chauffeur vous attend patiemment (hôpital, rendez-vous), un supplément est bienvenu
+- **Course de nuit ou par mauvais temps** : les chauffeurs qui travaillent de nuit ou sous la pluie apprécient la reconnaissance
+- **Service personnalisé** : un chauffeur qui fait un détour pour vous montrer un monument ou vous recommande un restaurant
+- **Trajet avec enfants** : un chauffeur patient et attentionné avec les enfants mérite un remerciement
+
+### Quand ne pas donner de pourboire
+
+Il est tout à fait acceptable de ne pas donner de pourboire dans ces situations :
+
+- **Service médiocre** : conduite dangereuse, impolitesse, véhicule sale
+- **Détour injustifié** : le chauffeur a pris un itinéraire manifestement plus long
+- **Refus du mode de paiement** : le chauffeur a refusé la carte bancaire (ce qui est illégal)
+- **Course très courte** : pour une course minimum, l'arrondi est suffisant
+
+## Comment donner le pourboire
+
+### En espèces
+
+C'est la méthode la plus simple et la plus appréciée. Au moment de payer :
+- Payez la course et ajoutez le pourboire en une seule transaction
+- Ou payez la course au compteur et remettez le pourboire séparément
+- La phrase habituelle : *"Gardez la monnaie"* ou *"C'est pour vous"*
+
+### Par carte bancaire
+
+Si vous payez par carte :
+- Demandez au chauffeur d'ajouter le pourboire au montant avant de passer la carte
+- Ou payez le montant exact par carte et donnez le pourboire en espèces
+- Sur certains terminaux de paiement, une option "pourboire" est proposée
+
+### Via l'application TaxiNeo
+
+Sur TaxiNeo, vous pouvez **ajouter un pourboire numériquement** après la course :
+- Un écran de pourboire apparaît après la validation du paiement
+- Choix prédéfinis : 1 €, 2 €, 3 €, 5 € ou montant personnalisé
+- Le pourboire est versé directement au chauffeur
+- C'est discret, simple et traçable
+
+## Le pourboire dans les autres pays : comparaison
+
+Comprendre les pratiques internationales est utile pour les voyageurs :
+
+| Pays | Pourboire taxi | Usage |
+|---|---|---|
+| **France** | 5-10% (facultatif) | Arrondir au supérieur |
+| **États-Unis** | 15-20% (quasi obligatoire) | Attendu systématiquement |
+| **Royaume-Uni** | 10-15% | Courant mais pas obligatoire |
+| **Allemagne** | 5-10% | Arrondir au supérieur |
+| **Italie** | 5-10% | Courant pour les touristes |
+| **Espagne** | Arrondir | Petit arrondi habituel |
+| **Japon** | 0% | Refusé (considéré comme insultant) |
+| **Australie** | 0-10% | Facultatif, en augmentation |
+
+**Pour les touristes en France** : ne vous sentez pas obligés de donner autant qu'aux États-Unis. Un simple arrondi au supérieur ou 5 à 10% est amplement suffisant et apprécié.
+
+## L'impact du pourboire sur les chauffeurs
+
+### Un complément de revenu appréciable
+
+Pour les chauffeurs de taxi, les pourboires représentent un **complément de revenu non négligeable**. Selon les estimations, les pourboires représentent environ **3 à 8% du chiffre d'affaires** d'un chauffeur en France. C'est moins qu'aux États-Unis (où cela atteint 15 à 20%), mais cela reste significatif.
+
+### Un encouragement à la qualité
+
+Le pourboire est aussi un **mécanisme de feedback direct**. Un chauffeur qui reçoit régulièrement des pourboires sait que son service est apprécié. C'est un encouragement puissant à maintenir un haut niveau de qualité : propreté du véhicule, courtoisie, conduite souple, connaissance des itinéraires.
+
+### L'évolution avec le numérique
+
+Avec les applications de réservation, le pourboire évolue :
+- **Plus facile à donner** : un clic suffit après la course
+- **Plus transparent** : le montant est traçable
+- **Moins spontané** : certains passagers oublient de donner via l'application
+- **Avis et pourboire combinés** : sur TaxiNeo, vous pouvez noter le chauffeur ET laisser un pourboire
+
+## L'étiquette du pourboire en taxi
+
+### Les bonnes pratiques
+
+- **Donnez le pourboire avec le sourire** : c'est un geste de reconnaissance, pas une transaction
+- **Ne commentez pas le montant** : ne dites pas "c'est peu, désolé" — tout pourboire est apprécié
+- **Donnez avant de descendre** : ne posez pas le pourboire sur le siège en partant
+- **Remerciez le chauffeur** : un simple "merci, bonne journée" accompagne bien le pourboire
+- **Soyez discret** : pas besoin de faire un spectacle
+
+### Les erreurs à éviter
+
+- **Ne proposez pas de pourboire en échange d'un avantage** : "Je vous donne 10 € de pourboire si vous griller ce feu rouge" — non
+- **Ne donnez pas de pièces de centimes** : 30 centimes de pourboire est perçu comme irrespectueux
+- **Ne forcez pas** : si le chauffeur refuse (rare mais possible), n'insistez pas
+
+---
+
+**Le pourboire en taxi est un art subtil en France.** Ni obligatoire ni attendu avec la même intensité qu'outre-Atlantique, il reste un geste de courtoisie qui fait plaisir. Un simple arrondi au supérieur suffit pour les courses standard. Pour un service exceptionnel, 10 à 15% est un beau geste. Avec TaxiNeo, vous pouvez récompenser facilement les chauffeurs qui font la différence.`,
+      en: `## Taxi tipping in France: how much to give?
+
+Taxi tipping is a subject that generates many questions, especially for tourists and occasional travellers. Unlike the United States where tipping is virtually mandatory, France has its own codes. This guide explains the customs, recommended amounts and etiquette to follow.
+
+## Taxi tipping: mandatory or not?
+
+### The rule in France
+
+In France, taxi tipping is **never mandatory**. The price displayed on the meter includes the entire service. The driver is paid through the regulated fare and does not depend on tips to make a living.
+
+However, tipping remains an **appreciated and common courtesy gesture**. It expresses your satisfaction with quality service.
+
+### What the law says
+
+No French law requires tipping in taxis. The **Tourism Code** and the **Transport Code** do not mention tipping. It is a voluntary and discretionary act by the passenger.
+
+## How much to give? Recommended amounts
+
+### The general rule: round up
+
+The most common practice in France is to **round up the fare** to the nearest whole number. It is simple, quick and universally accepted.
+
+**Examples:**
+- Fare of EUR 13.40 → give EUR 14 or EUR 15
+- Fare of EUR 27.80 → give EUR 28 or EUR 30
+- Fare of EUR 45.20 → give EUR 46 or EUR 48
+
+### Indicative percentages
+
+If you prefer to think in percentages, here are the usual benchmarks:
+
+| Service level | Recommended tip | Example (EUR 20 fare) |
+|---|---|---|
+| **Standard service** | 5-10% | EUR 1-2 |
+| **Good service** | 10-15% | EUR 2-3 |
+| **Exceptional service** | 15-20% | EUR 3-4 |
+| **Unsatisfactory service** | Nothing | EUR 0 |
+
+### Special cases
+
+Certain situations deserve a more generous tip:
+
+- **Help with heavy luggage**: a driver who helps you load and unload several suitcases deserves an extra gesture (+EUR 2-5)
+- **Extended waiting**: if the driver waits patiently for you (hospital, appointment), an extra amount is welcome
+- **Night or bad weather ride**: drivers working at night or in the rain appreciate recognition
+- **Personalised service**: a driver who makes a detour to show you a monument or recommends a restaurant
+- **Journey with children**: a patient and attentive driver with children deserves thanks
+
+### When not to tip
+
+It is perfectly acceptable not to tip in these situations:
+
+- **Poor service**: dangerous driving, rudeness, dirty vehicle
+- **Unjustified detour**: the driver took a clearly longer route
+- **Payment method refused**: the driver refused card payment (which is illegal)
+- **Very short ride**: for a minimum fare, rounding up is sufficient
+
+## How to give the tip
+
+### In cash
+
+This is the simplest and most appreciated method. When paying:
+- Pay the fare and add the tip in a single transaction
+- Or pay the metered fare and give the tip separately
+- The usual phrase: "Keep the change" or "That's for you"
+
+### By card
+
+If paying by card:
+- Ask the driver to add the tip to the amount before swiping the card
+- Or pay the exact amount by card and give the tip in cash
+- Some payment terminals offer a "tip" option
+
+### Via the TaxiNeo app
+
+On TaxiNeo, you can **add a tip digitally** after the ride:
+- A tipping screen appears after payment validation
+- Pre-set choices: EUR 1, 2, 3, 5 or custom amount
+- The tip goes directly to the driver
+- It is discreet, simple and traceable
+
+## Tipping in other countries: comparison
+
+Understanding international practices is useful for travellers:
+
+| Country | Taxi tip | Custom |
+|---|---|---|
+| **France** | 5-10% (optional) | Round up |
+| **United States** | 15-20% (virtually mandatory) | Always expected |
+| **United Kingdom** | 10-15% | Common but not mandatory |
+| **Germany** | 5-10% | Round up |
+| **Italy** | 5-10% | Common for tourists |
+| **Spain** | Round up | Small rounding customary |
+| **Japan** | 0% | Refused (considered insulting) |
+| **Australia** | 0-10% | Optional, increasing |
+
+**For tourists in France**: do not feel obliged to tip as much as in the United States. A simple round-up or 5-10% is more than sufficient and appreciated.
+
+## The impact of tipping on drivers
+
+### A welcome income supplement
+
+For taxi drivers, tips represent a **significant income supplement**. According to estimates, tips account for approximately **3-8% of a driver's revenue** in France. This is less than in the United States (where it reaches 15-20%), but it remains significant.
+
+### An encouragement to quality
+
+Tipping is also a **direct feedback mechanism**. A driver who regularly receives tips knows their service is appreciated. It is a powerful encouragement to maintain a high level of quality: vehicle cleanliness, courtesy, smooth driving, route knowledge.
+
+### Evolution with digital
+
+With booking apps, tipping is evolving:
+- **Easier to give**: one click is enough after the ride
+- **More transparent**: the amount is traceable
+- **Less spontaneous**: some passengers forget to tip via the app
+- **Reviews and tips combined**: on TaxiNeo, you can rate the driver AND leave a tip
+
+## Tipping etiquette in taxis
+
+### Good practices
+
+- **Give the tip with a smile**: it is a gesture of recognition, not a transaction
+- **Do not comment on the amount**: do not say "it's not much, sorry" — any tip is appreciated
+- **Give before getting out**: do not leave the tip on the seat as you leave
+- **Thank the driver**: a simple "thank you, have a good day" goes well with the tip
+- **Be discreet**: no need to make a show of it
+
+### Mistakes to avoid
+
+- **Do not offer a tip in exchange for an advantage**: "I'll give you EUR 10 tip if you run that red light" — no
+- **Do not give centimes**: a 30-cent tip is perceived as disrespectful
+- **Do not insist**: if the driver refuses (rare but possible), do not push
+
+---
+
+**Taxi tipping is a subtle art in France.** Neither mandatory nor expected with the same intensity as across the Atlantic, it remains a courtesy gesture that brings pleasure. A simple round-up is sufficient for standard rides. For exceptional service, 10-15% is a lovely gesture. With TaxiNeo, you can easily reward the drivers who make a difference.`,
+    },
+  },
+  {
+    slug: "taxi-bagage-cabine-regles",
+    title: {
+      fr: "Bagages en taxi : règles, limites et suppléments",
+      en: "Luggage in taxis: rules, limits and surcharges",
+    },
+    metaTitle: {
+      fr: "Bagages en taxi : règles et suppléments 2026 | TaxiNeo",
+      en: "Luggage in taxis: rules and surcharges 2026 | TaxiNeo",
+    },
+    metaDescription: {
+      fr: "Tout savoir sur les bagages en taxi : nombre de valises autorisées, suppléments, bagages spéciaux et conseils pour voyager sans stress.",
+      en: "Everything about luggage in taxis: number of suitcases allowed, surcharges, special luggage and tips for stress-free travel.",
+    },
+    excerpt: {
+      fr: "Règles complètes pour les bagages en taxi : limites, suppléments autorisés, bagages spéciaux et conseils pratiques.",
+      en: "Complete luggage rules for taxis: limits, authorised surcharges, special luggage and practical tips.",
+    },
+    date: "2026-03-21",
+    readingTime: 9,
+    content: {
+      fr: `## Bagages en taxi : règles, limites et suppléments
+
+Partir en vacances, se rendre à l'aéroport ou déménager quelques affaires : les bagages font partie intégrante de nombreuses courses en taxi. Mais quelles sont les règles ? Combien de valises peut-on emporter ? Le chauffeur peut-il facturer un supplément ? Ce guide répond à toutes vos questions sur les bagages en taxi.
+
+## Les règles générales sur les bagages en taxi
+
+### Ce que dit la réglementation
+
+La réglementation française concernant les bagages en taxi est encadrée par les **arrêtés préfectoraux** de chaque département. Les règles peuvent donc varier légèrement d'une ville à l'autre, mais les grands principes sont communs.
+
+**Règle de base** : le chauffeur de taxi est tenu de transporter les **bagages raisonnables** de ses passagers sans supplément. Ce qui est considéré comme "raisonnable" inclut :
+
+- Un ou deux bagages de taille standard par passager (valise cabine ou valise moyenne)
+- Un sac à main ou sac de voyage léger
+- Les effets personnels courants
+
+### Le principe du coffre
+
+Le critère principal est simple : **ce qui rentre dans le coffre** est transporté gratuitement. La plupart des taxis (berlines type Peugeot 508, Mercedes Classe E ou Toyota Camry) disposent d'un coffre d'environ **450 à 550 litres**, ce qui correspond à :
+
+- 2 à 3 valises de taille moyenne (65-70 cm)
+- Ou 1 grande valise + 2 valises cabine
+- Plus quelques sacs souples
+
+## Les suppléments bagages : ce qui est autorisé
+
+### Le supplément pour bagages volumineux
+
+Un supplément peut être facturé pour les **bagages volumineux ou encombrants** qui nécessitent une manipulation particulière ou l'utilisation d'un espace supplémentaire. Ce supplément est réglementé par arrêté préfectoral.
+
+**En Île-de-France (2026) :**
+- Supplément bagages volumineux : variable selon la préfecture, généralement **1 à 2 €** par bagage supplémentaire au-delà du raisonnable
+- Ce supplément doit être **annoncé avant le départ**
+- Il est affiché dans le véhicule (autocollant tarifaire)
+
+### Ce qui est considéré comme volumineux
+
+Les bagages suivants peuvent entraîner un supplément :
+
+- **Valises XL** (plus de 80 cm) ou malles
+- **Équipements sportifs** : skis, vélos (démontés), planches de surf
+- **Poussettes** volumineuses (les poussettes pliantes sont généralement gratuites)
+- **Instruments de musique** encombrants (violoncelle, contrebasse)
+- **Matériel médical** volumineux (fauteuil roulant non pliant — attention, les fauteuils des PMR ne doivent pas être facturés)
+- **Cartons de déménagement** ou paquets volumineux
+
+### Ce qui ne doit PAS être facturé en supplément
+
+- Les **bagages cabine** (55 x 35 x 25 cm) : toujours gratuits
+- Les **sacs à main** et sacs à dos légers
+- Les **poussettes pliantes** : elles rentrent dans le coffre
+- Le **chien guide** d'aveugle : aucun supplément autorisé
+- Les **béquilles, cannes et déambulateurs** : matériel médical de base
+
+## Les bagages spéciaux : cas par cas
+
+### Équipements sportifs
+
+- **Skis et snowboards** : la plupart des taxis acceptent les skis dans le coffre (certains modèles ont une trappe). Prévenez le chauffeur lors de la réservation.
+- **Vélos** : un vélo démonté (roues retirées) peut entrer dans un grand coffre ou un monospace. Un vélo monté nécessite un véhicule spécifique.
+- **Clubs de golf** : un sac de golf standard rentre généralement dans le coffre. Prévenez néanmoins.
+- **Planches de surf** : nécessitent un véhicule type monospace ou van. Réservation obligatoire.
+
+### Instruments de musique
+
+- **Guitare, violon** : dans le coffre ou sur la banquette arrière, sans supplément
+- **Violoncelle** : prend la place d'un passager sur la banquette. Certains chauffeurs facturent un siège supplémentaire.
+- **Contrebasse, harpe** : nécessite un véhicule type van. Réservez à l'avance.
+
+### Matériel professionnel
+
+- **Ordinateur portable et valise à roulettes** : aucun supplément
+- **Matériel photographique ou vidéo** : dans le coffre, aucun supplément
+- **Matériel d'exposition** (roll-ups, cartons) : peut nécessiter un van si volumineux
+
+### Courses et achats
+
+- **Sacs de courses alimentaires** : aucun supplément pour un volume raisonnable
+- **Achats volumineux** (meuble en kit, cartons) : supplément possible si encombrant
+- **Animaux achetés en animalerie** : voir notre article sur les animaux en taxi
+
+## Trajet vers l'aéroport : les bonnes pratiques
+
+Le trajet vers l'aéroport est la situation la plus courante où les bagages sont nombreux. Voici les bonnes pratiques :
+
+### Avant la réservation
+
+- **Comptez vos bagages** : listez le nombre exact de valises, sacs et bagages spéciaux
+- **Choisissez le bon véhicule** : sur TaxiNeo, sélectionnez un véhicule adapté (berline, monospace, van) en fonction de vos bagages
+- **Précisez dans la réservation** : indiquez le nombre et la taille de vos bagages dans les commentaires
+
+### Le jour du départ
+
+- **Préparez vos bagages à l'avance** : ne faites pas attendre le chauffeur
+- **Regroupez vos bagages** devant votre porte ou dans le hall
+- **Aidez le chauffeur** si possible : c'est courtois et ça accélère le chargement
+- **Vérifiez le coffre** à l'arrivée : assurez-vous de ne rien oublier
+
+### Les forfaits aéroport
+
+Pour les trajets aéroport, les forfaits sont souvent plus avantageux. En Île-de-France :
+
+- **Paris → Roissy CDG** : forfait de 56 € (rive droite) ou 65 € (rive gauche)
+- **Paris → Orly** : forfait de 41 € (rive gauche) ou 47 € (rive droite)
+
+Ces forfaits incluent les bagages standards. Aucun supplément bagage ne peut s'ajouter aux forfaits aéroport.
+
+## Le droit du chauffeur de refuser
+
+### Quand le chauffeur peut-il refuser ?
+
+Le chauffeur peut refuser de prendre vos bagages dans des cas limités :
+
+- **Sécurité** : les bagages empêchent la fermeture du coffre ou obstruent la visibilité
+- **Poids excessif** : le poids total (passagers + bagages) dépasse la charge maximale du véhicule
+- **Objets dangereux** : matières inflammables, explosives ou toxiques
+- **Salissure** : bagages mouillés, boueux ou malodorants qui risquent d'endommager le véhicule
+
+### Quand le chauffeur ne peut PAS refuser ?
+
+Le chauffeur ne peut pas refuser vos bagages pour ces raisons :
+
+- **Trop de valises** (si elles entrent dans le coffre)
+- **Poussette** pliante
+- **Fauteuil roulant** ou matériel médical
+- **Chien guide** d'aveugle
+
+## Conseils pour voyager avec beaucoup de bagages
+
+### Optimisez l'espace
+
+- **Utilisez des valises souples** : elles s'adaptent mieux à l'espace du coffre
+- **Empilez intelligemment** : les grosses valises en dessous, les petites au-dessus
+- **Utilisez les espaces morts** : entre les valises, dans les coins du coffre
+- **La banquette arrière** : si vous êtes seul, une valise peut aller sur la banquette
+
+### Réservez le bon véhicule
+
+Sur **TaxiNeo**, choisissez le véhicule adapté :
+
+| Type de véhicule | Capacité coffre | Idéal pour |
+|---|---|---|
+| **Berline** | 450-550 L | 2-3 valises moyennes |
+| **Break** | 550-650 L | 3-4 valises moyennes |
+| **Monospace** | 600-800 L | Familles avec bagages |
+| **Van** | 800-1200 L | Groupes ou bagages volumineux |
+
+### Communiquez en avance
+
+La clé d'un trajet sans stress est la **communication**. En précisant vos bagages lors de la réservation sur TaxiNeo, vous évitez toute surprise à l'arrivée du chauffeur.
+
+---
+
+**Les bagages ne devraient jamais être une source de stress en taxi.** Avec les bonnes informations et un véhicule adapté, chaque trajet se passe en douceur. Sur TaxiNeo, filtrez les véhicules par capacité de coffre, précisez vos bagages et voyagez l'esprit tranquille.`,
+      en: `## Luggage in taxis: rules, limits and surcharges
+
+Going on holiday, heading to the airport or moving a few belongings: luggage is an integral part of many taxi rides. But what are the rules? How many suitcases can you take? Can the driver charge a surcharge? This guide answers all your questions about luggage in taxis.
+
+## General rules on taxi luggage
+
+### What the regulations say
+
+French regulations concerning taxi luggage are governed by **prefectural decrees** in each department. Rules may therefore vary slightly from one city to another, but the main principles are common.
+
+**Basic rule**: the taxi driver is required to transport their passengers' **reasonable luggage** without surcharge. What is considered "reasonable" includes:
+
+- One or two standard-sized bags per passenger (cabin bag or medium suitcase)
+- A handbag or light travel bag
+- Common personal belongings
+
+### The boot principle
+
+The main criterion is simple: **what fits in the boot** is transported free of charge. Most taxis (saloons such as the Peugeot 508, Mercedes E-Class or Toyota Camry) have a boot of approximately **450 to 550 litres**, which corresponds to:
+
+- 2 to 3 medium suitcases (65-70 cm)
+- Or 1 large suitcase + 2 cabin bags
+- Plus a few soft bags
+
+## Luggage surcharges: what is allowed
+
+### The surcharge for bulky luggage
+
+A surcharge may be applied for **bulky or cumbersome luggage** that requires special handling or the use of additional space. This surcharge is regulated by prefectural decree.
+
+**In Ile-de-France (2026):**
+- Bulky luggage surcharge: varies by prefecture, generally **EUR 1-2** per additional piece beyond what is reasonable
+- This surcharge must be **announced before departure**
+- It is displayed inside the vehicle (fare sticker)
+
+### What is considered bulky
+
+The following luggage may incur a surcharge:
+
+- **XL suitcases** (over 80 cm) or trunks
+- **Sports equipment**: skis, bicycles (disassembled), surfboards
+- **Bulky pushchairs** (folding pushchairs are generally free)
+- **Bulky musical instruments** (cello, double bass)
+- **Bulky medical equipment** (non-folding wheelchair — note that wheelchair-user equipment must not be charged)
+- **Moving boxes** or bulky packages
+
+### What must NOT be charged
+
+- **Cabin bags** (55 x 35 x 25 cm): always free
+- **Handbags** and light backpacks
+- **Folding pushchairs**: they fit in the boot
+- **Guide dogs**: no surcharge allowed
+- **Crutches, canes and walkers**: basic medical equipment
+
+## Special luggage: case by case
+
+### Sports equipment
+
+- **Skis and snowboards**: most taxis accept skis in the boot (some models have a hatch). Inform the driver when booking.
+- **Bicycles**: a disassembled bicycle (wheels removed) can fit in a large boot or MPV. A fully assembled bicycle requires a specific vehicle.
+- **Golf clubs**: a standard golf bag usually fits in the boot. Inform the driver nonetheless.
+- **Surfboards**: require an MPV or van type vehicle. Booking required.
+
+### Musical instruments
+
+- **Guitar, violin**: in the boot or on the back seat, no surcharge
+- **Cello**: takes up a passenger seat. Some drivers charge for an additional seat.
+- **Double bass, harp**: requires a van. Book in advance.
+
+### Professional equipment
+
+- **Laptop and wheeled suitcase**: no surcharge
+- **Photography or video equipment**: in the boot, no surcharge
+- **Exhibition materials** (roll-ups, boxes): may require a van if bulky
+
+### Shopping
+
+- **Grocery bags**: no surcharge for a reasonable volume
+- **Bulky purchases** (flat-pack furniture, boxes): surcharge possible if cumbersome
+- **Animals bought from pet shops**: see our article on pets in taxis
+
+## Airport transfers: best practices
+
+The airport transfer is the most common situation where luggage is plentiful. Here are the best practices:
+
+### Before booking
+
+- **Count your luggage**: list the exact number of suitcases, bags and special items
+- **Choose the right vehicle**: on TaxiNeo, select a suitable vehicle (saloon, MPV, van) based on your luggage
+- **Specify in the booking**: indicate the number and size of your luggage in the comments
+
+### On the day of departure
+
+- **Prepare your luggage in advance**: do not keep the driver waiting
+- **Group your luggage** at your door or in the hallway
+- **Help the driver** if possible: it is courteous and speeds up loading
+- **Check the boot** on arrival: make sure you leave nothing behind
+
+### Airport flat rates
+
+For airport transfers, flat rates are often more advantageous. In Ile-de-France:
+
+- **Paris to Roissy CDG**: EUR 56 (right bank) or EUR 65 (left bank)
+- **Paris to Orly**: EUR 41 (left bank) or EUR 47 (right bank)
+
+These flat rates include standard luggage. No luggage surcharge may be added to airport flat rates.
+
+## The driver's right to refuse
+
+### When can the driver refuse?
+
+The driver may refuse your luggage in limited cases:
+
+- **Safety**: luggage prevents the boot from closing or obstructs visibility
+- **Excessive weight**: the total weight (passengers + luggage) exceeds the vehicle's maximum load
+- **Dangerous objects**: flammable, explosive or toxic materials
+- **Soiling**: wet, muddy or foul-smelling luggage that risks damaging the vehicle
+
+### When the driver may NOT refuse
+
+The driver cannot refuse your luggage for these reasons:
+
+- **Too many suitcases** (if they fit in the boot)
+- **Folding pushchair**
+- **Wheelchair** or medical equipment
+- **Guide dog**
+
+## Tips for travelling with lots of luggage
+
+### Optimise space
+
+- **Use soft suitcases**: they adapt better to the boot space
+- **Stack intelligently**: large suitcases at the bottom, small ones on top
+- **Use dead space**: between suitcases, in the corners of the boot
+- **The back seat**: if you are alone, a suitcase can go on the seat
+
+### Book the right vehicle
+
+On **TaxiNeo**, choose the adapted vehicle:
+
+| Vehicle type | Boot capacity | Ideal for |
+|---|---|---|
+| **Saloon** | 450-550 L | 2-3 medium suitcases |
+| **Estate** | 550-650 L | 3-4 medium suitcases |
+| **MPV** | 600-800 L | Families with luggage |
+| **Van** | 800-1200 L | Groups or bulky luggage |
+
+### Communicate in advance
+
+The key to a stress-free journey is **communication**. By specifying your luggage when booking on TaxiNeo, you avoid any surprises when the driver arrives.
+
+---
+
+**Luggage should never be a source of stress in a taxi.** With the right information and an adapted vehicle, every journey goes smoothly. On TaxiNeo, filter vehicles by boot capacity, specify your luggage and travel with peace of mind.`,
+    },
+  },
+  {
+    slug: "securite-taxi-conseils",
+    title: {
+      fr: "Sécurité en taxi : 8 conseils essentiels",
+      en: "Taxi safety: 8 essential tips",
+    },
+    metaTitle: {
+      fr: "Sécurité en taxi : 8 conseils essentiels 2026 | TaxiNeo",
+      en: "Taxi safety: 8 essential tips 2026 | TaxiNeo",
+    },
+    metaDescription: {
+      fr: "8 conseils essentiels pour votre sécurité en taxi : vérifications avant de monter, partage de trajet, comportement en cas de problème et droits des passagers.",
+      en: "8 essential tips for taxi safety: checks before boarding, trip sharing, behaviour in case of problems and passenger rights.",
+    },
+    excerpt: {
+      fr: "8 conseils pratiques pour voyager en taxi en toute sécurité : vérifications, partage de trajet, réflexes à adopter.",
+      en: "8 practical tips for safe taxi travel: checks, trip sharing, reflexes to adopt.",
+    },
+    date: "2026-03-24",
+    readingTime: 9,
+    content: {
+      fr: `## Sécurité en taxi : 8 conseils essentiels
+
+Le taxi est l'un des modes de transport les plus sûrs en France. Les chauffeurs sont licenciés, les véhicules sont inspectés et les tarifs sont réglementés. Pourtant, quelques précautions simples peuvent rendre chaque course encore plus sûre, en particulier lors de trajets nocturnes, en ville inconnue ou dans un pays étranger. Voici 8 conseils essentiels.
+
+## Conseil n°1 : Vérifiez que c'est un vrai taxi
+
+### Les signes d'un taxi officiel
+
+Avant de monter dans un véhicule, assurez-vous qu'il s'agit bien d'un taxi officiel. En France, un taxi légitime présente **obligatoirement** :
+
+- **Un lumineux sur le toit** : dispositif avec le mot "TAXI" et un numéro de commune. Vert = libre, rouge = occupé
+- **Un compteur horokilométrique** visible depuis la banquette arrière
+- **Une plaque professionnelle** fixée sur le véhicule
+- **La carte professionnelle du chauffeur** avec photo, affichée à l'intérieur du véhicule
+- **Le tableau des tarifs** affiché à l'intérieur
+
+### Les signes d'un taxi clandestin
+
+Méfiez-vous si le véhicule présente l'un de ces signaux d'alerte :
+
+- Pas de lumineux sur le toit
+- Le chauffeur vous aborde spontanément dans la rue ou à la sortie de l'aéroport
+- Pas de compteur ou compteur éteint
+- Pas de carte professionnelle visible
+- Le chauffeur refuse de mettre le compteur et propose un prix "forfaitaire" non réglementé
+- Le véhicule n'a pas de plaque professionnelle
+
+**Réflexe TaxiNeo** : en réservant via l'application, vous avez la garantie d'un chauffeur vérifié et licencié. Le nom, la photo et le numéro de licence sont affichés avant la course.
+
+## Conseil n°2 : Partagez votre trajet avec un proche
+
+### Pourquoi c'est important
+
+Partager les détails de votre course avec un ami ou un membre de votre famille est l'un des gestes de sécurité les plus efficaces. En cas de problème, quelqu'un sait où vous êtes.
+
+### Comment le faire
+
+- **Par SMS** : envoyez le nom du chauffeur, le numéro de licence et la plaque d'immatriculation
+- **Par application** : TaxiNeo propose une fonction de **partage de trajet en temps réel**. Envoyez un lien à un proche qui peut suivre votre position sur une carte
+- **Par appel** : appelez un proche pendant la course si vous ne vous sentez pas à l'aise
+
+### Quand le faire systématiquement
+
+- Trajets de nuit (après 22h)
+- Trajets dans une ville inconnue
+- Trajets depuis un lieu isolé
+- Lorsque vous voyagez seul(e)
+
+## Conseil n°3 : Montez toujours à l'arrière
+
+### Le siège le plus sûr
+
+Le siège arrière droit (côté trottoir) est considéré comme le **siège le plus sûr** dans un taxi pour plusieurs raisons :
+
+- **Sortie facile** côté trottoir en cas d'urgence
+- **Distance physique** avec le chauffeur
+- **Visibilité** : vous pouvez voir le chauffeur et le compteur
+- **Accès au GPS** : vous pouvez suivre l'itinéraire sur votre téléphone
+
+### Exception
+
+Vous pouvez monter à l'avant si vous êtes un groupe de 3 ou 4 passagers et que le 4e siège arrière n'est pas disponible. Certains passagers préfèrent aussi l'avant pour le mal des transports.
+
+## Conseil n°4 : Suivez l'itinéraire sur votre GPS
+
+### Pourquoi c'est utile
+
+Même si la grande majorité des chauffeurs sont honnêtes, suivre l'itinéraire sur votre propre GPS est une bonne habitude :
+
+- **Détection des détours** : vous repérez immédiatement un itinéraire anormalement long
+- **Réassurance** : vous savez où vous êtes à tout moment
+- **Communication** : vous pouvez partager votre position en temps réel
+
+### Comment le faire
+
+- Ouvrez Google Maps, Waze ou Apple Plans sur votre téléphone
+- Entrez votre destination et comparez l'itinéraire suggéré avec celui du chauffeur
+- Si l'itinéraire semble anormal, demandez poliment : "Je vois que mon GPS suggère un autre chemin, y a-t-il un problème sur la route ?"
+
+## Conseil n°5 : Gardez vos objets de valeur sur vous
+
+### Les réflexes à adopter
+
+- **Téléphone et portefeuille** : gardez-les dans votre poche ou votre sac, pas sur la banquette
+- **Sac à main** : entre vos pieds ou sur vos genoux, jamais dans le coffre
+- **Documents importants** : passeport, billets, papiers — toujours dans votre bagage à main
+- **Appareils électroniques** : laptop dans son sac, sur vos genoux ou entre vos pieds
+
+### Avant de descendre
+
+Prenez l'habitude de **vérifier la banquette et le plancher** avant de quitter le véhicule. Les objets les plus fréquemment oubliés en taxi sont :
+
+1. Le téléphone portable (glissé entre les sièges)
+2. Le portefeuille
+3. Les lunettes
+4. Les parapluies
+5. Les sacs de courses
+
+**Sur TaxiNeo**, en cas d'objet oublié, vous pouvez **contacter directement le chauffeur** via l'application pour organiser la récupération.
+
+## Conseil n°6 : Faites confiance à votre instinct
+
+### Quand quelque chose ne va pas
+
+Si vous ressentez un malaise ou une situation inhabituelle, ne l'ignorez pas :
+
+- Le chauffeur a un comportement agressif ou inapproprié
+- Le véhicule ne correspond pas à la description
+- L'itinéraire est clairement anormal
+- Le chauffeur refuse de vous déposer à votre destination
+- Le chauffeur verrouille les portes sans raison
+
+### Que faire
+
+1. **Restez calme** : ne montrez pas de panique
+2. **Demandez à descendre** : "Arrêtez-vous ici, s'il vous plaît, je descends"
+3. **Appelez à l'aide** : composez le 17 (police) ou le 112 (urgences européennes)
+4. **Attirez l'attention** : si le chauffeur refuse de s'arrêter, ouvrez la fenêtre et criez
+5. **Notez les informations** : numéro de licence, plaque d'immatriculation, signalement
+
+### Les numéros d'urgence en France
+
+| Service | Numéro |
+|---|---|
+| Police | 17 |
+| SAMU | 15 |
+| Pompiers | 18 |
+| Urgences européennes | 112 |
+| SMS urgences (sourds et malentendants) | 114 |
+
+## Conseil n°7 : Connaissez vos droits
+
+### Les obligations du chauffeur
+
+Le chauffeur de taxi a des obligations légales envers vous :
+
+- **Prendre en charge** tout passager qui le demande (sauf exceptions légales)
+- **Emprunter l'itinéraire le plus court** ou le plus rapide
+- **Mettre le compteur** en marche dès le début de la course
+- **Accepter le paiement par carte** bancaire (depuis 2018)
+- **Délivrer un reçu** sur demande
+- **Conduire prudemment** et respecter le Code de la route
+
+### Vos droits en tant que passager
+
+- Vous pouvez **demander l'itinéraire** de votre choix
+- Vous pouvez **refuser un supplément** non réglementaire
+- Vous pouvez **descendre à tout moment** (après paiement du montant au compteur)
+- Vous pouvez **filmer ou enregistrer** l'intérieur du taxi (c'est un espace professionnel)
+- Vous pouvez **porter plainte** en cas de comportement inapproprié
+
+## Conseil n°8 : Utilisez une application de réservation fiable
+
+### Pourquoi l'application est plus sûre
+
+Réserver via une application comme TaxiNeo offre un niveau de sécurité supplémentaire :
+
+- **Chauffeur identifié** : nom, photo, numéro de licence visibles avant la course
+- **Traçabilité complète** : l'itinéraire, le prix et l'heure sont enregistrés
+- **Partage de trajet** : envoyez un lien de suivi en temps réel à vos proches
+- **Historique des courses** : toutes vos courses sont archivées
+- **Système d'avis** : les chauffeurs mal notés sont identifiables
+- **Support client** : en cas de problème, l'équipe TaxiNeo est joignable
+
+### Les précautions avec l'application
+
+- **Vérifiez la plaque** du véhicule qui arrive avec celle affichée sur l'application
+- **Confirmez le prénom** du chauffeur
+- **Ne montez pas** dans un véhicule qui ne correspond pas aux informations de l'application
+- **Signalez tout problème** immédiatement via le bouton d'urgence de l'application
+
+---
+
+**La sécurité en taxi ne doit pas être une source d'anxiété.** Le taxi reste l'un des modes de transport les plus sûrs en France. En appliquant ces 8 conseils simples, vous transformez chaque course en trajet serein. Avec TaxiNeo, vous bénéficiez de garanties supplémentaires : chauffeurs vérifiés, traçabilité complète et partage de trajet en temps réel. Voyagez l'esprit tranquille.`,
+      en: `## Taxi safety: 8 essential tips
+
+Taxis are one of the safest modes of transport in France. Drivers are licensed, vehicles are inspected and fares are regulated. However, a few simple precautions can make every ride even safer, particularly for night journeys, in unfamiliar cities or abroad. Here are 8 essential tips.
+
+## Tip 1: Check it is a real taxi
+
+### Signs of an official taxi
+
+Before getting into a vehicle, make sure it is an official taxi. In France, a legitimate taxi must **always** display:
+
+- **A roof light**: device with the word "TAXI" and a municipality number. Green = available, red = occupied
+- **A taximeter** visible from the back seat
+- **A professional plate** fixed to the vehicle
+- **The driver's professional card** with photo, displayed inside the vehicle
+- **The fare chart** displayed inside
+
+### Signs of an unlicensed taxi
+
+Be wary if the vehicle shows any of these warning signs:
+
+- No roof light
+- The driver approaches you spontaneously in the street or at the airport exit
+- No meter or meter switched off
+- No visible professional card
+- The driver refuses to start the meter and offers an unregulated "flat" price
+- The vehicle has no professional plate
+
+**TaxiNeo reflex**: by booking via the app, you have the guarantee of a verified and licensed driver. The name, photo and licence number are displayed before the ride.
+
+## Tip 2: Share your trip with someone close
+
+### Why it matters
+
+Sharing the details of your ride with a friend or family member is one of the most effective safety gestures. If something goes wrong, someone knows where you are.
+
+### How to do it
+
+- **By text**: send the driver's name, licence number and registration plate
+- **Via app**: TaxiNeo offers a **real-time trip sharing** feature. Send a link to a contact who can follow your position on a map
+- **By phone call**: call someone during the ride if you do not feel comfortable
+
+### When to do it systematically
+
+- Night rides (after 10 pm)
+- Rides in an unfamiliar city
+- Rides from an isolated location
+- When travelling alone
+
+## Tip 3: Always sit in the back
+
+### The safest seat
+
+The rear right seat (pavement side) is considered the **safest seat** in a taxi for several reasons:
+
+- **Easy exit** on the pavement side in case of emergency
+- **Physical distance** from the driver
+- **Visibility**: you can see the driver and the meter
+- **GPS access**: you can follow the route on your phone
+
+### Exception
+
+You may sit in the front if you are a group of 3 or 4 passengers and the 4th rear seat is not available. Some passengers also prefer the front due to motion sickness.
+
+## Tip 4: Follow the route on your GPS
+
+### Why it is useful
+
+Even though the vast majority of drivers are honest, following the route on your own GPS is a good habit:
+
+- **Detour detection**: you immediately spot an abnormally long route
+- **Reassurance**: you know where you are at all times
+- **Communication**: you can share your position in real time
+
+### How to do it
+
+- Open Google Maps, Waze or Apple Maps on your phone
+- Enter your destination and compare the suggested route with the driver's
+- If the route seems abnormal, ask politely: "I see my GPS suggests another way, is there a problem on the road?"
+
+## Tip 5: Keep your valuables on you
+
+### Reflexes to adopt
+
+- **Phone and wallet**: keep them in your pocket or bag, not on the seat
+- **Handbag**: between your feet or on your lap, never in the boot
+- **Important documents**: passport, tickets, papers — always in your hand luggage
+- **Electronic devices**: laptop in its bag, on your lap or between your feet
+
+### Before getting out
+
+Get into the habit of **checking the seat and floor** before leaving the vehicle. The items most frequently forgotten in taxis are:
+
+1. Mobile phone (slipped between seats)
+2. Wallet
+3. Glasses
+4. Umbrellas
+5. Shopping bags
+
+**On TaxiNeo**, if you forget an item, you can **contact the driver directly** via the app to arrange collection.
+
+## Tip 6: Trust your instinct
+
+### When something feels wrong
+
+If you feel uneasy or notice an unusual situation, do not ignore it:
+
+- The driver behaves aggressively or inappropriately
+- The vehicle does not match the description
+- The route is clearly abnormal
+- The driver refuses to drop you at your destination
+- The driver locks the doors for no reason
+
+### What to do
+
+1. **Stay calm**: do not show panic
+2. **Ask to get out**: "Stop here please, I am getting out"
+3. **Call for help**: dial 17 (police) or 112 (European emergencies)
+4. **Attract attention**: if the driver refuses to stop, open the window and shout
+5. **Note the information**: licence number, registration plate, description
+
+### Emergency numbers in France
+
+| Service | Number |
+|---|---|
+| Police | 17 |
+| Medical emergency (SAMU) | 15 |
+| Fire brigade | 18 |
+| European emergencies | 112 |
+| SMS emergencies (deaf and hard of hearing) | 114 |
+
+## Tip 7: Know your rights
+
+### The driver's obligations
+
+The taxi driver has legal obligations towards you:
+
+- **Pick up** any passenger who requests it (with legal exceptions)
+- **Take the shortest** or fastest route
+- **Start the meter** at the beginning of the ride
+- **Accept card payment** (since 2018)
+- **Issue a receipt** on request
+- **Drive carefully** and respect traffic regulations
+
+### Your rights as a passenger
+
+- You can **request the route** of your choice
+- You can **refuse a non-regulatory surcharge**
+- You can **get out at any time** (after paying the metered amount)
+- You can **film or record** the taxi interior (it is a professional space)
+- You can **file a complaint** in case of inappropriate behaviour
+
+## Tip 8: Use a reliable booking app
+
+### Why the app is safer
+
+Booking via an app like TaxiNeo offers an additional level of security:
+
+- **Identified driver**: name, photo, licence number visible before the ride
+- **Complete traceability**: the route, price and time are recorded
+- **Trip sharing**: send a real-time tracking link to your contacts
+- **Ride history**: all your rides are archived
+- **Review system**: poorly rated drivers are identifiable
+- **Customer support**: in case of problems, the TaxiNeo team is reachable
+
+### App precautions
+
+- **Check the plate** of the arriving vehicle against the one displayed in the app
+- **Confirm the first name** of the driver
+- **Do not get in** a vehicle that does not match the app information
+- **Report any problem** immediately via the app's emergency button
+
+---
+
+**Taxi safety should not be a source of anxiety.** Taxis remain one of the safest transport modes in France. By applying these 8 simple tips, you turn every ride into a peaceful journey. With TaxiNeo, you benefit from additional guarantees: verified drivers, complete traceability and real-time trip sharing. Travel with peace of mind.`,
+    },
+  },
+  {
+    slug: "taxi-paiement-carte",
+    title: {
+      fr: "Payer son taxi par carte : obligations et astuces",
+      en: "Paying for your taxi by card: obligations and tips",
+    },
+    metaTitle: {
+      fr: "Payer son taxi par carte bancaire : guide 2026 | TaxiNeo",
+      en: "Paying for your taxi by card: guide 2026 | TaxiNeo",
+    },
+    metaDescription: {
+      fr: "Tout savoir sur le paiement par carte bancaire en taxi : obligation légale, que faire en cas de refus, paiement sans contact et solutions alternatives.",
+      en: "Everything about card payment in taxis: legal obligation, what to do if refused, contactless payment and alternative solutions.",
+    },
+    excerpt: {
+      fr: "Guide complet du paiement par carte en taxi : obligations légales, recours en cas de refus et solutions de paiement modernes.",
+      en: "Complete guide to card payment in taxis: legal obligations, remedies if refused and modern payment solutions.",
+    },
+    date: "2026-03-27",
+    readingTime: 9,
+    content: {
+      fr: `## Payer son taxi par carte : obligations et astuces
+
+La question du paiement par carte bancaire en taxi revient constamment. Beaucoup de passagers ont déjà vécu cette situation frustrante : le chauffeur annonce en fin de course que le terminal est "en panne" ou qu'il ne prend que les espèces. Que dit la loi ? Quels sont vos droits ? Comment éviter cette situation ? Ce guide fait le point.
+
+## L'obligation légale du paiement par carte
+
+### Ce que dit la loi
+
+Depuis le **1er janvier 2018**, les taxis français sont **légalement obligés** d'accepter le paiement par carte bancaire. Cette obligation est inscrite dans le **décret n°2017-1525 du 2 novembre 2017** et s'applique à tous les taxis sur l'ensemble du territoire français.
+
+**Les points clés :**
+- Le terminal de paiement électronique (TPE) doit être **fonctionnel et disponible** dans le véhicule
+- Le chauffeur **ne peut pas refuser** le paiement par carte
+- Aucun **montant minimum** ne peut être exigé pour accepter la carte
+- Le chauffeur ne peut pas **facturer de supplément** pour le paiement par carte
+
+### Les modes de paiement acceptés
+
+Le chauffeur doit accepter au minimum les cartes des réseaux suivants :
+
+- **Carte Bancaire (CB)** / Visa / Mastercard
+- **Paiement sans contact** (NFC) pour les montants jusqu'à 50 €
+- **Apple Pay, Google Pay, Samsung Pay** via le terminal NFC
+
+Les cartes American Express et Diners Club ne sont pas obligatoirement acceptées, mais de nombreux terminaux les prennent en charge.
+
+## Que faire si le chauffeur refuse la carte ?
+
+### Scénario 1 : "Mon terminal est en panne"
+
+C'est l'excuse la plus fréquente. Voici comment réagir :
+
+1. **Rappelez la loi** poliment : "La loi vous oblige à accepter la carte bancaire depuis 2018."
+2. **Demandez à voir le terminal** : s'il est réellement en panne, demandez un reçu manuscrit avec toutes les informations de la course
+3. **Proposez un virement instantané** ou un paiement via une application mobile
+4. **Notez les informations** du chauffeur : numéro de licence, plaque, heure de la course
+
+### Scénario 2 : "En dessous de 10 €, c'est espèces uniquement"
+
+C'est **illégal**. Il n'existe aucun montant minimum pour le paiement par carte en taxi. Même une course à 5,50 € doit pouvoir être payée par carte.
+
+### Scénario 3 : "La commission me coûte trop cher"
+
+Certains chauffeurs invoquent le coût des commissions bancaires. C'est compréhensible d'un point de vue humain, mais cela ne change pas la loi. Le chauffeur doit intégrer ce coût dans son activité professionnelle.
+
+**Votre réponse** : "Je comprends, mais je n'ai que ma carte. C'est mon droit de payer par carte."
+
+### Les recours en cas de refus
+
+Si le chauffeur persiste dans son refus :
+
+1. **Signalez l'incident** à la préfecture de votre département (qui gère les licences taxi)
+2. **Contactez la DGCCRF** pour signaler le refus de paiement par carte
+3. **Déposez un avis négatif** sur la plateforme de réservation utilisée
+4. **Portez plainte** si le chauffeur vous a retenu ou menacé
+
+Les sanctions pour le chauffeur peuvent aller jusqu'à une **amende de 150 €** pour refus d'un mode de paiement légal, et une sanction disciplinaire de la préfecture pouvant aller jusqu'à la **suspension de licence**.
+
+## Les différentes méthodes de paiement en taxi
+
+### Le paiement par carte classique
+
+Le chauffeur insère ou passe votre carte dans le **terminal de paiement électronique (TPE)**. Vous saisissez votre code PIN et validez. Un ticket est imprimé. C'est la méthode la plus classique.
+
+### Le paiement sans contact
+
+Pour les montants **inférieurs à 50 €** (plafond en 2026), vous pouvez simplement approcher votre carte du terminal. Pas de code PIN nécessaire. C'est rapide et hygiénique.
+
+**Astuce** : le plafond de 50 € concerne le sans contact physique. Avec Apple Pay ou Google Pay, le plafond est souvent plus élevé car l'authentification biométrique (Face ID, empreinte digitale) remplace le code PIN.
+
+### Le paiement via smartphone
+
+Les paiements mobiles sont de plus en plus acceptés :
+
+- **Apple Pay** : approchez votre iPhone ou Apple Watch du terminal
+- **Google Pay** : approchez votre smartphone Android du terminal
+- **Samsung Pay** : approchez votre smartphone Samsung du terminal
+
+### Le paiement via l'application TaxiNeo
+
+Sur TaxiNeo, le paiement est **intégré à l'application** :
+
+- **Enregistrement de carte** : entrez votre carte une seule fois dans l'application
+- **Paiement automatique** : le montant est débité à la fin de la course
+- **Pas de terminal** nécessaire : le paiement est 100% numérique
+- **Facture automatique** : reçue immédiatement par email
+- **Sécurité 3D Secure** : authentification forte pour chaque paiement
+
+### Le paiement en espèces
+
+Le paiement en espèces reste bien sûr autorisé. Le chauffeur doit avoir de la **monnaie** pour rendre. Si le chauffeur ne peut pas rendre la monnaie, il ne peut pas exiger un montant supérieur au prix de la course.
+
+## Les avantages du paiement par carte
+
+### Pour le passager
+
+- **Praticité** : pas besoin de retirer des espèces avant la course
+- **Traçabilité** : le paiement apparaît sur votre relevé bancaire
+- **Sécurité** : pas de risque de perte ou de vol d'espèces
+- **Note de frais** : le relevé bancaire sert de justificatif complémentaire
+- **Plafond élevé** : pas de limite liée aux espèces disponibles
+
+### Pour le chauffeur
+
+- **Sécurité** : moins d'espèces dans le véhicule = moins de risques de vol
+- **Rapidité** : pas de monnaie à rendre
+- **Traçabilité** : comptabilité simplifiée
+- **Clientèle élargie** : les passagers sans espèces peuvent quand même prendre un taxi
+- **Pourboire facilité** : les pourboires par carte sont souvent plus généreux
+
+## Les évolutions du paiement en taxi
+
+### Le QR code
+
+De plus en plus de taxis proposent un **QR code** collé à l'intérieur du véhicule. Le passager scanne le code avec son téléphone et paie directement via une page web sécurisée. Pas besoin d'application ni de terminal.
+
+### Le paiement biométrique
+
+Avec l'essor d'Apple Pay et Google Pay, le **paiement biométrique** (empreinte digitale, reconnaissance faciale) est devenu courant. Il combine rapidité, sécurité et traçabilité.
+
+### La facturation d'entreprise
+
+Pour les entreprises, TaxiNeo propose une **facturation centralisée** : toutes les courses des collaborateurs sont facturées mensuellement à l'entreprise. Pas de notes de frais individuelles à traiter.
+
+## Conseils pratiques
+
+### Pour les passagers
+
+- **Prévenez le chauffeur** de votre mode de paiement au début de la course
+- **Gardez toujours un peu d'espèces** en cas de panne réelle du terminal
+- **Utilisez le sans contact** pour les courses courtes : c'est plus rapide
+- **Enregistrez votre carte** sur TaxiNeo pour un paiement automatique
+- **Demandez un reçu** quel que soit le mode de paiement
+
+### Pour les chauffeurs
+
+- **Maintenez votre terminal** en bon état de fonctionnement
+- **Rechargez la batterie** du TPE quotidiennement
+- **Affichez clairement** les modes de paiement acceptés
+- **Formez-vous** aux paiements mobiles (Apple Pay, Google Pay)
+- **Proposez le reçu** systématiquement après le paiement
+
+---
+
+**Payer son taxi par carte est un droit, pas une option.** Depuis 2018, tout taxi français doit accepter le paiement par carte bancaire sans condition de montant minimum et sans supplément. En cas de refus, ne cédez pas : rappelez la loi et signalez l'incident. Avec TaxiNeo, le paiement est intégré à l'application : simple, sécurisé et automatique.`,
+      en: `## Paying for your taxi by card: obligations and tips
+
+The question of card payment in taxis comes up constantly. Many passengers have experienced the frustrating situation where the driver announces at the end of the ride that the terminal is "broken" or that they only accept cash. What does the law say? What are your rights? How can you avoid this situation? This guide provides the answers.
+
+## The legal obligation for card payment
+
+### What the law says
+
+Since **1 January 2018**, French taxis are **legally required** to accept card payment. This obligation is set out in **decree no. 2017-1525 of 2 November 2017** and applies to all taxis across the entire French territory.
+
+**Key points:**
+- The electronic payment terminal (TPE) must be **functional and available** in the vehicle
+- The driver **cannot refuse** card payment
+- No **minimum amount** may be required to accept the card
+- The driver cannot **charge a surcharge** for card payment
+
+### Accepted payment methods
+
+The driver must accept at minimum cards from the following networks:
+
+- **Carte Bancaire (CB)** / Visa / Mastercard
+- **Contactless payment** (NFC) for amounts up to EUR 50
+- **Apple Pay, Google Pay, Samsung Pay** via NFC terminal
+
+American Express and Diners Club cards are not necessarily accepted, but many terminals do handle them.
+
+## What to do if the driver refuses the card?
+
+### Scenario 1: "My terminal is broken"
+
+This is the most common excuse. Here is how to respond:
+
+1. **Remind them of the law** politely: "The law requires you to accept card payment since 2018."
+2. **Ask to see the terminal**: if it is genuinely broken, ask for a handwritten receipt with all the ride information
+3. **Offer an instant transfer** or mobile app payment
+4. **Note the driver's information**: licence number, plate, time of the ride
+
+### Scenario 2: "Below EUR 10, it's cash only"
+
+This is **illegal**. There is no minimum amount for card payment in taxis. Even a EUR 5.50 ride must be payable by card.
+
+### Scenario 3: "The commission costs me too much"
+
+Some drivers cite the cost of bank commissions. This is understandable from a human perspective, but it does not change the law. The driver must incorporate this cost into their professional activity.
+
+**Your response**: "I understand, but I only have my card. It is my right to pay by card."
+
+### Remedies if refused
+
+If the driver persists in their refusal:
+
+1. **Report the incident** to your departmental prefecture (which manages taxi licences)
+2. **Contact the DGCCRF** to report the card payment refusal
+3. **Leave a negative review** on the booking platform used
+4. **File a complaint** if the driver detained or threatened you
+
+Penalties for the driver can include a **fine of EUR 150** for refusal of a legal payment method, and a disciplinary sanction from the prefecture that can go up to **licence suspension**.
+
+## Different payment methods in taxis
+
+### Classic card payment
+
+The driver inserts or swipes your card in the **electronic payment terminal (TPE)**. You enter your PIN and validate. A receipt is printed. This is the most classic method.
+
+### Contactless payment
+
+For amounts **under EUR 50** (2026 limit), you can simply hold your card near the terminal. No PIN required. It is fast and hygienic.
+
+**Tip**: the EUR 50 limit applies to physical contactless. With Apple Pay or Google Pay, the limit is often higher because biometric authentication (Face ID, fingerprint) replaces the PIN.
+
+### Smartphone payment
+
+Mobile payments are increasingly accepted:
+
+- **Apple Pay**: hold your iPhone or Apple Watch near the terminal
+- **Google Pay**: hold your Android smartphone near the terminal
+- **Samsung Pay**: hold your Samsung smartphone near the terminal
+
+### Payment via the TaxiNeo app
+
+On TaxiNeo, payment is **built into the app**:
+
+- **Card registration**: enter your card once in the app
+- **Automatic payment**: the amount is charged at the end of the ride
+- **No terminal** needed: payment is 100% digital
+- **Automatic invoice**: received immediately by email
+- **3D Secure**: strong authentication for each payment
+
+### Cash payment
+
+Cash payment naturally remains allowed. The driver must have **change** to give back. If the driver cannot give change, they cannot demand an amount higher than the ride price.
+
+## Benefits of card payment
+
+### For the passenger
+
+- **Convenience**: no need to withdraw cash before the ride
+- **Traceability**: the payment appears on your bank statement
+- **Security**: no risk of cash loss or theft
+- **Expense reports**: the bank statement serves as supplementary proof
+- **High limit**: no limit linked to available cash
+
+### For the driver
+
+- **Security**: less cash in the vehicle = lower theft risk
+- **Speed**: no change to give
+- **Traceability**: simplified accounting
+- **Wider clientele**: passengers without cash can still take a taxi
+- **Easier tipping**: card tips are often more generous
+
+## Developments in taxi payment
+
+### QR codes
+
+More and more taxis offer a **QR code** stuck inside the vehicle. The passenger scans the code with their phone and pays directly via a secure web page. No app or terminal needed.
+
+### Biometric payment
+
+With the rise of Apple Pay and Google Pay, **biometric payment** (fingerprint, facial recognition) has become common. It combines speed, security and traceability.
+
+### Corporate invoicing
+
+For companies, TaxiNeo offers **centralised invoicing**: all employee rides are billed monthly to the company. No individual expense reports to process.
+
+## Practical tips
+
+### For passengers
+
+- **Inform the driver** of your payment method at the start of the ride
+- **Always keep some cash** in case of a genuine terminal breakdown
+- **Use contactless** for short rides: it is faster
+- **Register your card** on TaxiNeo for automatic payment
+- **Ask for a receipt** regardless of the payment method
+
+### For drivers
+
+- **Keep your terminal** in good working order
+- **Charge the TPE battery** daily
+- **Clearly display** accepted payment methods
+- **Train yourself** in mobile payments (Apple Pay, Google Pay)
+- **Offer the receipt** systematically after payment
+
+---
+
+**Paying for your taxi by card is a right, not an option.** Since 2018, every French taxi must accept card payment with no minimum amount condition and no surcharge. If refused, do not give in: remind them of the law and report the incident. With TaxiNeo, payment is built into the app: simple, secure and automatic.`,
+    },
+  },
+  {
+    slug: "taxi-animaux-regles",
+    title: {
+      fr: "Prendre un taxi avec un animal : règles et conseils",
+      en: "Taking a taxi with a pet: rules and tips",
+    },
+    metaTitle: {
+      fr: "Taxi avec animal de compagnie : règles et conseils 2026 | TaxiNeo",
+      en: "Taxi with pets: rules and tips 2026 | TaxiNeo",
+    },
+    metaDescription: {
+      fr: "Tout savoir pour prendre un taxi avec votre animal de compagnie : règles, droits, conseils pratiques et comment trouver un taxi pet-friendly sur TaxiNeo.",
+      en: "Everything about taking a taxi with your pet: rules, rights, practical tips and how to find a pet-friendly taxi on TaxiNeo.",
+    },
+    excerpt: {
+      fr: "Guide complet pour voyager en taxi avec votre animal : règles, droits des passagers, conseils et taxis pet-friendly.",
+      en: "Complete guide to travelling by taxi with your pet: rules, passenger rights, tips and pet-friendly taxis.",
+    },
+    date: "2026-03-30",
+    readingTime: 9,
+    content: {
+      fr: `## Prendre un taxi avec un animal : règles et conseils
+
+Voyager avec un animal de compagnie est de plus en plus courant. Rendez-vous chez le vétérinaire, départ en vacances ou simple déplacement quotidien, le taxi est souvent la solution la plus pratique. Mais quelles sont les règles ? Le chauffeur peut-il refuser votre animal ? Quelles précautions prendre ? Ce guide répond à toutes vos questions.
+
+## Ce que dit la réglementation
+
+### La règle générale
+
+En France, **aucune loi n'oblige** les taxis à accepter les animaux de compagnie (à l'exception des chiens guides). Le chauffeur a le droit de refuser un animal si :
+
+- L'animal n'est pas dans une caisse de transport adaptée (pour les petits animaux)
+- L'animal présente un risque pour la sécurité ou l'hygiène
+- Le véhicule n'est pas adapté
+
+Cependant, dans la pratique, **la grande majorité des chauffeurs acceptent** les animaux de compagnie bien tenus, surtout s'ils sont prévenus à l'avance.
+
+### L'exception des chiens guides
+
+Les **chiens guides d'aveugle et chiens d'assistance** bénéficient d'une protection légale absolue. La **loi du 11 février 2005** interdit formellement de refuser l'accès à un lieu public ou à un transport à une personne accompagnée de son chien guide. Le refus est une infraction pénale.
+
+**Points clés :**
+- Aucun supplément ne peut être facturé pour un chien guide
+- Le chien guide n'a pas besoin de muselière
+- Le chauffeur ne peut imposer aucune condition particulière
+- Le refus est passible d'une amende de 150 à 450 €
+
+## Les règles par type d'animal
+
+### Les chiens
+
+Les chiens sont les animaux les plus fréquemment transportés en taxi. Les règles varient selon la taille :
+
+**Petits chiens (moins de 6 kg) :**
+- Transportés sur les genoux du propriétaire ou dans une caisse de transport
+- Généralement acceptés sans difficulté
+- Pas de supplément dans la plupart des cas
+
+**Chiens moyens (6-25 kg) :**
+- Doivent rester au sol, entre les jambes du propriétaire, ou sur la banquette arrière
+- Une couverture de protection est recommandée pour les sièges
+- Prévenez le chauffeur lors de la réservation
+
+**Grands chiens (plus de 25 kg) :**
+- Nécessitent un véhicule adapté (monospace, van)
+- Doivent être tenus en laisse courte
+- Certains chauffeurs exigent une muselière (non obligatoire légalement, sauf pour les chiens de catégorie 1 et 2)
+- Réservation obligatoire avec mention de l'animal
+
+### Les chats
+
+Les chats doivent **impérativement** voyager dans une **caisse de transport fermée**. Un chat en liberté dans un taxi représente un danger réel : il peut se glisser sous les pédales ou griffer le chauffeur.
+
+**Règles pour les chats :**
+- Caisse de transport rigide ou souple, fermée
+- La caisse reste sur les genoux du propriétaire ou au sol
+- Pas de supplément dans la plupart des cas
+- Pas besoin de prévenir le chauffeur (mais c'est courtois de le faire)
+
+### Les NAC (Nouveaux Animaux de Compagnie)
+
+Les lapins, furets, hamsters, oiseaux et reptiles doivent voyager dans une **cage ou caisse de transport** adaptée et fermée.
+
+**Règles pour les NAC :**
+- Cage fermée et sécurisée, aucun risque d'évasion
+- Pas de reptiles en liberté (évidemment)
+- Prévenez le chauffeur par courtoisie
+- Certains chauffeurs peuvent refuser les serpents ou les lézards
+
+## Conseils pratiques pour voyager avec un animal
+
+### Avant la réservation
+
+- **Prévenez le chauffeur** : mentionnez la présence de l'animal lors de la réservation (espèce, taille, caisse de transport). Sur TaxiNeo, vous pouvez l'indiquer dans les commentaires.
+- **Vérifiez la politique** du chauffeur : certains profils sur TaxiNeo indiquent "animaux acceptés"
+- **Préparez la caisse** : pour les chats et petits animaux, ayez une caisse de transport propre et confortable
+- **Prévoyez une couverture** : pour protéger les sièges si votre chien voyage sur la banquette
+
+### Pendant le trajet
+
+- **Gardez votre animal calme** : une voix rassurante et des caresses aident
+- **Fenêtres fermées** : ne laissez jamais votre chien passer la tête par la fenêtre (risque d'accident)
+- **Laisse courte** : tenez votre chien en laisse même dans le taxi
+- **Pas de nourriture** : évitez de nourrir votre animal pendant le trajet pour limiter les risques de mal des transports
+- **Attention au mal des transports** : certains animaux sont sensibles. Consultez votre vétérinaire pour un éventuel traitement préventif
+
+### Après le trajet
+
+- **Vérifiez les sièges** : nettoyez les poils si nécessaire
+- **Signalez tout incident** : si votre animal a été malade, informez le chauffeur et proposez de couvrir les frais de nettoyage
+- **Laissez un avis** : sur TaxiNeo, mentionnez l'accueil réservé à votre animal dans votre avis. Cela aide les futurs passagers avec animaux.
+
+## Les suppléments : ce qui est autorisé
+
+### Ce que le chauffeur peut facturer
+
+- **Supplément nettoyage** : si l'animal salit le véhicule de manière significative (poils en quantité, accident), le chauffeur peut demander une compensation raisonnable
+- **Supplément véhicule adapté** : si vous avez demandé un véhicule spécifique (van) pour un grand chien
+
+### Ce que le chauffeur ne peut PAS facturer
+
+- **Supplément animal** : il n'existe pas de supplément réglementé pour le simple transport d'un animal
+- **Supplément chien guide** : strictement interdit par la loi
+- **Supplément caisse de transport** : la caisse est considérée comme un bagage
+
+## Trouver un taxi pet-friendly sur TaxiNeo
+
+TaxiNeo facilite la recherche de taxis accueillant les animaux :
+
+- **Filtre "Animaux acceptés"** : identifiez les chauffeurs qui acceptent les animaux
+- **Commentaires de réservation** : précisez l'espèce, la taille et le mode de transport de votre animal
+- **Avis spécifiques** : les passagers avec animaux partagent leur expérience
+- **Véhicules adaptés** : filtrez par monospace ou van pour les grands chiens
+
+### Conseils pour les chauffeurs
+
+Si vous êtes chauffeur de taxi, voici comment vous démarquer :
+
+- **Acceptez les animaux** et indiquez-le sur votre profil TaxiNeo
+- **Prévoyez une couverture** de protection pour la banquette arrière
+- **Ayez des lingettes** nettoyantes dans le véhicule
+- **Proposez une gamelle d'eau** pour les longs trajets (un geste très apprécié)
+- **Soyez patient** : les animaux peuvent être nerveux en voiture
+
+## Le transport d'animaux pour le vétérinaire
+
+Le cas le plus fréquent de transport d'animaux en taxi est le **rendez-vous vétérinaire**. Quelques conseils spécifiques :
+
+- **Réservez à l'avance** : les rendez-vous vétérinaires sont planifiables
+- **Indiquez l'urgence** si nécessaire : certains chauffeurs accepteront de rouler plus vite (dans les limites du Code de la route)
+- **Prévoyez une serviette** : les animaux malades ou blessés peuvent salir
+- **Restez calme** : votre animal ressent votre stress
+
+## Les transports alternatifs pour les animaux
+
+Si vous ne trouvez pas de taxi acceptant votre animal, d'autres options existent :
+
+- **Ambulances vétérinaires** : pour les urgences médicales animales
+- **Services de taxi animalier** : des entreprises spécialisées dans le transport d'animaux
+- **VTC** : certains VTC acceptent les animaux (vérifiez à la réservation)
+- **Transport en commun** : la plupart des réseaux acceptent les petits animaux en caisse de transport
+
+---
+
+**Voyager en taxi avec son animal de compagnie est tout à fait possible et de plus en plus simple.** La clé est la communication : prévenez le chauffeur, préparez votre animal et respectez quelques règles de base. Avec TaxiNeo, trouvez facilement un chauffeur pet-friendly et voyagez sereinement avec votre compagnon à quatre pattes.`,
+      en: `## Taking a taxi with a pet: rules and tips
+
+Travelling with a pet is increasingly common. Vet appointments, holiday departures or simple daily trips, taxis are often the most practical solution. But what are the rules? Can the driver refuse your pet? What precautions should you take? This guide answers all your questions.
+
+## What the regulations say
+
+### The general rule
+
+In France, **no law requires** taxis to accept pets (except guide dogs). The driver has the right to refuse an animal if:
+
+- The animal is not in a suitable carrier (for small animals)
+- The animal poses a risk to safety or hygiene
+- The vehicle is not suitable
+
+However, in practice, **the vast majority of drivers accept** well-behaved pets, especially if warned in advance.
+
+### The guide dog exception
+
+**Guide dogs and assistance dogs** benefit from absolute legal protection. The **law of 11 February 2005** formally prohibits refusing access to a public place or transport to a person accompanied by their guide dog. Refusal is a criminal offence.
+
+**Key points:**
+- No surcharge may be applied for a guide dog
+- The guide dog does not need a muzzle
+- The driver cannot impose any particular conditions
+- Refusal is punishable by a fine of EUR 150-450
+
+## Rules by animal type
+
+### Dogs
+
+Dogs are the most frequently transported animals in taxis. Rules vary by size:
+
+**Small dogs (under 6 kg):**
+- Transported on the owner's lap or in a carrier
+- Generally accepted without difficulty
+- No surcharge in most cases
+
+**Medium dogs (6-25 kg):**
+- Must stay on the floor between the owner's legs, or on the back seat
+- A protective cover is recommended for the seats
+- Inform the driver when booking
+
+**Large dogs (over 25 kg):**
+- Require a suitable vehicle (MPV, van)
+- Must be kept on a short lead
+- Some drivers require a muzzle (not legally mandatory, except for category 1 and 2 dogs)
+- Booking required with mention of the animal
+
+### Cats
+
+Cats must **always** travel in a **closed carrier**. A cat loose in a taxi is a real danger: it can slip under the pedals or scratch the driver.
+
+**Rules for cats:**
+- Rigid or soft carrier, closed
+- The carrier stays on the owner's lap or on the floor
+- No surcharge in most cases
+- No need to inform the driver (but it is courteous to do so)
+
+### Exotic pets
+
+Rabbits, ferrets, hamsters, birds and reptiles must travel in a suitable, closed **cage or carrier**.
+
+**Rules for exotic pets:**
+- Closed and secure cage, no risk of escape
+- No reptiles loose (obviously)
+- Inform the driver as a courtesy
+- Some drivers may refuse snakes or lizards
+
+## Practical tips for travelling with a pet
+
+### Before booking
+
+- **Inform the driver**: mention the animal when booking (species, size, carrier). On TaxiNeo, you can indicate this in the comments.
+- **Check the driver's policy**: some profiles on TaxiNeo indicate "pets accepted"
+- **Prepare the carrier**: for cats and small animals, have a clean and comfortable carrier
+- **Bring a cover**: to protect the seats if your dog travels on the back seat
+
+### During the journey
+
+- **Keep your pet calm**: a reassuring voice and petting help
+- **Windows closed**: never let your dog stick its head out of the window (accident risk)
+- **Short lead**: keep your dog on a lead even in the taxi
+- **No food**: avoid feeding your animal during the journey to limit motion sickness risks
+- **Motion sickness awareness**: some animals are sensitive. Consult your vet for possible preventive treatment
+
+### After the journey
+
+- **Check the seats**: clean up fur if necessary
+- **Report any incident**: if your animal was sick, inform the driver and offer to cover cleaning costs
+- **Leave a review**: on TaxiNeo, mention how your animal was welcomed in your review. This helps future passengers with pets.
+
+## Surcharges: what is allowed
+
+### What the driver can charge
+
+- **Cleaning surcharge**: if the animal significantly soils the vehicle (extensive fur, accident), the driver can request reasonable compensation
+- **Adapted vehicle surcharge**: if you requested a specific vehicle (van) for a large dog
+
+### What the driver may NOT charge
+
+- **Animal surcharge**: there is no regulated surcharge for simply transporting an animal
+- **Guide dog surcharge**: strictly prohibited by law
+- **Carrier surcharge**: the carrier is considered luggage
+
+## Finding a pet-friendly taxi on TaxiNeo
+
+TaxiNeo makes finding pet-welcoming taxis easy:
+
+- **"Pets accepted" filter**: identify drivers who accept animals
+- **Booking comments**: specify the species, size and transport mode for your animal
+- **Specific reviews**: passengers with pets share their experience
+- **Adapted vehicles**: filter by MPV or van for large dogs
+
+### Tips for drivers
+
+If you are a taxi driver, here is how to stand out:
+
+- **Accept animals** and indicate it on your TaxiNeo profile
+- **Keep a protective cover** for the back seat
+- **Have cleaning wipes** in the vehicle
+- **Offer a water bowl** for long journeys (a much-appreciated gesture)
+- **Be patient**: animals can be nervous in cars
+
+## Transporting animals to the vet
+
+The most common case for animal transport by taxi is the **vet appointment**. Some specific tips:
+
+- **Book in advance**: vet appointments are plannable
+- **Indicate urgency** if necessary: some drivers will accept to drive faster (within traffic regulations)
+- **Bring a towel**: sick or injured animals may soil
+- **Stay calm**: your animal senses your stress
+
+## Alternative transport for animals
+
+If you cannot find a taxi accepting your animal, other options exist:
+
+- **Veterinary ambulances**: for animal medical emergencies
+- **Animal taxi services**: companies specialising in animal transport
+- **Private hire cars**: some accept animals (check when booking)
+- **Public transport**: most networks accept small animals in carriers
+
+---
+
+**Travelling by taxi with your pet is perfectly possible and increasingly simple.** The key is communication: inform the driver, prepare your animal and follow a few basic rules. With TaxiNeo, easily find a pet-friendly driver and travel peacefully with your four-legged companion.`,
+    },
+  },
+  {
+    slug: "taxi-paris-nuit-guide",
+    title: {
+      fr: "Prendre un taxi à Paris la nuit : guide pratique",
+      en: "Taking a taxi in Paris at night: practical guide",
+    },
+    metaTitle: {
+      fr: "Taxi à Paris la nuit : guide pratique 2026 | TaxiNeo",
+      en: "Night taxi in Paris: practical guide 2026 | TaxiNeo",
+    },
+    metaDescription: {
+      fr: "Guide complet pour prendre un taxi à Paris la nuit : tarifs nocturnes, zones sûres, stations de nuit, astuces et conseils de sécurité.",
+      en: "Complete guide to taking a taxi in Paris at night: night fares, safe areas, night ranks, tips and safety advice.",
+    },
+    excerpt: {
+      fr: "Guide pratique du taxi nocturne à Paris : tarifs de nuit, stations, astuces de réservation et conseils de sécurité.",
+      en: "Practical guide to night taxis in Paris: night fares, ranks, booking tips and safety advice.",
+    },
+    date: "2026-04-02",
+    readingTime: 10,
+    content: {
+      fr: `## Prendre un taxi à Paris la nuit : guide pratique
+
+Paris ne dort jamais vraiment. Entre les restaurants, les bars, les concerts et les clubs, la vie nocturne parisienne bat son plein jusqu'aux petites heures du matin. Mais quand il est temps de rentrer, le taxi devient souvent le moyen le plus sûr et le plus pratique de rejoindre son domicile ou son hôtel. Ce guide vous donne toutes les clés pour prendre un taxi à Paris la nuit en toute sérénité.
+
+## Les tarifs de nuit : ce qu'il faut savoir
+
+### Le basculement jour/nuit
+
+Les tarifs taxi à Paris passent en **tarif de nuit à 19h00** et reviennent en tarif de jour à **7h00**. Ce changement est automatique sur le compteur horokilométrique.
+
+### Les tarifs applicables la nuit
+
+| Situation | Tarif | Prix/km (approx.) |
+|---|---|---|
+| Nuit dans Paris intra-muros | **Tarif B** | 1,46 €/km |
+| Nuit en banlieue | **Tarif C** | 1,61 €/km |
+| Dimanche nuit / nuit de jour férié | **Tarif D** | 1,61 €/km |
+
+### Le surcoût nocturne
+
+En comparaison avec le tarif de jour (tarif A à 1,14 €/km), le surcoût nocturne représente environ **28% de plus** pour une course dans Paris (tarif B) et **41% de plus** pour une course en banlieue (tarif C). C'est un surcoût réglementé et légitime, qui compense les conditions de travail nocturnes.
+
+### Exemple de prix
+
+| Trajet | Tarif jour (estimé) | Tarif nuit (estimé) | Différence |
+|---|---|---|---|
+| Bastille → Montmartre (6 km) | 14-18 € | 17-22 € | +3-4 € |
+| Champs-Élysées → Belleville (7 km) | 16-20 € | 20-25 € | +4-5 € |
+| Opéra → Porte de Versailles (8 km) | 18-23 € | 22-28 € | +4-5 € |
+| Paris → Aéroport CDG (forfait) | 56 € | 56 € | 0 € (forfait) |
+
+**Note** : le forfait aéroport est identique jour et nuit. C'est un avantage majeur pour les vols tôt le matin ou tard le soir.
+
+## Trouver un taxi la nuit à Paris
+
+### Les stations de taxi nocturnes
+
+Paris dispose de nombreuses stations de taxi qui fonctionnent **24h/24**. Les plus fréquentées la nuit sont :
+
+- **Gare du Nord** et **Gare de l'Est** : pour les arrivées tardives en train
+- **Gare de Lyon** et **Gare Montparnasse** : idem
+- **Place de la République** : cœur de la vie nocturne
+- **Bastille** : quartier de bars et restaurants
+- **Pigalle / Place de Clichy** : vie nocturne animée
+- **Châtelet** : centre névralgique
+- **Saint-Germain-des-Prés** : restaurants et bars de nuit
+- **Aéroport CDG et Orly** : 24h/24
+
+### Héler un taxi dans la rue
+
+La nuit, héler un taxi dans la rue est plus difficile qu'en journée. La demande est forte (sorties de restaurants, bars et clubs) et l'offre est réduite (moins de chauffeurs circulent). Quelques astuces :
+
+- **Cherchez les grands axes** : boulevards Haussmann, Saint-Germain, Sébastopol, les Champs-Élysées
+- **Éloignez-vous des zones très fréquentées** : devant les clubs, la concurrence est rude. Marchez 200 mètres dans une direction pour augmenter vos chances
+- **Repérez le lumineux vert** : un taxi libre a un lumineux entièrement vert. Si le lumineux est orange ou rouge, le taxi est occupé ou en réservation
+
+### Réserver via TaxiNeo
+
+La méthode la plus fiable pour obtenir un taxi la nuit reste la **réservation via application**. Sur TaxiNeo :
+
+- **Disponibilité en temps réel** : voyez quels chauffeurs sont disponibles dans votre zone
+- **Temps d'attente estimé** : sachez exactement combien de minutes il faudra attendre
+- **Réservation à l'avance** : si vous savez que vous sortirez tard, réservez votre taxi à l'avance pour une heure précise
+- **Suivi GPS** : suivez l'arrivée de votre chauffeur en temps réel
+
+## Les heures critiques : quand trouver un taxi est le plus difficile
+
+### Vendredi et samedi soir (23h - 2h)
+
+C'est la période la plus tendue. La demande explose avec la sortie des restaurants, des cinémas et le début de la vie nocturne. **Conseil** : réservez votre taxi 15 à 20 minutes avant d'en avoir besoin.
+
+### Fermeture des clubs (3h - 5h)
+
+La deuxième vague de demande survient à la fermeture des clubs et bars de nuit. Les stations de taxi à Bastille, Oberkampf et Pigalle sont particulièrement sollicitées. **Conseil** : éloignez-vous de la foule et utilisez TaxiNeo.
+
+### Nouvel An, 14 juillet et grandes fêtes
+
+Les nuits de grande fête sont les plus difficiles. La demande est exceptionnelle et de nombreux axes sont fermés. **Conseil** : réservez votre taxi **plusieurs heures à l'avance** ou prévoyez un hébergement sur place.
+
+## Sécurité nocturne : les bonnes pratiques
+
+### Attendez dans un lieu sûr
+
+- **Restez dans un lieu éclairé** et fréquenté en attendant votre taxi
+- **Ne restez pas seul(e)** dans une rue déserte
+- **Attendez à l'intérieur** (bar, restaurant, hall d'hôtel) si possible
+- **Utilisez la géolocalisation** de TaxiNeo pour que le chauffeur vous trouve facilement
+
+### Vérifications avant de monter
+
+La nuit, les vérifications sont encore plus importantes :
+
+- **Lumineux "TAXI"** sur le toit : obligatoire, vert = libre
+- **Plaque professionnelle** : vérifiez que le véhicule est un vrai taxi
+- **Application** : si vous avez réservé sur TaxiNeo, vérifiez que la plaque correspond
+- **Ne montez jamais** dans un véhicule non identifié qui vous propose une course
+
+### Partagez votre trajet
+
+La nuit, c'est encore plus essentiel de **partager votre trajet** avec un proche :
+
+- Envoyez un SMS avec le numéro de licence et la plaque
+- Utilisez la fonction de partage TaxiNeo
+- Prévenez quelqu'un de votre heure d'arrivée estimée
+
+### Faites confiance à votre instinct
+
+Si quelque chose vous semble anormal (comportement du chauffeur, itinéraire suspect, véhicule non conforme), **descendez**. Il vaut mieux attendre un autre taxi que de prendre un risque.
+
+## Les alternatives au taxi la nuit
+
+### Le Noctilien
+
+Le réseau de bus de nuit **Noctilien** fonctionne de **0h30 à 5h30** avec 47 lignes couvrant Paris et la banlieue proche. C'est économique mais lent et peu confortable.
+
+### Les VTC
+
+Les plateformes VTC sont actives la nuit, mais attention au **surge pricing** : les tarifs peuvent être multipliés par 2 ou 3 aux heures de pointe nocturnes.
+
+### Le vélo et la trottinette
+
+Les vélos en libre-service (Vélib') et les trottinettes électriques fonctionnent 24h/24, mais sont déconseillés la nuit pour des raisons de sécurité (visibilité réduite, état d'ébriété potentiel).
+
+## Conseils spécifiques pour les touristes
+
+Si vous êtes touriste à Paris :
+
+- **Ayez l'adresse de votre hôtel** écrite ou enregistrée sur votre téléphone
+- **Utilisez TaxiNeo** plutôt que de héler un taxi : c'est plus sûr et le prix est estimé à l'avance
+- **Vérifiez le forfait aéroport** : pour les retours à CDG ou Orly, le forfait est le même jour et nuit
+- **Apprenez quelques mots** : "Bonjour", "S'il vous plaît", "Merci" et l'adresse de votre hôtel suffisent
+- **Gardez du cash** en petites coupures comme solution de secours
+- **N'acceptez jamais** les propositions de "taxi" à la sortie des clubs ou monuments touristiques la nuit
+
+---
+
+**Paris la nuit est magnifique, et rentrer chez soi devrait être aussi agréable que la sortie.** Le taxi reste le moyen le plus sûr et le plus confortable de se déplacer dans la capitale après la tombée de la nuit. Avec TaxiNeo, réservez en quelques secondes, suivez votre chauffeur en temps réel et rentrez l'esprit tranquille. Bonne soirée à Paris.`,
+      en: `## Taking a taxi in Paris at night: practical guide
+
+Paris never truly sleeps. Between restaurants, bars, concerts and clubs, Parisian nightlife is in full swing until the early hours. But when it is time to head home, a taxi often becomes the safest and most practical way to reach your accommodation. This guide gives you all the keys to taking a taxi in Paris at night with complete peace of mind.
+
+## Night fares: what you need to know
+
+### The day/night switch
+
+Taxi fares in Paris switch to the **night rate at 7:00 pm** and return to the day rate at **7:00 am**. This change is automatic on the taximeter.
+
+### Applicable night rates
+
+| Situation | Tariff | Price/km (approx.) |
+|---|---|---|
+| Night in central Paris | **Tariff B** | EUR 1.46/km |
+| Night in suburbs | **Tariff C** | EUR 1.61/km |
+| Sunday night / public holiday night | **Tariff D** | EUR 1.61/km |
+
+### The night surcharge
+
+Compared with the day rate (tariff A at EUR 1.14/km), the night surcharge represents approximately **28% more** for a ride within Paris (tariff B) and **41% more** for a suburban ride (tariff C). This is a regulated and legitimate surcharge that compensates for night working conditions.
+
+### Price examples
+
+| Journey | Day fare (estimated) | Night fare (estimated) | Difference |
+|---|---|---|---|
+| Bastille to Montmartre (6 km) | EUR 14-18 | EUR 17-22 | +EUR 3-4 |
+| Champs-Elysees to Belleville (7 km) | EUR 16-20 | EUR 20-25 | +EUR 4-5 |
+| Opera to Porte de Versailles (8 km) | EUR 18-23 | EUR 22-28 | +EUR 4-5 |
+| Paris to CDG Airport (flat rate) | EUR 56 | EUR 56 | EUR 0 (flat rate) |
+
+**Note**: the airport flat rate is identical day and night. This is a major advantage for early morning or late evening flights.
+
+## Finding a taxi at night in Paris
+
+### Night taxi ranks
+
+Paris has numerous taxi ranks that operate **24/7**. The busiest at night are:
+
+- **Gare du Nord** and **Gare de l'Est**: for late train arrivals
+- **Gare de Lyon** and **Gare Montparnasse**: likewise
+- **Place de la Republique**: heart of the nightlife
+- **Bastille**: bar and restaurant district
+- **Pigalle / Place de Clichy**: lively nightlife
+- **Chatelet**: nerve centre
+- **Saint-Germain-des-Pres**: late-night restaurants and bars
+- **CDG and Orly airports**: 24/7
+
+### Hailing a taxi on the street
+
+At night, hailing a taxi on the street is harder than during the day. Demand is high (restaurant, bar and club closings) and supply is reduced (fewer drivers circulating). Some tips:
+
+- **Seek main roads**: boulevards Haussmann, Saint-Germain, Sebastopol, the Champs-Elysees
+- **Move away from very busy areas**: outside clubs, competition is fierce. Walk 200 metres in one direction to increase your chances
+- **Spot the green light**: a free taxi has a fully green roof light. If the light is orange or red, the taxi is occupied or reserved
+
+### Booking via TaxiNeo
+
+The most reliable method for getting a taxi at night remains **booking via an app**. On TaxiNeo:
+
+- **Real-time availability**: see which drivers are available in your area
+- **Estimated waiting time**: know exactly how many minutes you will wait
+- **Advance booking**: if you know you will be out late, book your taxi in advance for a specific time
+- **GPS tracking**: follow your driver's arrival in real time
+
+## Critical hours: when finding a taxi is hardest
+
+### Friday and Saturday evening (11 pm - 2 am)
+
+This is the most intense period. Demand explodes with people leaving restaurants, cinemas and the start of nightlife. **Tip**: book your taxi 15 to 20 minutes before you need it.
+
+### Club closing time (3 am - 5 am)
+
+The second wave of demand comes when clubs and late-night bars close. Taxi ranks at Bastille, Oberkampf and Pigalle are particularly busy. **Tip**: move away from the crowd and use TaxiNeo.
+
+### New Year's Eve, Bastille Day and major celebrations
+
+Major celebration nights are the most difficult. Demand is exceptional and many roads are closed. **Tip**: book your taxi **several hours in advance** or arrange accommodation nearby.
+
+## Night safety: best practices
+
+### Wait in a safe place
+
+- **Stay in a well-lit** and busy location while waiting for your taxi
+- **Do not remain alone** in a deserted street
+- **Wait inside** (bar, restaurant, hotel lobby) if possible
+- **Use TaxiNeo's geolocation** so the driver can find you easily
+
+### Checks before getting in
+
+At night, checks are even more important:
+
+- **"TAXI" roof light**: mandatory, green = available
+- **Professional plate**: verify the vehicle is a real taxi
+- **App**: if you booked on TaxiNeo, check that the plate matches
+- **Never get into** an unidentified vehicle offering you a ride
+
+### Share your trip
+
+At night, it is even more essential to **share your journey** with someone close:
+
+- Send a text with the licence number and plate
+- Use TaxiNeo's sharing feature
+- Let someone know your estimated arrival time
+
+### Trust your instinct
+
+If something seems abnormal (driver behaviour, suspicious route, non-compliant vehicle), **get out**. It is better to wait for another taxi than to take a risk.
+
+## Alternatives to taxis at night
+
+### The Noctilien
+
+The **Noctilien** night bus network operates from **12:30 am to 5:30 am** with 47 lines covering Paris and the near suburbs. It is economical but slow and not very comfortable.
+
+### Private hire cars
+
+Private hire platforms are active at night, but beware of **surge pricing**: fares can be multiplied by 2 or 3 during peak nighttime hours.
+
+### Bikes and scooters
+
+Self-service bikes (Velib') and electric scooters operate 24/7, but are not recommended at night for safety reasons (reduced visibility, potential intoxication).
+
+## Specific tips for tourists
+
+If you are a tourist in Paris:
+
+- **Have your hotel address** written down or saved on your phone
+- **Use TaxiNeo** rather than hailing a taxi: it is safer and the price is estimated in advance
+- **Check the airport flat rate**: for returns to CDG or Orly, the flat rate is the same day and night
+- **Learn a few words**: "Bonjour", "S'il vous plait", "Merci" and your hotel address are sufficient
+- **Keep some cash** in small notes as a backup
+- **Never accept** offers of "taxis" at club exits or tourist monuments at night
+
+---
+
+**Paris at night is magnificent, and getting home should be as enjoyable as the outing.** Taxis remain the safest and most comfortable way to get around the capital after dark. With TaxiNeo, book in seconds, follow your driver in real time and get home with peace of mind. Enjoy your evening in Paris.`,
+    },
+  },
+  {
+    slug: "tarif-taxi-reglementation-2026",
+    title: {
+      fr: "Réglementation des tarifs taxi en 2026",
+      en: "Taxi fare regulations in 2026",
+    },
+    metaTitle: {
+      fr: "Réglementation tarifs taxi 2026 : tout comprendre | TaxiNeo",
+      en: "Taxi fare regulations 2026: everything you need to know | TaxiNeo",
+    },
+    metaDescription: {
+      fr: "Réglementation complète des tarifs taxi en France en 2026 : barèmes officiels, forfaits, suppléments autorisés et évolutions réglementaires.",
+      en: "Complete taxi fare regulations in France in 2026: official rates, flat fares, authorised surcharges and regulatory changes.",
+    },
+    excerpt: {
+      fr: "Panorama complet de la réglementation des tarifs taxi en France pour 2026 : barèmes, forfaits et évolutions.",
+      en: "Complete overview of taxi fare regulations in France for 2026: rates, flat fares and changes.",
+    },
+    date: "2026-04-10",
+    readingTime: 11,
+    content: {
+      fr: `## Réglementation des tarifs taxi en 2026
+
+Les tarifs des taxis en France sont parmi les plus réglementés d'Europe. Chaque année, les barèmes sont révisés par arrêté ministériel et déclinés localement par arrêtés préfectoraux. En 2026, plusieurs évolutions importantes sont entrées en vigueur. Ce guide fait le point complet sur la réglementation actuelle.
+
+## Le cadre juridique des tarifs taxi
+
+### Les textes de référence
+
+La réglementation des tarifs taxi repose sur plusieurs textes :
+
+- **Code des transports** (articles L3121-1 et suivants) : définit le cadre général de l'activité taxi
+- **Décret n°2015-1252 du 7 octobre 2015** : fixe les conditions d'exercice et les tarifs
+- **Arrêté annuel du ministre des transports** : fixe les tarifs maximaux nationaux chaque année
+- **Arrêtés préfectoraux** : déclinent les tarifs au niveau local (peuvent être inférieurs aux maximaux nationaux)
+
+### Le principe fondamental : tarifs maximaux
+
+Les tarifs fixés par l'État sont des **tarifs maximaux**. Cela signifie que :
+
+- Un chauffeur ne peut **jamais dépasser** les tarifs réglementaires
+- Un chauffeur **peut appliquer des tarifs inférieurs** (mais c'est rare en pratique)
+- Les tarifs sont **identiques pour tous les passagers** : pas de discrimination possible
+
+## Les tarifs 2026 en détail
+
+### La prise en charge
+
+La prise en charge est le montant qui apparaît sur le compteur dès le début de la course, avant même que le véhicule ne roule.
+
+**Tarif 2026 :**
+- **Prise en charge maximale** : 4,18 € en Île-de-France
+- Ce montant varie légèrement selon les départements
+- Il est identique quel que soit le tarif (A, B, C ou D)
+
+### Les quatre tarifs kilométriques
+
+Le compteur horokilométrique applique l'un des quatre tarifs suivants selon les conditions de la course :
+
+| Tarif | Conditions | Prix/km 2026 (IDF) | Variation vs 2025 |
+|---|---|---|---|
+| **A** | Jour (7h-19h), lundi-samedi, Paris | 1,14 €/km | +2,7% |
+| **B** | Nuit (19h-7h), Paris / Jour, banlieue | 1,46 €/km | +2,8% |
+| **C** | Nuit (19h-7h), banlieue | 1,61 €/km | +2,5% |
+| **D** | Dimanche et jours fériés, toutes zones | 1,61 €/km | +2,5% |
+
+### L'heure d'attente
+
+Lorsque le taxi est à l'arrêt (embouteillages, feux rouges, attente du client), le compteur bascule en **tarif horaire** :
+
+- **Heure d'attente 2026** : environ 38,96 €/heure
+- Ce tarif s'applique automatiquement lorsque la vitesse descend en dessous d'un certain seuil
+- Le compteur alterne entre tarif kilométrique (en roulant) et tarif horaire (à l'arrêt)
+
+### Le montant minimum
+
+Chaque course a un **montant minimum** en dessous duquel le compteur ne peut pas descendre :
+
+- **Minimum 2026** : 8,00 € en Île-de-France
+- Ce montant inclut la prise en charge
+- Même pour une course de 500 mètres, le passager paie le minimum
+
+## Les forfaits réglementés
+
+### Les forfaits aéroports parisiens
+
+Les trajets entre Paris et les aéroports bénéficient de **forfaits fixes** depuis 2016. Ces forfaits sont réglementés et ne peuvent pas être dépassés.
+
+**Forfaits 2026 :**
+
+| Trajet | Forfait Rive Droite | Forfait Rive Gauche |
+|---|---|---|
+| Paris ↔ Roissy CDG | 56 € | 65 € |
+| Paris ↔ Orly | 41 € (rive gauche) | 47 € (rive droite) |
+
+**Important** :
+- Ces forfaits s'appliquent **jour et nuit**, 7j/7
+- Ils incluent les bagages standards
+- Ils ne s'appliquent que pour les courses **entre Paris intra-muros et l'aéroport** (pas depuis la banlieue)
+- Le forfait s'applique dans les deux sens (aéroport → Paris et Paris → aéroport)
+
+### Le forfait gare
+
+Il n'existe pas de forfait réglementé pour les trajets entre les gares parisiennes. Le compteur s'applique normalement.
+
+## Les suppléments autorisés
+
+### Le supplément réservation
+
+Un supplément peut être facturé lorsque le taxi est **réservé par téléphone ou par application** :
+
+- **Supplément réservation immédiate** : environ 4 €
+- **Supplément réservation à l'avance** : environ 7 € (réservation plus de 15 minutes à l'avance)
+- Ce supplément est **affiché dans le véhicule** et doit être annoncé au client
+
+### Le supplément 5e passager
+
+Lorsqu'un 5e passager (au-delà de 4) monte dans un véhicule équipé, un supplément peut être facturé :
+
+- **Supplément 5e passager** : variable selon la préfecture, généralement 3 à 4 €
+- Ce supplément ne s'applique qu'aux véhicules pouvant accueillir 5 passagers ou plus
+
+### Le supplément bagages
+
+- **Bagages standards** : aucun supplément
+- **Bagages volumineux** (au-delà du raisonnable) : un supplément peut être facturé, généralement 1 à 2 € par bagage supplémentaire
+- Ce supplément est à la discrétion du chauffeur et doit être annoncé
+
+### Les suppléments interdits
+
+Il est **strictement interdit** de facturer :
+
+- Un supplément pour le **paiement par carte** bancaire
+- Un supplément pour un **chien guide** ou un chien d'assistance
+- Un supplément pour un **fauteuil roulant**
+- Un supplément pour la **climatisation**
+- Un supplément lié au **handicap** du passager
+- Un "supplément nuit" en dehors du tarif B/C/D réglementaire
+
+## Le compteur horokilométrique : comment ça marche
+
+### Le fonctionnement
+
+Le compteur horokilométrique (ou taximètre) est un appareil **homologué et scellé** qui calcule automatiquement le prix de la course en fonction de :
+
+- La **distance parcourue** (en kilomètres)
+- Le **temps écoulé** (en minutes, pour les temps d'attente)
+- Le **tarif applicable** (A, B, C ou D)
+
+Le compteur alterne automatiquement entre le calcul au kilomètre (quand le taxi roule) et le calcul au temps (quand le taxi est à l'arrêt ou roule très lentement).
+
+### La vérification du compteur
+
+Le compteur doit être :
+
+- **Visible** depuis la banquette arrière
+- **Homologué** par un organisme agréé (Direction régionale des entreprises)
+- **Vérifié** annuellement (certificat de vérification)
+- **Scellé** : les scellés ne doivent pas être brisés
+
+### L'affichage obligatoire
+
+Le compteur affiche en permanence :
+
+- Le **montant de la course** en euros
+- Le **tarif en cours** (lettre A, B, C ou D)
+- L'état du taxi : **libre** ou **en course**
+
+## Les évolutions réglementaires 2026
+
+### La revalorisation annuelle
+
+Les tarifs 2026 ont été revalorisés d'environ **2,5 à 3%** par rapport à 2025, en cohérence avec l'inflation. Cette revalorisation est appliquée sur :
+
+- Les tarifs kilométriques (A, B, C, D)
+- La prise en charge
+- L'heure d'attente
+- Le montant minimum
+
+### L'encouragement aux véhicules propres
+
+La réglementation 2026 renforce les incitations pour les **taxis électriques et hybrides** :
+
+- **Prime à la conversion** maintenue pour les chauffeurs qui passent à l'électrique
+- **Avantages dans l'attribution de nouvelles licences** pour les véhicules zéro émission
+- **Zones à faibles émissions** (ZFE) : les taxis thermiques sont progressivement restreints dans certaines zones urbaines
+
+### Le renforcement du numérique
+
+La réglementation encourage les outils numériques :
+
+- Les plateformes de réservation comme **TaxiNeo** sont reconnues comme acteurs de la modernisation du secteur
+- L'obligation de paiement par carte est renforcée avec des contrôles accrus
+- Les factures numériques sont désormais pleinement reconnues
+
+## Comment vérifier que votre tarif est correct
+
+### La méthode simple
+
+Voici comment vérifier en temps réel que le tarif appliqué est correct :
+
+1. **Vérifiez l'heure** : avant 19h = tarif A (ou B en banlieue), après 19h = tarif B (ou C en banlieue)
+2. **Vérifiez le jour** : dimanche ou jour férié = tarif D obligatoirement
+3. **Vérifiez la lettre** affichée sur le compteur (A, B, C ou D)
+4. **Vérifiez la prise en charge** : environ 4,18 € dès le début de la course
+
+### En cas de doute
+
+Si vous suspectez un tarif incorrect :
+
+- **Demandez poliment** au chauffeur quel tarif est appliqué
+- **Photographiez le compteur** pour garder une trace
+- **Comparez avec l'estimation TaxiNeo** : avant de réserver, TaxiNeo affiche une estimation du prix qui vous sert de référence
+- **Contactez la préfecture** si vous pensez avoir été surfacturé
+
+## La transparence avec TaxiNeo
+
+TaxiNeo s'inscrit pleinement dans la logique de transparence de la réglementation :
+
+- **Estimation du prix** avant réservation, basée sur les tarifs réglementés
+- **Affichage du tarif** applicable (A, B, C ou D) selon l'heure et la zone
+- **Facture détaillée** avec ventilation du prix (prise en charge, kilométrage, suppléments)
+- **Comparaison** entre chauffeurs disponibles
+- **Historique des prix** pour vérifier la cohérence de vos courses passées
+
+---
+
+**La réglementation des tarifs taxi est votre meilleure protection en tant que passager.** Grâce à ce cadre strict, vous savez exactement ce que vous payez et pourquoi. En 2026, les tarifs restent encadrés, transparents et prévisibles. Avec TaxiNeo, cette transparence est renforcée par l'estimation du prix avant la course et la facturation détaillée après. Voyagez en toute confiance.`,
+      en: `## Taxi fare regulations in 2026
+
+Taxi fares in France are among the most regulated in Europe. Each year, the rates are revised by ministerial decree and implemented locally through prefectural orders. In 2026, several important changes have come into effect. This guide provides a complete overview of current regulations.
+
+## The legal framework for taxi fares
+
+### Reference texts
+
+Taxi fare regulation is based on several texts:
+
+- **Transport Code** (articles L3121-1 onwards): defines the general framework for taxi activity
+- **Decree no. 2015-1252 of 7 October 2015**: sets operating conditions and fares
+- **Annual order by the Transport Minister**: sets maximum national fares each year
+- **Prefectural orders**: implement fares at local level (may be lower than national maximums)
+
+### The fundamental principle: maximum fares
+
+The fares set by the State are **maximum fares**. This means that:
+
+- A driver can **never exceed** the regulated fares
+- A driver **may apply lower fares** (but this is rare in practice)
+- Fares are **identical for all passengers**: no discrimination possible
+
+## 2026 fares in detail
+
+### The pickup charge
+
+The pickup charge is the amount that appears on the meter at the start of the ride, before the vehicle even moves.
+
+**2026 rate:**
+- **Maximum pickup charge**: EUR 4.18 in Ile-de-France
+- This amount varies slightly by department
+- It is identical regardless of the tariff (A, B, C or D)
+
+### The four kilometric tariffs
+
+The taximeter applies one of the following four tariffs depending on ride conditions:
+
+| Tariff | Conditions | Price/km 2026 (IDF) | Change vs 2025 |
+|---|---|---|---|
+| **A** | Day (7am-7pm), Monday-Saturday, Paris | EUR 1.14/km | +2.7% |
+| **B** | Night (7pm-7am), Paris / Day, suburbs | EUR 1.46/km | +2.8% |
+| **C** | Night (7pm-7am), suburbs | EUR 1.61/km | +2.5% |
+| **D** | Sundays and public holidays, all zones | EUR 1.61/km | +2.5% |
+
+### The waiting hour
+
+When the taxi is stationary (traffic jams, red lights, waiting for the customer), the meter switches to an **hourly rate**:
+
+- **2026 waiting hour**: approximately EUR 38.96/hour
+- This rate applies automatically when speed drops below a certain threshold
+- The meter alternates between kilometric rate (moving) and hourly rate (stationary)
+
+### The minimum fare
+
+Each ride has a **minimum fare** below which the meter cannot go:
+
+- **2026 minimum**: EUR 8.00 in Ile-de-France
+- This amount includes the pickup charge
+- Even for a 500-metre ride, the passenger pays the minimum
+
+## Regulated flat fares
+
+### Paris airport flat fares
+
+Journeys between Paris and the airports benefit from **fixed flat fares** since 2016. These flat fares are regulated and cannot be exceeded.
+
+**2026 flat fares:**
+
+| Journey | Right Bank Flat Fare | Left Bank Flat Fare |
+|---|---|---|
+| Paris to/from Roissy CDG | EUR 56 | EUR 65 |
+| Paris to/from Orly | EUR 41 (left bank) | EUR 47 (right bank) |
+
+**Important**:
+- These flat fares apply **day and night**, 7 days a week
+- They include standard luggage
+- They only apply to rides **between central Paris and the airport** (not from the suburbs)
+- The flat fare applies in both directions (airport to Paris and Paris to airport)
+
+### Station flat fares
+
+There is no regulated flat fare for journeys between Parisian train stations. The meter applies normally.
+
+## Authorised surcharges
+
+### The booking surcharge
+
+A surcharge may be applied when the taxi is **booked by phone or app**:
+
+- **Immediate booking surcharge**: approximately EUR 4
+- **Advance booking surcharge**: approximately EUR 7 (booking more than 15 minutes in advance)
+- This surcharge is **displayed in the vehicle** and must be announced to the client
+
+### The 5th passenger surcharge
+
+When a 5th passenger (beyond 4) gets into an equipped vehicle, a surcharge may be applied:
+
+- **5th passenger surcharge**: varies by prefecture, generally EUR 3-4
+- This surcharge only applies to vehicles that can accommodate 5 or more passengers
+
+### The luggage surcharge
+
+- **Standard luggage**: no surcharge
+- **Bulky luggage** (beyond what is reasonable): a surcharge may be applied, generally EUR 1-2 per additional piece
+- This surcharge is at the driver's discretion and must be announced
+
+### Prohibited surcharges
+
+It is **strictly forbidden** to charge:
+
+- A surcharge for **card payment**
+- A surcharge for a **guide dog** or assistance dog
+- A surcharge for a **wheelchair**
+- A surcharge for **air conditioning**
+- A surcharge related to the passenger's **disability**
+- A "night surcharge" outside the regulatory B/C/D tariff
+
+## The taximeter: how it works
+
+### Operation
+
+The taximeter is an **approved and sealed** device that automatically calculates the ride price based on:
+
+- **Distance travelled** (in kilometres)
+- **Time elapsed** (in minutes, for waiting periods)
+- **Applicable tariff** (A, B, C or D)
+
+The meter automatically alternates between the per-kilometre calculation (when the taxi is moving) and the time-based calculation (when the taxi is stationary or moving very slowly).
+
+### Meter verification
+
+The meter must be:
+
+- **Visible** from the back seat
+- **Approved** by an accredited body (Regional Enterprise Directorate)
+- **Verified** annually (verification certificate)
+- **Sealed**: the seals must not be broken
+
+### Mandatory display
+
+The meter permanently shows:
+
+- The **ride amount** in euros
+- The **current tariff** (letter A, B, C or D)
+- The taxi's status: **available** or **in service**
+
+## 2026 regulatory changes
+
+### Annual revaluation
+
+2026 fares have been increased by approximately **2.5-3%** compared to 2025, in line with inflation. This revaluation applies to:
+
+- Kilometric tariffs (A, B, C, D)
+- The pickup charge
+- The waiting hour
+- The minimum fare
+
+### Encouragement for clean vehicles
+
+The 2026 regulations strengthen incentives for **electric and hybrid taxis**:
+
+- **Conversion bonus** maintained for drivers switching to electric
+- **Advantages in new licence allocation** for zero-emission vehicles
+- **Low-emission zones** (ZFE): combustion taxis are progressively restricted in certain urban areas
+
+### Digital reinforcement
+
+Regulations encourage digital tools:
+
+- Booking platforms like **TaxiNeo** are recognised as modernisation actors for the sector
+- The card payment obligation is reinforced with increased inspections
+- Digital invoices are now fully recognised
+
+## How to verify your fare is correct
+
+### The simple method
+
+Here is how to verify in real time that the correct tariff is being applied:
+
+1. **Check the time**: before 7 pm = tariff A (or B in suburbs), after 7 pm = tariff B (or C in suburbs)
+2. **Check the day**: Sunday or public holiday = tariff D mandatory
+3. **Check the letter** displayed on the meter (A, B, C or D)
+4. **Check the pickup charge**: approximately EUR 4.18 at the start of the ride
+
+### In case of doubt
+
+If you suspect an incorrect tariff:
+
+- **Politely ask** the driver which tariff is applied
+- **Photograph the meter** to keep a record
+- **Compare with the TaxiNeo estimate**: before booking, TaxiNeo displays a price estimate for reference
+- **Contact the prefecture** if you believe you were overcharged
+
+## Transparency with TaxiNeo
+
+TaxiNeo fully embraces the regulatory transparency logic:
+
+- **Price estimate** before booking, based on regulated fares
+- **Display of the applicable tariff** (A, B, C or D) according to time and zone
+- **Detailed invoice** with price breakdown (pickup charge, mileage, surcharges)
+- **Comparison** between available drivers
+- **Price history** to verify consistency of your past rides
+
+---
+
+**Taxi fare regulation is your best protection as a passenger.** Thanks to this strict framework, you know exactly what you are paying and why. In 2026, fares remain controlled, transparent and predictable. With TaxiNeo, this transparency is enhanced by the pre-ride price estimate and detailed post-ride invoicing. Travel with complete confidence.`,
+    },
+  },
 ];
 
 export function getArticleBySlug(slug: string): BlogArticle | undefined {
