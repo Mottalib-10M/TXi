@@ -10,6 +10,8 @@ import { TrajetDetails } from "@/components/trajet/TrajetDetails";
 import { TrajetPricing } from "@/components/trajet/TrajetPricing";
 import { TrajetRoute } from "@/components/trajet/TrajetRoute";
 import { TrajetAlternatives } from "@/components/trajet/TrajetAlternatives";
+import { TrajetConseils } from "@/components/trajet/TrajetConseils";
+import { TrajetComparaison } from "@/components/trajet/TrajetComparaison";
 import { CityFAQ } from "@/components/city/CityFAQ";
 import { CityContactForm } from "@/components/city/CityContactForm";
 import { CityCTA } from "@/components/city/CityCTA";
@@ -68,7 +70,9 @@ export default async function TrajetPage({ params }: PageProps) {
         <TrajetHero trajet={trajet} />
         <TrajetDetails trajet={trajet} />
         <TrajetRoute trajet={trajet} />
+        <TrajetConseils trajet={trajet} />
         <TrajetPricing trajet={trajet} />
+        <TrajetComparaison trajet={trajet} />
         <TrajetAlternatives trajet={trajet} />
         <CityFAQ cityName={`${trajet.from} → ${trajet.to}`} faq={trajet.i18n[loc].faq} />
         <CityContactForm cityName={`${trajet.from} → ${trajet.to}`} />

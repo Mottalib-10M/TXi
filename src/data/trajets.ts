@@ -10,6 +10,14 @@ export interface TrajetI18n {
   heroSubtitle: string;
   description: string;
   routeDescription: string;
+  /** Enriched content: 150+ word unique introduction with local context */
+  introduction?: string;
+  /** Enriched content: 150+ word detailed route description */
+  itineraire?: string;
+  /** Enriched content: 150+ word practical tips specific to this route */
+  conseils?: string;
+  /** Enriched content: 100+ word taxi vs alternatives comparison with real prices */
+  comparaisonTransport?: string;
   faq: TrajetFAQ[];
 }
 
@@ -30,6 +38,28 @@ export interface Trajet {
     fr: TrajetI18n;
     en: TrajetI18n;
   };
+  /** Minimum price in euros */
+  prixMin?: number;
+  /** Maximum price in euros */
+  prixMax?: number;
+  /** Van price in euros */
+  prixVan?: number;
+  /** Maximum duration in minutes (peak hour) */
+  dureeMax?: number;
+  /** Main highway/road used */
+  autoroute?: string;
+  /** Toll cost description */
+  peages?: string;
+  /** Slug linking to departure city page */
+  departSlug?: string;
+  /** Slug linking to arrival city page */
+  arriveeSlug?: string;
+  /** Related page slugs for internal linking */
+  liensInternes?: string[];
+  /** Content tags */
+  tags?: string[];
+  /** Hub city this route belongs to */
+  hub?: string;
 }
 
 export const categoryLabels = {
@@ -4447,12 +4477,26 @@ export const trajets: Trajet[] = [
 
 ];
 
+// Import hub expansion files (each uses `import type { Trajet }` to avoid circular deps)
+import { trajetsParis } from "./trajets-hub-paris";
+import { trajetsParisVilles } from "./trajets-paris-villes";
+import { trajetsParisToursime } from "./trajets-paris-tourisme";
+import { trajetsParisArrondissements } from "./trajets-paris-arrondissements";
+import { trajetsLyon } from "./trajets-hub-lyon";
+
+// Merge hub trajets into the main array
+trajets.push(...trajetsParis, ...trajetsParisVilles, ...trajetsParisToursime, ...trajetsParisArrondissements, ...trajetsLyon);
+
 export function getTrajetBySlug(slug: string): Trajet | undefined {
   return trajets.find((t) => t.slug === slug);
 }
 
 export function getTrajetsByCategory(category: Trajet["category"]): Trajet[] {
   return trajets.filter((t) => t.category === category);
+}
+
+export function getTrajetsByHub(hub: string): Trajet[] {
+  return trajets.filter((t) => t.hub === hub);
 }
 
 export function getRelatedTrajets(trajet: Trajet): Trajet[] {
