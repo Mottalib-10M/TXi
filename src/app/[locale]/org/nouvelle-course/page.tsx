@@ -130,7 +130,7 @@ export default function NouvelleCourse() {
 
       const res = await fetch(`/api/taxis?${params}`);
       const data = await res.json();
-      const drivers = (data.drivers || []).slice(0, 3);
+      const drivers = (data.drivers || []).slice(0, 5);
 
       setDriverResults(drivers);
       setStep("results");
@@ -175,7 +175,7 @@ export default function NouvelleCourse() {
       }
 
       setSuccess(t("rideCreated", { reference: json.reference }));
-      setTimeout(() => router.push("/org/courses"), 2000);
+      setTimeout(() => router.push("/org"), 2000);
     } catch {
       setError(tc("serverError"));
     } finally {
@@ -369,24 +369,28 @@ export default function NouvelleCourse() {
                 <p className="text-sm text-neutral-500">{t("noDriversFound")}</p>
               </div>
             ) : (
-              <div className="space-y-3">
+              <div className="space-y-2">
                 {driverResults.map((driver, index) => (
                   <div
                     key={driver.id}
-                    className={`flex items-center gap-4 p-4 rounded-xl border-2 transition-all ${
-                      index === 0 ? "border-green-200 bg-green-50/30" : "border-neutral-200"
+                    className={`flex items-center gap-4 rounded-xl transition-all ${
+                      index === 0
+                        ? "p-4 border-2 border-amber-300 bg-amber-50/50"
+                        : "p-3.5 border border-neutral-200"
                     }`}
                   >
-                    <div className="w-10 h-10 bg-neutral-200 rounded-full flex items-center justify-center text-sm font-semibold text-neutral-600 shrink-0">
+                    <div className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-semibold shrink-0 ${
+                      index === 0 ? "bg-amber-200 text-amber-800" : "bg-neutral-200 text-neutral-600"
+                    }`}>
                       {driver.firstName[0]}{driver.lastName?.[0] || ""}
                     </div>
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center gap-2">
-                        <p className="text-sm font-semibold">
-                          {driver.firstName} {driver.lastName}
+                        <p className={`text-sm font-semibold ${index === 0 ? "" : "text-neutral-700"}`}>
+                          {driver.companyName || `${driver.firstName} ${driver.lastName}`}
                         </p>
                         {index === 0 && (
-                          <span className="text-[10px] font-semibold bg-green-100 text-green-700 px-1.5 py-0.5 rounded-full">
+                          <span className="text-[10px] font-semibold bg-amber-200 text-amber-800 px-1.5 py-0.5 rounded-full">
                             {t("closest")}
                           </span>
                         )}
@@ -399,7 +403,7 @@ export default function NouvelleCourse() {
                     </div>
                     <div className="text-right shrink-0">
                       {driver.estimatedPrice && (
-                        <p className="text-lg font-bold">{driver.estimatedPrice.toFixed(0)} €</p>
+                        <p className={`font-bold ${index === 0 ? "text-lg" : "text-base text-neutral-700"}`}>{driver.estimatedPrice.toFixed(0)} €</p>
                       )}
                       <p className="text-[10px] text-neutral-400">{t("fixedPriceLabel")}</p>
                     </div>
@@ -407,7 +411,11 @@ export default function NouvelleCourse() {
                       type="button"
                       disabled={loading}
                       onClick={() => handleConfirmBooking(driver.id)}
-                      className="bg-neutral-900 text-white text-sm font-medium px-4 py-2 rounded-full hover:bg-neutral-800 transition-colors disabled:opacity-50 shrink-0"
+                      className={`text-sm font-medium px-4 py-2 rounded-full transition-colors disabled:opacity-50 shrink-0 ${
+                        index === 0
+                          ? "bg-amber-500 text-white hover:bg-amber-600"
+                          : "bg-neutral-900 text-white hover:bg-neutral-800"
+                      }`}
                     >
                       {t("selectDriver")}
                     </button>

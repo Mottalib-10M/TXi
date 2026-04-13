@@ -116,8 +116,16 @@ export default function OrgDashboard() {
 
   const isIndividual = orgType === "INDIVIDUAL";
 
-  const activeBookings = recent.filter((b) => b.status === "PENDING" || b.status === "ACCEPTED");
-  const otherBookings = recent.filter((b) => b.status !== "PENDING" && b.status !== "ACCEPTED").slice(0, 4);
+  // Active = PENDING (future) + ACCEPTED (up to 24h after ride date)
+  const nowMs = Date.now();
+  const oneDayMs = 24 * 60 * 60 * 1000;
+  const activeBookings = recent.filter((b) => {
+    const rideMs = new Date(b.requestedDate).getTime();
+    if (b.status === "PENDING") return rideMs >= nowMs;
+    if (b.status === "ACCEPTED") return rideMs >= nowMs - oneDayMs;
+    return false;
+  });
+  const otherBookings = recent.filter((b) => !activeBookings.some((a) => a.id === b.id)).slice(0, 4);
 
   const statusColors: Record<string, string> = {
     PENDING: "bg-amber-50 text-amber-700",

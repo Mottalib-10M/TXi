@@ -33,14 +33,25 @@ export default async function DashboardPage() {
   });
 
   // Fetch active bookings including invited ones
+  // Show PENDING (future only) + ACCEPTED (up to 24h after ride date)
+  const now = new Date();
+  const oneDayAgo = new Date(now.getTime() - 24 * 60 * 60 * 1000);
   const activeBookings = await prisma.booking.findMany({
     where: {
-      OR: [
-        { driverId: session.user.id },
-        { invitedDriverIds: { has: session.user.id } },
+      AND: [
+        {
+          OR: [
+            { driverId: session.user.id },
+            { invitedDriverIds: { has: session.user.id } },
+          ],
+        },
+        {
+          OR: [
+            { status: "PENDING", requestedDate: { gte: now } },
+            { status: "ACCEPTED", requestedDate: { gte: oneDayAgo } },
+          ],
+        },
       ],
-      status: { in: ["PENDING", "ACCEPTED"] },
-      requestedDate: { gte: new Date() },
     },
     orderBy: { requestedDate: "asc" },
   });
@@ -71,8 +82,6 @@ export default async function DashboardPage() {
   const completedFields = profileChecks.filter((c) => c.done).length;
   const completeness = Math.round((completedFields / profileChecks.length) * 100);
   const missingChecks = profileChecks.filter((c) => !c.done);
-
-  const now = new Date();
 
   function formatDate(date: Date) {
     return new Date(date).toLocaleDateString(locale === "en" ? "en-US" : "fr-FR", {

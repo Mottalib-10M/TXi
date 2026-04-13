@@ -30,7 +30,7 @@ interface Alternative {
   distance: number;
 }
 
-const filterKeys = ["all", "pending", "accepted", "completed", "rejected"] as const;
+const filterKeys = ["pending", "accepted", "completed", "rejected", "all"] as const;
 const filterStatusMap: Record<string, string | undefined> = {
   all: undefined,
   pending: "PENDING",
@@ -59,7 +59,7 @@ export default function CoursesPage() {
   const locale = useLocale();
   const [bookings, setBookings] = useState<Booking[]>([]);
   const [loading, setLoading] = useState(true);
-  const [activeFilter, setActiveFilter] = useState<string>("all");
+  const [activeFilter, setActiveFilter] = useState<string>("pending");
   const [alternatives, setAlternatives] = useState<Record<string, Alternative[]>>({});
   const [loadingAlts, setLoadingAlts] = useState<string | null>(null);
   const [cancellingId, setCancellingId] = useState<string | null>(null);

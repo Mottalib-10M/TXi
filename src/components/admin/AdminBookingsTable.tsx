@@ -48,7 +48,7 @@ export function AdminBookingsTable({ bookings }: { bookings: Booking[] }) {
     ORGANIZATION: t("organisations"),
   };
 
-  const [filter, setFilter] = useState<string>("ALL");
+  const [filter, setFilter] = useState<string>("PENDING");
   const [search, setSearch] = useState("");
   const [expandedId, setExpandedId] = useState<string | null>(null);
 
@@ -68,12 +68,12 @@ export function AdminBookingsTable({ bookings }: { bookings: Booking[] }) {
       {/* Filters */}
       <div className="flex gap-2 mb-4 overflow-x-auto pb-2">
         {[
-          { key: "ALL", label: t("filterAll") },
           { key: "PENDING", label: t("filterPending") },
           { key: "ACCEPTED", label: t("filterAccepted") },
           { key: "COMPLETED", label: t("filterCompleted") },
           { key: "REJECTED", label: t("filterRejected") },
           { key: "CANCELLED", label: t("filterCancelled") },
+          { key: "ALL", label: t("filterAll") },
         ].map((f) => (
           <button
             key={f.key}
