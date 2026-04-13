@@ -1,7 +1,8 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useMemo } from "react";
 import { useSearchParams } from "next/navigation";
+import { useSession } from "next-auth/react";
 import { Icon } from "@iconify/react";
 import { CoverageZoneEditor } from "./CoverageZoneEditor";
 import { PricingGrid } from "./PricingGrid";
@@ -9,8 +10,11 @@ import { AvailabilityEditor } from "./AvailabilityEditor";
 import type { Vehicle } from "@/types/vehicle";
 import { EMPTY_VEHICLE } from "@/types/vehicle";
 import { VehicleMiniature } from "@/components/ui/VehicleMiniature";
+import { ComboBox } from "@/components/ui/ComboBox";
 import { VEHICLE_BRANDS, BRAND_NAMES, VEHICLE_COLORS } from "@/data/vehicle-models";
 import { useTranslations } from "next-intl";
+import { getDepartmentCode, getAirportFares } from "@/lib/department-lookup";
+import { DEPARTMENT_NAMES } from "@/data/departmental-tariffs";
 
 interface DriverData {
   id: string;
@@ -56,8 +60,30 @@ const vehicleFeatureOptions = [
 ];
 
 /**
+ * Convert HEIC/HEIF to JPEG using heic2any (lazy-loaded).
+ * Returns the original file if not HEIC or if conversion fails.
+ */
+async function convertHeicIfNeeded(file: File): Promise<File> {
+  const heicTypes = ["image/heic", "image/heif"];
+  const isHeic = heicTypes.includes(file.type) ||
+    /\.(heic|heif)$/i.test(file.name);
+
+  if (!isHeic) return file;
+
+  try {
+    const heic2any = (await import("heic2any")).default;
+    const blob = await heic2any({ blob: file, toType: "image/jpeg", quality: 0.9 });
+    const result = Array.isArray(blob) ? blob[0] : blob;
+    return new File([result], file.name.replace(/\.(heic|heif)$/i, ".jpg"), { type: "image/jpeg" });
+  } catch (err) {
+    console.error("HEIC conversion failed:", err);
+    return file;
+  }
+}
+
+/**
  * Client-side image compression using Canvas API.
- * Handles EXIF rotation (modern browsers auto-rotate), resizes large images,
+ * Handles HEIC/HEIF conversion, EXIF rotation, resizes large images,
  * and compresses to JPEG to reduce upload size on mobile.
  */
 async function compressImageClient(
@@ -66,6 +92,9 @@ async function compressImageClient(
   maxHeight = 800,
   quality = 0.8
 ): Promise<File> {
+  // Convert HEIC/HEIF to JPEG first
+  const converted = await convertHeicIfNeeded(file);
+
   return new Promise((resolve, reject) => {
     const img = new Image();
     img.onload = () => {
@@ -83,7 +112,7 @@ async function compressImageClient(
       canvas.height = height;
       const ctx = canvas.getContext("2d");
       if (!ctx) {
-        resolve(file); // Fallback to original
+        resolve(converted); // Fallback
         return;
       }
       ctx.drawImage(img, 0, 0, width, height);
@@ -93,7 +122,7 @@ async function compressImageClient(
           if (blob) {
             resolve(new File([blob], "photo.jpg", { type: "image/jpeg" }));
           } else {
-            resolve(file); // Fallback to original
+            resolve(converted); // Fallback
           }
         },
         "image/jpeg",
@@ -101,12 +130,13 @@ async function compressImageClient(
       );
     };
     img.onerror = () => reject(new Error("Failed to load image"));
-    img.src = URL.createObjectURL(file);
+    img.src = URL.createObjectURL(converted);
   });
 }
 
 export function ProfileForm({ driver }: { driver: DriverData }) {
   const t = useTranslations("profileForm");
+  const { update: updateSession } = useSession();
   const searchParams = useSearchParams();
   const [saving, setSaving] = useState(false);
   const [success, setSuccess] = useState(false);
@@ -133,6 +163,10 @@ export function ProfileForm({ driver }: { driver: DriverData }) {
     setForm((prev) => ({ ...prev, [key]: value }));
     setSuccess(false);
   }
+
+  const departmentCode = useMemo(() => getDepartmentCode(form.zoneAddress), [form.zoneAddress]);
+  const departmentName = departmentCode ? DEPARTMENT_NAMES[departmentCode] ?? null : null;
+  const airportFares = useMemo(() => getAirportFares(departmentCode), [departmentCode]);
 
   function updateVehicle(index: number, field: keyof Vehicle, value: Vehicle[keyof Vehicle]) {
     setForm((prev) => {
@@ -188,6 +222,7 @@ export function ProfileForm({ driver }: { driver: DriverData }) {
 
       if (res.ok) {
         setSuccess(true);
+        await updateSession();
       } else {
         setError(true);
         setSuccess(false);
@@ -238,9 +273,9 @@ export function ProfileForm({ driver }: { driver: DriverData }) {
   ];
 
   return (
-    <div className="flex flex-col lg:flex-row gap-6">
-      {/* Section tabs */}
-      <div className="lg:w-56 flex lg:flex-col gap-1 overflow-x-auto pb-2 lg:pb-0">
+    <div className="flex flex-col gap-4">
+      {/* Section tabs — visible on mobile only, hidden on desktop (sidebar has them) */}
+      <div className="lg:hidden flex gap-1 overflow-x-auto pb-2">
         {sections.map((s) => (
           <button
             key={s.id}
@@ -258,21 +293,20 @@ export function ProfileForm({ driver }: { driver: DriverData }) {
       </div>
 
       {/* Form content */}
-      <div className="flex-1 bg-white border border-neutral-200 rounded-2xl p-6">
+      <div className="flex-1 bg-white border border-neutral-200 rounded-2xl p-5">
         {/* Personal info */}
         {activeSection === "personal" && (
-          <div className="space-y-4">
-            <h2 className="text-lg font-semibold tracking-tight mb-4">
-              {t("personalInfo")}
-            </h2>
-
-            {/* Profile photo */}
-            <div className="flex flex-col items-center gap-2 mb-2">
+          <div className="space-y-3">
+            <div className="flex items-center justify-between mb-2">
+              <h2 className="text-lg font-semibold tracking-tight">
+                {t("personalInfo")}
+              </h2>
+              {/* Profile photo */}
               <button
                 type="button"
                 onClick={() => photoInputRef.current?.click()}
                 disabled={uploadingPhoto}
-                className="relative w-20 h-20 rounded-full overflow-hidden group"
+                className="relative w-14 h-14 rounded-full overflow-hidden group shrink-0"
               >
                 {form.photoUrl ? (
                   // eslint-disable-next-line @next/next/no-img-element
@@ -282,94 +316,104 @@ export function ProfileForm({ driver }: { driver: DriverData }) {
                     className="w-full h-full object-cover"
                   />
                 ) : (
-                  <div className="w-full h-full bg-neutral-200 flex items-center justify-center text-neutral-500 text-xl font-semibold">
+                  <div className="w-full h-full bg-neutral-200 flex items-center justify-center text-neutral-500 text-lg font-semibold">
                     {form.firstName?.[0]?.toUpperCase() || ""}
                     {form.lastName?.[0]?.toUpperCase() || ""}
                   </div>
                 )}
                 <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                   {uploadingPhoto ? (
-                    <Icon icon="solar:refresh-linear" className="text-white text-xl animate-spin" />
+                    <Icon icon="solar:refresh-linear" className="text-white text-lg animate-spin" />
                   ) : (
-                    <Icon icon="solar:camera-linear" className="text-white text-xl" />
+                    <Icon icon="solar:camera-linear" className="text-white text-lg" />
                   )}
                 </div>
               </button>
-              <span className="text-xs text-neutral-400">{t("clickToEdit")}</span>
               <input
                 ref={photoInputRef}
                 type="file"
-                accept="image/*"
+                accept="image/*,.heic,.heif"
                 onChange={handlePhotoUpload}
                 className="hidden"
               />
             </div>
 
-            <div>
-              <label className="block text-sm font-medium mb-1.5">{t("companyName")}</label>
-              <input
-                value={form.companyName}
-                onChange={(e) => updateField("companyName", e.target.value)}
-                className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all"
-                placeholder={t("companyPlaceholder")}
-              />
+            <div className="grid grid-cols-2 gap-3">
+              <div>
+                <label className="block text-sm font-medium mb-1">{t("companyName")}</label>
+                <input
+                  value={form.companyName}
+                  onChange={(e) => updateField("companyName", e.target.value)}
+                  className="w-full bg-neutral-100 rounded-xl px-4 py-2.5 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all"
+                  placeholder={t("companyPlaceholder")}
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium mb-1">{t("firstName")}</label>
+                <input
+                  value={form.firstName}
+                  onChange={(e) => updateField("firstName", e.target.value)}
+                  className="w-full bg-neutral-100 rounded-xl px-4 py-2.5 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all"
+                  placeholder="Jean Dupont"
+                />
+              </div>
             </div>
-            <div>
-              <label className="block text-sm font-medium mb-1.5">{t("firstName")}</label>
-              <input
-                value={form.firstName}
-                onChange={(e) => updateField("firstName", e.target.value)}
-                className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all"
-                placeholder="Jean Dupont"
-              />
-            </div>
-            <div>
-              <label className="block text-sm font-medium mb-1.5">{t("phone")}</label>
-              <input
-                type="tel"
-                value={form.phone}
-                onChange={(e) => {
-                  let raw = e.target.value.replace(/[^\d+]/g, "");
-                  if (raw.includes("+") && raw.indexOf("+") > 0) {
-                    raw = raw.replace(/\+/g, "");
+            <div className="grid grid-cols-2 gap-3">
+              <div>
+                <label className="block text-sm font-medium mb-1">{t("email")}</label>
+                <input
+                  value={form.email}
+                  readOnly
+                  disabled
+                  className="w-full bg-neutral-50 rounded-xl px-4 py-2.5 text-sm text-neutral-400 outline-none cursor-not-allowed border border-neutral-100"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium mb-1">{t("phone")}</label>
+                <input
+                  type="tel"
+                  value={form.phone}
+                  onChange={(e) => {
+                    let raw = e.target.value.replace(/[^\d+]/g, "");
+                    if (raw.includes("+") && raw.indexOf("+") > 0) {
+                      raw = raw.replace(/\+/g, "");
+                    }
+                    let digits = raw.startsWith("+") ? raw.slice(1) : raw;
+                    if (raw.startsWith("+")) {
+                      const formatted = digits.replace(/(\d{2})(?=\d)/g, "$1 ").trim();
+                      updateField("phone", "+" + formatted);
+                    } else {
+                      digits = digits.slice(0, 10);
+                      const formatted = digits.replace(/(\d{2})(?=\d)/g, "$1 ").trim();
+                      updateField("phone", formatted);
+                    }
+                  }}
+                  className="w-full bg-neutral-100 rounded-xl px-4 py-2.5 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all"
+                  placeholder={t("phonePlaceholder")}
+                />
+                {form.phone && (() => {
+                  const digits = form.phone.replace(/[^\d]/g, "");
+                  const isInternational = form.phone.startsWith("+");
+                  const valid = isInternational ? digits.length >= 11 : digits.length === 10;
+                  if (!valid) {
+                    return (
+                      <p className="text-xs text-amber-600 mt-1 flex items-center gap-1">
+                        <Icon icon="solar:info-circle-linear" className="text-sm shrink-0" />
+                        {isInternational ? t("phoneFormatError") : t("phoneDigitsError")}
+                      </p>
+                    );
                   }
-                  let digits = raw.startsWith("+") ? raw.slice(1) : raw;
-                  if (raw.startsWith("+")) {
-                    // Format international: +33 6 12 34 56 78
-                    const formatted = digits.replace(/(\d{2})(?=\d)/g, "$1 ").trim();
-                    updateField("phone", "+" + formatted);
-                  } else {
-                    // Format français: 06 12 34 56 78
-                    digits = digits.slice(0, 10);
-                    const formatted = digits.replace(/(\d{2})(?=\d)/g, "$1 ").trim();
-                    updateField("phone", formatted);
-                  }
-                }}
-                className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all"
-                placeholder={t("phonePlaceholder")}
-              />
-              {form.phone && (() => {
-                const digits = form.phone.replace(/[^\d]/g, "");
-                const isInternational = form.phone.startsWith("+");
-                const valid = isInternational ? digits.length >= 11 : digits.length === 10;
-                if (!valid) {
-                  return (
-                    <p className="text-xs text-amber-600 mt-1.5 flex items-center gap-1">
-                      <Icon icon="solar:info-circle-linear" className="text-sm shrink-0" />
-                      {isInternational ? t("phoneFormatError") : t("phoneDigitsError")}
-                    </p>
-                  );
-                }
-                return null;
-              })()}
+                  return null;
+                })()}
+              </div>
             </div>
             <div>
-              <label className="block text-sm font-medium mb-1.5">{t("bio")}</label>
+              <label className="block text-sm font-medium mb-1">{t("bio")}</label>
               <textarea
                 value={form.bio}
                 onChange={(e) => updateField("bio", e.target.value)}
-                rows={3}
-                className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all resize-none"
+                rows={2}
+                className="w-full bg-neutral-100 rounded-xl px-4 py-2.5 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all resize-none"
                 placeholder={t("bioPlaceholder")}
               />
             </div>
@@ -417,6 +461,10 @@ export function ProfileForm({ driver }: { driver: DriverData }) {
               minimumFare: form.minimumFare,
             }}
             onChange={(pricing) => setForm((prev) => ({ ...prev, ...pricing }))}
+            departmentName={departmentName}
+            zoneAddress={form.zoneAddress}
+            onGoToZone={() => setActiveSection("zone")}
+            airportFares={airportFares}
           />
         )}
 
@@ -430,11 +478,11 @@ export function ProfileForm({ driver }: { driver: DriverData }) {
 
         {/* Notifications */}
         {activeSection === "notifications" && (
-          <div className="space-y-4">
-            <h2 className="text-lg font-semibold tracking-tight mb-4">
+          <div className="space-y-3">
+            <h2 className="text-lg font-semibold tracking-tight mb-2">
               {t("notificationPrefs")}
             </h2>
-            <label className="flex items-center justify-between py-3 border-b border-neutral-100">
+            <label className="flex items-center justify-between py-2.5 border-b border-neutral-100">
               <div>
                 <p className="text-sm font-medium">{t("emailNotifications")}</p>
                 <p className="text-xs text-neutral-500 font-light">
@@ -455,32 +503,25 @@ export function ProfileForm({ driver }: { driver: DriverData }) {
                 />
               </button>
             </label>
-            <label className="flex items-center justify-between py-3">
+            <div className="flex items-center justify-between py-2.5 opacity-50">
               <div>
-                <p className="text-sm font-medium">{t("smsNotifications")}</p>
+                <p className="text-sm font-medium flex items-center gap-2">
+                  {t("smsNotifications")}
+                  <span className="text-[10px] font-medium bg-neutral-100 text-neutral-500 px-1.5 py-0.5 rounded-full">{t("comingSoon")}</span>
+                </p>
                 <p className="text-xs text-neutral-500 font-light">
                   {t("smsNotificationsDesc")}
                 </p>
               </div>
-              <button
-                type="button"
-                onClick={() => updateField("notifySms", !form.notifySms)}
-                className={`w-11 h-6 rounded-full transition-colors relative ${
-                  form.notifySms ? "bg-neutral-900" : "bg-neutral-200"
-                }`}
-              >
-                <div
-                  className={`w-5 h-5 bg-white rounded-full shadow absolute top-0.5 transition-transform ${
-                    form.notifySms ? "translate-x-5" : "translate-x-0.5"
-                  }`}
-                />
-              </button>
-            </label>
+              <div className="w-11 h-6 rounded-full bg-neutral-200 relative cursor-not-allowed">
+                <div className="w-5 h-5 bg-white rounded-full shadow absolute top-0.5 translate-x-0.5" />
+              </div>
+            </div>
           </div>
         )}
 
         {/* Save button */}
-        <div className="mt-6 pt-6 border-t border-neutral-100 flex items-center justify-end gap-3">
+        <div className="mt-4 pt-4 border-t border-neutral-100 flex items-center justify-end gap-3">
           {error && (
             <span className="flex items-center gap-1.5 text-red-500 text-sm">
               <Icon icon="solar:danger-circle-linear" />
@@ -548,28 +589,43 @@ function VehicleSection({
   const vehicle = vehicles[activeTab];
 
   return (
-    <div className="space-y-4">
-      <div className="flex items-center justify-between mb-4">
+    <div className="space-y-3">
+      <div className="flex items-center justify-between mb-2">
         <h2 className="text-lg font-semibold tracking-tight">{t("vehicleTitle")}</h2>
         <span className="text-xs text-neutral-400">{vehicles.length}/2</span>
       </div>
 
       {/* Vehicle tabs */}
-      <div className="flex items-center gap-2 mb-2">
+      <div className="flex items-center gap-2 mb-1">
         {vehicles.map((_, i) => (
-          <button
-            key={i}
-            type="button"
-            onClick={() => setActiveTab(i)}
-            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
-              activeTab === i
-                ? "bg-neutral-900 text-white"
-                : "bg-neutral-100 text-neutral-600 hover:bg-neutral-200"
-            }`}
-          >
-            <Icon icon="mdi:car-outline" className="text-base" />
-            {t("vehicleNumber", { number: i + 1 })}
-          </button>
+          <div key={i} className="relative flex items-center">
+            <button
+              type="button"
+              onClick={() => setActiveTab(i)}
+              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
+                activeTab === i
+                  ? "bg-neutral-900 text-white"
+                  : "bg-neutral-100 text-neutral-600 hover:bg-neutral-200"
+              } ${i === 1 ? "pr-8" : ""}`}
+            >
+              <Icon icon="mdi:car-outline" className="text-base" />
+              {t("vehicleNumber", { number: i + 1 })}
+            </button>
+            {i === 1 && (
+              <button
+                type="button"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  removeVehicle(1);
+                  setActiveTab(0);
+                }}
+                className="absolute right-1.5 top-1/2 -translate-y-1/2 w-5 h-5 rounded-full flex items-center justify-center text-neutral-400 hover:bg-red-100 hover:text-red-600 transition-colors"
+                title={t("deleteVehicle")}
+              >
+                <Icon icon="solar:close-circle-bold" className="text-sm" />
+              </button>
+            )}
+          </div>
         ))}
         {vehicles.length < 2 && (
           <button
@@ -586,95 +642,80 @@ function VehicleSection({
         )}
       </div>
 
-      {/* Vehicle miniature preview */}
+      {/* Vehicle miniature preview with photo button inside */}
       {vehicle.brand && (
-        <VehicleMiniature
-          brand={vehicle.brand}
-          model={vehicle.model}
-          color={vehicle.color}
-          year={vehicle.year}
-          capacity={vehicle.capacity}
-        />
+        <div className="flex items-center p-3.5 gap-3 rounded-xl bg-neutral-50 border border-neutral-100">
+          {/* Color dot + car icon */}
+          <VehicleMiniature
+            brand={vehicle.brand}
+            model={vehicle.model}
+            color={vehicle.color}
+            year={vehicle.year}
+            capacity={vehicle.capacity}
+            bare
+          />
+          <button
+            type="button"
+            onClick={() => {
+              const el = document.getElementById(`vehicle-photos-${activeTab}`);
+              el?.scrollIntoView({ behavior: "smooth", block: "center" });
+            }}
+            className="flex items-center gap-1.5 shrink-0 ml-auto text-xs font-medium bg-neutral-900 text-white px-3 py-2 rounded-lg hover:bg-neutral-800 transition-colors"
+          >
+            <Icon icon="solar:camera-add-linear" className="text-sm" />
+            {vehicle.photos && vehicle.photos.length > 0
+              ? `${vehicle.photos.length}/5`
+              : t("addPhoto")
+            }
+          </button>
+        </div>
       )}
 
-      {/* Delete button for vehicle 2 */}
-      {activeTab === 1 && (
-        <button
-          type="button"
-          onClick={() => {
-            removeVehicle(1);
-            setActiveTab(0);
-          }}
-          className="flex items-center gap-1 text-xs text-red-500 hover:text-red-700 transition-colors"
-        >
-          <Icon icon="solar:trash-bin-trash-linear" className="text-sm" />
-          {t("deleteVehicle")}
-        </button>
-      )}
-
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
         <div>
-          <label className="block text-sm font-medium mb-1.5">{t("brand")}</label>
-          <input
-            list="brand-list"
+          <label className="block text-sm font-medium mb-1">{t("brand")}</label>
+          <ComboBox
             value={vehicle.brand}
-            onChange={(e) => {
-              updateVehicle(activeTab, "brand", e.target.value);
-              // Reset model when brand changes
-              if (e.target.value !== vehicle.brand) {
+            onChange={(val) => {
+              const prev = vehicle.brand;
+              updateVehicle(activeTab, "brand", val);
+              if (val !== prev) {
                 updateVehicle(activeTab, "model", "");
               }
             }}
-            className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all"
+            options={BRAND_NAMES}
             placeholder={t("brandPlaceholder")}
           />
-          <datalist id="brand-list">
-            {BRAND_NAMES.map((b) => (
-              <option key={b} value={b} />
-            ))}
-          </datalist>
         </div>
         <div>
-          <label className="block text-sm font-medium mb-1.5">{t("model")}</label>
-          <input
-            list={`model-list-${activeTab}`}
+          <label className="block text-sm font-medium mb-1">{t("model")}</label>
+          <ComboBox
             value={vehicle.model}
-            onChange={(e) => updateVehicle(activeTab, "model", e.target.value)}
-            className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all"
+            onChange={(val) => updateVehicle(activeTab, "model", val)}
+            options={VEHICLE_BRANDS[vehicle.brand] || []}
             placeholder={t("modelPlaceholder")}
           />
-          <datalist id={`model-list-${activeTab}`}>
-            {(VEHICLE_BRANDS[vehicle.brand] || []).map((m) => (
-              <option key={m} value={m} />
-            ))}
-          </datalist>
         </div>
         <div>
-          <label className="block text-sm font-medium mb-1.5">{t("year")}</label>
+          <label className="block text-sm font-medium mb-1">{t("year")}</label>
           <input
             type="number"
             value={vehicle.year}
             onChange={(e) => updateVehicle(activeTab, "year", parseInt(e.target.value))}
-            className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all"
+            className="w-full bg-neutral-100 rounded-xl px-4 py-2.5 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all"
           />
         </div>
         <div>
-          <label className="block text-sm font-medium mb-1.5">{t("color")}</label>
-          <input
-            list="color-list"
+          <label className="block text-sm font-medium mb-1">{t("color")}</label>
+          <ComboBox
             value={vehicle.color}
-            onChange={(e) => updateVehicle(activeTab, "color", e.target.value)}
-            className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all"
+            onChange={(val) => updateVehicle(activeTab, "color", val)}
+            options={VEHICLE_COLORS}
             placeholder={t("colorPlaceholder")}
           />
-          <datalist id="color-list">
-            {VEHICLE_COLORS.map((c) => (
-              <option key={c} value={c} />
-            ))}
-          </datalist>
         </div>
         <div>
-          <label className="block text-sm font-medium mb-1.5">{t("plate")}</label>
+          <label className="block text-sm font-medium mb-1">{t("plate")}</label>
           <input
             value={vehicle.plate}
             onChange={(e) => {
@@ -685,25 +726,25 @@ function VehicleSection({
               updateVehicle(activeTab, "plate", formatted);
             }}
             maxLength={9}
-            className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm font-mono tracking-wider outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all uppercase"
+            className="w-full bg-neutral-100 rounded-xl px-4 py-2.5 text-sm font-mono tracking-wider outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all uppercase"
             placeholder="AB-123-CD"
           />
         </div>
         <div>
-          <label className="block text-sm font-medium mb-1.5">{t("passengerCapacity")}</label>
+          <label className="block text-sm font-medium mb-1">{t("passengerCapacity")}</label>
           <input
             type="number"
             min={1}
             max={8}
             value={vehicle.capacity}
             onChange={(e) => updateVehicle(activeTab, "capacity", parseInt(e.target.value))}
-            className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all"
+            className="w-full bg-neutral-100 rounded-xl px-4 py-2.5 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all"
           />
         </div>
       </div>
 
       <div>
-        <label className="block text-sm font-medium mb-3">{t("vehicleOptions")}</label>
+        <label className="block text-sm font-medium mb-2">{t("vehicleOptions")}</label>
         <div className="flex flex-wrap gap-2">
           {vehicleFeatureOptions.map((feature) => (
             <button
@@ -723,10 +764,12 @@ function VehicleSection({
       </div>
 
       {/* Vehicle photos */}
-      <VehiclePhotos
-        photos={vehicle.photos || []}
-        onPhotosChange={(photos) => updateVehicle(activeTab, "photos", photos)}
-      />
+      <div id={`vehicle-photos-${activeTab}`}>
+        <VehiclePhotos
+          photos={vehicle.photos || []}
+          onPhotosChange={(photos) => updateVehicle(activeTab, "photos", photos)}
+        />
+      </div>
     </div>
   );
 }
@@ -775,7 +818,7 @@ function VehiclePhotos({
 
   return (
     <div>
-      <label className="block text-sm font-medium mb-3">{t("vehiclePhotos")}</label>
+      <label className="block text-sm font-medium mb-2">{t("vehiclePhotos")}</label>
       <div className="grid grid-cols-3 sm:grid-cols-5 gap-3">
         {photos.map((url, i) => (
           <div key={i} className="relative group aspect-square rounded-xl overflow-hidden bg-neutral-100">
@@ -811,7 +854,7 @@ function VehiclePhotos({
       <input
         ref={fileInputRef}
         type="file"
-        accept="image/*"
+        accept="image/*,.heic,.heif"
         onChange={handleUpload}
         className="hidden"
       />

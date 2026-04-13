@@ -23,7 +23,7 @@ export async function StationInternalLinks({ station }: { station: Station }) {
               href={`/taxi-gare-${s.slug}`}
               className="flex items-center gap-2 bg-white border border-neutral-200 rounded-xl px-4 py-3 hover:border-neutral-400 transition-colors card-hover"
             >
-              <Icon icon="solar:train-linear" className="text-neutral-400" />
+              <Icon icon="mdi:train" className="text-neutral-400" />
               <span className="text-sm font-medium">Taxi {t("stationPrefix")}{s.name}</span>
             </Link>
           ))}

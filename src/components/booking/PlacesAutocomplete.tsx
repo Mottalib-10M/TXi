@@ -9,6 +9,7 @@ interface PlacesAutocompleteProps {
   onChange: (value: string, lat?: number, lng?: number) => void;
   icon: string;
   showGeolocation?: boolean;
+  inputId?: string;
 }
 
 interface Prediction {
@@ -22,6 +23,7 @@ export function PlacesAutocomplete({
   onChange,
   icon,
   showGeolocation = false,
+  inputId,
 }: PlacesAutocompleteProps) {
   const [suggestions, setSuggestions] = useState<Prediction[]>([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
@@ -133,6 +135,7 @@ export function PlacesAutocomplete({
       <div className="flex items-center bg-neutral-100 rounded-xl px-4 py-3.5 focus-within:ring-2 focus-within:ring-neutral-900 focus-within:bg-white transition-all">
         <Icon icon={icon} className="text-neutral-400 text-lg mr-3 shrink-0" />
         <input
+          id={inputId}
           type="text"
           value={value}
           onChange={(e) => handleInputChange(e.target.value)}

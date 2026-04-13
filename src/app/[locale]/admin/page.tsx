@@ -5,13 +5,31 @@ export const dynamic = "force-dynamic";
 
 export default async function AdminOverviewPage() {
   try {
-    const [drivers, organizations, bookings, revenue] = await Promise.all([
+    const now = new Date();
+    const ago24h = new Date(now.getTime() - 24 * 60 * 60 * 1000);
+    const ago7d = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
+    const ago30d = new Date(now.getTime() - 30 * 24 * 60 * 60 * 1000);
+
+    const [
+      drivers,
+      organizations,
+      bookings,
+      revenue,
+      driversActive24h,
+      driversActive7d,
+      driversActive30d,
+      orgsActive24h,
+      orgsActive7d,
+      orgsActive30d,
+      recentlyActiveDrivers,
+      recentlyActiveOrgs,
+    ] = await Promise.all([
       prisma.driver.findMany({
-        select: { id: true, firstName: true, lastName: true, email: true, isActive: true, createdAt: true },
+        select: { id: true, firstName: true, lastName: true, email: true, isActive: true, lastLoginAt: true, createdAt: true },
         orderBy: { createdAt: "desc" },
       }),
       prisma.organization.findMany({
-        select: { id: true, name: true, email: true, type: true, createdAt: true },
+        select: { id: true, name: true, email: true, type: true, lastLoginAt: true, createdAt: true },
         orderBy: { createdAt: "desc" },
       }),
       prisma.booking.findMany({
@@ -32,6 +50,24 @@ export default async function AdminOverviewPage() {
       prisma.booking.aggregate({
         where: { status: "COMPLETED", lockedPrice: { not: null } },
         _sum: { lockedPrice: true },
+      }),
+      prisma.driver.count({ where: { lastLoginAt: { gte: ago24h } } }),
+      prisma.driver.count({ where: { lastLoginAt: { gte: ago7d } } }),
+      prisma.driver.count({ where: { lastLoginAt: { gte: ago30d } } }),
+      prisma.organization.count({ where: { lastLoginAt: { gte: ago24h } } }),
+      prisma.organization.count({ where: { lastLoginAt: { gte: ago7d } } }),
+      prisma.organization.count({ where: { lastLoginAt: { gte: ago30d } } }),
+      prisma.driver.findMany({
+        where: { lastLoginAt: { not: null } },
+        orderBy: { lastLoginAt: "desc" },
+        take: 5,
+        select: { id: true, firstName: true, lastName: true, lastLoginAt: true },
+      }),
+      prisma.organization.findMany({
+        where: { lastLoginAt: { not: null } },
+        orderBy: { lastLoginAt: "desc" },
+        take: 5,
+        select: { id: true, name: true, lastLoginAt: true },
       }),
     ]);
 
@@ -77,6 +113,28 @@ export default async function AdminOverviewPage() {
         driverName: b.driver ? `${b.driver.firstName} ${b.driver.lastName}` : null,
         orgName: b.organization?.name || null,
       })),
+      activeUsers: {
+        drivers24h: driversActive24h,
+        drivers7d: driversActive7d,
+        drivers30d: driversActive30d,
+        orgs24h: orgsActive24h,
+        orgs7d: orgsActive7d,
+        orgs30d: orgsActive30d,
+      },
+      recentActivity: [
+        ...recentlyActiveDrivers.map((d: typeof recentlyActiveDrivers[number]) => ({
+          type: "driver" as const,
+          id: d.id,
+          name: `${d.firstName} ${d.lastName}`,
+          at: d.lastLoginAt!.toISOString(),
+        })),
+        ...recentlyActiveOrgs.map((o: typeof recentlyActiveOrgs[number]) => ({
+          type: "org" as const,
+          id: o.id,
+          name: o.name,
+          at: o.lastLoginAt!.toISOString(),
+        })),
+      ].sort((a, b) => new Date(b.at).getTime() - new Date(a.at).getTime()).slice(0, 8),
     };
 
     return <AdminOverview data={data} />;

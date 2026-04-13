@@ -2,11 +2,16 @@ import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
 import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
-import { haversineDistance, estimatePrice } from "@/lib/geo";
+import { haversineDistance, getRoutingDistance, estimatePrice } from "@/lib/geo";
 import { generateUniqueReference } from "@/lib/reference";
+import { sendEmail, buildDriverNotificationEmail } from "@/lib/email";
+import { sendSms } from "@/lib/sms";
+import { runEscalation } from "@/lib/escalation";
+import { format } from "date-fns";
+import { fr } from "date-fns/locale";
 
 const createBookingSchema = z.object({
-  beneficiaryName: z.string().min(1, "Nom du bénéficiaire requis"),
+  beneficiaryName: z.string().optional().default(""),
   departureName: z.string().min(1),
   departureLat: z.number(),
   departureLng: z.number(),
@@ -32,13 +37,14 @@ export async function POST(request: Request) {
     const reference = await generateUniqueReference();
     const requestedDate = new Date(data.requestedDate);
 
-    // Calculate distance
-    const estimatedDistance = haversineDistance(
+    // Calculate distance (real driving distance via OSRM)
+    const routing = await getRoutingDistance(
       data.departureLat,
       data.departureLng,
       data.arrivalLat,
       data.arrivalLng
     );
+    const estimatedDistance = routing.distanceKm;
 
     let driverId = data.driverId;
     let estimatedPrice = data.estimatedPrice;
@@ -128,7 +134,34 @@ export async function POST(request: Request) {
         beneficiaryName: data.beneficiaryName,
         source: "ORGANIZATION",
       },
+      include: { driver: true },
     });
+
+    // Send notifications to assigned driver
+    if (booking.driver) {
+      const dateFormatted = format(requestedDate, "dd MMMM yyyy 'à' HH:mm", { locale: fr });
+
+      if (booking.driver.notifyEmail) {
+        const emailData = buildDriverNotificationEmail({
+          driverName: booking.driver.firstName,
+          clientName: data.beneficiaryName,
+          departure: data.departureName,
+          arrival: data.arrivalName,
+          date: dateFormatted,
+          reference,
+          bookingId: booking.id,
+          price: lockedPrice,
+          source: "ORGANIZATION",
+          locale: "fr",
+        });
+        await sendEmail({ to: booking.driver.email, ...emailData });
+      }
+
+      if (booking.driver.notifySms && booking.driver.phone) {
+        const smsText = `TaxiNeo - Nouvelle réservation #${reference} de ${data.beneficiaryName}. ${data.departureName} → ${data.arrivalName}. Connectez-vous pour accepter.`;
+        await sendSms(booking.driver.phone, smsText);
+      }
+    }
 
     return NextResponse.json(
       { message: "Course créée", reference: booking.reference, bookingId: booking.id },
@@ -157,6 +190,9 @@ export async function GET(request: NextRequest) {
     const where: Record<string, unknown> = { organizationId: session.user.id };
     if (status) where.status = status;
 
+    // Escalate pending bookings before fetching
+    await runEscalation().catch((e) => console.error("Escalation error:", e));
+
     const [bookings, total] = await Promise.all([
       prisma.booking.findMany({
         where,
@@ -165,6 +201,7 @@ export async function GET(request: NextRequest) {
             select: {
               firstName: true,
               lastName: true,
+              phone: true,
               zoneLat: true,
               zoneLng: true,
             },

@@ -13,14 +13,19 @@ export function PhoneLink({
   className?: string;
 }) {
   return (
-    <a
-      href={`tel:${phone}`}
-      onClick={(e) => { e.stopPropagation(); trackPhoneClick({ phone, context: label || "phone_link" }); }}
+    <button
+      type="button"
+      onClick={(e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        trackPhoneClick({ phone, context: label || "phone_link" });
+        window.location.href = `tel:${phone}`;
+      }}
       className={`inline-flex items-center gap-1 text-xs font-medium transition-colors ${className}`}
       title={label}
     >
       <Icon icon="solar:phone-bold" className="text-sm" />
       {phone}
-    </a>
+    </button>
   );
 }

@@ -3,7 +3,7 @@
 import { useState, useMemo } from "react";
 import { useRouter } from "@/i18n/navigation";
 import { Icon } from "@iconify/react";
-import { format } from "date-fns";
+import { format, formatDistanceToNow } from "date-fns";
 import { enUS, fr } from "date-fns/locale";
 import { Link } from "@/i18n/navigation";
 import { useLocale, useTranslations } from "next-intl";
@@ -20,6 +20,9 @@ interface Driver {
   isActive: boolean;
   isVerified: boolean;
   emailVerified: boolean;
+  lastLoginAt: string | null;
+  loginCount: number;
+  bookingsCount: number;
   createdAt: string;
 }
 
@@ -109,6 +112,16 @@ export function DriversTable({ drivers }: { drivers: Driver[] }) {
   }
 
   const notSpecifiedLabel = t("notSpecified");
+  const dateFnsLocale = locale === "en" ? enUS : fr;
+
+  function activityStatus(lastLoginAt: string | null): { color: string; label: string } {
+    if (!lastLoginAt) return { color: "bg-neutral-300", label: t("neverConnected") };
+    const diff = Date.now() - new Date(lastLoginAt).getTime();
+    const days = diff / (1000 * 60 * 60 * 24);
+    if (days < 7) return { color: "bg-green-500", label: t("recentlyActive") };
+    if (days < 30) return { color: "bg-amber-400", label: t("activeThisMonth") };
+    return { color: "bg-red-400", label: t("inactiveLong") };
+  }
 
   return (
     <div>
@@ -192,12 +205,19 @@ export function DriversTable({ drivers }: { drivers: Driver[] }) {
                   >
                     {/* Header */}
                     <div className="flex flex-wrap items-center gap-2 mb-2">
-                      <div className="w-8 h-8 bg-blue-50 rounded-full flex items-center justify-center text-xs font-semibold text-blue-600 shrink-0">
+                      <div className="relative w-8 h-8 bg-blue-50 rounded-full flex items-center justify-center text-xs font-semibold text-blue-600 shrink-0">
                         {driver.firstName[0]}{driver.lastName[0]}
+                        <span
+                          className={`absolute -bottom-0.5 -right-0.5 w-3 h-3 rounded-full border-2 border-white ${activityStatus(driver.lastLoginAt).color}`}
+                          title={activityStatus(driver.lastLoginAt).label}
+                        />
                       </div>
-                      <p className="text-sm font-semibold">
+                      <Link
+                        href={`/admin/chauffeurs/${driver.id}`}
+                        className="text-sm font-semibold hover:text-blue-600 transition-colors"
+                      >
                         {driver.firstName} {driver.lastName}
-                      </p>
+                      </Link>
                       <span
                         className={`text-xs px-2.5 py-0.5 rounded-full font-medium ${
                           driver.isActive
@@ -247,8 +267,22 @@ export function DriversTable({ drivers }: { drivers: Driver[] }) {
                           {driver.zone}
                         </span>
                       )}
+                      <span className="flex items-center gap-1">
+                        <Icon icon="solar:calendar-linear" className="text-neutral-400" />
+                        {t("ridesCount", { count: driver.bookingsCount })}
+                      </span>
+                      <span className="flex items-center gap-1">
+                        <Icon icon="solar:square-arrow-right-linear" className="text-neutral-400" />
+                        {t("connectionsCount", { count: driver.loginCount })}
+                      </span>
+                      {driver.lastLoginAt && (
+                        <span className="flex items-center gap-1" title={format(new Date(driver.lastLoginAt), "dd MMM yyyy HH:mm", { locale: dateFnsLocale })}>
+                          <Icon icon="solar:clock-circle-linear" className="text-neutral-400" />
+                          {t("lastSeen", { time: formatDistanceToNow(new Date(driver.lastLoginAt), { addSuffix: true, locale: dateFnsLocale }) })}
+                        </span>
+                      )}
                       <span className="text-neutral-400">
-                        {t("registeredOn", { date: format(new Date(driver.createdAt), "dd MMM yyyy", { locale: locale === "en" ? enUS : fr }) })}
+                        {t("registeredOn", { date: format(new Date(driver.createdAt), "dd MMM yyyy", { locale: dateFnsLocale }) })}
                       </span>
                     </div>
 
@@ -289,7 +323,7 @@ export function DriversTable({ drivers }: { drivers: Driver[] }) {
                         disabled={impersonating === driver.id}
                         className="px-3 py-1.5 rounded-lg text-xs font-medium bg-amber-50 text-amber-700 hover:bg-amber-100 transition-colors flex items-center gap-1 disabled:opacity-50"
                       >
-                        <Icon icon="solar:login-3-linear" />
+                        <Icon icon="solar:square-arrow-right-linear" />
                         {impersonating === driver.id ? "..." : t("loginAs")}
                       </button>
                     </div>

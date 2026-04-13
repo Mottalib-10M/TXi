@@ -7,6 +7,7 @@ import { Footer } from "@/components/layout/Footer";
 import { BookingForm } from "@/components/booking/BookingForm";
 import { ScrollAnimation } from "@/components/ui/ScrollAnimation";
 import { AddToFavoritesPopup } from "@/components/ui/AddToFavoritesPopup";
+import { ScrollToBooking } from "@/components/ui/ScrollToBooking";
 import { popularCities, cities } from "@/data/cities";
 import { popularAirports, airports } from "@/data/airports";
 import { popularStations, stations } from "@/data/stations";
@@ -246,112 +247,38 @@ export default async function HomePage() {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 md:py-28">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16 fade-up">
-            <p className="text-sm font-medium text-neutral-500 mb-2 uppercase tracking-wider">
-              {t("servicesTitle")}
-            </p>
+      <section className="py-14 md:py-20" id="reserver">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="text-center mb-10 fade-up">
             <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
               {t("servicesSubtitle")}
             </h2>
-          </div>
-
-          <div className="max-w-2xl mx-auto">
-            {/* Card — Taxi à prix fixe */}
-            <div className="bg-white border border-neutral-200 rounded-2xl p-8 fade-up fade-up-delay-1">
-              <div className="w-12 h-12 bg-neutral-900 rounded-full flex items-center justify-center mb-5">
-                <Icon icon="solar:routing-linear" className="text-white text-2xl" />
-              </div>
-              <h3 className="text-xl font-semibold tracking-tight mb-2">
-                {t("serviceFixedTitle")}
-              </h3>
-              <p className="text-sm text-neutral-500 font-light leading-relaxed mb-6">
-                {t("serviceFixedDesc")}
-              </p>
-              <ul className="space-y-3 mb-8">
-                {[t("serviceFixedPoint1"), t("serviceFixedPoint2"), t("serviceFixedPoint3")].map(
-                  (point) => (
-                    <li key={point} className="flex items-center gap-3">
-                      <div className="w-5 h-5 bg-neutral-100 rounded-full flex items-center justify-center shrink-0">
-                        <Icon icon="solar:check-read-linear" className="text-neutral-900 text-xs" />
-                      </div>
-                      <span className="text-sm font-light text-neutral-600">{point}</span>
-                    </li>
-                  )
-                )}
-              </ul>
-              <Link
-                href="/#reserver"
-                className="inline-flex items-center gap-2 bg-neutral-950 text-white text-sm font-medium px-6 py-3 rounded-full hover:bg-neutral-800 transition-colors btn-lift"
-              >
-                {t("serviceFixedCta")}
-                <Icon icon="solar:arrow-right-linear" />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* How it Works Section */}
-      <section
-        className="bg-neutral-50 border-t border-b border-neutral-100 py-20 md:py-28"
-        id="comment-ca-marche"
-      >
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16 fade-up">
-            <p className="text-sm font-medium text-neutral-500 mb-2 uppercase tracking-wider">
-              {t("howItWorksSubtitle")}
+            <p className="text-base text-neutral-500 font-light mt-3 max-w-lg mx-auto">
+              {t("serviceFixedDesc")}
             </p>
-            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
-              {t("howItWorksTitle")}
-            </h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 md:gap-12">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-14 mb-10">
             {[
-              {
-                step: "1",
-                title: t("step1Title"),
-                desc: t("step1Desc"),
-              },
-              {
-                step: "2",
-                title: t("step2Title"),
-                desc: t("step2Desc"),
-              },
-              {
-                step: "3",
-                title: t("step3Title"),
-                desc: t("step3Desc"),
-              },
-            ].map((item, i) => (
-              <div key={item.step} className={`relative fade-up fade-up-delay-${i + 1}`}>
-                <div className="flex items-start gap-5">
-                  <div className="w-12 h-12 bg-neutral-900 text-white rounded-2xl flex items-center justify-center shrink-0 text-lg font-semibold">
-                    {item.step}
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-medium tracking-tight mb-2">{item.title}</h3>
-                    <p className="text-sm text-neutral-500 font-light leading-relaxed">
-                      {item.desc}
-                    </p>
-                  </div>
+              { icon: "solar:tag-price-linear", text: t("serviceFixedPoint1") },
+              { icon: "solar:shield-check-linear", text: t("serviceFixedPoint2") },
+              { icon: "solar:clock-circle-linear", text: t("serviceFixedPoint3") },
+            ].map((item) => (
+              <div key={item.text} className="flex items-center gap-3 fade-up">
+                <div className="w-10 h-10 bg-neutral-900 rounded-full flex items-center justify-center shrink-0">
+                  <Icon icon={item.icon} className="text-white text-lg" />
                 </div>
+                <p className="text-sm font-medium text-neutral-700">{item.text}</p>
               </div>
             ))}
           </div>
 
-          <div className="flex justify-center mt-12 fade-up">
-            <Link
-              href="/comment-ca-marche"
-              className="text-sm font-medium text-neutral-900 bg-neutral-100 border border-neutral-300 rounded-full px-5 py-2 hover:bg-neutral-200 transition-colors inline-flex items-center gap-1.5"
-            >
-              {t("howItWorksLearnMore")} <Icon icon="solar:arrow-right-linear" className="text-sm" />
-            </Link>
+          <div className="text-center fade-up">
+            <ScrollToBooking label={t("serviceFixedCta")} />
           </div>
         </div>
       </section>
+
 
       {/* Features Section */}
       <section className="py-20 md:py-28" id="chauffeurs">

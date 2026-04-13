@@ -36,7 +36,7 @@ const advantageIcons = [
 const serviceIcons = [
   "solar:airplane-linear",
   "solar:route-linear",
-  "solar:train-linear",
+  "mdi:train",
   "solar:map-linear",
   "solar:calendar-linear",
   "solar:buildings-2-linear",

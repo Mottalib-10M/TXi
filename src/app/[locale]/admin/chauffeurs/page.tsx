@@ -21,7 +21,10 @@ export default async function AdminDriversPage() {
       isActive: true,
       isVerified: true,
       emailVerified: true,
+      lastLoginAt: true,
+      loginCount: true,
       createdAt: true,
+      _count: { select: { bookings: true } },
     },
   });
 
@@ -44,6 +47,9 @@ export default async function AdminDriversPage() {
       isActive: d.isActive,
       isVerified: d.isVerified,
       emailVerified: d.emailVerified,
+      lastLoginAt: d.lastLoginAt?.toISOString() || null,
+      loginCount: d.loginCount,
+      bookingsCount: d._count.bookings,
       createdAt: d.createdAt.toISOString(),
     };
   });

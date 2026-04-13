@@ -3,6 +3,7 @@ import { auth } from "@/lib/auth";
 import { isAdminEmail } from "@/lib/admin";
 import { prisma } from "@/lib/prisma";
 import { Prisma } from "@prisma/client";
+import { runEscalation } from "@/lib/escalation";
 
 export async function GET(request: Request) {
   const session = await auth();
@@ -28,6 +29,9 @@ export async function GET(request: Request) {
         { clientName: { contains: search, mode: "insensitive" } },
       ];
     }
+
+    // Escalate pending bookings before fetching
+    await runEscalation().catch((e) => console.error("Escalation error:", e));
 
     const bookings = await prisma.booking.findMany({
       where,

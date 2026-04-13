@@ -7,7 +7,7 @@ const serviceIcons = [
   "solar:user-check-linear",
   "solar:clock-circle-linear",
   "solar:routing-2-linear",
-  "solar:heart-pulse-linear",
+  "solar:health-linear",
 ];
 
 export async function CityServices({ cityName }: { cityName: string }) {

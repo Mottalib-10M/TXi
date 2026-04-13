@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { prisma } from "@/lib/prisma";
-import { haversineDistance, estimatePrice } from "@/lib/geo";
+import { haversineDistance, getRoutingDistance, estimatePrice } from "@/lib/geo";
 import { generateUniqueReference } from "@/lib/reference";
 import {
   sendEmail,
@@ -9,6 +9,7 @@ import {
   buildClientConfirmationEmail,
 } from "@/lib/email";
 import { sendSms } from "@/lib/sms";
+import { runEscalation } from "@/lib/escalation";
 import { format } from "date-fns";
 import { fr, enUS } from "date-fns/locale";
 
@@ -44,12 +45,13 @@ export async function POST(request: Request) {
     let estimatedPrice = data.estimatedPrice;
 
     if (data.departureLat && data.departureLng && data.arrivalLat && data.arrivalLng) {
-      estimatedDistance = haversineDistance(
+      const routing = await getRoutingDistance(
         data.departureLat,
         data.departureLng,
         data.arrivalLat,
         data.arrivalLng
       );
+      estimatedDistance = routing.distanceKm;
     }
 
     let driverId = data.driverId;
@@ -164,6 +166,7 @@ export async function POST(request: Request) {
           reference,
           bookingId: booking.id,
           price: booking.lockedPrice,
+          source: data.source,
           locale,
         });
         await sendEmail({ to: booking.driver.email, ...emailData });
@@ -193,6 +196,9 @@ export async function POST(request: Request) {
       });
       await sendEmail({ to: data.clientEmail, ...clientEmailData });
     }
+
+    // Fire-and-forget: escalate any older pending bookings
+    runEscalation().catch((e) => console.error("Escalation error:", e));
 
     return NextResponse.json(
       { message: "Réservation créée", reference, bookingId: booking.id },

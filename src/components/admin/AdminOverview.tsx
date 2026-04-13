@@ -2,7 +2,7 @@
 
 import { Link } from "@/i18n/navigation";
 import { Icon } from "@iconify/react";
-import { format } from "date-fns";
+import { format, formatDistanceToNow } from "date-fns";
 import { enUS, fr } from "date-fns/locale";
 import { useLocale, useTranslations } from "next-intl";
 
@@ -27,6 +27,20 @@ interface OverviewData {
     createdAt: string;
     driverName: string | null;
     orgName: string | null;
+  }[];
+  activeUsers: {
+    drivers24h: number;
+    drivers7d: number;
+    drivers30d: number;
+    orgs24h: number;
+    orgs7d: number;
+    orgs30d: number;
+  };
+  recentActivity: {
+    type: "driver" | "org";
+    id: string;
+    name: string;
+    at: string;
   }[];
 }
 
@@ -181,7 +195,92 @@ export function AdminOverview({ data }: { data: OverviewData }) {
         </div>
       )}
 
-      {/* Recent activity */}
+      {/* Active users + Recent activity feed */}
+      <div className="grid lg:grid-cols-2 gap-6 mb-8">
+        {/* Active users card */}
+        <div className="bg-white border border-neutral-200 rounded-2xl p-5">
+          <div className="flex items-center gap-2 mb-4">
+            <Icon icon="solar:users-group-rounded-bold" className="text-green-500" />
+            <h3 className="text-sm font-semibold">{t("activeUsersTitle")}</h3>
+          </div>
+          <div className="space-y-3">
+            <div className="flex items-center justify-between">
+              <span className="text-xs text-neutral-500">{t("last24h")}</span>
+              <div className="flex items-center gap-3">
+                <span className="text-xs bg-blue-50 text-blue-700 px-2 py-0.5 rounded-full">
+                  {data.activeUsers.drivers24h} {t("drivers").toLowerCase()}
+                </span>
+                <span className="text-xs bg-violet-50 text-violet-700 px-2 py-0.5 rounded-full">
+                  {data.activeUsers.orgs24h} {t("organisations").toLowerCase()}
+                </span>
+              </div>
+            </div>
+            <div className="flex items-center justify-between">
+              <span className="text-xs text-neutral-500">{t("last7d")}</span>
+              <div className="flex items-center gap-3">
+                <span className="text-xs bg-blue-50 text-blue-700 px-2 py-0.5 rounded-full">
+                  {data.activeUsers.drivers7d} {t("drivers").toLowerCase()}
+                </span>
+                <span className="text-xs bg-violet-50 text-violet-700 px-2 py-0.5 rounded-full">
+                  {data.activeUsers.orgs7d} {t("organisations").toLowerCase()}
+                </span>
+              </div>
+            </div>
+            <div className="flex items-center justify-between">
+              <span className="text-xs text-neutral-500">{t("last30d")}</span>
+              <div className="flex items-center gap-3">
+                <span className="text-xs bg-blue-50 text-blue-700 px-2 py-0.5 rounded-full">
+                  {data.activeUsers.drivers30d} {t("drivers").toLowerCase()}
+                </span>
+                <span className="text-xs bg-violet-50 text-violet-700 px-2 py-0.5 rounded-full">
+                  {data.activeUsers.orgs30d} {t("organisations").toLowerCase()}
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Recent activity feed */}
+        <div className="bg-white border border-neutral-200 rounded-2xl overflow-hidden">
+          <div className="px-5 py-4 border-b border-neutral-100">
+            <div className="flex items-center gap-2">
+              <Icon icon="solar:history-linear" className="text-amber-500" />
+              <h3 className="font-semibold text-sm">{t("activityFeed")}</h3>
+            </div>
+          </div>
+          {data.recentActivity.length === 0 ? (
+            <div className="px-5 py-8 text-center">
+              <Icon icon="solar:history-linear" className="text-3xl text-neutral-200 mx-auto mb-2" />
+              <p className="text-sm text-neutral-400 font-light">{t("noActivity")}</p>
+            </div>
+          ) : (
+            <div className="divide-y divide-neutral-100">
+              {data.recentActivity.map((item) => (
+                <Link
+                  key={`${item.type}-${item.id}`}
+                  href={item.type === "driver" ? `/admin/chauffeurs/${item.id}` : `/admin/organisations/${item.id}`}
+                  className="flex items-center gap-3 px-5 py-3 hover:bg-neutral-50 transition-colors"
+                >
+                  <div className={`w-8 h-8 rounded-full flex items-center justify-center text-xs font-semibold shrink-0 ${
+                    item.type === "driver" ? "bg-blue-50 text-blue-600" : "bg-violet-50 text-violet-600"
+                  }`}>
+                    <Icon icon={item.type === "driver" ? "solar:user-hands-linear" : "solar:buildings-2-linear"} className="text-sm" />
+                  </div>
+                  <div className="min-w-0 flex-1">
+                    <p className="text-sm font-medium truncate">{item.name}</p>
+                    <p className="text-xs text-neutral-400">{t("loggedIn")}</p>
+                  </div>
+                  <span className="text-xs text-neutral-400 shrink-0">
+                    {formatDistanceToNow(new Date(item.at), { addSuffix: true, locale: locale === "en" ? enUS : fr })}
+                  </span>
+                </Link>
+              ))}
+            </div>
+          )}
+        </div>
+      </div>
+
+      {/* Recent registrations */}
       <div className="grid lg:grid-cols-2 gap-6 mb-8">
         {/* Recent drivers */}
         <div className="bg-white border border-neutral-200 rounded-2xl overflow-hidden">

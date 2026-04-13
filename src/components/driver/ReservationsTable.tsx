@@ -30,7 +30,7 @@ export function ReservationsTable({ bookings }: { bookings: Booking[] }) {
   const tc = useTranslations("common");
   const locale = useLocale();
   const router = useRouter();
-  const [filter, setFilter] = useState<string>("ALL");
+  const [filter, setFilter] = useState<string>("PENDING");
   const [updating, setUpdating] = useState<string | null>(null);
 
   const statusConfig: Record<string, { label: string; color: string }> = {
@@ -59,7 +59,16 @@ export function ReservationsTable({ bookings }: { bookings: Booking[] }) {
     return hoursLeft > 0 && hoursLeft < 10;
   }
 
-  const filtered = filter === "ALL" ? bookings : bookings.filter((b) => b.status === filter);
+  const statusPriority: Record<string, number> = { PENDING: 0, ACCEPTED: 1, COMPLETED: 2, REJECTED: 3, CANCELLED: 4 };
+
+  const filtered = (filter === "ALL" ? bookings : bookings.filter((b) => b.status === filter))
+    .slice()
+    .sort((a, b) => {
+      const pa = statusPriority[a.status] ?? 9;
+      const pb = statusPriority[b.status] ?? 9;
+      if (pa !== pb) return pa - pb;
+      return new Date(a.requestedDate).getTime() - new Date(b.requestedDate).getTime();
+    });
 
   async function updateStatus(bookingId: string, status: "ACCEPTED" | "REJECTED" | "COMPLETED") {
     const actionMap = { ACCEPTED: "accept", REJECTED: "reject", COMPLETED: "complete" } as const;
@@ -84,11 +93,11 @@ export function ReservationsTable({ bookings }: { bookings: Booking[] }) {
       {/* Filters */}
       <div className="flex gap-2 mb-6 overflow-x-auto pb-2">
         {[
-          { key: "ALL", label: tc("all") },
           { key: "PENDING", label: t("pending") },
           { key: "ACCEPTED", label: t("acceptedPlural") },
           { key: "COMPLETED", label: t("completed") },
           { key: "REJECTED", label: t("rejected") },
+          { key: "ALL", label: tc("all") },
         ].map((f) => (
           <button
             key={f.key}

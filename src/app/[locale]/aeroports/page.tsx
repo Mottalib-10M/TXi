@@ -286,7 +286,7 @@ export default async function AeroportsPage({ params }: PageProps) {
               >
                 <div className="flex items-center gap-4 mb-3">
                   <div className="w-10 h-10 bg-neutral-50 border border-neutral-200 rounded-xl flex items-center justify-center group-hover:bg-neutral-100 transition-colors">
-                    <Icon icon="solar:train-linear" className="text-neutral-700 text-xl" />
+                    <Icon icon="mdi:train" className="text-neutral-700 text-xl" />
                   </div>
                   <h3 className="text-base font-medium tracking-tight">{t("crossLinkStations")}</h3>
                 </div>

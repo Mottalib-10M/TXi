@@ -10,15 +10,27 @@ import { LanguageSwitcher } from "@/components/ui/LanguageSwitcher";
 
 export function DashboardSidebar({ userName }: { userName: string }) {
   const t = useTranslations("dashboard.sidebar");
+  const tp = useTranslations("dashboard.profileSections");
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const navItems = [
     { href: "/dashboard", label: t("dashboard"), icon: "solar:chart-square-linear" },
     { href: "/dashboard/carte", label: t("freeCard"), icon: "solar:card-linear" },
-    { href: "/dashboard/profil", label: t("profile"), icon: "solar:user-linear" },
-    { href: "/dashboard/profil-public", label: t("publicProfile"), icon: "solar:eye-linear" },
     { href: "/dashboard/reservations", label: t("reservations"), icon: "solar:calendar-linear" },
+    { href: "/dashboard/profil-public", label: t("publicProfile"), icon: "solar:eye-linear" },
+    { href: "/dashboard/profil", label: t("profile"), icon: "solar:user-linear" },
+  ];
+
+  const isOnProfil = pathname.startsWith("/dashboard/profil") && !pathname.startsWith("/dashboard/profil-public");
+
+  const profilSections = [
+    { id: "personal", label: tp("personal"), icon: "solar:user-linear" },
+    { id: "vehicle", label: tp("vehicle"), icon: "mdi:car-outline" },
+    { id: "zone", label: tp("zone"), icon: "solar:map-point-linear" },
+    { id: "pricing", label: tp("pricing"), icon: "solar:tag-price-linear" },
+    { id: "availability", label: tp("availability"), icon: "solar:clock-circle-linear" },
+    { id: "notifications", label: tp("notifications"), icon: "solar:bell-linear" },
   ];
 
   return (
@@ -65,22 +77,44 @@ export function DashboardSidebar({ userName }: { userName: string }) {
               const isActive =
                 item.href === "/dashboard"
                   ? pathname === "/dashboard"
-                  : pathname.startsWith(item.href);
+                  : item.href === "/dashboard/profil"
+                    ? isOnProfil
+                    : pathname.startsWith(item.href);
 
               return (
-                <Link
-                  key={item.href}
-                  href={item.href as "/dashboard"}
-                  onClick={() => setMobileOpen(false)}
-                  className={`flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm mb-1 transition-colors ${
-                    isActive
-                      ? "bg-neutral-900 text-white font-medium"
-                      : "text-neutral-600 hover:bg-neutral-100 hover:text-neutral-900"
-                  }`}
-                >
-                  <Icon icon={item.icon} className="text-lg" />
-                  {item.label}
-                </Link>
+                <div key={item.href}>
+                  <Link
+                    href={item.href as "/dashboard"}
+                    onClick={() => setMobileOpen(false)}
+                    className={`flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm mb-1 transition-colors ${
+                      isActive
+                        ? "bg-neutral-900 text-white font-medium"
+                        : "text-neutral-600 hover:bg-neutral-100 hover:text-neutral-900"
+                    }`}
+                  >
+                    <Icon icon={item.icon} className="text-lg" />
+                    {item.label}
+                  </Link>
+                  {item.href === "/dashboard/profil" && isOnProfil && (
+                    <div className="ml-4 pl-3 border-l border-neutral-200 mb-2 mt-1 space-y-0.5">
+                      {profilSections.map((s) => (
+                        <Link
+                          key={s.id}
+                          href={`/dashboard/profil?section=${s.id}` as "/dashboard"}
+                          onClick={() => setMobileOpen(false)}
+                          className={`flex items-center gap-2 px-2.5 py-1.5 rounded-lg text-xs transition-colors ${
+                            pathname === "/dashboard/profil" && (typeof window !== "undefined" && new URLSearchParams(window.location.search).get("section") === s.id)
+                              ? "bg-neutral-100 text-neutral-900 font-medium"
+                              : "text-neutral-500 hover:bg-neutral-50 hover:text-neutral-800"
+                          }`}
+                        >
+                          <Icon icon={s.icon} className="text-sm" />
+                          {s.label}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
               );
             })}
           </nav>
@@ -90,8 +124,10 @@ export function DashboardSidebar({ userName }: { userName: string }) {
               <div className="w-8 h-8 bg-neutral-200 rounded-full flex items-center justify-center text-xs font-semibold text-neutral-600">
                 {userName
                   .split(" ")
+                  .filter((n) => /^[a-zA-ZÀ-ÿ]/.test(n))
                   .map((n) => n[0])
                   .join("")
+                  .slice(0, 2)
                   .toUpperCase()}
               </div>
               <div className="flex-1 min-w-0">

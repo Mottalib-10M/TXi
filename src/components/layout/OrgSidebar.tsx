@@ -98,10 +98,11 @@ export function OrgSidebar({ userName, orgType }: { userName: string; orgType?: 
               <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-xs font-semibold text-blue-700">
                 {userName
                   .split(" ")
+                  .filter((n) => /^[a-zA-ZÀ-ÿ]/.test(n))
                   .map((n) => n[0])
                   .join("")
-                  .toUpperCase()
-                  .slice(0, 2)}
+                  .slice(0, 2)
+                  .toUpperCase()}
               </div>
               <div className="flex-1 min-w-0">
                 <p className="text-sm font-medium truncate">{userName}</p>

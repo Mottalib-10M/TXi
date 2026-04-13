@@ -27,6 +27,12 @@ export async function POST(request: Request) {
         return NextResponse.json({ error: "EMAIL_NOT_VERIFIED" }, { status: 403 });
       }
 
+      // Track login activity
+      await prisma.driver.update({
+        where: { id: driver.id },
+        data: { lastLoginAt: new Date(), loginCount: { increment: 1 } },
+      });
+
       const user = {
         id: driver.id,
         email: driver.email,
@@ -77,6 +83,12 @@ export async function POST(request: Request) {
       if (!org.emailVerified) {
         return NextResponse.json({ error: "EMAIL_NOT_VERIFIED" }, { status: 403 });
       }
+
+      // Track login activity
+      await prisma.organization.update({
+        where: { id: org.id },
+        data: { lastLoginAt: new Date(), loginCount: { increment: 1 } },
+      });
 
       const secret = process.env.NEXTAUTH_SECRET!;
       const token = await encode({

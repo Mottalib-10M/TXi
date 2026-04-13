@@ -1,23 +1,22 @@
 "use client";
 
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "@/i18n/navigation";
 import { Icon } from "@iconify/react";
 import { PlacesAutocomplete } from "@/components/booking/PlacesAutocomplete";
 import { useTranslations } from "next-intl";
 
-interface FavoriteDriver {
+interface DriverResult {
   id: string;
-  driver: {
-    id: string;
-    firstName: string;
-    lastName: string;
-    vehicleBrand?: string;
-    vehicleModel?: string;
-    zoneAddress?: string;
-    zoneLat?: number;
-    zoneLng?: number;
-  };
+  firstName: string;
+  lastName: string;
+  companyName: string;
+  slug: string;
+  vehicleBrand: string | null;
+  vehicleModel: string | null;
+  zoneAddress: string | null;
+  distance: number;
+  estimatedPrice?: number;
 }
 
 export default function NouvelleCourse() {
@@ -27,6 +26,8 @@ export default function NouvelleCourse() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
+  const [step, setStep] = useState<"form" | "results">("form");
+  const [driverResults, setDriverResults] = useState<DriverResult[]>([]);
 
   const [beneficiaryName, setBeneficiaryName] = useState("");
   const [departure, setDeparture] = useState({ name: "", lat: 0, lng: 0 });
@@ -34,18 +35,12 @@ export default function NouvelleCourse() {
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
   const [passengerCount, setPassengerCount] = useState(1);
-  const [driverChoice, setDriverChoice] = useState<"auto" | string>("auto");
-  const [favorites, setFavorites] = useState<FavoriteDriver[]>([]);
   const [estimatedPrice, setEstimatedPrice] = useState<number | null>(null);
   const [orgType, setOrgType] = useState<string>("");
 
   useEffect(() => {
-    Promise.all([
-      fetch("/api/org/favorites").then((r) => r.json()),
-      fetch("/api/org/profile").then((r) => r.json()),
-    ])
-      .then(async ([favData, profileData]) => {
-        setFavorites(favData.favorites || []);
+    fetch("/api/org/profile").then((r) => r.json())
+      .then(async (profileData) => {
         setOrgType(profileData.type || "");
         if (profileData.type === "INDIVIDUAL") {
           setBeneficiaryName(profileData.name || "");
@@ -53,7 +48,6 @@ export default function NouvelleCourse() {
         // Pré-remplir l'adresse de départ avec l'adresse de l'établissement
         if (profileData.address && profileData.type !== "INDIVIDUAL") {
           setDeparture((prev) => ({ ...prev, name: profileData.address }));
-          // Géocoder l'adresse pour obtenir les coordonnées
           try {
             const acRes = await fetch(`/api/places/autocomplete?input=${encodeURIComponent(profileData.address)}`);
             const acData = await acRes.json();
@@ -73,55 +67,42 @@ export default function NouvelleCourse() {
       .catch(() => {});
   }, []);
 
-  // Estimate price when departure/arrival change
+  // Estimate price when departure/arrival change (real driving distance via OSRM)
   useEffect(() => {
-    if (departure.lat && departure.lng && arrival.lat && arrival.lng) {
-      const R = 6371;
-      const dLat = ((arrival.lat - departure.lat) * Math.PI) / 180;
-      const dLng = ((arrival.lng - departure.lng) * Math.PI) / 180;
-      const a =
-        Math.sin(dLat / 2) ** 2 +
-        Math.cos((departure.lat * Math.PI) / 180) *
-          Math.cos((arrival.lat * Math.PI) / 180) *
-          Math.sin(dLng / 2) ** 2;
-      const dist = R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-      // Prise en charge 2€ + 1.5€/km, minimum 7€
-      const price = Math.max(2 + dist * 1.5, 7);
-      setEstimatedPrice(Math.round(price * 100) / 100);
+    if (!departure.lat || !departure.lng || !arrival.lat || !arrival.lng) return;
+
+    let cancelled = false;
+    async function fetchDistance() {
+      try {
+        const url = `https://router.project-osrm.org/route/v1/driving/${departure.lng},${departure.lat};${arrival.lng},${arrival.lat}?overview=false`;
+        const res = await fetch(url, { signal: AbortSignal.timeout(3000) });
+        const data = await res.json();
+        const distKm = data?.routes?.[0]?.distance / 1000;
+        if (!cancelled && distKm) {
+          const price = Math.max(2 + distKm * 1.5, 7);
+          setEstimatedPrice(Math.round(price * 100) / 100);
+        }
+      } catch {
+        // Fallback to haversine
+        if (cancelled) return;
+        const R = 6371;
+        const dLat = ((arrival.lat - departure.lat) * Math.PI) / 180;
+        const dLng = ((arrival.lng - departure.lng) * Math.PI) / 180;
+        const a =
+          Math.sin(dLat / 2) ** 2 +
+          Math.cos((departure.lat * Math.PI) / 180) *
+            Math.cos((arrival.lat * Math.PI) / 180) *
+            Math.sin(dLng / 2) ** 2;
+        const dist = R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+        const price = Math.max(2 + dist * 1.5, 7);
+        setEstimatedPrice(Math.round(price * 100) / 100);
+      }
     }
+    fetchDistance();
+    return () => { cancelled = true; };
   }, [departure.lat, departure.lng, arrival.lat, arrival.lng]);
 
-  // Trier les favoris par distance au point de départ, le plus proche en premier
-  const sortedFavorites = useMemo((): (FavoriteDriver & { distance: number })[] => {
-    if (!departure.lat || !departure.lng || favorites.length === 0)
-      return favorites.map((f) => ({ ...f, distance: Infinity }));
-    return [...favorites]
-      .map((fav) => {
-        let dist = Infinity;
-        if (fav.driver.zoneLat && fav.driver.zoneLng) {
-          const R = 6371;
-          const dLat = ((fav.driver.zoneLat - departure.lat) * Math.PI) / 180;
-          const dLng = ((fav.driver.zoneLng - departure.lng) * Math.PI) / 180;
-          const a =
-            Math.sin(dLat / 2) ** 2 +
-            Math.cos((departure.lat * Math.PI) / 180) *
-              Math.cos((fav.driver.zoneLat * Math.PI) / 180) *
-              Math.sin(dLng / 2) ** 2;
-          dist = R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-        }
-        return { ...fav, distance: dist };
-      })
-      .sort((a, b) => a.distance - b.distance);
-  }, [favorites, departure.lat, departure.lng]);
-
-  // Pré-sélectionner le premier favori (le plus proche) s'il y en a
-  useEffect(() => {
-    if (sortedFavorites.length > 0 && driverChoice === "auto") {
-      setDriverChoice(sortedFavorites[0].driver.id);
-    }
-  }, [sortedFavorites, driverChoice]);
-
-  async function handleSubmit(e: React.FormEvent) {
+  async function handleSearchDrivers(e: React.FormEvent) {
     e.preventDefault();
     setError("");
     setSuccess("");
@@ -139,29 +120,51 @@ export default function NouvelleCourse() {
     setLoading(true);
 
     try {
+      const params = new URLSearchParams();
+      params.set("departureLat", departure.lat.toString());
+      params.set("departureLng", departure.lng.toString());
+      params.set("arrivalLat", arrival.lat.toString());
+      params.set("arrivalLng", arrival.lng.toString());
       const requestedDate = new Date(`${date}T${time}`).toISOString();
+      params.set("requestedTime", requestedDate);
 
-      const body: Record<string, unknown> = {
-        beneficiaryName,
-        departureName: departure.name,
-        departureLat: departure.lat,
-        departureLng: departure.lng,
-        arrivalName: arrival.name,
-        arrivalLat: arrival.lat,
-        arrivalLng: arrival.lng,
-        requestedDate,
-        passengerCount,
-        estimatedPrice: estimatedPrice || undefined,
-      };
+      const res = await fetch(`/api/taxis?${params}`);
+      const data = await res.json();
+      const drivers = (data.drivers || []).slice(0, 3);
 
-      if (driverChoice !== "auto") {
-        body.driverId = driverChoice;
-      }
+      setDriverResults(drivers);
+      setStep("results");
+    } catch {
+      setError(tc("serverError"));
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  async function handleConfirmBooking(driverId: string) {
+    setLoading(true);
+    setError("");
+
+    try {
+      const requestedDate = new Date(`${date}T${time}`).toISOString();
+      const selectedDriver = driverResults.find((d) => d.id === driverId);
 
       const res = await fetch("/api/org/bookings", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(body),
+        body: JSON.stringify({
+          beneficiaryName,
+          departureName: departure.name,
+          departureLat: departure.lat,
+          departureLng: departure.lng,
+          arrivalName: arrival.name,
+          arrivalLat: arrival.lat,
+          arrivalLng: arrival.lng,
+          requestedDate,
+          passengerCount,
+          driverId,
+          estimatedPrice: selectedDriver?.estimatedPrice || estimatedPrice || undefined,
+        }),
       });
 
       const json = await res.json();
@@ -192,7 +195,7 @@ export default function NouvelleCourse() {
         </p>
       </div>
 
-      <form onSubmit={handleSubmit} className="space-y-5">
+      <form onSubmit={handleSearchDrivers} className="space-y-5">
         {error && (
           <div className="bg-red-50 border border-red-200 text-red-700 text-sm px-4 py-3 rounded-xl">
             {error}
@@ -211,6 +214,9 @@ export default function NouvelleCourse() {
           <div>
             <label className="block text-sm font-medium mb-1.5">
               {orgType === "INDIVIDUAL" ? t("yourName") : t("beneficiaryName")}
+              {orgType !== "INDIVIDUAL" && (
+                <span className="text-neutral-400 font-normal ml-1">({tc("optional")})</span>
+              )}
             </label>
             <input
               type="text"
@@ -218,7 +224,7 @@ export default function NouvelleCourse() {
               onChange={(e) => setBeneficiaryName(e.target.value)}
               className={inputClass}
               placeholder={orgType === "INDIVIDUAL" ? t("fullNamePlaceholder") : t("beneficiaryPlaceholder")}
-              required
+              required={orgType === "INDIVIDUAL"}
             />
           </div>
         </div>
@@ -249,40 +255,40 @@ export default function NouvelleCourse() {
             />
           </div>
 
-          {estimatedPrice && (
-            <div className="flex items-center gap-2 bg-neutral-50 rounded-xl px-4 py-3">
-              <Icon icon="solar:tag-price-linear" className="text-neutral-500" />
-              <span className="text-sm">
-                {t("estimatedPrice")} <strong>{estimatedPrice.toFixed(0)} €</strong>
-              </span>
-              <span className="text-xs text-neutral-400 ml-1">{t("fixedPrice")}</span>
-            </div>
-          )}
         </div>
 
         <div className="bg-white rounded-2xl border border-neutral-200 p-5 space-y-4">
-          <div className="flex items-center justify-between">
-            <h2 className="font-medium text-sm text-neutral-500 uppercase tracking-wider">{t("datePassengers")}</h2>
-            <button
-              type="button"
-              onClick={() => {
-                const now = new Date();
-                setDate(now.toISOString().slice(0, 10));
-                setTime(now.toTimeString().slice(0, 5));
-              }}
-              className="flex items-center gap-1.5 text-sm font-medium text-white bg-neutral-900 hover:bg-neutral-800 px-4 py-2 rounded-xl transition-colors shadow-sm"
-            >
-              <Icon icon="solar:bolt-linear" className="text-sm" />
-              {t("asap")}
-            </button>
+          <h2 className="font-medium text-sm text-neutral-500 uppercase tracking-wider">{t("datePassengers")}</h2>
+
+          {/* ASAP button */}
+          <button
+            type="button"
+            onClick={() => {
+              const now = new Date(Date.now() + 15 * 60 * 1000);
+              setDate(now.toISOString().slice(0, 10));
+              setTime(now.toTimeString().slice(0, 5));
+              if (step === "results") setStep("form");
+            }}
+            className="w-full flex items-center justify-center gap-2 bg-neutral-950 border-2 border-neutral-950 hover:bg-neutral-800 hover:border-neutral-800 text-white font-semibold py-3.5 rounded-xl transition-colors"
+          >
+            <Icon icon="solar:bolt-bold" className="text-lg" />
+            {t("asap")}
+          </button>
+
+          {/* Separator */}
+          <div className="flex items-center gap-3">
+            <div className="flex-1 h-px bg-neutral-200" />
+            <span className="text-xs text-neutral-400">{t("orChooseDate")}</span>
+            <div className="flex-1 h-px bg-neutral-200" />
           </div>
+
           <div className="grid grid-cols-2 gap-3">
             <div>
               <label className="block text-sm font-medium mb-1.5">{t("date")}</label>
               <input
                 type="date"
                 value={date}
-                onChange={(e) => setDate(e.target.value)}
+                onChange={(e) => { setDate(e.target.value); if (step === "results") setStep("form"); }}
                 onClick={(e) => (e.target as HTMLInputElement).showPicker()}
                 className={`${inputClass} cursor-pointer`}
                 required
@@ -293,7 +299,7 @@ export default function NouvelleCourse() {
               <input
                 type="time"
                 value={time}
-                onChange={(e) => setTime(e.target.value)}
+                onChange={(e) => { setTime(e.target.value); if (step === "results") setStep("form"); }}
                 onClick={(e) => (e.target as HTMLInputElement).showPicker()}
                 className={`${inputClass} cursor-pointer`}
                 required
@@ -301,88 +307,124 @@ export default function NouvelleCourse() {
             </div>
           </div>
           <div>
-            <label className="block text-sm font-medium mb-1.5">{t("passengerCount")}</label>
-            <select
-              value={passengerCount}
-              onChange={(e) => setPassengerCount(Number(e.target.value))}
-              className={inputClass}
-            >
-              {[1, 2, 3, 4, 5, 6, 7, 8].map((n) => (
-                <option key={n} value={n}>{n} {n > 1 ? tc("passengers") : tc("passenger")}</option>
+            <label className="block text-sm font-medium mb-2">{t("passengerCount")}</label>
+            <div className="flex gap-2">
+              {[1, 2, 3, 4].map((n) => (
+                <button
+                  key={n}
+                  type="button"
+                  onClick={() => setPassengerCount(n)}
+                  className={`flex-1 flex flex-col items-center gap-1.5 py-3 rounded-xl border-2 transition-all ${
+                    (n === 4 ? passengerCount >= 4 : passengerCount === n)
+                      ? "border-neutral-900 bg-neutral-900 text-white"
+                      : "border-neutral-200 bg-neutral-50 text-neutral-600 hover:border-neutral-300"
+                  }`}
+                >
+                  <div className="flex items-center justify-center gap-0.5">
+                    {Array.from({ length: Math.min(n, 3) }).map((_, i) => (
+                      <Icon key={i} icon="solar:user-rounded-bold" className={n <= 2 ? "text-base" : "text-sm"} />
+                    ))}
+                    {n === 4 && <span className="text-xs font-bold ml-0.5">+</span>}
+                  </div>
+                  <span className="text-sm font-semibold">{n === 4 ? "4+" : n}</span>
+                </button>
               ))}
-            </select>
+            </div>
+            {passengerCount >= 4 && (
+              <div className="flex items-center gap-2 mt-2">
+                <select
+                  value={passengerCount}
+                  onChange={(e) => setPassengerCount(Number(e.target.value))}
+                  className="bg-neutral-50 border border-neutral-200 rounded-lg px-3 py-2 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-neutral-900"
+                >
+                  {[4, 5, 6].map((n) => (
+                    <option key={n} value={n}>{n} {tc("passengers")}</option>
+                  ))}
+                </select>
+              </div>
+            )}
           </div>
         </div>
 
-        <div className="bg-white rounded-2xl border border-neutral-200 p-5 space-y-4">
-          <h2 className="font-medium text-sm text-neutral-500 uppercase tracking-wider">{t("driver")}</h2>
-          {sortedFavorites.length === 0 ? (
-            <div className="text-center py-4">
-              <Icon icon="solar:star-linear" className="text-2xl text-neutral-300 mx-auto mb-2" />
-              <p className="text-sm text-neutral-500">{t("noFavorites")}</p>
-              <a href="/org/favoris" className="text-xs text-neutral-900 font-medium hover:underline mt-1 inline-block">
-                {t("addFavorites")}
-              </a>
+        {step === "form" && (
+          <button
+            type="submit"
+            disabled={loading}
+            className="w-full bg-neutral-950 text-white rounded-xl py-3.5 text-sm font-medium hover:bg-neutral-800 transition-colors disabled:opacity-50 disabled:cursor-not-allowed btn-lift"
+          >
+            {loading ? t("searching") : t("searchDrivers")}
+          </button>
+        )}
+
+        {step === "results" && (
+          <div className="bg-white rounded-2xl border border-neutral-200 p-5 space-y-4">
+            <div>
+              <h2 className="font-semibold">{t("availableDrivers")}</h2>
+              <p className="text-xs text-neutral-500 mt-0.5">{t("availableDriversDesc")}</p>
             </div>
-          ) : (
-            <div className="space-y-2">
-              {sortedFavorites.map((fav, index) => {
-                const isClosest = index === 0 && departure.lat !== 0 && fav.distance !== Infinity;
-                return (
-                  <label
-                    key={fav.id}
-                    className={`flex items-center gap-3 p-3 rounded-xl border-2 cursor-pointer transition-colors has-[:checked]:border-neutral-900 ${
-                      isClosest
-                        ? "border-green-300 bg-green-50/50 hover:border-green-400"
-                        : "border-neutral-200 hover:border-neutral-400"
+
+            {driverResults.length === 0 ? (
+              <div className="text-center py-6">
+                <Icon icon="solar:map-point-wave-linear" className="text-3xl text-neutral-300 mx-auto mb-2" />
+                <p className="text-sm text-neutral-500">{t("noDriversFound")}</p>
+              </div>
+            ) : (
+              <div className="space-y-3">
+                {driverResults.map((driver, index) => (
+                  <div
+                    key={driver.id}
+                    className={`flex items-center gap-4 p-4 rounded-xl border-2 transition-all ${
+                      index === 0 ? "border-green-200 bg-green-50/30" : "border-neutral-200"
                     }`}
                   >
-                    <input
-                      type="radio"
-                      name="driver"
-                      value={fav.driver.id}
-                      checked={driverChoice === fav.driver.id}
-                      onChange={() => setDriverChoice(fav.driver.id)}
-                      className="accent-neutral-900"
-                    />
+                    <div className="w-10 h-10 bg-neutral-200 rounded-full flex items-center justify-center text-sm font-semibold text-neutral-600 shrink-0">
+                      {driver.firstName[0]}{driver.lastName?.[0] || ""}
+                    </div>
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center gap-2">
-                        <p className="text-sm font-medium">
-                          {fav.driver.firstName} {fav.driver.lastName}
+                        <p className="text-sm font-semibold">
+                          {driver.firstName} {driver.lastName}
                         </p>
-                        {isClosest && (
-                          <span className="text-[10px] font-semibold bg-green-100 text-green-700 px-1.5 py-0.5 rounded-full whitespace-nowrap">
+                        {index === 0 && (
+                          <span className="text-[10px] font-semibold bg-green-100 text-green-700 px-1.5 py-0.5 rounded-full">
                             {t("closest")}
                           </span>
                         )}
                       </div>
-                      {(fav.driver.vehicleBrand || fav.driver.zoneAddress) && (
-                        <p className="text-xs text-neutral-500 truncate">
-                          {fav.driver.vehicleBrand && `${fav.driver.vehicleBrand} ${fav.driver.vehicleModel}`}
-                          {fav.driver.vehicleBrand && fav.driver.zoneAddress && " · "}
-                          {fav.driver.zoneAddress}
-                        </p>
-                      )}
+                      <p className="text-xs text-neutral-500 truncate">
+                        {driver.vehicleBrand && `${driver.vehicleBrand} ${driver.vehicleModel || ""}`}
+                        {driver.vehicleBrand && driver.zoneAddress && " · "}
+                        {driver.zoneAddress}
+                      </p>
                     </div>
-                    {isClosest && fav.distance < 100 && (
-                      <span className="text-xs text-neutral-400 shrink-0">
-                        {fav.distance < 1 ? `${Math.round(fav.distance * 1000)} m` : `${fav.distance.toFixed(0)} km`}
-                      </span>
-                    )}
-                  </label>
-                );
-              })}
-            </div>
-          )}
-        </div>
+                    <div className="text-right shrink-0">
+                      {driver.estimatedPrice && (
+                        <p className="text-lg font-bold">{driver.estimatedPrice.toFixed(0)} €</p>
+                      )}
+                      <p className="text-[10px] text-neutral-400">{t("fixedPriceLabel")}</p>
+                    </div>
+                    <button
+                      type="button"
+                      disabled={loading}
+                      onClick={() => handleConfirmBooking(driver.id)}
+                      className="bg-neutral-900 text-white text-sm font-medium px-4 py-2 rounded-full hover:bg-neutral-800 transition-colors disabled:opacity-50 shrink-0"
+                    >
+                      {t("selectDriver")}
+                    </button>
+                  </div>
+                ))}
+              </div>
+            )}
 
-        <button
-          type="submit"
-          disabled={loading}
-          className="w-full bg-neutral-950 text-white rounded-xl py-3.5 text-sm font-medium hover:bg-neutral-800 transition-colors disabled:opacity-50 disabled:cursor-not-allowed btn-lift"
-        >
-          {loading ? t("bookingInProgress") : t("bookRide")}
-        </button>
+            <button
+              type="button"
+              onClick={() => setStep("form")}
+              className="w-full text-sm text-neutral-500 hover:text-neutral-900 py-2 transition-colors"
+            >
+              ← {t("backToForm")}
+            </button>
+          </div>
+        )}
       </form>
     </div>
   );

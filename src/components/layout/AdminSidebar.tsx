@@ -100,8 +100,10 @@ export function AdminSidebar({ userName }: { userName: string }) {
               <div className="w-8 h-8 bg-violet-100 rounded-full flex items-center justify-center text-xs font-semibold text-violet-700">
                 {userName
                   .split(" ")
+                  .filter((n) => /^[a-zA-ZÀ-ÿ]/.test(n))
                   .map((n) => n[0])
                   .join("")
+                  .slice(0, 2)
                   .toUpperCase()}
               </div>
               <div className="flex-1 min-w-0">

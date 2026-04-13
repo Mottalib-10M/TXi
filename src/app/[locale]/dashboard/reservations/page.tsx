@@ -19,7 +19,12 @@ export default async function ReservationsPage() {
   const t = await getTranslations("dashboard");
 
   const bookings = await prisma.booking.findMany({
-    where: { driverId: session.user.id },
+    where: {
+      OR: [
+        { driverId: session.user.id },
+        { invitedDriverIds: { has: session.user.id } },
+      ],
+    },
     orderBy: { createdAt: "desc" },
   });
 

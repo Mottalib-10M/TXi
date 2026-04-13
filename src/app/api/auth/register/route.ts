@@ -16,6 +16,7 @@ const driverSchema = z.object({
   cityLat: z.number().optional(),
   cityLng: z.number().optional(),
   vehicleBrand: z.string().optional(),
+  vehicleModel: z.string().optional(),
   vehiclePlate: z.string().optional(),
   vehiclePhotoBase64: z.string().optional(),
 });
@@ -105,6 +106,16 @@ export async function POST(request: Request) {
         photoUrl = data.vehiclePhotoBase64;
       }
 
+      // Build vehicles JSON with photo if provided
+      const vehicle = {
+        brand: data.vehicleBrand || "",
+        model: data.vehicleModel || "",
+        plate: data.vehiclePlate || "",
+        capacity: 4,
+        features: [],
+        photos: photoUrl ? [photoUrl] : [],
+      };
+
       const driver = await prisma.driver.create({
         data: {
           firstName: data.firstName,
@@ -119,8 +130,10 @@ export async function POST(request: Request) {
           zoneAddress: data.cityAddress || undefined,
           zoneRadius: 50,
           vehicleBrand: data.vehicleBrand || undefined,
+          vehicleModel: data.vehicleModel || undefined,
           vehiclePlate: data.vehiclePlate || undefined,
           photoUrl,
+          vehicles: JSON.parse(JSON.stringify([vehicle])),
         },
       });
 

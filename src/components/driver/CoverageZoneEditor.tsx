@@ -37,8 +37,8 @@ export function CoverageZoneEditor({
   }
 
   return (
-    <div className="space-y-4">
-      <h2 className="text-lg font-semibold tracking-tight mb-4">{t("title")}</h2>
+    <div className="space-y-3">
+      <h2 className="text-lg font-semibold tracking-tight mb-2">{t("title")}</h2>
 
       <div>
         <label className="block text-sm font-medium mb-1.5">{t("centerAddress")}</label>

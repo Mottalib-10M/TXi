@@ -60,13 +60,25 @@ export function AvailabilityEditor({
   }
 
   return (
-    <div className="space-y-4">
-      <h2 className="text-lg font-semibold tracking-tight mb-4">{t("title")}</h2>
-      <p className="text-sm text-neutral-500 font-light mb-6">
-        {t("subtitle")}
-      </p>
+    <div className="space-y-3">
+      <div className="flex items-center justify-between mb-1">
+        <div>
+          <h2 className="text-lg font-semibold tracking-tight">{t("title")}</h2>
+          <p className="text-sm text-neutral-500 font-light mt-0.5">
+            {t("subtitle")}
+          </p>
+        </div>
+        <button
+          type="button"
+          onClick={toggleAll}
+          className="text-xs font-medium text-neutral-500 hover:text-neutral-900 transition-colors flex items-center gap-1.5 shrink-0"
+        >
+          <Icon icon={allActive ? "solar:close-circle-linear" : "solar:check-read-linear"} className="text-sm" />
+          {allActive ? t("disableAll") : t("enableAll")}
+        </button>
+      </div>
 
-      <div className="flex justify-end mb-2">
+      <div className="hidden">
         <button
           type="button"
           onClick={toggleAll}
@@ -77,7 +89,7 @@ export function AvailabilityEditor({
         </button>
       </div>
 
-      <div className="space-y-2">
+      <div className="space-y-1.5">
         {dayNames.map((day, index) => {
           const slot = availability.find((s) => s.day === index);
           const isActive = !!slot;
@@ -85,14 +97,14 @@ export function AvailabilityEditor({
           return (
             <div
               key={day}
-              className={`flex flex-wrap items-center gap-2 sm:gap-4 p-3 rounded-xl border transition-colors ${
+              className={`flex flex-wrap items-center gap-2 sm:gap-3 p-2.5 rounded-xl border transition-colors ${
                 isActive ? "border-neutral-200 bg-white" : "border-neutral-100 bg-neutral-50"
               }`}
             >
               <button
                 type="button"
                 onClick={() => toggleDay(index)}
-                className={`w-9 h-9 rounded-lg flex items-center justify-center shrink-0 transition-colors ${
+                className={`w-8 h-8 rounded-lg flex items-center justify-center shrink-0 transition-colors ${
                   isActive
                     ? "bg-neutral-900 text-white"
                     : "bg-neutral-200 text-neutral-400"
@@ -112,7 +124,7 @@ export function AvailabilityEditor({
                     value={slot.startTime}
                     onChange={(e) => updateSlot(index, "startTime", e.target.value)}
                     onClick={(e) => (e.target as HTMLInputElement).showPicker()}
-                    className="bg-neutral-100 rounded-lg px-2 sm:px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-neutral-900 w-[5.5rem] cursor-pointer"
+                    className="bg-neutral-100 rounded-lg px-2 sm:px-3 py-1.5 text-sm outline-none focus:ring-2 focus:ring-neutral-900 w-24 cursor-pointer"
                   />
                   <span className="text-neutral-400 text-xs">&rarr;</span>
                   <input
@@ -120,7 +132,7 @@ export function AvailabilityEditor({
                     value={slot.endTime}
                     onChange={(e) => updateSlot(index, "endTime", e.target.value)}
                     onClick={(e) => (e.target as HTMLInputElement).showPicker()}
-                    className="bg-neutral-100 rounded-lg px-2 sm:px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-neutral-900 w-[5.5rem] cursor-pointer"
+                    className="bg-neutral-100 rounded-lg px-2 sm:px-3 py-1.5 text-sm outline-none focus:ring-2 focus:ring-neutral-900 w-24 cursor-pointer"
                   />
                 </div>
               ) : (

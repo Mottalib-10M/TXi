@@ -139,7 +139,7 @@ export function FranceMapStations() {
                     isActive ? "text-white" : "text-neutral-900"
                   }`}
                 >
-                  <Icon icon="solar:train-linear" className={`text-base ${isActive ? "text-neutral-400" : "text-neutral-400"}`} />
+                  <Icon icon="mdi:train" className={`text-base ${isActive ? "text-neutral-400" : "text-neutral-400"}`} />
                   {region.name}
                 </h3>
                 <span

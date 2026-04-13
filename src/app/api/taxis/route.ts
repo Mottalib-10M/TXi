@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
-import { haversineDistance, estimatePrice } from "@/lib/geo";
+import { haversineDistance, getRoutingDistance, estimatePrice } from "@/lib/geo";
 
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
@@ -69,13 +69,15 @@ export async function GET(request: NextRequest) {
       },
     });
 
-    // Calculate trip distance
+    // Calculate trip distance (real driving distance via OSRM)
     let tripDistance = 0;
     if (departureLat && departureLng && arrivalLat && arrivalLng) {
-      tripDistance = haversineDistance(departureLat, departureLng, arrivalLat, arrivalLng);
+      const routing = await getRoutingDistance(departureLat, departureLng, arrivalLat, arrivalLng);
+      tripDistance = routing.distanceKm;
     }
 
-    // Filter drivers by coverage zone and calculate estimated price
+    // Filter drivers by coverage zone (haversine is fine for approximate zone check)
+    // and calculate estimated price using real driving distance
     const results = drivers
       .map((driver) => {
         const distanceToDriver = haversineDistance(

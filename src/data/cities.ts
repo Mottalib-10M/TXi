@@ -2453,7 +2453,7 @@ export const services = [
     description: "Trajets interurbains confortables avec tarifs négociés à l'avance.",
   },
   {
-    icon: "solar:heart-pulse-linear",
+    icon: "solar:health-linear",
     title: "Transport médical",
     description: "Transport adapté vers les hôpitaux et cliniques, avec prise en charge attentionnée.",
   },

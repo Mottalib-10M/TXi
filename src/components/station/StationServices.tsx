@@ -2,12 +2,12 @@ import { Icon } from "@iconify/react";
 import { getTranslations } from "next-intl/server";
 
 const serviceIcons = [
-  "solar:train-linear",
-  "solar:login-3-linear",
+  "mdi:train",
+  "solar:square-arrow-right-linear",
   "solar:users-group-rounded-linear",
   "solar:star-linear",
   "solar:clock-circle-linear",
-  "solar:heart-pulse-linear",
+  "solar:health-linear",
 ];
 
 export async function StationServices({ stationName }: { stationName: string }) {

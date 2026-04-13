@@ -15,6 +15,8 @@ export default async function AdminOrganisationsPage() {
       email: true,
       phone: true,
       cagnotteBalance: true,
+      lastLoginAt: true,
+      loginCount: true,
       createdAt: true,
       _count: { select: { bookings: true } },
     },
@@ -28,6 +30,8 @@ export default async function AdminOrganisationsPage() {
     email: o.email,
     phone: o.phone,
     cagnotteBalance: o.cagnotteBalance,
+    lastLoginAt: o.lastLoginAt?.toISOString() || null,
+    loginCount: o.loginCount,
     bookingsCount: o._count.bookings,
     createdAt: o.createdAt.toISOString(),
   }));

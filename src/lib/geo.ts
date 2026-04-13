@@ -25,6 +25,35 @@ function toRad(deg: number): number {
 }
 
 /**
+ * Get real driving distance & duration via OSRM (OpenStreetMap).
+ * Falls back silently to haversine if OSRM is unreachable.
+ */
+export async function getRoutingDistance(
+  lat1: number,
+  lng1: number,
+  lat2: number,
+  lng2: number
+): Promise<{ distanceKm: number; durationMinutes: number }> {
+  try {
+    const url = `https://router.project-osrm.org/route/v1/driving/${lng1},${lat1};${lng2},${lat2}?overview=false`;
+    const res = await fetch(url, { signal: AbortSignal.timeout(3000) });
+    if (!res.ok) throw new Error(`OSRM ${res.status}`);
+    const data = await res.json();
+    const route = data?.routes?.[0];
+    if (!route) throw new Error("No route found");
+    return {
+      distanceKm: route.distance / 1000,
+      durationMinutes: route.duration / 60,
+    };
+  } catch {
+    // Fallback to haversine
+    const distanceKm = haversineDistance(lat1, lng1, lat2, lng2);
+    const avgSpeed = distanceKm < 10 ? 25 : distanceKm < 30 ? 40 : 60;
+    return { distanceKm, durationMinutes: (distanceKm / avgSpeed) * 60 };
+  }
+}
+
+/**
  * Check if a given hour (0-23) falls within night time (19h-7h)
  */
 export function isNightTime(date: Date): boolean {

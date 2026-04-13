@@ -42,8 +42,10 @@ export function Navbar({ minimal = false }: { minimal?: boolean }) {
   const isLoggedIn = status === "authenticated" && session?.user;
   const initials = session?.user?.name
     ?.split(" ")
+    .filter((n) => /^[a-zA-ZÀ-ÿ]/.test(n))
     .map((n) => n[0])
     .join("")
+    .slice(0, 2)
     .toUpperCase() || "?";
 
   return (
@@ -68,12 +70,6 @@ export function Navbar({ minimal = false }: { minimal?: boolean }) {
                 className="text-sm font-medium text-neutral-500 hover:text-neutral-900 transition-colors"
               >
                 {t("howItWorks")}
-              </Link>
-              <Link
-                href="/devenir-chauffeur"
-                className="text-sm font-medium text-neutral-500 hover:text-neutral-900 transition-colors"
-              >
-                {t("drivers")}
               </Link>
               <Link
                 href="/blog"
@@ -108,49 +104,41 @@ export function Navbar({ minimal = false }: { minimal?: boolean }) {
                   />
                 </button>
                 {solutionsOpen && (
-                  <div className="absolute left-0 top-full mt-2 w-48 bg-white border border-neutral-200 rounded-xl shadow-lg shadow-black/5 z-50 py-1.5 overflow-hidden">
-                    <Link
-                      href="/solutions/hotel"
-                      onClick={() => setSolutionsOpen(false)}
-                      className="block px-4 py-2.5 text-sm text-neutral-700 hover:bg-neutral-50 transition-colors"
-                    >
-                      {t("solutionHotel")}
-                    </Link>
-                    <Link
-                      href="/solutions/hopital"
-                      onClick={() => setSolutionsOpen(false)}
-                      className="block px-4 py-2.5 text-sm text-neutral-700 hover:bg-neutral-50 transition-colors"
-                    >
-                      {t("solutionHospital")}
-                    </Link>
-                    <Link
-                      href="/solutions/entreprise"
-                      onClick={() => setSolutionsOpen(false)}
-                      className="block px-4 py-2.5 text-sm text-neutral-700 hover:bg-neutral-50 transition-colors"
-                    >
-                      {t("solutionEnterprise")}
-                    </Link>
-                    <Link
-                      href="/solutions/particulier"
-                      onClick={() => setSolutionsOpen(false)}
-                      className="block px-4 py-2.5 text-sm text-neutral-700 hover:bg-neutral-50 transition-colors"
-                    >
-                      {t("solutionParticulier")}
-                    </Link>
-                    <Link
-                      href="/solutions/mise-a-disposition"
-                      onClick={() => setSolutionsOpen(false)}
-                      className="block px-4 py-2.5 text-sm text-neutral-700 hover:bg-neutral-50 transition-colors"
-                    >
-                      {t("solutionMiseADispo")}
-                    </Link>
-                    <Link
-                      href="/solutions/assistance"
-                      onClick={() => setSolutionsOpen(false)}
-                      className="block px-4 py-2.5 text-sm text-neutral-700 hover:bg-neutral-50 transition-colors"
-                    >
-                      {t("solutionAssistance")}
-                    </Link>
+                  <div className="absolute right-0 top-full mt-2 w-72 bg-white border border-neutral-200 rounded-xl shadow-lg shadow-black/5 z-50 py-2 overflow-hidden">
+                    {[
+                      { href: "/solutions/hotel", icon: "solar:buildings-2-linear", label: t("solutionHotel"), desc: t("solutionHotelDesc") },
+                      { href: "/solutions/hopital", icon: "solar:health-linear", label: t("solutionHospital"), desc: t("solutionHospitalDesc") },
+                      { href: "/solutions/entreprise", icon: "solar:case-linear", label: t("solutionEnterprise"), desc: t("solutionEnterpriseDesc") },
+                      { href: "/solutions/particulier", icon: "solar:user-linear", label: t("solutionParticulier"), desc: t("solutionParticulierDesc") },
+                      { href: "/solutions/mise-a-disposition", icon: "solar:clock-circle-linear", label: t("solutionMiseADispo"), desc: t("solutionMiseADispoDesc") },
+                      { href: "/solutions/assistance", icon: "solar:shield-warning-linear", label: t("solutionAssistance"), desc: t("solutionAssistanceDesc") },
+                    ].map((item) => (
+                      <Link
+                        key={item.href}
+                        href={item.href}
+                        onClick={() => setSolutionsOpen(false)}
+                        className="flex items-start gap-3 px-4 py-2.5 hover:bg-neutral-50 transition-colors"
+                      >
+                        <Icon icon={item.icon} className="text-neutral-400 text-lg mt-0.5 shrink-0" />
+                        <div>
+                          <p className="text-sm font-medium text-neutral-800">{item.label}</p>
+                          <p className="text-xs text-neutral-400 font-light">{item.desc}</p>
+                        </div>
+                      </Link>
+                    ))}
+                    <div className="border-t border-neutral-100 mt-1.5 pt-1.5">
+                      <Link
+                        href="/devenir-chauffeur"
+                        onClick={() => setSolutionsOpen(false)}
+                        className="flex items-start gap-3 px-4 py-2.5 hover:bg-neutral-50 transition-colors"
+                      >
+                        <Icon icon="solar:steering-wheel-linear" className="text-neutral-400 text-lg mt-0.5 shrink-0" />
+                        <div>
+                          <p className="text-sm font-medium text-neutral-800">{t("becomeDriver")}</p>
+                          <p className="text-xs text-neutral-400 font-light">{t("becomeDriverDesc")}</p>
+                        </div>
+                      </Link>
+                    </div>
                   </div>
                 )}
               </div>
@@ -279,13 +267,6 @@ export function Navbar({ minimal = false }: { minimal?: boolean }) {
                 {t("howItWorks")}
               </Link>
               <Link
-                href="/devenir-chauffeur"
-                onClick={() => setMobileOpen(false)}
-                className="block py-3 text-sm font-medium text-neutral-500 hover:bg-neutral-50 hover:text-neutral-900 rounded-lg px-3 transition-colors"
-              >
-                {t("drivers")}
-              </Link>
-              <Link
                 href="/blog"
                 onClick={() => setMobileOpen(false)}
                 className="block py-3 text-sm font-medium text-neutral-500 hover:bg-neutral-50 hover:text-neutral-900 rounded-lg px-3 transition-colors"
@@ -311,48 +292,32 @@ export function Navbar({ minimal = false }: { minimal?: boolean }) {
               </button>
               {mobileSolutionsOpen && (
                 <div className="pl-4 space-y-0.5">
-                  <Link
-                    href="/solutions/hotel"
-                    onClick={() => setMobileOpen(false)}
-                    className="block py-2.5 text-sm text-neutral-500 hover:bg-neutral-50 hover:text-neutral-900 rounded-lg px-3 transition-colors"
-                  >
-                    {t("solutionHotel")}
-                  </Link>
-                  <Link
-                    href="/solutions/hopital"
-                    onClick={() => setMobileOpen(false)}
-                    className="block py-2.5 text-sm text-neutral-500 hover:bg-neutral-50 hover:text-neutral-900 rounded-lg px-3 transition-colors"
-                  >
-                    {t("solutionHospital")}
-                  </Link>
-                  <Link
-                    href="/solutions/entreprise"
-                    onClick={() => setMobileOpen(false)}
-                    className="block py-2.5 text-sm text-neutral-500 hover:bg-neutral-50 hover:text-neutral-900 rounded-lg px-3 transition-colors"
-                  >
-                    {t("solutionEnterprise")}
-                  </Link>
-                  <Link
-                    href="/solutions/particulier"
-                    onClick={() => setMobileOpen(false)}
-                    className="block py-2.5 text-sm text-neutral-500 hover:bg-neutral-50 hover:text-neutral-900 rounded-lg px-3 transition-colors"
-                  >
-                    {t("solutionParticulier")}
-                  </Link>
-                  <Link
-                    href="/solutions/mise-a-disposition"
-                    onClick={() => setMobileOpen(false)}
-                    className="block py-2.5 text-sm text-neutral-500 hover:bg-neutral-50 hover:text-neutral-900 rounded-lg px-3 transition-colors"
-                  >
-                    {t("solutionMiseADispo")}
-                  </Link>
-                  <Link
-                    href="/solutions/assistance"
-                    onClick={() => setMobileOpen(false)}
-                    className="block py-2.5 text-sm text-neutral-500 hover:bg-neutral-50 hover:text-neutral-900 rounded-lg px-3 transition-colors"
-                  >
-                    {t("solutionAssistance")}
-                  </Link>
+                  {[
+                    { href: "/solutions/hotel", label: t("solutionHotel") },
+                    { href: "/solutions/hopital", label: t("solutionHospital") },
+                    { href: "/solutions/entreprise", label: t("solutionEnterprise") },
+                    { href: "/solutions/particulier", label: t("solutionParticulier") },
+                    { href: "/solutions/mise-a-disposition", label: t("solutionMiseADispo") },
+                    { href: "/solutions/assistance", label: t("solutionAssistance") },
+                  ].map((item) => (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      onClick={() => setMobileOpen(false)}
+                      className="block py-2.5 text-sm text-neutral-500 hover:bg-neutral-50 hover:text-neutral-900 rounded-lg px-3 transition-colors"
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                  <div className="border-t border-neutral-100 mt-1 pt-1">
+                    <Link
+                      href="/devenir-chauffeur"
+                      onClick={() => setMobileOpen(false)}
+                      className="block py-2.5 text-sm text-neutral-500 hover:bg-neutral-50 hover:text-neutral-900 rounded-lg px-3 transition-colors"
+                    >
+                      {t("becomeDriver")}
+                    </Link>
+                  </div>
                 </div>
               )}
             </>

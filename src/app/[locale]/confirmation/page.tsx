@@ -6,6 +6,7 @@ import { prisma } from "@/lib/prisma";
 import { format } from "date-fns";
 import { fr, enUS } from "date-fns/locale";
 import { Navbar } from "@/components/layout/Navbar";
+import { CreateAccountPrompt } from "@/components/booking/CreateAccountPrompt";
 
 async function ConfirmationContent({ reference }: { reference: string }) {
   const t = await getTranslations("confirmation");
@@ -18,6 +19,16 @@ async function ConfirmationContent({ reference }: { reference: string }) {
         include: { driver: true },
       })
     : null;
+
+  // Check if client already has an account
+  let showCreateAccount = false;
+  if (booking?.clientEmail) {
+    const [existingDriver, existingOrg] = await Promise.all([
+      prisma.driver.findUnique({ where: { email: booking.clientEmail }, select: { id: true } }),
+      prisma.organization.findUnique({ where: { email: booking.clientEmail }, select: { id: true } }),
+    ]);
+    showCreateAccount = !existingDriver && !existingOrg;
+  }
 
   return (
     <div className="max-w-lg mx-auto text-center">
@@ -95,6 +106,15 @@ async function ConfirmationContent({ reference }: { reference: string }) {
             )}
           </div>
         </div>
+      )}
+
+      {showCreateAccount && booking && (
+        <CreateAccountPrompt
+          clientName={booking.clientName}
+          clientEmail={booking.clientEmail}
+          clientPhone={booking.clientPhone || ""}
+          locale={locale}
+        />
       )}
 
       <Link

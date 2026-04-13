@@ -2674,7 +2674,7 @@ export const airportServices = [
     description: "Votre chauffeur vous attend en zone d'arrivée avec une pancarte à votre nom. Suivi de vol en temps réel.",
   },
   {
-    icon: "solar:login-3-linear",
+    icon: "solar:square-arrow-right-linear",
     title: "Transfert départ",
     description: "Prise en charge à domicile ou à l'hôtel, dépose au terminal exact de votre vol.",
   },
@@ -2694,7 +2694,7 @@ export const airportServices = [
     description: "Chauffeur à votre disposition pour la journée : transfert + attente + retour.",
   },
   {
-    icon: "solar:heart-pulse-linear",
+    icon: "solar:health-linear",
     title: "Transport médical",
     description: "Transfert adapté vers ou depuis l'aéroport pour les personnes à mobilité réduite.",
   },

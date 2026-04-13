@@ -3,11 +3,11 @@ import { getTranslations } from "next-intl/server";
 
 const serviceIcons = [
   "mdi:airplane",
-  "solar:login-3-linear",
+  "solar:square-arrow-right-linear",
   "solar:users-group-rounded-linear",
   "solar:star-linear",
   "solar:clock-circle-linear",
-  "solar:heart-pulse-linear",
+  "solar:health-linear",
 ];
 
 export async function AirportServices({ airportName }: { airportName: string }) {

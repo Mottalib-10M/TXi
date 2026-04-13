@@ -29,7 +29,7 @@ export async function StationInfo({ station }: { station: Station }) {
 
         <div className="bg-white border border-neutral-200 rounded-2xl p-6 fade-up">
           <h3 className="text-sm font-medium mb-4 flex items-center gap-2">
-            <Icon icon="solar:train-linear" className="text-neutral-400" />
+            <Icon icon="mdi:train" className="text-neutral-400" />
             {t("infoLines")}
           </h3>
           <div className="flex flex-wrap gap-2">

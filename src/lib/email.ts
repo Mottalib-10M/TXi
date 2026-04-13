@@ -54,6 +54,7 @@ const t = {
     newBookingTitle: "Nouvelle demande de réservation",
     newBookingBody: "Vous avez reçu une nouvelle demande de réservation :",
     newBookingAction: "Connectez-vous à votre tableau de bord pour accepter ou refuser cette demande.",
+    newBookingNote: "Retrouvez cette course dans l'onglet <strong>Réservations</strong> de votre tableau de bord.",
     client: "Client",
     departure: "Départ",
     arrival: "Arrivée",
@@ -84,6 +85,10 @@ const t = {
     viewBooking: "Voir la réservation",
     clientDetails: "Coordonnées du client",
     estimatedPrice: "Prix estimé",
+    source: "Origine",
+    sourceLanding: "Page d'accueil",
+    sourceProfile: "Fiche chauffeur",
+    sourceOrganization: "Espace organisation",
     viewDashboard: "Voir dans mon tableau de bord",
     searchAgain: "Rechercher un chauffeur",
     viewMyBookings: "Voir mes réservations",
@@ -118,6 +123,9 @@ const t = {
     sharedTaxiDriverFoundReminder: "Pour que le trajet soit définitivement confirmé, 3 passagers au total doivent réserver.",
     sharedTaxiDriverFoundCta: "Voir les trajets partagés",
     sharedTaxiProposalComment: "Commentaire",
+    escalationResolvedSubject: (ref: string) => `Course #${ref} — acceptée par un autre chauffeur`,
+    escalationResolvedTitle: "Course prise en charge",
+    escalationResolvedBody: (ref: string) => `La course <strong>#${ref}</strong> a été acceptée par un autre chauffeur. Aucune action n'est requise de votre part.`,
   },
   en: {
     hello: "Hello",
@@ -137,6 +145,7 @@ const t = {
     newBookingTitle: "New booking request",
     newBookingBody: "You have received a new booking request:",
     newBookingAction: "Log in to your dashboard to accept or decline this request.",
+    newBookingNote: "You will find this booking under <strong>Reservations</strong> in your dashboard.",
     client: "Client",
     departure: "Pickup",
     arrival: "Drop-off",
@@ -167,6 +176,10 @@ const t = {
     viewBooking: "View booking",
     clientDetails: "Client details",
     estimatedPrice: "Estimated price",
+    source: "Source",
+    sourceLanding: "Homepage",
+    sourceProfile: "Driver profile",
+    sourceOrganization: "Organization portal",
     viewDashboard: "View in my dashboard",
     searchAgain: "Search for a driver",
     viewMyBookings: "View my bookings",
@@ -201,6 +214,9 @@ const t = {
     sharedTaxiDriverFoundReminder: "The ride will be confirmed once 3 passengers in total have booked.",
     sharedTaxiDriverFoundCta: "View shared rides",
     sharedTaxiProposalComment: "Comment",
+    escalationResolvedSubject: (ref: string) => `Ride #${ref} — accepted by another driver`,
+    escalationResolvedTitle: "Ride taken",
+    escalationResolvedBody: (ref: string) => `Ride <strong>#${ref}</strong> has been accepted by another driver. No action is required from you.`,
   },
 } as const;
 
@@ -263,6 +279,7 @@ export function buildDriverNotificationEmail(data: {
   reference: string;
   bookingId: string;
   price?: number | null;
+  source?: "LANDING" | "PROFILE" | "ORGANIZATION";
   locale?: Locale;
 }) {
   const l = t[data.locale || "fr"];
@@ -284,9 +301,10 @@ export function buildDriverNotificationEmail(data: {
           ${data.price ? `<tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.estimatedPrice}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${formatEmailPrice(data.price, locale)}</td></tr>` : ""}
           <tr><td style="padding: 8px; color: #737373;">${l.reference}</td><td style="padding: 8px; font-weight: 500;">#${data.reference}</td></tr>
         </table>
+        <p style="color: #525252; font-size: 13px;">${l.newBookingNote}</p>
         <div style="text-align: center; margin: 24px 0;">
           <a href="${dashboardUrl}" style="background-color: #171717; color: #ffffff; padding: 14px 28px; border-radius: 12px; text-decoration: none; font-weight: 500; font-size: 14px; display: inline-block;">
-            ${l.viewDashboard}
+            ${l.viewBooking}
           </a>
         </div>
         <p style="color: #a3a3a3; font-size: 12px;">${l.team}</p>
@@ -643,6 +661,25 @@ export function buildSharedTaxiDriverFoundEmail(data: {
             ${l.sharedTaxiDriverFoundCta}
           </a>
         </div>
+        <p style="color: #a3a3a3; font-size: 12px;">${l.team}</p>
+      </div>
+    `,
+  };
+}
+
+export function buildEscalationResolvedEmail(data: {
+  driverName: string;
+  reference: string;
+  locale?: Locale;
+}) {
+  const l = t[data.locale || "fr"];
+  return {
+    subject: l.escalationResolvedSubject(data.reference),
+    html: `
+      <div style="font-family: Inter, sans-serif; max-width: 600px; margin: 0 auto;">
+        <h2 style="color: #171717;">${l.escalationResolvedTitle}</h2>
+        <p>${l.hello} ${data.driverName},</p>
+        <p>${l.escalationResolvedBody(data.reference)}</p>
         <p style="color: #a3a3a3; font-size: 12px;">${l.team}</p>
       </div>
     `,

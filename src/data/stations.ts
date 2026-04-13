@@ -2657,12 +2657,12 @@ export const popularStations = stations.filter((s) =>
 
 export const stationServices = [
   {
-    icon: "solar:train-linear",
+    icon: "mdi:train",
     title: "Transfert arrivée",
     description: "Votre chauffeur vous attend à la sortie de la gare. Suivi de train en temps réel.",
   },
   {
-    icon: "solar:login-3-linear",
+    icon: "solar:square-arrow-right-linear",
     title: "Transfert départ",
     description: "Prise en charge à domicile ou à l'hôtel, dépose devant l'entrée de la gare.",
   },
@@ -2682,7 +2682,7 @@ export const stationServices = [
     description: "Chauffeur à votre disposition pour la journée : transfert + attente + retour.",
   },
   {
-    icon: "solar:heart-pulse-linear",
+    icon: "solar:health-linear",
     title: "Transport médical",
     description: "Transfert adapté vers ou depuis la gare pour les personnes à mobilité réduite.",
   },

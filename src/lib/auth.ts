@@ -30,14 +30,15 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
           if (!driver.emailVerified) {
             throw new Error("EMAIL_NOT_VERIFIED");
           }
+          // Track login activity
+          await prisma.driver.update({
+            where: { id: driver.id },
+            data: { lastLoginAt: new Date(), loginCount: { increment: 1 } },
+          });
           return {
             id: driver.id,
             email: driver.email,
-            name: driver.lastName
-              ? `${driver.firstName} ${driver.lastName}`
-              : driver.companyName
-                ? `${driver.firstName} — ${driver.companyName}`
-                : driver.firstName,
+            name: driver.companyName || driver.firstName,
             role: "driver" as const,
           };
         }
@@ -53,6 +54,11 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
           if (!org.emailVerified) {
             throw new Error("EMAIL_NOT_VERIFIED");
           }
+          // Track login activity
+          await prisma.organization.update({
+            where: { id: org.id },
+            data: { lastLoginAt: new Date(), loginCount: { increment: 1 } },
+          });
           return {
             id: org.id,
             email: org.email,
@@ -72,11 +78,31 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
     signIn: "/connexion",
   },
   callbacks: {
-    async jwt({ token, user }) {
+    async jwt({ token, user, trigger }) {
       if (user) {
         token.id = user.id;
         token.role = user.role;
         token.orgType = user.orgType;
+      }
+      if (trigger === "update" && token.id) {
+        const role = (token.role as string) || "driver";
+        if (role === "driver") {
+          const driver = await prisma.driver.findUnique({
+            where: { id: token.id as string },
+            select: { firstName: true, lastName: true, companyName: true },
+          });
+          if (driver) {
+            token.name = driver.companyName || driver.firstName;
+          }
+        } else if (role === "organization") {
+          const org = await prisma.organization.findUnique({
+            where: { id: token.id as string },
+            select: { name: true },
+          });
+          if (org) {
+            token.name = org.name;
+          }
+        }
       }
       return token;
     },

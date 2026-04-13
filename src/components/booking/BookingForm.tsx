@@ -166,6 +166,7 @@ export function BookingForm() {
               }}
               icon="solar:record-circle-linear"
               showGeolocation
+              inputId="departure-input"
             />
 
             <button

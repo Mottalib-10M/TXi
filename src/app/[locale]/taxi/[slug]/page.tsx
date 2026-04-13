@@ -51,9 +51,12 @@ export default async function TaxiProfilePage({ params }: Props) {
   if (!driver) notFound();
 
   // Build vehicles array from JSON field, falling back to flat fields
+  // Filter out empty vehicles (no brand and no model = not a real vehicle)
   let vehicles: Vehicle[] = [];
   if (Array.isArray(driver.vehicles)) {
-    vehicles = (driver.vehicles as unknown as Vehicle[]).slice(0, 2);
+    vehicles = (driver.vehicles as unknown as Vehicle[])
+      .slice(0, 2)
+      .filter((v) => v.brand || v.model);
   } else if (driver.vehicleBrand) {
     vehicles = [
       {

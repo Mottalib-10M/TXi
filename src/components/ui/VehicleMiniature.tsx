@@ -12,6 +12,8 @@ interface VehicleMiniatureProps {
   capacity?: number;
   className?: string;
   size?: "sm" | "md" | "lg";
+  /** Render only inner content (color dot + info) without the outer container */
+  bare?: boolean;
 }
 
 const COLOR_MAP: Record<string, { hex: string; label: string }> = {
@@ -129,6 +131,7 @@ export function VehicleMiniature({
   capacity,
   className = "",
   size = "md",
+  bare = false,
 }: VehicleMiniatureProps) {
   const type = detectType(brand, model);
   const config = TYPE_CONFIG[type];
@@ -155,8 +158,8 @@ export function VehicleMiniature({
   if (year && year > 0) details.push(String(year));
   if (capacity && capacity > 0) details.push(`${capacity} pl.`);
 
-  return (
-    <div className={`flex items-center ${sizeClasses[size]} rounded-xl bg-neutral-50 border border-neutral-100 ${className}`}>
+  const inner = (
+    <>
       {/* Color dot + car icon */}
       <div className="relative shrink-0">
         <div
@@ -191,6 +194,16 @@ export function VehicleMiniature({
           )}
         </div>
       </div>
+    </>
+  );
+
+  if (bare) {
+    return inner;
+  }
+
+  return (
+    <div className={`flex items-center ${sizeClasses[size]} rounded-xl bg-neutral-50 border border-neutral-100 ${className}`}>
+      {inner}
     </div>
   );
 }

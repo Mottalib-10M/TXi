@@ -76,12 +76,12 @@ model Driver {
   zoneRadius  Float    @default(15)
   zoneAddress String?
 
-  // Pricing
-  baseFare           Float @default(2.0)
-  pricePerKm         Float @default(1.5)
-  pricePerKmNight    Float @default(2.0)
-  pricePerMinute     Float @default(0.5)
-  minimumFare        Float @default(7.0)
+  // Pricing (defaults = plafonds réglementaires 2026, service-public.gouv.fr)
+  baseFare           Float @default(4.48)
+  pricePerKm         Float @default(1.30)
+  pricePerKmNight    Float @default(1.30)
+  pricePerMinute     Float @default(0.70)
+  minimumFare        Float @default(8.0)
   airportSupplement  Float @default(4.0)
   nightSupplement    Float @default(0.0)
   customPrices       Json?
@@ -97,6 +97,10 @@ model Driver {
   isActive      Boolean @default(true)
   isVerified    Boolean @default(false)
   emailVerified Boolean @default(false)
+
+  // Activity tracking
+  lastLoginAt DateTime?
+  loginCount  Int       @default(0)
 
   bookings     Booking[]
   favoritedBy  FavoriteDriver[]
@@ -142,6 +146,11 @@ model Booking {
   status BookingStatus @default(PENDING)
   source BookingSource @default(LANDING)
 
+  // Escalation
+  escalationPhase  Int       @default(0)   // 0=initial, 1=escalated, 2=admin notified
+  escalatedAt      DateTime?
+  invitedDriverIds String[]  @default([])
+
   // Driver relation
   driver   Driver? @relation(fields: [driverId], references: [id])
   driverId String?
@@ -176,6 +185,10 @@ model Organization {
   cagnotteBalance Float @default(0)
 
   emailVerified Boolean @default(false)
+
+  // Activity tracking
+  lastLoginAt DateTime?
+  loginCount  Int       @default(0)
 
   bookings        Booking[]
   favoriteDrivers FavoriteDriver[]
