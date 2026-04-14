@@ -4483,9 +4483,21 @@ import { trajetsParisVilles } from "./trajets-paris-villes";
 import { trajetsParisToursime } from "./trajets-paris-tourisme";
 import { trajetsParisArrondissements } from "./trajets-paris-arrondissements";
 import { trajetsLyon } from "./trajets-hub-lyon";
+import { trajetsParisArr8to13 } from "./trajets-paris-arr-8-13";
+import { trajetsParisArr14to20 } from "./trajets-paris-arr-14-20";
+import { trajetsLyonPart2 } from "./trajets-lyon-part2";
 
 // Merge hub trajets into the main array
-trajets.push(...trajetsParis, ...trajetsParisVilles, ...trajetsParisToursime, ...trajetsParisArrondissements, ...trajetsLyon);
+trajets.push(
+  ...trajetsParis,
+  ...trajetsParisVilles,
+  ...trajetsParisToursime,
+  ...trajetsParisArrondissements,
+  ...trajetsLyon,
+  ...trajetsParisArr8to13,
+  ...trajetsParisArr14to20,
+  ...trajetsLyonPart2,
+);
 
 export function getTrajetBySlug(slug: string): Trajet | undefined {
   return trajets.find((t) => t.slug === slug);
