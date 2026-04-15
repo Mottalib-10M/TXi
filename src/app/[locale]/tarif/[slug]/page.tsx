@@ -82,6 +82,46 @@ export default async function TarifPage({ params }: PageProps) {
         <TarifHero tarif={tarif} />
         <TarifGrid tarif={tarif} />
         <TarifExplanation tarif={tarif} />
+
+        {tarif.i18n[loc].introduction && (
+          <section className="py-12 md:py-16 bg-neutral-50">
+            <div className="max-w-4xl mx-auto px-6 fade-up">
+              <h2 className="text-2xl font-semibold tracking-tight mb-4">
+                {loc === "en" ? "About these fares" : "À propos de ces tarifs"}
+              </h2>
+              <p className="text-neutral-600 font-light leading-relaxed whitespace-pre-line">
+                {tarif.i18n[loc].introduction}
+              </p>
+            </div>
+          </section>
+        )}
+
+        {tarif.i18n[loc].conseils && (
+          <section className="py-12 md:py-16">
+            <div className="max-w-4xl mx-auto px-6 fade-up">
+              <h2 className="text-2xl font-semibold tracking-tight mb-4">
+                {loc === "en" ? "Tips to save money" : "Conseils pour économiser"}
+              </h2>
+              <p className="text-neutral-600 font-light leading-relaxed whitespace-pre-line">
+                {tarif.i18n[loc].conseils}
+              </p>
+            </div>
+          </section>
+        )}
+
+        {tarif.i18n[loc].bonASavoir && (
+          <section className="py-12 md:py-16 bg-neutral-50">
+            <div className="max-w-4xl mx-auto px-6 fade-up">
+              <h2 className="text-2xl font-semibold tracking-tight mb-4">
+                {loc === "en" ? "Good to know" : "Bon à savoir"}
+              </h2>
+              <p className="text-neutral-600 font-light leading-relaxed whitespace-pre-line">
+                {tarif.i18n[loc].bonASavoir}
+              </p>
+            </div>
+          </section>
+        )}
+
         <CityFAQ cityName={tarif.title} faq={tarif.i18n[loc].faq} />
         <CityContactForm cityName={tarif.title} />
         <CityCTA cityName={tarif.title} />

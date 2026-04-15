@@ -80,6 +80,46 @@ export default async function ServicePage({ params }: PageProps) {
 
         <ServiceHero service={service} />
         <ServiceBenefits service={service} />
+
+        {service.i18n[loc].detailedDescription && (
+          <section className="py-12 md:py-16 bg-neutral-50">
+            <div className="max-w-4xl mx-auto px-6 fade-up">
+              <h2 className="text-2xl font-semibold tracking-tight mb-4">
+                {loc === "en" ? "About this service" : "En détail"}
+              </h2>
+              <p className="text-neutral-600 font-light leading-relaxed whitespace-pre-line">
+                {service.i18n[loc].detailedDescription}
+              </p>
+            </div>
+          </section>
+        )}
+
+        {service.i18n[loc].useCases && (
+          <section className="py-12 md:py-16">
+            <div className="max-w-4xl mx-auto px-6 fade-up">
+              <h2 className="text-2xl font-semibold tracking-tight mb-4">
+                {loc === "en" ? "Who is it for?" : "Pour qui ?"}
+              </h2>
+              <p className="text-neutral-600 font-light leading-relaxed whitespace-pre-line">
+                {service.i18n[loc].useCases}
+              </p>
+            </div>
+          </section>
+        )}
+
+        {service.i18n[loc].howItWorks && (
+          <section className="py-12 md:py-16 bg-neutral-50">
+            <div className="max-w-4xl mx-auto px-6 fade-up">
+              <h2 className="text-2xl font-semibold tracking-tight mb-4">
+                {loc === "en" ? "How it works" : "Comment ça marche ?"}
+              </h2>
+              <p className="text-neutral-600 font-light leading-relaxed whitespace-pre-line">
+                {service.i18n[loc].howItWorks}
+              </p>
+            </div>
+          </section>
+        )}
+
         <CityFAQ cityName={service.title} faq={service.i18n[loc].faq} />
         <CityContactForm cityName={service.title} />
         <CityCTA cityName={service.title} />

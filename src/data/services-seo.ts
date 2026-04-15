@@ -11,6 +11,9 @@ export interface ServiceI18n {
   description: string;
   benefits: string[];
   faq: ServiceFAQ[];
+  detailedDescription?: string;
+  useCases?: string;
+  howItWorks?: string;
 }
 
 export interface ServiceSeo {
@@ -69,6 +72,12 @@ export const services: ServiceSeo[] = [
               "Nos taxis 7 places sont des minivans récents type Mercedes Classe V, Volkswagen Caravelle ou Ford Tourneo. Tous climatisés et parfaitement entretenus.",
           },
         ],
+        detailedDescription:
+          "Le taxi 7 places représente la solution de transport collectif la plus demandée en France pour les familles nombreuses et les groupes de voyageurs. Nos minivans de référence — Mercedes Classe V, Renault Trafic Passenger et Volkswagen Caravelle — sont sélectionnés pour leur habitacle généreux, leur confort de suspension et leur volume de coffre capable d'accueillir simultanément 7 passagers et leurs bagages. Chaque véhicule dispose de la climatisation bi-zone, de prises USB à chaque rangée et de sièges ergonomiques inclinables. Le taxi 7 places est particulièrement plébiscité pour les transferts aéroport en famille, où la possibilité de voyager ensemble dans un seul véhicule évite le stress de se séparer entre deux taxis classiques. Nos chauffeurs professionnels, titulaires de la carte T, connaissent les itinéraires optimaux et adaptent leur conduite au confort de tous les passagers, y compris les enfants en bas âge. Le prix est calculé par course et non par passager, ce qui rend le taxi 7 places nettement plus économique qu'un VTC classique dès que vous voyagez à cinq personnes ou plus.",
+        useCases:
+          "Les familles avec enfants utilisent le taxi 7 places pour les transferts entre domicile et aéroport, gare ou lieu de vacances, en profitant d'un seul véhicule spacieux avec sièges enfant installés à la demande. Les groupes d'amis le réservent pour les week-ends de mariage, les sorties culturelles ou les événements sportifs, évitant ainsi la contrainte de désigner un conducteur. Les professionnels en déplacement collectif choisissent cette formule pour rejoindre un salon, un séminaire ou un site client, tout en travaillant à bord grâce au WiFi et aux prises de recharge. Enfin, les seniors voyageant en petit groupe apprécient le confort et l'assistance du chauffeur pour charger et décharger les bagages.",
+        howItWorks:
+          "Réservez en ligne sur TaxiNeo en sélectionnant l'option « 7 places ». Indiquez le nombre de passagers, le nombre de bagages et précisez si vous avez besoin de sièges enfant. Vous recevez instantanément un prix fixe garanti. Le jour J, votre chauffeur vous attend à l'adresse indiquée avec un minivan spacieux, aide au chargement des bagages et vous conduit à destination en toute sérénité.",
       },
       en: {
         metaTitle: "7-Seater Taxi: book a minivan for groups | TaxiNeo",
@@ -108,6 +117,12 @@ export const services: ServiceSeo[] = [
               "Our 7-seater taxis are recent minivans such as Mercedes V-Class, Volkswagen Caravelle or Ford Tourneo. All air-conditioned and perfectly maintained.",
           },
         ],
+        detailedDescription:
+          "The 7-seater taxi is the most popular group transport solution in France for large families and travelling groups. Our flagship minivans — Mercedes V-Class, Renault Trafic Passenger and Volkswagen Caravelle — are selected for their spacious cabin, smooth suspension and boot volume capable of carrying 7 passengers and their luggage simultaneously. Each vehicle features dual-zone climate control, USB ports at every row and ergonomic reclining seats. The 7-seater taxi is especially popular for family airport transfers, where travelling together in a single vehicle eliminates the stress of splitting between two standard taxis. Our professional drivers, fully licensed and vetted, know the optimal routes and adapt their driving for the comfort of all passengers, including young children. The fare is calculated per trip rather than per passenger, making the 7-seater taxi significantly more economical than a standard ride-hailing car once you travel with five or more people.",
+        useCases:
+          "Families with children use the 7-seater taxi for transfers between home and airport, train station or holiday destination, enjoying a single spacious vehicle with child seats fitted on request. Groups of friends book it for wedding weekends, cultural outings or sporting events, avoiding the need to designate a driver. Business teams on group trips choose this option to reach a trade show, seminar or client site while working on board thanks to WiFi and charging ports. Seniors travelling in small groups appreciate the comfort and the driver's assistance with loading and unloading luggage.",
+        howItWorks:
+          "Book online on TaxiNeo by selecting the '7-seater' option. Enter the number of passengers, amount of luggage and specify if you need child seats. You instantly receive a guaranteed fixed price. On the day, your driver meets you at the specified address with a spacious minivan, helps load luggage and drives you to your destination in complete comfort.",
       },
     },
   },
@@ -155,6 +170,12 @@ export const services: ServiceSeo[] = [
               "Nous recommandons de réserver au moins 24 heures à l'avance pour garantir la disponibilité d'un van. En cas d'urgence, nous faisons notre possible pour répondre sous 2 heures.",
           },
         ],
+        detailedDescription:
+          "Le taxi van est la solution de transport grand format pour les groupes de 8 à 9 passagers nécessitant un espace de chargement supérieur à celui d'un minivan classique. Nos vans — Mercedes Sprinter, Ford Transit Custom et Peugeot Traveller — offrent un habitacle haut de plafond, des portes coulissantes latérales pour un embarquement facilité et un volume de coffre pouvant accueillir valises, équipements sportifs ou matériel professionnel. La climatisation arrière indépendante garantit un confort optimal quelle que soit la saison. Le taxi van est le choix privilégié des entreprises organisant des séminaires, des équipes sportives en déplacement et des groupes participant à des voyages organisés ou des événements culturels. Chaque van est équipé de prises 220V, du WiFi embarqué et de sièges inclinables avec appuie-tête réglables. Nos chauffeurs, expérimentés dans la conduite de véhicules grand gabarit, assurent une conduite souple et anticipative, même sur autoroute ou en zone urbaine dense. Le tarif unique par course rend le van particulièrement avantageux pour les grands groupes comparé à la réservation de plusieurs taxis séparés.",
+        useCases:
+          "Les entreprises réservent le taxi van pour transporter leurs collaborateurs lors de séminaires, team buildings ou salons professionnels, en combinant gain de temps et esprit d'équipe. Les associations sportives l'utilisent pour les déplacements de compétition, avec assez de place pour les joueurs, les sacs de sport et le matériel technique. Les agences de voyage et tours opérateurs le choisissent pour les excursions journée et les circuits touristiques en petit groupe. Les familles élargies et groupes d'amis le réservent pour les mariages, fêtes de famille ou week-ends de célébration, bénéficiant d'un seul véhicule confortable pour tout le monde.",
+        howItWorks:
+          "Sélectionnez l'option « Van » lors de votre réservation sur TaxiNeo. Précisez le nombre exact de passagers, la quantité et le type de bagages ou équipements. Recevez votre devis instantané à prix fixe. Le jour prévu, le chauffeur arrive avec le van, ouvre les portes coulissantes pour faciliter le chargement et vous accompagne jusqu'à votre destination dans un confort spacieux.",
       },
       en: {
         metaTitle: "Taxi Van: group transport up to 8 passengers | TaxiNeo",
@@ -194,6 +215,12 @@ export const services: ServiceSeo[] = [
               "We recommend booking at least 24 hours in advance to guarantee van availability. In case of emergency, we do our best to respond within 2 hours.",
           },
         ],
+        detailedDescription:
+          "The taxi van is the large-format transport solution for groups of 8 to 9 passengers requiring more loading space than a standard minivan. Our vans — Mercedes Sprinter, Ford Transit Custom and Peugeot Traveller — feature a high-ceiling cabin, lateral sliding doors for easy boarding and a boot volume capable of accommodating suitcases, sports equipment or professional gear. Independent rear climate control ensures optimal comfort regardless of the season. The taxi van is the preferred choice for companies organising seminars, sports teams on the move and groups attending organised trips or cultural events. Each van is equipped with 220V outlets, onboard WiFi and reclining seats with adjustable headrests. Our drivers, experienced in handling large vehicles, ensure smooth and anticipatory driving, even on motorways or in dense urban areas. The single per-trip fare makes the van particularly advantageous for large groups compared to booking several separate taxis.",
+        useCases:
+          "Businesses book the taxi van to transport their teams to seminars, team-building events or trade fairs, combining time savings with team spirit. Sports clubs use it for competition travel, with ample room for players, sports bags and technical equipment. Travel agencies and tour operators choose it for day excursions and small-group sightseeing tours. Extended families and friend groups reserve it for weddings, family celebrations or weekend getaways, benefiting from a single comfortable vehicle for everyone.",
+        howItWorks:
+          "Select the 'Van' option when booking on TaxiNeo. Specify the exact number of passengers, the quantity and type of luggage or equipment. Receive your instant fixed-price quote. On the scheduled day, the driver arrives with the van, opens the sliding doors for easy loading and accompanies you to your destination in spacious comfort.",
       },
     },
   },
@@ -241,6 +268,12 @@ export const services: ServiceSeo[] = [
               "Un léger supplément peut s'appliquer en raison du véhicule spécialisé, mais nos tarifs restent compétitifs. Le prix fixe est communiqué à la réservation, sans surprise.",
           },
         ],
+        detailedDescription:
+          "Le taxi PMR (Personne à Mobilité Réduite) de TaxiNeo est un service de transport spécialement conçu pour garantir l'accessibilité et la dignité des personnes en fauteuil roulant ou souffrant de handicaps moteurs. Nos véhicules adaptés sont équipés de rampes d'accès homologuées ou de plateformes élévatrices hydrauliques capables de supporter des fauteuils roulants manuels, électriques et scooters de mobilité jusqu'à 300 kg. Un système d'arrimage certifié maintient le fauteuil fermement en place pendant tout le trajet, assurant une sécurité maximale même en cas de freinage brusque. Nos chauffeurs suivent une formation spécifique à l'accompagnement des personnes handicapées, couvrant les gestes d'assistance, la communication bienveillante et les protocoles de sécurité. Le plancher surbaissé et l'espace intérieur élargi permettent une installation confortable sans transfert obligatoire hors du fauteuil. Ce service répond aux exigences de la loi sur l'accessibilité des transports et convient aussi bien aux déplacements quotidiens qu'aux rendez-vous médicaux, sorties familiales ou voyages. Le transport médical conventionné CPAM est possible via nos chauffeurs partenaires agréés.",
+        useCases:
+          "Les personnes en fauteuil roulant utilisent le taxi PMR pour leurs rendez-vous médicaux réguliers — consultations hospitalières, séances de kinésithérapie ou dialyse — avec la garantie d'un véhicule parfaitement adapté à chaque trajet. Les familles accompagnant un proche handicapé le réservent pour les sorties culturelles, les visites familiales ou les déplacements vers les centres de rééducation. Les établissements de soins et les associations d'aide aux personnes handicapées font appel à ce service pour organiser les transferts de leurs résidents ou adhérents. Les professionnels en fauteuil roulant choisissent le taxi PMR pour leurs déplacements d'affaires, garantissant ponctualité et accessibilité à chaque rendez-vous.",
+        howItWorks:
+          "Lors de la réservation en ligne sur TaxiNeo, sélectionnez l'option « PMR / Fauteuil roulant ». Précisez le type de fauteuil (manuel, électrique ou scooter) et ses dimensions si nécessaire. Un véhicule adapté avec rampe ou plateforme élévatrice est attribué automatiquement. Le chauffeur formé arrive, déploie la rampe, vous assiste pour l'installation et sécurise l'arrimage du fauteuil avant le départ.",
       },
       en: {
         metaTitle: "Wheelchair Accessible Taxi: adapted transport for reduced mobility | TaxiNeo",
@@ -280,6 +313,12 @@ export const services: ServiceSeo[] = [
               "A small surcharge may apply due to the specialised vehicle, but our rates remain competitive. The fixed price is communicated at booking, with no surprises.",
           },
         ],
+        detailedDescription:
+          "The TaxiNeo wheelchair accessible taxi is a transport service specifically designed to guarantee accessibility and dignity for people in wheelchairs or with motor disabilities. Our adapted vehicles are fitted with approved access ramps or hydraulic lift platforms capable of supporting manual wheelchairs, electric wheelchairs and mobility scooters up to 300 kg. A certified restraint system holds the wheelchair firmly in place throughout the journey, ensuring maximum safety even during sudden braking. Our drivers undergo specific training in assisting people with disabilities, covering assistance techniques, compassionate communication and safety protocols. The lowered floor and widened interior space allow comfortable installation without requiring a transfer out of the wheelchair. This service meets transport accessibility law requirements and is suitable for daily travel, medical appointments, family outings and longer trips. CPAM-approved medical transport is available through our licensed partner drivers.",
+        useCases:
+          "People in wheelchairs use the accessible taxi for regular medical appointments — hospital consultations, physiotherapy sessions or dialysis — with the assurance of a perfectly adapted vehicle for every journey. Families accompanying a disabled relative book it for cultural outings, family visits or travel to rehabilitation centres. Healthcare facilities and disability support organisations use this service to arrange transfers for their residents or members. Wheelchair-using professionals choose the accessible taxi for business travel, guaranteeing punctuality and accessibility at every meeting.",
+        howItWorks:
+          "When booking online on TaxiNeo, select the 'Wheelchair Accessible' option. Specify the type of wheelchair (manual, electric or scooter) and its dimensions if necessary. An adapted vehicle with ramp or lift platform is automatically assigned. The trained driver arrives, deploys the ramp, assists you with boarding and secures the wheelchair restraints before departure.",
       },
     },
   },
@@ -327,6 +366,12 @@ export const services: ServiceSeo[] = [
               "Oui, nous pouvons organiser le transport de tous vos invités avec une flotte de véhicules coordonnés. Nous proposons un devis global pour le transport complet du mariage.",
           },
         ],
+        detailedDescription:
+          "Le taxi mariage TaxiNeo transforme chaque déplacement de votre jour J en un moment d'élégance et de sérénité. Nous proposons une sélection de berlines premium — Mercedes Classe E et Classe S, BMW Série 5 et Série 7, Audi A6 et A8 — toutes récentes, immaculées et disponibles en coloris sobre (noir, blanc nacré, gris anthracite). La décoration du véhicule est réalisée selon vos souhaits : compositions florales assorties au thème du mariage, rubans de satin, noeud sur le capot et guirlandes discrètes. Le chauffeur, en costume sombre et gants blancs, assure un service protocolaire : ouverture de porte, assistance à la descente de la mariée, timing millimétré entre mairie, lieu de culte, séance photo et salle de réception. Nous coordonnons également le transport de tous les invités grâce à une flotte de véhicules dédiés — berlines, minivans et vans — avec un planning horaire précis communiqué à chaque chauffeur. Le véhicule des mariés reste à disposition pendant toute la durée de la cérémonie et des photos, garantissant une liberté totale sans contrainte de temps.",
+        useCases:
+          "Les mariés réservent le taxi mariage pour leur transfert entre le domicile, la mairie, le lieu de culte et la salle de réception, avec un véhicule décoré et un chauffeur au service protocolaire impeccable. Les témoins et demoiselles d'honneur bénéficient d'un transport coordonné pour arriver ensemble et à l'heure aux différents lieux. Les familles des mariés organisent le transport des parents, grands-parents et proches, notamment les personnes âgées nécessitant un accompagnement attentionné. Les wedding planners font appel à TaxiNeo pour gérer la logistique transport de A à Z, avec un interlocuteur unique et un planning partagé en temps réel.",
+        howItWorks:
+          "Contactez TaxiNeo en précisant la date du mariage, le nombre de véhicules souhaités, les lieux et horaires de chaque étape. Nous élaborons un devis personnalisé incluant la décoration, le nombre de chauffeurs et le planning détaillé. Après validation, chaque chauffeur reçoit son itinéraire. Le jour J, les véhicules décorés arrivent en avance, prêts à rendre votre mariage inoubliable.",
       },
       en: {
         metaTitle: "Wedding Taxi: chauffeured car for your big day | TaxiNeo",
@@ -366,6 +411,12 @@ export const services: ServiceSeo[] = [
               "Yes, we can organise transport for all your guests with a coordinated fleet of vehicles. We offer a comprehensive quote for the entire wedding transport.",
           },
         ],
+        detailedDescription:
+          "The TaxiNeo wedding taxi transforms every journey on your big day into a moment of elegance and serenity. We offer a selection of premium sedans — Mercedes E-Class and S-Class, BMW 5 Series and 7 Series, Audi A6 and A8 — all recent, immaculate and available in understated colours (black, pearl white, anthracite grey). Vehicle decoration is carried out according to your wishes: floral arrangements matching the wedding theme, satin ribbons, bonnet bows and subtle garlands. The chauffeur, in a dark suit and white gloves, provides a ceremonial service: door opening, assistance for the bride, precisely timed transfers between the town hall, place of worship, photo session and reception venue. We also coordinate transport for all guests through a dedicated fleet — sedans, minivans and vans — with a precise timetable communicated to each driver. The couple's vehicle remains at your disposal throughout the ceremony and photos, guaranteeing complete freedom with no time constraints.",
+        useCases:
+          "The couple books the wedding taxi for their transfer between home, town hall, place of worship and reception venue, with a decorated vehicle and a chauffeur providing impeccable ceremonial service. Best men and bridesmaids benefit from coordinated transport to arrive together and on time at each venue. The families of the couple arrange transport for parents, grandparents and close relatives, particularly elderly guests requiring attentive assistance. Wedding planners call on TaxiNeo to manage transport logistics from start to finish, with a single point of contact and a shared real-time schedule.",
+        howItWorks:
+          "Contact TaxiNeo specifying the wedding date, number of vehicles required, venues and timings for each stage. We prepare a personalised quote including decoration, number of chauffeurs and detailed schedule. After confirmation, each driver receives their itinerary. On the big day, decorated vehicles arrive early, ready to make your wedding unforgettable.",
       },
     },
   },
@@ -413,6 +464,12 @@ export const services: ServiceSeo[] = [
               "Vous pouvez ajuster l'heure de retour via notre application ou en contactant votre chauffeur directement. Nous nous adaptons à votre emploi du temps sans pénalité.",
           },
         ],
+        detailedDescription:
+          "Le taxi événement TaxiNeo est le service de transport dédié aux spectateurs, participants et organisateurs d'événements de toute nature : concerts au Stade de France ou à l'Accor Arena, festivals de musique, salons professionnels au Parc des Expositions, matchs de football et de rugby, galas d'entreprise, soirées privées et conférences. Le principal avantage de ce service réside dans la garantie absolue du retour : votre chauffeur se positionne à proximité de la sortie de l'événement et vous attend, même si la fin se prolonge au-delà de l'horaire prévu. Nous connaissons les points d'accès, les zones de dépose rapide et les contraintes de circulation propres à chaque lieu événementiel en France. La réservation anticipée vous permet de sécuriser un véhicule même lors des pics de demande — fins de concert, nuits de match ou clôture de salon. Le prix fixe aller-retour est communiqué dès la réservation et ne change pas, quels que soient les embouteillages ou le temps d'attente du chauffeur. Pour les groupes, nous coordonnons plusieurs véhicules avec un point de rendez-vous unique à la sortie.",
+        useCases:
+          "Les amateurs de concerts et festivals réservent le taxi événement pour profiter pleinement de leur soirée sans se soucier du stationnement, de l'alcool au volant ou de la disponibilité des transports en commun tardifs. Les professionnels se rendant à des salons, congrès ou conférences l'utilisent pour arriver à l'heure et repartir dès la fin des sessions sans attendre. Les supporters réservent leur trajet retour avant le match, évitant la cohue des taxis à la sortie du stade. Les entreprises organisent le transport collectif de leurs collaborateurs pour les soirées d'entreprise, galas de fin d'année ou team buildings, garantissant la sécurité de chacun sur le trajet retour.",
+        howItWorks:
+          "Réservez sur TaxiNeo en indiquant le lieu de l'événement, l'heure d'arrivée souhaitée et l'heure de retour estimée. Vous pouvez ajuster l'heure de retour jusqu'à 30 minutes avant via l'application ou par SMS au chauffeur. Le prix fixe aller-retour est confirmé instantanément. Le jour de l'événement, votre chauffeur vous conduit sur place puis revient vous chercher à la sortie au point convenu.",
       },
       en: {
         metaTitle: "Event Taxi: transport for concerts, exhibitions and parties | TaxiNeo",
@@ -452,6 +509,12 @@ export const services: ServiceSeo[] = [
               "You can adjust the return time via our app or by contacting your driver directly. We adapt to your schedule without penalty.",
           },
         ],
+        detailedDescription:
+          "The TaxiNeo event taxi is the dedicated transport service for spectators, attendees and organisers of events of all kinds: concerts at the Stade de France or Accor Arena, music festivals, trade shows at the Parc des Expositions, football and rugby matches, corporate galas, private parties and conferences. The key advantage of this service is the absolute guarantee of a return journey: your driver positions near the event exit and waits for you, even if the event runs beyond schedule. We know the access points, quick drop-off zones and traffic constraints specific to each event venue in France. Advance booking lets you secure a vehicle even during peak demand — concert endings, match nights or trade show closings. The fixed round-trip price is communicated at booking and does not change, regardless of traffic or the driver's waiting time. For groups, we coordinate multiple vehicles with a single meeting point at the exit.",
+        useCases:
+          "Concert and festival fans book the event taxi to fully enjoy their evening without worrying about parking, drink-driving or the availability of late-night public transport. Professionals attending trade shows, congresses or conferences use it to arrive on time and leave as soon as sessions end. Sports fans secure their return journey before the match, avoiding the taxi scramble at stadium exits. Companies organise collective transport for their staff for corporate evenings, year-end galas or team-building events, ensuring everyone gets home safely.",
+        howItWorks:
+          "Book on TaxiNeo by entering the event venue, desired arrival time and estimated return time. You can adjust the return time up to 30 minutes beforehand via the app or by texting the driver. The fixed round-trip price is confirmed instantly. On the event day, your driver takes you there and returns to collect you at the exit at the agreed meeting point.",
       },
     },
   },
@@ -499,6 +562,12 @@ export const services: ServiceSeo[] = [
               "Nous desservons tous les hôpitaux, cliniques, centres de dialyse, centres de rééducation et cabinets médicaux en France. Aucune restriction géographique.",
           },
         ],
+        detailedDescription:
+          "Le taxi médical TaxiNeo est un service de transport sanitaire pensé pour les patients ayant des rendez-vous médicaux réguliers ou ponctuels dans les hôpitaux, cliniques, centres de dialyse, centres de rééducation et cabinets spécialisés. Contrairement aux ambulances, le taxi médical convient aux patients autonomes ou semi-autonomes qui n'ont pas besoin d'équipement médical embarqué mais qui nécessitent un transport ponctuel, confortable et bienveillant. Nos chauffeurs reçoivent une formation spécifique à l'accompagnement de patients : aide à la montée et descente du véhicule, patience pendant les temps d'attente, connaissance des accès hospitaliers et des protocoles de dépose devant les urgences ou consultations. Pour les traitements récurrents comme la chimiothérapie, la dialyse trois fois par semaine ou les séances de rééducation, nous proposons des réservations programmées avec attribution du même chauffeur afin de créer un lien de confiance bénéfique au bien-être du patient. Le véhicule est nettoyé et désinfecté entre chaque course médicale. Un bon de transport médical n'est pas requis pour utiliser notre service, mais si vous disposez d'une prescription médicale de transport, nous vous orientons vers notre page taxi conventionné pour un éventuel remboursement.",
+        useCases:
+          "Les patients atteints d'affection longue durée (ALD) réservent le taxi médical pour leurs séances régulières de dialyse, chimiothérapie ou radiothérapie, avec la certitude d'un chauffeur ponctuel et attentionné. Les personnes âgées l'utilisent pour se rendre à leurs consultations spécialisées, opérations ambulatoires ou examens hospitaliers, accompagnées de leur domicile jusqu'à l'accueil de l'établissement. Les parents accompagnant un enfant malade bénéficient d'un transport adapté et rassurant vers les hôpitaux pédiatriques. Les convalescents sortant d'hospitalisation réservent le taxi médical pour un retour à domicile en douceur, sans effort et en toute sécurité.",
+        howItWorks:
+          "Réservez en ligne sur TaxiNeo en sélectionnant le service « Médical ». Indiquez l'établissement de santé, la date et l'heure du rendez-vous. Pour les traitements récurrents, configurez un planning hebdomadaire. Le chauffeur arrive à votre domicile en avance, vous aide à monter en voiture, vous conduit à l'accueil de l'établissement et revient vous chercher à l'heure convenue pour le retour.",
       },
       en: {
         metaTitle: "Medical Taxi: healthcare transport to hospitals and clinics | TaxiNeo",
@@ -538,6 +607,12 @@ export const services: ServiceSeo[] = [
               "We serve all hospitals, clinics, dialysis centres, rehabilitation centres and medical offices in France. No geographical restrictions.",
           },
         ],
+        detailedDescription:
+          "The TaxiNeo medical taxi is a healthcare transport service designed for patients with regular or one-off appointments at hospitals, clinics, dialysis centres, rehabilitation facilities and specialist practices. Unlike ambulances, the medical taxi is suitable for autonomous or semi-autonomous patients who do not need onboard medical equipment but require punctual, comfortable and considerate transport. Our drivers receive specific patient-care training: help getting in and out of the vehicle, patience during waiting times, familiarity with hospital access routes and drop-off protocols near emergency departments or consultation areas. For recurring treatments such as chemotherapy, dialysis three times a week or rehabilitation sessions, we offer scheduled bookings with the same driver assigned to build a trusting relationship that benefits patient wellbeing. Each vehicle is cleaned and disinfected between medical trips. A medical transport voucher is not required to use our service, but if you have a medical transport prescription, we direct you to our conventional taxi page for potential reimbursement.",
+        useCases:
+          "Patients with long-term conditions (ALD) book the medical taxi for regular dialysis, chemotherapy or radiotherapy sessions, with the certainty of a punctual and caring driver. Elderly people use it for specialist consultations, outpatient procedures or hospital examinations, escorted from their doorstep to the facility reception. Parents accompanying a sick child benefit from adapted and reassuring transport to paediatric hospitals. Patients recovering from hospitalisation book the medical taxi for a gentle, effortless and safe return home.",
+        howItWorks:
+          "Book online on TaxiNeo by selecting the 'Medical' service. Enter the healthcare facility, date and appointment time. For recurring treatments, set up a weekly schedule. The driver arrives at your home ahead of time, helps you into the car, takes you to the facility reception and returns to collect you at the agreed time for the journey home.",
       },
     },
   },
@@ -585,6 +660,12 @@ export const services: ServiceSeo[] = [
               "Absolument. C'est l'un des usages les plus courants. Le chauffeur peut attendre le temps de la consultation pour vous ramener ensuite avec votre animal.",
           },
         ],
+        detailedDescription:
+          "Le taxi animaux TaxiNeo met fin à la difficulté de trouver un chauffeur acceptant les animaux de compagnie. Nos véhicules sont spécialement préparés pour accueillir chiens, chats, lapins, furets et autres petits animaux domestiques dans les meilleures conditions de sécurité et d'hygiène. Les sièges arrière sont protégés par des housses imperméables lavables, et le coffre peut recevoir des caisses de transport de toutes tailles, des paniers rigides aux sacs souples ventilés. Nos chauffeurs sont habitués aux animaux et adoptent une conduite douce pour éviter le stress de votre compagnon : pas de freinages brusques, musique calme et température agréable. Aucune race de chien n'est refusée, y compris les grands gabarits type berger allemand, labrador ou dogue, à condition que l'animal soit tenu en laisse ou en caisse. Le tarif appliqué est identique à celui d'une course classique, avec un éventuel léger supplément de nettoyage clairement indiqué lors de la réservation. Le taxi animaux convient aussi bien pour les trajets quotidiens vers le vétérinaire, le toiletteur ou la pension que pour les déplacements plus longs comme les départs en vacances avec votre compagnon.",
+        useCases:
+          "Les propriétaires de chiens et chats utilisent le taxi animaux pour les visites vétérinaires, notamment les urgences où la rapidité du transport est cruciale. Les familles partant en vacances avec leur animal réservent ce service pour rejoindre la gare ou l'aéroport sans laisser leur compagnon derrière. Les personnes âgées accompagnées de leur animal de compagnie l'utilisent pour les déplacements médicaux ou les visites familiales. Les éleveurs et professionnels du secteur animalier font appel au taxi animaux pour transporter des animaux vers des expositions, des concours ou des pensions spécialisées.",
+        howItWorks:
+          "Réservez sur TaxiNeo en cochant l'option « Animaux acceptés ». Précisez l'espèce, la race, la taille approximative de l'animal et si vous utiliserez une caisse de transport. Le prix fixe est calculé instantanément, avec le supplément nettoyage éventuel affiché clairement. Le chauffeur arrive avec les protections de siège installées, accueille votre compagnon avec bienveillance et vous conduit à destination en douceur.",
       },
       en: {
         metaTitle: "Pet Taxi: transport for your pets | TaxiNeo",
@@ -624,6 +705,12 @@ export const services: ServiceSeo[] = [
               "Absolutely. It is one of the most common uses. The driver can wait during the consultation to bring you back with your pet afterwards.",
           },
         ],
+        detailedDescription:
+          "The TaxiNeo pet taxi eliminates the difficulty of finding a driver who accepts pets. Our vehicles are specially prepared to welcome dogs, cats, rabbits, ferrets and other small domestic animals in the best conditions of safety and hygiene. Rear seats are protected with washable waterproof covers, and the boot can accommodate carriers of all sizes, from rigid crates to ventilated soft bags. Our drivers are accustomed to animals and adopt smooth driving to minimise your companion's stress: no sudden braking, calm music and a comfortable temperature. No dog breed is refused, including large breeds such as German shepherds, labradors or mastiffs, provided the animal is on a leash or in a carrier. The fare applied is identical to a standard trip, with a possible small cleaning surcharge clearly indicated at booking. The pet taxi is suitable for everyday trips to the vet, groomer or kennel as well as longer journeys such as holiday departures with your companion.",
+        useCases:
+          "Dog and cat owners use the pet taxi for veterinary visits, especially emergencies where speed of transport is crucial. Families going on holiday with their pet book this service to reach the train station or airport without leaving their companion behind. Elderly people accompanied by their pet use it for medical trips or family visits. Breeders and animal industry professionals call on the pet taxi to transport animals to shows, competitions or specialist boarding facilities.",
+        howItWorks:
+          "Book on TaxiNeo by ticking the 'Pets accepted' option. Specify the species, breed, approximate size of the animal and whether you will use a carrier. The fixed price is calculated instantly, with any cleaning surcharge clearly displayed. The driver arrives with seat protections already fitted, welcomes your companion warmly and drives you to your destination smoothly.",
       },
     },
   },
@@ -671,6 +758,12 @@ export const services: ServiceSeo[] = [
               "Oui, un lien de suivi GPS vous est envoyé par SMS dès l'enlèvement. Vous pouvez suivre votre colis en temps réel jusqu'à la livraison.",
           },
         ],
+        detailedDescription:
+          "Le taxi colis TaxiNeo est un service de coursier premium qui utilise la rapidité et la disponibilité du réseau taxi pour assurer la livraison express de vos plis, documents et colis urgents. Contrairement aux services de livraison classiques avec des délais de 24 à 48 heures, le taxi colis garantit un enlèvement en moins de 30 minutes et une livraison le jour même, souvent en moins d'une heure en zone urbaine. Chaque envoi bénéficie d'un suivi GPS en temps réel : vous recevez un lien de tracking par SMS dès l'enlèvement et pouvez suivre votre colis jusqu'à la remise en main propre au destinataire. Une preuve de livraison avec signature électronique et horodatage vous est envoyée instantanément. Le service est particulièrement prisé par les cabinets d'avocats pour les plis confidentiels, les entreprises pour les contrats urgents, les laboratoires pour les échantillons biologiques, les pharmacies pour les médicaments sensibles et les particuliers pour les clés, papiers d'identité ou objets oubliés. Tous les colis sont couverts par notre assurance transport, avec option d'assurance complémentaire pour les objets de valeur. Le service fonctionne 7 jours sur 7, week-ends et jours fériés compris.",
+        useCases:
+          "Les entreprises et cabinets juridiques envoient des contrats, des documents notariés et des plis confidentiels nécessitant une livraison rapide et sécurisée avec preuve de remise. Les laboratoires médicaux et les pharmacies font transporter des échantillons biologiques, des résultats d'analyses ou des médicaments thermosensibles dans des conditions contrôlées. Les professionnels de l'informatique expédient des pièces détachées, disques durs ou serveurs de remplacement pour minimiser les temps d'arrêt. Les particuliers utilisent le taxi colis pour envoyer des clés à un proche, faire livrer un cadeau en urgence ou récupérer des documents oubliés dans un autre lieu.",
+        howItWorks:
+          "Créez votre demande de livraison sur TaxiNeo en précisant l'adresse d'enlèvement, l'adresse de livraison, la nature du colis et son poids approximatif. Recevez un prix fixe instantané. Un chauffeur-coursier se présente à l'adresse d'enlèvement en moins de 30 minutes, prend en charge votre colis et le livre en main propre au destinataire. Vous recevez la preuve de livraison signée par SMS.",
       },
       en: {
         metaTitle: "Parcel Taxi: express delivery of packages and documents | TaxiNeo",
@@ -710,6 +803,12 @@ export const services: ServiceSeo[] = [
               "Yes, a GPS tracking link is sent to you by SMS upon collection. You can track your parcel in real time until delivery.",
           },
         ],
+        detailedDescription:
+          "The TaxiNeo parcel taxi is a premium courier service that leverages the speed and availability of the taxi network to provide express delivery of your letters, documents and urgent packages. Unlike standard delivery services with 24 to 48-hour timescales, the parcel taxi guarantees collection within 30 minutes and same-day delivery, often under an hour in urban areas. Every shipment benefits from real-time GPS tracking: you receive a tracking link by SMS upon collection and can follow your parcel until hand-to-hand delivery to the recipient. A proof of delivery with electronic signature and timestamp is sent to you instantly. The service is especially valued by law firms for confidential documents, businesses for urgent contracts, laboratories for biological samples, pharmacies for sensitive medications and individuals for keys, identity papers or forgotten items. All parcels are covered by our transport insurance, with optional additional cover for high-value items. The service operates 7 days a week, including weekends and public holidays.",
+        useCases:
+          "Businesses and law firms send contracts, notarised documents and confidential letters requiring fast, secure delivery with proof of receipt. Medical laboratories and pharmacies transport biological samples, test results or temperature-sensitive medications under controlled conditions. IT professionals ship spare parts, hard drives or replacement servers to minimise downtime. Private individuals use the parcel taxi to send keys to a relative, have a gift delivered urgently or retrieve documents left at another location.",
+        howItWorks:
+          "Create your delivery request on TaxiNeo by entering the collection address, delivery address, nature of the parcel and approximate weight. Receive an instant fixed price. A courier-driver arrives at the collection address within 30 minutes, takes charge of your parcel and delivers it hand-to-hand to the recipient. You receive signed proof of delivery by SMS.",
       },
     },
   },
@@ -757,6 +856,12 @@ export const services: ServiceSeo[] = [
               "Notre service de nuit couvre toute la France métropolitaine, y compris les zones rurales. La disponibilité peut varier selon la zone, mais nous faisons notre maximum pour accepter chaque demande.",
           },
         ],
+        detailedDescription:
+          "Le taxi de nuit TaxiNeo assure un service de transport continu entre 19 heures et 7 heures du matin, comblant le creux de disponibilité des transports en commun et la rareté des taxis conventionnels aux heures tardives. Nos chauffeurs de nuit sont des professionnels expérimentés, titulaires de la carte T, qui connaissent parfaitement les itinéraires nocturnes, les rues à sens unique et les zones à éviter. Chaque véhicule est géolocalisé en permanence et les coordonnées du chauffeur vous sont communiquées avant la prise en charge, garantissant une transparence et une sécurité totales. Le tarif de nuit, conforme à la réglementation tarifaire en vigueur (tarif C et D), est communiqué à l'avance lors de la réservation et reste fixe, sans majoration surprise liée aux embouteillages ou aux détours. Le taxi de nuit est particulièrement sollicité pour les sorties de restaurant, les retours de soirée, les fins de concert, les vols retardés ou décalés au petit matin et les urgences médicales nocturnes. Même en pleine nuit, un chauffeur peut généralement être à votre adresse en 10 à 20 minutes dans les grandes agglomérations, et sous 30 minutes en zone périurbaine.",
+        useCases:
+          "Les noctambules réservent le taxi de nuit pour rentrer en sécurité après une soirée entre amis, un dîner au restaurant ou une sortie en boîte de nuit, sans risquer l'alcool au volant. Les voyageurs ayant un vol matinal très tôt ou un vol retardé atterrissant tard dans la nuit l'utilisent pour rejoindre l'aéroport ou rentrer chez eux sans stress. Les professionnels de la santé — infirmières, médecins de garde, aides-soignantes — font appel au taxi de nuit pour leurs trajets domicile-hôpital lors des gardes nocturnes. Les personnes confrontées à une urgence médicale non vitale, comme une forte fièvre ou une blessure nécessitant les urgences, utilisent ce service pour un transport rapide et sûr vers l'hôpital le plus proche.",
+        howItWorks:
+          "Réservez votre taxi de nuit sur TaxiNeo en indiquant l'adresse de prise en charge et la destination. La réservation est possible à l'avance ou en temps réel, même à 3 heures du matin. Le prix fixe de nuit s'affiche instantanément. Un chauffeur professionnel est assigné et ses coordonnées vous sont envoyées par SMS. Il arrive à l'adresse indiquée, vous prend en charge en toute sécurité et vous conduit à destination.",
       },
       en: {
         metaTitle: "Night Taxi: driver available 24/7 across France | TaxiNeo",
@@ -796,6 +901,12 @@ export const services: ServiceSeo[] = [
               "Our night service covers all of mainland France, including rural areas. Availability may vary by area, but we do our best to accept every request.",
           },
         ],
+        detailedDescription:
+          "The TaxiNeo night taxi provides continuous transport between 7pm and 7am, filling the gap left by reduced public transport and the scarcity of conventional taxis during late hours. Our night drivers are experienced professionals, fully licensed, who know nocturnal routes, one-way streets and areas to avoid inside out. Every vehicle is permanently geolocated and the driver's contact details are sent to you before pick-up, guaranteeing complete transparency and safety. The night fare, compliant with current tariff regulations (tariff C and D), is communicated in advance at booking and remains fixed, with no surprise surcharges due to traffic or detours. The night taxi is especially popular for restaurant outings, party returns, concert endings, delayed flights or early-morning departures and nocturnal medical emergencies. Even in the middle of the night, a driver can usually reach your address in 10 to 20 minutes in major cities, and within 30 minutes in suburban areas.",
+        useCases:
+          "Night owls book the night taxi to get home safely after an evening with friends, a restaurant dinner or a nightclub outing, avoiding the risk of drink-driving. Travellers with very early morning flights or delayed flights landing late at night use it to reach the airport or get home without stress. Healthcare professionals — nurses, on-call doctors, care assistants — rely on the night taxi for home-to-hospital journeys during night shifts. People facing a non-life-threatening medical emergency, such as a high fever or an injury requiring A&E, use this service for fast, safe transport to the nearest hospital.",
+        howItWorks:
+          "Book your night taxi on TaxiNeo by entering the pick-up address and destination. Booking is possible in advance or in real time, even at 3am. The fixed night fare is displayed instantly. A professional driver is assigned and their contact details are sent to you by SMS. They arrive at the specified address, collect you safely and drive you to your destination.",
       },
     },
   },
@@ -843,6 +954,12 @@ export const services: ServiceSeo[] = [
               "Oui, nos chauffeures femmes sont disponibles de jour comme de nuit. La disponibilité peut varier selon les zones, mais nous couvrons les principales agglomérations 24h/24.",
           },
         ],
+        detailedDescription:
+          "Le taxi femme TaxiNeo répond à un besoin de plus en plus exprimé par les passagères — et parfois les passagers — de pouvoir choisir une chauffeure femme pour leurs déplacements. Ce service naît d'un constat simple : de nombreuses femmes se sentent plus à l'aise et plus en sécurité lorsqu'elles voyagent avec une conductrice, en particulier lors de trajets nocturnes, de retours de soirée ou de déplacements dans des zones peu familières. Nos chauffeures sont des professionnelles titulaires de la carte T, sélectionnées avec les mêmes critères d'exigence que l'ensemble de notre réseau : expérience de conduite, connaissance des itinéraires, ponctualité et sens du service. Le tarif est strictement identique à celui d'un taxi classique, sans aucun supplément. Le service est ouvert à toutes et à tous, sans distinction : femmes voyageant seules, mères avec enfants, personnes âgées, ou toute personne souhaitant voyager avec une chauffeure femme pour des raisons personnelles, culturelles ou religieuses. La disponibilité des chauffeures femmes couvre les principales agglomérations françaises 24 heures sur 24, avec une couverture étendue en province aux heures de forte demande.",
+        useCases:
+          "Les femmes voyageant seules la nuit réservent le taxi femme pour rentrer chez elles après une soirée, une garde nocturne ou un vol tardif, avec la tranquillité d'esprit d'être conduite par une femme. Les mères avec enfants en bas âge apprécient la présence rassurante d'une chauffeure pour les trajets vers l'école, les activités ou l'aéroport. Les femmes enceintes proches du terme choisissent ce service pour leurs déplacements médicaux, avec une conductrice sensible à leur état. Les professionnelles en déplacement d'affaires l'utilisent pour les transferts hôtel-lieu de rendez-vous dans des villes qu'elles ne connaissent pas, gagnant en sérénité et en confiance.",
+        howItWorks:
+          "Lors de votre réservation sur TaxiNeo, cochez simplement l'option « Chauffeure femme ». Indiquez votre trajet et vos horaires comme pour toute réservation. Le système attribue une chauffeure femme disponible dans votre zone. En cas d'indisponibilité, vous êtes prévenue à l'avance et pouvez choisir de maintenir ou reporter votre course. Le tarif affiché est identique à celui d'un taxi standard.",
       },
       en: {
         metaTitle: "Female Driver Taxi: travel with confidence | TaxiNeo",
@@ -882,6 +999,12 @@ export const services: ServiceSeo[] = [
               "Yes, our female drivers are available day and night. Availability may vary by area, but we cover the main metropolitan areas 24/7.",
           },
         ],
+        detailedDescription:
+          "The TaxiNeo female driver taxi addresses a growing need expressed by passengers — particularly women — to be able to choose a female driver for their journeys. This service stems from a simple observation: many women feel more comfortable and safer when travelling with a female driver, especially during nighttime trips, party returns or travel in unfamiliar areas. Our female drivers are professionals holding a full taxi licence, selected with the same demanding criteria as our entire network: driving experience, route knowledge, punctuality and service mindset. The fare is strictly identical to a standard taxi, with no surcharge whatsoever. The service is open to everyone without distinction: women travelling alone, mothers with children, elderly people, or anyone wishing to travel with a female driver for personal, cultural or religious reasons. Female driver availability covers the main French metropolitan areas 24 hours a day, with extended coverage in provincial cities during peak demand hours.",
+        useCases:
+          "Women travelling alone at night book the female driver taxi to get home after an evening out, a night shift or a late flight, with the peace of mind of being driven by a woman. Mothers with young children appreciate the reassuring presence of a female driver for trips to school, activities or the airport. Pregnant women close to their due date choose this service for medical journeys, with a driver sensitive to their condition. Businesswomen on work trips use it for hotel-to-meeting transfers in unfamiliar cities, gaining serenity and confidence.",
+        howItWorks:
+          "When booking on TaxiNeo, simply tick the 'Female driver' option. Enter your route and times as for any booking. The system assigns an available female driver in your area. If none is available, you are notified in advance and can choose to keep or reschedule your trip. The displayed fare is identical to a standard taxi.",
       },
     },
   },
@@ -929,6 +1052,12 @@ export const services: ServiceSeo[] = [
               "Tous nos chauffeurs sont titulaires de la carte professionnelle, vérifiés (casier judiciaire) et formés à l'accueil des enfants. Ils font l'objet d'une sélection renforcée pour ce service.",
           },
         ],
+        detailedDescription:
+          "Le taxi enfant TaxiNeo est un service de transport sécurisé spécialement conçu pour les familles avec enfants, de la naissance à l'adolescence. Chaque véhicule est équipé de sièges auto homologués adaptés à l'âge et au poids de l'enfant : nacelle groupe 0 pour les nouveau-nés, siège coque groupe 0+ jusqu'à 13 kg, siège groupe 1 de 9 à 18 kg, rehausseur groupe 2/3 de 15 à 36 kg. Nos chauffeurs font l'objet d'une sélection renforcée incluant la vérification du casier judiciaire, un entretien approfondi et une formation spécifique à l'accueil des mineurs. Ils savent installer correctement chaque type de siège, adopter une conduite particulièrement douce et rassurer les enfants pendant le trajet. Pour les trajets scolaires quotidiens, TaxiNeo propose un service d'abonnement avec attribution du même chauffeur afin de créer un lien de confiance entre le conducteur, l'enfant et les parents. À chaque prise en charge et chaque dépose, les parents reçoivent un SMS de confirmation horodaté. Les enfants à partir de 6 ans peuvent voyager sans accompagnateur adulte avec une autorisation parentale écrite. Ce service est également adapté à la garde alternée, assurant le transfert régulier et ponctuel de l'enfant entre les deux domiciles parentaux.",
+        useCases:
+          "Les parents débordés utilisent le taxi enfant pour les trajets école-domicile, domicile-activités extrascolaires (sport, musique, cours particuliers) lorsqu'ils ne peuvent pas se libérer. Les familles en garde alternée programment des transferts réguliers entre les deux domiciles parentaux, avec le même chauffeur de confiance chaque semaine. Les familles voyageant avec des bébés et jeunes enfants réservent le taxi enfant pour les transferts aéroport, bénéficiant de sièges auto adaptés sans avoir à transporter les leurs. Les parents d'adolescents l'utilisent pour les retours de soirée ou de fêtes d'anniversaire, garantissant un transport sûr supervisé par un chauffeur vérifié.",
+        howItWorks:
+          "Réservez sur TaxiNeo en sélectionnant « Taxi enfant ». Indiquez l'âge et le poids de chaque enfant pour l'attribution automatique du siège adapté. Précisez si l'enfant voyage accompagné ou seul (avec autorisation parentale). Pour un abonnement scolaire, configurez les jours, horaires et adresses récurrents. Le chauffeur vérifié arrive avec les sièges installés, confirme la prise en charge par SMS aux parents et assure un trajet sécurisé.",
       },
       en: {
         metaTitle: "Child Taxi: safe transport with child car seat | TaxiNeo",
@@ -968,6 +1097,12 @@ export const services: ServiceSeo[] = [
               "All our drivers hold a professional licence, are verified (criminal record check) and trained in welcoming children. They undergo enhanced screening for this service.",
           },
         ],
+        detailedDescription:
+          "The TaxiNeo child taxi is a secure transport service specifically designed for families with children, from newborns to teenagers. Every vehicle is fitted with approved child car seats matched to the child's age and weight: group 0 carrycot for newborns, group 0+ infant carrier up to 13 kg, group 1 seat from 9 to 18 kg, group 2/3 booster from 15 to 36 kg. Our drivers undergo enhanced selection including criminal record checks, in-depth interviews and specific training in transporting minors. They know how to correctly install each type of seat, adopt particularly gentle driving and reassure children during the journey. For daily school runs, TaxiNeo offers a subscription service with the same driver assigned to build a trusting relationship between driver, child and parents. At every pick-up and drop-off, parents receive a timestamped SMS confirmation. Children aged 6 and over can travel without an adult accompanier with written parental consent. This service is also suited to shared custody arrangements, ensuring regular and punctual transfers between both parental homes.",
+        useCases:
+          "Busy parents use the child taxi for school-to-home and home-to-extracurricular activity runs (sport, music, tutoring) when they cannot get away. Shared custody families schedule regular transfers between both parental homes with the same trusted driver each week. Families travelling with babies and toddlers book the child taxi for airport transfers, benefiting from fitted child seats without having to carry their own. Parents of teenagers use it for returns from parties or birthday celebrations, ensuring safe transport supervised by a vetted driver.",
+        howItWorks:
+          "Book on TaxiNeo by selecting 'Child taxi'. Enter each child's age and weight for automatic assignment of the correct seat. Specify whether the child travels accompanied or alone (with parental consent). For a school subscription, configure recurring days, times and addresses. The vetted driver arrives with seats already fitted, confirms pick-up by SMS to parents and ensures a safe journey.",
       },
     },
   },
@@ -1015,6 +1150,12 @@ export const services: ServiceSeo[] = [
               "Nous proposons toutes les destinations en France métropolitaine, sans limite de distance. Paris-Marseille, Paris-Bordeaux, Lyon-Nice : toutes les combinaisons sont possibles.",
           },
         ],
+        detailedDescription:
+          "Le taxi longue distance TaxiNeo offre une alternative premium au train et à l'avion pour les trajets interurbains à travers toute la France métropolitaine. Ce service de porte à porte supprime les contraintes des transports collectifs : pas de correspondance, pas d'attente en gare, pas de limitation de bagages et un départ à l'heure exacte qui vous convient. Nos berlines confortables — Mercedes Classe E, BMW Série 5, Peugeot 508 — sont équipées pour les longs trajets : sièges inclinables en cuir, climatisation bi-zone, prises USB et 220V, bouteilles d'eau offertes et WiFi embarqué. Le prix au kilomètre est dégressif : plus la distance est longue, plus le tarif kilométrique diminue, rendant le taxi longue distance compétitif dès 3 passagers par rapport au TGV. Les pauses en route sont non seulement possibles mais encouragées pour le confort de tous : arrêt café sur aire d'autoroute, pause déjeuner dans un restaurant recommandé par le chauffeur, visite express d'un site touristique en chemin. Nos chauffeurs sont expérimentés sur les trajets autoroutiers et connaissent les itinéraires les plus fluides entre les grandes métropoles françaises. Le tarif fixe est garanti dès la réservation et ne varie jamais, quelles que soient les conditions de circulation.",
+        useCases:
+          "Les familles avec enfants en bas âge préfèrent le taxi longue distance au train pour éviter le stress des gares, des correspondances et des bagages à porter, tout en gardant les sièges auto installés dans le véhicule. Les cadres et dirigeants l'utilisent pour les déplacements inter-villes (Paris-Lyon, Paris-Bordeaux, Lyon-Marseille), transformant le temps de trajet en temps de travail productif grâce au WiFi et au calme de l'habitacle. Les personnes âgées ou à mobilité réduite choisissent ce service pour le confort du porte-à-porte et l'assistance du chauffeur à chaque étape. Les groupes d'amis en week-end ou en vacances mutualisent le coût d'un taxi longue distance, souvent moins cher par personne que le billet de train en période de pointe.",
+        howItWorks:
+          "Entrez votre ville de départ et votre destination sur TaxiNeo. Le prix fixe dégressif au kilomètre s'affiche immédiatement. Précisez vos préférences : type de véhicule, arrêts souhaités en route, heure de départ. Validez votre réservation. Le jour du départ, votre chauffeur vous attend à l'adresse indiquée, charge vos bagages et vous conduit à destination avec des pauses confort selon vos envies.",
       },
       en: {
         metaTitle: "Long Distance Taxi: intercity trips across France | TaxiNeo",
@@ -1054,6 +1195,12 @@ export const services: ServiceSeo[] = [
               "We offer all destinations in mainland France, with no distance limit. Paris-Marseille, Paris-Bordeaux, Lyon-Nice: all combinations are possible.",
           },
         ],
+        detailedDescription:
+          "The TaxiNeo long distance taxi offers a premium alternative to train and plane for intercity journeys across mainland France. This door-to-door service eliminates the constraints of public transport: no connections, no station waiting, no luggage restrictions and departure at the exact time that suits you. Our comfortable sedans — Mercedes E-Class, BMW 5 Series, Peugeot 508 — are equipped for long journeys: reclining leather seats, dual-zone climate control, USB and 220V outlets, complimentary water bottles and onboard WiFi. The per-kilometre price is degressive: the longer the distance, the lower the rate per kilometre, making the long distance taxi competitive from 3 passengers compared to high-speed rail. Stops en route are not only possible but encouraged for everyone's comfort: coffee break at a motorway service area, lunch at a restaurant recommended by the driver, quick visit to a tourist site along the way. Our drivers are experienced on motorway routes and know the smoothest itineraries between major French cities. The fixed fare is guaranteed at booking and never changes, regardless of traffic conditions.",
+        useCases:
+          "Families with young children prefer the long distance taxi over the train to avoid the stress of stations, connections and carrying luggage, while keeping child seats fitted in the vehicle. Executives and business leaders use it for intercity trips (Paris-Lyon, Paris-Bordeaux, Lyon-Marseille), turning travel time into productive work time thanks to WiFi and the quiet cabin. Elderly people or those with reduced mobility choose this service for the comfort of door-to-door travel and the driver's assistance at every stage. Groups of friends on weekend or holiday trips share the cost of a long distance taxi, often cheaper per person than a peak-time train ticket.",
+        howItWorks:
+          "Enter your departure city and destination on TaxiNeo. The fixed degressive per-kilometre price is displayed immediately. Specify your preferences: vehicle type, desired stops en route, departure time. Confirm your booking. On the day of departure, your driver meets you at the specified address, loads your luggage and drives you to your destination with comfort breaks whenever you wish.",
       },
     },
   },
@@ -1101,6 +1248,12 @@ export const services: ServiceSeo[] = [
               "Oui, la formule aller-retour est disponible pour toutes les distances, y compris les trajets interurbains. Plus la distance est longue, plus l'économie est importante.",
           },
         ],
+        detailedDescription:
+          "Le taxi aller-retour TaxiNeo est une formule tout-en-un qui combine le trajet aller et le trajet retour en une seule réservation, à un tarif préférentiel de 10 à 20 % inférieur à deux courses séparées. Ce service est conçu pour les déplacements avec un retour programmé : rendez-vous médical, démarche administrative, séance shopping, excursion touristique à la journée ou visite familiale. Votre chauffeur dédié vous conduit à destination, puis soit reste sur place si l'attente est courte (moins de 2 heures), soit revient vous chercher à l'heure convenue pour les attentes plus longues. Cette flexibilité vous libère du souci de retrouver un taxi pour le retour, notamment dans les zones moins desservies ou aux heures creuses. Le prix forfaitaire aller-retour est communiqué dès la réservation et intègre le temps d'attente éventuel du chauffeur, garantissant l'absence totale de frais cachés. Vous pouvez ajuster l'heure de retour jusqu'à 30 minutes avant le créneau prévu, par SMS au chauffeur ou via l'application. La formule est disponible pour toutes les distances, des trajets urbains courts aux longs parcours interurbains, et l'économie réalisée augmente proportionnellement avec la distance.",
+        useCases:
+          "Les patients se rendant à un rendez-vous médical réservent l'aller-retour pour être certains d'avoir un taxi au retour, surtout après une consultation qui peut durer plus longtemps que prévu. Les familles organisent des excursions à la journée — visite de château, parc d'attractions, marché artisanal — avec la tranquillité d'un chauffeur qui les ramène en fin de journée. Les professionnels en rendez-vous client hors de leur ville utilisent la formule pour optimiser leur déplacement sans perdre de temps à chercher un transport retour. Les seniors effectuant des démarches administratives (préfecture, notaire, banque) apprécient la sécurité de savoir que le chauffeur les attend ou revient les chercher.",
+        howItWorks:
+          "Sur TaxiNeo, sélectionnez la formule « Aller-retour ». Entrez l'adresse de départ, la destination, l'heure de départ et l'heure estimée de retour. Le tarif préférentiel aller-retour s'affiche avec l'économie réalisée par rapport à deux courses séparées. Le chauffeur vous conduit à destination, vous confirme sa disponibilité ou son heure de retour, puis vous ramène au point de départ à l'heure convenue.",
       },
       en: {
         metaTitle: "Round Trip Taxi: book your complete journey at a reduced rate | TaxiNeo",
@@ -1140,6 +1293,12 @@ export const services: ServiceSeo[] = [
               "Yes, the round trip formula is available for all distances, including intercity journeys. The longer the distance, the greater the saving.",
           },
         ],
+        detailedDescription:
+          "The TaxiNeo round trip taxi is an all-in-one formula combining the outward and return journey in a single booking, at a preferential rate 10 to 20 percent lower than two separate trips. This service is designed for journeys with a planned return: medical appointments, administrative errands, shopping trips, day excursions or family visits. Your dedicated driver takes you to your destination, then either waits on site if the wait is short (under 2 hours) or returns to collect you at the agreed time for longer waits. This flexibility frees you from the worry of finding a taxi for the return, particularly in less-served areas or during off-peak hours. The all-inclusive round trip price is communicated at booking and includes any driver waiting time, guaranteeing no hidden charges whatsoever. You can adjust the return time up to 30 minutes before the scheduled slot, by texting the driver or via the app. The formula is available for all distances, from short urban journeys to long intercity routes, and the savings increase proportionally with distance.",
+        useCases:
+          "Patients going to medical appointments book a round trip to be certain of having a taxi for the return, especially after a consultation that may run longer than expected. Families organise day excursions — castle visits, theme parks, craft markets — with the peace of mind of a driver bringing them home at the end of the day. Professionals on client visits outside their city use the formula to optimise their trip without wasting time finding return transport. Seniors running administrative errands (prefecture, solicitor, bank) appreciate the security of knowing the driver waits or returns for them.",
+        howItWorks:
+          "On TaxiNeo, select the 'Round trip' formula. Enter the departure address, destination, departure time and estimated return time. The preferential round trip fare is displayed along with the saving compared to two separate trips. The driver takes you to your destination, confirms their availability or return time, then brings you back to the starting point at the agreed time.",
       },
     },
   },
@@ -1187,6 +1346,12 @@ export const services: ServiceSeo[] = [
               "Pour un vol matinal, nous calculons l'heure de départ idéale en fonction de la distance et du terminal. Réservez la veille et nous nous occupons du timing optimal.",
           },
         ],
+        detailedDescription:
+          "La navette aéroport TaxiNeo est le service de transfert le plus fiable et le plus complet pour rejoindre ou quitter n'importe quel aéroport de France : Paris-Charles de Gaulle, Paris-Orly, Beauvais-Tillé, Lyon Saint-Exupéry, Nice Côte d'Azur, Marseille Provence, Toulouse Blagnac, Bordeaux Mérignac, Nantes Atlantique et tous les aéroports régionaux. Le système de suivi de vol intégré permet à votre chauffeur de connaître en temps réel l'état de votre vol — retard, avance, changement de terminal — et d'adapter automatiquement son heure d'arrivée. En cas de retard de votre vol, le chauffeur vous attend gratuitement jusqu'à 60 minutes sans supplément. Pour les arrivées, votre chauffeur se positionne en zone arrivée avec un panneau nominatif et vous aide avec vos bagages jusqu'au véhicule. Pour les départs, il calcule l'heure de prise en charge idéale en fonction de la distance, du terminal et du temps d'enregistrement recommandé. Le prix fixe est garanti dès la réservation et ne varie jamais, quelles que soient les conditions de circulation. Nos véhicules sont climatisés, récents et disposent d'un espace bagage dimensionné pour les voyageurs internationaux avec plusieurs valises.",
+        useCases:
+          "Les voyageurs d'affaires réservent la navette aéroport pour un transfert ponctuel et professionnel entre leur domicile ou hôtel et l'aéroport, avec prise en charge des bagages et conduite en berline confortable. Les familles partant en vacances utilisent ce service pour éviter le stress du stationnement longue durée et bénéficier d'un véhicule spacieux capable d'accueillir poussettes, valises et sièges enfant. Les voyageurs arrivant en France pour la première fois apprécient l'accueil personnalisé avec panneau nominatif, éliminant l'incertitude de trouver un transport à la sortie du terminal. Les passagers ayant des vols très matinaux (4h-6h) ou des arrivées tardives (23h-2h) comptent sur la navette aéroport pour un transport garanti à des heures où les transports en commun ne circulent pas.",
+        howItWorks:
+          "Réservez sur TaxiNeo en entrant votre adresse, l'aéroport et le numéro de vol. Pour un départ, le système calcule l'heure de prise en charge optimale. Pour une arrivée, le suivi de vol ajuste automatiquement l'heure du chauffeur. Le prix fixe s'affiche instantanément. Le jour J, le chauffeur vous envoie un SMS avec sa position. À l'arrivée, il vous attend avec un panneau nominatif en zone arrivée et prend en charge vos bagages.",
       },
       en: {
         metaTitle: "Airport Shuttle: taxi transfer to all airports | TaxiNeo",
@@ -1226,6 +1391,12 @@ export const services: ServiceSeo[] = [
               "For an early morning flight, we calculate the ideal departure time based on distance and terminal. Book the day before and we handle the optimal timing.",
           },
         ],
+        detailedDescription:
+          "The TaxiNeo airport shuttle is the most reliable and comprehensive transfer service for reaching or leaving any airport in France: Paris-Charles de Gaulle, Paris-Orly, Beauvais-Tille, Lyon Saint-Exupery, Nice Cote d'Azur, Marseille Provence, Toulouse Blagnac, Bordeaux Merignac, Nantes Atlantique and all regional airports. The integrated flight tracking system allows your driver to know your flight status in real time — delay, early arrival, terminal change — and automatically adjust their arrival time. If your flight is delayed, the driver waits free of charge for up to 60 minutes at no extra cost. For arrivals, your driver positions in the arrivals area with a name board and helps with your luggage to the vehicle. For departures, they calculate the ideal pick-up time based on distance, terminal and recommended check-in time. The fixed price is guaranteed at booking and never changes, regardless of traffic conditions. Our vehicles are air-conditioned, recent and have luggage space sized for international travellers with multiple suitcases.",
+        useCases:
+          "Business travellers book the airport shuttle for a punctual and professional transfer between their home or hotel and the airport, with luggage handling and a comfortable sedan ride. Families going on holiday use this service to avoid the stress of long-term parking and benefit from a spacious vehicle for pushchairs, suitcases and child seats. Travellers arriving in France for the first time appreciate the personalised meet and greet with name board, eliminating the uncertainty of finding transport outside the terminal. Passengers with very early flights (4am-6am) or late arrivals (11pm-2am) rely on the airport shuttle for guaranteed transport at hours when public transport is not running.",
+        howItWorks:
+          "Book on TaxiNeo by entering your address, the airport and your flight number. For departures, the system calculates the optimal pick-up time. For arrivals, flight tracking automatically adjusts the driver's schedule. The fixed price is displayed instantly. On the day, the driver sends you an SMS with their position. On arrival, they meet you with a name board in the arrivals area and handle your luggage.",
       },
     },
   },
@@ -1273,6 +1444,12 @@ export const services: ServiceSeo[] = [
               "Si aucun taxi conventionné n'est disponible dans votre zone, vous pouvez utiliser TaxiNeo et demander un remboursement a posteriori à votre CPAM avec la facture et votre prescription médicale.",
           },
         ],
+        detailedDescription:
+          "Le taxi conventionné est un dispositif encadré par l'Assurance Maladie (CPAM) permettant aux patients de bénéficier d'un remboursement partiel ou total de leurs frais de transport vers les établissements de santé. Pour en bénéficier, le patient doit disposer d'une prescription médicale de transport (PMT) délivrée par son médecin traitant ou spécialiste, et le taxi utilisé doit avoir signé une convention avec la CPAM locale. Le remboursement standard s'élève à 65 % du tarif conventionnel, le reste étant pris en charge par la mutuelle complémentaire si le patient en possède une. Pour les patients en affection longue durée (ALD) — dialyse, chimiothérapie, radiothérapie — le remboursement peut atteindre 100 % dans le cadre du tiers payant, le patient n'avançant alors aucun frais. TaxiNeo vous informe sur l'ensemble des conditions d'éligibilité et vous aide à trouver un chauffeur conventionné dans notre réseau de partenaires. Si aucun taxi conventionné n'est disponible dans votre zone, nous vous proposons une alternative avec notre service standard et vous accompagnons dans la démarche de remboursement a posteriori auprès de votre caisse.",
+        useCases:
+          "Les patients en ALD nécessitant des séances de dialyse trois fois par semaine utilisent le taxi conventionné en tiers payant pour se rendre au centre de dialyse sans avancer de frais. Les patients suivant des traitements de chimiothérapie ou radiothérapie bénéficient du transport conventionné pour leurs allers-retours réguliers entre domicile et centre anti-cancéreux. Les personnes âgées disposant d'une prescription médicale l'utilisent pour leurs consultations spécialisées, examens d'imagerie ou hospitalisations programmées. Les patients sortant d'opération chirurgicale réservent un taxi conventionné pour leur retour à domicile, avec un bon de transport délivré par l'hôpital.",
+        howItWorks:
+          "Obtenez une prescription médicale de transport (PMT) auprès de votre médecin. Sur TaxiNeo, sélectionnez le service « Taxi conventionné » et indiquez votre numéro de Sécurité sociale. Nous recherchons un chauffeur conventionné disponible dans votre zone. Si un partenaire conventionné est trouvé, le trajet est réservé en tiers payant. Sinon, nous vous proposons une course standard avec une facture détaillée pour demander le remboursement à votre CPAM.",
       },
       en: {
         metaTitle: "Conventional Taxi: transport reimbursed by French health insurance | TaxiNeo",
@@ -1312,6 +1489,12 @@ export const services: ServiceSeo[] = [
               "If no conventional taxi is available in your area, you can use TaxiNeo and request reimbursement afterwards from your CPAM with the invoice and your medical prescription.",
           },
         ],
+        detailedDescription:
+          "The conventional taxi is a scheme regulated by French Health Insurance (CPAM) enabling patients to receive partial or full reimbursement of their transport costs to healthcare facilities. To qualify, the patient must have a medical transport prescription (PMT) issued by their GP or specialist, and the taxi used must have signed an agreement with the local CPAM. Standard reimbursement is 65 percent of the conventional rate, with the remainder covered by supplementary health insurance if the patient has one. For patients with long-term conditions (ALD) — dialysis, chemotherapy, radiotherapy — reimbursement can reach 100 percent under the third-party payment system, meaning the patient pays nothing upfront. TaxiNeo provides information on all eligibility conditions and helps you find a conventional driver within our partner network. If no conventional taxi is available in your area, we offer an alternative through our standard service and guide you through the process of claiming reimbursement from your fund afterwards.",
+        useCases:
+          "ALD patients requiring dialysis sessions three times a week use the conventional taxi with third-party payment to reach the dialysis centre without paying upfront. Patients undergoing chemotherapy or radiotherapy benefit from conventional transport for their regular round trips between home and the cancer treatment centre. Elderly people with a medical prescription use it for specialist consultations, imaging examinations or planned hospitalisations. Post-surgical patients book a conventional taxi for their return home, with a transport voucher issued by the hospital.",
+        howItWorks:
+          "Obtain a medical transport prescription (PMT) from your doctor. On TaxiNeo, select the 'Conventional taxi' service and enter your social security number. We search for an available conventional driver in your area. If a conventional partner is found, the trip is booked under third-party payment. If not, we offer a standard trip with a detailed invoice for you to claim reimbursement from your CPAM.",
       },
     },
   },
@@ -1359,6 +1542,12 @@ export const services: ServiceSeo[] = [
               "Oui, toutes les prestations VIP (eau, journaux, WiFi, ouverture de porte, prise en charge bagages) sont incluses dans le tarif. Aucun supplément caché.",
           },
         ],
+        detailedDescription:
+          "Le taxi de luxe TaxiNeo incarne l'excellence du transport privé haut de gamme en France. Notre flotte premium comprend les berlines les plus prestigieuses du marché : Mercedes Classe S avec sellerie cuir Nappa et suspension pneumatique, BMW Série 7 avec éclairage d'ambiance et insonorisation renforcée, et Audi A8 avec sièges massants et toit panoramique. Chaque véhicule est entretenu selon des standards d'exigence supérieurs, avec un contrôle minutieux avant chaque course : propreté irréprochable, parfum d'ambiance discret, bouteilles d'eau minérale fraîche, presse du jour et connexion WiFi haut débit. Nos chauffeurs de luxe portent un costume sombre, une cravate et des gants blancs. Ils sont formés au protocole VIP : ouverture de porte, assistance bagages, discrétion absolue et adaptation aux demandes spécifiques du client (température, musique, itinéraire). Le service est disponible en réservation ponctuelle ou en mise à disposition à la journée et à la demi-journée, permettant aux clients de disposer d'un chauffeur personnel pour enchaîner plusieurs rendez-vous. Une coupe de champagne peut être servie à bord sur demande pour célébrer une occasion spéciale.",
+        useCases:
+          "Les dirigeants d'entreprise et cadres supérieurs utilisent le taxi de luxe pour leurs déplacements professionnels quotidiens, transferts aéroport et rendez-vous clients, projetant une image de prestige et de sérieux. Les célébrités, artistes et personnalités publiques apprécient la discrétion totale du chauffeur et le confort exceptionnel de la berline pour leurs déplacements privés. Les voyageurs d'affaires internationaux réservent le service pour leur séjour en France, bénéficiant d'un chauffeur personnel à la journée qui les accompagne entre hôtel, réunions et dîners d'affaires. Les particuliers souhaitant marquer un anniversaire, une demande en mariage ou une célébration spéciale choisissent le taxi de luxe avec champagne à bord pour une expérience mémorable.",
+        howItWorks:
+          "Réservez sur TaxiNeo en sélectionnant la gamme « Luxe ». Choisissez votre modèle de berline préféré et indiquez vos préférences (champagne, presse spécifique, température). Pour une mise à disposition, précisez la durée et le programme de la journée. Le tarif tout compris s'affiche immédiatement, sans frais cachés. Le chauffeur en costume vous attend à l'adresse indiquée, ouvre la porte et vous accueille dans un habitacle luxueux préparé selon vos souhaits.",
       },
       en: {
         metaTitle: "Luxury Taxi: premium sedan with private chauffeur | TaxiNeo",
@@ -1398,6 +1587,12 @@ export const services: ServiceSeo[] = [
               "Yes, all VIP amenities (water, newspapers, WiFi, door opening, luggage handling) are included in the fare. No hidden surcharges.",
           },
         ],
+        detailedDescription:
+          "The TaxiNeo luxury taxi embodies the pinnacle of premium private transport in France. Our prestige fleet includes the most distinguished sedans on the market: Mercedes S-Class with Nappa leather upholstery and air suspension, BMW 7 Series with ambient lighting and enhanced sound insulation, and Audi A8 with massage seats and panoramic roof. Every vehicle is maintained to superior standards, with meticulous checks before each trip: spotless cleanliness, subtle ambient fragrance, chilled mineral water bottles, daily newspapers and high-speed WiFi. Our luxury chauffeurs wear a dark suit, tie and white gloves. They are trained in VIP protocol: door opening, luggage assistance, absolute discretion and adaptation to the client's specific requests (temperature, music, route). The service is available as a one-off booking or as full-day and half-day hire, allowing clients to have a personal chauffeur for consecutive appointments. A glass of champagne can be served on board upon request to celebrate a special occasion.",
+        useCases:
+          "CEOs and senior executives use the luxury taxi for daily business travel, airport transfers and client meetings, projecting an image of prestige and professionalism. Celebrities, artists and public figures appreciate the chauffeur's total discretion and the sedan's exceptional comfort for private journeys. International business travellers book the service for their stay in France, benefiting from a personal chauffeur for the day who accompanies them between hotel, meetings and business dinners. Private clients wishing to mark a birthday, a marriage proposal or a special celebration choose the luxury taxi with champagne on board for a memorable experience.",
+        howItWorks:
+          "Book on TaxiNeo by selecting the 'Luxury' tier. Choose your preferred sedan model and indicate your preferences (champagne, specific newspapers, temperature). For full-day hire, specify the duration and the day's programme. The all-inclusive fare is displayed immediately, with no hidden charges. The suited chauffeur meets you at the specified address, opens the door and welcomes you into a luxurious cabin prepared to your wishes.",
       },
     },
   },
@@ -1445,6 +1640,12 @@ export const services: ServiceSeo[] = [
               "Au-delà des véhicules électriques, nous optimisons les itinéraires pour réduire les distances, nous compensons les émissions résiduelles et nous investissons dans des projets de reforestation.",
           },
         ],
+        detailedDescription:
+          "Le taxi écologique TaxiNeo permet de concilier mobilité urbaine et engagement environnemental sans aucun compromis sur le confort, la ponctualité ou le tarif. Notre flotte verte est composée de véhicules 100 % électriques de dernière génération — Tesla Model 3 et Model Y, Mercedes EQS et EQE, Hyundai Ioniq 5 — ainsi que d'hybrides rechargeables premium pour les trajets nécessitant une autonomie étendue. Les véhicules électriques offrent une expérience de conduite unique : silence total de l'habitacle, accélération progressive et fluide, absence de vibration moteur et climatisation performante alimentée par la batterie. L'autonomie de nos modèles phares atteint 400 à 600 km, couvrant sans difficulté la grande majorité des trajets urbains et périurbains. Pour les longs parcours, un arrêt de recharge rapide de 20 à 30 minutes sur borne Supercharger ou Ionity suffit à reprendre la route. Le tarif du taxi écologique est strictement identique à celui d'un taxi classique thermique : choisir l'option verte ne coûte pas un centime de plus. Au-delà du choix des véhicules, TaxiNeo optimise les itinéraires pour réduire les distances parcourues, compense les émissions résiduelles des hybrides via des programmes certifiés et investit dans des projets de reforestation en France.",
+        useCases:
+          "Les entreprises engagées dans une démarche RSE choisissent le taxi écologique pour les déplacements professionnels de leurs collaborateurs, affichant concrètement leur engagement environnemental auprès de leurs clients et partenaires. Les particuliers sensibles à l'écologie l'utilisent pour leurs trajets quotidiens, transferts aéroport et sorties, réduisant leur empreinte carbone sans modifier leurs habitudes de transport. Les collectivités locales et administrations publiques le réservent pour le transport de leurs élus et agents dans le cadre de plans de mobilité durable. Les voyageurs découvrant les véhicules électriques pour la première fois profitent du taxi écologique pour expérimenter le silence, le confort et la technologie embarquée d'une Tesla ou d'une Mercedes EQS avant un éventuel achat personnel.",
+        howItWorks:
+          "Sur TaxiNeo, cochez l'option « Véhicule écologique » lors de votre réservation. Vous pouvez choisir entre 100 % électrique ou hybride rechargeable selon vos préférences. Le tarif affiché est identique à celui d'un taxi classique. Un véhicule vert disponible dans votre zone est attribué automatiquement. Le chauffeur arrive dans un véhicule silencieux et zéro émission, vous offrant un trajet confortable et responsable jusqu'à votre destination.",
       },
       en: {
         metaTitle: "Eco Taxi: electric or hybrid vehicle | TaxiNeo",
@@ -1484,6 +1685,12 @@ export const services: ServiceSeo[] = [
               "Beyond electric vehicles, we optimise routes to reduce distances, offset residual emissions and invest in reforestation projects.",
           },
         ],
+        detailedDescription:
+          "The TaxiNeo eco taxi lets you combine urban mobility with environmental commitment without any compromise on comfort, punctuality or fare. Our green fleet consists of latest-generation 100 percent electric vehicles — Tesla Model 3 and Model Y, Mercedes EQS and EQE, Hyundai Ioniq 5 — as well as premium plug-in hybrids for journeys requiring extended range. Electric vehicles offer a unique driving experience: total cabin silence, smooth progressive acceleration, no engine vibration and efficient climate control powered by the battery. The range of our flagship models reaches 400 to 600 km, easily covering the vast majority of urban and suburban journeys. For long trips, a quick 20 to 30-minute recharging stop at a Supercharger or Ionity station is enough to continue the journey. The eco taxi fare is strictly identical to a standard combustion-engine taxi: choosing the green option does not cost a single penny more. Beyond vehicle choice, TaxiNeo optimises routes to reduce distances travelled, offsets residual hybrid emissions through certified programmes and invests in reforestation projects in France.",
+        useCases:
+          "Companies committed to CSR choose the eco taxi for their employees' business travel, visibly demonstrating their environmental commitment to clients and partners. Environmentally conscious individuals use it for daily journeys, airport transfers and outings, reducing their carbon footprint without changing their transport habits. Local authorities and public administrations book it for transporting elected officials and staff as part of sustainable mobility plans. Travellers discovering electric vehicles for the first time enjoy the eco taxi to experience the silence, comfort and onboard technology of a Tesla or Mercedes EQS before a potential personal purchase.",
+        howItWorks:
+          "On TaxiNeo, tick the 'Eco vehicle' option when booking. You can choose between 100 percent electric or plug-in hybrid according to your preference. The displayed fare is identical to a standard taxi. An available green vehicle in your area is automatically assigned. The driver arrives in a silent, zero-emission vehicle, offering you a comfortable and responsible journey to your destination.",
       },
     },
   },

@@ -82,6 +82,46 @@ export default async function DepartementPage({ params }: PageProps) {
         <DepartementHero dept={dept} />
         <DepartementVilles dept={dept} />
         <DepartementDescription dept={dept} />
+
+        {dept.i18n[loc].presentation && (
+          <section className="py-12 md:py-16 bg-neutral-50">
+            <div className="max-w-4xl mx-auto px-6 fade-up">
+              <h2 className="text-2xl font-semibold tracking-tight mb-4">
+                {loc === "en" ? `Discover ${dept.name}` : `Découvrir ${dept.name}`}
+              </h2>
+              <p className="text-neutral-600 font-light leading-relaxed whitespace-pre-line">
+                {dept.i18n[loc].presentation}
+              </p>
+            </div>
+          </section>
+        )}
+
+        {dept.i18n[loc].transports && (
+          <section className="py-12 md:py-16">
+            <div className="max-w-4xl mx-auto px-6 fade-up">
+              <h2 className="text-2xl font-semibold tracking-tight mb-4">
+                {loc === "en" ? `Transport in ${dept.name}` : `Se déplacer en ${dept.name}`}
+              </h2>
+              <p className="text-neutral-600 font-light leading-relaxed whitespace-pre-line">
+                {dept.i18n[loc].transports}
+              </p>
+            </div>
+          </section>
+        )}
+
+        {dept.i18n[loc].tourisme && (
+          <section className="py-12 md:py-16 bg-neutral-50">
+            <div className="max-w-4xl mx-auto px-6 fade-up">
+              <h2 className="text-2xl font-semibold tracking-tight mb-4">
+                {loc === "en" ? `Tourism & places to visit` : `Tourisme et lieux à visiter`}
+              </h2>
+              <p className="text-neutral-600 font-light leading-relaxed whitespace-pre-line">
+                {dept.i18n[loc].tourisme}
+              </p>
+            </div>
+          </section>
+        )}
+
         <CityFAQ cityName={`${dept.name} (${dept.code})`} faq={dept.i18n[loc].faq} />
         <CityContactForm cityName={dept.name} />
         <CityCTA cityName={dept.name} />

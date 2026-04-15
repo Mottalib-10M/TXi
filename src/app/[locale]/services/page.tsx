@@ -110,6 +110,30 @@ export default async function ServicesPage({ params }: PageProps) {
           );
         })}
 
+        <section className="py-16 md:py-20">
+          <div className="max-w-4xl mx-auto px-6 fade-up">
+            <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-6">
+              {t("seoTitle")}
+            </h2>
+            <p className="text-neutral-600 font-light leading-relaxed mb-4">
+              {t("seoParagraph1")}
+            </p>
+            <p className="text-neutral-600 font-light leading-relaxed mb-6">
+              {t("seoParagraph2")}
+            </p>
+            <div className="flex flex-wrap gap-3">
+              <Link href="/tarifs" className="inline-flex items-center gap-1.5 text-sm font-medium text-neutral-900 hover:text-neutral-600 transition-colors">
+                {t("seoLinkTarifs")}
+                <Icon icon="solar:arrow-right-linear" className="text-xs" />
+              </Link>
+              <Link href="/guides" className="inline-flex items-center gap-1.5 text-sm font-medium text-neutral-900 hover:text-neutral-600 transition-colors">
+                {t("seoLinkGuides")}
+                <Icon icon="solar:arrow-right-linear" className="text-xs" />
+              </Link>
+            </div>
+          </div>
+        </section>
+
         <section className="bg-neutral-950 py-20 md:py-28">
           <div className="max-w-7xl mx-auto px-6 text-center">
             <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-white mb-4 fade-up">
