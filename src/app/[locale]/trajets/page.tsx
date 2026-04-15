@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 }
 
 const CATEGORY_ICONS: Record<Trajet["category"], string> = {
-  aeroport: "solar:airplane-linear",
+  aeroport: "mdi:airplane",
   gare: "mdi:train",
   touristique: "solar:camera-linear",
   "ville-a-ville": "solar:city-linear",
@@ -191,7 +191,7 @@ export default async function TrajetsPage({ params }: PageProps) {
               >
                 <div className="flex items-center gap-4 mb-3">
                   <div className="w-10 h-10 bg-neutral-50 border border-neutral-200 rounded-xl flex items-center justify-center group-hover:bg-neutral-100 transition-colors">
-                    <Icon icon="solar:airplane-linear" className="text-neutral-700 text-xl" />
+                    <Icon icon="mdi:airplane" className="text-neutral-700 text-xl" />
                   </div>
                   <h3 className="text-base font-medium tracking-tight">{t("crossLinkAirports")}</h3>
                 </div>

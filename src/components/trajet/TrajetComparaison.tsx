@@ -44,7 +44,7 @@ export async function TrajetComparaison({ trajet }: { trajet: Trajet }) {
             {trajet.prixMin && trajet.prixMax && (
               <div className="bg-white border border-neutral-200 rounded-xl p-5">
                 <div className="flex items-center gap-2 mb-2">
-                  <Icon icon="solar:sedan-minimalistic-linear" className="text-neutral-500" />
+                  <Icon icon="mdi:car-side" className="text-neutral-500" />
                   <p className="text-sm font-medium">{t("comparaisonBerline")}</p>
                 </div>
                 <p className="text-2xl font-semibold">{trajet.prixMin} — {trajet.prixMax} €</p>

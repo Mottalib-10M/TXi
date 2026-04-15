@@ -190,8 +190,8 @@ export function Navbar({ minimal = false }: { minimal?: boolean }) {
                     <div className="border-t border-neutral-100 mt-1.5 pt-1.5">
                       {[
                         { href: "/villes", icon: "solar:city-linear", label: t("discoverVilles") },
-                        { href: "/aeroports", icon: "solar:airplane-linear", label: t("discoverAeroports") },
-                        { href: "/gares", icon: "solar:train-linear", label: t("discoverGares") },
+                        { href: "/aeroports", icon: "mdi:airplane", label: t("discoverAeroports") },
+                        { href: "/gares", icon: "mdi:train", label: t("discoverGares") },
                       ].map((item) => (
                         <Link
                           key={item.href}

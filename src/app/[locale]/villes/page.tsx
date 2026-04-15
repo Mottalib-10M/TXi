@@ -143,7 +143,7 @@ export default async function VillesPage({ params }: PageProps) {
             <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
               {[
                 { icon: "solar:city-linear", text: t("seoText3a") },
-                { icon: "solar:airplane-linear", text: t("seoText3b") },
+                { icon: "mdi:airplane", text: t("seoText3b") },
                 { icon: "solar:road-linear", text: t("seoText3c") },
                 { icon: "solar:health-linear", text: t("seoText3d") },
               ].map((item, i) => (
@@ -281,7 +281,7 @@ export default async function VillesPage({ params }: PageProps) {
               >
                 <div className="flex items-center gap-4 mb-3">
                   <div className="w-10 h-10 bg-neutral-50 border border-neutral-200 rounded-xl flex items-center justify-center group-hover:bg-neutral-100 transition-colors">
-                    <Icon icon="solar:airplane-linear" className="text-neutral-700 text-xl" />
+                    <Icon icon="mdi:airplane" className="text-neutral-700 text-xl" />
                   </div>
                   <h3 className="text-base font-medium tracking-tight">{t("crossLinkAirports")}</h3>
                 </div>

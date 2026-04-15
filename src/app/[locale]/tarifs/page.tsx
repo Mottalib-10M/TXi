@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 }
 
 const TYPE_ICONS: Record<Tarif["type"], string> = {
-  aeroport: "solar:airplane-linear",
+  aeroport: "mdi:airplane",
   gare: "mdi:train",
   ville: "solar:city-linear",
   departement: "solar:map-linear",

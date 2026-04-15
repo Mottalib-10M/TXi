@@ -26,13 +26,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 const fleetIcons = [
-  "solar:sedan-minimalistic-linear",
+  "mdi:car-side",
   "solar:bus-linear",
-  "solar:minibus-linear",
+  "mdi:van-passenger",
 ];
 
 const serviceIcons = [
-  "solar:airplane-linear",
+  "mdi:airplane",
   "solar:star-shine-linear",
   "solar:route-linear",
   "solar:buildings-2-linear",
@@ -203,7 +203,7 @@ export default async function MiseADispositionPage() {
                 </div>
                 <div className="space-y-3 mb-5">
                   <div className="flex items-center gap-3 text-sm">
-                    <Icon icon="solar:sedan-minimalistic-linear" className="text-neutral-400" />
+                    <Icon icon="mdi:car-side" className="text-neutral-400" />
                     <span className="text-neutral-600 font-light">{t("mockupVehicle")}</span>
                   </div>
                   <div className="flex items-center gap-3 text-sm">

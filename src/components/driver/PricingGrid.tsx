@@ -154,7 +154,7 @@ export function PricingGrid({ pricing, onChange, departmentName, zoneAddress, on
       {airportFares && airportFares.length > 0 && (
         <div className="bg-amber-50 border border-amber-200 rounded-xl p-3 mt-2">
           <div className="flex items-start gap-2.5">
-            <Icon icon="solar:airplane-linear" className="text-amber-600 text-lg mt-0.5 shrink-0" />
+            <Icon icon="mdi:airplane" className="text-amber-600 text-lg mt-0.5 shrink-0" />
             <div className="w-full">
               <p className="text-sm font-medium text-amber-900 mb-2">
                 {t("airportFaresTitle")}

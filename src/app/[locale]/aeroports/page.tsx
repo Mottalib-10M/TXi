@@ -164,7 +164,7 @@ export default async function AeroportsPage({ params }: PageProps) {
 
             <div className="grid md:grid-cols-3 gap-8 md:gap-12">
               {[
-                { step: "1", icon: "solar:airplane-linear", title: t("step1Title"), desc: t("step1Desc") },
+                { step: "1", icon: "mdi:airplane", title: t("step1Title"), desc: t("step1Desc") },
                 { step: "2", icon: "solar:document-text-linear", title: t("step2Title"), desc: t("step2Desc") },
                 { step: "3", icon: "solar:car-linear", title: t("step3Title"), desc: t("step3Desc") },
               ].map((item, i) => (

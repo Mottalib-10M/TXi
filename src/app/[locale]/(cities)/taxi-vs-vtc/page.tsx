@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 const advantageIcons = [
   "solar:tag-price-linear",
   "solar:bus-linear",
-  "solar:airplane-linear",
+  "mdi:airplane",
   "solar:hand-shake-linear",
   "solar:diploma-verified-linear",
   "solar:map-linear",

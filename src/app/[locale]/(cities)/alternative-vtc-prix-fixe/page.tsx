@@ -28,13 +28,13 @@ const advantageIcons = [
   "solar:tag-price-linear",
   "solar:clock-circle-linear",
   "solar:bus-linear",
-  "solar:airplane-linear",
+  "mdi:airplane",
   "solar:user-check-linear",
   "solar:heart-linear",
 ];
 
 const serviceIcons = [
-  "solar:airplane-linear",
+  "mdi:airplane",
   "solar:route-linear",
   "mdi:train",
   "solar:map-linear",

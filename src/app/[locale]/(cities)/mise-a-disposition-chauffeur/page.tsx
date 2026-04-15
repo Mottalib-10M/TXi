@@ -37,7 +37,7 @@ const advantageIcons = [
 const useCaseIcons = [
   "solar:buildings-linear",
   "solar:route-linear",
-  "solar:airplane-linear",
+  "mdi:airplane",
   "solar:star-shine-linear",
   "solar:compass-linear",
   "solar:users-group-rounded-linear",

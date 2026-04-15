@@ -1305,7 +1305,7 @@ export const services: ServiceSeo[] = [
   {
     slug: "navette-aeroport",
     title: "Navette Aéroport",
-    icon: "solar:airplane-linear",
+    icon: "mdi:airplane",
     category: "transport",
     i18n: {
       fr: {
