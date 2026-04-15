@@ -15,9 +15,12 @@ export function Navbar({ minimal = false }: { minimal?: boolean }) {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [solutionsOpen, setSolutionsOpen] = useState(false);
+  const [discoverOpen, setDiscoverOpen] = useState(false);
   const [mobileSolutionsOpen, setMobileSolutionsOpen] = useState(false);
+  const [mobileDiscoverOpen, setMobileDiscoverOpen] = useState(false);
   const headerRef = useRef<HTMLElement>(null);
   const solutionsTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const discoverTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     function handleScroll() {
@@ -138,6 +141,68 @@ export function Navbar({ minimal = false }: { minimal?: boolean }) {
                           <p className="text-xs text-neutral-400 font-light">{t("becomeDriverDesc")}</p>
                         </div>
                       </Link>
+                    </div>
+                  </div>
+                )}
+              </div>
+              <div
+                className="relative"
+                onMouseEnter={() => {
+                  if (discoverTimeoutRef.current) clearTimeout(discoverTimeoutRef.current);
+                  setDiscoverOpen(true);
+                }}
+                onMouseLeave={() => {
+                  discoverTimeoutRef.current = setTimeout(() => setDiscoverOpen(false), 150);
+                }}
+              >
+                <button
+                  onClick={() => setDiscoverOpen(!discoverOpen)}
+                  className="flex items-center gap-1 text-sm font-medium text-neutral-500 hover:text-neutral-900 transition-colors"
+                >
+                  {t("discover")}
+                  <Icon
+                    icon="solar:alt-arrow-down-linear"
+                    className={`text-xs transition-transform ${discoverOpen ? "rotate-180" : ""}`}
+                  />
+                </button>
+                {discoverOpen && (
+                  <div className="absolute right-0 top-full mt-2 w-72 bg-white border border-neutral-200 rounded-xl shadow-lg shadow-black/5 z-50 py-2 overflow-hidden">
+                    {[
+                      { href: "/trajets", icon: "solar:routing-linear", label: t("discoverTrajets"), desc: t("discoverTrajetsDesc") },
+                      { href: "/tarifs", icon: "solar:tag-price-linear", label: t("discoverTarifs"), desc: t("discoverTarifsDesc") },
+                      { href: "/guides", icon: "solar:book-linear", label: t("discoverGuides"), desc: t("discoverGuidesDesc") },
+                      { href: "/departements", icon: "solar:map-linear", label: t("discoverDepartements"), desc: t("discoverDepartementsDesc") },
+                      { href: "/services", icon: "solar:settings-linear", label: t("discoverServices"), desc: t("discoverServicesDesc") },
+                    ].map((item) => (
+                      <Link
+                        key={item.href}
+                        href={item.href}
+                        onClick={() => setDiscoverOpen(false)}
+                        className="flex items-start gap-3 px-4 py-2.5 hover:bg-neutral-50 transition-colors"
+                      >
+                        <Icon icon={item.icon} className="text-neutral-400 text-lg mt-0.5 shrink-0" />
+                        <div>
+                          <p className="text-sm font-medium text-neutral-800">{item.label}</p>
+                          <p className="text-xs text-neutral-400 font-light">{item.desc}</p>
+                        </div>
+                      </Link>
+                    ))}
+                    <div className="border-t border-neutral-100 mt-1.5 pt-1.5">
+                      {[
+                        { href: "/villes", icon: "solar:city-linear", label: t("discoverVilles") },
+                        { href: "/aeroports", icon: "solar:airplane-linear", label: t("discoverAeroports") },
+                        { href: "/gares", icon: "solar:train-linear", label: t("discoverGares") },
+                      ].map((item) => (
+                        <Link
+                          key={item.href}
+                          href={item.href}
+                          onClick={() => setDiscoverOpen(false)}
+                          className="flex items-center gap-3 px-4 py-2 hover:bg-neutral-50 transition-colors"
+                        >
+                          <Icon icon={item.icon} className="text-neutral-400 text-lg shrink-0" />
+                          <p className="text-sm text-neutral-600">{item.label}</p>
+                        </Link>
+                      ))}
                     </div>
                   </div>
                 )}
@@ -317,6 +382,52 @@ export function Navbar({ minimal = false }: { minimal?: boolean }) {
                     >
                       {t("becomeDriver")}
                     </Link>
+                  </div>
+                </div>
+              )}
+              <button
+                onClick={() => setMobileDiscoverOpen(!mobileDiscoverOpen)}
+                className="flex items-center justify-between w-full py-3 text-sm font-medium text-neutral-500 hover:bg-neutral-50 hover:text-neutral-900 rounded-lg px-3 transition-colors"
+              >
+                {t("discover")}
+                <Icon
+                  icon="solar:alt-arrow-down-linear"
+                  className={`text-xs transition-transform ${mobileDiscoverOpen ? "rotate-180" : ""}`}
+                />
+              </button>
+              {mobileDiscoverOpen && (
+                <div className="pl-4 space-y-0.5">
+                  {[
+                    { href: "/trajets", label: t("discoverTrajets") },
+                    { href: "/tarifs", label: t("discoverTarifs") },
+                    { href: "/guides", label: t("discoverGuides") },
+                    { href: "/departements", label: t("discoverDepartements") },
+                    { href: "/services", label: t("discoverServices") },
+                  ].map((item) => (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      onClick={() => setMobileOpen(false)}
+                      className="block py-2.5 text-sm text-neutral-500 hover:bg-neutral-50 hover:text-neutral-900 rounded-lg px-3 transition-colors"
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                  <div className="border-t border-neutral-100 mt-1 pt-1">
+                    {[
+                      { href: "/villes", label: t("discoverVilles") },
+                      { href: "/aeroports", label: t("discoverAeroports") },
+                      { href: "/gares", label: t("discoverGares") },
+                    ].map((item) => (
+                      <Link
+                        key={item.href}
+                        href={item.href}
+                        onClick={() => setMobileOpen(false)}
+                        className="block py-2.5 text-sm text-neutral-500 hover:bg-neutral-50 hover:text-neutral-900 rounded-lg px-3 transition-colors"
+                      >
+                        {item.label}
+                      </Link>
+                    ))}
                   </div>
                 </div>
               )}

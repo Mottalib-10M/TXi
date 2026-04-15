@@ -11,7 +11,7 @@ export function Footer() {
   return (
     <footer className="bg-white border-t border-neutral-200 pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-16">
           <div className="col-span-2 md:col-span-1">
             <Link href="/" className="mb-4 block">
               <Logo />
@@ -145,6 +145,57 @@ export function Footer() {
               <li className="border-t border-neutral-100 pt-3">
                 <Link href="/blog" className="hover:text-neutral-900 transition-colors">
                   {t("blog")}
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-sm font-medium mb-4 tracking-tight">{t("discover")}</h4>
+            <ul className="space-y-3 text-sm text-neutral-500 font-light">
+              <li>
+                <Link href="/trajets" className="hover:text-neutral-900 transition-colors">
+                  {t("trajets")}
+                </Link>
+              </li>
+              <li>
+                <Link href="/tarifs" className="hover:text-neutral-900 transition-colors">
+                  {t("tarifs")}
+                </Link>
+              </li>
+              <li>
+                <Link href="/guides" className="hover:text-neutral-900 transition-colors">
+                  {t("guides")}
+                </Link>
+              </li>
+              <li>
+                <Link href="/departements" className="hover:text-neutral-900 transition-colors">
+                  {t("departements")}
+                </Link>
+              </li>
+              <li>
+                <Link href="/services" className="hover:text-neutral-900 transition-colors">
+                  {t("services2")}
+                </Link>
+              </li>
+              <li className="border-t border-neutral-100 pt-3">
+                <Link href="/villes" className="hover:text-neutral-900 transition-colors">
+                  {t("villes")}
+                </Link>
+              </li>
+              <li>
+                <Link href="/aeroports" className="hover:text-neutral-900 transition-colors">
+                  {t("aeroports2")}
+                </Link>
+              </li>
+              <li>
+                <Link href="/gares" className="hover:text-neutral-900 transition-colors">
+                  {t("gares")}
+                </Link>
+              </li>
+              <li>
+                <Link href="/plan-du-site" className="hover:text-neutral-900 transition-colors">
+                  {t("sitemap")}
                 </Link>
               </li>
             </ul>

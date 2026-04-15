@@ -11,6 +11,9 @@ import { ScrollToBooking } from "@/components/ui/ScrollToBooking";
 import { popularCities, cities } from "@/data/cities";
 import { popularAirports, airports } from "@/data/airports";
 import { popularStations, stations } from "@/data/stations";
+import { trajets } from "@/data/trajets";
+import { guides } from "@/data/guides";
+import { departements } from "@/data/departements";
 
 interface Props {
   params: Promise<{ locale: string }>;
@@ -610,6 +613,156 @@ export default async function HomePage() {
               className="text-sm font-medium text-neutral-900 bg-neutral-100 border border-neutral-300 rounded-full px-5 py-2 hover:bg-neutral-200 transition-colors inline-flex items-center gap-1.5"
             >
               {t("seeAllStations", { count: stations.length })} <Icon icon="solar:arrow-right-linear" className="text-sm" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Popular Routes Section */}
+      <section className="bg-neutral-50 border-t border-b border-neutral-100 py-20 md:py-28" id="trajets">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16 fade-up">
+            <p className="text-sm font-medium text-neutral-500 mb-2 uppercase tracking-wider">
+              {t("trajetsSubtitle")}
+            </p>
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
+              {t("trajetsTitle")}
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+            {(() => {
+              const popularSlugs = ["paris-cdg", "paris-orly", "lyon-aeroport-centre", "marseille-aeroport-centre", "nice-aeroport-centre", "toulouse-aeroport-centre", "bordeaux-aeroport-centre", "cdg-disneyland"];
+              return popularSlugs
+                .map((slug) => trajets.find((t) => t.slug === slug))
+                .filter(Boolean)
+                .map((trajet, i) => (
+                  <Link
+                    key={trajet!.slug}
+                    href={`/trajet/${trajet!.slug}` as never}
+                    className={`group bg-white border border-neutral-200 rounded-2xl p-5 card-hover fade-up fade-up-delay-${(i % 3) + 1}`}
+                  >
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="w-9 h-9 bg-neutral-50 border border-neutral-200 rounded-lg flex items-center justify-center group-hover:bg-neutral-900 group-hover:border-neutral-900 transition-colors">
+                        <Icon icon="solar:routing-linear" className="text-neutral-600 text-lg group-hover:text-white transition-colors" />
+                      </div>
+                      <div className="min-w-0">
+                        <h3 className="text-sm font-medium tracking-tight truncate">{trajet!.from} → {trajet!.to}</h3>
+                      </div>
+                    </div>
+                    <div className="flex items-center justify-between text-xs text-neutral-500 font-light">
+                      <span>{trajet!.priceEstimate}</span>
+                      <span>{t("trajetDuration", { min: trajet!.durationMin })}</span>
+                    </div>
+                  </Link>
+                ));
+            })()}
+          </div>
+
+          <div className="flex justify-center fade-up">
+            <Link
+              href="/trajets"
+              className="text-sm font-medium text-neutral-900 bg-neutral-100 border border-neutral-300 rounded-full px-5 py-2 hover:bg-neutral-200 transition-colors inline-flex items-center gap-1.5"
+            >
+              {t("seeAllTrajets")} <Icon icon="solar:arrow-right-linear" className="text-sm" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Guides Section */}
+      <section className="py-20 md:py-28" id="guides">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16 fade-up">
+            <p className="text-sm font-medium text-neutral-500 mb-2 uppercase tracking-wider">
+              {t("guidesSubtitle")}
+            </p>
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
+              {t("guidesTitle")}
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
+            {guides.slice(0, 6).map((guide, i) => (
+              <Link
+                key={guide.slug}
+                href={`/guide/${guide.slug}` as never}
+                className={`group bg-white border border-neutral-200 rounded-2xl p-5 card-hover fade-up fade-up-delay-${(i % 3) + 1}`}
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-9 h-9 bg-neutral-50 border border-neutral-200 rounded-lg flex items-center justify-center group-hover:bg-neutral-900 group-hover:border-neutral-900 transition-colors">
+                    <Icon icon={guide.icon} className="text-neutral-600 text-lg group-hover:text-white transition-colors" />
+                  </div>
+                  <h3 className="text-sm font-medium tracking-tight">{guide.title}</h3>
+                </div>
+                <p className="text-xs text-neutral-500 font-light line-clamp-2 mb-2">
+                  {guide.i18n.fr.heroSubtitle}
+                </p>
+                <span className="text-xs text-neutral-400 font-light">
+                  {t("guideReadingTime", { min: guide.readingTime })}
+                </span>
+              </Link>
+            ))}
+          </div>
+
+          <div className="flex justify-center fade-up">
+            <Link
+              href="/guides"
+              className="text-sm font-medium text-neutral-900 bg-neutral-100 border border-neutral-300 rounded-full px-5 py-2 hover:bg-neutral-200 transition-colors inline-flex items-center gap-1.5"
+            >
+              {t("seeAllGuides")} <Icon icon="solar:arrow-right-linear" className="text-sm" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Departments Section */}
+      <section className="bg-neutral-50 border-t border-b border-neutral-100 py-20 md:py-28" id="departements">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16 fade-up">
+            <p className="text-sm font-medium text-neutral-500 mb-2 uppercase tracking-wider">
+              {t("departementsSubtitle")}
+            </p>
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
+              {t("departementsTitle")}
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+            {(() => {
+              const popularCodes = ["75", "69", "13", "06", "31", "33", "59", "67"];
+              return popularCodes
+                .map((code) => departements.find((d) => d.code === code))
+                .filter(Boolean)
+                .map((dept, i) => (
+                  <Link
+                    key={dept!.slug}
+                    href={`/departement/${dept!.slug}` as never}
+                    className={`group bg-white border border-neutral-200 rounded-2xl p-5 card-hover fade-up fade-up-delay-${(i % 3) + 1}`}
+                  >
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="w-9 h-9 bg-neutral-50 border border-neutral-200 rounded-lg flex items-center justify-center group-hover:bg-neutral-900 group-hover:border-neutral-900 transition-colors">
+                        <Icon icon="solar:map-linear" className="text-neutral-600 text-lg group-hover:text-white transition-colors" />
+                      </div>
+                      <div>
+                        <h3 className="text-sm font-medium tracking-tight">{dept!.name} ({dept!.code})</h3>
+                        <p className="text-xs text-neutral-500 font-light">{dept!.region}</p>
+                      </div>
+                    </div>
+                    <div className="text-xs text-neutral-500 font-light">
+                      {t("departementCities", { count: dept!.mainCities.length })}
+                    </div>
+                  </Link>
+                ));
+            })()}
+          </div>
+
+          <div className="flex justify-center fade-up">
+            <Link
+              href="/departements"
+              className="text-sm font-medium text-neutral-900 bg-neutral-100 border border-neutral-300 rounded-full px-5 py-2 hover:bg-neutral-200 transition-colors inline-flex items-center gap-1.5"
+            >
+              {t("seeAllDepartements")} <Icon icon="solar:arrow-right-linear" className="text-sm" />
             </Link>
           </div>
         </div>
