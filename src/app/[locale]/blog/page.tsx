@@ -80,6 +80,43 @@ export default async function BlogPage({ params }: PageProps) {
               </Link>
             ))}
           </div>
+
+          {/* Cross-links SEO */}
+          <div className="mt-16 pt-10 border-t border-neutral-100 fade-up">
+            <h2 className="text-lg font-semibold tracking-tight mb-4">
+              {lang === "en" ? "Explore TaxiNeo" : "Découvrez aussi"}
+            </h2>
+            <div className="flex flex-wrap gap-3">
+              <Link
+                href="/guides"
+                className="inline-flex items-center gap-2 px-4 py-2.5 bg-white border border-neutral-200 rounded-xl text-sm font-medium hover:border-neutral-400 transition-colors"
+              >
+                <Icon icon="solar:book-linear" className="text-neutral-400" />
+                {lang === "en" ? "Practical guides" : "Guides pratiques"}
+              </Link>
+              <Link
+                href="/trajets"
+                className="inline-flex items-center gap-2 px-4 py-2.5 bg-white border border-neutral-200 rounded-xl text-sm font-medium hover:border-neutral-400 transition-colors"
+              >
+                <Icon icon="solar:route-linear" className="text-neutral-400" />
+                {lang === "en" ? "Popular routes" : "Trajets populaires"}
+              </Link>
+              <Link
+                href="/villes"
+                className="inline-flex items-center gap-2 px-4 py-2.5 bg-white border border-neutral-200 rounded-xl text-sm font-medium hover:border-neutral-400 transition-colors"
+              >
+                <Icon icon="solar:map-point-linear" className="text-neutral-400" />
+                {lang === "en" ? "Cities" : "Villes desservies"}
+              </Link>
+              <Link
+                href="/services"
+                className="inline-flex items-center gap-2 px-4 py-2.5 bg-white border border-neutral-200 rounded-xl text-sm font-medium hover:border-neutral-400 transition-colors"
+              >
+                <Icon icon="solar:star-linear" className="text-neutral-400" />
+                {lang === "en" ? "Our services" : "Nos services"}
+              </Link>
+            </div>
+          </div>
         </div>
       </main>
 

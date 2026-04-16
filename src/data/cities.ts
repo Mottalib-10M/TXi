@@ -2426,6 +2426,13 @@ export const popularCities = cities.filter((c) =>
   ["paris", "marseille", "lyon", "toulouse", "nice", "nantes", "bordeaux", "lille"].includes(c.slug)
 );
 
+export function findCityByName(name: string): City | undefined {
+  const n = name.toLowerCase().trim();
+  return cities.find(
+    (c) => c.name.toLowerCase() === n || c.slug === n
+  );
+}
+
 export const services = [
   {
     icon: "solar:city-linear",

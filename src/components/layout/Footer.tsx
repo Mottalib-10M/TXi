@@ -89,6 +89,11 @@ export function Footer() {
                   {t("miseADisposChauffeur")}
                 </Link>
               </li>
+              <li>
+                <Link href="/taxi-partage" className="hover:text-neutral-900 transition-colors">
+                  {t("taxiPartage")}
+                </Link>
+              </li>
             </ul>
           </div>
 

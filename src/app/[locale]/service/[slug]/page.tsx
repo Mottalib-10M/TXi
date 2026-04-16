@@ -9,7 +9,7 @@ import { ServiceJsonLd } from "@/components/service/ServiceJsonLd";
 import { CityFAQ } from "@/components/city/CityFAQ";
 import { CityContactForm } from "@/components/city/CityContactForm";
 import { CityCTA } from "@/components/city/CityCTA";
-import { services, getServiceBySlug } from "@/data/services-seo";
+import { services, getServiceBySlug, getServicesByCategory } from "@/data/services-seo";
 import { Link } from "@/i18n/navigation";
 import { getTranslations } from "next-intl/server";
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
@@ -119,6 +119,53 @@ export default async function ServicePage({ params }: PageProps) {
             </div>
           </section>
         )}
+
+        {/* Voir aussi — Cross-links SEO */}
+        {(() => {
+          const sameCategory = getServicesByCategory(service.category)
+            .filter((s) => s.slug !== service.slug)
+            .slice(0, 3);
+          const others = sameCategory.length >= 3
+            ? sameCategory
+            : [
+                ...sameCategory,
+                ...services
+                  .filter((s) => s.slug !== service.slug && !sameCategory.some((sc) => sc.slug === s.slug))
+                  .slice(0, 3 - sameCategory.length),
+              ];
+          return (
+            <section className="py-12 md:py-16 bg-neutral-50">
+              <div className="max-w-4xl mx-auto px-6 fade-up">
+                <h2 className="text-2xl font-semibold tracking-tight mb-6">
+                  {loc === "en" ? "See also" : "Voir aussi"}
+                </h2>
+                <div className="flex flex-wrap gap-3">
+                  {others.map((s) => (
+                    <Link
+                      key={s.slug}
+                      href={`/service/${s.slug}`}
+                      className="inline-flex items-center gap-2 px-4 py-2.5 bg-white border border-neutral-200 rounded-xl text-sm font-medium hover:border-neutral-400 transition-colors"
+                    >
+                      {s.i18n[loc].heroTitle}
+                    </Link>
+                  ))}
+                  <Link
+                    href="/tarifs"
+                    className="inline-flex items-center gap-2 px-4 py-2.5 bg-white border border-neutral-200 rounded-xl text-sm font-medium hover:border-neutral-400 transition-colors"
+                  >
+                    {loc === "en" ? "Taxi fares" : "Tarifs taxi"}
+                  </Link>
+                  <Link
+                    href="/trajets"
+                    className="inline-flex items-center gap-2 px-4 py-2.5 bg-white border border-neutral-200 rounded-xl text-sm font-medium hover:border-neutral-400 transition-colors"
+                  >
+                    {loc === "en" ? "Popular routes" : "Trajets populaires"}
+                  </Link>
+                </div>
+              </div>
+            </section>
+          );
+        })()}
 
         <CityFAQ cityName={service.title} faq={service.i18n[loc].faq} />
         <CityContactForm cityName={service.title} />

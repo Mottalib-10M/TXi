@@ -122,6 +122,45 @@ export default async function TarifPage({ params }: PageProps) {
           </section>
         )}
 
+        {/* Voir aussi — Cross-links SEO */}
+        {(() => {
+          const others = tarifs
+            .filter((t2) => t2.slug !== tarif.slug)
+            .slice(0, 3);
+          return (
+            <section className="py-12 md:py-16 bg-neutral-50">
+              <div className="max-w-4xl mx-auto px-6 fade-up">
+                <h2 className="text-2xl font-semibold tracking-tight mb-6">
+                  {loc === "en" ? "See also" : "Voir aussi"}
+                </h2>
+                <div className="flex flex-wrap gap-3">
+                  {others.map((t2) => (
+                    <Link
+                      key={t2.slug}
+                      href={`/tarif/${t2.slug}`}
+                      className="inline-flex items-center gap-2 px-4 py-2.5 bg-white border border-neutral-200 rounded-xl text-sm font-medium hover:border-neutral-400 transition-colors"
+                    >
+                      {t2.i18n[loc].heroTitle}
+                    </Link>
+                  ))}
+                  <Link
+                    href="/trajets"
+                    className="inline-flex items-center gap-2 px-4 py-2.5 bg-white border border-neutral-200 rounded-xl text-sm font-medium hover:border-neutral-400 transition-colors"
+                  >
+                    {loc === "en" ? "Popular routes" : "Trajets populaires"}
+                  </Link>
+                  <Link
+                    href="/departements"
+                    className="inline-flex items-center gap-2 px-4 py-2.5 bg-white border border-neutral-200 rounded-xl text-sm font-medium hover:border-neutral-400 transition-colors"
+                  >
+                    {loc === "en" ? "Departments" : "Départements"}
+                  </Link>
+                </div>
+              </div>
+            </section>
+          );
+        })()}
+
         <CityFAQ cityName={tarif.title} faq={tarif.i18n[loc].faq} />
         <CityContactForm cityName={tarif.title} />
         <CityCTA cityName={tarif.title} />

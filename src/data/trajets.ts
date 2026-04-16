@@ -4522,6 +4522,25 @@ export function getTrajetsByHub(hub: string): Trajet[] {
 }
 
 export function getRelatedTrajets(trajet: Trajet): Trajet[] {
+  // Prioritize liensInternes if populated
+  if (trajet.liensInternes && trajet.liensInternes.length > 0) {
+    const linked = trajet.liensInternes
+      .map((slug) => trajets.find((t) => t.slug === slug))
+      .filter((t): t is Trajet => t !== undefined && t.slug !== trajet.slug);
+    if (linked.length >= 3) return linked.slice(0, 6);
+    // Supplement with from/to matches if liensInternes gives fewer than 3
+    const linkedSlugs = new Set(linked.map((t) => t.slug));
+    const extra = trajets
+      .filter(
+        (t) =>
+          t.slug !== trajet.slug &&
+          !linkedSlugs.has(t.slug) &&
+          (t.from === trajet.from || t.to === trajet.to || t.from === trajet.to || t.to === trajet.from)
+      )
+      .slice(0, 6 - linked.length);
+    return [...linked, ...extra];
+  }
+
   return trajets
     .filter(
       (t) =>
@@ -4529,4 +4548,16 @@ export function getRelatedTrajets(trajet: Trajet): Trajet[] {
         (t.from === trajet.from || t.to === trajet.to || t.from === trajet.to || t.to === trajet.from)
     )
     .slice(0, 6);
+}
+
+export function findTrajetSlugForRoute(from: string, to: string): string | undefined {
+  const normalize = (s: string) => s.toLowerCase().trim();
+  const f = normalize(from);
+  const t = normalize(to);
+  const match = trajets.find(
+    (tr) =>
+      (normalize(tr.from) === f && normalize(tr.to) === t) ||
+      (normalize(tr.from) === t && normalize(tr.to) === f)
+  );
+  return match?.slug;
 }
