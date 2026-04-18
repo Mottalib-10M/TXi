@@ -4518,6 +4518,13 @@ import { trajetsLyonPart4 } from "./trajets-hub-lyon-4";
 import { trajetsAvignonHub } from "./trajets-hub-avignon";
 import { trajetsGrenobleHub2 } from "./trajets-hub-grenoble-2";
 import { trajetsToursHub2 } from "./trajets-hub-tours-2";
+import { trajetsParisRetours2 } from "./trajets-hub-paris-retours-2";
+import { trajetsParisRetours3 } from "./trajets-hub-paris-retours-3";
+import { trajetsDijonReims } from "./trajets-hub-dijon-reims";
+import { trajetsChamberyValence } from "./trajets-hub-chambery-valence";
+import { trajetsBesanconMulhouse } from "./trajets-hub-besancon-mulhouse";
+import { trajetsBayonnePau2 } from "./trajets-hub-bayonne-pau-2";
+import { trajetsLille2 } from "./trajets-hub-lille-2";
 
 // Merge hub trajets into the main array
 trajets.push(
@@ -4561,6 +4568,13 @@ trajets.push(
   ...trajetsAvignonHub,
   ...trajetsGrenobleHub2,
   ...trajetsToursHub2,
+  ...trajetsParisRetours2,
+  ...trajetsParisRetours3,
+  ...trajetsDijonReims,
+  ...trajetsChamberyValence,
+  ...trajetsBesanconMulhouse,
+  ...trajetsBayonnePau2,
+  ...trajetsLille2,
 );
 
 export function getTrajetBySlug(slug: string): Trajet | undefined {
