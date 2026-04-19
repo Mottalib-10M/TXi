@@ -4639,6 +4639,12 @@ import { trajetsRocamadourSarlat } from "./trajets-hub-rocamadour-sarlat";
 import { trajetsLorientConcarneau } from "./trajets-hub-lorient-concarneau";
 import { trajetsChateaubriantRedon } from "./trajets-hub-chateaubriant-redon";
 import { trajetsVichyClermont } from "./trajets-hub-vichy-clermont";
+import { trajetsLourdesCauterets } from "./trajets-hub-lourdes-cauterets";
+import { trajetsSaintJeanDeLuz } from "./trajets-hub-saint-jean-de-luz";
+import { trajetsEpernayChateauThierry } from "./trajets-hub-epernay-chateau-thierry";
+import { trajetsMorlaixRoscoff } from "./trajets-hub-morlaix-roscoff";
+import { trajetsAbbevilleBerck } from "./trajets-hub-abbeville-berck";
+import { trajetsDieppeFecamp } from "./trajets-hub-dieppe-fecamp";
 
 // Merge hub trajets into the main array
 trajets.push(
@@ -4803,6 +4809,12 @@ trajets.push(
   ...trajetsLorientConcarneau,
   ...trajetsChateaubriantRedon,
   ...trajetsVichyClermont,
+  ...trajetsLourdesCauterets,
+  ...trajetsSaintJeanDeLuz,
+  ...trajetsEpernayChateauThierry,
+  ...trajetsMorlaixRoscoff,
+  ...trajetsAbbevilleBerck,
+  ...trajetsDieppeFecamp,
 );
 
 export function getTrajetBySlug(slug: string): Trajet | undefined {
