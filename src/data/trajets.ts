@@ -4663,6 +4663,11 @@ import { trajetsMaconTournus } from "./trajets-hub-macon-tournus";
 import { trajetsBeauneAutun } from "./trajets-hub-beaune-autun";
 import { trajetsCluses } from "./trajets-hub-cluses-sallanches";
 import { trajetsPerpignanCollioure } from "./trajets-hub-perpignan-collioure";
+import { trajetsDolFougeres } from "./trajets-hub-dol-fougeres";
+import { trajetsCahorsGourdon } from "./trajets-hub-cahors-gourdon";
+import { trajetsAuxerreTonnerre } from "./trajets-hub-auxerre-tonnerre";
+import { trajetsOleronRochefort } from "./trajets-hub-oleron-rochefort";
+import { trajetsMontaubanCastres } from "./trajets-hub-montauban-castres";
 
 // Merge hub trajets into the main array
 trajets.push(
@@ -4851,6 +4856,11 @@ trajets.push(
   ...trajetsBeauneAutun,
   ...trajetsCluses,
   ...trajetsPerpignanCollioure,
+  ...trajetsDolFougeres,
+  ...trajetsCahorsGourdon,
+  ...trajetsAuxerreTonnerre,
+  ...trajetsOleronRochefort,
+  ...trajetsMontaubanCastres,
 );
 
 export function getTrajetBySlug(slug: string): Trajet | undefined {
