@@ -4581,6 +4581,8 @@ import { trajetsRochefortSaintes } from "./trajets-hub-rochefort-saintes";
 import { trajetsSaintMaloDinard } from "./trajets-hub-saint-malo-dinard";
 import { trajetsSensMelun } from "./trajets-hub-sens-melun";
 import { trajetsSeteAgde } from "./trajets-hub-sete-agde";
+import { trajetsMentonAntibes } from "./trajets-hub-menton-antibes";
+import { trajetsGrasseDinan } from "./trajets-hub-grasse-dinan";
 
 // Merge hub trajets into the main array
 trajets.push(
@@ -4687,6 +4689,8 @@ trajets.push(
   ...trajetsSaintMaloDinard,
   ...trajetsSensMelun,
   ...trajetsSeteAgde,
+  ...trajetsMentonAntibes,
+  ...trajetsGrasseDinan,
 );
 
 export function getTrajetBySlug(slug: string): Trajet | undefined {
