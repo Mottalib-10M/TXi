@@ -4527,6 +4527,36 @@ import { trajetsBayonnePau2 } from "./trajets-hub-bayonne-pau-2";
 import { trajetsLille2 } from "./trajets-hub-lille-2";
 import { trajetsRouenCaen3 } from "./trajets-hub-rouen-caen-3";
 import { trajetsToulouse2 } from "./trajets-hub-toulouse-2";
+import { trajetsAixEnProvence } from "./trajets-hub-aix-en-provence";
+import { trajetsCannes } from "./trajets-hub-cannes";
+import { trajetsNancy } from "./trajets-hub-nancy";
+import { trajetsSaintEtienne } from "./trajets-hub-saint-etienne";
+import { trajetsNimes } from "./trajets-hub-nimes";
+import { trajetsLaRochelle } from "./trajets-hub-la-rochelle";
+import { trajetsAngers } from "./trajets-hub-angers";
+import { trajetsBrest } from "./trajets-hub-brest";
+import { trajetsMonaco } from "./trajets-hub-monaco";
+import { trajetsLeHavre } from "./trajets-hub-le-havre";
+import { trajetsDunkerqueCalais } from "./trajets-hub-dunkerque-calais";
+import { trajetsTroyesAuxerre } from "./trajets-hub-troyes-auxerre";
+import { trajetsVannesLorient } from "./trajets-hub-vannes-lorient";
+import { trajetsPerpignan2 } from "./trajets-hub-perpignan-2";
+import { trajetsColmar } from "./trajets-hub-colmar";
+import { trajetsMaconChalon } from "./trajets-hub-macon-chalon";
+import { trajetsRoanneVichy } from "./trajets-hub-roanne-vichy";
+import { trajetsTarbesLourdes } from "./trajets-hub-tarbes-lourdes";
+import { trajetsPau3 } from "./trajets-hub-pau-3";
+import { trajetsAgenMontauban } from "./trajets-hub-agen-montauban";
+import { trajetsAngoulemeCognac } from "./trajets-hub-angouleme-cognac";
+import { trajetsBourgesNevers } from "./trajets-hub-bourges-nevers";
+import { trajetsChartresDreux } from "./trajets-hub-chartres-dreux";
+import { trajetsBeauvaisCompiegne } from "./trajets-hub-beauvais-compiegne";
+import { trajetsArlesCamargue } from "./trajets-hub-arles-camargue";
+import { trajetsGapBriancon } from "./trajets-hub-gap-briancon";
+import { trajetsCarcassonne } from "./trajets-hub-carcassonne";
+import { trajetsLavalMayenne } from "./trajets-hub-laval-mayenne";
+import { trajetsRodezCahors } from "./trajets-hub-rodez-cahors";
+import { trajetsCherbourg } from "./trajets-hub-cherbourg-saintlo";
 
 // Merge hub trajets into the main array
 trajets.push(
@@ -4579,6 +4609,36 @@ trajets.push(
   ...trajetsLille2,
   ...trajetsRouenCaen3,
   ...trajetsToulouse2,
+  ...trajetsAixEnProvence,
+  ...trajetsCannes,
+  ...trajetsNancy,
+  ...trajetsSaintEtienne,
+  ...trajetsNimes,
+  ...trajetsLaRochelle,
+  ...trajetsAngers,
+  ...trajetsBrest,
+  ...trajetsMonaco,
+  ...trajetsLeHavre,
+  ...trajetsDunkerqueCalais,
+  ...trajetsTroyesAuxerre,
+  ...trajetsVannesLorient,
+  ...trajetsPerpignan2,
+  ...trajetsColmar,
+  ...trajetsMaconChalon,
+  ...trajetsRoanneVichy,
+  ...trajetsTarbesLourdes,
+  ...trajetsPau3,
+  ...trajetsAgenMontauban,
+  ...trajetsAngoulemeCognac,
+  ...trajetsBourgesNevers,
+  ...trajetsChartresDreux,
+  ...trajetsBeauvaisCompiegne,
+  ...trajetsArlesCamargue,
+  ...trajetsGapBriancon,
+  ...trajetsCarcassonne,
+  ...trajetsLavalMayenne,
+  ...trajetsRodezCahors,
+  ...trajetsCherbourg,
 );
 
 export function getTrajetBySlug(slug: string): Trajet | undefined {
