@@ -4657,6 +4657,12 @@ import { trajetsMontelimarPierrelatte } from "./trajets-hub-montelimar-pierrelat
 import { trajetsMarmandeVilleneuve } from "./trajets-hub-marmande-villeneuve";
 import { trajetsRoyanIleDeRe } from "./trajets-hub-royan-ile-de-re";
 import { trajetsNeufchateauBarLeDuc } from "./trajets-hub-neufchateau-barleduc";
+import { trajetsTulleUssel } from "./trajets-hub-tulle-ussel";
+import { trajetsGueretAubusson } from "./trajets-hub-gueret-aubusson";
+import { trajetsMaconTournus } from "./trajets-hub-macon-tournus";
+import { trajetsBeauneAutun } from "./trajets-hub-beaune-autun";
+import { trajetsCluses } from "./trajets-hub-cluses-sallanches";
+import { trajetsPerpignanCollioure } from "./trajets-hub-perpignan-collioure";
 
 // Merge hub trajets into the main array
 trajets.push(
@@ -4839,6 +4845,12 @@ trajets.push(
   ...trajetsMarmandeVilleneuve,
   ...trajetsRoyanIleDeRe,
   ...trajetsNeufchateauBarLeDuc,
+  ...trajetsTulleUssel,
+  ...trajetsGueretAubusson,
+  ...trajetsMaconTournus,
+  ...trajetsBeauneAutun,
+  ...trajetsCluses,
+  ...trajetsPerpignanCollioure,
 );
 
 export function getTrajetBySlug(slug: string): Trajet | undefined {
