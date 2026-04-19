@@ -4583,6 +4583,35 @@ import { trajetsSensMelun } from "./trajets-hub-sens-melun";
 import { trajetsSeteAgde } from "./trajets-hub-sete-agde";
 import { trajetsMentonAntibes } from "./trajets-hub-menton-antibes";
 import { trajetsGrasseDinan } from "./trajets-hub-grasse-dinan";
+import { trajetsSaintBrieucDinan } from "./trajets-hub-saint-brieuc-dinan";
+import { trajetsVersailles } from "./trajets-hub-versailles";
+import { trajetsCDGAeroport } from "./trajets-hub-cdg-aeroport";
+import { trajetsOrlyAeroport } from "./trajets-hub-orly-aeroport";
+import { trajetsFontainebleau } from "./trajets-hub-fontainebleau";
+import { trajetsMeauxMarne } from "./trajets-hub-meaux-marne";
+import { trajetsCergyPontoise } from "./trajets-hub-cergy-pontoise";
+import { trajetsLyonSaintExupery } from "./trajets-hub-lyon-saint-exupery";
+import { trajetsNiceAeroport } from "./trajets-hub-nice-aeroport";
+import { trajetsMarseilleAeroport } from "./trajets-hub-marseille-aeroport";
+import { trajetsToulouseAeroport } from "./trajets-hub-toulouse-aeroport";
+import { trajetsBordeauxAeroport } from "./trajets-hub-bordeaux-aeroport";
+import { trajetsValenceRomans } from "./trajets-hub-valence-romans";
+import { trajetsBéziersNarbonne } from "./trajets-hub-beziers-narbonne";
+import { trajetsAjaccioBastia } from "./trajets-hub-ajaccio-bastia";
+import { trajetsBelfortMontbeliard } from "./trajets-hub-belfort-montbeliard";
+import { trajetsBourgEnBresse } from "./trajets-hub-bourg-en-bresse";
+import { trajetsOrangeCarpentras } from "./trajets-hub-orange-carpentras";
+import { trajetsDraguignanBrignoles } from "./trajets-hub-draguignan-brignoles";
+import { trajetsSaintTropez } from "./trajets-hub-saint-tropez";
+import { trajetsPoitiers } from "./trajets-hub-poitiers";
+import { trajetsLonsLeSaunier } from "./trajets-hub-lons-le-saunier";
+import { trajetsDignéManosque } from "./trajets-hub-digne-manosque";
+import { trajetsAubagneCassis } from "./trajets-hub-aubagne-cassis";
+import { trajetsNantesAeroport } from "./trajets-hub-nantes-aeroport";
+import { trajetsStrasbourgAeroport } from "./trajets-hub-strasbourg-aeroport";
+import { trajetsPrivasAubenas } from "./trajets-hub-privas-aubenas";
+import { trajetsVillefrancheTarare } from "./trajets-hub-villefranche-tarare";
+import { trajetsVienneBourgoin } from "./trajets-hub-vienne-bourgoin";
 
 // Merge hub trajets into the main array
 trajets.push(
@@ -4691,6 +4720,35 @@ trajets.push(
   ...trajetsSeteAgde,
   ...trajetsMentonAntibes,
   ...trajetsGrasseDinan,
+  ...trajetsSaintBrieucDinan,
+  ...trajetsVersailles,
+  ...trajetsCDGAeroport,
+  ...trajetsOrlyAeroport,
+  ...trajetsFontainebleau,
+  ...trajetsMeauxMarne,
+  ...trajetsCergyPontoise,
+  ...trajetsLyonSaintExupery,
+  ...trajetsNiceAeroport,
+  ...trajetsMarseilleAeroport,
+  ...trajetsToulouseAeroport,
+  ...trajetsBordeauxAeroport,
+  ...trajetsValenceRomans,
+  ...trajetsBéziersNarbonne,
+  ...trajetsAjaccioBastia,
+  ...trajetsBelfortMontbeliard,
+  ...trajetsBourgEnBresse,
+  ...trajetsOrangeCarpentras,
+  ...trajetsDraguignanBrignoles,
+  ...trajetsSaintTropez,
+  ...trajetsPoitiers,
+  ...trajetsLonsLeSaunier,
+  ...trajetsDignéManosque,
+  ...trajetsAubagneCassis,
+  ...trajetsNantesAeroport,
+  ...trajetsStrasbourgAeroport,
+  ...trajetsPrivasAubenas,
+  ...trajetsVillefrancheTarare,
+  ...trajetsVienneBourgoin,
 );
 
 export function getTrajetBySlug(slug: string): Trajet | undefined {
