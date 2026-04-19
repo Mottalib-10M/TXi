@@ -4612,6 +4612,15 @@ import { trajetsStrasbourgAeroport } from "./trajets-hub-strasbourg-aeroport";
 import { trajetsPrivasAubenas } from "./trajets-hub-privas-aubenas";
 import { trajetsVillefrancheTarare } from "./trajets-hub-villefranche-tarare";
 import { trajetsVienneBourgoin } from "./trajets-hub-vienne-bourgoin";
+import { trajetsSalonMartigues } from "./trajets-hub-salon-martigues";
+import { trajetsAptCavaillon } from "./trajets-hub-apt-cavaillon";
+import { trajetsEvryCorbeil } from "./trajets-hub-evry-corbeil";
+import { trajetsMantesPoissy } from "./trajets-hub-mantes-poissy";
+import { trajetsSaintQuentinLaon } from "./trajets-hub-saint-quentin-laon";
+import { trajetsCambraiValenciennes } from "./trajets-hub-cambrai-valenciennes";
+import { trajetsCholetSaumur } from "./trajets-hub-cholet-saumur";
+import { trajetsLaRocheSurYon } from "./trajets-hub-la-roche-sur-yon";
+import { trajetsChâlonsVitry } from "./trajets-hub-chalons-vitry";
 
 // Merge hub trajets into the main array
 trajets.push(
@@ -4749,6 +4758,15 @@ trajets.push(
   ...trajetsPrivasAubenas,
   ...trajetsVillefrancheTarare,
   ...trajetsVienneBourgoin,
+  ...trajetsSalonMartigues,
+  ...trajetsAptCavaillon,
+  ...trajetsEvryCorbeil,
+  ...trajetsMantesPoissy,
+  ...trajetsSaintQuentinLaon,
+  ...trajetsCambraiValenciennes,
+  ...trajetsCholetSaumur,
+  ...trajetsLaRocheSurYon,
+  ...trajetsChâlonsVitry,
 );
 
 export function getTrajetBySlug(slug: string): Trajet | undefined {
