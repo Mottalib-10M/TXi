@@ -4651,6 +4651,12 @@ import { trajetsSarregueminesForbach } from "./trajets-hub-sarreguemines-forbach
 import { trajetsThionvilleLongwy } from "./trajets-hub-thionville-longwy";
 import { trajetsDouaiBethune } from "./trajets-hub-douai-bethune";
 import { trajetsSaverneWissembourg } from "./trajets-hub-saverne-wissembourg";
+import { trajetsIssoudunVierzon } from "./trajets-hub-issoudun-vierzon";
+import { trajetsChatelleraultLoudun } from "./trajets-hub-chatellerault-loudun";
+import { trajetsMontelimarPierrelatte } from "./trajets-hub-montelimar-pierrelatte";
+import { trajetsMarmandeVilleneuve } from "./trajets-hub-marmande-villeneuve";
+import { trajetsRoyanIleDeRe } from "./trajets-hub-royan-ile-de-re";
+import { trajetsNeufchateauBarLeDuc } from "./trajets-hub-neufchateau-barleduc";
 
 // Merge hub trajets into the main array
 trajets.push(
@@ -4827,6 +4833,12 @@ trajets.push(
   ...trajetsThionvilleLongwy,
   ...trajetsDouaiBethune,
   ...trajetsSaverneWissembourg,
+  ...trajetsIssoudunVierzon,
+  ...trajetsChatelleraultLoudun,
+  ...trajetsMontelimarPierrelatte,
+  ...trajetsMarmandeVilleneuve,
+  ...trajetsRoyanIleDeRe,
+  ...trajetsNeufchateauBarLeDuc,
 );
 
 export function getTrajetBySlug(slug: string): Trajet | undefined {
