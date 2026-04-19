@@ -4557,6 +4557,30 @@ import { trajetsCarcassonne } from "./trajets-hub-carcassonne";
 import { trajetsLavalMayenne } from "./trajets-hub-laval-mayenne";
 import { trajetsRodezCahors } from "./trajets-hub-rodez-cahors";
 import { trajetsCherbourg } from "./trajets-hub-cherbourg-saintlo";
+import { trajetsAlbiCastres } from "./trajets-hub-albi-castres";
+import { trajetsAuchCondom } from "./trajets-hub-auch-condom";
+import { trajetsAurillacLePuy } from "./trajets-hub-aurillac-lepuy";
+import { trajetsBloisVendome } from "./trajets-hub-blois-vendome";
+import { trajetsBriveTulle } from "./trajets-hub-brive-tulle";
+import { trajetsChamonix } from "./trajets-hub-chamonix";
+import { trajetsChateaurouxGueret } from "./trajets-hub-chateauroux-gueret";
+import { trajetsDaxMontDeMarsan } from "./trajets-hub-dax-montdemarsan";
+import { trajetsEpinalVerdun } from "./trajets-hub-epinal-verdun";
+import { trajetsEvianThonon } from "./trajets-hub-evian-thonon";
+import { trajetsEvreuxLisieux } from "./trajets-hub-evreux-lisieux";
+import { trajetsFoixAndorre } from "./trajets-hub-foix-andorre";
+import { trajetsHyeresFrejus } from "./trajets-hub-hyeres-frejus";
+import { trajetsLensArras } from "./trajets-hub-lens-arras";
+import { trajetsLibourneBergerac } from "./trajets-hub-libourne-bergerac";
+import { trajetsMendeMillau } from "./trajets-hub-mende-millau";
+import { trajetsMoulinsMontlucon } from "./trajets-hub-moulins-montlucon";
+import { trajetsNiortBressuire } from "./trajets-hub-niort-bressuire";
+import { trajetsPérigord } from "./trajets-hub-perigueux-sarlat";
+import { trajetsQuimper } from "./trajets-hub-quimper";
+import { trajetsRochefortSaintes } from "./trajets-hub-rochefort-saintes";
+import { trajetsSaintMaloDinard } from "./trajets-hub-saint-malo-dinard";
+import { trajetsSensMelun } from "./trajets-hub-sens-melun";
+import { trajetsSeteAgde } from "./trajets-hub-sete-agde";
 
 // Merge hub trajets into the main array
 trajets.push(
@@ -4639,6 +4663,30 @@ trajets.push(
   ...trajetsLavalMayenne,
   ...trajetsRodezCahors,
   ...trajetsCherbourg,
+  ...trajetsAlbiCastres,
+  ...trajetsAuchCondom,
+  ...trajetsAurillacLePuy,
+  ...trajetsBloisVendome,
+  ...trajetsBriveTulle,
+  ...trajetsChamonix,
+  ...trajetsChateaurouxGueret,
+  ...trajetsDaxMontDeMarsan,
+  ...trajetsEpinalVerdun,
+  ...trajetsEvianThonon,
+  ...trajetsEvreuxLisieux,
+  ...trajetsFoixAndorre,
+  ...trajetsHyeresFrejus,
+  ...trajetsLensArras,
+  ...trajetsLibourneBergerac,
+  ...trajetsMendeMillau,
+  ...trajetsMoulinsMontlucon,
+  ...trajetsNiortBressuire,
+  ...trajetsPérigord,
+  ...trajetsQuimper,
+  ...trajetsRochefortSaintes,
+  ...trajetsSaintMaloDinard,
+  ...trajetsSensMelun,
+  ...trajetsSeteAgde,
 );
 
 export function getTrajetBySlug(slug: string): Trajet | undefined {
