@@ -4632,6 +4632,13 @@ import { trajetsDisneylandRoissy } from "./trajets-hub-disneyland-roissy";
 import { trajetsFigeacDecazeville } from "./trajets-hub-figeac-decazeville";
 import { trajetsBayeuxLisieux } from "./trajets-hub-bayeux-lisieux";
 import { trajetsDeauvilleHonfleur } from "./trajets-hub-deauville-honfleur";
+import { trajetsArcachonBassin } from "./trajets-hub-arcachon-bassin";
+import { trajetsMillauLodeve } from "./trajets-hub-millau-lodeve";
+import { trajetsMontSaintMichel } from "./trajets-hub-mont-saint-michel";
+import { trajetsRocamadourSarlat } from "./trajets-hub-rocamadour-sarlat";
+import { trajetsLorientConcarneau } from "./trajets-hub-lorient-concarneau";
+import { trajetsChateaubriantRedon } from "./trajets-hub-chateaubriant-redon";
+import { trajetsVichyClermont } from "./trajets-hub-vichy-clermont";
 
 // Merge hub trajets into the main array
 trajets.push(
@@ -4789,6 +4796,13 @@ trajets.push(
   ...trajetsFigeacDecazeville,
   ...trajetsBayeuxLisieux,
   ...trajetsDeauvilleHonfleur,
+  ...trajetsArcachonBassin,
+  ...trajetsMillauLodeve,
+  ...trajetsMontSaintMichel,
+  ...trajetsRocamadourSarlat,
+  ...trajetsLorientConcarneau,
+  ...trajetsChateaubriantRedon,
+  ...trajetsVichyClermont,
 );
 
 export function getTrajetBySlug(slug: string): Trajet | undefined {
