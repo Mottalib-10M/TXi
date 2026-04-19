@@ -4621,6 +4621,17 @@ import { trajetsCambraiValenciennes } from "./trajets-hub-cambrai-valenciennes";
 import { trajetsCholetSaumur } from "./trajets-hub-cholet-saumur";
 import { trajetsLaRocheSurYon } from "./trajets-hub-la-roche-sur-yon";
 import { trajetsChâlonsVitry } from "./trajets-hub-chalons-vitry";
+import { trajetsMontargisPithiviers } from "./trajets-hub-montargis-pithiviers";
+import { trajetsChaumontLangres } from "./trajets-hub-chaumont-langres";
+import { trajetsThononAnnemasse } from "./trajets-hub-thonon-annemasse";
+import { trajetsAlençonFlers } from "./trajets-hub-alencon-flers";
+import { trajetsBoulogneNanterre } from "./trajets-hub-boulogne-nanterre";
+import { trajetsSaintDenisBobigny } from "./trajets-hub-saint-denis-bobigny";
+import { trajetsCreteilVitry } from "./trajets-hub-creteil-vitry";
+import { trajetsDisneylandRoissy } from "./trajets-hub-disneyland-roissy";
+import { trajetsFigeacDecazeville } from "./trajets-hub-figeac-decazeville";
+import { trajetsBayeuxLisieux } from "./trajets-hub-bayeux-lisieux";
+import { trajetsDeauvilleHonfleur } from "./trajets-hub-deauville-honfleur";
 
 // Merge hub trajets into the main array
 trajets.push(
@@ -4767,6 +4778,17 @@ trajets.push(
   ...trajetsCholetSaumur,
   ...trajetsLaRocheSurYon,
   ...trajetsChâlonsVitry,
+  ...trajetsMontargisPithiviers,
+  ...trajetsChaumontLangres,
+  ...trajetsThononAnnemasse,
+  ...trajetsAlençonFlers,
+  ...trajetsBoulogneNanterre,
+  ...trajetsSaintDenisBobigny,
+  ...trajetsCreteilVitry,
+  ...trajetsDisneylandRoissy,
+  ...trajetsFigeacDecazeville,
+  ...trajetsBayeuxLisieux,
+  ...trajetsDeauvilleHonfleur,
 );
 
 export function getTrajetBySlug(slug: string): Trajet | undefined {
