@@ -115,6 +115,7 @@ export function Navbar({ minimal = false }: { minimal?: boolean }) {
                       { href: "/solutions/particulier", icon: "solar:user-linear", label: t("solutionParticulier"), desc: t("solutionParticulierDesc") },
                       { href: "/solutions/mise-a-disposition", icon: "solar:clock-circle-linear", label: t("solutionMiseADispo"), desc: t("solutionMiseADispoDesc") },
                       { href: "/solutions/assistance", icon: "solar:shield-warning-linear", label: t("solutionAssistance"), desc: t("solutionAssistanceDesc") },
+                      { href: "/devenir-chauffeur", icon: "solar:steering-wheel-linear", label: t("becomeDriver"), desc: t("becomeDriverDesc") },
                     ].map((item) => (
                       <Link
                         key={item.href}
@@ -129,19 +130,6 @@ export function Navbar({ minimal = false }: { minimal?: boolean }) {
                         </div>
                       </Link>
                     ))}
-                    <div className="border-t border-neutral-100 mt-1.5 pt-1.5">
-                      <Link
-                        href="/devenir-chauffeur"
-                        onClick={() => setSolutionsOpen(false)}
-                        className="flex items-start gap-3 px-4 py-2.5 hover:bg-neutral-50 transition-colors"
-                      >
-                        <Icon icon="solar:steering-wheel-linear" className="text-neutral-400 text-lg mt-0.5 shrink-0" />
-                        <div>
-                          <p className="text-sm font-medium text-neutral-800">{t("becomeDriver")}</p>
-                          <p className="text-xs text-neutral-400 font-light">{t("becomeDriverDesc")}</p>
-                        </div>
-                      </Link>
-                    </div>
                   </div>
                 )}
               </div>
@@ -173,6 +161,9 @@ export function Navbar({ minimal = false }: { minimal?: boolean }) {
                       { href: "/guides", icon: "solar:book-linear", label: t("discoverGuides"), desc: t("discoverGuidesDesc") },
                       { href: "/departements", icon: "solar:map-linear", label: t("discoverDepartements"), desc: t("discoverDepartementsDesc") },
                       { href: "/services", icon: "solar:settings-linear", label: t("discoverServices"), desc: t("discoverServicesDesc") },
+                      { href: "/villes", icon: "solar:city-linear", label: t("discoverVilles"), desc: t("discoverVillesDesc") },
+                      { href: "/aeroports", icon: "mdi:airplane", label: t("discoverAeroports"), desc: t("discoverAeroportsDesc") },
+                      { href: "/gares", icon: "mdi:train", label: t("discoverGares"), desc: t("discoverGaresDesc") },
                     ].map((item) => (
                       <Link
                         key={item.href}
@@ -187,23 +178,6 @@ export function Navbar({ minimal = false }: { minimal?: boolean }) {
                         </div>
                       </Link>
                     ))}
-                    <div className="border-t border-neutral-100 mt-1.5 pt-1.5">
-                      {[
-                        { href: "/villes", icon: "solar:city-linear", label: t("discoverVilles") },
-                        { href: "/aeroports", icon: "mdi:airplane", label: t("discoverAeroports") },
-                        { href: "/gares", icon: "mdi:train", label: t("discoverGares") },
-                      ].map((item) => (
-                        <Link
-                          key={item.href}
-                          href={item.href}
-                          onClick={() => setDiscoverOpen(false)}
-                          className="flex items-center gap-3 px-4 py-2 hover:bg-neutral-50 transition-colors"
-                        >
-                          <Icon icon={item.icon} className="text-neutral-400 text-lg shrink-0" />
-                          <p className="text-sm text-neutral-600">{item.label}</p>
-                        </Link>
-                      ))}
-                    </div>
                   </div>
                 )}
               </div>
@@ -364,6 +338,7 @@ export function Navbar({ minimal = false }: { minimal?: boolean }) {
                     { href: "/solutions/particulier", label: t("solutionParticulier") },
                     { href: "/solutions/mise-a-disposition", label: t("solutionMiseADispo") },
                     { href: "/solutions/assistance", label: t("solutionAssistance") },
+                    { href: "/devenir-chauffeur", label: t("becomeDriver") },
                   ].map((item) => (
                     <Link
                       key={item.href}
@@ -374,15 +349,6 @@ export function Navbar({ minimal = false }: { minimal?: boolean }) {
                       {item.label}
                     </Link>
                   ))}
-                  <div className="border-t border-neutral-100 mt-1 pt-1">
-                    <Link
-                      href="/devenir-chauffeur"
-                      onClick={() => setMobileOpen(false)}
-                      className="block py-2.5 text-sm text-neutral-500 hover:bg-neutral-50 hover:text-neutral-900 rounded-lg px-3 transition-colors"
-                    >
-                      {t("becomeDriver")}
-                    </Link>
-                  </div>
                 </div>
               )}
               <button
@@ -403,6 +369,9 @@ export function Navbar({ minimal = false }: { minimal?: boolean }) {
                     { href: "/guides", label: t("discoverGuides") },
                     { href: "/departements", label: t("discoverDepartements") },
                     { href: "/services", label: t("discoverServices") },
+                    { href: "/villes", label: t("discoverVilles") },
+                    { href: "/aeroports", label: t("discoverAeroports") },
+                    { href: "/gares", label: t("discoverGares") },
                   ].map((item) => (
                     <Link
                       key={item.href}
@@ -413,22 +382,6 @@ export function Navbar({ minimal = false }: { minimal?: boolean }) {
                       {item.label}
                     </Link>
                   ))}
-                  <div className="border-t border-neutral-100 mt-1 pt-1">
-                    {[
-                      { href: "/villes", label: t("discoverVilles") },
-                      { href: "/aeroports", label: t("discoverAeroports") },
-                      { href: "/gares", label: t("discoverGares") },
-                    ].map((item) => (
-                      <Link
-                        key={item.href}
-                        href={item.href}
-                        onClick={() => setMobileOpen(false)}
-                        className="block py-2.5 text-sm text-neutral-500 hover:bg-neutral-50 hover:text-neutral-900 rounded-lg px-3 transition-colors"
-                      >
-                        {item.label}
-                      </Link>
-                    ))}
-                  </div>
                 </div>
               )}
             </>

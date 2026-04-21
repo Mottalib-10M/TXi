@@ -74,8 +74,11 @@
     "discoverServices": "Services",
     "discoverServicesDesc": "Tous nos services de taxi",
     "discoverVilles": "Nos villes",
+    "discoverVillesDesc": "Taxis dans 50+ villes françaises",
     "discoverAeroports": "Aéroports",
-    "discoverGares": "Gares"
+    "discoverAeroportsDesc": "Transferts aéroport à prix fixe",
+    "discoverGares": "Gares",
+    "discoverGaresDesc": "Navettes gare sans attente"
   },
   "footer": {
     "tagline": "L'application qui remet les professionnels de la route au centre de la mobilité urbaine.",
@@ -1164,7 +1167,10 @@
     "routesFrom": "Départ",
     "routesTo": "Arrivée",
     "routesPrice": "Prix estimé",
-    "routesEstimate": "Estimation tarifaire"
+    "routesEstimate": "Estimation tarifaire",
+    "departementLink": "Département",
+    "nearbyStations": "Gares proches",
+    "nearbyAirports": "Aéroports proches"
   },
   "businessCard": {
     "businessCardLabel": "Carte de visite",
@@ -1363,7 +1369,9 @@
     "airport": "aéroport",
     "airports": "aéroports",
     "testimonialsSubtitle": "Témoignages",
-    "testimonialsTitle": "Avis sur les transferts {name}"
+    "testimonialsTitle": "Avis sur les transferts {name}",
+    "departementLink": "Département",
+    "relatedTrajets": "Trajets depuis cet aéroport"
   },
   "station": {
     "breadcrumbHome": "Accueil",
@@ -1426,7 +1434,9 @@
     "station": "gare",
     "stations": "gares",
     "testimonialsSubtitle": "Témoignages",
-    "testimonialsTitle": "Avis sur les transferts gare {name}"
+    "testimonialsTitle": "Avis sur les transferts gare {name}",
+    "departementLink": "Département",
+    "relatedTrajets": "Trajets depuis cette gare"
   },
   "whyJoin": {
     "metaTitle": "Devenir chauffeur partenaire TaxiNeo — 100% gratuit",
@@ -2313,7 +2323,8 @@
     "backToList": "Retour au blog",
     "publishedOn": "Publié le",
     "readingTime": "{minutes} min de lecture",
-    "relatedArticles": "Articles similaires"
+    "relatedArticles": "Articles similaires",
+    "relatedContent": "À découvrir aussi"
   },
   "miseADisposition": {
     "metaTitle": "Taxi à disposition — Chauffeur à la journée | TaxiNeo",
@@ -2538,7 +2549,11 @@
     "advCoverage": "Couverture complète",
     "advCoverageDesc": "Nos chauffeurs couvrent l'ensemble du département {name} et ses environs.",
     "adv247": "Disponible 24h/24",
-    "adv247Desc": "Réservez à toute heure, tous les jours de l'année. Un chauffeur est toujours disponible."
+    "adv247Desc": "Réservez à toute heure, tous les jours de l'année. Un chauffeur est toujours disponible.",
+    "garesTitle": "Gares desservies",
+    "aeroportsTitle": "Aéroports proches",
+    "trajetsTitle": "Trajets populaires",
+    "nearbyDepts": "Départements voisins"
   },
   "departements": {
     "metaTitle": "Taxi par département en France : tous les départements | TaxiNeo",

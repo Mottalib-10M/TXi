@@ -74,8 +74,11 @@
     "discoverServices": "Services",
     "discoverServicesDesc": "All our taxi services",
     "discoverVilles": "Our cities",
+    "discoverVillesDesc": "Taxis in 50+ French cities",
     "discoverAeroports": "Airports",
-    "discoverGares": "Stations"
+    "discoverAeroportsDesc": "Fixed-price airport transfers",
+    "discoverGares": "Stations",
+    "discoverGaresDesc": "Hassle-free station shuttles"
   },
   "footer": {
     "tagline": "The app that puts road professionals back at the center of urban mobility.",
@@ -1164,7 +1167,10 @@
     "routesFrom": "From",
     "routesTo": "To",
     "routesPrice": "Estimated price",
-    "routesEstimate": "Fare estimate"
+    "routesEstimate": "Fare estimate",
+    "departementLink": "Department",
+    "nearbyStations": "Nearby stations",
+    "nearbyAirports": "Nearby airports"
   },
   "businessCard": {
     "businessCardLabel": "Business card",
@@ -1363,7 +1369,9 @@
     "airport": "airport",
     "airports": "airports",
     "testimonialsSubtitle": "Testimonials",
-    "testimonialsTitle": "Reviews of {name} transfers"
+    "testimonialsTitle": "Reviews of {name} transfers",
+    "departementLink": "Department",
+    "relatedTrajets": "Routes from this airport"
   },
   "station": {
     "breadcrumbHome": "Home",
@@ -1426,7 +1434,9 @@
     "station": "station",
     "stations": "stations",
     "testimonialsSubtitle": "Testimonials",
-    "testimonialsTitle": "Reviews of {name} station transfers"
+    "testimonialsTitle": "Reviews of {name} station transfers",
+    "departementLink": "Department",
+    "relatedTrajets": "Routes from this station"
   },
   "whyJoin": {
     "metaTitle": "Become a TaxiNeo Partner Driver — Join for Free Today",
@@ -2313,7 +2323,8 @@
     "backToList": "Back to blog",
     "publishedOn": "Published on",
     "readingTime": "{minutes} min read",
-    "relatedArticles": "Related articles"
+    "relatedArticles": "Related articles",
+    "relatedContent": "Discover more"
   },
   "miseADisposition": {
     "metaTitle": "Chauffeur Hire — Licensed taxi for a full day | TaxiNeo",
@@ -2538,7 +2549,11 @@
     "advCoverage": "Full coverage",
     "advCoverageDesc": "Our drivers cover the entire {name} department and its surroundings.",
     "adv247": "Available 24/7",
-    "adv247Desc": "Book any time, every day of the year. A driver is always available."
+    "adv247Desc": "Book any time, every day of the year. A driver is always available.",
+    "garesTitle": "Train stations served",
+    "aeroportsTitle": "Nearby airports",
+    "trajetsTitle": "Popular routes",
+    "nearbyDepts": "Nearby departments"
   },
   "departements": {
     "metaTitle": "Taxi by department in France: all departments | TaxiNeo",

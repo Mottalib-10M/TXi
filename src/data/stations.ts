@@ -2655,6 +2655,17 @@ export const popularStations = stations.filter((s) =>
    "marseille-saint-charles", "bordeaux-saint-jean", "lille-europe", "strasbourg"].includes(s.slug)
 );
 
+import { haversineDistance } from "@/lib/geo";
+
+export function getStationsInDepartement(dept: { lat: number; lng: number }, limit = 6): Station[] {
+  return stations
+    .map((s) => ({ s, dist: haversineDistance(dept.lat, dept.lng, s.lat, s.lng) }))
+    .filter((x) => x.dist < 60)
+    .sort((a, b) => a.dist - b.dist)
+    .slice(0, limit)
+    .map((x) => x.s);
+}
+
 export const stationServices = [
   {
     icon: "mdi:train",

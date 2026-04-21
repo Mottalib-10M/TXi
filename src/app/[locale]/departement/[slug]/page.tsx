@@ -10,6 +10,7 @@ import { DepartementJsonLd } from "@/components/departement/DepartementJsonLd";
 import { CityFAQ } from "@/components/city/CityFAQ";
 import { CityContactForm } from "@/components/city/CityContactForm";
 import { CityCTA } from "@/components/city/CityCTA";
+import { DepartementInternalLinks } from "@/components/departement/DepartementInternalLinks";
 import { departements, getDepartementBySlug } from "@/data/departements";
 import { Link } from "@/i18n/navigation";
 import { getTranslations } from "next-intl/server";
@@ -125,6 +126,7 @@ export default async function DepartementPage({ params }: PageProps) {
         <CityFAQ cityName={`${dept.name} (${dept.code})`} faq={dept.i18n[loc].faq} />
         <CityContactForm cityName={dept.name} />
         <CityCTA cityName={dept.name} />
+        <DepartementInternalLinks dept={dept} />
       </main>
 
       <Footer />

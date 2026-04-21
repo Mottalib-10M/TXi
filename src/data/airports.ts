@@ -2667,6 +2667,17 @@ export const popularAirports = airports.filter((a) =>
    "marseille-provence", "toulouse-blagnac", "bordeaux-merignac", "nantes-atlantique"].includes(a.slug)
 );
 
+import { haversineDistance } from "@/lib/geo";
+
+export function getAirportsInDepartement(dept: { lat: number; lng: number }, limit = 4): Airport[] {
+  return airports
+    .map((a) => ({ a, dist: haversineDistance(dept.lat, dept.lng, a.lat, a.lng) }))
+    .filter((x) => x.dist < 80)
+    .sort((a, b) => a.dist - b.dist)
+    .slice(0, limit)
+    .map((x) => x.a);
+}
+
 export const airportServices = [
   {
     icon: "mdi:airplane",

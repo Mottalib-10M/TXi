@@ -46,8 +46,8 @@ export const departements: Departement[] = [
     mainCities: ["Paris 1er", "Paris 8e", "Paris 16e", "Montmartre", "Belleville", "La Défense"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris (75) : réservation et prix | TaxiNeo",
-        metaDescription: "Réservez votre taxi à Paris (75) avec TaxiNeo. Prix fixe garanti, chauffeurs professionnels, disponible 24h/24. Réservation en ligne rapide.",
+        metaTitle: "Taxi Paris (75) | CDG, Orly et prix fixe | TaxiNeo",
+        metaDescription: "Courses intra-muros, transferts CDG (30 km) et Orly (15 km), gares et La Défense. Tarif annoncé avant départ, pas de compteur. 14 500 taxis licenciés à Paris.",
         heroTitle: "Taxi Paris (75)",
         heroSubtitle: "Réservez un taxi professionnel à Paris. Prix fixe, sans compteur, disponible jour et nuit.",
         description: "Paris, capitale de la France, est desservie par un réseau dense de taxis professionnels. TaxiNeo vous connecte avec les meilleurs chauffeurs parisiens pour tous vos déplacements : transferts aéroports, courses en ville, sorties nocturnes. Profitez d'un service premium à prix fixe dans tout le 75.",
@@ -62,8 +62,8 @@ export const departements: Departement[] = [
         tourisme: "La Tour Eiffel, le Musée du Louvre et la Cathédrale Notre-Dame (en restauration après l'incendie de 2019) forment la trinité emblématique des monuments parisiens. Les Champs-Élysées s'étendent de l'Arc de Triomphe à la Place de la Concorde et au Jardin des Tuileries. La basilique du Sacré-Coeur à Montmartre offre des vues panoramiques sur la ville, tandis que le Marais préserve des rues médiévales abritant des musées comme le Musée Picasso. Le Musée d'Orsay, installé dans une ancienne gare, présente des chefs-d'oeuvre impressionnistes. Les quais de la Seine, site UNESCO, invitent à la promenade le long des bouquinistes, des ponts et des îles. Le Centre Pompidou a révolutionné les musées d'art moderne, et la Bourse de Commerce par Tadao Ando abrite la Collection Pinault. Le cimetière du Père-Lachaise, le Jardin du Luxembourg et les passages couverts du 2e arrondissement ajoutent des couches de découverte à chaque visite.",
       },
       en: {
-        metaTitle: "Taxi Paris (75): booking and fares | TaxiNeo",
-        metaDescription: "Book your taxi in Paris (75) with TaxiNeo. Guaranteed fixed price, professional drivers, available 24/7. Quick online booking.",
+        metaTitle: "Taxi Paris (75) | CDG, Orly, fixed prices | TaxiNeo",
+        metaDescription: "City rides, CDG (30 km) and Orly (15 km) transfers, stations and La Défense. Fare confirmed before departure, no meter. 14,500 licensed taxis in Paris.",
         heroTitle: "Taxi Paris (75)",
         heroSubtitle: "Book a professional taxi in Paris. Fixed price, no meter, available day and night.",
         description: "Paris, the capital of France, is served by a dense network of professional taxis. TaxiNeo connects you with the best Parisian drivers for all your trips: airport transfers, city rides, nights out. Enjoy premium service at a fixed price throughout the 75th department.",
@@ -90,8 +90,8 @@ export const departements: Departement[] = [
     mainCities: ["Melun", "Meaux", "Chelles", "Pontault-Combault", "Savigny-le-Temple", "Torcy"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Seine-et-Marne (77) : réservation et prix | TaxiNeo",
-        metaDescription: "Réservez votre taxi en Seine-et-Marne (77) avec TaxiNeo. Prix fixe, chauffeurs professionnels, transferts Disneyland et aéroports. Disponible 24h/24.",
+        metaTitle: "Taxi Seine-et-Marne (77) | Melun, Meaux, CDG | TaxiNeo",
+        metaDescription: "Plus grand département d'Île-de-France : Disneyland, Fontainebleau, Provins. Transferts CDG et Orly inclus. Tarif fixe annoncé, prise en charge dans tout le 77.",
         heroTitle: "Taxi Seine-et-Marne (77)",
         heroSubtitle: "Réservez un taxi professionnel en Seine-et-Marne. Transferts Disneyland, aéroports et gares à prix fixe.",
         description: "La Seine-et-Marne est le plus grand département d'Île-de-France, abritant Disneyland Paris et de nombreuses zones d'activités. TaxiNeo assure vos transferts entre les gares, aéroports et toutes les villes du 77. Profitez de tarifs fixes et de chauffeurs connaissant parfaitement le département.",
@@ -107,7 +107,7 @@ export const departements: Departement[] = [
       },
       en: {
         metaTitle: "Taxi Seine-et-Marne (77): booking and fares | TaxiNeo",
-        metaDescription: "Book your taxi in Seine-et-Marne (77) with TaxiNeo. Fixed price, professional drivers, Disneyland and airport transfers. Available 24/7.",
+        metaDescription: "Book your taxi in Seine-et-Marne (77) with TaxiNeo. Fixed price, professional drivers, Disneyland Paris and airport transfers. Available around the clock.",
         heroTitle: "Taxi Seine-et-Marne (77)",
         heroSubtitle: "Book a professional taxi in Seine-et-Marne. Disneyland, airport and station transfers at fixed prices.",
         description: "Seine-et-Marne is the largest department in Île-de-France, home to Disneyland Paris and many business areas. TaxiNeo provides transfers between stations, airports and all cities in the 77. Enjoy fixed fares and drivers who know the department perfectly.",
@@ -134,8 +134,8 @@ export const departements: Departement[] = [
     mainCities: ["Versailles", "Sartrouville", "Mantes-la-Jolie", "Saint-Germain-en-Laye", "Poissy", "Conflans-Sainte-Honorine"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Yvelines (78) : réservation et prix | TaxiNeo",
-        metaDescription: "Réservez votre taxi dans les Yvelines (78) avec TaxiNeo. Prix fixe garanti, chauffeurs professionnels, transferts Versailles et aéroports.",
+        metaTitle: "Taxi Yvelines (78) | Versailles, CDG et Orly | TaxiNeo",
+        metaDescription: "Château de Versailles, Saint-Germain-en-Laye, gares RER C et A. Accès Orly (30 km) et CDG (60 km). Tarif fixe annoncé avant la course, tout le département 78.",
         heroTitle: "Taxi Yvelines (78)",
         heroSubtitle: "Réservez un taxi professionnel dans les Yvelines. Transferts Versailles, gares et aéroports à prix fixe.",
         description: "Les Yvelines, département résidentiel et touristique à l'ouest de Paris, accueillent le célèbre Château de Versailles. TaxiNeo met à votre disposition des chauffeurs professionnels pour tous vos trajets dans le 78. Gares, aéroports, transferts professionnels : réservez à prix fixe.",
@@ -150,8 +150,8 @@ export const departements: Departement[] = [
         tourisme: "Le Château de Versailles, avec sa Galerie des Glaces, le Grand et le Petit Trianon, et le Hameau de Marie-Antoinette, est le monument le plus visité de France hors Paris. Les jardins, dessinés par Le Nôtre, accueillent les spectaculaires Grandes Eaux Musicales. Le château de Saint-Germain-en-Laye abrite le Musée d'Archéologie Nationale, et sa Grande Terrasse offre un panorama sur Paris. Le Château de Rambouillet, résidence présidentielle d'été, ouvre son parc aux visiteurs. Le parc naturel de la Vallée de Chevreuse propose des randonnées à travers des vallées boisées, passant par les ruines de l'abbaye de Port-Royal-des-Champs. Le Zoo-Safari de Thoiry est une destination familiale prisée. Montfort-l'Amaury, où Ravel composa, et la cité médiévale de Houdan ajoutent une profondeur culturelle à l'ouest du département.",
       },
       en: {
-        metaTitle: "Taxi Yvelines (78): booking and fares | TaxiNeo",
-        metaDescription: "Book your taxi in Yvelines (78) with TaxiNeo. Guaranteed fixed price, professional drivers, Versailles and airport transfers.",
+        metaTitle: "Taxi Yvelines (78): online booking, fares | TaxiNeo",
+        metaDescription: "Book your taxi in Yvelines (78) with TaxiNeo. Guaranteed fixed price, professional drivers, Versailles Palace and airport transfers. Book online 24/7.",
         heroTitle: "Taxi Yvelines (78)",
         heroSubtitle: "Book a professional taxi in Yvelines. Versailles, station and airport transfers at fixed prices.",
         description: "Yvelines, a residential and touristic department west of Paris, is home to the famous Palace of Versailles. TaxiNeo provides professional drivers for all your trips in the 78. Stations, airports, business transfers: book at a fixed price.",
@@ -178,8 +178,8 @@ export const departements: Departement[] = [
     mainCities: ["Évry-Courcouronnes", "Corbeil-Essonnes", "Massy", "Savigny-sur-Orge", "Sainte-Geneviève-des-Bois", "Palaiseau"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Essonne (91) : réservation et prix | TaxiNeo",
-        metaDescription: "Réservez votre taxi en Essonne (91) avec TaxiNeo. Prix fixe garanti, chauffeurs professionnels, transferts aéroport d'Orly. Disponible 24h/24.",
+        metaTitle: "Taxi Essonne (91) | Orly, Saclay et prix fixe | TaxiNeo",
+        metaDescription: "Aéroport d'Orly à 15 min, campus Saclay (Polytechnique, HEC), gare TGV Massy. Tarif fixe pour tout le 91, annoncé à la commande. Évry et toutes communes.",
         heroTitle: "Taxi Essonne (91)",
         heroSubtitle: "Réservez un taxi professionnel en Essonne. Transferts Orly, gares et déplacements quotidiens à prix fixe.",
         description: "L'Essonne, au sud de Paris, abrite le plateau de Saclay et de nombreux pôles technologiques. TaxiNeo vous propose des chauffeurs professionnels pour vos trajets dans le 91, vos transferts vers Orly et vos déplacements professionnels. Tarifs fixes garantis.",
@@ -194,8 +194,8 @@ export const departements: Departement[] = [
         tourisme: "Le Domaine de Chamarande, château du XVIIe siècle dans un parc paysager, accueille des expositions d'art contemporain et des événements saisonniers. La Forêt de Sénart, l'une des plus grandes forêts d'Île-de-France, offre 3 000 hectares de chênaie pour la randonnée et le vélo. Dourdan conserve un impressionnant château royal du XIIIe siècle et un charmant bourg médiéval. La vallée de l'Essonne propose de paisibles parcours en canoë et de la pêche. Le domaine de Méréville, avec son jardin paysager du XVIIIe siècle, est l'un des plus beaux exemples subsistants de jardins français à l'anglaise. La Cathédrale d'Évry, conçue par Mario Botta, est la seule cathédrale construite en France au XXe siècle, avec une forme cylindrique saisissante couronnée d'arbres inclinés. La Maison de la Photographie Robert Doisneau à Gentilly célèbre le légendaire photographe de rue parisien.",
       },
       en: {
-        metaTitle: "Taxi Essonne (91): booking and fares | TaxiNeo",
-        metaDescription: "Book your taxi in Essonne (91) with TaxiNeo. Guaranteed fixed price, professional drivers, Orly airport transfers. Available 24/7.",
+        metaTitle: "Taxi Essonne (91): booking and fixed fares | TaxiNeo",
+        metaDescription: "Book your taxi in Essonne (91) with TaxiNeo. Guaranteed fixed price, professional drivers, Orly airport and Saclay campus transfers. Available around the clock.",
         heroTitle: "Taxi Essonne (91)",
         heroSubtitle: "Book a professional taxi in Essonne. Orly transfers, stations and daily commutes at fixed prices.",
         description: "Essonne, south of Paris, is home to the Saclay plateau and many technology hubs. TaxiNeo offers professional drivers for your trips in the 91, transfers to Orly and business travel. Guaranteed fixed fares.",
@@ -222,8 +222,8 @@ export const departements: Departement[] = [
     mainCities: ["Nanterre", "Boulogne-Billancourt", "Courbevoie", "Colombes", "Asnières-sur-Seine", "Rueil-Malmaison"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Hauts-de-Seine (92) : réservation et prix | TaxiNeo",
-        metaDescription: "Réservez votre taxi dans les Hauts-de-Seine (92) avec TaxiNeo. Prix fixe garanti, chauffeurs professionnels, La Défense et transferts aéroports.",
+        metaTitle: "Taxi Hauts-de-Seine (92) | La Défense, CDG | TaxiNeo",
+        metaDescription: "La Défense, Boulogne, Nanterre, Issy : transferts CDG et Orly depuis tout le 92. Tarif fixe annoncé avant départ. Idéal déplacements d'affaires quartier ouest.",
         heroTitle: "Taxi Hauts-de-Seine (92)",
         heroSubtitle: "Réservez un taxi professionnel dans les Hauts-de-Seine. La Défense, aéroports et gares à prix fixe.",
         description: "Les Hauts-de-Seine, premier département d'affaires de France avec le quartier de La Défense, nécessitent un service de taxi fiable et professionnel. TaxiNeo assure vos déplacements d'affaires, transferts aéroports et courses quotidiennes dans tout le 92.",
@@ -239,7 +239,7 @@ export const departements: Departement[] = [
       },
       en: {
         metaTitle: "Taxi Hauts-de-Seine (92): booking and fares | TaxiNeo",
-        metaDescription: "Book your taxi in Hauts-de-Seine (92) with TaxiNeo. Guaranteed fixed price, professional drivers, La Défense and airport transfers.",
+        metaDescription: "Book your taxi in Hauts-de-Seine (92) with TaxiNeo. Guaranteed fixed price, professional drivers, La Défense and airport transfers. Easy online booking 24/7.",
         heroTitle: "Taxi Hauts-de-Seine (92)",
         heroSubtitle: "Book a professional taxi in Hauts-de-Seine. La Défense, airports and stations at fixed prices.",
         description: "Hauts-de-Seine, France's top business department with the La Défense district, requires a reliable and professional taxi service. TaxiNeo handles your business travel, airport transfers and daily rides throughout the 92.",
@@ -266,8 +266,8 @@ export const departements: Departement[] = [
     mainCities: ["Bobigny", "Saint-Denis", "Montreuil", "Aulnay-sous-Bois", "Aubervilliers", "Drancy"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Seine-Saint-Denis (93) : réservation et prix | TaxiNeo",
-        metaDescription: "Réservez votre taxi en Seine-Saint-Denis (93) avec TaxiNeo. Prix fixe garanti, chauffeurs professionnels, transferts CDG et Stade de France.",
+        metaTitle: "Taxi Seine-Saint-Denis (93) | CDG, Villepinte | TaxiNeo",
+        metaDescription: "Accès CDG direct à 15 min, Stade de France, parc expo Villepinte, Le Bourget. Tarif fixe garanti pour tout le 93. Prise en charge porte-à-porte sans supplément.",
         heroTitle: "Taxi Seine-Saint-Denis (93)",
         heroSubtitle: "Réservez un taxi professionnel en Seine-Saint-Denis. CDG, Stade de France et gares à prix fixe.",
         description: "La Seine-Saint-Denis, département dynamique aux portes de Paris, accueille l'aéroport CDG et le Stade de France. TaxiNeo vous propose un service de taxi fiable pour vos transferts aéroport, vos déplacements vers le Stade de France et vos courses quotidiennes dans le 93.",
@@ -283,7 +283,7 @@ export const departements: Departement[] = [
       },
       en: {
         metaTitle: "Taxi Seine-Saint-Denis (93): booking and fares | TaxiNeo",
-        metaDescription: "Book your taxi in Seine-Saint-Denis (93) with TaxiNeo. Guaranteed fixed price, professional drivers, CDG and Stade de France transfers.",
+        metaDescription: "Book your taxi in Seine-Saint-Denis (93) with TaxiNeo. Guaranteed fixed price, professional drivers, CDG airport and Stade de France transfers. Available 24/7.",
         heroTitle: "Taxi Seine-Saint-Denis (93)",
         heroSubtitle: "Book a professional taxi in Seine-Saint-Denis. CDG, Stade de France and stations at fixed prices.",
         description: "Seine-Saint-Denis, a dynamic department at the gates of Paris, is home to CDG airport and the Stade de France. TaxiNeo offers reliable taxi service for airport transfers, trips to the Stade de France and daily rides in the 93.",
@@ -310,8 +310,8 @@ export const departements: Departement[] = [
     mainCities: ["Créteil", "Vitry-sur-Seine", "Saint-Maur-des-Fossés", "Champigny-sur-Marne", "Ivry-sur-Seine", "Maisons-Alfort"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Val-de-Marne (94) : réservation et prix | TaxiNeo",
-        metaDescription: "Réservez votre taxi dans le Val-de-Marne (94) avec TaxiNeo. Prix fixe garanti, chauffeurs professionnels, transferts Orly et gares.",
+        metaTitle: "Taxi Val-de-Marne (94) | Orly direct, fixe | TaxiNeo",
+        metaDescription: "Accès Orly en 10 min, Créteil, Vincennes, Ivry, gares RER A, C et D. Tarif annoncé à la commande pour toutes les communes du Val-de-Marne. Devis immédiat.",
         heroTitle: "Taxi Val-de-Marne (94)",
         heroSubtitle: "Réservez un taxi professionnel dans le Val-de-Marne. Transferts Orly, gares et courses quotidiennes à prix fixe.",
         description: "Le Val-de-Marne, département au sud-est de Paris, est idéalement situé entre la capitale et l'aéroport d'Orly. TaxiNeo vous propose des chauffeurs professionnels pour vos transferts Orly, vos déplacements dans le 94 et vos trajets vers Paris.",
@@ -327,7 +327,7 @@ export const departements: Departement[] = [
       },
       en: {
         metaTitle: "Taxi Val-de-Marne (94): booking and fares | TaxiNeo",
-        metaDescription: "Book your taxi in Val-de-Marne (94) with TaxiNeo. Guaranteed fixed price, professional drivers, Orly and station transfers.",
+        metaDescription: "Book your taxi in Val-de-Marne (94) with TaxiNeo. Guaranteed fixed price, professional drivers, Orly airport and station transfers. Easy online booking, 24/7.",
         heroTitle: "Taxi Val-de-Marne (94)",
         heroSubtitle: "Book a professional taxi in Val-de-Marne. Orly transfers, stations and daily rides at fixed prices.",
         description: "Val-de-Marne, a department southeast of Paris, is ideally located between the capital and Orly airport. TaxiNeo offers professional drivers for your Orly transfers, trips within the 94 and rides to Paris.",
@@ -354,8 +354,8 @@ export const departements: Departement[] = [
     mainCities: ["Pontoise", "Argenteuil", "Sarcelles", "Cergy", "Garges-lès-Gonesse", "Franconville"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Val-d'Oise (95) : réservation et prix | TaxiNeo",
-        metaDescription: "Réservez votre taxi dans le Val-d'Oise (95) avec TaxiNeo. Prix fixe garanti, chauffeurs professionnels, transferts CDG et gares.",
+        metaTitle: "Taxi Val-d'Oise (95) | CDG, Cergy, prix fixe | TaxiNeo",
+        metaDescription: "CDG à 15 min, Cergy-Pontoise, Enghien-les-Bains et gare de Roissy. Tarif fixe garanti pour toutes les communes du 95. Idéal vols matinaux ou nocturnes.",
         heroTitle: "Taxi Val-d'Oise (95)",
         heroSubtitle: "Réservez un taxi professionnel dans le Val-d'Oise. Transferts CDG, Cergy et gares à prix fixe.",
         description: "Le Val-d'Oise, au nord de Paris, offre un accès privilégié à l'aéroport Roissy-CDG. TaxiNeo met à votre disposition des chauffeurs professionnels pour vos transferts aéroport, vos déplacements vers Cergy-Pontoise et vos courses dans tout le 95.",
@@ -370,8 +370,8 @@ export const departements: Departement[] = [
         tourisme: "Le Château d'Auvers-sur-Oise, avec son expérience immersive impressionniste, et l'Auberge Ravoux où Van Gogh passa ses derniers jours, font d'Auvers un lieu de pèlerinage pour les amateurs d'art. L'Abbaye de Royaumont, abbaye cistercienne du XIIIe siècle dans un parc boisé, accueille de prestigieux concerts de musique classique. Enghien-les-Bains offre des soins thermaux et le seul casino de la grande couronne parisienne. Le parc naturel du Vexin français présente des collines douces, des villages médiévaux et des églises romanes. L'Isle-Adam possède une plage fluviale sur l'Oise prisée en été. Le Château d'Écouen abrite le Musée National de la Renaissance avec une collection exceptionnelle d'arts décoratifs. Le château troglodytique de La Roche-Guyon, construit dans les falaises de craie au-dessus de la Seine, est l'un des monuments les plus insolites de la région.",
       },
       en: {
-        metaTitle: "Taxi Val-d'Oise (95): booking and fares | TaxiNeo",
-        metaDescription: "Book your taxi in Val-d'Oise (95) with TaxiNeo. Guaranteed fixed price, professional drivers, CDG and station transfers.",
+        metaTitle: "Taxi Val-d'Oise (95): booking, fixed fares | TaxiNeo",
+        metaDescription: "Book your taxi in Val-d'Oise (95) with TaxiNeo. Guaranteed fixed price, professional drivers, CDG airport and station transfers. Quick online booking available.",
         heroTitle: "Taxi Val-d'Oise (95)",
         heroSubtitle: "Book a professional taxi in Val-d'Oise. CDG, Cergy and station transfers at fixed prices.",
         description: "Val-d'Oise, north of Paris, offers privileged access to Roissy-CDG airport. TaxiNeo provides professional drivers for your airport transfers, trips to Cergy-Pontoise and rides throughout the 95.",
@@ -398,8 +398,8 @@ export const departements: Departement[] = [
     mainCities: ["Marseille", "Aix-en-Provence", "Arles", "Martigues", "Salon-de-Provence", "Istres"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Bouches-du-Rhône (13) : réservation et prix | TaxiNeo",
-        metaDescription: "Réservez votre taxi dans les Bouches-du-Rhône (13) avec TaxiNeo. Marseille, Aix-en-Provence, aéroport Marseille-Provence. Prix fixe garanti.",
+        metaTitle: "Taxi Bouches-du-Rhône (13) | Marseille, Aix | TaxiNeo",
+        metaDescription: "Marseille, Aix-en-Provence, aéroport MRS (25 min), Calanques et Camargue. Tarif fixe pour tout le 13. Accès A7, A51 et A55. Port de croisière Joliette desservi.",
         heroTitle: "Taxi Bouches-du-Rhône (13)",
         heroSubtitle: "Réservez un taxi professionnel dans les Bouches-du-Rhône. Marseille, Aix, aéroport et gare à prix fixe.",
         description: "Les Bouches-du-Rhône, département ensoleillé entre Marseille et Aix-en-Provence, attirent des millions de visiteurs chaque année. TaxiNeo vous propose des transferts aéroport Marseille-Provence, des courses en ville et des trajets vers les Calanques. Service premium à prix fixe dans tout le 13.",
@@ -415,7 +415,7 @@ export const departements: Departement[] = [
       },
       en: {
         metaTitle: "Taxi Bouches-du-Rhône (13): booking and fares | TaxiNeo",
-        metaDescription: "Book your taxi in Bouches-du-Rhône (13) with TaxiNeo. Marseille, Aix-en-Provence, Marseille-Provence airport. Guaranteed fixed price.",
+        metaDescription: "Book your taxi in Bouches-du-Rhône (13) with TaxiNeo. Marseille, Aix-en-Provence, Marseille-Provence airport. Guaranteed fixed price, professional drivers 24/7.",
         heroTitle: "Taxi Bouches-du-Rhône (13)",
         heroSubtitle: "Book a professional taxi in Bouches-du-Rhône. Marseille, Aix, airport and station at fixed prices.",
         description: "Bouches-du-Rhône, a sun-drenched department between Marseille and Aix-en-Provence, attracts millions of visitors every year. TaxiNeo offers Marseille-Provence airport transfers, city rides and trips to the Calanques. Premium service at fixed prices throughout the 13.",
@@ -442,8 +442,8 @@ export const departements: Departement[] = [
     mainCities: ["Nice", "Cannes", "Antibes", "Grasse", "Menton", "Cagnes-sur-Mer"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Alpes-Maritimes (06) : réservation et prix | TaxiNeo",
-        metaDescription: "Réservez votre taxi dans les Alpes-Maritimes (06) avec TaxiNeo. Nice, Cannes, aéroport Nice Côte d'Azur. Prix fixe garanti, disponible 24h/24.",
+        metaTitle: "Taxi Alpes-Maritimes (06) | Nice, Cannes | TaxiNeo",
+        metaDescription: "Nice, Cannes, Antibes, Monaco et aéroport Nice Côte d'Azur. Tarif fixe pour tout le 06. Promenade des Anglais aux stations Isola 2000 et Auron (90 km).",
         heroTitle: "Taxi Alpes-Maritimes (06)",
         heroSubtitle: "Réservez un taxi professionnel sur la Côte d'Azur. Nice, Cannes, Monaco et aéroport à prix fixe.",
         description: "Les Alpes-Maritimes, joyau de la Côte d'Azur, accueillent des millions de touristes et professionnels chaque année. TaxiNeo vous propose des transferts depuis l'aéroport Nice Côte d'Azur, des courses le long du littoral et des trajets vers Monaco. Service haut de gamme à prix fixe.",
@@ -459,7 +459,7 @@ export const departements: Departement[] = [
       },
       en: {
         metaTitle: "Taxi Alpes-Maritimes (06): booking and fares | TaxiNeo",
-        metaDescription: "Book your taxi in Alpes-Maritimes (06) with TaxiNeo. Nice, Cannes, Nice Côte d'Azur airport. Guaranteed fixed price, available 24/7.",
+        metaDescription: "Book your taxi in Alpes-Maritimes (06) with TaxiNeo. Nice, Cannes, Nice Côte d'Azur airport, Monaco transfers. Guaranteed fixed price, available 24/7.",
         heroTitle: "Taxi Alpes-Maritimes (06)",
         heroSubtitle: "Book a professional taxi on the French Riviera. Nice, Cannes, Monaco and airport at fixed prices.",
         description: "Alpes-Maritimes, the jewel of the French Riviera, welcomes millions of tourists and professionals every year. TaxiNeo offers transfers from Nice Côte d'Azur airport, coastal rides and trips to Monaco. Premium service at fixed prices.",
@@ -486,8 +486,8 @@ export const departements: Departement[] = [
     mainCities: ["Lyon", "Villeurbanne", "Vénissieux", "Vaulx-en-Velin", "Saint-Priest", "Caluire-et-Cuire"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Rhône (69) : réservation et prix | TaxiNeo",
-        metaDescription: "Réservez votre taxi dans le Rhône (69) avec TaxiNeo. Lyon, aéroport Saint-Exupéry, gare Part-Dieu. Prix fixe garanti, disponible 24h/24.",
+        metaTitle: "Taxi Rhône (69) | Lyon, aéroport, Part-Dieu | TaxiNeo",
+        metaDescription: "Lyon, aéroport Saint-Exupéry (25 km), gares Part-Dieu et Perrache. Tarif fixe dans le 69. Accès A6, A7, A43. Villeurbanne, Villefranche-sur-Saône et Tarare.",
         heroTitle: "Taxi Rhône (69)",
         heroSubtitle: "Réservez un taxi professionnel dans le Rhône. Lyon, aéroport Saint-Exupéry et gares à prix fixe.",
         description: "Le Rhône, avec Lyon comme capitale, est le deuxième pôle économique de France. TaxiNeo assure vos transferts depuis l'aéroport Lyon Saint-Exupéry, la gare Part-Dieu et toutes vos courses dans le Grand Lyon. Chauffeurs professionnels et prix fixes garantis.",
@@ -502,8 +502,8 @@ export const departements: Departement[] = [
         tourisme: "Le Vieux Lyon, avec ses cours Renaissance et ses traboules secrètes, est l'un des quartiers Renaissance les plus étendus d'Europe. La Basilique de Fourvière couronne la colline, offrant des vues panoramiques sur les deux fleuves. Les Halles de Lyon Paul Bocuse sont un temple de la gastronomie française, avec des dizaines d'étals spécialisés. Le Musée des Confluences, spectaculaire musée de sciences à l'architecture déconstructiviste au confluent du Rhône et de la Saône, est devenu l'icône architecturale de Lyon. La Fête des Lumières chaque décembre transforme la ville en spectacle d'art lumineux à ciel ouvert attirant 4 millions de visiteurs. La route des vins du Beaujolais à travers Fleurie, Morgon et Brouilly offre des dégustations dans des paysages de vignobles vallonnés. Le patrimoine soyeux de Lyon est préservé dans le quartier de la Croix-Rousse et au musée de la Maison des Canuts.",
       },
       en: {
-        metaTitle: "Taxi Rhône (69): booking and fares | TaxiNeo",
-        metaDescription: "Book your taxi in Rhône (69) with TaxiNeo. Lyon, Saint-Exupéry airport, Part-Dieu station. Guaranteed fixed price, available 24/7.",
+        metaTitle: "Taxi Rhône (69): booking and fixed fares | TaxiNeo",
+        metaDescription: "Book your taxi in Rhône (69) with TaxiNeo. Lyon, Saint-Exupéry airport, Part-Dieu station. Guaranteed fixed price, professional drivers. Book online 24/7.",
         heroTitle: "Taxi Rhône (69)",
         heroSubtitle: "Book a professional taxi in Rhône. Lyon, Saint-Exupéry airport and stations at fixed prices.",
         description: "Rhône, with Lyon as its capital, is France's second economic hub. TaxiNeo handles your transfers from Lyon Saint-Exupéry airport, Part-Dieu station and all your rides in Greater Lyon. Professional drivers and guaranteed fixed prices.",
@@ -530,8 +530,8 @@ export const departements: Departement[] = [
     mainCities: ["Toulouse", "Colomiers", "Tournefeuille", "Blagnac", "Muret", "Ramonville-Saint-Agne"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Haute-Garonne (31) : réservation et prix | TaxiNeo",
-        metaDescription: "Réservez votre taxi en Haute-Garonne (31) avec TaxiNeo. Toulouse, aéroport Blagnac, gare Matabiau. Prix fixe garanti, disponible 24h/24.",
+        metaTitle: "Taxi Haute-Garonne (31) | Toulouse, Blagnac | TaxiNeo",
+        metaDescription: "Toulouse, aéroport Blagnac (10 km), gare Matabiau et zone Airbus. Tarif fixe pour tout le 31. Cité de l'Espace, Muret, Saint-Gaudens. Accès A61, A62 et A68.",
         heroTitle: "Taxi Haute-Garonne (31)",
         heroSubtitle: "Réservez un taxi professionnel en Haute-Garonne. Toulouse, aéroport Blagnac et gares à prix fixe.",
         description: "La Haute-Garonne, avec Toulouse la Ville Rose comme préfecture, est un pôle aéronautique et universitaire majeur. TaxiNeo vous connecte avec des chauffeurs professionnels pour vos transferts aéroport Blagnac, vos courses en ville et vos déplacements dans tout le 31.",
@@ -547,7 +547,7 @@ export const departements: Departement[] = [
       },
       en: {
         metaTitle: "Taxi Haute-Garonne (31): booking and fares | TaxiNeo",
-        metaDescription: "Book your taxi in Haute-Garonne (31) with TaxiNeo. Toulouse, Blagnac airport, Matabiau station. Guaranteed fixed price, available 24/7.",
+        metaDescription: "Book your taxi in Haute-Garonne (31) with TaxiNeo. Toulouse, Blagnac airport, Matabiau station. Guaranteed fixed price, professional drivers. Book online 24/7.",
         heroTitle: "Taxi Haute-Garonne (31)",
         heroSubtitle: "Book a professional taxi in Haute-Garonne. Toulouse, Blagnac airport and stations at fixed prices.",
         description: "Haute-Garonne, with Toulouse the Pink City as its capital, is a major aeronautics and university hub. TaxiNeo connects you with professional drivers for Blagnac airport transfers, city rides and trips throughout the 31.",
@@ -574,8 +574,8 @@ export const departements: Departement[] = [
     mainCities: ["Bordeaux", "Mérignac", "Pessac", "Talence", "Libourne", "Arcachon"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Gironde (33) : réservation et prix | TaxiNeo",
-        metaDescription: "Réservez votre taxi en Gironde (33) avec TaxiNeo. Bordeaux, aéroport Mérignac, gare Saint-Jean. Prix fixe garanti, disponible 24h/24.",
+        metaTitle: "Taxi Gironde (33) | Bordeaux, aéroport, gare | TaxiNeo",
+        metaDescription: "Bordeaux, aéroport Mérignac (12 km), gare Saint-Jean, Médoc et Saint-Émilion. Tarif fixe pour tout le 33. Bassin d'Arcachon et vignobles. Accès A10 et A63.",
         heroTitle: "Taxi Gironde (33)",
         heroSubtitle: "Réservez un taxi professionnel en Gironde. Bordeaux, aéroport Mérignac et gares à prix fixe.",
         description: "La Gironde, avec Bordeaux comme capitale, est le plus grand département de France métropolitaine. TaxiNeo vous accompagne pour vos transferts aéroport Mérignac, vos déplacements dans le vignoble bordelais et vos courses en ville. Prix fixes et chauffeurs professionnels.",
@@ -590,8 +590,8 @@ export const departements: Departement[] = [
         tourisme: "Le centre du XVIIIe siècle de Bordeaux, plus grand site urbain UNESCO de France, présente l'emblématique Place de la Bourse reflétée dans son miroir d'eau. La Cité du Vin, spectaculaire musée du vin, est devenue le repère culturel de Bordeaux depuis 2016. Saint-Émilion, village médiéval perché entouré de vignobles, est lui-même site UNESCO avec des catacombes souterraines et une église monolithe. La Dune du Pilat culmine à 110 mètres au-dessus du Bassin d'Arcachon, offrant parapente et panoramas au coucher du soleil. Le Cap Ferret offre une retraite atlantique chic et décontractée. La route des vins du Médoc traverse des châteaux légendaires : Margaux, Mouton Rothschild, Latour. Les villages ostréicoles d'Arcachon servent des huîtres fraîches accompagnées de vin blanc local. La citadelle Vauban de Blaye sur l'estuaire de la Gironde complète le trio patrimonial UNESCO.",
       },
       en: {
-        metaTitle: "Taxi Gironde (33): booking and fares | TaxiNeo",
-        metaDescription: "Book your taxi in Gironde (33) with TaxiNeo. Bordeaux, Mérignac airport, Saint-Jean station. Guaranteed fixed price, available 24/7.",
+        metaTitle: "Taxi Gironde (33): booking and fixed fares | TaxiNeo",
+        metaDescription: "Book your taxi in Gironde (33) with TaxiNeo. Bordeaux, Mérignac airport, Saint-Jean station, vineyard tours. Guaranteed fixed price, professional drivers 24/7.",
         heroTitle: "Taxi Gironde (33)",
         heroSubtitle: "Book a professional taxi in Gironde. Bordeaux, Mérignac airport and stations at fixed prices.",
         description: "Gironde, with Bordeaux as its capital, is the largest department in metropolitan France. TaxiNeo supports you with Mérignac airport transfers, trips through the Bordeaux vineyards and city rides. Fixed prices and professional drivers.",
@@ -618,8 +618,8 @@ export const departements: Departement[] = [
     mainCities: ["Montpellier", "Béziers", "Sète", "Agde", "Lunel", "Frontignan"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Hérault (34) : réservation et prix | TaxiNeo",
-        metaDescription: "Réservez votre taxi dans l'Hérault (34) avec TaxiNeo. Montpellier, aéroport, gare Saint-Roch. Prix fixe garanti, disponible 24h/24.",
+        metaTitle: "Taxi Hérault (34) | Montpellier, gare, plages | TaxiNeo",
+        metaDescription: "Montpellier, aéroport, gare Saint-Roch, Palavas, Sète et Cap d'Agde. Tarif fixe pour tout le 34. Accès A9 et A75. Littoral méditerranéen à portée de main.",
         heroTitle: "Taxi Hérault (34)",
         heroSubtitle: "Réservez un taxi professionnel dans l'Hérault. Montpellier, Sète, Béziers et aéroport à prix fixe.",
         description: "L'Hérault, département méditerranéen dynamique autour de Montpellier, attire touristes et étudiants toute l'année. TaxiNeo vous propose des transferts aéroport, des courses en ville à Montpellier et des trajets vers les stations balnéaires du littoral héraultais.",
@@ -634,8 +634,8 @@ export const departements: Departement[] = [
         tourisme: "La Place de la Comédie de Montpellier et ses élégants boulevards haussmanniens s'ouvrent sur l'Esplanade Charles de Gaulle et le quartier contemporain Antigone conçu par Ricardo Bofill. Le Musée Fabre figure parmi les plus beaux musées d'art de France. Les joutes nautiques de Sète sur le Canal Royal, ses restaurants de fruits de mer frais et le cimetière marin de Paul Valéry attirent les visiteurs toute l'année. Le Cap d'Agde est la plus grande station balnéaire de Méditerranée. Le Canal du Midi, voie navigable UNESCO, traverse le département sur sa route de Toulouse à la mer. La région viticole du Pic Saint-Loup et le spectaculaire Cirque de Navacelles offrent des escapades à l'intérieur des terres. Les villages médiévaux de Saint-Guilhem-le-Désert (UNESCO) et Minerve couronnent des éperons rocheux au-dessus de vallées sauvages.",
       },
       en: {
-        metaTitle: "Taxi Hérault (34): booking and fares | TaxiNeo",
-        metaDescription: "Book your taxi in Hérault (34) with TaxiNeo. Montpellier, airport, Saint-Roch station. Guaranteed fixed price, available 24/7.",
+        metaTitle: "Taxi Hérault (34): booking and fixed fares | TaxiNeo",
+        metaDescription: "Book your taxi in Hérault (34) with TaxiNeo. Montpellier, airport, Saint-Roch station and coastal resorts. Guaranteed fixed price, professional drivers 24/7.",
         heroTitle: "Taxi Hérault (34)",
         heroSubtitle: "Book a professional taxi in Hérault. Montpellier, Sète, Béziers and airport at fixed prices.",
         description: "Hérault, a dynamic Mediterranean department centered on Montpellier, attracts tourists and students year-round. TaxiNeo offers airport transfers, city rides in Montpellier and trips to the seaside resorts along the Hérault coast.",
@@ -662,8 +662,8 @@ export const departements: Departement[] = [
     mainCities: ["Nantes", "Saint-Nazaire", "Rezé", "Saint-Herblain", "Orvault", "Vertou"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Loire-Atlantique (44) : réservation et prix | TaxiNeo",
-        metaDescription: "Réservez votre taxi en Loire-Atlantique (44) avec TaxiNeo. Nantes, aéroport Nantes Atlantique, gare. Prix fixe garanti, disponible 24h/24.",
+        metaTitle: "Taxi Loire-Atlantique (44) | Nantes, La Baule | TaxiNeo",
+        metaDescription: "Nantes, aéroport Nantes Atlantique (10 km), gare SNCF, La Baule et Guérande. Tarif fixe pour tout le 44. Saint-Nazaire, Muscadet. Accès A11 et N165 directs.",
         heroTitle: "Taxi Loire-Atlantique (44)",
         heroSubtitle: "Réservez un taxi professionnel en Loire-Atlantique. Nantes, aéroport et Saint-Nazaire à prix fixe.",
         description: "La Loire-Atlantique, avec Nantes comme métropole, est un département dynamique de l'ouest de la France. TaxiNeo assure vos transferts depuis l'aéroport Nantes Atlantique, vos déplacements en ville et vos trajets vers Saint-Nazaire et La Baule.",
@@ -679,7 +679,7 @@ export const departements: Departement[] = [
       },
       en: {
         metaTitle: "Taxi Loire-Atlantique (44): booking and fares | TaxiNeo",
-        metaDescription: "Book your taxi in Loire-Atlantique (44) with TaxiNeo. Nantes, Nantes Atlantique airport, station. Guaranteed fixed price, available 24/7.",
+        metaDescription: "Book your taxi in Loire-Atlantique (44) with TaxiNeo. Nantes, Nantes Atlantique airport, station and La Baule. Guaranteed fixed price, easy online booking 24/7.",
         heroTitle: "Taxi Loire-Atlantique (44)",
         heroSubtitle: "Book a professional taxi in Loire-Atlantique. Nantes, airport and Saint-Nazaire at fixed prices.",
         description: "Loire-Atlantique, with Nantes as its metropolis, is a dynamic department in western France. TaxiNeo provides transfers from Nantes Atlantique airport, city rides and trips to Saint-Nazaire and La Baule.",
@@ -706,8 +706,8 @@ export const departements: Departement[] = [
     mainCities: ["Lille", "Roubaix", "Tourcoing", "Dunkerque", "Villeneuve-d'Ascq", "Valenciennes"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Nord (59) : réservation et prix | TaxiNeo",
-        metaDescription: "Réservez votre taxi dans le Nord (59) avec TaxiNeo. Lille, aéroport Lesquin, gare Lille-Europe. Prix fixe garanti, disponible 24h/24.",
+        metaTitle: "Taxi Nord (59) | Lille, Eurostar, aéroport | TaxiNeo",
+        metaDescription: "Lille, aéroport Lesquin, gares Lille-Europe (Eurostar) et Flandres. Tarif fixe pour tout le 59. Roubaix, Tourcoing, Douai. Accès A1, A25 et frontière belge.",
         heroTitle: "Taxi Nord (59)",
         heroSubtitle: "Réservez un taxi professionnel dans le Nord. Lille, Eurostar, aéroport et gares à prix fixe.",
         description: "Le Nord, département le plus peuplé de France après Paris, est un carrefour européen majeur avec Lille comme capitale. TaxiNeo vous propose des transferts aéroport Lesquin, des navettes gare Lille-Europe pour l'Eurostar et des courses dans toute la métropole lilloise.",
@@ -722,8 +722,8 @@ export const departements: Departement[] = [
         tourisme: "La Grand Place de Lille et la Vieille Bourse, magnifique bourse flamande du XVIIe siècle, forment le coeur de l'un des centres-villes les plus séduisants de France. Le Palais des Beaux-Arts abrite la deuxième plus grande collection d'art de France après le Louvre. La Piscine de Roubaix, piscine Art Déco convertie en musée d'art, est une sensation architecturale. La Braderie de Lille annuelle, plus grande brocante d'Europe, attire 2 millions de visiteurs chaque septembre. Le carnaval de Dunkerque, avec son délirant « jet de harengs », est l'un des plus exubérants de France. Les beffrois de Lille, Douai et Cambrai sont inscrits au patrimoine mondial UNESCO. Cassel, perché sur la plus haute colline de Flandre, a été élu village préféré des Français et offre des vues panoramiques sur la Belgique.",
       },
       en: {
-        metaTitle: "Taxi Nord (59): booking and fares | TaxiNeo",
-        metaDescription: "Book your taxi in Nord (59) with TaxiNeo. Lille, Lesquin airport, Lille-Europe station. Guaranteed fixed price, available 24/7.",
+        metaTitle: "Taxi Nord (59) | Lille, Eurostar, airport | TaxiNeo",
+        metaDescription: "Lille, Lesquin airport, Lille-Europe (Eurostar) and Flandres stations. Fixed fare across the 59. Roubaix, Tourcoing, Douai. A1, A25 and Belgian border.",
         heroTitle: "Taxi Nord (59)",
         heroSubtitle: "Book a professional taxi in Nord. Lille, Eurostar, airport and stations at fixed prices.",
         description: "Nord, the most populous department in France after Paris, is a major European crossroads with Lille as its capital. TaxiNeo offers Lesquin airport transfers, Lille-Europe station shuttles for Eurostar and rides across the Lille metropolitan area.",
@@ -750,8 +750,8 @@ export const departements: Departement[] = [
     mainCities: ["Strasbourg", "Haguenau", "Schiltigheim", "Illkirch-Graffenstaden", "Lingolsheim", "Sélestat"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Bas-Rhin (67) : réservation et prix | TaxiNeo",
-        metaDescription: "Réservez votre taxi dans le Bas-Rhin (67) avec TaxiNeo. Strasbourg, aéroport Entzheim, gare centrale. Prix fixe garanti, disponible 24h/24.",
+        metaTitle: "Taxi Bas-Rhin (67) | Strasbourg, Entzheim | TaxiNeo",
+        metaDescription: "Strasbourg, aéroport Entzheim (15 km), gare centrale TGV. Tarif fixe pour tout le 67. Route des Vins d'Alsace, Parlement européen et quartier Petite France.",
         heroTitle: "Taxi Bas-Rhin (67)",
         heroSubtitle: "Réservez un taxi professionnel dans le Bas-Rhin. Strasbourg, aéroport et Parlement européen à prix fixe.",
         description: "Le Bas-Rhin, avec Strasbourg comme capitale européenne, est un département frontalier dynamique. TaxiNeo assure vos transferts depuis l'aéroport Strasbourg-Entzheim, vos déplacements vers le Parlement européen et vos courses dans toute l'Eurométropole.",
@@ -766,8 +766,8 @@ export const departements: Departement[] = [
         tourisme: "La cathédrale gothique de Strasbourg, avec sa complexe horloge astronomique et sa flèche unique vertigineuse, est un chef-d'oeuvre architectural visible depuis la Forêt-Noire. Le quartier de la Petite France, avec ses maisons à colombages fleuries le long des canaux de l'Ill, est le quartier le plus photographié de la ville. Le quartier des institutions européennes présente une architecture moderne de Rogers et Nouvel. Le Christkindelsmärik, plus ancien marché de Noël de France (depuis 1570), transforme Strasbourg en « Capitale de Noël » chaque décembre, attirant 2 millions de visiteurs. La Route des Vins d'Alsace débute à Marlenheim et traverse des villages de carte postale comme Obernai, Barr et Andlau. Le château du Haut-Koenigsbourg, perché à 700 mètres d'altitude, offre des vues panoramiques des Vosges à la Forêt-Noire.",
       },
       en: {
-        metaTitle: "Taxi Bas-Rhin (67): booking and fares | TaxiNeo",
-        metaDescription: "Book your taxi in Bas-Rhin (67) with TaxiNeo. Strasbourg, Entzheim airport, central station. Guaranteed fixed price, available 24/7.",
+        metaTitle: "Taxi Bas-Rhin (67): booking, fixed fares | TaxiNeo",
+        metaDescription: "Book your taxi in Bas-Rhin (67) with TaxiNeo. Strasbourg, Entzheim airport, central station and European Parliament. Guaranteed fixed price, available 24/7.",
         heroTitle: "Taxi Bas-Rhin (67)",
         heroSubtitle: "Book a professional taxi in Bas-Rhin. Strasbourg, airport and European Parliament at fixed prices.",
         description: "Bas-Rhin, with Strasbourg as its European capital, is a dynamic border department. TaxiNeo provides transfers from Strasbourg-Entzheim airport, rides to the European Parliament and trips across the Eurometropolis.",
@@ -794,8 +794,8 @@ export const departements: Departement[] = [
     mainCities: ["Rennes", "Saint-Malo", "Fougères", "Vitré", "Bruz", "Cesson-Sévigné"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Ille-et-Vilaine (35) : réservation et prix | TaxiNeo",
-        metaDescription: "Réservez votre taxi en Ille-et-Vilaine (35) avec TaxiNeo. Rennes, Saint-Malo, aéroport et gare. Prix fixe garanti, disponible 24h/24.",
+        metaTitle: "Taxi Ille-et-Vilaine (35) | Rennes, St-Malo | TaxiNeo",
+        metaDescription: "Rennes, Saint-Malo, aéroport et gare TGV (1h25 de Paris). Tarif fixe pour tout le 35. Fougères, Vitré, côte d'Émeraude (Dinard, Cancale). Accès A84 et N137.",
         heroTitle: "Taxi Ille-et-Vilaine (35)",
         heroSubtitle: "Réservez un taxi professionnel en Ille-et-Vilaine. Rennes, Saint-Malo et aéroport à prix fixe.",
         description: "L'Ille-et-Vilaine, porte d'entrée de la Bretagne avec Rennes comme métropole, combine dynamisme universitaire et patrimoine maritime à Saint-Malo. TaxiNeo vous connecte avec des chauffeurs professionnels pour vos transferts aéroport, vos déplacements dans le 35 et vos escapades côtières.",
@@ -811,7 +811,7 @@ export const departements: Departement[] = [
       },
       en: {
         metaTitle: "Taxi Ille-et-Vilaine (35): booking and fares | TaxiNeo",
-        metaDescription: "Book your taxi in Ille-et-Vilaine (35) with TaxiNeo. Rennes, Saint-Malo, airport and station. Guaranteed fixed price, available 24/7.",
+        metaDescription: "Book your taxi in Ille-et-Vilaine (35) with TaxiNeo. Rennes, Saint-Malo, airport and TGV station. Guaranteed fixed price, professional drivers. Book 24/7.",
         heroTitle: "Taxi Ille-et-Vilaine (35)",
         heroSubtitle: "Book a professional taxi in Ille-et-Vilaine. Rennes, Saint-Malo and airport at fixed prices.",
         description: "Ille-et-Vilaine, the gateway to Brittany with Rennes as its metropolis, combines university dynamism and maritime heritage in Saint-Malo. TaxiNeo connects you with professional drivers for airport transfers, rides in the 35 and coastal getaways.",
@@ -838,8 +838,8 @@ export const departements: Departement[] = [
     mainCities: ["Angers", "Cholet", "Saumur", "Avrillé", "Les Ponts-de-Cé", "Trélazé"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Maine-et-Loire (49) : réservation et prix | TaxiNeo",
-        metaDescription: "Réservez votre taxi en Maine-et-Loire (49) avec TaxiNeo. Angers, Cholet, Saumur, gare Saint-Laud. Prix fixe garanti, disponible 24h/24.",
+        metaTitle: "Taxi Maine-et-Loire (49) | Angers, Saumur | TaxiNeo",
+        metaDescription: "Angers, Cholet, Saumur, gare Saint-Laud (TGV) et châteaux de la Loire. Tarif fixe pour tout le 49. Vignoble d'Anjou. Accès A11, A85 et A87 vers le sud.",
         heroTitle: "Taxi Maine-et-Loire (49)",
         heroSubtitle: "Réservez un taxi professionnel en Maine-et-Loire. Angers, châteaux de la Loire et gares à prix fixe.",
         description: "Le Maine-et-Loire, au coeur du Val de Loire, combine patrimoine historique et dynamisme économique autour d'Angers. TaxiNeo assure vos déplacements dans le département, vos transferts gare Saint-Laud et vos excursions vers les châteaux de la Loire.",
@@ -855,7 +855,7 @@ export const departements: Departement[] = [
       },
       en: {
         metaTitle: "Taxi Maine-et-Loire (49): booking and fares | TaxiNeo",
-        metaDescription: "Book your taxi in Maine-et-Loire (49) with TaxiNeo. Angers, Cholet, Saumur, Saint-Laud station. Guaranteed fixed price, available 24/7.",
+        metaDescription: "Book your taxi in Maine-et-Loire (49) with TaxiNeo. Angers, Cholet, Saumur, Saint-Laud station. Guaranteed fixed price, professional drivers. Book online 24/7.",
         heroTitle: "Taxi Maine-et-Loire (49)",
         heroSubtitle: "Book a professional taxi in Maine-et-Loire. Angers, Loire castles and stations at fixed prices.",
         description: "Maine-et-Loire, in the heart of the Loire Valley, combines historical heritage and economic dynamism around Angers. TaxiNeo handles your trips across the department, Saint-Laud station transfers and excursions to the Loire castles.",
@@ -882,8 +882,8 @@ export const departements: Departement[] = [
     mainCities: ["Tours", "Joué-lès-Tours", "Saint-Cyr-sur-Loire", "Amboise", "Saint-Pierre-des-Corps", "Chambray-lès-Tours"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Indre-et-Loire (37) : réservation et prix | TaxiNeo",
-        metaDescription: "Réservez votre taxi en Indre-et-Loire (37) avec TaxiNeo. Tours, Amboise, châteaux de la Loire. Prix fixe garanti, disponible 24h/24.",
+        metaTitle: "Taxi Indre-et-Loire (37) | Tours, châteaux | TaxiNeo",
+        metaDescription: "Tours, Amboise, Chenonceau, Villandry et gare TGV (55 min de Paris). Tarif fixe dans tout le 37. Circuit châteaux de la Loire sans souci de stationnement.",
         heroTitle: "Taxi Indre-et-Loire (37)",
         heroSubtitle: "Réservez un taxi professionnel en Indre-et-Loire. Tours, Amboise et châteaux de la Loire à prix fixe.",
         description: "L'Indre-et-Loire, berceau des châteaux de la Loire avec Tours comme capitale, est une destination touristique incontournable. TaxiNeo vous propose des transferts gare de Tours, des excursions vers Amboise, Chenonceau et Villandry, et des courses dans tout le 37.",
@@ -899,7 +899,7 @@ export const departements: Departement[] = [
       },
       en: {
         metaTitle: "Taxi Indre-et-Loire (37): booking and fares | TaxiNeo",
-        metaDescription: "Book your taxi in Indre-et-Loire (37) with TaxiNeo. Tours, Amboise, Loire castles. Guaranteed fixed price, available 24/7.",
+        metaDescription: "Book your taxi in Indre-et-Loire (37) with TaxiNeo. Tours, Amboise, Loire castles and TGV station transfers. Guaranteed fixed price, professional drivers 24/7.",
         heroTitle: "Taxi Indre-et-Loire (37)",
         heroSubtitle: "Book a professional taxi in Indre-et-Loire. Tours, Amboise and Loire castles at fixed prices.",
         description: "Indre-et-Loire, cradle of the Loire castles with Tours as its capital, is an essential tourist destination. TaxiNeo offers Tours station transfers, excursions to Amboise, Chenonceau and Villandry, and rides across the 37.",
@@ -926,8 +926,8 @@ export const departements: Departement[] = [
     mainCities: ["Orléans", "Olivet", "Saint-Jean-de-Braye", "Fleury-les-Aubrais", "Saran", "Saint-Jean-de-la-Ruelle"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Loiret (45) : réservation et prix | TaxiNeo",
-        metaDescription: "Réservez votre taxi dans le Loiret (45) avec TaxiNeo. Orléans, gare des Aubrais, centre-ville. Prix fixe garanti, disponible 24h/24.",
+        metaTitle: "Taxi Loiret (45) | Orléans, gare des Aubrais | TaxiNeo",
+        metaDescription: "Orléans, gare des Aubrais (TGV), centre-ville et forêt d'Orléans. Tarif fixe pour tout le 45. Pithiviers, Montargis et accès direct A10 et A71 vers Paris.",
         heroTitle: "Taxi Loiret (45)",
         heroSubtitle: "Réservez un taxi professionnel dans le Loiret. Orléans, gare des Aubrais et environs à prix fixe.",
         description: "Le Loiret, avec Orléans comme préfecture, se situe au carrefour entre Paris et le Val de Loire. TaxiNeo assure vos transferts depuis la gare des Aubrais, vos déplacements dans la métropole orléanaise et vos trajets vers Paris et les châteaux de la Loire.",
@@ -942,8 +942,8 @@ export const departements: Departement[] = [
         tourisme: "La Cathédrale Sainte-Croix d'Orléans, reconstruite au fil des siècles, présente une architecture gothique flamboyante et des vitraux retraçant l'histoire de Jeanne d'Arc. Les Fêtes de Jeanne d'Arc annuelles en mai recréent la libération de la ville avec défilés et festivités médiévales. La Loire à Vélo traverse le département, offrant un itinéraire cyclable plat le long du fleuve entre vignobles et châteaux. La Forêt d'Orléans propose randonnée, VTT et observation de la faune dans 35 000 hectares de bois anciens. Le Château de Sully-sur-Loire, surgissant des eaux, et les jardins fleuris de Cheverny sont des excursions prisées. Gien est réputée pour sa faïence, et le pont-canal de Briare, remarquable ouvrage d'art du XIXe siècle, enjambe la Loire.",
       },
       en: {
-        metaTitle: "Taxi Loiret (45): booking and fares | TaxiNeo",
-        metaDescription: "Book your taxi in Loiret (45) with TaxiNeo. Orléans, Les Aubrais station, city center. Guaranteed fixed price, available 24/7.",
+        metaTitle: "Taxi Loiret (45): booking and fixed fares | TaxiNeo",
+        metaDescription: "Book your taxi in Loiret (45) with TaxiNeo. Orléans, Les Aubrais station, city center and Loire Valley tours. Guaranteed fixed price, professional drivers 24/7.",
         heroTitle: "Taxi Loiret (45)",
         heroSubtitle: "Book a professional taxi in Loiret. Orléans, Les Aubrais station and surroundings at fixed prices.",
         description: "Loiret, with Orléans as its capital, sits at the crossroads between Paris and the Loire Valley. TaxiNeo provides transfers from Les Aubrais station, rides in the Orléans metropolitan area and trips to Paris and the Loire castles.",
@@ -970,8 +970,8 @@ export const departements: Departement[] = [
     mainCities: ["Dijon", "Beaune", "Chenôve", "Talant", "Chevigny-Saint-Sauveur", "Nuits-Saint-Georges"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Côte-d'Or (21) : réservation et prix | TaxiNeo",
-        metaDescription: "Réservez votre taxi en Côte-d'Or (21) avec TaxiNeo. Dijon, Beaune, Route des Vins. Prix fixe garanti, disponible 24h/24.",
+        metaTitle: "Taxi Côte-d'Or (21) | Dijon, Beaune, vignobles | TaxiNeo",
+        metaDescription: "Route des Grands Crus, gare TGV (1h40 de Paris). Tarif fixe pour le 21. Nuits-Saint-Georges, Clos de Vougeot, Hospices de Beaune. Dégustation sans conduire.",
         heroTitle: "Taxi Côte-d'Or (21)",
         heroSubtitle: "Réservez un taxi professionnel en Côte-d'Or. Dijon, Beaune et Route des Vins à prix fixe.",
         description: "La Côte-d'Or, avec Dijon comme capitale de la Bourgogne, est mondialement connue pour ses vignobles et sa gastronomie. TaxiNeo vous propose des transferts gare de Dijon, des excursions sur la Route des Vins et des courses dans tout le département.",
@@ -986,8 +986,8 @@ export const departements: Departement[] = [
         tourisme: "Les Climats du vignoble de Bourgogne, site UNESCO depuis 2015, représentent des siècles de savoir viticole dans une mosaïque de parcelles précisément délimitées. Les Hospices de Beaune, avec leur emblématique toit en tuiles vernissées polychromes, accueillent chaque novembre la plus célèbre vente aux enchères caritative de vins au monde. Le Palais des Ducs de Dijon abrite le Musée des Beaux-Arts, l'un des plus anciens et des plus riches de France. Le Parcours de la Chouette révèle les maisons à colombages, églises gothiques et hôtels particuliers de la cité médiévale. La Route des Grands Crus traverse des villages légendaires : Gevrey-Chambertin, Vosne-Romanée, Pommard, Meursault. L'Abbaye de Fontenay, autre site UNESCO, est un monastère cistercien du XIIe siècle parfaitement préservé. Le Cassissium à Nuits-Saint-Georges explore la tradition de la liqueur de cassis.",
       },
       en: {
-        metaTitle: "Taxi Côte-d'Or (21): booking and fares | TaxiNeo",
-        metaDescription: "Book your taxi in Côte-d'Or (21) with TaxiNeo. Dijon, Beaune, Wine Route. Guaranteed fixed price, available 24/7.",
+        metaTitle: "Taxi Côte-d'Or (21): booking, fixed fares | TaxiNeo",
+        metaDescription: "Book your taxi in Côte-d'Or (21) with TaxiNeo. Dijon, Beaune, Burgundy Wine Route and station transfers. Guaranteed fixed price, professional drivers 24/7.",
         heroTitle: "Taxi Côte-d'Or (21)",
         heroSubtitle: "Book a professional taxi in Côte-d'Or. Dijon, Beaune and Wine Route at fixed prices.",
         description: "Côte-d'Or, with Dijon as Burgundy's capital, is world-renowned for its vineyards and gastronomy. TaxiNeo offers Dijon station transfers, Wine Route excursions and rides across the department.",
@@ -1014,8 +1014,8 @@ export const departements: Departement[] = [
     mainCities: ["Besançon", "Montbéliard", "Pontarlier", "Audincourt", "Valentigney", "Morteau"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Doubs (25) : réservation et prix | TaxiNeo",
-        metaDescription: "Réservez votre taxi dans le Doubs (25) avec TaxiNeo. Besançon, Montbéliard, gare Viotte. Prix fixe garanti, disponible 24h/24.",
+        metaTitle: "Taxi Doubs (25) | Besançon, gare TGV, Suisse | TaxiNeo",
+        metaDescription: "Besançon, Montbéliard, gare Viotte (TGV) et trajets transfrontaliers Suisse. Tarif fixe pour tout le 25. Citadelle Vauban, Saut du Doubs. Accès A36 et N57.",
         heroTitle: "Taxi Doubs (25)",
         heroSubtitle: "Réservez un taxi professionnel dans le Doubs. Besançon, Montbéliard et Pontarlier à prix fixe.",
         description: "Le Doubs, département frontalier avec la Suisse, offre un cadre naturel exceptionnel autour de Besançon. TaxiNeo assure vos transferts gare de Besançon Viotte et Besançon Franche-Comté TGV, vos déplacements vers Montbéliard et vos trajets transfrontaliers.",
@@ -1030,8 +1030,8 @@ export const departements: Departement[] = [
         tourisme: "La Citadelle de Besançon, chef-d'oeuvre de Vauban et site UNESCO, abrite un zoo, un aquarium et un muséum d'histoire naturelle dans ses murs massifs. La vieille ville en contrebas, enserrée par le Doubs, présente des palais Renaissance et l'horloge astronomique de la Cathédrale de Besançon. La Saline Royale d'Arc-et-Senans, autre site UNESCO, est un complexe industriel visionnaire du XVIIIe siècle signé Ledoux. Le Saut du Doubs, cascade de 27 mètres près de Villers-le-Lac à la frontière franco-suisse, est accessible en croisière en bateau. Le plateau du Haut-Doubs autour de Pontarlier offre un ski nordique exceptionnel, de la raquette et des visites de fromageries de Comté. Le festival des Lumières de Montbéliard attire les visiteurs régionaux chaque décembre.",
       },
       en: {
-        metaTitle: "Taxi Doubs (25): booking and fares | TaxiNeo",
-        metaDescription: "Book your taxi in Doubs (25) with TaxiNeo. Besançon, Montbéliard, Viotte station. Guaranteed fixed price, available 24/7.",
+        metaTitle: "Taxi Doubs (25): booking and fixed fares | TaxiNeo",
+        metaDescription: "Book your taxi in Doubs (25) with TaxiNeo. Besançon, Montbéliard, Viotte station and cross-border trips to Switzerland. Guaranteed fixed price, available 24/7.",
         heroTitle: "Taxi Doubs (25)",
         heroSubtitle: "Book a professional taxi in Doubs. Besançon, Montbéliard and Pontarlier at fixed prices.",
         description: "Doubs, a border department with Switzerland, offers an exceptional natural setting around Besançon. TaxiNeo provides transfers from Besançon Viotte and Besançon Franche-Comté TGV stations, rides to Montbéliard and cross-border trips.",
@@ -1058,8 +1058,8 @@ export const departements: Departement[] = [
     mainCities: ["Metz", "Thionville", "Montigny-lès-Metz", "Sarreguemines", "Forbach", "Saint-Avold"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Moselle (57) : réservation et prix | TaxiNeo",
-        metaDescription: "Réservez votre taxi en Moselle (57) avec TaxiNeo. Metz, Thionville, gare de Metz. Prix fixe garanti, disponible 24h/24.",
+        metaTitle: "Taxi Moselle (57) | Metz, gare TGV, Luxembourg | TaxiNeo",
+        metaDescription: "Metz, Thionville, gare TGV et trajets transfrontaliers Luxembourg (40 min). Tarif fixe pour tout le 57. Amnéville, Sarreguemines. Accès direct A4 et A31.",
         heroTitle: "Taxi Moselle (57)",
         heroSubtitle: "Réservez un taxi professionnel en Moselle. Metz, Thionville et Luxembourg à prix fixe.",
         description: "La Moselle, département frontalier avec le Luxembourg et l'Allemagne, est un carrefour européen autour de Metz. TaxiNeo assure vos transferts gare de Metz, vos déplacements transfrontaliers vers le Luxembourg et vos courses dans tout le 57.",
@@ -1074,8 +1074,8 @@ export const departements: Departement[] = [
         tourisme: "Le Centre Pompidou-Metz, conçu par Shigeru Ban avec son toit tressé saisissant, a transformé Metz en destination d'art contemporain depuis 2010. La Cathédrale Saint-Étienne, avec la nef gothique la plus haute de France et des vitraux de Chagall, domine la silhouette de la ville. Le Quartier Impérial, construit pendant l'annexion allemande (1871-1918), présente une architecture wilhelminienne monumentale. La médiévale Porte des Allemands et le Temple Neuf sur une île de la Moselle ajoutent au charme de la cité. Amnéville-les-Thermes offre un zoo, des thermes et un dôme de ski. Les fortifications de la Ligne Maginot à Hackenberg et Simserhof attirent les passionnés d'histoire militaire. La Route du Cristal transfrontalière traverse les célèbres villes verrières.",
       },
       en: {
-        metaTitle: "Taxi Moselle (57): booking and fares | TaxiNeo",
-        metaDescription: "Book your taxi in Moselle (57) with TaxiNeo. Metz, Thionville, Metz station. Guaranteed fixed price, available 24/7.",
+        metaTitle: "Taxi Moselle (57): booking and fixed fares | TaxiNeo",
+        metaDescription: "Book your taxi in Moselle (57) with TaxiNeo. Metz, Thionville, Metz station and Luxembourg transfers. Guaranteed fixed price, professional drivers. Book 24/7.",
         heroTitle: "Taxi Moselle (57)",
         heroSubtitle: "Book a professional taxi in Moselle. Metz, Thionville and Luxembourg at fixed prices.",
         description: "Moselle, a border department with Luxembourg and Germany, is a European crossroads around Metz. TaxiNeo provides Metz station transfers, cross-border trips to Luxembourg and rides throughout the 57.",
@@ -1102,8 +1102,8 @@ export const departements: Departement[] = [
     mainCities: ["Nancy", "Vandoeuvre-lès-Nancy", "Lunéville", "Toul", "Villers-lès-Nancy", "Laxou"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Meurthe-et-Moselle (54) : réservation et prix | TaxiNeo",
-        metaDescription: "Réservez votre taxi en Meurthe-et-Moselle (54) avec TaxiNeo. Nancy, gare de Nancy, Place Stanislas. Prix fixe garanti, disponible 24h/24.",
+        metaTitle: "Taxi Meurthe-et-Moselle (54) | Nancy, gare TGV | TaxiNeo",
+        metaDescription: "Nancy, Place Stanislas (UNESCO), gare TGV (1h30 de Paris). Tarif fixe pour tout le 54. Lunéville, Toul, Pont-à-Mousson et Baccarat. Accès direct A31 et A33.",
         heroTitle: "Taxi Meurthe-et-Moselle (54)",
         heroSubtitle: "Réservez un taxi professionnel en Meurthe-et-Moselle. Nancy, gare et environs à prix fixe.",
         description: "La Meurthe-et-Moselle, avec Nancy et sa célèbre Place Stanislas, est un pôle universitaire et culturel majeur du Grand Est. TaxiNeo assure vos transferts gare de Nancy, vos déplacements dans le Grand Nancy et vos courses vers toutes les communes du 54.",
@@ -1119,7 +1119,7 @@ export const departements: Departement[] = [
       },
       en: {
         metaTitle: "Taxi Meurthe-et-Moselle (54): booking and fares | TaxiNeo",
-        metaDescription: "Book your taxi in Meurthe-et-Moselle (54) with TaxiNeo. Nancy, Nancy station, Place Stanislas. Guaranteed fixed price, available 24/7.",
+        metaDescription: "Book your taxi in Meurthe-et-Moselle (54) with TaxiNeo. Nancy, Nancy station, Place Stanislas and university campus. Guaranteed fixed price, available 24/7.",
         heroTitle: "Taxi Meurthe-et-Moselle (54)",
         heroSubtitle: "Book a professional taxi in Meurthe-et-Moselle. Nancy, station and surroundings at fixed prices.",
         description: "Meurthe-et-Moselle, with Nancy and its famous Place Stanislas, is a major university and cultural hub in Grand Est. TaxiNeo provides Nancy station transfers, rides across Greater Nancy and trips to all municipalities in the 54.",
@@ -1146,8 +1146,8 @@ export const departements: Departement[] = [
     mainCities: ["Châlons-en-Champagne", "Reims", "Épernay", "Vitry-le-François", "Tinqueux", "Saint-Memmie"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Marne (51) : réservation et prix | TaxiNeo",
-        metaDescription: "Réservez votre taxi dans la Marne (51) avec TaxiNeo. Reims, Épernay, route du Champagne. Prix fixe garanti, disponible 24h/24.",
+        metaTitle: "Taxi Marne (51) | Reims, Épernay, route Champagne | TaxiNeo",
+        metaDescription: "Reims, Épernay, caves de champagne et gare TGV (45 min de Paris). Tarif fixe dans tout le 51. Cathédrale de Reims, vignobles classés. Accès A4 et A26.",
         heroTitle: "Taxi Marne (51)",
         heroSubtitle: "Réservez un taxi professionnel dans la Marne. Reims, Épernay et route du Champagne à prix fixe.",
         description: "La Marne, terre du Champagne avec Reims et Épernay comme villes phares, est une destination incontournable pour les amateurs de vin. TaxiNeo vous propose des transferts gare TGV de Reims, des excursions sur la route du Champagne et des courses dans tout le 51.",
@@ -1162,8 +1162,8 @@ export const departements: Departement[] = [
         tourisme: "La Cathédrale de Reims, où 33 rois de France furent couronnés, est un chef-d'oeuvre gothique célèbre pour sa sculpture de l'ange au sourire. L'Avenue de Champagne à Épernay, bordée des sièges de Moët & Chandon, Perrier-Jouët et d'autres grandes maisons, propose des visites de caves souterraines et des dégustations. Le parc naturel de la Montagne de Reims, entre les deux villes, abrite des forêts uniques de faux de Verzy et des vignobles premiers crus. La Basilique Saint-Remi de Reims, autre site UNESCO, recèle mille ans d'histoire. Le Fort de la Pompelle et les champs de bataille champenois préservent la mémoire de la Première Guerre mondiale. La Route du Champagne guide les visiteurs à travers de pittoresques villages viticoles et des domaines familiaux.",
       },
       en: {
-        metaTitle: "Taxi Marne (51): booking and fares | TaxiNeo",
-        metaDescription: "Book your taxi in Marne (51) with TaxiNeo. Reims, Épernay, Champagne route. Guaranteed fixed price, available 24/7.",
+        metaTitle: "Taxi Marne (51): booking and fixed fares | TaxiNeo",
+        metaDescription: "Book your taxi in Marne (51) with TaxiNeo. Reims, Épernay, Champagne route and TGV station. Guaranteed fixed price, professional drivers. Easy online booking.",
         heroTitle: "Taxi Marne (51)",
         heroSubtitle: "Book a professional taxi in Marne. Reims, Épernay and Champagne route at fixed prices.",
         description: "Marne, the land of Champagne with Reims and Épernay as its flagship cities, is an essential destination for wine lovers. TaxiNeo offers Reims TGV station transfers, Champagne route excursions and rides throughout the 51.",
@@ -1190,8 +1190,8 @@ export const departements: Departement[] = [
     mainCities: ["Troyes", "Romilly-sur-Seine", "La Chapelle-Saint-Luc", "Saint-André-les-Vergers", "Sainte-Savine", "Pont-Sainte-Marie"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Aube (10) : réservation et prix | TaxiNeo",
-        metaDescription: "Réservez votre taxi dans l'Aube (10) avec TaxiNeo. Troyes, magasins d'usine, gare. Prix fixe garanti, disponible 24h/24.",
+        metaTitle: "Taxi Aube (10) | Troyes, outlets et Champagne | TaxiNeo",
+        metaDescription: "Troyes, magasins d'usine McArthurGlen, gare et vignobles de Champagne sud. Tarif fixe pour tout le 10. Lac d'Orient, Bar-sur-Aube. Accès direct A5 et A26.",
         heroTitle: "Taxi Aube (10)",
         heroSubtitle: "Réservez un taxi professionnel dans l'Aube. Troyes, magasins d'usine et gare à prix fixe.",
         description: "L'Aube, avec Troyes comme capitale historique de la Champagne, est célèbre pour ses magasins d'usine et son patrimoine médiéval. TaxiNeo assure vos transferts gare de Troyes, vos courses en ville et vos déplacements vers les centres commerciaux de marques.",
@@ -1206,8 +1206,8 @@ export const departements: Departement[] = [
         tourisme: "Le centre-ville à colombages de Troyes, parfois appelé « le bouchon » pour sa forme distinctive, compte neuf églises historiques dont la splendide Cathédrale Saint-Pierre-et-Saint-Paul avec ses remarquables vitraux. Les centres de magasins d'usine de la ville attirent plus de 4 millions d'acheteurs par an, faisant de Troyes la capitale française des outlets. Le parc naturel de la Forêt d'Orient offre voile, baignade et plus de 260 espèces d'oiseaux autour de trois lacs artificiels. La route du champagne de la Côte des Bar serpente à travers les vignobles vallonnés au sud de Troyes, avec des producteurs artisanaux proposant des dégustations intimistes. Le parc d'attractions Nigloland est une destination familiale prisée. L'Abbaye de Clairvaux, fondée par Saint Bernard en 1115, ajoute une dimension spirituelle et historique.",
       },
       en: {
-        metaTitle: "Taxi Aube (10): booking and fares | TaxiNeo",
-        metaDescription: "Book your taxi in Aube (10) with TaxiNeo. Troyes, outlet stores, station. Guaranteed fixed price, available 24/7.",
+        metaTitle: "Taxi Aube (10) | Troyes, outlets and Champagne | TaxiNeo",
+        metaDescription: "Troyes, McArthurGlen outlet stores, station and southern Champagne vineyards. Fixed fare across the 10. Lac d'Orient, Bar-sur-Aube. A5 and A26 access.",
         heroTitle: "Taxi Aube (10)",
         heroSubtitle: "Book a professional taxi in Aube. Troyes, outlet stores and station at fixed prices.",
         description: "Aube, with Troyes as the historic capital of Champagne, is famous for its outlet stores and medieval heritage. TaxiNeo provides Troyes station transfers, city rides and trips to brand outlet centers.",
@@ -1234,8 +1234,8 @@ export const departements: Departement[] = [
     mainCities: ["Arras", "Calais", "Boulogne-sur-Mer", "Lens", "Liévin", "Hénin-Beaumont"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Pas-de-Calais (62) : réservation et prix | TaxiNeo",
-        metaDescription: "Réservez votre taxi dans le Pas-de-Calais (62) avec TaxiNeo. Calais, Arras, Lens, Eurotunnel. Prix fixe garanti, disponible 24h/24.",
+        metaTitle: "Taxi Pas-de-Calais (62) | Calais, Eurotunnel | TaxiNeo",
+        metaDescription: "Calais, Arras, Lens, Boulogne et Eurotunnel Coquelles. Tarif fixe pour tout le 62. Dépose terminal ferry ou navette. Côte d'Opale. Accès A26, A1 et Belgique.",
         heroTitle: "Taxi Pas-de-Calais (62)",
         heroSubtitle: "Réservez un taxi professionnel dans le Pas-de-Calais. Calais, Arras, Lens et Eurotunnel à prix fixe.",
         description: "Le Pas-de-Calais, département côtier entre la France et l'Angleterre, est un point de passage essentiel avec le tunnel sous la Manche. TaxiNeo assure vos transferts Eurotunnel, vos déplacements à Calais, Arras et Lens, et vos courses sur la Côte d'Opale.",
@@ -1251,7 +1251,7 @@ export const departements: Departement[] = [
       },
       en: {
         metaTitle: "Taxi Pas-de-Calais (62): booking and fares | TaxiNeo",
-        metaDescription: "Book your taxi in Pas-de-Calais (62) with TaxiNeo. Calais, Arras, Lens, Eurotunnel. Guaranteed fixed price, available 24/7.",
+        metaDescription: "Book your taxi in Pas-de-Calais (62) with TaxiNeo. Calais, Arras, Lens, Eurotunnel and Opal Coast. Guaranteed fixed price, professional drivers. Book 24/7.",
         heroTitle: "Taxi Pas-de-Calais (62)",
         heroSubtitle: "Book a professional taxi in Pas-de-Calais. Calais, Arras, Lens and Eurotunnel at fixed prices.",
         description: "Pas-de-Calais, a coastal department between France and England, is an essential crossing point with the Channel Tunnel. TaxiNeo provides Eurotunnel transfers, rides in Calais, Arras and Lens, and trips along the Opal Coast.",
@@ -1278,8 +1278,8 @@ export const departements: Departement[] = [
     mainCities: ["Amiens", "Abbeville", "Albert", "Péronne", "Longueau", "Rivery"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Somme (80) : réservation et prix | TaxiNeo",
-        metaDescription: "Réservez votre taxi dans la Somme (80) avec TaxiNeo. Amiens, Baie de Somme, gare d'Amiens. Prix fixe garanti, disponible 24h/24.",
+        metaTitle: "Taxi Somme (80) | Amiens TGV, Baie de Somme | TaxiNeo",
+        metaDescription: "Amiens, Baie de Somme, gare TGV (1h10 de Paris) et mémoriaux de 14-18. Tarif fixe pour tout le 80. Abbeville, Péronne et côte picarde. Accès A16 et A29.",
         heroTitle: "Taxi Somme (80)",
         heroSubtitle: "Réservez un taxi professionnel dans la Somme. Amiens, Baie de Somme et gares à prix fixe.",
         description: "La Somme, avec Amiens et sa cathédrale gothique, est un département alliant patrimoine historique et nature préservée avec la Baie de Somme. TaxiNeo assure vos transferts gare d'Amiens, vos excursions en Baie de Somme et vos déplacements dans tout le 80.",
@@ -1294,8 +1294,8 @@ export const departements: Departement[] = [
         tourisme: "La cathédrale d'Amiens, chef-d'oeuvre de l'architecture gothique et site UNESCO, possède la nef la plus haute de France. La baie de Somme est un paradis naturel où l'on peut observer la plus grande colonie de phoques de France et assister à de spectaculaires mascarets. Les hortillonnages d'Amiens, jardins flottants entretenus depuis des siècles, créent un paysage urbain unique. L'Historial de la Grande Guerre à Péronne et le mémorial franco-australien de Villers-Bretonneux retracent la dévastatrice bataille de la Somme de 1916. Le Crotoy et Saint-Valery-sur-Somme sont de charmants villages balnéaires reliés par un chemin de fer à vapeur patrimonial. La réserve ornithologique du Marquenterre accueille des centaines d'espèces migratrices chaque année.",
       },
       en: {
-        metaTitle: "Taxi Somme (80): booking and fares | TaxiNeo",
-        metaDescription: "Book your taxi in Somme (80) with TaxiNeo. Amiens, Somme Bay, Amiens station. Guaranteed fixed price, available 24/7.",
+        metaTitle: "Taxi Somme (80): booking and fixed fares | TaxiNeo",
+        metaDescription: "Book your taxi in Somme (80) with TaxiNeo. Amiens, Somme Bay, Amiens station and WWI sites. Guaranteed fixed price, professional drivers. Easy online booking.",
         heroTitle: "Taxi Somme (80)",
         heroSubtitle: "Book a professional taxi in Somme. Amiens, Somme Bay and stations at fixed prices.",
         description: "Somme, with Amiens and its Gothic cathedral, is a department combining historical heritage and preserved nature with the Somme Bay. TaxiNeo provides Amiens station transfers, Somme Bay excursions and rides throughout the 80.",
@@ -1322,8 +1322,8 @@ export const departements: Departement[] = [
     mainCities: ["Rouen", "Le Havre", "Dieppe", "Sotteville-lès-Rouen", "Saint-Étienne-du-Rouvray", "Petit-Quevilly"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Seine-Maritime (76) : réservation et prix | TaxiNeo",
-        metaDescription: "Réservez votre taxi en Seine-Maritime (76) avec TaxiNeo. Rouen, Le Havre, Dieppe, gares et port. Prix fixe garanti, disponible 24h/24.",
+        metaTitle: "Taxi Seine-Maritime (76) | Rouen, Le Havre | TaxiNeo",
+        metaDescription: "Rouen, Le Havre, Dieppe, gares SNCF et port. Tarif fixe pour tout le 76. Étretat, Fécamp, côte d'Albâtre et vallée de la Seine. Accès A13, A28 et A29.",
         heroTitle: "Taxi Seine-Maritime (76)",
         heroSubtitle: "Réservez un taxi professionnel en Seine-Maritime. Rouen, Le Havre et Étretat à prix fixe.",
         description: "La Seine-Maritime, avec Rouen et Le Havre, est un département normand dynamique entre patrimoine historique et activité portuaire. TaxiNeo assure vos transferts gare de Rouen, vos déplacements vers Le Havre et vos excursions aux falaises d'Étretat.",
@@ -1339,7 +1339,7 @@ export const departements: Departement[] = [
       },
       en: {
         metaTitle: "Taxi Seine-Maritime (76): booking and fares | TaxiNeo",
-        metaDescription: "Book your taxi in Seine-Maritime (76) with TaxiNeo. Rouen, Le Havre, Dieppe, stations and port. Guaranteed fixed price, available 24/7.",
+        metaDescription: "Book your taxi in Seine-Maritime (76) with TaxiNeo. Rouen, Le Havre, Dieppe, stations and port. Guaranteed fixed price, professional drivers. Book online 24/7.",
         heroTitle: "Taxi Seine-Maritime (76)",
         heroSubtitle: "Book a professional taxi in Seine-Maritime. Rouen, Le Havre and Étretat at fixed prices.",
         description: "Seine-Maritime, with Rouen and Le Havre, is a dynamic Norman department between historical heritage and port activity. TaxiNeo provides Rouen station transfers, trips to Le Havre and excursions to the Étretat cliffs.",
@@ -1366,8 +1366,8 @@ export const departements: Departement[] = [
     mainCities: ["Caen", "Lisieux", "Bayeux", "Hérouville-Saint-Clair", "Deauville", "Honfleur"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Calvados (14) : réservation et prix | TaxiNeo",
-        metaDescription: "Réservez votre taxi dans le Calvados (14) avec TaxiNeo. Caen, Deauville, plages du Débarquement. Prix fixe garanti, disponible 24h/24.",
+        metaTitle: "Taxi Calvados (14) | Caen, Deauville, D-Day | TaxiNeo",
+        metaDescription: "Caen, Deauville, plages du Débarquement (Omaha, Juno, Gold) et gare de Caen. Tarif fixe dans tout le 14. Honfleur, Bayeux (tapisserie). Accès A13 et A84.",
         heroTitle: "Taxi Calvados (14)",
         heroSubtitle: "Réservez un taxi professionnel dans le Calvados. Caen, Deauville et plages du Débarquement à prix fixe.",
         description: "Le Calvados, département normand entre mer et bocage, accueille les plages du Débarquement et les stations balnéaires de Deauville et Honfleur. TaxiNeo assure vos transferts gare de Caen, vos excursions historiques et vos déplacements sur la Côte Fleurie.",
@@ -1382,8 +1382,8 @@ export const departements: Departement[] = [
         tourisme: "Les plages du Débarquement — Omaha, Gold, Juno et Sword — ainsi que le cimetière américain de Colleville-sur-Mer forment l'un des paysages mémoriels les plus émouvants au monde. Le Mémorial de Caen offre un contexte complet sur la Bataille de Normandie. Bayeux abrite sa célèbre tapisserie du XIe siècle retraçant la conquête de l'Angleterre. Les planches de Deauville, son casino et son festival du film attirent une clientèle glamour, tandis que le vieux port de Honfleur, peint par Monet et Boudin, reste une icône artistique. La Route du Cidre serpente à travers le Pays d'Auge entre fermes de dégustation. Les gorges de la Suisse Normande offrent canoë et escalade dans un paysage étonnamment vallonné.",
       },
       en: {
-        metaTitle: "Taxi Calvados (14): booking and fares | TaxiNeo",
-        metaDescription: "Book your taxi in Calvados (14) with TaxiNeo. Caen, Deauville, D-Day beaches. Guaranteed fixed price, available 24/7.",
+        metaTitle: "Taxi Calvados (14): booking, fixed fares | TaxiNeo",
+        metaDescription: "Book your taxi in Calvados (14) with TaxiNeo. Caen, Deauville, D-Day beaches and Honfleur. Guaranteed fixed price, professional drivers. Easy online booking.",
         heroTitle: "Taxi Calvados (14)",
         heroSubtitle: "Book a professional taxi in Calvados. Caen, Deauville and D-Day beaches at fixed prices.",
         description: "Calvados, a Norman department between sea and countryside, is home to the D-Day beaches and the seaside resorts of Deauville and Honfleur. TaxiNeo provides Caen station transfers, historical excursions and rides along the Côte Fleurie.",
@@ -1410,8 +1410,8 @@ export const departements: Departement[] = [
     mainCities: ["Saint-Lô", "Cherbourg-en-Cotentin", "Granville", "Coutances", "Avranches", "Valognes"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Manche (50) : réservation et prix | TaxiNeo",
-        metaDescription: "Réservez votre taxi dans la Manche (50) avec TaxiNeo. Cherbourg, Mont-Saint-Michel, gares. Prix fixe garanti, disponible 24h/24.",
+        metaTitle: "Taxi Manche (50) | Cherbourg, Mont-Saint-Michel | TaxiNeo",
+        metaDescription: "Cherbourg, Mont-Saint-Michel, ferry Angleterre et gares SNCF. Tarif fixe pour tout le 50. Granville, Coutances et presqu'île du Cotentin. Accès N13 et A84.",
         heroTitle: "Taxi Manche (50)",
         heroSubtitle: "Réservez un taxi professionnel dans la Manche. Cherbourg, Mont-Saint-Michel et côtes à prix fixe.",
         description: "La Manche, département normand entre la côte du Cotentin et le Mont-Saint-Michel, offre des paysages maritimes uniques. TaxiNeo assure vos transferts gare de Cherbourg, vos excursions au Mont-Saint-Michel et vos déplacements dans tout le 50.",
@@ -1426,8 +1426,8 @@ export const departements: Departement[] = [
         tourisme: "Le Mont-Saint-Michel, abbaye insulaire emblématique inscrite au patrimoine mondial UNESCO, se dresse à la frontière sud du département et attire plus de 3 millions de visiteurs par an. La Cité de la Mer de Cherbourg, installée dans une ancienne gare transatlantique, présente l'histoire maritime et le plus grand sous-marin visitable de France. La côte sauvage du Cotentin offre des falaises spectaculaires au Nez de Jobourg, des plages préservées à Barneville-Carteret et le sanctuaire ornithologique du Cap de la Hague. Granville, le « Monaco du Nord », se perche sur un promontoire rocheux avec un port de pêche animé. Le patrimoine du Débarquement à Utah Beach et Sainte-Mère-Église attire les passionnés d'histoire. Le bocage récompense cyclistes et randonneurs par ses chemins tranquilles et ses fermes cidricoles.",
       },
       en: {
-        metaTitle: "Taxi Manche (50): booking and fares | TaxiNeo",
-        metaDescription: "Book your taxi in Manche (50) with TaxiNeo. Cherbourg, Mont-Saint-Michel, stations. Guaranteed fixed price, available 24/7.",
+        metaTitle: "Taxi Manche (50): booking and fixed fares | TaxiNeo",
+        metaDescription: "Book your taxi in Manche (50) with TaxiNeo. Cherbourg, Mont-Saint-Michel, ferry port and stations. Guaranteed fixed price, professional drivers. Book 24/7.",
         heroTitle: "Taxi Manche (50)",
         heroSubtitle: "Book a professional taxi in Manche. Cherbourg, Mont-Saint-Michel and coastline at fixed prices.",
         description: "Manche, a Norman department between the Cotentin coast and Mont-Saint-Michel, offers unique maritime landscapes. TaxiNeo provides Cherbourg station transfers, Mont-Saint-Michel excursions and rides throughout the 50.",
@@ -1454,8 +1454,8 @@ export const departements: Departement[] = [
     mainCities: ["Quimper", "Brest", "Concarneau", "Morlaix", "Douarnenez", "Landerneau"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Finistère (29) : réservation et prix | TaxiNeo",
-        metaDescription: "Réservez votre taxi dans le Finistère (29) avec TaxiNeo. Brest, Quimper, aéroport Brest-Bretagne. Prix fixe garanti, disponible 24h/24.",
+        metaTitle: "Taxi Finistère (29) | Brest, Quimper, Crozon | TaxiNeo",
+        metaDescription: "Brest, Quimper, aéroport Brest-Bretagne et Pointe du Raz. Tarif fixe pour tout le 29. Concarneau, Douarnenez et presqu'île de Crozon. Accès N12 et N165 directs.",
         heroTitle: "Taxi Finistère (29)",
         heroSubtitle: "Réservez un taxi professionnel dans le Finistère. Brest, Quimper et côtes bretonnes à prix fixe.",
         description: "Le Finistère, pointe extrême de la Bretagne, offre des côtes spectaculaires et une culture maritime riche autour de Brest et Quimper. TaxiNeo vous propose des transferts aéroport Brest-Bretagne, des courses en ville et des excursions vers la Pointe du Raz et les îles.",
@@ -1470,8 +1470,8 @@ export const departements: Departement[] = [
         tourisme: "La Pointe du Raz, cap le plus visité de France, plonge de façon spectaculaire dans l'Atlantique avec vue sur l'Île de Sein. Océanopolis à Brest est l'un des plus grands aquariums d'Europe, présentant les écosystèmes marins. La ville close médiévale de Concarneau et le port des artistes de Pont-Aven, rendu célèbre par Gauguin, sont des incontournables. La presqu'île de Crozon offre des aiguilles rocheuses spectaculaires et des plages isolées. Les enclos paroissiaux de la vallée de l'Élorn présentent une sculpture Renaissance en granit extraordinaire. L'Île d'Ouessant, battue par les courants, récompense les visiteurs par sa beauté sauvage et ses colonies d'oiseaux marins. Les Fêtes Maritimes de Brest célèbrent le patrimoine maritime de la région à grande échelle.",
       },
       en: {
-        metaTitle: "Taxi Finistère (29): booking and fares | TaxiNeo",
-        metaDescription: "Book your taxi in Finistère (29) with TaxiNeo. Brest, Quimper, Brest-Bretagne airport. Guaranteed fixed price, available 24/7.",
+        metaTitle: "Taxi Finistère (29): booking, fixed fares | TaxiNeo",
+        metaDescription: "Book your taxi in Finistère (29) with TaxiNeo. Brest, Quimper, Brest-Bretagne airport and coastal tours. Guaranteed fixed price, professional drivers 24/7.",
         heroTitle: "Taxi Finistère (29)",
         heroSubtitle: "Book a professional taxi in Finistère. Brest, Quimper and Breton coastline at fixed prices.",
         description: "Finistère, the extreme tip of Brittany, offers spectacular coastlines and rich maritime culture around Brest and Quimper. TaxiNeo provides Brest-Bretagne airport transfers, city rides and excursions to the Pointe du Raz and islands.",
@@ -1498,8 +1498,8 @@ export const departements: Departement[] = [
     mainCities: ["Vannes", "Lorient", "Lanester", "Pontivy", "Hennebont", "Auray"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Morbihan (56) : réservation et prix | TaxiNeo",
-        metaDescription: "Réservez votre taxi dans le Morbihan (56) avec TaxiNeo. Vannes, Lorient, Golfe du Morbihan. Prix fixe garanti, disponible 24h/24.",
+        metaTitle: "Taxi Morbihan (56) | Vannes, Golfe, Carnac | TaxiNeo",
+        metaDescription: "Vannes, Lorient, Golfe du Morbihan, Carnac et Belle-Île. Tarif fixe pour tout le 56. Auray, Pontivy et gare TGV d'Auray. Accès N165 et N166 vers la côte.",
         heroTitle: "Taxi Morbihan (56)",
         heroSubtitle: "Réservez un taxi professionnel dans le Morbihan. Vannes, Lorient et Golfe du Morbihan à prix fixe.",
         description: "Le Morbihan, avec le célèbre Golfe du Morbihan et ses alignements de Carnac, est un département breton entre terre et mer. TaxiNeo assure vos transferts gare de Vannes, vos excursions vers Carnac et Belle-Île et vos courses dans tout le 56.",
@@ -1514,8 +1514,8 @@ export const departements: Departement[] = [
         tourisme: "Le golfe du Morbihan, avec plus de 40 îles accessibles en bateau, compte parmi les plus belles baies du monde. Les alignements mégalithiques de Carnac — des milliers de menhirs vieux de 6 000 ans — sont uniques en Europe. Belle-Île-en-Mer séduit les visiteurs par ses falaises dramatiques, ses criques de sable et la Citadelle Vauban. Les remparts médiévaux et le vieux quartier à colombages de Vannes invitent à la flânerie. La presqu'île de Quiberon offre des plages de surf sauvages côté ouest et des eaux calmes côté est. Le Festival Interceltique de Lorient attire 800 000 visiteurs chaque mois d'août. Le château de Josselin et Rochefort-en-Terre, élu village préféré des Français, complètent un riche itinéraire de découverte.",
       },
       en: {
-        metaTitle: "Taxi Morbihan (56): booking and fares | TaxiNeo",
-        metaDescription: "Book your taxi in Morbihan (56) with TaxiNeo. Vannes, Lorient, Gulf of Morbihan. Guaranteed fixed price, available 24/7.",
+        metaTitle: "Taxi Morbihan (56): booking, fixed fares | TaxiNeo",
+        metaDescription: "Book your taxi in Morbihan (56) with TaxiNeo. Vannes, Lorient, Gulf of Morbihan and Carnac. Guaranteed fixed price, professional drivers. Easy online booking.",
         heroTitle: "Taxi Morbihan (56)",
         heroSubtitle: "Book a professional taxi in Morbihan. Vannes, Lorient and Gulf of Morbihan at fixed prices.",
         description: "Morbihan, with the famous Gulf of Morbihan and Carnac alignments, is a Breton department between land and sea. TaxiNeo provides Vannes station transfers, excursions to Carnac and Belle-Île and rides throughout the 56.",
@@ -1542,8 +1542,8 @@ export const departements: Departement[] = [
     mainCities: ["Saint-Brieuc", "Lannion", "Dinan", "Lamballe", "Plérin", "Loudéac"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Côtes-d'Armor (22) : réservation et prix | TaxiNeo",
-        metaDescription: "Réservez votre taxi dans les Côtes-d'Armor (22) avec TaxiNeo. Saint-Brieuc, Dinan, Côte de Granit Rose. Prix fixe garanti, disponible 24h/24.",
+        metaTitle: "Taxi Côtes-d'Armor (22) | St-Brieuc, Dinan | TaxiNeo",
+        metaDescription: "Saint-Brieuc, Dinan, Côte de Granit Rose et gare TGV. Tarif fixe pour tout le 22. Lannion, Guingamp, Cap Fréhel et Fort-la-Latte. Accès N12 et N176 rapides.",
         heroTitle: "Taxi Côtes-d'Armor (22)",
         heroSubtitle: "Réservez un taxi professionnel dans les Côtes-d'Armor. Saint-Brieuc, Dinan et Côte de Granit Rose à prix fixe.",
         description: "Les Côtes-d'Armor, département breton entre la Côte de Granit Rose et les terres intérieures, offrent des paysages maritimes uniques. TaxiNeo assure vos transferts gare de Saint-Brieuc, vos excursions vers Dinan et Perros-Guirec et vos courses dans tout le 22.",
@@ -1559,7 +1559,7 @@ export const departements: Departement[] = [
       },
       en: {
         metaTitle: "Taxi Côtes-d'Armor (22): booking and fares | TaxiNeo",
-        metaDescription: "Book your taxi in Côtes-d'Armor (22) with TaxiNeo. Saint-Brieuc, Dinan, Pink Granite Coast. Guaranteed fixed price, available 24/7.",
+        metaDescription: "Book your taxi in Côtes-d'Armor (22) with TaxiNeo. Saint-Brieuc, Dinan, Pink Granite Coast and TGV station. Guaranteed fixed price, professional drivers 24/7.",
         heroTitle: "Taxi Côtes-d'Armor (22)",
         heroSubtitle: "Book a professional taxi in Côtes-d'Armor. Saint-Brieuc, Dinan and Pink Granite Coast at fixed prices.",
         description: "Côtes-d'Armor, a Breton department between the Pink Granite Coast and the hinterland, offers unique maritime landscapes. TaxiNeo provides Saint-Brieuc station transfers, excursions to Dinan and Perros-Guirec and rides throughout the 22.",
@@ -1585,4 +1585,28 @@ export function getDepartementBySlug(slug: string): Departement | undefined {
 
 export function getDepartementsByRegion(region: string): Departement[] {
   return departements.filter((d) => d.region === region);
+}
+
+import { haversineDistance } from "@/lib/geo";
+
+export function getNearbyDepartements(dept: Departement, limit = 4): Departement[] {
+  return departements
+    .filter((d) => d.slug !== dept.slug)
+    .map((d) => ({ d, dist: haversineDistance(dept.lat, dept.lng, d.lat, d.lng) }))
+    .sort((a, b) => a.dist - b.dist)
+    .slice(0, limit)
+    .map((x) => x.d);
+}
+
+export function findDepartementForCoords(lat: number, lng: number): Departement | undefined {
+  let best: Departement | undefined;
+  let bestDist = Infinity;
+  for (const d of departements) {
+    const dist = haversineDistance(lat, lng, d.lat, d.lng);
+    if (dist < bestDist) {
+      bestDist = dist;
+      best = d;
+    }
+  }
+  return best;
 }

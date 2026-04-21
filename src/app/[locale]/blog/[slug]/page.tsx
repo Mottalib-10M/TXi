@@ -7,6 +7,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { ScrollAnimation } from "@/components/ui/ScrollAnimation";
 import { getArticleBySlug, getArticleSlugs, blogArticles } from "@/data/blog";
+import { BlogRelatedContent } from "@/components/blog/BlogRelatedContent";
 
 interface PageProps {
   params: Promise<{ locale: string; slug: string }>;
@@ -314,6 +315,8 @@ export default async function BlogArticlePage({ params }: PageProps) {
               </div>
             </div>
           )}
+
+          <BlogRelatedContent slug={slug} />
         </div>
       </main>
 
