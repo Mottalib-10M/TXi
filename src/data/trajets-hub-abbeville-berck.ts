@@ -27,8 +27,8 @@ export const trajetsAbbevilleBerck: Trajet[] = [
     hub: "abbeville-berck",
     i18n: {
       fr: {
-        metaTitle: "Taxi Abbeville → Amiens | Prix fixe dès 60 € | TaxiNeo",
-        metaDescription: "Taxi Abbeville → Amiens. 50 km, 35 min, dès 60 €. A16 gratuite, cathédrale UNESCO, hortillonnages. Réservation 24h/24.",
+        metaTitle: "Taxi Abbeville → Amiens | 50 km, dès 60 € | TaxiNeo",
+        metaDescription: "Itinéraire A16, environ 35 min. Passage par Somme, Baie de Somme, Cathédrale UNESCO et Hortillonnages. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Abbeville → Amiens",
         heroSubtitle: "Transfert Abbeville → Amiens au prix fixe de 60 — 80 €. 50 km, direct par l'A16 gratuite.",
         description: "Amiens, préfecture de la Somme et ville de Jules Verne, est à 35 min d'Abbeville.",
@@ -46,8 +46,8 @@ export const trajetsAbbevilleBerck: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Abbeville → Amiens | Fixed price from €60 | TaxiNeo",
-        metaDescription: "Taxi Abbeville → Amiens. 50 km, 35 min, from €60. Toll-free A16, UNESCO cathedral, floating gardens. Book 24/7.",
+        metaTitle: "Taxi Abbeville → Amiens | 50 km, from €60 | TaxiNeo",
+        metaDescription: "A16 route, approximately 35 min. Somme, Baie de Somme, Cathédrale UNESCO and Hortillonnages en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Abbeville → Amiens",
         heroSubtitle: "Your Abbeville → Amiens transfer at €60 — €80. 50 km, via the toll-free A16.",
         description: "Amiens, capital of the Somme and city of Jules Verne, is 35 min from Abbeville.",
@@ -92,8 +92,8 @@ export const trajetsAbbevilleBerck: Trajet[] = [
     hub: "abbeville-berck",
     i18n: {
       fr: {
-        metaTitle: "Taxi Abbeville → Le Touquet | Prix fixe dès 65 € | TaxiNeo",
-        metaDescription: "Taxi Abbeville → Le Touquet-Paris-Plage. 55 km, 40 min, dès 65 €. Côte d'Opale, golf, plage. Réservation 24h/24.",
+        metaTitle: "Taxi Abbeville → Le Touquet-Paris-Plage | 55 km | TaxiNeo",
+        metaDescription: "Via A16 puis D901 en 40 min. A16/D901, Côte d'Opale, Golf et Plage en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Abbeville → Le Touquet",
         heroSubtitle: "Transfert Abbeville → Le Touquet-Paris-Plage au prix fixe de 65 — 85 €. 55 km, la perle de la Côte d'Opale.",
         description: "Le Touquet-Paris-Plage, station balnéaire mythique de la Côte d'Opale, est à 40 min d'Abbeville.",
@@ -111,8 +111,8 @@ export const trajetsAbbevilleBerck: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Abbeville → Le Touquet | Fixed price from €65 | TaxiNeo",
-        metaDescription: "Taxi Abbeville → Le Touquet-Paris-Plage. 55 km, 40 min, from €65. Opal Coast, golf, beach. Book 24/7.",
+        metaTitle: "Taxi Abbeville → Le Touquet-Paris-Plage | 55 km | TaxiNeo",
+        metaDescription: "Via A16 then D901, 40 min ride. A16/D901, Côte d'Opale, Golf and Plage en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Abbeville → Le Touquet",
         heroSubtitle: "Your Abbeville → Le Touquet-Paris-Plage transfer at €65 — €85. 55 km, the Opal Coast jewel.",
         description: "Le Touquet-Paris-Plage, iconic Opal Coast resort, is 40 min from Abbeville.",
@@ -157,8 +157,8 @@ export const trajetsAbbevilleBerck: Trajet[] = [
     hub: "abbeville-berck",
     i18n: {
       fr: {
-        metaTitle: "Taxi Berck → Boulogne-sur-Mer | Prix fixe dès 60 € | TaxiNeo",
-        metaDescription: "Taxi Berck → Boulogne-sur-Mer. 50 km, 35 min, dès 60 €. Côte d'Opale, Nausicaá, cerfs-volants. Réservation 24h/24.",
+        metaTitle: "Taxi Berck → Boulogne-sur-Mer | 50 km, dès 60 € | TaxiNeo",
+        metaDescription: "Itinéraire D940 puis A16, environ 35 min. D940/A16, Côte d'Opale, Nausicaá et Cerfs-volants en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Berck → Boulogne-sur-Mer",
         heroSubtitle: "Transfert Berck → Boulogne-sur-Mer au prix fixe de 60 — 80 €. 50 km, la Côte d'Opale.",
         description: "Boulogne-sur-Mer, premier port de pêche de France et cité de Nausicaá, est à 35 min de Berck.",
@@ -176,8 +176,8 @@ export const trajetsAbbevilleBerck: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Berck → Boulogne-sur-Mer | Fixed price from €60 | TaxiNeo",
-        metaDescription: "Taxi Berck → Boulogne-sur-Mer. 50 km, 35 min, from €60. Opal Coast, Nausicaá aquarium, kites. Book 24/7.",
+        metaTitle: "Taxi Berck → Boulogne-sur-Mer | 50 km, from €60 | TaxiNeo",
+        metaDescription: "Direct route via D940 then A16, 35 min. D940/A16, Côte d'Opale, Nausicaá and Cerfs-volants en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Berck → Boulogne-sur-Mer",
         heroSubtitle: "Your Berck → Boulogne-sur-Mer transfer at €60 — €80. 50 km, along the Opal Coast.",
         description: "Boulogne-sur-Mer, France's top fishing port and home to Nausicaá, is 35 min from Berck.",
@@ -222,8 +222,8 @@ export const trajetsAbbevilleBerck: Trajet[] = [
     hub: "abbeville-berck",
     i18n: {
       fr: {
-        metaTitle: "Taxi Berck → Lille | Prix fixe dès 170 € | TaxiNeo",
-        metaDescription: "Taxi Berck → Lille. 140 km, 1h30, dès 170 €. A16/A26, transfert direct porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Berck → Lille | 140 km, dès 170 €, 1h30 | TaxiNeo",
+        metaDescription: "Via A16 puis A26 en 1h30. A16/A26, Flandre, Côte d'Opale et Cerfs-volants en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Berck → Lille",
         heroSubtitle: "Transfert Berck → Lille au prix fixe de 170 — 215 €. 140 km, direct par l'A16 et l'A26.",
         description: "Lille, métropole européenne et capitale des Flandres, est à 1h30 de Berck.",
@@ -242,7 +242,7 @@ export const trajetsAbbevilleBerck: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Berck → Lille | Fixed price from €170 | TaxiNeo",
-        metaDescription: "Taxi Berck → Lille. 140 km, 1h30, from €170. A16/A26, direct door-to-door transfer. Book 24/7.",
+        metaDescription: "Via A16 then A26, 1h30 ride. A16/A26, Flandre, Côte d'Opale and Cerfs-volants en route. Drop-off at your exact address. Door-to-door, luggage included.",
         heroTitle: "Taxi Berck → Lille",
         heroSubtitle: "Your Berck → Lille transfer at €170 — €215. 140 km, via the A16 and A26.",
         description: "Lille, European metropolis and capital of Flanders, is 1h30 from Berck.",
@@ -287,8 +287,8 @@ export const trajetsAbbevilleBerck: Trajet[] = [
     hub: "abbeville-berck",
     i18n: {
       fr: {
-        metaTitle: "Taxi Le Touquet → Paris | Prix fixe dès 275 € | TaxiNeo",
-        metaDescription: "Taxi Le Touquet → Paris. 230 km, 2h25, dès 275 €. A16/A1, transfert direct porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Le Touquet-Paris-Plage → Paris | 230 km | TaxiNeo",
+        metaDescription: "Via A16 puis A1 en 2h25. A16/A1, Paris, Côte d'Opale et Golf en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Le Touquet → Paris",
         heroSubtitle: "Transfert Le Touquet-Paris-Plage → Paris au prix fixe de 275 — 340 €. 230 km, la Côte d'Opale à portée de Paris.",
         description: "Paris est à 2h25 du Touquet-Paris-Plage par l'A16 et l'A1.",
@@ -306,8 +306,8 @@ export const trajetsAbbevilleBerck: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Le Touquet → Paris | Fixed price from €275 | TaxiNeo",
-        metaDescription: "Taxi Le Touquet → Paris. 230 km, 2h25, from €275. A16/A1, direct door-to-door transfer. Book 24/7.",
+        metaTitle: "Taxi Le Touquet-Paris-Plage → Paris | 230 km, €275 | TaxiNeo",
+        metaDescription: "Via A16 then A1, 2h25 ride. A16/A1, Paris, Côte d'Opale and Golf en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Le Touquet → Paris",
         heroSubtitle: "Your Le Touquet-Paris-Plage → Paris transfer at €275 — €340. 230 km, the Opal Coast within reach of Paris.",
         description: "Paris is 2h25 from Le Touquet-Paris-Plage via the A16 and A1.",

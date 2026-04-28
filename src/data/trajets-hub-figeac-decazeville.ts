@@ -27,8 +27,8 @@ export const trajetsFigeacDecazeville: Trajet[] = [
     hub: "figeac-decazeville",
     i18n: {
       fr: {
-        metaTitle: "Taxi Figeac → Toulouse | Prix fixe dès 200 € | TaxiNeo",
-        metaDescription: "Taxi Figeac → Toulouse. 170 km, 1h50, dès 200 €. D840/A20, vallée du Lot, Causses du Quercy. Réservation 24h/24.",
+        metaTitle: "Taxi Figeac → Toulouse | 170 km, dès 200 € | TaxiNeo",
+        metaDescription: "Via D840/A20 en 1h50. Vallée du Lot, Causses du Quercy, Villefranche-de-Rouergue et Ville rose en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Figeac → Toulouse",
         heroSubtitle: "Transfert Figeac → Toulouse au prix fixe de 200 — 255 €. 170 km, à travers les Causses du Quercy jusqu'à la Ville rose.",
         description: "Toulouse, capitale de l'Occitanie et métropole aéronautique, est à 1h50 de Figeac par la D840 et l'A20.",
@@ -46,8 +46,8 @@ export const trajetsFigeacDecazeville: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Figeac → Toulouse | Fixed price from €200 | TaxiNeo",
-        metaDescription: "Taxi Figeac → Toulouse. 170 km, 1h50, from €200. D840/A20, Lot valley, Quercy Causses. Book 24/7.",
+        metaTitle: "Taxi Figeac → Toulouse | 170 km, from €200 | TaxiNeo",
+        metaDescription: "Via D840/A20, 1h50 ride. Vallée du Lot, Causses du Quercy, Villefranche-de-Rouergue and Ville rose en route. Faster and more direct than train or bus.",
         heroTitle: "Taxi Figeac → Toulouse",
         heroSubtitle: "Your Figeac → Toulouse transfer at €200 — €255. 170 km, through the Quercy Causses to the Pink City.",
         description: "Toulouse, Occitanie capital and aerospace hub, is 1h50 from Figeac via the D840 and A20.",
@@ -92,8 +92,8 @@ export const trajetsFigeacDecazeville: Trajet[] = [
     hub: "figeac-decazeville",
     i18n: {
       fr: {
-        metaTitle: "Taxi Figeac → Cahors | Prix fixe dès 85 € | TaxiNeo",
-        metaDescription: "Taxi Figeac → Cahors. 70 km, 50 min, dès 85 €. D840, vallée du Lot, Causses du Quercy. Réservation 24h/24.",
+        metaTitle: "Taxi Figeac → Cahors | forfait dès 85 €, 50 min | TaxiNeo",
+        metaDescription: "Via D840 en 50 min. Passage par Vallée du Célé, Causses du Quercy, Pont Valentré et Vignoble de Cahors. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Figeac → Cahors",
         heroSubtitle: "Transfert Figeac → Cahors au prix fixe de 85 — 110 €. 70 km à travers les Causses du Quercy, route gratuite.",
         description: "Cahors, préfecture du Lot et cité du vin noir, est à 50 minutes de Figeac par la D840.",
@@ -112,7 +112,7 @@ export const trajetsFigeacDecazeville: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Figeac → Cahors | Fixed price from €85 | TaxiNeo",
-        metaDescription: "Taxi Figeac → Cahors. 70 km, 50 min, from €85. D840, Lot valley, Quercy Causses. Book 24/7.",
+        metaDescription: "Via D840, 50 min ride. Vallée du Célé, Causses du Quercy, Pont Valentré and Vignoble de Cahors en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Figeac → Cahors",
         heroSubtitle: "Your Figeac → Cahors transfer at €85 — €110. 70 km through the Quercy Causses, toll-free.",
         description: "Cahors, capital of the Lot and city of 'black wine', is 50 minutes from Figeac via the D840.",
@@ -157,8 +157,8 @@ export const trajetsFigeacDecazeville: Trajet[] = [
     hub: "figeac-decazeville",
     i18n: {
       fr: {
-        metaTitle: "Taxi Figeac → Rodez | Prix fixe dès 75 € | TaxiNeo",
-        metaDescription: "Taxi Figeac → Rodez. 60 km, 45 min, dès 75 €. D840/D922, Rouergue, musée Soulages. Réservation 24h/24.",
+        metaTitle: "Taxi Figeac → Rodez | forfait dès 75 €, 45 min | TaxiNeo",
+        metaDescription: "Par D840/D922, 45 min de trajet. Vallée du Lot, Rouergue, Musée Soulages et Cathédrale de Rodez en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Figeac → Rodez",
         heroSubtitle: "Transfert Figeac → Rodez au prix fixe de 75 — 95 €. 60 km entre Lot et Aveyron, route gratuite.",
         description: "Rodez, préfecture de l'Aveyron et cité de Pierre Soulages, est à 45 minutes de Figeac.",
@@ -177,7 +177,7 @@ export const trajetsFigeacDecazeville: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Figeac → Rodez | Fixed price from €75 | TaxiNeo",
-        metaDescription: "Taxi Figeac → Rodez. 60 km, 45 min, from €75. D840/D922, Rouergue, Soulages Museum. Book 24/7.",
+        metaDescription: "Via D840/D922, 45 min ride. Vallée du Lot, Rouergue, Musée Soulages and Cathédrale de Rodez en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Figeac → Rodez",
         heroSubtitle: "Your Figeac → Rodez transfer at €75 — €95. 60 km between Lot and Aveyron, toll-free.",
         description: "Rodez, capital of Aveyron and home to the Soulages Museum, is 45 minutes from Figeac.",
@@ -222,8 +222,8 @@ export const trajetsFigeacDecazeville: Trajet[] = [
     hub: "figeac-decazeville",
     i18n: {
       fr: {
-        metaTitle: "Taxi Figeac → Aurillac | Prix fixe dès 85 € | TaxiNeo",
-        metaDescription: "Taxi Figeac → Aurillac. 70 km, 55 min, dès 85 €. D922/N122, Cantal, volcans d'Auvergne. Réservation 24h/24.",
+        metaTitle: "Taxi Figeac → Aurillac | 70 km, dès 85 € | TaxiNeo",
+        metaDescription: "Via D922/N122 en 55 min. N122, Vallée du Lot, Cantal et Volcans d'Auvergne en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Figeac → Aurillac",
         heroSubtitle: "Transfert Figeac → Aurillac au prix fixe de 85 — 110 €. 70 km entre Quercy et Cantal, route gratuite.",
         description: "Aurillac, préfecture du Cantal et porte des volcans d'Auvergne, est à 55 minutes de Figeac.",
@@ -241,8 +241,8 @@ export const trajetsFigeacDecazeville: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Figeac → Aurillac | Fixed price from €85 | TaxiNeo",
-        metaDescription: "Taxi Figeac → Aurillac. 70 km, 55 min, from €85. D922/N122, Cantal, Auvergne volcanoes. Book 24/7.",
+        metaTitle: "Taxi Figeac → Aurillac | 70 km, from €85 | TaxiNeo",
+        metaDescription: "Via D922/N122, 55 min ride. N122, Vallée du Lot, Cantal and Volcans d'Auvergne en route. Drop-off at your exact address. Door-to-door, luggage included.",
         heroTitle: "Taxi Figeac → Aurillac",
         heroSubtitle: "Your Figeac → Aurillac transfer at €85 — €110. 70 km between Quercy and Cantal, toll-free.",
         description: "Aurillac, gateway to the Auvergne volcanoes, is 55 minutes from Figeac.",
@@ -287,8 +287,8 @@ export const trajetsFigeacDecazeville: Trajet[] = [
     hub: "figeac-decazeville",
     i18n: {
       fr: {
-        metaTitle: "Taxi Decazeville → Rodez | Prix fixe dès 40 € | TaxiNeo",
-        metaDescription: "Taxi Decazeville → Rodez. 35 km, 30 min, dès 40 €. D840, bassin de Decazeville, musée Soulages. Réservation 24h/24.",
+        metaTitle: "Taxi Decazeville → Rodez | 35 km, dès 40 € | TaxiNeo",
+        metaDescription: "Via D840 en 30 min. Bassin houiller, Aveyron, Musée Soulages et Conques en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Decazeville → Rodez",
         heroSubtitle: "Transfert Decazeville → Rodez au prix fixe de 40 — 55 €. 35 km, direct par la D840, route gratuite.",
         description: "Rodez, préfecture de l'Aveyron et cité du musée Soulages, est à seulement 30 minutes de Decazeville.",
@@ -306,8 +306,8 @@ export const trajetsFigeacDecazeville: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Decazeville → Rodez | Fixed price from €40 | TaxiNeo",
-        metaDescription: "Taxi Decazeville → Rodez. 35 km, 30 min, from €40. D840, coal basin heritage, Soulages Museum. Book 24/7.",
+        metaTitle: "Taxi Decazeville → Rodez | 35 km, from €40 | TaxiNeo",
+        metaDescription: "Via D840, 30 min ride. Bassin houiller, Aveyron, Musée Soulages and Conques en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Decazeville → Rodez",
         heroSubtitle: "Your Decazeville → Rodez transfer at €40 — €55. 35 km, direct via D840, toll-free.",
         description: "Rodez, capital of Aveyron and home to the Soulages Museum, is just 30 minutes from Decazeville.",

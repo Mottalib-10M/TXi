@@ -27,8 +27,8 @@ export const trajetsStrasbourgAeroport: Trajet[] = [
     hub: "strasbourg-aeroport",
     i18n: {
       fr: {
-        metaTitle: "Taxi Aéroport Strasbourg → Centre-ville | Prix fixe dès 20 € | TaxiNeo",
-        metaDescription: "Taxi Aéroport Strasbourg-Entzheim → Strasbourg Centre. 12 km, 15 min, dès 20 €. Cathédrale, Petite France, Parlement européen. Réservation 24h/24.",
+        metaTitle: "Taxi Aéroport Strasbourg → Centre | Dès 20 € | TaxiNeo",
+        metaDescription: "Via D400 / A35 en 15 min. Cathédrale de Strasbourg, Petite France, Parlement européen et Grande Île UNESCO en chemin. Dépose au terminal, suivi de vol.",
         heroTitle: "Taxi Aéroport Strasbourg → Centre-ville",
         heroSubtitle: "Transfert Aéroport Strasbourg-Entzheim → Strasbourg Centre au prix fixe de 20 — 30 €. 12 km, 15 minutes de trajet direct.",
         description: "L'aéroport de Strasbourg-Entzheim (SXB) est situé à seulement 12 km au sud-ouest du centre de Strasbourg, la capitale européenne et alsacienne.",
@@ -46,8 +46,8 @@ export const trajetsStrasbourgAeroport: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Strasbourg Airport → City Centre | Fixed price from €20 | TaxiNeo",
-        metaDescription: "Taxi Strasbourg-Entzheim Airport → Strasbourg Centre. 12 km, 15 min, from €20. Cathedral, Petite France, European Parliament. Book 24/7.",
+        metaTitle: "Taxi Strasbourg Airport → City Centre | 24/7 | TaxiNeo",
+        metaDescription: "Via D400 / A35, 15 min ride. Cathédrale de Strasbourg, Petite France, Parlement européen and Grande Île UNESCO en route. Terminal drop-off, flight tracking.",
         heroTitle: "Taxi Strasbourg Airport → City Centre",
         heroSubtitle: "Your Strasbourg-Entzheim Airport → City Centre transfer at €20 — €30. 12 km, 15 minutes direct.",
         description: "Strasbourg-Entzheim Airport (SXB) is just 12 km south-west of Strasbourg city centre, the European and Alsatian capital.",
@@ -92,8 +92,8 @@ export const trajetsStrasbourgAeroport: Trajet[] = [
     hub: "strasbourg-aeroport",
     i18n: {
       fr: {
-        metaTitle: "Taxi Aéroport Strasbourg → Colmar | Prix fixe dès 80 € | TaxiNeo",
-        metaDescription: "Taxi Aéroport Strasbourg-Entzheim → Colmar. 65 km, 40 min, dès 80 €. Route des Vins, Petite Venise, Unterlinden. Réservation 24h/24.",
+        metaTitle: "Taxi Aéroport Strasbourg-Entzheim → Colmar | 65 km | TaxiNeo",
+        metaDescription: "Via A35 en 40 min. Route des Vins, Petite Venise, Musée Unterlinden et Vignoble alsacien en chemin. Dépose au terminal exact, suivi de vol en temps réel.",
         heroTitle: "Taxi Aéroport Strasbourg → Colmar",
         heroSubtitle: "Transfert Aéroport Strasbourg-Entzheim → Colmar au prix fixe de 80 — 100 €. 65 km par l'A35 à travers le vignoble alsacien.",
         description: "Colmar, capitale des vins d'Alsace avec sa Petite Venise et ses maisons à colombages, est à 40 minutes de l'aéroport de Strasbourg par l'A35.",
@@ -111,8 +111,8 @@ export const trajetsStrasbourgAeroport: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Strasbourg Airport → Colmar | Fixed price from €80 | TaxiNeo",
-        metaDescription: "Taxi Strasbourg-Entzheim Airport → Colmar. 65 km, 40 min, from €80. Wine Route, Petite Venise, Unterlinden Museum. Book 24/7.",
+        metaTitle: "Taxi Aéroport Strasbourg-Entzheim → Colmar | 65 km | TaxiNeo",
+        metaDescription: "Via A35, 40 min ride. Route des Vins, Petite Venise, Musée Unterlinden and Vignoble alsacien en route. Terminal drop-off, real-time flight tracking included.",
         heroTitle: "Taxi Strasbourg Airport → Colmar",
         heroSubtitle: "Your Strasbourg-Entzheim Airport → Colmar transfer at €80 — €100. 65 km via the toll-free A35 through Alsatian vineyards.",
         description: "Colmar, the capital of Alsace wines with its Petite Venise and colourful half-timbered houses, is 40 minutes from Strasbourg Airport via the A35.",
@@ -157,8 +157,8 @@ export const trajetsStrasbourgAeroport: Trajet[] = [
     hub: "strasbourg-aeroport",
     i18n: {
       fr: {
-        metaTitle: "Taxi Aéroport Strasbourg → Baden-Baden | Prix fixe dès 65 € | TaxiNeo",
-        metaDescription: "Taxi Aéroport Strasbourg → Baden-Baden (Allemagne). 50 km, 35 min, dès 65 €. Service transfrontalier, Forêt-Noire, thermes Caracalla. Réservation 24h/24.",
+        metaTitle: "Taxi Strasbourg-Entzheim → Baden-Baden | 50 km | TaxiNeo",
+        metaDescription: "Via A35 / A5 en 35 min. Pont de l'Europe, Forêt-Noire, Thermes Caracalla et Casino de Baden-Baden en chemin. Suivi de vol, dépose directe au terminal.",
         heroTitle: "Taxi Aéroport Strasbourg → Baden-Baden",
         heroSubtitle: "Transfert transfrontalier Aéroport Strasbourg-Entzheim → Baden-Baden au prix fixe de 65 — 85 €. 50 km, 35 minutes via le Rhin.",
         description: "Baden-Baden, célèbre ville thermale de la Forêt-Noire en Allemagne, est à seulement 35 minutes de l'aéroport de Strasbourg par l'A35 et le pont du Rhin.",
@@ -176,8 +176,8 @@ export const trajetsStrasbourgAeroport: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Strasbourg Airport → Baden-Baden | Fixed price from €65 | TaxiNeo",
-        metaDescription: "Taxi Strasbourg Airport → Baden-Baden (Germany). 50 km, 35 min, from €65. Cross-border service, Black Forest, Caracalla Spa. Book 24/7.",
+        metaTitle: "Taxi Strasbourg-Entzheim → Baden-Baden | 50 km | TaxiNeo",
+        metaDescription: "Via A35 / A5, 35 min ride. Pont de l'Europe, Forêt-Noire, Thermes Caracalla and Casino de Baden-Baden en route. Meet at terminal, free wait if flight delayed.",
         heroTitle: "Taxi Strasbourg Airport → Baden-Baden",
         heroSubtitle: "Your cross-border Strasbourg-Entzheim Airport → Baden-Baden transfer at €65 — €85. 50 km, 35 minutes via the Rhine.",
         description: "Baden-Baden, the famous Black Forest spa town in Germany, is just 35 minutes from Strasbourg Airport via the A35 and the Rhine bridge.",
@@ -222,8 +222,8 @@ export const trajetsStrasbourgAeroport: Trajet[] = [
     hub: "strasbourg-aeroport",
     i18n: {
       fr: {
-        metaTitle: "Taxi Aéroport Strasbourg → Offenburg | Prix fixe dès 40 € | TaxiNeo",
-        metaDescription: "Taxi Aéroport Strasbourg → Offenburg (Allemagne). 30 km, 25 min, dès 40 €. Service transfrontalier, Kehl, Forêt-Noire. Réservation 24h/24.",
+        metaTitle: "Taxi Strasbourg-Entzheim → Offenburg | 30 km, 40 € | TaxiNeo",
+        metaDescription: "Via A35 / B28 en 25 min. Pont du Rhin, Kehl, Forêt-Noire et Ortenau en chemin. Dépose au terminal, suivi de vol. Suivi de vol, dépose directe au terminal.",
         heroTitle: "Taxi Aéroport Strasbourg → Offenburg",
         heroSubtitle: "Transfert transfrontalier Aéroport Strasbourg-Entzheim → Offenburg au prix fixe de 40 — 55 €. 30 km, 25 minutes via le Rhin.",
         description: "Offenburg, ville de l'Ortenau au pied de la Forêt-Noire en Allemagne, est à seulement 25 minutes de l'aéroport de Strasbourg en traversant le Rhin.",
@@ -241,8 +241,8 @@ export const trajetsStrasbourgAeroport: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Strasbourg Airport → Offenburg | Fixed price from €40 | TaxiNeo",
-        metaDescription: "Taxi Strasbourg Airport → Offenburg (Germany). 30 km, 25 min, from €40. Cross-border service, Kehl, Black Forest. Book 24/7.",
+        metaTitle: "Taxi Strasbourg-Entzheim → Offenburg | 30 km, €40 | TaxiNeo",
+        metaDescription: "Via A35 / B28, 25 min ride. Pont du Rhin, Kehl, Forêt-Noire and Ortenau en route. Terminal drop-off, flight tracking. Flight tracking, direct terminal drop-off.",
         heroTitle: "Taxi Strasbourg Airport → Offenburg",
         heroSubtitle: "Your cross-border Strasbourg-Entzheim Airport → Offenburg transfer at €40 — €55. 30 km, 25 minutes via the Rhine.",
         description: "Offenburg, a town in the Ortenau district at the foot of the Black Forest in Germany, is just 25 minutes from Strasbourg Airport across the Rhine.",
@@ -287,8 +287,8 @@ export const trajetsStrasbourgAeroport: Trajet[] = [
     hub: "strasbourg-aeroport",
     i18n: {
       fr: {
-        metaTitle: "Taxi Aéroport Strasbourg → Haguenau | Prix fixe dès 50 € | TaxiNeo",
-        metaDescription: "Taxi Aéroport Strasbourg → Haguenau. 40 km, 30 min, dès 50 €. A35, forêt de Haguenau, Alsace du Nord. Réservation 24h/24.",
+        metaTitle: "Taxi Strasbourg-Entzheim → Haguenau | 40 km, 50 € | TaxiNeo",
+        metaDescription: "Via A35 / A4 en 30 min. Forêt de Haguenau, Alsace du Nord, Musée alsacien et Houblon en chemin. Accueil au terminal, attente gratuite si retard de vol.",
         heroTitle: "Taxi Aéroport Strasbourg → Haguenau",
         heroSubtitle: "Transfert Aéroport Strasbourg-Entzheim → Haguenau au prix fixe de 50 — 65 €. 40 km, 30 minutes par l'A35 et l'A4.",
         description: "Haguenau, sous-préfecture du Bas-Rhin et porte de l'Alsace du Nord, est à 30 minutes de l'aéroport de Strasbourg par l'A35.",
@@ -306,8 +306,8 @@ export const trajetsStrasbourgAeroport: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Strasbourg Airport → Haguenau | Fixed price from €50 | TaxiNeo",
-        metaDescription: "Taxi Strasbourg Airport → Haguenau. 40 km, 30 min, from €50. A35, Haguenau Forest, Northern Alsace. Book 24/7.",
+        metaTitle: "Taxi Strasbourg-Entzheim → Haguenau | 40 km, €50 | TaxiNeo",
+        metaDescription: "Via A35 / A4, 30 min ride. Forêt de Haguenau, Alsace du Nord, Musée alsacien and Houblon en route. Terminal drop-off, real-time flight tracking included.",
         heroTitle: "Taxi Strasbourg Airport → Haguenau",
         heroSubtitle: "Your Strasbourg-Entzheim Airport → Haguenau transfer at €50 — €65. 40 km, 30 minutes via the A35 and A4.",
         description: "Haguenau, sub-prefecture of Bas-Rhin and gateway to Northern Alsace, is 30 minutes from Strasbourg Airport via the A35.",

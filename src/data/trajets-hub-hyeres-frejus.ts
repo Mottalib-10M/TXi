@@ -27,8 +27,8 @@ export const trajetsHyeresFrejus: Trajet[] = [
     hub: "hyeres-frejus",
     i18n: {
       fr: {
-        metaTitle: "Taxi Hyères → Toulon | Prix fixe dès 25 € | TaxiNeo",
-        metaDescription: "Taxi Hyères → Toulon. 20 km, 18 min, dès 25 €. A570, route gratuite. Transfert rapide porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Hyères → Toulon | forfait dès 25 €, 18 min | TaxiNeo",
+        metaDescription: "Via A570 en 18 min. Îles d'Or, Porquerolles, Port de Toulon et Arsenal en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Hyères → Toulon",
         heroSubtitle: "Transfert Hyères → Toulon au prix fixe de 25 — 35 €. 20 km, direct par l'A570.",
         description: "Toulon, préfecture du Var et premier port militaire français, est à seulement 18 min d'Hyères.",
@@ -47,7 +47,7 @@ export const trajetsHyeresFrejus: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Hyères → Toulon | Fixed price from €25 | TaxiNeo",
-        metaDescription: "Taxi Hyères → Toulon. 20 km, 18 min, from €25. A570, toll-free. Door-to-door transfer. Book 24/7.",
+        metaDescription: "Via A570, 18 min ride. Îles d'Or, Porquerolles, Port de Toulon and Arsenal en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Hyères → Toulon",
         heroSubtitle: "Your Hyères → Toulon transfer at €25 — €35. 20 km, via the A570.",
         description: "Toulon, France's main naval base, is just 18 min from Hyères.",
@@ -92,8 +92,8 @@ export const trajetsHyeresFrejus: Trajet[] = [
     hub: "hyeres-frejus",
     i18n: {
       fr: {
-        metaTitle: "Taxi Hyères → Marseille | Prix fixe dès 90 € | TaxiNeo",
-        metaDescription: "Taxi Hyères → Marseille. 85 km, 55 min, dès 90 €. A50, transfert direct porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Hyères → Marseille | 85 km, dès 90 € | TaxiNeo",
+        metaDescription: "Itinéraire A50, environ 55 min. Passage par Côte varoise, Calanques, Vieux-Port et Gare Saint-Charles. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Hyères → Marseille",
         heroSubtitle: "Transfert Hyères → Marseille au prix fixe de 90 — 115 €. 85 km, direct par l'A50.",
         description: "Marseille, deuxième ville de France et porte de la Méditerranée, est à 55 min d'Hyères par l'A50.",
@@ -111,8 +111,8 @@ export const trajetsHyeresFrejus: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Hyères → Marseille | Fixed price from €90 | TaxiNeo",
-        metaDescription: "Taxi Hyères → Marseille. 85 km, 55 min, from €90. A50 coastal motorway. Door-to-door. Book 24/7.",
+        metaTitle: "Taxi Hyères → Marseille | 85 km, from €90 | TaxiNeo",
+        metaDescription: "A50 route, approximately 55 min. Côte varoise, Calanques, Vieux-Port and Gare Saint-Charles en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Hyères → Marseille",
         heroSubtitle: "Your Hyères → Marseille transfer at €90 — €115. 85 km, via the A50.",
         description: "Marseille, France's second city, is 55 min from Hyères via the A50 coastal motorway.",
@@ -157,8 +157,8 @@ export const trajetsHyeresFrejus: Trajet[] = [
     hub: "hyeres-frejus",
     i18n: {
       fr: {
-        metaTitle: "Taxi Fréjus → Nice | Prix fixe dès 70 € | TaxiNeo",
-        metaDescription: "Taxi Fréjus → Nice. 65 km, 40 min, dès 70 €. A8, massif de l'Estérel. Réservation 24h/24.",
+        metaTitle: "Taxi Fréjus → Nice | forfait dès 70 €, 40 min | TaxiNeo",
+        metaDescription: "Par A8, 40 min de trajet. Estérel, Promenade des Anglais, Arènes romaines et Baie des Anges en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Fréjus → Nice",
         heroSubtitle: "Transfert Fréjus → Nice au prix fixe de 70 — 85 €. 65 km, via l'A8 et le massif de l'Estérel.",
         description: "Nice, capitale de la Côte d'Azur et cinquième ville de France, est à 40 min de Fréjus par l'A8.",
@@ -177,7 +177,7 @@ export const trajetsHyeresFrejus: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Fréjus → Nice | Fixed price from €70 | TaxiNeo",
-        metaDescription: "Taxi Fréjus → Nice. 65 km, 40 min, from €70. A8 through the Estérel massif. Book 24/7.",
+        metaDescription: "Direct route via A8, 40 min. Estérel, Promenade des Anglais, Arènes romaines and Baie des Anges en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Fréjus → Nice",
         heroSubtitle: "Your Fréjus → Nice transfer at €70 — €85. 65 km, via the A8.",
         description: "Nice, capital of the French Riviera and UNESCO World Heritage Site, is 40 min from Fréjus.",
@@ -222,8 +222,8 @@ export const trajetsHyeresFrejus: Trajet[] = [
     hub: "hyeres-frejus",
     i18n: {
       fr: {
-        metaTitle: "Taxi Fréjus → Cannes | Prix fixe dès 45 € | TaxiNeo",
-        metaDescription: "Taxi Fréjus → Cannes. 40 km, 25 min, dès 45 €. A8, massif de l'Estérel, La Croisette. Réservation 24h/24.",
+        metaTitle: "Taxi Fréjus → Cannes | forfait dès 45 €, 25 min | TaxiNeo",
+        metaDescription: "Itinéraire A8, environ 25 min. Passage par Estérel, Croisette, Palais des Festivals et Îles de Lérins. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Fréjus → Cannes",
         heroSubtitle: "Transfert Fréjus → Cannes au prix fixe de 45 — 60 €. 40 km, via l'A8 et l'Estérel.",
         description: "Cannes, ville du festival de cinéma et de la Croisette, est à seulement 25 min de Fréjus.",
@@ -242,7 +242,7 @@ export const trajetsHyeresFrejus: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Fréjus → Cannes | Fixed price from €45 | TaxiNeo",
-        metaDescription: "Taxi Fréjus → Cannes. 40 km, 25 min, from €45. A8 through the Estérel. Book 24/7.",
+        metaDescription: "A8 route, approximately 25 min. Estérel, Croisette, Palais des Festivals and Îles de Lérins en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Fréjus → Cannes",
         heroSubtitle: "Your Fréjus → Cannes transfer at €45 — €60. 40 km, via the A8.",
         description: "Cannes, home of the Film Festival and the Croisette, is just 25 min from Fréjus.",
@@ -287,8 +287,8 @@ export const trajetsHyeresFrejus: Trajet[] = [
     hub: "hyeres-frejus",
     i18n: {
       fr: {
-        metaTitle: "Taxi Fréjus → Saint-Tropez | Prix fixe dès 40 € | TaxiNeo",
-        metaDescription: "Taxi Fréjus → Saint-Tropez. 35 km, 30 min, dès 40 €. D98, golfe de Saint-Tropez. Réservation 24h/24.",
+        metaTitle: "Taxi Fréjus → Saint-Tropez | 35 km, dès 40 € | TaxiNeo",
+        metaDescription: "Trajet direct D98 en 30 min. Passage par Golfe de Saint-Tropez, Plage de Pampelonne, Port et Citadelle. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Fréjus → Saint-Tropez",
         heroSubtitle: "Transfert Fréjus → Saint-Tropez au prix fixe de 40 — 55 €. 35 km, route gratuite via la D98.",
         description: "Saint-Tropez, village mythique de la Côte d'Azur, est à 30 min de Fréjus par la D98.",
@@ -306,8 +306,8 @@ export const trajetsHyeresFrejus: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Fréjus → Saint-Tropez | Fixed price from €40 | TaxiNeo",
-        metaDescription: "Taxi Fréjus → Saint-Tropez. 35 km, 30 min, from €40. D98, Gulf of Saint-Tropez. Book 24/7.",
+        metaTitle: "Taxi Fréjus → Saint-Tropez | 35 km, from €40 | TaxiNeo",
+        metaDescription: "Direct route via D98, 30 min. Golfe de Saint-Tropez, Plage de Pampelonne, Port and Citadelle en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Fréjus → Saint-Tropez",
         heroSubtitle: "Your Fréjus → Saint-Tropez transfer at €40 — €55. 35 km, toll-free via the D98.",
         description: "Saint-Tropez, the legendary Riviera village, is 30 min from Fréjus via the D98.",

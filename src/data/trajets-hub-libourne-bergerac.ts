@@ -27,8 +27,8 @@ export const trajetsLibourneBergerac: Trajet[] = [
     hub: "libourne-bergerac",
     i18n: {
       fr: {
-        metaTitle: "Taxi Libourne → Bordeaux | Prix fixe dès 40 € | TaxiNeo",
-        metaDescription: "Taxi Libourne → Bordeaux. 35 km, 25 min, dès 40 €. A89, vignoble de Saint-Émilion, transfert direct porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Libourne → Bordeaux | 35 km, dès 40 € | TaxiNeo",
+        metaDescription: "Par A89, 25 min de trajet. Passage par Saint-Émilion, Vignoble bordelais, Dordogne et Gare Saint-Jean. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Libourne → Bordeaux",
         heroSubtitle: "Transfert Libourne → Bordeaux au prix fixe de 40 — 50 €. 35 km, direct par l'A89.",
         description: "Bordeaux, capitale mondiale du vin, est à 25 min de Libourne par l'A89.",
@@ -46,8 +46,8 @@ export const trajetsLibourneBergerac: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Libourne → Bordeaux | Fixed price from €40 | TaxiNeo",
-        metaDescription: "Taxi Libourne → Bordeaux. 35 km, 25 min, from €40. A89, Saint-Émilion vineyards, direct door-to-door. Book 24/7.",
+        metaTitle: "Taxi Libourne → Bordeaux | 35 km, from €40 | TaxiNeo",
+        metaDescription: "Direct route via A89, 25 min. Saint-Émilion, Vignoble bordelais, Dordogne and Gare Saint-Jean en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Libourne → Bordeaux",
         heroSubtitle: "Your Libourne → Bordeaux transfer at €40 — €50. 35 km, via the A89.",
         description: "Bordeaux, world wine capital, is 25 min from Libourne via the A89.",
@@ -92,8 +92,8 @@ export const trajetsLibourneBergerac: Trajet[] = [
     hub: "libourne-bergerac",
     i18n: {
       fr: {
-        metaTitle: "Taxi Libourne → Bergerac | Prix fixe dès 60 € | TaxiNeo",
-        metaDescription: "Taxi Libourne → Bergerac. 55 km, 35 min, dès 60 €. D936 le long de la Dordogne, vignobles, transfert direct. Réservation 24h/24.",
+        metaTitle: "Taxi Libourne → Bergerac | 55 km, dès 60 € | TaxiNeo",
+        metaDescription: "Par D936, 35 min de trajet. Passage par Dordogne, Vignobles, Castillon-la-Bataille et Périgord pourpre. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Libourne → Bergerac",
         heroSubtitle: "Transfert Libourne → Bergerac au prix fixe de 60 — 75 €. 55 km, route des vignobles le long de la Dordogne.",
         description: "Bergerac, capitale du Périgord pourpre et cité de Cyrano, est à 35 min de Libourne.",
@@ -111,8 +111,8 @@ export const trajetsLibourneBergerac: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Libourne → Bergerac | Fixed price from €60 | TaxiNeo",
-        metaDescription: "Taxi Libourne → Bergerac. 55 km, 35 min, from €60. D936 along the Dordogne valley. Book 24/7.",
+        metaTitle: "Taxi Libourne → Bergerac | 55 km, from €60 | TaxiNeo",
+        metaDescription: "Direct route via D936, 35 min. Dordogne, Vignobles, Castillon-la-Bataille and Périgord pourpre en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Libourne → Bergerac",
         heroSubtitle: "Your Libourne → Bergerac transfer at €60 — €75. 55 km, via the D936 wine route.",
         description: "Bergerac, capital of the Purple Périgord and Cyrano's city, is 35 min from Libourne.",
@@ -157,8 +157,8 @@ export const trajetsLibourneBergerac: Trajet[] = [
     hub: "libourne-bergerac",
     i18n: {
       fr: {
-        metaTitle: "Taxi Bergerac → Bordeaux | Prix fixe dès 100 € | TaxiNeo",
-        metaDescription: "Taxi Bergerac → Bordeaux. 95 km, 1h, dès 100 €. A89, vignobles, transfert direct porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Bergerac → Bordeaux | 95 km, dès 100 € | TaxiNeo",
+        metaDescription: "Via A89 en 1h. Vignoble bordelais, Saint-Émilion, Dordogne et Cité du Vin en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Bergerac → Bordeaux",
         heroSubtitle: "Transfert Bergerac → Bordeaux au prix fixe de 100 — 125 €. 95 km, direct par l'A89.",
         description: "Bordeaux, métropole inscrite au patrimoine mondial de l'UNESCO, est à 1h de Bergerac par l'A89.",
@@ -176,8 +176,8 @@ export const trajetsLibourneBergerac: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Bergerac → Bordeaux | Fixed price from €100 | TaxiNeo",
-        metaDescription: "Taxi Bergerac → Bordeaux. 95 km, 1h, from €100. A89, vineyards, direct door-to-door. Book 24/7.",
+        metaTitle: "Taxi Bergerac → Bordeaux | 95 km, from €100 | TaxiNeo",
+        metaDescription: "A89 route, approximately 1 hour. Vignoble bordelais, Saint-Émilion, Dordogne and Cité du Vin en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Bergerac → Bordeaux",
         heroSubtitle: "Your Bergerac → Bordeaux transfer at €100 — €125. 95 km, via the A89.",
         description: "Bordeaux, UNESCO-listed metropolis, is 1h from Bergerac via the A89.",
@@ -222,8 +222,8 @@ export const trajetsLibourneBergerac: Trajet[] = [
     hub: "libourne-bergerac",
     i18n: {
       fr: {
-        metaTitle: "Taxi Bergerac → Sarlat-la-Canéda | Prix fixe dès 60 € | TaxiNeo",
-        metaDescription: "Taxi Bergerac → Sarlat. 55 km, 40 min, dès 60 €. D660, Périgord noir, Lascaux, transfert direct. Réservation 24h/24.",
+        metaTitle: "Taxi Bergerac → Sarlat-la-Canéda | 55 km, dès 60 € | TaxiNeo",
+        metaDescription: "Par D660, 40 min de trajet. Passage par Périgord noir, Lascaux, Dordogne et Gastronomie périgourdine. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Bergerac → Sarlat-la-Canéda",
         heroSubtitle: "Transfert Bergerac → Sarlat au prix fixe de 60 — 75 €. 55 km, au cœur du Périgord noir.",
         description: "Sarlat-la-Canéda, joyau médiéval du Périgord noir, est à 40 min de Bergerac.",
@@ -241,8 +241,8 @@ export const trajetsLibourneBergerac: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Bergerac → Sarlat-la-Canéda | Fixed price from €60 | TaxiNeo",
-        metaDescription: "Taxi Bergerac → Sarlat. 55 km, 40 min, from €60. D660, Black Périgord, Lascaux, direct transfer. Book 24/7.",
+        metaTitle: "Taxi Bergerac → Sarlat-la-Canéda | 55 km, from €60 | TaxiNeo",
+        metaDescription: "Via D660, 40 min ride. Périgord noir, Lascaux, Dordogne and Gastronomie périgourdine en route. Stops for sightseeing possible en route. No toll on this route.",
         heroTitle: "Taxi Bergerac → Sarlat-la-Canéda",
         heroSubtitle: "Your Bergerac → Sarlat transfer at €60 — €75. 55 km, into the Black Périgord.",
         description: "Sarlat-la-Canéda, medieval jewel of the Black Périgord, is 40 min from Bergerac.",
@@ -287,8 +287,8 @@ export const trajetsLibourneBergerac: Trajet[] = [
     hub: "libourne-bergerac",
     i18n: {
       fr: {
-        metaTitle: "Taxi Bergerac → Périgueux | Prix fixe dès 55 € | TaxiNeo",
-        metaDescription: "Taxi Bergerac → Périgueux. 50 km, 35 min, dès 55 €. N21, Périgord blanc, cathédrale Saint-Front. Réservation 24h/24.",
+        metaTitle: "Taxi Bergerac → Périgueux | 50 km, dès 55 € | TaxiNeo",
+        metaDescription: "Via N21 en 35 min. Périgord blanc, Cathédrale Saint-Front, Isle et Vésone en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Bergerac → Périgueux",
         heroSubtitle: "Transfert Bergerac → Périgueux au prix fixe de 55 — 70 €. 50 km, direct par la N21.",
         description: "Périgueux, préfecture de la Dordogne et capitale du Périgord blanc, est à 35 min de Bergerac.",
@@ -306,8 +306,8 @@ export const trajetsLibourneBergerac: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Bergerac → Périgueux | Fixed price from €55 | TaxiNeo",
-        metaDescription: "Taxi Bergerac → Périgueux. 50 km, 35 min, from €55. N21, White Périgord, Saint-Front cathedral. Book 24/7.",
+        metaTitle: "Taxi Bergerac → Périgueux | 50 km, from €55 | TaxiNeo",
+        metaDescription: "Via N21, 35 min ride. Périgord blanc, Cathédrale Saint-Front, Isle and Vésone en route. Drop-off at your exact address. Door-to-door, luggage included.",
         heroTitle: "Taxi Bergerac → Périgueux",
         heroSubtitle: "Your Bergerac → Périgueux transfer at €55 — €70. 50 km, via the N21.",
         description: "Périgueux, Dordogne's capital and White Périgord hub, is 35 min from Bergerac.",

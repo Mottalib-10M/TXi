@@ -27,8 +27,8 @@ export const trajetsVichyClermont: Trajet[] = [
     hub: "vichy-clermont",
     i18n: {
       fr: {
-        metaTitle: "Taxi Vichy → Clermont-Ferrand | Prix fixe dès 75 € | TaxiNeo",
-        metaDescription: "Taxi Vichy → Clermont-Ferrand. 60 km, 40 min, dès 75 €. A719 via la Limagne. Transfert thermal porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Vichy → Clermont-Ferrand | 60 km, dès 75 € | TaxiNeo",
+        metaDescription: "Via A719 en 40 min. Plaine de Limagne, Thermalisme Vichy, Puy de Dôme et Volcans d'Auvergne en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Vichy → Clermont-Ferrand",
         heroSubtitle: "Votre transfert Vichy → Clermont-Ferrand au prix fixe de 75 — 95 €. 60 km, 40 min par l'A719.",
         description: "Vichy — Clermont-Ferrand par l'A719 en 40 min, de la reine des villes d'eaux à la capitale auvergnate.",
@@ -46,8 +46,8 @@ export const trajetsVichyClermont: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Vichy → Clermont-Ferrand | Fixed price from €75 | TaxiNeo",
-        metaDescription: "Taxi Vichy → Clermont-Ferrand. 60 km, 40 min, from €75. A719 via the Limagne plain. Door-to-door thermal transfer. Book 24/7.",
+        metaTitle: "Taxi Vichy → Clermont-Ferrand | 60 km, from €75 | TaxiNeo",
+        metaDescription: "Via A719, 40 min ride. Plaine de Limagne, Thermalisme Vichy, Puy de Dôme and Volcans d'Auvergne en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Vichy → Clermont-Ferrand",
         heroSubtitle: "Your Vichy → Clermont-Ferrand transfer at a fixed price of €75 — €95. 60 km, 40 min via the A719.",
         description: "Vichy to Clermont-Ferrand via the A719 in 40 min, from the queen of spa towns to the Auvergne capital.",
@@ -92,8 +92,8 @@ export const trajetsVichyClermont: Trajet[] = [
     hub: "vichy-clermont",
     i18n: {
       fr: {
-        metaTitle: "Taxi Vichy → Lyon | Prix fixe dès 210 € | TaxiNeo",
-        metaDescription: "Taxi Vichy → Lyon. 175 km, 1h50, dès 210 €. A89 via Roanne et le Beaujolais. Transfert direct porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Vichy → Lyon | 175 km, dès 210 €, 1h50 | TaxiNeo",
+        metaDescription: "Par A89, 1h50 de trajet. Passage par Monts du Forez, Beaujolais, Thermalisme Vichy et Gastronomie Lyon. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Vichy → Lyon",
         heroSubtitle: "Votre transfert Vichy → Lyon au prix fixe de 210 — 265 €. 175 km, 1h50 par l'A89.",
         description: "Vichy — Lyon par l'A89 en 1h50, de la ville thermale à la capitale de la gastronomie.",
@@ -112,7 +112,7 @@ export const trajetsVichyClermont: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Vichy → Lyon | Fixed price from €210 | TaxiNeo",
-        metaDescription: "Taxi Vichy → Lyon. 175 km, 1h50, from €210. A89 via Roanne and Beaujolais. Direct door-to-door transfer. Book 24/7.",
+        metaDescription: "Direct route via A89, 1h50. Monts du Forez, Beaujolais, Thermalisme Vichy and Gastronomie Lyon en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Vichy → Lyon",
         heroSubtitle: "Your Vichy → Lyon transfer at a fixed price of €210 — €265. 175 km, 1h50 via the A89.",
         description: "Vichy to Lyon via the A89 in 1h50, from France's premier spa town to the gastronomic capital.",
@@ -157,8 +157,8 @@ export const trajetsVichyClermont: Trajet[] = [
     hub: "vichy-clermont",
     i18n: {
       fr: {
-        metaTitle: "Taxi Vichy → Paris | Prix fixe dès 420 € | TaxiNeo",
-        metaDescription: "Taxi Vichy → Paris. 350 km, 3h30, dès 420 €. A71 directe via Bourges et Orléans. Transfert porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Vichy → Paris | 350 km, dès 420 €, 3h30 | TaxiNeo",
+        metaDescription: "Via A71 en 3h30. Allier, Berry, Sologne et Pastilles Vichy en chemin. Dépose porte-à-porte, bagages inclus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Vichy → Paris",
         heroSubtitle: "Votre transfert Vichy → Paris au prix fixe de 420 — 520 €. 350 km, 3h30 par l'A71.",
         description: "Vichy — Paris par l'A71 en 3h30, de la ville thermale UNESCO à la capitale française.",
@@ -177,7 +177,7 @@ export const trajetsVichyClermont: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Vichy → Paris | Fixed price from €420 | TaxiNeo",
-        metaDescription: "Taxi Vichy → Paris. 350 km, 3h30, from €420. A71 via Bourges and Orleans. Direct door-to-door transfer. Book 24/7.",
+        metaDescription: "Via A71, 3h30 ride. Allier, Berry, Sologne and Pastilles Vichy en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Vichy → Paris",
         heroSubtitle: "Your Vichy → Paris transfer at a fixed price of €420 — €520. 350 km, 3h30 via the A71.",
         description: "Vichy to Paris via the A71 in 3h30, from the UNESCO-listed spa town to the French capital.",
@@ -222,8 +222,8 @@ export const trajetsVichyClermont: Trajet[] = [
     hub: "vichy-clermont",
     i18n: {
       fr: {
-        metaTitle: "Taxi Clermont-Ferrand → Lyon | Prix fixe dès 200 € | TaxiNeo",
-        metaDescription: "Taxi Clermont-Ferrand → Lyon. 170 km, 1h45, dès 200 €. A89 via Thiers et les monts du Forez. Réservation 24h/24.",
+        metaTitle: "Taxi Clermont-Ferrand → Lyon | 170 km, dès 200 € | TaxiNeo",
+        metaDescription: "Par A89, 1h45 de trajet. Volcans d'Auvergne, Thiers coutellerie, Monts du Forez et Michelin en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Clermont-Ferrand → Lyon",
         heroSubtitle: "Votre transfert Clermont-Ferrand → Lyon au prix fixe de 200 — 255 €. 170 km, 1h45 par l'A89.",
         description: "Clermont-Ferrand — Lyon par l'A89 en 1h45, de la capitale de Michelin à la métropole lyonnaise.",
@@ -241,8 +241,8 @@ export const trajetsVichyClermont: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Clermont-Ferrand → Lyon | Fixed price from €200 | TaxiNeo",
-        metaDescription: "Taxi Clermont-Ferrand → Lyon. 170 km, 1h45, from €200. A89 via Thiers and the Forez mountains. Book 24/7.",
+        metaTitle: "Taxi Clermont-Ferrand → Lyon | 170 km, from €200 | TaxiNeo",
+        metaDescription: "Direct route via A89, 1h45. Volcans d'Auvergne, Thiers coutellerie, Monts du Forez and Michelin en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Clermont-Ferrand → Lyon",
         heroSubtitle: "Your Clermont-Ferrand → Lyon transfer at a fixed price of €200 — €255. 170 km, 1h45 via the A89.",
         description: "Clermont-Ferrand to Lyon via the A89 in 1h45, from the Michelin capital to the gastronomic metropolis.",
@@ -287,8 +287,8 @@ export const trajetsVichyClermont: Trajet[] = [
     hub: "vichy-clermont",
     i18n: {
       fr: {
-        metaTitle: "Taxi Clermont-Ferrand → Saint-Étienne | Prix fixe dès 175 € | TaxiNeo",
-        metaDescription: "Taxi Clermont-Ferrand → Saint-Étienne. 145 km, 1h35, dès 175 €. A89/A72 via les monts du Forez. Réservation 24h/24.",
+        metaTitle: "Taxi Clermont-Ferrand → Saint-Étienne | 145 km | TaxiNeo",
+        metaDescription: "Via A89/A72 en 1h35. Passage par Volcans d'Auvergne, Monts du Forez, Design Saint-Étienne et Michelin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Clermont-Ferrand → Saint-Étienne",
         heroSubtitle: "Votre transfert Clermont-Ferrand → Saint-Étienne au prix fixe de 175 — 220 €. 145 km, 1h35 par l'A89/A72.",
         description: "Clermont-Ferrand — Saint-Étienne par l'A89 et l'A72 en 1h35, des volcans à la cité du design.",
@@ -306,8 +306,8 @@ export const trajetsVichyClermont: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Clermont-Ferrand → Saint-Étienne | Fixed price from €175 | TaxiNeo",
-        metaDescription: "Taxi Clermont-Ferrand → Saint-Étienne. 145 km, 1h35, from €175. A89/A72 via the Forez mountains. Book 24/7.",
+        metaTitle: "Taxi Clermont-Ferrand → Saint-Étienne | 145 km | TaxiNeo",
+        metaDescription: "Via A89/A72, 1h35 ride. Volcans d'Auvergne, Monts du Forez, Design Saint-Étienne and Michelin en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Clermont-Ferrand → Saint-Étienne",
         heroSubtitle: "Your Clermont-Ferrand → Saint-Étienne transfer at a fixed price of €175 — €220. 145 km, 1h35 via the A89/A72.",
         description: "Clermont-Ferrand to Saint-Etienne via the A89/A72 in 1h35, from the volcanoes to the city of design.",

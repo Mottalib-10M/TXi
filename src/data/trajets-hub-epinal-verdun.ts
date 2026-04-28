@@ -30,8 +30,8 @@ export const trajetsEpinalVerdun: Trajet[] = [
     hub: "epinal-verdun",
     i18n: {
       fr: {
-        metaTitle: "Taxi Épinal → Nancy | Prix fixe dès 75 € | TaxiNeo",
-        metaDescription: "Taxi Épinal → Nancy. 70 km, 50 min, dès 75 €. A33, vallée de la Moselle, Place Stanislas. Réservation 24h/24.",
+        metaTitle: "Taxi Épinal → Nancy | forfait dès 75 €, 50 min | TaxiNeo",
+        metaDescription: "Via A33 en 50 min. Moselle, Vosges, Place Stanislas UNESCO et Charmes en chemin. Dépose à votre adresse exacte. Alternative directe au train ou au bus.",
         heroTitle: "Taxi Épinal → Nancy",
         heroSubtitle: "Transfert Épinal → Nancy au prix fixe de 75 — 95 €. 70 km par l'A33 à travers la vallée de la Moselle.",
         description: "Nancy, capitale des ducs de Lorraine et ville de l'Art nouveau avec sa Place Stanislas classée UNESCO, est à 50 min d'Épinal par l'A33.",
@@ -50,7 +50,7 @@ export const trajetsEpinalVerdun: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Épinal → Nancy | Fixed price from €75 | TaxiNeo",
-        metaDescription: "Taxi Épinal → Nancy. 70 km, 50 min, from €75. A33, Moselle valley, Place Stanislas UNESCO. Book 24/7.",
+        metaDescription: "Via A33, 50 min ride. Moselle, Vosges, Place Stanislas UNESCO and Charmes en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Épinal → Nancy",
         heroSubtitle: "Your Épinal → Nancy transfer at €75 — €95. 70 km via the A33 through the Moselle valley.",
         description: "Nancy, capital of the Dukes of Lorraine and Art Nouveau city with its UNESCO-listed Place Stanislas, is 50 min from Épinal via the A33.",
@@ -95,8 +95,8 @@ export const trajetsEpinalVerdun: Trajet[] = [
     hub: "epinal-verdun",
     i18n: {
       fr: {
-        metaTitle: "Taxi Épinal → Strasbourg | Prix fixe dès 170 € | TaxiNeo",
-        metaDescription: "Taxi Épinal → Strasbourg. 155 km, 1h35, dès 170 €. A33/A35 via les Vosges, cathédrale, Petite France. Réservation 24h/24.",
+        metaTitle: "Taxi Épinal → Strasbourg | 155 km, dès 170 € | TaxiNeo",
+        metaDescription: "Par A33/A35, 1h35 de trajet. Col du Donon, Vosges, Cathédrale de Strasbourg et Petite France en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Épinal → Strasbourg",
         heroSubtitle: "Transfert Épinal → Strasbourg au prix fixe de 170 — 215 €. 155 km par l'A33 et l'A35, des Vosges à l'Alsace.",
         description: "Strasbourg, capitale européenne avec sa cathédrale gothique en grès rose et son quartier de la Petite France classé UNESCO, est à 1h35 d'Épinal.",
@@ -114,8 +114,8 @@ export const trajetsEpinalVerdun: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Épinal → Strasbourg | Fixed price from €170 | TaxiNeo",
-        metaDescription: "Taxi Épinal → Strasbourg. 155 km, 1h35, from €170. A33/A35 via the Vosges, cathedral, Petite France. Book 24/7.",
+        metaTitle: "Taxi Épinal → Strasbourg | 155 km, from €170 | TaxiNeo",
+        metaDescription: "Direct route via A33/A35, 1h35. Col du Donon, Vosges, Cathédrale de Strasbourg and Petite France en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Épinal → Strasbourg",
         heroSubtitle: "Your Épinal → Strasbourg transfer at €170 — €215. 155 km via the A33/A35 from the Vosges to Alsace.",
         description: "Strasbourg, European capital with its pink sandstone Gothic cathedral and UNESCO-listed Petite France quarter, is 1h35 from Épinal.",
@@ -160,8 +160,8 @@ export const trajetsEpinalVerdun: Trajet[] = [
     hub: "epinal-verdun",
     i18n: {
       fr: {
-        metaTitle: "Taxi Épinal → Mulhouse | Prix fixe dès 105 € | TaxiNeo",
-        metaDescription: "Taxi Épinal → Mulhouse. 100 km, 1h05, dès 105 €. N66 via les Vosges, Cité de l'Automobile, Cité du Train. Réservation 24h/24.",
+        metaTitle: "Taxi Épinal → Mulhouse | 100 km, dès 105 € | TaxiNeo",
+        metaDescription: "Itinéraire N66, environ 1h05. Passage par Vosges, Ballon d'Alsace, Cité de l'Automobile et Remiremont. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Épinal → Mulhouse",
         heroSubtitle: "Transfert Épinal → Mulhouse au prix fixe de 105 — 135 €. 100 km par la N66 à travers le massif vosgien.",
         description: "Mulhouse, ville industrielle et culturelle du sud de l'Alsace avec ses musées techniques de renommée mondiale, est à 1h05 d'Épinal par la N66.",
@@ -179,8 +179,8 @@ export const trajetsEpinalVerdun: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Épinal → Mulhouse | Fixed price from €105 | TaxiNeo",
-        metaDescription: "Taxi Épinal → Mulhouse. 100 km, 1h05, from €105. N66 via the Vosges, Cité de l'Automobile, Cité du Train. Book 24/7.",
+        metaTitle: "Taxi Épinal → Mulhouse | 100 km, from €105 | TaxiNeo",
+        metaDescription: "N66 route, approximately 1h05. Vosges, Ballon d'Alsace, Cité de l'Automobile and Remiremont en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Épinal → Mulhouse",
         heroSubtitle: "Your Épinal → Mulhouse transfer at €105 — €135. 100 km via the N66 through the Vosges mountains.",
         description: "Mulhouse, industrial and cultural city of southern Alsace with world-renowned technical museums, is 1h05 from Épinal via the N66.",
@@ -228,8 +228,8 @@ export const trajetsEpinalVerdun: Trajet[] = [
     hub: "epinal-verdun",
     i18n: {
       fr: {
-        metaTitle: "Taxi Verdun → Metz | Prix fixe dès 85 € | TaxiNeo",
-        metaDescription: "Taxi Verdun → Metz. 80 km, 50 min, dès 85 €. A4, champs de bataille 14-18, Centre Pompidou-Metz. Réservation 24h/24.",
+        metaTitle: "Taxi Verdun → Metz | forfait dès 85 €, 50 min | TaxiNeo",
+        metaDescription: "Via A4 en 50 min. Bataille de Verdun, Mémorial 14-18, Ossuary de Douaumont et Cathédrale Saint-Étienne en chemin. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Verdun → Metz",
         heroSubtitle: "Transfert Verdun → Metz au prix fixe de 85 — 105 €. 80 km par l'A4 entre la cité de la Paix et la capitale mosellane.",
         description: "Metz, ville d'art et d'histoire avec son Centre Pompidou-Metz et sa cathédrale aux plus grands vitraux du monde, est à 50 min de Verdun par l'A4.",
@@ -248,7 +248,7 @@ export const trajetsEpinalVerdun: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Verdun → Metz | Fixed price from €85 | TaxiNeo",
-        metaDescription: "Taxi Verdun → Metz. 80 km, 50 min, from €85. A4, WWI battlefields, Centre Pompidou-Metz. Book 24/7.",
+        metaDescription: "Via A4, 50 min ride. Bataille de Verdun, Mémorial 14-18, Ossuary de Douaumont and Cathédrale Saint-Étienne en route. Faster and more direct than train or bus.",
         heroTitle: "Taxi Verdun → Metz",
         heroSubtitle: "Your Verdun → Metz transfer at €85 — €105. 80 km via the A4 from the City of Peace to Lorraine's Moselle capital.",
         description: "Metz, city of art and history with its Centre Pompidou-Metz and cathedral boasting the world's largest stained glass surface, is 50 min from Verdun via the A4.",
@@ -293,8 +293,8 @@ export const trajetsEpinalVerdun: Trajet[] = [
     hub: "epinal-verdun",
     i18n: {
       fr: {
-        metaTitle: "Taxi Verdun → Paris | Prix fixe dès 290 € | TaxiNeo",
-        metaDescription: "Taxi Verdun → Paris. 265 km, 2h40, dès 290 €. A4 via la Champagne. Transfert direct depuis la cité de la Paix. Réservation 24h/24.",
+        metaTitle: "Taxi Verdun → Paris | 265 km, dès 290 €, 2h40 | TaxiNeo",
+        metaDescription: "Via A4 en 2h40. Meuse, Champagne, Mémorial 14-18 et Reims en chemin. Dépose porte-à-porte, bagages inclus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Verdun → Paris",
         heroSubtitle: "Transfert Verdun → Paris au prix fixe de 290 — 360 €. 265 km par l'A4 à travers la Meuse et la Champagne.",
         description: "Paris, capitale de la France, est à 2h40 de Verdun par l'autoroute A4, un trajet direct traversant les plaines de Champagne.",
@@ -313,7 +313,7 @@ export const trajetsEpinalVerdun: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Verdun → Paris | Fixed price from €290 | TaxiNeo",
-        metaDescription: "Taxi Verdun → Paris. 265 km, 2h40, from €290. A4 via Champagne. Direct transfer from the City of Peace. Book 24/7.",
+        metaDescription: "Via A4, 2h40 ride. Meuse, Champagne, Mémorial 14-18 and Reims en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Verdun → Paris",
         heroSubtitle: "Your Verdun → Paris transfer at €290 — €360. 265 km via the A4 through the Meuse and Champagne.",
         description: "Paris, the capital of France, is 2h40 from Verdun via the A4 motorway, a direct journey crossing the Champagne plains.",

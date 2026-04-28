@@ -26,8 +26,8 @@ export const trajetsRochefortSaintes: Trajet[] = [
     hub: "rochefort-saintes",
     i18n: {
       fr: {
-        metaTitle: "Taxi Rochefort → La Rochelle | Prix fixe dès 40 € | TaxiNeo",
-        metaDescription: "Taxi Rochefort → La Rochelle. 35 km, 25 min, dès 40 €. Route N137, de la Corderie Royale au Vieux-Port. Réservation 24h/24.",
+        metaTitle: "Taxi Rochefort → La Rochelle | 35 km, dès 40 € | TaxiNeo",
+        metaDescription: "Trajet direct N137 en 25 min. Passage par Charente-Maritime, Corderie Royale, Atlantique et Vieux-Port. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Rochefort → La Rochelle",
         heroSubtitle: "Transfert Rochefort → La Rochelle au prix fixe de 40 — 50 €. 35 km, de l'Arsenal maritime au Vieux-Port atlantique.",
         description: "La Rochelle, perle de la côte atlantique et porte de l'île de Ré, est à seulement 25 min de Rochefort par la N137.",
@@ -45,8 +45,8 @@ export const trajetsRochefortSaintes: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Rochefort → La Rochelle | Fixed price from €40 | TaxiNeo",
-        metaDescription: "Taxi Rochefort → La Rochelle. 35 km, 25 min, from €40. N137, from the Royal Ropeworks to the Old Port. Book 24/7.",
+        metaTitle: "Taxi Rochefort → La Rochelle | 35 km, from €40 | TaxiNeo",
+        metaDescription: "Direct route via N137, 25 min. Charente-Maritime, Corderie Royale, Atlantique and Vieux-Port en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Rochefort → La Rochelle",
         heroSubtitle: "Your Rochefort → La Rochelle transfer at €40 — €50. 35 km, from the maritime arsenal to the Atlantic port.",
         description: "La Rochelle, pearl of the Atlantic coast and gateway to Île de Ré, is just 25 min from Rochefort via the N137.",
@@ -90,8 +90,8 @@ export const trajetsRochefortSaintes: Trajet[] = [
     hub: "rochefort-saintes",
     i18n: {
       fr: {
-        metaTitle: "Taxi Rochefort → Bordeaux | Prix fixe dès 195 € | TaxiNeo",
-        metaDescription: "Taxi Rochefort → Bordeaux. 180 km, 1h50, dès 195 €. Autoroute A10, de l'Arsenal maritime à la capitale du vin. Réservation 24h/24.",
+        metaTitle: "Taxi Rochefort → Bordeaux | 180 km, dès 195 € | TaxiNeo",
+        metaDescription: "Via A10 en 1h50. Charente-Maritime, Estuaire Gironde, Arsenal et Vignobles en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Rochefort → Bordeaux",
         heroSubtitle: "Transfert Rochefort → Bordeaux au prix fixe de 195 — 250 €. 180 km, de la Charente-Maritime aux quais de la Garonne.",
         description: "Bordeaux, capitale mondiale du vin et métropole de Nouvelle-Aquitaine, est à 1h50 de Rochefort par l'A10.",
@@ -109,8 +109,8 @@ export const trajetsRochefortSaintes: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Rochefort → Bordeaux | Fixed price from €195 | TaxiNeo",
-        metaDescription: "Taxi Rochefort → Bordeaux. 180 km, 1h50, from €195. A10 motorway, from the naval arsenal to the wine capital. Book 24/7.",
+        metaTitle: "Taxi Rochefort → Bordeaux | 180 km, from €195 | TaxiNeo",
+        metaDescription: "Via A10, 1h50 ride. Charente-Maritime, Estuaire Gironde, Arsenal and Vignobles en route. Drop-off at your exact address. Door-to-door, luggage included.",
         heroTitle: "Taxi Rochefort → Bordeaux",
         heroSubtitle: "Your Rochefort → Bordeaux transfer at €195 — €250. 180 km, from Charente-Maritime to the Garonne quays.",
         description: "Bordeaux, world wine capital and Nouvelle-Aquitaine metropolis, is 1h50 from Rochefort via the A10.",
@@ -154,8 +154,8 @@ export const trajetsRochefortSaintes: Trajet[] = [
     hub: "rochefort-saintes",
     i18n: {
       fr: {
-        metaTitle: "Taxi Saintes → Bordeaux | Prix fixe dès 130 € | TaxiNeo",
-        metaDescription: "Taxi Saintes → Bordeaux. 120 km, 1h15, dès 130 €. Autoroute A10, de la Saintonge romaine aux quais bordelais. Réservation 24h/24.",
+        metaTitle: "Taxi Saintes → Bordeaux | 120 km, dès 130 € | TaxiNeo",
+        metaDescription: "Via A10 en 1h15. Saintonge, Estuaire Gironde, Vignobles et Garonne en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Saintes → Bordeaux",
         heroSubtitle: "Transfert Saintes → Bordeaux au prix fixe de 130 — 165 €. 120 km, de la cité gallo-romaine à la capitale du vin.",
         description: "Bordeaux, métropole du Sud-Ouest classée au patrimoine mondial, est à 1h15 de Saintes par l'A10.",
@@ -173,8 +173,8 @@ export const trajetsRochefortSaintes: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Saintes → Bordeaux | Fixed price from €130 | TaxiNeo",
-        metaDescription: "Taxi Saintes → Bordeaux. 120 km, 1h15, from €130. A10 motorway, from Roman Saintonge to Bordeaux. Book 24/7.",
+        metaTitle: "Taxi Saintes → Bordeaux | 120 km, from €130 | TaxiNeo",
+        metaDescription: "Via A10, 1h15 ride. Saintonge, Estuaire Gironde, Vignobles and Garonne en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Saintes → Bordeaux",
         heroSubtitle: "Your Saintes → Bordeaux transfer at €130 — €165. 120 km, from the Gallo-Roman city to the wine capital.",
         description: "Bordeaux, UNESCO-listed south-west metropolis, is 1h15 from Saintes via the A10.",
@@ -218,8 +218,8 @@ export const trajetsRochefortSaintes: Trajet[] = [
     hub: "rochefort-saintes",
     i18n: {
       fr: {
-        metaTitle: "Taxi Saintes → La Rochelle | Prix fixe dès 80 € | TaxiNeo",
-        metaDescription: "Taxi Saintes → La Rochelle. 75 km, 50 min, dès 80 €. Route N137, de la Saintonge romaine à l'Atlantique. Réservation 24h/24.",
+        metaTitle: "Taxi Saintes → La Rochelle | 75 km, dès 80 € | TaxiNeo",
+        metaDescription: "Via N137 en 50 min. Saintonge, Charente-Maritime, Atlantique et Vieux-Port en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Saintes → La Rochelle",
         heroSubtitle: "Transfert Saintes → La Rochelle au prix fixe de 80 — 100 €. 75 km, de la cité romaine à la perle de l'Atlantique.",
         description: "La Rochelle, joyau de la côte atlantique et porte de l'île de Ré, est à 50 min de Saintes par la N137.",
@@ -237,8 +237,8 @@ export const trajetsRochefortSaintes: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Saintes → La Rochelle | Fixed price from €80 | TaxiNeo",
-        metaDescription: "Taxi Saintes → La Rochelle. 75 km, 50 min, from €80. N137, from Roman Saintonge to the Atlantic. Book 24/7.",
+        metaTitle: "Taxi Saintes → La Rochelle | 75 km, from €80 | TaxiNeo",
+        metaDescription: "Via N137, 50 min ride. Saintonge, Charente-Maritime, Atlantique and Vieux-Port en route. Drop-off at your exact address. Door-to-door, luggage included.",
         heroTitle: "Taxi Saintes → La Rochelle",
         heroSubtitle: "Your Saintes → La Rochelle transfer at €80 — €100. 75 km, from the Roman city to the Atlantic pearl.",
         description: "La Rochelle, Atlantic coast jewel and gateway to Île de Ré, is 50 min from Saintes via the N137.",
@@ -282,8 +282,8 @@ export const trajetsRochefortSaintes: Trajet[] = [
     hub: "rochefort-saintes",
     i18n: {
       fr: {
-        metaTitle: "Taxi Royan → Bordeaux | Prix fixe dès 140 € | TaxiNeo",
-        metaDescription: "Taxi Royan → Bordeaux. 130 km, 1h20, dès 140 €. Autoroute A10, de la Côte de Beauté à la capitale du vin. Réservation 24h/24.",
+        metaTitle: "Taxi Royan → Bordeaux | 130 km, dès 140 € | TaxiNeo",
+        metaDescription: "Via A10 en 1h20. Côte de Beauté, Estuaire Gironde, Atlantique et Vignobles en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Royan → Bordeaux",
         heroSubtitle: "Transfert Royan → Bordeaux au prix fixe de 140 — 175 €. 130 km, de la station balnéaire de la Côte de Beauté aux quais bordelais.",
         description: "Bordeaux, métropole viticole de Nouvelle-Aquitaine, est à 1h20 de Royan par l'A10 via Saintes.",
@@ -301,8 +301,8 @@ export const trajetsRochefortSaintes: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Royan → Bordeaux | Fixed price from €140 | TaxiNeo",
-        metaDescription: "Taxi Royan → Bordeaux. 130 km, 1h20, from €140. A10 motorway, from the Côte de Beauté to the wine capital. Book 24/7.",
+        metaTitle: "Taxi Royan → Bordeaux | 130 km, from €140 | TaxiNeo",
+        metaDescription: "Via A10, 1h20 ride. Côte de Beauté, Estuaire Gironde, Atlantique and Vignobles en route. Drop-off at your exact address. Door-to-door, luggage included.",
         heroTitle: "Taxi Royan → Bordeaux",
         heroSubtitle: "Your Royan → Bordeaux transfer at €140 — €175. 130 km, from the Côte de Beauté seaside resort to the Bordeaux quays.",
         description: "Bordeaux, Nouvelle-Aquitaine's wine metropolis, is 1h20 from Royan via the A10 through Saintes.",

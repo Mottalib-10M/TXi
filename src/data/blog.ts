@@ -5914,7 +5914,7 @@ TaxiNeo displays the **estimated CO2 emissions** for each journey. Passengers ca
     },
     metaDescription: {
       fr: "Découvrez comment bien choisir votre taxi en France : application vs rue, avis clients, type de véhicule, tarifs et conseils pratiques pour une course réussie.",
-      en: "Learn how to choose the right taxi in France: app vs street hailing, customer reviews, vehicle types, fares and practical tips for a great ride.",
+      en: "Learn how to choose the right taxi in France: app vs street hailing, customer reviews, vehicle types, fares and practical tips for a smooth, great ride.",
     },
     excerpt: {
       fr: "Guide complet pour bien choisir votre taxi : comparaison des méthodes de réservation, critères de sélection et conseils pratiques.",
@@ -6278,8 +6278,8 @@ By using TaxiNeo, you move from a random choice to an **informed choice**. You k
       en: "10 mistakes to avoid with private hire cars | TaxiNeo",
     },
     metaDescription: {
-      fr: "Découvrez les 10 erreurs les plus fréquentes quand on prend un VTC et comment les éviter pour des trajets sereins et au meilleur prix.",
-      en: "Discover the 10 most common mistakes when using a private hire car and how to avoid them for stress-free rides at the best price.",
+      fr: "Découvrez les 10 erreurs les plus fréquentes quand on prend un VTC et comment les éviter. Conseils pratiques pour des trajets sereins et au meilleur prix.",
+      en: "Discover the 10 most common mistakes when using a private hire car and learn how to avoid them. Expert tips for smooth, stress-free rides at the best price.",
     },
     excerpt: {
       fr: "Les 10 erreurs les plus courantes en VTC et les solutions pour des trajets sereins, sûrs et économiques.",
@@ -6533,8 +6533,8 @@ On **TaxiNeo**, you get all the advantages of a standard taxi with the convenien
       en: "Taxi vs carpooling: complete comparison 2026 | TaxiNeo",
     },
     metaDescription: {
-      fr: "Comparatif détaillé entre taxi et covoiturage : prix, confort, sécurité, flexibilité. Découvrez quelle solution de transport est la meilleure selon votre situation.",
-      en: "Detailed comparison between taxi and carpooling: price, comfort, safety, flexibility. Find out which transport solution is best for your situation.",
+      fr: "Comparatif taxi vs covoiturage : prix, confort, sécurité et flexibilité. Découvrez quelle solution de transport choisir selon votre situation en 2026.",
+      en: "Taxi vs carpooling comparison: price, comfort, safety and flexibility. Find out which transport solution is best for your situation and budget in 2026.",
     },
     excerpt: {
       fr: "Comparatif complet taxi vs covoiturage : prix, confort, sécurité et flexibilité pour choisir le bon mode de transport.",
@@ -6853,11 +6853,11 @@ TaxiNeo lets you enjoy the **reliability and comfort of a taxi** with the **conv
     },
     metaTitle: {
       fr: "Taxi conventionné CPAM : guide complet 2026 | TaxiNeo",
-      en: "CPAM-approved taxi: complete guide 2026 | TaxiNeo",
+      en: "CPAM-approved medical taxi: full guide 2026 | TaxiNeo",
     },
     metaDescription: {
       fr: "Tout savoir sur le taxi conventionné CPAM : conditions, remboursement, démarches, droits des patients et comment trouver un taxi conventionné près de chez vous.",
-      en: "Everything about CPAM-approved taxis: conditions, reimbursement, procedures, patient rights and how to find an approved taxi near you.",
+      en: "Everything about CPAM-approved medical taxis: conditions, reimbursement, procedures, patient rights and how to find an approved taxi near you on TaxiNeo.",
     },
     excerpt: {
       fr: "Tout comprendre sur le taxi conventionné CPAM : conditions d'éligibilité, démarches de remboursement et droits des patients.",
@@ -7176,11 +7176,11 @@ TaxiNeo simplifies the search for approved taxis:
     },
     metaTitle: {
       fr: "Taxi et handicap : guide du transport adapté 2026 | TaxiNeo",
-      en: "Taxis and disability: accessible transport guide 2026 | TaxiNeo",
+      en: "Taxi and disability: accessible transport 2026 | TaxiNeo",
     },
     metaDescription: {
       fr: "Guide complet du transport en taxi pour les personnes en situation de handicap : véhicules adaptés, aides financières, droits et réservation sur TaxiNeo.",
-      en: "Complete taxi transport guide for people with disabilities: adapted vehicles, financial aid, rights and booking on TaxiNeo.",
+      en: "Complete taxi transport guide for people with disabilities: adapted vehicles, financial aid, rights, booking options and accessibility solutions on TaxiNeo.",
     },
     excerpt: {
       fr: "Guide pratique pour les personnes en situation de handicap : véhicules adaptés, aides financières, droits et conseils pour voyager en taxi.",
@@ -7532,8 +7532,8 @@ Accessible transport is evolving rapidly in France:
       en: "How to request a taxi invoice: complete guide | TaxiNeo",
     },
     metaDescription: {
-      fr: "Découvrez comment obtenir une facture de taxi : obligations légales du chauffeur, mentions obligatoires, note de frais et solutions en cas de refus.",
-      en: "Learn how to get a taxi invoice: driver legal obligations, mandatory details, expense reports and solutions if refused.",
+      fr: "Découvrez comment obtenir une facture de taxi : obligations légales du chauffeur, mentions obligatoires, note de frais et solutions efficaces en cas de refus.",
+      en: "Learn how to get a taxi invoice in France: driver legal obligations, mandatory details, expense report tips and effective solutions if payment receipt refused.",
     },
     excerpt: {
       fr: "Guide complet pour obtenir une facture de taxi : obligations légales, mentions obligatoires et solutions en cas de refus.",
@@ -7859,8 +7859,8 @@ For companies, TaxiNeo also offers an **invoicing dashboard** to centralise all 
       en: "Taxi tipping in France: complete guide 2026 | TaxiNeo",
     },
     metaDescription: {
-      fr: "Tout savoir sur le pourboire en taxi en France : montants conseillés, usages, étiquette et comparaison avec les pratiques internationales.",
-      en: "Everything about taxi tipping in France: recommended amounts, customs, etiquette and comparison with international practices.",
+      fr: "Tout savoir sur le pourboire en taxi en France : montants conseillés, usages selon les situations, étiquette et comparaison avec les pratiques internationales.",
+      en: "Everything about taxi tipping in France: recommended amounts, local customs, proper etiquette and detailed comparison with international tipping practices.",
     },
     excerpt: {
       fr: "Guide du pourboire en taxi en France : combien donner, quand et comment, avec les usages et l'étiquette à connaître.",
@@ -8152,8 +8152,8 @@ With booking apps, tipping is evolving:
       en: "Luggage in taxis: rules and surcharges 2026 | TaxiNeo",
     },
     metaDescription: {
-      fr: "Tout savoir sur les bagages en taxi : nombre de valises autorisées, suppléments, bagages spéciaux et conseils pour voyager sans stress.",
-      en: "Everything about luggage in taxis: number of suitcases allowed, surcharges, special luggage and tips for stress-free travel.",
+      fr: "Tout savoir sur les bagages en taxi : nombre de valises autorisées, suppléments tarifaires, bagages spéciaux et conseils pratiques pour voyager sans stress.",
+      en: "Everything about luggage in taxis: number of suitcases allowed, surcharges, special luggage handling and practical tips for a stress-free travel experience.",
     },
     excerpt: {
       fr: "Règles complètes pour les bagages en taxi : limites, suppléments autorisés, bagages spéciaux et conseils pratiques.",
@@ -8480,11 +8480,11 @@ The key to a stress-free journey is **communication**. By specifying your luggag
     },
     metaTitle: {
       fr: "Sécurité en taxi : 8 conseils essentiels 2026 | TaxiNeo",
-      en: "Taxi safety: 8 essential tips 2026 | TaxiNeo",
+      en: "Taxi safety: 8 essential tips for riders 2026 | TaxiNeo",
     },
     metaDescription: {
       fr: "8 conseils essentiels pour votre sécurité en taxi : vérifications avant de monter, partage de trajet, comportement en cas de problème et droits des passagers.",
-      en: "8 essential tips for taxi safety: checks before boarding, trip sharing, behaviour in case of problems and passenger rights.",
+      en: "8 essential tips for taxi safety: checks before boarding, trip sharing, behaviour in case of problems, passenger rights and what to do in an emergency.",
     },
     excerpt: {
       fr: "8 conseils pratiques pour voyager en taxi en toute sécurité : vérifications, partage de trajet, réflexes à adopter.",
@@ -8855,7 +8855,7 @@ Booking via an app like TaxiNeo offers an additional level of security:
     },
     metaDescription: {
       fr: "Tout savoir sur le paiement par carte bancaire en taxi : obligation légale, que faire en cas de refus, paiement sans contact et solutions alternatives.",
-      en: "Everything about card payment in taxis: legal obligation, what to do if refused, contactless payment and alternative solutions.",
+      en: "Everything about card payment in taxis: legal obligation, what to do if payment is refused, contactless options and alternative payment solutions in France.",
     },
     excerpt: {
       fr: "Guide complet du paiement par carte en taxi : obligations légales, recours en cas de refus et solutions de paiement modernes.",
@@ -9163,12 +9163,12 @@ For companies, TaxiNeo offers **centralised invoicing**: all employee rides are 
       en: "Taking a taxi with a pet: rules and tips",
     },
     metaTitle: {
-      fr: "Taxi avec animal de compagnie : règles et conseils 2026 | TaxiNeo",
-      en: "Taxi with pets: rules and tips 2026 | TaxiNeo",
+      fr: "Taxi et animal de compagnie : règles et conseils | TaxiNeo",
+      en: "Taxi with pets: complete rules and tips 2026 | TaxiNeo",
     },
     metaDescription: {
       fr: "Tout savoir pour prendre un taxi avec votre animal de compagnie : règles, droits, conseils pratiques et comment trouver un taxi pet-friendly sur TaxiNeo.",
-      en: "Everything about taking a taxi with your pet: rules, rights, practical tips and how to find a pet-friendly taxi on TaxiNeo.",
+      en: "Everything about taking a taxi with your pet in France: rules, rights, practical tips, breed restrictions and how to find a pet-friendly taxi on TaxiNeo.",
     },
     excerpt: {
       fr: "Guide complet pour voyager en taxi avec votre animal : règles, droits des passagers, conseils et taxis pet-friendly.",
@@ -9478,8 +9478,8 @@ If you cannot find a taxi accepting your animal, other options exist:
       en: "Night taxi in Paris: practical guide 2026 | TaxiNeo",
     },
     metaDescription: {
-      fr: "Guide complet pour prendre un taxi à Paris la nuit : tarifs nocturnes, zones sûres, stations de nuit, astuces et conseils de sécurité.",
-      en: "Complete guide to taking a taxi in Paris at night: night fares, safe areas, night ranks, tips and safety advice.",
+      fr: "Guide complet pour prendre un taxi à Paris la nuit : tarifs nocturnes, zones sûres, meilleures stations de nuit, astuces pratiques et conseils de sécurité.",
+      en: "Complete guide to taking a taxi in Paris at night: night fares, safe areas, best night ranks, practical booking tips and essential safety advice for riders.",
     },
     excerpt: {
       fr: "Guide pratique du taxi nocturne à Paris : tarifs de nuit, stations, astuces de réservation et conseils de sécurité.",
@@ -9772,11 +9772,11 @@ If you are a tourist in Paris:
     },
     metaTitle: {
       fr: "Réglementation tarifs taxi 2026 : tout comprendre | TaxiNeo",
-      en: "Taxi fare regulations 2026: everything you need to know | TaxiNeo",
+      en: "Taxi fare regulations 2026: complete guide | TaxiNeo",
     },
     metaDescription: {
-      fr: "Réglementation complète des tarifs taxi en France en 2026 : barèmes officiels, forfaits, suppléments autorisés et évolutions réglementaires.",
-      en: "Complete taxi fare regulations in France in 2026: official rates, flat fares, authorised surcharges and regulatory changes.",
+      fr: "Réglementation complète des tarifs taxi en France en 2026 : barèmes officiels, forfaits aéroport, suppléments autorisés et dernières évolutions réglementaires.",
+      en: "Complete taxi fare regulations in France in 2026: official rates, airport flat fares, authorised surcharges, supplements and all regulatory changes explained.",
     },
     excerpt: {
       fr: "Panorama complet de la réglementation des tarifs taxi en France pour 2026 : barèmes, forfaits et évolutions.",

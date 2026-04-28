@@ -26,8 +26,8 @@ export const trajetsAuchCondom: Trajet[] = [
     hub: "auch-condom",
     i18n: {
       fr: {
-        metaTitle: "Taxi Auch → Toulouse | Prix fixe dès 85 € | TaxiNeo",
-        metaDescription: "Taxi Auch → Toulouse. 80 km, 50 min, dès 85 €. Route N124 gratuite à travers la campagne gersoise. Réservation 24h/24.",
+        metaTitle: "Taxi Auch → Toulouse | forfait dès 85 €, 50 min | TaxiNeo",
+        metaDescription: "Via N124 en 50 min. Gers, Gascogne, Armagnac et Toulouse en chemin. Dépose porte-à-porte, bagages inclus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Auch → Toulouse",
         heroSubtitle: "Transfert Auch → Toulouse au prix fixe de 85 — 110 €. 80 km, de la capitale de la Gascogne à la Ville Rose.",
         description: "Toulouse, métropole du Sud-Ouest et capitale européenne de l'aéronautique, est à 50 min d'Auch par la N124.",
@@ -46,7 +46,7 @@ export const trajetsAuchCondom: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Auch → Toulouse | Fixed price from €85 | TaxiNeo",
-        metaDescription: "Taxi Auch → Toulouse. 80 km, 50 min, from €85. Toll-free N124 through Gers countryside. Book 24/7.",
+        metaDescription: "Via N124, 50 min ride. Gers, Gascogne, Armagnac and Toulouse en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Auch → Toulouse",
         heroSubtitle: "Your Auch → Toulouse transfer at €85 — €110. 80 km, from the capital of Gascony to the Pink City.",
         description: "Toulouse, south-west France's metropolis and European aerospace capital, is 50 min from Auch via the N124.",
@@ -90,8 +90,8 @@ export const trajetsAuchCondom: Trajet[] = [
     hub: "auch-condom",
     i18n: {
       fr: {
-        metaTitle: "Taxi Auch → Bordeaux | Prix fixe dès 220 € | TaxiNeo",
-        metaDescription: "Taxi Auch → Bordeaux. 200 km, 2h, dès 220 €. Autoroute A62, des coteaux du Gers à la capitale du vin. Réservation 24h/24.",
+        metaTitle: "Taxi Auch → Bordeaux | 200 km, dès 220 € | TaxiNeo",
+        metaDescription: "Via A62 en 2h. Gers, Gascogne, Vignobles et Bordeaux en chemin. Alternative directe au train ou au bus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Auch → Bordeaux",
         heroSubtitle: "Transfert Auch → Bordeaux au prix fixe de 220 — 280 €. 200 km, de la Gascogne profonde à la métropole girondine.",
         description: "Bordeaux, capitale mondiale du vin et joyau architectural de Nouvelle-Aquitaine, est à 2h d'Auch par l'A62.",
@@ -109,8 +109,8 @@ export const trajetsAuchCondom: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Auch → Bordeaux | Fixed price from €220 | TaxiNeo",
-        metaDescription: "Taxi Auch → Bordeaux. 200 km, 2h, from €220. A62 motorway via Agen. Book 24/7.",
+        metaTitle: "Taxi Auch → Bordeaux | 200 km, from €220 | TaxiNeo",
+        metaDescription: "Via A62, 2 hours ride. Gers, Gascogne, Vignobles and Bordeaux en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Auch → Bordeaux",
         heroSubtitle: "Your Auch → Bordeaux transfer at €220 — €280. 200 km, from deepest Gascony to the wine capital.",
         description: "Bordeaux, world wine capital and Nouvelle-Aquitaine's architectural gem, is 2h from Auch via the A62.",
@@ -154,8 +154,8 @@ export const trajetsAuchCondom: Trajet[] = [
     hub: "auch-condom",
     i18n: {
       fr: {
-        metaTitle: "Taxi Auch → Pau | Prix fixe dès 85 € | TaxiNeo",
-        metaDescription: "Taxi Auch → Pau. 80 km, 55 min, dès 85 €. Route D943 gratuite à travers les coteaux gascons et le Béarn. Réservation 24h/24.",
+        metaTitle: "Taxi Auch → Pau | 80 km via D943, dès 85 € | TaxiNeo",
+        metaDescription: "Via D943 en 55 min. Gers, Béarn, Pyrénées et Gascogne en chemin. Dépose porte-à-porte, bagages inclus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Auch → Pau",
         heroSubtitle: "Transfert Auch → Pau au prix fixe de 85 — 110 €. 80 km, des terres d'Armagnac au balcon des Pyrénées.",
         description: "Pau, ville royale et balcon naturel sur les Pyrénées, est à 55 min d'Auch par la D943.",
@@ -173,8 +173,8 @@ export const trajetsAuchCondom: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Auch → Pau | Fixed price from €85 | TaxiNeo",
-        metaDescription: "Taxi Auch → Pau. 80 km, 55 min, from €85. Toll-free D943 through Gers hills and Béarn. Book 24/7.",
+        metaTitle: "Taxi Auch → Pau | Guaranteed fixed price | TaxiNeo",
+        metaDescription: "Via D943, 55 min ride. Gers, Béarn, Pyrénées and Gascogne en route. Faster and more direct than train or bus. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Auch → Pau",
         heroSubtitle: "Your Auch → Pau transfer at €85 — €110. 80 km, from Armagnac country to the Pyrenees balcony.",
         description: "Pau, royal city and natural Pyrenees balcony, is 55 min from Auch via the D943.",
@@ -218,8 +218,8 @@ export const trajetsAuchCondom: Trajet[] = [
     hub: "auch-condom",
     i18n: {
       fr: {
-        metaTitle: "Taxi Auch → Agen | Prix fixe dès 75 € | TaxiNeo",
-        metaDescription: "Taxi Auch → Agen. 70 km, 45 min, dès 75 €. Route N21 gratuite à travers la Lomagne gersoise. Réservation 24h/24.",
+        metaTitle: "Taxi Auch → Agen | forfait dès 75 €, 45 min | TaxiNeo",
+        metaDescription: "Via N21 en 45 min. Gers, Lot-et-Garonne, Gascogne et Garonne en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Auch → Agen",
         heroSubtitle: "Transfert Auch → Agen au prix fixe de 75 — 95 €. 70 km, de la Gascogne à la capitale du pruneau.",
         description: "Agen, préfecture du Lot-et-Garonne et capitale du pruneau, est à 45 min d'Auch par la N21.",
@@ -237,8 +237,8 @@ export const trajetsAuchCondom: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Auch → Agen | Fixed price from €75 | TaxiNeo",
-        metaDescription: "Taxi Auch → Agen. 70 km, 45 min, from €75. Toll-free N21 through Lomagne hills. Book 24/7.",
+        metaTitle: "Taxi Auch → Agen | Guaranteed fixed price | TaxiNeo",
+        metaDescription: "Via N21, 45 min ride. Gers, Lot-et-Garonne, Gascogne and Garonne en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Auch → Agen",
         heroSubtitle: "Your Auch → Agen transfer at €75 — €95. 70 km, from Gascony to the prune capital.",
         description: "Agen, Lot-et-Garonne prefecture and prune capital, is 45 min from Auch via the N21.",
@@ -282,8 +282,8 @@ export const trajetsAuchCondom: Trajet[] = [
     hub: "auch-condom",
     i18n: {
       fr: {
-        metaTitle: "Taxi Condom → Toulouse | Prix fixe dès 140 € | TaxiNeo",
-        metaDescription: "Taxi Condom → Toulouse. 130 km, 1h20, dès 140 €. D931 puis A62, au coeur de l'Armagnac. Réservation 24h/24.",
+        metaTitle: "Taxi Condom → Toulouse | 130 km, dès 140 € | TaxiNeo",
+        metaDescription: "Via D931/A62 en 1h20. Gers, Armagnac, Ténarèze sur le parcours. Alternative directe au train ou au bus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Condom → Toulouse",
         heroSubtitle: "Transfert Condom → Toulouse au prix fixe de 140 — 175 €. 130 km, du coeur de la Ténarèze à la Ville Rose.",
         description: "Toulouse, métropole du Sud-Ouest et capitale de l'aéronautique européenne, est à 1h20 de Condom par la D931 et l'A62.",
@@ -301,8 +301,8 @@ export const trajetsAuchCondom: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Condom → Toulouse | Fixed price from €140 | TaxiNeo",
-        metaDescription: "Taxi Condom → Toulouse. 130 km, 1h20, from €140. D931 then A62, heart of Armagnac country. Book 24/7.",
+        metaTitle: "Taxi Condom → Toulouse | 130 km, from €140 | TaxiNeo",
+        metaDescription: "Via D931/A62, 1h20 ride. Gers, Armagnac and Ténarèze along the way. Faster and more direct than train or bus. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Condom → Toulouse",
         heroSubtitle: "Your Condom → Toulouse transfer at €140 — €175. 130 km, from the heart of Ténarèze to the Pink City.",
         description: "Toulouse, south-west France's metropolis and European aerospace capital, is 1h20 from Condom via the D931 and A62.",

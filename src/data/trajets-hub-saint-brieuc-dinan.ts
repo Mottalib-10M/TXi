@@ -30,8 +30,8 @@ export const trajetsSaintBrieucDinan: Trajet[] = [
     hub: "saint-brieuc-dinan",
     i18n: {
       fr: {
-        metaTitle: "Taxi Saint-Brieuc → Rennes | Prix fixe dès 105 € | TaxiNeo",
-        metaDescription: "Taxi Saint-Brieuc → Rennes. 100 km, 1h05, dès 105 €. N12 gratuite via Lamballe et Montauban-de-Bretagne. Réservation 24h/24.",
+        metaTitle: "Taxi Saint-Brieuc → Rennes | 100 km, dès 105 € | TaxiNeo",
+        metaDescription: "Via N12 en 1h05. Côtes-d'Armor, Lamballe et Capitale bretonne en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Saint-Brieuc → Rennes",
         heroSubtitle: "Transfert Saint-Brieuc → Rennes au prix fixe de 105 — 135 €. 100 km par la N12.",
         description: "Rennes, capitale de la Bretagne et métropole dynamique de 450 000 habitants, est à 1h05 de Saint-Brieuc par la voie express N12.",
@@ -49,8 +49,8 @@ export const trajetsSaintBrieucDinan: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Saint-Brieuc → Rennes | Fixed price from €105 | TaxiNeo",
-        metaDescription: "Taxi Saint-Brieuc → Rennes. 100 km, 65 min, from €105. Toll-free N12 via Lamballe. Book 24/7.",
+        metaTitle: "Taxi Saint-Brieuc → Rennes | 100 km, from €105 | TaxiNeo",
+        metaDescription: "Via N12, 1h05 ride. Côtes-d'Armor, Lamballe and Capitale bretonne along the way. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Saint-Brieuc → Rennes",
         heroSubtitle: "Your Saint-Brieuc → Rennes transfer at €105 — €135. 100 km via the N12.",
         description: "Rennes, capital of Brittany and a thriving metropolis of 450,000, is 65 minutes from Saint-Brieuc via the toll-free N12 expressway.",
@@ -95,8 +95,8 @@ export const trajetsSaintBrieucDinan: Trajet[] = [
     hub: "saint-brieuc-dinan",
     i18n: {
       fr: {
-        metaTitle: "Taxi Saint-Brieuc → Brest | Prix fixe dès 155 € | TaxiNeo",
-        metaDescription: "Taxi Saint-Brieuc → Brest. 145 km, 1h25, dès 155 €. N12 gratuite via Guingamp et Morlaix. Réservation 24h/24.",
+        metaTitle: "Taxi Saint-Brieuc → Brest | 145 km, dès 155 € | TaxiNeo",
+        metaDescription: "Via N12 en 1h25. Guingamp, Morlaix et Rade de Brest en chemin. Alternative directe au train ou au bus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Saint-Brieuc → Brest",
         heroSubtitle: "Transfert Saint-Brieuc → Brest au prix fixe de 155 — 195 €. 145 km par la N12.",
         description: "Brest, grand port militaire et universitaire au bout de la Bretagne, est à 1h25 de Saint-Brieuc par la voie express N12.",
@@ -114,8 +114,8 @@ export const trajetsSaintBrieucDinan: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Saint-Brieuc → Brest | Fixed price from €155 | TaxiNeo",
-        metaDescription: "Taxi Saint-Brieuc → Brest. 145 km, 85 min, from €155. Toll-free N12 via Guingamp and Morlaix. Book 24/7.",
+        metaTitle: "Taxi Saint-Brieuc → Brest | 145 km, from €155 | TaxiNeo",
+        metaDescription: "Via N12, 1h25 ride. Guingamp, Morlaix and Rade de Brest along the way. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Saint-Brieuc → Brest",
         heroSubtitle: "Your Saint-Brieuc → Brest transfer at €155 — €195. 145 km via the N12.",
         description: "Brest, a major naval and university city at the tip of Brittany, is 85 minutes from Saint-Brieuc via the toll-free N12 expressway.",
@@ -160,8 +160,8 @@ export const trajetsSaintBrieucDinan: Trajet[] = [
     hub: "saint-brieuc-dinan",
     i18n: {
       fr: {
-        metaTitle: "Taxi Saint-Brieuc → Paris | Prix fixe dès 490 € | TaxiNeo",
-        metaDescription: "Taxi Saint-Brieuc → Paris. 450 km, 4h30, dès 490 €. Côtes-d'Armor vers la capitale. Réservation 24h/24.",
+        metaTitle: "Taxi Saint-Brieuc → Paris | 450 km, dès 490 € | TaxiNeo",
+        metaDescription: "Itinéraire N12/A11, environ 4h30. Passage par N12, Traversée Bretagne-Paris, Côtes-d'Armor et Capitale. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Saint-Brieuc → Paris",
         heroSubtitle: "Transfert Saint-Brieuc → Paris au prix fixe de 490 — 590 €. 450 km par la N12/A11.",
         description: "Paris est à 4h30 de route de Saint-Brieuc par la N12, l'A84 et l'A81/A11, un trajet direct et confortable en taxi.",
@@ -179,8 +179,8 @@ export const trajetsSaintBrieucDinan: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Saint-Brieuc → Paris | Fixed price from €490 | TaxiNeo",
-        metaDescription: "Taxi Saint-Brieuc → Paris. 450 km, 4h30, from €490. Cotes-d'Armor to the capital. Book 24/7.",
+        metaTitle: "Taxi Saint-Brieuc → Paris | 450 km, from €490 | TaxiNeo",
+        metaDescription: "N12/A11 route, approximately 4h30. N12, Traversée Bretagne-Paris, Côtes-d'Armor and Capitale en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Saint-Brieuc → Paris",
         heroSubtitle: "Your Saint-Brieuc → Paris transfer at €490 — €590. 450 km via the N12/A11.",
         description: "Paris is a 4h30 drive from Saint-Brieuc via the N12, A84 and A81/A11 motorways, a direct and comfortable taxi journey.",
@@ -225,8 +225,8 @@ export const trajetsSaintBrieucDinan: Trajet[] = [
     hub: "saint-brieuc-dinan",
     i18n: {
       fr: {
-        metaTitle: "Taxi Dinan → Rennes | Prix fixe dès 60 € | TaxiNeo",
-        metaDescription: "Taxi Dinan → Rennes. 55 km, 40 min, dès 60 €. Cité médiévale vers la capitale bretonne par la D766. Réservation 24h/24.",
+        metaTitle: "Taxi Dinan → Rennes | forfait dès 60 €, 40 min | TaxiNeo",
+        metaDescription: "Itinéraire D766, environ 40 min. Cité médiévale, Vallée de la Rance, Capitale bretonne sur le parcours. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Dinan → Rennes",
         heroSubtitle: "Transfert Dinan → Rennes au prix fixe de 60 — 75 €. 55 km par la D766.",
         description: "Rennes, capitale de la Bretagne, est à seulement 40 minutes de Dinan par la D766, route directe à travers la campagne bretonne.",
@@ -245,7 +245,7 @@ export const trajetsSaintBrieucDinan: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Dinan → Rennes | Fixed price from €60 | TaxiNeo",
-        metaDescription: "Taxi Dinan → Rennes. 55 km, 40 min, from €60. Medieval walled city to Brittany's capital. Book 24/7.",
+        metaDescription: "Direct route via D766, 40 min. Cité médiévale, Vallée de la Rance and Capitale bretonne along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Dinan → Rennes",
         heroSubtitle: "Your Dinan → Rennes transfer at €60 — €75. 55 km via the D766.",
         description: "Rennes, capital of Brittany, is just 40 minutes from Dinan via the D766, a direct route through the Breton countryside.",
@@ -290,8 +290,8 @@ export const trajetsSaintBrieucDinan: Trajet[] = [
     hub: "saint-brieuc-dinan",
     i18n: {
       fr: {
-        metaTitle: "Taxi Dinan → Saint-Malo | Prix fixe dès 35 € | TaxiNeo",
-        metaDescription: "Taxi Dinan → Saint-Malo. 30 km, 25 min, dès 35 €. Cité médiévale vers la cité corsaire par la D168. Réservation 24h/24.",
+        metaTitle: "Taxi Dinan → Saint-Malo | 30 km, dès 35 € | TaxiNeo",
+        metaDescription: "Via D168 en 25 min. Vallée de la Rance, Cité corsaire et Port médiéval en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Dinan → Saint-Malo",
         heroSubtitle: "Transfert Dinan → Saint-Malo au prix fixe de 35 — 45 €. 30 km par la D168.",
         description: "Saint-Malo, la célèbre cité corsaire fortifiée de la Côte d'Émeraude, est à seulement 25 minutes de Dinan.",
@@ -309,8 +309,8 @@ export const trajetsSaintBrieucDinan: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Dinan → Saint-Malo | Fixed price from €35 | TaxiNeo",
-        metaDescription: "Taxi Dinan → Saint-Malo. 30 km, 25 min, from €35. Medieval city to corsair citadel via D168. Book 24/7.",
+        metaTitle: "Taxi Dinan → Saint-Malo | 30 km, from €35 | TaxiNeo",
+        metaDescription: "D168 route, approximately 25 min. Vallée de la Rance, Cité corsaire and Port médiéval along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Dinan → Saint-Malo",
         heroSubtitle: "Your Dinan → Saint-Malo transfer at €35 — €45. 30 km via the D168.",
         description: "Saint-Malo, the famous fortified corsair city on the Emerald Coast, is just 25 minutes from Dinan.",

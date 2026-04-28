@@ -44,7 +44,7 @@ export const tarifs: Tarif[] = [
     i18n: {
       fr: {
         metaTitle: "Tarif Taxi Paris 2026 : prix, barème et forfaits | TaxiNeo",
-        metaDescription: "Découvrez les tarifs taxi à Paris en 2026. Barème officiel, forfaits aéroport, tarifs jour/nuit et astuces pour payer le juste prix.",
+        metaDescription: "Découvrez les tarifs taxi à Paris en 2026. Barème officiel, forfaits aéroport CDG et Orly, tarifs jour/nuit et astuces pour payer le juste prix avec TaxiNeo.",
         heroTitle: "Tarif Taxi Paris",
         heroSubtitle: "Tous les tarifs taxi à Paris en 2026 : barème officiel, forfaits et prix fixes TaxiNeo.",
         description: "Paris est la ville où les tarifs taxi sont les plus réglementés de France. Le compteur horokilométrique applique 4 tarifs (A, B, C, D) selon l'heure, le jour et la zone. Avec TaxiNeo, profitez de prix fixes sans compteur pour tous vos trajets parisiens.",
@@ -68,7 +68,7 @@ export const tarifs: Tarif[] = [
       },
       en: {
         metaTitle: "Paris Taxi Fares 2026: prices, rates & fixed fares | TaxiNeo",
-        metaDescription: "Discover Paris taxi fares in 2026. Official rates, airport flat rates, day/night pricing and tips for paying the right price.",
+        metaDescription: "Discover Paris taxi fares in 2026. Official rates, CDG and Orly airport flat rates, day/night pricing and expert tips for paying the right price with TaxiNeo.",
         heroTitle: "Paris Taxi Fares",
         heroSubtitle: "All Paris taxi fares in 2026: official rates, flat rates and TaxiNeo fixed prices.",
         description: "Paris has the most regulated taxi fares in France. The meter applies 4 rates (A, B, C, D) depending on time, day and zone. With TaxiNeo, enjoy fixed prices without a meter for all your Paris journeys.",
@@ -100,8 +100,8 @@ export const tarifs: Tarif[] = [
     lng: 2.5479,
     i18n: {
       fr: {
-        metaTitle: "Tarif Taxi CDG 2026 : forfaits Paris, tarifs et prix | TaxiNeo",
-        metaDescription: "Tarifs taxi depuis l'aéroport CDG en 2026. Forfait rive droite/gauche, prix vers Disneyland, La Défense et toutes les destinations.",
+        metaTitle: "Tarif Taxi CDG 2026 : forfaits et prix fixes | TaxiNeo",
+        metaDescription: "Tarifs taxi depuis l'aéroport CDG en 2026. Forfait officiel rive droite 56 €, rive gauche 65 €, prix vers Disneyland, La Défense et toutes vos destinations.",
         heroTitle: "Tarif Taxi Aéroport CDG",
         heroSubtitle: "Forfaits réglementés et prix fixes depuis l'aéroport Charles de Gaulle.",
         description: "Les tarifs taxi depuis CDG sont encadrés par des forfaits obligatoires vers Paris. Rive droite : 56 €, rive gauche : 65 €. TaxiNeo propose des forfaits pour toutes les destinations, pas seulement Paris.",
@@ -125,7 +125,7 @@ export const tarifs: Tarif[] = [
       },
       en: {
         metaTitle: "CDG Airport Taxi Fares 2026: flat rates & prices | TaxiNeo",
-        metaDescription: "CDG airport taxi fares in 2026. Regulated flat rates to Paris, prices to Disneyland, La Défense and all destinations.",
+        metaDescription: "CDG airport taxi fares in 2026. Official flat rates to Paris (Right Bank €56, Left Bank €65), prices to Disneyland, La Défense and all other destinations.",
         heroTitle: "CDG Airport Taxi Fares",
         heroSubtitle: "Regulated flat rates and fixed prices from Charles de Gaulle Airport.",
         description: "Taxi fares from CDG are regulated with mandatory flat rates to Paris. Right Bank: €56, Left Bank: €65. TaxiNeo offers flat rates to all destinations, not just Paris.",
@@ -157,8 +157,8 @@ export const tarifs: Tarif[] = [
     lng: 2.3652,
     i18n: {
       fr: {
-        metaTitle: "Tarif Taxi Orly 2026 : forfaits Paris, tarifs et prix | TaxiNeo",
-        metaDescription: "Tarifs taxi depuis Orly en 2026. Forfait Paris rive droite/gauche, prix vers toutes les destinations.",
+        metaTitle: "Tarif Taxi Orly 2026 : forfaits et prix fixes | TaxiNeo",
+        metaDescription: "Tarifs taxi depuis l'aéroport d'Orly en 2026. Forfait Paris rive gauche 35 €, rive droite 41 €, prix fixes garantis vers toutes les destinations avec TaxiNeo.",
         heroTitle: "Tarif Taxi Aéroport d'Orly",
         heroSubtitle: "Forfaits réglementés et prix fixes depuis l'aéroport d'Orly.",
         description: "Les forfaits taxi Orly — Paris sont réglementés. Rive gauche : 35 €, rive droite : 41 €. TaxiNeo étend les forfaits à toutes les destinations.",
@@ -182,7 +182,7 @@ export const tarifs: Tarif[] = [
       },
       en: {
         metaTitle: "Orly Airport Taxi Fares 2026: flat rates & prices | TaxiNeo",
-        metaDescription: "Orly airport taxi fares in 2026. Regulated flat rates to Paris, prices to all destinations.",
+        metaDescription: "Orly airport taxi fares in 2026. Regulated flat rates to Paris (Left Bank €35, Right Bank €41), prices to all destinations and fixed fares with TaxiNeo.",
         heroTitle: "Orly Airport Taxi Fares",
         heroSubtitle: "Regulated flat rates and fixed prices from Orly Airport.",
         description: "Orly — Paris taxi flat rates are regulated. Left Bank: €35, Right Bank: €41. TaxiNeo extends flat rates to all destinations.",
@@ -440,7 +440,7 @@ for (const t of simpleTarifs) {
     lng: t.lng,
     i18n: {
       fr: {
-        metaTitle: `${t.frTitle} 2026 : prix et barème | TaxiNeo`,
+        metaTitle: `${t.frTitle} 2026 : prix, barème taxi | TaxiNeo`,
         metaDescription: t.frDesc,
         heroTitle: t.frTitle,
         heroSubtitle: `Tous les tarifs taxi en 2026 : barème officiel, forfaits et prix fixes TaxiNeo.`,
@@ -457,7 +457,7 @@ for (const t of simpleTarifs) {
         ...(t.frBonASavoir && { bonASavoir: t.frBonASavoir }),
       },
       en: {
-        metaTitle: `${t.enTitle} 2026: prices & rates | TaxiNeo`,
+        metaTitle: `${t.enTitle} 2026: all rates & prices | TaxiNeo`,
         metaDescription: t.enDesc,
         heroTitle: t.enTitle,
         heroSubtitle: `All taxi fares in 2026: official rates, flat rates and TaxiNeo fixed prices.`,

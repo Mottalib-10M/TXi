@@ -26,8 +26,8 @@ export const trajetsLimogesPoitiers: Trajet[] = [
     hub: "limoges",
     i18n: {
       fr: {
-        metaTitle: "Taxi Limoges → Brive-la-Gaillarde | Prix fixe dès 115 € | TaxiNeo",
-        metaDescription: "Taxi Limoges → Brive-la-Gaillarde. 92 km, 1h10, dès 115 €. Autoroute A20, porte du Périgord. Réservation 24h/24.",
+        metaTitle: "Taxi Limoges → Brive-la-Gaillarde | 92 km, 115 € | TaxiNeo",
+        metaDescription: "Via A20 en 1h10. Pompadour, Corrèze, Gastronomie et Périgord en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Limoges → Brive-la-Gaillarde",
         heroSubtitle: "Transfert Limoges → Brive au prix fixe de 115 — 140 €. 92 km, porte de la Corrèze et du Périgord.",
         description: "Brive-la-Gaillarde, sous-préfecture de la Corrèze, est à 1h10 de Limoges par l'A20.",
@@ -45,8 +45,8 @@ export const trajetsLimogesPoitiers: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Limoges → Brive-la-Gaillarde | Fixed price from €115 | TaxiNeo",
-        metaDescription: "Taxi Limoges → Brive-la-Gaillarde. 92 km, 1h10, from €115. A20 motorway, gateway to Périgord. Book 24/7.",
+        metaTitle: "Taxi Limoges → Brive-la-Gaillarde | 92 km, €115 | TaxiNeo",
+        metaDescription: "Via A20, 1h10 ride. Pompadour, Corrèze, Gastronomie and Périgord en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Limoges → Brive-la-Gaillarde",
         heroSubtitle: "Your Limoges → Brive transfer at €115 — €140. 92 km, gateway to Corrèze and Périgord.",
         description: "Brive-la-Gaillarde, main city of southern Corrèze, is 1h10 from Limoges via the A20.",
@@ -90,8 +90,8 @@ export const trajetsLimogesPoitiers: Trajet[] = [
     hub: "limoges",
     i18n: {
       fr: {
-        metaTitle: "Taxi Limoges → Guéret | Prix fixe dès 115 € | TaxiNeo",
-        metaDescription: "Taxi Limoges → Guéret. 90 km, 1h10, dès 115 €. Préfecture de la Creuse, nature préservée. Réservation 24h/24.",
+        metaTitle: "Taxi Limoges → Guéret | 90 km, dès 115 € | TaxiNeo",
+        metaDescription: "Itinéraire A20 puis N145, environ 1h10. Passage par A20/N145, Creuse, Tapisseries et Lac de Vassivière. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Limoges → Guéret",
         heroSubtitle: "Transfert Limoges → Guéret au prix fixe de 115 — 140 €. 90 km, cœur de la Creuse.",
         description: "Guéret, préfecture de la Creuse, est à 1h10 de Limoges via l'A20 et la N145.",
@@ -109,8 +109,8 @@ export const trajetsLimogesPoitiers: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Limoges → Guéret | Fixed price from €115 | TaxiNeo",
-        metaDescription: "Taxi Limoges → Guéret. 90 km, 1h10, from €115. Creuse prefecture, unspoilt nature. Book 24/7.",
+        metaTitle: "Taxi Limoges → Guéret | 90 km, from €115 | TaxiNeo",
+        metaDescription: "A20 then N145 route, approximately 1h10. A20/N145, Creuse, Tapisseries and Lac de Vassivière en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Limoges → Guéret",
         heroSubtitle: "Your Limoges → Guéret transfer at €115 — €140. 90 km, heart of the Creuse.",
         description: "Guéret, prefecture of the Creuse, is 1h10 from Limoges via the A20 and N145.",
@@ -154,8 +154,8 @@ export const trajetsLimogesPoitiers: Trajet[] = [
     hub: "limoges",
     i18n: {
       fr: {
-        metaTitle: "Taxi Limoges → Angoulême | Prix fixe dès 130 € | TaxiNeo",
-        metaDescription: "Taxi Limoges → Angoulême. 105 km, 1h15, dès 130 €. Capitale de la BD, remparts, Charente. Réservation 24h/24.",
+        metaTitle: "Taxi Limoges → Angoulême | 105 km, dès 130 € | TaxiNeo",
+        metaDescription: "Via N141 en 1h15. N141/RN141, Charente, BD et Cognac en chemin. Alternative directe au train ou au bus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Limoges → Angoulême",
         heroSubtitle: "Transfert Limoges → Angoulême au prix fixe de 130 — 160 €. 105 km, capitale de la bande dessinée.",
         description: "Angoulême, capitale de la bande dessinée et préfecture de la Charente, est à 1h15 de Limoges.",
@@ -173,8 +173,8 @@ export const trajetsLimogesPoitiers: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Limoges → Angoulême | Fixed price from €130 | TaxiNeo",
-        metaDescription: "Taxi Limoges → Angoulême. 105 km, 1h15, from €130. Comic strip capital, ramparts, Charente. Book 24/7.",
+        metaTitle: "Taxi Limoges → Angoulême | 105 km, from €130 | TaxiNeo",
+        metaDescription: "Via N141, 1h15 ride. N141/RN141, Charente, BD and Cognac en route. Faster and more direct than train or bus. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Limoges → Angoulême",
         heroSubtitle: "Your Limoges → Angoulême transfer at €130 — €160. 105 km, comic strip capital of the world.",
         description: "Angoulême, world capital of comic strips and Charente prefecture, is 1h15 from Limoges.",
@@ -218,8 +218,8 @@ export const trajetsLimogesPoitiers: Trajet[] = [
     hub: "limoges",
     i18n: {
       fr: {
-        metaTitle: "Taxi Limoges → Tulle | Prix fixe dès 115 € | TaxiNeo",
-        metaDescription: "Taxi Limoges → Tulle. 90 km, 1h15, dès 115 €. Préfecture de la Corrèze, dentelle, accordéon. Réservation 24h/24.",
+        metaTitle: "Taxi Limoges → Tulle | forfait dès 115 € | TaxiNeo",
+        metaDescription: "Via A20 puis N120 en 1h15. A20/N120, Corrèze, Dentelle et Accordéon en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Limoges → Tulle",
         heroSubtitle: "Transfert Limoges → Tulle au prix fixe de 115 — 140 €. 90 km, préfecture de la Corrèze.",
         description: "Tulle, préfecture de la Corrèze, est à 1h15 de Limoges via l'A20 et la N120.",
@@ -238,7 +238,7 @@ export const trajetsLimogesPoitiers: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Limoges → Tulle | Fixed price from €115 | TaxiNeo",
-        metaDescription: "Taxi Limoges → Tulle. 90 km, 1h15, from €115. Corrèze prefecture, lace, accordions. Book 24/7.",
+        metaDescription: "Via A20 then N120, 1h15 ride. A20/N120, Corrèze, Dentelle and Accordéon en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Limoges → Tulle",
         heroSubtitle: "Your Limoges → Tulle transfer at €115 — €140. 90 km, Corrèze prefecture.",
         description: "Tulle, prefecture of the Corrèze, is 1h15 from Limoges via the A20 and N120.",
@@ -282,8 +282,8 @@ export const trajetsLimogesPoitiers: Trajet[] = [
     hub: "limoges",
     i18n: {
       fr: {
-        metaTitle: "Taxi Limoges → Périgueux | Prix fixe dès 120 € | TaxiNeo",
-        metaDescription: "Taxi Limoges → Périgueux. 95 km, 1h15, dès 120 €. Capitale du Périgord, cathédrale Saint-Front. Réservation 24h/24.",
+        metaTitle: "Taxi Limoges → Périgueux | 95 km, dès 120 € | TaxiNeo",
+        metaDescription: "Itinéraire A89 ou N21, environ 1h15. Passage par A89/N21, Dordogne, Périgord et Cathédrale Saint-Front. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Limoges → Périgueux",
         heroSubtitle: "Transfert Limoges → Périgueux au prix fixe de 120 — 145 €. 95 km, cœur du Périgord blanc.",
         description: "Périgueux, préfecture de la Dordogne et capitale du Périgord, est à 1h15 de Limoges.",
@@ -301,8 +301,8 @@ export const trajetsLimogesPoitiers: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Limoges → Périgueux | Fixed price from €120 | TaxiNeo",
-        metaDescription: "Taxi Limoges → Périgueux. 95 km, 1h15, from €120. Périgord capital, Saint-Front cathedral. Book 24/7.",
+        metaTitle: "Taxi Limoges → Périgueux | 95 km, from €120 | TaxiNeo",
+        metaDescription: "A89 ou N21 route, approximately 1h15. A89/N21, Dordogne, Périgord and Cathédrale Saint-Front en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Limoges → Périgueux",
         heroSubtitle: "Your Limoges → Périgueux transfer at €120 — €145. 95 km, heart of the White Périgord.",
         description: "Périgueux, Dordogne prefecture and Périgord capital, is 1h15 from Limoges.",
@@ -346,8 +346,8 @@ export const trajetsLimogesPoitiers: Trajet[] = [
     hub: "poitiers",
     i18n: {
       fr: {
-        metaTitle: "Taxi Poitiers → Tours | Prix fixe dès 125 € | TaxiNeo",
-        metaDescription: "Taxi Poitiers → Tours. 100 km, 1h05, dès 125 €. A10, Loire, châteaux. Réservation 24h/24.",
+        metaTitle: "Taxi Poitiers → Tours | 100 km, dès 125 € | TaxiNeo",
+        metaDescription: "Via A10 en 1h05. Loire, Châteaux, Futuroscope et TGV en chemin. Alternative directe au train ou au bus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Poitiers → Tours",
         heroSubtitle: "Transfert Poitiers → Tours au prix fixe de 125 — 155 €. 100 km, porte des châteaux de la Loire.",
         description: "Tours, capitale de la Touraine et porte des châteaux de la Loire, est à 1h05 de Poitiers par l'A10.",
@@ -365,8 +365,8 @@ export const trajetsLimogesPoitiers: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Poitiers → Tours | Fixed price from €125 | TaxiNeo",
-        metaDescription: "Taxi Poitiers → Tours. 100 km, 1h05, from €125. A10, Loire Valley châteaux. Book 24/7.",
+        metaTitle: "Taxi Poitiers → Tours | 100 km, from €125 | TaxiNeo",
+        metaDescription: "Via A10, 1h05 ride. Loire, Châteaux, Futuroscope and TGV en route. Faster and more direct than train or bus. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Poitiers → Tours",
         heroSubtitle: "Your Poitiers → Tours transfer at €125 — €155. 100 km, gateway to the Loire châteaux.",
         description: "Tours, capital of Touraine and gateway to the Loire châteaux, is 1h05 from Poitiers via the A10.",
@@ -410,8 +410,8 @@ export const trajetsLimogesPoitiers: Trajet[] = [
     hub: "poitiers",
     i18n: {
       fr: {
-        metaTitle: "Taxi Poitiers → Niort | Prix fixe dès 95 € | TaxiNeo",
-        metaDescription: "Taxi Poitiers → Niort. 75 km, 55 min, dès 95 €. Capitale des mutuelles, Marais poitevin. Réservation 24h/24.",
+        metaTitle: "Taxi Poitiers → Niort | forfait dès 95 € | TaxiNeo",
+        metaDescription: "Via A10 en 55 min. Deux-Sèvres, Mutuelles, Marais poitevin et Donjon en chemin. Dépose à votre adresse exacte. Alternative directe au train ou au bus.",
         heroTitle: "Taxi Poitiers → Niort",
         heroSubtitle: "Transfert Poitiers → Niort au prix fixe de 95 — 115 €. 75 km, capitale des mutuelles.",
         description: "Niort, préfecture des Deux-Sèvres et capitale française des mutuelles, est à 55 min de Poitiers.",
@@ -430,7 +430,7 @@ export const trajetsLimogesPoitiers: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Poitiers → Niort | Fixed price from €95 | TaxiNeo",
-        metaDescription: "Taxi Poitiers → Niort. 75 km, 55 min, from €95. Mutual insurance capital, Marais Poitevin. Book 24/7.",
+        metaDescription: "Via A10, 55 min ride. Deux-Sèvres, Mutuelles, Marais poitevin and Donjon en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Poitiers → Niort",
         heroSubtitle: "Your Poitiers → Niort transfer at €95 — €115. 75 km, France's mutual insurance capital.",
         description: "Niort, Deux-Sèvres prefecture and France's mutual insurance capital, is 55 min from Poitiers.",
@@ -474,8 +474,8 @@ export const trajetsLimogesPoitiers: Trajet[] = [
     hub: "poitiers",
     i18n: {
       fr: {
-        metaTitle: "Taxi Poitiers → Châtellerault | Prix fixe dès 45 € | TaxiNeo",
-        metaDescription: "Taxi Poitiers → Châtellerault. 35 km, 30 min, dès 45 €. Manufacture, musée Auto-Moto-Vélo. Réservation 24h/24.",
+        metaTitle: "Taxi Poitiers → Châtellerault | 35 km, dès 45 € | TaxiNeo",
+        metaDescription: "Via A10 en 30 min. Vienne, Manufacture, Auto-Moto-Vélo et Châtellerie en chemin. Dépose à votre adresse exacte. Alternative directe au train ou au bus.",
         heroTitle: "Taxi Poitiers → Châtellerault",
         heroSubtitle: "Transfert Poitiers → Châtellerault au prix fixe de 45 — 55 €. 35 km, cité de la manufacture.",
         description: "Châtellerault, sous-préfecture de la Vienne, est à 30 min de Poitiers par l'A10.",
@@ -493,8 +493,8 @@ export const trajetsLimogesPoitiers: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Poitiers → Châtellerault | Fixed price from €45 | TaxiNeo",
-        metaDescription: "Taxi Poitiers → Châtellerault. 35 km, 30 min, from €45. Arms factory museum, Auto-Moto-Vélo. Book 24/7.",
+        metaTitle: "Taxi Poitiers → Châtellerault | 35 km, from €45 | TaxiNeo",
+        metaDescription: "Via A10, 30 min ride. Vienne, Manufacture, Auto-Moto-Vélo and Châtellerie en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Poitiers → Châtellerault",
         heroSubtitle: "Your Poitiers → Châtellerault transfer at €45 — €55. 35 km, manufacture city.",
         description: "Châtellerault, Vienne sub-prefecture, is 30 min from Poitiers via the A10.",
@@ -538,8 +538,8 @@ export const trajetsLimogesPoitiers: Trajet[] = [
     hub: "poitiers",
     i18n: {
       fr: {
-        metaTitle: "Taxi Poitiers → Futuroscope | Prix fixe dès 20 € | TaxiNeo",
-        metaDescription: "Taxi Poitiers → Futuroscope. 12 km, 15 min, dès 20 €. Transfert direct gare-parc. Réservation 24h/24.",
+        metaTitle: "Taxi Poitiers → Futuroscope | 12 km, dès 20 € | TaxiNeo",
+        metaDescription: "Via N10 en 15 min. Parc d'attractions, Technologie, Famille et Spectacles en chemin. Arrêt visite possible en chemin. Arrêt possible pour visites ou photos.",
         heroTitle: "Taxi Poitiers → Futuroscope",
         heroSubtitle: "Transfert Poitiers → Futuroscope au prix fixe de 20 — 28 €. 12 km, 15 min porte-à-porte.",
         description: "Le Futuroscope, parc d'attractions dédié aux technologies du futur, est à 15 min du centre de Poitiers.",
@@ -557,8 +557,8 @@ export const trajetsLimogesPoitiers: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Poitiers → Futuroscope | Fixed price from €20 | TaxiNeo",
-        metaDescription: "Taxi Poitiers → Futuroscope. 12 km, 15 min, from €20. Direct station-park transfer. Book 24/7.",
+        metaTitle: "Taxi Poitiers → Futuroscope | 12 km, from €20 | TaxiNeo",
+        metaDescription: "Via N10, 15 min ride. Parc d'attractions, Technologie, Famille and Spectacles en route. Stops for sightseeing possible en route. No toll on this route.",
         heroTitle: "Taxi Poitiers → Futuroscope",
         heroSubtitle: "Your Poitiers → Futuroscope transfer at €20 — €28. 12 km, 15 min door-to-door.",
         description: "Futuroscope, France's second-largest theme park, is 15 min from central Poitiers.",
@@ -602,8 +602,8 @@ export const trajetsLimogesPoitiers: Trajet[] = [
     hub: "poitiers",
     i18n: {
       fr: {
-        metaTitle: "Taxi Poitiers → La Rochelle | Prix fixe dès 180 € | TaxiNeo",
-        metaDescription: "Taxi Poitiers → La Rochelle. 145 km, 1h30, dès 180 €. Vieux-Port, Île de Ré, Aquarium. Réservation 24h/24.",
+        metaTitle: "Taxi Poitiers → La Rochelle | 145 km, dès 180 € | TaxiNeo",
+        metaDescription: "Via A10 puis N11 en 1h30. A10/N11, Atlantique, Vieux-Port et Île de Ré en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Poitiers → La Rochelle",
         heroSubtitle: "Transfert Poitiers → La Rochelle au prix fixe de 180 — 215 €. 145 km, perle de l'Atlantique.",
         description: "La Rochelle, perle de la côte atlantique, est à 1h30 de Poitiers.",
@@ -621,8 +621,8 @@ export const trajetsLimogesPoitiers: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Poitiers → La Rochelle | Fixed price from €180 | TaxiNeo",
-        metaDescription: "Taxi Poitiers → La Rochelle. 145 km, 1h30, from €180. Old Port, Île de Ré, Aquarium. Book 24/7.",
+        metaTitle: "Taxi Poitiers → La Rochelle | 145 km, from €180 | TaxiNeo",
+        metaDescription: "Via A10 then N11, 1h30 ride. A10/N11, Atlantique, Vieux-Port and Île de Ré en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Poitiers → La Rochelle",
         heroSubtitle: "Your Poitiers → La Rochelle transfer at €180 — €215. 145 km, Atlantic pearl.",
         description: "La Rochelle, pearl of the Atlantic coast, is 1h30 from Poitiers.",

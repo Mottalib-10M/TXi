@@ -20,7 +20,7 @@ export const trajetsPau3: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Pau → Biarritz | Prix fixe dès 125 € | TaxiNeo",
-        metaDescription: "Taxi Pau → Biarritz. 120 km, 1h10, dès 125 €. Transfert Béarn — Côte Basque par A64. Réservation 24h/24.",
+        metaDescription: "Via A64 en undefined min. Pays Basque, Atlantique, Surf et Thalasso en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Pau → Biarritz",
         heroSubtitle: "Transfert Pau → Biarritz au prix fixe de 125 — 160 €. 120 km, 1h10.",
         description: "Biarritz, joyau de la Côte Basque et capitale européenne du surf, à 1h10 de Pau.",
@@ -39,7 +39,7 @@ export const trajetsPau3: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Pau → Biarritz | Fixed price from €125 | TaxiNeo",
-        metaDescription: "Taxi Pau → Biarritz. 120 km, 70 min, from €125. Pyrenees to Atlantic Coast. Book 24/7.",
+        metaDescription: "Via A64, undefined min ride. Pays Basque, Atlantique, Surf and Thalasso en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Pau → Biarritz",
         heroSubtitle: "Pau → Biarritz transfer at €125 — €160. 120 km, 70 min.",
         description: "Biarritz, European surf capital on the Basque Coast, 70 min from Pau.",
@@ -76,8 +76,8 @@ export const trajetsPau3: Trajet[] = [
     hub: "pau",
     i18n: {
       fr: {
-        metaTitle: "Taxi Pau → Auch | Prix fixe dès 85 € | TaxiNeo",
-        metaDescription: "Taxi Pau → Auch. 80 km, 55 min, dès 85 €. Traversée de la Gascogne par la D943. Réservation 24h/24.",
+        metaTitle: "Taxi Pau → Auch | 80 km via D943, dès 85 € | TaxiNeo",
+        metaDescription: "Via D943 en undefined min. Gers, Armagnac, Gascogne et D'Artagnan en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Pau → Auch",
         heroSubtitle: "Transfert Pau → Auch au prix fixe de 85 — 110 €. 80 km, 55 min.",
         description: "Auch, capitale historique de la Gascogne et patrie de d'Artagnan, à 55 min de Pau.",
@@ -95,8 +95,8 @@ export const trajetsPau3: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Pau → Auch | Fixed price from €85 | TaxiNeo",
-        metaDescription: "Taxi Pau → Auch. 80 km, 55 min, from €85. Through Gascony heartland. Book 24/7.",
+        metaTitle: "Taxi Pau → Auch | Guaranteed fixed price | TaxiNeo",
+        metaDescription: "Via D943, undefined min ride. Gers, Armagnac, Gascogne and D'Artagnan en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Pau → Auch",
         heroSubtitle: "Pau → Auch transfer at €85 — €110. 80 km, 55 min.",
         description: "Auch, historic capital of Gascony and d'Artagnan's homeland, 55 min from Pau.",
@@ -133,8 +133,8 @@ export const trajetsPau3: Trajet[] = [
     hub: "pau",
     i18n: {
       fr: {
-        metaTitle: "Taxi Pau → Saragosse | Prix fixe dès 300 € | TaxiNeo",
-        metaDescription: "Taxi Pau → Saragosse. 260 km, 2h50, dès 300 €. Traversée des Pyrénées par le Somport. Réservation 24h/24.",
+        metaTitle: "Taxi Pau → Saragosse | 260 km, dès 300 € | TaxiNeo",
+        metaDescription: "Via N134 / E7 en undefined min. N134, E7, Pyrénées et Espagne en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Pau → Saragosse",
         heroSubtitle: "Transfert Pau → Saragosse au prix fixe de 300 — 380 €. 260 km, 2h50.",
         description: "Saragosse, cinquième ville d'Espagne et cité du Pilar, à 2h50 de Pau via les Pyrénées.",
@@ -152,8 +152,8 @@ export const trajetsPau3: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Pau → Zaragoza | Fixed price from €300 | TaxiNeo",
-        metaDescription: "Taxi Pau → Zaragoza. 260 km, 2h50, from €300. Cross-Pyrenees via Somport tunnel. Book 24/7.",
+        metaTitle: "Taxi Pau → Saragosse | 260 km, from €300 | TaxiNeo",
+        metaDescription: "Via N134 / E7, undefined min ride. N134, E7, Pyrénées and Espagne en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Pau → Saragosse (Zaragoza)",
         heroSubtitle: "Pau → Zaragoza transfer at €300 — €380. 260 km, 2h50.",
         description: "Zaragoza, Spain's fifth city and Pilar basilica, 2h50 from Pau across the Pyrenees.",
@@ -190,8 +190,8 @@ export const trajetsPau3: Trajet[] = [
     hub: "pau",
     i18n: {
       fr: {
-        metaTitle: "Taxi Pau → Aéroport Pau-Pyrénées | Dès 20 € | TaxiNeo",
-        metaDescription: "Taxi Pau → Aéroport Pau-Pyrénées. 10 km, 10 min, dès 20 €. Transfert aéroport au prix fixe. Réservation 24h/24.",
+        metaTitle: "Taxi Pau → Aéroport Pau-Pyrénées | 10 km, dès 20 € | TaxiNeo",
+        metaDescription: "Via D802 en undefined min. Aéroport, Pyrénées, Navette et Direct en chemin. Dépose au terminal, suivi de vol. Suivi de vol, dépose directe au terminal.",
         heroTitle: "Taxi Pau → Aéroport Pau-Pyrénées",
         heroSubtitle: "Transfert centre-ville de Pau → Aéroport au prix fixe de 20 — 30 €. 10 km, 10 min.",
         description: "Transfert rapide et économique entre le centre de Pau et l'aéroport Pau-Pyrénées.",
@@ -209,8 +209,8 @@ export const trajetsPau3: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Pau → Pau-Pyrénées Airport | From €20 | TaxiNeo",
-        metaDescription: "Taxi Pau → Pau Airport. 10 km, 10 min, from €20. Fixed price airport transfer. Book 24/7.",
+        metaTitle: "Taxi Pau → Aéroport Pau-Pyrénées | 10 km, from €20 | TaxiNeo",
+        metaDescription: "Via D802, undefined min ride. Aéroport, Pyrénées, Navette and Direct en route. Terminal drop-off, flight tracking. Flight tracking, direct terminal drop-off.",
         heroTitle: "Taxi Pau → Pau-Pyrénées Airport",
         heroSubtitle: "Pau city center → Airport at €20 — €30. 10 km, 10 min.",
         description: "Quick and affordable transfer between Pau city center and Pau-Pyrénées Airport.",
@@ -248,7 +248,7 @@ export const trajetsPau3: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Pau → Cauterets | Prix fixe dès 60 € | TaxiNeo",
-        metaDescription: "Taxi Pau → Cauterets. 55 km, 50 min, dès 60 €. Station thermale et ski au cœur des Pyrénées. Réservation 24h/24.",
+        metaDescription: "Via D920 en undefined min. Pyrénées, Thermalisme, Ski et Pont d'Espagne en chemin. Arrêt visite possible en chemin. Arrêt possible pour visites ou photos.",
         heroTitle: "Taxi Pau → Cauterets",
         heroSubtitle: "Transfert Pau → Cauterets au prix fixe de 60 — 80 €. 55 km, 50 min.",
         description: "Cauterets, station thermale et de ski au coeur du Parc National des Pyrénées, à 50 min de Pau.",
@@ -266,8 +266,8 @@ export const trajetsPau3: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Pau → Cauterets | From €60 | TaxiNeo",
-        metaDescription: "Taxi Pau → Cauterets. 55 km, 50 min, from €60. Pyrenees spa and ski resort. Book 24/7.",
+        metaTitle: "Taxi Pau → Cauterets | Fixed price transfer | TaxiNeo",
+        metaDescription: "Via D920, undefined min ride. Pyrénées, Thermalisme, Ski and Pont d'Espagne en route. Stops for sightseeing possible en route. Return trip at same rate.",
         heroTitle: "Taxi Pau → Cauterets",
         heroSubtitle: "Pau → Cauterets transfer at €60 — €80. 55 km, 50 min.",
         description: "Cauterets, thermal spa and ski resort in the Pyrenees National Park, 50 min from Pau.",

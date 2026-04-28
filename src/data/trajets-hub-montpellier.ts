@@ -27,8 +27,8 @@ export const trajetsMontpellierHub: Trajet[] = [
     hub: "montpellier",
     i18n: {
       fr: {
-        metaTitle: "Taxi Montpellier → Sète | Prix fixe dès 45 € | TaxiNeo",
-        metaDescription: "Taxi Montpellier → Sète. 32 km, 30 min, dès 45 €. Étang de Thau, Mont Saint-Clair, port de pêche. Réservation 24h/24.",
+        metaTitle: "Taxi Montpellier → Sète | 32 km, dès 45 € | TaxiNeo",
+        metaDescription: "Par A9, 30 min de trajet. Étang de Thau, Mont Saint-Clair, Joutes nautiques et Port de pêche en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Montpellier → Sète",
         heroSubtitle: "Transfert Montpellier → Sète au prix fixe de 45 — 60 €. 32 km par l'A9.",
         description: "Sète, la 'Venise du Languedoc' avec ses canaux, son port de pêche et l'étang de Thau, est à 30 min de Montpellier.",
@@ -46,8 +46,8 @@ export const trajetsMontpellierHub: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Montpellier → Sète | Fixed price from €45 | TaxiNeo",
-        metaDescription: "Taxi Montpellier → Sète. 32 km, 30 min, from €45. Thau lagoon, Mont Saint-Clair, fishing port. Book 24/7.",
+        metaTitle: "Taxi Montpellier → Sète | 32 km, from €45 | TaxiNeo",
+        metaDescription: "Direct route via A9, 30 min. Étang de Thau, Mont Saint-Clair, Joutes nautiques and Port de pêche en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Montpellier → Sète",
         heroSubtitle: "Your Montpellier → Sète transfer at €45 — €60. 32 km via the A9.",
         description: "Sète, the 'Venice of Languedoc' with its canals, fishing port and Thau lagoon, is 30 min from Montpellier.",
@@ -92,8 +92,8 @@ export const trajetsMontpellierHub: Trajet[] = [
     hub: "montpellier",
     i18n: {
       fr: {
-        metaTitle: "Taxi Montpellier → Nîmes | Prix fixe dès 70 € | TaxiNeo",
-        metaDescription: "Taxi Montpellier → Nîmes. 55 km, 40 min, dès 70 €. Arènes, Maison Carrée, Pont du Gard. Réservation 24h/24.",
+        metaTitle: "Taxi Montpellier → Nîmes | 55 km, dès 70 € | TaxiNeo",
+        metaDescription: "Par A9, 40 min de trajet. Arènes de Nîmes, Maison Carrée, Jardins de la Fontaine et Pont du Gard en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Montpellier → Nîmes",
         heroSubtitle: "Transfert Montpellier → Nîmes au prix fixe de 70 — 90 €. 55 km par l'A9.",
         description: "Nîmes, la 'Rome française' avec ses monuments antiques exceptionnels, est à 40 min de Montpellier.",
@@ -111,8 +111,8 @@ export const trajetsMontpellierHub: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Montpellier → Nîmes | Fixed price from €70 | TaxiNeo",
-        metaDescription: "Taxi Montpellier → Nîmes. 55 km, 40 min, from €70. Arena, Maison Carrée, Pont du Gard. Book 24/7.",
+        metaTitle: "Taxi Montpellier → Nîmes | 55 km, from €70 | TaxiNeo",
+        metaDescription: "Via A9, 40 min ride. Arènes de Nîmes, Maison Carrée, Jardins de la Fontaine and Pont du Gard en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Montpellier → Nîmes",
         heroSubtitle: "Your Montpellier → Nîmes transfer at €70 — €90. 55 km via the A9.",
         description: "Nîmes, the 'French Rome' with its exceptional ancient monuments, is 40 min from Montpellier.",
@@ -157,8 +157,8 @@ export const trajetsMontpellierHub: Trajet[] = [
     hub: "montpellier",
     i18n: {
       fr: {
-        metaTitle: "Taxi Montpellier → Béziers | Prix fixe dès 90 € | TaxiNeo",
-        metaDescription: "Taxi Montpellier → Béziers. 75 km, 50 min, dès 90 €. Canal du Midi, écluses de Fonseranes. Réservation 24h/24.",
+        metaTitle: "Taxi Montpellier → Béziers | 75 km, dès 90 € | TaxiNeo",
+        metaDescription: "Via A9 en 50 min. Canal du Midi, Cathédrale Saint-Nazaire, Écluses de Fonseranes et Vignoble en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Montpellier → Béziers",
         heroSubtitle: "Transfert Montpellier → Béziers au prix fixe de 90 — 120 €. 75 km par l'A9.",
         description: "Béziers, ville millénaire surplombant l'Orb avec sa cathédrale et le Canal du Midi, est à 50 min de Montpellier.",
@@ -176,8 +176,8 @@ export const trajetsMontpellierHub: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Montpellier → Béziers | Fixed price from €90 | TaxiNeo",
-        metaDescription: "Taxi Montpellier → Béziers. 75 km, 50 min, from €90. Canal du Midi, Fonseranes locks. Book 24/7.",
+        metaTitle: "Taxi Montpellier → Béziers | 75 km, from €90 | TaxiNeo",
+        metaDescription: "Via A9, 50 min ride. Canal du Midi, Cathédrale Saint-Nazaire, Écluses de Fonseranes and Vignoble en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Montpellier → Béziers",
         heroSubtitle: "Your Montpellier → Béziers transfer at €90 — €120. 75 km via the A9.",
         description: "Béziers, a millennial city overlooking the Orb with its cathedral and Canal du Midi, is 50 min from Montpellier.",
@@ -221,8 +221,8 @@ export const trajetsMontpellierHub: Trajet[] = [
     hub: "montpellier",
     i18n: {
       fr: {
-        metaTitle: "Taxi Montpellier → Aigues-Mortes | Dès 50 € | TaxiNeo",
-        metaDescription: "Taxi Montpellier → Aigues-Mortes. 35 km, 30 min, dès 50 €. Remparts, Camargue, salins. Réservation 24h/24.",
+        metaTitle: "Taxi Montpellier → Aigues-Mortes | 35 km, dès 50 € | TaxiNeo",
+        metaDescription: "Par D62/A9, 30 min de trajet. Remparts médiévaux, Salins du Midi, Camargue et Tour de Constance en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Montpellier → Aigues-Mortes",
         heroSubtitle: "Transfert Montpellier → Aigues-Mortes au prix fixe de 50 — 65 €. 35 km, porte de la Camargue.",
         description: "Aigues-Mortes, cité médiévale fortifiée en Camargue avec ses remparts intacts et ses salins roses, est à 30 min de Montpellier.",
@@ -240,8 +240,8 @@ export const trajetsMontpellierHub: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Montpellier → Aigues-Mortes | From €50 | TaxiNeo",
-        metaDescription: "Taxi Montpellier → Aigues-Mortes. 35 km, 30 min, from €50. Ramparts, Camargue, salt flats. Book 24/7.",
+        metaTitle: "Taxi Montpellier → Aigues-Mortes | 35 km, from €50 | TaxiNeo",
+        metaDescription: "Direct route via D62/A9, 30 min. Remparts médiévaux, Salins du Midi, Camargue and Tour de Constance en route. Stops for sightseeing possible en route.",
         heroTitle: "Taxi Montpellier → Aigues-Mortes",
         heroSubtitle: "Your Montpellier → Aigues-Mortes transfer at €50 — €65. 35 km, gateway to the Camargue.",
         description: "Aigues-Mortes, a fortified medieval city in the Camargue with intact ramparts and pink salt flats, is 30 min from Montpellier.",
@@ -286,8 +286,8 @@ export const trajetsMontpellierHub: Trajet[] = [
     hub: "montpellier",
     i18n: {
       fr: {
-        metaTitle: "Taxi Montpellier → Avignon | Prix fixe dès 120 € | TaxiNeo",
-        metaDescription: "Taxi Montpellier → Avignon. 100 km, 1h05, dès 120 €. Palais des Papes, pont d'Avignon, festival. Réservation 24h/24.",
+        metaTitle: "Taxi Montpellier → Avignon | 100 km, dès 120 € | TaxiNeo",
+        metaDescription: "Via A9 puis A54 en 1h05. Passage par Palais des Papes, Pont d'Avignon, Festival d'Avignon et Provence. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Montpellier → Avignon",
         heroSubtitle: "Transfert Montpellier → Avignon au prix fixe de 120 — 155 €. 100 km, la cité des Papes.",
         description: "Avignon, cité des Papes avec son palais monumental et son célèbre pont, est à 1h05 de Montpellier.",
@@ -305,8 +305,8 @@ export const trajetsMontpellierHub: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Montpellier → Avignon | Fixed price from €120 | TaxiNeo",
-        metaDescription: "Taxi Montpellier → Avignon. 100 km, 1h05, from €120. Palace of the Popes, Avignon bridge, festival. Book 24/7.",
+        metaTitle: "Taxi Montpellier → Avignon | 100 km, from €120 | TaxiNeo",
+        metaDescription: "Via A9 then A54, 1h05 ride. Palais des Papes, Pont d'Avignon, Festival d'Avignon and Provence en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Montpellier → Avignon",
         heroSubtitle: "Your Montpellier → Avignon transfer at €120 — €155. 100 km, the City of the Popes.",
         description: "Avignon, City of the Popes with its monumental palace and famous bridge, is 1h05 from Montpellier.",
@@ -351,8 +351,8 @@ export const trajetsMontpellierHub: Trajet[] = [
     hub: "montpellier",
     i18n: {
       fr: {
-        metaTitle: "Taxi Montpellier → Carcassonne | Prix fixe dès 180 € | TaxiNeo",
-        metaDescription: "Taxi Montpellier → Carcassonne. 155 km, 1h35, dès 180 €. Cité médiévale UNESCO, Canal du Midi. Réservation 24h/24.",
+        metaTitle: "Taxi Montpellier → Carcassonne | 155 km, dès 180 € | TaxiNeo",
+        metaDescription: "Via A9 puis A61 en 1h35. Cité médiévale, Canal du Midi et UNESCO en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Montpellier → Carcassonne",
         heroSubtitle: "Transfert Montpellier → Carcassonne au prix fixe de 180 — 230 €. 155 km, la cité médiévale UNESCO.",
         description: "Carcassonne, avec sa cité médiévale aux 52 tours classée à l'UNESCO, est à 1h35 de Montpellier.",
@@ -370,8 +370,8 @@ export const trajetsMontpellierHub: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Montpellier → Carcassonne | Fixed price from €180 | TaxiNeo",
-        metaDescription: "Taxi Montpellier → Carcassonne. 155 km, 1h35, from €180. UNESCO medieval citadel, Canal du Midi. Book 24/7.",
+        metaTitle: "Taxi Montpellier → Carcassonne | 155 km, from €180 | TaxiNeo",
+        metaDescription: "Via A9 then A61, 1h35 ride. Cité médiévale, Canal du Midi and UNESCO along the way. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Montpellier → Carcassonne",
         heroSubtitle: "Your Montpellier → Carcassonne transfer at €180 — €230. 155 km, the UNESCO medieval citadel.",
         description: "Carcassonne, with its 52-tower UNESCO medieval citadel, is 1h35 from Montpellier.",
@@ -416,7 +416,7 @@ export const trajetsMontpellierHub: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Montpellier → Aéroport Montpellier | Dès 25 € | TaxiNeo",
-        metaDescription: "Taxi Montpellier → Aéroport Montpellier-Méditerranée (MPL). 10 km, 15 min, dès 25 €. Transfert rapide. Réservation 24h/24.",
+        metaDescription: "Via D66 en 15 min. Aéroport MPL et Fréjorgues en chemin. Dépose au terminal exact, suivi de vol en temps réel. Suivi de vol, dépose directe au terminal.",
         heroTitle: "Taxi Montpellier → Aéroport",
         heroSubtitle: "Transfert Montpellier → Aéroport Montpellier-Méditerranée au prix fixe de 25 — 35 €. 10 km, 15 min.",
         description: "L'aéroport Montpellier-Méditerranée (MPL) est à seulement 10 km et 15 min du centre-ville.",
@@ -435,7 +435,7 @@ export const trajetsMontpellierHub: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Montpellier → Montpellier Airport | From €25 | TaxiNeo",
-        metaDescription: "Taxi Montpellier → Montpellier-Méditerranée Airport (MPL). 10 km, 15 min, from €25. Fast transfer. Book 24/7.",
+        metaDescription: "Via D66, 15 min ride. Aéroport MPL and Fréjorgues along the way. Terminal drop-off, flight tracking. Terminal drop-off, real-time flight tracking included.",
         heroTitle: "Taxi Montpellier → Airport",
         heroSubtitle: "Your Montpellier → Montpellier-Méditerranée Airport transfer at €25 — €35. 10 km, 15 min.",
         description: "Montpellier-Méditerranée Airport (MPL) is just 10 km and 15 min from the city centre.",

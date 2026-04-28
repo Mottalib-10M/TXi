@@ -27,8 +27,8 @@ export const trajetsBloisVendome: Trajet[] = [
     hub: "blois-vendome",
     i18n: {
       fr: {
-        metaTitle: "Taxi Blois → Paris | Prix fixe dès 200 € | TaxiNeo",
-        metaDescription: "Taxi Blois → Paris. 185 km, 1h50, dès 200 €. A10, transfert direct porte-à-porte depuis la cité royale. Réservation 24h/24.",
+        metaTitle: "Taxi Blois → Paris | 185 km, dès 200 €, 1h50 | TaxiNeo",
+        metaDescription: "Via A10 en 1h50. Loire, Beauce, Île-de-France et Chambord en chemin. Dépose porte-à-porte, bagages inclus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Blois → Paris",
         heroSubtitle: "Transfert Blois → Paris au prix fixe de 200 — 255 €. 185 km, direct par l'A10.",
         description: "Paris est à 1h50 de Blois par l'A10, à travers la plaine de Beauce.",
@@ -47,7 +47,7 @@ export const trajetsBloisVendome: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Blois → Paris | Fixed price from €200 | TaxiNeo",
-        metaDescription: "Taxi Blois → Paris. 185 km, 1h50, from €200. A10, direct door-to-door transfer from the royal city. Book 24/7.",
+        metaDescription: "Via A10, 1h50 ride. Loire, Beauce, Île-de-France and Chambord en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Blois → Paris",
         heroSubtitle: "Your Blois → Paris transfer at €200 — €255. 185 km, direct via the A10.",
         description: "Paris is 1h50 from Blois via the A10 through the Beauce plain.",
@@ -92,8 +92,8 @@ export const trajetsBloisVendome: Trajet[] = [
     hub: "blois-vendome",
     i18n: {
       fr: {
-        metaTitle: "Taxi Blois → Tours | Prix fixe dès 65 € | TaxiNeo",
-        metaDescription: "Taxi Blois → Tours. 62 km, 40 min, dès 65 €. Châteaux de la Loire, Amboise, Chenonceau. Réservation 24h/24.",
+        metaTitle: "Taxi Blois → Tours | forfait dès 65 €, 40 min | TaxiNeo",
+        metaDescription: "Via A10 en 40 min. Loire, Châteaux, Amboise et Chenonceau en chemin. Dépose porte-à-porte, bagages inclus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Blois → Tours",
         heroSubtitle: "Transfert Blois → Tours au prix fixe de 65 — 80 €. 62 km, au cœur des châteaux de la Loire.",
         description: "Tours, capitale de la Touraine et porte des châteaux de la Loire, est à 40 min de Blois.",
@@ -112,7 +112,7 @@ export const trajetsBloisVendome: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Blois → Tours | Fixed price from €65 | TaxiNeo",
-        metaDescription: "Taxi Blois → Tours. 62 km, 40 min, from €65. Loire châteaux, Amboise, Chenonceau. Book 24/7.",
+        metaDescription: "Via A10, 40 min ride. Loire, Châteaux, Amboise and Chenonceau en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Blois → Tours",
         heroSubtitle: "Your Blois → Tours transfer at €65 — €80. 62 km, heart of the Loire châteaux.",
         description: "Tours, Touraine capital and Loire châteaux gateway, is 40 min from Blois.",
@@ -157,8 +157,8 @@ export const trajetsBloisVendome: Trajet[] = [
     hub: "blois-vendome",
     i18n: {
       fr: {
-        metaTitle: "Taxi Blois → Orléans | Prix fixe dès 65 € | TaxiNeo",
-        metaDescription: "Taxi Blois → Orléans. 60 km, 40 min, dès 65 €. A10, Chambord, Loire, Sologne. Réservation 24h/24.",
+        metaTitle: "Taxi Blois → Orléans | forfait dès 65 €, 40 min | TaxiNeo",
+        metaDescription: "Via A10 en 40 min. Loire, Chambord, Sologne et Jeanne d'Arc en chemin. Dépose porte-à-porte, bagages inclus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Blois → Orléans",
         heroSubtitle: "Transfert Blois → Orléans au prix fixe de 65 — 80 €. 60 km, entre Loire et Sologne.",
         description: "Orléans, cité de Jeanne d'Arc sur la Loire, est à 40 min de Blois par l'A10.",
@@ -177,7 +177,7 @@ export const trajetsBloisVendome: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Blois → Orléans | Fixed price from €65 | TaxiNeo",
-        metaDescription: "Taxi Blois → Orléans. 60 km, 40 min, from €65. A10, Chambord, Loire, Sologne. Book 24/7.",
+        metaDescription: "Via A10, 40 min ride. Loire, Chambord, Sologne and Jeanne d'Arc en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Blois → Orléans",
         heroSubtitle: "Your Blois → Orléans transfer at €65 — €80. 60 km, between Loire and Sologne.",
         description: "Orléans, Joan of Arc's city on the Loire, is 40 min from Blois via the A10.",
@@ -222,8 +222,8 @@ export const trajetsBloisVendome: Trajet[] = [
     hub: "blois-vendome",
     i18n: {
       fr: {
-        metaTitle: "Taxi Blois → Chambord | Prix fixe dès 25 € | TaxiNeo",
-        metaDescription: "Taxi Blois → Chambord. 18 km, 15 min, dès 25 €. Transfert direct vers le plus grand château de la Loire. Réservation 24h/24.",
+        metaTitle: "Taxi Blois → Chambord | forfait dès 25 € | TaxiNeo",
+        metaDescription: "Via D33 en 15 min. Chambord, Renaissance, François Ier et Léonard de Vinci en chemin. Arrêt visite possible en chemin. Arrêt possible pour visites ou photos.",
         heroTitle: "Taxi Blois → Chambord",
         heroSubtitle: "Transfert Blois → Chambord au prix fixe de 25 — 35 €. 18 km, le joyau de la Renaissance.",
         description: "Chambord, le plus grand et le plus majestueux des châteaux de la Loire, est à 15 min de Blois.",
@@ -242,7 +242,7 @@ export const trajetsBloisVendome: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Blois → Chambord | Fixed price from €25 | TaxiNeo",
-        metaDescription: "Taxi Blois → Chambord. 18 km, 15 min, from €25. Direct transfer to the Loire's largest château. Book 24/7.",
+        metaDescription: "Via D33, 15 min ride. Chambord, Renaissance, François Ier and Léonard de Vinci en route. Stops for sightseeing possible en route. No toll on this route.",
         heroTitle: "Taxi Blois → Chambord",
         heroSubtitle: "Your Blois → Chambord transfer at €25 — €35. 18 km, the Renaissance jewel.",
         description: "Chambord, the largest and most majestic Loire château, is 15 min from Blois.",
@@ -287,8 +287,8 @@ export const trajetsBloisVendome: Trajet[] = [
     hub: "blois-vendome",
     i18n: {
       fr: {
-        metaTitle: "Taxi Vendôme → Paris | Prix fixe dès 185 € | TaxiNeo",
-        metaDescription: "Taxi Vendôme → Paris. 170 km, 1h40, dès 185 €. A10, transfert direct porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Vendôme → Paris | 170 km, dès 185 € | TaxiNeo",
+        metaDescription: "Via A10 en 1h40. TGV, Loir, Perche et Île-de-France en chemin. Alternative directe au train ou au bus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Vendôme → Paris",
         heroSubtitle: "Transfert Vendôme → Paris au prix fixe de 185 — 230 €. 170 km, direct par l'A10.",
         description: "Paris est à 1h40 de Vendôme par l'A10, à travers le Perche et la Beauce.",
@@ -306,8 +306,8 @@ export const trajetsBloisVendome: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Vendôme → Paris | Fixed price from €185 | TaxiNeo",
-        metaDescription: "Taxi Vendôme → Paris. 170 km, 1h40, from €185. A10, direct door-to-door transfer. Book 24/7.",
+        metaTitle: "Taxi Vendôme → Paris | 170 km, from €185 | TaxiNeo",
+        metaDescription: "Via A10, 1h40 ride. TGV, Loir, Perche and Île-de-France en route. Faster and more direct than train or bus. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Vendôme → Paris",
         heroSubtitle: "Your Vendôme → Paris transfer at €185 — €230. 170 km, direct via the A10.",
         description: "Paris is 1h40 from Vendôme via the A10 through the Beauce plain.",

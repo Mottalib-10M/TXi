@@ -19,8 +19,8 @@ export const trajetsGrasseDinan: Trajet[] = [
     hub: "grasse-dinan",
     i18n: {
       fr: {
-        metaTitle: "Taxi Grasse → Cannes | Dès 30 € | TaxiNeo",
-        metaDescription: "Taxi Grasse → Cannes. 17 km, 20 min, dès 30 €. Parfums et Croisette. Réservation 24h/24.",
+        metaTitle: "Taxi Grasse → Cannes | Prix fixe dès 30 € | TaxiNeo",
+        metaDescription: "Via D6085 en undefined min. Parfums, Croisette, Arrière-pays et Festivals en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Grasse → Cannes",
         heroSubtitle: "Transfert Grasse → Cannes au prix fixe de 30 — 40 €. 17 km, 20 min.",
         description: "De la capitale mondiale du parfum à la Croisette en 20 minutes.",
@@ -38,8 +38,8 @@ export const trajetsGrasseDinan: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Grasse → Cannes | From €30 | TaxiNeo",
-        metaDescription: "Taxi Grasse → Cannes. 17 km, 20 min, from €30. Perfume capital to Croisette. Book 24/7.",
+        metaTitle: "Taxi Grasse → Cannes | Fixed price transfer | TaxiNeo",
+        metaDescription: "Via D6085, undefined min ride. Parfums, Croisette, Arrière-pays and Festivals en route. Drop-off at your exact address. Door-to-door, luggage included.",
         heroTitle: "Taxi Grasse → Cannes",
         heroSubtitle: "Grasse → Cannes transfer at €30 — €40. 17 km, 20 min.",
         description: "From the world perfume capital to the Croisette in 20 minutes.",
@@ -76,8 +76,8 @@ export const trajetsGrasseDinan: Trajet[] = [
     hub: "grasse-dinan",
     i18n: {
       fr: {
-        metaTitle: "Taxi Saint-Brieuc → Rennes | Dès 105 € | TaxiNeo",
-        metaDescription: "Taxi Saint-Brieuc → Rennes. 100 km, 1h05, dès 105 €. Voie express gratuite N12. Réservation 24h/24.",
+        metaTitle: "Taxi Saint-Brieuc → Rennes | 100 km, dès 105 € | TaxiNeo",
+        metaDescription: "Via N12 en undefined min. N12, Bretagne, Côtes-d'Armor et Voie express en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Saint-Brieuc → Rennes",
         heroSubtitle: "Transfert Saint-Brieuc → Rennes au prix fixe de 105 — 135 €. 100 km, 1h05.",
         description: "Rejoignez la capitale bretonne depuis Saint-Brieuc en 1h05.",
@@ -95,8 +95,8 @@ export const trajetsGrasseDinan: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Saint-Brieuc → Rennes | From €105 | TaxiNeo",
-        metaDescription: "Taxi Saint-Brieuc → Rennes. 100 km, 1h05, from €105. Free expressway. Book 24/7.",
+        metaTitle: "Taxi Saint-Brieuc → Rennes | 100 km, from €105 | TaxiNeo",
+        metaDescription: "Via N12, undefined min ride. N12, Bretagne, Côtes-d'Armor and Voie express en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Saint-Brieuc → Rennes",
         heroSubtitle: "Saint-Brieuc → Rennes transfer at €105 — €135. 100 km, 1h05.",
         description: "Reach the Breton capital from Saint-Brieuc in 1h05.",
@@ -133,8 +133,8 @@ export const trajetsGrasseDinan: Trajet[] = [
     hub: "grasse-dinan",
     i18n: {
       fr: {
-        metaTitle: "Taxi Dinan → Saint-Malo | Dès 35 € | TaxiNeo",
-        metaDescription: "Taxi Dinan → Saint-Malo. 30 km, 25 min, dès 35 €. Bretagne médiévale. Réservation 24h/24.",
+        metaTitle: "Taxi Dinan → Saint-Malo | 30 km, dès 35 € | TaxiNeo",
+        metaDescription: "Via D137/D766 en undefined min. Bretagne, Médiéval, Corsaires et Rance en chemin. Arrêt visite possible en chemin. Arrêt possible pour visites ou photos.",
         heroTitle: "Taxi Dinan → Saint-Malo",
         heroSubtitle: "Transfert Dinan → Saint-Malo au prix fixe de 35 — 45 €. 30 km, 25 min.",
         description: "De la cité médiévale de Dinan à la cité corsaire en 25 min.",
@@ -152,8 +152,8 @@ export const trajetsGrasseDinan: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Dinan → Saint-Malo | From €35 | TaxiNeo",
-        metaDescription: "Taxi Dinan → Saint-Malo. 30 km, 25 min, from €35. Medieval Brittany. Book 24/7.",
+        metaTitle: "Taxi Dinan → Saint-Malo | 30 km, from €35 | TaxiNeo",
+        metaDescription: "Via D137/D766, undefined min ride. Bretagne, Médiéval, Corsaires and Rance en route. Stops for sightseeing possible en route. Return trip at same rate.",
         heroTitle: "Taxi Dinan → Saint-Malo",
         heroSubtitle: "Dinan → Saint-Malo transfer at €35 — €45. 30 km, 25 min.",
         description: "From the medieval city to the corsair citadel in 25 min.",

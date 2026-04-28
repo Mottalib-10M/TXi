@@ -27,8 +27,8 @@ export const trajetsThononAnnemasse: Trajet[] = [
     hub: "thonon-annemasse",
     i18n: {
       fr: {
-        metaTitle: "Taxi Annemasse → Genève | Prix fixe dès 20 € | TaxiNeo",
-        metaDescription: "Taxi Annemasse → Genève. 10 km, 15 min, dès 20 €. Transfert transfrontalier direct, aéroport GVA. Réservation 24h/24.",
+        metaTitle: "Taxi Annemasse → Genève | 10 km, dès 20 € | TaxiNeo",
+        metaDescription: "Via D1206 en 15 min. Frontière suisse, Douane de Moillesulaz, Léman Express et Aéroport GVA en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Annemasse → Genève",
         heroSubtitle: "Transfert Annemasse → Genève au prix fixe de 20 — 30 €. 10 km, la frontière en toute simplicité.",
         description: "Genève, métropole internationale au bord du Lac Léman avec l'ONU et le CERN, est à seulement 15 min d'Annemasse.",
@@ -46,8 +46,8 @@ export const trajetsThononAnnemasse: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Annemasse → Geneva | Fixed price from €20 | TaxiNeo",
-        metaDescription: "Taxi Annemasse → Geneva. 10 km, 15 min, from €20. Direct cross-border transfer, GVA airport. Book 24/7.",
+        metaTitle: "Taxi Annemasse → Genève | 10 km, from €20 | TaxiNeo",
+        metaDescription: "Via D1206, 15 min ride. Frontière suisse, Douane de Moillesulaz, Léman Express and Aéroport GVA en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Annemasse → Geneva",
         heroSubtitle: "Your Annemasse → Geneva transfer at €20 — €30. 10 km, the border made simple.",
         description: "Geneva, an international metropolis on Lake Geneva with the UN and CERN, is just 15 min from Annemasse.",
@@ -92,8 +92,8 @@ export const trajetsThononAnnemasse: Trajet[] = [
     hub: "thonon-annemasse",
     i18n: {
       fr: {
-        metaTitle: "Taxi Annemasse → Annecy | Prix fixe dès 55 € | TaxiNeo",
-        metaDescription: "Taxi Annemasse → Annecy. 45 km, 35 min, dès 55 €. Du Genevois au lac d'Annecy par l'A41. Réservation 24h/24.",
+        metaTitle: "Taxi Annemasse → Annecy | 45 km, dès 55 € | TaxiNeo",
+        metaDescription: "Via A41 en 35 min. Massif du Salève, Lac d'Annecy, Genevois savoyard et Vieille ville d'Annecy en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Annemasse → Annecy",
         heroSubtitle: "Transfert Annemasse → Annecy au prix fixe de 55 — 75 €. 45 km du Genevois à la Venise des Alpes.",
         description: "Annecy, la Venise des Alpes au bord de son lac turquoise réputé le plus pur d'Europe, est à 35 min d'Annemasse.",
@@ -111,8 +111,8 @@ export const trajetsThononAnnemasse: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Annemasse → Annecy | Fixed price from €55 | TaxiNeo",
-        metaDescription: "Taxi Annemasse → Annecy. 45 km, 35 min, from €55. From the Genevois to Lake Annecy via A41. Book 24/7.",
+        metaTitle: "Taxi Annemasse → Annecy | 45 km, from €55 | TaxiNeo",
+        metaDescription: "Via A41, 35 min ride. Massif du Salève, Lac d'Annecy, Genevois savoyard and Vieille ville d'Annecy en route. Faster and more direct than train or bus.",
         heroTitle: "Taxi Annemasse → Annecy",
         heroSubtitle: "Your Annemasse → Annecy transfer at €55 — €75. 45 km from the Genevois to the Venice of the Alps.",
         description: "Annecy, the Venice of the Alps beside its turquoise lake reputed Europe's purest, is 35 min from Annemasse.",
@@ -157,8 +157,8 @@ export const trajetsThononAnnemasse: Trajet[] = [
     hub: "thonon-annemasse",
     i18n: {
       fr: {
-        metaTitle: "Taxi Annemasse → Lyon | Prix fixe dès 185 € | TaxiNeo",
-        metaDescription: "Taxi Annemasse → Lyon. 155 km, 1h40, dès 185 €. Du Genevois à la capitale des Gaules par A41/A43. Réservation 24h/24.",
+        metaTitle: "Taxi Annemasse → Lyon | 155 km, dès 185 € | TaxiNeo",
+        metaDescription: "Par A41 puis A43, 1h40 de trajet. Passage par Massif du Salève, Chambéry et Capitale de la gastronomie. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Annemasse → Lyon",
         heroSubtitle: "Transfert Annemasse → Lyon au prix fixe de 185 — 235 €. 155 km du bassin lémanique à la capitale gastronomique.",
         description: "Lyon, capitale de la gastronomie française classée à l'UNESCO, est à 1h40 d'Annemasse par autoroute.",
@@ -176,8 +176,8 @@ export const trajetsThononAnnemasse: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Annemasse → Lyon | Fixed price from €185 | TaxiNeo",
-        metaDescription: "Taxi Annemasse → Lyon. 155 km, 1h40, from €185. From the Genevois to France's gastronomic capital via A41/A43. Book 24/7.",
+        metaTitle: "Taxi Annemasse → Lyon | 155 km, from €185 | TaxiNeo",
+        metaDescription: "Via A41 then A43, 1h40 ride. Massif du Salève, Chambéry and Capitale de la gastronomie along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Annemasse → Lyon",
         heroSubtitle: "Your Annemasse → Lyon transfer at €185 — €235. 155 km from the Lake Geneva basin to France's food capital.",
         description: "Lyon, France's gastronomic capital and UNESCO World Heritage city, is 1h40 from Annemasse by motorway.",
@@ -222,8 +222,8 @@ export const trajetsThononAnnemasse: Trajet[] = [
     hub: "thonon-annemasse",
     i18n: {
       fr: {
-        metaTitle: "Taxi Thonon-les-Bains → Genève | Prix fixe dès 45 € | TaxiNeo",
-        metaDescription: "Taxi Thonon-les-Bains → Genève. 35 km, 30 min, dès 45 €. Rive sud du Léman, aéroport GVA. Réservation 24h/24.",
+        metaTitle: "Taxi Thonon-les-Bains → Genève | 35 km, dès 45 € | TaxiNeo",
+        metaDescription: "Via D1005 en 30 min. Lac Léman, Yvoire, Frontière suisse et Thermalisme en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Thonon-les-Bains → Genève",
         heroSubtitle: "Transfert Thonon-les-Bains → Genève au prix fixe de 45 — 60 €. 35 km le long de la rive sud du Léman.",
         description: "Genève, capitale internationale au bord du Lac Léman avec l'ONU et le CERN, est à 30 min de Thonon-les-Bains.",
@@ -241,8 +241,8 @@ export const trajetsThononAnnemasse: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Thonon-les-Bains → Geneva | Fixed price from €45 | TaxiNeo",
-        metaDescription: "Taxi Thonon-les-Bains → Geneva. 35 km, 30 min, from €45. Lake Geneva south shore, GVA airport. Book 24/7.",
+        metaTitle: "Taxi Thonon-les-Bains → Genève | 35 km, from €45 | TaxiNeo",
+        metaDescription: "Via D1005, 30 min ride. Lac Léman, Yvoire, Frontière suisse and Thermalisme en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Thonon-les-Bains → Geneva",
         heroSubtitle: "Your Thonon-les-Bains → Geneva transfer at €45 — €60. 35 km along Lake Geneva's south shore.",
         description: "Geneva, an international capital on Lake Geneva with the UN and CERN, is 30 min from Thonon-les-Bains.",
@@ -287,8 +287,8 @@ export const trajetsThononAnnemasse: Trajet[] = [
     hub: "thonon-annemasse",
     i18n: {
       fr: {
-        metaTitle: "Taxi Annemasse → Chamonix | Prix fixe dès 100 € | TaxiNeo",
-        metaDescription: "Taxi Annemasse → Chamonix. 85 km, 1h05, dès 100 €. Du Genevois au Mont-Blanc par l'A40. Réservation 24h/24.",
+        metaTitle: "Taxi Annemasse → Chamonix | 85 km, dès 100 € | TaxiNeo",
+        metaDescription: "Par A40, 1h05 de trajet. A40 Autoroute Blanche, Vallée de l'Arve, Mont-Blanc et Stations de ski en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Annemasse → Chamonix",
         heroSubtitle: "Transfert Annemasse → Chamonix au prix fixe de 100 — 135 €. 85 km de la frontière suisse au pied du Mont-Blanc.",
         description: "Chamonix-Mont-Blanc, capitale mondiale de l'alpinisme au pied du toit de l'Europe, est à 1h05 d'Annemasse.",
@@ -306,8 +306,8 @@ export const trajetsThononAnnemasse: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Annemasse → Chamonix | Fixed price from €100 | TaxiNeo",
-        metaDescription: "Taxi Annemasse → Chamonix. 85 km, 1h05, from €100. From the Genevois to Mont-Blanc via the A40. Book 24/7.",
+        metaTitle: "Taxi Annemasse → Chamonix | 85 km, from €100 | TaxiNeo",
+        metaDescription: "Via A40, 1h05 ride. A40 Autoroute Blanche, Vallée de l'Arve, Mont-Blanc and Stations de ski en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Annemasse → Chamonix",
         heroSubtitle: "Your Annemasse → Chamonix transfer at €100 — €135. 85 km from the Swiss border to the foot of Mont-Blanc.",
         description: "Chamonix-Mont-Blanc, world capital of mountaineering at the foot of Europe's roof, is 1h05 from Annemasse.",

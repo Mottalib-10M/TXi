@@ -27,8 +27,8 @@ export const trajetsArcachonBassin: Trajet[] = [
     hub: "arcachon-bassin",
     i18n: {
       fr: {
-        metaTitle: "Taxi Arcachon → Bordeaux | Prix fixe dès 80 € | TaxiNeo",
-        metaDescription: "Taxi Arcachon → Bordeaux. 65 km, 45 min, dès 80 €. A660/A63, pinède landaise, chauffeur professionnel. Réservation 24h/24.",
+        metaTitle: "Taxi Arcachon → Bordeaux | 65 km, dès 80 € | TaxiNeo",
+        metaDescription: "Par A660 / A63, 45 min de trajet. Passage par Pinède landaise, Bassin d'Arcachon et Place de la Bourse. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Arcachon → Bordeaux",
         heroSubtitle: "Transfert Arcachon → Bordeaux au prix fixe de 80 — 100 €. 65 km, liaison directe entre le Bassin d'Arcachon et la capitale girondine.",
         description: "Bordeaux, classée au patrimoine mondial de l'UNESCO, est à 45 min d'Arcachon par l'autoroute A660 puis A63, à travers la majestueuse pinède landaise.",
@@ -46,8 +46,8 @@ export const trajetsArcachonBassin: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Arcachon → Bordeaux | Fixed price from €80 | TaxiNeo",
-        metaDescription: "Taxi Arcachon → Bordeaux. 65 km, 45 min, from €80. A660/A63, pine forest, professional driver. Book 24/7.",
+        metaTitle: "Taxi Arcachon → Bordeaux | 65 km, from €80 | TaxiNeo",
+        metaDescription: "Via A660 / A63, 45 min ride. Pinède landaise, Bassin d'Arcachon and Place de la Bourse along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Arcachon → Bordeaux",
         heroSubtitle: "Your Arcachon → Bordeaux transfer at €80 — €100. 65 km, direct link between the Arcachon Bay and Bordeaux.",
         description: "Bordeaux, a UNESCO World Heritage city, is 45 min from Arcachon via the A660 and A63 motorways through the majestic Landes pine forest.",
@@ -92,8 +92,8 @@ export const trajetsArcachonBassin: Trajet[] = [
     hub: "arcachon-bassin",
     i18n: {
       fr: {
-        metaTitle: "Taxi Arcachon → Aéroport Bordeaux-Mérignac | Dès 65 € | TaxiNeo",
-        metaDescription: "Taxi Arcachon → Aéroport Bordeaux-Mérignac. 55 km, 40 min, dès 65 €. Transfert direct A660/A63, suivi de vol. Réservation 24h/24.",
+        metaTitle: "Taxi Arcachon → Aéroport Bordeaux-Mérignac | 55 km | TaxiNeo",
+        metaDescription: "Via A660 / A63 en 40 min. Aéroport BOD, Pinède landaise et Mérignac en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Arcachon → Aéroport Bordeaux-Mérignac",
         heroSubtitle: "Transfert Arcachon → Aéroport Bordeaux-Mérignac au prix fixe de 65 — 85 €. 55 km, liaison directe vers votre terminal.",
         description: "L'aéroport de Bordeaux-Mérignac (BOD), principal aéroport de Nouvelle-Aquitaine, est accessible en 40 min depuis Arcachon via l'A660 et l'A63.",
@@ -111,8 +111,8 @@ export const trajetsArcachonBassin: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Arcachon → Bordeaux Airport | Fixed price from €65 | TaxiNeo",
-        metaDescription: "Taxi Arcachon → Bordeaux-Mérignac Airport. 55 km, 40 min, from €65. Direct A660/A63 transfer, flight tracking. Book 24/7.",
+        metaTitle: "Taxi Arcachon → Aéroport Bordeaux-Mérignac | 55 km | TaxiNeo",
+        metaDescription: "Via A660 / A63, 40 min ride. Aéroport BOD, Pinède landaise and Mérignac along the way. Drop-off at your exact address. Door-to-door, luggage included.",
         heroTitle: "Taxi Arcachon → Bordeaux Airport",
         heroSubtitle: "Your Arcachon → Bordeaux-Mérignac Airport transfer at €65 — €85. 55 km, direct to your terminal.",
         description: "Bordeaux-Mérignac Airport (BOD), the main airport in Nouvelle-Aquitaine, is accessible in 40 min from Arcachon via the A660 and A63 motorways.",
@@ -157,8 +157,8 @@ export const trajetsArcachonBassin: Trajet[] = [
     hub: "arcachon-bassin",
     i18n: {
       fr: {
-        metaTitle: "Taxi Arcachon → Dune du Pilat | Prix fixe dès 15 € | TaxiNeo",
-        metaDescription: "Taxi Arcachon → Dune du Pilat. 8 km, 10 min, dès 15 €. Plus haute dune d'Europe, Banc d'Arguin, panorama. Réservation 24h/24.",
+        metaTitle: "Taxi Arcachon → Dune du Pilat | 8 km, dès 15 € | TaxiNeo",
+        metaDescription: "Via D218 / Boulevard de l'Océan en 10 min. Plus haute dune d'Europe, Banc d'Arguin, Pinède et Panorama océan en chemin. Dépose à votre adresse exacte.",
         heroTitle: "Taxi Arcachon → Dune du Pilat",
         heroSubtitle: "Transfert Arcachon → Dune du Pilat au prix fixe de 15 — 20 €. 8 km, accès direct à la plus haute dune d'Europe.",
         description: "La Dune du Pilat, plus haute dune de sable d'Europe culminant à plus de 100 mètres, est accessible en seulement 10 min depuis le centre d'Arcachon.",
@@ -176,8 +176,8 @@ export const trajetsArcachonBassin: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Arcachon → Dune du Pilat | Fixed price from €15 | TaxiNeo",
-        metaDescription: "Taxi Arcachon → Dune du Pilat. 8 km, 10 min, from €15. Europe's tallest sand dune, Banc d'Arguin, panoramic views. Book 24/7.",
+        metaTitle: "Taxi Arcachon → Dune du Pilat | 8 km, from €15 | TaxiNeo",
+        metaDescription: "Via D218 / Boulevard de l'Océan, 10 min ride. Plus haute dune d'Europe, Banc d'Arguin, Pinède and Panorama océan en route. Drop-off at your exact address.",
         heroTitle: "Taxi Arcachon → Dune du Pilat",
         heroSubtitle: "Your Arcachon → Dune du Pilat transfer at €15 — €20. 8 km, direct access to Europe's tallest sand dune.",
         description: "The Dune du Pilat, Europe's tallest sand dune standing over 100 metres high, is just 10 min from central Arcachon.",
@@ -222,8 +222,8 @@ export const trajetsArcachonBassin: Trajet[] = [
     hub: "arcachon-bassin",
     i18n: {
       fr: {
-        metaTitle: "Taxi Arcachon → Cap Ferret | Prix fixe dès 85 € | TaxiNeo",
-        metaDescription: "Taxi Arcachon → Cap Ferret. 70 km, 50 min, dès 85 €. Tour du Bassin d'Arcachon, villages ostréicoles, presqu'île. Réservation 24h/24.",
+        metaTitle: "Taxi Arcachon → Cap Ferret | 70 km, dès 85 € | TaxiNeo",
+        metaDescription: "Par D1250 / D106, 50 min de trajet. Tour du Bassin, Île aux Oiseaux et Villages ostréicoles en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Arcachon → Cap Ferret",
         heroSubtitle: "Transfert Arcachon → Cap Ferret au prix fixe de 85 — 110 €. 70 km, tour du Bassin d'Arcachon par la route.",
         description: "Le Cap Ferret, presqu'île mythique du Bassin d'Arcachon connue pour son phare, ses villages ostréicoles et ses plages sauvages, est accessible en 50 min depuis Arcachon par la route.",
@@ -241,8 +241,8 @@ export const trajetsArcachonBassin: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Arcachon → Cap Ferret | Fixed price from €85 | TaxiNeo",
-        metaDescription: "Taxi Arcachon → Cap Ferret. 70 km, 50 min, from €85. Arcachon Bay circuit, oyster villages, peninsula. Book 24/7.",
+        metaTitle: "Taxi Arcachon → Cap Ferret | 70 km, from €85 | TaxiNeo",
+        metaDescription: "Via D1250 / D106, 50 min ride. Tour du Bassin, Île aux Oiseaux and Villages ostréicoles along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Arcachon → Cap Ferret",
         heroSubtitle: "Your Arcachon → Cap Ferret transfer at €85 — €110. 70 km, scenic drive around the Arcachon Bay.",
         description: "Cap Ferret, the iconic peninsula of the Arcachon Bay known for its lighthouse, oyster villages and wild beaches, is 50 min from Arcachon by road.",
@@ -287,8 +287,8 @@ export const trajetsArcachonBassin: Trajet[] = [
     hub: "arcachon-bassin",
     i18n: {
       fr: {
-        metaTitle: "Taxi La Teste-de-Buch → Bordeaux | Prix fixe dès 75 € | TaxiNeo",
-        metaDescription: "Taxi La Teste-de-Buch → Bordeaux. 60 km, 40 min, dès 75 €. A660/A63, forêt landaise, vignobles de Pessac-Léognan. Réservation 24h/24.",
+        metaTitle: "Taxi La Teste-de-Buch → Bordeaux | 60 km, dès 75 € | TaxiNeo",
+        metaDescription: "Via A660 / A63 en 40 min. Forêt des Landes, Pessac-Léognan et Garonne en chemin. Dépose à votre adresse exacte. Alternative directe au train ou au bus.",
         heroTitle: "Taxi La Teste-de-Buch → Bordeaux",
         heroSubtitle: "Transfert La Teste-de-Buch → Bordeaux au prix fixe de 75 — 95 €. 60 km, traversée de la pinède landaise jusqu'au coeur de Bordeaux.",
         description: "La Teste-de-Buch, commune historique du Bassin d'Arcachon englobant la Dune du Pilat et le Pyla-sur-Mer, est reliée à Bordeaux en 40 min par l'A660 et l'A63.",
@@ -306,8 +306,8 @@ export const trajetsArcachonBassin: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi La Teste-de-Buch → Bordeaux | Fixed price from €75 | TaxiNeo",
-        metaDescription: "Taxi La Teste-de-Buch → Bordeaux. 60 km, 40 min, from €75. A660/A63, Landes forest, Pessac-Léognan vineyards. Book 24/7.",
+        metaTitle: "Taxi La Teste-de-Buch → Bordeaux | 60 km, from €75 | TaxiNeo",
+        metaDescription: "Via A660 / A63, 40 min ride. Forêt des Landes, Pessac-Léognan and Garonne along the way. Drop-off at your exact address. Door-to-door, luggage included.",
         heroTitle: "Taxi La Teste-de-Buch → Bordeaux",
         heroSubtitle: "Your La Teste-de-Buch → Bordeaux transfer at €75 — €95. 60 km, through the Landes pine forest to the heart of Bordeaux.",
         description: "La Teste-de-Buch, the historic municipality of the Arcachon Bay encompassing the Dune du Pilat and Pyla-sur-Mer, is connected to Bordeaux in 40 min via the A660 and A63.",

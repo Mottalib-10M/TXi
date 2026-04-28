@@ -27,8 +27,8 @@ export const trajetsDunkerqueCalais: Trajet[] = [
     hub: "dunkerque-calais",
     i18n: {
       fr: {
-        metaTitle: "Taxi Dunkerque → Lille | Prix fixe dès 85 € | TaxiNeo",
-        metaDescription: "Taxi Dunkerque → Lille. 80 km, 55 min, dès 85 €. A25 gratuite, transfert direct porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Dunkerque → Lille | 80 km, dès 85 € | TaxiNeo",
+        metaDescription: "Via A25 en 55 min. Flandre, Beffroi UNESCO, Carnaval et Jean Bart en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Dunkerque → Lille",
         heroSubtitle: "Transfert Dunkerque → Lille au prix fixe de 85 — 110 €. 80 km, direct par l'A25 gratuite.",
         description: "Lille, capitale des Flandres, est à 55 min de Dunkerque par l'A25.",
@@ -46,8 +46,8 @@ export const trajetsDunkerqueCalais: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Dunkirk → Lille | Fixed price from €85 | TaxiNeo",
-        metaDescription: "Taxi Dunkirk → Lille. 80 km, 55 min, from €85. Toll-free A25, direct door-to-door. Book 24/7.",
+        metaTitle: "Taxi Dunkerque → Lille | 80 km, from €85 | TaxiNeo",
+        metaDescription: "Via A25, 55 min ride. Flandre, Beffroi UNESCO, Carnaval and Jean Bart en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Dunkirk → Lille",
         heroSubtitle: "Your Dunkirk → Lille transfer at €85 — €110. 80 km, via the toll-free A25.",
         description: "Lille, capital of French Flanders, is 55 min from Dunkirk via the A25.",
@@ -92,8 +92,8 @@ export const trajetsDunkerqueCalais: Trajet[] = [
     hub: "dunkerque-calais",
     i18n: {
       fr: {
-        metaTitle: "Taxi Dunkerque → Calais | Prix fixe dès 50 € | TaxiNeo",
-        metaDescription: "Taxi Dunkerque → Calais. 45 km, 35 min, dès 50 €. A16, Eurotunnel, ferry. Réservation 24h/24.",
+        metaTitle: "Taxi Dunkerque → Calais | 45 km, dès 50 € | TaxiNeo",
+        metaDescription: "Via A16 en 35 min. Côte d'Opale, Eurotunnel, Ferry et Plage en chemin. Dépose porte-à-porte, bagages inclus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Dunkerque → Calais",
         heroSubtitle: "Transfert Dunkerque → Calais au prix fixe de 50 — 65 €. 45 km, porte de l'Angleterre.",
         description: "Calais, porte du transmanche, est à 35 min de Dunkerque par l'A16.",
@@ -111,8 +111,8 @@ export const trajetsDunkerqueCalais: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Dunkirk → Calais | Fixed price from €50 | TaxiNeo",
-        metaDescription: "Taxi Dunkirk → Calais. 45 km, 35 min, from €50. A16, Eurotunnel, ferry transfers. Book 24/7.",
+        metaTitle: "Taxi Dunkerque → Calais | 45 km, from €50 | TaxiNeo",
+        metaDescription: "Via A16, 35 min ride. Côte d'Opale, Eurotunnel, Ferry and Plage en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Dunkirk → Calais",
         heroSubtitle: "Your Dunkirk → Calais transfer at €50 — €65. 45 km, gateway to England.",
         description: "Calais, the Channel crossing hub, is 35 min from Dunkirk via the A16.",
@@ -157,8 +157,8 @@ export const trajetsDunkerqueCalais: Trajet[] = [
     hub: "dunkerque-calais",
     i18n: {
       fr: {
-        metaTitle: "Taxi Calais → Lille | Prix fixe dès 115 € | TaxiNeo",
-        metaDescription: "Taxi Calais → Lille. 110 km, 1h10, dès 115 €. A26, transfert direct porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Calais → Lille | 110 km, dès 115 €, 1h10 | TaxiNeo",
+        metaDescription: "Via A26 en 1h10. Passage par Flandre, Artois, Eurostar et TGV. Alternative directe au train ou au bus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Calais → Lille",
         heroSubtitle: "Transfert Calais → Lille au prix fixe de 115 — 145 €. 110 km, direct par l'A26.",
         description: "Lille, métropole européenne, est à 1h10 de Calais par l'A26.",
@@ -177,7 +177,7 @@ export const trajetsDunkerqueCalais: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Calais → Lille | Fixed price from €115 | TaxiNeo",
-        metaDescription: "Taxi Calais → Lille. 110 km, 1h10, from €115. A26, door-to-door from ferry/Eurotunnel. Book 24/7.",
+        metaDescription: "Via A26, 1h10 ride. Flandre, Artois, Eurostar and TGV en route. Faster and more direct than train or bus. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Calais → Lille",
         heroSubtitle: "Your Calais → Lille transfer at €115 — €145. 110 km, via the A26.",
         description: "Lille, European metropolis, is 1h10 from Calais via the A26.",
@@ -222,8 +222,8 @@ export const trajetsDunkerqueCalais: Trajet[] = [
     hub: "dunkerque-calais",
     i18n: {
       fr: {
-        metaTitle: "Taxi Calais → Boulogne-sur-Mer | Prix fixe dès 40 € | TaxiNeo",
-        metaDescription: "Taxi Calais → Boulogne-sur-Mer. 35 km, 25 min, dès 40 €. Nausicaá, Côte d'Opale. Réservation 24h/24.",
+        metaTitle: "Taxi Calais → Boulogne-sur-Mer | 35 km, dès 40 € | TaxiNeo",
+        metaDescription: "Par A16, 25 min de trajet. Passage par Côte d'Opale, Nausicaá, Vieille ville fortifiée et Cap Gris-Nez. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Calais → Boulogne-sur-Mer",
         heroSubtitle: "Transfert Calais → Boulogne-sur-Mer au prix fixe de 40 — 50 €. 35 km, perle de la Côte d'Opale.",
         description: "Boulogne-sur-Mer, premier port de pêche de France et perle de la Côte d'Opale, est à 25 min de Calais.",
@@ -241,8 +241,8 @@ export const trajetsDunkerqueCalais: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Calais → Boulogne-sur-Mer | Fixed price from €40 | TaxiNeo",
-        metaDescription: "Taxi Calais → Boulogne-sur-Mer. 35 km, 25 min, from €40. Nausicaa, Opal Coast. Book 24/7.",
+        metaTitle: "Taxi Calais → Boulogne-sur-Mer | 35 km, from €40 | TaxiNeo",
+        metaDescription: "Direct route via A16, 25 min. Côte d'Opale, Nausicaá, Vieille ville fortifiée and Cap Gris-Nez en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Calais → Boulogne-sur-Mer",
         heroSubtitle: "Your Calais → Boulogne-sur-Mer transfer at €40 — €50. 35 km, Opal Coast gem.",
         description: "Boulogne-sur-Mer, France's top fishing port and home to Nausicaa, is 25 min from Calais.",
@@ -287,8 +287,8 @@ export const trajetsDunkerqueCalais: Trajet[] = [
     hub: "dunkerque-calais",
     i18n: {
       fr: {
-        metaTitle: "Taxi Calais → Paris | Prix fixe dès 320 € | TaxiNeo",
-        metaDescription: "Taxi Calais → Paris. 290 km, 3h, dès 320 €. A26/A1, transfert direct depuis ferry ou Eurotunnel. Réservation 24h/24.",
+        metaTitle: "Taxi Calais → Paris | 290 km, dès 320 €, 3h | TaxiNeo",
+        metaDescription: "Via A26/A1 en 3h. Transmanche, Navette, CDG et Porte-à-porte en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Calais → Paris",
         heroSubtitle: "Transfert Calais → Paris au prix fixe de 320 — 400 €. 290 km, direct par l'A26 puis l'A1.",
         description: "Paris est à 3h de Calais par l'A26 et l'A1, la route historique du transmanche.",
@@ -307,7 +307,7 @@ export const trajetsDunkerqueCalais: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Calais → Paris | Fixed price from €320 | TaxiNeo",
-        metaDescription: "Taxi Calais → Paris. 290 km, 3h, from €320. A26/A1, direct from ferry or Eurotunnel. Book 24/7.",
+        metaDescription: "Via A26/A1, 3 hours ride. Transmanche, Navette, CDG and Porte-à-porte en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Calais → Paris",
         heroSubtitle: "Your Calais → Paris transfer at €320 — €400. 290 km, via the A26 and A1.",
         description: "Paris is 3h from Calais via the A26 and A1, the historic Channel route.",

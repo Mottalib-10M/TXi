@@ -30,8 +30,8 @@ export const trajetsPerpignanCollioure: Trajet[] = [
     hub: "perpignan-collioure",
     i18n: {
       fr: {
-        metaTitle: "Taxi Perpignan → Collioure | Prix fixe dès 35 € | TaxiNeo",
-        metaDescription: "Taxi Perpignan-Collioure. 30 km, 25 min, dès 35 €. D914, Côte Vermeille. Réservation 24h/24.",
+        metaTitle: "Taxi Perpignan → Collioure | 30 km, dès 35 € | TaxiNeo",
+        metaDescription: "Itinéraire D914, environ 25 min. Côte Vermeille, Argelès-sur-Mer, Château Royal et Fauvisme en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Perpignan → Collioure",
         heroSubtitle: "Votre transfert Perpignan → Collioure au prix fixe de 35 — 50 €. 30 km via la D914.",
         description: "Collioure, joyau de la Côte Vermeille et berceau du fauvisme, est à seulement 25 minutes de Perpignan par la D914.",
@@ -49,8 +49,8 @@ export const trajetsPerpignanCollioure: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Perpignan → Collioure | Fixed price from €35 | TaxiNeo",
-        metaDescription: "Taxi Perpignan-Collioure. 30 km, 25 min, from €35. D914, Côte Vermeille. Book 24/7.",
+        metaTitle: "Taxi Perpignan → Collioure | 30 km, from €35 | TaxiNeo",
+        metaDescription: "Direct route via D914, 25 min. Côte Vermeille, Argelès-sur-Mer, Château Royal and Fauvisme en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Perpignan → Collioure",
         heroSubtitle: "Your Perpignan → Collioure transfer at €35 — €50. 30 km via the D914.",
         description: "Collioure, jewel of the Côte Vermeille and birthplace of Fauvism, is just 25 minutes from Perpignan via the D914.",
@@ -95,8 +95,8 @@ export const trajetsPerpignanCollioure: Trajet[] = [
     hub: "perpignan-collioure",
     i18n: {
       fr: {
-        metaTitle: "Taxi Perpignan → Font-Romeu | Prix fixe dès 115 € | TaxiNeo",
-        metaDescription: "Taxi Perpignan-Font-Romeu. 95 km, 1h10, dès 115 €. N116, Cerdagne, Pyrénées-Orientales. Réservation 24h/24.",
+        metaTitle: "Taxi Perpignan → Font-Romeu | 95 km, dès 115 € | TaxiNeo",
+        metaDescription: "Via N116 en 1h10. Cerdagne, Train Jaune, Canigou et Four solaire en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Perpignan → Font-Romeu",
         heroSubtitle: "Votre transfert Perpignan → Font-Romeu au prix fixe de 115 — 145 €. 95 km via la N116.",
         description: "Font-Romeu, station de ski et de cure solaire sur le haut plateau de Cerdagne, est à 1h10 de Perpignan par la N116.",
@@ -114,8 +114,8 @@ export const trajetsPerpignanCollioure: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Perpignan → Font-Romeu | Fixed price from €115 | TaxiNeo",
-        metaDescription: "Taxi Perpignan-Font-Romeu. 95 km, 1h10, from €115. N116, Cerdagne, Pyrenees. Book 24/7.",
+        metaTitle: "Taxi Perpignan → Font-Romeu | 95 km, from €115 | TaxiNeo",
+        metaDescription: "Via N116, 1h10 ride. Cerdagne, Train Jaune, Canigou and Four solaire en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Perpignan → Font-Romeu",
         heroSubtitle: "Your Perpignan → Font-Romeu transfer at €115 — €145. 95 km via the N116.",
         description: "Font-Romeu, a ski resort and solar health station on the Cerdagne plateau, is 1h10 from Perpignan via the N116.",
@@ -160,8 +160,8 @@ export const trajetsPerpignanCollioure: Trajet[] = [
     hub: "perpignan-collioure",
     i18n: {
       fr: {
-        metaTitle: "Taxi Perpignan → Barcelone | Prix fixe dès 225 € | TaxiNeo",
-        metaDescription: "Taxi Perpignan-Barcelone. 190 km, 2h, dès 225 €. AP-7 via Le Perthus. Transfert international 24h/24.",
+        metaTitle: "Taxi Perpignan → Barcelone | 190 km, dès 225 € | TaxiNeo",
+        metaDescription: "Via AP-7 en 2h. Frontière espagnole, Costa Brava, Le Perthus et Catalogne en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Perpignan → Barcelone",
         heroSubtitle: "Votre transfert Perpignan → Barcelone au prix fixe de 225 — 285 €. 190 km via l'AP-7.",
         description: "Barcelone, capitale de la Catalogne et métropole méditerranéenne de renommée mondiale, est à 2h de Perpignan par l'AP-7.",
@@ -179,8 +179,8 @@ export const trajetsPerpignanCollioure: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Perpignan → Barcelona | Fixed price from €225 | TaxiNeo",
-        metaDescription: "Taxi Perpignan-Barcelona. 190 km, 2h, from €225. AP-7 via Le Perthus. International transfer 24/7.",
+        metaTitle: "Taxi Perpignan → Barcelone | 190 km, from €225 | TaxiNeo",
+        metaDescription: "Direct route via AP-7, 2 hours. Frontière espagnole, Costa Brava, Le Perthus and Catalogne en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Perpignan → Barcelona",
         heroSubtitle: "Your Perpignan → Barcelona transfer at €225 — €285. 190 km via the AP-7.",
         description: "Barcelona, capital of Catalonia and world-renowned Mediterranean metropolis, is 2 hours from Perpignan via the AP-7.",
@@ -225,8 +225,8 @@ export const trajetsPerpignanCollioure: Trajet[] = [
     hub: "perpignan-collioure",
     i18n: {
       fr: {
-        metaTitle: "Taxi Perpignan → Narbonne | Prix fixe dès 80 € | TaxiNeo",
-        metaDescription: "Taxi Perpignan-Narbonne. 65 km, 45 min, dès 80 €. A9, Corbières. Réservation 24h/24.",
+        metaTitle: "Taxi Perpignan → Narbonne | 65 km, dès 80 € | TaxiNeo",
+        metaDescription: "Via A9 en 45 min. Corbières, Étangs littoraux, Pays cathare et Via Domitia en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Perpignan → Narbonne",
         heroSubtitle: "Votre transfert Perpignan → Narbonne au prix fixe de 80 — 100 €. 65 km via l'A9.",
         description: "Narbonne, ancienne capitale romaine de la Gaule narbonnaise et carrefour autoroutier du sud, est à 45 minutes de Perpignan par l'A9.",
@@ -244,8 +244,8 @@ export const trajetsPerpignanCollioure: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Perpignan → Narbonne | Fixed price from €80 | TaxiNeo",
-        metaDescription: "Taxi Perpignan-Narbonne. 65 km, 45 min, from €80. A9, Corbières. Book 24/7.",
+        metaTitle: "Taxi Perpignan → Narbonne | 65 km, from €80 | TaxiNeo",
+        metaDescription: "Via A9, 45 min ride. Corbières, Étangs littoraux, Pays cathare and Via Domitia en route. Drop-off at your exact address. Door-to-door, luggage included.",
         heroTitle: "Taxi Perpignan → Narbonne",
         heroSubtitle: "Your Perpignan → Narbonne transfer at €80 — €100. 65 km via the A9.",
         description: "Narbonne, ancient Roman capital of Gallia Narbonensis and southern France's motorway hub, is 45 minutes from Perpignan via the A9.",
@@ -290,8 +290,8 @@ export const trajetsPerpignanCollioure: Trajet[] = [
     hub: "perpignan-collioure",
     i18n: {
       fr: {
-        metaTitle: "Taxi Perpignan → Prades | Prix fixe dès 55 € | TaxiNeo",
-        metaDescription: "Taxi Perpignan-Prades. 45 km, 35 min, dès 55 €. N116, Canigou, Conflent. Réservation 24h/24.",
+        metaTitle: "Taxi Perpignan → Prades | 45 km, dès 55 € | TaxiNeo",
+        metaDescription: "Par N116, 35 min de trajet. Passage par Canigou, Conflent, Pablo Casals et Abbaye Saint-Michel-de-Cuxa. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Perpignan → Prades",
         heroSubtitle: "Votre transfert Perpignan → Prades au prix fixe de 55 — 70 €. 45 km via la N116.",
         description: "Prades, petite ville catalane au pied du Canigou et capitale du Conflent, est à 35 minutes de Perpignan par la N116.",
@@ -309,8 +309,8 @@ export const trajetsPerpignanCollioure: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Perpignan → Prades | Fixed price from €55 | TaxiNeo",
-        metaDescription: "Taxi Perpignan-Prades. 45 km, 35 min, from €55. N116, Canigou, Conflent. Book 24/7.",
+        metaTitle: "Taxi Perpignan → Prades | 45 km, from €55 | TaxiNeo",
+        metaDescription: "Direct route via N116, 35 min. Canigou, Conflent, Pablo Casals and Abbaye Saint-Michel-de-Cuxa en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Perpignan → Prades",
         heroSubtitle: "Your Perpignan → Prades transfer at €55 — €70. 45 km via the N116.",
         description: "Prades, a small Catalan town at the foot of Mount Canigou and capital of the Conflent, is 35 minutes from Perpignan via the N116.",

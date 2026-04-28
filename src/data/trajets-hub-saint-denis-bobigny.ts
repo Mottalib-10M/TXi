@@ -27,8 +27,8 @@ export const trajetsSaintDenisBobigny: Trajet[] = [
     hub: "saint-denis-bobigny",
     i18n: {
       fr: {
-        metaTitle: "Taxi Saint-Denis → CDG | Prix fixe dès 35 € | TaxiNeo",
-        metaDescription: "Taxi Saint-Denis → Aéroport CDG. 20 km, 20 min, dès 35 €. A1 directe, transfert porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Saint-Denis → Aéroport Paris-CDG | 20 km | TaxiNeo",
+        metaDescription: "Par A1, 20 min de trajet. Seine-Saint-Denis, Stade de France, Terminal 2 et Basilique en chemin. Dépose au terminal exact, suivi de vol en temps réel.",
         heroTitle: "Taxi Saint-Denis → Aéroport CDG",
         heroSubtitle: "Transfert Saint-Denis → CDG au prix fixe de 35 — 45 €. 20 km, accès direct par l'A1.",
         description: "L'aéroport Paris-CDG est à seulement 20 km de Saint-Denis, en accès direct par l'A1.",
@@ -46,8 +46,8 @@ export const trajetsSaintDenisBobigny: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Saint-Denis → CDG Airport | Fixed price from €35 | TaxiNeo",
-        metaDescription: "Taxi Saint-Denis → CDG Airport. 20 km, 20 min, from €35. Direct A1 motorway, door-to-door. Book 24/7.",
+        metaTitle: "Taxi Saint-Denis → Aéroport Paris-CDG | 20 km, €35 | TaxiNeo",
+        metaDescription: "Direct route via A1, 20 min. Seine-Saint-Denis, Stade de France, Terminal 2 and Basilique en route. Terminal drop-off, real-time flight tracking included.",
         heroTitle: "Taxi Saint-Denis → CDG Airport",
         heroSubtitle: "Your Saint-Denis → CDG transfer at €35 — €45. 20 km, direct via the A1.",
         description: "CDG Airport is just 20 km from Saint-Denis, with direct access via the A1 motorway.",
@@ -92,8 +92,8 @@ export const trajetsSaintDenisBobigny: Trajet[] = [
     hub: "saint-denis-bobigny",
     i18n: {
       fr: {
-        metaTitle: "Taxi Saint-Denis → Orly | Prix fixe dès 35 € | TaxiNeo",
-        metaDescription: "Taxi Saint-Denis → Aéroport d'Orly. 25 km, 30 min, dès 35 €. Transfert direct porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Saint-Denis → Aéroport Paris-Orly | 25 km | TaxiNeo",
+        metaDescription: "Via A1 puis Périphérique puis A6 en 30 min. A1/Périphérique/A6, Seine-Saint-Denis, Navette Orly et Basilique en chemin. Dépose au terminal, suivi de vol.",
         heroTitle: "Taxi Saint-Denis → Aéroport Orly",
         heroSubtitle: "Transfert Saint-Denis → Orly au prix fixe de 35 — 50 €. 25 km via le Périphérique.",
         description: "L'aéroport d'Orly est à 25 km de Saint-Denis, accessible via le boulevard Périphérique et l'A6.",
@@ -111,8 +111,8 @@ export const trajetsSaintDenisBobigny: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Saint-Denis → Orly Airport | Fixed price from €35 | TaxiNeo",
-        metaDescription: "Taxi Saint-Denis → Orly Airport. 25 km, 30 min, from €35. Direct door-to-door transfer. Book 24/7.",
+        metaTitle: "Taxi Saint-Denis → Aéroport Paris-Orly | 25 km | TaxiNeo",
+        metaDescription: "Via A1 then ring road then A6, 30 min ride. A1/Périphérique/A6, Seine-Saint-Denis, Navette Orly and Basilique en route. Terminal drop-off, flight tracking.",
         heroTitle: "Taxi Saint-Denis → Orly Airport",
         heroSubtitle: "Your Saint-Denis → Orly transfer at €35 — €50. 25 km via the Périphérique.",
         description: "Orly Airport is 25 km from Saint-Denis, accessible via the Périphérique and A6 motorway.",
@@ -157,8 +157,8 @@ export const trajetsSaintDenisBobigny: Trajet[] = [
     hub: "saint-denis-bobigny",
     i18n: {
       fr: {
-        metaTitle: "Taxi Bobigny → CDG | Prix fixe dès 30 € | TaxiNeo",
-        metaDescription: "Taxi Bobigny → Aéroport CDG. 18 km, 20 min, dès 30 €. A3/A1 directe, transfert porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Bobigny → Aéroport Paris-CDG | 18 km, 30 € | TaxiNeo",
+        metaDescription: "Par A3 puis A1, 20 min de trajet. A3/A1, Seine-Saint-Denis, Canal de l'Ourcq et Tribunal en chemin. Dépose au terminal exact, suivi de vol en temps réel.",
         heroTitle: "Taxi Bobigny → Aéroport CDG",
         heroSubtitle: "Transfert Bobigny → CDG au prix fixe de 30 — 40 €. 18 km, via l'A3 et l'A1.",
         description: "L'aéroport CDG est à seulement 18 km de Bobigny, via l'A3 et l'A1.",
@@ -176,8 +176,8 @@ export const trajetsSaintDenisBobigny: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Bobigny → CDG Airport | Fixed price from €30 | TaxiNeo",
-        metaDescription: "Taxi Bobigny → CDG Airport. 18 km, 20 min, from €30. A3/A1 direct, door-to-door. Book 24/7.",
+        metaTitle: "Taxi Bobigny → Aéroport Paris-CDG | 18 km, €30 | TaxiNeo",
+        metaDescription: "Through A3 then A1 in 20 min. A3/A1, Seine-Saint-Denis, Canal de l'Ourcq and Tribunal en route. Terminal drop-off, real-time flight tracking included.",
         heroTitle: "Taxi Bobigny → CDG Airport",
         heroSubtitle: "Your Bobigny → CDG transfer at €30 — €40. 18 km, via the A3 and A1.",
         description: "CDG Airport is just 18 km from Bobigny, via the A3 and A1 motorways.",
@@ -222,8 +222,8 @@ export const trajetsSaintDenisBobigny: Trajet[] = [
     hub: "saint-denis-bobigny",
     i18n: {
       fr: {
-        metaTitle: "Taxi Saint-Denis → Gare du Nord | Prix fixe dès 15 € | TaxiNeo",
-        metaDescription: "Taxi Saint-Denis → Gare du Nord. 8 km, 15 min, dès 15 €. Eurostar, Thalys, TGV Nord. Réservation 24h/24.",
+        metaTitle: "Taxi Saint-Denis → Gare du Nord | 8 km, dès 15 € | TaxiNeo",
+        metaDescription: "Via A1 ou avenue de Paris en 15 min. A1/Périphérique, Gare du Nord, Eurostar et Thalys en chemin. Dépose au terminal exact, suivi de vol en temps réel.",
         heroTitle: "Taxi Saint-Denis → Gare du Nord",
         heroSubtitle: "Transfert Saint-Denis → Gare du Nord au prix fixe de 15 — 25 €. 8 km, idéal pour l'Eurostar.",
         description: "La Gare du Nord, plus grande gare d'Europe, est à seulement 8 km de Saint-Denis.",
@@ -241,8 +241,8 @@ export const trajetsSaintDenisBobigny: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Saint-Denis → Gare du Nord | Fixed price from €15 | TaxiNeo",
-        metaDescription: "Taxi Saint-Denis → Gare du Nord. 8 km, 15 min, from €15. Eurostar, Thalys, TGV Nord. Book 24/7.",
+        metaTitle: "Taxi Saint-Denis → Gare du Nord | 8 km, from €15 | TaxiNeo",
+        metaDescription: "Via A1 ou avenue de Paris, 15 min ride. A1/Périphérique, Gare du Nord, Eurostar and Thalys en route. Terminal drop-off, real-time flight tracking included.",
         heroTitle: "Taxi Saint-Denis → Gare du Nord",
         heroSubtitle: "Your Saint-Denis → Gare du Nord transfer at €15 — €25. 8 km, perfect for the Eurostar.",
         description: "Gare du Nord, Europe's busiest station, is just 8 km from Saint-Denis.",
@@ -287,8 +287,8 @@ export const trajetsSaintDenisBobigny: Trajet[] = [
     hub: "saint-denis-bobigny",
     i18n: {
       fr: {
-        metaTitle: "Taxi Bobigny → Disneyland Paris | Prix fixe dès 50 € | TaxiNeo",
-        metaDescription: "Taxi Bobigny → Disneyland Paris. 40 km, 35 min, dès 50 €. A3/A104/A4, transfert famille direct. Réservation 24h/24.",
+        metaTitle: "Taxi Bobigny → Disneyland Paris | 40 km, dès 50 € | TaxiNeo",
+        metaDescription: "Via A3 puis A104 puis A4 en 35 min. A3/A104/A4, Marne-la-Vallée, Disneyland Park et Walt Disney Studios en chemin. Suivi de vol, dépose directe au terminal.",
         heroTitle: "Taxi Bobigny → Disneyland Paris",
         heroSubtitle: "Transfert Bobigny → Disneyland au prix fixe de 50 — 70 €. 40 km, direct par l'A104 et l'A4.",
         description: "Disneyland Paris est à 40 km de Bobigny, accessible en 35 min par l'A3, l'A104 et l'A4.",
@@ -306,8 +306,8 @@ export const trajetsSaintDenisBobigny: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Bobigny → Disneyland Paris | Fixed price from €50 | TaxiNeo",
-        metaDescription: "Taxi Bobigny → Disneyland Paris. 40 km, 35 min, from €50. Direct family transfer via A104/A4. Book 24/7.",
+        metaTitle: "Taxi Bobigny → Disneyland Paris | 40 km, from €50 | TaxiNeo",
+        metaDescription: "Via A3 then A104 then A4, 35 min ride. A3/A104/A4, Marne-la-Vallée, Disneyland Park and Walt Disney Studios en route. Terminal drop-off, flight tracking.",
         heroTitle: "Taxi Bobigny → Disneyland Paris",
         heroSubtitle: "Your Bobigny → Disneyland transfer at €50 — €70. 40 km, direct via the A104 and A4.",
         description: "Disneyland Paris is 40 km from Bobigny, reachable in 35 min via the A3, A104 and A4.",

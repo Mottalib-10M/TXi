@@ -27,8 +27,8 @@ export const trajetsTroyesAuxerre: Trajet[] = [
     hub: "troyes-auxerre",
     i18n: {
       fr: {
-        metaTitle: "Taxi Troyes → Paris | Prix fixe dès 185 € | TaxiNeo",
-        metaDescription: "Taxi Troyes → Paris. 170 km, 1h40, dès 185 €. A5, transfert direct porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Troyes → Paris | 170 km, dès 185 €, 1h40 | TaxiNeo",
+        metaDescription: "Via A5 en 1h40. Champagne, Magasins d'usine, Cathédrale et Vitraux en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Troyes → Paris",
         heroSubtitle: "Transfert Troyes → Paris au prix fixe de 185 — 230 €. 170 km, direct par l'A5.",
         description: "Paris est à 1h40 de Troyes par l'autoroute A5.",
@@ -47,7 +47,7 @@ export const trajetsTroyesAuxerre: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Troyes → Paris | Fixed price from €185 | TaxiNeo",
-        metaDescription: "Taxi Troyes → Paris. 170 km, 1h40, from €185. A5, direct door-to-door. Book 24/7.",
+        metaDescription: "Via A5, 1h40 ride. Champagne, Magasins d'usine, Cathédrale and Vitraux en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Troyes → Paris",
         heroSubtitle: "Your Troyes → Paris transfer at €185 — €230. 170 km, via the A5.",
         description: "Paris is 1h40 from Troyes via the A5 motorway.",
@@ -92,8 +92,8 @@ export const trajetsTroyesAuxerre: Trajet[] = [
     hub: "troyes-auxerre",
     i18n: {
       fr: {
-        metaTitle: "Taxi Troyes → Reims | Prix fixe dès 140 € | TaxiNeo",
-        metaDescription: "Taxi Troyes → Reims. 130 km, 1h20, dès 140 €. A26, route du Champagne, cathédrale. Réservation 24h/24.",
+        metaTitle: "Taxi Troyes → Reims | 130 km, dès 140 €, 1h20 | TaxiNeo",
+        metaDescription: "Par A26, 1h20 de trajet. Champagne, Cathédrale de Reims, Route du Champagne et Sacre des rois en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Troyes → Reims",
         heroSubtitle: "Transfert Troyes → Reims au prix fixe de 140 — 175 €. 130 km, au coeur du Champagne.",
         description: "Reims, cité des sacres et capitale du Champagne, est à 1h20 de Troyes.",
@@ -112,7 +112,7 @@ export const trajetsTroyesAuxerre: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Troyes → Reims | Fixed price from €140 | TaxiNeo",
-        metaDescription: "Taxi Troyes → Reims. 130 km, 1h20, from €140. A26, Champagne route, cathedral. Book 24/7.",
+        metaDescription: "Through A26 in 1h20. Champagne, Cathédrale de Reims, Route du Champagne and Sacre des rois en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Troyes → Reims",
         heroSubtitle: "Your Troyes → Reims transfer at €140 — €175. 130 km, heart of Champagne.",
         description: "Reims, city of coronations and Champagne capital, is 1h20 from Troyes.",
@@ -157,8 +157,8 @@ export const trajetsTroyesAuxerre: Trajet[] = [
     hub: "troyes-auxerre",
     i18n: {
       fr: {
-        metaTitle: "Taxi Troyes → Dijon | Prix fixe dès 165 € | TaxiNeo",
-        metaDescription: "Taxi Troyes → Dijon. 155 km, 1h35, dès 165 €. A5, Bourgogne, gastronomie. Réservation 24h/24.",
+        metaTitle: "Taxi Troyes → Dijon | 155 km, dès 165 €, 1h35 | TaxiNeo",
+        metaDescription: "Via A5 en 1h35. Bourgogne, Moutarde, Climat de Bourgogne et Chouette en chemin. Dépose à votre adresse exacte. Alternative directe au train ou au bus.",
         heroTitle: "Taxi Troyes → Dijon",
         heroSubtitle: "Transfert Troyes → Dijon au prix fixe de 165 — 210 €. 155 km, de la Champagne à la Bourgogne.",
         description: "Dijon, capitale de la Bourgogne et cité des ducs, est à 1h35 de Troyes.",
@@ -177,7 +177,7 @@ export const trajetsTroyesAuxerre: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Troyes → Dijon | Fixed price from €165 | TaxiNeo",
-        metaDescription: "Taxi Troyes → Dijon. 155 km, 1h35, from €165. A5, Burgundy, gastronomy. Book 24/7.",
+        metaDescription: "Via A5, 1h35 ride. Bourgogne, Moutarde, Climat de Bourgogne and Chouette en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Troyes → Dijon",
         heroSubtitle: "Your Troyes → Dijon transfer at €165 — €210. 155 km, from Champagne to Burgundy.",
         description: "Dijon, Burgundy capital and city of the Dukes, is 1h35 from Troyes.",
@@ -222,8 +222,8 @@ export const trajetsTroyesAuxerre: Trajet[] = [
     hub: "troyes-auxerre",
     i18n: {
       fr: {
-        metaTitle: "Taxi Auxerre → Paris | Prix fixe dès 180 € | TaxiNeo",
-        metaDescription: "Taxi Auxerre → Paris. 165 km, 1h40, dès 180 €. A6, transfert direct porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Auxerre → Paris | 165 km, dès 180 € | TaxiNeo",
+        metaDescription: "Via A6 en 1h40. Bourgogne, Yonne, Cathédrale et Chablis en chemin. Dépose porte-à-porte, bagages inclus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Auxerre → Paris",
         heroSubtitle: "Transfert Auxerre → Paris au prix fixe de 180 — 225 €. 165 km, direct par l'A6.",
         description: "Paris est à 1h40 d'Auxerre par l'autoroute A6.",
@@ -241,8 +241,8 @@ export const trajetsTroyesAuxerre: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Auxerre → Paris | Fixed price from €180 | TaxiNeo",
-        metaDescription: "Taxi Auxerre → Paris. 165 km, 1h40, from €180. A6, direct door-to-door. Book 24/7.",
+        metaTitle: "Taxi Auxerre → Paris | 165 km, from €180 | TaxiNeo",
+        metaDescription: "Via A6, 1h40 ride. Bourgogne, Yonne, Cathédrale and Chablis en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Auxerre → Paris",
         heroSubtitle: "Your Auxerre → Paris transfer at €180 — €225. 165 km, via the A6.",
         description: "Paris is 1h40 from Auxerre via the A6 motorway.",
@@ -287,8 +287,8 @@ export const trajetsTroyesAuxerre: Trajet[] = [
     hub: "troyes-auxerre",
     i18n: {
       fr: {
-        metaTitle: "Taxi Auxerre → Dijon | Prix fixe dès 160 € | TaxiNeo",
-        metaDescription: "Taxi Auxerre → Dijon. 150 km, 1h30, dès 160 €. A6, Bourgogne, Chablis, route des vins. Réservation 24h/24.",
+        metaTitle: "Taxi Auxerre → Dijon | 150 km, dès 160 € | TaxiNeo",
+        metaDescription: "Via A6 en 1h30. Bourgogne, Morvan, Chablis et Climats UNESCO en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Auxerre → Dijon",
         heroSubtitle: "Transfert Auxerre → Dijon au prix fixe de 160 — 200 €. 150 km, traversée de la Bourgogne.",
         description: "Dijon, capitale de la Bourgogne, est à 1h30 d'Auxerre par l'A6.",
@@ -306,8 +306,8 @@ export const trajetsTroyesAuxerre: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Auxerre → Dijon | Fixed price from €160 | TaxiNeo",
-        metaDescription: "Taxi Auxerre → Dijon. 150 km, 1h30, from €160. A6, Burgundy, Chablis, wine route. Book 24/7.",
+        metaTitle: "Taxi Auxerre → Dijon | 150 km, from €160 | TaxiNeo",
+        metaDescription: "Via A6, 1h30 ride. Bourgogne, Morvan, Chablis and Climats UNESCO en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Auxerre → Dijon",
         heroSubtitle: "Your Auxerre → Dijon transfer at €160 — €200. 150 km, across Burgundy.",
         description: "Dijon, Burgundy capital, is 1h30 from Auxerre via the A6.",

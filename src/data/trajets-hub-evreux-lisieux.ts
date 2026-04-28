@@ -27,8 +27,8 @@ export const trajetsEvreuxLisieux: Trajet[] = [
     hub: "evreux-lisieux",
     i18n: {
       fr: {
-        metaTitle: "Taxi Évreux → Paris | Prix fixe dès 105 € | TaxiNeo",
-        metaDescription: "Taxi Évreux → Paris. 100 km, 1h05, dès 105 €. A13, transfert direct porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Évreux → Paris | 100 km, dès 105 €, 1h05 | TaxiNeo",
+        metaDescription: "Via A13 en 1h05. Eure, Cathédrale, Desserte gare/aéroport et Normandie en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Évreux → Paris",
         heroSubtitle: "Transfert Évreux → Paris au prix fixe de 105 — 135 €. 100 km, direct par l'A13.",
         description: "Paris est à 1h05 d'Évreux par l'autoroute de Normandie A13.",
@@ -47,7 +47,7 @@ export const trajetsEvreuxLisieux: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Évreux → Paris | Fixed price from €105 | TaxiNeo",
-        metaDescription: "Taxi Évreux → Paris. 100 km, 1h05, from €105. A13 motorway, direct door-to-door. Book 24/7.",
+        metaDescription: "Via A13, 1h05 ride. Eure, Cathédrale, Desserte gare/aéroport and Normandie en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Évreux → Paris",
         heroSubtitle: "Your Évreux → Paris transfer at €105 — €135. 100 km, via the A13.",
         description: "Paris is 1h05 from Évreux via the A13 Normandy motorway.",
@@ -92,8 +92,8 @@ export const trajetsEvreuxLisieux: Trajet[] = [
     hub: "evreux-lisieux",
     i18n: {
       fr: {
-        metaTitle: "Taxi Évreux → Rouen | Prix fixe dès 60 € | TaxiNeo",
-        metaDescription: "Taxi Évreux → Rouen. 55 km, 40 min, dès 60 €. N154, cathédrale, Normandie. Réservation 24h/24.",
+        metaTitle: "Taxi Évreux → Rouen | forfait dès 60 €, 40 min | TaxiNeo",
+        metaDescription: "Trajet direct N154 en 40 min. Passage par Eure, Seine-Maritime, Cathédrale de Rouen et Impressionnisme. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Évreux → Rouen",
         heroSubtitle: "Transfert Évreux → Rouen au prix fixe de 60 — 75 €. 55 km, route gratuite.",
         description: "Rouen, capitale historique de la Normandie, est à 40 min d'Évreux par la N154.",
@@ -112,7 +112,7 @@ export const trajetsEvreuxLisieux: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Évreux → Rouen | Fixed price from €60 | TaxiNeo",
-        metaDescription: "Taxi Évreux → Rouen. 55 km, 40 min, from €60. N154, toll-free. Book 24/7.",
+        metaDescription: "Direct route via N154, 40 min. Eure, Seine-Maritime, Cathédrale de Rouen and Impressionnisme en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Évreux → Rouen",
         heroSubtitle: "Your Évreux → Rouen transfer at €60 — €75. 55 km, toll-free.",
         description: "Rouen, historic capital of Normandy, is 40 min from Évreux via the N154.",
@@ -157,8 +157,8 @@ export const trajetsEvreuxLisieux: Trajet[] = [
     hub: "evreux-lisieux",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lisieux → Caen | Prix fixe dès 55 € | TaxiNeo",
-        metaDescription: "Taxi Lisieux → Caen. 50 km, 35 min, dès 55 €. A13, Pays d'Auge, Sainte-Thérèse. Réservation 24h/24.",
+        metaTitle: "Taxi Lisieux → Caen | forfait dès 55 €, 35 min | TaxiNeo",
+        metaDescription: "Itinéraire A13, environ 35 min. Passage par Pays d'Auge, Sainte-Thérèse, Calvados et Mémorial de Caen. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Lisieux → Caen",
         heroSubtitle: "Transfert Lisieux → Caen au prix fixe de 55 — 70 €. 50 km, par l'A13.",
         description: "Caen, cité de Guillaume le Conquérant, est à 35 min de Lisieux par l'A13.",
@@ -177,7 +177,7 @@ export const trajetsEvreuxLisieux: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Lisieux → Caen | Fixed price from €55 | TaxiNeo",
-        metaDescription: "Taxi Lisieux → Caen. 50 km, 35 min, from €55. A13, Pays d'Auge, Sainte-Thérèse. Book 24/7.",
+        metaDescription: "A13 route, approximately 35 min. Pays d'Auge, Sainte-Thérèse, Calvados and Mémorial de Caen en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Lisieux → Caen",
         heroSubtitle: "Your Lisieux → Caen transfer at €55 — €70. 50 km, via the A13.",
         description: "Caen, William the Conqueror's city, is 35 min from Lisieux via the A13.",
@@ -222,8 +222,8 @@ export const trajetsEvreuxLisieux: Trajet[] = [
     hub: "evreux-lisieux",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lisieux → Paris | Prix fixe dès 195 € | TaxiNeo",
-        metaDescription: "Taxi Lisieux → Paris. 180 km, 1h50, dès 195 €. A13, Pays d'Auge, transfert direct. Réservation 24h/24.",
+        metaTitle: "Taxi Lisieux → Paris | 180 km, dès 195 € | TaxiNeo",
+        metaDescription: "Itinéraire A13, environ 1h50. Passage par Pays d'Auge, Normandie, Desserte gare/aéroport et Camembert. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Lisieux → Paris",
         heroSubtitle: "Transfert Lisieux → Paris au prix fixe de 195 — 250 €. 180 km, direct par l'A13.",
         description: "Paris est à 1h50 de Lisieux par l'autoroute de Normandie A13.",
@@ -241,8 +241,8 @@ export const trajetsEvreuxLisieux: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Lisieux → Paris | Fixed price from €195 | TaxiNeo",
-        metaDescription: "Taxi Lisieux → Paris. 180 km, 1h50, from €195. A13, Pays d'Auge, direct transfer. Book 24/7.",
+        metaTitle: "Taxi Lisieux → Paris | 180 km, from €195 | TaxiNeo",
+        metaDescription: "A13 route, approximately 1h50. Pays d'Auge, Normandie, Desserte gare/aéroport and Camembert en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Lisieux → Paris",
         heroSubtitle: "Your Lisieux → Paris transfer at €195 — €250. 180 km, via the A13.",
         description: "Paris is 1h50 from Lisieux via the A13 Normandy motorway.",
@@ -287,8 +287,8 @@ export const trajetsEvreuxLisieux: Trajet[] = [
     hub: "evreux-lisieux",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lisieux → Deauville | Prix fixe dès 35 € | TaxiNeo",
-        metaDescription: "Taxi Lisieux → Deauville. 30 km, 20 min, dès 35 €. D579, Pays d'Auge, les Planches. Réservation 24h/24.",
+        metaTitle: "Taxi Lisieux → Deauville | 30 km, dès 35 € | TaxiNeo",
+        metaDescription: "Via D579 en 20 min. Pays d'Auge, Planches, Casino et Festival du cinéma en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Lisieux → Deauville",
         heroSubtitle: "Transfert Lisieux → Deauville au prix fixe de 35 — 45 €. 30 km, route gratuite.",
         description: "Deauville, station balnéaire de prestige, est à 20 min de Lisieux par la D579.",
@@ -306,8 +306,8 @@ export const trajetsEvreuxLisieux: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Lisieux → Deauville | Fixed price from €35 | TaxiNeo",
-        metaDescription: "Taxi Lisieux → Deauville. 30 km, 20 min, from €35. D579, Pays d'Auge, the Planches. Book 24/7.",
+        metaTitle: "Taxi Lisieux → Deauville | 30 km, from €35 | TaxiNeo",
+        metaDescription: "Via D579, 20 min ride. Pays d'Auge, Planches, Casino and Festival du cinéma en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Lisieux → Deauville",
         heroSubtitle: "Your Lisieux → Deauville transfer at €35 — €45. 30 km, toll-free.",
         description: "Deauville, prestigious seaside resort, is 20 min from Lisieux via the D579.",

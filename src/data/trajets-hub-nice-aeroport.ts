@@ -40,9 +40,8 @@ export const trajetsNiceAeroport: Trajet[] = [
     hub: "nice-aeroport",
     i18n: {
       fr: {
-        metaTitle: "Taxi Aéroport Nice → Monaco | Transfert NCE | TaxiNeo",
-        metaDescription:
-          "Réservez votre taxi aéroport Nice–Monaco dès 45 €. Transfert direct en 25 min vers la Principauté. Chauffeur en zone d'arrivée, service 24h/24.",
+        metaTitle: "Taxi Aéroport Nice Côte d'Azur → Monaco | 22 km | TaxiNeo",
+        metaDescription: "Via A8 en 25 min. Principauté de Monaco, Monte-Carlo Casino, Port Hercule et Vue sur la Méditerranée en chemin. Suivi de vol, dépose directe au terminal.",
         heroTitle: "Taxi Aéroport Nice — Monaco",
         heroSubtitle: "Transfert direct vers la Principauté de Monaco",
         description:
@@ -85,9 +84,8 @@ export const trajetsNiceAeroport: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nice Airport → Monaco | NCE Transfer | TaxiNeo",
-        metaDescription:
-          "Book your Nice Airport–Monaco taxi from €45. Direct 25-minute transfer to the Principality. Driver at arrivals, 24/7 service.",
+        metaTitle: "Taxi Aéroport Nice Côte d'Azur → Monaco | 22 km | TaxiNeo",
+        metaDescription: "Via A8, 25 min ride. Principauté de Monaco, Monte-Carlo Casino, Port Hercule and Vue sur la Méditerranée en route. Terminal drop-off, flight tracking.",
         heroTitle: "Taxi Nice Airport — Monaco",
         heroSubtitle: "Direct transfer to the Principality of Monaco",
         description:
@@ -167,9 +165,8 @@ export const trajetsNiceAeroport: Trajet[] = [
     hub: "nice-aeroport",
     i18n: {
       fr: {
-        metaTitle: "Taxi Aéroport Nice → Cannes | Transfert NCE | TaxiNeo",
-        metaDescription:
-          "Réservez votre taxi aéroport Nice–Cannes dès 50 €. Transfert direct en 30 min vers La Croisette. Chauffeur à l'arrivée, service 24h/24.",
+        metaTitle: "Taxi Aéroport Nice Côte d'Azur → Cannes | 30 km | TaxiNeo",
+        metaDescription: "Via A8 sortie Cannes en 30 min. Festival de Cannes, La Croisette, Palais des Festivals et Îles de Lérins en chemin. Suivi de vol, dépose directe au terminal.",
         heroTitle: "Taxi Aéroport Nice — Cannes",
         heroSubtitle: "Transfert rapide vers la capitale du cinéma",
         description:
@@ -212,9 +209,8 @@ export const trajetsNiceAeroport: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nice Airport → Cannes | NCE Transfer | TaxiNeo",
-        metaDescription:
-          "Book your Nice Airport–Cannes taxi from €50. Direct 30-minute transfer to La Croisette. Driver at arrivals, 24/7 service.",
+        metaTitle: "Taxi Aéroport Nice Côte d'Azur → Cannes | 30 km | TaxiNeo",
+        metaDescription: "Via A8 sortie Cannes, 30 min ride. Festival de Cannes, La Croisette, Palais des Festivals and Îles de Lérins en route. Terminal drop-off, flight tracking.",
         heroTitle: "Taxi Nice Airport — Cannes",
         heroSubtitle: "Quick transfer to the cinema capital of the world",
         description:
@@ -294,9 +290,8 @@ export const trajetsNiceAeroport: Trajet[] = [
     hub: "nice-aeroport",
     i18n: {
       fr: {
-        metaTitle: "Taxi Aéroport Nice → Antibes | Transfert NCE | TaxiNeo",
-        metaDescription:
-          "Réservez votre taxi aéroport Nice–Antibes dès 35 €. Transfert direct en 20 min vers le Vieil Antibes ou Juan-les-Pins. Service 24h/24.",
+        metaTitle: "Taxi Aéroport Nice Côte d'Azur → Antibes | 20 km | TaxiNeo",
+        metaDescription: "Via A8 sortie Antibes / route du b en 20 min. Vieil Antibes, Musée Picasso, Cap d'Antibes et Juan-les-Pins en chemin. Dépose au terminal, suivi de vol.",
         heroTitle: "Taxi Aéroport Nice — Antibes",
         heroSubtitle: "Transfert express vers la cité de Picasso",
         description:
@@ -339,9 +334,8 @@ export const trajetsNiceAeroport: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nice Airport → Antibes | NCE Transfer | TaxiNeo",
-        metaDescription:
-          "Book your Nice Airport–Antibes taxi from €35. Direct 20-minute transfer to Old Antibes or Juan-les-Pins. 24/7 service.",
+        metaTitle: "Taxi Aéroport Nice Côte d'Azur → Antibes | 20 km | TaxiNeo",
+        metaDescription: "Via A8 sortie Antibes / route du bord de mer D6098, 20 min ride. Vieil Antibes, Musée Picasso, Cap d'Antibes and Juan-les-Pins en route. ~€2 toll included.",
         heroTitle: "Taxi Nice Airport — Antibes",
         heroSubtitle: "Express transfer to the city of Picasso",
         description:
@@ -421,9 +415,8 @@ export const trajetsNiceAeroport: Trajet[] = [
     hub: "nice-aeroport",
     i18n: {
       fr: {
-        metaTitle: "Taxi Aéroport Nice → Menton | Transfert NCE | TaxiNeo",
-        metaDescription:
-          "Réservez votre taxi aéroport Nice–Menton dès 55 €. Transfert en 35 min vers la Perle de la France. Chauffeur au terminal, service 24h/24.",
+        metaTitle: "Taxi Aéroport Nice Côte d'Azur → Menton | 35 km | TaxiNeo",
+        metaDescription: "Via A8 sortie 59 Menton / Moyenne  en 35 min. Perle de la France, Fête du Citron, Jardins d'exception et Frontière italienne en chemin. Péage ~3 € inclus.",
         heroTitle: "Taxi Aéroport Nice — Menton",
         heroSubtitle: "Transfert vers la Perle de la France, aux portes de l'Italie",
         description:
@@ -466,9 +459,8 @@ export const trajetsNiceAeroport: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nice Airport → Menton | NCE Transfer | TaxiNeo",
-        metaDescription:
-          "Book your Nice Airport–Menton taxi from €55. 35-minute transfer to the Pearl of France. Driver at terminal, 24/7 service.",
+        metaTitle: "Taxi Aéroport Nice Côte d'Azur → Menton | 35 km | TaxiNeo",
+        metaDescription: "Via A8 sortie 59 Menton / Moyenne Corniche, 35 min ride. Perle de la France, Fête du Citron, Jardins d'exception and Frontière italienne en route. Quote online.",
         heroTitle: "Taxi Nice Airport — Menton",
         heroSubtitle: "Transfer to the Pearl of France, at the gateway to Italy",
         description:
@@ -548,9 +540,8 @@ export const trajetsNiceAeroport: Trajet[] = [
     hub: "nice-aeroport",
     i18n: {
       fr: {
-        metaTitle: "Taxi Aéroport Nice → Saint-Tropez | Transfert NCE | TaxiNeo",
-        metaDescription:
-          "Réservez votre taxi aéroport Nice–Saint-Tropez dès 160 €. Transfert en 1h30 vers le village mythique de la Côte d'Azur. Service porte-à-porte 24h/24.",
+        metaTitle: "Taxi Nice Côte d'Azur → St-Tropez | 110 km, 160 € | TaxiNeo",
+        metaDescription: "Via A8 en 1h30. Village mythique, Port de Saint-Tropez, Plage de Pampelonne et Citadelle en chemin. Dépose au terminal exact, suivi de vol en temps réel.",
         heroTitle: "Taxi Aéroport Nice — Saint-Tropez",
         heroSubtitle: "Transfert vers le village le plus mythique de la Riviera",
         description:
@@ -593,9 +584,8 @@ export const trajetsNiceAeroport: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nice Airport → Saint-Tropez | NCE Transfer | TaxiNeo",
-        metaDescription:
-          "Book your Nice Airport–Saint-Tropez taxi from €160. 90-minute transfer to the legendary Riviera village. Door-to-door service 24/7.",
+        metaTitle: "Taxi Nice Côte d'Azur → St-Tropez | 110 km, €160 | TaxiNeo",
+        metaDescription: "Via A8, 1h30 ride. Village mythique, Port de Saint-Tropez, Plage de Pampelonne and Citadelle en route. Terminal drop-off, real-time flight tracking included.",
         heroTitle: "Taxi Nice Airport — Saint-Tropez",
         heroSubtitle: "Transfer to the most legendary village on the Riviera",
         description:

@@ -30,8 +30,8 @@ export const trajetsSaintMaloDinard: Trajet[] = [
     hub: "saint-malo-dinard",
     i18n: {
       fr: {
-        metaTitle: "Taxi Saint-Malo → Rennes | Prix fixe dès 80 € | TaxiNeo",
-        metaDescription: "Taxi Saint-Malo → Rennes. 75 km, 50 min, dès 80 €. Cité corsaire vers la capitale bretonne. Réservation 24h/24.",
+        metaTitle: "Taxi Saint-Malo → Rennes | 75 km, dès 80 € | TaxiNeo",
+        metaDescription: "Via D137 en 50 min. Côte d'Émeraude, Cité corsaire et Capitale bretonne en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Saint-Malo → Rennes",
         heroSubtitle: "Transfert Saint-Malo → Rennes au prix fixe de 80 — 100 €. 75 km par la D137.",
         description: "Rennes, capitale de la Bretagne et ville universitaire dynamique, est à 50 minutes de Saint-Malo par la voie express D137.",
@@ -49,8 +49,8 @@ export const trajetsSaintMaloDinard: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Saint-Malo → Rennes | Fixed price from €80 | TaxiNeo",
-        metaDescription: "Taxi Saint-Malo → Rennes. 75 km, 50 min, from €80. Corsair city to Brittany's capital. Book 24/7.",
+        metaTitle: "Taxi Saint-Malo → Rennes | 75 km, from €80 | TaxiNeo",
+        metaDescription: "D137 route, approximately 50 min. Côte d'Émeraude, Cité corsaire and Capitale bretonne along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Saint-Malo → Rennes",
         heroSubtitle: "Your Saint-Malo → Rennes transfer at €80 — €100. 75 km via the D137.",
         description: "Rennes, capital of Brittany and a vibrant university city, is 50 minutes from Saint-Malo via the toll-free D137 expressway.",
@@ -95,8 +95,8 @@ export const trajetsSaintMaloDinard: Trajet[] = [
     hub: "saint-malo-dinard",
     i18n: {
       fr: {
-        metaTitle: "Taxi Saint-Malo → Paris | Prix fixe dès 430 € | TaxiNeo",
-        metaDescription: "Taxi Saint-Malo → Paris. 400 km, 4h, dès 430 €. Cité corsaire vers la capitale. Réservation 24h/24.",
+        metaTitle: "Taxi Saint-Malo → Paris | 400 km, dès 430 € | TaxiNeo",
+        metaDescription: "Via A11/A81 en 4h. Traversée Bretagne-Paris, Cité corsaire et Capitale en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Saint-Malo → Paris",
         heroSubtitle: "Transfert Saint-Malo → Paris au prix fixe de 430 — 530 €. 400 km par l'A81/A11.",
         description: "Paris est à 4 heures de route de Saint-Malo par les autoroutes A81 et A11, un trajet direct et confortable en taxi.",
@@ -114,8 +114,8 @@ export const trajetsSaintMaloDinard: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Saint-Malo → Paris | Fixed price from €430 | TaxiNeo",
-        metaDescription: "Taxi Saint-Malo → Paris. 400 km, 4h, from €430. Corsair city to the capital. Book 24/7.",
+        metaTitle: "Taxi Saint-Malo → Paris | 400 km, from €430 | TaxiNeo",
+        metaDescription: "Direct route via A11/A81, 4 hours. Traversée Bretagne-Paris, Cité corsaire and Capitale along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Saint-Malo → Paris",
         heroSubtitle: "Your Saint-Malo → Paris transfer at €430 — €530. 400 km via the A81/A11.",
         description: "Paris is a 4-hour drive from Saint-Malo via the A81 and A11 motorways, a direct and comfortable taxi journey.",
@@ -160,8 +160,8 @@ export const trajetsSaintMaloDinard: Trajet[] = [
     hub: "saint-malo-dinard",
     i18n: {
       fr: {
-        metaTitle: "Taxi Saint-Malo → Mont-Saint-Michel | Prix fixe dès 60 € | TaxiNeo",
-        metaDescription: "Taxi Saint-Malo → Mont-Saint-Michel. 55 km, 40 min, dès 60 €. Merveille de l'Occident, baie classée UNESCO. Réservation 24h/24.",
+        metaTitle: "Taxi Saint-Malo → Mont-Saint-Michel | 55 km, 60 € | TaxiNeo",
+        metaDescription: "Par D155, 40 min de trajet. Passage par Merveille de l'Occident, Baie du Mont-Saint-Michel et Polders. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Saint-Malo → Mont-Saint-Michel",
         heroSubtitle: "Transfert Saint-Malo → Mont-Saint-Michel au prix fixe de 60 — 75 €. 55 km par la D155.",
         description: "Le Mont-Saint-Michel, Merveille de l'Occident classée au patrimoine mondial de l'UNESCO, est à seulement 40 minutes de Saint-Malo.",
@@ -179,8 +179,8 @@ export const trajetsSaintMaloDinard: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Saint-Malo → Mont-Saint-Michel | Fixed price from €60 | TaxiNeo",
-        metaDescription: "Taxi Saint-Malo → Mont-Saint-Michel. 55 km, 40 min, from €60. UNESCO World Heritage, Wonder of the West. Book 24/7.",
+        metaTitle: "Taxi Saint-Malo → Mont-Saint-Michel | 55 km, €60 | TaxiNeo",
+        metaDescription: "D155 route, approximately 40 min. Merveille de l'Occident, Baie du Mont-Saint-Michel and Polders along the way. Stops for sightseeing possible en route.",
         heroTitle: "Taxi Saint-Malo → Mont-Saint-Michel",
         heroSubtitle: "Your Saint-Malo → Mont-Saint-Michel transfer at €60 — €75. 55 km via the D155.",
         description: "Mont-Saint-Michel, the UNESCO World Heritage 'Wonder of the Western World', is just 40 minutes from Saint-Malo.",
@@ -225,8 +225,8 @@ export const trajetsSaintMaloDinard: Trajet[] = [
     hub: "saint-malo-dinard",
     i18n: {
       fr: {
-        metaTitle: "Taxi Dinard → Rennes | Prix fixe dès 75 € | TaxiNeo",
-        metaDescription: "Taxi Dinard → Rennes. 70 km, 50 min, dès 75 €. Station balnéaire Belle Époque vers la capitale bretonne. Réservation 24h/24.",
+        metaTitle: "Taxi Dinard → Rennes | forfait dès 75 €, 50 min | TaxiNeo",
+        metaDescription: "Trajet direct D137 en 50 min. En passant par Station balnéaire Belle Époque, Côte d'Émeraude et Rance. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Dinard → Rennes",
         heroSubtitle: "Transfert Dinard → Rennes au prix fixe de 75 — 95 €. 70 km par la D137.",
         description: "Rennes, capitale de la Bretagne, est à 50 minutes de Dinard par la voie express D137, route directe et gratuite.",
@@ -245,7 +245,7 @@ export const trajetsSaintMaloDinard: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Dinard → Rennes | Fixed price from €75 | TaxiNeo",
-        metaDescription: "Taxi Dinard → Rennes. 70 km, 50 min, from €75. Belle Epoque resort to Brittany's capital. Book 24/7.",
+        metaDescription: "Direct route via D137, 50 min. Station balnéaire Belle Époque, Côte d'Émeraude and Rance along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Dinard → Rennes",
         heroSubtitle: "Your Dinard → Rennes transfer at €75 — €95. 70 km via the D137.",
         description: "Rennes, capital of Brittany, is 50 minutes from Dinard via the toll-free D137 expressway.",
@@ -290,8 +290,8 @@ export const trajetsSaintMaloDinard: Trajet[] = [
     hub: "saint-malo-dinard",
     i18n: {
       fr: {
-        metaTitle: "Taxi Dinard → Aéroport Dinard-Pleurtuit | Dès 15 € | TaxiNeo",
-        metaDescription: "Taxi Dinard → Aéroport Dinard-Pleurtuit. 5 km, 8 min, dès 15 €. Transfert rapide et fiable. Réservation 24h/24.",
+        metaTitle: "Taxi Dinard → Aéroport Dinard-Pleurtuit | 5 km | TaxiNeo",
+        metaDescription: "Via D168 en 8 min. Aéroport Dinard-Pleurtuit-Saint-Malo, Ryanair et Côte d'Émeraude en chemin. Accueil au terminal, attente gratuite si retard de vol.",
         heroTitle: "Taxi Dinard → Aéroport Dinard-Pleurtuit",
         heroSubtitle: "Transfert Dinard → Aéroport au prix fixe de 15 — 25 €. 5 km, 8 minutes.",
         description: "L'aéroport de Dinard-Pleurtuit-Saint-Malo est à 5 km et 8 minutes de Dinard centre, un transfert rapide et économique en taxi.",
@@ -309,8 +309,8 @@ export const trajetsSaintMaloDinard: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Dinard → Dinard-Pleurtuit Airport | From €15 | TaxiNeo",
-        metaDescription: "Taxi Dinard → Dinard-Pleurtuit Airport. 5 km, 8 min, from €15. Fast and reliable transfer. Book 24/7.",
+        metaTitle: "Taxi Dinard → Aéroport Dinard-Pleurtuit | 5 km | TaxiNeo",
+        metaDescription: "Via D168, 8 min ride. Aéroport Dinard-Pleurtuit-Saint-Malo, Ryanair and Côte d'Émeraude along the way. Terminal drop-off, real-time flight tracking included.",
         heroTitle: "Taxi Dinard → Dinard-Pleurtuit Airport",
         heroSubtitle: "Your Dinard → Airport transfer at €15 — €25. 5 km, 8 minutes.",
         description: "Dinard-Pleurtuit-Saint-Malo Airport is 5 km and 8 minutes from Dinard centre, a quick and affordable taxi transfer.",

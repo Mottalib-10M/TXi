@@ -27,8 +27,8 @@ export const trajetsBéziersNarbonne: Trajet[] = [
     hub: "beziers-narbonne",
     i18n: {
       fr: {
-        metaTitle: "Taxi Béziers → Montpellier | Prix fixe dès 85 € | TaxiNeo",
-        metaDescription: "Taxi Béziers → Montpellier. 70 km, 50 min, dès 85 €. A9, Canal du Midi, vignobles du Languedoc. Réservation 24h/24.",
+        metaTitle: "Taxi Béziers → Montpellier | 70 km, dès 85 € | TaxiNeo",
+        metaDescription: "Par A9, 50 min de trajet. Passage par Canal du Midi, Vignobles du Languedoc, Étang de Thau et Pézenas. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Béziers → Montpellier",
         heroSubtitle: "Transfert Béziers → Montpellier au prix fixe de 85 — 110 €. 70 km, direct par l'A9.",
         description: "Montpellier, capitale de l'Occitanie, est à 50 min de Béziers par l'A9 à travers les vignobles du Languedoc.",
@@ -46,8 +46,8 @@ export const trajetsBéziersNarbonne: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Béziers → Montpellier | Fixed price from €85 | TaxiNeo",
-        metaDescription: "Taxi Béziers → Montpellier. 70 km, 50 min, from €85. A9, Canal du Midi, Languedoc vineyards. Book 24/7.",
+        metaTitle: "Taxi Béziers → Montpellier | 70 km, from €85 | TaxiNeo",
+        metaDescription: "Direct route via A9, 50 min. Canal du Midi, Vignobles du Languedoc, Étang de Thau and Pézenas en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Béziers → Montpellier",
         heroSubtitle: "Your Béziers → Montpellier transfer at €85 — €110. 70 km, via the A9.",
         description: "Montpellier, capital of Occitanie, is 50 min from Béziers via the A9 through Languedoc vineyards.",
@@ -92,8 +92,8 @@ export const trajetsBéziersNarbonne: Trajet[] = [
     hub: "beziers-narbonne",
     i18n: {
       fr: {
-        metaTitle: "Taxi Béziers → Narbonne | Prix fixe dès 35 € | TaxiNeo",
-        metaDescription: "Taxi Béziers → Narbonne. 30 km, 25 min, dès 35 €. A9, Canal du Midi, Via Domitia. Réservation 24h/24.",
+        metaTitle: "Taxi Béziers → Narbonne | 30 km, dès 35 € | TaxiNeo",
+        metaDescription: "Via A9 en 25 min. Passage par Canal du Midi, Via Domitia, Cathédrale inachevée et Vignobles Corbières. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Béziers → Narbonne",
         heroSubtitle: "Transfert Béziers → Narbonne au prix fixe de 35 — 50 €. 30 km, direct par l'A9.",
         description: "Narbonne, ancienne capitale romaine de la Gaule, est à 25 min de Béziers par l'A9.",
@@ -111,8 +111,8 @@ export const trajetsBéziersNarbonne: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Béziers → Narbonne | Fixed price from €35 | TaxiNeo",
-        metaDescription: "Taxi Béziers → Narbonne. 30 km, 25 min, from €35. A9, Canal du Midi, Via Domitia. Book 24/7.",
+        metaTitle: "Taxi Béziers → Narbonne | 30 km, from €35 | TaxiNeo",
+        metaDescription: "Via A9, 25 min ride. Canal du Midi, Via Domitia, Cathédrale inachevée and Vignobles Corbières en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Béziers → Narbonne",
         heroSubtitle: "Your Béziers → Narbonne transfer at €35 — €50. 30 km, via the A9.",
         description: "Narbonne, ancient Roman capital of Gaul, is 25 min from Béziers via the A9.",
@@ -157,8 +157,8 @@ export const trajetsBéziersNarbonne: Trajet[] = [
     hub: "beziers-narbonne",
     i18n: {
       fr: {
-        metaTitle: "Taxi Narbonne → Perpignan | Prix fixe dès 80 € | TaxiNeo",
-        metaDescription: "Taxi Narbonne → Perpignan. 65 km, 45 min, dès 80 €. A9, Pays Cathare, forteresse de Salses. Réservation 24h/24.",
+        metaTitle: "Taxi Narbonne → Perpignan | 65 km, dès 80 € | TaxiNeo",
+        metaDescription: "Trajet direct A9 en 45 min. Passage par Pays Cathare, Étang de Leucate, Salses-le-Château et Catalogne. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Narbonne → Perpignan",
         heroSubtitle: "Transfert Narbonne → Perpignan au prix fixe de 80 — 100 €. 65 km, direct par l'A9.",
         description: "Perpignan, capitale du Roussillon catalan, est à 45 min de Narbonne par l'A9.",
@@ -176,8 +176,8 @@ export const trajetsBéziersNarbonne: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Narbonne → Perpignan | Fixed price from €80 | TaxiNeo",
-        metaDescription: "Taxi Narbonne → Perpignan. 65 km, 45 min, from €80. A9, Cathar country, Salses fortress. Book 24/7.",
+        metaTitle: "Taxi Narbonne → Perpignan | 65 km, from €80 | TaxiNeo",
+        metaDescription: "Direct route via A9, 45 min. Pays Cathare, Étang de Leucate, Salses-le-Château and Catalogne en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Narbonne → Perpignan",
         heroSubtitle: "Your Narbonne → Perpignan transfer at €80 — €100. 65 km, via the A9.",
         description: "Perpignan, capital of French Catalonia, is 45 min from Narbonne via the A9.",
@@ -222,8 +222,8 @@ export const trajetsBéziersNarbonne: Trajet[] = [
     hub: "beziers-narbonne",
     i18n: {
       fr: {
-        metaTitle: "Taxi Narbonne → Carcassonne | Prix fixe dès 75 € | TaxiNeo",
-        metaDescription: "Taxi Narbonne → Carcassonne. 60 km, 40 min, dès 75 €. A61, Cité médiévale, Minervois, Canal du Midi. Réservation 24h/24.",
+        metaTitle: "Taxi Narbonne → Carcassonne | 60 km, dès 75 € | TaxiNeo",
+        metaDescription: "Via A61 en 40 min. Cité médiévale, Canal du Midi, Minervois et Pays Cathare en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Narbonne → Carcassonne",
         heroSubtitle: "Transfert Narbonne → Carcassonne au prix fixe de 75 — 95 €. 60 km, direct par l'A61.",
         description: "Carcassonne et sa Cité médiévale classée UNESCO sont à 40 min de Narbonne par l'A61.",
@@ -241,8 +241,8 @@ export const trajetsBéziersNarbonne: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Narbonne → Carcassonne | Fixed price from €75 | TaxiNeo",
-        metaDescription: "Taxi Narbonne → Carcassonne. 60 km, 40 min, from €75. A61, medieval Cité, Minervois, Canal du Midi. Book 24/7.",
+        metaTitle: "Taxi Narbonne → Carcassonne | 60 km, from €75 | TaxiNeo",
+        metaDescription: "A61 route, approximately 40 min. Cité médiévale, Canal du Midi, Minervois and Pays Cathare en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Narbonne → Carcassonne",
         heroSubtitle: "Your Narbonne → Carcassonne transfer at €75 — €95. 60 km, via the A61.",
         description: "Carcassonne and its UNESCO-listed medieval fortress are 40 min from Narbonne via the A61.",
@@ -287,8 +287,8 @@ export const trajetsBéziersNarbonne: Trajet[] = [
     hub: "beziers-narbonne",
     i18n: {
       fr: {
-        metaTitle: "Taxi Béziers → Agde / Cap d'Agde | Prix fixe dès 30 € | TaxiNeo",
-        metaDescription: "Taxi Béziers → Agde et Cap d'Agde. 25 km, 20 min, dès 30 €. Plages, Canal du Midi, station balnéaire. Réservation 24h/24.",
+        metaTitle: "Taxi Béziers → Agde / Cap d'Agde | 25 km, dès 30 € | TaxiNeo",
+        metaDescription: "Via D612/A9 en 20 min. Cap d'Agde, Canal du Midi, Écluses de Fonseranes et Plages méditerranéennes en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Béziers → Agde / Cap d'Agde",
         heroSubtitle: "Transfert Béziers → Agde et Cap d'Agde au prix fixe de 30 — 40 €. 25 km, direct.",
         description: "Agde et la station balnéaire du Cap d'Agde sont à 20 min de Béziers.",
@@ -306,8 +306,8 @@ export const trajetsBéziersNarbonne: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Béziers → Agde / Cap d'Agde | Fixed price from €30 | TaxiNeo",
-        metaDescription: "Taxi Béziers → Agde & Cap d'Agde. 25 km, 20 min, from €30. Beaches, Canal du Midi, seaside resort. Book 24/7.",
+        metaTitle: "Taxi Béziers → Agde / Cap d'Agde | 25 km, from €30 | TaxiNeo",
+        metaDescription: "Via D612/A9, 20 min ride. Cap d'Agde, Canal du Midi, Écluses de Fonseranes and Plages méditerranéennes en route. Faster and more direct than train or bus.",
         heroTitle: "Taxi Béziers → Agde / Cap d'Agde",
         heroSubtitle: "Your Béziers → Agde & Cap d'Agde transfer at €30 — €40. 25 km, direct.",
         description: "Agde and the Cap d'Agde seaside resort are 20 min from Béziers.",

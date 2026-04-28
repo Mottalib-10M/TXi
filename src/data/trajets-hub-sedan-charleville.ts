@@ -30,8 +30,8 @@ export const trajetsSedanCharleville: Trajet[] = [
     hub: "sedan-charleville",
     i18n: {
       fr: {
-        metaTitle: "Taxi Charleville-Mézières → Reims | Prix fixe dès 100 € | TaxiNeo",
-        metaDescription: "Taxi Charleville-Mézières → Reims. 85 km, 55 min, dès 100 €. A34, Ardennes, cathédrale de Reims. Réservation 24h/24.",
+        metaTitle: "Taxi Charleville-Mézières → Reims | 85 km, 100 € | TaxiNeo",
+        metaDescription: "Par A34, 55 min de trajet. Ardennes, Place Ducale, Cathédrale de Reims et Vallée de l'Aisne en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Charleville-Mézières → Reims",
         heroSubtitle: "Transfert Charleville-Mézières → Reims au prix fixe de 100 — 130 €. 85 km par l'A34 des Ardennes à la Champagne.",
         description: "Reims, cité des sacres et capitale du champagne avec sa cathédrale gothique classée UNESCO, est à 55 min de Charleville-Mézières par l'A34.",
@@ -49,8 +49,8 @@ export const trajetsSedanCharleville: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Charleville-Mézières → Reims | Fixed price from €100 | TaxiNeo",
-        metaDescription: "Taxi Charleville-Mézières → Reims. 85 km, 55 min, from €100. A34, Ardennes, Reims Cathedral. Book 24/7.",
+        metaTitle: "Taxi Charleville-Mézières → Reims | 85 km, €100 | TaxiNeo",
+        metaDescription: "Direct route via A34, 55 min. Ardennes, Place Ducale, Cathédrale de Reims and Vallée de l'Aisne en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Charleville-Mézières → Reims",
         heroSubtitle: "Your Charleville-Mézières → Reims transfer at €100 — €130. 85 km via the A34 from the Ardennes to Champagne.",
         description: "Reims, city of coronations and champagne capital with its UNESCO-listed Gothic cathedral, is 55 min from Charleville-Mézières via the A34.",
@@ -95,8 +95,8 @@ export const trajetsSedanCharleville: Trajet[] = [
     hub: "sedan-charleville",
     i18n: {
       fr: {
-        metaTitle: "Taxi Charleville-Mézières → Paris | Prix fixe dès 285 € | TaxiNeo",
-        metaDescription: "Taxi Charleville-Mézières → Paris. 240 km, 2h30, dès 285 €. A34/A4 via Reims et la Champagne. Réservation 24h/24.",
+        metaTitle: "Taxi Charleville-Mézières → Paris | 240 km, 285 € | TaxiNeo",
+        metaDescription: "Via A34/A4 en 2h30. Ardennes, Champagne, Rimbaud et Cathédrale de Reims en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Charleville-Mézières → Paris",
         heroSubtitle: "Transfert Charleville-Mézières → Paris au prix fixe de 285 — 355 €. 240 km par l'A34 et l'A4 à travers les Ardennes et la Champagne.",
         description: "Paris, capitale de la France, est à 2h30 de Charleville-Mézières par l'A34 et l'A4, un trajet direct traversant les Ardennes et la Champagne.",
@@ -114,8 +114,8 @@ export const trajetsSedanCharleville: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Charleville-Mézières → Paris | Fixed price from €285 | TaxiNeo",
-        metaDescription: "Taxi Charleville-Mézières → Paris. 240 km, 2h30, from €285. A34/A4 via Reims and Champagne. Book 24/7.",
+        metaTitle: "Taxi Charleville-Mézières → Paris | 240 km, €285 | TaxiNeo",
+        metaDescription: "Via A34/A4, 2h30 ride. Ardennes, Champagne, Rimbaud and Cathédrale de Reims en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Charleville-Mézières → Paris",
         heroSubtitle: "Your Charleville-Mézières → Paris transfer at €285 — €355. 240 km via the A34/A4 through the Ardennes and Champagne.",
         description: "Paris, the capital of France, is 2h30 from Charleville-Mézières via the A34 and A4, a direct journey through the Ardennes and Champagne.",
@@ -160,8 +160,8 @@ export const trajetsSedanCharleville: Trajet[] = [
     hub: "sedan-charleville",
     i18n: {
       fr: {
-        metaTitle: "Taxi Sedan → Reims | Prix fixe dès 120 € | TaxiNeo",
-        metaDescription: "Taxi Sedan → Reims. 100 km, 1h05, dès 120 €. N43/A34, château fort de Sedan, cathédrale de Reims. Réservation 24h/24.",
+        metaTitle: "Taxi Sedan → Reims | 100 km, dès 120 €, 1h05 | TaxiNeo",
+        metaDescription: "Trajet direct N43/A34 en 1h05. Passage par N43, Château fort de Sedan, Ardennes et Cathédrale de Reims. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Sedan → Reims",
         heroSubtitle: "Transfert Sedan → Reims au prix fixe de 120 — 155 €. 100 km par la N43 et l'A34 du plus grand château fort d'Europe à la cité des sacres.",
         description: "Reims, cité des sacres et capitale du champagne, est à 1h05 de Sedan par la N43 et l'A34, un trajet traversant le cœur des Ardennes et la Champagne.",
@@ -180,7 +180,7 @@ export const trajetsSedanCharleville: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Sedan → Reims | Fixed price from €120 | TaxiNeo",
-        metaDescription: "Taxi Sedan → Reims. 100 km, 1h05, from €120. N43/A34, Sedan Castle, Reims Cathedral. Book 24/7.",
+        metaDescription: "Direct route via N43/A34, 1h05. N43, Château fort de Sedan, Ardennes and Cathédrale de Reims en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Sedan → Reims",
         heroSubtitle: "Your Sedan → Reims transfer at €120 — €155. 100 km via the N43/A34 from Europe's largest castle to the city of coronations.",
         description: "Reims, city of coronations and champagne capital, is 1h05 from Sedan via the N43 and A34, crossing the heart of the Ardennes and Champagne.",
@@ -225,8 +225,8 @@ export const trajetsSedanCharleville: Trajet[] = [
     hub: "sedan-charleville",
     i18n: {
       fr: {
-        metaTitle: "Taxi Charleville-Mézières → Luxembourg | Prix fixe dès 155 € | TaxiNeo",
-        metaDescription: "Taxi Charleville-Mézières → Luxembourg. 130 km, 1h25, dès 155 €. Traversée des Ardennes et de la frontière belgo-luxembourgeoise. Réservation 24h/24.",
+        metaTitle: "Taxi Charleville-Mézières → Luxembourg | 130 km | TaxiNeo",
+        metaDescription: "Via N43/A34/E25 en 1h25. N43, Ardennes, Meuse et Forêt des Ardennes en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Charleville-Mézières → Luxembourg",
         heroSubtitle: "Transfert Charleville-Mézières → Luxembourg au prix fixe de 155 — 200 €. 130 km à travers les Ardennes et la frontière franco-belgo-luxembourgeoise.",
         description: "Luxembourg, capitale du Grand-Duché avec ses casemates et son centre financier européen, est à 1h25 de Charleville-Mézières à travers les forêts des Ardennes.",
@@ -244,8 +244,8 @@ export const trajetsSedanCharleville: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Charleville-Mézières → Luxembourg | Fixed price from €155 | TaxiNeo",
-        metaDescription: "Taxi Charleville-Mézières → Luxembourg. 130 km, 1h25, from €155. Through the Ardennes forest and Belgian-Luxembourg border. Book 24/7.",
+        metaTitle: "Taxi Charleville-Mézières → Luxembourg | 130 km | TaxiNeo",
+        metaDescription: "Via N43/A34/E25, 1h25 ride. N43, Ardennes, Meuse and Forêt des Ardennes en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Charleville-Mézières → Luxembourg",
         heroSubtitle: "Your Charleville-Mézières → Luxembourg transfer at €155 — €200. 130 km through the Ardennes and the Franco-Belgian-Luxembourg border.",
         description: "Luxembourg, capital of the Grand Duchy with its casemates and European financial centre, is 1h25 from Charleville-Mézières through the Ardennes forests.",
@@ -290,8 +290,8 @@ export const trajetsSedanCharleville: Trajet[] = [
     hub: "sedan-charleville",
     i18n: {
       fr: {
-        metaTitle: "Taxi Sedan → Charleville-Mézières | Prix fixe dès 25 € | TaxiNeo",
-        metaDescription: "Taxi Sedan → Charleville-Mézières. 20 km, 18 min, dès 25 €. N43 le long de la Meuse. Du château fort à la Place Ducale. Réservation 24h/24.",
+        metaTitle: "Taxi Sedan → Charleville-Mézières | 20 km, 25 € | TaxiNeo",
+        metaDescription: "Via N43 en 18 min. Meuse, Château fort de Sedan, Place Ducale et Rimbaud en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Sedan → Charleville-Mézières",
         heroSubtitle: "Transfert Sedan → Charleville-Mézières au prix fixe de 25 — 35 €. 20 km par la N43 le long de la Meuse.",
         description: "Charleville-Mézières, ville natale de Rimbaud et sa célèbre Place Ducale, est à 18 min de Sedan par la N43 le long de la vallée de la Meuse.",
@@ -309,8 +309,8 @@ export const trajetsSedanCharleville: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Sedan → Charleville-Mézières | Fixed price from €25 | TaxiNeo",
-        metaDescription: "Taxi Sedan → Charleville-Mézières. 20 km, 18 min, from €25. N43 along the Meuse. From the castle to Place Ducale. Book 24/7.",
+        metaTitle: "Taxi Sedan → Charleville-Mézières | 20 km, €25 | TaxiNeo",
+        metaDescription: "Via N43, 18 min ride. Meuse, Château fort de Sedan, Place Ducale and Rimbaud en route. Drop-off at your exact address. Door-to-door, luggage included.",
         heroTitle: "Taxi Sedan → Charleville-Mézières",
         heroSubtitle: "Your Sedan → Charleville-Mézières transfer at €25 — €35. 20 km via the N43 along the Meuse.",
         description: "Charleville-Mézières, Rimbaud's birthplace and its famous Place Ducale, is 18 min from Sedan via the N43 along the Meuse valley.",

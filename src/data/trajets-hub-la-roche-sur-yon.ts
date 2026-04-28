@@ -27,8 +27,8 @@ export const trajetsLaRocheSurYon: Trajet[] = [
     hub: "la-roche-sur-yon",
     i18n: {
       fr: {
-        metaTitle: "Taxi La Roche-sur-Yon → Nantes | Prix fixe dès 80 € | TaxiNeo",
-        metaDescription: "Taxi La Roche-sur-Yon → Nantes. 65 km, 45 min, dès 80 €. A87, transfert direct porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi La Roche-sur-Yon → Nantes | 65 km, dès 80 € | TaxiNeo",
+        metaDescription: "Via A87 en 45 min. Vendée, Nantes métropole, Loire-Atlantique et Napoléon en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi La Roche-sur-Yon → Nantes",
         heroSubtitle: "Transfert La Roche-sur-Yon → Nantes au prix fixe de 80 — 100 €. 65 km, direct par l'A87.",
         description: "Nantes, métropole de l'Ouest, est à 45 min de La Roche-sur-Yon par l'A87.",
@@ -46,8 +46,8 @@ export const trajetsLaRocheSurYon: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi La Roche-sur-Yon → Nantes | Fixed price from €80 | TaxiNeo",
-        metaDescription: "Taxi La Roche-sur-Yon → Nantes. 65 km, 45 min, from €80. A87, direct door-to-door transfer. Book 24/7.",
+        metaTitle: "Taxi La Roche-sur-Yon → Nantes | 65 km, from €80 | TaxiNeo",
+        metaDescription: "Via A87, 45 min ride. Vendée, Nantes métropole, Loire-Atlantique and Napoléon en route. Drop-off at your exact address. Door-to-door, luggage included.",
         heroTitle: "Taxi La Roche-sur-Yon → Nantes",
         heroSubtitle: "Your La Roche-sur-Yon → Nantes transfer at €80 — €100. 65 km, direct via the A87.",
         description: "Nantes, western France's major city, is 45 min from La Roche-sur-Yon via the A87.",
@@ -92,8 +92,8 @@ export const trajetsLaRocheSurYon: Trajet[] = [
     hub: "la-roche-sur-yon",
     i18n: {
       fr: {
-        metaTitle: "Taxi La Roche-sur-Yon → Les Sables-d'Olonne | Prix fixe dès 40 € | TaxiNeo",
-        metaDescription: "Taxi La Roche-sur-Yon → Les Sables-d'Olonne. 35 km, 30 min, dès 40 €. D160, Vendée Globe, plages. Réservation 24h/24.",
+        metaTitle: "Taxi La Roche-sur-Yon → Les Sables-d'Olonne | TaxiNeo",
+        metaDescription: "Par D160, 30 min de trajet. Vendée Globe, Plages vendéennes, Remblai et Prieuré Saint-Nicolas en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi La Roche-sur-Yon → Les Sables-d'Olonne",
         heroSubtitle: "Transfert La Roche-sur-Yon → Les Sables-d'Olonne au prix fixe de 40 — 55 €. 35 km, cap sur l'océan.",
         description: "Les Sables-d'Olonne, port de départ du Vendée Globe et station balnéaire, est à 30 min de La Roche-sur-Yon.",
@@ -111,8 +111,8 @@ export const trajetsLaRocheSurYon: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi La Roche-sur-Yon → Les Sables-d'Olonne | Fixed price from €40 | TaxiNeo",
-        metaDescription: "Taxi La Roche-sur-Yon → Les Sables-d'Olonne. 35 km, 30 min, from €40. D160, Vendée Globe, beaches. Book 24/7.",
+        metaTitle: "Taxi La Roche-sur-Yon → Les Sables-d'Olonne | 24/7 | TaxiNeo",
+        metaDescription: "Through D160 in 30 min. Vendée Globe, Plages vendéennes, Remblai and Prieuré Saint-Nicolas en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi La Roche-sur-Yon → Les Sables-d'Olonne",
         heroSubtitle: "Your La Roche-sur-Yon → Les Sables-d'Olonne transfer at €40 — €55. 35 km, straight to the Atlantic coast.",
         description: "Les Sables-d'Olonne, home port of the Vendée Globe race and popular beach resort, is 30 min from La Roche-sur-Yon.",
@@ -157,8 +157,8 @@ export const trajetsLaRocheSurYon: Trajet[] = [
     hub: "la-roche-sur-yon",
     i18n: {
       fr: {
-        metaTitle: "Taxi La Roche-sur-Yon → La Rochelle | Prix fixe dès 95 € | TaxiNeo",
-        metaDescription: "Taxi La Roche-sur-Yon → La Rochelle. 80 km, 55 min, dès 95 €. Via Luçon et le marais poitevin. Réservation 24h/24.",
+        metaTitle: "Taxi La Roche-sur-Yon → La Rochelle | 80 km, 95 € | TaxiNeo",
+        metaDescription: "Par D747 / D137, 55 min de trajet. Marais poitevin, Vendée, Vieux-Port et Aquarium La Rochelle en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi La Roche-sur-Yon → La Rochelle",
         heroSubtitle: "Transfert La Roche-sur-Yon → La Rochelle au prix fixe de 95 — 125 €. 80 km, de la Vendée à la Charente-Maritime.",
         description: "La Rochelle, cité maritime et universitaire, est à 55 min de La Roche-sur-Yon via Luçon et le marais poitevin.",
@@ -176,8 +176,8 @@ export const trajetsLaRocheSurYon: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi La Roche-sur-Yon → La Rochelle | Fixed price from €95 | TaxiNeo",
-        metaDescription: "Taxi La Roche-sur-Yon → La Rochelle. 80 km, 55 min, from €95. Via Luçon and the Marais Poitevin. Book 24/7.",
+        metaTitle: "Taxi La Roche-sur-Yon → La Rochelle | 80 km, €95 | TaxiNeo",
+        metaDescription: "Via D747 / D137, 55 min ride. Marais poitevin, Vendée, Vieux-Port and Aquarium La Rochelle en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi La Roche-sur-Yon → La Rochelle",
         heroSubtitle: "Your La Roche-sur-Yon → La Rochelle transfer at €95 — €125. 80 km, from Vendée to Charente-Maritime.",
         description: "La Rochelle, historic maritime city, is 55 min from La Roche-sur-Yon via Luçon and the Marais Poitevin.",
@@ -222,8 +222,8 @@ export const trajetsLaRocheSurYon: Trajet[] = [
     hub: "la-roche-sur-yon",
     i18n: {
       fr: {
-        metaTitle: "Taxi La Roche-sur-Yon → Cholet | Prix fixe dès 85 € | TaxiNeo",
-        metaDescription: "Taxi La Roche-sur-Yon → Cholet. 70 km, 50 min, dès 85 €. Via le bocage vendéen, près du Puy du Fou. Réservation 24h/24.",
+        metaTitle: "Taxi La Roche-sur-Yon → Cholet | 70 km, dès 85 € | TaxiNeo",
+        metaDescription: "Via D948 / D160bis en 50 min. Passage par Guerres de Vendée, Puy du Fou, Bocage et Mouchoir de Cholet. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi La Roche-sur-Yon → Cholet",
         heroSubtitle: "Transfert La Roche-sur-Yon → Cholet au prix fixe de 85 — 110 €. 70 km, au coeur du bocage vendéen.",
         description: "Cholet, ville du mouchoir et de l'industrie textile, est à 50 min de La Roche-sur-Yon via le bocage.",
@@ -241,8 +241,8 @@ export const trajetsLaRocheSurYon: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi La Roche-sur-Yon → Cholet | Fixed price from €85 | TaxiNeo",
-        metaDescription: "Taxi La Roche-sur-Yon → Cholet. 70 km, 50 min, from €85. Vendée bocage, near Puy du Fou. Book 24/7.",
+        metaTitle: "Taxi La Roche-sur-Yon → Cholet | 70 km, from €85 | TaxiNeo",
+        metaDescription: "Via D948 / D160bis, 50 min ride. Guerres de Vendée, Puy du Fou, Bocage and Mouchoir de Cholet en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi La Roche-sur-Yon → Cholet",
         heroSubtitle: "Your La Roche-sur-Yon → Cholet transfer at €85 — €110. 70 km, through the Vendée bocage.",
         description: "Cholet, famous for its handkerchief and textile heritage, is 50 min from La Roche-sur-Yon through the bocage.",
@@ -287,8 +287,8 @@ export const trajetsLaRocheSurYon: Trajet[] = [
     hub: "la-roche-sur-yon",
     i18n: {
       fr: {
-        metaTitle: "Taxi Les Sables-d'Olonne → Nantes | Prix fixe dès 120 € | TaxiNeo",
-        metaDescription: "Taxi Les Sables-d'Olonne → Nantes. 100 km, 1h10, dès 120 €. D160 puis A87. Réservation 24h/24.",
+        metaTitle: "Taxi Les Sables-d'Olonne → Nantes | 100 km, 120 € | TaxiNeo",
+        metaDescription: "Itinéraire D160 / A87, environ 1h10. Vendée Globe, Plages vendéennes, Nantes métropole sur le parcours. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Les Sables-d'Olonne → Nantes",
         heroSubtitle: "Transfert Les Sables-d'Olonne → Nantes au prix fixe de 120 — 155 €. 100 km, de l'océan à la métropole.",
         description: "Nantes, grande métropole de l'Ouest, est à 1h10 des Sables-d'Olonne via La Roche-sur-Yon et l'A87.",
@@ -306,8 +306,8 @@ export const trajetsLaRocheSurYon: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Les Sables-d'Olonne → Nantes | Fixed price from €120 | TaxiNeo",
-        metaDescription: "Taxi Les Sables-d'Olonne → Nantes. 100 km, 1h10, from €120. D160 then A87. Book 24/7.",
+        metaTitle: "Taxi Les Sables-d'Olonne → Nantes | 100 km, €120 | TaxiNeo",
+        metaDescription: "Direct route via D160 / A87, 1h10. Vendée Globe, Plages vendéennes and Nantes métropole along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Les Sables-d'Olonne → Nantes",
         heroSubtitle: "Your Les Sables-d'Olonne → Nantes transfer at €120 — €155. 100 km, from the ocean to the city.",
         description: "Nantes, western France's major city, is 1h10 from Les Sables-d'Olonne via La Roche-sur-Yon and the A87.",

@@ -19,8 +19,8 @@ export const trajetsLille2: Trajet[] = [
     hub: "lille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lille → Courtrai | Prix fixe dès 45 € | TaxiNeo",
-        metaDescription: "Taxi Lille → Courtrai (Kortrijk). 35 km, 30 min, dès 45 €. Transfert franco-belge direct. Réservation 24h/24.",
+        metaTitle: "Taxi Lille → Courtrai | forfait dès 45 € | TaxiNeo",
+        metaDescription: "Via A22 / E17 en undefined min. Belgique, Flandre et Textile en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Lille → Courtrai",
         heroSubtitle: "Transfert Lille → Courtrai au prix fixe de 45 — 60 €. 35 km, 30 min.",
         description: "Courtrai (Kortrijk), ville flamande historique, est à 30 min de Lille.",
@@ -39,7 +39,7 @@ export const trajetsLille2: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Lille → Kortrijk | Fixed price from €45 | TaxiNeo",
-        metaDescription: "Taxi Lille → Kortrijk. 35 km, 30 min, from €45. Cross-border Flanders. Book 24/7.",
+        metaDescription: "Via A22 / E17, undefined min ride. Belgique, Flandre and Textile along the way. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Lille → Kortrijk",
         heroSubtitle: "Lille → Kortrijk transfer at €45 — €60. 35 km, 30 min.",
         description: "Kortrijk, historic Flemish city, 30 min from Lille.",
@@ -76,8 +76,8 @@ export const trajetsLille2: Trajet[] = [
     hub: "lille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lille → CDG Aéroport | Prix fixe dès 270 € | TaxiNeo",
-        metaDescription: "Taxi Lille → Aéroport CDG. 215 km, 2h20, dès 270 €. A1 directe. Réservation 24h/24.",
+        metaTitle: "Taxi Lille → Aéroport CDG | 215 km, dès 270 € | TaxiNeo",
+        metaDescription: "Via A1 en undefined min. Direct, Roissy et Vol international en chemin. Dépose au terminal, suivi de vol. Dépose au terminal exact, suivi de vol en temps réel.",
         heroTitle: "Taxi Lille → Aéroport CDG",
         heroSubtitle: "Transfert Lille → CDG au prix fixe de 270 — 350 €. 215 km, 2h20.",
         description: "Lille — CDG est le transfert aéroport de référence pour le Nord.",
@@ -95,8 +95,8 @@ export const trajetsLille2: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Lille → CDG Airport | Fixed price from €270 | TaxiNeo",
-        metaDescription: "Taxi Lille → CDG Airport. 215 km, 2h20, from €270. Direct A1. Book 24/7.",
+        metaTitle: "Taxi Lille → Aéroport CDG | 215 km, from €270 | TaxiNeo",
+        metaDescription: "Via A1, undefined min ride. Direct, Roissy and Vol international along the way. Terminal drop-off, flight tracking. Flight tracking, direct terminal drop-off.",
         heroTitle: "Taxi Lille → CDG Airport",
         heroSubtitle: "Lille → CDG transfer at €270 — €350. 215 km, 2h20.",
         description: "Lille to CDG is northern France's main airport transfer.",
@@ -134,7 +134,7 @@ export const trajetsLille2: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Lille → Namur | Prix fixe dès 200 € | TaxiNeo",
-        metaDescription: "Taxi Lille → Namur. 170 km, 1h50, dès 200 €. Vers la capitale wallonne. Réservation 24h/24.",
+        metaDescription: "Via A27 / E42 en undefined min. E42, Belgique, Wallonie et Meuse en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Lille → Namur",
         heroSubtitle: "Transfert Lille → Namur au prix fixe de 200 — 260 €. 170 km, 1h50.",
         description: "Namur, capitale de la Wallonie, est à 1h50 de Lille.",
@@ -153,7 +153,7 @@ export const trajetsLille2: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Lille → Namur | Fixed price from €200 | TaxiNeo",
-        metaDescription: "Taxi Lille → Namur. 170 km, 1h50, from €200. Wallonia capital. Book 24/7.",
+        metaDescription: "Via A27 / E42, undefined min ride. E42, Belgique, Wallonie and Meuse en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Lille → Namur",
         heroSubtitle: "Lille → Namur transfer at €200 — €260. 170 km, 1h50.",
         description: "Namur, capital of Wallonia, is 1h50 from Lille.",
@@ -191,7 +191,7 @@ export const trajetsLille2: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Lille → Rouen | Prix fixe dès 310 € | TaxiNeo",
-        metaDescription: "Taxi Lille → Rouen. 260 km, 2h50, dès 310 €. Via A26/A29. Réservation 24h/24.",
+        metaDescription: "Via A26 / A29 en undefined min. Picardie, Normandie et Somme en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Lille → Rouen",
         heroSubtitle: "Transfert Lille → Rouen au prix fixe de 310 — 400 €. 260 km, 2h50.",
         description: "Lille — Rouen relie les Hauts-de-France à la Normandie en 2h50.",
@@ -210,7 +210,7 @@ export const trajetsLille2: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Lille → Rouen | Fixed price from €310 | TaxiNeo",
-        metaDescription: "Taxi Lille → Rouen. 260 km, 2h50, from €310. Via A26/A29. Book 24/7.",
+        metaDescription: "Via A26 / A29, undefined min ride. Picardie, Normandie and Somme along the way. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Lille → Rouen",
         heroSubtitle: "Lille → Rouen transfer at €310 — €400. 260 km, 2h50.",
         description: "Lille to Rouen connects northern France to Normandy.",
@@ -247,8 +247,8 @@ export const trajetsLille2: Trajet[] = [
     hub: "lille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lille → Deauville | Prix fixe dès 390 € | TaxiNeo",
-        metaDescription: "Taxi Lille → Deauville. 330 km, 3h30, dès 390 €. Via Rouen et A13. Réservation 24h/24.",
+        metaTitle: "Taxi Lille → Deauville | 330 km, dès 390 € | TaxiNeo",
+        metaDescription: "Via A26 / A29 / A13 en undefined min. Normandie, Plages et Casino en chemin. Arrêt visite possible en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Lille → Deauville",
         heroSubtitle: "Transfert Lille → Deauville au prix fixe de 390 — 500 €. 330 km, 3h30.",
         description: "Deauville, station balnéaire chic, en 3h30 depuis Lille.",
@@ -266,8 +266,8 @@ export const trajetsLille2: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Lille → Deauville | Fixed price from €390 | TaxiNeo",
-        metaDescription: "Taxi Lille → Deauville. 330 km, 3h30, from €390. Via A13. Book 24/7.",
+        metaTitle: "Taxi Lille → Deauville | 330 km, from €390 | TaxiNeo",
+        metaDescription: "Via A26 / A29 / A13, undefined min ride. Normandie, Plages and Casino along the way. Stops for sightseeing possible en route. Return trip at same rate.",
         heroTitle: "Taxi Lille → Deauville",
         heroSubtitle: "Lille → Deauville transfer at €390 — €500. 330 km, 3h30.",
         description: "Deauville, Normandy's chic seaside resort, in 3h30 from Lille.",

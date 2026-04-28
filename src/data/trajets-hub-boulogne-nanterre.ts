@@ -27,8 +27,8 @@ export const trajetsBoulogneNanterre: Trajet[] = [
     hub: "boulogne-nanterre",
     i18n: {
       fr: {
-        metaTitle: "Taxi Boulogne-Billancourt → Orly | Prix fixe dès 30 € | TaxiNeo",
-        metaDescription: "Taxi Boulogne-Billancourt → Aéroport d'Orly. 20 km, 25 min, dès 30 €. Transfert direct porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Boulogne-Billancourt → d'Orly | 20 km, 30 € | TaxiNeo",
+        metaDescription: "Par Périphérique / A6, 25 min de trajet. Périphérique, Hauts-de-Seine, Renault et Seine en chemin. Dépose au terminal exact, suivi de vol en temps réel.",
         heroTitle: "Taxi Boulogne-Billancourt → Orly",
         heroSubtitle: "Transfert Boulogne-Billancourt → Aéroport d'Orly au prix fixe de 30 — 40 €. 20 km, direct par le Périphérique.",
         description: "L'aéroport d'Orly est à 25 min de Boulogne-Billancourt via le boulevard Périphérique et l'A6.",
@@ -46,8 +46,8 @@ export const trajetsBoulogneNanterre: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Boulogne-Billancourt → Orly Airport | Fixed price from €30 | TaxiNeo",
-        metaDescription: "Taxi Boulogne-Billancourt → Orly Airport. 20 km, 25 min, from €30. Direct door-to-door transfer. Book 24/7.",
+        metaTitle: "Taxi Boulogne-Billancourt → d'Orly | 20 km, €30 | TaxiNeo",
+        metaDescription: "Direct route via ring road / A6, 25 min. Périphérique, Hauts-de-Seine, Renault and Seine en route. Terminal drop-off, real-time flight tracking included.",
         heroTitle: "Taxi Boulogne-Billancourt → Orly",
         heroSubtitle: "Your Boulogne-Billancourt → Orly Airport transfer at €30 — €40. 20 km, via the Périphérique.",
         description: "Orly Airport is 25 min from Boulogne-Billancourt via the Périphérique and A6.",
@@ -92,8 +92,8 @@ export const trajetsBoulogneNanterre: Trajet[] = [
     hub: "boulogne-nanterre",
     i18n: {
       fr: {
-        metaTitle: "Taxi Boulogne-Billancourt → CDG | Prix fixe dès 55 € | TaxiNeo",
-        metaDescription: "Taxi Boulogne-Billancourt → Aéroport CDG. 35 km, 40 min, dès 55 €. Transfert direct Roissy. Réservation 24h/24.",
+        metaTitle: "Taxi Boulogne-Billancourt → Aéroport CDG | 35 km | TaxiNeo",
+        metaDescription: "Via A86 / A1 en 40 min. Hauts-de-Seine, Roissy et Business en chemin. Dépose au terminal, suivi de vol. Dépose au terminal exact, suivi de vol en temps réel.",
         heroTitle: "Taxi Boulogne-Billancourt → CDG",
         heroSubtitle: "Transfert Boulogne-Billancourt → Aéroport Charles de Gaulle au prix fixe de 55 — 70 €. 35 km, direct.",
         description: "L'aéroport CDG (Roissy) est à 40 min de Boulogne-Billancourt via l'A86 et l'A1.",
@@ -111,8 +111,8 @@ export const trajetsBoulogneNanterre: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Boulogne-Billancourt → CDG Airport | Fixed price from €55 | TaxiNeo",
-        metaDescription: "Taxi Boulogne-Billancourt → CDG Airport. 35 km, 40 min, from €55. Direct Roissy transfer. Book 24/7.",
+        metaTitle: "Taxi Boulogne-Billancourt → Aéroport CDG | 35 km | TaxiNeo",
+        metaDescription: "Via A86 / A1, 40 min ride. Hauts-de-Seine, Roissy and Business along the way. Terminal drop-off, flight tracking. Meet at terminal, free wait if flight delayed.",
         heroTitle: "Taxi Boulogne-Billancourt → CDG",
         heroSubtitle: "Your Boulogne-Billancourt → CDG Airport transfer at €55 — €70. 35 km, direct to Roissy.",
         description: "CDG Airport (Roissy) is 40 min from Boulogne-Billancourt via the A86 and A1.",
@@ -157,8 +157,8 @@ export const trajetsBoulogneNanterre: Trajet[] = [
     hub: "boulogne-nanterre",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nanterre → CDG | Prix fixe dès 55 € | TaxiNeo",
-        metaDescription: "Taxi Nanterre → Aéroport CDG. 35 km, 40 min, dès 55 €. Transfert direct depuis la préfecture des Hauts-de-Seine. Réservation 24h/24.",
+        metaTitle: "Taxi Nanterre → Aéroport CDG | 35 km, dès 55 € | TaxiNeo",
+        metaDescription: "Via A86 / A1 en 40 min. Préfecture 92, Université et RER A en chemin. Dépose au terminal, suivi de vol. Dépose au terminal exact, suivi de vol en temps réel.",
         heroTitle: "Taxi Nanterre → CDG",
         heroSubtitle: "Transfert Nanterre → Aéroport Charles de Gaulle au prix fixe de 55 — 70 €. 35 km, direct par l'A86.",
         description: "L'aéroport CDG est à 40 min de Nanterre via l'A86 et l'A1.",
@@ -176,8 +176,8 @@ export const trajetsBoulogneNanterre: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nanterre → CDG Airport | Fixed price from €55 | TaxiNeo",
-        metaDescription: "Taxi Nanterre → CDG Airport. 35 km, 40 min, from €55. Direct transfer from Hauts-de-Seine prefecture. Book 24/7.",
+        metaTitle: "Taxi Nanterre → Aéroport CDG | 35 km, from €55 | TaxiNeo",
+        metaDescription: "Via A86 / A1, 40 min ride. Préfecture 92, Université and RER A along the way. Terminal drop-off, flight tracking. Meet at terminal, free wait if flight delayed.",
         heroTitle: "Taxi Nanterre → CDG",
         heroSubtitle: "Your Nanterre → CDG Airport transfer at €55 — €70. 35 km, via the A86.",
         description: "CDG Airport is 40 min from Nanterre via the A86 and A1.",
@@ -222,8 +222,8 @@ export const trajetsBoulogneNanterre: Trajet[] = [
     hub: "boulogne-nanterre",
     i18n: {
       fr: {
-        metaTitle: "Taxi La Défense → Orly | Prix fixe dès 35 € | TaxiNeo",
-        metaDescription: "Taxi La Défense → Aéroport d'Orly. 25 km, 30 min, dès 35 €. Transfert direct depuis le quartier d'affaires. Réservation 24h/24.",
+        metaTitle: "Taxi La Défense → Aéroport d'Orly | 25 km, 35 € | TaxiNeo",
+        metaDescription: "Via A13 / Périphérique / A6 en 30 min. Périphérique, Quartier d'affaires, Grande Arche et Tours en chemin. Dépose au terminal exact, suivi de vol en temps réel.",
         heroTitle: "Taxi La Défense → Orly",
         heroSubtitle: "Transfert La Défense → Aéroport d'Orly au prix fixe de 35 — 50 €. 25 km, direct depuis le quartier d'affaires.",
         description: "L'aéroport d'Orly est à 30 min de La Défense via l'A13 et le Périphérique sud.",
@@ -241,8 +241,8 @@ export const trajetsBoulogneNanterre: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi La Défense → Orly Airport | Fixed price from €35 | TaxiNeo",
-        metaDescription: "Taxi La Défense → Orly Airport. 25 km, 30 min, from €35. Direct transfer from Europe's largest business district. Book 24/7.",
+        metaTitle: "Taxi La Défense → Aéroport d'Orly | 25 km, €35 | TaxiNeo",
+        metaDescription: "Via A13 / ring road / A6, 30 min ride. Périphérique, Quartier d'affaires, Grande Arche and Tours en route. Meet at terminal, free wait if flight delayed.",
         heroTitle: "Taxi La Défense → Orly",
         heroSubtitle: "Your La Défense → Orly Airport transfer at €35 — €50. 25 km, from Europe's business hub.",
         description: "Orly Airport is 30 min from La Défense via the A13 and southern Périphérique.",
@@ -287,8 +287,8 @@ export const trajetsBoulogneNanterre: Trajet[] = [
     hub: "boulogne-nanterre",
     i18n: {
       fr: {
-        metaTitle: "Taxi La Défense → CDG | Prix fixe dès 55 € | TaxiNeo",
-        metaDescription: "Taxi La Défense → Aéroport CDG. 35 km, 40 min, dès 55 €. Transfert direct depuis le quartier d'affaires. Réservation 24h/24.",
+        metaTitle: "Taxi La Défense → Aéroport CDG | 35 km, dès 55 € | TaxiNeo",
+        metaDescription: "Via A86 / A1 en 40 min. Grande Arche, Roissy et CAC 40 en chemin. Dépose au terminal, suivi de vol. Dépose au terminal exact, suivi de vol en temps réel.",
         heroTitle: "Taxi La Défense → CDG",
         heroSubtitle: "Transfert La Défense → Aéroport Charles de Gaulle au prix fixe de 55 — 70 €. 35 km, le transfert business par excellence.",
         description: "L'aéroport CDG (Roissy) est à 40 min de La Défense via l'A86 et l'A1.",
@@ -306,8 +306,8 @@ export const trajetsBoulogneNanterre: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi La Défense → CDG Airport | Fixed price from €55 | TaxiNeo",
-        metaDescription: "Taxi La Défense → CDG Airport. 35 km, 40 min, from €55. Direct transfer from Europe's top business district. Book 24/7.",
+        metaTitle: "Taxi La Défense → Aéroport CDG | 35 km, from €55 | TaxiNeo",
+        metaDescription: "Via A86 / A1, 40 min ride. Grande Arche, Roissy and CAC 40 along the way. Terminal drop-off, flight tracking. Meet at terminal, free wait if flight delayed.",
         heroTitle: "Taxi La Défense → CDG",
         heroSubtitle: "Your La Défense → CDG Airport transfer at €55 — €70. 35 km, the ultimate business transfer.",
         description: "CDG Airport (Roissy) is 40 min from La Défense via the A86 and A1.",

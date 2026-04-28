@@ -27,8 +27,8 @@ export const trajetsSeteAgde: Trajet[] = [
     hub: "sete-agde",
     i18n: {
       fr: {
-        metaTitle: "Taxi Sète → Montpellier | Prix fixe dès 35 € | TaxiNeo",
-        metaDescription: "Taxi Sète → Montpellier. 32 km, 25 min, dès 35 €. A9, transfert direct porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Sète → Montpellier | 32 km, dès 35 € | TaxiNeo",
+        metaDescription: "Via A9 en 25 min. Bassin de Thau, Brassens, Huîtres et Port en chemin. Dépose porte-à-porte, bagages inclus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Sète → Montpellier",
         heroSubtitle: "Transfert Sète → Montpellier au prix fixe de 35 — 50 €. 32 km, direct par l'A9.",
         description: "Montpellier est à 25 min de Sète par l'A9, la Languedocienne.",
@@ -46,8 +46,8 @@ export const trajetsSeteAgde: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Sète → Montpellier | Fixed price from €35 | TaxiNeo",
-        metaDescription: "Taxi Sète → Montpellier. 32 km, 25 min, from €35. A9, direct door-to-door. Book 24/7.",
+        metaTitle: "Taxi Sète → Montpellier | 32 km, from €35 | TaxiNeo",
+        metaDescription: "Via A9, 25 min ride. Bassin de Thau, Brassens, Huîtres and Port en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Sète → Montpellier",
         heroSubtitle: "Your Sète → Montpellier transfer at €35 — €50. 32 km, via the A9.",
         description: "Montpellier is 25 min from Sète via the A9 motorway.",
@@ -92,8 +92,8 @@ export const trajetsSeteAgde: Trajet[] = [
     hub: "sete-agde",
     i18n: {
       fr: {
-        metaTitle: "Taxi Sète → Béziers | Prix fixe dès 60 € | TaxiNeo",
-        metaDescription: "Taxi Sète → Béziers. 55 km, 35 min, dès 60 €. A9, Canal du Midi, écluses de Fonseranes. Réservation 24h/24.",
+        metaTitle: "Taxi Sète → Béziers | forfait dès 60 €, 35 min | TaxiNeo",
+        metaDescription: "Via A9 en 35 min. Canal du Midi, Écluses de Fonseranes, Cathédrale Saint-Nazaire et Vignobles en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Sète → Béziers",
         heroSubtitle: "Transfert Sète → Béziers au prix fixe de 60 — 75 €. 55 km, direct par l'A9.",
         description: "Béziers et son Canal du Midi sont à 35 min de Sète par l'A9.",
@@ -112,7 +112,7 @@ export const trajetsSeteAgde: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Sète → Béziers | Fixed price from €60 | TaxiNeo",
-        metaDescription: "Taxi Sète → Béziers. 55 km, 35 min, from €60. A9, Canal du Midi, Fonseranes locks. Book 24/7.",
+        metaDescription: "Via A9, 35 min ride. Canal du Midi, Écluses de Fonseranes, Cathédrale Saint-Nazaire and Vignobles en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Sète → Béziers",
         heroSubtitle: "Your Sète → Béziers transfer at €60 — €75. 55 km, via the A9.",
         description: "Béziers and the Canal du Midi are 35 min from Sète via the A9.",
@@ -157,8 +157,8 @@ export const trajetsSeteAgde: Trajet[] = [
     hub: "sete-agde",
     i18n: {
       fr: {
-        metaTitle: "Taxi Agde → Montpellier | Prix fixe dès 60 € | TaxiNeo",
-        metaDescription: "Taxi Agde → Montpellier. 57 km, 35 min, dès 60 €. A9, Cap d'Agde, transfert direct. Réservation 24h/24.",
+        metaTitle: "Taxi Agde → Montpellier | 57 km, dès 60 € | TaxiNeo",
+        metaDescription: "Via A9 en 35 min. Cap d'Agde, Canal du Midi, Volcan et Plages en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Agde → Montpellier",
         heroSubtitle: "Transfert Agde → Montpellier au prix fixe de 60 — 75 €. 57 km, direct par l'A9.",
         description: "Montpellier est à 35 min d'Agde par l'A9.",
@@ -176,8 +176,8 @@ export const trajetsSeteAgde: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Agde → Montpellier | Fixed price from €60 | TaxiNeo",
-        metaDescription: "Taxi Agde → Montpellier. 57 km, 35 min, from €60. A9, Cap d'Agde pickup. Book 24/7.",
+        metaTitle: "Taxi Agde → Montpellier | 57 km, from €60 | TaxiNeo",
+        metaDescription: "Via A9, 35 min ride. Cap d'Agde, Canal du Midi, Volcan and Plages en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Agde → Montpellier",
         heroSubtitle: "Your Agde → Montpellier transfer at €60 — €75. 57 km, via the A9.",
         description: "Montpellier is 35 min from Agde via the A9 motorway.",
@@ -222,8 +222,8 @@ export const trajetsSeteAgde: Trajet[] = [
     hub: "sete-agde",
     i18n: {
       fr: {
-        metaTitle: "Taxi Agde → Béziers | Prix fixe dès 30 € | TaxiNeo",
-        metaDescription: "Taxi Agde → Béziers. 25 km, 18 min, dès 30 €. N112, sans péage. Canal du Midi. Réservation 24h/24.",
+        metaTitle: "Taxi Agde → Béziers | forfait dès 30 €, 18 min | TaxiNeo",
+        metaDescription: "Via N112 en 18 min. Canal du Midi, Écluse ronde, Fonseranes et Vignobles en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Agde → Béziers",
         heroSubtitle: "Transfert Agde → Béziers au prix fixe de 30 — 40 €. 25 km, route gratuite par la N112.",
         description: "Béziers est à 18 min d'Agde par la N112, sans péage.",
@@ -242,7 +242,7 @@ export const trajetsSeteAgde: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Agde → Béziers | Fixed price from €30 | TaxiNeo",
-        metaDescription: "Taxi Agde → Béziers. 25 km, 18 min, from €30. N112, toll-free. Canal du Midi. Book 24/7.",
+        metaDescription: "Via N112, 18 min ride. Canal du Midi, Écluse ronde, Fonseranes and Vignobles en route. Drop-off at your exact address. Door-to-door, luggage included.",
         heroTitle: "Taxi Agde → Béziers",
         heroSubtitle: "Your Agde → Béziers transfer at €30 — €40. 25 km, toll-free via the N112.",
         description: "Béziers is 18 min from Agde via the toll-free N112.",
@@ -287,8 +287,8 @@ export const trajetsSeteAgde: Trajet[] = [
     hub: "sete-agde",
     i18n: {
       fr: {
-        metaTitle: "Taxi Sète → Narbonne | Prix fixe dès 95 € | TaxiNeo",
-        metaDescription: "Taxi Sète → Narbonne. 90 km, 55 min, dès 95 €. A9, Narbonne romaine. Réservation 24h/24.",
+        metaTitle: "Taxi Sète → Narbonne | forfait dès 95 €, 55 min | TaxiNeo",
+        metaDescription: "Par A9, 55 min de trajet. Bassin de Thau, Narbonne romaine, Cathédrale inachevée et Gruissan en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Sète → Narbonne",
         heroSubtitle: "Transfert Sète → Narbonne au prix fixe de 95 — 120 €. 90 km, direct par l'A9.",
         description: "Narbonne, ancienne capitale romaine, est à 55 min de Sète par l'A9.",
@@ -307,7 +307,7 @@ export const trajetsSeteAgde: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Sète → Narbonne | Fixed price from €95 | TaxiNeo",
-        metaDescription: "Taxi Sète → Narbonne. 90 km, 55 min, from €95. A9, Roman Narbonne. Book 24/7.",
+        metaDescription: "Direct route via A9, 55 min. Bassin de Thau, Narbonne romaine, Cathédrale inachevée and Gruissan en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Sète → Narbonne",
         heroSubtitle: "Your Sète → Narbonne transfer at €95 — €120. 90 km, via the A9.",
         description: "Narbonne, ancient Roman capital, is 55 min from Sète via the A9.",

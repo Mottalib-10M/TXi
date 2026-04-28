@@ -27,8 +27,8 @@ export const trajetsBordeauxAeroport: Trajet[] = [
     hub: "bordeaux-aeroport",
     i18n: {
       fr: {
-        metaTitle: "Taxi Aéroport Bordeaux-Mérignac → Centre-ville | Prix fixe dès 25 € | TaxiNeo",
-        metaDescription: "Taxi Aéroport Bordeaux-Mérignac → Bordeaux Centre. 12 km, 20 min, dès 25 €. Place de la Bourse, Miroir d'eau, quais de la Garonne. Réservation 24h/24.",
+        metaTitle: "Taxi Bordeaux-Mérignac → Bordeaux Centre | 12 km | TaxiNeo",
+        metaDescription: "Via Rocade A630 en 20 min. Rocade bordelaise, Place de la Bourse, Miroir d'eau et Garonne en chemin. Dépose au terminal exact, suivi de vol en temps réel.",
         heroTitle: "Taxi Aéroport Bordeaux-Mérignac → Bordeaux Centre",
         heroSubtitle: "Transfert aéroport au prix fixe de 25 — 35 €. 12 km, rejoignez le cœur historique de Bordeaux en 20 minutes.",
         description: "Bordeaux Centre, classé au patrimoine mondial de l'UNESCO, est à seulement 20 min de l'aéroport de Mérignac par la rocade bordelaise.",
@@ -46,8 +46,8 @@ export const trajetsBordeauxAeroport: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Bordeaux-Mérignac Airport → City Centre | Fixed price from €25 | TaxiNeo",
-        metaDescription: "Taxi Bordeaux-Mérignac Airport → Bordeaux Centre. 12 km, 20 min, from €25. Place de la Bourse, Water Mirror, Garonne quays. Book 24/7.",
+        metaTitle: "Taxi Bordeaux-Mérignac → Bordeaux Centre | 12 km | TaxiNeo",
+        metaDescription: "Via Rocade A630, 20 min ride. Rocade bordelaise, Place de la Bourse, Miroir d'eau and Garonne en route. Terminal drop-off, real-time flight tracking included.",
         heroTitle: "Taxi Bordeaux-Mérignac Airport → Bordeaux Centre",
         heroSubtitle: "Airport transfer at a fixed price of €25 — €35. 12 km, reach the historic heart of Bordeaux in 20 minutes.",
         description: "Bordeaux Centre, a UNESCO World Heritage Site, is just 20 min from Mérignac Airport via the Bordeaux ring road.",
@@ -92,8 +92,8 @@ export const trajetsBordeauxAeroport: Trajet[] = [
     hub: "bordeaux-aeroport",
     i18n: {
       fr: {
-        metaTitle: "Taxi Aéroport Bordeaux-Mérignac → Arcachon | Prix fixe dès 80 € | TaxiNeo",
-        metaDescription: "Taxi Aéroport Bordeaux-Mérignac → Arcachon. 65 km, 45 min, dès 80 €. Bassin d'Arcachon, Dune du Pilat, huîtres. Réservation 24h/24.",
+        metaTitle: "Taxi Aéroport Bordeaux-Mérignac → Arcachon | 65 km | TaxiNeo",
+        metaDescription: "Via A63 / A660 en 45 min. Bassin d'Arcachon, Dune du Pilat, Ville d'Hiver et Parcs à huîtres en chemin. Dépose au terminal exact, suivi de vol en temps réel.",
         heroTitle: "Taxi Aéroport Bordeaux-Mérignac → Arcachon",
         heroSubtitle: "Transfert aéroport au prix fixe de 80 — 100 €. 65 km, rejoignez le Bassin d'Arcachon et la Dune du Pilat en 45 minutes.",
         description: "Arcachon, station balnéaire emblématique du Bassin d'Arcachon avec sa Dune du Pilat et ses parcs à huîtres, est à 45 min de l'aéroport de Mérignac.",
@@ -111,8 +111,8 @@ export const trajetsBordeauxAeroport: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Bordeaux-Mérignac Airport → Arcachon | Fixed price from €80 | TaxiNeo",
-        metaDescription: "Taxi Bordeaux-Mérignac Airport → Arcachon. 65 km, 45 min, from €80. Arcachon Bay, Dune du Pilat, oysters. Book 24/7.",
+        metaTitle: "Taxi Aéroport Bordeaux-Mérignac → Arcachon | 65 km | TaxiNeo",
+        metaDescription: "Via A63 / A660, 45 min ride. Bassin d'Arcachon, Dune du Pilat, Ville d'Hiver and Parcs à huîtres en route. Meet at terminal, free wait if flight delayed.",
         heroTitle: "Taxi Bordeaux-Mérignac Airport → Arcachon",
         heroSubtitle: "Airport transfer at a fixed price of €80 — €100. 65 km, reach Arcachon Bay and the Dune du Pilat in 45 minutes.",
         description: "Arcachon, the iconic seaside resort on Arcachon Bay with the Dune du Pilat and oyster farms, is 45 min from Mérignac Airport.",
@@ -157,8 +157,8 @@ export const trajetsBordeauxAeroport: Trajet[] = [
     hub: "bordeaux-aeroport",
     i18n: {
       fr: {
-        metaTitle: "Taxi Aéroport Bordeaux-Mérignac → Périgueux | Prix fixe dès 155 € | TaxiNeo",
-        metaDescription: "Taxi Aéroport Bordeaux-Mérignac → Périgueux. 130 km, 1h25, dès 155 €. A89, Cathédrale Saint-Front, truffe du Périgord. Réservation 24h/24.",
+        metaTitle: "Taxi Bordeaux-Mérignac → Périgueux | 130 km, 155 € | TaxiNeo",
+        metaDescription: "Itinéraire A89, environ 1h25. Passage par Périgord, Cathédrale Saint-Front, Truffe et Vésunna. Accueil au terminal, attente gratuite si retard de vol.",
         heroTitle: "Taxi Aéroport Bordeaux-Mérignac → Périgueux",
         heroSubtitle: "Transfert aéroport au prix fixe de 155 — 195 €. 130 km via l'A89, au cœur du Périgord Blanc.",
         description: "Périgueux, préfecture de la Dordogne et capitale du Périgord, est à 1h25 de l'aéroport de Bordeaux-Mérignac via l'autoroute A89.",
@@ -176,8 +176,8 @@ export const trajetsBordeauxAeroport: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Bordeaux-Mérignac Airport → Périgueux | Fixed price from €155 | TaxiNeo",
-        metaDescription: "Taxi Bordeaux-Mérignac Airport → Périgueux. 130 km, 1h25, from €155. A89, Saint-Front Cathedral, Périgord truffles. Book 24/7.",
+        metaTitle: "Taxi Bordeaux-Mérignac → Périgueux | 130 km, €155 | TaxiNeo",
+        metaDescription: "Via A89, 1h25 ride. Périgord, Cathédrale Saint-Front, Truffe and Vésunna en route. Terminal drop-off, real-time flight tracking included. ~€12 toll included.",
         heroTitle: "Taxi Bordeaux-Mérignac Airport → Périgueux",
         heroSubtitle: "Airport transfer at a fixed price of €155 — €195. 130 km via the A89, into the heart of Périgord.",
         description: "Périgueux, capital of the Dordogne and the Périgord region, is 1h25 from Bordeaux-Mérignac Airport via the A89 motorway.",
@@ -222,8 +222,8 @@ export const trajetsBordeauxAeroport: Trajet[] = [
     hub: "bordeaux-aeroport",
     i18n: {
       fr: {
-        metaTitle: "Taxi Aéroport Bordeaux-Mérignac → Bayonne | Prix fixe dès 230 € | TaxiNeo",
-        metaDescription: "Taxi Aéroport Bordeaux-Mérignac → Bayonne. 195 km, 2h, dès 230 €. A63, forêt des Landes, Pays Basque, chocolat. Réservation 24h/24.",
+        metaTitle: "Taxi Aéroport Bordeaux-Mérignac → Bayonne | 195 km | TaxiNeo",
+        metaDescription: "Via A63 en 2h. Forêt des Landes, Pays Basque, Cathédrale Sainte-Marie et Chocolat basque en chemin. Dépose au terminal exact, suivi de vol en temps réel.",
         heroTitle: "Taxi Aéroport Bordeaux-Mérignac → Bayonne",
         heroSubtitle: "Transfert longue distance au prix fixe de 230 — 280 €. 195 km via l'A63, des vignobles bordelais au Pays Basque français.",
         description: "Bayonne, capitale du Pays Basque français au confluent de la Nive et de l'Adour, est à 2h de l'aéroport de Bordeaux-Mérignac par l'A63.",
@@ -241,8 +241,8 @@ export const trajetsBordeauxAeroport: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Bordeaux-Mérignac Airport → Bayonne | Fixed price from €230 | TaxiNeo",
-        metaDescription: "Taxi Bordeaux-Mérignac Airport → Bayonne. 195 km, 2h, from €230. A63, Landes forest, Basque Country, chocolate. Book 24/7.",
+        metaTitle: "Taxi Aéroport Bordeaux-Mérignac → Bayonne | 195 km | TaxiNeo",
+        metaDescription: "Via A63, 2 hours ride. Forêt des Landes, Pays Basque, Cathédrale Sainte-Marie and Chocolat basque en route. Meet at terminal, free wait if flight delayed.",
         heroTitle: "Taxi Bordeaux-Mérignac Airport → Bayonne",
         heroSubtitle: "Long-distance airport transfer at €230 — €280. 195 km via the A63, from Bordeaux vineyards to the French Basque Country.",
         description: "Bayonne, capital of the French Basque Country at the confluence of the Nive and Adour rivers, is 2h from Bordeaux-Mérignac Airport via the A63.",
@@ -287,8 +287,8 @@ export const trajetsBordeauxAeroport: Trajet[] = [
     hub: "bordeaux-aeroport",
     i18n: {
       fr: {
-        metaTitle: "Taxi Aéroport Bordeaux-Mérignac → Agen | Prix fixe dès 170 € | TaxiNeo",
-        metaDescription: "Taxi Aéroport Bordeaux-Mérignac → Agen. 145 km, 1h30, dès 170 €. A62, Garonne, pruneau d'Agen, Pont-Canal. Réservation 24h/24.",
+        metaTitle: "Taxi Aéroport Bordeaux-Mérignac → Agen | 145 km | TaxiNeo",
+        metaDescription: "Trajet direct A62 en 1h30. Passage par Garonne, Pruneau d'Agen, Canal de Garonne et Pont-Canal. Accueil au terminal, attente gratuite si retard de vol.",
         heroTitle: "Taxi Aéroport Bordeaux-Mérignac → Agen",
         heroSubtitle: "Transfert aéroport au prix fixe de 170 — 210 €. 145 km via l'A62, des vignobles bordelais aux vergers du Lot-et-Garonne.",
         description: "Agen, préfecture du Lot-et-Garonne au bord de la Garonne, capitale du pruneau et du rugby, est à 1h30 de l'aéroport de Bordeaux-Mérignac via l'A62.",
@@ -306,8 +306,8 @@ export const trajetsBordeauxAeroport: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Bordeaux-Mérignac Airport → Agen | Fixed price from €170 | TaxiNeo",
-        metaDescription: "Taxi Bordeaux-Mérignac Airport → Agen. 145 km, 1h30, from €170. A62, Garonne valley, Agen prunes, Pont-Canal. Book 24/7.",
+        metaTitle: "Taxi Aéroport Bordeaux-Mérignac → Agen | 145 km | TaxiNeo",
+        metaDescription: "A62 route, approximately 1h30. Garonne, Pruneau d'Agen, Canal de Garonne and Pont-Canal en route. Terminal drop-off, real-time flight tracking included.",
         heroTitle: "Taxi Bordeaux-Mérignac Airport → Agen",
         heroSubtitle: "Airport transfer at a fixed price of €170 — €210. 145 km via the A62, from Bordeaux vineyards to the orchards of Lot-et-Garonne.",
         description: "Agen, prefecture of Lot-et-Garonne on the banks of the Garonne, famed for its prunes and rugby, is 1h30 from Bordeaux-Mérignac Airport via the A62.",

@@ -27,8 +27,8 @@ export const trajetsAuxerreTonnerre: Trajet[] = [
     hub: "auxerre-tonnerre",
     i18n: {
       fr: {
-        metaTitle: "Taxi Auxerre → Paris | Prix fixe dès 200 € | TaxiNeo",
-        metaDescription: "Taxi Auxerre → Paris. 170 km, 1h50, dès 200 €. A6 autoroute du Soleil, transfert direct porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Auxerre → Paris | 170 km, dès 200 € | TaxiNeo",
+        metaDescription: "Via A6 en 1h50. Yonne, Bourgogne, Cathédrale Saint-Étienne et Chablis en chemin. Dépose à votre adresse exacte. Alternative directe au train ou au bus.",
         heroTitle: "Taxi Auxerre → Paris",
         heroSubtitle: "Transfert Auxerre → Paris au prix fixe de 200 — 255 €. 170 km, direct par l'A6.",
         description: "Paris est à 1h50 d'Auxerre par l'autoroute A6, l'autoroute du Soleil.",
@@ -46,8 +46,8 @@ export const trajetsAuxerreTonnerre: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Auxerre → Paris | Fixed price from €200 | TaxiNeo",
-        metaDescription: "Taxi Auxerre → Paris. 170 km, 1h50, from €200. A6 motorway, direct door-to-door transfer. Book 24/7.",
+        metaTitle: "Taxi Auxerre → Paris | 170 km, from €200 | TaxiNeo",
+        metaDescription: "Via A6, 1h50 ride. Yonne, Bourgogne, Cathédrale Saint-Étienne and Chablis en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Auxerre → Paris",
         heroSubtitle: "Your Auxerre → Paris transfer at €200 — €255. 170 km, via the A6.",
         description: "Paris is 1h50 from Auxerre via the A6 motorway (Autoroute du Soleil).",
@@ -92,8 +92,8 @@ export const trajetsAuxerreTonnerre: Trajet[] = [
     hub: "auxerre-tonnerre",
     i18n: {
       fr: {
-        metaTitle: "Taxi Auxerre → Dijon | Prix fixe dès 180 € | TaxiNeo",
-        metaDescription: "Taxi Auxerre → Dijon. 150 km, 1h35, dès 180 €. A6/A38, traversée de la Bourgogne. Réservation 24h/24.",
+        metaTitle: "Taxi Auxerre → Dijon | 150 km, dès 180 € | TaxiNeo",
+        metaDescription: "Via A6 / A38 en 1h35. Bourgogne, Chablis, Morvan et Climats UNESCO en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Auxerre → Dijon",
         heroSubtitle: "Transfert Auxerre → Dijon au prix fixe de 180 — 225 €. 150 km, au coeur de la Bourgogne.",
         description: "Dijon, capitale historique de la Bourgogne, est à 1h35 d'Auxerre par l'A6 et l'A38.",
@@ -111,8 +111,8 @@ export const trajetsAuxerreTonnerre: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Auxerre → Dijon | Fixed price from €180 | TaxiNeo",
-        metaDescription: "Taxi Auxerre → Dijon. 150 km, 1h35, from €180. A6/A38, across Burgundy. Book 24/7.",
+        metaTitle: "Taxi Auxerre → Dijon | 150 km, from €180 | TaxiNeo",
+        metaDescription: "Via A6 / A38, 1h35 ride. Bourgogne, Chablis, Morvan and Climats UNESCO en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Auxerre → Dijon",
         heroSubtitle: "Your Auxerre → Dijon transfer at €180 — €225. 150 km, across Burgundy.",
         description: "Dijon, historic Burgundy capital, is 1h35 from Auxerre via the A6 and A38.",
@@ -157,8 +157,8 @@ export const trajetsAuxerreTonnerre: Trajet[] = [
     hub: "auxerre-tonnerre",
     i18n: {
       fr: {
-        metaTitle: "Taxi Auxerre → Troyes | Prix fixe dès 95 € | TaxiNeo",
-        metaDescription: "Taxi Auxerre → Troyes. 80 km, 55 min, dès 95 €. D606, sans péage, Bourgogne-Champagne. Réservation 24h/24.",
+        metaTitle: "Taxi Auxerre → Troyes | forfait dès 95 € | TaxiNeo",
+        metaDescription: "Via D606 / N77 en 55 min. N77, Yonne, Aube et Pontigny en chemin. Dépose porte-à-porte, bagages inclus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Auxerre → Troyes",
         heroSubtitle: "Transfert Auxerre → Troyes au prix fixe de 95 — 125 €. 80 km, de la Bourgogne à la Champagne.",
         description: "Troyes, capitale historique de la Champagne, est à 55 minutes d'Auxerre par la D606.",
@@ -177,7 +177,7 @@ export const trajetsAuxerreTonnerre: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Auxerre → Troyes | Fixed price from €95 | TaxiNeo",
-        metaDescription: "Taxi Auxerre → Troyes. 80 km, 55 min, from €95. D606, toll-free, Burgundy to Champagne. Book 24/7.",
+        metaDescription: "Via D606 / N77, 55 min ride. N77, Yonne, Aube and Pontigny en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Auxerre → Troyes",
         heroSubtitle: "Your Auxerre → Troyes transfer at €95 — €125. 80 km, toll-free.",
         description: "Troyes, historic Champagne capital, is 55 minutes from Auxerre via the D606.",
@@ -222,8 +222,8 @@ export const trajetsAuxerreTonnerre: Trajet[] = [
     hub: "auxerre-tonnerre",
     i18n: {
       fr: {
-        metaTitle: "Taxi Tonnerre → Dijon | Prix fixe dès 140 € | TaxiNeo",
-        metaDescription: "Taxi Tonnerre → Dijon. 115 km, 1h15, dès 140 €. A6, canal de Bourgogne, transfert direct. Réservation 24h/24.",
+        metaTitle: "Taxi Tonnerre → Dijon | 115 km, dès 140 € | TaxiNeo",
+        metaDescription: "Via A6 en 1h15. Canal de Bourgogne, Tonnerre, Fosse Dionne et Ancy-le-Franc en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Tonnerre → Dijon",
         heroSubtitle: "Transfert Tonnerre → Dijon au prix fixe de 140 — 175 €. 115 km, à travers la Bourgogne.",
         description: "Dijon est à 1h15 de Tonnerre par l'A6, en traversant le coeur de la Bourgogne.",
@@ -241,8 +241,8 @@ export const trajetsAuxerreTonnerre: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Tonnerre → Dijon | Fixed price from €140 | TaxiNeo",
-        metaDescription: "Taxi Tonnerre → Dijon. 115 km, 1h15, from €140. A6, Burgundy Canal, direct transfer. Book 24/7.",
+        metaTitle: "Taxi Tonnerre → Dijon | 115 km, from €140 | TaxiNeo",
+        metaDescription: "A6 route, approximately 1h15. Canal de Bourgogne, Tonnerre, Fosse Dionne and Ancy-le-Franc en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Tonnerre → Dijon",
         heroSubtitle: "Your Tonnerre → Dijon transfer at €140 — €175. 115 km, through Burgundy.",
         description: "Dijon is 1h15 from Tonnerre via the A6, crossing rural Burgundy.",
@@ -287,8 +287,8 @@ export const trajetsAuxerreTonnerre: Trajet[] = [
     hub: "auxerre-tonnerre",
     i18n: {
       fr: {
-        metaTitle: "Taxi Auxerre → Sens | Prix fixe dès 75 € | TaxiNeo",
-        metaDescription: "Taxi Auxerre → Sens. 60 km, 40 min, dès 75 €. N6, sans péage, vallée de l'Yonne. Réservation 24h/24.",
+        metaTitle: "Taxi Auxerre → Sens | forfait dès 75 €, 40 min | TaxiNeo",
+        metaDescription: "Via N6 / D606 en 40 min. N6, Yonne, Cathédrale de Sens et Joigny en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Auxerre → Sens",
         heroSubtitle: "Transfert Auxerre → Sens au prix fixe de 75 — 95 €. 60 km, le long de la vallée de l'Yonne.",
         description: "Sens, première cathédrale gothique de France, est à 40 minutes d'Auxerre par la N6.",
@@ -307,7 +307,7 @@ export const trajetsAuxerreTonnerre: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Auxerre → Sens | Fixed price from €75 | TaxiNeo",
-        metaDescription: "Taxi Auxerre → Sens. 60 km, 40 min, from €75. N6, toll-free, Yonne valley. Book 24/7.",
+        metaDescription: "Via N6 / D606, 40 min ride. N6, Yonne, Cathédrale de Sens and Joigny en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Auxerre → Sens",
         heroSubtitle: "Your Auxerre → Sens transfer at €75 — €95. 60 km, toll-free.",
         description: "Sens, home to France's first Gothic cathedral, is 40 minutes from Auxerre via the N6.",

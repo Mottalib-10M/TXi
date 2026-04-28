@@ -27,8 +27,8 @@ export const trajetsCarcassonne: Trajet[] = [
     hub: "carcassonne",
     i18n: {
       fr: {
-        metaTitle: "Taxi Carcassonne → Toulouse | Prix fixe dès 100 € | TaxiNeo",
-        metaDescription: "Taxi Carcassonne → Toulouse. 95 km, 55 min, dès 100 €. A61, transfert direct porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Carcassonne → Toulouse | 95 km, dès 100 € | TaxiNeo",
+        metaDescription: "Via A61 en 55 min. Cité médiévale, Ville rose, Canal du Midi et Cathares en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Carcassonne → Toulouse",
         heroSubtitle: "Transfert Carcassonne → Toulouse au prix fixe de 100 — 130 €. 95 km, direct par l'A61.",
         description: "Toulouse, la Ville rose, est à 55 min de Carcassonne par l'A61.",
@@ -46,8 +46,8 @@ export const trajetsCarcassonne: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Carcassonne → Toulouse | Fixed price from €100 | TaxiNeo",
-        metaDescription: "Taxi Carcassonne → Toulouse. 95 km, 55 min, from €100. A61, direct door-to-door. Book 24/7.",
+        metaTitle: "Taxi Carcassonne → Toulouse | 95 km, from €100 | TaxiNeo",
+        metaDescription: "Via A61, 55 min ride. Cité médiévale, Ville rose, Canal du Midi and Cathares en route. Drop-off at your exact address. Door-to-door, luggage included.",
         heroTitle: "Taxi Carcassonne → Toulouse",
         heroSubtitle: "Your Carcassonne → Toulouse transfer at €100 — €130. 95 km, via the A61.",
         description: "Toulouse, the Pink City, is 55 min from Carcassonne via the A61.",
@@ -92,8 +92,8 @@ export const trajetsCarcassonne: Trajet[] = [
     hub: "carcassonne",
     i18n: {
       fr: {
-        metaTitle: "Taxi Carcassonne → Montpellier | Prix fixe dès 170 € | TaxiNeo",
-        metaDescription: "Taxi Carcassonne → Montpellier. 155 km, 1h35, dès 170 €. A61/A9, transfert direct. Réservation 24h/24.",
+        metaTitle: "Taxi Carcassonne → Montpellier | 155 km, dès 170 € | TaxiNeo",
+        metaDescription: "Via A61/A9 en 1h35. Languedoc, UNESCO, Méditerranée et Faculté de médecine en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Carcassonne → Montpellier",
         heroSubtitle: "Transfert Carcassonne → Montpellier au prix fixe de 170 — 215 €. 155 km, traversée du Languedoc.",
         description: "Montpellier, capitale du Languedoc, est à 1h35 de Carcassonne par l'A61 et l'A9.",
@@ -111,8 +111,8 @@ export const trajetsCarcassonne: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Carcassonne → Montpellier | Fixed price from €170 | TaxiNeo",
-        metaDescription: "Taxi Carcassonne → Montpellier. 155 km, 1h35, from €170. A61/A9, direct transfer. Book 24/7.",
+        metaTitle: "Taxi Carcassonne → Montpellier | 155 km, from €170 | TaxiNeo",
+        metaDescription: "Via A61/A9, 1h35 ride. Languedoc, UNESCO, Méditerranée and Faculté de médecine en route. Drop-off at your exact address. Door-to-door, luggage included.",
         heroTitle: "Taxi Carcassonne → Montpellier",
         heroSubtitle: "Your Carcassonne → Montpellier transfer at €170 — €215. 155 km, across the Languedoc.",
         description: "Montpellier, Languedoc capital, is 1h35 from Carcassonne via the A61 and A9.",
@@ -157,8 +157,8 @@ export const trajetsCarcassonne: Trajet[] = [
     hub: "carcassonne",
     i18n: {
       fr: {
-        metaTitle: "Taxi Carcassonne → Perpignan | Prix fixe dès 115 € | TaxiNeo",
-        metaDescription: "Taxi Carcassonne → Perpignan. 110 km, 1h05, dès 115 €. A61, transfert direct. Réservation 24h/24.",
+        metaTitle: "Taxi Carcassonne → Perpignan | 110 km, dès 115 € | TaxiNeo",
+        metaDescription: "Via A61 en 1h05. Catalogne, Pays cathare, Canigou et Castillet en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Carcassonne → Perpignan",
         heroSubtitle: "Transfert Carcassonne → Perpignan au prix fixe de 115 — 145 €. 110 km, du pays cathare à la Catalogne.",
         description: "Perpignan, capitale de la Catalogne nord, est à 1h05 de Carcassonne par l'A61.",
@@ -176,8 +176,8 @@ export const trajetsCarcassonne: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Carcassonne → Perpignan | Fixed price from €115 | TaxiNeo",
-        metaDescription: "Taxi Carcassonne → Perpignan. 110 km, 1h05, from €115. A61, direct transfer. Book 24/7.",
+        metaTitle: "Taxi Carcassonne → Perpignan | 110 km, from €115 | TaxiNeo",
+        metaDescription: "Via A61, 1h05 ride. Catalogne, Pays cathare, Canigou and Castillet en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Carcassonne → Perpignan",
         heroSubtitle: "Your Carcassonne → Perpignan transfer at €115 — €145. 110 km, from Cathar country to Catalonia.",
         description: "Perpignan, capital of Northern Catalonia, is 1h05 from Carcassonne via the A61.",
@@ -222,8 +222,8 @@ export const trajetsCarcassonne: Trajet[] = [
     hub: "carcassonne",
     i18n: {
       fr: {
-        metaTitle: "Taxi Carcassonne → Narbonne | Prix fixe dès 65 € | TaxiNeo",
-        metaDescription: "Taxi Carcassonne → Narbonne. 60 km, 35 min, dès 65 €. A61, cathédrale, halles. Réservation 24h/24.",
+        metaTitle: "Taxi Carcassonne → Narbonne | 60 km, dès 65 € | TaxiNeo",
+        metaDescription: "Par A61, 35 min de trajet. Passage par Cathédrale inachevée, Via Domitia, Halles et Canal de la Robine. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Carcassonne → Narbonne",
         heroSubtitle: "Transfert Carcassonne → Narbonne au prix fixe de 65 — 80 €. 60 km, la première fille de Rome.",
         description: "Narbonne, ancienne capitale de la Gaule romaine, est à 35 min de Carcassonne.",
@@ -241,8 +241,8 @@ export const trajetsCarcassonne: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Carcassonne → Narbonne | Fixed price from €65 | TaxiNeo",
-        metaDescription: "Taxi Carcassonne → Narbonne. 60 km, 35 min, from €65. A61, cathedral, market hall. Book 24/7.",
+        metaTitle: "Taxi Carcassonne → Narbonne | 60 km, from €65 | TaxiNeo",
+        metaDescription: "Direct route via A61, 35 min. Cathédrale inachevée, Via Domitia, Halles and Canal de la Robine en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Carcassonne → Narbonne",
         heroSubtitle: "Your Carcassonne → Narbonne transfer at €65 — €80. 60 km, Rome's first daughter.",
         description: "Narbonne, ancient Roman capital of Gaul, is 35 min from Carcassonne.",
@@ -287,8 +287,8 @@ export const trajetsCarcassonne: Trajet[] = [
     hub: "carcassonne",
     i18n: {
       fr: {
-        metaTitle: "Taxi Carcassonne → Béziers | Prix fixe dès 85 € | TaxiNeo",
-        metaDescription: "Taxi Carcassonne → Béziers. 80 km, 50 min, dès 85 €. A61/A9, écluses de Fonseranes, Canal du Midi. Réservation 24h/24.",
+        metaTitle: "Taxi Carcassonne → Béziers | 80 km, dès 85 € | TaxiNeo",
+        metaDescription: "Via A61/A9 en 50 min. Écluses de Fonseranes, Canal du Midi, Cathédrale Saint-Nazaire et Vignobles en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Carcassonne → Béziers",
         heroSubtitle: "Transfert Carcassonne → Béziers au prix fixe de 85 — 105 €. 80 km, la cité de Riquet.",
         description: "Béziers, berceau de Pierre-Paul Riquet et du Canal du Midi, est à 50 min de Carcassonne.",
@@ -306,8 +306,8 @@ export const trajetsCarcassonne: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Carcassonne → Béziers | Fixed price from €85 | TaxiNeo",
-        metaDescription: "Taxi Carcassonne → Béziers. 80 km, 50 min, from €85. A61/A9, Fonseranes locks, Canal du Midi. Book 24/7.",
+        metaTitle: "Taxi Carcassonne → Béziers | 80 km, from €85 | TaxiNeo",
+        metaDescription: "Via A61/A9, 50 min ride. Écluses de Fonseranes, Canal du Midi, Cathédrale Saint-Nazaire and Vignobles en route. Faster and more direct than train or bus.",
         heroTitle: "Taxi Carcassonne → Béziers",
         heroSubtitle: "Your Carcassonne → Béziers transfer at €85 — €105. 80 km, Riquet's city.",
         description: "Béziers, birthplace of Pierre-Paul Riquet and the Canal du Midi, is 50 min from Carcassonne.",

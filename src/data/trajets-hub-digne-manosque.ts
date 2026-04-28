@@ -19,8 +19,8 @@ export const trajetsDignéManosque: Trajet[] = [
     hub: "digne-manosque",
     i18n: {
       fr: {
-        metaTitle: "Taxi Digne-les-Bains → Marseille | Prix fixe dès 185 € | TaxiNeo",
-        metaDescription: "Taxi Digne-les-Bains → Marseille. 150 km, 1h40, dès 185 €. A51 via la vallée de la Durance. Réservation 24h/24.",
+        metaTitle: "Taxi Digne-les-Bains → Marseille | 150 km, 185 € | TaxiNeo",
+        metaDescription: "Par A51, undefined min de trajet. Route Napoléon, Durance, Alpes-de-Haute-Provence et Thermes en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Digne-les-Bains → Marseille",
         heroSubtitle: "Transfert Digne-les-Bains → Marseille au prix fixe de 185 — 235 €. 150 km, 1h40.",
         description: "Digne-les-Bains — Marseille descend des Alpes de Haute-Provence vers la Méditerranée par l'A51.",
@@ -38,8 +38,8 @@ export const trajetsDignéManosque: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Digne-les-Bains → Marseille | Fixed price from €185 | TaxiNeo",
-        metaDescription: "Taxi Digne-les-Bains → Marseille. 150 km, 1h40, from €185. A51 via Durance valley. Book 24/7.",
+        metaTitle: "Taxi Digne-les-Bains → Marseille | 150 km, €185 | TaxiNeo",
+        metaDescription: "Through A51 in undefined min. Route Napoléon, Durance, Alpes-de-Haute-Provence and Thermes en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Digne-les-Bains → Marseille",
         heroSubtitle: "Digne-les-Bains → Marseille transfer at €185 — €235. 150 km, 1h40.",
         description: "Digne-les-Bains to Marseille descends from the Alpine foothills to the Mediterranean via A51.",
@@ -76,8 +76,8 @@ export const trajetsDignéManosque: Trajet[] = [
     hub: "digne-manosque",
     i18n: {
       fr: {
-        metaTitle: "Taxi Digne-les-Bains → Nice | Prix fixe dès 190 € | TaxiNeo",
-        metaDescription: "Taxi Digne-les-Bains → Nice. 150 km, 1h50, dès 190 €. N202 via la vallée du Var, itinéraire du Train des Pignes. Réservation 24h/24.",
+        metaTitle: "Taxi Digne-les-Bains → Nice | 150 km, dès 190 € | TaxiNeo",
+        metaDescription: "Via N202 / D6085 en undefined min. N202, Train des Pignes, Verdon et Alpes-de-Haute-Provence en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Digne-les-Bains → Nice",
         heroSubtitle: "Transfert Digne-les-Bains → Nice au prix fixe de 190 — 240 €. 150 km, 1h50.",
         description: "Digne-les-Bains — Nice traverse les Alpes du sud en suivant la vallée du Var, itinéraire du célèbre Train des Pignes.",
@@ -95,8 +95,8 @@ export const trajetsDignéManosque: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Digne-les-Bains → Nice | Fixed price from €190 | TaxiNeo",
-        metaDescription: "Taxi Digne-les-Bains → Nice. 150 km, 1h50, from €190. N202 via Var valley, Train des Pignes route. Book 24/7.",
+        metaTitle: "Taxi Digne-les-Bains → Nice | 150 km, from €190 | TaxiNeo",
+        metaDescription: "Via N202 / D6085, undefined min ride. N202, Train des Pignes, Verdon and Alpes-de-Haute-Provence en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Digne-les-Bains → Nice",
         heroSubtitle: "Digne-les-Bains → Nice transfer at €190 — €240. 150 km, 1h50.",
         description: "Digne-les-Bains to Nice crosses the southern Alps following the Var valley, the famous Train des Pignes route.",
@@ -133,8 +133,8 @@ export const trajetsDignéManosque: Trajet[] = [
     hub: "digne-manosque",
     i18n: {
       fr: {
-        metaTitle: "Taxi Manosque → Aix-en-Provence | Prix fixe dès 65 € | TaxiNeo",
-        metaDescription: "Taxi Manosque → Aix-en-Provence. 55 km, 40 min, dès 65 €. A51 via le Luberon. Réservation 24h/24.",
+        metaTitle: "Taxi Manosque → Aix-en-Provence | 55 km, dès 65 € | TaxiNeo",
+        metaDescription: "Via A51 en undefined min. Luberon, Durance, L'Occitane et Provence en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Manosque → Aix-en-Provence",
         heroSubtitle: "Transfert Manosque → Aix-en-Provence au prix fixe de 65 — 85 €. 55 km, 40 min.",
         description: "Manosque — Aix-en-Provence relie la porte du Luberon à la capitale historique de la Provence par l'A51.",
@@ -152,8 +152,8 @@ export const trajetsDignéManosque: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Manosque → Aix-en-Provence | Fixed price from €65 | TaxiNeo",
-        metaDescription: "Taxi Manosque → Aix-en-Provence. 55 km, 40 min, from €65. A51 via Luberon. Book 24/7.",
+        metaTitle: "Taxi Manosque → Aix-en-Provence | 55 km, from €65 | TaxiNeo",
+        metaDescription: "Via A51, undefined min ride. Luberon, Durance, L'Occitane and Provence en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Manosque → Aix-en-Provence",
         heroSubtitle: "Manosque → Aix-en-Provence transfer at €65 — €85. 55 km, 40 min.",
         description: "Manosque to Aix-en-Provence links the gateway to the Luberon with Provence's historic capital.",
@@ -190,8 +190,8 @@ export const trajetsDignéManosque: Trajet[] = [
     hub: "digne-manosque",
     i18n: {
       fr: {
-        metaTitle: "Taxi Manosque → Marseille | Prix fixe dès 110 € | TaxiNeo",
-        metaDescription: "Taxi Manosque → Marseille. 90 km, 1h, dès 110 €. A51 via Aix-en-Provence. Réservation 24h/24.",
+        metaTitle: "Taxi Manosque → Marseille | 90 km, dès 110 € | TaxiNeo",
+        metaDescription: "Itinéraire A51 / A7, environ undefined min. Durance, Luberon, L'Occitane et Aix-en-Provence en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Manosque → Marseille",
         heroSubtitle: "Transfert Manosque → Marseille au prix fixe de 110 — 140 €. 90 km, 1h.",
         description: "Manosque — Marseille descend la vallée de la Durance par l'A51 et rejoint Marseille via l'A7.",
@@ -209,8 +209,8 @@ export const trajetsDignéManosque: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Manosque → Marseille | Fixed price from €110 | TaxiNeo",
-        metaDescription: "Taxi Manosque → Marseille. 90 km, 1h, from €110. A51 via Aix-en-Provence. Book 24/7.",
+        metaTitle: "Taxi Manosque → Marseille | 90 km, from €110 | TaxiNeo",
+        metaDescription: "Direct route via A51 / A7, undefined min. Durance, Luberon, L'Occitane and Aix-en-Provence en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Manosque → Marseille",
         heroSubtitle: "Manosque → Marseille transfer at €110 — €140. 90 km, 1h.",
         description: "Manosque to Marseille follows the Durance valley via A51 and A7 to the Mediterranean.",
@@ -247,8 +247,8 @@ export const trajetsDignéManosque: Trajet[] = [
     hub: "digne-manosque",
     i18n: {
       fr: {
-        metaTitle: "Taxi Digne-les-Bains → Gap | Prix fixe dès 110 € | TaxiNeo",
-        metaDescription: "Taxi Digne-les-Bains → Gap. 90 km, 1h20, dès 110 €. N85 (Route Napoléon) à travers les Préalpes. Réservation 24h/24.",
+        metaTitle: "Taxi Digne-les-Bains → Gap | 90 km, dès 110 € | TaxiNeo",
+        metaDescription: "Trajet direct N85 en undefined min. Passage par N85, Route Napoléon, Alpes-de-Haute-Provence et Bléone. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Digne-les-Bains → Gap",
         heroSubtitle: "Transfert Digne-les-Bains → Gap au prix fixe de 110 — 145 €. 90 km, 1h20.",
         description: "Digne-les-Bains — Gap emprunte la N85 (Route Napoléon) à travers les Préalpes du sud.",
@@ -266,8 +266,8 @@ export const trajetsDignéManosque: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Digne-les-Bains → Gap | Fixed price from €110 | TaxiNeo",
-        metaDescription: "Taxi Digne-les-Bains → Gap. 90 km, 1h20, from €110. N85 (Route Napoléon) through the Pre-Alps. Book 24/7.",
+        metaTitle: "Taxi Digne-les-Bains → Gap | 90 km, from €110 | TaxiNeo",
+        metaDescription: "Direct route via N85, undefined min. N85, Route Napoléon, Alpes-de-Haute-Provence and Bléone en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Digne-les-Bains → Gap",
         heroSubtitle: "Digne-les-Bains → Gap transfer at €110 — €145. 90 km, 1h20.",
         description: "Digne-les-Bains to Gap follows the N85 (Route Napoléon) through the southern Pre-Alps.",

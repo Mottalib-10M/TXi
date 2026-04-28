@@ -32,9 +32,8 @@ export const trajetsParisVilles: Trajet[] = [
     highlights: ["A6 Autoroute du Soleil", "Beaune", "Vignobles de Bourgogne", "Aire de Beaune-Tailly"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Lyon | Forfait dès 480 € | TaxiNeo",
-        metaDescription:
-          "Réservez votre taxi Paris → Lyon. 465 km, ~4h30, forfait dès 480 €. Chauffeur privé, véhicule confortable, Wi-Fi à bord. Alternative flexible au TGV.",
+        metaTitle: "Taxi Paris → Lyon | 465 km, dès 480 €, 4h30 | TaxiNeo",
+        metaDescription:"Via A6 en 4h30. A6 Autoroute du Soleil, Beaune, Vignobles de Bourgogne et Aire de Beaune-Tailly en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Paris → Lyon",
         heroSubtitle:
           "Transfert privé Paris → Lyon au forfait de 480 — 620 €. Prise en charge à domicile, véhicule haut de gamme, chauffeur professionnel.",
@@ -80,8 +79,7 @@ export const trajetsParisVilles: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Paris → Lyon | Fixed rate from €480 | TaxiNeo",
-        metaDescription:
-          "Book your private taxi Paris → Lyon. 465 km, ~4h30, fixed rate from €480. Door-to-door service, professional driver, Wi-Fi on board.",
+        metaDescription:"Via A6, 4h30 ride. A6 Autoroute du Soleil, Beaune, Vignobles de Bourgogne and Aire de Beaune-Tailly en route. Faster and more direct than train or bus.",
         heroTitle: "Taxi Paris → Lyon",
         heroSubtitle:
           "Private transfer Paris → Lyon from €480 — €620. Home pick-up, premium vehicle, professional driver 24/7.",
@@ -155,9 +153,8 @@ export const trajetsParisVilles: Trajet[] = [
     highlights: ["A6/A7 Autoroute du Soleil", "Vallée du Rhône", "Avignon", "Aix-en-Provence"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Marseille | Forfait dès 750 € | TaxiNeo",
-        metaDescription:
-          "Réservez votre taxi Paris → Marseille. 775 km, ~7h30, forfait dès 750 €. Transfert porte-à-porte, chauffeur professionnel, véhicule climatisé.",
+        metaTitle: "Taxi Paris → Marseille | 775 km, dès 750 € | TaxiNeo",
+        metaDescription:"Via A6 puis A7 en 7h30. A6/A7 Autoroute du Soleil, Vallée du Rhône, Avignon et Aix-en-Provence en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Paris → Marseille",
         heroSubtitle:
           "Transfert privé Paris → Marseille au forfait de 750 — 950 €. Prise en charge à domicile, confort premium, chauffeur expérimenté.",
@@ -202,9 +199,8 @@ export const trajetsParisVilles: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Marseille | Fixed rate from €750 | TaxiNeo",
-        metaDescription:
-          "Book your private taxi Paris → Marseille. 775 km, ~7h30, fixed rate from €750. Door-to-door, professional driver, air-conditioned vehicle.",
+        metaTitle: "Taxi Paris → Marseille | 775 km, from €750 | TaxiNeo",
+        metaDescription:"Via A6 then A7, 7h30 ride. A6/A7 Autoroute du Soleil, Vallée du Rhône, Avignon and Aix-en-Provence en route. Faster and more direct than train or bus.",
         heroTitle: "Taxi Paris → Marseille",
         heroSubtitle:
           "Private transfer Paris → Marseille from €750 — €950. Home pick-up, premium comfort, experienced driver.",
@@ -278,9 +274,8 @@ export const trajetsParisVilles: Trajet[] = [
     highlights: ["A1 Autoroute du Nord", "Arras", "Lens", "Beffroi de Lille"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Lille | Forfait dès 260 € | TaxiNeo",
-        metaDescription:
-          "Réservez votre taxi Paris → Lille. 225 km, ~2h30, forfait dès 260 €. Transfert direct porte-à-porte, chauffeur professionnel.",
+        metaTitle: "Taxi Paris → Lille | 225 km, dès 260 €, 2h30 | TaxiNeo",
+        metaDescription:"Via A1 en 2h30. A1 Autoroute du Nord, Arras, Lens et Beffroi de Lille en chemin. Dépose à votre adresse exacte. Alternative directe au train ou au bus.",
         heroTitle: "Taxi Paris → Lille",
         heroSubtitle:
           "Transfert privé Paris → Lille au forfait de 260 — 340 €. Prise en charge à domicile, véhicule confortable, sans correspondance.",
@@ -326,8 +321,7 @@ export const trajetsParisVilles: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Paris → Lille | Fixed rate from €260 | TaxiNeo",
-        metaDescription:
-          "Book your private taxi Paris → Lille. 225 km, ~2h30, fixed rate from €260. Direct door-to-door transfer, professional driver.",
+        metaDescription:"Via A1, 2h30 ride. A1 Autoroute du Nord, Arras, Lens and Beffroi de Lille en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Paris → Lille",
         heroSubtitle:
           "Private transfer Paris → Lille from €260 — €340. Home pick-up, comfortable vehicle, no connections.",
@@ -401,9 +395,8 @@ export const trajetsParisVilles: Trajet[] = [
     highlights: ["A10/A20", "Vierzon", "Limoges", "Cahors", "Ville rose"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Toulouse | Forfait dès 680 € | TaxiNeo",
-        metaDescription:
-          "Réservez votre taxi Paris → Toulouse. 680 km, ~6h30, forfait dès 680 €. Transfert privé porte-à-porte, chauffeur professionnel.",
+        metaTitle: "Taxi Paris → Toulouse | 680 km, dès 680 € | TaxiNeo",
+        metaDescription:"Via A10 puis A20 en 6h30. A10/A20, Vierzon, Limoges et Cahors en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Paris → Toulouse",
         heroSubtitle:
           "Transfert privé Paris → Toulouse au forfait de 680 — 860 €. Prise en charge à domicile, véhicule haut de gamme.",
@@ -448,9 +441,8 @@ export const trajetsParisVilles: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Toulouse | Fixed rate from €680 | TaxiNeo",
-        metaDescription:
-          "Book your private taxi Paris → Toulouse. 680 km, ~6h30, fixed rate from €680. Door-to-door private transfer.",
+        metaTitle: "Taxi Paris → Toulouse | 680 km, from €680 | TaxiNeo",
+        metaDescription:"Via A10 then A20, 6h30 ride. A10/A20, Vierzon, Limoges and Cahors en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Paris → Toulouse",
         heroSubtitle:
           "Private transfer Paris → Toulouse from €680 — €860. Home pick-up, premium vehicle.",
@@ -519,9 +511,8 @@ export const trajetsParisVilles: Trajet[] = [
     highlights: ["A10 L'Aquitaine", "Tours", "Poitiers", "Vignobles bordelais"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Bordeaux | Forfait dès 580 € | TaxiNeo",
-        metaDescription:
-          "Réservez votre taxi Paris → Bordeaux. 585 km, ~6h, forfait dès 580 €. Transfert privé confortable, chauffeur professionnel 24h/24.",
+        metaTitle: "Taxi Paris → Bordeaux | 585 km, dès 580 € | TaxiNeo",
+        metaDescription:"Via A10 en 6h. A10 L'Aquitaine, Tours, Poitiers et Vignobles bordelais en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Paris → Bordeaux",
         heroSubtitle:
           "Transfert privé Paris → Bordeaux au forfait de 580 — 740 €. Voyage en toute sérénité avec prise en charge à domicile.",
@@ -566,9 +557,8 @@ export const trajetsParisVilles: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Bordeaux | Fixed rate from €580 | TaxiNeo",
-        metaDescription:
-          "Book your private taxi Paris → Bordeaux. 585 km, ~6h, fixed rate from €580. Comfortable private transfer, 24/7.",
+        metaTitle: "Taxi Paris → Bordeaux | 585 km, from €580 | TaxiNeo",
+        metaDescription:"A10 route, approximately 6 hours. A10 L'Aquitaine, Tours, Poitiers and Vignobles bordelais en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Paris → Bordeaux",
         heroSubtitle:
           "Private transfer Paris → Bordeaux from €580 — €740. Stress-free travel with home pick-up.",
@@ -637,9 +627,8 @@ export const trajetsParisVilles: Trajet[] = [
     highlights: ["A6/A7/A8", "Vallée du Rhône", "Côte d'Azur", "Promenade des Anglais"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Nice | Forfait dès 900 € | TaxiNeo",
-        metaDescription:
-          "Réservez votre taxi Paris → Nice. 930 km, ~9h, forfait dès 900 €. Transfert privé vers la Côte d'Azur, véhicule haut de gamme.",
+        metaTitle: "Taxi Paris → Nice | 930 km, dès 900 €, 9h | TaxiNeo",
+        metaDescription:"Par A6 puis A8, 9h de trajet. A6/A7/A8, Vallée du Rhône, Côte d'Azur et Promenade des Anglais en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Paris → Nice",
         heroSubtitle:
           "Transfert privé Paris → Nice au forfait de 900 — 1 150 €. Rejoignez la Côte d'Azur en tout confort.",
@@ -685,8 +674,7 @@ export const trajetsParisVilles: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Paris → Nice | Fixed rate from €900 | TaxiNeo",
-        metaDescription:
-          "Book your private taxi Paris → Nice. 930 km, ~9h, from €900. Premium transfer to the French Riviera.",
+        metaDescription:"Via A6 then A8, 9 hours ride. A6/A7/A8, Vallée du Rhône, Côte d'Azur and Promenade des Anglais en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Paris → Nice",
         heroSubtitle:
           "Private transfer Paris → Nice from €900 — €1,150. Reach the Côte d'Azur in complete comfort.",
@@ -755,9 +743,8 @@ export const trajetsParisVilles: Trajet[] = [
     highlights: ["A11 L'Océane", "Le Mans", "Angers", "Machines de l'Île"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Nantes | Forfait dès 400 € | TaxiNeo",
-        metaDescription:
-          "Réservez votre taxi Paris → Nantes. 385 km, ~4h, forfait dès 400 €. Transfert confortable, chauffeur professionnel.",
+        metaTitle: "Taxi Paris → Nantes | 385 km, dès 400 €, 4h | TaxiNeo",
+        metaDescription:"Via A11 en 4h. A11 L'Océane, Le Mans, Angers et Machines de l'Île en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Paris → Nantes",
         heroSubtitle:
           "Transfert privé Paris → Nantes au forfait de 400 — 520 €. Voyage direct porte-à-porte.",
@@ -803,8 +790,7 @@ export const trajetsParisVilles: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Paris → Nantes | Fixed rate from €400 | TaxiNeo",
-        metaDescription:
-          "Book your private taxi Paris → Nantes. 385 km, ~4h, from €400. Comfortable door-to-door transfer.",
+        metaDescription:"Via A11, 4 hours ride. A11 L'Océane, Le Mans, Angers and Machines de l'Île en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Paris → Nantes",
         heroSubtitle: "Private transfer Paris → Nantes from €400 — €520. Direct door-to-door journey.",
         description:
@@ -871,9 +857,8 @@ export const trajetsParisVilles: Trajet[] = [
     highlights: ["A4 L'Est", "Reims", "Metz", "Cathédrale de Strasbourg", "Parlement européen"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Strasbourg | Forfait dès 500 € | TaxiNeo",
-        metaDescription:
-          "Réservez votre taxi Paris → Strasbourg. 490 km, ~4h40, forfait dès 500 €. Chauffeur privé, transfert direct.",
+        metaTitle: "Taxi Paris → Strasbourg | 490 km, dès 500 € | TaxiNeo",
+        metaDescription:"Via A4 en 4h40. A4 L'Est, Reims, Metz et Cathédrale de Strasbourg en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Paris → Strasbourg",
         heroSubtitle:
           "Transfert privé Paris → Strasbourg au forfait de 500 — 650 €. Capitale européenne, porte-à-porte.",
@@ -918,9 +903,8 @@ export const trajetsParisVilles: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Strasbourg | Fixed rate from €500 | TaxiNeo",
-        metaDescription:
-          "Book your private taxi Paris → Strasbourg. 490 km, ~4h40, from €500. Direct private transfer to the European capital.",
+        metaTitle: "Taxi Paris → Strasbourg | 490 km, from €500 | TaxiNeo",
+        metaDescription:"Via A4, 4h40 ride. A4 L'Est, Reims, Metz and Cathédrale de Strasbourg en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Paris → Strasbourg",
         heroSubtitle: "Private transfer Paris → Strasbourg from €500 — €650. Door-to-door to the European capital.",
         description:
@@ -987,9 +971,8 @@ export const trajetsParisVilles: Trajet[] = [
     highlights: ["A6/A7/A9", "Vallée du Rhône", "Nîmes", "Place de la Comédie"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Montpellier | Forfait dès 720 € | TaxiNeo",
-        metaDescription:
-          "Réservez votre taxi Paris → Montpellier. 750 km, ~7h, forfait dès 720 €. Transfert privé vers le sud, chauffeur professionnel.",
+        metaTitle: "Taxi Paris → Montpellier | 750 km, dès 720 € | TaxiNeo",
+        metaDescription:"Trajet direct A6 puis A9 en 7h10. Passage par A6/A7/A9, Vallée du Rhône, Nîmes et Place de la Comédie. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Paris → Montpellier",
         heroSubtitle:
           "Transfert privé Paris → Montpellier au forfait de 720 — 920 €. Direction le Languedoc en confort premium.",
@@ -1029,9 +1012,8 @@ export const trajetsParisVilles: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Montpellier | Fixed rate from €720 | TaxiNeo",
-        metaDescription:
-          "Book your private taxi Paris → Montpellier. 750 km, ~7h, from €720. Private transfer to the south.",
+        metaTitle: "Taxi Paris → Montpellier | 750 km, from €720 | TaxiNeo",
+        metaDescription:"Direct route via A6 then A9, 7h10. A6/A7/A9, Vallée du Rhône, Nîmes and Place de la Comédie en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Paris → Montpellier",
         heroSubtitle: "Private transfer Paris → Montpellier from €720 — €920. Head to Languedoc in premium comfort.",
         description:
@@ -1098,9 +1080,8 @@ export const trajetsParisVilles: Trajet[] = [
     highlights: ["A11/A81", "Le Mans", "Laval", "Parlement de Bretagne"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Rennes | Forfait dès 370 € | TaxiNeo",
-        metaDescription:
-          "Réservez votre taxi Paris → Rennes. 350 km, ~3h40, forfait dès 370 €. Transfert direct vers la capitale bretonne.",
+        metaTitle: "Taxi Paris → Rennes | 350 km, dès 370 €, 3h40 | TaxiNeo",
+        metaDescription:"Via A11 puis A81 en 3h40. A11/A81, Le Mans, Laval et Parlement de Bretagne en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Paris → Rennes",
         heroSubtitle:
           "Transfert privé Paris → Rennes au forfait de 370 — 480 €. Cap sur la Bretagne en tout confort.",
@@ -1141,8 +1122,7 @@ export const trajetsParisVilles: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Paris → Rennes | Fixed rate from €370 | TaxiNeo",
-        metaDescription:
-          "Book your private taxi Paris → Rennes. 350 km, ~3h40, from €370. Direct transfer to Brittany's capital.",
+        metaDescription:"Via A11 then A81, 3h40 ride. A11/A81, Le Mans, Laval and Parlement de Bretagne en route. Drop-off at your exact address. Door-to-door, luggage included.",
         heroTitle: "Taxi Paris → Rennes",
         heroSubtitle: "Private transfer Paris → Rennes from €370 — €480. Head to Brittany in comfort.",
         description:
@@ -1213,9 +1193,8 @@ export const trajetsParisVilles: Trajet[] = [
     highlights: ["A13 Autoroute de Normandie", "Boucles de la Seine", "Forêt de Bord", "Cathédrale de Rouen"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Rouen | Forfait dès 180 € | TaxiNeo",
-        metaDescription:
-          "Réservez votre taxi Paris → Rouen. 135 km, ~1h30, forfait dès 180 €. Transfert privé vers la capitale normande, chauffeur professionnel.",
+        metaTitle: "Taxi Paris → Rouen | 135 km, dès 180 €, 1h30 | TaxiNeo",
+        metaDescription:"Via A13 en 1h30. A13 Autoroute de Normandie, Boucles de la Seine, Forêt de Bord et Cathédrale de Rouen en chemin. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Paris → Rouen",
         heroSubtitle:
           "Transfert privé Paris → Rouen au forfait de 180 — 240 €. Prise en charge à domicile, véhicule confortable.",
@@ -1261,8 +1240,7 @@ export const trajetsParisVilles: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Paris → Rouen | Fixed rate from €180 | TaxiNeo",
-        metaDescription:
-          "Book your private taxi Paris → Rouen. 135 km, ~1h30, from €180. Door-to-door transfer to Normandy's historic capital.",
+        metaDescription:"Via A13, 1h30 ride. A13 Autoroute de Normandie, Boucles de la Seine, Forêt de Bord and Cathédrale de Rouen en route. Faster and more direct than train or bus.",
         heroTitle: "Taxi Paris → Rouen",
         heroSubtitle: "Private transfer Paris → Rouen from €180 — €240. Comfortable door-to-door service.",
         description:
@@ -1329,9 +1307,8 @@ export const trajetsParisVilles: Trajet[] = [
     highlights: ["A4 Autoroute de l'Est", "Vignobles de Champagne", "Cathédrale de Reims", "Montagne de Reims"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Reims | Forfait dès 190 € | TaxiNeo",
-        metaDescription:
-          "Réservez votre taxi Paris → Reims. 145 km, ~1h35, forfait dès 190 €. Transfert privé vers la cité des sacres et du champagne.",
+        metaTitle: "Taxi Paris → Reims | 145 km, dès 190 €, 1h35 | TaxiNeo",
+        metaDescription:"Via A4 en 1h35. A4 Autoroute de l'Est, Vignobles de Champagne, Cathédrale de Reims et Montagne de Reims en chemin. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Paris → Reims",
         heroSubtitle:
           "Transfert privé Paris → Reims au forfait de 190 — 250 €. Direction la capitale du champagne en tout confort.",
@@ -1377,8 +1354,7 @@ export const trajetsParisVilles: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Paris → Reims | Fixed rate from €190 | TaxiNeo",
-        metaDescription:
-          "Book your private taxi Paris → Reims. 145 km, ~1h35, from €190. Discover the Champagne capital with door-to-door service.",
+        metaDescription:"Via A4, 1h35 ride. A4 Autoroute de l'Est, Vignobles de Champagne, Cathédrale de Reims and Montagne de Reims en route. Faster and more direct than train or bus.",
         heroTitle: "Taxi Paris → Reims",
         heroSubtitle: "Private transfer Paris → Reims from €190 — €250. Gateway to Champagne country.",
         description:
@@ -1445,9 +1421,8 @@ export const trajetsParisVilles: Trajet[] = [
     highlights: ["A1 Autoroute du Nord", "Cathédrale d'Amiens", "Hortillonnages", "Quartier Saint-Leu"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Amiens | Forfait dès 190 € | TaxiNeo",
-        metaDescription:
-          "Réservez votre taxi Paris → Amiens. 145 km, ~1h40, forfait dès 190 €. Transfert direct vers la capitale picarde.",
+        metaTitle: "Taxi Paris → Amiens | 145 km, dès 190 €, 1h40 | TaxiNeo",
+        metaDescription:"Via A1 en 1h40. A1 Autoroute du Nord, Cathédrale d'Amiens, Hortillonnages et Quartier Saint-Leu en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Paris → Amiens",
         heroSubtitle:
           "Transfert privé Paris → Amiens au forfait de 190 — 250 €. Direction la plus grande cathédrale gothique de France.",
@@ -1492,8 +1467,7 @@ export const trajetsParisVilles: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Paris → Amiens | Fixed rate from €190 | TaxiNeo",
-        metaDescription:
-          "Book your private taxi Paris → Amiens. 145 km, ~1h40, from €190. Discover France's largest Gothic cathedral.",
+        metaDescription:"Via A1, 1h40 ride. A1 Autoroute du Nord, Cathédrale d'Amiens, Hortillonnages and Quartier Saint-Leu en route. Faster and more direct than train or bus.",
         heroTitle: "Taxi Paris → Amiens",
         heroSubtitle: "Private transfer Paris → Amiens from €190 — €250. Discover Picardy's hidden gem.",
         description:
@@ -1560,9 +1534,8 @@ export const trajetsParisVilles: Trajet[] = [
     highlights: ["A10 L'Aquitaine", "Châteaux de la Loire", "Amboise", "Chenonceau", "Vieux Tours"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Tours | Forfait dès 300 € | TaxiNeo",
-        metaDescription:
-          "Réservez votre taxi Paris → Tours. 235 km, ~2h30, forfait dès 300 €. Porte d'entrée des châteaux de la Loire.",
+        metaTitle: "Taxi Paris → Tours | 235 km, dès 300 €, 2h30 | TaxiNeo",
+        metaDescription:"Itinéraire A10, environ 2h30. Passage par A10 L'Aquitaine, Châteaux de la Loire, Amboise et Chenonceau. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Paris → Tours",
         heroSubtitle:
           "Transfert privé Paris → Tours au forfait de 300 — 380 €. Cap sur les châteaux de la Loire.",
@@ -1608,8 +1581,7 @@ export const trajetsParisVilles: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Paris → Tours | Fixed rate from €300 | TaxiNeo",
-        metaDescription:
-          "Book your private taxi Paris → Tours. 235 km, ~2h30, from €300. Gateway to the Loire Valley châteaux.",
+        metaDescription:"A10 route, approximately 2h30. A10 L'Aquitaine, Châteaux de la Loire, Amboise and Chenonceau en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Paris → Tours",
         heroSubtitle: "Private transfer Paris → Tours from €300 — €380. Discover the Loire Valley.",
         description:
@@ -1676,9 +1648,8 @@ export const trajetsParisVilles: Trajet[] = [
     highlights: ["A10 L'Aquitaine", "Beauce", "Cathédrale Sainte-Croix", "Loire à Orléans", "Maison Jeanne d'Arc"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Orléans | Forfait dès 170 € | TaxiNeo",
-        metaDescription:
-          "Réservez votre taxi Paris → Orléans. 130 km, ~1h30, forfait dès 170 €. Transfert rapide vers la cité johannique.",
+        metaTitle: "Taxi Paris → Orléans | 130 km, dès 170 € | TaxiNeo",
+        metaDescription:"Par A10, 1h30 de trajet. A10 L'Aquitaine, Beauce, Cathédrale Sainte-Croix et Loire à Orléans en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Paris → Orléans",
         heroSubtitle:
           "Transfert privé Paris → Orléans au forfait de 170 — 220 €. La cité de Jeanne d'Arc à portée de main.",
@@ -1718,9 +1689,8 @@ export const trajetsParisVilles: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Orléans | Fixed rate from €170 | TaxiNeo",
-        metaDescription:
-          "Book your private taxi Paris → Orléans. 130 km, ~1h30, from €170. Quick transfer to Joan of Arc's city on the Loire.",
+        metaTitle: "Taxi Paris → Orléans | 130 km, from €170 | TaxiNeo",
+        metaDescription:"Direct route via A10, 1h30. A10 L'Aquitaine, Beauce, Cathédrale Sainte-Croix and Loire à Orléans en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Paris → Orléans",
         heroSubtitle: "Private transfer Paris → Orléans from €170 — €220. Joan of Arc's city awaits.",
         description:
@@ -1787,9 +1757,8 @@ export const trajetsParisVilles: Trajet[] = [
     highlights: ["A71 Autoroute d'Auvergne", "Viaduc de Veauce", "Volcans d'Auvergne", "Chaîne des Puys"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Clermont-Ferrand | Forfait dès 430 € | TaxiNeo",
-        metaDescription:
-          "Réservez votre taxi Paris → Clermont-Ferrand. 420 km, ~4h, forfait dès 430 €. Chauffeur privé, véhicule confortable, Wi-Fi à bord. Alternative au train Intercités.",
+        metaTitle: "Taxi Paris → Clermont-Ferrand | 420 km, dès 430 € | TaxiNeo",
+        metaDescription:"Via A71 en 4h. A71 Autoroute d'Auvergne, Viaduc de Veauce, Volcans d'Auvergne et Chaîne des Puys en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Paris → Clermont-Ferrand",
         heroSubtitle:
           "Transfert privé Paris → Clermont-Ferrand au forfait de 430 — 560 €. Prise en charge à domicile, véhicule haut de gamme, chauffeur professionnel.",
@@ -1834,9 +1803,8 @@ export const trajetsParisVilles: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Clermont-Ferrand | Fixed rate from €430 | TaxiNeo",
-        metaDescription:
-          "Book your private taxi Paris → Clermont-Ferrand. 420 km, ~4h, fixed rate from €430. Door-to-door service, professional driver, Wi-Fi on board.",
+        metaTitle: "Taxi Paris → Clermont-Ferrand | 420 km, from €430 | TaxiNeo",
+        metaDescription:"Via A71, 4 hours ride. A71 Autoroute d'Auvergne, Viaduc de Veauce, Volcans d'Auvergne and Chaîne des Puys en route. Faster and more direct than train or bus.",
         heroTitle: "Taxi Paris → Clermont-Ferrand",
         heroSubtitle:
           "Private transfer Paris → Clermont-Ferrand from €430 — €560. Home pick-up, premium vehicle, professional driver 24/7.",
@@ -1905,9 +1873,8 @@ export const trajetsParisVilles: Trajet[] = [
     highlights: ["A6 Autoroute du Soleil", "Vignobles de Bourgogne", "Hospices de Beaune", "Cité de la Gastronomie"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Dijon | Forfait dès 320 € | TaxiNeo",
-        metaDescription:
-          "Réservez votre taxi Paris → Dijon. 315 km, ~3h, forfait dès 320 €. Chauffeur privé, véhicule confortable, Wi-Fi à bord. Alternative pratique au TGV.",
+        metaTitle: "Taxi Paris → Dijon | 315 km, dès 320 €, 3h | TaxiNeo",
+        metaDescription:"Via A6 en 3h. A6 Autoroute du Soleil, Vignobles de Bourgogne, Hospices de Beaune et Cité de la Gastronomie en chemin. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Paris → Dijon",
         heroSubtitle:
           "Transfert privé Paris → Dijon au forfait de 320 — 420 €. Prise en charge à domicile, véhicule haut de gamme, chauffeur professionnel.",
@@ -1953,8 +1920,7 @@ export const trajetsParisVilles: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Paris → Dijon | Fixed rate from €320 | TaxiNeo",
-        metaDescription:
-          "Book your private taxi Paris → Dijon. 315 km, ~3h, fixed rate from €320. Door-to-door service, professional driver, Wi-Fi on board.",
+        metaDescription:"Via A6, 3 hours ride. A6 Autoroute du Soleil, Vignobles de Bourgogne, Hospices de Beaune and Cité de la Gastronomie en route. Drop-off at your exact address.",
         heroTitle: "Taxi Paris → Dijon",
         heroSubtitle:
           "Private transfer Paris → Dijon from €320 — €420. Home pick-up, premium vehicle, professional driver 24/7.",
@@ -2023,9 +1989,8 @@ export const trajetsParisVilles: Trajet[] = [
     highlights: ["A4 Autoroute de l'Est", "Centre Pompidou-Metz", "Cathédrale Saint-Étienne", "Place Saint-Louis"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Metz | Forfait dès 340 € | TaxiNeo",
-        metaDescription:
-          "Réservez votre taxi Paris → Metz. 330 km, ~3h15, forfait dès 340 €. Chauffeur privé, véhicule confortable, Wi-Fi à bord. Alternative flexible au TGV Est.",
+        metaTitle: "Taxi Paris → Metz | 330 km, dès 340 €, 3h15 | TaxiNeo",
+        metaDescription:"Via A4 en 3h15. A4 Autoroute de l'Est, Centre Pompidou-Metz, Cathédrale Saint-Étienne et Place Saint-Louis en chemin. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Paris → Metz",
         heroSubtitle:
           "Transfert privé Paris → Metz au forfait de 340 — 440 €. Prise en charge à domicile, véhicule haut de gamme, chauffeur professionnel.",
@@ -2071,8 +2036,7 @@ export const trajetsParisVilles: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Paris → Metz | Fixed rate from €340 | TaxiNeo",
-        metaDescription:
-          "Book your private taxi Paris → Metz. 330 km, ~3h15, fixed rate from €340. Door-to-door service, professional driver, Wi-Fi on board.",
+        metaDescription:"Via A4, 3h15 ride. A4 Autoroute de l'Est, Centre Pompidou-Metz, Cathédrale Saint-Étienne and Place Saint-Louis en route. Drop-off at your exact address.",
         heroTitle: "Taxi Paris → Metz",
         heroSubtitle:
           "Private transfer Paris → Metz from €340 — €440. Home pick-up, premium vehicle, professional driver 24/7.",
@@ -2141,9 +2105,8 @@ export const trajetsParisVilles: Trajet[] = [
     highlights: ["A4 Autoroute de l'Est", "Champagne", "Parc naturel de Lorraine", "Place Stanislas", "Art nouveau"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Nancy | Forfait dès 400 € | TaxiNeo",
-        metaDescription:
-          "Réservez votre taxi Paris → Nancy. 387 km, ~3h30, forfait dès 400 €. Chauffeur privé, véhicule confortable. Alternative flexible au TGV Est.",
+        metaTitle: "Taxi Paris → Nancy | 387 km, dès 400 €, 3h30 | TaxiNeo",
+        metaDescription:"Via A4 en 3h30. A4 Autoroute de l'Est, Champagne, Parc naturel de Lorraine et Place Stanislas en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Paris → Nancy",
         heroSubtitle:
           "Transfert privé Paris → Nancy au forfait de 400 — 520 €. Prise en charge à domicile, véhicule haut de gamme, chauffeur professionnel.",
@@ -2189,8 +2152,7 @@ export const trajetsParisVilles: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Paris → Nancy | Fixed rate from €400 | TaxiNeo",
-        metaDescription:
-          "Book your private taxi Paris → Nancy. 387 km, ~3h30, from €400. Door-to-door service to Lorraine's Art Nouveau capital.",
+        metaDescription:"Via A4, 3h30 ride. A4 Autoroute de l'Est, Champagne, Parc naturel de Lorraine and Place Stanislas en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Paris → Nancy",
         heroSubtitle:
           "Private transfer Paris → Nancy from €400 — €520. Home pick-up, premium vehicle, professional driver.",
@@ -2259,9 +2221,8 @@ export const trajetsParisVilles: Trajet[] = [
     highlights: ["A11 L'Océane", "Chartres", "Circuit des 24 Heures", "Vieux-Mans", "Cathédrale Saint-Julien"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Le Mans | Forfait dès 250 € | TaxiNeo",
-        metaDescription:
-          "Réservez votre taxi Paris → Le Mans. 210 km, ~2h15, forfait dès 250 €. Transfert direct vers la cité des 24 Heures.",
+        metaTitle: "Taxi Paris → Le Mans | 210 km, dès 250 € | TaxiNeo",
+        metaDescription:"Itinéraire A11, environ 2h15. Passage par A11 L'Océane, Chartres, Circuit des 24 Heures et Vieux-Mans. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Paris → Le Mans",
         heroSubtitle:
           "Transfert privé Paris → Le Mans au forfait de 250 — 330 €. Prise en charge à domicile, véhicule confortable.",
@@ -2306,9 +2267,8 @@ export const trajetsParisVilles: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Le Mans | Fixed rate from €250 | TaxiNeo",
-        metaDescription:
-          "Book your private taxi Paris → Le Mans. 210 km, ~2h15, from €250. Direct transfer to the home of the 24 Hours race.",
+        metaTitle: "Taxi Paris → Le Mans | 210 km, from €250 | TaxiNeo",
+        metaDescription:"A11 route, approximately 2h15. A11 L'Océane, Chartres, Circuit des 24 Heures and Vieux-Mans en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Paris → Le Mans",
         heroSubtitle:
           "Private transfer Paris → Le Mans from €250 — €330. Door-to-door service, comfortable vehicle.",
@@ -2377,9 +2337,8 @@ export const trajetsParisVilles: Trajet[] = [
     highlights: ["A13 Autoroute de Normandie", "Rouen", "Pays d'Auge", "Mémorial de Caen", "Plages du Débarquement"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Caen | Forfait dès 280 € | TaxiNeo",
-        metaDescription:
-          "Réservez votre taxi Paris → Caen. 238 km, ~2h30, forfait dès 280 €. Transfert privé vers la Normandie, le Mémorial et les plages du Débarquement.",
+        metaTitle: "Taxi Paris → Caen | 238 km, dès 280 €, 2h30 | TaxiNeo",
+        metaDescription:"Par A13, 2h30 de trajet. A13 Autoroute de Normandie, Rouen, Pays d'Auge et Mémorial de Caen en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Paris → Caen",
         heroSubtitle:
           "Transfert privé Paris → Caen au forfait de 280 — 370 €. La Normandie historique à portée de main.",
@@ -2425,8 +2384,7 @@ export const trajetsParisVilles: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Paris → Caen | Fixed rate from €280 | TaxiNeo",
-        metaDescription:
-          "Book your private taxi Paris → Caen. 238 km, ~2h30, from €280. Gateway to D-Day beaches and the Caen Memorial.",
+        metaDescription:"Direct route via A13, 2h30. A13 Autoroute de Normandie, Rouen, Pays d'Auge and Mémorial de Caen en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Paris → Caen",
         heroSubtitle:
           "Private transfer Paris → Caen from €280 — €370. Your gateway to Normandy's history.",
@@ -2495,9 +2453,8 @@ export const trajetsParisVilles: Trajet[] = [
     highlights: ["A20 L'Occitane", "Châteauroux", "Plateau de Millevaches", "Porcelaine de Limoges", "Cathédrale Saint-Étienne"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Limoges | Forfait dès 410 € | TaxiNeo",
-        metaDescription:
-          "Réservez votre taxi Paris → Limoges. 392 km, ~3h45, forfait dès 410 €. Transfert privé vers la capitale de la porcelaine.",
+        metaTitle: "Taxi Paris → Limoges | 392 km, dès 410 € | TaxiNeo",
+        metaDescription:"Via A20 en 3h45. A20 L'Occitane, Châteauroux, Plateau de Millevaches et Porcelaine de Limoges en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Paris → Limoges",
         heroSubtitle:
           "Transfert privé Paris → Limoges au forfait de 410 — 540 €. La capitale de la porcelaine et du Limousin.",
@@ -2542,9 +2499,8 @@ export const trajetsParisVilles: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Limoges | Fixed rate from €410 | TaxiNeo",
-        metaDescription:
-          "Book your private taxi Paris → Limoges. 392 km, ~3h45, from €410. Transfer to the porcelain capital of France.",
+        metaTitle: "Taxi Paris → Limoges | 392 km, from €410 | TaxiNeo",
+        metaDescription:"Via A20, 3h45 ride. A20 L'Occitane, Châteauroux, Plateau de Millevaches and Porcelaine de Limoges en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Paris → Limoges",
         heroSubtitle:
           "Private transfer Paris → Limoges from €410 — €540. Discover the porcelain capital.",
@@ -2613,9 +2569,8 @@ export const trajetsParisVilles: Trajet[] = [
     highlights: ["A10 L'Aquitaine", "Loire Valley", "Futuroscope", "Église Notre-Dame-la-Grande", "Bataille de Poitiers"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Poitiers | Forfait dès 360 € | TaxiNeo",
-        metaDescription:
-          "Réservez votre taxi Paris → Poitiers. 338 km, ~3h15, forfait dès 360 €. Transfert privé vers le Futuroscope et la ville aux cent clochers.",
+        metaTitle: "Taxi Paris → Poitiers | 338 km, dès 360 € | TaxiNeo",
+        metaDescription:"Via A10 en 3h15. Passage par A10 L'Aquitaine, Loire Valley, Futuroscope et Église Notre-Dame-la-Grande. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Paris → Poitiers",
         heroSubtitle:
           "Transfert privé Paris → Poitiers au forfait de 360 — 470 €. Futuroscope, patrimoine roman et art de vivre poitevin.",
@@ -2660,9 +2615,8 @@ export const trajetsParisVilles: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Poitiers | Fixed rate from €360 | TaxiNeo",
-        metaDescription:
-          "Book your private taxi Paris → Poitiers. 338 km, ~3h15, from €360. Direct transfer to Futuroscope and Romanesque Poitiers.",
+        metaTitle: "Taxi Paris → Poitiers | 338 km, from €360 | TaxiNeo",
+        metaDescription:"Via A10, 3h15 ride. A10 L'Aquitaine, Loire Valley, Futuroscope and Église Notre-Dame-la-Grande en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Paris → Poitiers",
         heroSubtitle:
           "Private transfer Paris → Poitiers from €360 — €470. Futuroscope, Romanesque heritage and Poitou charm.",
@@ -2731,9 +2685,8 @@ export const trajetsParisVilles: Trajet[] = [
     highlights: ["A11 L'Océane", "Le Mans", "Château d'Angers", "Tapisserie de l'Apocalypse", "Vignoble de l'Anjou"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Angers | Forfait dès 320 € | TaxiNeo",
-        metaDescription:
-          "Réservez votre taxi Paris → Angers. 296 km, ~3h, forfait dès 320 €. Transfert privé vers la capitale de l'Anjou et la douceur angevine.",
+        metaTitle: "Taxi Paris → Angers | 296 km, dès 320 €, 3h | TaxiNeo",
+        metaDescription:"Par A11, 3h de trajet. A11 L'Océane, Le Mans, Château d'Angers et Tapisserie de l'Apocalypse en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Paris → Angers",
         heroSubtitle:
           "Transfert privé Paris → Angers au forfait de 320 — 420 €. La douceur angevine et le patrimoine de la Loire.",
@@ -2779,8 +2732,7 @@ export const trajetsParisVilles: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Paris → Angers | Fixed rate from €320 | TaxiNeo",
-        metaDescription:
-          "Book your private taxi Paris → Angers. 296 km, ~3h, from €320. Transfer to Anjou's castle city and Loire wine country.",
+        metaDescription:"Via A11, 3 hours ride. A11 L'Océane, Le Mans, Château d'Angers and Tapisserie de l'Apocalypse en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Paris → Angers",
         heroSubtitle:
           "Private transfer Paris → Angers from €320 — €420. Discover the gentle Anjou lifestyle.",
@@ -2849,9 +2801,8 @@ export const trajetsParisVilles: Trajet[] = [
     highlights: ["A5 Autoroute du Soleil", "Forêt de Fontainebleau", "Maisons à pans de bois", "Magasins d'usine", "Vitraux"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Troyes | Forfait dès 200 € | TaxiNeo",
-        metaDescription:
-          "Réservez votre taxi Paris → Troyes. 170 km, ~1h45, forfait dès 200 €. Transfert rapide vers la capitale du vitrail et des magasins d'usine.",
+        metaTitle: "Taxi Paris → Troyes | 170 km, dès 200 €, 1h45 | TaxiNeo",
+        metaDescription:"Via A5 en 1h45. A5 Autoroute du Soleil, Forêt de Fontainebleau, Maisons à pans de bois et Magasins d'usine en chemin. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Paris → Troyes",
         heroSubtitle:
           "Transfert privé Paris → Troyes au forfait de 200 — 270 €. Patrimoine médiéval, vitraux et shopping d'usine.",
@@ -2897,8 +2848,7 @@ export const trajetsParisVilles: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Paris → Troyes | Fixed rate from €200 | TaxiNeo",
-        metaDescription:
-          "Book your private taxi Paris → Troyes. 170 km, ~1h45, from €200. Outlet shopping, medieval heritage and stained glass.",
+        metaDescription:"Via A5, 1h45 ride. A5 Autoroute du Soleil, Forêt de Fontainebleau, Maisons à pans de bois and Magasins d'usine en route. Drop-off at your exact address.",
         heroTitle: "Taxi Paris → Troyes",
         heroSubtitle:
           "Private transfer Paris → Troyes from €200 — €270. Outlet shopping, half-timbered houses and stunning stained glass.",

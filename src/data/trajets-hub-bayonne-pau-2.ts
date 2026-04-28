@@ -19,8 +19,8 @@ export const trajetsBayonnePau2: Trajet[] = [
     hub: "bayonne",
     i18n: {
       fr: {
-        metaTitle: "Taxi Bayonne → Saint-Jean-Pied-de-Port | Dès 70 € | TaxiNeo",
-        metaDescription: "Taxi Bayonne → Saint-Jean-Pied-de-Port. 55 km, 50 min, dès 70 €. Transfert Pays Basque intérieur. Réservation 24h/24.",
+        metaTitle: "Taxi Bayonne → Saint-Jean-Pied-de-Port | 55 km | TaxiNeo",
+        metaDescription: "Via D918 en undefined min. Pays Basque, Pyrénées, Compostelle et Pelote en chemin. Arrêt visite possible en chemin. Arrêt possible pour visites ou photos.",
         heroTitle: "Taxi Bayonne → Saint-Jean-Pied-de-Port",
         heroSubtitle: "Transfert au cœur du Pays Basque au prix fixe de 70 — 90 €. 55 km, 50 min.",
         description: "Saint-Jean-Pied-de-Port, étape mythique du chemin de Compostelle, en 50 min.",
@@ -38,8 +38,8 @@ export const trajetsBayonnePau2: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Bayonne → Saint-Jean-Pied-de-Port | From €70 | TaxiNeo",
-        metaDescription: "Taxi Bayonne → Saint-Jean-Pied-de-Port. 55 km, 50 min, from €70. Basque Country transfer. Book 24/7.",
+        metaTitle: "Taxi Bayonne → Saint-Jean-Pied-de-Port | 55 km | TaxiNeo",
+        metaDescription: "Via D918, undefined min ride. Pays Basque, Pyrénées, Compostelle and Pelote en route. Stops for sightseeing possible en route. Return trip at same rate.",
         heroTitle: "Taxi Bayonne → Saint-Jean-Pied-de-Port",
         heroSubtitle: "Basque Country transfer at €70 — €90. 55 km, 50 min.",
         description: "Saint-Jean-Pied-de-Port, legendary Camino de Santiago start, in 50 min.",
@@ -76,8 +76,8 @@ export const trajetsBayonnePau2: Trajet[] = [
     hub: "bayonne",
     i18n: {
       fr: {
-        metaTitle: "Taxi Bayonne → San Sebastián | Prix fixe dès 65 € | TaxiNeo",
-        metaDescription: "Taxi Bayonne → San Sebastián. 55 km, 40 min, dès 65 €. Transfert transfrontalier Pays Basque. Réservation 24h/24.",
+        metaTitle: "Taxi Bayonne → San Sebastián | 55 km, dès 65 € | TaxiNeo",
+        metaDescription: "Via A63 / AP-8 en undefined min. AP-8, Pays Basque, Espagne et Gastronomie en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Bayonne → San Sebastián",
         heroSubtitle: "Transfert Bayonne → San Sebastián au prix fixe de 65 — 85 €. 55 km, 40 min.",
         description: "Bayonne — San Sebastián relie le Pays Basque français au Pays Basque espagnol.",
@@ -95,8 +95,8 @@ export const trajetsBayonnePau2: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Bayonne → San Sebastián | Fixed price from €65 | TaxiNeo",
-        metaDescription: "Taxi Bayonne → San Sebastián. 55 km, 40 min, from €65. Cross-border Basque Country. Book 24/7.",
+        metaTitle: "Taxi Bayonne → San Sebastián | 55 km, from €65 | TaxiNeo",
+        metaDescription: "Via A63 / AP-8, undefined min ride. AP-8, Pays Basque, Espagne and Gastronomie en route. Drop-off at your exact address. Door-to-door, luggage included.",
         heroTitle: "Taxi Bayonne → San Sebastián",
         heroSubtitle: "Bayonne → San Sebastián transfer at €65 — €85. 55 km, 40 min.",
         description: "French to Spanish Basque Country in 40 minutes.",
@@ -133,8 +133,8 @@ export const trajetsBayonnePau2: Trajet[] = [
     hub: "pau",
     i18n: {
       fr: {
-        metaTitle: "Taxi Pau → Oloron-Sainte-Marie | Prix fixe dès 45 € | TaxiNeo",
-        metaDescription: "Taxi Pau → Oloron-Sainte-Marie. 35 km, 30 min, dès 45 €. Porte de la vallée d'Aspe. Réservation 24h/24.",
+        metaTitle: "Taxi Pau → Oloron-Sainte-Marie | 35 km, dès 45 € | TaxiNeo",
+        metaDescription: "Via A64 / N134 en undefined min. Béarn, Pyrénées et Gave d'Oloron en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Pau → Oloron-Sainte-Marie",
         heroSubtitle: "Transfert Pau → Oloron au prix fixe de 45 — 60 €. 35 km, 30 min.",
         description: "Oloron-Sainte-Marie, porte de la vallée d'Aspe, à 30 min de Pau.",
@@ -152,8 +152,8 @@ export const trajetsBayonnePau2: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Pau → Oloron-Sainte-Marie | From €45 | TaxiNeo",
-        metaDescription: "Taxi Pau → Oloron-Sainte-Marie. 35 km, 30 min, from €45. Pyrenees gateway. Book 24/7.",
+        metaTitle: "Taxi Pau → Oloron-Sainte-Marie | 35 km, from €45 | TaxiNeo",
+        metaDescription: "Via A64 / N134, undefined min ride. Béarn, Pyrénées and Gave d'Oloron along the way. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Pau → Oloron-Sainte-Marie",
         heroSubtitle: "Pau → Oloron transfer at €45 — €60. 35 km, 30 min.",
         description: "Oloron-Sainte-Marie, gateway to the Aspe Valley, 30 min from Pau.",
@@ -190,8 +190,8 @@ export const trajetsBayonnePau2: Trajet[] = [
     hub: "pau",
     i18n: {
       fr: {
-        metaTitle: "Taxi Pau → Tarbes | Prix fixe dès 55 € | TaxiNeo",
-        metaDescription: "Taxi Pau → Tarbes. 45 km, 35 min, dès 55 €. A64 entre Béarn et Bigorre. Réservation 24h/24.",
+        metaTitle: "Taxi Pau → Tarbes | 45 km via A64, dès 55 € | TaxiNeo",
+        metaDescription: "Via A64 en undefined min. Pyrénées, Béarn, Bigorre et Direct en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Pau → Tarbes",
         heroSubtitle: "Transfert Pau → Tarbes au prix fixe de 55 — 75 €. 45 km, 35 min.",
         description: "Pau — Tarbes relie le Béarn à la Bigorre en 35 min par l'A64.",
@@ -210,7 +210,7 @@ export const trajetsBayonnePau2: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Pau → Tarbes | Fixed price from €55 | TaxiNeo",
-        metaDescription: "Taxi Pau → Tarbes. 45 km, 35 min, from €55. A64 along the Pyrenees. Book 24/7.",
+        metaDescription: "Via A64, undefined min ride. Pyrénées, Béarn, Bigorre and Direct en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Pau → Tarbes",
         heroSubtitle: "Pau → Tarbes transfer at €55 — €75. 45 km, 35 min.",
         description: "Pau to Tarbes, from Béarn to Bigorre in 35 min via A64.",
@@ -247,8 +247,8 @@ export const trajetsBayonnePau2: Trajet[] = [
     hub: "bayonne",
     i18n: {
       fr: {
-        metaTitle: "Taxi Bayonne → Dax | Prix fixe dès 65 € | TaxiNeo",
-        metaDescription: "Taxi Bayonne → Dax. 55 km, 40 min, dès 65 €. A64 directe vers la station thermale. Réservation 24h/24.",
+        metaTitle: "Taxi Bayonne → Dax | 55 km A64, dès 65 € | TaxiNeo",
+        metaDescription: "Via A64 en undefined min. Landes, Thermalisme et Adour en chemin. Dépose porte-à-porte, bagages inclus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Bayonne → Dax",
         heroSubtitle: "Transfert Bayonne → Dax au prix fixe de 65 — 85 €. 55 km, 40 min.",
         description: "Dax, première station thermale de France, est à 40 min de Bayonne.",
@@ -267,7 +267,7 @@ export const trajetsBayonnePau2: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Bayonne → Dax | Fixed price from €65 | TaxiNeo",
-        metaDescription: "Taxi Bayonne → Dax. 55 km, 40 min, from €65. France's top spa town. Book 24/7.",
+        metaDescription: "Via A64, undefined min ride. Landes, Thermalisme and Adour along the way. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Bayonne → Dax",
         heroSubtitle: "Bayonne → Dax transfer at €65 — €85. 55 km, 40 min.",
         description: "Dax, France's top thermal spa town, 40 min from Bayonne.",

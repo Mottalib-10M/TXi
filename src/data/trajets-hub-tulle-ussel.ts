@@ -27,8 +27,8 @@ export const trajetsTulleUssel: Trajet[] = [
     hub: "tulle-ussel",
     i18n: {
       fr: {
-        metaTitle: "Taxi Tulle → Limoges | Prix fixe dès 110 € | TaxiNeo",
-        metaDescription: "Taxi Tulle → Limoges. 90 km, 1h, dès 110 €. A20 via Uzerche, de la préfecture de la Corrèze à la capitale du Limousin. Réservation 24h/24.",
+        metaTitle: "Taxi Tulle → Limoges | forfait dès 110 € | TaxiNeo",
+        metaDescription: "Via A20 en 1h. Corrèze, Dentelle de Tulle, Porcelaine et Limousin en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Tulle → Limoges",
         heroSubtitle: "Transfert Tulle → Limoges au prix fixe de 110 — 140 €. 90 km, liaison rapide entre la vallée de la Corrèze et le cœur du Limousin.",
         description: "Limoges, préfecture de la Haute-Vienne et capitale mondiale de la porcelaine, est à 1h de Tulle par l'A20.",
@@ -47,7 +47,7 @@ export const trajetsTulleUssel: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Tulle → Limoges | Fixed price from €110 | TaxiNeo",
-        metaDescription: "Taxi Tulle → Limoges. 90 km, 1h, from €110. A20 via Uzerche, Corrèze prefecture to Limousin capital. Book 24/7.",
+        metaDescription: "Via A20, 1 hour ride. Corrèze, Dentelle de Tulle, Porcelaine and Limousin en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Tulle → Limoges",
         heroSubtitle: "Your Tulle → Limoges transfer at €110 — €140. 90 km, fast link from the Corrèze valley to Limousin.",
         description: "Limoges, world capital of porcelain and Haute-Vienne prefecture, is 1h from Tulle via the A20.",
@@ -92,8 +92,8 @@ export const trajetsTulleUssel: Trajet[] = [
     hub: "tulle-ussel",
     i18n: {
       fr: {
-        metaTitle: "Taxi Tulle → Clermont-Ferrand | Prix fixe dès 200 € | TaxiNeo",
-        metaDescription: "Taxi Tulle → Clermont-Ferrand. 165 km, 1h50, dès 200 €. A89 à travers le Massif Central. Réservation 24h/24.",
+        metaTitle: "Taxi Tulle → Clermont-Ferrand | 165 km, dès 200 € | TaxiNeo",
+        metaDescription: "Via A89 en 1h50. Corrèze, Massif Central, Plateau de Millevaches et Volcans en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Tulle → Clermont-Ferrand",
         heroSubtitle: "Transfert Tulle → Clermont-Ferrand au prix fixe de 200 — 250 €. 165 km, traversée du Massif Central.",
         description: "Clermont-Ferrand, capitale de l'Auvergne et siège mondial de Michelin, est à 1h50 de Tulle par l'A89.",
@@ -111,8 +111,8 @@ export const trajetsTulleUssel: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Tulle → Clermont-Ferrand | Fixed price from €200 | TaxiNeo",
-        metaDescription: "Taxi Tulle → Clermont-Ferrand. 165 km, 1h50, from €200. A89 across the Massif Central. Book 24/7.",
+        metaTitle: "Taxi Tulle → Clermont-Ferrand | 165 km, from €200 | TaxiNeo",
+        metaDescription: "A89 route, approximately 1h50. Corrèze, Massif Central, Plateau de Millevaches and Volcans en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Tulle → Clermont-Ferrand",
         heroSubtitle: "Your Tulle → Clermont-Ferrand transfer at €200 — €250. 165 km across the Massif Central.",
         description: "Clermont-Ferrand, Auvergne capital and Michelin world headquarters, is 1h50 from Tulle via the A89.",
@@ -157,8 +157,8 @@ export const trajetsTulleUssel: Trajet[] = [
     hub: "tulle-ussel",
     i18n: {
       fr: {
-        metaTitle: "Taxi Ussel → Clermont-Ferrand | Prix fixe dès 130 € | TaxiNeo",
-        metaDescription: "Taxi Ussel → Clermont-Ferrand. 110 km, 1h20, dès 130 €. A89 via le plateau de Millevaches. Réservation 24h/24.",
+        metaTitle: "Taxi Ussel → Clermont-Ferrand | 110 km, dès 130 € | TaxiNeo",
+        metaDescription: "Par A89, 1h20 de trajet. Plateau de Millevaches, Massif Central, Volcans d'Auvergne et Corrèze en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Ussel → Clermont-Ferrand",
         heroSubtitle: "Transfert Ussel → Clermont-Ferrand au prix fixe de 130 — 170 €. 110 km, du plateau de Millevaches aux volcans d'Auvergne.",
         description: "Clermont-Ferrand, métropole auvergnate et siège de Michelin, est à 1h20 d'Ussel par l'A89.",
@@ -176,8 +176,8 @@ export const trajetsTulleUssel: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Ussel → Clermont-Ferrand | Fixed price from €130 | TaxiNeo",
-        metaDescription: "Taxi Ussel → Clermont-Ferrand. 110 km, 1h20, from €130. A89 via Millevaches plateau. Book 24/7.",
+        metaTitle: "Taxi Ussel → Clermont-Ferrand | 110 km, from €130 | TaxiNeo",
+        metaDescription: "Via A89, 1h20 ride. Plateau de Millevaches, Massif Central, Volcans d'Auvergne and Corrèze en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Ussel → Clermont-Ferrand",
         heroSubtitle: "Your Ussel → Clermont-Ferrand transfer at €130 — €170. 110 km from the Millevaches plateau to Auvergne's volcanic capital.",
         description: "Clermont-Ferrand, Auvergne's capital and Michelin world headquarters, is 1h20 from Ussel via the A89.",
@@ -222,8 +222,8 @@ export const trajetsTulleUssel: Trajet[] = [
     hub: "tulle-ussel",
     i18n: {
       fr: {
-        metaTitle: "Taxi Ussel → Limoges | Prix fixe dès 145 € | TaxiNeo",
-        metaDescription: "Taxi Ussel → Limoges. 120 km, 1h20, dès 145 €. N89/A89 via Égletons et Tulle. Réservation 24h/24.",
+        metaTitle: "Taxi Ussel → Limoges | 120 km, dès 145 € | TaxiNeo",
+        metaDescription: "Via N89/A89 en 1h20. N89, Plateau de Millevaches, Vézère et Corrèze en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Ussel → Limoges",
         heroSubtitle: "Transfert Ussel → Limoges au prix fixe de 145 — 185 €. 120 km, du plateau de Millevaches à la capitale du Limousin.",
         description: "Limoges, capitale de la porcelaine et préfecture de la Haute-Vienne, est à 1h20 d'Ussel via la N89 et l'A89.",
@@ -241,8 +241,8 @@ export const trajetsTulleUssel: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Ussel → Limoges | Fixed price from €145 | TaxiNeo",
-        metaDescription: "Taxi Ussel → Limoges. 120 km, 1h20, from €145. N89/A89 via Égletons and Tulle. Book 24/7.",
+        metaTitle: "Taxi Ussel → Limoges | 120 km, from €145 | TaxiNeo",
+        metaDescription: "Via N89/A89, 1h20 ride. N89, Plateau de Millevaches, Vézère and Corrèze en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Ussel → Limoges",
         heroSubtitle: "Your Ussel → Limoges transfer at €145 — €185. 120 km from the Millevaches plateau to Limousin's capital.",
         description: "Limoges, world porcelain capital and Haute-Vienne prefecture, is 1h20 from Ussel via the N89 and A89.",
@@ -287,8 +287,8 @@ export const trajetsTulleUssel: Trajet[] = [
     hub: "tulle-ussel",
     i18n: {
       fr: {
-        metaTitle: "Taxi Tulle → Aurillac | Prix fixe dès 115 € | TaxiNeo",
-        metaDescription: "Taxi Tulle → Aurillac. 95 km, 1h10, dès 115 €. D1089/N122 via Argentat et la Xaintrie. Réservation 24h/24.",
+        metaTitle: "Taxi Tulle → Aurillac | 95 km, dès 115 € | TaxiNeo",
+        metaDescription: "Via D1089/N122 en 1h10. N120, Corrèze, Cantal et Massif Central en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Tulle → Aurillac",
         heroSubtitle: "Transfert Tulle → Aurillac au prix fixe de 115 — 145 €. 95 km, de la vallée de la Corrèze aux montagnes du Cantal.",
         description: "Aurillac, préfecture du Cantal et capitale du parapluie, est à 1h10 de Tulle par les routes du Massif Central.",
@@ -306,8 +306,8 @@ export const trajetsTulleUssel: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Tulle → Aurillac | Fixed price from €115 | TaxiNeo",
-        metaDescription: "Taxi Tulle → Aurillac. 95 km, 1h10, from €115. D1089/N122 via Argentat and the Xaintrie. Book 24/7.",
+        metaTitle: "Taxi Tulle → Aurillac | 95 km, from €115 | TaxiNeo",
+        metaDescription: "Via D1089/N122, 1h10 ride. N120, Corrèze, Cantal and Massif Central en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Tulle → Aurillac",
         heroSubtitle: "Your Tulle → Aurillac transfer at €115 — €145. 95 km from the Corrèze valley to the Cantal mountains.",
         description: "Aurillac, Cantal prefecture and home of the street theatre festival, is 1h10 from Tulle through the Massif Central.",

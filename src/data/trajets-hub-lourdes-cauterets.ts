@@ -19,8 +19,8 @@ export const trajetsLourdesCauterets: Trajet[] = [
     hub: "lourdes-cauterets",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lourdes → Toulouse | Dès 225 € | TaxiNeo",
-        metaDescription: "Taxi Lourdes → Toulouse. 190 km, 2h, dès 225 €. Transfert confortable depuis la cité mariale vers la Ville Rose par l'A64. Réservation 24h/24.",
+        metaTitle: "Taxi Lourdes → Toulouse | 190 km, dès 225 € | TaxiNeo",
+        metaDescription: "Via A64 en undefined min. A64 la Pyrénéenne, Sanctuaire de Lourdes, Ville Rose et Pyrénées en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Lourdes → Toulouse",
         heroSubtitle: "Transfert Lourdes → Toulouse au prix fixe de 225 — 285 €. 190 km, 2h.",
         description: "Lourdes — Toulouse relie la cité mariale des Pyrénées à la métropole occitane en 2 heures par l'A64.",
@@ -38,8 +38,8 @@ export const trajetsLourdesCauterets: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Lourdes → Toulouse | From €225 | TaxiNeo",
-        metaDescription: "Taxi Lourdes → Toulouse. 190 km, 2h, from €225. Comfortable transfer from the pilgrimage city to the Pink City via A64. Book 24/7.",
+        metaTitle: "Taxi Lourdes → Toulouse | 190 km, from €225 | TaxiNeo",
+        metaDescription: "Direct route via A64, undefined min. A64 la Pyrénéenne, Sanctuaire de Lourdes, Ville Rose and Pyrénées en route. Stops for sightseeing possible en route.",
         heroTitle: "Taxi Lourdes → Toulouse",
         heroSubtitle: "Lourdes → Toulouse transfer at €225 — €285. 190 km, 2h.",
         description: "Lourdes to Toulouse, from the world's top Catholic pilgrimage site to the Pink City in 2 hours.",
@@ -76,8 +76,8 @@ export const trajetsLourdesCauterets: Trajet[] = [
     hub: "lourdes-cauterets",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lourdes → Pau | Dès 55 € | TaxiNeo",
-        metaDescription: "Taxi Lourdes → Pau. 45 km, 35 min, dès 55 €. De la cité mariale à la capitale du Béarn par l'A64. Réservation 24h/24.",
+        metaTitle: "Taxi Lourdes → Pau | 45 km A64, dès 55 € | TaxiNeo",
+        metaDescription: "Via A64 en undefined min. Passage par Boulevard des Pyrénées, Château Henri IV, Gave de Pau et Béarn. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Lourdes → Pau",
         heroSubtitle: "Transfert Lourdes → Pau au prix fixe de 55 — 70 €. 45 km, 35 min.",
         description: "Lourdes — Pau relie le sanctuaire marial à la capitale du Béarn en 35 minutes par l'A64.",
@@ -95,8 +95,8 @@ export const trajetsLourdesCauterets: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Lourdes → Pau | From €55 | TaxiNeo",
-        metaDescription: "Taxi Lourdes → Pau. 45 km, 35 min, from €55. Pilgrimage city to Béarn capital via A64. Book 24/7.",
+        metaTitle: "Taxi Lourdes → Pau | Fixed price transfer | TaxiNeo",
+        metaDescription: "Direct route via A64, undefined min. Boulevard des Pyrénées, Château Henri IV, Gave de Pau and Béarn en route. Stops for sightseeing possible en route.",
         heroTitle: "Taxi Lourdes → Pau",
         heroSubtitle: "Lourdes → Pau transfer at €55 — €70. 45 km, 35 min.",
         description: "Lourdes to Pau, from the world pilgrimage capital to the elegant Béarn capital in 35 minutes.",
@@ -133,8 +133,8 @@ export const trajetsLourdesCauterets: Trajet[] = [
     hub: "lourdes-cauterets",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lourdes → Tarbes | Dès 25 € | TaxiNeo",
-        metaDescription: "Taxi Lourdes → Tarbes. 20 km, 18 min, dès 25 €. Transfert rapide de la cité mariale à la préfecture des Hautes-Pyrénées. Réservation 24h/24.",
+        metaTitle: "Taxi Lourdes → Tarbes | forfait dès 25 € | TaxiNeo",
+        metaDescription: "Par D921, undefined min de trajet. Bigorre, Sanctuaire de Lourdes, Haras de Tarbes et Pyrénées en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Lourdes → Tarbes",
         heroSubtitle: "Transfert Lourdes → Tarbes au prix fixe de 25 — 35 €. 20 km, 18 min.",
         description: "Lourdes — Tarbes relie la cité mariale à la préfecture des Hautes-Pyrénées en 18 minutes par la D921.",
@@ -152,8 +152,8 @@ export const trajetsLourdesCauterets: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Lourdes → Tarbes | From €25 | TaxiNeo",
-        metaDescription: "Taxi Lourdes → Tarbes. 20 km, 18 min, from €25. Fast transfer from the pilgrimage city to Tarbes. Book 24/7.",
+        metaTitle: "Taxi Lourdes → Tarbes | Fixed price transfer | TaxiNeo",
+        metaDescription: "D921 route, approximately undefined min. Bigorre, Sanctuaire de Lourdes, Haras de Tarbes and Pyrénées en route. Stops for sightseeing possible en route.",
         heroTitle: "Taxi Lourdes → Tarbes",
         heroSubtitle: "Lourdes → Tarbes transfer at €25 — €35. 20 km, 18 min.",
         description: "Lourdes to Tarbes, from the pilgrimage city to the Hautes-Pyrenees capital in 18 minutes.",
@@ -190,8 +190,8 @@ export const trajetsLourdesCauterets: Trajet[] = [
     hub: "lourdes-cauterets",
     i18n: {
       fr: {
-        metaTitle: "Taxi Cauterets → Lourdes | Dès 40 € | TaxiNeo",
-        metaDescription: "Taxi Cauterets → Lourdes. 35 km, 30 min, dès 40 €. Descente des Pyrénées depuis la station thermale et de ski vers la cité mariale. Réservation 24h/24.",
+        metaTitle: "Taxi Cauterets → Lourdes | 35 km, dès 40 € | TaxiNeo",
+        metaDescription: "Par D920, undefined min de trajet. Pont d'Espagne, Gave de Cauterets, Pyrénées et Thermalisme en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Cauterets → Lourdes",
         heroSubtitle: "Transfert Cauterets → Lourdes au prix fixe de 40 — 55 €. 35 km, 30 min.",
         description: "Cauterets — Lourdes relie la station thermale et de ski des Pyrénées à la cité mariale en 30 minutes.",
@@ -209,8 +209,8 @@ export const trajetsLourdesCauterets: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Cauterets → Lourdes | From €40 | TaxiNeo",
-        metaDescription: "Taxi Cauterets → Lourdes. 35 km, 30 min, from €40. Mountain transfer from the Pyrenees spa and ski resort to the pilgrimage city. Book 24/7.",
+        metaTitle: "Taxi Cauterets → Lourdes | 35 km, from €40 | TaxiNeo",
+        metaDescription: "D920 route, approximately undefined min. Pont d'Espagne, Gave de Cauterets, Pyrénées and Thermalisme en route. Stops for sightseeing possible en route.",
         heroTitle: "Taxi Cauterets → Lourdes",
         heroSubtitle: "Cauterets → Lourdes transfer at €40 — €55. 35 km, 30 min.",
         description: "Cauterets to Lourdes, from the Pyrenees spa and ski resort to the pilgrimage city in 30 minutes.",
@@ -247,8 +247,8 @@ export const trajetsLourdesCauterets: Trajet[] = [
     hub: "lourdes-cauterets",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lourdes → Biarritz | Dès 180 € | TaxiNeo",
-        metaDescription: "Taxi Lourdes → Biarritz. 150 km, 1h40, dès 180 €. Des Pyrénées à l'Océan, de la cité mariale à la Côte Basque. Réservation 24h/24.",
+        metaTitle: "Taxi Lourdes → Biarritz | 150 km, dès 180 € | TaxiNeo",
+        metaDescription: "Via A64 puis A64/A63 en undefined min. A64 / N21 / A64, Côte Basque, Pyrénées et Gave de Pau en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Lourdes → Biarritz",
         heroSubtitle: "Transfert Lourdes → Biarritz au prix fixe de 180 — 230 €. 150 km, 1h40.",
         description: "Lourdes — Biarritz relie la cité mariale des Pyrénées à la Côte Basque et l'Océan Atlantique en 1h40.",
@@ -266,8 +266,8 @@ export const trajetsLourdesCauterets: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Lourdes → Biarritz | From €180 | TaxiNeo",
-        metaDescription: "Taxi Lourdes → Biarritz. 150 km, 1h40, from €180. From the Pyrenees pilgrimage city to the Basque Coast. Book 24/7.",
+        metaTitle: "Taxi Lourdes → Biarritz | 150 km, from €180 | TaxiNeo",
+        metaDescription: "Direct route via A64 then A64/A63, undefined min. A64 / N21 / A64, Côte Basque, Pyrénées and Gave de Pau en route. Stops for sightseeing possible en route.",
         heroTitle: "Taxi Lourdes → Biarritz",
         heroSubtitle: "Lourdes → Biarritz transfer at €180 — €230. 150 km, 1h40.",
         description: "Lourdes to Biarritz, from the sacred Pyrenees to the Atlantic Ocean and the Basque Coast in 1h40.",

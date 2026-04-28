@@ -38,8 +38,8 @@ export const trajetsCDGAeroport: Trajet[] = [
     hub: "cdg-aeroport",
     i18n: {
       fr: {
-        metaTitle: "Taxi CDG → Paris centre | Forfait 55 € | TaxiNeo",
-        metaDescription: "Taxi Aéroport CDG Paris centre : 30 km, 40 min, forfait réglementé dès 55 €. Prise en charge au terminal, suivi de vol. Réservation 24h/24.",
+        metaTitle: "Taxi Aéroport CDG → Paris centre | 30 km, dès 55 € | TaxiNeo",
+        metaDescription: "Via A1 puis Boulevard Périphérique en 40 min. Passage par Autoroute A1 puis Porte de la Chapelle. Dépose au terminal exact, suivi de vol en temps réel.",
         heroTitle: "Taxi Aéroport CDG → Paris centre",
         heroSubtitle: "Votre transfert CDG → Paris centre au forfait réglementé de 55 — 65 €. Chauffeur professionnel, prise en charge au terminal.",
         description: "Le trajet Aéroport Charles de Gaulle — Paris centre est le transfert aéroport le plus fréquenté de France. Avec un forfait réglementé par arrêté préfectoral, vous bénéficiez d'un prix fixe garanti de 55 € pour la rive droite et 65 € pour la rive gauche, quelles que soient les conditions de circulation. TaxiNeo vous assure une prise en charge directe à votre terminal d'arrivée.",
@@ -57,8 +57,8 @@ export const trajetsCDGAeroport: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi CDG → Paris centre | Fixed Rate €55 | TaxiNeo",
-        metaDescription: "Taxi CDG Airport to Paris centre: 30 km, 40 min, regulated fixed rate from €55. Terminal pickup, flight tracking. Online booking 24/7.",
+        metaTitle: "Taxi Aéroport CDG → Paris centre | 30 km, from €55 | TaxiNeo",
+        metaDescription: "Direct route via A1 then ring road, 40 min. Autoroute A1 puis Porte de la Chapelle along the way. Terminal drop-off, real-time flight tracking included.",
         heroTitle: "Taxi CDG Airport → Paris Centre",
         heroSubtitle: "Your CDG → Paris centre transfer at the regulated fixed rate of €55 — €65. Professional driver, terminal pickup.",
         description: "The Charles de Gaulle Airport — Paris centre transfer is France's busiest airport route. With a government-regulated flat rate, you benefit from a guaranteed fixed price of €55 for the Right Bank and €65 for the Left Bank, regardless of traffic conditions. TaxiNeo ensures direct pickup at your arrival terminal.",
@@ -111,8 +111,8 @@ export const trajetsCDGAeroport: Trajet[] = [
     hub: "cdg-aeroport",
     i18n: {
       fr: {
-        metaTitle: "Taxi CDG → Disneyland Paris | Dès 60 € | TaxiNeo",
-        metaDescription: "Taxi Aéroport CDG Disneyland Paris : 45 km, 40 min, dès 60 €. Transfert direct, sièges enfants. Réservation en ligne 24h/24.",
+        metaTitle: "Taxi Aéroport CDG → Disneyland Paris | 45 km, 60 € | TaxiNeo",
+        metaDescription: "Via A104 puis A4 en 40 min. Navette directe CDG — Disneyland sans détour et Sièges enfants disponibles sur demande en chemin. Dépose au terminal, suivi de vol.",
         heroTitle: "Taxi Aéroport CDG → Disneyland Paris",
         heroSubtitle: "Votre transfert CDG → Disneyland Paris dès 60 €. Sièges enfants disponibles, prise en charge au terminal.",
         description: "Le transfert Aéroport CDG — Disneyland Paris est l'un des trajets les plus demandés par les familles arrivant en France. Situé à seulement 45 kilomètres à l'est de l'aéroport, le parc Disneyland Paris est accessible en 40 minutes par l'autoroute A104 puis l'A4. TaxiNeo vous garantit un transfert confortable et adapté aux familles avec enfants.",
@@ -130,8 +130,8 @@ export const trajetsCDGAeroport: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi CDG → Disneyland Paris | From €60 | TaxiNeo",
-        metaDescription: "Taxi CDG Airport to Disneyland Paris: 45 km, 40 min, from €60. Direct transfer, child seats available. Online booking 24/7.",
+        metaTitle: "Taxi Aéroport CDG → Disneyland Paris | 45 km, €60 | TaxiNeo",
+        metaDescription: "Via A104 then A4, 40 min ride. Navette directe CDG — Disneyland sans détour and Sièges enfants disponibles sur demande along the way. ~€3 toll included.",
         heroTitle: "Taxi CDG Airport → Disneyland Paris",
         heroSubtitle: "Your CDG → Disneyland Paris transfer from €60. Child seats available, terminal pickup.",
         description: "The CDG Airport — Disneyland Paris transfer is one of the most requested routes by families arriving in France. Located just 45 kilometres east of the airport, Disneyland Paris is accessible in 40 minutes via the A104 and A4 motorways. TaxiNeo guarantees a comfortable, family-friendly transfer.",
@@ -184,8 +184,8 @@ export const trajetsCDGAeroport: Trajet[] = [
     hub: "cdg-aeroport",
     i18n: {
       fr: {
-        metaTitle: "Taxi CDG → La Défense | Dès 60 € | TaxiNeo",
-        metaDescription: "Taxi Aéroport CDG La Défense : 35 km, 45 min, dès 60 €. Transfert direct vers le quartier d'affaires. Réservation 24h/24.",
+        metaTitle: "Taxi Aéroport CDG → La Défense | 35 km, dès 60 € | TaxiNeo",
+        metaDescription: "Via A1 en 45 min. Accès direct au quartier d'affaires, Autoroute A1 puis Périphérique ou A86 et Idéal pour les voyageurs d'affaires en chemin. Devis en ligne.",
         heroTitle: "Taxi Aéroport CDG → La Défense",
         heroSubtitle: "Votre transfert CDG → La Défense dès 60 €. Chauffeur professionnel, dépose au pied de votre tour.",
         description: "Le trajet Aéroport CDG — La Défense est le transfert privilégié des voyageurs d'affaires internationaux rejoignant le premier quartier d'affaires européen. En 45 minutes, TaxiNeo vous conduit directement de votre terminal d'arrivée au pied de votre tour à La Défense, dans un véhicule confortable équipé du Wi-Fi pour travailler pendant le trajet.",
@@ -203,8 +203,8 @@ export const trajetsCDGAeroport: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi CDG → La Défense | From €60 | TaxiNeo",
-        metaDescription: "Taxi CDG Airport to La Défense: 35 km, 45 min, from €60. Direct transfer to the business district. Online booking 24/7.",
+        metaTitle: "Taxi Aéroport CDG → La Défense | 35 km, from €60 | TaxiNeo",
+        metaDescription: "Via A1 then A86 ou ring road ouest, 45 min ride. Accès direct au quartier d'affaires and Autoroute A1 puis Périphérique ou A86 along the way. Luggage included.",
         heroTitle: "Taxi CDG Airport → La Défense",
         heroSubtitle: "Your CDG → La Défense transfer from €60. Professional driver, drop-off at your tower.",
         description: "The CDG Airport — La Défense transfer is the preferred route for international business travellers heading to Europe's largest business district. In 45 minutes, TaxiNeo takes you directly from your arrival terminal to the foot of your tower at La Défense, in a comfortable Wi-Fi-equipped vehicle.",
@@ -257,8 +257,8 @@ export const trajetsCDGAeroport: Trajet[] = [
     hub: "cdg-aeroport",
     i18n: {
       fr: {
-        metaTitle: "Taxi CDG → Gare du Nord | Forfait ~55 € | TaxiNeo",
-        metaDescription: "Taxi Aéroport CDG Gare du Nord : 28 km, 35 min, forfait rive droite ~55 €. Correspondances Eurostar et Thalys. Réservation 24h/24.",
+        metaTitle: "Taxi Aéroport CDG → Gare du Nord | 28 km, dès 53 € | TaxiNeo",
+        metaDescription: "Via A1 directe en 35 min. Trajet le plus court CDG → Paris et Correspondances Eurostar, Thalys, TGV en chemin. Suivi de vol, dépose directe au terminal.",
         heroTitle: "Taxi Aéroport CDG → Gare du Nord",
         heroSubtitle: "Votre transfert CDG → Gare du Nord au forfait de 53 — 58 €. Idéal pour vos correspondances Eurostar et Thalys.",
         description: "Le trajet Aéroport CDG — Gare du Nord est le transfert le plus court entre Roissy et Paris, empruntant l'autoroute A1 en ligne droite sur 28 kilomètres. Ce trajet est particulièrement prisé des voyageurs en correspondance vers Londres (Eurostar), Bruxelles ou Amsterdam (Thalys), qui ont besoin d'un transfert rapide et fiable entre leur vol et leur train.",
@@ -276,8 +276,8 @@ export const trajetsCDGAeroport: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi CDG → Gare du Nord | Fixed Rate ~€55 | TaxiNeo",
-        metaDescription: "Taxi CDG Airport to Gare du Nord: 28 km, 35 min, fixed rate ~€55. Eurostar & Thalys connections. Online booking 24/7.",
+        metaTitle: "Taxi Aéroport CDG → Gare du Nord | 28 km, from €53 | TaxiNeo",
+        metaDescription: "Via A1 directe, 35 min ride. Past Trajet le plus court CDG → Paris, Correspondances Eurostar, Thalys, TGV and Dépose devant l'entrée de la gare. Quote online.",
         heroTitle: "Taxi CDG Airport → Gare du Nord",
         heroSubtitle: "Your CDG → Gare du Nord transfer at €53 — €58. Perfect for Eurostar and Thalys connections.",
         description: "The CDG Airport — Gare du Nord transfer is the shortest route between Roissy and Paris, following the A1 motorway in a straight line for 28 kilometres. This route is especially popular with passengers connecting to London (Eurostar), Brussels or Amsterdam (Thalys), who need a fast and reliable transfer between their flight and train.",
@@ -330,8 +330,8 @@ export const trajetsCDGAeroport: Trajet[] = [
     hub: "cdg-aeroport",
     i18n: {
       fr: {
-        metaTitle: "Taxi CDG → Orly | Dès 80 € | TaxiNeo",
-        metaDescription: "Taxi Aéroport CDG Orly : 65 km, 60 min, dès 80 €. Transfert inter-aéroports direct, suivi de vols. Réservation 24h/24.",
+        metaTitle: "Taxi Aéroport CDG → Aéroport d'Orly | 65 km, 80 € | TaxiNeo",
+        metaDescription: "Via A1 puis Périphérique puis A6 en 1h. Navette inter-aéroports CDG ↔ Orly et Itinéraire A1 + Périphérique + A6 en chemin. Dépose au terminal, suivi de vol.",
         heroTitle: "Taxi Aéroport CDG → Aéroport d'Orly",
         heroSubtitle: "Votre transfert inter-aéroports CDG → Orly dès 80 €. Suivi de vol, prise en charge au terminal.",
         description: "Le transfert Aéroport CDG — Aéroport d'Orly est le trajet inter-aéroports de référence en Île-de-France. Séparés par 65 kilomètres et la traversée complète de l'agglomération parisienne, les deux principaux aéroports français nécessitent un transfert fiable et ponctuel, surtout pour les passagers en correspondance entre un vol international à CDG et un vol domestique ou européen à Orly.",
@@ -349,8 +349,8 @@ export const trajetsCDGAeroport: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi CDG → Orly Airport | From €80 | TaxiNeo",
-        metaDescription: "Taxi CDG to Orly Airport: 65 km, 60 min, from €80. Direct inter-airport transfer, flight tracking. Online booking 24/7.",
+        metaTitle: "Taxi Aéroport CDG → Aéroport d'Orly | 65 km, €80 | TaxiNeo",
+        metaDescription: "Via A1 then ring road then A6, 1 hour ride. Navette inter-aéroports CDG ↔ Orly and Itinéraire A1 + Périphérique + A6 along the way. No toll on this route.",
         heroTitle: "Taxi CDG Airport → Orly Airport",
         heroSubtitle: "Your inter-airport transfer CDG → Orly from €80. Dual flight tracking, terminal pickup.",
         description: "The CDG Airport — Orly Airport transfer is the benchmark inter-airport route in the Paris region. Separated by 65 kilometres and a complete crossing of the Paris conurbation, France's two main airports require a reliable, punctual transfer, especially for passengers connecting between an international flight at CDG and a domestic or European flight at Orly.",

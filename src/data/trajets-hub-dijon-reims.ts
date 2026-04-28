@@ -19,8 +19,8 @@ export const trajetsDijonReims: Trajet[] = [
     hub: "dijon",
     i18n: {
       fr: {
-        metaTitle: "Taxi Dijon → Dole | Prix fixe dès 70 € | TaxiNeo",
-        metaDescription: "Taxi Dijon → Dole. 55 km, 40 min, dès 70 €. A39 directe vers la porte du Jura. Réservation 24h/24.",
+        metaTitle: "Taxi Dijon → Dole | 55 km via A39, dès 70 € | TaxiNeo",
+        metaDescription: "Via A39 en undefined min. Jura, Pasteur et Canal du Rhône au Rhin en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Dijon → Dole",
         heroSubtitle: "Transfert Dijon → Dole au prix fixe de 70 — 90 €. 55 km, 40 min.",
         description: "Dole, ville natale de Louis Pasteur, est à 40 min de Dijon par l'A39.",
@@ -39,7 +39,7 @@ export const trajetsDijonReims: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Dijon → Dole | Fixed price from €70 | TaxiNeo",
-        metaDescription: "Taxi Dijon → Dole. 55 km, 40 min, from €70. Direct A39 to Jura gateway. Book 24/7.",
+        metaDescription: "Via A39, undefined min ride. Jura, Pasteur and Canal du Rhône au Rhin along the way. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Dijon → Dole",
         heroSubtitle: "Dijon → Dole transfer at €70 — €90. 55 km, 40 min.",
         description: "Dole, birthplace of Louis Pasteur, is 40 min from Dijon via A39.",
@@ -77,7 +77,7 @@ export const trajetsDijonReims: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Dijon → Nevers | Prix fixe dès 230 € | TaxiNeo",
-        metaDescription: "Taxi Dijon → Nevers. 190 km, 2h10, dès 230 €. Via le Morvan. Réservation 24h/24.",
+        metaDescription: "Itinéraire A38 / A6 / N81, environ undefined min. En passant par Morvan, Canal de Bourgogne et Nièvre. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Dijon → Nevers",
         heroSubtitle: "Transfert Dijon → Nevers au prix fixe de 230 — 290 €. 190 km à travers la Bourgogne.",
         description: "Nevers, au confluent de la Loire et de la Nièvre, est à 2h10 de Dijon.",
@@ -96,7 +96,7 @@ export const trajetsDijonReims: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Dijon → Nevers | Fixed price from €230 | TaxiNeo",
-        metaDescription: "Taxi Dijon → Nevers. 190 km, 2h10, from €230. Through Burgundy. Book 24/7.",
+        metaDescription: "Direct route via A38 / A6 / N81, undefined min. Morvan, Canal de Bourgogne and Nièvre along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Dijon → Nevers",
         heroSubtitle: "Dijon → Nevers transfer at €230 — €290. 190 km through Burgundy.",
         description: "Nevers, at the confluence of Loire and Nièvre, is 2h10 from Dijon.",
@@ -134,7 +134,7 @@ export const trajetsDijonReims: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Dijon → Genève | Prix fixe dès 230 € | TaxiNeo",
-        metaDescription: "Taxi Dijon → Genève. 190 km, 2h, dès 230 €. Via A39/A40 et le Jura. Réservation 24h/24.",
+        metaDescription: "Via A39 / A40 en undefined min. Jura, Bourg-en-Bresse et International en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Dijon → Genève",
         heroSubtitle: "Transfert Dijon → Genève au prix fixe de 230 — 300 €. 190 km, 2 heures.",
         description: "Dijon — Genève traverse le Jura pour rejoindre la Suisse en 2 heures.",
@@ -153,7 +153,7 @@ export const trajetsDijonReims: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Dijon → Geneva | Fixed price from €230 | TaxiNeo",
-        metaDescription: "Taxi Dijon → Geneva. 190 km, 2h, from €230. Via A39/A40 through Jura. Book 24/7.",
+        metaDescription: "A39 / A40 route, approximately undefined min. Jura, Bourg-en-Bresse and International along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Dijon → Geneva",
         heroSubtitle: "Dijon → Geneva transfer at €230 — €300. 190 km, 2 hours.",
         description: "Dijon to Geneva crosses the Jura mountains to Switzerland in 2 hours.",
@@ -190,8 +190,8 @@ export const trajetsDijonReims: Trajet[] = [
     hub: "reims",
     i18n: {
       fr: {
-        metaTitle: "Taxi Reims → Soissons | Prix fixe dès 75 € | TaxiNeo",
-        metaDescription: "Taxi Reims → Soissons. 60 km, 45 min, dès 75 €. Route directe via la vallée de la Vesle. Réservation 24h/24.",
+        metaTitle: "Taxi Reims → Soissons | forfait dès 75 € | TaxiNeo",
+        metaDescription: "Via D1044 en undefined min. Champagne, Aisne et Vallée de la Vesle en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Reims → Soissons",
         heroSubtitle: "Transfert Reims → Soissons au prix fixe de 75 — 95 €. 60 km, 45 min.",
         description: "Soissons, ancienne capitale mérovingienne, est à 45 min de Reims.",
@@ -210,7 +210,7 @@ export const trajetsDijonReims: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Reims → Soissons | Fixed price from €75 | TaxiNeo",
-        metaDescription: "Taxi Reims → Soissons. 60 km, 45 min, from €75. Direct route. Book 24/7.",
+        metaDescription: "Via D1044, undefined min ride. Champagne, Aisne and Vallée de la Vesle along the way. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Reims → Soissons",
         heroSubtitle: "Reims → Soissons transfer at €75 — €95. 60 km, 45 min.",
         description: "Soissons, former Merovingian capital, is 45 min from Reims.",
@@ -248,7 +248,7 @@ export const trajetsDijonReims: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Reims → Troyes | Prix fixe dès 150 € | TaxiNeo",
-        metaDescription: "Taxi Reims → Troyes. 125 km, 1h20, dès 150 €. Via A26/A5 en Champagne. Réservation 24h/24.",
+        metaDescription: "Via A26 / A5 en undefined min. Champagne, Aube et Magasins d'usine en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Reims → Troyes",
         heroSubtitle: "Transfert Reims → Troyes au prix fixe de 150 — 190 €. 125 km, 1h20.",
         description: "Troyes, capitale du pan de bois et des magasins d'usine, est à 1h20 de Reims.",
@@ -267,7 +267,7 @@ export const trajetsDijonReims: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Reims → Troyes | Fixed price from €150 | TaxiNeo",
-        metaDescription: "Taxi Reims → Troyes. 125 km, 1h20, from €150. Through Champagne. Book 24/7.",
+        metaDescription: "Via A26 / A5, undefined min ride. Champagne, Aube and Magasins d'usine along the way. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Reims → Troyes",
         heroSubtitle: "Reims → Troyes transfer at €150 — €190. 125 km, 1h20.",
         description: "Troyes, medieval timber-frame city and France's largest outlet center.",
@@ -304,8 +304,8 @@ export const trajetsDijonReims: Trajet[] = [
     hub: "reims",
     i18n: {
       fr: {
-        metaTitle: "Taxi Reims → CDG Aéroport | Prix fixe dès 155 € | TaxiNeo",
-        metaDescription: "Taxi Reims → Aéroport CDG. 130 km, 1h20, dès 155 €. A26/A1 directe. Réservation 24h/24.",
+        metaTitle: "Taxi Reims → Aéroport CDG | 130 km, dès 155 € | TaxiNeo",
+        metaDescription: "Via A26 / A1 en undefined min. Champagne, Roissy et Direct en chemin. Dépose au terminal, suivi de vol. Dépose au terminal exact, suivi de vol en temps réel.",
         heroTitle: "Taxi Reims → Aéroport CDG",
         heroSubtitle: "Transfert Reims → CDG au prix fixe de 155 — 195 €. 130 km, 1h20.",
         description: "Reims — CDG est le transfert aéroport de référence pour la Champagne.",
@@ -323,8 +323,8 @@ export const trajetsDijonReims: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Reims → CDG Airport | Fixed price from €155 | TaxiNeo",
-        metaDescription: "Taxi Reims → CDG Airport. 130 km, 1h20, from €155. Direct A26/A1. Book 24/7.",
+        metaTitle: "Taxi Reims → Aéroport CDG | 130 km, from €155 | TaxiNeo",
+        metaDescription: "Via A26 / A1, undefined min ride. Champagne, Roissy and Direct along the way. Terminal drop-off, flight tracking. Meet at terminal, free wait if flight delayed.",
         heroTitle: "Taxi Reims → CDG Airport",
         heroSubtitle: "Reims → CDG transfer at €155 — €195. 130 km, 1h20.",
         description: "Reims to CDG is the main airport transfer for the Champagne region.",

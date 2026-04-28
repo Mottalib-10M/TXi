@@ -95,7 +95,7 @@ export const guides: Guide[] = [
       en: {
         metaTitle: "Taxi vs Uber in France: full comparison 2026 | TaxiNeo",
         metaDescription:
-          "Taxi or Uber? Discover the differences in pricing, regulations, insurance and service quality between taxis and ride-hailing in France. Complete comparison guide.",
+          "Taxi or Uber? Discover the differences in pricing, regulations, insurance and service quality between taxis and ride-hailing in France. Full comparison.",
         heroTitle: "Taxi vs Uber: which to choose in 2026?",
         heroSubtitle:
           "Compare conventional taxis and ride-hailing services like Uber to make the best choice based on your trip, budget and needs.",
@@ -160,9 +160,9 @@ export const guides: Guide[] = [
     i18n: {
       fr: {
         metaTitle:
-          "Comment prendre un taxi en France : guide pratique 2026 | TaxiNeo",
+          "Prendre un taxi en France : guide pratique | TaxiNeo",
         metaDescription:
-          "Découvrez comment prendre un taxi en France : héler un taxi, stations, réservation en ligne, paiement et droits du passager. Guide complet pour voyageurs.",
+          "Prendre un taxi en France : héler, stations, applications, paiement CB ou espèces et droits du passager. Guide pratique pour résidents et touristes.",
         heroTitle: "Comment prendre un taxi en France",
         heroSubtitle:
           "Tout ce que vous devez savoir pour prendre un taxi en toute sérénité : trouver un taxi, monter à bord, payer et connaître vos droits.",
@@ -223,7 +223,7 @@ export const guides: Guide[] = [
         metaTitle:
           "How to take a taxi in France: practical guide 2026 | TaxiNeo",
         metaDescription:
-          "Learn how to take a taxi in France: hailing, taxi ranks, online booking, payment and passenger rights. Complete guide for travellers.",
+          "Learn how to take a taxi in France: hailing, taxi ranks, online booking, payment methods and passenger rights. Your complete practical guide for travellers.",
         heroTitle: "How to take a taxi in France",
         heroSubtitle:
           "Everything you need to know about taking a taxi with confidence: finding one, getting in, paying and knowing your rights.",
@@ -287,7 +287,7 @@ export const guides: Guide[] = [
     i18n: {
       fr: {
         metaTitle:
-          "Taxi conventionné CPAM : guide complet 2026 | Remboursement & démarches | TaxiNeo",
+          "Taxi conventionné CPAM : guide complet 2026 | TaxiNeo",
         metaDescription:
           "Tout savoir sur le taxi conventionné : conditions de remboursement par la CPAM, démarches, prescription médicale et prise en charge à 100 %. Guide détaillé.",
         heroTitle: "Taxi conventionné : le guide complet",
@@ -354,9 +354,9 @@ export const guides: Guide[] = [
       },
       en: {
         metaTitle:
-          "Approved medical taxi in France: complete guide 2026 | TaxiNeo",
+          "Approved medical taxi in France: guide 2026 | TaxiNeo",
         metaDescription:
-          "Everything about approved medical taxis: reimbursement conditions, medical prescription, social security coverage and procedures. Detailed guide.",
+          "Everything about approved medical taxis in France: reimbursement conditions, medical prescription, social security coverage and step-by-step procedures.",
         heroTitle: "Approved medical taxi: the complete guide",
         heroSubtitle:
           "Understand how approved medical taxis work, reimbursement conditions through French social security, and the steps to benefit from the service.",
@@ -428,7 +428,7 @@ export const guides: Guide[] = [
     i18n: {
       fr: {
         metaTitle:
-          "Facture taxi : comment l'obtenir et que doit-elle contenir | TaxiNeo",
+          "Facture de taxi : comment l'obtenir en France | TaxiNeo",
         metaDescription:
           "Comment réclamer une facture de taxi en France ? Mentions obligatoires, droits du passager, note de frais et remboursement professionnel. Guide pratique.",
         heroTitle: "Réclamer une facture de taxi",
@@ -485,9 +485,9 @@ export const guides: Guide[] = [
       },
       en: {
         metaTitle:
-          "Taxi receipt in France: how to get one & what it must include | TaxiNeo",
+          "Taxi receipt in France: a complete guide 2026 | TaxiNeo",
         metaDescription:
-          "How to request a taxi receipt in France. Mandatory information, passenger rights, expense reports and professional reimbursement. Practical guide.",
+          "How to request a taxi receipt in France. Mandatory information, passenger rights, expense reports and professional reimbursement. Full practical guide.",
         heroTitle: "How to get a taxi receipt",
         heroSubtitle:
           "Learn about your rights to obtain a taxi receipt, the mandatory details it must contain and how to use it for professional expense reports.",
@@ -549,7 +549,7 @@ export const guides: Guide[] = [
     i18n: {
       fr: {
         metaTitle:
-          "Réglementation tarif taxi en France 2026 : barèmes et règles | TaxiNeo",
+          "Tarif taxi en France 2026 : barèmes officiels | TaxiNeo",
         metaDescription:
           "Comprendre la réglementation des tarifs taxi en France : tarifs A, B, C, D, prise en charge, forfaits aéroport et suppléments autorisés. Guide officiel.",
         heroTitle: "Tarif taxi : la réglementation en France",
@@ -610,9 +610,9 @@ export const guides: Guide[] = [
       },
       en: {
         metaTitle:
-          "Taxi fare regulations in France 2026: official rates & rules | TaxiNeo",
+          "Taxi fare regulations in France: rates guide 2026 | TaxiNeo",
         metaDescription:
-          "Understand taxi fare regulations in France: A, B, C, D rates, pick-up charges, airport flat fares and authorised surcharges. Official guide.",
+          "Understand taxi fare regulations in France: A, B, C, D rates, pick-up charges, airport flat fares and all authorised surcharges. Complete official guide.",
         heroTitle: "Taxi fares: French regulations explained",
         heroSubtitle:
           "Understand the regulated fare system for French taxis: official tariff bands, day and night rates, flat fares and authorised surcharges.",
@@ -677,7 +677,7 @@ export const guides: Guide[] = [
     i18n: {
       fr: {
         metaTitle:
-          "Payer son taxi par carte bancaire en France : droits et obligations | TaxiNeo",
+          "Taxi et carte bancaire : droits et obligations | TaxiNeo",
         metaDescription:
           "Le paiement par carte est-il obligatoire en taxi ? Droits du passager, obligations du chauffeur, montant minimum et que faire en cas de refus. Guide complet.",
         heroTitle: "Payer son taxi par carte bancaire",
@@ -734,9 +734,9 @@ export const guides: Guide[] = [
       },
       en: {
         metaTitle:
-          "Paying by card in a French taxi: rights & obligations | TaxiNeo",
+          "Paying by card in a French taxi: your rights | TaxiNeo",
         metaDescription:
-          "Is card payment mandatory in French taxis? Passenger rights, driver obligations, minimum amount and what to do if refused. Complete guide.",
+          "Is card payment mandatory in French taxis? Passenger rights, driver obligations, minimum amounts and what to do if your card is refused. Complete guide.",
         heroTitle: "Paying for a taxi by card",
         heroSubtitle:
           "Everything you need to know about card payment in French taxis: your rights, driver obligations and alternatives.",
@@ -857,7 +857,7 @@ export const guides: Guide[] = [
         metaTitle:
           "Taxi tipping in France: how much & when to tip | TaxiNeo",
         metaDescription:
-          "Should you tip a taxi driver in France? Recommended amounts, customs by situation, differences with other countries. Best practices guide.",
+          "Should you tip a taxi driver in France? Recommended amounts, local customs by situation, differences with other countries. Complete best practices guide.",
         heroTitle: "Tipping your taxi driver in France",
         heroSubtitle:
           "Should you tip your taxi driver? Discover French customs, recommended amounts and best practices.",
@@ -918,7 +918,7 @@ export const guides: Guide[] = [
     i18n: {
       fr: {
         metaTitle:
-          "Taxi et bagages en France : règles, suppléments et conseils | TaxiNeo",
+          "Taxi et bagages en France : règles et conseils | TaxiNeo",
         metaDescription:
           "Combien de bagages peut-on mettre dans un taxi ? Règles, suppléments autorisés, bagages volumineux et conseils pour les transferts aéroport. Guide complet.",
         heroTitle: "Taxi et bagages : tout savoir",
@@ -980,9 +980,9 @@ export const guides: Guide[] = [
       },
       en: {
         metaTitle:
-          "Taxi and luggage in France: rules, surcharges & tips | TaxiNeo",
+          "Taxi and luggage in France: rules & tips | TaxiNeo",
         metaDescription:
-          "How much luggage can you take in a French taxi? Rules, authorised surcharges, oversized luggage and tips for airport transfers. Complete guide.",
+          "How much luggage can you take in a French taxi? Rules, authorised surcharges, oversized items and practical tips for smooth airport transfers. Full guide.",
         heroTitle: "Taxi and luggage: everything you need to know",
         heroSubtitle:
           "How much luggage can you bring in a taxi? Discover the rules, any surcharges and our tips for stress-free travel.",
@@ -1048,9 +1048,9 @@ export const guides: Guide[] = [
     i18n: {
       fr: {
         metaTitle:
-          "Sécurité en taxi en France : droits, vérifications et conseils | TaxiNeo",
+          "Sécurité en taxi : droits et conseils 2026 | TaxiNeo",
         metaDescription:
-          "Comment vérifier qu'un taxi est en règle ? Droits du passager, contrôles obligatoires, conduite à tenir en cas de problème. Guide sécurité complet.",
+          "Comment vérifier qu'un taxi est en règle en France ? Droits du passager, contrôles obligatoires et conduite à tenir en cas de problème. Guide complet.",
         heroTitle: "La sécurité en taxi en France",
         heroSubtitle:
           "Découvrez comment vérifier qu'un taxi est en règle, connaître vos droits de passager et adopter les bons réflexes pour voyager en toute sécurité.",
@@ -1112,7 +1112,7 @@ export const guides: Guide[] = [
         metaTitle:
           "Taxi safety in France: rights, checks & tips | TaxiNeo",
         metaDescription:
-          "How to check a taxi is legitimate in France. Passenger rights, mandatory inspections and what to do if something goes wrong. Complete safety guide.",
+          "How to check a taxi is legitimate in France. Passenger rights, mandatory vehicle inspections and what to do if something goes wrong. Full safety guide.",
         heroTitle: "Taxi safety in France",
         heroSubtitle:
           "Learn how to verify a taxi is legitimate, know your passenger rights and adopt good habits for safe travel.",
@@ -1179,7 +1179,7 @@ export const guides: Guide[] = [
     i18n: {
       fr: {
         metaTitle:
-          "Taxi et handicap en France : accessibilité, droits et aides 2026 | TaxiNeo",
+          "Taxi et handicap : accessibilité et droits | TaxiNeo",
         metaDescription:
           "Guide complet taxi et handicap : véhicules adaptés PMR, droits des personnes handicapées, aides financières et réservation de taxis accessibles en France.",
         heroTitle: "Taxi et handicap : le guide complet",
@@ -1241,7 +1241,7 @@ export const guides: Guide[] = [
       },
       en: {
         metaTitle:
-          "Taxi and disability in France: accessibility, rights & support 2026 | TaxiNeo",
+          "Taxi & disability in France: rights & access | TaxiNeo",
         metaDescription:
           "Complete guide to taxis and disability: wheelchair-accessible vehicles, disabled passenger rights, financial support and booking accessible taxis in France.",
         heroTitle: "Taxi and disability: the complete guide",

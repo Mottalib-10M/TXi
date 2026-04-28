@@ -19,8 +19,8 @@ export const trajetsParisRetours2: Trajet[] = [
     hub: "paris-retours",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nice → Paris | Transfert longue distance | TaxiNeo",
-        metaDescription: "Taxi Nice → Paris. 930 km, ~9h, dès 1 100 €. Transfert privé porte-à-porte depuis la Côte d'Azur. Réservation 24h/24.",
+        metaTitle: "Taxi Nice → Paris | 930 km, 9h, dès 1 100 € | TaxiNeo",
+        metaDescription: "Via A8 / A7 / A6 en undefined min. Côte d'Azur et Vallée du Rhône en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Nice → Paris",
         heroSubtitle: "Transfert Nice → Paris au prix fixe de 1 100 — 1 400 €. 930 km en véhicule privé.",
         description: "Le transfert Nice — Paris relie la Côte d'Azur à la capitale en toute sérénité.",
@@ -39,7 +39,7 @@ export const trajetsParisRetours2: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Nice → Paris | Long distance transfer | TaxiNeo",
-        metaDescription: "Taxi Nice → Paris. 930 km, ~9h, from €1,100. Private door-to-door transfer from the French Riviera. Book 24/7.",
+        metaDescription: "Via A8 / A7 / A6, undefined min ride. Côte d'Azur and Vallée du Rhône along the way. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Nice → Paris",
         heroSubtitle: "Nice → Paris transfer at €1,100 — €1,400. 930 km private vehicle.",
         description: "Nice to Paris transfer across France in complete comfort.",
@@ -76,8 +76,8 @@ export const trajetsParisRetours2: Trajet[] = [
     hub: "paris-retours",
     i18n: {
       fr: {
-        metaTitle: "Taxi Bordeaux → Paris | Prix fixe dès 700 € | TaxiNeo",
-        metaDescription: "Taxi Bordeaux → Paris. 585 km, ~6h, dès 700 €. A10 directe, transfert privé porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Bordeaux → Paris | 585 km, dès 700 € | TaxiNeo",
+        metaDescription: "Via A10 en undefined min. Vignobles, Val de Loire et Autoroute directe en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Bordeaux → Paris",
         heroSubtitle: "Transfert Bordeaux → Paris au prix fixe de 700 — 900 €. 585 km via l'A10.",
         description: "Le trajet Bordeaux — Paris emprunte l'A10, l'autoroute l'Aquitaine, en 6 heures.",
@@ -95,8 +95,8 @@ export const trajetsParisRetours2: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Bordeaux → Paris | Fixed price from €700 | TaxiNeo",
-        metaDescription: "Taxi Bordeaux → Paris. 585 km, ~6h, from €700. Direct A10 transfer. Book 24/7.",
+        metaTitle: "Taxi Bordeaux → Paris | 585 km, from €700 | TaxiNeo",
+        metaDescription: "A10 route, approximately undefined min. Vignobles, Val de Loire and Autoroute directe along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Bordeaux → Paris",
         heroSubtitle: "Bordeaux → Paris transfer at €700 — €900. 585 km via A10.",
         description: "Bordeaux to Paris via the A10 Aquitaine motorway in 6 hours.",
@@ -133,8 +133,8 @@ export const trajetsParisRetours2: Trajet[] = [
     hub: "paris-retours",
     i18n: {
       fr: {
-        metaTitle: "Taxi Toulouse → Paris | Transfert longue distance | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Paris. 680 km, ~6h30, dès 800 €. Via A20 et Massif Central. Réservation 24h/24.",
+        metaTitle: "Taxi Toulouse → Paris | 680 km, dès 800 € | TaxiNeo",
+        metaDescription: "Via A20 / A71 en undefined min. Massif Central, Cahors et Limoges en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Toulouse → Paris",
         heroSubtitle: "Transfert Toulouse → Paris au prix fixe de 800 — 1 000 €. 680 km via l'A20.",
         description: "Toulouse — Paris traverse le Massif Central par l'A20, une route panoramique.",
@@ -152,8 +152,8 @@ export const trajetsParisRetours2: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Toulouse → Paris | Long distance transfer | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Paris. 680 km, ~6h30, from €800. Via A20 through Massif Central. Book 24/7.",
+        metaTitle: "Taxi Toulouse → Paris | 680 km, from €800 | TaxiNeo",
+        metaDescription: "Via A20 / A71, undefined min ride. Massif Central, Cahors and Limoges along the way. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Toulouse → Paris",
         heroSubtitle: "Toulouse → Paris transfer at €800 — €1,000. 680 km via A20.",
         description: "Toulouse to Paris across the Massif Central on the scenic A20.",
@@ -190,8 +190,8 @@ export const trajetsParisRetours2: Trajet[] = [
     hub: "paris-retours",
     i18n: {
       fr: {
-        metaTitle: "Taxi Strasbourg → Paris | Prix fixe dès 580 € | TaxiNeo",
-        metaDescription: "Taxi Strasbourg → Paris. 490 km, ~4h40, dès 580 €. A4 directe via Metz et Reims. Réservation 24h/24.",
+        metaTitle: "Taxi Strasbourg → Paris | 490 km, dès 580 € | TaxiNeo",
+        metaDescription: "Via A4 en undefined min. Champagne, Reims, Metz et Grand Est en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Strasbourg → Paris",
         heroSubtitle: "Transfert Strasbourg → Paris au prix fixe de 580 — 750 €. 490 km via l'A4.",
         description: "Strasbourg — Paris emprunte l'A4, l'autoroute de l'Est, en 4h40.",
@@ -209,8 +209,8 @@ export const trajetsParisRetours2: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Strasbourg → Paris | Fixed price from €580 | TaxiNeo",
-        metaDescription: "Taxi Strasbourg → Paris. 490 km, ~4h40, from €580. Direct A4 via Metz and Reims. Book 24/7.",
+        metaTitle: "Taxi Strasbourg → Paris | 490 km, from €580 | TaxiNeo",
+        metaDescription: "Via A4, undefined min ride. Champagne, Reims, Metz and Grand Est en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Strasbourg → Paris",
         heroSubtitle: "Strasbourg → Paris transfer at €580 — €750. 490 km via A4.",
         description: "Strasbourg to Paris via A4 through Lorraine and Champagne.",
@@ -248,7 +248,7 @@ export const trajetsParisRetours2: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Nantes → Paris | Prix fixe dès 450 € | TaxiNeo",
-        metaDescription: "Taxi Nantes → Paris. 385 km, ~4h, dès 450 €. A11 directe via Le Mans. Réservation 24h/24.",
+        metaDescription: "Via A11 en undefined min. Val de Loire, Angers, Le Mans et Direct en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Nantes → Paris",
         heroSubtitle: "Transfert Nantes → Paris au prix fixe de 450 — 580 €. 385 km via l'A11.",
         description: "Nantes — Paris emprunte l'A11, l'autoroute de l'Océane, en 4 heures.",
@@ -267,7 +267,7 @@ export const trajetsParisRetours2: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Nantes → Paris | Fixed price from €450 | TaxiNeo",
-        metaDescription: "Taxi Nantes → Paris. 385 km, ~4h, from €450. Direct A11 via Le Mans. Book 24/7.",
+        metaDescription: "Via A11, undefined min ride. Val de Loire, Angers, Le Mans and Direct en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Nantes → Paris",
         heroSubtitle: "Nantes → Paris transfer at €450 — €580. 385 km via A11.",
         description: "Nantes to Paris via the A11 Océane motorway in 4 hours.",
@@ -305,7 +305,7 @@ export const trajetsParisRetours2: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Rennes → Paris | Prix fixe dès 420 € | TaxiNeo",
-        metaDescription: "Taxi Rennes → Paris. 350 km, ~3h40, dès 420 €. Via A81/A11 depuis la Bretagne. Réservation 24h/24.",
+        metaDescription: "Via A81 / A11 en undefined min. Bretagne, Laval et Le Mans en chemin. Dépose porte-à-porte, bagages inclus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Rennes → Paris",
         heroSubtitle: "Transfert Rennes → Paris au prix fixe de 420 — 540 €. 350 km depuis la Bretagne.",
         description: "Rennes — Paris relie la capitale bretonne à Paris en 3h40.",
@@ -324,7 +324,7 @@ export const trajetsParisRetours2: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Rennes → Paris | Fixed price from €420 | TaxiNeo",
-        metaDescription: "Taxi Rennes → Paris. 350 km, ~3h40, from €420. From Brittany via A81/A11. Book 24/7.",
+        metaDescription: "Via A81 / A11, undefined min ride. Bretagne, Laval and Le Mans along the way. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Rennes → Paris",
         heroSubtitle: "Rennes → Paris transfer at €420 — €540. 350 km from Brittany.",
         description: "Rennes to Paris connects the Breton capital to Paris in 3h40.",

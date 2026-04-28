@@ -27,8 +27,8 @@ export const trajetsSaverneWissembourg: Trajet[] = [
     hub: "saverne-wissembourg",
     i18n: {
       fr: {
-        metaTitle: "Taxi Saverne → Strasbourg | Prix fixe dès 50 € | TaxiNeo",
-        metaDescription: "Taxi Saverne → Strasbourg. 40 km, 30 min, dès 50 €. A4, Col de Saverne, Cathédrale. Réservation 24h/24.",
+        metaTitle: "Taxi Saverne → Strasbourg | 40 km, dès 50 € | TaxiNeo",
+        metaDescription: "Itinéraire A4, environ 30 min. Passage par Col de Saverne, Château du Haut-Barr, Cathédrale et Vosges. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Saverne → Strasbourg",
         heroSubtitle: "Transfert Saverne → Strasbourg au prix fixe de 50 — 65 €. 40 km, descente rapide par l'A4.",
         description: "Strasbourg, capitale européenne et joyau alsacien, est à 30 min de Saverne par l'A4.",
@@ -46,8 +46,8 @@ export const trajetsSaverneWissembourg: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Saverne → Strasbourg | Fixed price from €50 | TaxiNeo",
-        metaDescription: "Taxi Saverne → Strasbourg. 40 km, 30 min, from €50. A4, Col de Saverne, Cathedral. Book 24/7.",
+        metaTitle: "Taxi Saverne → Strasbourg | 40 km, from €50 | TaxiNeo",
+        metaDescription: "A4 route, approximately 30 min. Col de Saverne, Château du Haut-Barr, Cathédrale and Vosges en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Saverne → Strasbourg",
         heroSubtitle: "Your Saverne → Strasbourg transfer at €50 — €65. 40 km, via the A4 motorway.",
         description: "Strasbourg, European capital and Alsatian gem, is 30 min from Saverne via the A4.",
@@ -92,8 +92,8 @@ export const trajetsSaverneWissembourg: Trajet[] = [
     hub: "saverne-wissembourg",
     i18n: {
       fr: {
-        metaTitle: "Taxi Saverne → Nancy | Prix fixe dès 145 € | TaxiNeo",
-        metaDescription: "Taxi Saverne → Nancy. 120 km, 1h15, dès 145 €. A4/A33, Place Stanislas, Art nouveau. Réservation 24h/24.",
+        metaTitle: "Taxi Saverne → Nancy | 120 km, dès 145 € | TaxiNeo",
+        metaDescription: "Itinéraire A4/A33, environ 1h15. Passage par Place Stanislas, Lorraine, Col de Saverne et Art nouveau. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Saverne → Nancy",
         heroSubtitle: "Transfert Saverne → Nancy au prix fixe de 145 — 185 €. 120 km, traversée des Vosges par l'A4.",
         description: "Nancy, perle de l'Art nouveau et de la Place Stanislas, est à 1h15 de Saverne par l'A4.",
@@ -111,8 +111,8 @@ export const trajetsSaverneWissembourg: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Saverne → Nancy | Fixed price from €145 | TaxiNeo",
-        metaDescription: "Taxi Saverne → Nancy. 120 km, 75 min, from €145. A4/A33, Place Stanislas, Art Nouveau. Book 24/7.",
+        metaTitle: "Taxi Saverne → Nancy | 120 km, from €145 | TaxiNeo",
+        metaDescription: "A4/A33 route, approximately 1h15. Place Stanislas, Lorraine, Col de Saverne and Art nouveau en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Saverne → Nancy",
         heroSubtitle: "Your Saverne → Nancy transfer at €145 — €185. 120 km, across the Vosges mountains.",
         description: "Nancy, Art Nouveau capital and home of Place Stanislas, is 75 min from Saverne via the A4.",
@@ -157,8 +157,8 @@ export const trajetsSaverneWissembourg: Trajet[] = [
     hub: "saverne-wissembourg",
     i18n: {
       fr: {
-        metaTitle: "Taxi Wissembourg → Strasbourg | Prix fixe dès 80 € | TaxiNeo",
-        metaDescription: "Taxi Wissembourg → Strasbourg. 65 km, 45 min, dès 80 €. D263/A35, Outre-Forêt, Ligne Maginot. Réservation 24h/24.",
+        metaTitle: "Taxi Wissembourg → Strasbourg | 65 km, dès 80 € | TaxiNeo",
+        metaDescription: "Via D263/A35 en 45 min. Passage par Outre-Forêt, Ligne Maginot, Frontière allemande et Alsace du Nord. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Wissembourg → Strasbourg",
         heroSubtitle: "Transfert Wissembourg → Strasbourg au prix fixe de 80 — 100 €. 65 km, traversée de l'Alsace du Nord.",
         description: "Strasbourg, capitale européenne, est à 45 min de Wissembourg à travers la belle région de l'Outre-Forêt.",
@@ -176,8 +176,8 @@ export const trajetsSaverneWissembourg: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Wissembourg → Strasbourg | Fixed price from €80 | TaxiNeo",
-        metaDescription: "Taxi Wissembourg → Strasbourg. 65 km, 45 min, from €80. Outre-Foret, Maginot Line. Book 24/7.",
+        metaTitle: "Taxi Wissembourg → Strasbourg | 65 km, from €80 | TaxiNeo",
+        metaDescription: "Via D263/A35, 45 min ride. Outre-Forêt, Ligne Maginot, Frontière allemande and Alsace du Nord en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Wissembourg → Strasbourg",
         heroSubtitle: "Your Wissembourg → Strasbourg transfer at €80 — €100. 65 km, through Northern Alsace.",
         description: "Strasbourg, European capital, is 45 min from Wissembourg through the Outre-Foret region.",
@@ -222,8 +222,8 @@ export const trajetsSaverneWissembourg: Trajet[] = [
     hub: "saverne-wissembourg",
     i18n: {
       fr: {
-        metaTitle: "Taxi Saverne → Haguenau | Prix fixe dès 50 € | TaxiNeo",
-        metaDescription: "Taxi Saverne → Haguenau. 40 km, 30 min, dès 50 €. D1004, Forêt de Haguenau, Alsace du Nord. Réservation 24h/24.",
+        metaTitle: "Taxi Saverne → Haguenau | 40 km, dès 50 € | TaxiNeo",
+        metaDescription: "Par D1004, 30 min de trajet. Forêt de Haguenau, Alsace du Nord, Hohenstaufen et Vosges du Nord en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Saverne → Haguenau",
         heroSubtitle: "Transfert Saverne → Haguenau au prix fixe de 50 — 65 €. 40 km, à travers l'Alsace du Nord.",
         description: "Haguenau, ancienne résidence impériale des Hohenstaufen, est à 30 min de Saverne par la D1004.",
@@ -241,8 +241,8 @@ export const trajetsSaverneWissembourg: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Saverne → Haguenau | Fixed price from €50 | TaxiNeo",
-        metaDescription: "Taxi Saverne → Haguenau. 40 km, 30 min, from €50. D1004, Haguenau Forest, Northern Alsace. Book 24/7.",
+        metaTitle: "Taxi Saverne → Haguenau | 40 km, from €50 | TaxiNeo",
+        metaDescription: "Via D1004, 30 min ride. Forêt de Haguenau, Alsace du Nord, Hohenstaufen and Vosges du Nord en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Saverne → Haguenau",
         heroSubtitle: "Your Saverne → Haguenau transfer at €50 — €65. 40 km, through Northern Alsace.",
         description: "Haguenau, former Hohenstaufen imperial residence, is 30 min from Saverne via the D1004.",
@@ -287,8 +287,8 @@ export const trajetsSaverneWissembourg: Trajet[] = [
     hub: "saverne-wissembourg",
     i18n: {
       fr: {
-        metaTitle: "Taxi Wissembourg → Haguenau | Prix fixe dès 40 € | TaxiNeo",
-        metaDescription: "Taxi Wissembourg → Haguenau. 35 km, 25 min, dès 40 €. D263, Outre-Forêt, Ligne Maginot. Réservation 24h/24.",
+        metaTitle: "Taxi Wissembourg → Haguenau | 35 km, dès 40 € | TaxiNeo",
+        metaDescription: "Via D263 en 25 min. Outre-Forêt, Ligne Maginot, Houblon et Alsace du Nord en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Wissembourg → Haguenau",
         heroSubtitle: "Transfert Wissembourg → Haguenau au prix fixe de 40 — 55 €. 35 km, coeur de l'Outre-Forêt.",
         description: "Haguenau, sous-préfecture du Bas-Rhin, est à 25 min de Wissembourg par la D263.",
@@ -306,8 +306,8 @@ export const trajetsSaverneWissembourg: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Wissembourg → Haguenau | Fixed price from €40 | TaxiNeo",
-        metaDescription: "Taxi Wissembourg → Haguenau. 35 km, 25 min, from €40. D263, Outre-Foret, Maginot Line. Book 24/7.",
+        metaTitle: "Taxi Wissembourg → Haguenau | 35 km, from €40 | TaxiNeo",
+        metaDescription: "Via D263, 25 min ride. Outre-Forêt, Ligne Maginot, Houblon and Alsace du Nord en route. Drop-off at your exact address. Door-to-door, luggage included.",
         heroTitle: "Taxi Wissembourg → Haguenau",
         heroSubtitle: "Your Wissembourg → Haguenau transfer at €40 — €55. 35 km, through the Outre-Foret.",
         description: "Haguenau is 25 min from Wissembourg through the authentic Outre-Foret region.",

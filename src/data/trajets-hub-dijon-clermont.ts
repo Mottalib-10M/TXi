@@ -30,8 +30,8 @@ export const trajetsDijonClermont: Trajet[] = [
     hub: "dijon",
     i18n: {
       fr: {
-        metaTitle: "Taxi Dijon → Beaune | Prix fixe dès 65 € | TaxiNeo",
-        metaDescription: "Taxi Dijon → Beaune. 45 km, 35 min, dès 65 €. Hospices de Beaune, Route des Grands Crus, vignobles. Réservation 24h/24.",
+        metaTitle: "Taxi Dijon → Beaune | forfait dès 65 €, 35 min | TaxiNeo",
+        metaDescription: "Itinéraire A31, environ 35 min. En passant par Route des Grands Crus, Hospices de Beaune et Vignobles. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Dijon → Beaune",
         heroSubtitle: "Transfert Dijon → Beaune au prix fixe de 65 — 85 €. 45 km par l'A31 ou la Route des Grands Crus.",
         description: "Beaune, capitale des vins de Bourgogne, est située à seulement 35 minutes de Dijon par l'autoroute A31. Les célèbres Hospices de Beaune et la Route des Grands Crus en font une destination incontournable.",
@@ -50,7 +50,7 @@ export const trajetsDijonClermont: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Dijon → Beaune | Fixed price from €65 | TaxiNeo",
-        metaDescription: "Taxi Dijon → Beaune. 45 km, 35 min, from €65. Hospices de Beaune, Route des Grands Crus, vineyards. Book 24/7.",
+        metaDescription: "Direct route via A31, 35 min. Route des Grands Crus, Hospices de Beaune and Vignobles along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Dijon → Beaune",
         heroSubtitle: "Your Dijon → Beaune transfer at €65 — €85. 45 km via the A31 or the Route des Grands Crus.",
         description: "Beaune, the wine capital of Burgundy, is just 35 minutes from Dijon via the A31 motorway. The famous Hospices de Beaune and the Route des Grands Crus make it a must-visit destination.",
@@ -95,8 +95,8 @@ export const trajetsDijonClermont: Trajet[] = [
     hub: "dijon",
     i18n: {
       fr: {
-        metaTitle: "Taxi Dijon → Auxerre | Prix fixe dès 195 € | TaxiNeo",
-        metaDescription: "Taxi Dijon → Auxerre. 155 km, 1h40, dès 195 €. Cathédrale Saint-Étienne, vignobles de Chablis, Yonne. Réservation 24h/24.",
+        metaTitle: "Taxi Dijon → Auxerre | 155 km, dès 195 € | TaxiNeo",
+        metaDescription: "Itinéraire A38 puis A6, environ 1h40. Cathédrale Saint-Étienne et Vignoble de Chablis sur le parcours. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Dijon → Auxerre",
         heroSubtitle: "Transfert Dijon → Auxerre au prix fixe de 195 — 260 €. 155 km par l'A38 et l'A6.",
         description: "Auxerre, préfecture de l'Yonne, est une ville d'art et d'histoire baignée par l'Yonne, célèbre pour sa cathédrale gothique Saint-Étienne et sa proximité avec le vignoble de Chablis.",
@@ -114,8 +114,8 @@ export const trajetsDijonClermont: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Dijon → Auxerre | Fixed price from €195 | TaxiNeo",
-        metaDescription: "Taxi Dijon → Auxerre. 155 km, 1h40, from €195. Saint-Étienne Cathedral, Chablis vineyards, Yonne. Book 24/7.",
+        metaTitle: "Taxi Dijon → Auxerre | 155 km, from €195 | TaxiNeo",
+        metaDescription: "A38 then A6 route, approximately 1h40. Cathédrale Saint-Étienne and Vignoble de Chablis along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Dijon → Auxerre",
         heroSubtitle: "Your Dijon → Auxerre transfer at €195 — €260. 155 km via the A38 and A6.",
         description: "Auxerre, prefecture of the Yonne department, is a city of art and history on the banks of the Yonne river, famous for its Gothic cathedral and proximity to the Chablis vineyards.",
@@ -160,8 +160,8 @@ export const trajetsDijonClermont: Trajet[] = [
     hub: "dijon",
     i18n: {
       fr: {
-        metaTitle: "Taxi Dijon → Chalon-sur-Saône | Prix fixe dès 90 € | TaxiNeo",
-        metaDescription: "Taxi Dijon → Chalon-sur-Saône. 70 km, 50 min, dès 90 €. Musée Niépce, Côte chalonnaise, Saône. Réservation 24h/24.",
+        metaTitle: "Taxi Dijon → Chalon-sur-Saône | 70 km, dès 90 € | TaxiNeo",
+        metaDescription: "Via A31 puis A6 en 50 min. Saône, Nicéphore Niépce et Côte chalonnaise en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Dijon → Chalon-sur-Saône",
         heroSubtitle: "Transfert Dijon → Chalon-sur-Saône au prix fixe de 90 — 120 €. 70 km par l'A31 et l'A6.",
         description: "Chalon-sur-Saône, deuxième ville de Bourgogne, est un important carrefour fluvial sur la Saône, connue pour le musée Nicéphore Niépce dédié à l'invention de la photographie et pour les vignobles de la Côte chalonnaise.",
@@ -179,8 +179,8 @@ export const trajetsDijonClermont: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Dijon → Chalon-sur-Saône | Fixed price from €90 | TaxiNeo",
-        metaDescription: "Taxi Dijon → Chalon-sur-Saône. 70 km, 50 min, from €90. Niépce Museum, Côte Chalonnaise wines, Saône river. Book 24/7.",
+        metaTitle: "Taxi Dijon → Chalon-sur-Saône | 70 km, from €90 | TaxiNeo",
+        metaDescription: "A31 then A6 route, approximately 50 min. Saône, Nicéphore Niépce and Côte chalonnaise along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Dijon → Chalon-sur-Saône",
         heroSubtitle: "Your Dijon → Chalon-sur-Saône transfer at €90 — €120. 70 km via the A31 and A6.",
         description: "Chalon-sur-Saône, Burgundy's second city, is an important river crossroads on the Saône, known for the Nicéphore Niépce photography museum and the Côte Chalonnaise vineyards.",
@@ -225,8 +225,8 @@ export const trajetsDijonClermont: Trajet[] = [
     hub: "dijon",
     i18n: {
       fr: {
-        metaTitle: "Taxi Dijon → Dole | Prix fixe dès 75 € | TaxiNeo",
-        metaDescription: "Taxi Dijon → Dole. 55 km, 40 min, dès 75 €. Maison natale de Pasteur, collégiale, vieille ville. Réservation 24h/24.",
+        metaTitle: "Taxi Dijon → Dole | forfait dès 75 €, 40 min | TaxiNeo",
+        metaDescription: "Itinéraire A39, environ 40 min. Canal du Rhône au Rhin, Collégiale Notre-Dame, Pasteur sur le parcours. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Dijon → Dole",
         heroSubtitle: "Transfert Dijon → Dole au prix fixe de 75 — 95 €. 55 km par l'A39.",
         description: "Dole, ancienne capitale de la Franche-Comté, est une charmante ville au bord du Doubs et du canal du Rhône au Rhin, célèbre comme lieu de naissance de Louis Pasteur.",
@@ -245,7 +245,7 @@ export const trajetsDijonClermont: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Dijon → Dole | Fixed price from €75 | TaxiNeo",
-        metaDescription: "Taxi Dijon → Dole. 55 km, 40 min, from €75. Pasteur's birthplace, collegiate church, old town. Book 24/7.",
+        metaDescription: "Direct route via A39, 40 min. Canal du Rhône au Rhin, Collégiale Notre-Dame and Pasteur along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Dijon → Dole",
         heroSubtitle: "Your Dijon → Dole transfer at €75 — €95. 55 km via the A39.",
         description: "Dole, former capital of Franche-Comté, is a charming town on the Doubs river and the Rhine-Rhône canal, famous as the birthplace of Louis Pasteur.",
@@ -290,8 +290,8 @@ export const trajetsDijonClermont: Trajet[] = [
     hub: "dijon",
     i18n: {
       fr: {
-        metaTitle: "Taxi Dijon → Besançon | Prix fixe dès 120 € | TaxiNeo",
-        metaDescription: "Taxi Dijon → Besançon. 95 km, 1h05, dès 120 €. Citadelle Vauban UNESCO, boucle du Doubs, horlogerie. Réservation 24h/24.",
+        metaTitle: "Taxi Dijon → Besançon | 95 km, dès 120 € | TaxiNeo",
+        metaDescription: "Via A39 puis A36 en 1h05. Citadelle Vauban, UNESCO, Doubs et Horlogerie en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Dijon → Besançon",
         heroSubtitle: "Transfert Dijon → Besançon au prix fixe de 120 — 160 €. 95 km par l'A39 et l'A36.",
         description: "Besançon, capitale de la Franche-Comté, est une ville d'art et d'histoire inscrite au patrimoine mondial de l'UNESCO pour sa citadelle Vauban, lovée dans un méandre spectaculaire du Doubs.",
@@ -309,8 +309,8 @@ export const trajetsDijonClermont: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Dijon → Besançon | Fixed price from €120 | TaxiNeo",
-        metaDescription: "Taxi Dijon → Besançon. 95 km, 1h05, from €120. Vauban Citadel UNESCO, Doubs loop, watchmaking. Book 24/7.",
+        metaTitle: "Taxi Dijon → Besançon | 95 km, from €120 | TaxiNeo",
+        metaDescription: "Via A39 then A36, 1h05 ride. Citadelle Vauban, UNESCO, Doubs and Horlogerie en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Dijon → Besançon",
         heroSubtitle: "Your Dijon → Besançon transfer at €120 — €160. 95 km via the A39 and A36.",
         description: "Besançon, capital of Franche-Comté, is an art and history city with a UNESCO-listed Vauban citadel, nestled in a spectacular meander of the Doubs river.",
@@ -355,8 +355,8 @@ export const trajetsDijonClermont: Trajet[] = [
     hub: "dijon",
     i18n: {
       fr: {
-        metaTitle: "Taxi Dijon → Mâcon | Prix fixe dès 155 € | TaxiNeo",
-        metaDescription: "Taxi Dijon → Mâcon. 125 km, 1h20, dès 155 €. Roche de Solutré, vignobles Pouilly-Fuissé, Saône. Réservation 24h/24.",
+        metaTitle: "Taxi Dijon → Mâcon | 125 km, dès 155 €, 1h20 | TaxiNeo",
+        metaDescription: "Via A31 puis A6 en 1h20. Saône, Roche de Solutré et Beaujolais en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Dijon → Mâcon",
         heroSubtitle: "Transfert Dijon → Mâcon au prix fixe de 155 — 210 €. 125 km par l'A31 et l'A6.",
         description: "Mâcon, préfecture de Saône-et-Loire, est une ville baignée par la Saône, porte d'entrée du Beaujolais et du Mâconnais viticole, dominée par la célèbre Roche de Solutré.",
@@ -375,7 +375,7 @@ export const trajetsDijonClermont: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Dijon → Mâcon | Fixed price from €155 | TaxiNeo",
-        metaDescription: "Taxi Dijon → Mâcon. 125 km, 1h20, from €155. Rock of Solutré, Pouilly-Fuissé vineyards, Saône. Book 24/7.",
+        metaDescription: "Via A31 then A6, 1h20 ride. Saône, Roche de Solutré and Beaujolais along the way. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Dijon → Mâcon",
         heroSubtitle: "Your Dijon → Mâcon transfer at €155 — €210. 125 km via the A31 and A6.",
         description: "Mâcon, prefecture of Saône-et-Loire, is a riverside city on the Saône, gateway to Beaujolais and the Mâconnais wine region, overlooked by the famous Rock of Solutré.",

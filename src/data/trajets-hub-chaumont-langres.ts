@@ -27,8 +27,8 @@ export const trajetsChaumontLangres: Trajet[] = [
     hub: "chaumont-langres",
     i18n: {
       fr: {
-        metaTitle: "Taxi Chaumont → Dijon | Prix fixe dès 140 € | TaxiNeo",
-        metaDescription: "Taxi Chaumont → Dijon. 115 km, 1h15, dès 140 €. N19 et A31, traversée du plateau de Langres. Réservation 24h/24.",
+        metaTitle: "Taxi Chaumont → Dijon | 115 km, dès 140 € | TaxiNeo",
+        metaDescription: "Par N19 / A31, 1h15 de trajet. Passage par N19, Haute-Marne, Plateau de Langres et Viaduc de Chaumont. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Chaumont → Dijon",
         heroSubtitle: "Transfert Chaumont → Dijon au prix fixe de 140 — 175 €. 115 km, de la Haute-Marne à la Bourgogne.",
         description: "Dijon, capitale de la Bourgogne et cité des ducs, est à 1h15 de Chaumont.",
@@ -46,8 +46,8 @@ export const trajetsChaumontLangres: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Chaumont → Dijon | Fixed price from €140 | TaxiNeo",
-        metaDescription: "Taxi Chaumont → Dijon. 115 km, 1h15, from €140. N19 and A31, across the Langres plateau. Book 24/7.",
+        metaTitle: "Taxi Chaumont → Dijon | 115 km, from €140 | TaxiNeo",
+        metaDescription: "Direct route via N19 / A31, 1h15. N19, Haute-Marne, Plateau de Langres and Viaduc de Chaumont en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Chaumont → Dijon",
         heroSubtitle: "Your Chaumont → Dijon transfer at €140 — €175. 115 km, from Haute-Marne to Burgundy.",
         description: "Dijon, Burgundy capital and city of the Dukes, is 1h15 from Chaumont.",
@@ -92,8 +92,8 @@ export const trajetsChaumontLangres: Trajet[] = [
     hub: "chaumont-langres",
     i18n: {
       fr: {
-        metaTitle: "Taxi Chaumont → Troyes | Prix fixe dès 120 € | TaxiNeo",
-        metaDescription: "Taxi Chaumont → Troyes. 100 km, 1h05, dès 120 €. N19, Champagne-Sud, cathédrale, magasins d'usine. Réservation 24h/24.",
+        metaTitle: "Taxi Chaumont → Troyes | 100 km, dès 120 € | TaxiNeo",
+        metaDescription: "Via N19 / A5 en 1h05. N19, Champagne-Sud, Bassigny et Magasins d'usine en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Chaumont → Troyes",
         heroSubtitle: "Transfert Chaumont → Troyes au prix fixe de 120 — 155 €. 100 km, traversée de la Champagne méridionale.",
         description: "Troyes, capitale historique de la Champagne et paradis du shopping, est à 1h05 de Chaumont.",
@@ -111,8 +111,8 @@ export const trajetsChaumontLangres: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Chaumont → Troyes | Fixed price from €120 | TaxiNeo",
-        metaDescription: "Taxi Chaumont → Troyes. 100 km, 1h05, from €120. N19, southern Champagne, cathedral, outlet stores. Book 24/7.",
+        metaTitle: "Taxi Chaumont → Troyes | 100 km, from €120 | TaxiNeo",
+        metaDescription: "Via N19 / A5, 1h05 ride. N19, Champagne-Sud, Bassigny and Magasins d'usine en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Chaumont → Troyes",
         heroSubtitle: "Your Chaumont → Troyes transfer at €120 — €155. 100 km, through southern Champagne.",
         description: "Troyes, historic Champagne capital and shopping paradise, is 1h05 from Chaumont.",
@@ -157,8 +157,8 @@ export const trajetsChaumontLangres: Trajet[] = [
     hub: "chaumont-langres",
     i18n: {
       fr: {
-        metaTitle: "Taxi Chaumont → Paris | Prix fixe dès 310 € | TaxiNeo",
-        metaDescription: "Taxi Chaumont → Paris. 260 km, 2h40, dès 310 €. A5, transfert direct porte-à-porte depuis la Haute-Marne. Réservation 24h/24.",
+        metaTitle: "Taxi Chaumont → Paris | 260 km, dès 310 € | TaxiNeo",
+        metaDescription: "Par A5, 2h40 de trajet. Champagne, Sources de la Marne, Haute-Marne et Trajet longue distance en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Chaumont → Paris",
         heroSubtitle: "Transfert Chaumont → Paris au prix fixe de 310 — 380 €. 260 km, direct par l'A5.",
         description: "Paris est à 2h40 de Chaumont par l'autoroute A5.",
@@ -176,8 +176,8 @@ export const trajetsChaumontLangres: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Chaumont → Paris | Fixed price from €310 | TaxiNeo",
-        metaDescription: "Taxi Chaumont → Paris. 260 km, 2h40, from €310. A5, direct door-to-door from Haute-Marne. Book 24/7.",
+        metaTitle: "Taxi Chaumont → Paris | 260 km, from €310 | TaxiNeo",
+        metaDescription: "Via A5, 2h40 ride. Champagne, Sources de la Marne, Haute-Marne and Trajet longue distance en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Chaumont → Paris",
         heroSubtitle: "Your Chaumont → Paris transfer at €310 — €380. 260 km, via the A5.",
         description: "Paris is 2h40 from Chaumont via the A5 motorway.",
@@ -222,8 +222,8 @@ export const trajetsChaumontLangres: Trajet[] = [
     hub: "chaumont-langres",
     i18n: {
       fr: {
-        metaTitle: "Taxi Langres → Dijon | Prix fixe dès 100 € | TaxiNeo",
-        metaDescription: "Taxi Langres → Dijon. 85 km, 1h, dès 100 €. D674 et A31, depuis la cité de Diderot. Réservation 24h/24.",
+        metaTitle: "Taxi Langres → Dijon | forfait dès 100 € | TaxiNeo",
+        metaDescription: "Via D674 / A31 en 1h. Remparts de Langres, Diderot, Plateau de Langres et Sources de la Marne en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Langres → Dijon",
         heroSubtitle: "Transfert Langres → Dijon au prix fixe de 100 — 130 €. 85 km, du plateau de Langres à la Bourgogne.",
         description: "Dijon est à 1h de Langres, cité fortifiée et ville natale de Diderot.",
@@ -242,7 +242,7 @@ export const trajetsChaumontLangres: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Langres → Dijon | Fixed price from €100 | TaxiNeo",
-        metaDescription: "Taxi Langres → Dijon. 85 km, 1h, from €100. D674 and A31, from Diderot's birthplace. Book 24/7.",
+        metaDescription: "Via D674 / A31, 1 hour ride. Remparts de Langres, Diderot, Plateau de Langres and Sources de la Marne en route. Faster and more direct than train or bus.",
         heroTitle: "Taxi Langres → Dijon",
         heroSubtitle: "Your Langres → Dijon transfer at €100 — €130. 85 km, from the Langres plateau to Burgundy.",
         description: "Dijon is 1h from Langres, a fortified hilltop city and birthplace of Diderot.",
@@ -287,8 +287,8 @@ export const trajetsChaumontLangres: Trajet[] = [
     hub: "chaumont-langres",
     i18n: {
       fr: {
-        metaTitle: "Taxi Chaumont → Nancy | Prix fixe dès 180 € | TaxiNeo",
-        metaDescription: "Taxi Chaumont → Nancy. 150 km, 1h35, dès 180 €. A31, place Stanislas, Art nouveau. Réservation 24h/24.",
+        metaTitle: "Taxi Chaumont → Nancy | 150 km, dès 180 € | TaxiNeo",
+        metaDescription: "Itinéraire N19 / A31, environ 1h35. Passage par Lorraine, Place Stanislas, Haute-Marne et Art nouveau. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Chaumont → Nancy",
         heroSubtitle: "Transfert Chaumont → Nancy au prix fixe de 180 — 225 €. 150 km, de la Haute-Marne à la Lorraine.",
         description: "Nancy, cité de Stanislas et capitale de l'Art nouveau, est à 1h35 de Chaumont.",
@@ -306,8 +306,8 @@ export const trajetsChaumontLangres: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Chaumont → Nancy | Fixed price from €180 | TaxiNeo",
-        metaDescription: "Taxi Chaumont → Nancy. 150 km, 1h35, from €180. A31, Place Stanislas, Art Nouveau. Book 24/7.",
+        metaTitle: "Taxi Chaumont → Nancy | 150 km, from €180 | TaxiNeo",
+        metaDescription: "N19 / A31 route, approximately 1h35. Lorraine, Place Stanislas, Haute-Marne and Art nouveau en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Chaumont → Nancy",
         heroSubtitle: "Your Chaumont → Nancy transfer at €180 — €225. 150 km, from Haute-Marne to Lorraine.",
         description: "Nancy, city of Stanislas and Art Nouveau capital, is 1h35 from Chaumont.",

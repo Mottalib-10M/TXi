@@ -30,8 +30,8 @@ export const trajetsMonaco: Trajet[] = [
     hub: "monaco",
     i18n: {
       fr: {
-        metaTitle: "Taxi Monaco → Nice | Transfert Côte d'Azur | TaxiNeo",
-        metaDescription: "Réservez votre taxi Monaco–Nice dès 35 €. Trajet de 20 km le long de la Riviera, via la Basse Corniche ou l'A8. Service porte-à-porte 24h/24.",
+        metaTitle: "Taxi Monaco → Nice | forfait dès 35 €, 20 min | TaxiNeo",
+        metaDescription: "Via A8 / Basse Corniche en 20 min. Côte d'Azur, Basse Corniche, Promenade des Anglais sur le parcours. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Monaco — Nice",
         heroSubtitle: "De la Principauté au cœur de la capitale azuréenne",
         description: "Transfert en taxi de Monaco à Nice, capitale de la Côte d'Azur, par la Basse Corniche panoramique ou l'autoroute A8.",
@@ -50,7 +50,7 @@ export const trajetsMonaco: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Monaco → Nice | French Riviera Transfer | TaxiNeo",
-        metaDescription: "Book your Monaco–Nice taxi from €35. 20 km along the Riviera via the Basse Corniche or A8. Door-to-door service 24/7.",
+        metaDescription: "Via A8 / Basse Corniche, 20 min ride. Côte d'Azur, Basse Corniche and Promenade des Anglais along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Monaco — Nice",
         heroSubtitle: "From the Principality to the heart of the Riviera capital",
         description: "Taxi transfer from Monaco to Nice, capital of the French Riviera, via the scenic Basse Corniche or the A8 motorway.",
@@ -95,8 +95,8 @@ export const trajetsMonaco: Trajet[] = [
     hub: "monaco",
     i18n: {
       fr: {
-        metaTitle: "Taxi Monaco → Aéroport Nice | Transfert NCE | TaxiNeo",
-        metaDescription: "Réservez votre taxi Monaco–Aéroport Nice dès 40 €. 25 km par l'A8, trajet direct en 25 min. Prise en charge au terminal, service 24h/24.",
+        metaTitle: "Taxi Monaco → Aéroport Nice | 25 km, dès 40 € | TaxiNeo",
+        metaDescription: "Via A8 en 25 min. Aéroport Nice Côte d'Azur et Terminal 1 & 2 en chemin. Dépose au terminal, suivi de vol. Dépose au terminal exact, suivi de vol en temps réel.",
         heroTitle: "Taxi Monaco — Aéroport Nice",
         heroSubtitle: "Transfert direct depuis la Principauté vers l'aéroport Nice Côte d'Azur",
         description: "Transfert en taxi de Monaco à l'aéroport Nice Côte d'Azur (NCE), troisième aéroport de France, via l'autoroute A8.",
@@ -114,8 +114,8 @@ export const trajetsMonaco: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Monaco → Nice Airport | NCE Transfer | TaxiNeo",
-        metaDescription: "Book your Monaco–Nice Airport taxi from €40. 25 km via the A8, direct 25-min transfer. Terminal pickup, 24/7 service.",
+        metaTitle: "Taxi Monaco → Aéroport Nice | 25 km, from €40 | TaxiNeo",
+        metaDescription: "Via A8, 25 min ride. Aéroport Nice Côte d'Azur and Terminal 1 & 2 along the way. Terminal drop-off, flight tracking. Flight tracking, direct terminal drop-off.",
         heroTitle: "Taxi Monaco — Nice Airport",
         heroSubtitle: "Direct transfer from the Principality to Nice Côte d'Azur Airport",
         description: "Taxi transfer from Monaco to Nice Côte d'Azur Airport (NCE), France's third-busiest airport, via the A8 motorway.",
@@ -160,8 +160,8 @@ export const trajetsMonaco: Trajet[] = [
     hub: "monaco",
     i18n: {
       fr: {
-        metaTitle: "Taxi Monaco → Menton | Transfert Riviera | TaxiNeo",
-        metaDescription: "Réservez votre taxi Monaco–Menton dès 25 €. Trajet de 10 km par la Basse Corniche, arrivée en 12 min. Service porte-à-porte.",
+        metaTitle: "Taxi Monaco → Menton | forfait dès 25 €, 12 min | TaxiNeo",
+        metaDescription: "Via Basse Corniche en 12 min. Frontière italienne et Jardins de Menton en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Monaco — Menton",
         heroSubtitle: "De la Principauté à la Perle de la France, aux portes de l'Italie",
         description: "Transfert en taxi de Monaco à Menton, dernière ville française avant la frontière italienne, le long de la Basse Corniche méditerranéenne.",
@@ -179,8 +179,8 @@ export const trajetsMonaco: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Monaco → Menton | Riviera Transfer | TaxiNeo",
-        metaDescription: "Book your Monaco–Menton taxi from €25. 10 km via the Basse Corniche, arriving in 12 min. Door-to-door service.",
+        metaTitle: "Taxi Monaco → Menton | Fixed price transfer | TaxiNeo",
+        metaDescription: "Basse Corniche route, approximately 12 min. Frontière italienne and Jardins de Menton along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Monaco — Menton",
         heroSubtitle: "From the Principality to the Pearl of France, at Italy's doorstep",
         description: "Taxi transfer from Monaco to Menton, the last French town before the Italian border, along the Mediterranean Basse Corniche.",
@@ -225,8 +225,8 @@ export const trajetsMonaco: Trajet[] = [
     hub: "monaco",
     i18n: {
       fr: {
-        metaTitle: "Taxi Monaco → Cannes | Transfert Croisette | TaxiNeo",
-        metaDescription: "Réservez votre taxi Monaco–Cannes dès 70 €. 56 km par l'A8, trajet en 45 min. Dépose à la Croisette, au Palais des Festivals ou à votre hôtel.",
+        metaTitle: "Taxi Monaco → Cannes | forfait dès 70 €, 45 min | TaxiNeo",
+        metaDescription: "Via A8 en 45 min. Festival de Cannes et La Croisette en chemin. Alternative directe au train ou au bus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Monaco — Cannes",
         heroSubtitle: "De Monte-Carlo à la Croisette, deux joyaux de la Riviera",
         description: "Transfert en taxi de Monaco à Cannes, ville du célèbre Festival du Cinéma, via l'autoroute A8 le long de la Côte d'Azur.",
@@ -245,7 +245,7 @@ export const trajetsMonaco: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Monaco → Cannes | Croisette Transfer | TaxiNeo",
-        metaDescription: "Book your Monaco–Cannes taxi from €70. 56 km via the A8, 45-min ride. Drop-off at the Croisette, Palais des Festivals or your hotel.",
+        metaDescription: "Via A8, 45 min ride. Festival de Cannes and La Croisette along the way. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Monaco — Cannes",
         heroSubtitle: "From Monte Carlo to the Croisette, two Riviera jewels",
         description: "Taxi transfer from Monaco to Cannes, home of the famous Film Festival, via the A8 motorway along the French Riviera.",
@@ -290,8 +290,8 @@ export const trajetsMonaco: Trajet[] = [
     hub: "monaco",
     i18n: {
       fr: {
-        metaTitle: "Taxi Monaco → Milan | Transfert international | TaxiNeo",
-        metaDescription: "Réservez votre taxi Monaco–Milan dès 400 €. 340 km par l'A8, A10 et A7 via Gênes. Trajet en 3h20, service porte-à-porte international.",
+        metaTitle: "Taxi Monaco → Milan | 340 km, dès 400 €, 3h20 | TaxiNeo",
+        metaDescription: "Par A8 / A10 / A7, 3h20 de trajet. Traversée Italie, Autoroute A10/A7, Duomo di Milano sur le parcours. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Monaco — Milan",
         heroSubtitle: "De la Principauté à la capitale italienne de la mode et des affaires",
         description: "Transfert longue distance en taxi de Monaco à Milan, capitale économique de l'Italie, via les autoroutes A8, A10 et A7 à travers la Ligurie et la Lombardie.",
@@ -310,7 +310,7 @@ export const trajetsMonaco: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Monaco → Milan | International Transfer | TaxiNeo",
-        metaDescription: "Book your Monaco–Milan taxi from €400. 340 km via A8, A10 and A7 through Genoa. 3h20 journey, international door-to-door service.",
+        metaDescription: "Through A8 / A10 / A7 in 3h20. Traversée Italie, Autoroute A10/A7 and Duomo di Milano along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Monaco — Milan",
         heroSubtitle: "From the Principality to Italy's fashion and business capital",
         description: "Long-distance taxi transfer from Monaco to Milan, Italy's economic capital, via the A8, A10 and A7 motorways through Liguria and Lombardy.",

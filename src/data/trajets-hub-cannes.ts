@@ -30,8 +30,8 @@ export const trajetsCannes: Trajet[] = [
     hub: "cannes",
     i18n: {
       fr: {
-        metaTitle: "Taxi Cannes → Nice | Dès 45 € | TaxiNeo",
-        metaDescription: "Taxi Cannes → Nice. 33 km, 30 min, dès 45 €. Côte d'Azur. Réservation 24h/24.",
+        metaTitle: "Taxi Cannes → Nice | forfait dès 45 €, 30 min | TaxiNeo",
+        metaDescription: "Via A8 en 30 min. Côte d'Azur, Festival, Promenade des Anglais et Croisette en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Cannes → Nice",
         heroSubtitle: "Transfert Cannes → Nice au prix fixe de 45 — 60 €. 33 km, 30 min.",
         description: "Cannes — Nice, la Croisette à la Promenade des Anglais en 30 min.",
@@ -49,8 +49,8 @@ export const trajetsCannes: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Cannes → Nice | From €45 | TaxiNeo",
-        metaDescription: "Taxi Cannes → Nice. 33 km, 30 min, from €45. French Riviera. Book 24/7.",
+        metaTitle: "Taxi Cannes → Nice | Fixed price transfer | TaxiNeo",
+        metaDescription: "A8 route, approximately 30 min. Côte d'Azur, Festival, Promenade des Anglais and Croisette en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Cannes → Nice",
         heroSubtitle: "Cannes → Nice transfer at €45 — €60. 33 km, 30 min.",
         description: "From the Croisette to the Promenade des Anglais in 30 min.",
@@ -95,8 +95,8 @@ export const trajetsCannes: Trajet[] = [
     hub: "cannes",
     i18n: {
       fr: {
-        metaTitle: "Taxi Cannes → Monaco | Dès 70 € | TaxiNeo",
-        metaDescription: "Taxi Cannes → Monaco. 56 km, 45 min, dès 70 €. Principauté de Monaco, Monte-Carlo. Réservation 24h/24.",
+        metaTitle: "Taxi Cannes → Monaco | forfait dès 70 €, 45 min | TaxiNeo",
+        metaDescription: "Via A8 en 45 min. Principauté, Grand Prix, Casino Monte-Carlo et Riviera en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Cannes → Monaco",
         heroSubtitle: "Transfert Cannes → Monaco au prix fixe de 70 — 90 €. 56 km, 45 min.",
         description: "De la Croisette au Rocher de Monaco en 45 min par l'A8.",
@@ -114,8 +114,8 @@ export const trajetsCannes: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Cannes → Monaco | From €70 | TaxiNeo",
-        metaDescription: "Taxi Cannes → Monaco. 56 km, 45 min, from €70. Principality of Monaco, Monte-Carlo. Book 24/7.",
+        metaTitle: "Taxi Cannes → Monaco | Fixed price transfer | TaxiNeo",
+        metaDescription: "Via A8, 45 min ride. Principauté, Grand Prix, Casino Monte-Carlo and Riviera en route. Drop-off at your exact address. Door-to-door, luggage included.",
         heroTitle: "Taxi Cannes → Monaco",
         heroSubtitle: "Cannes → Monaco transfer at €70 — €90. 56 km, 45 min.",
         description: "From the Croisette to the Rock of Monaco in 45 min via A8.",
@@ -160,8 +160,8 @@ export const trajetsCannes: Trajet[] = [
     hub: "cannes",
     i18n: {
       fr: {
-        metaTitle: "Taxi Cannes → Saint-Tropez | Dès 100 € | TaxiNeo",
-        metaDescription: "Taxi Cannes → Saint-Tropez. 80 km, 1h10, dès 100 €. Golfe de Saint-Tropez. Réservation 24h/24.",
+        metaTitle: "Taxi Cannes → Saint-Tropez | 80 km, dès 100 € | TaxiNeo",
+        metaDescription: "Via A8 + D25 en 1h10. Golfe de Saint-Tropez, Plages et Port en chemin. Dépose porte-à-porte, bagages inclus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Cannes → Saint-Tropez",
         heroSubtitle: "Transfert Cannes → Saint-Tropez au prix fixe de 100 — 130 €. 80 km, 1h10.",
         description: "De la Croisette au port mythique de Saint-Tropez en 1h10.",
@@ -179,8 +179,8 @@ export const trajetsCannes: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Cannes → Saint-Tropez | From €100 | TaxiNeo",
-        metaDescription: "Taxi Cannes → Saint-Tropez. 80 km, 70 min, from €100. Gulf of Saint-Tropez. Book 24/7.",
+        metaTitle: "Taxi Cannes → Saint-Tropez | 80 km, from €100 | TaxiNeo",
+        metaDescription: "Via A8 + D25, 1h10 ride. Golfe de Saint-Tropez, Plages and Port along the way. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Cannes → Saint-Tropez",
         heroSubtitle: "Cannes → Saint-Tropez transfer at €100 — €130. 80 km, 70 min.",
         description: "From the Croisette to the legendary port of Saint-Tropez in 70 min.",
@@ -225,8 +225,8 @@ export const trajetsCannes: Trajet[] = [
     hub: "cannes",
     i18n: {
       fr: {
-        metaTitle: "Taxi Cannes → Grasse | Dès 30 € | TaxiNeo",
-        metaDescription: "Taxi Cannes → Grasse. 17 km, 20 min, dès 30 €. Capitale mondiale du parfum. Réservation 24h/24.",
+        metaTitle: "Taxi Cannes → Grasse | forfait dès 30 €, 20 min | TaxiNeo",
+        metaDescription: "Via D6085 en 20 min. Parfumerie, Provence, Vieille ville et Arrière-pays en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Cannes → Grasse",
         heroSubtitle: "Transfert Cannes → Grasse au prix fixe de 30 — 40 €. 17 km, 20 min.",
         description: "De la Croisette à la capitale mondiale du parfum en 20 min.",
@@ -244,8 +244,8 @@ export const trajetsCannes: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Cannes → Grasse | From €30 | TaxiNeo",
-        metaDescription: "Taxi Cannes → Grasse. 17 km, 20 min, from €30. World capital of perfume. Book 24/7.",
+        metaTitle: "Taxi Cannes → Grasse | Fixed price transfer | TaxiNeo",
+        metaDescription: "Via D6085, 20 min ride. Parfumerie, Provence, Vieille ville and Arrière-pays en route. Drop-off at your exact address. Door-to-door, luggage included.",
         heroTitle: "Taxi Cannes → Grasse",
         heroSubtitle: "Cannes → Grasse transfer at €30 — €40. 17 km, 20 min.",
         description: "From the Croisette to the world capital of perfume in 20 min.",
@@ -290,8 +290,8 @@ export const trajetsCannes: Trajet[] = [
     hub: "cannes",
     i18n: {
       fr: {
-        metaTitle: "Taxi Cannes → Aéroport Nice | Dès 40 € | TaxiNeo",
-        metaDescription: "Taxi Cannes → Aéroport Nice Côte d'Azur. 26 km, 25 min, dès 40 €. Transfert terminal 1 & 2. Réservation 24h/24.",
+        metaTitle: "Taxi Cannes → Aéroport Nice | 26 km, dès 40 € | TaxiNeo",
+        metaDescription: "Par A8, 25 min de trajet. Aéroport Nice Côte d'Azur, Terminal 1, Terminal 2 et Navette en chemin. Dépose au terminal exact, suivi de vol en temps réel.",
         heroTitle: "Taxi Cannes → Aéroport Nice",
         heroSubtitle: "Transfert Cannes → Aéroport Nice au prix fixe de 40 — 55 €. 26 km, 25 min.",
         description: "Transfert direct de Cannes à l'aéroport Nice Côte d'Azur en 25 min.",
@@ -309,8 +309,8 @@ export const trajetsCannes: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Cannes → Nice Airport | From €40 | TaxiNeo",
-        metaDescription: "Taxi Cannes → Nice Côte d'Azur Airport. 26 km, 25 min, from €40. Terminal 1 & 2 transfer. Book 24/7.",
+        metaTitle: "Taxi Cannes → Aéroport Nice | 26 km, from €40 | TaxiNeo",
+        metaDescription: "Through A8 in 25 min. Aéroport Nice Côte d'Azur, Terminal 1, Terminal 2 and Navette en route. Terminal drop-off, real-time flight tracking included.",
         heroTitle: "Taxi Cannes → Nice Airport",
         heroSubtitle: "Cannes → Nice Airport transfer at €40 — €55. 26 km, 25 min.",
         description: "Direct transfer from Cannes to Nice Côte d'Azur Airport in 25 min.",

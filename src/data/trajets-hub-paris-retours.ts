@@ -19,8 +19,8 @@ export const trajetsParisRetours: Trajet[] = [
     hub: "paris-retours",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lyon → Paris | Prix fixe dès 450 € | TaxiNeo",
-        metaDescription: "Taxi Lyon → Paris. 465 km, 4h30, dès 450 €. Retour confortable par l'A6 après salon ou déplacement pro. Réservation 24h/24.",
+        metaTitle: "Taxi Lyon → Paris | 465 km A6, dès 450 € | TaxiNeo",
+        metaDescription: "Par A6, undefined min de trajet. A6 Autoroute du Soleil, Bourgogne, Beaune et Retour business en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Lyon → Paris",
         heroSubtitle: "Retour Lyon → Paris au prix fixe de 450 — 550 €. 465 km via l'A6, Autoroute du Soleil.",
         description: "Le retour Lyon — Paris par l'A6 est idéal après un salon à Eurexpo, un rendez-vous Part-Dieu ou un weekend gastronomique dans les bouchons lyonnais.",
@@ -39,7 +39,7 @@ export const trajetsParisRetours: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Lyon → Paris | Fixed price from €450 | TaxiNeo",
-        metaDescription: "Taxi Lyon → Paris. 465 km, 4h30, from €450. Comfortable return via A6 after trade show or business trip. Book 24/7.",
+        metaDescription: "Through A6 in undefined min. A6 Autoroute du Soleil, Bourgogne, Beaune and Retour business en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Lyon → Paris",
         heroSubtitle: "Return Lyon → Paris at a fixed price of €450 — €550. 465 km via the A6.",
         description: "The Lyon to Paris return via the A6 is ideal after a trade show at Eurexpo or a business meeting in the Part-Dieu district.",
@@ -76,8 +76,8 @@ export const trajetsParisRetours: Trajet[] = [
     hub: "paris-retours",
     i18n: {
       fr: {
-        metaTitle: "Taxi Marseille → Paris | Prix fixe dès 750 € | TaxiNeo",
-        metaDescription: "Taxi Marseille → Paris. 775 km, 7h30, dès 750 €. Retour confortable après vacances en Provence. Réservation 24h/24.",
+        metaTitle: "Taxi Marseille → Paris | 775 km, dès 750 € | TaxiNeo",
+        metaDescription: "Par A7 puis A6, undefined min de trajet. A7+A6, Vallée du Rhône, Provence et Retour vacances en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Marseille → Paris",
         heroSubtitle: "Retour Marseille → Paris au prix fixe de 750 — 900 €. 775 km par l'A7 et l'A6.",
         description: "Le retour Marseille — Paris traverse toute la vallée du Rhône, des calanques provençales aux portes de la capitale.",
@@ -95,8 +95,8 @@ export const trajetsParisRetours: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Marseille → Paris | Fixed price from €750 | TaxiNeo",
-        metaDescription: "Taxi Marseille → Paris. 775 km, 7h30, from €750. Comfortable return after Provence holiday. Book 24/7.",
+        metaTitle: "Taxi Marseille → Paris | 775 km, from €750 | TaxiNeo",
+        metaDescription: "Direct route via A7 then A6, undefined min. A7+A6, Vallée du Rhône, Provence and Retour vacances en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Marseille → Paris",
         heroSubtitle: "Return Marseille → Paris at €750 — €900. 775 km via A7 and A6.",
         description: "The Marseille to Paris return crosses the entire Rhône Valley, from the Provençal calanques to the capital.",
@@ -133,8 +133,8 @@ export const trajetsParisRetours: Trajet[] = [
     hub: "paris-retours",
     i18n: {
       fr: {
-        metaTitle: "Taxi Disneyland → Paris | Prix fixe dès 55 € | TaxiNeo",
-        metaDescription: "Taxi Disneyland Paris → Paris centre. 40 km, 40 min, dès 55 €. Retour après fermeture du parc, enfants endormis. Réservation 24h/24.",
+        metaTitle: "Taxi Disneyland Paris → Paris | 40 km, dès 55 € | TaxiNeo",
+        metaDescription: "Via A4 en undefined min. Marne-la-Vallée, Retour parc, Soirée et Famille en chemin. Arrêt visite possible en chemin. Arrêt possible pour visites ou photos.",
         heroTitle: "Taxi Disneyland → Paris",
         heroSubtitle: "Retour Disneyland → Paris au prix fixe de 55 — 75 €. 40 km, prise en charge à la sortie du parc.",
         description: "Le retour de Disneyland Paris vers Paris en taxi est la solution idéale quand les enfants sont épuisés après une journée magique et que le RER A bondé n'est pas envisageable.",
@@ -152,8 +152,8 @@ export const trajetsParisRetours: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Disneyland → Paris | Fixed price from €55 | TaxiNeo",
-        metaDescription: "Taxi Disneyland Paris → Paris centre. 40 km, 40 min, from €55. Return after park closing, sleeping children. Book 24/7.",
+        metaTitle: "Taxi Disneyland Paris → Paris | 40 km, from €55 | TaxiNeo",
+        metaDescription: "Via A4, undefined min ride. Marne-la-Vallée, Retour parc, Soirée and Famille en route. Stops for sightseeing possible en route. Return trip at same rate.",
         heroTitle: "Taxi Disneyland → Paris",
         heroSubtitle: "Return Disneyland → Paris at €55 — €75. Pick-up at park exit.",
         description: "The return from Disneyland Paris by taxi is ideal when children are exhausted and the packed RER A is not an option.",
@@ -190,8 +190,8 @@ export const trajetsParisRetours: Trajet[] = [
     hub: "paris-retours",
     i18n: {
       fr: {
-        metaTitle: "Taxi Versailles → Paris | Prix fixe dès 35 € | TaxiNeo",
-        metaDescription: "Taxi Versailles → Paris. 22 km, 30 min, dès 35 €. Retour après visite du Château, Grandes Eaux ou spectacle. Réservation 24h/24.",
+        metaTitle: "Taxi Versailles → Paris | 22 km, dès 35 € | TaxiNeo",
+        metaDescription: "Trajet direct A13/N118 en undefined min. Passage par Château, Retour visite, Spectacle et Grandes Eaux. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Versailles → Paris",
         heroSubtitle: "Retour Versailles → Paris au prix fixe de 35 — 50 €. 22 km, porte-à-porte.",
         description: "Le retour de Versailles après une journée au Château est un classique. Le taxi vous évite le RER C bondé et la marche jusqu'à la gare.",
@@ -209,8 +209,8 @@ export const trajetsParisRetours: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Versailles → Paris | Fixed price from €35 | TaxiNeo",
-        metaDescription: "Taxi Versailles → Paris. 22 km, 30 min, from €35. Return after Château visit, Musical Fountains or show. Book 24/7.",
+        metaTitle: "Taxi Versailles → Paris | 22 km, from €35 | TaxiNeo",
+        metaDescription: "Direct route via A13/N118, undefined min. Château, Retour visite, Spectacle and Grandes Eaux en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Versailles → Paris",
         heroSubtitle: "Return Versailles → Paris at €35 — €50. Door-to-door.",
         description: "Return from Versailles after a day at the Château. The taxi avoids the crowded RER C and the walk to the station.",
@@ -248,7 +248,7 @@ export const trajetsParisRetours: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Reims → Paris | Prix fixe dès 170 € | TaxiNeo",
-        metaDescription: "Taxi Reims → Paris. 145 km, 1h30, dès 170 €. Retour après visite des caves de Champagne ou cathédrale. Réservation 24h/24.",
+        metaDescription: "Via A4 en undefined min. Champagne, Retour degustation, Caves et Cathédrale en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Reims → Paris",
         heroSubtitle: "Retour Reims → Paris au prix fixe de 170 — 210 €. 145 km par l'A4.",
         description: "Le retour Reims — Paris est parfait après une journée de dégustation dans les grandes maisons de Champagne ou une visite de la cathédrale des sacres.",
@@ -267,7 +267,7 @@ export const trajetsParisRetours: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Reims → Paris | Fixed price from €170 | TaxiNeo",
-        metaDescription: "Taxi Reims → Paris. 145 km, 1h30, from €170. Return after Champagne tasting or cathedral visit. Book 24/7.",
+        metaDescription: "A4 route, approximately undefined min. Champagne, Retour degustation, Caves and Cathédrale en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Reims → Paris",
         heroSubtitle: "Return Reims → Paris at €170 — €210. 145 km via A4.",
         description: "Perfect return after a day tasting in the great Champagne houses or visiting the coronation cathedral.",
@@ -304,8 +304,8 @@ export const trajetsParisRetours: Trajet[] = [
     hub: "paris-retours",
     i18n: {
       fr: {
-        metaTitle: "Taxi Deauville → Paris | Prix fixe dès 220 € | TaxiNeo",
-        metaDescription: "Taxi Deauville → Paris. 200 km, 2h15, dès 220 €. Retour dimanche soir après weekend normand. Réservation 24h/24.",
+        metaTitle: "Taxi Deauville → Paris | 200 km, dès 220 € | TaxiNeo",
+        metaDescription: "Via A13 en undefined min. Normandie, Retour weekend, Plage et Dimanche soir en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Deauville → Paris",
         heroSubtitle: "Retour Deauville → Paris au prix fixe de 220 — 270 €. 200 km par l'A13.",
         description: "Le retour de Deauville le dimanche soir est un classique parisien. Le taxi évite les embouteillages de l'A13 et la fatigue de la conduite après un weekend à la mer.",
@@ -323,8 +323,8 @@ export const trajetsParisRetours: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Deauville → Paris | Fixed price from €220 | TaxiNeo",
-        metaDescription: "Taxi Deauville → Paris. 200 km, 2h15, from €220. Sunday evening return after Normandy weekend. Book 24/7.",
+        metaTitle: "Taxi Deauville → Paris | 200 km, from €220 | TaxiNeo",
+        metaDescription: "A13 route, approximately undefined min. Normandie, Retour weekend, Plage and Dimanche soir en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Deauville → Paris",
         heroSubtitle: "Return Deauville → Paris at €220 — €270. 200 km via A13.",
         description: "The Sunday evening return from Deauville is a Parisian classic. The taxi avoids A13 traffic jams and driving fatigue.",
@@ -362,7 +362,7 @@ export const trajetsParisRetours: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Rouen → Paris | Prix fixe dès 165 € | TaxiNeo",
-        metaDescription: "Taxi Rouen → Paris. 135 km, 1h30, dès 165 €. Retour après visite de la capitale normande. Réservation 24h/24.",
+        metaDescription: "Via A13 en undefined min. Normandie, Seine, Cathédrale Monet et Retour en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Rouen → Paris",
         heroSubtitle: "Retour Rouen → Paris au prix fixe de 165 — 200 €. 135 km par l'A13.",
         description: "Le retour Rouen — Paris par l'A13 longe la Seine à travers les méandres normands, les falaises crayeuses et la forêt de Bord.",
@@ -381,7 +381,7 @@ export const trajetsParisRetours: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Rouen → Paris | Fixed price from €165 | TaxiNeo",
-        metaDescription: "Taxi Rouen → Paris. 135 km, 1h30, from €165. Return from Normandy's capital. Book 24/7.",
+        metaDescription: "Via A13, undefined min ride. Normandie, Seine, Cathédrale Monet and Retour en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Rouen → Paris",
         heroSubtitle: "Return Rouen → Paris at €165 — €200. 135 km via A13.",
         description: "The Rouen to Paris return via the A13 follows the Seine through Norman meanders, chalk cliffs and Bord forest.",

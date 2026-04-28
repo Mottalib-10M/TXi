@@ -20,7 +20,7 @@ export const trajetsRouenCaen3: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Rouen → Dieppe | Prix fixe dès 75 € | TaxiNeo",
-        metaDescription: "Taxi Rouen → Dieppe. 60 km, 50 min, dès 75 €. Vers la Côte d'Albâtre. Réservation 24h/24.",
+        metaDescription: "Via D915 en undefined min. Côte d'Albâtre, Falaises et Port de pêche en chemin. Dépose à votre adresse exacte. Alternative directe au train ou au bus.",
         heroTitle: "Taxi Rouen → Dieppe",
         heroSubtitle: "Transfert Rouen → Dieppe au prix fixe de 75 — 95 €. 60 km, 50 min.",
         description: "Dieppe, premier port de pêche normand, est à 50 min de Rouen.",
@@ -39,7 +39,7 @@ export const trajetsRouenCaen3: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Rouen → Dieppe | Fixed price from €75 | TaxiNeo",
-        metaDescription: "Taxi Rouen → Dieppe. 60 km, 50 min, from €75. Alabaster Coast. Book 24/7.",
+        metaDescription: "Via D915, undefined min ride. Côte d'Albâtre, Falaises and Port de pêche along the way. Drop-off at your exact address. Door-to-door, luggage included.",
         heroTitle: "Taxi Rouen → Dieppe",
         heroSubtitle: "Rouen → Dieppe transfer at €75 — €95. 60 km, 50 min.",
         description: "Dieppe, France's oldest seaside resort, 50 min from Rouen.",
@@ -76,8 +76,8 @@ export const trajetsRouenCaen3: Trajet[] = [
     hub: "rouen",
     i18n: {
       fr: {
-        metaTitle: "Taxi Rouen → Le Havre | Prix fixe dès 110 € | TaxiNeo",
-        metaDescription: "Taxi Rouen → Le Havre. 90 km, 55 min, dès 110 €. A150/A13 directe. Réservation 24h/24.",
+        metaTitle: "Taxi Rouen → Le Havre | 90 km, dès 110 € | TaxiNeo",
+        metaDescription: "Itinéraire A150 / A13, environ undefined min. Seine Maritime, Port, Patrimoine UNESCO sur le parcours. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Rouen → Le Havre",
         heroSubtitle: "Transfert Rouen → Le Havre au prix fixe de 110 — 140 €. 90 km, 55 min.",
         description: "Le Havre, premier port de France et patrimoine UNESCO, est à 55 min de Rouen.",
@@ -95,8 +95,8 @@ export const trajetsRouenCaen3: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Rouen → Le Havre | Fixed price from €110 | TaxiNeo",
-        metaDescription: "Taxi Rouen → Le Havre. 90 km, 55 min, from €110. France's #1 port, UNESCO site. Book 24/7.",
+        metaTitle: "Taxi Rouen → Le Havre | 90 km, from €110 | TaxiNeo",
+        metaDescription: "Direct route via A150 / A13, undefined min. Seine Maritime, Port and Patrimoine UNESCO along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Rouen → Le Havre",
         heroSubtitle: "Rouen → Le Havre transfer at €110 — €140. 90 km, 55 min.",
         description: "Le Havre, France's largest port and UNESCO World Heritage Site.",
@@ -134,7 +134,7 @@ export const trajetsRouenCaen3: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Caen → Saint-Lô | Prix fixe dès 80 € | TaxiNeo",
-        metaDescription: "Taxi Caen → Saint-Lô. 65 km, 50 min, dès 80 €. A84 gratuite vers la Manche. Réservation 24h/24.",
+        metaDescription: "Via A84 en undefined min. Bocage normand, Manche et Reconstruction en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Caen → Saint-Lô",
         heroSubtitle: "Transfert Caen → Saint-Lô au prix fixe de 80 — 100 €. 65 km, 50 min.",
         description: "Saint-Lô, « capitale des ruines », est à 50 min de Caen par l'A84 gratuite.",
@@ -153,7 +153,7 @@ export const trajetsRouenCaen3: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Caen → Saint-Lô | Fixed price from €80 | TaxiNeo",
-        metaDescription: "Taxi Caen → Saint-Lô. 65 km, 50 min, from €80. Free A84 through Norman bocage. Book 24/7.",
+        metaDescription: "Via A84, undefined min ride. Bocage normand, Manche and Reconstruction along the way. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Caen → Saint-Lô",
         heroSubtitle: "Caen → Saint-Lô transfer at €80 — €100. 65 km, 50 min.",
         description: "Saint-Lô, the 'capital of ruins', 50 min from Caen on toll-free A84.",
@@ -190,8 +190,8 @@ export const trajetsRouenCaen3: Trajet[] = [
     hub: "caen",
     i18n: {
       fr: {
-        metaTitle: "Taxi Caen → Granville | Prix fixe dès 135 € | TaxiNeo",
-        metaDescription: "Taxi Caen → Granville. 110 km, 1h20, dès 135 €. Vers la Monaco du Nord. Réservation 24h/24.",
+        metaTitle: "Taxi Caen → Granville | 110 km, dès 135 € | TaxiNeo",
+        metaDescription: "Via A84 / D924 en undefined min. Bocage, Mer et Îles Chausey en chemin. Arrêt visite possible en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Caen → Granville",
         heroSubtitle: "Transfert Caen → Granville au prix fixe de 135 — 170 €. 110 km, 1h20.",
         description: "Granville, la « Monaco du Nord », port de pêche et station balnéaire.",
@@ -209,8 +209,8 @@ export const trajetsRouenCaen3: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Caen → Granville | Fixed price from €135 | TaxiNeo",
-        metaDescription: "Taxi Caen → Granville. 110 km, 1h20, from €135. The 'Monaco of the North'. Book 24/7.",
+        metaTitle: "Taxi Caen → Granville | 110 km, from €135 | TaxiNeo",
+        metaDescription: "Via A84 / D924, undefined min ride. Bocage, Mer and Îles Chausey along the way. Stops for sightseeing possible en route. Perfect for a day trip without driving.",
         heroTitle: "Taxi Caen → Granville",
         heroSubtitle: "Caen → Granville transfer at €135 — €170. 110 km, 1h20.",
         description: "Granville, the 'Monaco of the North', fishing port and Belle Époque resort.",
@@ -248,7 +248,7 @@ export const trajetsRouenCaen3: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Rouen → Évreux | Prix fixe dès 70 € | TaxiNeo",
-        metaDescription: "Taxi Rouen → Évreux. 55 km, 45 min, dès 70 €. Vers la préfecture de l'Eure. Réservation 24h/24.",
+        metaDescription: "Via A13 / N154 en undefined min. Eure, Vallée de l'Eure et Cathédrale en chemin. Dépose à votre adresse exacte. Alternative directe au train ou au bus.",
         heroTitle: "Taxi Rouen → Évreux",
         heroSubtitle: "Transfert Rouen → Évreux au prix fixe de 70 — 90 €. 55 km, 45 min.",
         description: "Évreux, préfecture de l'Eure, est à 45 min de Rouen.",
@@ -267,7 +267,7 @@ export const trajetsRouenCaen3: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Rouen → Évreux | Fixed price from €70 | TaxiNeo",
-        metaDescription: "Taxi Rouen → Évreux. 55 km, 45 min, from €70. Eure prefecture. Book 24/7.",
+        metaDescription: "Via A13 / N154, undefined min ride. Eure, Vallée de l'Eure and Cathédrale along the way. Drop-off at your exact address. Door-to-door, luggage included.",
         heroTitle: "Taxi Rouen → Évreux",
         heroSubtitle: "Rouen → Évreux transfer at €70 — €90. 55 km, 45 min.",
         description: "Évreux, Eure prefecture, 45 min from Rouen.",

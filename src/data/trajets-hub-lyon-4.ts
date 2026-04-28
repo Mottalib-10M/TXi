@@ -20,7 +20,7 @@ export const trajetsLyonPart4: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Lyon → Avignon | Prix fixe dès 250 € | TaxiNeo",
-        metaDescription: "Taxi Lyon → Avignon. 230 km, 2h30, dès 250 €. Vallée du Rhône par l'A7, transfert direct. Réservation 24h/24.",
+        metaDescription: "Via A7 en undefined min. Vallée du Rhône, Provence, Festival et TGV en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Lyon → Avignon",
         heroSubtitle: "Transfert Lyon → Avignon au prix fixe de 250 — 310 €. 230 km via l'A7, la vallée du Rhône.",
         description: "Lyon et Avignon sont reliées par l'A7 qui descend la vallée du Rhône, l'un des plus beaux corridors routiers de France.",
@@ -39,7 +39,7 @@ export const trajetsLyonPart4: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Lyon → Avignon | Fixed price from €250 | TaxiNeo",
-        metaDescription: "Taxi Lyon → Avignon. 230 km, 2h30, from €250. Rhône Valley via A7. Book 24/7.",
+        metaDescription: "Via A7, undefined min ride. Vallée du Rhône, Provence, Festival and TGV en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Lyon → Avignon",
         heroSubtitle: "Lyon → Avignon transfer at €250 — €310. 230 km via the A7, Rhône Valley.",
         description: "Lyon and Avignon are linked by the A7 through the stunning Rhône Valley.",
@@ -76,8 +76,8 @@ export const trajetsLyonPart4: Trajet[] = [
     hub: "lyon",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lyon → Montpellier | Prix fixe dès 320 € | TaxiNeo",
-        metaDescription: "Taxi Lyon → Montpellier. 305 km, 3h, dès 320 €. A7/A9 via la vallée du Rhône. Réservation 24h/24.",
+        metaTitle: "Taxi Lyon → Montpellier | 305 km, dès 320 € | TaxiNeo",
+        metaDescription: "Via A7/A9 en undefined min. Méditerranée, Languedoc, Université et Plages en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Lyon → Montpellier",
         heroSubtitle: "Transfert Lyon → Montpellier au prix fixe de 320 — 400 €. 305 km via l'A7 et l'A9.",
         description: "Montpellier, ville méditerranéenne dynamique, est accessible en 3h depuis Lyon par l'A7 puis l'A9.",
@@ -95,8 +95,8 @@ export const trajetsLyonPart4: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Lyon → Montpellier | Fixed price from €320 | TaxiNeo",
-        metaDescription: "Taxi Lyon → Montpellier. 305 km, 3h, from €320. A7/A9 via Rhône Valley. Book 24/7.",
+        metaTitle: "Taxi Lyon → Montpellier | 305 km, from €320 | TaxiNeo",
+        metaDescription: "Via A7/A9, undefined min ride. Méditerranée, Languedoc, Université and Plages en route. Drop-off at your exact address. Door-to-door, luggage included.",
         heroTitle: "Taxi Lyon → Montpellier",
         heroSubtitle: "Lyon → Montpellier transfer at €320 — €400. 305 km via A7 and A9.",
         description: "Montpellier, France's fastest-growing Mediterranean city, is 3h from Lyon via A7/A9.",
@@ -133,8 +133,8 @@ export const trajetsLyonPart4: Trajet[] = [
     hub: "lyon",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lyon → Nice | Prix fixe dès 460 € | TaxiNeo",
-        metaDescription: "Taxi Lyon → Nice. 470 km, 4h30, dès 460 €. A7/A8, Côte d'Azur via Aix-en-Provence. Réservation 24h/24.",
+        metaTitle: "Taxi Lyon → Nice | 470 km A7/A8, dès 460 € | TaxiNeo",
+        metaDescription: "Via A7/A8 en undefined min. Côte d'Azur, Provence, Riviera et Aéroport Nice en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Lyon → Nice",
         heroSubtitle: "Transfert Lyon → Nice au prix fixe de 460 — 560 €. 470 km via l'A7/A8, direction la Côte d'Azur.",
         description: "De Lyon à Nice, le trajet traverse toute la Provence avant d'atteindre la Côte d'Azur et la Promenade des Anglais.",
@@ -153,7 +153,7 @@ export const trajetsLyonPart4: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Lyon → Nice | Fixed price from €460 | TaxiNeo",
-        metaDescription: "Taxi Lyon → Nice. 470 km, 4h30, from €460. A7/A8 via Provence to the French Riviera. Book 24/7.",
+        metaDescription: "A7/A8 route, approximately undefined min. Côte d'Azur, Provence, Riviera and Aéroport Nice en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Lyon → Nice",
         heroSubtitle: "Lyon → Nice transfer at €460 — €560. 470 km via A7/A8, French Riviera.",
         description: "From Lyon to Nice, crossing Provence to reach the Côte d'Azur and the Promenade des Anglais.",
@@ -190,8 +190,8 @@ export const trajetsLyonPart4: Trajet[] = [
     hub: "lyon",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lyon → Toulouse | Prix fixe dès 520 € | TaxiNeo",
-        metaDescription: "Taxi Lyon → Toulouse. 540 km, 5h, dès 520 €. A7/A9/A61 via Montpellier ou A75 via Clermont. Réservation 24h/24.",
+        metaTitle: "Taxi Lyon → Toulouse | 540 km, dès 520 € | TaxiNeo",
+        metaDescription: "Trajet direct A7/A9/A61 en undefined min. Passage par Auvergne, Languedoc, Airbus et Cité de l'Espace. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Lyon → Toulouse",
         heroSubtitle: "Transfert Lyon → Toulouse au prix fixe de 520 — 640 €. 540 km, la traversée du sud de la France.",
         description: "Lyon et Toulouse, les deux grandes métropoles du sud, sont reliées par un trajet de 5h traversant les paysages variés du Massif central ou du Languedoc.",
@@ -209,8 +209,8 @@ export const trajetsLyonPart4: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Lyon → Toulouse | Fixed price from €520 | TaxiNeo",
-        metaDescription: "Taxi Lyon → Toulouse. 540 km, 5h, from €520. Via Montpellier or Millau viaduct. Book 24/7.",
+        metaTitle: "Taxi Lyon → Toulouse | 540 km, from €520 | TaxiNeo",
+        metaDescription: "Direct route via A7/A9/A61, undefined min. Auvergne, Languedoc, Airbus and Cité de l'Espace en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Lyon → Toulouse",
         heroSubtitle: "Lyon → Toulouse transfer at €520 — €640. 540 km across southern France.",
         description: "Lyon and Toulouse, the two great southern capitals, connected by a 5h journey.",
@@ -247,8 +247,8 @@ export const trajetsLyonPart4: Trajet[] = [
     hub: "lyon",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lyon → Bordeaux | Prix fixe dès 540 € | TaxiNeo",
-        metaDescription: "Taxi Lyon → Bordeaux. 555 km, 5h10, dès 540 €. A89 directe via le Massif central. Réservation 24h/24.",
+        metaTitle: "Taxi Lyon → Bordeaux | 555 km, dès 540 € | TaxiNeo",
+        metaDescription: "Via A89 en undefined min. Massif central, Périgord, Vignobles et Direct en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Lyon → Bordeaux",
         heroSubtitle: "Transfert Lyon → Bordeaux au prix fixe de 540 — 660 €. 555 km via l'A89, traversée du Massif central.",
         description: "L'A89 (La Transversale) relie directement Lyon à Bordeaux en traversant le Massif central, sans passer par Paris.",
@@ -266,8 +266,8 @@ export const trajetsLyonPart4: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Lyon → Bordeaux | Fixed price from €540 | TaxiNeo",
-        metaDescription: "Taxi Lyon → Bordeaux. 555 km, 5h10, from €540. Direct A89 across the Massif Central. Book 24/7.",
+        metaTitle: "Taxi Lyon → Bordeaux | 555 km, from €540 | TaxiNeo",
+        metaDescription: "Via A89, undefined min ride. Massif central, Périgord, Vignobles and Direct en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Lyon → Bordeaux",
         heroSubtitle: "Lyon → Bordeaux transfer at €540 — €660. 555 km via A89, crossing the Massif Central.",
         description: "The A89 directly connects Lyon and Bordeaux across the Massif Central, no Paris detour needed.",
@@ -304,8 +304,8 @@ export const trajetsLyonPart4: Trajet[] = [
     hub: "lyon",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lyon → Strasbourg | Prix fixe dès 480 € | TaxiNeo",
-        metaDescription: "Taxi Lyon → Strasbourg. 490 km, 4h40, dès 480 €. A6/A36/A35 via Dijon et Mulhouse. Réservation 24h/24.",
+        metaTitle: "Taxi Lyon → Strasbourg | 490 km, dès 480 € | TaxiNeo",
+        metaDescription: "Par A6/A36/A35, undefined min de trajet. Bourgogne, Franche-Comté, Alsace et Parlement européen en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Lyon → Strasbourg",
         heroSubtitle: "Transfert Lyon → Strasbourg au prix fixe de 480 — 590 €. 490 km, de la Saône au Rhin.",
         description: "Le trajet relie les deux grandes métropoles du sillon rhodanien et de l'axe rhénan, traversant Bourgogne et Franche-Comté.",
@@ -323,8 +323,8 @@ export const trajetsLyonPart4: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Lyon → Strasbourg | Fixed price from €480 | TaxiNeo",
-        metaDescription: "Taxi Lyon → Strasbourg. 490 km, 4h40, from €480. Via Dijon and Mulhouse. Book 24/7.",
+        metaTitle: "Taxi Lyon → Strasbourg | 490 km, from €480 | TaxiNeo",
+        metaDescription: "Via A6/A36/A35, undefined min ride. Bourgogne, Franche-Comté, Alsace and Parlement européen en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Lyon → Strasbourg",
         heroSubtitle: "Lyon → Strasbourg transfer at €480 — €590. 490 km, from the Saône to the Rhine.",
         description: "Connecting Lyon to the European Parliament city through Burgundy and Franche-Comté.",
@@ -362,7 +362,7 @@ export const trajetsLyonPart4: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Lyon → Tignes | Prix fixe dès 240 € | TaxiNeo",
-        metaDescription: "Taxi Lyon → Tignes. 220 km, 2h45, dès 240 €. Transfert ski direct via Chambéry et la Tarentaise. Réservation 24h/24.",
+        metaDescription: "Via A43/N90 en undefined min. Savoie, Ski, Station 2100m et Espace Killy en chemin. Arrêt visite possible en chemin. Arrêt possible pour visites ou photos.",
         heroTitle: "Taxi Lyon → Tignes",
         heroSubtitle: "Transfert Lyon → Tignes au prix fixe de 240 — 300 €. 220 km via la vallée de la Tarentaise.",
         description: "Tignes, station mythique de l'Espace Killy à 2 100 m, est à 2h45 de Lyon par la vallée de la Tarentaise.",
@@ -381,7 +381,7 @@ export const trajetsLyonPart4: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Lyon → Tignes | Fixed price from €240 | TaxiNeo",
-        metaDescription: "Taxi Lyon → Tignes. 220 km, 2h45, from €240. Direct ski transfer via Tarentaise Valley. Book 24/7.",
+        metaDescription: "Via A43/N90, undefined min ride. Savoie, Ski, Station 2100m and Espace Killy en route. Stops for sightseeing possible en route. Return trip at same rate.",
         heroTitle: "Taxi Lyon → Tignes",
         heroSubtitle: "Lyon → Tignes transfer at €240 — €300. 220 km via the Tarentaise Valley.",
         description: "Tignes, the iconic Espace Killy resort at 2,100m, is 2h45 from Lyon.",
@@ -419,7 +419,7 @@ export const trajetsLyonPart4: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Lyon → Megève | Prix fixe dès 200 € | TaxiNeo",
-        metaDescription: "Taxi Lyon → Megève. 185 km, 2h10, dès 200 €. Transfert direct vers la station chic du Mont-Blanc. Réservation 24h/24.",
+        metaDescription: "Par A43/A40, undefined min de trajet. Passage par Mont-Blanc, Ski chic, Village alpin et Haute-Savoie. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Lyon → Megève",
         heroSubtitle: "Transfert Lyon → Megève au prix fixe de 200 — 250 €. 185 km au pied du Mont-Blanc.",
         description: "Megève, station de ski emblématique au pied du Mont-Blanc, est à 2h10 de Lyon.",
@@ -438,7 +438,7 @@ export const trajetsLyonPart4: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Lyon → Megève | Fixed price from €200 | TaxiNeo",
-        metaDescription: "Taxi Lyon → Megève. 185 km, 2h10, from €200. Direct transfer to the chic Mont-Blanc resort. Book 24/7.",
+        metaDescription: "Via A43/A40, undefined min ride. Mont-Blanc, Ski chic, Village alpin and Haute-Savoie en route. Stops for sightseeing possible en route. 7-seater van available.",
         heroTitle: "Taxi Lyon → Megève",
         heroSubtitle: "Lyon → Megève transfer at €200 — €250. 185 km at the foot of Mont-Blanc.",
         description: "Megève, the chic ski resort at the foot of Mont-Blanc, is 2h10 from Lyon.",
@@ -475,8 +475,8 @@ export const trajetsLyonPart4: Trajet[] = [
     hub: "lyon",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lyon → Les Deux Alpes | Prix fixe dès 180 € | TaxiNeo",
-        metaDescription: "Taxi Lyon → Les Deux Alpes. 160 km, 2h, dès 180 €. Transfert ski direct via Grenoble. Réservation 24h/24.",
+        metaTitle: "Taxi Lyon → Les Deux Alpes | 160 km, dès 180 € | TaxiNeo",
+        metaDescription: "Via A48/D1091 en undefined min. Isère, Glacier 3600m, Ski été et VTT en chemin. Arrêt visite possible en chemin. Arrêt possible pour visites ou photos.",
         heroTitle: "Taxi Lyon → Les Deux Alpes",
         heroSubtitle: "Transfert Lyon → Les Deux Alpes au prix fixe de 180 — 220 €. 160 km via Grenoble et le Bourg-d'Oisans.",
         description: "Les Deux Alpes, station de ski réputée pour son glacier à 3 600 m, est accessible en 2h depuis Lyon.",
@@ -494,8 +494,8 @@ export const trajetsLyonPart4: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Lyon → Les Deux Alpes | Fixed price from €180 | TaxiNeo",
-        metaDescription: "Taxi Lyon → Les Deux Alpes. 160 km, 2h, from €180. Direct ski transfer via Grenoble. Book 24/7.",
+        metaTitle: "Taxi Lyon → Les Deux Alpes | 160 km, from €180 | TaxiNeo",
+        metaDescription: "Via A48/D1091, undefined min ride. Isère, Glacier 3600m, Ski été and VTT en route. Stops for sightseeing possible en route. Guaranteed fare, no meter.",
         heroTitle: "Taxi Lyon → Les Deux Alpes",
         heroSubtitle: "Lyon → Les Deux Alpes transfer at €180 — €220. 160 km via Grenoble.",
         description: "Les Deux Alpes, home to Europe's largest skiable glacier at 3,600m, is 2h from Lyon.",
@@ -532,8 +532,8 @@ export const trajetsLyonPart4: Trajet[] = [
     hub: "lyon",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lyon → Alpe d'Huez | Prix fixe dès 180 € | TaxiNeo",
-        metaDescription: "Taxi Lyon → Alpe d'Huez. 155 km, 2h, dès 180 €. Transfert direct via les 21 virages légendaires. Réservation 24h/24.",
+        metaTitle: "Taxi Lyon → Alpe d'Huez | 155 km, dès 180 € | TaxiNeo",
+        metaDescription: "Par A48/D1091/D211, undefined min de trajet. 21 virages, Tour de France, Isère et Ski soleil en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Lyon → Alpe d'Huez",
         heroSubtitle: "Transfert Lyon → Alpe d'Huez au prix fixe de 180 — 220 €. 155 km via Grenoble et les 21 virages.",
         description: "L'Alpe d'Huez, « l'île au soleil » des Alpes, est célèbre pour ses 21 virages mythiques du Tour de France et son ensoleillement record.",
@@ -551,8 +551,8 @@ export const trajetsLyonPart4: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Lyon → Alpe d'Huez | Fixed price from €180 | TaxiNeo",
-        metaDescription: "Taxi Lyon → Alpe d'Huez. 155 km, 2h, from €180. Direct transfer via the legendary 21 hairpin bends. Book 24/7.",
+        metaTitle: "Taxi Lyon → Alpe d'Huez | 155 km, from €180 | TaxiNeo",
+        metaDescription: "A48/D1091/D211 route, approximately undefined min. 21 virages, Tour de France, Isère and Ski soleil en route. Stops for sightseeing possible en route.",
         heroTitle: "Taxi Lyon → Alpe d'Huez",
         heroSubtitle: "Lyon → Alpe d'Huez transfer at €180 — €220. 155 km via Grenoble and the 21 bends.",
         description: "Alpe d'Huez, the 'Island in the Sun', famous for its 21 Tour de France hairpin bends and record sunshine.",
@@ -589,8 +589,8 @@ export const trajetsLyonPart4: Trajet[] = [
     hub: "lyon",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lyon → Chamonix | Prix fixe dès 230 € | TaxiNeo",
-        metaDescription: "Taxi Lyon → Chamonix-Mont-Blanc. 220 km, 2h30, dès 230 €. Transfert direct au pied du Mont-Blanc. Réservation 24h/24.",
+        metaTitle: "Taxi Lyon → Chamonix | 220 km, dès 230 € | TaxiNeo",
+        metaDescription: "Via A43/A40 en undefined min. Mont-Blanc, Aiguille du Midi, Tunnel du Mont-Blanc et Alpinisme en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Lyon → Chamonix",
         heroSubtitle: "Transfert Lyon → Chamonix au prix fixe de 230 — 290 €. 220 km au pied du toit de l'Europe.",
         description: "Chamonix-Mont-Blanc, berceau de l'alpinisme et station légendaire au pied du plus haut sommet d'Europe occidentale.",
@@ -608,8 +608,8 @@ export const trajetsLyonPart4: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Lyon → Chamonix | Fixed price from €230 | TaxiNeo",
-        metaDescription: "Taxi Lyon → Chamonix-Mont-Blanc. 220 km, 2h30, from €230. Direct transfer to the foot of Mont-Blanc. Book 24/7.",
+        metaTitle: "Taxi Lyon → Chamonix | 220 km, from €230 | TaxiNeo",
+        metaDescription: "Direct route via A43/A40, undefined min. Mont-Blanc, Aiguille du Midi, Tunnel du Mont-Blanc and Alpinisme en route. Stops for sightseeing possible en route.",
         heroTitle: "Taxi Lyon → Chamonix",
         heroSubtitle: "Lyon → Chamonix transfer at €230 — €290. 220 km to the roof of Europe.",
         description: "Chamonix-Mont-Blanc, the birthplace of mountaineering, at the foot of Western Europe's highest peak.",
@@ -646,8 +646,8 @@ export const trajetsLyonPart4: Trajet[] = [
     hub: "lyon",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lyon → La Plagne | Prix fixe dès 230 € | TaxiNeo",
-        metaDescription: "Taxi Lyon → La Plagne. 210 km, 2h35, dès 230 €. Transfert ski direct Paradiski via la Tarentaise. Réservation 24h/24.",
+        metaTitle: "Taxi Lyon → La Plagne | 210 km, dès 230 € | TaxiNeo",
+        metaDescription: "Itinéraire A43/N90, environ undefined min. Paradiski, Tarentaise, Famille et 225 km pistes en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Lyon → La Plagne",
         heroSubtitle: "Transfert Lyon → La Plagne au prix fixe de 230 — 280 €. 210 km, domaine Paradiski.",
         description: "La Plagne, l'une des stations les plus fréquentées au monde, offre le domaine Paradiski (425 km de pistes) relié aux Arcs.",
@@ -665,8 +665,8 @@ export const trajetsLyonPart4: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Lyon → La Plagne | Fixed price from €230 | TaxiNeo",
-        metaDescription: "Taxi Lyon → La Plagne. 210 km, 2h35, from €230. Direct Paradiski ski transfer. Book 24/7.",
+        metaTitle: "Taxi Lyon → La Plagne | 210 km, from €230 | TaxiNeo",
+        metaDescription: "Via A43/N90, undefined min ride. Paradiski, Tarentaise, Famille and 225 km pistes en route. Stops for sightseeing possible en route. Return trip at same rate.",
         heroTitle: "Taxi Lyon → La Plagne",
         heroSubtitle: "Lyon → La Plagne transfer at €230 — €280. 210 km, Paradiski ski domain.",
         description: "La Plagne, the world's most visited ski resort, offers Paradiski (425 km of pistes) linked to Les Arcs.",
@@ -703,8 +703,8 @@ export const trajetsLyonPart4: Trajet[] = [
     hub: "lyon",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lyon → Courchevel | Prix fixe dès 220 € | TaxiNeo",
-        metaDescription: "Taxi Lyon → Courchevel. 195 km, 2h25, dès 220 €. Transfert direct vers la station de luxe des 3 Vallées. Réservation 24h/24.",
+        metaTitle: "Taxi Lyon → Courchevel | 195 km, dès 220 € | TaxiNeo",
+        metaDescription: "Via A43/N90 en undefined min. 3 Vallées, Luxe, Tarentaise et 600 km pistes en chemin. Arrêt visite possible en chemin. Arrêt possible pour visites ou photos.",
         heroTitle: "Taxi Lyon → Courchevel",
         heroSubtitle: "Transfert Lyon → Courchevel au prix fixe de 220 — 280 €. 195 km, domaine des 3 Vallées.",
         description: "Courchevel, joyau des 3 Vallées, est la station de ski la plus prestigieuse au monde. Transfert direct depuis Lyon en 2h25.",
@@ -722,8 +722,8 @@ export const trajetsLyonPart4: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Lyon → Courchevel | Fixed price from €220 | TaxiNeo",
-        metaDescription: "Taxi Lyon → Courchevel. 195 km, 2h25, from €220. Direct transfer to the luxury 3 Vallées resort. Book 24/7.",
+        metaTitle: "Taxi Lyon → Courchevel | 195 km, from €220 | TaxiNeo",
+        metaDescription: "Via A43/N90, undefined min ride. 3 Vallées, Luxe, Tarentaise and 600 km pistes en route. Stops for sightseeing possible en route. Return trip at same rate.",
         heroTitle: "Taxi Lyon → Courchevel",
         heroSubtitle: "Lyon → Courchevel transfer at €220 — €280. 195 km, the 3 Vallées domain.",
         description: "Courchevel, jewel of the 3 Vallées, is the world's most prestigious ski resort. Direct from Lyon in 2h25.",

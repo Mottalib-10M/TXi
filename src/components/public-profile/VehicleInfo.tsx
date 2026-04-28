@@ -117,7 +117,7 @@ function VehicleCard({ vehicle, index, total, onPhotoClick, photoIndexOffset }: 
   const t = useTranslations("publicProfile");
   const type = detectType(vehicle.brand, vehicle.model);
   const config = TYPE_CONFIG[type];
-  const colorHex = COLOR_MAP[vehicle.color.toLowerCase().trim()] || "#525252";
+  const colorHex = (vehicle.color ? COLOR_MAP[vehicle.color.toLowerCase().trim()] : null) || "#525252";
   const fullName = `${vehicle.brand} ${vehicle.model}`.trim();
   const hasPhotos = vehicle.photos && vehicle.photos.length > 0;
   const brandLogoUrl = getBrandLogoUrl(vehicle.brand);

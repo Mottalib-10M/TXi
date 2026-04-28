@@ -27,8 +27,8 @@ export const trajetsCholetSaumur: Trajet[] = [
     hub: "cholet-saumur",
     i18n: {
       fr: {
-        metaTitle: "Taxi Cholet → Nantes | Prix fixe dès 80 € | TaxiNeo",
-        metaDescription: "Taxi Cholet → Nantes. 65 km, 45 min, dès 80 €. Via N249 et A87, traversée des Mauges et du vignoble nantais. Réservation 24h/24.",
+        metaTitle: "Taxi Cholet → Nantes | forfait dès 80 €, 45 min | TaxiNeo",
+        metaDescription: "Itinéraire N249 / A87, environ 45 min. Passage par N249, Mauges, Loire-Atlantique et Vignoble nantais. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Cholet → Nantes",
         heroSubtitle: "Transfert Cholet → Nantes au prix fixe de 80 — 100 €. 65 km, trajet direct porte-à-porte depuis le cœur des Mauges.",
         description: "Nantes, métropole dynamique de l'Ouest, est à 45 minutes de Cholet par la N249 et l'A87.",
@@ -47,7 +47,7 @@ export const trajetsCholetSaumur: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Cholet → Nantes | Fixed price from €80 | TaxiNeo",
-        metaDescription: "Taxi Cholet → Nantes. 65 km, 45 min, from €80. Via N249 and A87, through the Mauges and Nantes vineyards. Book 24/7.",
+        metaDescription: "N249 / A87 route, approximately 45 min. N249, Mauges, Loire-Atlantique and Vignoble nantais en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Cholet → Nantes",
         heroSubtitle: "Your Cholet → Nantes transfer at €80 — €100. 65 km, direct door-to-door from the heart of the Mauges.",
         description: "Nantes, a dynamic western French metropolis, is 45 minutes from Cholet via the N249 and A87.",
@@ -92,8 +92,8 @@ export const trajetsCholetSaumur: Trajet[] = [
     hub: "cholet-saumur",
     i18n: {
       fr: {
-        metaTitle: "Taxi Cholet → Angers | Prix fixe dès 75 € | TaxiNeo",
-        metaDescription: "Taxi Cholet → Angers. 60 km, 40 min, dès 75 €. Via A87 et D960, traversée de l'Anjou et des Mauges. Réservation 24h/24.",
+        metaTitle: "Taxi Cholet → Angers | forfait dès 75 €, 40 min | TaxiNeo",
+        metaDescription: "Via A87 / D960 en 40 min. Mauges, Anjou, Château d'Angers et Maine-et-Loire en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Cholet → Angers",
         heroSubtitle: "Transfert Cholet → Angers au prix fixe de 75 — 95 €. 60 km, liaison directe entre les deux grandes villes du Maine-et-Loire.",
         description: "Angers, capitale de l'Anjou et préfecture du Maine-et-Loire, est à 40 minutes de Cholet par la D960 ou l'A87.",
@@ -112,7 +112,7 @@ export const trajetsCholetSaumur: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Cholet → Angers | Fixed price from €75 | TaxiNeo",
-        metaDescription: "Taxi Cholet → Angers. 60 km, 40 min, from €75. Via A87/D960, through the Mauges and Anjou. Book 24/7.",
+        metaDescription: "A87 / D960 route, approximately 40 min. Mauges, Anjou, Château d'Angers and Maine-et-Loire en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Cholet → Angers",
         heroSubtitle: "Your Cholet → Angers transfer at €75 — €95. 60 km, direct link between Maine-et-Loire's two main cities.",
         description: "Angers, capital of Anjou and Maine-et-Loire prefecture, is 40 minutes from Cholet via the D960 or A87.",
@@ -157,8 +157,8 @@ export const trajetsCholetSaumur: Trajet[] = [
     hub: "cholet-saumur",
     i18n: {
       fr: {
-        metaTitle: "Taxi Saumur → Tours | Prix fixe dès 80 € | TaxiNeo",
-        metaDescription: "Taxi Saumur → Tours. 65 km, 45 min, dès 80 €. Via A85, au cœur des châteaux de la Loire. Réservation 24h/24.",
+        metaTitle: "Taxi Saumur → Tours | forfait dès 80 €, 45 min | TaxiNeo",
+        metaDescription: "Itinéraire A85, environ 45 min. Loire Valley, Châteaux, Cadre Noir et Vignobles de Touraine en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Saumur → Tours",
         heroSubtitle: "Transfert Saumur → Tours au prix fixe de 80 — 100 €. 65 km, liaison directe au cœur du Val de Loire classé UNESCO.",
         description: "Tours, capitale de la Touraine, est à 45 minutes de Saumur par l'autoroute A85 le long de la Loire.",
@@ -177,7 +177,7 @@ export const trajetsCholetSaumur: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Saumur → Tours | Fixed price from €80 | TaxiNeo",
-        metaDescription: "Taxi Saumur → Tours. 65 km, 45 min, from €80. Via A85 through the Loire Valley châteaux. Book 24/7.",
+        metaDescription: "Direct route via A85, 45 min. Loire Valley, Châteaux, Cadre Noir and Vignobles de Touraine en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Saumur → Tours",
         heroSubtitle: "Your Saumur → Tours transfer at €80 — €100. 65 km, direct route through the UNESCO-listed Loire Valley.",
         description: "Tours, capital of Touraine, is 45 minutes from Saumur via the A85 motorway along the Loire.",
@@ -222,8 +222,8 @@ export const trajetsCholetSaumur: Trajet[] = [
     hub: "cholet-saumur",
     i18n: {
       fr: {
-        metaTitle: "Taxi Saumur → Angers | Prix fixe dès 60 € | TaxiNeo",
-        metaDescription: "Taxi Saumur → Angers. 50 km, 35 min, dès 60 €. Via A85 ou D952, le long de la Loire en Anjou. Réservation 24h/24.",
+        metaTitle: "Taxi Saumur → Angers | forfait dès 60 €, 35 min | TaxiNeo",
+        metaDescription: "Itinéraire A85 / D952, environ 35 min. Passage par Loire, Anjou blanc, Cadre Noir et Château d'Angers. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Saumur → Angers",
         heroSubtitle: "Transfert Saumur → Angers au prix fixe de 60 — 80 €. 50 km, liaison express entre les deux perles de l'Anjou.",
         description: "Angers, préfecture du Maine-et-Loire et capitale de l'Anjou, est à 35 minutes de Saumur le long de la Loire.",
@@ -242,7 +242,7 @@ export const trajetsCholetSaumur: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Saumur → Angers | Fixed price from €60 | TaxiNeo",
-        metaDescription: "Taxi Saumur → Angers. 50 km, 35 min, from €60. Via A85 or D952 along the Loire. Book 24/7.",
+        metaDescription: "A85 / D952 route, approximately 35 min. Loire, Anjou blanc, Cadre Noir and Château d'Angers en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Saumur → Angers",
         heroSubtitle: "Your Saumur → Angers transfer at €60 — €80. 50 km, express link between Anjou's two gems.",
         description: "Angers, Maine-et-Loire prefecture and Anjou capital, is 35 minutes from Saumur along the Loire.",
@@ -287,8 +287,8 @@ export const trajetsCholetSaumur: Trajet[] = [
     hub: "cholet-saumur",
     i18n: {
       fr: {
-        metaTitle: "Taxi Cholet → La Roche-sur-Yon | Prix fixe dès 85 € | TaxiNeo",
-        metaDescription: "Taxi Cholet → La Roche-sur-Yon. 70 km, 50 min, dès 85 €. Traversée du bocage vendéen, sans péage. Réservation 24h/24.",
+        metaTitle: "Taxi Cholet → La Roche-sur-Yon | 70 km, dès 85 € | TaxiNeo",
+        metaDescription: "Via D960bis / N249 en 50 min. Vendée, Bocage vendéen, Puy du Fou et Mauges en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Cholet → La Roche-sur-Yon",
         heroSubtitle: "Transfert Cholet → La Roche-sur-Yon au prix fixe de 85 — 110 €. 70 km, liaison directe entre Maine-et-Loire et Vendée.",
         description: "La Roche-sur-Yon, préfecture de la Vendée, est à 50 minutes de Cholet par les routes départementales à travers le bocage vendéen.",
@@ -306,8 +306,8 @@ export const trajetsCholetSaumur: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Cholet → La Roche-sur-Yon | Fixed price from €85 | TaxiNeo",
-        metaDescription: "Taxi Cholet → La Roche-sur-Yon. 70 km, 50 min, from €85. Through the Vendée bocage, toll-free. Book 24/7.",
+        metaTitle: "Taxi Cholet → La Roche-sur-Yon | 70 km, from €85 | TaxiNeo",
+        metaDescription: "Via D960bis / N249, 50 min ride. Vendée, Bocage vendéen, Puy du Fou and Mauges en route. Drop-off at your exact address. Door-to-door, luggage included.",
         heroTitle: "Taxi Cholet → La Roche-sur-Yon",
         heroSubtitle: "Your Cholet → La Roche-sur-Yon transfer at €85 — €110. 70 km, direct link between Maine-et-Loire and Vendée.",
         description: "La Roche-sur-Yon, Vendée prefecture, is 50 minutes from Cholet through the Vendée bocage countryside.",

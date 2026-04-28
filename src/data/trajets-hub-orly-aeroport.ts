@@ -32,8 +32,8 @@ export const trajetsOrlyAeroport: Trajet[] = [
     hub: "orly-aeroport",
     i18n: {
       fr: {
-        metaTitle: "Taxi Orly → Paris centre | Prix fixe 32-37 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Aéroport Orly → Paris centre. 18 km, 25 min, tarif réglementé 32-37 €. Chauffeur professionnel 24h/24. Réservation en ligne.",
+        metaTitle: "Taxi Aéroport Orly → Paris centre | 18 km, 32 € | TaxiNeo",
+        metaDescription: "Via A106 en 25 min. Porte d'Italie, Boulevard périphérique, Pont National et Place d'Italie en chemin. Dépose au terminal exact, suivi de vol en temps réel.",
         heroTitle: "Taxi Aéroport Orly → Paris centre",
         heroSubtitle: "Votre transfert Orly → Paris centre au tarif réglementé de 32 — 37 €. Réservation en ligne, chauffeur professionnel 24h/24.",
         description: "Le trajet Aéroport Orly — Paris centre est le transfert le plus fréquent depuis le deuxième aéroport parisien. Situé à seulement 18 km au sud de la capitale, Orly dessert chaque année plus de 33 millions de passagers. Votre chauffeur TaxiNeo vous accueille en zone arrivées et vous conduit directement à votre adresse parisienne en 25 minutes.",
@@ -51,8 +51,8 @@ export const trajetsOrlyAeroport: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Orly → Paris Centre | Fixed Rate €32-37 | TaxiNeo",
-        metaDescription: "Book your taxi from Orly Airport to Paris centre. 18 km, 25 min, regulated flat rate €32-37. Professional driver 24/7. Online booking.",
+        metaTitle: "Taxi Aéroport Orly → Paris centre | 18 km, €32 | TaxiNeo",
+        metaDescription: "Via A106 then ring road, 25 min ride. Porte d'Italie, Boulevard périphérique, Pont National and Place d'Italie en route. Terminal drop-off, flight tracking.",
         heroTitle: "Taxi Orly Airport → Paris Centre",
         heroSubtitle: "Your Orly → Paris centre transfer at the regulated flat rate of €32 — €37. Online booking, professional driver 24/7.",
         description: "The Orly Airport — Paris centre route is the most frequent transfer from Paris's second airport. Located just 18 km south of the capital, Orly handles over 33 million passengers annually. Your TaxiNeo driver meets you in the arrivals area and drives you directly to your Parisian address in 25 minutes.",
@@ -99,8 +99,8 @@ export const trajetsOrlyAeroport: Trajet[] = [
     hub: "orly-aeroport",
     i18n: {
       fr: {
-        metaTitle: "Taxi Orly → Versailles | Dès 45 € | TaxiNeo",
-        metaDescription: "Taxi Aéroport Orly → Versailles : 30 km, 30 min, dès 45 €. Transfert direct vers le Château de Versailles. Réservation en ligne 24h/24.",
+        metaTitle: "Taxi Aéroport Orly → Versailles | 30 km, dès 45 € | TaxiNeo",
+        metaDescription: "Via A6 puis A10 / N118 en 30 min. A10 direction Chartres, Plateau de Saclay, Château de Versailles et Forêt de Verrières en chemin. Trajet sans péage.",
         heroTitle: "Taxi Aéroport Orly → Versailles",
         heroSubtitle: "Votre transfert Orly → Versailles au prix fixe de 45 — 60 €. Chauffeur professionnel, réservation en ligne 24h/24.",
         description: "Le trajet Aéroport Orly — Versailles relie directement le deuxième aéroport parisien à la célèbre ville royale des Yvelines. En 30 minutes et sans passer par Paris, votre chauffeur TaxiNeo vous conduit depuis votre terminal d'arrivée jusqu'au pied du Château de Versailles ou à toute autre adresse dans la ville.",
@@ -118,8 +118,8 @@ export const trajetsOrlyAeroport: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Orly → Versailles | From €45 | TaxiNeo",
-        metaDescription: "Taxi Orly Airport to Versailles: 30 km, 30 min, from €45. Direct transfer to the Palace of Versailles. Online booking 24/7.",
+        metaTitle: "Taxi Aéroport Orly → Versailles | 30 km, from €45 | TaxiNeo",
+        metaDescription: "Via A6 then A10 / N118, 30 min ride. A10 direction Chartres, Plateau de Saclay, Château de Versailles and Forêt de Verrières en route. No toll on this route.",
         heroTitle: "Taxi Orly Airport → Versailles",
         heroSubtitle: "Your Orly → Versailles transfer at a fixed price of €45 — €60. Professional driver, online booking 24/7.",
         description: "The Orly Airport — Versailles route directly connects Paris's second airport to the famous royal city in the Yvelines department. In 30 minutes and without passing through Paris, your TaxiNeo driver takes you from your arrival terminal to the Palace of Versailles or any other address in the city.",
@@ -166,8 +166,8 @@ export const trajetsOrlyAeroport: Trajet[] = [
     hub: "orly-aeroport",
     i18n: {
       fr: {
-        metaTitle: "Taxi Orly → Fontainebleau | Dès 85 € | TaxiNeo",
-        metaDescription: "Taxi Aéroport Orly → Fontainebleau : 70 km, 50 min, dès 85 €. Transfert direct vers le Château et la forêt de Fontainebleau. Réservation 24h/24.",
+        metaTitle: "Taxi Aéroport Orly → Fontainebleau | 70 km, 85 € | TaxiNeo",
+        metaDescription: "Via A6 puis A6 direction Lyon / N7 en 50 min. Forêt de Sénart, Évry-Courcouronnes, Forêt de Fontainebleau et Château de Fontainebleau en chemin. Devis en ligne.",
         heroTitle: "Taxi Aéroport Orly → Fontainebleau",
         heroSubtitle: "Votre transfert Orly → Fontainebleau au prix fixe de 85 — 110 €. Chauffeur professionnel, réservation en ligne 24h/24.",
         description: "Le trajet Aéroport Orly — Fontainebleau relie en 50 minutes le deuxième aéroport parisien à la ville impériale de Seine-et-Marne. Fontainebleau, célèbre pour son château et sa forêt de 25 000 hectares, est une destination prisée des voyageurs internationaux comme des résidents franciliens. Votre chauffeur TaxiNeo vous y conduit confortablement par l'autoroute A6.",
@@ -185,8 +185,8 @@ export const trajetsOrlyAeroport: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Orly → Fontainebleau | From €85 | TaxiNeo",
-        metaDescription: "Taxi Orly Airport to Fontainebleau: 70 km, 50 min, from €85. Direct transfer to the Palace and Forest of Fontainebleau. Online booking 24/7.",
+        metaTitle: "Taxi Aéroport Orly → Fontainebleau | 70 km, €85 | TaxiNeo",
+        metaDescription: "Via A6 then A6 direction Lyon / N7, 50 min ride. Forêt de Sénart, Évry-Courcouronnes and Forêt de Fontainebleau along the way. Up to 1h15 during rush hour.",
         heroTitle: "Taxi Orly Airport → Fontainebleau",
         heroSubtitle: "Your Orly → Fontainebleau transfer at a fixed price of €85 — €110. Professional driver, online booking 24/7.",
         description: "The Orly Airport — Fontainebleau route connects Paris's second airport to the imperial city of Seine-et-Marne in 50 minutes. Fontainebleau, renowned for its palace and 25,000-hectare forest, is a prized destination for international travellers and Île-de-France residents alike.",
@@ -233,8 +233,8 @@ export const trajetsOrlyAeroport: Trajet[] = [
     hub: "orly-aeroport",
     i18n: {
       fr: {
-        metaTitle: "Taxi Orly → Évry-Courcouronnes | Dès 30 € | TaxiNeo",
-        metaDescription: "Taxi Aéroport Orly → Évry-Courcouronnes : 20 km, 20 min, dès 30 €. Transfert direct vers la préfecture de l'Essonne. Réservation en ligne 24h/24.",
+        metaTitle: "Taxi Aéroport Orly → Évry-Courcouronnes | 20 km | TaxiNeo",
+        metaDescription: "Via A6 puis N104 Francilienne en 20 min. Marché de Rungis, Francilienne N104, Cathédrale d'Évry et Centre commercial Évry 2 en chemin. Trajet sans péage.",
         heroTitle: "Taxi Aéroport Orly → Évry-Courcouronnes",
         heroSubtitle: "Votre transfert Orly → Évry-Courcouronnes au prix fixe de 30 — 40 €. Chauffeur professionnel, réservation en ligne 24h/24.",
         description: "Le trajet Aéroport Orly — Évry-Courcouronnes relie en 20 minutes le deuxième aéroport parisien à la préfecture de l'Essonne. Située à seulement 20 km au sud d'Orly, Évry-Courcouronnes est un pôle administratif, universitaire et économique majeur du sud francilien. Votre chauffeur TaxiNeo vous y conduit directement par l'A6 et la Francilienne.",
@@ -252,8 +252,8 @@ export const trajetsOrlyAeroport: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Orly → Évry-Courcouronnes | From €30 | TaxiNeo",
-        metaDescription: "Taxi Orly Airport to Évry-Courcouronnes: 20 km, 20 min, from €30. Direct transfer to the Essonne prefecture. Online booking 24/7.",
+        metaTitle: "Taxi Aéroport Orly → Évry-Courcouronnes | 20 km | TaxiNeo",
+        metaDescription: "Via A6 then N104 Francilienne, 20 min ride. Marché de Rungis, Francilienne N104, Cathédrale d'Évry and Centre commercial Évry 2 en route. No toll on this route.",
         heroTitle: "Taxi Orly Airport → Évry-Courcouronnes",
         heroSubtitle: "Your Orly → Évry-Courcouronnes transfer at a fixed price of €30 — €40. Professional driver, online booking 24/7.",
         description: "The Orly Airport — Évry-Courcouronnes route connects Paris's second airport to the Essonne prefecture in just 20 minutes. Located only 20 km south of Orly, Évry-Courcouronnes is a major administrative, university and economic hub in the southern Paris region.",
@@ -300,8 +300,8 @@ export const trajetsOrlyAeroport: Trajet[] = [
     hub: "orly-aeroport",
     i18n: {
       fr: {
-        metaTitle: "Taxi Orly → Massy-Palaiseau | Dès 25 € | TaxiNeo",
-        metaDescription: "Taxi Aéroport Orly → Massy-Palaiseau : 15 km, 18 min, dès 25 €. Transfert direct vers la gare TGV et le plateau de Saclay. Réservation 24h/24.",
+        metaTitle: "Taxi Aéroport Orly → Massy-Palaiseau | 15 km, 25 € | TaxiNeo",
+        metaDescription: "Via D117 puis A10 / N20 en 18 min. Route D117, Parc de Vilgénis, Gare TGV Massy et Quartier Atlantis en chemin. Suivi de vol, dépose directe au terminal.",
         heroTitle: "Taxi Aéroport Orly → Massy-Palaiseau",
         heroSubtitle: "Votre transfert Orly → Massy-Palaiseau au prix fixe de 25 — 35 €. Chauffeur professionnel, réservation en ligne 24h/24.",
         description: "Le trajet Aéroport Orly — Massy-Palaiseau relie en seulement 18 minutes le deuxième aéroport parisien au pôle scientifique et ferroviaire de l'Essonne. Massy, avec sa gare TGV connectant la province au sud francilien, et Palaiseau, siège de l'École polytechnique et du plateau de Saclay, forment un ensemble urbain stratégique desservi rapidement depuis Orly.",
@@ -319,8 +319,8 @@ export const trajetsOrlyAeroport: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Orly → Massy-Palaiseau | From €25 | TaxiNeo",
-        metaDescription: "Taxi Orly Airport to Massy-Palaiseau: 15 km, 18 min, from €25. Direct transfer to the TGV station and Saclay plateau. Online booking 24/7.",
+        metaTitle: "Taxi Aéroport Orly → Massy-Palaiseau | 15 km, €25 | TaxiNeo",
+        metaDescription: "Via D117 then A10 / N20, 18 min ride. Route D117, Parc de Vilgénis, Gare TGV Massy and Quartier Atlantis en route. Terminal drop-off, flight tracking.",
         heroTitle: "Taxi Orly Airport → Massy-Palaiseau",
         heroSubtitle: "Your Orly → Massy-Palaiseau transfer at a fixed price of €25 — €35. Professional driver, online booking 24/7.",
         description: "The Orly Airport — Massy-Palaiseau route connects Paris's second airport to the Essonne's scientific and railway hub in just 18 minutes. Massy, with its TGV station linking the provinces to southern Île-de-France, and Palaiseau, home to École Polytechnique and the Saclay plateau, form a strategic urban centre quickly reached from Orly.",

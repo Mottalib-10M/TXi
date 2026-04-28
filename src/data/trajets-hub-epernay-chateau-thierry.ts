@@ -27,8 +27,8 @@ export const trajetsEpernayChateauThierry: Trajet[] = [
     hub: "epernay-chateau-thierry",
     i18n: {
       fr: {
-        metaTitle: "Taxi Épernay → Reims | Prix fixe dès 35 € | TaxiNeo",
-        metaDescription: "Taxi Épernay → Reims. 30 km, 25 min, dès 35 €. D951 à travers les vignobles de Champagne UNESCO. Réservation 24h/24.",
+        metaTitle: "Taxi Épernay → Reims | forfait dès 35 €, 25 min | TaxiNeo",
+        metaDescription: "Via D951 / A4 en 25 min. Champagne UNESCO, Avenue de Champagne, Cathédrale de Reims et Vignobles en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Épernay → Reims",
         heroSubtitle: "Transfert Épernay → Reims au prix fixe de 35 — 50 €. 30 km à travers les coteaux de Champagne.",
         description: "Reims, cité des sacres et capitale du Champagne, est à 25 min d'Épernay par la D951.",
@@ -47,7 +47,7 @@ export const trajetsEpernayChateauThierry: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Épernay → Reims | Fixed price from €35 | TaxiNeo",
-        metaDescription: "Taxi Épernay → Reims. 30 km, 25 min, from €35. D951 through UNESCO Champagne vineyards. Book 24/7.",
+        metaDescription: "Via D951 / A4, 25 min ride. Champagne UNESCO, Avenue de Champagne, Cathédrale de Reims and Vignobles en route. Faster and more direct than train or bus.",
         heroTitle: "Taxi Épernay → Reims",
         heroSubtitle: "Your Épernay → Reims transfer at €35 — €50. 30 km through Champagne hillsides.",
         description: "Reims, coronation city and Champagne capital, is 25 min from Épernay via the D951.",
@@ -92,8 +92,8 @@ export const trajetsEpernayChateauThierry: Trajet[] = [
     hub: "epernay-chateau-thierry",
     i18n: {
       fr: {
-        metaTitle: "Taxi Épernay → Paris | Prix fixe dès 170 € | TaxiNeo",
-        metaDescription: "Taxi Épernay → Paris. 140 km, 1h30, dès 170 €. A4 autoroute de l'Est, transfert direct depuis la capitale du Champagne. Réservation 24h/24.",
+        metaTitle: "Taxi Épernay → Paris | 140 km, dès 170 € | TaxiNeo",
+        metaDescription: "Via A4 en 1h30. Champagne, Avenue de Champagne, Moët & Chandon et Marne en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Épernay → Paris",
         heroSubtitle: "Transfert Épernay → Paris au prix fixe de 170 — 215 €. 140 km, direct par l'A4.",
         description: "Paris est à 1h30 d'Épernay par l'A4, l'autoroute de l'Est.",
@@ -111,8 +111,8 @@ export const trajetsEpernayChateauThierry: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Épernay → Paris | Fixed price from €170 | TaxiNeo",
-        metaDescription: "Taxi Épernay → Paris. 140 km, 1h30, from €170. A4 motorway, direct transfer from the Champagne capital. Book 24/7.",
+        metaTitle: "Taxi Épernay → Paris | 140 km, from €170 | TaxiNeo",
+        metaDescription: "Via A4, 1h30 ride. Champagne, Avenue de Champagne, Moët & Chandon and Marne en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Épernay → Paris",
         heroSubtitle: "Your Épernay → Paris transfer at €170 — €215. 140 km, direct via the A4.",
         description: "Paris is 1h30 from Épernay via the A4 motorway.",
@@ -157,8 +157,8 @@ export const trajetsEpernayChateauThierry: Trajet[] = [
     hub: "epernay-chateau-thierry",
     i18n: {
       fr: {
-        metaTitle: "Taxi Château-Thierry → Paris | Prix fixe dès 115 € | TaxiNeo",
-        metaDescription: "Taxi Château-Thierry → Paris. 95 km, 1h05, dès 115 €. A4, ville de La Fontaine, vallée de la Marne. Réservation 24h/24.",
+        metaTitle: "Taxi Château-Thierry → Paris | 95 km, dès 115 € | TaxiNeo",
+        metaDescription: "Via A4 en 1h05. La Fontaine, Marne, Champagne sud et Disneyland en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Château-Thierry → Paris",
         heroSubtitle: "Transfert Château-Thierry → Paris au prix fixe de 115 — 145 €. 95 km, direct par l'A4.",
         description: "Paris est à 1h05 de Château-Thierry par l'A4, au cœur de la vallée de la Marne.",
@@ -176,8 +176,8 @@ export const trajetsEpernayChateauThierry: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Château-Thierry → Paris | Fixed price from €115 | TaxiNeo",
-        metaDescription: "Taxi Château-Thierry → Paris. 95 km, 1h05, from €115. A4 motorway, La Fontaine's birthplace. Book 24/7.",
+        metaTitle: "Taxi Château-Thierry → Paris | 95 km, from €115 | TaxiNeo",
+        metaDescription: "Via A4, 1h05 ride. La Fontaine, Marne, Champagne sud and Disneyland en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Château-Thierry → Paris",
         heroSubtitle: "Your Château-Thierry → Paris transfer at €115 — €145. 95 km, direct via the A4.",
         description: "Paris is 1h05 from Château-Thierry via the A4, in the Marne valley.",
@@ -222,8 +222,8 @@ export const trajetsEpernayChateauThierry: Trajet[] = [
     hub: "epernay-chateau-thierry",
     i18n: {
       fr: {
-        metaTitle: "Taxi Épernay → Châlons-en-Champagne | Prix fixe dès 40 € | TaxiNeo",
-        metaDescription: "Taxi Épernay → Châlons-en-Champagne. 35 km, 30 min, dès 40 €. Préfecture de la Marne, patrimoine UNESCO. Réservation 24h/24.",
+        metaTitle: "Taxi Épernay → Châlons-en-Champagne | 35 km, 40 € | TaxiNeo",
+        metaDescription: "Via N3 / D3 en 30 min. Passage par N3/D3, Préfecture Marne, Collégiale Notre-Dame-en-Vaux et Champagne. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Épernay → Châlons-en-Champagne",
         heroSubtitle: "Transfert Épernay → Châlons-en-Champagne au prix fixe de 40 — 55 €. 35 km, route gratuite.",
         description: "Châlons-en-Champagne, préfecture de la Marne, est à 30 min d'Épernay.",
@@ -241,8 +241,8 @@ export const trajetsEpernayChateauThierry: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Épernay → Châlons-en-Champagne | Fixed price from €40 | TaxiNeo",
-        metaDescription: "Taxi Épernay → Châlons-en-Champagne. 35 km, 30 min, from €40. Marne prefecture, UNESCO heritage. Book 24/7.",
+        metaTitle: "Taxi Épernay → Châlons-en-Champagne | 35 km, €40 | TaxiNeo",
+        metaDescription: "Via N3 / D3, 30 min ride. N3/D3, Préfecture Marne, Collégiale Notre-Dame-en-Vaux and Champagne en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Épernay → Châlons-en-Champagne",
         heroSubtitle: "Your Épernay → Châlons-en-Champagne transfer at €40 — €55. 35 km, toll-free.",
         description: "Châlons-en-Champagne, Marne prefecture, is 30 min from Épernay.",
@@ -287,8 +287,8 @@ export const trajetsEpernayChateauThierry: Trajet[] = [
     hub: "epernay-chateau-thierry",
     i18n: {
       fr: {
-        metaTitle: "Taxi Château-Thierry → Reims | Prix fixe dès 75 € | TaxiNeo",
-        metaDescription: "Taxi Château-Thierry → Reims. 60 km, 45 min, dès 75 €. Vallée de la Marne, vignobles de Champagne. Réservation 24h/24.",
+        metaTitle: "Taxi Château-Thierry → Reims | 60 km, dès 75 € | TaxiNeo",
+        metaDescription: "Via A4 puis A26 en 45 min. Passage par A4/D380, La Fontaine, Vallée de la Marne et Vignobles Champagne. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Château-Thierry → Reims",
         heroSubtitle: "Transfert Château-Thierry → Reims au prix fixe de 75 — 95 €. 60 km à travers le vignoble champenois.",
         description: "Reims, cité des sacres, est à 45 min de Château-Thierry à travers la vallée de la Marne.",
@@ -306,8 +306,8 @@ export const trajetsEpernayChateauThierry: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Château-Thierry → Reims | Fixed price from €75 | TaxiNeo",
-        metaDescription: "Taxi Château-Thierry → Reims. 60 km, 45 min, from €75. Marne valley, Champagne vineyards. Book 24/7.",
+        metaTitle: "Taxi Château-Thierry → Reims | 60 km, from €75 | TaxiNeo",
+        metaDescription: "Via A4 then A26, 45 min ride. A4/D380, La Fontaine, Vallée de la Marne and Vignobles Champagne en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Château-Thierry → Reims",
         heroSubtitle: "Your Château-Thierry → Reims transfer at €75 — €95. 60 km through Champagne vineyards.",
         description: "Reims, coronation city, is 45 min from Château-Thierry through the Marne valley.",

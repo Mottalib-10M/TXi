@@ -19,8 +19,8 @@ export const trajetsVillefrancheTarare: Trajet[] = [
     hub: "villefranche-tarare",
     i18n: {
       fr: {
-        metaTitle: "Taxi Villefranche-sur-Saône → Lyon | Prix fixe dès 40 € | TaxiNeo",
-        metaDescription: "Taxi Villefranche-sur-Saône → Lyon. 35 km, 30 min, dès 40 €. A6 directe le long de la Saône. Réservation 24h/24.",
+        metaTitle: "Taxi Villefranche-sur-Saône → Lyon | 35 km, 40 € | TaxiNeo",
+        metaDescription: "Via A6 en undefined min. Beaujolais, Saône, Calade et Direct en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Villefranche-sur-Saône → Lyon",
         heroSubtitle: "Transfert Villefranche-sur-Saône → Lyon au prix fixe de 40 — 55 €. 35 km, 30 min.",
         description: "Villefranche-sur-Saône — Lyon par l'A6 en 30 min, le long de la vallée de la Saône.",
@@ -38,8 +38,8 @@ export const trajetsVillefrancheTarare: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Villefranche-sur-Saône → Lyon | Fixed price from €40 | TaxiNeo",
-        metaDescription: "Taxi Villefranche-sur-Saône → Lyon. 35 km, 30 min, from €40. Direct A6 along the Saône. Book 24/7.",
+        metaTitle: "Taxi Villefranche-sur-Saône → Lyon | 35 km, €40 | TaxiNeo",
+        metaDescription: "Via A6, undefined min ride. Beaujolais, Saône, Calade and Direct en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Villefranche-sur-Saône → Lyon",
         heroSubtitle: "Villefranche-sur-Saône → Lyon transfer at €40 — €55. 35 km, 30 min.",
         description: "Villefranche-sur-Saône to Lyon via A6 along the Saône valley in 30 min.",
@@ -76,8 +76,8 @@ export const trajetsVillefrancheTarare: Trajet[] = [
     hub: "villefranche-tarare",
     i18n: {
       fr: {
-        metaTitle: "Taxi Villefranche-sur-Saône → Mâcon | Prix fixe dès 50 € | TaxiNeo",
-        metaDescription: "Taxi Villefranche-sur-Saône → Mâcon. 40 km, 30 min, dès 50 €. A6 à travers le cœur du Beaujolais. Réservation 24h/24.",
+        metaTitle: "Taxi Villefranche-sur-Saône → Mâcon | 40 km, 50 € | TaxiNeo",
+        metaDescription: "Via A6 en undefined min. Beaujolais, Saône, Vignobles et Belleville en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Villefranche-sur-Saône → Mâcon",
         heroSubtitle: "Transfert Villefranche-sur-Saône → Mâcon au prix fixe de 50 — 65 €. 40 km, 30 min.",
         description: "Villefranche-sur-Saône — Mâcon par l'A6 en 30 min, traversée intégrale du vignoble beaujolais.",
@@ -95,8 +95,8 @@ export const trajetsVillefrancheTarare: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Villefranche-sur-Saône → Mâcon | Fixed price from €50 | TaxiNeo",
-        metaDescription: "Taxi Villefranche-sur-Saône → Mâcon. 40 km, 30 min, from €50. A6 through the heart of Beaujolais. Book 24/7.",
+        metaTitle: "Taxi Villefranche-sur-Saône → Mâcon | 40 km, €50 | TaxiNeo",
+        metaDescription: "Via A6, undefined min ride. Beaujolais, Saône, Vignobles and Belleville en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Villefranche-sur-Saône → Mâcon",
         heroSubtitle: "Villefranche-sur-Saône → Mâcon transfer at €50 — €65. 40 km, 30 min.",
         description: "Villefranche-sur-Saône to Mâcon via A6 through the Beaujolais vineyards in 30 min.",
@@ -133,8 +133,8 @@ export const trajetsVillefrancheTarare: Trajet[] = [
     hub: "villefranche-tarare",
     i18n: {
       fr: {
-        metaTitle: "Taxi Villefranche-sur-Saône → Bourg-en-Bresse | Prix fixe dès 75 € | TaxiNeo",
-        metaDescription: "Taxi Villefranche-sur-Saône → Bourg-en-Bresse. 60 km, 45 min, dès 75 €. Via la Dombes et la Bresse. Réservation 24h/24.",
+        metaTitle: "Taxi Villefranche-sur-Saône → Bourg-en-Bresse | TaxiNeo",
+        metaDescription: "Via A6/D1079 en undefined min. Dombes, Beaujolais, Bresse et Ain en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Villefranche-sur-Saône → Bourg-en-Bresse",
         heroSubtitle: "Transfert Villefranche-sur-Saône → Bourg-en-Bresse au prix fixe de 75 — 95 €. 60 km, 45 min.",
         description: "Villefranche-sur-Saône — Bourg-en-Bresse en 45 min, du Beaujolais à la Bresse à travers la Dombes.",
@@ -152,8 +152,8 @@ export const trajetsVillefrancheTarare: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Villefranche-sur-Saône → Bourg-en-Bresse | Fixed price from €75 | TaxiNeo",
-        metaDescription: "Taxi Villefranche-sur-Saône → Bourg-en-Bresse. 60 km, 45 min, from €75. Via the Dombes lake district and Bresse. Book 24/7.",
+        metaTitle: "Taxi Villefranche-sur-Saône → Bourg-en-Bresse | TaxiNeo",
+        metaDescription: "Via A6/D1079, undefined min ride. Dombes, Beaujolais, Bresse and Ain en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Villefranche-sur-Saône → Bourg-en-Bresse",
         heroSubtitle: "Villefranche-sur-Saône → Bourg-en-Bresse transfer at €75 — €95. 60 km, 45 min.",
         description: "Villefranche-sur-Saône to Bourg-en-Bresse via the Dombes lake district in 45 min.",
@@ -190,8 +190,8 @@ export const trajetsVillefrancheTarare: Trajet[] = [
     hub: "villefranche-tarare",
     i18n: {
       fr: {
-        metaTitle: "Taxi Tarare → Lyon | Prix fixe dès 55 € | TaxiNeo",
-        metaDescription: "Taxi Tarare → Lyon. 45 km, 35 min, dès 55 €. A89 à travers les monts du Lyonnais. Réservation 24h/24.",
+        metaTitle: "Taxi Tarare → Lyon | 45 km A89, dès 55 € | TaxiNeo",
+        metaDescription: "Via A89 en undefined min. Monts du Lyonnais, L'Arbresle, Textile et Direct en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Tarare → Lyon",
         heroSubtitle: "Transfert Tarare → Lyon au prix fixe de 55 — 75 €. 45 km, 35 min.",
         description: "Tarare — Lyon par l'A89 en 35 min, traversée des monts du Lyonnais et de la vallée de la Brévenne.",
@@ -210,7 +210,7 @@ export const trajetsVillefrancheTarare: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Tarare → Lyon | Fixed price from €55 | TaxiNeo",
-        metaDescription: "Taxi Tarare → Lyon. 45 km, 35 min, from €55. A89 through the Monts du Lyonnais. Book 24/7.",
+        metaDescription: "Via A89, undefined min ride. Monts du Lyonnais, L'Arbresle, Textile and Direct en route. Drop-off at your exact address. Door-to-door, luggage included.",
         heroTitle: "Taxi Tarare → Lyon",
         heroSubtitle: "Tarare → Lyon transfer at €55 — €75. 45 km, 35 min.",
         description: "Tarare to Lyon via A89 through the Monts du Lyonnais in 35 min.",
@@ -248,7 +248,7 @@ export const trajetsVillefrancheTarare: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Tarare → Roanne | Prix fixe dès 50 € | TaxiNeo",
-        metaDescription: "Taxi Tarare → Roanne. 40 km, 35 min, dès 50 €. D385/A89 à travers les monts de Tarare. Réservation 24h/24.",
+        metaDescription: "Itinéraire D385/A89, environ undefined min. Passage par Monts de Tarare, Loire, Textile et Gastronomie. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Tarare → Roanne",
         heroSubtitle: "Transfert Tarare → Roanne au prix fixe de 50 — 65 €. 40 km, 35 min.",
         description: "Tarare — Roanne en 35 min par la D385 et l'A89, à travers les monts de Tarare et la vallée de la Loire.",
@@ -267,7 +267,7 @@ export const trajetsVillefrancheTarare: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Tarare → Roanne | Fixed price from €50 | TaxiNeo",
-        metaDescription: "Taxi Tarare → Roanne. 40 km, 35 min, from €50. D385/A89 through the Monts de Tarare. Book 24/7.",
+        metaDescription: "D385/A89 route, approximately undefined min. Monts de Tarare, Loire, Textile and Gastronomie en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Tarare → Roanne",
         heroSubtitle: "Tarare → Roanne transfer at €50 — €65. 40 km, 35 min.",
         description: "Tarare to Roanne via D385 or A89 through the Monts de Tarare in 35 min.",

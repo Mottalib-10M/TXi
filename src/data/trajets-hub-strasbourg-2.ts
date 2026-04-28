@@ -27,8 +27,8 @@ export const trajetsStrasbourgHub2: Trajet[] = [
     hub: "strasbourg",
     i18n: {
       fr: {
-        metaTitle: "Taxi Strasbourg → Karlsruhe | Prix fixe dès 100 € | TaxiNeo",
-        metaDescription: "Taxi Strasbourg → Karlsruhe. 80 km, 1h, dès 100 €. Traversée du Rhin, autoroute gratuite. Réservation 24h/24.",
+        metaTitle: "Taxi Strasbourg → Karlsruhe | 80 km, dès 100 € | TaxiNeo",
+        metaDescription: "Itinéraire A35 puis A5, environ 1h. Passage par Pont de l'Europe, A35/A5, Allemagne et Bade-Wurtemberg. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Strasbourg → Karlsruhe",
         heroSubtitle: "Transfert Strasbourg → Karlsruhe au prix fixe de 100 — 125 €. 80 km, traversée du Rhin vers le Bade-Wurtemberg.",
         description: "Karlsruhe, grande ville du Bade-Wurtemberg, est à 1h de Strasbourg en traversant le Rhin.",
@@ -46,8 +46,8 @@ export const trajetsStrasbourgHub2: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Strasbourg → Karlsruhe | Fixed price from €100 | TaxiNeo",
-        metaDescription: "Taxi Strasbourg → Karlsruhe. 80 km, 1h, from €100. Cross the Rhine, toll-free. Book 24/7.",
+        metaTitle: "Taxi Strasbourg → Karlsruhe | 80 km, from €100 | TaxiNeo",
+        metaDescription: "Direct route via A35 then A5, 1 hour. Pont de l'Europe, A35/A5, Allemagne and Bade-Wurtemberg en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Strasbourg → Karlsruhe",
         heroSubtitle: "Your Strasbourg → Karlsruhe transfer at €100 — €125. 80 km, cross-border to Baden-Württemberg.",
         description: "Karlsruhe, major Baden-Württemberg city, is 1h from Strasbourg across the Rhine.",
@@ -92,8 +92,8 @@ export const trajetsStrasbourgHub2: Trajet[] = [
     hub: "strasbourg",
     i18n: {
       fr: {
-        metaTitle: "Taxi Strasbourg → Nancy | Prix fixe dès 190 € | TaxiNeo",
-        metaDescription: "Taxi Strasbourg → Nancy. 155 km, 1h40, dès 190 €. Place Stanislas UNESCO, Art nouveau. Réservation 24h/24.",
+        metaTitle: "Taxi Strasbourg → Nancy | 155 km, dès 190 € | TaxiNeo",
+        metaDescription: "Via A4 en 1h40. Lorraine, Place Stanislas, Art nouveau et Bergamote en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Strasbourg → Nancy",
         heroSubtitle: "Transfert Strasbourg → Nancy au prix fixe de 190 — 230 €. 155 km, la perle lorraine.",
         description: "Nancy, ville d'Art nouveau et place Stanislas UNESCO, est à 1h40 de Strasbourg.",
@@ -111,8 +111,8 @@ export const trajetsStrasbourgHub2: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Strasbourg → Nancy | Fixed price from €190 | TaxiNeo",
-        metaDescription: "Taxi Strasbourg → Nancy. 155 km, 1h40, from €190. Place Stanislas UNESCO, Art Nouveau. Book 24/7.",
+        metaTitle: "Taxi Strasbourg → Nancy | 155 km, from €190 | TaxiNeo",
+        metaDescription: "Via A4, 1h40 ride. Lorraine, Place Stanislas, Art nouveau and Bergamote en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Strasbourg → Nancy",
         heroSubtitle: "Your Strasbourg → Nancy transfer at €190 — €230. 155 km, Lorraine's gem.",
         description: "Nancy, Art Nouveau capital with UNESCO Place Stanislas, is 1h40 from Strasbourg.",
@@ -157,8 +157,8 @@ export const trajetsStrasbourgHub2: Trajet[] = [
     hub: "strasbourg",
     i18n: {
       fr: {
-        metaTitle: "Taxi Strasbourg → Metz | Prix fixe dès 200 € | TaxiNeo",
-        metaDescription: "Taxi Strasbourg → Metz. 163 km, 1h45, dès 200 €. Centre Pompidou-Metz, cathédrale. Réservation 24h/24.",
+        metaTitle: "Taxi Strasbourg → Metz | 163 km, dès 200 € | TaxiNeo",
+        metaDescription: "Via A4 en 1h45. Lorraine, Centre Pompidou-Metz, Cathédrale et Mirabelle en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Strasbourg → Metz",
         heroSubtitle: "Transfert Strasbourg → Metz au prix fixe de 200 — 240 €. 163 km, capitale de la Lorraine.",
         description: "Metz, ville d'art et d'histoire avec le Centre Pompidou-Metz, est à 1h45 de Strasbourg.",
@@ -176,8 +176,8 @@ export const trajetsStrasbourgHub2: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Strasbourg → Metz | Fixed price from €200 | TaxiNeo",
-        metaDescription: "Taxi Strasbourg → Metz. 163 km, 1h45, from €200. Centre Pompidou-Metz, cathedral. Book 24/7.",
+        metaTitle: "Taxi Strasbourg → Metz | 163 km, from €200 | TaxiNeo",
+        metaDescription: "Via A4, 1h45 ride. Lorraine, Centre Pompidou-Metz, Cathédrale and Mirabelle en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Strasbourg → Metz",
         heroSubtitle: "Your Strasbourg → Metz transfer at €200 — €240. 163 km, art and history city.",
         description: "Metz, with Centre Pompidou-Metz and its record-breaking stained-glass cathedral, is 1h45 from Strasbourg.",
@@ -222,8 +222,8 @@ export const trajetsStrasbourgHub2: Trajet[] = [
     hub: "strasbourg",
     i18n: {
       fr: {
-        metaTitle: "Taxi Strasbourg → Luxembourg | Prix fixe dès 270 € | TaxiNeo",
-        metaDescription: "Taxi Strasbourg → Luxembourg. 220 km, 2h15, dès 270 €. Grand-Duché, via Metz. Réservation 24h/24.",
+        metaTitle: "Taxi Strasbourg → Luxembourg-Ville | 220 km, 270 € | TaxiNeo",
+        metaDescription: "Via A4 puis A31 en 2h15. A4/A31, Luxembourg, Grand-Duché et Transfrontalier en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Strasbourg → Luxembourg",
         heroSubtitle: "Transfert Strasbourg → Luxembourg au prix fixe de 270 — 320 €. 220 km, vers le Grand-Duché.",
         description: "Luxembourg-Ville, capitale du Grand-Duché, est à 2h15 de Strasbourg.",
@@ -241,8 +241,8 @@ export const trajetsStrasbourgHub2: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Strasbourg → Luxembourg | Fixed price from €270 | TaxiNeo",
-        metaDescription: "Taxi Strasbourg → Luxembourg. 220 km, 2h15, from €270. Grand Duchy, via Metz. Book 24/7.",
+        metaTitle: "Taxi Strasbourg → Luxembourg-Ville | 220 km, €270 | TaxiNeo",
+        metaDescription: "A4 then A31 route, approximately 2h15. A4/A31, Luxembourg, Grand-Duché and Transfrontalier en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Strasbourg → Luxembourg",
         heroSubtitle: "Your Strasbourg → Luxembourg transfer at €270 — €320. 220 km, to the Grand Duchy.",
         description: "Luxembourg City, capital of the Grand Duchy, is 2h15 from Strasbourg.",
@@ -287,8 +287,8 @@ export const trajetsStrasbourgHub2: Trajet[] = [
     hub: "strasbourg",
     i18n: {
       fr: {
-        metaTitle: "Taxi Strasbourg → Wissembourg | Prix fixe dès 80 € | TaxiNeo",
-        metaDescription: "Taxi Strasbourg → Wissembourg. 60 km, 50 min, dès 80 €. Alsace du Nord, vignobles, colombages. Réservation 24h/24.",
+        metaTitle: "Taxi Strasbourg → Wissembourg | 60 km, dès 80 € | TaxiNeo",
+        metaDescription: "Par A35 puis D263, 50 min de trajet. D263/A35, Alsace du Nord, Vignoble et Maisons à colombages en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Strasbourg → Wissembourg",
         heroSubtitle: "Transfert Strasbourg → Wissembourg au prix fixe de 80 — 100 €. 60 km, perle de l'Alsace du Nord.",
         description: "Wissembourg, charmante cité alsacienne à la frontière allemande, est à 50 min de Strasbourg.",
@@ -306,8 +306,8 @@ export const trajetsStrasbourgHub2: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Strasbourg → Wissembourg | Fixed price from €80 | TaxiNeo",
-        metaDescription: "Taxi Strasbourg → Wissembourg. 60 km, 50 min, from €80. Northern Alsace, half-timbered houses. Book 24/7.",
+        metaTitle: "Taxi Strasbourg → Wissembourg | 60 km, from €80 | TaxiNeo",
+        metaDescription: "Via A35 then D263, 50 min ride. D263/A35, Alsace du Nord, Vignoble and Maisons à colombages en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Strasbourg → Wissembourg",
         heroSubtitle: "Your Strasbourg → Wissembourg transfer at €80 — €100. 60 km, Northern Alsace gem.",
         description: "Wissembourg, charming Alsatian town at the German border, is 50 min from Strasbourg.",
@@ -352,8 +352,8 @@ export const trajetsStrasbourgHub2: Trajet[] = [
     hub: "strasbourg",
     i18n: {
       fr: {
-        metaTitle: "Taxi Strasbourg → Molsheim | Prix fixe dès 35 € | TaxiNeo",
-        metaDescription: "Taxi Strasbourg → Molsheim. 25 km, 25 min, dès 35 €. Bugatti, vignobles, route des vins. Réservation 24h/24.",
+        metaTitle: "Taxi Strasbourg → Molsheim | 25 km, dès 35 € | TaxiNeo",
+        metaDescription: "Via A352 en 25 min. Bugatti, Vignoble, Chartreuse et Route des vins en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Strasbourg → Molsheim",
         heroSubtitle: "Transfert Strasbourg → Molsheim au prix fixe de 35 — 45 €. 25 km, cité Bugatti.",
         description: "Molsheim, berceau de Bugatti sur la route des vins d'Alsace, est à 25 min de Strasbourg.",
@@ -371,8 +371,8 @@ export const trajetsStrasbourgHub2: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Strasbourg → Molsheim | Fixed price from €35 | TaxiNeo",
-        metaDescription: "Taxi Strasbourg → Molsheim. 25 km, 25 min, from €35. Bugatti birthplace, wine route. Book 24/7.",
+        metaTitle: "Taxi Strasbourg → Molsheim | 25 km, from €35 | TaxiNeo",
+        metaDescription: "Via A352, 25 min ride. Bugatti, Vignoble, Chartreuse and Route des vins en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Strasbourg → Molsheim",
         heroSubtitle: "Your Strasbourg → Molsheim transfer at €35 — €45. 25 km, Bugatti's home.",
         description: "Molsheim, Bugatti's birthplace on the Alsace wine route, is 25 min from Strasbourg.",
@@ -417,8 +417,8 @@ export const trajetsStrasbourgHub2: Trajet[] = [
     hub: "strasbourg",
     i18n: {
       fr: {
-        metaTitle: "Taxi Strasbourg → Gérardmer | Prix fixe dès 140 € | TaxiNeo",
-        metaDescription: "Taxi Strasbourg → Gérardmer. 110 km, 1h30, dès 140 €. Lac, ski, Vosges, col de Schlucht. Réservation 24h/24.",
+        metaTitle: "Taxi Strasbourg → Gérardmer | 110 km, dès 140 € | TaxiNeo",
+        metaDescription: "Via A35 puis route du col en 1h30. Col de Schlucht, Vosges, Lac et Ski en chemin. Arrêt visite possible en chemin. Arrêt possible pour visites ou photos.",
         heroTitle: "Taxi Strasbourg → Gérardmer",
         heroSubtitle: "Transfert Strasbourg → Gérardmer au prix fixe de 140 — 170 €. 110 km, perle des Vosges.",
         description: "Gérardmer, la 'perle des Vosges' avec son lac et ses pistes de ski, est à 1h30 de Strasbourg.",
@@ -436,8 +436,8 @@ export const trajetsStrasbourgHub2: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Strasbourg → Gérardmer | Fixed price from €140 | TaxiNeo",
-        metaDescription: "Taxi Strasbourg → Gérardmer. 110 km, 1h30, from €140. Lake, skiing, Vosges mountains. Book 24/7.",
+        metaTitle: "Taxi Strasbourg → Gérardmer | 110 km, from €140 | TaxiNeo",
+        metaDescription: "Via A35 then route du col, 1h30 ride. Col de Schlucht, Vosges, Lac and Ski en route. Stops for sightseeing possible en route. Up to 1h50 during rush hour.",
         heroTitle: "Taxi Strasbourg → Gérardmer",
         heroSubtitle: "Your Strasbourg → Gérardmer transfer at €140 — €170. 110 km, Pearl of the Vosges.",
         description: "Gérardmer, 'Pearl of the Vosges' with its lake and ski resort, is 1h30 from Strasbourg.",
@@ -482,8 +482,8 @@ export const trajetsStrasbourgHub2: Trajet[] = [
     hub: "strasbourg",
     i18n: {
       fr: {
-        metaTitle: "Taxi Strasbourg → Offenburg | Prix fixe dès 40 € | TaxiNeo",
-        metaDescription: "Taxi Strasbourg → Offenburg. 25 km, 25 min, dès 40 €. Porte de la Forêt-Noire. Réservation 24h/24.",
+        metaTitle: "Taxi Strasbourg → Offenburg | 25 km, dès 40 € | TaxiNeo",
+        metaDescription: "Par pont Kehl puis A5, 25 min de trajet. Passage par Pont de l'Europe, Allemagne, Forêt-Noire et Bade. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Strasbourg → Offenburg",
         heroSubtitle: "Transfert Strasbourg → Offenburg au prix fixe de 40 — 50 €. 25 km, porte de la Forêt-Noire.",
         description: "Offenburg, porte de la Forêt-Noire en Allemagne, est à 25 min de Strasbourg.",
@@ -501,8 +501,8 @@ export const trajetsStrasbourgHub2: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Strasbourg → Offenburg | Fixed price from €40 | TaxiNeo",
-        metaDescription: "Taxi Strasbourg → Offenburg. 25 km, 25 min, from €40. Black Forest gateway. Book 24/7.",
+        metaTitle: "Taxi Strasbourg → Offenburg | 25 km, from €40 | TaxiNeo",
+        metaDescription: "Direct route via pont Kehl then A5, 25 min. Pont de l'Europe, Allemagne, Forêt-Noire and Bade en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Strasbourg → Offenburg",
         heroSubtitle: "Your Strasbourg → Offenburg transfer at €40 — €50. 25 km, Black Forest gateway.",
         description: "Offenburg, gateway to the Black Forest, is 25 min from Strasbourg across the Rhine.",

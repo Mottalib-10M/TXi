@@ -27,8 +27,8 @@ export const trajetsAmiensTolon: Trajet[] = [
     hub: "amiens",
     i18n: {
       fr: {
-        metaTitle: "Taxi Amiens → Paris | Prix fixe dès 170 € | TaxiNeo",
-        metaDescription: "Taxi Amiens → Paris. 135 km, 1h30, dès 170 €. A1, transfert direct porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Amiens → Paris | 135 km, dès 170 €, 1h30 | TaxiNeo",
+        metaDescription: "Via A1 en 1h30. Picardie, Cathédrale, Desserte gare/aéroport et CDG en chemin. Dépose à votre adresse exacte. Alternative directe au train ou au bus.",
         heroTitle: "Taxi Amiens → Paris",
         heroSubtitle: "Transfert Amiens → Paris au prix fixe de 170 — 205 €. 135 km, direct par l'A1.",
         description: "Paris est à 1h30 d'Amiens par l'A1, l'autoroute du Nord.",
@@ -47,7 +47,7 @@ export const trajetsAmiensTolon: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Amiens → Paris | Fixed price from €170 | TaxiNeo",
-        metaDescription: "Taxi Amiens → Paris. 135 km, 1h30, from €170. A1, direct door-to-door. Book 24/7.",
+        metaDescription: "Via A1, 1h30 ride. Picardie, Cathédrale, Desserte gare/aéroport and CDG en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Amiens → Paris",
         heroSubtitle: "Your Amiens → Paris transfer at €170 — €205. 135 km, via the A1.",
         description: "Paris is 1h30 from Amiens via the A1 motorway.",
@@ -92,8 +92,8 @@ export const trajetsAmiensTolon: Trajet[] = [
     hub: "amiens",
     i18n: {
       fr: {
-        metaTitle: "Taxi Amiens → Beauvais | Prix fixe dès 75 € | TaxiNeo",
-        metaDescription: "Taxi Amiens → Beauvais. 60 km, 50 min, dès 75 €. Cathédrale, aéroport Beauvais-Tillé. Réservation 24h/24.",
+        metaTitle: "Taxi Amiens → Beauvais | 60 km, dès 75 € | TaxiNeo",
+        metaDescription: "Trajet direct N1/A16 en 50 min. Passage par N1, Oise, Cathédrale inachevée et Aéroport Beauvais-Tillé. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Amiens → Beauvais",
         heroSubtitle: "Transfert Amiens → Beauvais au prix fixe de 75 — 95 €. 60 km, route gratuite.",
         description: "Beauvais, avec sa cathédrale record et son aéroport low-cost, est à 50 min d'Amiens.",
@@ -111,8 +111,8 @@ export const trajetsAmiensTolon: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Amiens → Beauvais | Fixed price from €75 | TaxiNeo",
-        metaDescription: "Taxi Amiens → Beauvais. 60 km, 50 min, from €75. World's tallest Gothic choir, airport. Book 24/7.",
+        metaTitle: "Taxi Amiens → Beauvais | 60 km, from €75 | TaxiNeo",
+        metaDescription: "Direct route via N1/A16, 50 min. N1, Oise, Cathédrale inachevée and Aéroport Beauvais-Tillé en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Amiens → Beauvais",
         heroSubtitle: "Your Amiens → Beauvais transfer at €75 — €95. 60 km, toll-free.",
         description: "Beauvais, with the world's tallest Gothic choir and low-cost airport, is 50 min from Amiens.",
@@ -157,8 +157,8 @@ export const trajetsAmiensTolon: Trajet[] = [
     hub: "amiens",
     i18n: {
       fr: {
-        metaTitle: "Taxi Amiens → Saint-Quentin | Prix fixe dès 95 € | TaxiNeo",
-        metaDescription: "Taxi Amiens → Saint-Quentin. 75 km, 55 min, dès 95 €. Art Déco, basilique, Quentin de La Tour. Réservation 24h/24.",
+        metaTitle: "Taxi Amiens → Saint-Quentin | 75 km, dès 95 € | TaxiNeo",
+        metaDescription: "Via A29 puis A26 en 55 min. A29/A26, Aisne, Art Déco et Basilique en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Amiens → Saint-Quentin",
         heroSubtitle: "Transfert Amiens → Saint-Quentin au prix fixe de 95 — 115 €. 75 km, capitale de l'Art Déco.",
         description: "Saint-Quentin, ville d'Art Déco et de pastels de Quentin de La Tour, est à 55 min d'Amiens.",
@@ -176,8 +176,8 @@ export const trajetsAmiensTolon: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Amiens → Saint-Quentin | Fixed price from €95 | TaxiNeo",
-        metaDescription: "Taxi Amiens → Saint-Quentin. 75 km, 55 min, from €95. Art Deco, basilica. Book 24/7.",
+        metaTitle: "Taxi Amiens → Saint-Quentin | 75 km, from €95 | TaxiNeo",
+        metaDescription: "Via A29 then A26, 55 min ride. A29/A26, Aisne, Art Déco and Basilique en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Amiens → Saint-Quentin",
         heroSubtitle: "Your Amiens → Saint-Quentin transfer at €95 — €115. 75 km, Art Deco capital.",
         description: "Saint-Quentin, Art Deco city, is 55 min from Amiens.",
@@ -222,8 +222,8 @@ export const trajetsAmiensTolon: Trajet[] = [
     hub: "amiens",
     i18n: {
       fr: {
-        metaTitle: "Taxi Amiens → Abbeville | Prix fixe dès 60 € | TaxiNeo",
-        metaDescription: "Taxi Amiens → Abbeville. 45 km, 40 min, dès 60 €. Baie de Somme, collégiale. Réservation 24h/24.",
+        metaTitle: "Taxi Amiens → Abbeville | 45 km, dès 60 € | TaxiNeo",
+        metaDescription: "Via A16 en 40 min. Baie de Somme, Collégiale, Beffroi et Picardie maritime en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Amiens → Abbeville",
         heroSubtitle: "Transfert Amiens → Abbeville au prix fixe de 60 — 75 €. 45 km, porte de la Baie de Somme.",
         description: "Abbeville, porte de la Baie de Somme, est à 40 min d'Amiens.",
@@ -241,8 +241,8 @@ export const trajetsAmiensTolon: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Amiens → Abbeville | Fixed price from €60 | TaxiNeo",
-        metaDescription: "Taxi Amiens → Abbeville. 45 km, 40 min, from €60. Baie de Somme gateway. Book 24/7.",
+        metaTitle: "Taxi Amiens → Abbeville | 45 km, from €60 | TaxiNeo",
+        metaDescription: "Via A16, 40 min ride. Baie de Somme, Collégiale, Beffroi and Picardie maritime en route. Drop-off at your exact address. Door-to-door, luggage included.",
         heroTitle: "Taxi Amiens → Abbeville",
         heroSubtitle: "Your Amiens → Abbeville transfer at €60 — €75. 45 km, Baie de Somme gateway.",
         description: "Abbeville, gateway to the Baie de Somme, is 40 min from Amiens.",
@@ -287,8 +287,8 @@ export const trajetsAmiensTolon: Trajet[] = [
     hub: "amiens",
     i18n: {
       fr: {
-        metaTitle: "Taxi Amiens → Compiègne | Prix fixe dès 100 € | TaxiNeo",
-        metaDescription: "Taxi Amiens → Compiègne. 80 km, 1h, dès 100 €. Palais impérial, forêt, clairière de l'Armistice. Réservation 24h/24.",
+        metaTitle: "Taxi Amiens → Compiègne | 80 km, dès 100 € | TaxiNeo",
+        metaDescription: "Via A1/A29 en 1h. Oise, Palais impérial, Forêt et Armistice en chemin. Dépose porte-à-porte, bagages inclus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Amiens → Compiègne",
         heroSubtitle: "Transfert Amiens → Compiègne au prix fixe de 100 — 125 €. 80 km, cité impériale.",
         description: "Compiègne, avec son palais impérial et sa forêt, est à 1h d'Amiens.",
@@ -306,8 +306,8 @@ export const trajetsAmiensTolon: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Amiens → Compiègne | Fixed price from €100 | TaxiNeo",
-        metaDescription: "Taxi Amiens → Compiègne. 80 km, 1h, from €100. Imperial palace, Armistice clearing. Book 24/7.",
+        metaTitle: "Taxi Amiens → Compiègne | 80 km, from €100 | TaxiNeo",
+        metaDescription: "Via A1/A29, 1 hour ride. Oise, Palais impérial, Forêt and Armistice en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Amiens → Compiègne",
         heroSubtitle: "Your Amiens → Compiègne transfer at €100 — €125. 80 km, imperial city.",
         description: "Compiègne, with its imperial palace and forest, is 1h from Amiens.",
@@ -352,8 +352,8 @@ export const trajetsAmiensTolon: Trajet[] = [
     hub: "toulon",
     i18n: {
       fr: {
-        metaTitle: "Taxi Toulon → Marseille | Prix fixe dès 85 € | TaxiNeo",
-        metaDescription: "Taxi Toulon → Marseille. 65 km, 55 min, dès 85 €. A50, Vieux-Port, Calanques. Réservation 24h/24.",
+        metaTitle: "Taxi Toulon → Marseille | 65 km, dès 85 € | TaxiNeo",
+        metaDescription: "Via A50 en 55 min. Provence, Vieux-Port, Calanques et Méditerranée en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Toulon → Marseille",
         heroSubtitle: "Transfert Toulon → Marseille au prix fixe de 85 — 105 €. 65 km, la cité phocéenne.",
         description: "Marseille, deuxième ville de France, est à 55 min de Toulon par l'A50.",
@@ -371,8 +371,8 @@ export const trajetsAmiensTolon: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Toulon → Marseille | Fixed price from €85 | TaxiNeo",
-        metaDescription: "Taxi Toulon → Marseille. 65 km, 55 min, from €85. A50, Vieux-Port, Calanques. Book 24/7.",
+        metaTitle: "Taxi Toulon → Marseille | 65 km, from €85 | TaxiNeo",
+        metaDescription: "Via A50, 55 min ride. Provence, Vieux-Port, Calanques and Méditerranée en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Toulon → Marseille",
         heroSubtitle: "Your Toulon → Marseille transfer at €85 — €105. 65 km, the Phocaean city.",
         description: "Marseille, France's second city, is 55 min from Toulon via the A50.",
@@ -417,8 +417,8 @@ export const trajetsAmiensTolon: Trajet[] = [
     hub: "toulon",
     i18n: {
       fr: {
-        metaTitle: "Taxi Toulon → Hyères | Prix fixe dès 28 € | TaxiNeo",
-        metaDescription: "Taxi Toulon → Hyères. 18 km, 20 min, dès 28 €. Porquerolles, îles d'Or, palmiers. Réservation 24h/24.",
+        metaTitle: "Taxi Toulon → Hyères | forfait dès 28 €, 20 min | TaxiNeo",
+        metaDescription: "Via A57 en 20 min. Îles d'Or, Porquerolles, Palmiers et Presqu'île de Giens en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Toulon → Hyères",
         heroSubtitle: "Transfert Toulon → Hyères au prix fixe de 28 — 35 €. 18 km, porte des îles d'Or.",
         description: "Hyères, cité des palmiers et porte de Porquerolles, est à 20 min de Toulon.",
@@ -437,7 +437,7 @@ export const trajetsAmiensTolon: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Toulon → Hyères | Fixed price from €28 | TaxiNeo",
-        metaDescription: "Taxi Toulon → Hyères. 18 km, 20 min, from €28. Porquerolles, Golden Islands. Book 24/7.",
+        metaDescription: "A57 route, approximately 20 min. Îles d'Or, Porquerolles, Palmiers and Presqu'île de Giens en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Toulon → Hyères",
         heroSubtitle: "Your Toulon → Hyères transfer at €28 — €35. 18 km, Golden Islands gateway.",
         description: "Hyères, palm city and Porquerolles gateway, is 20 min from Toulon.",
@@ -482,8 +482,8 @@ export const trajetsAmiensTolon: Trajet[] = [
     hub: "toulon",
     i18n: {
       fr: {
-        metaTitle: "Taxi Toulon → Saint-Tropez | Prix fixe dès 95 € | TaxiNeo",
-        metaDescription: "Taxi Toulon → Saint-Tropez. 70 km, 1h10, dès 95 €. Port, plages de Pampelonne, jet-set. Réservation 24h/24.",
+        metaTitle: "Taxi Toulon → Saint-Tropez | 70 km, dès 95 € | TaxiNeo",
+        metaDescription: "Via A57 puis D558 en 1h10. A57/D558, Côte d'Azur, Jet-set et Port en chemin. Arrêt visite possible en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Toulon → Saint-Tropez",
         heroSubtitle: "Transfert Toulon → Saint-Tropez au prix fixe de 95 — 115 €. 70 km, mythique Côte d'Azur.",
         description: "Saint-Tropez, joyau de la Côte d'Azur, est à 1h10 de Toulon.",
@@ -501,8 +501,8 @@ export const trajetsAmiensTolon: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Toulon → Saint-Tropez | Fixed price from €95 | TaxiNeo",
-        metaDescription: "Taxi Toulon → Saint-Tropez. 70 km, 1h10, from €95. Port, Pampelonne beaches. Book 24/7.",
+        metaTitle: "Taxi Toulon → Saint-Tropez | 70 km, from €95 | TaxiNeo",
+        metaDescription: "Via A57 then D558, 1h10 ride. A57/D558, Côte d'Azur, Jet-set and Port en route. Stops for sightseeing possible en route. Perfect for a day trip without driving.",
         heroTitle: "Taxi Toulon → Saint-Tropez",
         heroSubtitle: "Your Toulon → Saint-Tropez transfer at €95 — €115. 70 km, mythical Côte d'Azur.",
         description: "Saint-Tropez, Côte d'Azur jewel, is 1h10 from Toulon.",
@@ -547,8 +547,8 @@ export const trajetsAmiensTolon: Trajet[] = [
     hub: "toulon",
     i18n: {
       fr: {
-        metaTitle: "Taxi Toulon → Bandol | Prix fixe dès 28 € | TaxiNeo",
-        metaDescription: "Taxi Toulon → Bandol. 18 km, 20 min, dès 28 €. Vins de Bandol, plages, port. Réservation 24h/24.",
+        metaTitle: "Taxi Toulon → Bandol | forfait dès 28 €, 20 min | TaxiNeo",
+        metaDescription: "Via A50 en 20 min. Vin de Bandol, Plage, Port et Île de Bendor en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Toulon → Bandol",
         heroSubtitle: "Transfert Toulon → Bandol au prix fixe de 28 — 35 €. 18 km, terroir viticole d'exception.",
         description: "Bandol, station balnéaire et vignoble AOC renommé, est à 20 min de Toulon.",
@@ -567,7 +567,7 @@ export const trajetsAmiensTolon: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Toulon → Bandol | Fixed price from €28 | TaxiNeo",
-        metaDescription: "Taxi Toulon → Bandol. 18 km, 20 min, from €28. Bandol wines, beaches, port. Book 24/7.",
+        metaDescription: "Via A50, 20 min ride. Vin de Bandol, Plage, Port and Île de Bendor en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Toulon → Bandol",
         heroSubtitle: "Your Toulon → Bandol transfer at €28 — €35. 18 km, exceptional wine terroir.",
         description: "Bandol, seaside resort and renowned AOC vineyard, is 20 min from Toulon.",
@@ -612,8 +612,8 @@ export const trajetsAmiensTolon: Trajet[] = [
     hub: "toulon",
     i18n: {
       fr: {
-        metaTitle: "Taxi Toulon → Aéroport Hyères | Prix fixe dès 32 € | TaxiNeo",
-        metaDescription: "Taxi Toulon → Aéroport de Toulon-Hyères. 22 km, 25 min, dès 32 €. Transfert direct. Réservation 24h/24.",
+        metaTitle: "Taxi Toulon → Aéroport de Toulon-Hyères | 22 km | TaxiNeo",
+        metaDescription: "Via A57 en 25 min. Aéroport, Navette, Vol et Parking en chemin. Dépose au terminal, suivi de vol. Dépose au terminal exact, suivi de vol en temps réel.",
         heroTitle: "Taxi Toulon → Aéroport Hyères",
         heroSubtitle: "Transfert Toulon → Aéroport de Toulon-Hyères au prix fixe de 32 — 40 €. 22 km, 25 min.",
         description: "L'aéroport de Toulon-Hyères est à 25 min du centre de Toulon.",
@@ -631,8 +631,8 @@ export const trajetsAmiensTolon: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Toulon → Hyères Airport | Fixed price from €32 | TaxiNeo",
-        metaDescription: "Taxi Toulon → Toulon-Hyères Airport. 22 km, 25 min, from €32. Direct transfer. Book 24/7.",
+        metaTitle: "Taxi Toulon → Aéroport de Toulon-Hyères | 22 km | TaxiNeo",
+        metaDescription: "Via A57, 25 min ride. Aéroport, Navette, Vol and Parking en route. Terminal drop-off, flight tracking. Terminal drop-off, real-time flight tracking included.",
         heroTitle: "Taxi Toulon → Hyères Airport",
         heroSubtitle: "Your Toulon → Toulon-Hyères Airport transfer at €32 — €40. 22 km, 25 min.",
         description: "Toulon-Hyères Airport is 25 min from central Toulon.",

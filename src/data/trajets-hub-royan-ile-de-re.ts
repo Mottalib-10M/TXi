@@ -27,8 +27,8 @@ export const trajetsRoyanIleDeRe: Trajet[] = [
     hub: "royan-ile-de-re",
     i18n: {
       fr: {
-        metaTitle: "Taxi Royan → La Rochelle | Prix fixe dès 85 € | TaxiNeo",
-        metaDescription: "Taxi Royan → La Rochelle. 70 km, 50 min, dès 85 €. Route D733 et N137, de la Côte de Beauté au Vieux-Port. Réservation 24h/24.",
+        metaTitle: "Taxi Royan → La Rochelle | 70 km, dès 85 € | TaxiNeo",
+        metaDescription: "Via D733 / N137 en 50 min. Côte de Beauté, Charente-Maritime, Atlantique et Marennes-Oléron en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Royan → La Rochelle",
         heroSubtitle: "Transfert Royan → La Rochelle au prix fixe de 85 — 110 €. 70 km, de la station balnéaire de la Côte de Beauté au Vieux-Port atlantique.",
         description: "La Rochelle, perle de la côte atlantique et porte de l'île de Ré, est à seulement 50 min de Royan par la D733 et la N137.",
@@ -46,8 +46,8 @@ export const trajetsRoyanIleDeRe: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Royan → La Rochelle | Fixed price from €85 | TaxiNeo",
-        metaDescription: "Taxi Royan → La Rochelle. 70 km, 50 min, from €85. D733 and N137, from the Côte de Beauté to the Old Port. Book 24/7.",
+        metaTitle: "Taxi Royan → La Rochelle | 70 km, from €85 | TaxiNeo",
+        metaDescription: "Via D733 / N137, 50 min ride. Côte de Beauté, Charente-Maritime, Atlantique and Marennes-Oléron en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Royan → La Rochelle",
         heroSubtitle: "Your Royan → La Rochelle transfer at €85 — €110. 70 km, from the Côte de Beauté resort to the Atlantic Old Port.",
         description: "La Rochelle, Atlantic coast gem and gateway to Île de Ré, is just 50 min from Royan via the D733 and N137.",
@@ -92,8 +92,8 @@ export const trajetsRoyanIleDeRe: Trajet[] = [
     hub: "royan-ile-de-re",
     i18n: {
       fr: {
-        metaTitle: "Taxi Royan → Bordeaux | Prix fixe dès 145 € | TaxiNeo",
-        metaDescription: "Taxi Royan → Bordeaux. 120 km, 1h20, dès 145 €. Via D733 et A10, de la Côte de Beauté à la capitale du vin. Réservation 24h/24.",
+        metaTitle: "Taxi Royan → Bordeaux | 120 km, dès 145 € | TaxiNeo",
+        metaDescription: "Par D733 / A10, 1h20 de trajet. Côte de Beauté, Estuaire Gironde, Vignobles bordelais et Garonne en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Royan → Bordeaux",
         heroSubtitle: "Transfert Royan → Bordeaux au prix fixe de 145 — 185 €. 120 km, de la station balnéaire atlantique aux quais de la Garonne.",
         description: "Bordeaux, métropole viticole et culturelle de Nouvelle-Aquitaine, est à 1h20 de Royan par la D733 puis l'A10.",
@@ -111,8 +111,8 @@ export const trajetsRoyanIleDeRe: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Royan → Bordeaux | Fixed price from €145 | TaxiNeo",
-        metaDescription: "Taxi Royan → Bordeaux. 120 km, 1h20, from €145. Via D733 and A10, from the Côte de Beauté to the wine capital. Book 24/7.",
+        metaTitle: "Taxi Royan → Bordeaux | 120 km, from €145 | TaxiNeo",
+        metaDescription: "Via D733 / A10, 1h20 ride. Côte de Beauté, Estuaire Gironde, Vignobles bordelais and Garonne en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Royan → Bordeaux",
         heroSubtitle: "Your Royan → Bordeaux transfer at €145 — €185. 120 km, from the Atlantic resort to the Garonne quays.",
         description: "Bordeaux, UNESCO-listed wine capital of Nouvelle-Aquitaine, is 1h20 from Royan via the D733 and A10.",
@@ -157,8 +157,8 @@ export const trajetsRoyanIleDeRe: Trajet[] = [
     hub: "royan-ile-de-re",
     i18n: {
       fr: {
-        metaTitle: "Taxi Île de Ré → La Rochelle | Prix fixe dès 20 € | TaxiNeo",
-        metaDescription: "Taxi Île de Ré → La Rochelle. 15 km, 15 min, dès 20 €. Via le pont de l'Île de Ré. Réservation 24h/24.",
+        metaTitle: "Taxi Île de Ré → La Rochelle | 15 km, dès 20 € | TaxiNeo",
+        metaDescription: "Via Pont de l'Île de Ré / D735 en 15 min. Pont de l'Île de Ré, Charente-Maritime, Atlantique et Fort Boyard en chemin. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Île de Ré → La Rochelle",
         heroSubtitle: "Transfert Île de Ré → La Rochelle au prix fixe de 20 — 30 €. 15 km via le pont de Ré, du paradis insulaire au Vieux-Port.",
         description: "La Rochelle, avec son Vieux-Port et ses tours médiévales, est à seulement 15 min de l'Île de Ré par le pont.",
@@ -176,8 +176,8 @@ export const trajetsRoyanIleDeRe: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Île de Ré → La Rochelle | Fixed price from €20 | TaxiNeo",
-        metaDescription: "Taxi Île de Ré → La Rochelle. 15 km, 15 min, from €20. Via the Île de Ré bridge. Book 24/7.",
+        metaTitle: "Taxi Île de Ré → La Rochelle | 15 km, from €20 | TaxiNeo",
+        metaDescription: "Via Pont de l'Île de Ré / D735, 15 min ride. Pont de l'Île de Ré, Charente-Maritime, Atlantique and Fort Boyard en route. Drop-off at your exact address.",
         heroTitle: "Taxi Île de Ré → La Rochelle",
         heroSubtitle: "Your Île de Ré → La Rochelle transfer at €20 — €30. 15 km via the Ré bridge, from island paradise to the Old Port.",
         description: "La Rochelle with its Old Port and medieval towers is just 15 min from Île de Ré via the bridge.",
@@ -222,8 +222,8 @@ export const trajetsRoyanIleDeRe: Trajet[] = [
     hub: "royan-ile-de-re",
     i18n: {
       fr: {
-        metaTitle: "Taxi La Rochelle → Royan | Prix fixe dès 85 € | TaxiNeo",
-        metaDescription: "Taxi La Rochelle → Royan. 70 km, 50 min, dès 85 €. Route N137 et D733, du Vieux-Port à la Côte de Beauté. Réservation 24h/24.",
+        metaTitle: "Taxi La Rochelle → Royan | 70 km, dès 85 € | TaxiNeo",
+        metaDescription: "Trajet direct N137 / D733 en 50 min. Passage par N137, Vieux-Port, Charente-Maritime et Côte de Beauté. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi La Rochelle → Royan",
         heroSubtitle: "Transfert La Rochelle → Royan au prix fixe de 85 — 110 €. 70 km, du Vieux-Port atlantique à la station balnéaire de la Côte de Beauté.",
         description: "Royan, station balnéaire de la Côte de Beauté face à l'estuaire de la Gironde, est à 50 min de La Rochelle par la N137 et la D733.",
@@ -241,8 +241,8 @@ export const trajetsRoyanIleDeRe: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi La Rochelle → Royan | Fixed price from €85 | TaxiNeo",
-        metaDescription: "Taxi La Rochelle → Royan. 70 km, 50 min, from €85. N137 and D733, from the Old Port to the Côte de Beauté. Book 24/7.",
+        metaTitle: "Taxi La Rochelle → Royan | 70 km, from €85 | TaxiNeo",
+        metaDescription: "Direct route via N137 / D733, 50 min. N137, Vieux-Port, Charente-Maritime and Côte de Beauté en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi La Rochelle → Royan",
         heroSubtitle: "Your La Rochelle → Royan transfer at €85 — €110. 70 km, from the Atlantic Old Port to the Côte de Beauté resort.",
         description: "Royan, seaside resort on the Côte de Beauté facing the Gironde estuary, is 50 min from La Rochelle via the N137 and D733.",
@@ -287,8 +287,8 @@ export const trajetsRoyanIleDeRe: Trajet[] = [
     hub: "royan-ile-de-re",
     i18n: {
       fr: {
-        metaTitle: "Taxi Royan → Saintes | Prix fixe dès 40 € | TaxiNeo",
-        metaDescription: "Taxi Royan → Saintes. 35 km, 30 min, dès 40 €. Route D733, de la Côte de Beauté à la cité gallo-romaine. Réservation 24h/24.",
+        metaTitle: "Taxi Royan → Saintes | forfait dès 40 €, 30 min | TaxiNeo",
+        metaDescription: "Via D733 en 30 min. Côte de Beauté, Saintonge, Art roman et Charente en chemin. Dépose à votre adresse exacte. Alternative directe au train ou au bus.",
         heroTitle: "Taxi Royan → Saintes",
         heroSubtitle: "Transfert Royan → Saintes au prix fixe de 40 — 55 €. 35 km, de la station balnéaire atlantique à la capitale de la Saintonge romaine.",
         description: "Saintes, cité gallo-romaine deux fois millénaire et capitale de la Saintonge, est à seulement 30 min de Royan par la D733.",
@@ -307,7 +307,7 @@ export const trajetsRoyanIleDeRe: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Royan → Saintes | Fixed price from €40 | TaxiNeo",
-        metaDescription: "Taxi Royan → Saintes. 35 km, 30 min, from €40. D733, from the Côte de Beauté to the Gallo-Roman city. Book 24/7.",
+        metaDescription: "Via D733, 30 min ride. Côte de Beauté, Saintonge, Art roman and Charente en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Royan → Saintes",
         heroSubtitle: "Your Royan → Saintes transfer at €40 — €55. 35 km, from the Atlantic resort to the capital of Roman Saintonge.",
         description: "Saintes, a two-thousand-year-old Gallo-Roman city and capital of Saintonge, is just 30 min from Royan via the D733.",

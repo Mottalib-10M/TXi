@@ -27,8 +27,8 @@ export const trajetsArlesCamargue: Trajet[] = [
     hub: "arles-camargue",
     i18n: {
       fr: {
-        metaTitle: "Taxi Arles → Marseille | Prix fixe dès 95 € | TaxiNeo",
-        metaDescription: "Taxi Arles → Marseille. 90 km, 55 min, dès 95 €. A54, transfert direct porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Arles → Marseille | 90 km, dès 95 € | TaxiNeo",
+        metaDescription: "Via A54 en 55 min. Provence, Camargue, Vieux-Port et Aéroport Marignane en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Arles → Marseille",
         heroSubtitle: "Transfert Arles → Marseille au prix fixe de 95 — 120 €. 90 km, direct par l'A54.",
         description: "Marseille, cité phocéenne et deuxième ville de France, est à 55 min d'Arles par l'A54.",
@@ -46,8 +46,8 @@ export const trajetsArlesCamargue: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Arles → Marseille | Fixed price from €95 | TaxiNeo",
-        metaDescription: "Taxi Arles → Marseille. 90 km, 55 min, from €95. A54, direct door-to-door transfer. Book 24/7.",
+        metaTitle: "Taxi Arles → Marseille | 90 km, from €95 | TaxiNeo",
+        metaDescription: "Via A54, 55 min ride. Provence, Camargue, Vieux-Port and Aéroport Marignane en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Arles → Marseille",
         heroSubtitle: "Your Arles → Marseille transfer at €95 — €120. 90 km, via the A54.",
         description: "Marseille, France's second city, is 55 min from Arles via the A54.",
@@ -92,8 +92,8 @@ export const trajetsArlesCamargue: Trajet[] = [
     hub: "arles-camargue",
     i18n: {
       fr: {
-        metaTitle: "Taxi Arles → Avignon | Prix fixe dès 40 € | TaxiNeo",
-        metaDescription: "Taxi Arles → Avignon. 37 km, 30 min, dès 40 €. Palais des Papes, Pont d'Avignon, gare TGV. Réservation 24h/24.",
+        metaTitle: "Taxi Arles → Avignon | forfait dès 40 €, 30 min | TaxiNeo",
+        metaDescription: "Via N570 en 30 min. Provence, Palais des Papes, Pont d'Avignon et TGV en chemin. Dépose à votre adresse exacte. Alternative directe au train ou au bus.",
         heroTitle: "Taxi Arles → Avignon",
         heroSubtitle: "Transfert Arles → Avignon au prix fixe de 40 — 55 €. 37 km, route gratuite par la N570.",
         description: "Avignon, cité des Papes et capitale du théâtre, est à 30 min d'Arles.",
@@ -112,7 +112,7 @@ export const trajetsArlesCamargue: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Arles → Avignon | Fixed price from €40 | TaxiNeo",
-        metaDescription: "Taxi Arles → Avignon. 37 km, 30 min, from €40. Papal Palace, TGV station. Book 24/7.",
+        metaDescription: "Via N570, 30 min ride. Provence, Palais des Papes, Pont d'Avignon and TGV en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Arles → Avignon",
         heroSubtitle: "Your Arles → Avignon transfer at €40 — €55. 37 km, toll-free via the N570.",
         description: "Avignon, City of Popes and theatre capital, is 30 min from Arles.",
@@ -157,8 +157,8 @@ export const trajetsArlesCamargue: Trajet[] = [
     hub: "arles-camargue",
     i18n: {
       fr: {
-        metaTitle: "Taxi Arles → Nîmes | Prix fixe dès 35 € | TaxiNeo",
-        metaDescription: "Taxi Arles → Nîmes. 32 km, 25 min, dès 35 €. Arènes, Maison Carrée, Pont du Gard. Réservation 24h/24.",
+        metaTitle: "Taxi Arles → Nîmes | forfait dès 35 €, 25 min | TaxiNeo",
+        metaDescription: "Via A54 en 25 min. Gard, Arènes de Nîmes, Maison Carrée et Pont du Gard en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Arles → Nîmes",
         heroSubtitle: "Transfert Arles → Nîmes au prix fixe de 35 — 45 €. 32 km, direct par l'A54.",
         description: "Nîmes, la Rome française, est à seulement 25 min d'Arles par l'A54.",
@@ -177,7 +177,7 @@ export const trajetsArlesCamargue: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Arles → Nîmes | Fixed price from €35 | TaxiNeo",
-        metaDescription: "Taxi Arles → Nîmes. 32 km, 25 min, from €35. Roman arena, Maison Carrée, Pont du Gard. Book 24/7.",
+        metaDescription: "Via A54, 25 min ride. Gard, Arènes de Nîmes, Maison Carrée and Pont du Gard en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Arles → Nîmes",
         heroSubtitle: "Your Arles → Nîmes transfer at €35 — €45. 32 km, via the A54.",
         description: "Nîmes, the French Rome, is just 25 min from Arles via the A54.",
@@ -222,8 +222,8 @@ export const trajetsArlesCamargue: Trajet[] = [
     hub: "arles-camargue",
     i18n: {
       fr: {
-        metaTitle: "Taxi Arles → Montpellier | Prix fixe dès 80 € | TaxiNeo",
-        metaDescription: "Taxi Arles → Montpellier. 75 km, 50 min, dès 80 €. A9, transfert direct porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Arles → Montpellier | 75 km, dès 80 € | TaxiNeo",
+        metaDescription: "Via A9 en 50 min. Languedoc, Écusson, Tramway et Méditerranée en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Arles → Montpellier",
         heroSubtitle: "Transfert Arles → Montpellier au prix fixe de 80 — 100 €. 75 km, direct par l'A9.",
         description: "Montpellier, métropole méditerranéenne dynamique, est à 50 min d'Arles par l'A9.",
@@ -241,8 +241,8 @@ export const trajetsArlesCamargue: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Arles → Montpellier | Fixed price from €80 | TaxiNeo",
-        metaDescription: "Taxi Arles → Montpellier. 75 km, 50 min, from €80. A9, direct door-to-door. Book 24/7.",
+        metaTitle: "Taxi Arles → Montpellier | 75 km, from €80 | TaxiNeo",
+        metaDescription: "Via A9, 50 min ride. Languedoc, Écusson, Tramway and Méditerranée en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Arles → Montpellier",
         heroSubtitle: "Your Arles → Montpellier transfer at €80 — €100. 75 km, via the A9.",
         description: "Montpellier, dynamic Mediterranean city, is 50 min from Arles via the A9.",
@@ -287,8 +287,8 @@ export const trajetsArlesCamargue: Trajet[] = [
     hub: "arles-camargue",
     i18n: {
       fr: {
-        metaTitle: "Taxi Arles → Saintes-Maries-de-la-Mer | Prix fixe dès 40 € | TaxiNeo",
-        metaDescription: "Taxi Arles → Saintes-Maries-de-la-Mer. 38 km, 30 min, dès 40 €. Camargue, flamants roses, plages. Réservation 24h/24.",
+        metaTitle: "Taxi Arles → Saintes-Maries-de-la-Mer | 38 km | TaxiNeo",
+        metaDescription: "Via D570 en 30 min. Camargue, Flamants roses, Chevaux blancs et Taureaux en chemin. Arrêt visite possible en chemin. Arrêt possible pour visites ou photos.",
         heroTitle: "Taxi Arles → Saintes-Maries-de-la-Mer",
         heroSubtitle: "Transfert Arles → Saintes-Maries-de-la-Mer au prix fixe de 40 — 55 €. 38 km, au coeur de la Camargue.",
         description: "Saintes-Maries-de-la-Mer, capitale de la Camargue, est à 30 min d'Arles par la D570.",
@@ -306,8 +306,8 @@ export const trajetsArlesCamargue: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Arles → Saintes-Maries-de-la-Mer | Fixed price from €40 | TaxiNeo",
-        metaDescription: "Taxi Arles → Saintes-Maries-de-la-Mer. 38 km, 30 min, from €40. Camargue, flamingos, wild horses. Book 24/7.",
+        metaTitle: "Taxi Arles → Saintes-Maries-de-la-Mer | 38 km, €40 | TaxiNeo",
+        metaDescription: "Via D570, 30 min ride. Camargue, Flamants roses, Chevaux blancs and Taureaux en route. Stops for sightseeing possible en route. No toll on this route.",
         heroTitle: "Taxi Arles → Saintes-Maries-de-la-Mer",
         heroSubtitle: "Your Arles → Saintes-Maries-de-la-Mer transfer at €40 — €55. 38 km, into the heart of the Camargue.",
         description: "Saintes-Maries-de-la-Mer, capital of the Camargue, is 30 min from Arles via the D570.",

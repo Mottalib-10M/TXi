@@ -30,8 +30,8 @@ export const trajetsBrest: Trajet[] = [
     hub: "brest",
     i18n: {
       fr: {
-        metaTitle: "Taxi Brest → Quimper | Prix fixe dès 75 € | TaxiNeo",
-        metaDescription: "Taxi Brest → Quimper. 72 km, 50 min, dès 75 €. Cathédrale Saint-Corentin, vallée de l'Odet. Réservation 24h/24.",
+        metaTitle: "Taxi Brest → Quimper | forfait dès 75 €, 50 min | TaxiNeo",
+        metaDescription: "Via N165 en 50 min. Finistère Sud, Cathédrale Saint-Corentin et Odet en chemin. Dépose à votre adresse exacte. Alternative directe au train ou au bus.",
         heroTitle: "Taxi Brest → Quimper",
         heroSubtitle: "Transfert Brest → Quimper au prix fixe de 75 — 95 €. 72 km par la N165.",
         description: "Quimper, préfecture du Finistère et capitale de la Cornouaille, est à 50 minutes de Brest par la voie express N165.",
@@ -50,7 +50,7 @@ export const trajetsBrest: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Brest → Quimper | Fixed price from €75 | TaxiNeo",
-        metaDescription: "Taxi Brest → Quimper. 72 km, 50 min, from €75. Saint-Corentin Cathedral, Odet valley. Book 24/7.",
+        metaDescription: "Via N165, 50 min ride. Finistère Sud, Cathédrale Saint-Corentin and Odet along the way. Drop-off at your exact address. Door-to-door, luggage included.",
         heroTitle: "Taxi Brest → Quimper",
         heroSubtitle: "Your Brest → Quimper transfer at €75 — €95. 72 km via the N165.",
         description: "Quimper, capital of Cornouaille and Finistere's prefecture, is 50 minutes from Brest via the N165 expressway.",
@@ -95,8 +95,8 @@ export const trajetsBrest: Trajet[] = [
     hub: "brest",
     i18n: {
       fr: {
-        metaTitle: "Taxi Brest → Morlaix | Prix fixe dès 65 € | TaxiNeo",
-        metaDescription: "Taxi Brest → Morlaix. 60 km, 40 min, dès 65 €. Viaduc, maisons à pondalez, baie de Morlaix. Réservation 24h/24.",
+        metaTitle: "Taxi Brest → Morlaix | forfait dès 65 €, 40 min | TaxiNeo",
+        metaDescription: "Itinéraire N12, environ 40 min. Viaduc de Morlaix, Maisons à pondalez, Baie de Morlaix sur le parcours. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Brest → Morlaix",
         heroSubtitle: "Transfert Brest → Morlaix au prix fixe de 65 — 80 €. 60 km par la N12.",
         description: "Morlaix, ville historique dominée par son viaduc monumental, est à 40 minutes de Brest par la voie express N12.",
@@ -115,7 +115,7 @@ export const trajetsBrest: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Brest → Morlaix | Fixed price from €65 | TaxiNeo",
-        metaDescription: "Taxi Brest → Morlaix. 60 km, 40 min, from €65. Viaduct, pondalez houses, Morlaix bay. Book 24/7.",
+        metaDescription: "Direct route via N12, 40 min. Viaduc de Morlaix, Maisons à pondalez and Baie de Morlaix along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Brest → Morlaix",
         heroSubtitle: "Your Brest → Morlaix transfer at €65 — €80. 60 km via the N12.",
         description: "Morlaix, a historic town dominated by its monumental two-tier viaduct, is 40 minutes from Brest via the N12 expressway.",
@@ -160,8 +160,8 @@ export const trajetsBrest: Trajet[] = [
     hub: "brest",
     i18n: {
       fr: {
-        metaTitle: "Taxi Brest → Saint-Brieuc | Prix fixe dès 155 € | TaxiNeo",
-        metaDescription: "Taxi Brest → Saint-Brieuc. 145 km, 1h30, dès 155 €. Baie de Saint-Brieuc, Côtes-d'Armor. Réservation 24h/24.",
+        metaTitle: "Taxi Brest → Saint-Brieuc | 145 km, dès 155 € | TaxiNeo",
+        metaDescription: "Via N12 en 1h30. Côtes-d'Armor, Baie de Saint-Brieuc et Plateau du Léon en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Brest → Saint-Brieuc",
         heroSubtitle: "Transfert Brest → Saint-Brieuc au prix fixe de 155 — 195 €. 145 km par la N12.",
         description: "Saint-Brieuc, préfecture des Côtes-d'Armor, est à 1h30 de Brest par la voie express N12.",
@@ -179,8 +179,8 @@ export const trajetsBrest: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Brest → Saint-Brieuc | Fixed price from €155 | TaxiNeo",
-        metaDescription: "Taxi Brest → Saint-Brieuc. 145 km, 1h30, from €155. Bay of Saint-Brieuc, Cotes-d'Armor. Book 24/7.",
+        metaTitle: "Taxi Brest → Saint-Brieuc | 145 km, from €155 | TaxiNeo",
+        metaDescription: "N12 route, approximately 1h30. Côtes-d'Armor, Baie de Saint-Brieuc and Plateau du Léon along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Brest → Saint-Brieuc",
         heroSubtitle: "Your Brest → Saint-Brieuc transfer at €155 — €195. 145 km via the N12.",
         description: "Saint-Brieuc, prefecture of Cotes-d'Armor, is 1h30 from Brest via the toll-free N12 expressway.",
@@ -225,8 +225,8 @@ export const trajetsBrest: Trajet[] = [
     hub: "brest",
     i18n: {
       fr: {
-        metaTitle: "Taxi Brest → Rennes | Prix fixe dès 270 € | TaxiNeo",
-        metaDescription: "Taxi Brest → Rennes. 245 km, 2h30, dès 270 €. Traversée de la Bretagne sans péage. Réservation 24h/24.",
+        metaTitle: "Taxi Brest → Rennes | 245 km, dès 270 €, 2h30 | TaxiNeo",
+        metaDescription: "Via N12/N164 en 2h30. N12, N164, Traversée de la Bretagne et Morlaix en chemin. Dépose à votre adresse exacte. Alternative directe au train ou au bus.",
         heroTitle: "Taxi Brest → Rennes",
         heroSubtitle: "Transfert Brest → Rennes au prix fixe de 270 — 340 €. 245 km par la N12/N164.",
         description: "Rennes, capitale de la Bretagne, est à 2h30 de Brest par les voies express N12 et N164, entièrement gratuites.",
@@ -245,7 +245,7 @@ export const trajetsBrest: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Brest → Rennes | Fixed price from €270 | TaxiNeo",
-        metaDescription: "Taxi Brest → Rennes. 245 km, 2h30, from €270. Cross Brittany toll-free. Book 24/7.",
+        metaDescription: "Via N12/N164, 2h30 ride. N12, N164, Traversée de la Bretagne and Morlaix en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Brest → Rennes",
         heroSubtitle: "Your Brest → Rennes transfer at €270 — €340. 245 km via the N12/N164.",
         description: "Rennes, capital of Brittany, is 2h30 from Brest via the toll-free N12 and N164 expressways.",
@@ -290,8 +290,8 @@ export const trajetsBrest: Trajet[] = [
     hub: "brest",
     i18n: {
       fr: {
-        metaTitle: "Taxi Brest → Lorient | Prix fixe dès 145 € | TaxiNeo",
-        metaDescription: "Taxi Brest → Lorient. 135 km, 1h25, dès 145 €. Base sous-marine, Cité de la Voile, rade de Lorient. Réservation 24h/24.",
+        metaTitle: "Taxi Brest → Lorient | 135 km, dès 145 € | TaxiNeo",
+        metaDescription: "Via N165 en 1h25. Rade de Lorient, Base sous-marine et Cité de la Voile en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Brest → Lorient",
         heroSubtitle: "Transfert Brest → Lorient au prix fixe de 145 — 185 €. 135 km par la N165.",
         description: "Lorient, cité maritime du Morbihan et port de la Compagnie des Indes, est à 1h25 de Brest par la voie express N165.",
@@ -309,8 +309,8 @@ export const trajetsBrest: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Brest → Lorient | Fixed price from €145 | TaxiNeo",
-        metaDescription: "Taxi Brest → Lorient. 135 km, 1h25, from €145. Submarine base, Cite de la Voile, Lorient harbour. Book 24/7.",
+        metaTitle: "Taxi Brest → Lorient | 135 km, from €145 | TaxiNeo",
+        metaDescription: "N165 route, approximately 1h25. Rade de Lorient, Base sous-marine and Cité de la Voile along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Brest → Lorient",
         heroSubtitle: "Your Brest → Lorient transfer at €145 — €185. 135 km via the N165.",
         description: "Lorient, the Morbihan maritime city and former East India Company port, is 1h25 from Brest via the N165 expressway.",

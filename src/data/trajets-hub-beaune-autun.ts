@@ -27,8 +27,8 @@ export const trajetsBeauneAutun: Trajet[] = [
     hub: "beaune-autun",
     i18n: {
       fr: {
-        metaTitle: "Taxi Beaune → Dijon | Prix fixe dès 55 € | TaxiNeo",
-        metaDescription: "Taxi Beaune → Dijon. 45 km, 30 min, dès 55 €. A31 ou Route des Grands Crus, transfert direct en Côte-d'Or. Réservation 24h/24.",
+        metaTitle: "Taxi Beaune → Dijon | forfait dès 55 €, 30 min | TaxiNeo",
+        metaDescription: "Par A31, 30 min de trajet. Route des Grands Crus, Côte-d'Or, Vignoble et Hospices de Beaune en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Beaune → Dijon",
         heroSubtitle: "Transfert Beaune → Dijon au prix fixe de 55 — 75 €. 45 km, au cœur de la Côte-d'Or.",
         description: "Dijon, capitale de la Bourgogne et ancienne cité des Ducs, est à seulement 30 minutes de Beaune par l'A31.",
@@ -47,7 +47,7 @@ export const trajetsBeauneAutun: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Beaune → Dijon | Fixed price from €55 | TaxiNeo",
-        metaDescription: "Taxi Beaune → Dijon. 45 km, 30 min, from €55. A31 or Route des Grands Crus. Book 24/7.",
+        metaDescription: "Direct route via A31, 30 min. Route des Grands Crus, Côte-d'Or, Vignoble and Hospices de Beaune en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Beaune → Dijon",
         heroSubtitle: "Your Beaune → Dijon transfer at €55 — €75. 45 km through the Côte-d'Or vineyards.",
         description: "Dijon, Burgundy's capital and former seat of the Dukes, is just 30 minutes from Beaune via the A31.",
@@ -92,8 +92,8 @@ export const trajetsBeauneAutun: Trajet[] = [
     hub: "beaune-autun",
     i18n: {
       fr: {
-        metaTitle: "Taxi Beaune → Lyon | Prix fixe dès 185 € | TaxiNeo",
-        metaDescription: "Taxi Beaune → Lyon. 155 km, 1h35, dès 185 €. A6, transfert Bourgogne-Lyon direct. Réservation 24h/24.",
+        metaTitle: "Taxi Beaune → Lyon | 155 km, dès 185 €, 1h35 | TaxiNeo",
+        metaDescription: "Via A6 en 1h35. Côte-d'Or, Mâconnais, Beaujolais et Gastronomie en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Beaune → Lyon",
         heroSubtitle: "Transfert Beaune → Lyon au prix fixe de 185 — 235 €. 155 km, de la Côte-d'Or à la capitale des Gaules.",
         description: "Lyon, capitale de la gastronomie française, est à 1h35 de Beaune par l'autoroute du Soleil A6.",
@@ -112,7 +112,7 @@ export const trajetsBeauneAutun: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Beaune → Lyon | Fixed price from €185 | TaxiNeo",
-        metaDescription: "Taxi Beaune → Lyon. 155 km, 1h35, from €185. A6 motorway, Burgundy to Lyon transfer. Book 24/7.",
+        metaDescription: "Via A6, 1h35 ride. Côte-d'Or, Mâconnais, Beaujolais and Gastronomie en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Beaune → Lyon",
         heroSubtitle: "Your Beaune → Lyon transfer at €185 — €235. 155 km via the A6 Autoroute du Soleil.",
         description: "Lyon, France's gastronomic capital, is 1h35 from Beaune via the A6 motorway.",
@@ -157,8 +157,8 @@ export const trajetsBeauneAutun: Trajet[] = [
     hub: "beaune-autun",
     i18n: {
       fr: {
-        metaTitle: "Taxi Beaune → Chalon-sur-Saône | Prix fixe dès 35 € | TaxiNeo",
-        metaDescription: "Taxi Beaune → Chalon-sur-Saône. 30 km, 20 min, dès 35 €. D974 ou A6, transfert rapide en Bourgogne. Réservation 24h/24.",
+        metaTitle: "Taxi Beaune → Chalon-sur-Saône | 30 km, dès 35 € | TaxiNeo",
+        metaDescription: "Via A6 en 20 min. Côte de Beaune, Saône, Nicéphore Niépce et Meursault en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Beaune → Chalon-sur-Saône",
         heroSubtitle: "Transfert Beaune → Chalon-sur-Saône au prix fixe de 35 — 50 €. 30 km, entre Côte de Beaune et vallée de la Saône.",
         description: "Chalon-sur-Saône, ville natale de la photographie, est à seulement 20 minutes de Beaune par la D974.",
@@ -176,8 +176,8 @@ export const trajetsBeauneAutun: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Beaune → Chalon-sur-Saône | Fixed price from €35 | TaxiNeo",
-        metaDescription: "Taxi Beaune → Chalon-sur-Saône. 30 km, 20 min, from €35. Through Burgundy vineyards. Book 24/7.",
+        metaTitle: "Taxi Beaune → Chalon-sur-Saône | 30 km, from €35 | TaxiNeo",
+        metaDescription: "Via A6, 20 min ride. Côte de Beaune, Saône, Nicéphore Niépce and Meursault en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Beaune → Chalon-sur-Saône",
         heroSubtitle: "Your Beaune → Chalon-sur-Saône transfer at €35 — €50. 30 km through the Côte de Beaune.",
         description: "Chalon-sur-Saône, birthplace of photography, is just 20 minutes from Beaune.",
@@ -222,8 +222,8 @@ export const trajetsBeauneAutun: Trajet[] = [
     hub: "beaune-autun",
     i18n: {
       fr: {
-        metaTitle: "Taxi Autun → Dijon | Prix fixe dès 100 € | TaxiNeo",
-        metaDescription: "Taxi Autun → Dijon. 85 km, 55 min, dès 100 €. D978 via Arnay-le-Duc, transfert Morvan-Dijon. Réservation 24h/24.",
+        metaTitle: "Taxi Autun → Dijon | forfait dès 100 €, 55 min | TaxiNeo",
+        metaDescription: "Par D978 / A38, 55 min de trajet. Morvan, Cathédrale Saint-Lazare, Côte-d'Or et Arnay-le-Duc en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Autun → Dijon",
         heroSubtitle: "Transfert Autun → Dijon au prix fixe de 100 — 130 €. 85 km, du Morvan à la capitale bourguignonne.",
         description: "Dijon, capitale de la Bourgogne, est à 55 minutes d'Autun par la D978 via Arnay-le-Duc.",
@@ -242,7 +242,7 @@ export const trajetsBeauneAutun: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Autun → Dijon | Fixed price from €100 | TaxiNeo",
-        metaDescription: "Taxi Autun → Dijon. 85 km, 55 min, from €100. D978 via Arnay-le-Duc. No tolls. Book 24/7.",
+        metaDescription: "Direct route via D978 / A38, 55 min. Morvan, Cathédrale Saint-Lazare, Côte-d'Or and Arnay-le-Duc en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Autun → Dijon",
         heroSubtitle: "Your Autun → Dijon transfer at €100 — €130. 85 km from the Morvan to Burgundy's capital.",
         description: "Dijon is 55 minutes from Autun via the D978 through the Auxois countryside.",
@@ -287,8 +287,8 @@ export const trajetsBeauneAutun: Trajet[] = [
     hub: "beaune-autun",
     i18n: {
       fr: {
-        metaTitle: "Taxi Autun → Chalon-sur-Saône | Prix fixe dès 65 € | TaxiNeo",
-        metaDescription: "Taxi Autun → Chalon-sur-Saône. 55 km, 40 min, dès 65 €. D978/D973 via Couches, transfert Morvan-Saône. Réservation 24h/24.",
+        metaTitle: "Taxi Autun → Chalon-sur-Saône | 55 km, dès 65 € | TaxiNeo",
+        metaDescription: "Via D978 / D973 en 40 min. Morvan, Saône et Couches en chemin. Alternative directe au train ou au bus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Autun → Chalon-sur-Saône",
         heroSubtitle: "Transfert Autun → Chalon-sur-Saône au prix fixe de 65 — 85 €. 55 km, du Morvan à la vallée de la Saône.",
         description: "Chalon-sur-Saône est à 40 minutes d'Autun par la D978 et la D973, à travers la campagne bourguignonne.",
@@ -306,8 +306,8 @@ export const trajetsBeauneAutun: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Autun → Chalon-sur-Saône | Fixed price from €65 | TaxiNeo",
-        metaDescription: "Taxi Autun → Chalon-sur-Saône. 55 km, 40 min, from €65. D978/D973 via Couches. No tolls. Book 24/7.",
+        metaTitle: "Taxi Autun → Chalon-sur-Saône | 55 km, from €65 | TaxiNeo",
+        metaDescription: "Via D978 / D973, 40 min ride. Morvan, Saône and Couches along the way. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Autun → Chalon-sur-Saône",
         heroSubtitle: "Your Autun → Chalon-sur-Saône transfer at €65 — €85. 55 km from the Morvan to the Saône valley.",
         description: "Chalon-sur-Saône is 40 minutes from Autun through the Burgundy countryside.",

@@ -30,8 +30,8 @@ export const trajetsLyonPart3: Trajet[] = [
     hub: "lyon",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lyon → Courchevel | Prix fixe dès 250 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Lyon → Courchevel. 185 km, 2h20, prix fixe dès 250 €. Transfert ski direct, chauffeur équipé chaînes. Réservation en ligne 24h/24.",
+        metaTitle: "Taxi Lyon → Courchevel | 185 km, dès 250 € | TaxiNeo",
+        metaDescription: "Par A43/N90, 2h20 de trajet. Passage par Vallée de la Maurienne, Stations de ski, Alpes et 3 Vallées. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Lyon → Courchevel",
         heroSubtitle: "Votre transfert Lyon → Courchevel au prix fixe de 250 — 320 €. Trajet direct par l'A43 et la vallée de la Tarentaise, 2h20 de route. Réservation en ligne.",
         description: "Le trajet Lyon — Courchevel relie la métropole lyonnaise à la station de ski la plus prestigieuse des Alpes françaises, au cœur du domaine des 3 Vallées. 185 km séparent les deux villes, par l'A43 puis la route de la Tarentaise. Votre chauffeur TaxiNeo vous conduit directement au pied des pistes.",
@@ -49,8 +49,8 @@ export const trajetsLyonPart3: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Lyon → Courchevel | Fixed price from €250 | TaxiNeo",
-        metaDescription: "Book your taxi Lyon → Courchevel. 185 km, 2h20, fixed price from €250. Direct ski transfer, snow-equipped driver. Online booking 24/7.",
+        metaTitle: "Taxi Lyon → Courchevel | 185 km, from €250 | TaxiNeo",
+        metaDescription: "Via A43/N90, 2h20 ride. Vallée de la Maurienne, Stations de ski, Alpes and 3 Vallées en route. Stops for sightseeing possible en route. ~€20 toll included.",
         heroTitle: "Taxi Lyon → Courchevel",
         heroSubtitle: "Your Lyon → Courchevel transfer at a fixed price of €250 — €320. Direct route via A43 and Tarentaise valley, 2h20 drive. Online booking.",
         description: "The Lyon — Courchevel route connects the Lyon metropolitan area to the most prestigious ski resort in the French Alps, in the heart of the 3 Vallées domain. 185 km separate the two cities, via the A43 and the Tarentaise road. Your TaxiNeo driver takes you directly to the foot of the slopes.",
@@ -98,8 +98,8 @@ export const trajetsLyonPart3: Trajet[] = [
     hub: "lyon",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lyon → Méribel | Prix fixe dès 240 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Lyon → Méribel. 175 km, 2h15, prix fixe dès 240 €. Transfert ski 3 Vallées, chauffeur équipé hiver. Réservation en ligne 24h/24.",
+        metaTitle: "Taxi Lyon → Méribel | 175 km, dès 240 €, 2h15 | TaxiNeo",
+        metaDescription: "Via A43/N90 en 2h15. Tarentaise, 3 Vallées, Méribel-Mottaret et JO 2030 en chemin. Arrêt visite possible en chemin. Arrêt possible pour visites ou photos.",
         heroTitle: "Taxi Lyon → Méribel",
         heroSubtitle: "Votre transfert Lyon → Méribel au prix fixe de 240 — 300 €. Trajet direct par l'A43, cœur des 3 Vallées, 2h15 de route.",
         description: "Le trajet Lyon — Méribel relie la capitale des Gaules à la station savoyarde emblématique du domaine des 3 Vallées. 175 km par l'A43 puis la vallée de la Tarentaise. Votre chauffeur TaxiNeo vous dépose au pied des pistes de Méribel ou Méribel-Mottaret.",
@@ -118,7 +118,7 @@ export const trajetsLyonPart3: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Lyon → Méribel | Fixed price from €240 | TaxiNeo",
-        metaDescription: "Book your taxi Lyon → Méribel. 175 km, 2h15, fixed price from €240. 3 Vallées ski transfer, winter-equipped driver. Online booking 24/7.",
+        metaDescription: "Via A43/N90, 2h15 ride. Tarentaise, 3 Vallées, Méribel-Mottaret and JO 2030 en route. Stops for sightseeing possible en route. Up to 2h55 during rush hour.",
         heroTitle: "Taxi Lyon → Méribel",
         heroSubtitle: "Your Lyon → Méribel transfer at a fixed price of €240 — €300. Direct route via A43, heart of the 3 Vallées, 2h15 drive.",
         description: "The Lyon — Méribel route connects the Lyon metropolitan area to the iconic Savoyard resort at the heart of the 3 Vallées domain. 175 km via the A43 then the Tarentaise valley. Your TaxiNeo driver drops you at the foot of the slopes in Méribel or Méribel-Mottaret.",
@@ -166,8 +166,8 @@ export const trajetsLyonPart3: Trajet[] = [
     hub: "lyon",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lyon → Val Thorens | Prix fixe dès 260 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Lyon → Val Thorens. 190 km, 2h30, prix fixe dès 260 €. Plus haute station d'Europe, 3 Vallées. Réservation en ligne 24h/24.",
+        metaTitle: "Taxi Lyon → Val Thorens | 190 km, dès 260 € | TaxiNeo",
+        metaDescription: "Par A43/N90, 2h30 de trajet. Tarentaise, 3 Vallées, Plus haute station d'Europe et 2 300 m en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Lyon → Val Thorens",
         heroSubtitle: "Votre transfert Lyon → Val Thorens au prix fixe de 260 — 330 €. Plus haute station d'Europe à 2 300 m, domaine des 3 Vallées.",
         description: "Le trajet Lyon — Val Thorens relie la métropole lyonnaise à la plus haute station de ski d'Europe, perchée à 2 300 m d'altitude au sommet de la vallée des Belleville, dans le domaine des 3 Vallées.",
@@ -185,8 +185,8 @@ export const trajetsLyonPart3: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Lyon → Val Thorens | Fixed price from €260 | TaxiNeo",
-        metaDescription: "Book your taxi Lyon → Val Thorens. 190 km, 2h30, fixed price from €260. Europe's highest ski resort, 3 Vallées. Online booking 24/7.",
+        metaTitle: "Taxi Lyon → Val Thorens | 190 km, from €260 | TaxiNeo",
+        metaDescription: "Via A43/N90, 2h30 ride. Tarentaise, 3 Vallées, Plus haute station d'Europe and 2 300 m en route. Stops for sightseeing possible en route. ~€20 toll included.",
         heroTitle: "Taxi Lyon → Val Thorens",
         heroSubtitle: "Your Lyon → Val Thorens transfer at a fixed price of €260 — €330. Europe's highest resort at 2,300 m, 3 Vallées domain.",
         description: "The Lyon — Val Thorens route connects the Lyon metropolitan area to Europe's highest ski resort, perched at 2,300 m altitude at the top of the Belleville valley, in the 3 Vallées domain.",
@@ -234,8 +234,8 @@ export const trajetsLyonPart3: Trajet[] = [
     hub: "lyon",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lyon → Les Arcs | Prix fixe dès 250 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Lyon → Les Arcs. 190 km, 2h20, prix fixe dès 250 €. Domaine Paradiski, transfert ski direct. Réservation en ligne 24h/24.",
+        metaTitle: "Taxi Lyon → Les Arcs | 190 km, dès 250 € | TaxiNeo",
+        metaDescription: "Par A43/N90, 2h20 de trajet. Passage par Tarentaise, Paradiski, Bourg-Saint-Maurice et Aiguille Rouge. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Lyon → Les Arcs",
         heroSubtitle: "Votre transfert Lyon → Les Arcs au prix fixe de 250 — 320 €. Domaine Paradiski, trajet direct par l'A43, 2h20 de route.",
         description: "Le trajet Lyon — Les Arcs relie la métropole lyonnaise à l'une des stations phares du domaine Paradiski, en haute Tarentaise. 190 km par l'A43 puis la N90 jusqu'à Bourg-Saint-Maurice.",
@@ -253,8 +253,8 @@ export const trajetsLyonPart3: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Lyon → Les Arcs | Fixed price from €250 | TaxiNeo",
-        metaDescription: "Book your taxi Lyon → Les Arcs. 190 km, 2h20, fixed price from €250. Paradiski domain, direct ski transfer. Online booking 24/7.",
+        metaTitle: "Taxi Lyon → Les Arcs | 190 km, from €250 | TaxiNeo",
+        metaDescription: "Via A43/N90, 2h20 ride. Tarentaise, Paradiski, Bourg-Saint-Maurice and Aiguille Rouge en route. Stops for sightseeing possible en route. ~€20 toll included.",
         heroTitle: "Taxi Lyon → Les Arcs",
         heroSubtitle: "Your Lyon → Les Arcs transfer at a fixed price of €250 — €320. Paradiski domain, direct route via A43, 2h20 drive.",
         description: "The Lyon — Les Arcs route connects the Lyon metropolitan area to one of the flagship stations of the Paradiski domain in the upper Tarentaise. 190 km via the A43 then the N90 to Bourg-Saint-Maurice.",
@@ -302,8 +302,8 @@ export const trajetsLyonPart3: Trajet[] = [
     hub: "lyon",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lyon → La Plagne | Prix fixe dès 250 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Lyon → La Plagne. 185 km, 2h20, prix fixe dès 250 €. Domaine Paradiski, station familiale. Réservation en ligne 24h/24.",
+        metaTitle: "Taxi Lyon → La Plagne | 185 km, dès 250 € | TaxiNeo",
+        metaDescription: "Par A43/N90, 2h20 de trajet. Passage par Tarentaise, Paradiski, Aime et Piste olympique de bobsleigh. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Lyon → La Plagne",
         heroSubtitle: "Votre transfert Lyon → La Plagne au prix fixe de 250 — 310 €. Paradiski, 425 km de pistes, station familiale par excellence.",
         description: "Le trajet Lyon — La Plagne relie la métropole lyonnaise à l'une des stations de ski les plus populaires de France, au cœur du domaine Paradiski. 185 km par l'A43 puis la route d'Aime.",
@@ -321,8 +321,8 @@ export const trajetsLyonPart3: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Lyon → La Plagne | Fixed price from €250 | TaxiNeo",
-        metaDescription: "Book your taxi Lyon → La Plagne. 185 km, 2h20, fixed price from €250. Paradiski domain, family resort. Online booking 24/7.",
+        metaTitle: "Taxi Lyon → La Plagne | 185 km, from €250 | TaxiNeo",
+        metaDescription: "Via A43/N90, 2h20 ride. Tarentaise, Paradiski, Aime and Piste olympique de bobsleigh en route. Stops for sightseeing possible en route. ~€20 toll included.",
         heroTitle: "Taxi Lyon → La Plagne",
         heroSubtitle: "Your Lyon → La Plagne transfer at a fixed price of €250 — €310. Paradiski, 425 km of runs, the ultimate family resort.",
         description: "The Lyon — La Plagne route connects the Lyon metropolitan area to one of France's most popular ski resorts, at the heart of the Paradiski domain. 185 km via the A43 then the road from Aime.",

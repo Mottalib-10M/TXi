@@ -30,8 +30,8 @@ export const trajetsNantes: Trajet[] = [
     hub: "nantes",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nantes → Saint-Nazaire | Prix fixe dès 80 € | TaxiNeo",
-        metaDescription: "Taxi Nantes → Saint-Nazaire. 65 km, 45 min, dès 80 €. Chantiers navals, estuaire de la Loire. Réservation en ligne 24h/24.",
+        metaTitle: "Taxi Nantes → Saint-Nazaire | 65 km, dès 80 € | TaxiNeo",
+        metaDescription: "Via N165/A11 en 45 min. Pont de Saint-Nazaire, Chantiers navals, Estuaire de la Loire sur le parcours. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Nantes → Saint-Nazaire",
         heroSubtitle: "Transfert Nantes → Saint-Nazaire au prix fixe de 80 — 100 €. 65 km via la N165, sans péage.",
         description: "Saint-Nazaire, ville des grands paquebots et de l'estuaire de la Loire, est à 45 minutes de Nantes par la voie express.",
@@ -49,8 +49,8 @@ export const trajetsNantes: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nantes → Saint-Nazaire | Fixed price from €80 | TaxiNeo",
-        metaDescription: "Taxi Nantes → Saint-Nazaire. 65 km, 45 min, from €80. Shipyards, Loire estuary. Online booking 24/7.",
+        metaTitle: "Taxi Nantes → Saint-Nazaire | 65 km, from €80 | TaxiNeo",
+        metaDescription: "Via N165/A11, 45 min ride. Pont de Saint-Nazaire, Chantiers navals and Estuaire de la Loire along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Nantes → Saint-Nazaire",
         heroSubtitle: "Your Nantes → Saint-Nazaire transfer at €80 — €100. 65 km via the N165, toll-free.",
         description: "Saint-Nazaire, city of great ocean liners and the Loire estuary, is 45 minutes from Nantes by expressway.",
@@ -95,8 +95,8 @@ export const trajetsNantes: Trajet[] = [
     hub: "nantes",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nantes → La Baule | Prix fixe dès 100 € | TaxiNeo",
-        metaDescription: "Taxi Nantes → La Baule. 80 km, 55 min, dès 100 €. Plus belle plage d'Europe, côte d'Amour. Réservation 24h/24.",
+        metaTitle: "Taxi Nantes → La Baule | 80 km, dès 100 € | TaxiNeo",
+        metaDescription: "Via N165/N171 en 55 min. Passage par Côte d'Amour, Plage de La Baule, Station balnéaire et Pornichet. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Nantes → La Baule",
         heroSubtitle: "Transfert Nantes → La Baule au prix fixe de 100 — 125 €. 80 km via la N165, sans péage.",
         description: "La Baule et sa baie de 9 km de sable fin, souvent classée parmi les plus belles plages d'Europe, est à 55 minutes de Nantes.",
@@ -114,8 +114,8 @@ export const trajetsNantes: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nantes → La Baule | Fixed price from €100 | TaxiNeo",
-        metaDescription: "Taxi Nantes → La Baule. 80 km, 55 min, from €100. Europe's finest beach, Côte d'Amour. Book 24/7.",
+        metaTitle: "Taxi Nantes → La Baule | 80 km, from €100 | TaxiNeo",
+        metaDescription: "Direct route via N165/N171, 55 min. Côte d'Amour, Plage de La Baule, Station balnéaire and Pornichet en route. Stops for sightseeing possible en route.",
         heroTitle: "Taxi Nantes → La Baule",
         heroSubtitle: "Your Nantes → La Baule transfer at €100 — €125. 80 km via the N165, toll-free.",
         description: "La Baule and its 9 km bay of fine sand, regularly ranked among Europe's finest beaches, is 55 minutes from Nantes.",
@@ -160,8 +160,8 @@ export const trajetsNantes: Trajet[] = [
     hub: "nantes",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nantes → Pornic | Prix fixe dès 65 € | TaxiNeo",
-        metaDescription: "Taxi Nantes → Pornic. 50 km, 40 min, dès 65 €. Côte de Jade, château, thalasso, port de pêche. Réservation 24h/24.",
+        metaTitle: "Taxi Nantes → Pornic | forfait dès 65 €, 40 min | TaxiNeo",
+        metaDescription: "Via D751/Route Bleue en 40 min. Côte de Jade, Château de Pornic, Thalasso et Port de pêche en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Nantes → Pornic",
         heroSubtitle: "Transfert Nantes → Pornic au prix fixe de 65 — 85 €. 50 km via la Route Bleue, sans péage.",
         description: "Pornic, perle de la côte de Jade, est à seulement 40 minutes de Nantes par la Route Bleue.",
@@ -180,7 +180,7 @@ export const trajetsNantes: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Nantes → Pornic | Fixed price from €65 | TaxiNeo",
-        metaDescription: "Taxi Nantes → Pornic. 50 km, 40 min, from €65. Jade Coast, castle, thalassotherapy, fishing port. Book 24/7.",
+        metaDescription: "Direct route via D751/Route Bleue, 40 min. Côte de Jade, Château de Pornic, Thalasso and Port de pêche en route. Stops for sightseeing possible en route.",
         heroTitle: "Taxi Nantes → Pornic",
         heroSubtitle: "Your Nantes → Pornic transfer at €65 — €85. 50 km via the Route Bleue, toll-free.",
         description: "Pornic, pearl of the Jade Coast, is just 40 minutes from Nantes via the Route Bleue.",
@@ -225,8 +225,8 @@ export const trajetsNantes: Trajet[] = [
     hub: "nantes",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nantes → Clisson | Prix fixe dès 45 € | TaxiNeo",
-        metaDescription: "Taxi Nantes → Clisson. 30 km, 30 min, dès 45 €. Hellfest, vignoble Muscadet, château médiéval. Réservation 24h/24.",
+        metaTitle: "Taxi Nantes → Clisson | forfait dès 45 € | TaxiNeo",
+        metaDescription: "Via N149/D59 en 30 min. Vignoble Muscadet, Hellfest, Château de Clisson et Architecture italianisante en chemin. Arrêt possible pour visites ou photos.",
         heroTitle: "Taxi Nantes → Clisson",
         heroSubtitle: "Transfert Nantes → Clisson au prix fixe de 45 — 60 €. 30 km sans péage à travers le vignoble.",
         description: "Clisson, cité italianisante au cœur du vignoble du Muscadet, est à 30 minutes de Nantes.",
@@ -245,7 +245,7 @@ export const trajetsNantes: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Nantes → Clisson | Fixed price from €45 | TaxiNeo",
-        metaDescription: "Taxi Nantes → Clisson. 30 km, 30 min, from €45. Hellfest, Muscadet vineyard, medieval castle. Book 24/7.",
+        metaDescription: "Via N149/D59, 30 min ride. Vignoble Muscadet, Hellfest, Château de Clisson and Architecture italianisante en route. Stops for sightseeing possible en route.",
         heroTitle: "Taxi Nantes → Clisson",
         heroSubtitle: "Your Nantes → Clisson transfer at €45 — €60. 30 km toll-free through the vineyards.",
         description: "Clisson, an Italianate town in the heart of the Muscadet vineyard, is 30 minutes from Nantes.",
@@ -290,8 +290,8 @@ export const trajetsNantes: Trajet[] = [
     hub: "nantes",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nantes → Ancenis | Prix fixe dès 55 € | TaxiNeo",
-        metaDescription: "Taxi Nantes → Ancenis. 40 km, 35 min, dès 55 €. Bords de Loire, vignoble, patrimoine. Réservation en ligne 24h/24.",
+        metaTitle: "Taxi Nantes → Ancenis | forfait dès 55 € | TaxiNeo",
+        metaDescription: "Via N23/A11 en 35 min. Loire, Vignoble, Pont suspendu et Château d'Ancenis en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Nantes → Ancenis",
         heroSubtitle: "Transfert Nantes → Ancenis au prix fixe de 55 — 70 €. 40 km le long de la Loire, sans péage.",
         description: "Ancenis, cité ligérienne historique aux portes de l'Anjou, est à 35 minutes de Nantes le long de la Loire.",
@@ -310,7 +310,7 @@ export const trajetsNantes: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Nantes → Ancenis | Fixed price from €55 | TaxiNeo",
-        metaDescription: "Taxi Nantes → Ancenis. 40 km, 35 min, from €55. Loire riverbanks, vineyard, heritage. Book online 24/7.",
+        metaDescription: "Via N23/A11, 35 min ride. Loire, Vignoble, Pont suspendu and Château d'Ancenis en route. Drop-off at your exact address. Door-to-door, luggage included.",
         heroTitle: "Taxi Nantes → Ancenis",
         heroSubtitle: "Your Nantes → Ancenis transfer at €55 — €70. 40 km along the Loire, toll-free.",
         description: "Ancenis, a historic Loire town on the Anjou border, is 35 minutes from Nantes along the Loire.",
@@ -355,8 +355,8 @@ export const trajetsNantes: Trajet[] = [
     hub: "nantes",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nantes → Châteaubriant | Prix fixe dès 80 € | TaxiNeo",
-        metaDescription: "Taxi Nantes → Châteaubriant. 65 km, 50 min, dès 80 €. Château Renaissance, bocage, Foire de Béré. Réservation 24h/24.",
+        metaTitle: "Taxi Nantes → Châteaubriant | 65 km, dès 80 € | TaxiNeo",
+        metaDescription: "Par N171/D178, 50 min de trajet. Château Renaissance, Forêt de Juigné, Bocage et Foire de Béré en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Nantes → Châteaubriant",
         heroSubtitle: "Transfert Nantes → Châteaubriant au prix fixe de 80 — 100 €. 65 km à travers le bocage, sans péage.",
         description: "Châteaubriant, cité médiévale et Renaissance du bocage nantais, est à 50 minutes de Nantes.",
@@ -374,8 +374,8 @@ export const trajetsNantes: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nantes → Châteaubriant | Fixed price from €80 | TaxiNeo",
-        metaDescription: "Taxi Nantes → Châteaubriant. 65 km, 50 min, from €80. Renaissance castle, bocage, Foire de Béré. Book 24/7.",
+        metaTitle: "Taxi Nantes → Châteaubriant | 65 km, from €80 | TaxiNeo",
+        metaDescription: "Via N171/D178, 50 min ride. Château Renaissance, Forêt de Juigné, Bocage and Foire de Béré en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Nantes → Châteaubriant",
         heroSubtitle: "Your Nantes → Châteaubriant transfer at €80 — €100. 65 km through the bocage, toll-free.",
         description: "Châteaubriant, a medieval and Renaissance town in the Nantes bocage, is 50 minutes from Nantes.",
@@ -420,8 +420,8 @@ export const trajetsNantes: Trajet[] = [
     hub: "nantes",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nantes → Aéroport Nantes Atlantique | Dès 25 € | TaxiNeo",
-        metaDescription: "Taxi Nantes centre → Aéroport Nantes Atlantique. 10 km, 15 min, dès 25 €. Prix fixe, pas de compteur. Réservation 24h/24.",
+        metaTitle: "Taxi Nantes → Aéroport Nantes Atlantique | 10 km | TaxiNeo",
+        metaDescription: "Par Périphérique sud, 15 min de trajet. Passage par Aéroport NTE, Terminal et Navette aéroport. Accueil au terminal, attente gratuite si retard de vol.",
         heroTitle: "Taxi Nantes → Aéroport Nantes Atlantique",
         heroSubtitle: "Transfert Nantes centre → Aéroport NTE au prix fixe de 25 — 35 €. 15 minutes, disponible 24h/24.",
         description: "L'aéroport Nantes Atlantique (NTE) est le principal aéroport du Grand Ouest, à seulement 10 km au sud du centre-ville de Nantes.",
@@ -439,8 +439,8 @@ export const trajetsNantes: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nantes → Nantes Atlantique Airport | From €25 | TaxiNeo",
-        metaDescription: "Taxi Nantes city → Nantes Atlantique Airport. 10 km, 15 min, from €25. Fixed price, no meter. Book 24/7.",
+        metaTitle: "Taxi Nantes → Aéroport Nantes Atlantique | 10 km | TaxiNeo",
+        metaDescription: "Direct route via ring road sud, 15 min. Aéroport NTE, Terminal and Navette aéroport along the way. Terminal drop-off, real-time flight tracking included.",
         heroTitle: "Taxi Nantes → Nantes Atlantique Airport",
         heroSubtitle: "Your Nantes centre → NTE Airport transfer at €25 — €35. 15 minutes, available 24/7.",
         description: "Nantes Atlantique Airport (NTE) is the main airport of western France, just 10 km south of Nantes city centre.",
@@ -485,8 +485,8 @@ export const trajetsNantes: Trajet[] = [
     hub: "nantes",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nantes → Paris | Prix fixe dès 450 € | TaxiNeo",
-        metaDescription: "Taxi Nantes → Paris. 385 km, 4h, dès 450 €. Via A11, prix fixe tout compris péages inclus. Réservation 24h/24.",
+        metaTitle: "Taxi Nantes → Paris | 385 km, dès 450 €, 4h | TaxiNeo",
+        metaDescription: "Via A11 en 4h. Le Mans, Chartres et Porte d'Orléans en chemin. Alternative directe au train ou au bus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Nantes → Paris",
         heroSubtitle: "Transfert Nantes → Paris au prix fixe de 450 — 550 €. 385 km par l'A11, péages inclus.",
         description: "Paris est à 4h de Nantes par l'A11 (L'Océane), une autoroute fluide traversant le Mans et Chartres.",
@@ -505,7 +505,7 @@ export const trajetsNantes: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Nantes → Paris | Fixed price from €450 | TaxiNeo",
-        metaDescription: "Taxi Nantes → Paris. 385 km, 4h, from €450. Via A11, all-inclusive fixed price with tolls. Book 24/7.",
+        metaDescription: "Via A11, 4 hours ride. Le Mans, Chartres and Porte d'Orléans along the way. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Nantes → Paris",
         heroSubtitle: "Your Nantes → Paris transfer at €450 — €550. 385 km via the A11, tolls included.",
         description: "Paris is 4 hours from Nantes via the A11 (L'Océane), a smooth motorway through Le Mans and Chartres.",
@@ -550,8 +550,8 @@ export const trajetsNantes: Trajet[] = [
     hub: "nantes",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nantes → Rennes | Prix fixe dès 140 € | TaxiNeo",
-        metaDescription: "Taxi Nantes → Rennes. 110 km, 1h15, dès 140 €. Via N137 gratuite. Deux capitales bretonnes. Réservation 24h/24.",
+        metaTitle: "Taxi Nantes → Rennes | 110 km, dès 140 € | TaxiNeo",
+        metaDescription: "Via N137 en 1h15. Redon, Bretagne et Parlement de Bretagne en chemin. Dépose porte-à-porte, bagages inclus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Nantes → Rennes",
         heroSubtitle: "Transfert Nantes → Rennes au prix fixe de 140 — 175 €. 110 km par la N137, entièrement gratuit.",
         description: "Rennes, capitale administrative de la Bretagne, est à 1h15 de Nantes par la N137 (voie express gratuite).",
@@ -569,8 +569,8 @@ export const trajetsNantes: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nantes → Rennes | Fixed price from €140 | TaxiNeo",
-        metaDescription: "Taxi Nantes → Rennes. 110 km, 1h15, from €140. Via toll-free N137. Two Breton capitals. Book 24/7.",
+        metaTitle: "Taxi Nantes → Rennes | 110 km, from €140 | TaxiNeo",
+        metaDescription: "Via N137, 1h15 ride. Redon, Bretagne and Parlement de Bretagne along the way. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Nantes → Rennes",
         heroSubtitle: "Your Nantes → Rennes transfer at €140 — €175. 110 km via the N137, entirely toll-free.",
         description: "Rennes, the administrative capital of Brittany, is 1h15 from Nantes via the N137 (free dual carriageway).",
@@ -615,8 +615,8 @@ export const trajetsNantes: Trajet[] = [
     hub: "nantes",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nantes → Angers | Prix fixe dès 115 € | TaxiNeo",
-        metaDescription: "Taxi Nantes → Angers. 90 km, 1h, dès 115 €. Château d'Angers, Val de Loire, tapisserie de l'Apocalypse. Réservation 24h/24.",
+        metaTitle: "Taxi Nantes → Angers | forfait dès 115 € | TaxiNeo",
+        metaDescription: "Via A11 en 1h. Loire, Château d'Angers et Tapisserie de l'Apocalypse en chemin. Dépose à votre adresse exacte. Alternative directe au train ou au bus.",
         heroTitle: "Taxi Nantes → Angers",
         heroSubtitle: "Transfert Nantes → Angers au prix fixe de 115 — 145 €. 90 km par l'A11 en 1 heure.",
         description: "Angers, capitale de l'Anjou et joyau du Val de Loire, est à 1 heure de Nantes par l'A11.",
@@ -635,7 +635,7 @@ export const trajetsNantes: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Nantes → Angers | Fixed price from €115 | TaxiNeo",
-        metaDescription: "Taxi Nantes → Angers. 90 km, 1h, from €115. Angers Castle, Loire Valley, Apocalypse Tapestry. Book 24/7.",
+        metaDescription: "A11 route, approximately 1 hour. Loire, Château d'Angers and Tapisserie de l'Apocalypse along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Nantes → Angers",
         heroSubtitle: "Your Nantes → Angers transfer at €115 — €145. 90 km via the A11 in 1 hour.",
         description: "Angers, capital of Anjou and jewel of the Loire Valley, is 1 hour from Nantes via the A11.",

@@ -27,8 +27,8 @@ export const trajetsBayeuxLisieux: Trajet[] = [
     hub: "bayeux-lisieux",
     i18n: {
       fr: {
-        metaTitle: "Taxi Bayeux → Caen | Prix fixe dès 35 € | TaxiNeo",
-        metaDescription: "Taxi Bayeux → Caen. 30 km, 25 min, dès 35 €. N13, transfert direct porte-à-porte en Normandie. Réservation 24h/24.",
+        metaTitle: "Taxi Bayeux → Caen | forfait dès 35 €, 25 min | TaxiNeo",
+        metaDescription: "Via N13 en 25 min. Tapisserie de Bayeux, Plages du Débarquement, Mémorial de Caen et Normandie en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Bayeux → Caen",
         heroSubtitle: "Transfert Bayeux → Caen au prix fixe de 35 — 50 €. 30 km, direct par la N13 à travers la campagne du Bessin.",
         description: "Caen, cité de Guillaume le Conquérant, est à 25 min de Bayeux par la N13.",
@@ -47,7 +47,7 @@ export const trajetsBayeuxLisieux: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Bayeux → Caen | Fixed price from €35 | TaxiNeo",
-        metaDescription: "Taxi Bayeux → Caen. 30 km, 25 min, from €35. N13, direct door-to-door in Normandy. Book 24/7.",
+        metaDescription: "Via N13, 25 min ride. Tapisserie de Bayeux, Plages du Débarquement, Mémorial de Caen and Normandie en route. Faster and more direct than train or bus.",
         heroTitle: "Taxi Bayeux → Caen",
         heroSubtitle: "Your Bayeux → Caen transfer at €35 — €50. 30 km, via the toll-free N13 through the Bessin countryside.",
         description: "Caen, William the Conqueror's city, is 25 min from Bayeux via the N13.",
@@ -92,8 +92,8 @@ export const trajetsBayeuxLisieux: Trajet[] = [
     hub: "bayeux-lisieux",
     i18n: {
       fr: {
-        metaTitle: "Taxi Bayeux → Cherbourg | Prix fixe dès 115 € | TaxiNeo",
-        metaDescription: "Taxi Bayeux → Cherbourg. 95 km, 1h05, dès 115 €. N13, transfert direct porte-à-porte à travers le Cotentin. Réservation 24h/24.",
+        metaTitle: "Taxi Bayeux → Cherbourg | 95 km, dès 115 € | TaxiNeo",
+        metaDescription: "Par N13, 1h05 de trajet. Passage par Cotentin, Plages du Débarquement, Port de Cherbourg et Normandie. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Bayeux → Cherbourg",
         heroSubtitle: "Transfert Bayeux → Cherbourg au prix fixe de 115 — 145 €. 95 km, direct par la N13 à travers le Cotentin.",
         description: "Cherbourg-en-Cotentin, ville portuaire à la pointe de la presqu'île, est à 1h05 de Bayeux par la N13.",
@@ -111,8 +111,8 @@ export const trajetsBayeuxLisieux: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Bayeux → Cherbourg | Fixed price from €115 | TaxiNeo",
-        metaDescription: "Taxi Bayeux → Cherbourg. 95 km, 1h05, from €115. N13, direct door-to-door through the Cotentin. Book 24/7.",
+        metaTitle: "Taxi Bayeux → Cherbourg | 95 km, from €115 | TaxiNeo",
+        metaDescription: "Direct route via N13, 1h05. Cotentin, Plages du Débarquement, Port de Cherbourg and Normandie en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Bayeux → Cherbourg",
         heroSubtitle: "Your Bayeux → Cherbourg transfer at €115 — €145. 95 km, via the toll-free N13 through the Cotentin peninsula.",
         description: "Cherbourg, gateway to England and Ireland by ferry, is 1h05 from Bayeux via the N13.",
@@ -157,8 +157,8 @@ export const trajetsBayeuxLisieux: Trajet[] = [
     hub: "bayeux-lisieux",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lisieux → Caen | Prix fixe dès 60 € | TaxiNeo",
-        metaDescription: "Taxi Lisieux → Caen. 50 km, 35 min, dès 60 €. A13, Pays d'Auge, Basilique Sainte-Thérèse. Réservation 24h/24.",
+        metaTitle: "Taxi Lisieux → Caen | forfait dès 60 €, 35 min | TaxiNeo",
+        metaDescription: "Par A13, 35 min de trajet. Basilique Sainte-Thérèse, Pays d'Auge, Calvados et Mémorial de Caen en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Lisieux → Caen",
         heroSubtitle: "Transfert Lisieux → Caen au prix fixe de 60 — 80 €. 50 km, par l'A13 à travers le Pays d'Auge.",
         description: "Caen, cité de Guillaume le Conquérant, est à 35 min de Lisieux par l'autoroute de Normandie A13.",
@@ -177,7 +177,7 @@ export const trajetsBayeuxLisieux: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Lisieux → Caen | Fixed price from €60 | TaxiNeo",
-        metaDescription: "Taxi Lisieux → Caen. 50 km, 35 min, from €60. A13, Pays d'Auge, Basilique Sainte-Thérèse. Book 24/7.",
+        metaDescription: "Via A13, 35 min ride. Basilique Sainte-Thérèse, Pays d'Auge, Calvados and Mémorial de Caen en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Lisieux → Caen",
         heroSubtitle: "Your Lisieux → Caen transfer at €60 — €80. 50 km, via the A13 through the Pays d'Auge.",
         description: "Caen, William the Conqueror's city, is 35 min from Lisieux via the A13 Normandy motorway.",
@@ -222,8 +222,8 @@ export const trajetsBayeuxLisieux: Trajet[] = [
     hub: "bayeux-lisieux",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lisieux → Deauville | Prix fixe dès 35 € | TaxiNeo",
-        metaDescription: "Taxi Lisieux → Deauville. 30 km, 25 min, dès 35 €. D579, Pays d'Auge, Côte Fleurie. Réservation 24h/24.",
+        metaTitle: "Taxi Lisieux → Deauville | 30 km, dès 35 € | TaxiNeo",
+        metaDescription: "Trajet direct D579 en 25 min. Passage par Pays d'Auge, Côte Fleurie, Planches de Deauville et Calvados. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Lisieux → Deauville",
         heroSubtitle: "Transfert Lisieux → Deauville au prix fixe de 35 — 50 €. 30 km, direct par la D579 à travers le Pays d'Auge.",
         description: "Deauville, station balnéaire élégante de la Côte Fleurie, est à 25 min de Lisieux par la D579.",
@@ -241,8 +241,8 @@ export const trajetsBayeuxLisieux: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Lisieux → Deauville | Fixed price from €35 | TaxiNeo",
-        metaDescription: "Taxi Lisieux → Deauville. 30 km, 25 min, from €35. D579, Pays d'Auge, Cote Fleurie. Book 24/7.",
+        metaTitle: "Taxi Lisieux → Deauville | 30 km, from €35 | TaxiNeo",
+        metaDescription: "Direct route via D579, 25 min. Pays d'Auge, Côte Fleurie, Planches de Deauville and Calvados en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Lisieux → Deauville",
         heroSubtitle: "Your Lisieux → Deauville transfer at €35 — €50. 30 km, via the D579 through the Pays d'Auge.",
         description: "Deauville, elegant seaside resort on the Cote Fleurie, is 25 min from Lisieux via the D579.",
@@ -287,8 +287,8 @@ export const trajetsBayeuxLisieux: Trajet[] = [
     hub: "bayeux-lisieux",
     i18n: {
       fr: {
-        metaTitle: "Taxi Bayeux → Mont-Saint-Michel | Prix fixe dès 145 € | TaxiNeo",
-        metaDescription: "Taxi Bayeux → Mont-Saint-Michel. 120 km, 1h20, dès 145 €. Transfert direct porte-à-porte, routes gratuites. Réservation 24h/24.",
+        metaTitle: "Taxi Bayeux → Mont-Saint-Michel | 120 km, 145 € | TaxiNeo",
+        metaDescription: "Via D613/A84 en 1h20. Plages du Débarquement, Normandie, UNESCO et Baie du Mont-Saint-Michel en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Bayeux → Mont-Saint-Michel",
         heroSubtitle: "Transfert Bayeux → Mont-Saint-Michel au prix fixe de 145 — 185 €. 120 km, direct par la D613 et l'A84.",
         description: "Le Mont-Saint-Michel, merveille de l'Occident, est à 1h20 de Bayeux par la D613 et l'A84.",
@@ -306,8 +306,8 @@ export const trajetsBayeuxLisieux: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Bayeux → Mont-Saint-Michel | Fixed price from €145 | TaxiNeo",
-        metaDescription: "Taxi Bayeux → Mont-Saint-Michel. 120 km, 1h20, from €145. Direct door-to-door, toll-free. Book 24/7.",
+        metaTitle: "Taxi Bayeux → Mont-Saint-Michel | 120 km, €145 | TaxiNeo",
+        metaDescription: "Via D613/A84, 1h20 ride. Plages du Débarquement, Normandie, UNESCO and Baie du Mont-Saint-Michel en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Bayeux → Mont-Saint-Michel",
         heroSubtitle: "Your Bayeux → Mont-Saint-Michel transfer at €145 — €185. 120 km, via the D613 and toll-free A84.",
         description: "Mont-Saint-Michel, the Wonder of the Western World (UNESCO), is 1h20 from Bayeux.",

@@ -19,8 +19,8 @@ export const trajetsMaconChalon: Trajet[] = [
     hub: "macon-chalon",
     i18n: {
       fr: {
-        metaTitle: "Taxi Mâcon → Lyon | Prix fixe dès 75 € | TaxiNeo",
-        metaDescription: "Taxi Mâcon → Lyon. 72 km, 45 min, dès 75 €. A6 directe à travers le Beaujolais. Réservation 24h/24.",
+        metaTitle: "Taxi Mâcon → Lyon | 72 km via A6, dès 75 € | TaxiNeo",
+        metaDescription: "Via A6 en undefined min. Beaujolais, Saône et Villefranche-sur-Saône en chemin. Dépose à votre adresse exacte. Alternative directe au train ou au bus.",
         heroTitle: "Taxi Mâcon → Lyon",
         heroSubtitle: "Transfert Mâcon → Lyon au prix fixe de 75 — 100 €. 72 km, 45 min.",
         description: "Mâcon — Lyon emprunte l'A6, reliant le sud de la Bourgogne à la métropole lyonnaise.",
@@ -39,7 +39,7 @@ export const trajetsMaconChalon: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Mâcon → Lyon | Fixed price from €75 | TaxiNeo",
-        metaDescription: "Taxi Mâcon → Lyon. 72 km, 45 min, from €75. Direct A6 through Beaujolais wine country. Book 24/7.",
+        metaDescription: "Via A6, undefined min ride. Beaujolais, Saône and Villefranche-sur-Saône along the way. Drop-off at your exact address. Door-to-door, luggage included.",
         heroTitle: "Taxi Mâcon → Lyon",
         heroSubtitle: "Mâcon → Lyon transfer at €75 — €100. 72 km, 45 min.",
         description: "Mâcon to Lyon via A6 through Beaujolais vineyards in 45 min.",
@@ -77,7 +77,7 @@ export const trajetsMaconChalon: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Mâcon → Dijon | Prix fixe dès 130 € | TaxiNeo",
-        metaDescription: "Taxi Mâcon → Dijon. 125 km, 1h10, dès 130 €. A6 à travers la Bourgogne viticole. Réservation 24h/24.",
+        metaDescription: "Via A6 en undefined min. Bourgogne, Côte de Nuits, Tournus et Chalon en chemin. Dépose à votre adresse exacte. Alternative directe au train ou au bus.",
         heroTitle: "Taxi Mâcon → Dijon",
         heroSubtitle: "Transfert Mâcon → Dijon au prix fixe de 130 — 165 €. 125 km, 1h10.",
         description: "Mâcon — Dijon remonte l'A6 au cœur de la Bourgogne viticole.",
@@ -96,7 +96,7 @@ export const trajetsMaconChalon: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Mâcon → Dijon | Fixed price from €130 | TaxiNeo",
-        metaDescription: "Taxi Mâcon → Dijon. 125 km, 1h10, from €130. A6 through Burgundy's greatest vineyards. Book 24/7.",
+        metaDescription: "Via A6, undefined min ride. Bourgogne, Côte de Nuits, Tournus and Chalon en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Mâcon → Dijon",
         heroSubtitle: "Mâcon → Dijon transfer at €130 — €165. 125 km, 1h10.",
         description: "Mâcon to Dijon via A6 through the heart of Burgundy's wine country.",
@@ -133,8 +133,8 @@ export const trajetsMaconChalon: Trajet[] = [
     hub: "macon-chalon",
     i18n: {
       fr: {
-        metaTitle: "Taxi Mâcon → Bourg-en-Bresse | Prix fixe dès 40 € | TaxiNeo",
-        metaDescription: "Taxi Mâcon → Bourg-en-Bresse. 35 km, 25 min, dès 40 €. D1079 directe entre Bourgogne et Bresse. Réservation 24h/24.",
+        metaTitle: "Taxi Mâcon → Bourg-en-Bresse | 35 km, dès 40 € | TaxiNeo",
+        metaDescription: "Itinéraire D1079, environ undefined min. En passant par Bresse, Monastère de Brou et Poulet de Bresse. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Mâcon → Bourg-en-Bresse",
         heroSubtitle: "Transfert Mâcon → Bourg-en-Bresse au prix fixe de 40 — 50 €. 35 km, 25 min.",
         description: "Mâcon — Bourg-en-Bresse relie la Bourgogne à la Bresse par la D1079 en 25 min.",
@@ -152,8 +152,8 @@ export const trajetsMaconChalon: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Mâcon → Bourg-en-Bresse | Fixed price from €40 | TaxiNeo",
-        metaDescription: "Taxi Mâcon → Bourg-en-Bresse. 35 km, 25 min, from €40. D1079 between Burgundy and Bresse. Book 24/7.",
+        metaTitle: "Taxi Mâcon → Bourg-en-Bresse | 35 km, from €40 | TaxiNeo",
+        metaDescription: "Direct route via D1079, undefined min. Bresse, Monastère de Brou and Poulet de Bresse along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Mâcon → Bourg-en-Bresse",
         heroSubtitle: "Mâcon → Bourg-en-Bresse transfer at €40 — €50. 35 km, 25 min.",
         description: "Mâcon to Bourg-en-Bresse via D1079 in 25 min, gateway to Bresse country.",
@@ -190,8 +190,8 @@ export const trajetsMaconChalon: Trajet[] = [
     hub: "macon-chalon",
     i18n: {
       fr: {
-        metaTitle: "Taxi Chalon-sur-Saône → Dijon | Prix fixe dès 75 € | TaxiNeo",
-        metaDescription: "Taxi Chalon-sur-Saône → Dijon. 70 km, 45 min, dès 75 €. A31 via les vignobles de la Côte de Beaune. Réservation 24h/24.",
+        metaTitle: "Taxi Chalon-sur-Saône → Dijon | 70 km, dès 75 € | TaxiNeo",
+        metaDescription: "Via A31 en undefined min. Côte de Beaune, Beaune et Côte-d'Or en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Chalon-sur-Saône → Dijon",
         heroSubtitle: "Transfert Chalon-sur-Saône → Dijon au prix fixe de 75 — 95 €. 70 km, 45 min.",
         description: "Chalon — Dijon remonte la Côte d'Or viticole par l'A31 en 45 min.",
@@ -209,8 +209,8 @@ export const trajetsMaconChalon: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Chalon-sur-Saône → Dijon | Fixed price from €75 | TaxiNeo",
-        metaDescription: "Taxi Chalon-sur-Saône → Dijon. 70 km, 45 min, from €75. A31 through UNESCO Burgundy vineyards. Book 24/7.",
+        metaTitle: "Taxi Chalon-sur-Saône → Dijon | 70 km, from €75 | TaxiNeo",
+        metaDescription: "Via A31, undefined min ride. Côte de Beaune, Beaune and Côte-d'Or along the way. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Chalon-sur-Saône → Dijon",
         heroSubtitle: "Chalon-sur-Saône → Dijon transfer at €75 — €95. 70 km, 45 min.",
         description: "Chalon to Dijon via A31, through the Côte d'Or UNESCO wine country.",
@@ -247,8 +247,8 @@ export const trajetsMaconChalon: Trajet[] = [
     hub: "macon-chalon",
     i18n: {
       fr: {
-        metaTitle: "Taxi Chalon-sur-Saône → Lyon | Prix fixe dès 140 € | TaxiNeo",
-        metaDescription: "Taxi Chalon-sur-Saône → Lyon. 130 km, 1h15, dès 140 €. A6 via Tournus, Mâcon et le Beaujolais. Réservation 24h/24.",
+        metaTitle: "Taxi Chalon-sur-Saône → Lyon | 130 km, dès 140 € | TaxiNeo",
+        metaDescription: "Via A6 en undefined min. Saône, Tournus, Mâcon et Beaujolais en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Chalon-sur-Saône → Lyon",
         heroSubtitle: "Transfert Chalon-sur-Saône → Lyon au prix fixe de 140 — 175 €. 130 km, 1h15.",
         description: "Chalon — Lyon descend l'A6 le long de la Saône à travers la Bourgogne du Sud et le Beaujolais.",
@@ -266,8 +266,8 @@ export const trajetsMaconChalon: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Chalon-sur-Saône → Lyon | Fixed price from €140 | TaxiNeo",
-        metaDescription: "Taxi Chalon-sur-Saône → Lyon. 130 km, 1h15, from €140. A6 via Tournus, Mâcon and Beaujolais. Book 24/7.",
+        metaTitle: "Taxi Chalon-sur-Saône → Lyon | 130 km, from €140 | TaxiNeo",
+        metaDescription: "Via A6, undefined min ride. Saône, Tournus, Mâcon and Beaujolais en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Chalon-sur-Saône → Lyon",
         heroSubtitle: "Chalon-sur-Saône → Lyon transfer at €140 — €175. 130 km, 1h15.",
         description: "Chalon to Lyon via A6 along the Saône valley through southern Burgundy and Beaujolais.",

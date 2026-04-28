@@ -27,8 +27,8 @@ export const trajetsMarseilleAeroport: Trajet[] = [
     hub: "marseille-aeroport",
     i18n: {
       fr: {
-        metaTitle: "Taxi Aéroport Marseille Provence → Marseille Centre | Dès 39 € | TaxiNeo",
-        metaDescription: "Taxi Aéroport Marseille Provence → Marseille Centre. 28 km, 25 min, dès 39 €. Transfert direct A7, Vieux-Port, porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Marseille Provence → Marseille Centre | 28 km | TaxiNeo",
+        metaDescription: "Via A7 en 25 min. Marignane, Vieux-Port, Étang de Berre et Provence en chemin. Dépose au terminal, suivi de vol. Suivi de vol, dépose directe au terminal.",
         heroTitle: "Taxi Aéroport Marseille Provence → Marseille Centre",
         heroSubtitle: "Transfert aéroport vers le centre de Marseille au prix fixe de 39 — 50 €. 28 km, direct par l'A7.",
         description: "Le centre de Marseille est à seulement 25 minutes de l'aéroport Marseille Provence par l'A7.",
@@ -46,8 +46,8 @@ export const trajetsMarseilleAeroport: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Marseille Provence Airport → Marseille Centre | From €39 | TaxiNeo",
-        metaDescription: "Taxi Marseille Provence Airport → Marseille Centre. 28 km, 25 min, from €39. Direct A7 transfer, door-to-door. Book 24/7.",
+        metaTitle: "Taxi Marseille Provence → Marseille Centre | 28 km | TaxiNeo",
+        metaDescription: "Via A7, 25 min ride. Marignane, Vieux-Port, Étang de Berre and Provence en route. Terminal drop-off, flight tracking. Flight tracking, direct terminal drop-off.",
         heroTitle: "Taxi Marseille Provence Airport → Marseille Centre",
         heroSubtitle: "Airport transfer to Marseille centre at €39 — €50. 28 km, direct via the A7.",
         description: "Marseille city centre is just 25 minutes from Marseille Provence Airport via the A7.",
@@ -92,8 +92,8 @@ export const trajetsMarseilleAeroport: Trajet[] = [
     hub: "marseille-aeroport",
     i18n: {
       fr: {
-        metaTitle: "Taxi Aéroport Marseille Provence → Aix-en-Provence | Dès 39 € | TaxiNeo",
-        metaDescription: "Taxi Aéroport Marseille Provence → Aix-en-Provence. 25 km, 25 min, dès 39 €. Transfert direct A51, Cours Mirabeau. Réservation 24h/24.",
+        metaTitle: "Taxi Marseille Provence → Aix-en-Provence | 25 km | TaxiNeo",
+        metaDescription: "Via A51 en 25 min. Marignane, Cours Mirabeau, Cézanne et Provence en chemin. Dépose au terminal, suivi de vol. Suivi de vol, dépose directe au terminal.",
         heroTitle: "Taxi Aéroport Marseille Provence → Aix-en-Provence",
         heroSubtitle: "Transfert aéroport vers Aix-en-Provence au prix fixe de 39 — 50 €. 25 km, direct par l'A51.",
         description: "Aix-en-Provence est à seulement 25 minutes de l'aéroport Marseille Provence par l'A51.",
@@ -111,8 +111,8 @@ export const trajetsMarseilleAeroport: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Marseille Provence Airport → Aix-en-Provence | From €39 | TaxiNeo",
-        metaDescription: "Taxi Marseille Provence Airport → Aix-en-Provence. 25 km, 25 min, from €39. Direct A51 transfer, Cours Mirabeau. Book 24/7.",
+        metaTitle: "Taxi Marseille Provence → Aix-en-Provence | 25 km | TaxiNeo",
+        metaDescription: "Via A51, 25 min ride. Marignane, Cours Mirabeau, Cézanne and Provence en route. Terminal drop-off, flight tracking. Flight tracking, direct terminal drop-off.",
         heroTitle: "Taxi Marseille Provence Airport → Aix-en-Provence",
         heroSubtitle: "Airport transfer to Aix-en-Provence at €39 — €50. 25 km, direct via the A51.",
         description: "Aix-en-Provence is just 25 minutes from Marseille Provence Airport via the A51.",
@@ -157,8 +157,8 @@ export const trajetsMarseilleAeroport: Trajet[] = [
     hub: "marseille-aeroport",
     i18n: {
       fr: {
-        metaTitle: "Taxi Aéroport Marseille Provence → Avignon | Dès 110 € | TaxiNeo",
-        metaDescription: "Taxi Aéroport Marseille Provence → Avignon. 90 km, 1h, dès 110 €. A7, Palais des Papes, transfert direct. Réservation 24h/24.",
+        metaTitle: "Taxi Aéroport Marseille Provence → Avignon | 90 km | TaxiNeo",
+        metaDescription: "Par A7, 1h de trajet. Passage par Palais des Papes, Pont d'Avignon, Provence et Étang de Berre. Accueil au terminal, attente gratuite si retard de vol.",
         heroTitle: "Taxi Aéroport Marseille Provence → Avignon",
         heroSubtitle: "Transfert aéroport vers Avignon au prix fixe de 110 — 140 €. 90 km, 1h par l'A7.",
         description: "Avignon et son Palais des Papes sont à 1h de l'aéroport Marseille Provence par l'A7.",
@@ -176,8 +176,8 @@ export const trajetsMarseilleAeroport: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Marseille Provence Airport → Avignon | From €110 | TaxiNeo",
-        metaDescription: "Taxi Marseille Provence Airport → Avignon. 90 km, 1h, from €110. A7, Palais des Papes, direct transfer. Book 24/7.",
+        metaTitle: "Taxi Aéroport Marseille Provence → Avignon | 90 km | TaxiNeo",
+        metaDescription: "Direct route via A7, 1 hour. Palais des Papes, Pont d'Avignon, Provence and Étang de Berre en route. Terminal drop-off, real-time flight tracking included.",
         heroTitle: "Taxi Marseille Provence Airport → Avignon",
         heroSubtitle: "Airport transfer to Avignon at €110 — €140. 90 km, 1h via the A7.",
         description: "Avignon and its Palais des Papes are 1h from Marseille Provence Airport via the A7.",
@@ -222,8 +222,8 @@ export const trajetsMarseilleAeroport: Trajet[] = [
     hub: "marseille-aeroport",
     i18n: {
       fr: {
-        metaTitle: "Taxi Aéroport Marseille Provence → Toulon | Dès 100 € | TaxiNeo",
-        metaDescription: "Taxi Aéroport Marseille Provence → Toulon. 80 km, 55 min, dès 100 €. A50, rade de Toulon, transfert direct. Réservation 24h/24.",
+        metaTitle: "Taxi Aéroport Marseille Provence → Toulon | 80 km | TaxiNeo",
+        metaDescription: "Par A7 puis A50, 55 min de trajet. Rade de Toulon, Marine nationale, Provence et Bandol en chemin. Dépose au terminal exact, suivi de vol en temps réel.",
         heroTitle: "Taxi Aéroport Marseille Provence → Toulon",
         heroSubtitle: "Transfert aéroport vers Toulon au prix fixe de 100 — 130 €. 80 km, 55 min par l'A50.",
         description: "Toulon et sa célèbre rade sont à 55 minutes de l'aéroport Marseille Provence par l'A50.",
@@ -241,8 +241,8 @@ export const trajetsMarseilleAeroport: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Marseille Provence Airport → Toulon | From €100 | TaxiNeo",
-        metaDescription: "Taxi Marseille Provence Airport → Toulon. 80 km, 55 min, from €100. A50, direct transfer. Book 24/7.",
+        metaTitle: "Taxi Aéroport Marseille Provence → Toulon | 80 km | TaxiNeo",
+        metaDescription: "Direct route via A7 then A50, 55 min. Rade de Toulon, Marine nationale, Provence and Bandol en route. Terminal drop-off, real-time flight tracking included.",
         heroTitle: "Taxi Marseille Provence Airport → Toulon",
         heroSubtitle: "Airport transfer to Toulon at €100 — €130. 80 km, 55 min via the A50.",
         description: "Toulon and its famous harbour are 55 minutes from Marseille Provence Airport via the A50.",
@@ -287,8 +287,8 @@ export const trajetsMarseilleAeroport: Trajet[] = [
     hub: "marseille-aeroport",
     i18n: {
       fr: {
-        metaTitle: "Taxi Aéroport Marseille Provence → Cassis | Dès 65 € | TaxiNeo",
-        metaDescription: "Taxi Aéroport Marseille Provence → Cassis. 50 km, 40 min, dès 65 €. Calanques, Cap Canaille, transfert direct. Réservation 24h/24.",
+        metaTitle: "Taxi Aéroport Marseille Provence → Cassis | 50 km | TaxiNeo",
+        metaDescription: "Par A7 puis A50, 40 min de trajet. Calanques, Port de Cassis, Cap Canaille et Provence en chemin. Dépose au terminal exact, suivi de vol en temps réel.",
         heroTitle: "Taxi Aéroport Marseille Provence → Cassis",
         heroSubtitle: "Transfert aéroport vers Cassis au prix fixe de 65 — 85 €. 50 km, 40 min par l'A50.",
         description: "Le village de Cassis et ses calanques sont à 40 minutes de l'aéroport Marseille Provence.",
@@ -306,8 +306,8 @@ export const trajetsMarseilleAeroport: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Marseille Provence Airport → Cassis | From €65 | TaxiNeo",
-        metaDescription: "Taxi Marseille Provence Airport → Cassis. 50 km, 40 min, from €65. Calanques, Cap Canaille, direct transfer. Book 24/7.",
+        metaTitle: "Taxi Aéroport Marseille Provence → Cassis | 50 km | TaxiNeo",
+        metaDescription: "Direct route via A7 then A50, 40 min. Calanques, Port de Cassis, Cap Canaille and Provence en route. Terminal drop-off, real-time flight tracking included.",
         heroTitle: "Taxi Marseille Provence Airport → Cassis",
         heroSubtitle: "Airport transfer to Cassis at €65 — €85. 50 km, 40 min via the A50.",
         description: "The village of Cassis and its calanques are 40 minutes from Marseille Provence Airport.",

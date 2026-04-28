@@ -30,8 +30,8 @@ export const trajetsChateaubriantRedon: Trajet[] = [
     hub: "chateaubriant-redon",
     i18n: {
       fr: {
-        metaTitle: "Taxi Châteaubriant → Rennes | Prix fixe dès 80 € | TaxiNeo",
-        metaDescription: "Taxi Châteaubriant → Rennes. 65 km, 45 min, dès 80 €. D163 via la forêt de Teillay et le bocage breton. Réservation 24h/24.",
+        metaTitle: "Taxi Châteaubriant → Rennes | 65 km, dès 80 € | TaxiNeo",
+        metaDescription: "Via D163 en 45 min. Bocage breton, Château de Châteaubriant, Forêt de Teillay et Capitale bretonne en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Châteaubriant → Rennes",
         heroSubtitle: "Transfert Châteaubriant → Rennes au prix fixe de 80 — 100 €. 65 km par la D163.",
         description: "Rennes, capitale de la Bretagne et métropole dynamique, est à 45 minutes de Châteaubriant par la D163 à travers le bocage breton.",
@@ -49,8 +49,8 @@ export const trajetsChateaubriantRedon: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Châteaubriant → Rennes | Fixed price from €80 | TaxiNeo",
-        metaDescription: "Taxi Châteaubriant → Rennes. 65 km, 45 min, from €80. D163 through Teillay forest and Breton bocage. Book 24/7.",
+        metaTitle: "Taxi Châteaubriant → Rennes | 65 km, from €80 | TaxiNeo",
+        metaDescription: "Via D163, 45 min ride. Bocage breton, Château de Châteaubriant, Forêt de Teillay and Capitale bretonne en route. Faster and more direct than train or bus.",
         heroTitle: "Taxi Châteaubriant → Rennes",
         heroSubtitle: "Your Châteaubriant → Rennes transfer at €80 — €100. 65 km via the D163.",
         description: "Rennes, capital of Brittany and a thriving metropolis, is 45 minutes from Châteaubriant via the D163 through the Breton bocage.",
@@ -95,8 +95,8 @@ export const trajetsChateaubriantRedon: Trajet[] = [
     hub: "chateaubriant-redon",
     i18n: {
       fr: {
-        metaTitle: "Taxi Châteaubriant → Nantes | Prix fixe dès 85 € | TaxiNeo",
-        metaDescription: "Taxi Châteaubriant → Nantes. 70 km, 50 min, dès 85 €. N171 via Nozay et le bocage de Loire-Atlantique. Réservation 24h/24.",
+        metaTitle: "Taxi Châteaubriant → Nantes | 70 km, dès 85 € | TaxiNeo",
+        metaDescription: "Itinéraire N171, environ 50 min. Passage par Bocage breton, Forêt d'Ancenis, Erdre et Château des ducs. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Châteaubriant → Nantes",
         heroSubtitle: "Transfert Châteaubriant → Nantes au prix fixe de 85 — 110 €. 70 km par la N171.",
         description: "Nantes, métropole de l'Ouest et ancienne capitale des ducs de Bretagne, est à 50 minutes de Châteaubriant par la N171.",
@@ -114,8 +114,8 @@ export const trajetsChateaubriantRedon: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Châteaubriant → Nantes | Fixed price from €85 | TaxiNeo",
-        metaDescription: "Taxi Châteaubriant → Nantes. 70 km, 50 min, from €85. N171 via Nozay and Loire-Atlantique bocage. Book 24/7.",
+        metaTitle: "Taxi Châteaubriant → Nantes | 70 km, from €85 | TaxiNeo",
+        metaDescription: "N171 route, approximately 50 min. Bocage breton, Forêt d'Ancenis, Erdre and Château des ducs en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Châteaubriant → Nantes",
         heroSubtitle: "Your Châteaubriant → Nantes transfer at €85 — €110. 70 km via the N171.",
         description: "Nantes, western France's metropolis and former capital of the Dukes of Brittany, is 50 minutes from Châteaubriant via the N171.",
@@ -160,8 +160,8 @@ export const trajetsChateaubriantRedon: Trajet[] = [
     hub: "chateaubriant-redon",
     i18n: {
       fr: {
-        metaTitle: "Taxi Redon → Rennes | Prix fixe dès 80 € | TaxiNeo",
-        metaDescription: "Taxi Redon → Rennes. 65 km, 45 min, dès 80 €. N137 via Bain-de-Bretagne et la vallée de la Vilaine. Réservation 24h/24.",
+        metaTitle: "Taxi Redon → Rennes | forfait dès 80 €, 45 min | TaxiNeo",
+        metaDescription: "Via N137 en 45 min. Vilaine, Canal de Nantes à Brest, Bain-de-Bretagne et Capitale bretonne en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Redon → Rennes",
         heroSubtitle: "Transfert Redon → Rennes au prix fixe de 80 — 100 €. 65 km par la N137.",
         description: "Rennes, capitale de la Bretagne, est à 45 minutes de Redon par la N137, voie express gratuite longeant la vallée de la Vilaine.",
@@ -180,7 +180,7 @@ export const trajetsChateaubriantRedon: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Redon → Rennes | Fixed price from €80 | TaxiNeo",
-        metaDescription: "Taxi Redon → Rennes. 65 km, 45 min, from €80. Toll-free N137 via Bain-de-Bretagne and the Vilaine valley. Book 24/7.",
+        metaDescription: "Via N137, 45 min ride. Vilaine, Canal de Nantes à Brest, Bain-de-Bretagne and Capitale bretonne en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Redon → Rennes",
         heroSubtitle: "Your Redon → Rennes transfer at €80 — €100. 65 km via the N137.",
         description: "Rennes, capital of Brittany, is 45 minutes from Redon via the toll-free N137 expressway along the Vilaine valley.",
@@ -225,8 +225,8 @@ export const trajetsChateaubriantRedon: Trajet[] = [
     hub: "chateaubriant-redon",
     i18n: {
       fr: {
-        metaTitle: "Taxi Redon → Vannes | Prix fixe dès 75 € | TaxiNeo",
-        metaDescription: "Taxi Redon → Vannes. 60 km, 40 min, dès 75 €. D775 via Rochefort-en-Terre, golfe du Morbihan. Réservation 24h/24.",
+        metaTitle: "Taxi Redon → Vannes | forfait dès 75 €, 40 min | TaxiNeo",
+        metaDescription: "Via D775 en 40 min. Canal de Nantes à Brest, Vilaine, Rochefort-en-Terre et Golfe du Morbihan en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Redon → Vannes",
         heroSubtitle: "Transfert Redon → Vannes au prix fixe de 75 — 95 €. 60 km par la D775.",
         description: "Vannes, préfecture du Morbihan et porte du golfe du Morbihan, est à 40 minutes de Redon par la D775 à travers le bocage morbihannais.",
@@ -245,7 +245,7 @@ export const trajetsChateaubriantRedon: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Redon → Vannes | Fixed price from €75 | TaxiNeo",
-        metaDescription: "Taxi Redon → Vannes. 60 km, 40 min, from €75. D775 via Rochefort-en-Terre, Gulf of Morbihan. Book 24/7.",
+        metaDescription: "Via D775, 40 min ride. Canal de Nantes à Brest, Vilaine, Rochefort-en-Terre and Golfe du Morbihan en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Redon → Vannes",
         heroSubtitle: "Your Redon → Vannes transfer at €75 — €95. 60 km via the D775.",
         description: "Vannes, Morbihan prefecture and gateway to the Gulf of Morbihan, is 40 minutes from Redon via the D775 through the Morbihan countryside.",
@@ -290,8 +290,8 @@ export const trajetsChateaubriantRedon: Trajet[] = [
     hub: "chateaubriant-redon",
     i18n: {
       fr: {
-        metaTitle: "Taxi Redon → Nantes | Prix fixe dès 85 € | TaxiNeo",
-        metaDescription: "Taxi Redon → Nantes. 70 km, 50 min, dès 85 €. D164/N137 via Pontchâteau et la Grande Brière. Réservation 24h/24.",
+        metaTitle: "Taxi Redon → Nantes | forfait dès 85 €, 50 min | TaxiNeo",
+        metaDescription: "Itinéraire N137/D164, environ 50 min. N137, Vilaine, Pontchâteau et Canal de Nantes à Brest en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Redon → Nantes",
         heroSubtitle: "Transfert Redon → Nantes au prix fixe de 85 — 110 €. 70 km par la D164 et N137.",
         description: "Nantes, métropole de l'Ouest et ancienne capitale des ducs de Bretagne, est à 50 minutes de Redon par la D164 et la N137.",
@@ -310,7 +310,7 @@ export const trajetsChateaubriantRedon: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Redon → Nantes | Fixed price from €85 | TaxiNeo",
-        metaDescription: "Taxi Redon → Nantes. 70 km, 50 min, from €85. D164/N137 via Pontchâteau and Grande Brière. Book 24/7.",
+        metaDescription: "Direct route via N137/D164, 50 min. N137, Vilaine, Pontchâteau and Canal de Nantes à Brest en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Redon → Nantes",
         heroSubtitle: "Your Redon → Nantes transfer at €85 — €110. 70 km via the D164 and N137.",
         description: "Nantes, western France's metropolis and former capital of the Dukes of Brittany, is 50 minutes from Redon via the D164 and N137.",

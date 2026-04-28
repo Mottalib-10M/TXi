@@ -30,8 +30,8 @@ export const trajetsSarregueminesForbach: Trajet[] = [
     hub: "sarreguemines-forbach",
     i18n: {
       fr: {
-        metaTitle: "Taxi Sarreguemines → Metz | Prix fixe dès 95 € | TaxiNeo",
-        metaDescription: "Taxi Sarreguemines → Metz. 80 km, 55 min, dès 95 €. A4 via Saint-Avold, bassin houiller lorrain. Réservation 24h/24.",
+        metaTitle: "Taxi Sarreguemines → Metz | 80 km, dès 95 € | TaxiNeo",
+        metaDescription: "Via A4 en 55 min. Moselle-Est, Faïenceries et Cathédrale Saint-Étienne en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Sarreguemines → Metz",
         heroSubtitle: "Transfert Sarreguemines → Metz au prix fixe de 95 — 125 €. 80 km par l'A4 à travers la Moselle-Est.",
         description: "Metz, ville d'art et d'histoire avec son Centre Pompidou-Metz et sa cathédrale aux vitraux de Chagall, est à 55 min de Sarreguemines par l'A4.",
@@ -49,8 +49,8 @@ export const trajetsSarregueminesForbach: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Sarreguemines → Metz | Fixed price from €95 | TaxiNeo",
-        metaDescription: "Taxi Sarreguemines → Metz. 80 km, 55 min, from €95. A4 via Saint-Avold, Lorraine coalfield. Book 24/7.",
+        metaTitle: "Taxi Sarreguemines → Metz | 80 km, from €95 | TaxiNeo",
+        metaDescription: "A4 route, approximately 55 min. Moselle-Est, Faïenceries and Cathédrale Saint-Étienne along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Sarreguemines → Metz",
         heroSubtitle: "Your Sarreguemines → Metz transfer at €95 — €125. 80 km via the A4 through Moselle-Est.",
         description: "Metz, city of art and history with its Centre Pompidou-Metz and Chagall stained-glass cathedral, is 55 min from Sarreguemines via the A4.",
@@ -95,8 +95,8 @@ export const trajetsSarregueminesForbach: Trajet[] = [
     hub: "sarreguemines-forbach",
     i18n: {
       fr: {
-        metaTitle: "Taxi Sarreguemines → Strasbourg | Prix fixe dès 130 € | TaxiNeo",
-        metaDescription: "Taxi Sarreguemines → Strasbourg. 110 km, 1h10, dès 130 €. A4/A320, Moselle-Est, cathédrale gothique. Réservation 24h/24.",
+        metaTitle: "Taxi Sarreguemines → Strasbourg | 110 km, 130 € | TaxiNeo",
+        metaDescription: "Via A4/A320 en 1h10. Moselle-Est et Cathédrale de Strasbourg en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Sarreguemines → Strasbourg",
         heroSubtitle: "Transfert Sarreguemines → Strasbourg au prix fixe de 130 — 170 €. 110 km par l'A4 et l'A320, de la frontière sarroise à la capitale alsacienne.",
         description: "Strasbourg, capitale européenne avec sa cathédrale en grès rose et son quartier de la Petite France classé UNESCO, est à 1h10 de Sarreguemines.",
@@ -114,8 +114,8 @@ export const trajetsSarregueminesForbach: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Sarreguemines → Strasbourg | Fixed price from €130 | TaxiNeo",
-        metaDescription: "Taxi Sarreguemines → Strasbourg. 110 km, 1h10, from €130. A4/A320, Moselle-Est, Gothic cathedral. Book 24/7.",
+        metaTitle: "Taxi Sarreguemines → Strasbourg | 110 km, €130 | TaxiNeo",
+        metaDescription: "Via A4/A320, 1h10 ride. Moselle-Est and Cathédrale de Strasbourg along the way. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Sarreguemines → Strasbourg",
         heroSubtitle: "Your Sarreguemines → Strasbourg transfer at €130 — €170. 110 km via the A4/A320 from the Saar border to the Alsatian capital.",
         description: "Strasbourg, European capital with its pink sandstone cathedral and UNESCO-listed Petite France quarter, is 1h10 from Sarreguemines.",
@@ -160,8 +160,8 @@ export const trajetsSarregueminesForbach: Trajet[] = [
     hub: "sarreguemines-forbach",
     i18n: {
       fr: {
-        metaTitle: "Taxi Sarreguemines → Nancy | Prix fixe dès 130 € | TaxiNeo",
-        metaDescription: "Taxi Sarreguemines → Nancy. 110 km, 1h10, dès 130 €. A4, bassin houiller, Place Stanislas UNESCO. Réservation 24h/24.",
+        metaTitle: "Taxi Sarreguemines → Nancy | 110 km, dès 130 € | TaxiNeo",
+        metaDescription: "Via A4 en 1h10. Moselle-Est, Place Stanislas UNESCO et Bassin houiller en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Sarreguemines → Nancy",
         heroSubtitle: "Transfert Sarreguemines → Nancy au prix fixe de 130 — 170 €. 110 km par l'A4 et l'A31, de la frontière sarroise à la capitale des ducs de Lorraine.",
         description: "Nancy, capitale des ducs de Lorraine et joyau de l'Art nouveau avec sa Place Stanislas classée UNESCO, est à 1h10 de Sarreguemines.",
@@ -179,8 +179,8 @@ export const trajetsSarregueminesForbach: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Sarreguemines → Nancy | Fixed price from €130 | TaxiNeo",
-        metaDescription: "Taxi Sarreguemines → Nancy. 110 km, 1h10, from €130. A4, Lorraine coalfield, Place Stanislas UNESCO. Book 24/7.",
+        metaTitle: "Taxi Sarreguemines → Nancy | 110 km, from €130 | TaxiNeo",
+        metaDescription: "A4 route, approximately 1h10. Moselle-Est, Place Stanislas UNESCO and Bassin houiller along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Sarreguemines → Nancy",
         heroSubtitle: "Your Sarreguemines → Nancy transfer at €130 — €170. 110 km via the A4/A31 from the Saar border to the capital of the Dukes of Lorraine.",
         description: "Nancy, capital of the Dukes of Lorraine and Art Nouveau jewel with its UNESCO-listed Place Stanislas, is 1h10 from Sarreguemines.",
@@ -228,8 +228,8 @@ export const trajetsSarregueminesForbach: Trajet[] = [
     hub: "sarreguemines-forbach",
     i18n: {
       fr: {
-        metaTitle: "Taxi Forbach → Metz | Prix fixe dès 80 € | TaxiNeo",
-        metaDescription: "Taxi Forbach → Metz. 65 km, 45 min, dès 80 €. A4, bassin houiller lorrain, Centre Pompidou-Metz. Réservation 24h/24.",
+        metaTitle: "Taxi Forbach → Metz | forfait dès 80 €, 45 min | TaxiNeo",
+        metaDescription: "Via A4 en 45 min. Bassin houiller lorrain, Freyming-Merlebach, Saint-Avold et Centre Pompidou-Metz en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Forbach → Metz",
         heroSubtitle: "Transfert Forbach → Metz au prix fixe de 80 — 100 €. 65 km par l'A4 à travers le bassin houiller lorrain.",
         description: "Metz, métropole lorraine avec son Centre Pompidou-Metz et sa cathédrale Saint-Étienne aux vitraux de Chagall, est à 45 min de Forbach par l'A4.",
@@ -248,7 +248,7 @@ export const trajetsSarregueminesForbach: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Forbach → Metz | Fixed price from €80 | TaxiNeo",
-        metaDescription: "Taxi Forbach → Metz. 65 km, 45 min, from €80. A4, Lorraine coalfield, Centre Pompidou-Metz. Book 24/7.",
+        metaDescription: "Via A4, 45 min ride. Bassin houiller lorrain, Freyming-Merlebach, Saint-Avold and Centre Pompidou-Metz en route. Faster and more direct than train or bus.",
         heroTitle: "Taxi Forbach → Metz",
         heroSubtitle: "Your Forbach → Metz transfer at €80 — €100. 65 km via the A4 through the Lorraine coalfield.",
         description: "Metz, Lorraine's metropolis with its Centre Pompidou-Metz and Chagall stained-glass cathedral, is 45 min from Forbach via the A4.",
@@ -293,8 +293,8 @@ export const trajetsSarregueminesForbach: Trajet[] = [
     hub: "sarreguemines-forbach",
     i18n: {
       fr: {
-        metaTitle: "Taxi Forbach → Sarrebruck | Prix fixe dès 18 € | TaxiNeo",
-        metaDescription: "Taxi Forbach → Sarrebruck. 10 km, 12 min, dès 18 €. Transfert transfrontalier France-Allemagne, sans péage. Réservation 24h/24.",
+        metaTitle: "Taxi Forbach → Sarrebruck | 10 km, dès 18 € | TaxiNeo",
+        metaDescription: "Par D603, 12 min de trajet. Passage par Transfrontalier, Frontière allemande, Sarre et Stiring-Wendel. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Forbach → Sarrebruck",
         heroSubtitle: "Transfert Forbach → Sarrebruck au prix fixe de 18 — 25 €. 10 km, traversée de la frontière franco-allemande en 12 minutes.",
         description: "Sarrebruck, capitale du Land de Sarre en Allemagne, est à seulement 12 minutes de Forbach, de l'autre côté de la frontière.",
@@ -312,8 +312,8 @@ export const trajetsSarregueminesForbach: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Forbach → Saarbrücken | Fixed price from €18 | TaxiNeo",
-        metaDescription: "Taxi Forbach → Saarbrücken. 10 km, 12 min, from €18. Cross-border France-Germany, toll-free. Book 24/7.",
+        metaTitle: "Taxi Forbach → Sarrebruck | 10 km, from €18 | TaxiNeo",
+        metaDescription: "Direct route via D603, 12 min. Transfrontalier, Frontière allemande, Sarre and Stiring-Wendel en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Forbach → Saarbrücken",
         heroSubtitle: "Your Forbach → Saarbrücken transfer at €18 — €25. 10 km, crossing the Franco-German border in 12 minutes.",
         description: "Saarbrücken, capital of the German Saarland, is just 12 minutes from Forbach, across the French-German border.",

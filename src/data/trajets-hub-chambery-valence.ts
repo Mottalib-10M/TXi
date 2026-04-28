@@ -19,8 +19,8 @@ export const trajetsChamberyValence: Trajet[] = [
     hub: "chambery",
     i18n: {
       fr: {
-        metaTitle: "Taxi Chambéry → Annecy | Prix fixe dès 65 € | TaxiNeo",
-        metaDescription: "Taxi Chambéry → Annecy. 50 km, 40 min, dès 65 €. A41 entre les deux capitales savoyardes. Réservation 24h/24.",
+        metaTitle: "Taxi Chambéry → Annecy | 50 km, dès 65 € | TaxiNeo",
+        metaDescription: "Via A41 en undefined min. Lac du Bourget, Savoie et Alpes en chemin. Dépose porte-à-porte, bagages inclus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Chambéry → Annecy",
         heroSubtitle: "Transfert Chambéry → Annecy au prix fixe de 65 — 85 €. 50 km, 40 min.",
         description: "Les deux capitales savoyardes sont reliées en 40 min par l'A41.",
@@ -38,8 +38,8 @@ export const trajetsChamberyValence: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Chambéry → Annecy | Fixed price from €65 | TaxiNeo",
-        metaDescription: "Taxi Chambéry → Annecy. 50 km, 40 min, from €65. A41 between Savoy's two capitals. Book 24/7.",
+        metaTitle: "Taxi Chambéry → Annecy | 50 km, from €65 | TaxiNeo",
+        metaDescription: "Via A41, undefined min ride. Lac du Bourget, Savoie and Alpes along the way. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Chambéry → Annecy",
         heroSubtitle: "Chambéry → Annecy transfer at €65 — €85. 50 km, 40 min.",
         description: "Savoy's two historic capitals connected in 40 min via A41.",
@@ -76,8 +76,8 @@ export const trajetsChamberyValence: Trajet[] = [
     hub: "chambery",
     i18n: {
       fr: {
-        metaTitle: "Taxi Chambéry → Lyon | Prix fixe dès 125 € | TaxiNeo",
-        metaDescription: "Taxi Chambéry → Lyon. 105 km, 1h10, dès 125 €. A43 directe depuis la Savoie. Réservation 24h/24.",
+        metaTitle: "Taxi Chambéry → Lyon | 105 km, dès 125 € | TaxiNeo",
+        metaDescription: "Via A43 en undefined min. Isère, Avant-Pays Savoyard et Direct en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Chambéry → Lyon",
         heroSubtitle: "Transfert Chambéry → Lyon au prix fixe de 125 — 160 €. 105 km, 1h10.",
         description: "Chambéry — Lyon emprunte l'A43, reliant la Savoie à la métropole lyonnaise.",
@@ -95,8 +95,8 @@ export const trajetsChamberyValence: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Chambéry → Lyon | Fixed price from €125 | TaxiNeo",
-        metaDescription: "Taxi Chambéry → Lyon. 105 km, 1h10, from €125. Direct A43 from Savoy. Book 24/7.",
+        metaTitle: "Taxi Chambéry → Lyon | 105 km, from €125 | TaxiNeo",
+        metaDescription: "Via A43, undefined min ride. Isère, Avant-Pays Savoyard and Direct along the way. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Chambéry → Lyon",
         heroSubtitle: "Chambéry → Lyon transfer at €125 — €160. 105 km, 1h10.",
         description: "Chambéry to Lyon via A43, connecting Savoy to the Lyon metropolis.",
@@ -133,8 +133,8 @@ export const trajetsChamberyValence: Trajet[] = [
     hub: "chambery",
     i18n: {
       fr: {
-        metaTitle: "Taxi Chambéry → Courchevel | Prix fixe dès 140 € | TaxiNeo",
-        metaDescription: "Taxi Chambéry → Courchevel. 110 km, 1h30, dès 140 €. Transfert ski direct depuis la gare TGV. Réservation 24h/24.",
+        metaTitle: "Taxi Chambéry → Courchevel | 110 km, dès 140 € | TaxiNeo",
+        metaDescription: "Via A43 / N90 en undefined min. Tarentaise, Moûtiers, Ski et Luxe en chemin. Arrêt visite possible en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Chambéry → Courchevel",
         heroSubtitle: "Transfert Chambéry → Courchevel au prix fixe de 140 — 180 €. 110 km vers la station mythique.",
         description: "Chambéry — Courchevel est le transfert ski de référence depuis la gare TGV.",
@@ -152,8 +152,8 @@ export const trajetsChamberyValence: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Chambéry → Courchevel | Fixed price from €140 | TaxiNeo",
-        metaDescription: "Taxi Chambéry → Courchevel. 110 km, 1h30, from €140. Direct ski transfer from TGV station. Book 24/7.",
+        metaTitle: "Taxi Chambéry → Courchevel | 110 km, from €140 | TaxiNeo",
+        metaDescription: "Via A43 / N90, undefined min ride. Tarentaise, Moûtiers, Ski and Luxe en route. Stops for sightseeing possible en route. Perfect for a day trip without driving.",
         heroTitle: "Taxi Chambéry → Courchevel",
         heroSubtitle: "Chambéry → Courchevel transfer at €140 — €180. 110 km to the legendary resort.",
         description: "Chambéry to Courchevel is the premium ski transfer from TGV station.",
@@ -191,7 +191,7 @@ export const trajetsChamberyValence: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Valence → Lyon | Prix fixe dès 120 € | TaxiNeo",
-        metaDescription: "Taxi Valence → Lyon. 100 km, 1h05, dès 120 €. A7 directe vallée du Rhône. Réservation 24h/24.",
+        metaDescription: "Via A7 en undefined min. Vallée du Rhône, Vignobles et TGV en chemin. Dépose porte-à-porte, bagages inclus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Valence → Lyon",
         heroSubtitle: "Transfert Valence → Lyon au prix fixe de 120 — 155 €. 100 km, 1h05.",
         description: "Valence — Lyon remonte la vallée du Rhône par l'A7 en 1h05.",
@@ -210,7 +210,7 @@ export const trajetsChamberyValence: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Valence → Lyon | Fixed price from €120 | TaxiNeo",
-        metaDescription: "Taxi Valence → Lyon. 100 km, 1h05, from €120. Direct A7 Rhône Valley. Book 24/7.",
+        metaDescription: "Via A7, undefined min ride. Vallée du Rhône, Vignobles and TGV along the way. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Valence → Lyon",
         heroSubtitle: "Valence → Lyon transfer at €120 — €155. 100 km, 1h05.",
         description: "Valence to Lyon up the Rhône Valley via A7 in 1h05.",
@@ -247,8 +247,8 @@ export const trajetsChamberyValence: Trajet[] = [
     hub: "valence",
     i18n: {
       fr: {
-        metaTitle: "Taxi Valence → Grenoble | Prix fixe dès 115 € | TaxiNeo",
-        metaDescription: "Taxi Valence → Grenoble. 95 km, 1h05, dès 115 €. A49 directe via le Vercors. Réservation 24h/24.",
+        metaTitle: "Taxi Valence → Grenoble | 95 km, dès 115 € | TaxiNeo",
+        metaDescription: "Via A49 en undefined min. Vercors, Isère et Romans-sur-Isère en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Valence → Grenoble",
         heroSubtitle: "Transfert Valence → Grenoble au prix fixe de 115 — 145 €. 95 km, 1h05.",
         description: "Valence — Grenoble emprunte l'A49, avec le Vercors en toile de fond.",
@@ -266,8 +266,8 @@ export const trajetsChamberyValence: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Valence → Grenoble | Fixed price from €115 | TaxiNeo",
-        metaDescription: "Taxi Valence → Grenoble. 95 km, 1h05, from €115. A49 with Vercors views. Book 24/7.",
+        metaTitle: "Taxi Valence → Grenoble | 95 km, from €115 | TaxiNeo",
+        metaDescription: "Via A49, undefined min ride. Vercors, Isère and Romans-sur-Isère along the way. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Valence → Grenoble",
         heroSubtitle: "Valence → Grenoble transfer at €115 — €145. 95 km, 1h05.",
         description: "Valence to Grenoble via A49 with spectacular Vercors cliffs.",
@@ -304,8 +304,8 @@ export const trajetsChamberyValence: Trajet[] = [
     hub: "valence",
     i18n: {
       fr: {
-        metaTitle: "Taxi Valence → Montélimar | Prix fixe dès 65 € | TaxiNeo",
-        metaDescription: "Taxi Valence → Montélimar. 50 km, 35 min, dès 65 €. A7 directe, capitale du nougat. Réservation 24h/24.",
+        metaTitle: "Taxi Valence → Montélimar | 50 km, dès 65 € | TaxiNeo",
+        metaDescription: "Via A7 en undefined min. Passage par Nougat, Drôme et Provence. Alternative directe au train ou au bus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Valence → Montélimar",
         heroSubtitle: "Transfert Valence → Montélimar au prix fixe de 65 — 85 €. 50 km, 35 min.",
         description: "Montélimar, capitale du nougat, est à 35 min au sud de Valence par l'A7.",
@@ -323,8 +323,8 @@ export const trajetsChamberyValence: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Valence → Montélimar | Fixed price from €65 | TaxiNeo",
-        metaDescription: "Taxi Valence → Montélimar. 50 km, 35 min, from €65. A7, nougat capital. Book 24/7.",
+        metaTitle: "Taxi Valence → Montélimar | 50 km, from €65 | TaxiNeo",
+        metaDescription: "Via A7, undefined min ride. Nougat, Drôme and Provence along the way. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Valence → Montélimar",
         heroSubtitle: "Valence → Montélimar transfer at €65 — €85. 50 km, 35 min.",
         description: "Montélimar, world nougat capital, is 35 min south of Valence via A7.",

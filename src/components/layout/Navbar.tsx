@@ -59,30 +59,24 @@ export function Navbar({ minimal = false }: { minimal?: boolean }) {
       } ${scrolled ? "shadow-sm" : ""}`}
     >
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-        <div className="flex items-center gap-8">
+        <div className="flex items-center gap-6">
           <Link href="/">
             <Logo />
           </Link>
           {!minimal && (
-            <nav className="hidden md:flex items-center gap-6">
-              <Link href="/#reserver" className="text-sm font-medium text-neutral-900 hover:text-neutral-600 transition-colors">
+            <nav className="hidden md:flex items-center gap-4">
+              <Link href="/#reserver" className="whitespace-nowrap text-sm font-medium text-neutral-900 hover:text-neutral-600 transition-colors">
                 {t("taxiFixedTitle")}
               </Link>
               <Link
                 href="/comment-ca-marche"
-                className="text-sm font-medium text-neutral-500 hover:text-neutral-900 transition-colors"
+                className="whitespace-nowrap text-sm font-medium text-neutral-500 hover:text-neutral-900 transition-colors"
               >
                 {t("howItWorks")}
               </Link>
               <Link
-                href="/blog"
-                className="text-sm font-medium text-neutral-500 hover:text-neutral-900 transition-colors"
-              >
-                {t("blog")}
-              </Link>
-              <Link
                 href="/contact"
-                className="text-sm font-medium text-neutral-500 hover:text-neutral-900 transition-colors"
+                className="whitespace-nowrap text-sm font-medium text-neutral-500 hover:text-neutral-900 transition-colors"
               >
                 {t("contact")}
               </Link>
@@ -156,6 +150,7 @@ export function Navbar({ minimal = false }: { minimal?: boolean }) {
                 {discoverOpen && (
                   <div className="absolute right-0 top-full mt-2 w-72 bg-white border border-neutral-200 rounded-xl shadow-lg shadow-black/5 z-50 py-2 overflow-hidden">
                     {[
+                      { href: "/blog", icon: "solar:document-text-linear", label: t("blog"), desc: t("discoverBlogDesc") },
                       { href: "/trajets", icon: "solar:routing-linear", label: t("discoverTrajets"), desc: t("discoverTrajetsDesc") },
                       { href: "/tarifs", icon: "solar:tag-price-linear", label: t("discoverTarifs"), desc: t("discoverTarifsDesc") },
                       { href: "/guides", icon: "solar:book-linear", label: t("discoverGuides"), desc: t("discoverGuidesDesc") },
@@ -306,13 +301,6 @@ export function Navbar({ minimal = false }: { minimal?: boolean }) {
                 {t("howItWorks")}
               </Link>
               <Link
-                href="/blog"
-                onClick={() => setMobileOpen(false)}
-                className="block py-3 text-sm font-medium text-neutral-500 hover:bg-neutral-50 hover:text-neutral-900 rounded-lg px-3 transition-colors"
-              >
-                {t("blog")}
-              </Link>
-              <Link
                 href="/contact"
                 onClick={() => setMobileOpen(false)}
                 className="block py-3 text-sm font-medium text-neutral-500 hover:bg-neutral-50 hover:text-neutral-900 rounded-lg px-3 transition-colors"
@@ -364,6 +352,7 @@ export function Navbar({ minimal = false }: { minimal?: boolean }) {
               {mobileDiscoverOpen && (
                 <div className="pl-4 space-y-0.5">
                   {[
+                    { href: "/blog", label: t("blog") },
                     { href: "/trajets", label: t("discoverTrajets") },
                     { href: "/tarifs", label: t("discoverTarifs") },
                     { href: "/guides", label: t("discoverGuides") },

@@ -27,8 +27,8 @@ export const trajetsMarmandeVilleneuve: Trajet[] = [
     hub: "marmande-villeneuve",
     i18n: {
       fr: {
-        metaTitle: "Taxi Marmande → Bordeaux | Prix fixe dès 115 € | TaxiNeo",
-        metaDescription: "Taxi Marmande → Bordeaux. 95 km, 1h, dès 115 €. A62, transfert direct porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Marmande → Bordeaux | 95 km, dès 115 € | TaxiNeo",
+        metaDescription: "Itinéraire A62, environ 1h. Garonne, Tomate de Marmande, Vignobles bordelais et Cité du Vin en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Marmande → Bordeaux",
         heroSubtitle: "Transfert Marmande → Bordeaux au prix fixe de 115 — 145 €. 95 km, direct par l'A62.",
         description: "Bordeaux est à 1h de Marmande par l'A62, à travers les vignobles de l'Entre-deux-Mers.",
@@ -46,8 +46,8 @@ export const trajetsMarmandeVilleneuve: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Marmande → Bordeaux | Fixed price from €115 | TaxiNeo",
-        metaDescription: "Taxi Marmande → Bordeaux. 95 km, 1h, from €115. A62 motorway, direct door-to-door. Book 24/7.",
+        metaTitle: "Taxi Marmande → Bordeaux | 95 km, from €115 | TaxiNeo",
+        metaDescription: "Direct route via A62, 1 hour. Garonne, Tomate de Marmande, Vignobles bordelais and Cité du Vin en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Marmande → Bordeaux",
         heroSubtitle: "Your Marmande → Bordeaux transfer at €115 — €145. 95 km, via the A62.",
         description: "Bordeaux is 1h from Marmande via the A62 motorway.",
@@ -92,8 +92,8 @@ export const trajetsMarmandeVilleneuve: Trajet[] = [
     hub: "marmande-villeneuve",
     i18n: {
       fr: {
-        metaTitle: "Taxi Marmande → Agen | Prix fixe dès 60 € | TaxiNeo",
-        metaDescription: "Taxi Marmande → Agen. 50 km, 35 min, dès 60 €. A62, transfert direct porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Marmande → Agen | forfait dès 60 €, 35 min | TaxiNeo",
+        metaDescription: "Itinéraire A62, environ 35 min. Passage par Garonne, Pruneau d'Agen, Tomate de Marmande et Pont-canal. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Marmande → Agen",
         heroSubtitle: "Transfert Marmande → Agen au prix fixe de 60 — 80 €. 50 km, direct par l'A62.",
         description: "Agen est à 35 min de Marmande par l'A62, deux villes du Lot-et-Garonne reliées par la Garonne.",
@@ -112,7 +112,7 @@ export const trajetsMarmandeVilleneuve: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Marmande → Agen | Fixed price from €60 | TaxiNeo",
-        metaDescription: "Taxi Marmande → Agen. 50 km, 35 min, from €60. A62 motorway, direct door-to-door. Book 24/7.",
+        metaDescription: "A62 route, approximately 35 min. Garonne, Pruneau d'Agen, Tomate de Marmande and Pont-canal en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Marmande → Agen",
         heroSubtitle: "Your Marmande → Agen transfer at €60 — €80. 50 km, via the A62.",
         description: "Agen is 35 min from Marmande via the A62, both in the Lot-et-Garonne department.",
@@ -157,8 +157,8 @@ export const trajetsMarmandeVilleneuve: Trajet[] = [
     hub: "marmande-villeneuve",
     i18n: {
       fr: {
-        metaTitle: "Taxi Villeneuve-sur-Lot → Agen | Prix fixe dès 35 € | TaxiNeo",
-        metaDescription: "Taxi Villeneuve-sur-Lot → Agen. 30 km, 25 min, dès 35 €. N21, transfert direct porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Villeneuve-sur-Lot → Agen | 30 km, dès 35 € | TaxiNeo",
+        metaDescription: "Via N21 en 25 min. Bastides, Pruneau d'Agen, Vallée du Lot et Pont-canal en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Villeneuve-sur-Lot → Agen",
         heroSubtitle: "Transfert Villeneuve-sur-Lot → Agen au prix fixe de 35 — 50 €. 30 km, direct par la N21.",
         description: "Agen est à 25 min de Villeneuve-sur-Lot par la N21, au coeur du Lot-et-Garonne.",
@@ -176,8 +176,8 @@ export const trajetsMarmandeVilleneuve: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Villeneuve-sur-Lot → Agen | Fixed price from €35 | TaxiNeo",
-        metaDescription: "Taxi Villeneuve-sur-Lot → Agen. 30 km, 25 min, from €35. N21, direct door-to-door. Book 24/7.",
+        metaTitle: "Taxi Villeneuve-sur-Lot → Agen | 30 km, from €35 | TaxiNeo",
+        metaDescription: "Via N21, 25 min ride. Bastides, Pruneau d'Agen, Vallée du Lot and Pont-canal en route. Drop-off at your exact address. Door-to-door, luggage included.",
         heroTitle: "Taxi Villeneuve-sur-Lot → Agen",
         heroSubtitle: "Your Villeneuve-sur-Lot → Agen transfer at €35 — €50. 30 km, via the N21.",
         description: "Agen is 25 min from Villeneuve-sur-Lot via the N21, toll-free.",
@@ -222,8 +222,8 @@ export const trajetsMarmandeVilleneuve: Trajet[] = [
     hub: "marmande-villeneuve",
     i18n: {
       fr: {
-        metaTitle: "Taxi Villeneuve-sur-Lot → Toulouse | Prix fixe dès 175 € | TaxiNeo",
-        metaDescription: "Taxi Villeneuve-sur-Lot → Toulouse. 145 km, 1h35, dès 175 €. N21 puis A62, transfert direct porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Villeneuve-sur-Lot → Toulouse | 145 km, 175 € | TaxiNeo",
+        metaDescription: "Via N21 / A62 en 1h35. N21, Bastides du Quercy, Ville Rose et Vallée du Lot en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Villeneuve-sur-Lot → Toulouse",
         heroSubtitle: "Transfert Villeneuve-sur-Lot → Toulouse au prix fixe de 175 — 220 €. 145 km, via la N21 et l'A62.",
         description: "Toulouse est à 1h35 de Villeneuve-sur-Lot, via Agen et l'A62.",
@@ -241,8 +241,8 @@ export const trajetsMarmandeVilleneuve: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Villeneuve-sur-Lot → Toulouse | Fixed price from €175 | TaxiNeo",
-        metaDescription: "Taxi Villeneuve-sur-Lot → Toulouse. 145 km, 1h35, from €175. N21 + A62, direct door-to-door. Book 24/7.",
+        metaTitle: "Taxi Villeneuve-sur-Lot → Toulouse | 145 km, €175 | TaxiNeo",
+        metaDescription: "N21 / A62 route, approximately 1h35. N21, Bastides du Quercy, Ville Rose and Vallée du Lot en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Villeneuve-sur-Lot → Toulouse",
         heroSubtitle: "Your Villeneuve-sur-Lot → Toulouse transfer at €175 — €220. 145 km, via N21 and A62.",
         description: "Toulouse is 1h35 from Villeneuve-sur-Lot, via Agen and the A62.",
@@ -287,8 +287,8 @@ export const trajetsMarmandeVilleneuve: Trajet[] = [
     hub: "marmande-villeneuve",
     i18n: {
       fr: {
-        metaTitle: "Taxi Marmande → Toulouse | Prix fixe dès 240 € | TaxiNeo",
-        metaDescription: "Taxi Marmande → Toulouse. 200 km, 2h05, dès 240 €. A62, transfert direct porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Marmande → Toulouse | 200 km, dès 240 € | TaxiNeo",
+        metaDescription: "Via A62 en 2h05. Garonne, Tomate de Marmande, Ville Rose et Canal du Midi en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Marmande → Toulouse",
         heroSubtitle: "Transfert Marmande → Toulouse au prix fixe de 240 — 300 €. 200 km, direct par l'A62.",
         description: "Toulouse est à 2h05 de Marmande par l'A62, en traversant tout le Lot-et-Garonne.",
@@ -306,8 +306,8 @@ export const trajetsMarmandeVilleneuve: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Marmande → Toulouse | Fixed price from €240 | TaxiNeo",
-        metaDescription: "Taxi Marmande → Toulouse. 200 km, 2h05, from €240. A62 motorway, direct door-to-door. Book 24/7.",
+        metaTitle: "Taxi Marmande → Toulouse | 200 km, from €240 | TaxiNeo",
+        metaDescription: "Via A62, 2h05 ride. Garonne, Tomate de Marmande, Ville Rose and Canal du Midi en route. Drop-off at your exact address. Door-to-door, luggage included.",
         heroTitle: "Taxi Marmande → Toulouse",
         heroSubtitle: "Your Marmande → Toulouse transfer at €240 — €300. 200 km, via the A62.",
         description: "Toulouse is 2h05 from Marmande via the A62 through the Garonne valley.",

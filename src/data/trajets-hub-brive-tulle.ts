@@ -26,8 +26,8 @@ export const trajetsBriveTulle: Trajet[] = [
     hub: "brive-tulle",
     i18n: {
       fr: {
-        metaTitle: "Taxi Brive-la-Gaillarde → Paris | Prix fixe dès 520 € | TaxiNeo",
-        metaDescription: "Taxi Brive-la-Gaillarde → Paris. 480 km, 4h40, dès 520 €. A20 directe, alternative au train. Réservation 24h/24.",
+        metaTitle: "Taxi Brive-la-Gaillarde → Paris | 480 km, 520 € | TaxiNeo",
+        metaDescription: "Via A20 en 4h40. Limousin, Porte-à-porte, Périgord et Île-de-France en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Brive-la-Gaillarde → Paris",
         heroSubtitle: "Transfert Brive-la-Gaillarde → Paris au prix fixe de 520 — 630 €. 480 km, trajet direct porte-à-porte.",
         description: "Paris, capitale de la France, est à 4h40 de Brive-la-Gaillarde par l'autoroute A20.",
@@ -45,8 +45,8 @@ export const trajetsBriveTulle: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Brive-la-Gaillarde → Paris | Fixed price from €520 | TaxiNeo",
-        metaDescription: "Taxi Brive-la-Gaillarde → Paris. 480 km, 4h40, from €520. Direct A20, door-to-door alternative to the train. Book 24/7.",
+        metaTitle: "Taxi Brive-la-Gaillarde → Paris | 480 km, €520 | TaxiNeo",
+        metaDescription: "Via A20, 4h40 ride. Limousin, Porte-à-porte, Périgord and Île-de-France en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Brive-la-Gaillarde → Paris",
         heroSubtitle: "Your Brive-la-Gaillarde → Paris transfer at €520 — €630. 480 km, direct door-to-door service.",
         description: "Paris, capital of France, is 4h40 from Brive-la-Gaillarde via the A20 motorway.",
@@ -90,8 +90,8 @@ export const trajetsBriveTulle: Trajet[] = [
     hub: "brive-tulle",
     i18n: {
       fr: {
-        metaTitle: "Taxi Brive-la-Gaillarde → Toulouse | Prix fixe dès 220 € | TaxiNeo",
-        metaDescription: "Taxi Brive-la-Gaillarde → Toulouse. 200 km, 2h, dès 220 €. A20 via Cahors, Ville Rose. Réservation 24h/24.",
+        metaTitle: "Taxi Brive-la-Gaillarde → Toulouse | 200 km, 220 € | TaxiNeo",
+        metaDescription: "Via A20 en 2h. Quercy, Cahors, Occitanie et Ville Rose en chemin. Dépose porte-à-porte, bagages inclus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Brive-la-Gaillarde → Toulouse",
         heroSubtitle: "Transfert Brive-la-Gaillarde → Toulouse au prix fixe de 220 — 280 €. 200 km, de la Corrèze à la Ville Rose.",
         description: "Toulouse, capitale de l'Occitanie et quatrième ville de France, est à 2h de Brive-la-Gaillarde par l'A20.",
@@ -109,8 +109,8 @@ export const trajetsBriveTulle: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Brive-la-Gaillarde → Toulouse | Fixed price from €220 | TaxiNeo",
-        metaDescription: "Taxi Brive-la-Gaillarde → Toulouse. 200 km, 2h, from €220. A20 via Cahors, the Pink City. Book 24/7.",
+        metaTitle: "Taxi Brive-la-Gaillarde → Toulouse | 200 km, €220 | TaxiNeo",
+        metaDescription: "Via A20, 2 hours ride. Quercy, Cahors, Occitanie and Ville Rose en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Brive-la-Gaillarde → Toulouse",
         heroSubtitle: "Your Brive-la-Gaillarde → Toulouse transfer at €220 — €280. 200 km, from Corrèze to the Pink City.",
         description: "Toulouse, Occitanie capital and France's fourth city, is 2h from Brive-la-Gaillarde via the A20.",
@@ -154,8 +154,8 @@ export const trajetsBriveTulle: Trajet[] = [
     hub: "brive-tulle",
     i18n: {
       fr: {
-        metaTitle: "Taxi Brive-la-Gaillarde → Limoges | Prix fixe dès 95 € | TaxiNeo",
-        metaDescription: "Taxi Brive-la-Gaillarde → Limoges. 90 km, 55 min, dès 95 €. A20, de la Corrèze à la Haute-Vienne. Réservation 24h/24.",
+        metaTitle: "Taxi Brive-la-Gaillarde → Limoges | 90 km, 95 € | TaxiNeo",
+        metaDescription: "Via A20 en 55 min. Uzerche, Limousin, Porcelaine et Corrèze en chemin. Dépose porte-à-porte, bagages inclus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Brive-la-Gaillarde → Limoges",
         heroSubtitle: "Transfert Brive-la-Gaillarde → Limoges au prix fixe de 95 — 120 €. 90 km, liaison rapide entre les deux grandes villes du Limousin.",
         description: "Limoges, préfecture de la Haute-Vienne et capitale des arts du feu, est à 55 min de Brive par l'A20.",
@@ -173,8 +173,8 @@ export const trajetsBriveTulle: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Brive-la-Gaillarde → Limoges | Fixed price from €95 | TaxiNeo",
-        metaDescription: "Taxi Brive-la-Gaillarde → Limoges. 90 km, 55 min, from €95. A20 motorway, Limousin's two main cities. Book 24/7.",
+        metaTitle: "Taxi Brive-la-Gaillarde → Limoges | 90 km, €95 | TaxiNeo",
+        metaDescription: "Via A20, 55 min ride. Uzerche, Limousin, Porcelaine and Corrèze en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Brive-la-Gaillarde → Limoges",
         heroSubtitle: "Your Brive-la-Gaillarde → Limoges transfer at €95 — €120. 90 km, fast link between Limousin's two main cities.",
         description: "Limoges, Haute-Vienne prefecture and world capital of fine porcelain, is 55 min from Brive via the A20.",
@@ -218,8 +218,8 @@ export const trajetsBriveTulle: Trajet[] = [
     hub: "brive-tulle",
     i18n: {
       fr: {
-        metaTitle: "Taxi Brive-la-Gaillarde → Bordeaux | Prix fixe dès 230 € | TaxiNeo",
-        metaDescription: "Taxi Brive-la-Gaillarde → Bordeaux. 210 km, 2h10, dès 230 €. A89 via le Périgord, capitale du vin. Réservation 24h/24.",
+        metaTitle: "Taxi Brive-la-Gaillarde → Bordeaux | 210 km, 230 € | TaxiNeo",
+        metaDescription: "Via A89 en 2h10. Périgord, Dordogne, Vignobles et Saint-Émilion en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Brive-la-Gaillarde → Bordeaux",
         heroSubtitle: "Transfert Brive-la-Gaillarde → Bordeaux au prix fixe de 230 — 290 €. 210 km, du Périgord à la capitale du vin.",
         description: "Bordeaux, capitale mondiale du vin et métropole dynamique de Nouvelle-Aquitaine, est à 2h10 de Brive par l'A89.",
@@ -237,8 +237,8 @@ export const trajetsBriveTulle: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Brive-la-Gaillarde → Bordeaux | Fixed price from €230 | TaxiNeo",
-        metaDescription: "Taxi Brive-la-Gaillarde → Bordeaux. 210 km, 2h10, from €230. A89 via Périgord, world wine capital. Book 24/7.",
+        metaTitle: "Taxi Brive-la-Gaillarde → Bordeaux | 210 km, €230 | TaxiNeo",
+        metaDescription: "Via A89, 2h10 ride. Périgord, Dordogne, Vignobles and Saint-Émilion en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Brive-la-Gaillarde → Bordeaux",
         heroSubtitle: "Your Brive-la-Gaillarde → Bordeaux transfer at €230 — €290. 210 km, from Périgord to the wine capital.",
         description: "Bordeaux, world wine capital and dynamic Nouvelle-Aquitaine metropolis, is 2h10 from Brive via the A89.",
@@ -282,8 +282,8 @@ export const trajetsBriveTulle: Trajet[] = [
     hub: "brive-tulle",
     i18n: {
       fr: {
-        metaTitle: "Taxi Tulle → Limoges | Prix fixe dès 95 € | TaxiNeo",
-        metaDescription: "Taxi Tulle → Limoges. 90 km, 1h, dès 95 €. A20, de la préfecture de la Corrèze à la capitale du Limousin. Réservation 24h/24.",
+        metaTitle: "Taxi Tulle → Limoges | forfait dès 95 €, 1h | TaxiNeo",
+        metaDescription: "Via A20 en 1h. Corrèze, Dentelle, Accordéon et Limousin en chemin. Dépose porte-à-porte, bagages inclus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Tulle → Limoges",
         heroSubtitle: "Transfert Tulle → Limoges au prix fixe de 95 — 120 €. 90 km, de la vallée de la Corrèze au cœur du Limousin.",
         description: "Limoges, préfecture de la Haute-Vienne et capitale des arts du feu, est à 1h de Tulle via l'A20.",
@@ -302,7 +302,7 @@ export const trajetsBriveTulle: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Tulle → Limoges | Fixed price from €95 | TaxiNeo",
-        metaDescription: "Taxi Tulle → Limoges. 90 km, 1h, from €95. A20, Corrèze prefecture to Limousin capital. Book 24/7.",
+        metaDescription: "Via A20, 1 hour ride. Corrèze, Dentelle, Accordéon and Limousin en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Tulle → Limoges",
         heroSubtitle: "Your Tulle → Limoges transfer at €95 — €120. 90 km, from the Corrèze valley to the heart of Limousin.",
         description: "Limoges, Haute-Vienne prefecture and capital of the fire arts, is 1h from Tulle via the A20.",

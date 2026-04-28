@@ -19,8 +19,8 @@ export const trajetsOrangeCarpentras: Trajet[] = [
     hub: "orange-carpentras",
     i18n: {
       fr: {
-        metaTitle: "Taxi Orange → Avignon | Prix fixe dès 35 € | TaxiNeo",
-        metaDescription: "Taxi Orange → Avignon. 30 km, 25 min, dès 35 €. Transfert direct entre les deux cités UNESCO de Provence. Réservation 24h/24.",
+        metaTitle: "Taxi Orange → Avignon | forfait dès 35 € | TaxiNeo",
+        metaDescription: "Par A7, undefined min de trajet. Théâtre antique, Palais des Papes, Côtes du Rhône et UNESCO en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Orange → Avignon",
         heroSubtitle: "Transfert Orange → Avignon au prix fixe de 35 — 50 €. 30 km, deux cités classées UNESCO reliées en 25 min.",
         description: "Orange et Avignon, deux cités monumentales classées au patrimoine mondial, sont reliées en seulement 25 min par l'A7.",
@@ -39,7 +39,7 @@ export const trajetsOrangeCarpentras: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Orange → Avignon | Fixed price from €35 | TaxiNeo",
-        metaDescription: "Taxi Orange → Avignon. 30 km, 25 min, from €35. Direct transfer between two UNESCO cities in Provence. Book 24/7.",
+        metaDescription: "Direct route via A7, undefined min. Théâtre antique, Palais des Papes, Côtes du Rhône and UNESCO en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Orange → Avignon",
         heroSubtitle: "Orange → Avignon transfer at €35 — €50. 30 km, two UNESCO heritage cities connected in 25 min.",
         description: "Orange and Avignon, two monumental UNESCO cities, connected in just 25 min via the A7.",
@@ -77,7 +77,7 @@ export const trajetsOrangeCarpentras: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Orange → Lyon | Prix fixe dès 230 € | TaxiNeo",
-        metaDescription: "Taxi Orange → Lyon. 195 km, 2h, dès 230 €. A7 par la vallée du Rhône, Montélimar, Valence. Réservation 24h/24.",
+        metaDescription: "Itinéraire A7, environ undefined min. Passage par Vallée du Rhône, Montélimar, Valence et Gastronomie. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Orange → Lyon",
         heroSubtitle: "Transfert Orange → Lyon au prix fixe de 230 — 285 €. 195 km, la remontée de la vallée du Rhône en 2h.",
         description: "Orange et Lyon sont reliées en 2h par l'A7, l'Autoroute du Soleil, en remontant la vallée du Rhône.",
@@ -96,7 +96,7 @@ export const trajetsOrangeCarpentras: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Orange → Lyon | Fixed price from €230 | TaxiNeo",
-        metaDescription: "Taxi Orange → Lyon. 195 km, 2h, from €230. A7 through the Rhône Valley. Book 24/7.",
+        metaDescription: "A7 route, approximately undefined min. Vallée du Rhône, Montélimar, Valence and Gastronomie en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Orange → Lyon",
         heroSubtitle: "Orange → Lyon transfer at €230 — €285. 195 km, up the Rhône Valley in 2h.",
         description: "Orange and Lyon connected in 2h via the A7 Autoroute du Soleil, through the Rhône Valley.",
@@ -133,8 +133,8 @@ export const trajetsOrangeCarpentras: Trajet[] = [
     hub: "orange-carpentras",
     i18n: {
       fr: {
-        metaTitle: "Taxi Carpentras → Avignon | Prix fixe dès 30 € | TaxiNeo",
-        metaDescription: "Taxi Carpentras → Avignon. 25 km, 25 min, dès 30 €. Transfert direct depuis la capitale du Comtat Venaissin. Réservation 24h/24.",
+        metaTitle: "Taxi Carpentras → Avignon | 25 km, dès 30 € | TaxiNeo",
+        metaDescription: "Trajet direct D942 en undefined min. Passage par Comtat Venaissin, Palais des Papes, Ventoux et Marché. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Carpentras → Avignon",
         heroSubtitle: "Transfert Carpentras → Avignon au prix fixe de 30 — 45 €. 25 km, du pied du Ventoux à la cité des Papes.",
         description: "Carpentras, capitale du Comtat Venaissin au pied du Mont Ventoux, est à 25 min d'Avignon par la D942.",
@@ -152,8 +152,8 @@ export const trajetsOrangeCarpentras: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Carpentras → Avignon | Fixed price from €30 | TaxiNeo",
-        metaDescription: "Taxi Carpentras → Avignon. 25 km, 25 min, from €30. Direct transfer from Mont Ventoux area. Book 24/7.",
+        metaTitle: "Taxi Carpentras → Avignon | 25 km, from €30 | TaxiNeo",
+        metaDescription: "Direct route via D942, undefined min. Comtat Venaissin, Palais des Papes, Ventoux and Marché en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Carpentras → Avignon",
         heroSubtitle: "Carpentras → Avignon transfer at €30 — €45. 25 km, from Ventoux country to the City of Popes.",
         description: "Carpentras, capital of the Comtat Venaissin at the foot of Mont Ventoux, is 25 min from Avignon via D942.",
@@ -190,8 +190,8 @@ export const trajetsOrangeCarpentras: Trajet[] = [
     hub: "orange-carpentras",
     i18n: {
       fr: {
-        metaTitle: "Taxi Orange → Montélimar | Prix fixe dès 60 € | TaxiNeo",
-        metaDescription: "Taxi Orange → Montélimar. 50 km, 35 min, dès 60 €. A7, la porte de la Drôme provençale. Réservation 24h/24.",
+        metaTitle: "Taxi Orange → Montélimar | 50 km, dès 60 € | TaxiNeo",
+        metaDescription: "Via A7 en undefined min. Nougat, Drôme provençale, Lavande et Châteaux en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Orange → Montélimar",
         heroSubtitle: "Transfert Orange → Montélimar au prix fixe de 60 — 80 €. 50 km, du Théâtre Antique à la capitale du nougat.",
         description: "Montélimar, la capitale du nougat et porte de la Drôme provençale, est à 35 min d'Orange par l'A7.",
@@ -209,8 +209,8 @@ export const trajetsOrangeCarpentras: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Orange → Montélimar | Fixed price from €60 | TaxiNeo",
-        metaDescription: "Taxi Orange → Montélimar. 50 km, 35 min, from €60. A7 to the nougat capital. Book 24/7.",
+        metaTitle: "Taxi Orange → Montélimar | 50 km, from €60 | TaxiNeo",
+        metaDescription: "Via A7, undefined min ride. Nougat, Drôme provençale, Lavande and Châteaux en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Orange → Montélimar",
         heroSubtitle: "Orange → Montélimar transfer at €60 — €80. 50 km, from the Roman Theatre to the nougat capital.",
         description: "Montélimar, nougat capital and gateway to Drôme Provençale, is 35 min from Orange via the A7.",
@@ -247,8 +247,8 @@ export const trajetsOrangeCarpentras: Trajet[] = [
     hub: "orange-carpentras",
     i18n: {
       fr: {
-        metaTitle: "Taxi Carpentras → Mont Ventoux | Prix fixe dès 35 € | TaxiNeo",
-        metaDescription: "Taxi Carpentras → Mont Ventoux. 25 km, 30 min, dès 35 €. Montée du Géant de Provence par Bédoin. Réservation 24h/24.",
+        metaTitle: "Taxi Carpentras → Mont Ventoux | 25 km, dès 35 € | TaxiNeo",
+        metaDescription: "Via D974 en undefined min. Ventoux, Cyclisme, Tour de France et Panorama en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Carpentras → Mont Ventoux",
         heroSubtitle: "Transfert Carpentras → Mont Ventoux au prix fixe de 35 — 50 €. 25 km, l'ascension du Géant de Provence.",
         description: "Le Mont Ventoux (1 912 m), le « Géant de Provence », est à 30 min de Carpentras par la D974 via Bédoin.",
@@ -266,8 +266,8 @@ export const trajetsOrangeCarpentras: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Carpentras → Mont Ventoux | Fixed price from €35 | TaxiNeo",
-        metaDescription: "Taxi Carpentras → Mont Ventoux. 25 km, 30 min, from €35. Climb the Giant of Provence. Book 24/7.",
+        metaTitle: "Taxi Carpentras → Mont Ventoux | 25 km, from €35 | TaxiNeo",
+        metaDescription: "Via D974, undefined min ride. Ventoux, Cyclisme, Tour de France and Panorama en route. Drop-off at your exact address. Door-to-door, luggage included.",
         heroTitle: "Taxi Carpentras → Mont Ventoux",
         heroSubtitle: "Carpentras → Mont Ventoux transfer at €35 — €50. 25 km, ascent of the Giant of Provence.",
         description: "Mont Ventoux (1,912m), the 'Giant of Provence', is 30 min from Carpentras via the D974 through Bédoin.",

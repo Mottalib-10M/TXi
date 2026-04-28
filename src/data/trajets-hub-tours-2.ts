@@ -20,7 +20,7 @@ export const trajetsToursHub2: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Tours → Paris | Prix fixe dès 250 € | TaxiNeo",
-        metaDescription: "Taxi Tours → Paris. 235 km, 2h30, dès 250 €. A10, transfert direct après le dernier TGV. Réservation 24h/24.",
+        metaDescription: "Via A10 en undefined min. Loire, Beauce, TGV alternative et Nuit en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Tours → Paris",
         heroSubtitle: "Transfert Tours → Paris au prix fixe de 250 — 310 €. 235 km via l'A10.",
         description: "Le retour Tours → Paris par l'A10, L'Aquitaine, est un trajet fluide de 2h30.",
@@ -39,7 +39,7 @@ export const trajetsToursHub2: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Tours → Paris | Fixed price from €250 | TaxiNeo",
-        metaDescription: "Taxi Tours → Paris. 235 km, 2h30, from €250. A10, direct after last TGV. Book 24/7.",
+        metaDescription: "Via A10, undefined min ride. Loire, Beauce, TGV alternative and Nuit en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Tours → Paris",
         heroSubtitle: "Tours → Paris transfer at €250 — €310. 235 km via A10.",
         description: "The return from Tours to Paris via A10 is a smooth 2h30 journey.",
@@ -76,8 +76,8 @@ export const trajetsToursHub2: Trajet[] = [
     hub: "tours",
     i18n: {
       fr: {
-        metaTitle: "Taxi Tours → Aéroport CDG | Prix fixe dès 290 € | TaxiNeo",
-        metaDescription: "Taxi Tours → Aéroport Paris-CDG. 275 km, 2h50, dès 290 €. Transfert aéroport direct. Réservation 24h/24.",
+        metaTitle: "Taxi Tours → Aéroport Paris-CDG | 275 km, 290 € | TaxiNeo",
+        metaDescription: "Itinéraire A10/A86, environ undefined min. CDG, Roissy, Vol international et Direct en chemin. Accueil au terminal, attente gratuite si retard de vol.",
         heroTitle: "Taxi Tours → Aéroport CDG",
         heroSubtitle: "Transfert Tours → Aéroport Paris-CDG au prix fixe de 290 — 360 €. 275 km, direct.",
         description: "L'aéroport Paris-CDG (Roissy) est accessible directement depuis Tours en 2h50.",
@@ -95,8 +95,8 @@ export const trajetsToursHub2: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Tours → CDG Airport | Fixed price from €290 | TaxiNeo",
-        metaDescription: "Taxi Tours → Paris-CDG Airport. 275 km, 2h50, from €290. Direct airport transfer. Book 24/7.",
+        metaTitle: "Taxi Tours → Aéroport Paris-CDG | 275 km, €290 | TaxiNeo",
+        metaDescription: "A10/A86 route, approximately undefined min. CDG, Roissy, Vol international and Direct en route. Terminal drop-off, real-time flight tracking included.",
         heroTitle: "Taxi Tours → CDG Airport",
         heroSubtitle: "Tours → Paris-CDG Airport transfer at €290 — €360. 275 km, direct.",
         description: "Paris-CDG Airport (Roissy) is directly accessible from Tours in 2h50.",
@@ -133,8 +133,8 @@ export const trajetsToursHub2: Trajet[] = [
     hub: "tours",
     i18n: {
       fr: {
-        metaTitle: "Taxi Tours → Blois | Prix fixe dès 75 € | TaxiNeo",
-        metaDescription: "Taxi Tours → Blois. 62 km, 40 min, dès 75 €. Château de Blois, porte de Chambord. Réservation 24h/24.",
+        metaTitle: "Taxi Tours → Blois | 62 km A10, dès 75 € | TaxiNeo",
+        metaDescription: "Via A10 en undefined min. Château, Chambord, Loire et Renaissance en chemin. Arrêt visite possible en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Tours → Blois",
         heroSubtitle: "Transfert Tours → Blois au prix fixe de 75 — 95 €. 62 km, la porte de Chambord.",
         description: "Blois, avec son château royal aux quatre ailes de quatre siècles, est la porte d'entrée de Chambord.",
@@ -153,7 +153,7 @@ export const trajetsToursHub2: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Tours → Blois | Fixed price from €75 | TaxiNeo",
-        metaDescription: "Taxi Tours → Blois. 62 km, 40 min, from €75. Royal Castle, gateway to Chambord. Book 24/7.",
+        metaDescription: "Via A10, undefined min ride. Château, Chambord, Loire and Renaissance en route. Stops for sightseeing possible en route. Perfect for a day trip without driving.",
         heroTitle: "Taxi Tours → Blois",
         heroSubtitle: "Tours → Blois transfer at €75 — €95. 62 km, gateway to Chambord.",
         description: "Blois, with its royal castle of four architectural styles, is the gateway to Chambord.",
@@ -190,8 +190,8 @@ export const trajetsToursHub2: Trajet[] = [
     hub: "tours",
     i18n: {
       fr: {
-        metaTitle: "Taxi Tours → Orléans | Prix fixe dès 130 € | TaxiNeo",
-        metaDescription: "Taxi Tours → Orléans. 115 km, 1h10, dès 130 €. A10, les deux capitales du Val de Loire. Réservation 24h/24.",
+        metaTitle: "Taxi Tours → Orléans | 115 km, dès 130 € | TaxiNeo",
+        metaDescription: "Via A10 en undefined min. Loire, Jeanne d'Arc, Sologne et Cathédrale en chemin. Dépose à votre adresse exacte. Alternative directe au train ou au bus.",
         heroTitle: "Taxi Tours → Orléans",
         heroSubtitle: "Transfert Tours → Orléans au prix fixe de 130 — 160 €. 115 km, de la Touraine à l'Orléanais.",
         description: "Orléans, cité de Jeanne d'Arc et capitale de la région Centre, est à 1h10 de Tours par l'A10.",
@@ -209,8 +209,8 @@ export const trajetsToursHub2: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Tours → Orléans | Fixed price from €130 | TaxiNeo",
-        metaDescription: "Taxi Tours → Orléans. 115 km, 1h10, from €130. A10, Loire Valley capitals. Book 24/7.",
+        metaTitle: "Taxi Tours → Orléans | 115 km, from €130 | TaxiNeo",
+        metaDescription: "Via A10, undefined min ride. Loire, Jeanne d'Arc, Sologne and Cathédrale en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Tours → Orléans",
         heroSubtitle: "Tours → Orléans transfer at €130 — €160. 115 km, Touraine to Orléanais.",
         description: "Orléans, Joan of Arc's city and Centre region capital, is 1h10 from Tours via A10.",
@@ -248,7 +248,7 @@ export const trajetsToursHub2: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Tours → Loches | Prix fixe dès 55 € | TaxiNeo",
-        metaDescription: "Taxi Tours → Loches. 42 km, 35 min, dès 55 €. Cité royale médiévale, donjon du XIe siècle. Réservation 24h/24.",
+        metaDescription: "Via D943 en undefined min. Cité royale, Donjon, Agnès Sorel et Médiéval en chemin. Arrêt visite possible en chemin. Arrêt possible pour visites ou photos.",
         heroTitle: "Taxi Tours → Loches",
         heroSubtitle: "Transfert Tours → Loches au prix fixe de 55 — 70 €. 42 km, la cité royale.",
         description: "Loches, l'une des plus belles cités fortifiées de France, domine la vallée de l'Indre avec son donjon millénaire.",
@@ -267,7 +267,7 @@ export const trajetsToursHub2: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Tours → Loches | Fixed price from €55 | TaxiNeo",
-        metaDescription: "Taxi Tours → Loches. 42 km, 35 min, from €55. Medieval royal citadel. Book 24/7.",
+        metaDescription: "Via D943, undefined min ride. Cité royale, Donjon, Agnès Sorel and Médiéval en route. Stops for sightseeing possible en route. Return trip at same rate.",
         heroTitle: "Taxi Tours → Loches",
         heroSubtitle: "Tours → Loches transfer at €55 — €70. 42 km, the royal citadel.",
         description: "Loches, one of France's finest fortified cities, with its 11th-century keep overlooking the Indre Valley.",
@@ -305,7 +305,7 @@ export const trajetsToursHub2: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Tours → Le Mans | Prix fixe dès 95 € | TaxiNeo",
-        metaDescription: "Taxi Tours → Le Mans. 82 km, 55 min, dès 95 €. A28, ville des 24 Heures. Réservation 24h/24.",
+        metaDescription: "Via A28 en undefined min. 24h, Sarthe, Cathédrale et Vieille ville en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Tours → Le Mans",
         heroSubtitle: "Transfert Tours → Le Mans au prix fixe de 95 — 120 €. 82 km via l'A28.",
         description: "Le Mans, célèbre pour ses 24 Heures et sa cité Plantagenêt, est à 55 min de Tours.",
@@ -324,7 +324,7 @@ export const trajetsToursHub2: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Tours → Le Mans | Fixed price from €95 | TaxiNeo",
-        metaDescription: "Taxi Tours → Le Mans. 82 km, 55 min, from €95. A28, home of the 24 Hours. Book 24/7.",
+        metaDescription: "Via A28, undefined min ride. 24h, Sarthe, Cathédrale and Vieille ville en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Tours → Le Mans",
         heroSubtitle: "Tours → Le Mans transfer at €95 — €120. 82 km via A28.",
         description: "Le Mans, home of the 24 Hours race and the Plantagenet citadel, is 55 min from Tours.",
@@ -362,7 +362,7 @@ export const trajetsToursHub2: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Tours → Angers | Prix fixe dès 125 € | TaxiNeo",
-        metaDescription: "Taxi Tours → Angers. 110 km, 1h10, dès 125 €. A85, de la Touraine à l'Anjou. Réservation 24h/24.",
+        metaDescription: "Via A85 en undefined min. Anjou, Château, Tapisserie et Loire en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Tours → Angers",
         heroSubtitle: "Transfert Tours → Angers au prix fixe de 125 — 155 €. 110 km via l'A85, de la Touraine à l'Anjou.",
         description: "Angers, capitale de l'Anjou, est célèbre pour sa forteresse aux 17 tours et la tapisserie de l'Apocalypse.",
@@ -381,7 +381,7 @@ export const trajetsToursHub2: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Tours → Angers | Fixed price from €125 | TaxiNeo",
-        metaDescription: "Taxi Tours → Angers. 110 km, 1h10, from €125. A85, Touraine to Anjou. Book 24/7.",
+        metaDescription: "Via A85, undefined min ride. Anjou, Château, Tapisserie and Loire en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Tours → Angers",
         heroSubtitle: "Tours → Angers transfer at €125 — €155. 110 km via A85, Touraine to Anjou.",
         description: "Angers, capital of Anjou, famous for its 17-tower fortress and the Apocalypse Tapestry.",
@@ -418,8 +418,8 @@ export const trajetsToursHub2: Trajet[] = [
     hub: "tours",
     i18n: {
       fr: {
-        metaTitle: "Taxi Tours → Poitiers | Prix fixe dès 115 € | TaxiNeo",
-        metaDescription: "Taxi Tours → Poitiers. 100 km, 1h05, dès 115 €. A10, Futuroscope et art roman. Réservation 24h/24.",
+        metaTitle: "Taxi Tours → Poitiers | 100 km, dès 115 € | TaxiNeo",
+        metaDescription: "Via A10 en undefined min. Futuroscope, Roman, Notre-Dame et Université en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Tours → Poitiers",
         heroSubtitle: "Transfert Tours → Poitiers au prix fixe de 115 — 145 €. 100 km via l'A10.",
         description: "Poitiers, cité romane par excellence et porte du Futuroscope, est à 1h05 de Tours.",
@@ -437,8 +437,8 @@ export const trajetsToursHub2: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Tours → Poitiers | Fixed price from €115 | TaxiNeo",
-        metaDescription: "Taxi Tours → Poitiers. 100 km, 1h05, from €115. A10, Futuroscope and Romanesque art. Book 24/7.",
+        metaTitle: "Taxi Tours → Poitiers | 100 km, from €115 | TaxiNeo",
+        metaDescription: "Via A10, undefined min ride. Futuroscope, Roman, Notre-Dame and Université en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Tours → Poitiers",
         heroSubtitle: "Tours → Poitiers transfer at €115 — €145. 100 km via A10.",
         description: "Poitiers, Romanesque art capital and Futuroscope gateway, is 1h05 from Tours.",
@@ -475,8 +475,8 @@ export const trajetsToursHub2: Trajet[] = [
     hub: "tours",
     i18n: {
       fr: {
-        metaTitle: "Taxi Tours → Bourges | Prix fixe dès 170 € | TaxiNeo",
-        metaDescription: "Taxi Tours → Bourges. 155 km, 1h40, dès 170 €. Cathédrale UNESCO et Printemps de Bourges. Réservation 24h/24.",
+        metaTitle: "Taxi Tours → Bourges | 155 km, dès 170 € | TaxiNeo",
+        metaDescription: "Via A85/A71 en undefined min. Cathédrale UNESCO, Jacques Cœur, Berry et Printemps de Bourges en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Tours → Bourges",
         heroSubtitle: "Transfert Tours → Bourges au prix fixe de 170 — 210 €. 155 km, la cathédrale UNESCO du Berry.",
         description: "Bourges, cité de Jacques Cœur, abrite l'une des plus belles cathédrales gothiques au monde (UNESCO).",
@@ -494,8 +494,8 @@ export const trajetsToursHub2: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Tours → Bourges | Fixed price from €170 | TaxiNeo",
-        metaDescription: "Taxi Tours → Bourges. 155 km, 1h40, from €170. UNESCO cathedral and Printemps de Bourges. Book 24/7.",
+        metaTitle: "Taxi Tours → Bourges | 155 km, from €170 | TaxiNeo",
+        metaDescription: "Via A85/A71, undefined min ride. Cathédrale UNESCO, Jacques Cœur, Berry and Printemps de Bourges en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Tours → Bourges",
         heroSubtitle: "Tours → Bourges transfer at €170 — €210. 155 km, the UNESCO cathedral of Berry.",
         description: "Bourges, city of Jacques Cœur, houses one of the world's finest Gothic cathedrals (UNESCO).",
@@ -532,8 +532,8 @@ export const trajetsToursHub2: Trajet[] = [
     hub: "tours",
     i18n: {
       fr: {
-        metaTitle: "Taxi Tours → Chenonceau | Prix fixe dès 45 € | TaxiNeo",
-        metaDescription: "Taxi Tours → Chenonceau. 35 km, 30 min, dès 45 €. Le Château des Dames sur le Cher. Réservation 24h/24.",
+        metaTitle: "Taxi Tours → Chenonceau | 35 km, dès 45 € | TaxiNeo",
+        metaDescription: "Via D976 en undefined min. Château des Dames, Cher, Renaissance et Jardins en chemin. Arrêt visite possible en chemin. Arrêt possible pour visites ou photos.",
         heroTitle: "Taxi Tours → Chenonceau",
         heroSubtitle: "Transfert Tours → Chenonceau au prix fixe de 45 — 60 €. 35 km, le plus élégant des châteaux.",
         description: "Le château de Chenonceau, « le Château des Dames », enjambe le Cher avec une grâce unique au monde.",
@@ -551,8 +551,8 @@ export const trajetsToursHub2: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Tours → Chenonceau | Fixed price from €45 | TaxiNeo",
-        metaDescription: "Taxi Tours → Chenonceau. 35 km, 30 min, from €45. The Ladies' Castle on the Cher. Book 24/7.",
+        metaTitle: "Taxi Tours → Chenonceau | 35 km, from €45 | TaxiNeo",
+        metaDescription: "Via D976, undefined min ride. Château des Dames, Cher, Renaissance and Jardins en route. Stops for sightseeing possible en route. Return trip at same rate.",
         heroTitle: "Taxi Tours → Chenonceau",
         heroSubtitle: "Tours → Chenonceau transfer at €45 — €60. 35 km, the most elegant château.",
         description: "Chenonceau, the 'Ladies' Castle', spans the Cher river with unique grace.",

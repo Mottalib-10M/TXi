@@ -30,8 +30,8 @@ export const trajetsNeufchateauBarLeDuc: Trajet[] = [
     hub: "neufchateau-barleduc",
     i18n: {
       fr: {
-        metaTitle: "Taxi Bar-le-Duc → Nancy | Prix fixe dès 95 € | TaxiNeo",
-        metaDescription: "Taxi Bar-le-Duc → Nancy. 80 km, 55 min, dès 95 €. N4, côtes de Meuse, Place Stanislas UNESCO. Réservation 24h/24.",
+        metaTitle: "Taxi Bar-le-Duc → Nancy | 80 km, dès 95 € | TaxiNeo",
+        metaDescription: "Via N4 en 55 min. Passage par Meuse, Côtes de Meuse, Place Stanislas UNESCO et Confiture de groseilles. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Bar-le-Duc → Nancy",
         heroSubtitle: "Transfert Bar-le-Duc → Nancy au prix fixe de 95 — 125 €. 80 km par la N4 à travers les côtes de Meuse et le plateau lorrain.",
         description: "Nancy, capitale des ducs de Lorraine avec sa Place Stanislas classée UNESCO, est à 55 min de Bar-le-Duc par la N4.",
@@ -49,8 +49,8 @@ export const trajetsNeufchateauBarLeDuc: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Bar-le-Duc → Nancy | Fixed price from €95 | TaxiNeo",
-        metaDescription: "Taxi Bar-le-Duc → Nancy. 80 km, 55 min, from €95. N4, Meuse hills, Place Stanislas UNESCO. Book 24/7.",
+        metaTitle: "Taxi Bar-le-Duc → Nancy | 80 km, from €95 | TaxiNeo",
+        metaDescription: "Via N4, 55 min ride. Meuse, Côtes de Meuse, Place Stanislas UNESCO and Confiture de groseilles en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Bar-le-Duc → Nancy",
         heroSubtitle: "Your Bar-le-Duc → Nancy transfer at €95 — €125. 80 km via the N4 through the Meuse hills and the Lorraine plateau.",
         description: "Nancy, capital of the Dukes of Lorraine with its UNESCO-listed Place Stanislas, is 55 min from Bar-le-Duc via the N4.",
@@ -95,8 +95,8 @@ export const trajetsNeufchateauBarLeDuc: Trajet[] = [
     hub: "neufchateau-barleduc",
     i18n: {
       fr: {
-        metaTitle: "Taxi Bar-le-Duc → Metz | Prix fixe dès 115 € | TaxiNeo",
-        metaDescription: "Taxi Bar-le-Duc → Metz. 95 km, 1h, dès 115 €. A4 via les côtes de Meuse, cathédrale, Centre Pompidou-Metz. Réservation 24h/24.",
+        metaTitle: "Taxi Bar-le-Duc → Metz | 95 km, dès 115 € | TaxiNeo",
+        metaDescription: "Via A4 en 1h. N135, Meuse, Verdun et Cathédrale Saint-Étienne Metz en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Bar-le-Duc → Metz",
         heroSubtitle: "Transfert Bar-le-Duc → Metz au prix fixe de 115 — 145 €. 95 km par l'A4 entre la Meuse et la Moselle.",
         description: "Metz, ville d'art et d'histoire avec son Centre Pompidou-Metz et sa cathédrale aux plus grands vitraux du monde, est à 1h de Bar-le-Duc par l'A4.",
@@ -114,8 +114,8 @@ export const trajetsNeufchateauBarLeDuc: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Bar-le-Duc → Metz | Fixed price from €115 | TaxiNeo",
-        metaDescription: "Taxi Bar-le-Duc → Metz. 95 km, 1h, from €115. A4 via Meuse hills, cathedral, Centre Pompidou-Metz. Book 24/7.",
+        metaTitle: "Taxi Bar-le-Duc → Metz | 95 km, from €115 | TaxiNeo",
+        metaDescription: "Via A4, 1 hour ride. N135, Meuse, Verdun and Cathédrale Saint-Étienne Metz en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Bar-le-Duc → Metz",
         heroSubtitle: "Your Bar-le-Duc → Metz transfer at €115 — €145. 95 km via the A4 between the Meuse and Moselle valleys.",
         description: "Metz, city of art and history with its Centre Pompidou-Metz and cathedral boasting the world's largest stained glass surface, is 1h from Bar-le-Duc via the A4.",
@@ -160,8 +160,8 @@ export const trajetsNeufchateauBarLeDuc: Trajet[] = [
     hub: "neufchateau-barleduc",
     i18n: {
       fr: {
-        metaTitle: "Taxi Bar-le-Duc → Reims | Prix fixe dès 155 € | TaxiNeo",
-        metaDescription: "Taxi Bar-le-Duc → Reims. 130 km, 1h20, dès 155 €. A4 via l'Argonne et la Champagne, cathédrale des sacres. Réservation 24h/24.",
+        metaTitle: "Taxi Bar-le-Duc → Reims | 130 km, dès 155 € | TaxiNeo",
+        metaDescription: "Via A4 en 1h20. N4, Champagne, Cathédrale de Reims et Voie sacrée en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Bar-le-Duc → Reims",
         heroSubtitle: "Transfert Bar-le-Duc → Reims au prix fixe de 155 — 200 €. 130 km par l'A4 de la Meuse à la Champagne.",
         description: "Reims, cité des sacres royaux avec sa cathédrale gothique chef-d'œuvre et ses caves de champagne, est à 1h20 de Bar-le-Duc par l'A4.",
@@ -179,8 +179,8 @@ export const trajetsNeufchateauBarLeDuc: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Bar-le-Duc → Reims | Fixed price from €155 | TaxiNeo",
-        metaDescription: "Taxi Bar-le-Duc → Reims. 130 km, 1h20, from €155. A4 via Argonne forest and Champagne, coronation cathedral. Book 24/7.",
+        metaTitle: "Taxi Bar-le-Duc → Reims | 130 km, from €155 | TaxiNeo",
+        metaDescription: "Via A4, 1h20 ride. N4, Champagne, Cathédrale de Reims and Voie sacrée en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Bar-le-Duc → Reims",
         heroSubtitle: "Your Bar-le-Duc → Reims transfer at €155 — €200. 130 km via the A4 from the Meuse to Champagne.",
         description: "Reims, city of royal coronations with its Gothic cathedral masterpiece and champagne cellars, is 1h20 from Bar-le-Duc via the A4.",
@@ -228,8 +228,8 @@ export const trajetsNeufchateauBarLeDuc: Trajet[] = [
     hub: "neufchateau-barleduc",
     i18n: {
       fr: {
-        metaTitle: "Taxi Neufchâteau → Nancy | Prix fixe dès 90 € | TaxiNeo",
-        metaDescription: "Taxi Neufchâteau → Nancy. 75 km, 50 min, dès 90 €. D674 via Domrémy-la-Pucelle, terre de Jeanne d'Arc. Réservation 24h/24.",
+        metaTitle: "Taxi Neufchâteau → Nancy | 75 km, dès 90 € | TaxiNeo",
+        metaDescription: "Via D674/N4 en 50 min. Passage par Domrémy-la-Pucelle, Jeanne d'Arc, Vosges et Place Stanislas UNESCO. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Neufchâteau → Nancy",
         heroSubtitle: "Transfert Neufchâteau → Nancy au prix fixe de 90 — 115 €. 75 km à travers les Vosges et la terre de Jeanne d'Arc.",
         description: "Nancy, capitale des ducs de Lorraine et ville Art nouveau avec sa Place Stanislas UNESCO, est à 50 min de Neufchâteau par la D674.",
@@ -247,8 +247,8 @@ export const trajetsNeufchateauBarLeDuc: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Neufchâteau → Nancy | Fixed price from €90 | TaxiNeo",
-        metaDescription: "Taxi Neufchâteau → Nancy. 75 km, 50 min, from €90. D674 via Domrémy-la-Pucelle, Joan of Arc's birthplace. Book 24/7.",
+        metaTitle: "Taxi Neufchâteau → Nancy | 75 km, from €90 | TaxiNeo",
+        metaDescription: "Via D674/N4, 50 min ride. Domrémy-la-Pucelle, Jeanne d'Arc, Vosges and Place Stanislas UNESCO en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Neufchâteau → Nancy",
         heroSubtitle: "Your Neufchâteau → Nancy transfer at €90 — €115. 75 km through the Vosges and Joan of Arc's homeland.",
         description: "Nancy, capital of the Dukes of Lorraine and Art Nouveau city with its UNESCO-listed Place Stanislas, is 50 min from Neufchâteau via the D674.",
@@ -293,8 +293,8 @@ export const trajetsNeufchateauBarLeDuc: Trajet[] = [
     hub: "neufchateau-barleduc",
     i18n: {
       fr: {
-        metaTitle: "Taxi Neufchâteau → Épinal | Prix fixe dès 60 € | TaxiNeo",
-        metaDescription: "Taxi Neufchâteau → Épinal. 50 km, 40 min, dès 60 €. Routes vosgiennes, vallée de la Moselle, Imagerie d'Épinal. Réservation 24h/24.",
+        metaTitle: "Taxi Neufchâteau → Épinal | 50 km, dès 60 € | TaxiNeo",
+        metaDescription: "Via D166/D460 en 40 min. Vosges, Vallée de la Moselle, Imagerie d'Épinal et Domrémy-la-Pucelle en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Neufchâteau → Épinal",
         heroSubtitle: "Transfert Neufchâteau → Épinal au prix fixe de 60 — 80 €. 50 km à travers la campagne vosgienne jusqu'à la cité des Images.",
         description: "Épinal, préfecture des Vosges célèbre pour son Imagerie et ses Images d'Épinal, est à 40 min de Neufchâteau par les routes départementales.",
@@ -312,8 +312,8 @@ export const trajetsNeufchateauBarLeDuc: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Neufchâteau → Épinal | Fixed price from €60 | TaxiNeo",
-        metaDescription: "Taxi Neufchâteau → Épinal. 50 km, 40 min, from €60. Vosges countryside, Moselle valley, Imagerie d'Épinal. Book 24/7.",
+        metaTitle: "Taxi Neufchâteau → Épinal | 50 km, from €60 | TaxiNeo",
+        metaDescription: "Via D166/D460, 40 min ride. Vosges, Vallée de la Moselle, Imagerie d'Épinal and Domrémy-la-Pucelle en route. Faster and more direct than train or bus.",
         heroTitle: "Taxi Neufchâteau → Épinal",
         heroSubtitle: "Your Neufchâteau → Épinal transfer at €60 — €80. 50 km through the Vosges countryside to the City of Images.",
         description: "Épinal, prefecture of the Vosges famous for its Imagerie and Images d'Épinal, is 40 min from Neufchâteau via departmental roads.",

@@ -27,8 +27,8 @@ export const trajetsOleronRochefort: Trajet[] = [
     hub: "oleron-rochefort",
     i18n: {
       fr: {
-        metaTitle: "Taxi Île d'Oléron → La Rochelle | Prix fixe dès 50 € | TaxiNeo",
-        metaDescription: "Taxi Île d'Oléron → La Rochelle. 40 km, 35 min, dès 50 €. Pont d'Oléron, D734, N137. Réservation 24h/24.",
+        metaTitle: "Taxi Île d'Oléron → La Rochelle | 40 km, dès 50 € | TaxiNeo",
+        metaDescription: "Par D734 / N137, 35 min de trajet. Pont d'Oléron, Charente-Maritime, Fort Boyard et Vieux-Port en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Île d'Oléron → La Rochelle",
         heroSubtitle: "Transfert Île d'Oléron → La Rochelle au prix fixe de 50 — 65 €. 40 km, de l'île lumineuse au Vieux-Port atlantique.",
         description: "La Rochelle, perle de la côte atlantique, est à seulement 35 min de l'île d'Oléron via le pont et la D734.",
@@ -46,8 +46,8 @@ export const trajetsOleronRochefort: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Île d'Oléron → La Rochelle | Fixed price from €50 | TaxiNeo",
-        metaDescription: "Taxi Île d'Oléron → La Rochelle. 40 km, 35 min, from €50. Oléron bridge, D734, N137. Book 24/7.",
+        metaTitle: "Taxi Île d'Oléron → La Rochelle | 40 km, from €50 | TaxiNeo",
+        metaDescription: "Via D734 / N137, 35 min ride. Pont d'Oléron, Charente-Maritime, Fort Boyard and Vieux-Port en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Île d'Oléron → La Rochelle",
         heroSubtitle: "Your Île d'Oléron → La Rochelle transfer at €50 — €65. 40 km, from the luminous island to the Atlantic Old Port.",
         description: "La Rochelle, Atlantic coast pearl, is just 35 min from Île d'Oléron via the bridge and D734.",
@@ -92,8 +92,8 @@ export const trajetsOleronRochefort: Trajet[] = [
     hub: "oleron-rochefort",
     i18n: {
       fr: {
-        metaTitle: "Taxi Rochefort → La Rochelle | Prix fixe dès 35 € | TaxiNeo",
-        metaDescription: "Taxi Rochefort → La Rochelle. 30 km, 25 min, dès 35 €. N137 gratuite, de la Corderie Royale au Vieux-Port. Réservation 24h/24.",
+        metaTitle: "Taxi Rochefort → La Rochelle | 30 km, dès 35 € | TaxiNeo",
+        metaDescription: "Itinéraire N137, environ 25 min. Passage par Charente-Maritime, Corderie Royale, Arsenal et Vieux-Port. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Rochefort → La Rochelle",
         heroSubtitle: "Transfert Rochefort → La Rochelle au prix fixe de 35 — 50 €. 30 km, de l'Arsenal maritime au Vieux-Port atlantique.",
         description: "La Rochelle, perle de la côte atlantique et porte de l'île de Ré, est à seulement 25 min de Rochefort par la N137.",
@@ -111,8 +111,8 @@ export const trajetsOleronRochefort: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Rochefort → La Rochelle | Fixed price from €35 | TaxiNeo",
-        metaDescription: "Taxi Rochefort → La Rochelle. 30 km, 25 min, from €35. Toll-free N137, from the Royal Ropeworks to the Old Port. Book 24/7.",
+        metaTitle: "Taxi Rochefort → La Rochelle | 30 km, from €35 | TaxiNeo",
+        metaDescription: "N137 route, approximately 25 min. Charente-Maritime, Corderie Royale, Arsenal and Vieux-Port en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Rochefort → La Rochelle",
         heroSubtitle: "Your Rochefort → La Rochelle transfer at €35 — €50. 30 km, from the maritime arsenal to the Atlantic Old Port.",
         description: "La Rochelle, Atlantic coast pearl and gateway to Île de Ré, is just 25 min from Rochefort via the N137.",
@@ -157,8 +157,8 @@ export const trajetsOleronRochefort: Trajet[] = [
     hub: "oleron-rochefort",
     i18n: {
       fr: {
-        metaTitle: "Taxi Île d'Oléron → Bordeaux | Prix fixe dès 210 € | TaxiNeo",
-        metaDescription: "Taxi Île d'Oléron → Bordeaux. 175 km, 1h55, dès 210 €. Pont d'Oléron, A10, transfert direct. Réservation 24h/24.",
+        metaTitle: "Taxi Île d'Oléron → Bordeaux | 175 km, dès 210 € | TaxiNeo",
+        metaDescription: "Par D734 / A10, 1h55 de trajet. Pont d'Oléron, Charente-Maritime, Estuaire Gironde et Vignobles en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Île d'Oléron → Bordeaux",
         heroSubtitle: "Transfert Île d'Oléron → Bordeaux au prix fixe de 210 — 265 €. 175 km, de l'île lumineuse à la capitale du vin.",
         description: "Bordeaux, capitale mondiale du vin et métropole de Nouvelle-Aquitaine, est à 1h55 de l'île d'Oléron par le pont et l'A10.",
@@ -176,8 +176,8 @@ export const trajetsOleronRochefort: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Île d'Oléron → Bordeaux | Fixed price from €210 | TaxiNeo",
-        metaDescription: "Taxi Île d'Oléron → Bordeaux. 175 km, 1h55, from €210. Oléron bridge, A10 motorway, direct transfer. Book 24/7.",
+        metaTitle: "Taxi Île d'Oléron → Bordeaux | 175 km, from €210 | TaxiNeo",
+        metaDescription: "Via D734 / A10, 1h55 ride. Pont d'Oléron, Charente-Maritime, Estuaire Gironde and Vignobles en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Île d'Oléron → Bordeaux",
         heroSubtitle: "Your Île d'Oléron → Bordeaux transfer at €210 — €265. 175 km, from the luminous island to the wine capital.",
         description: "Bordeaux, world wine capital and Nouvelle-Aquitaine metropolis, is 1h55 from Île d'Oléron via the bridge and A10.",
@@ -222,8 +222,8 @@ export const trajetsOleronRochefort: Trajet[] = [
     hub: "oleron-rochefort",
     i18n: {
       fr: {
-        metaTitle: "Taxi Rochefort → Niort | Prix fixe dès 65 € | TaxiNeo",
-        metaDescription: "Taxi Rochefort → Niort. 55 km, 40 min, dès 65 €. N11, de l'Arsenal maritime au Marais poitevin. Réservation 24h/24.",
+        metaTitle: "Taxi Rochefort → Niort | 55 km, dès 65 € | TaxiNeo",
+        metaDescription: "Via N11 / A10 en 40 min. N11, Charente-Maritime, Marais poitevin et Arsenal en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Rochefort → Niort",
         heroSubtitle: "Transfert Rochefort → Niort au prix fixe de 65 — 85 €. 55 km, de la Corderie Royale à la porte du Marais poitevin.",
         description: "Niort, capitale des mutuelles et porte du Marais poitevin, est à 40 min de Rochefort par la N11.",
@@ -241,8 +241,8 @@ export const trajetsOleronRochefort: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Rochefort → Niort | Fixed price from €65 | TaxiNeo",
-        metaDescription: "Taxi Rochefort → Niort. 55 km, 40 min, from €65. N11, from the naval arsenal to the Marais Poitevin. Book 24/7.",
+        metaTitle: "Taxi Rochefort → Niort | 55 km, from €65 | TaxiNeo",
+        metaDescription: "N11 / A10 route, approximately 40 min. N11, Charente-Maritime, Marais poitevin and Arsenal en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Rochefort → Niort",
         heroSubtitle: "Your Rochefort → Niort transfer at €65 — €85. 55 km, from the Corderie Royale to the Marais Poitevin gateway.",
         description: "Niort, insurance capital and Marais Poitevin gateway, is 40 min from Rochefort via the N11.",
@@ -287,8 +287,8 @@ export const trajetsOleronRochefort: Trajet[] = [
     hub: "oleron-rochefort",
     i18n: {
       fr: {
-        metaTitle: "Taxi Île d'Oléron → Royan | Prix fixe dès 55 € | TaxiNeo",
-        metaDescription: "Taxi Île d'Oléron → Royan. 45 km, 35 min, dès 55 €. Pont d'Oléron, D728, transfert direct. Réservation 24h/24.",
+        metaTitle: "Taxi Île d'Oléron → Royan | 45 km, dès 55 € | TaxiNeo",
+        metaDescription: "Par D734 / D728, 35 min de trajet. Passage par Pont d'Oléron, Marennes, Côte de Beauté et Fort Boyard. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Île d'Oléron → Royan",
         heroSubtitle: "Transfert Île d'Oléron → Royan au prix fixe de 55 — 70 €. 45 km, de l'île lumineuse à la Côte de Beauté.",
         description: "Royan, station balnéaire de la Côte de Beauté, est à 35 min de l'île d'Oléron via le pont et la D728.",
@@ -306,8 +306,8 @@ export const trajetsOleronRochefort: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Île d'Oléron → Royan | Fixed price from €55 | TaxiNeo",
-        metaDescription: "Taxi Île d'Oléron → Royan. 45 km, 35 min, from €55. Oléron bridge, D728, direct transfer. Book 24/7.",
+        metaTitle: "Taxi Île d'Oléron → Royan | 45 km, from €55 | TaxiNeo",
+        metaDescription: "Direct route via D734 / D728, 35 min. Pont d'Oléron, Marennes, Côte de Beauté and Fort Boyard en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Île d'Oléron → Royan",
         heroSubtitle: "Your Île d'Oléron → Royan transfer at €55 — €70. 45 km, from the luminous island to the Côte de Beauté.",
         description: "Royan, Côte de Beauté seaside resort, is 35 min from Île d'Oléron via the bridge and D728.",

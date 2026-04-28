@@ -27,8 +27,8 @@ export const trajetsRodezCahors: Trajet[] = [
     hub: "rodez-cahors",
     i18n: {
       fr: {
-        metaTitle: "Taxi Rodez → Toulouse | Prix fixe dès 170 € | TaxiNeo",
-        metaDescription: "Taxi Rodez → Toulouse. 155 km, 1h40, dès 170 €. A68, transfert direct porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Rodez → Toulouse | 155 km, dès 170 € | TaxiNeo",
+        metaDescription: "Via A68 en 1h40. Aveyron, Cathédrale de Rodez, Musée Soulages et Ville rose en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Rodez → Toulouse",
         heroSubtitle: "Transfert Rodez → Toulouse au prix fixe de 170 — 215 €. 155 km, direct par l'A68.",
         description: "Toulouse, la Ville rose, est à 1h40 de Rodez par l'A68.",
@@ -46,8 +46,8 @@ export const trajetsRodezCahors: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Rodez → Toulouse | Fixed price from €170 | TaxiNeo",
-        metaDescription: "Taxi Rodez → Toulouse. 155 km, 1h40, from €170. A68, direct door-to-door. Book 24/7.",
+        metaTitle: "Taxi Rodez → Toulouse | 155 km, from €170 | TaxiNeo",
+        metaDescription: "A68 route, approximately 1h40. Aveyron, Cathédrale de Rodez, Musée Soulages and Ville rose en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Rodez → Toulouse",
         heroSubtitle: "Your Rodez → Toulouse transfer at €170 — €215. 155 km, via the A68.",
         description: "Toulouse, the Pink City, is 1h40 from Rodez via the A68.",
@@ -92,8 +92,8 @@ export const trajetsRodezCahors: Trajet[] = [
     hub: "rodez-cahors",
     i18n: {
       fr: {
-        metaTitle: "Taxi Rodez → Montpellier | Prix fixe dès 210 € | TaxiNeo",
-        metaDescription: "Taxi Rodez → Montpellier. 190 km, 2h10, dès 210 €. A75, viaduc de Millau, Causses. Réservation 24h/24.",
+        metaTitle: "Taxi Rodez → Montpellier | 190 km, dès 210 € | TaxiNeo",
+        metaDescription: "Via A75 en 2h10. Viaduc de Millau, Causses, Larzac et Méditerranée en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Rodez → Montpellier",
         heroSubtitle: "Transfert Rodez → Montpellier au prix fixe de 210 — 270 €. 190 km, via l'A75 et le viaduc de Millau.",
         description: "Montpellier est à 2h10 de Rodez par l'A75 et le spectaculaire viaduc de Millau.",
@@ -111,8 +111,8 @@ export const trajetsRodezCahors: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Rodez → Montpellier | Fixed price from €210 | TaxiNeo",
-        metaDescription: "Taxi Rodez → Montpellier. 190 km, 2h10, from €210. A75, Millau Viaduct, Causses. Book 24/7.",
+        metaTitle: "Taxi Rodez → Montpellier | 190 km, from €210 | TaxiNeo",
+        metaDescription: "Via A75, 2h10 ride. Viaduc de Millau, Causses, Larzac and Méditerranée en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Rodez → Montpellier",
         heroSubtitle: "Your Rodez → Montpellier transfer at €210 — €270. 190 km, via the A75 and Millau Viaduct.",
         description: "Montpellier is 2h10 from Rodez via the A75 and the spectacular Millau Viaduct.",
@@ -157,8 +157,8 @@ export const trajetsRodezCahors: Trajet[] = [
     hub: "rodez-cahors",
     i18n: {
       fr: {
-        metaTitle: "Taxi Cahors → Toulouse | Prix fixe dès 120 € | TaxiNeo",
-        metaDescription: "Taxi Cahors → Toulouse. 115 km, 1h10, dès 120 €. A20, transfert direct. Réservation 24h/24.",
+        metaTitle: "Taxi Cahors → Toulouse | 115 km, dès 120 € | TaxiNeo",
+        metaDescription: "Via A20 en 1h10. Lot, Pont Valentré, Vignoble de Cahors et Ville rose en chemin. Dépose à votre adresse exacte. Alternative directe au train ou au bus.",
         heroTitle: "Taxi Cahors → Toulouse",
         heroSubtitle: "Transfert Cahors → Toulouse au prix fixe de 120 — 150 €. 115 km, direct par l'A20.",
         description: "Toulouse est à 1h10 de Cahors par l'A20, l'autoroute de l'Occitanie.",
@@ -176,8 +176,8 @@ export const trajetsRodezCahors: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Cahors → Toulouse | Fixed price from €120 | TaxiNeo",
-        metaDescription: "Taxi Cahors → Toulouse. 115 km, 1h10, from €120. A20, direct door-to-door. Book 24/7.",
+        metaTitle: "Taxi Cahors → Toulouse | 115 km, from €120 | TaxiNeo",
+        metaDescription: "Via A20, 1h10 ride. Lot, Pont Valentré, Vignoble de Cahors and Ville rose en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Cahors → Toulouse",
         heroSubtitle: "Your Cahors → Toulouse transfer at €120 — €150. 115 km, via the A20.",
         description: "Toulouse is 1h10 from Cahors via the A20.",
@@ -222,8 +222,8 @@ export const trajetsRodezCahors: Trajet[] = [
     hub: "rodez-cahors",
     i18n: {
       fr: {
-        metaTitle: "Taxi Cahors → Bordeaux | Prix fixe dès 235 € | TaxiNeo",
-        metaDescription: "Taxi Cahors → Bordeaux. 215 km, 2h10, dès 235 €. A20/A62, vignobles, transfert direct. Réservation 24h/24.",
+        metaTitle: "Taxi Cahors → Bordeaux | 215 km, dès 235 € | TaxiNeo",
+        metaDescription: "Via A20/A62 en 2h10. Lot-et-Garonne, Vignobles, Garonne et Saint-Émilion en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Cahors → Bordeaux",
         heroSubtitle: "Transfert Cahors → Bordeaux au prix fixe de 235 — 300 €. 215 km, via l'A20 et l'A62.",
         description: "Bordeaux, capitale mondiale du vin, est à 2h10 de Cahors par l'A20 et l'A62.",
@@ -241,8 +241,8 @@ export const trajetsRodezCahors: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Cahors → Bordeaux | Fixed price from €235 | TaxiNeo",
-        metaDescription: "Taxi Cahors → Bordeaux. 215 km, 2h10, from €235. A20/A62, vineyards, direct transfer. Book 24/7.",
+        metaTitle: "Taxi Cahors → Bordeaux | 215 km, from €235 | TaxiNeo",
+        metaDescription: "Via A20/A62, 2h10 ride. Lot-et-Garonne, Vignobles, Garonne and Saint-Émilion en route. Drop-off at your exact address. Door-to-door, luggage included.",
         heroTitle: "Taxi Cahors → Bordeaux",
         heroSubtitle: "Your Cahors → Bordeaux transfer at €235 — €300. 215 km, via the A20 and A62.",
         description: "Bordeaux, world wine capital, is 2h10 from Cahors via the A20 and A62.",
@@ -287,8 +287,8 @@ export const trajetsRodezCahors: Trajet[] = [
     hub: "rodez-cahors",
     i18n: {
       fr: {
-        metaTitle: "Taxi Rodez → Aurillac | Prix fixe dès 105 € | TaxiNeo",
-        metaDescription: "Taxi Rodez → Aurillac. 100 km, 1h15, dès 105 €. N122, Conques, volcans d'Auvergne. Réservation 24h/24.",
+        metaTitle: "Taxi Rodez → Aurillac | 100 km, dès 105 € | TaxiNeo",
+        metaDescription: "Via N122 en 1h15. Cantal, Volcans d'Auvergne, Conques et Fromages en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Rodez → Aurillac",
         heroSubtitle: "Transfert Rodez → Aurillac au prix fixe de 105 — 135 €. 100 km, entre Rouergue et Cantal.",
         description: "Aurillac, capitale du Cantal et porte des volcans d'Auvergne, est à 1h15 de Rodez.",
@@ -306,8 +306,8 @@ export const trajetsRodezCahors: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Rodez → Aurillac | Fixed price from €105 | TaxiNeo",
-        metaDescription: "Taxi Rodez → Aurillac. 100 km, 1h15, from €105. N122, Conques, Auvergne volcanoes. Book 24/7.",
+        metaTitle: "Taxi Rodez → Aurillac | 100 km, from €105 | TaxiNeo",
+        metaDescription: "Via N122, 1h15 ride. Cantal, Volcans d'Auvergne, Conques and Fromages en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Rodez → Aurillac",
         heroSubtitle: "Your Rodez → Aurillac transfer at €105 — €135. 100 km, between Rouergue and Cantal.",
         description: "Aurillac, gateway to Auvergne volcanoes, is 1h15 from Rodez.",

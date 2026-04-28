@@ -27,8 +27,8 @@ export const trajetsCahorsGourdon: Trajet[] = [
     hub: "cahors-gourdon",
     i18n: {
       fr: {
-        metaTitle: "Taxi Cahors → Toulouse | Prix fixe dès 140 € | TaxiNeo",
-        metaDescription: "Taxi Cahors → Toulouse. 115 km, 1h15, dès 140 €. A20, transfert direct porte-à-porte depuis le Lot. Réservation 24h/24.",
+        metaTitle: "Taxi Cahors → Toulouse | 115 km, dès 140 € | TaxiNeo",
+        metaDescription: "Via A20 en 1h15. Pont Valentré UNESCO, Vignoble de Cahors Malbec, Quercy blanc et Ville rose en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Cahors → Toulouse",
         heroSubtitle: "Transfert Cahors → Toulouse au prix fixe de 140 — 175 €. 115 km, direct par l'A20 à travers le Quercy.",
         description: "Toulouse, capitale de l'Occitanie et Ville rose, est à 1h15 de Cahors par l'autoroute A20.",
@@ -46,8 +46,8 @@ export const trajetsCahorsGourdon: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Cahors → Toulouse | Fixed price from €140 | TaxiNeo",
-        metaDescription: "Taxi Cahors → Toulouse. 115 km, 1h15, from €140. A20 motorway, direct door-to-door transfer. Book 24/7.",
+        metaTitle: "Taxi Cahors → Toulouse | 115 km, from €140 | TaxiNeo",
+        metaDescription: "Via A20, 1h15 ride. Pont Valentré UNESCO, Vignoble de Cahors Malbec, Quercy blanc and Ville rose en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Cahors → Toulouse",
         heroSubtitle: "Your Cahors → Toulouse transfer at €140 — €175. 115 km via the A20 through Quercy.",
         description: "Toulouse, capital of Occitanie and the Pink City, is 1h15 from Cahors via the A20 motorway.",
@@ -92,8 +92,8 @@ export const trajetsCahorsGourdon: Trajet[] = [
     hub: "cahors-gourdon",
     i18n: {
       fr: {
-        metaTitle: "Taxi Cahors → Bordeaux | Prix fixe dès 255 € | TaxiNeo",
-        metaDescription: "Taxi Cahors → Bordeaux. 215 km, 2h15, dès 255 €. A20/A62, vignobles, transfert direct porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Cahors → Bordeaux | 215 km, dès 255 € | TaxiNeo",
+        metaDescription: "Via A20/A62 en 2h15. Vignoble de Cahors, Saint-Émilion UNESCO, Vallée de la Garonne et Lot-et-Garonne en chemin. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Cahors → Bordeaux",
         heroSubtitle: "Transfert Cahors → Bordeaux au prix fixe de 255 — 320 €. 215 km, via l'A20 et l'A62 à travers les vignobles du Sud-Ouest.",
         description: "Bordeaux, capitale mondiale du vin et métropole inscrite au patrimoine mondial de l'UNESCO, est à 2h15 de Cahors par l'A20 et l'A62.",
@@ -111,8 +111,8 @@ export const trajetsCahorsGourdon: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Cahors → Bordeaux | Fixed price from €255 | TaxiNeo",
-        metaDescription: "Taxi Cahors → Bordeaux. 215 km, 2h15, from €255. A20/A62, vineyards, direct door-to-door. Book 24/7.",
+        metaTitle: "Taxi Cahors → Bordeaux | 215 km, from €255 | TaxiNeo",
+        metaDescription: "Via A20/A62, 2h15 ride. Vignoble de Cahors, Saint-Émilion UNESCO, Vallée de la Garonne and Lot-et-Garonne en route. Faster and more direct than train or bus.",
         heroTitle: "Taxi Cahors → Bordeaux",
         heroSubtitle: "Your Cahors → Bordeaux transfer at €255 — €320. 215 km via the A20 and A62 through south-west vineyards.",
         description: "Bordeaux, world wine capital and UNESCO-listed city, is 2h15 from Cahors via the A20 and A62.",
@@ -157,8 +157,8 @@ export const trajetsCahorsGourdon: Trajet[] = [
     hub: "cahors-gourdon",
     i18n: {
       fr: {
-        metaTitle: "Taxi Cahors → Brive-la-Gaillarde | Prix fixe dès 125 € | TaxiNeo",
-        metaDescription: "Taxi Cahors → Brive-la-Gaillarde. 105 km, 1h10, dès 125 €. A20, Causses du Quercy, transfert direct. Réservation 24h/24.",
+        metaTitle: "Taxi Cahors → Brive-la-Gaillarde | 105 km, 125 € | TaxiNeo",
+        metaDescription: "Trajet direct A20 en 1h10. Passage par A20/N20, Vallée de la Dordogne, Causses du Quercy et Rocamadour. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Cahors → Brive-la-Gaillarde",
         heroSubtitle: "Transfert Cahors → Brive au prix fixe de 125 — 160 €. 105 km, direct par l'A20 à travers les Causses du Quercy.",
         description: "Brive-la-Gaillarde, porte du Périgord et de la Corrèze, est à 1h10 de Cahors par l'A20.",
@@ -176,8 +176,8 @@ export const trajetsCahorsGourdon: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Cahors → Brive-la-Gaillarde | Fixed price from €125 | TaxiNeo",
-        metaDescription: "Taxi Cahors → Brive-la-Gaillarde. 105 km, 1h10, from €125. A20, Causses du Quercy, Rocamadour nearby. Book 24/7.",
+        metaTitle: "Taxi Cahors → Brive-la-Gaillarde | 105 km, €125 | TaxiNeo",
+        metaDescription: "Direct route via A20, 1h10. A20/N20, Vallée de la Dordogne, Causses du Quercy and Rocamadour en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Cahors → Brive-la-Gaillarde",
         heroSubtitle: "Your Cahors → Brive transfer at €125 — €160. 105 km via the A20 through the Causses du Quercy.",
         description: "Brive-la-Gaillarde, gateway to Périgord and Corrèze, is 1h10 from Cahors via the A20.",
@@ -222,8 +222,8 @@ export const trajetsCahorsGourdon: Trajet[] = [
     hub: "cahors-gourdon",
     i18n: {
       fr: {
-        metaTitle: "Taxi Gourdon → Sarlat-la-Canéda | Prix fixe dès 30 € | TaxiNeo",
-        metaDescription: "Taxi Gourdon → Sarlat-la-Canéda. 25 km, 20 min, dès 30 €. D704, traversée du Périgord noir. Réservation 24h/24.",
+        metaTitle: "Taxi Gourdon → Sarlat-la-Canéda | 25 km, dès 30 € | TaxiNeo",
+        metaDescription: "Par D704, 20 min de trajet. Périgord noir, Grottes de Cougnac, Bastides et Vallée de la Dordogne en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Gourdon → Sarlat-la-Canéda",
         heroSubtitle: "Transfert Gourdon → Sarlat au prix fixe de 30 — 40 €. 25 km, trajet rapide au cœur du Périgord noir.",
         description: "Sarlat-la-Canéda, capitale du Périgord noir et joyau de l'architecture médiévale, est à 20 minutes de Gourdon par la D704.",
@@ -241,8 +241,8 @@ export const trajetsCahorsGourdon: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Gourdon → Sarlat-la-Canéda | Fixed price from €30 | TaxiNeo",
-        metaDescription: "Taxi Gourdon → Sarlat-la-Canéda. 25 km, 20 min, from €30. D704 through the Périgord Noir. Book 24/7.",
+        metaTitle: "Taxi Gourdon → Sarlat-la-Canéda | 25 km, from €30 | TaxiNeo",
+        metaDescription: "Via D704, 20 min ride. Périgord noir, Grottes de Cougnac, Bastides and Vallée de la Dordogne en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Gourdon → Sarlat-la-Canéda",
         heroSubtitle: "Your Gourdon → Sarlat transfer at €30 — €40. 25 km, quick ride through the Périgord Noir.",
         description: "Sarlat-la-Canéda, capital of the Périgord Noir and a medieval architectural gem, is 20 minutes from Gourdon.",
@@ -287,8 +287,8 @@ export const trajetsCahorsGourdon: Trajet[] = [
     hub: "cahors-gourdon",
     i18n: {
       fr: {
-        metaTitle: "Taxi Cahors → Agen | Prix fixe dès 110 € | TaxiNeo",
-        metaDescription: "Taxi Cahors → Agen. 90 km, 1h, dès 110 €. Route de la vallée du Lot, transfert direct porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Cahors → Agen | forfait dès 110 €, 1h | TaxiNeo",
+        metaDescription: "Via D656/D811 en 1h. D656/N21, Vallée du Lot, Quercy et Pruneaux d'Agen en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Cahors → Agen",
         heroSubtitle: "Transfert Cahors → Agen au prix fixe de 110 — 140 €. 90 km, route pittoresque par la vallée du Lot.",
         description: "Agen, préfecture du Lot-et-Garonne et capitale du pruneau, est à 1h de Cahors par la vallée du Lot.",
@@ -307,7 +307,7 @@ export const trajetsCahorsGourdon: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Cahors → Agen | Fixed price from €110 | TaxiNeo",
-        metaDescription: "Taxi Cahors → Agen. 90 km, 1h, from €110. Scenic Lot valley road, toll-free, direct transfer. Book 24/7.",
+        metaDescription: "D656/D811 route, approximately 1 hour. D656/N21, Vallée du Lot, Quercy and Pruneaux d'Agen en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Cahors → Agen",
         heroSubtitle: "Your Cahors → Agen transfer at €110 — €140. 90 km along the scenic Lot valley, entirely toll-free.",
         description: "Agen, capital of Lot-et-Garonne and home of the famous prune, is 1h from Cahors along the Lot valley.",

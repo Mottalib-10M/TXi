@@ -30,8 +30,8 @@ export const trajetsAixEnProvence: Trajet[] = [
     hub: "aix-en-provence",
     i18n: {
       fr: {
-        metaTitle: "Taxi Aix-en-Provence → Marseille | Dès 45 € | TaxiNeo",
-        metaDescription: "Taxi Aix-en-Provence → Marseille. 35 km, 30 min, dès 45 €. Transfert Provence. Réservation 24h/24.",
+        metaTitle: "Taxi Aix-en-Provence → Marseille | 35 km, dès 45 € | TaxiNeo",
+        metaDescription: "Via A51 en 30 min. Provence, Métropole, Gare TGV et Aéroport en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Aix-en-Provence → Marseille",
         heroSubtitle: "Transfert Aix-en-Provence → Marseille au prix fixe de 45 — 60 €. 35 km, 30 min.",
         description: "Rejoignez Marseille depuis Aix-en-Provence en 30 minutes par l'A51.",
@@ -49,8 +49,8 @@ export const trajetsAixEnProvence: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Aix-en-Provence → Marseille | From €45 | TaxiNeo",
-        metaDescription: "Taxi Aix-en-Provence → Marseille. 35 km, 30 min, from €45. Provence transfer. Book 24/7.",
+        metaTitle: "Taxi Aix-en-Provence → Marseille | 35 km, from €45 | TaxiNeo",
+        metaDescription: "Via A51, 30 min ride. Provence, Métropole, Gare TGV and Aéroport en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Aix-en-Provence → Marseille",
         heroSubtitle: "Your Aix-en-Provence → Marseille transfer at a fixed price of €45 — €60. 35 km, 30 min.",
         description: "Reach Marseille from Aix-en-Provence in 30 minutes via the A51 motorway.",
@@ -95,8 +95,8 @@ export const trajetsAixEnProvence: Trajet[] = [
     hub: "aix-en-provence",
     i18n: {
       fr: {
-        metaTitle: "Taxi Aix-en-Provence → Avignon | Prix fixe dès 90 € | TaxiNeo",
-        metaDescription: "Taxi Aix-en-Provence → Avignon. 82 km, 55 min, dès 90 €. Palais des Papes, Festival. Réservation 24h/24.",
+        metaTitle: "Taxi Aix-en-Provence → Avignon | 82 km, dès 90 € | TaxiNeo",
+        metaDescription: "Via A7 en 55 min. Provence, Palais des Papes, Festival et Luberon en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Aix-en-Provence → Avignon",
         heroSubtitle: "Transfert Aix-en-Provence → Avignon au prix fixe de 90 — 120 €. 82 km, 55 min par l'A7.",
         description: "Rejoignez Avignon depuis Aix-en-Provence en 55 minutes par l'autoroute du Soleil.",
@@ -114,8 +114,8 @@ export const trajetsAixEnProvence: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Aix-en-Provence → Avignon | From €90 | TaxiNeo",
-        metaDescription: "Taxi Aix-en-Provence → Avignon. 82 km, 55 min, from €90. Palais des Papes, Festival. Book 24/7.",
+        metaTitle: "Taxi Aix-en-Provence → Avignon | 82 km, from €90 | TaxiNeo",
+        metaDescription: "Via A7, 55 min ride. Provence, Palais des Papes, Festival and Luberon en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Aix-en-Provence → Avignon",
         heroSubtitle: "Your Aix-en-Provence → Avignon transfer at a fixed price of €90 — €120. 82 km, 55 min via A7.",
         description: "Reach Avignon from Aix-en-Provence in 55 minutes via the Autoroute du Soleil.",
@@ -160,8 +160,8 @@ export const trajetsAixEnProvence: Trajet[] = [
     hub: "aix-en-provence",
     i18n: {
       fr: {
-        metaTitle: "Taxi Aix-en-Provence → Toulon | Prix fixe dès 95 € | TaxiNeo",
-        metaDescription: "Taxi Aix-en-Provence → Toulon. 83 km, 1h, dès 95 €. Transfert Provence-Var. Réservation 24h/24.",
+        metaTitle: "Taxi Aix-en-Provence → Toulon | 83 km, dès 95 € | TaxiNeo",
+        metaDescription: "Via A52 puis A50 en 1h. Var, Port militaire et Mont Faron en chemin. Dépose porte-à-porte, bagages inclus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Aix-en-Provence → Toulon",
         heroSubtitle: "Transfert Aix-en-Provence → Toulon au prix fixe de 95 — 120 €. 83 km, 1h par l'A52/A50.",
         description: "Rejoignez Toulon depuis Aix-en-Provence en 1 heure par les autoroutes A52 et A50.",
@@ -179,8 +179,8 @@ export const trajetsAixEnProvence: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Aix-en-Provence → Toulon | From €95 | TaxiNeo",
-        metaDescription: "Taxi Aix-en-Provence → Toulon. 83 km, 1h, from €95. Provence-Var transfer. Book 24/7.",
+        metaTitle: "Taxi Aix-en-Provence → Toulon | 83 km, from €95 | TaxiNeo",
+        metaDescription: "Via A52 then A50, 1 hour ride. Var, Port militaire and Mont Faron along the way. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Aix-en-Provence → Toulon",
         heroSubtitle: "Your Aix-en-Provence → Toulon transfer at a fixed price of €95 — €120. 83 km, 1h via A52/A50.",
         description: "Reach Toulon from Aix-en-Provence in 1 hour via the A52 and A50 motorways.",
@@ -225,8 +225,8 @@ export const trajetsAixEnProvence: Trajet[] = [
     hub: "aix-en-provence",
     i18n: {
       fr: {
-        metaTitle: "Taxi Aix-en-Provence → Salon-de-Provence | Dès 45 € | TaxiNeo",
-        metaDescription: "Taxi Aix-en-Provence → Salon-de-Provence. 38 km, 30 min, dès 45 €. Nostradamus, Patrouille de France. Réservation 24h/24.",
+        metaTitle: "Taxi Aix-en-Provence → Salon-de-Provence | 38 km | TaxiNeo",
+        metaDescription: "Via A7 en 30 min. Nostradamus, Patrouille de France, Savon et Empéri en chemin. Dépose à votre adresse exacte. Alternative directe au train ou au bus.",
         heroTitle: "Taxi Aix-en-Provence → Salon-de-Provence",
         heroSubtitle: "Transfert Aix-en-Provence → Salon-de-Provence au prix fixe de 45 — 55 €. 38 km, 30 min.",
         description: "Rejoignez Salon-de-Provence depuis Aix en 30 minutes par l'A7.",
@@ -244,8 +244,8 @@ export const trajetsAixEnProvence: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Aix-en-Provence → Salon-de-Provence | From €45 | TaxiNeo",
-        metaDescription: "Taxi Aix → Salon-de-Provence. 38 km, 30 min, from €45. Nostradamus, Patrouille de France. Book 24/7.",
+        metaTitle: "Taxi Aix-en-Provence → Salon-de-Provence | 38 km | TaxiNeo",
+        metaDescription: "Via A7, 30 min ride. Nostradamus, Patrouille de France, Savon and Empéri en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Aix-en-Provence → Salon-de-Provence",
         heroSubtitle: "Your Aix → Salon-de-Provence transfer at a fixed price of €45 — €55. 38 km, 30 min.",
         description: "Reach Salon-de-Provence from Aix in 30 minutes via the A7.",
@@ -290,8 +290,8 @@ export const trajetsAixEnProvence: Trajet[] = [
     hub: "aix-en-provence",
     i18n: {
       fr: {
-        metaTitle: "Taxi Aix-en-Provence → Nice | Prix fixe dès 200 € | TaxiNeo",
-        metaDescription: "Taxi Aix-en-Provence → Nice. 177 km, 1h40, dès 200 €. Côte d'Azur, aéroport Nice. Réservation 24h/24.",
+        metaTitle: "Taxi Aix-en-Provence → Nice | 177 km, dès 200 € | TaxiNeo",
+        metaDescription: "Par A8, 1h40 de trajet. Côte d'Azur, Autoroute Esterel, Promenade des Anglais et Aéroport Nice en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Aix-en-Provence → Nice",
         heroSubtitle: "Transfert Aix-en-Provence → Nice au prix fixe de 200 — 260 €. 177 km, 1h40 par l'A8.",
         description: "Rejoignez Nice depuis Aix-en-Provence en 1h40 par l'autoroute A8, la Provençale.",
@@ -309,8 +309,8 @@ export const trajetsAixEnProvence: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Aix-en-Provence → Nice | From €200 | TaxiNeo",
-        metaDescription: "Taxi Aix-en-Provence → Nice. 177 km, 1h40, from €200. Côte d'Azur, Nice Airport. Book 24/7.",
+        metaTitle: "Taxi Aix-en-Provence → Nice | 177 km, from €200 | TaxiNeo",
+        metaDescription: "Via A8, 1h40 ride. Côte d'Azur, Autoroute Esterel, Promenade des Anglais and Aéroport Nice en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Aix-en-Provence → Nice",
         heroSubtitle: "Your Aix-en-Provence → Nice transfer at a fixed price of €200 — €260. 177 km, 1h40 via A8.",
         description: "Reach Nice from Aix-en-Provence in 1h40 via the A8 motorway (La Provençale).",

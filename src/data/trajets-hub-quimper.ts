@@ -27,8 +27,8 @@ export const trajetsQuimper: Trajet[] = [
     hub: "quimper",
     i18n: {
       fr: {
-        metaTitle: "Taxi Quimper → Brest | Prix fixe dès 75 € | TaxiNeo",
-        metaDescription: "Taxi Quimper → Brest. 72 km, 50 min, dès 75 €. N165, transfert direct entre les deux capitales du Finistère. Réservation 24h/24.",
+        metaTitle: "Taxi Quimper → Brest | forfait dès 75 €, 50 min | TaxiNeo",
+        metaDescription: "Via N165 en 50 min. Finistère, Rade de Brest, Cornouaille et Bretagne en chemin. Dépose à votre adresse exacte. Alternative directe au train ou au bus.",
         heroTitle: "Taxi Quimper → Brest",
         heroSubtitle: "Transfert Quimper → Brest au prix fixe de 75 — 95 €. 72 km, direct par la N165.",
         description: "Brest, port militaire historique et pôle universitaire du Finistère nord, est à 50 min de Quimper par la N165.",
@@ -47,7 +47,7 @@ export const trajetsQuimper: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Quimper → Brest | Fixed price from €75 | TaxiNeo",
-        metaDescription: "Taxi Quimper → Brest. 72 km, 50 min, from €75. N165, direct transfer across Finistère. Book 24/7.",
+        metaDescription: "Via N165, 50 min ride. Finistère, Rade de Brest, Cornouaille and Bretagne en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Quimper → Brest",
         heroSubtitle: "Your Quimper → Brest transfer at €75 — €95. 72 km, direct via the N165.",
         description: "Brest, France's main naval port and Finistère's northern hub, is 50 min from Quimper via the N165.",
@@ -92,8 +92,8 @@ export const trajetsQuimper: Trajet[] = [
     hub: "quimper",
     i18n: {
       fr: {
-        metaTitle: "Taxi Quimper → Rennes | Prix fixe dès 235 € | TaxiNeo",
-        metaDescription: "Taxi Quimper → Rennes. 215 km, 2h15, dès 235 €. N165/N164, transfert Finistère-capitale bretonne. Réservation 24h/24.",
+        metaTitle: "Taxi Quimper → Rennes | 215 km, dès 235 € | TaxiNeo",
+        metaDescription: "Via N165/N164 en 2h15. N165, N164, Bretagne et Lorient en chemin. Dépose porte-à-porte, bagages inclus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Quimper → Rennes",
         heroSubtitle: "Transfert Quimper → Rennes au prix fixe de 235 — 300 €. 215 km, traversée de la Bretagne.",
         description: "Rennes, capitale de la Bretagne et métropole dynamique, est à 2h15 de Quimper par les voies express N165 et N164.",
@@ -111,8 +111,8 @@ export const trajetsQuimper: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Quimper → Rennes | Fixed price from €235 | TaxiNeo",
-        metaDescription: "Taxi Quimper → Rennes. 215 km, 2h15, from €235. N165/N164, toll-free across Brittany. Book 24/7.",
+        metaTitle: "Taxi Quimper → Rennes | 215 km, from €235 | TaxiNeo",
+        metaDescription: "Via N165/N164, 2h15 ride. N165, N164, Bretagne and Lorient en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Quimper → Rennes",
         heroSubtitle: "Your Quimper → Rennes transfer at €235 — €300. 215 km, crossing Brittany toll-free.",
         description: "Rennes, Brittany's capital and a dynamic tech hub, is 2h15 from Quimper via toll-free expressways.",
@@ -157,8 +157,8 @@ export const trajetsQuimper: Trajet[] = [
     hub: "quimper",
     i18n: {
       fr: {
-        metaTitle: "Taxi Quimper → Lorient | Prix fixe dès 70 € | TaxiNeo",
-        metaDescription: "Taxi Quimper → Lorient. 67 km, 45 min, dès 70 €. N165, transfert direct Cornouaille-Lorient. Réservation 24h/24.",
+        metaTitle: "Taxi Quimper → Lorient | 67 km, dès 70 € | TaxiNeo",
+        metaDescription: "Via N165 en 45 min. Cornouaille, Lorient, Festival Interceltique et Rade en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Quimper → Lorient",
         heroSubtitle: "Transfert Quimper → Lorient au prix fixe de 70 — 90 €. 67 km, direct par la N165.",
         description: "Lorient, ville des cinq ports et cité du Festival Interceltique, est à 45 min de Quimper par la N165.",
@@ -176,8 +176,8 @@ export const trajetsQuimper: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Quimper → Lorient | Fixed price from €70 | TaxiNeo",
-        metaDescription: "Taxi Quimper → Lorient. 67 km, 45 min, from €70. N165, toll-free transfer. Book 24/7.",
+        metaTitle: "Taxi Quimper → Lorient | 67 km, from €70 | TaxiNeo",
+        metaDescription: "Via N165, 45 min ride. Cornouaille, Lorient, Festival Interceltique and Rade en route. Drop-off at your exact address. Door-to-door, luggage included.",
         heroTitle: "Taxi Quimper → Lorient",
         heroSubtitle: "Your Quimper → Lorient transfer at €70 — €90. 67 km, direct via the N165.",
         description: "Lorient, city of five ports and home to the Interceltique Festival, is 45 min from Quimper.",
@@ -222,8 +222,8 @@ export const trajetsQuimper: Trajet[] = [
     hub: "quimper",
     i18n: {
       fr: {
-        metaTitle: "Taxi Quimper → Concarneau | Prix fixe dès 30 € | TaxiNeo",
-        metaDescription: "Taxi Quimper → Concarneau. 22 km, 20 min, dès 30 €. D783, Ville Close et port de pêche. Réservation 24h/24.",
+        metaTitle: "Taxi Quimper → Concarneau | 22 km, dès 30 € | TaxiNeo",
+        metaDescription: "Via D783 en 20 min. Ville Close, Port de pêche, Cornouaille et Finistère en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Quimper → Concarneau",
         heroSubtitle: "Transfert Quimper → Concarneau au prix fixe de 30 — 40 €. 22 km, la Ville Close à portée de main.",
         description: "Concarneau, cité corsaire et troisième port de pêche de France, est à 20 min de Quimper par la D783.",
@@ -241,8 +241,8 @@ export const trajetsQuimper: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Quimper → Concarneau | Fixed price from €30 | TaxiNeo",
-        metaDescription: "Taxi Quimper → Concarneau. 22 km, 20 min, from €30. D783, Ville Close and fishing port. Book 24/7.",
+        metaTitle: "Taxi Quimper → Concarneau | 22 km, from €30 | TaxiNeo",
+        metaDescription: "Via D783, 20 min ride. Ville Close, Port de pêche, Cornouaille and Finistère en route. Drop-off at your exact address. Door-to-door, luggage included.",
         heroTitle: "Taxi Quimper → Concarneau",
         heroSubtitle: "Your Quimper → Concarneau transfer at €30 — €40. 22 km, gateway to the walled city.",
         description: "Concarneau, walled corsair city and France's third fishing port, is just 20 min from Quimper.",
@@ -287,8 +287,8 @@ export const trajetsQuimper: Trajet[] = [
     hub: "quimper",
     i18n: {
       fr: {
-        metaTitle: "Taxi Quimper → Douarnenez | Prix fixe dès 30 € | TaxiNeo",
-        metaDescription: "Taxi Quimper → Douarnenez. 23 km, 20 min, dès 30 €. D765, Port-Musée et baie mythique. Réservation 24h/24.",
+        metaTitle: "Taxi Quimper → Douarnenez | 23 km, dès 30 € | TaxiNeo",
+        metaDescription: "Via D765 en 20 min. Port-Musée, Baie de Douarnenez, Sardine et Tristan en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Quimper → Douarnenez",
         heroSubtitle: "Transfert Quimper → Douarnenez au prix fixe de 30 — 40 €. 23 km, au bord de la plus belle baie de Bretagne.",
         description: "Douarnenez, ville de la sardine et du Port-Musée, est à 20 min de Quimper par la D765.",
@@ -306,8 +306,8 @@ export const trajetsQuimper: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Quimper → Douarnenez | Fixed price from €30 | TaxiNeo",
-        metaDescription: "Taxi Quimper → Douarnenez. 23 km, 20 min, from €30. D765, Port-Musée and legendary bay. Book 24/7.",
+        metaTitle: "Taxi Quimper → Douarnenez | 23 km, from €30 | TaxiNeo",
+        metaDescription: "Via D765, 20 min ride. Port-Musée, Baie de Douarnenez, Sardine and Tristan en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Quimper → Douarnenez",
         heroSubtitle: "Your Quimper → Douarnenez transfer at €30 — €40. 23 km, to Brittany's most beautiful bay.",
         description: "Douarnenez, sardine capital and home of the Port-Musée, is just 20 min from Quimper.",

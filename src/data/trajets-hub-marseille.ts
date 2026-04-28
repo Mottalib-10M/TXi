@@ -30,8 +30,8 @@ export const trajetsMarseille: Trajet[] = [
     hub: "marseille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Marseille → Arles | Prix fixe dès 110 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Marseille → Arles. 90 km, 55 min, prix fixe dès 110 €. Cité romaine, Camargue, Rencontres photo. Réservation 24h/24.",
+        metaTitle: "Taxi Marseille → Arles | 90 km, dès 110 € | TaxiNeo",
+        metaDescription: "Via A7 puis A54 en 55 min. Salon-de-Provence, Crau et Camargue en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Marseille → Arles",
         heroSubtitle: "Votre transfert Marseille → Arles au prix fixe de 110 — 140 €. Trajet direct par l'A7 et l'A54. Réservation en ligne.",
         description: "Le trajet Marseille — Arles relie la cité phocéenne à l'ancienne capitale de la Provence romaine. Les deux villes, distantes de 90 km, sont connectées par l'autoroute A7 puis l'A54 à travers la plaine de la Crau.",
@@ -49,8 +49,8 @@ export const trajetsMarseille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Marseille → Arles | Fixed price from €110 | TaxiNeo",
-        metaDescription: "Book your taxi Marseille → Arles. 90 km, 55 min, fixed price from €110. Roman city, Camargue, Photo festival. Online booking 24/7.",
+        metaTitle: "Taxi Marseille → Arles | 90 km, from €110 | TaxiNeo",
+        metaDescription: "Via A7 then A54, 55 min ride. Salon-de-Provence, Crau and Camargue along the way. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Marseille → Arles",
         heroSubtitle: "Your Marseille → Arles transfer at a fixed price of €110 — €140. Direct route via A7 and A54. Online booking.",
         description: "The Marseille — Arles route connects the Phocaean city to the former capital of Roman Provence. The two cities, 90 km apart, are linked by the A7 then A54 motorways across the Crau plain.",
@@ -95,8 +95,8 @@ export const trajetsMarseille: Trajet[] = [
     hub: "marseille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Marseille → Montpellier | Prix fixe dès 220 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Marseille → Montpellier. 170 km, 1h45, prix fixe dès 220 €. Autoroute A7/A54/A9. Réservation en ligne 24h/24.",
+        metaTitle: "Taxi Marseille → Montpellier | 170 km, dès 220 € | TaxiNeo",
+        metaDescription: "Via A7 puis A54 puis A9 en 1h45. Nîmes, Lunel et Languedoc en chemin. Dépose porte-à-porte, bagages inclus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Marseille → Montpellier",
         heroSubtitle: "Votre transfert Marseille → Montpellier au prix fixe de 220 — 280 €. Trajet direct par l'A7, A54 et A9.",
         description: "Le trajet Marseille — Montpellier relie les deux grandes métropoles du sud de la France. 170 km séparent la cité phocéenne de la capitale languedocienne, via les autoroutes A7, A54 et A9.",
@@ -114,8 +114,8 @@ export const trajetsMarseille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Marseille → Montpellier | Fixed price from €220 | TaxiNeo",
-        metaDescription: "Book your taxi Marseille → Montpellier. 170 km, 1h45, fixed price from €220. A7/A54/A9 motorways. Online booking 24/7.",
+        metaTitle: "Taxi Marseille → Montpellier | 170 km, from €220 | TaxiNeo",
+        metaDescription: "Via A7 then A54 then A9, 1h45 ride. Nîmes, Lunel and Languedoc along the way. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Marseille → Montpellier",
         heroSubtitle: "Your Marseille → Montpellier transfer at a fixed price of €220 — €280. Direct route via A7, A54 and A9.",
         description: "The Marseille — Montpellier route connects two major southern French metropolises. 170 km separate the Phocaean city from the Languedoc capital via the A7, A54 and A9 motorways.",
@@ -160,8 +160,8 @@ export const trajetsMarseille: Trajet[] = [
     hub: "marseille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Marseille → Nîmes | Prix fixe dès 160 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Marseille → Nîmes. 125 km, 1h20, prix fixe dès 160 €. Arènes romaines, Pont du Gard. Réservation en ligne 24h/24.",
+        metaTitle: "Taxi Marseille → Nîmes | 125 km, dès 160 € | TaxiNeo",
+        metaDescription: "Via A7 puis A54 en 1h20. Salon-de-Provence, Arles et Costières en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Marseille → Nîmes",
         heroSubtitle: "Votre transfert Marseille → Nîmes au prix fixe de 160 — 200 €. Trajet direct par l'A7 et l'A54.",
         description: "Le trajet Marseille — Nîmes relie la cité phocéenne à la Rome française. 125 km via les autoroutes A7 et A54 à travers la Provence et les Costières du Gard.",
@@ -179,8 +179,8 @@ export const trajetsMarseille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Marseille → Nîmes | Fixed price from €160 | TaxiNeo",
-        metaDescription: "Book your taxi Marseille → Nîmes. 125 km, 1h20, fixed price from €160. Roman arena, Pont du Gard nearby. Online booking 24/7.",
+        metaTitle: "Taxi Marseille → Nîmes | 125 km, from €160 | TaxiNeo",
+        metaDescription: "Via A7 then A54, 1h20 ride. Salon-de-Provence, Arles and Costières along the way. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Marseille → Nîmes",
         heroSubtitle: "Your Marseille → Nîmes transfer at a fixed price of €160 — €200. Direct route via A7 and A54.",
         description: "The Marseille — Nîmes route connects the Phocaean city to the French Rome. 125 km via the A7 and A54 motorways through Provence and the Costières du Gard.",
@@ -228,8 +228,8 @@ export const trajetsMarseille: Trajet[] = [
     hub: "marseille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Marseille → Salon-de-Provence | Dès 70 € | TaxiNeo",
-        metaDescription: "Taxi Marseille → Salon-de-Provence. 55 km, 40 min, prix fixe dès 70 €. Base aérienne, château de l'Empéri. Réservation 24h/24.",
+        metaTitle: "Taxi Marseille → Salon-de-Provence | 55 km, 70 € | TaxiNeo",
+        metaDescription: "Via A7 en 40 min. Salon-de-Provence, Nostradamus et Base aérienne 701 en chemin. Dépose à votre adresse exacte. Alternative directe au train ou au bus.",
         heroTitle: "Taxi Marseille → Salon-de-Provence",
         heroSubtitle: "Transfert Marseille → Salon-de-Provence au prix fixe de 70 — 90 €. 55 km par l'A7.",
         description: "Salon-de-Provence, ville de Nostradamus et de la Patrouille de France, est accessible en 40 minutes depuis Marseille par l'autoroute A7.",
@@ -247,8 +247,8 @@ export const trajetsMarseille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Marseille → Salon-de-Provence | From €70 | TaxiNeo",
-        metaDescription: "Taxi Marseille → Salon-de-Provence. 55 km, 40 min, fixed price from €70. Air base, Nostradamus. Online booking 24/7.",
+        metaTitle: "Taxi Marseille → Salon-de-Provence | 55 km, €70 | TaxiNeo",
+        metaDescription: "Via A7, 40 min ride. Salon-de-Provence, Nostradamus and Base aérienne 701 along the way. Drop-off at your exact address. Door-to-door, luggage included.",
         heroTitle: "Taxi Marseille → Salon-de-Provence",
         heroSubtitle: "Your Marseille → Salon-de-Provence transfer at €70 — €90. 55 km via A7.",
         description: "Salon-de-Provence, city of Nostradamus and the Patrouille de France, is accessible in 40 minutes from Marseille via the A7 motorway.",
@@ -293,8 +293,8 @@ export const trajetsMarseille: Trajet[] = [
     hub: "marseille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Marseille → La Ciotat | Prix fixe dès 45 € | TaxiNeo",
-        metaDescription: "Taxi Marseille → La Ciotat. 32 km, 30 min, prix fixe dès 45 €. Berceau du cinéma, calanques. Réservation 24h/24.",
+        metaTitle: "Taxi Marseille → La Ciotat | 32 km, dès 45 € | TaxiNeo",
+        metaDescription: "Via A50 en 30 min. Calanques, Cinéma Lumière et Bec de l'Aigle en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Marseille → La Ciotat",
         heroSubtitle: "Transfert Marseille → La Ciotat au prix fixe de 45 — 60 €. 32 km par l'A50, sans péage.",
         description: "La Ciotat, berceau du cinéma et perle du littoral provençal, est à seulement 30 minutes de Marseille par l'autoroute A50.",
@@ -312,8 +312,8 @@ export const trajetsMarseille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Marseille → La Ciotat | Fixed price from €45 | TaxiNeo",
-        metaDescription: "Taxi Marseille → La Ciotat. 32 km, 30 min, fixed price from €45. Birthplace of cinema, calanques. Book online 24/7.",
+        metaTitle: "Taxi Marseille → La Ciotat | 32 km, from €45 | TaxiNeo",
+        metaDescription: "Via A50, 30 min ride. Calanques, Cinéma Lumière and Bec de l'Aigle along the way. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Marseille → La Ciotat",
         heroSubtitle: "Your Marseille → La Ciotat transfer at €45 — €60. 32 km via toll-free A50.",
         description: "La Ciotat, birthplace of cinema and a gem of the Provençal coast, is just 30 minutes from Marseille via the toll-free A50 motorway.",
@@ -358,8 +358,8 @@ export const trajetsMarseille: Trajet[] = [
     hub: "marseille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Marseille → Aubagne | Prix fixe dès 30 € | TaxiNeo",
-        metaDescription: "Taxi Marseille → Aubagne. 18 km, 20 min, prix fixe dès 30 €. Ville de Pagnol, santons, Légion étrangère. Réservation 24h/24.",
+        metaTitle: "Taxi Marseille → Aubagne | 18 km, dès 30 € | TaxiNeo",
+        metaDescription: "Via A50 en 20 min. Marcel Pagnol, Santons et Légion étrangère en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Marseille → Aubagne",
         heroSubtitle: "Transfert Marseille → Aubagne au prix fixe de 30 — 42 €. 18 km par l'A50, sans péage.",
         description: "Aubagne, ville natale de Marcel Pagnol et capitale du santon, est à 20 minutes de Marseille par l'A50.",
@@ -377,8 +377,8 @@ export const trajetsMarseille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Marseille → Aubagne | Fixed price from €30 | TaxiNeo",
-        metaDescription: "Taxi Marseille → Aubagne. 18 km, 20 min, fixed price from €30. Pagnol's birthplace, santons, Foreign Legion. Book 24/7.",
+        metaTitle: "Taxi Marseille → Aubagne | 18 km, from €30 | TaxiNeo",
+        metaDescription: "Via A50, 20 min ride. Marcel Pagnol, Santons and Légion étrangère along the way. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Marseille → Aubagne",
         heroSubtitle: "Your Marseille → Aubagne transfer at €30 — €42. 18 km via toll-free A50.",
         description: "Aubagne, birthplace of Marcel Pagnol and santon capital, is 20 minutes from Marseille via the A50.",
@@ -423,8 +423,8 @@ export const trajetsMarseille: Trajet[] = [
     hub: "marseille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Marseille → Martigues | Prix fixe dès 55 € | TaxiNeo",
-        metaDescription: "Taxi Marseille → Martigues. 40 km, 35 min, prix fixe dès 55 €. Venise provençale, étang de Berre. Réservation 24h/24.",
+        metaTitle: "Taxi Marseille → Martigues | 40 km, dès 55 € | TaxiNeo",
+        metaDescription: "Via A55 en 35 min. Étang de Berre, Venise provençale et Port de pêche en chemin. Dépose à votre adresse exacte. Alternative directe au train ou au bus.",
         heroTitle: "Taxi Marseille → Martigues",
         heroSubtitle: "Transfert Marseille → Martigues au prix fixe de 55 — 70 €. 40 km par l'A55, sans péage.",
         description: "Martigues, la Venise provençale, est accessible en 35 minutes depuis Marseille par l'autoroute A55 qui longe la côte ouest.",
@@ -442,8 +442,8 @@ export const trajetsMarseille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Marseille → Martigues | Fixed price from €55 | TaxiNeo",
-        metaDescription: "Taxi Marseille → Martigues. 40 km, 35 min, fixed price from €55. Provençal Venice, Étang de Berre. Book 24/7.",
+        metaTitle: "Taxi Marseille → Martigues | 40 km, from €55 | TaxiNeo",
+        metaDescription: "Via A55, 35 min ride. Étang de Berre, Venise provençale and Port de pêche along the way. Drop-off at your exact address. Door-to-door, luggage included.",
         heroTitle: "Taxi Marseille → Martigues",
         heroSubtitle: "Your Marseille → Martigues transfer at €55 — €70. 40 km via toll-free A55.",
         description: "Martigues, the Provençal Venice, is 35 minutes from Marseille via the A55 motorway along the western coast.",
@@ -491,8 +491,8 @@ export const trajetsMarseille: Trajet[] = [
     hub: "marseille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Marseille → Nice | Prix fixe dès 280 € | TaxiNeo",
-        metaDescription: "Taxi Marseille → Nice. 200 km, 2h15, prix fixe dès 280 €. Autoroute A8 via l'Esterel. Réservation en ligne 24h/24.",
+        metaTitle: "Taxi Marseille → Nice | 200 km, dès 280 € | TaxiNeo",
+        metaDescription: "Via A8 en 2h10. Autoroute de Provence, Fréjus, Esterel et Cannes en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Marseille → Nice",
         heroSubtitle: "Transfert Marseille → Nice au prix fixe de 280 — 350 €. 200 km par l'A8, la route de la Côte d'Azur.",
         description: "Le trajet Marseille — Nice relie la cité phocéenne à la capitale de la Côte d'Azur. 200 km via l'autoroute A8 à travers la Provence et l'Esterel.",
@@ -510,8 +510,8 @@ export const trajetsMarseille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Marseille → Nice | Fixed price from €280 | TaxiNeo",
-        metaDescription: "Taxi Marseille → Nice. 200 km, 2h15, fixed price from €280. A8 motorway via the Esterel. Online booking 24/7.",
+        metaTitle: "Taxi Marseille → Nice | 200 km, from €280 | TaxiNeo",
+        metaDescription: "Via A8, 2h10 ride. Autoroute de Provence, Fréjus, Esterel and Cannes en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Marseille → Nice",
         heroSubtitle: "Your Marseille → Nice transfer at €280 — €350. 200 km via the A8, the French Riviera route.",
         description: "The Marseille — Nice route connects the Phocaean city to the capital of the French Riviera. 200 km via the A8 motorway through Provence and the Esterel.",
@@ -556,8 +556,8 @@ export const trajetsMarseille: Trajet[] = [
     hub: "marseille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Marseille → Cannes | Prix fixe dès 240 € | TaxiNeo",
-        metaDescription: "Taxi Marseille → Cannes. 175 km, 2h, prix fixe dès 240 €. Festival, Croisette, congrès. Réservation 24h/24.",
+        metaTitle: "Taxi Marseille → Cannes | 175 km, dès 240 € | TaxiNeo",
+        metaDescription: "Via A8 en 1h55. Esterel, Fréjus, Croisette et Festival en chemin. Dépose porte-à-porte, bagages inclus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Marseille → Cannes",
         heroSubtitle: "Transfert Marseille → Cannes au prix fixe de 240 — 300 €. 175 km par l'A8.",
         description: "Cannes, ville du Festival du Film et des congrès internationaux, est à 2h de Marseille par l'A8 à travers l'Esterel.",
@@ -575,8 +575,8 @@ export const trajetsMarseille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Marseille → Cannes | Fixed price from €240 | TaxiNeo",
-        metaDescription: "Taxi Marseille → Cannes. 175 km, 2h, fixed price from €240. Festival, Croisette, congress. Book 24/7.",
+        metaTitle: "Taxi Marseille → Cannes | 175 km, from €240 | TaxiNeo",
+        metaDescription: "Via A8, 1h55 ride. Esterel, Fréjus, Croisette and Festival en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Marseille → Cannes",
         heroSubtitle: "Your Marseille → Cannes transfer at €240 — €300. 175 km via the A8.",
         description: "Cannes, city of the Film Festival and international congresses, is 2h from Marseille via the A8 through the Esterel.",
@@ -621,8 +621,8 @@ export const trajetsMarseille: Trajet[] = [
     hub: "marseille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Marseille → Saint-Tropez | Dès 200 € | TaxiNeo",
-        metaDescription: "Taxi Marseille → Saint-Tropez. 130 km, 2h, prix fixe dès 200 €. Presqu'île tropézienne, Pampelonne. Réservation 24h/24.",
+        metaTitle: "Taxi Marseille → Saint-Tropez | 130 km, dès 200 € | TaxiNeo",
+        metaDescription: "Via A8 puis D558 en 2h. Le Muy, Presqu'île et Pampelonne en chemin. Arrêt possible pour visites ou photos. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Marseille → Saint-Tropez",
         heroSubtitle: "Transfert Marseille → Saint-Tropez au prix fixe de 200 — 260 €. Via l'A8 et la D558.",
         description: "Saint-Tropez, mythique village de la Côte d'Azur, est accessible en 2h depuis Marseille par l'A8 puis la route départementale D558 à travers la presqu'île.",
@@ -640,8 +640,8 @@ export const trajetsMarseille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Marseille → Saint-Tropez | From €200 | TaxiNeo",
-        metaDescription: "Taxi Marseille → Saint-Tropez. 130 km, 2h, fixed price from €200. Tropezian peninsula, Pampelonne. Book 24/7.",
+        metaTitle: "Taxi Marseille → Saint-Tropez | 130 km, from €200 | TaxiNeo",
+        metaDescription: "Via A8 then D558, 2 hours ride. Le Muy, Presqu'île and Pampelonne along the way. Stops for sightseeing possible en route. Up to 3 hours during rush hour.",
         heroTitle: "Taxi Marseille → Saint-Tropez",
         heroSubtitle: "Your Marseille → Saint-Tropez transfer at €200 — €260. Via the A8 and D558.",
         description: "Saint-Tropez, the mythical Côte d'Azur village, is accessible in 2h from Marseille via the A8 then the D558 through the peninsula.",
@@ -686,8 +686,8 @@ export const trajetsMarseille: Trajet[] = [
     hub: "marseille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Marseille → Istres | Prix fixe dès 75 € | TaxiNeo",
-        metaDescription: "Taxi Marseille → Istres. 60 km, 45 min, prix fixe dès 75 €. Étang de Berre, base aérienne 125. Réservation 24h/24.",
+        metaTitle: "Taxi Marseille → Istres | 60 km, dès 75 € | TaxiNeo",
+        metaDescription: "Via A55 puis A7 en 45 min. Étang de Berre et Base aérienne 125 en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Marseille → Istres",
         heroSubtitle: "Transfert Marseille → Istres au prix fixe de 75 — 95 €. 60 km via l'A55 et l'A7.",
         description: "Istres, ville militaire et industrielle sur les rives de l'étang de Berre, est à 45 minutes de Marseille.",
@@ -705,8 +705,8 @@ export const trajetsMarseille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Marseille → Istres | Fixed price from €75 | TaxiNeo",
-        metaDescription: "Taxi Marseille → Istres. 60 km, 45 min, fixed price from €75. Étang de Berre, air base 125. Book 24/7.",
+        metaTitle: "Taxi Marseille → Istres | 60 km, from €75 | TaxiNeo",
+        metaDescription: "Via A55 then A7, 45 min ride. Étang de Berre and Base aérienne 125 along the way. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Marseille → Istres",
         heroSubtitle: "Your Marseille → Istres transfer at €75 — €95. 60 km via A55 and A7.",
         description: "Istres, a military and industrial city on the shores of the Étang de Berre, is 45 minutes from Marseille.",
@@ -751,8 +751,8 @@ export const trajetsMarseille: Trajet[] = [
     hub: "marseille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Marseille → Bandol | Vignobles & Plages | TaxiNeo",
-        metaDescription: "Réservez votre taxi Marseille–Bandol dès 65 €. 50 km par l'A50, trajet en 40 min. Accès aux vignobles AOC Bandol et plages.",
+        metaTitle: "Taxi Marseille → Bandol | 50 km, dès 65 € | TaxiNeo",
+        metaDescription: "Via A50 direction Toulon, sortie 1 en 40 min. Vignobles AOC Bandol, Station balnéaire et Port de plaisance en chemin. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Marseille — Bandol",
         heroSubtitle: "La station balnéaire au cœur du vignoble",
         description: "Transfert en taxi de Marseille à Bandol, station balnéaire réputée pour ses vins AOC et ses plages de sable fin.",
@@ -770,8 +770,8 @@ export const trajetsMarseille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Marseille → Bandol | Vineyards & Beaches | TaxiNeo",
-        metaDescription: "Book your Marseille–Bandol taxi from €65. 50 km via A50, 40-min ride. Access AOC Bandol vineyards and beaches.",
+        metaTitle: "Taxi Marseille → Bandol | 50 km, from €65 | TaxiNeo",
+        metaDescription: "Via A50 direction Toulon, sortie 11 Bandol, 40 min ride. Vignobles AOC Bandol, Station balnéaire and Port de plaisance along the way. ~€4 toll included.",
         heroTitle: "Taxi Marseille — Bandol",
         heroSubtitle: "The seaside resort at the heart of the vineyard",
         description: "Taxi transfer from Marseille to Bandol, a seaside resort renowned for its AOC wines and fine sandy beaches.",
@@ -816,8 +816,8 @@ export const trajetsMarseille: Trajet[] = [
     hub: "marseille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Marseille → Carry-le-Rouet | Côte Bleue | TaxiNeo",
-        metaDescription: "Réservez votre taxi Marseille–Carry-le-Rouet dès 42 €. 30 km en 30 min. La Côte Bleue, ses calanques et ses oursinades.",
+        metaTitle: "Taxi Marseille → Carry-le-Rouet | 30 km, dès 42 € | TaxiNeo",
+        metaDescription: "Via A55 puis D9 en 30 min. Côte Bleue, Calanques et Oursinades en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Marseille — Carry-le-Rouet",
         heroSubtitle: "La perle de la Côte Bleue",
         description: "Transfert en taxi de Marseille à Carry-le-Rouet, station balnéaire de la Côte Bleue célèbre pour ses calanques et ses oursinades.",
@@ -835,8 +835,8 @@ export const trajetsMarseille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Marseille → Carry-le-Rouet | Blue Coast | TaxiNeo",
-        metaDescription: "Book your Marseille–Carry-le-Rouet taxi from €42. 30 km in 30 min. Blue Coast, coves and sea urchin festivals.",
+        metaTitle: "Taxi Marseille → Carry-le-Rouet | 30 km, from €42 | TaxiNeo",
+        metaDescription: "Via A55 then D9, 30 min ride. Côte Bleue, Calanques and Oursinades along the way. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Marseille — Carry-le-Rouet",
         heroSubtitle: "The pearl of the Blue Coast",
         description: "Taxi transfer from Marseille to Carry-le-Rouet, a Blue Coast resort famous for its coves and sea urchin festivals.",
@@ -881,8 +881,8 @@ export const trajetsMarseille: Trajet[] = [
     hub: "marseille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Marseille → Gare TGV Aix | Transfert gare | TaxiNeo",
-        metaDescription: "Réservez votre taxi Marseille–Gare TGV Aix-en-Provence dès 38 €. 25 km, 25 min. Ne ratez plus votre TGV pour Paris.",
+        metaTitle: "Taxi Marseille → Gare TGV Aix-en-Provence | 25 km | TaxiNeo",
+        metaDescription: "Par A7 puis A51 sortie Gare TGV, 25 min de trajet. En passant par Gare TGV, Connexion Paris et Arbois. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Marseille — Gare TGV Aix",
         heroSubtitle: "Connexion rapide vers la gare TGV d'Aix-en-Provence",
         description: "Transfert en taxi de Marseille à la Gare TGV d'Aix-en-Provence, située sur le plateau de l'Arbois, pour vos connexions TGV vers Paris et le nord.",
@@ -900,8 +900,8 @@ export const trajetsMarseille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Marseille → Aix TGV Station | Station Transfer | TaxiNeo",
-        metaDescription: "Book your Marseille–Aix TGV Station taxi from €38. 25 km, 25 min. Never miss your TGV to Paris again.",
+        metaTitle: "Taxi Marseille → Gare TGV Aix-en-Provence | 25 km | TaxiNeo",
+        metaDescription: "Direct route via A7 then A51 sortie Gare TGV, 25 min. Gare TGV, Connexion Paris and Arbois along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Marseille — Aix TGV Station",
         heroSubtitle: "Fast connection to Aix-en-Provence TGV Station",
         description: "Taxi transfer from Marseille to Aix-en-Provence TGV Station on the Arbois plateau, for TGV connections to Paris and northern France.",
@@ -946,8 +946,8 @@ export const trajetsMarseille: Trajet[] = [
     hub: "marseille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Marseille → Hyères | Îles d'Or & Porquerolles | TaxiNeo",
-        metaDescription: "Réservez votre taxi Marseille–Hyères dès 105 €. 82 km en 1h. Embarquez pour Porquerolles et les îles d'Or.",
+        metaTitle: "Taxi Marseille → Hyères | 82 km, dès 105 € | TaxiNeo",
+        metaDescription: "Via A50 puis A570 en 1h. Îles d'Or, Porquerolles et Presqu'île de Giens en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Marseille — Hyères",
         heroSubtitle: "Porte d'entrée des îles d'Or et de Porquerolles",
         description: "Transfert en taxi de Marseille à Hyères, porte d'accès aux célèbres îles d'Or : Porquerolles, Port-Cros et Le Levant.",
@@ -965,8 +965,8 @@ export const trajetsMarseille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Marseille → Hyères | Golden Islands & Porquerolles | TaxiNeo",
-        metaDescription: "Book your Marseille–Hyères taxi from €105. 82 km in 1h. Board for Porquerolles and the Golden Islands.",
+        metaTitle: "Taxi Marseille → Hyères | 82 km, from €105 | TaxiNeo",
+        metaDescription: "Direct route via A50 then A570, 1 hour. Îles d'Or, Porquerolles and Presqu'île de Giens along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Marseille — Hyères",
         heroSubtitle: "Gateway to the Golden Islands and Porquerolles",
         description: "Taxi transfer from Marseille to Hyères, gateway to the famous Golden Islands: Porquerolles, Port-Cros and Le Levant.",
@@ -1011,8 +1011,8 @@ export const trajetsMarseille: Trajet[] = [
     hub: "marseille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Marseille → Gordes | Plus beau village & Lavande | TaxiNeo",
-        metaDescription: "Réservez votre taxi Marseille–Gordes dès 125 €. 95 km en 1h15. Plus beau village de France, abbaye de Sénanque et champs de lavande.",
+        metaTitle: "Taxi Marseille → Gordes | 95 km, dès 125 € | TaxiNeo",
+        metaDescription: "Itinéraire A7, environ 1h15. Plus beau village de France, Abbaye de Sénanque, Lavande sur le parcours. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Marseille — Gordes",
         heroSubtitle: "Le joyau du Luberon et l'abbaye de Sénanque",
         description: "Transfert en taxi de Marseille à Gordes, classé parmi les plus beaux villages de France, au cœur du Luberon.",
@@ -1030,8 +1030,8 @@ export const trajetsMarseille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Marseille → Gordes | Most Beautiful Village & Lavender | TaxiNeo",
-        metaDescription: "Book your Marseille–Gordes taxi from €125. 95 km in 1h15. One of France's most beautiful villages, Sénanque Abbey and lavender fields.",
+        metaTitle: "Taxi Marseille → Gordes | 95 km, from €125 | TaxiNeo",
+        metaDescription: "Via A7, 1h15 ride. Plus beau village de France, Abbaye de Sénanque and Lavande along the way. Stops for sightseeing possible en route. ~€8 toll included.",
         heroTitle: "Taxi Marseille — Gordes",
         heroSubtitle: "The jewel of the Luberon and Sénanque Abbey",
         description: "Taxi transfer from Marseille to Gordes, listed among France's most beautiful villages, in the heart of the Luberon.",
@@ -1076,8 +1076,8 @@ export const trajetsMarseille: Trajet[] = [
     hub: "marseille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Marseille → Saint-Rémy-de-Provence | Van Gogh & Alpilles | TaxiNeo",
-        metaDescription: "Réservez votre taxi Marseille–Saint-Rémy dès 110 €. 85 km en 1h05. Sur les pas de Van Gogh, site antique de Glanum et Alpilles.",
+        metaTitle: "Taxi Marseille → Saint-Rémy-de-Provence | 85 km | TaxiNeo",
+        metaDescription: "Par A7, 1h05 de trajet. Van Gogh, Alpilles et Glanum en chemin. Arrêt possible pour visites ou photos. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Marseille — Saint-Rémy-de-Provence",
         heroSubtitle: "Sur les pas de Van Gogh au pied des Alpilles",
         description: "Transfert en taxi de Marseille à Saint-Rémy-de-Provence, village de charme au pied des Alpilles, sur les pas de Van Gogh.",
@@ -1095,8 +1095,8 @@ export const trajetsMarseille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Marseille → Saint-Rémy-de-Provence | Van Gogh & Alpilles | TaxiNeo",
-        metaDescription: "Book your Marseille–Saint-Rémy taxi from €110. 85 km in 1h05. Follow Van Gogh's footsteps, Glanum ruins and the Alpilles.",
+        metaTitle: "Taxi Marseille → Saint-Rémy-de-Provence | 85 km | TaxiNeo",
+        metaDescription: "Direct route via A7, 1h05. Van Gogh, Alpilles and Glanum along the way. Stops for sightseeing possible en route. Perfect for a day trip without driving.",
         heroTitle: "Taxi Marseille — Saint-Rémy-de-Provence",
         heroSubtitle: "In Van Gogh's footsteps at the foot of the Alpilles",
         description: "Taxi transfer from Marseille to Saint-Rémy-de-Provence, a charming village at the foot of the Alpilles, in Van Gogh's footsteps.",
@@ -1141,8 +1141,8 @@ export const trajetsMarseille: Trajet[] = [
     hub: "marseille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Marseille → Apt | Capitale du Luberon | TaxiNeo",
-        metaDescription: "Réservez votre taxi Marseille–Apt dès 130 €. 100 km en 1h15. Capitale du Luberon, marché provençal du samedi et fruits confits.",
+        metaTitle: "Taxi Marseille → Apt | 100 km, dès 130 € | TaxiNeo",
+        metaDescription: "Itinéraire A51 puis D900, environ 1h15. Passage par Luberon, Ocre, Marché provençal et Fruits confits. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Marseille — Apt",
         heroSubtitle: "La capitale du Luberon et de la lavande",
         description: "Transfert en taxi de Marseille à Apt, capitale du Luberon, ville des fruits confits et de la lavande.",
@@ -1160,8 +1160,8 @@ export const trajetsMarseille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Marseille → Apt | Capital of the Luberon | TaxiNeo",
-        metaDescription: "Book your Marseille–Apt taxi from €130. 100 km in 1h15. Luberon capital, Saturday Provençal market and candied fruits.",
+        metaTitle: "Taxi Marseille → Apt | 100 km, from €130 | TaxiNeo",
+        metaDescription: "A51 then D900 route, approximately 1h15. Luberon, Ocre, Marché provençal and Fruits confits en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Marseille — Apt",
         heroSubtitle: "The capital of the Luberon and lavender",
         description: "Taxi transfer from Marseille to Apt, capital of the Luberon, city of candied fruits and lavender.",
@@ -1209,8 +1209,8 @@ export const trajetsMarseille: Trajet[] = [
     hub: "marseille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Marseille → Orange | Prix fixe dès 145 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Marseille → Orange. 115 km, 1h15, prix fixe dès 145 €. Théâtre antique UNESCO, vignobles des Côtes-du-Rhône. Réservation 24h/24.",
+        metaTitle: "Taxi Marseille → Orange | 115 km, dès 145 € | TaxiNeo",
+        metaDescription: "Par A7, 1h15 de trajet. Théâtre antique, Côtes-du-Rhône, Arc de triomphe et Châteauneuf-du-Pape en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Marseille → Orange",
         heroSubtitle: "Votre transfert Marseille → Orange au prix fixe de 145 — 185 €. Trajet direct par l'A7. Réservation en ligne.",
         description: "Le trajet Marseille — Orange relie la cité phocéenne à la cité des Princes dans le nord du Vaucluse. 115 km d'autoroute A7 séparent les deux villes, à travers la vallée du Rhône et ses vignobles prestigieux.",
@@ -1228,8 +1228,8 @@ export const trajetsMarseille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Marseille → Orange | Fixed price from €145 | TaxiNeo",
-        metaDescription: "Book your taxi Marseille → Orange. 115 km, 1h15, fixed price from €145. UNESCO Ancient Theatre, Côtes-du-Rhône vineyards. Online booking 24/7.",
+        metaTitle: "Taxi Marseille → Orange | 115 km, from €145 | TaxiNeo",
+        metaDescription: "Via A7, 1h15 ride. Théâtre antique, Côtes-du-Rhône, Arc de triomphe and Châteauneuf-du-Pape en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Marseille → Orange",
         heroSubtitle: "Your Marseille → Orange transfer at a fixed price of €145 — €185. Direct route via A7. Online booking.",
         description: "The Marseille — Orange route connects the Phocaean city to the City of Princes in northern Vaucluse. 115 km of the A7 motorway separate the two cities, through the Rhône valley and its prestigious vineyards.",
@@ -1274,8 +1274,8 @@ export const trajetsMarseille: Trajet[] = [
     hub: "marseille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Marseille → Carpentras | Prix fixe dès 135 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Marseille → Carpentras. 105 km, 1h10, prix fixe dès 135 €. Mont Ventoux, truffes, marché provençal. Réservation 24h/24.",
+        metaTitle: "Taxi Marseille → Carpentras | 105 km, dès 135 € | TaxiNeo",
+        metaDescription: "Trajet direct A7 puis D942 en 1h10. Passage par Mont Ventoux, Truffes, Berlingots et Comtat Venaissin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Marseille → Carpentras",
         heroSubtitle: "Votre transfert Marseille → Carpentras au prix fixe de 135 — 170 €. Trajet par l'A7 et la D942. Réservation en ligne.",
         description: "Le trajet Marseille — Carpentras relie la cité phocéenne à la capitale du Comtat Venaissin, au pied du Mont Ventoux. 105 km séparent les deux villes, via l'autoroute A7 puis la D942 depuis Avignon.",
@@ -1293,8 +1293,8 @@ export const trajetsMarseille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Marseille → Carpentras | Fixed price from €135 | TaxiNeo",
-        metaDescription: "Book your taxi Marseille → Carpentras. 105 km, 1h10, fixed price from €135. Mont Ventoux, truffles, Provençal market. Online booking 24/7.",
+        metaTitle: "Taxi Marseille → Carpentras | 105 km, from €135 | TaxiNeo",
+        metaDescription: "Direct route via A7 then D942, 1h10. Mont Ventoux, Truffes, Berlingots and Comtat Venaissin en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Marseille → Carpentras",
         heroSubtitle: "Your Marseille → Carpentras transfer at a fixed price of €135 — €170. Route via A7 and D942. Online booking.",
         description: "The Marseille — Carpentras route connects the Phocaean city to the capital of Comtat Venaissin, at the foot of Mont Ventoux. 105 km separate the two cities, via the A7 motorway then D942 from Avignon.",
@@ -1339,8 +1339,8 @@ export const trajetsMarseille: Trajet[] = [
     hub: "marseille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Marseille → Les Baux-de-Provence | Dès 105 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Marseille → Les Baux-de-Provence. 80 km, 55 min, dès 105 €. Carrières de Lumières, village perché des Alpilles. Réservation 24h/24.",
+        metaTitle: "Taxi Marseille → Les Baux-de-Provence | 80 km | TaxiNeo",
+        metaDescription: "Via A7 puis D99 / D27 en 55 min. Carrières de Lumières, Alpilles, Village perché et Huile d'olive en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Marseille → Les Baux-de-Provence",
         heroSubtitle: "Votre transfert Marseille → Les Baux au prix fixe de 105 — 135 €. Village perché, Carrières de Lumières et Alpilles.",
         description: "Le trajet Marseille — Les Baux-de-Provence relie la cité phocéenne à l'un des plus beaux villages de France, niché au cœur du massif des Alpilles. 80 km à travers la Provence par l'A7 et les routes départementales.",
@@ -1358,8 +1358,8 @@ export const trajetsMarseille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Marseille → Les Baux-de-Provence | From €105 | TaxiNeo",
-        metaDescription: "Book your taxi Marseille → Les Baux-de-Provence. 80 km, 55 min, from €105. Carrières de Lumières, perched Alpilles village. Online booking 24/7.",
+        metaTitle: "Taxi Marseille → Les Baux-de-Provence | 80 km | TaxiNeo",
+        metaDescription: "Via A7 then D99 / D27, 55 min ride. Carrières de Lumières, Alpilles, Village perché and Huile d'olive en route. Stops for sightseeing possible en route.",
         heroTitle: "Taxi Marseille → Les Baux-de-Provence",
         heroSubtitle: "Your Marseille → Les Baux transfer at a fixed price of €105 — €135. Perched village, Carrières de Lumières and Alpilles.",
         description: "The Marseille — Les Baux-de-Provence route connects the Phocaean city to one of France's most beautiful villages, nestled in the heart of the Alpilles mountain range. 80 km through Provence via the A7 and departmental roads.",
@@ -1404,8 +1404,8 @@ export const trajetsMarseille: Trajet[] = [
     hub: "marseille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Marseille → Port-de-Bouc | Prix fixe dès 65 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Marseille → Port-de-Bouc. 48 km, 35 min, prix fixe dès 65 €. Golfe de Fos, Étang de Berre. Réservation 24h/24.",
+        metaTitle: "Taxi Marseille → Port-de-Bouc | 48 km, dès 65 € | TaxiNeo",
+        metaDescription: "Par A55, 35 min de trajet. Passage par Golfe de Fos, Étang de Berre, Port industriel et Plage Bonnieu. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Marseille → Port-de-Bouc",
         heroSubtitle: "Votre transfert Marseille → Port-de-Bouc au prix fixe de 65 — 85 €. Trajet direct par l'A55. Réservation en ligne.",
         description: "Le trajet Marseille — Port-de-Bouc relie le centre de la cité phocéenne à cette ville portuaire du golfe de Fos, sur la rive sud de l'étang de Berre. 48 km séparent les deux communes, via l'autoroute A55 gratuite.",
@@ -1423,8 +1423,8 @@ export const trajetsMarseille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Marseille → Port-de-Bouc | Fixed price from €65 | TaxiNeo",
-        metaDescription: "Book your taxi Marseille → Port-de-Bouc. 48 km, 35 min, fixed price from €65. Gulf of Fos, Étang de Berre. Online booking 24/7.",
+        metaTitle: "Taxi Marseille → Port-de-Bouc | 48 km, from €65 | TaxiNeo",
+        metaDescription: "Direct route via A55, 35 min. Golfe de Fos, Étang de Berre, Port industriel and Plage Bonnieu en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Marseille → Port-de-Bouc",
         heroSubtitle: "Your Marseille → Port-de-Bouc transfer at a fixed price of €65 — €85. Direct route via A55. Online booking.",
         description: "The Marseille — Port-de-Bouc route connects the centre of the Phocaean city to this port town on the Gulf of Fos, on the southern shore of the Étang de Berre lagoon. 48 km separate the two towns via the toll-free A55 motorway.",
@@ -1469,8 +1469,8 @@ export const trajetsMarseille: Trajet[] = [
     hub: "marseille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Marseille → La Seyne-sur-Mer | Dès 80 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Marseille → La Seyne-sur-Mer. 62 km, 45 min, prix fixe dès 80 €. Rade de Toulon, plages du Var. Réservation 24h/24.",
+        metaTitle: "Taxi Marseille → La Seyne-sur-Mer | 62 km, 80 € | TaxiNeo",
+        metaDescription: "Via A50 en 45 min. Rade de Toulon, Arsenal, Tamaris et Plages du Var en chemin. Dépose à votre adresse exacte. Alternative directe au train ou au bus.",
         heroTitle: "Taxi Marseille → La Seyne-sur-Mer",
         heroSubtitle: "Votre transfert Marseille → La Seyne-sur-Mer au prix fixe de 80 — 105 €. Trajet direct par l'A50.",
         description: "Le trajet Marseille — La Seyne-sur-Mer relie la cité phocéenne à cette ville balnéaire et industrielle de la rade de Toulon. 62 km d'autoroute A50 à travers les massifs côtiers des Bouches-du-Rhône et du Var.",
@@ -1488,8 +1488,8 @@ export const trajetsMarseille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Marseille → La Seyne-sur-Mer | From €80 | TaxiNeo",
-        metaDescription: "Book your taxi Marseille → La Seyne-sur-Mer. 62 km, 45 min, fixed price from €80. Toulon bay, Var beaches. Online booking 24/7.",
+        metaTitle: "Taxi Marseille → La Seyne-sur-Mer | 62 km, €80 | TaxiNeo",
+        metaDescription: "Via A50, 45 min ride. Rade de Toulon, Arsenal, Tamaris and Plages du Var en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Marseille → La Seyne-sur-Mer",
         heroSubtitle: "Your Marseille → La Seyne-sur-Mer transfer at a fixed price of €80 — €105. Direct route via A50.",
         description: "The Marseille — La Seyne-sur-Mer route connects the Phocaean city to this seaside and industrial town on the Bay of Toulon. 62 km on the A50 motorway through the coastal massifs of Bouches-du-Rhône and Var.",
@@ -1534,8 +1534,8 @@ export const trajetsMarseille: Trajet[] = [
     hub: "marseille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Marseille → Sanary-sur-Mer | Dès 75 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Marseille → Sanary-sur-Mer. 55 km, 40 min, prix fixe dès 75 €. Port provençal, plongée, marché. Réservation 24h/24.",
+        metaTitle: "Taxi Marseille → Sanary-sur-Mer | 55 km, dès 75 € | TaxiNeo",
+        metaDescription: "Via A50 en 40 min. Port provençal, Plongée, Pointus et Marché nocturne en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Marseille → Sanary-sur-Mer",
         heroSubtitle: "Votre transfert Marseille → Sanary-sur-Mer au prix fixe de 75 — 95 €. Trajet par l'A50. Réservation en ligne.",
         description: "Le trajet Marseille — Sanary-sur-Mer relie la cité phocéenne à l'un des plus charmants ports de pêche de la côte varoise. 55 km par l'A50, à travers les paysages côtiers de la Provence.",
@@ -1553,8 +1553,8 @@ export const trajetsMarseille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Marseille → Sanary-sur-Mer | From €75 | TaxiNeo",
-        metaDescription: "Book your taxi Marseille → Sanary-sur-Mer. 55 km, 40 min, fixed price from €75. Provençal port, diving, market. Online booking 24/7.",
+        metaTitle: "Taxi Marseille → Sanary-sur-Mer | 55 km, from €75 | TaxiNeo",
+        metaDescription: "Via A50, 40 min ride. Port provençal, Plongée, Pointus and Marché nocturne en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Marseille → Sanary-sur-Mer",
         heroSubtitle: "Your Marseille → Sanary-sur-Mer transfer at a fixed price of €75 — €95. Route via A50. Online booking.",
         description: "The Marseille — Sanary-sur-Mer route connects the Phocaean city to one of the most charming fishing ports on the Var coast. 55 km via the A50, through the coastal landscapes of Provence.",
@@ -1599,8 +1599,8 @@ export const trajetsMarseille: Trajet[] = [
     hub: "marseille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Marseille → Digne-les-Bains | Dès 230 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Marseille → Digne-les-Bains. 175 km, 2h, prix fixe dès 230 €. Lavande, thermes, Train des Pignes, préalpes. Réservation 24h/24.",
+        metaTitle: "Taxi Marseille → Digne-les-Bains | 175 km, 230 € | TaxiNeo",
+        metaDescription: "Via A51 puis N85 en 2h. Lavande, Train des Pignes, Préalpes et Thermes en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Marseille → Digne-les-Bains",
         heroSubtitle: "Votre transfert Marseille → Digne-les-Bains au prix fixe de 230 — 290 €. Par l'A51 et la Route Napoléon.",
         description: "Le trajet Marseille — Digne-les-Bains relie la côte méditerranéenne à la préfecture des Alpes-de-Haute-Provence, aux portes des Préalpes. 175 km par l'autoroute A51 puis la N85 (Route Napoléon).",
@@ -1618,8 +1618,8 @@ export const trajetsMarseille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Marseille → Digne-les-Bains | From €230 | TaxiNeo",
-        metaDescription: "Book your taxi Marseille → Digne-les-Bains. 175 km, 2h, fixed price from €230. Lavender, spa, Train des Pignes, pre-Alps. Online booking 24/7.",
+        metaTitle: "Taxi Marseille → Digne-les-Bains | 175 km, €230 | TaxiNeo",
+        metaDescription: "A51 then N85 route, approximately 2 hours. Lavande, Train des Pignes, Préalpes and Thermes en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Marseille → Digne-les-Bains",
         heroSubtitle: "Your Marseille → Digne-les-Bains transfer at a fixed price of €230 — €290. Via A51 and Route Napoléon.",
         description: "The Marseille — Digne-les-Bains route connects the Mediterranean coast to the prefecture of Alpes-de-Haute-Provence, at the gateway to the pre-Alps. 175 km via the A51 motorway then the N85 (Route Napoléon).",
@@ -1664,8 +1664,8 @@ export const trajetsMarseille: Trajet[] = [
     hub: "marseille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Marseille → Manosque | Prix fixe dès 125 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Marseille → Manosque. 95 km, 1h05, prix fixe dès 125 €. Luberon sud, Giono, Cadarache/ITER. Réservation 24h/24.",
+        metaTitle: "Taxi Marseille → Manosque | 95 km, dès 125 € | TaxiNeo",
+        metaDescription: "Via A51 en 1h05. Giono, Luberon sud, Cadarache et CEA ITER en chemin. Dépose porte-à-porte, bagages inclus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Marseille → Manosque",
         heroSubtitle: "Votre transfert Marseille → Manosque au prix fixe de 125 — 160 €. Trajet direct par l'A51.",
         description: "Le trajet Marseille — Manosque relie la cité phocéenne à la plus grande ville des Alpes-de-Haute-Provence, porte du Luberon sud et voisine du centre de recherche de Cadarache. 95 km par l'autoroute A51.",
@@ -1683,8 +1683,8 @@ export const trajetsMarseille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Marseille → Manosque | Fixed price from €125 | TaxiNeo",
-        metaDescription: "Book your taxi Marseille → Manosque. 95 km, 1h05, fixed price from €125. South Luberon, Giono, Cadarache/ITER. Online booking 24/7.",
+        metaTitle: "Taxi Marseille → Manosque | 95 km, from €125 | TaxiNeo",
+        metaDescription: "Via A51, 1h05 ride. Giono, Luberon sud, Cadarache and CEA ITER en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Marseille → Manosque",
         heroSubtitle: "Your Marseille → Manosque transfer at a fixed price of €125 — €160. Direct route via A51.",
         description: "The Marseille — Manosque route connects the Phocaean city to the largest town in Alpes-de-Haute-Provence, gateway to the southern Luberon and neighbour to the Cadarache research centre. 95 km via the A51 motorway.",
@@ -1732,8 +1732,8 @@ export const trajetsMarseille: Trajet[] = [
     hub: "marseille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Marseille → Avignon | Prix fixe dès 130 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Marseille → Avignon. 100 km, 1h05, prix fixe dès 130 €. Palais des Papes, Festival, remparts. Réservation 24h/24.",
+        metaTitle: "Taxi Marseille → Avignon | 100 km, dès 130 € | TaxiNeo",
+        metaDescription: "Via A7 en 1h05. Palais des Papes, Pont d'Avignon et Provence en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Marseille → Avignon",
         heroSubtitle: "Votre transfert Marseille → Avignon au prix fixe de 130 — 165 €. Trajet direct par l'A7. Réservation en ligne.",
         description: "Le trajet Marseille — Avignon relie la cité phocéenne à la cité des Papes, ancienne capitale de la chrétienté. 100 km par l'autoroute du Soleil A7 à travers la vallée du Rhône provençale.",
@@ -1751,8 +1751,8 @@ export const trajetsMarseille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Marseille → Avignon | Fixed price from €130 | TaxiNeo",
-        metaDescription: "Book your taxi Marseille → Avignon. 100 km, 1h05, fixed price from €130. Palace of the Popes, Festival, ramparts. Online booking 24/7.",
+        metaTitle: "Taxi Marseille → Avignon | 100 km, from €130 | TaxiNeo",
+        metaDescription: "Via A7, 1h05 ride. Palais des Papes, Pont d'Avignon and Provence along the way. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Marseille → Avignon",
         heroSubtitle: "Your Marseille → Avignon transfer at a fixed price of €130 — €165. Direct route via A7. Online booking.",
         description: "The Marseille — Avignon route connects the Phocaean city to the City of the Popes, former capital of Christendom. 100 km via the A7 Autoroute du Soleil through the Provençal Rhône valley.",
@@ -1800,8 +1800,8 @@ export const trajetsMarseille: Trajet[] = [
     hub: "marseille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Marseille → Toulon | Prix fixe dès 85 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Marseille → Toulon. 65 km, 50 min, prix fixe dès 85 €. Rade, Mont Faron, Arsenal. Réservation en ligne 24h/24.",
+        metaTitle: "Taxi Marseille → Toulon | 65 km, dès 85 € | TaxiNeo",
+        metaDescription: "Via A50 en 50 min. Rade de Toulon, Marine nationale, Arsenal et Mont Faron en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Marseille → Toulon",
         heroSubtitle: "Votre transfert Marseille → Toulon au prix fixe de 85 — 110 €. Trajet direct par l'A50. Réservation en ligne.",
         description: "Le trajet Marseille — Toulon relie la cité phocéenne à la préfecture du Var et premier port militaire de France. 65 km par l'A50 à travers les massifs côtiers provençaux.",
@@ -1819,8 +1819,8 @@ export const trajetsMarseille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Marseille → Toulon | Fixed price from €85 | TaxiNeo",
-        metaDescription: "Book your taxi Marseille → Toulon. 65 km, 50 min, fixed price from €85. Naval port, Mont Faron, harbour. Online booking 24/7.",
+        metaTitle: "Taxi Marseille → Toulon | 65 km, from €85 | TaxiNeo",
+        metaDescription: "Via A50, 50 min ride. Rade de Toulon, Marine nationale, Arsenal and Mont Faron en route. Drop-off at your exact address. Door-to-door, luggage included.",
         heroTitle: "Taxi Marseille → Toulon",
         heroSubtitle: "Your Marseille → Toulon transfer at a fixed price of €85 — €110. Direct route via A50. Online booking.",
         description: "The Marseille — Toulon route connects the Phocaean city to the Var prefecture and France's premier naval port. 65 km via the A50 through Provence's coastal massifs.",
@@ -1868,8 +1868,8 @@ export const trajetsMarseille: Trajet[] = [
     hub: "marseille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Marseille → Cassis | Dès 40 € | Calanques | TaxiNeo",
-        metaDescription: "Réservez votre taxi Marseille → Cassis. 23 km, 25 min, prix fixe dès 40 €. Calanques, Cap Canaille, port provençal. Réservation 24h/24.",
+        metaTitle: "Taxi Marseille → Cassis | 23 km, dès 40 € | TaxiNeo",
+        metaDescription: "Par A50 ou D559, 25 min de trajet. Route des Crêtes, Calanques, Port de Cassis et Cap Canaille en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Marseille → Cassis",
         heroSubtitle: "Votre transfert Marseille → Cassis au prix fixe de 40 — 55 €. Trajet par l'A50 ou la route des Crêtes. Réservation en ligne.",
         description: "Le trajet Marseille — Cassis relie la cité phocéenne au joyau du littoral provençal, niché entre les calanques et le Cap Canaille. 23 km par l'A50 ou la spectaculaire D559.",
@@ -1887,8 +1887,8 @@ export const trajetsMarseille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Marseille → Cassis | From €40 | Calanques | TaxiNeo",
-        metaDescription: "Book your taxi Marseille → Cassis. 23 km, 25 min, fixed price from €40. Calanques, Cap Canaille, Provencal port. Online booking 24/7.",
+        metaTitle: "Taxi Marseille → Cassis | 23 km, from €40 | TaxiNeo",
+        metaDescription: "A50 ou D559 route, approximately 25 min. Route des Crêtes, Calanques, Port de Cassis and Cap Canaille en route. Stops for sightseeing possible en route.",
         heroTitle: "Taxi Marseille → Cassis",
         heroSubtitle: "Your Marseille → Cassis transfer at a fixed price of €40 — €55. Route via A50 or the Cretes road. Online booking.",
         description: "The Marseille — Cassis route connects the Phocaean city to the jewel of the Provencal coast, nestled between the Calanques and Cap Canaille. 23 km via A50 or the spectacular D559.",
@@ -1936,8 +1936,8 @@ export const trajetsMarseille: Trajet[] = [
     hub: "marseille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Marseille → Pertuis | Prix fixe dès 85 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Marseille → Pertuis. 65 km, 50 min, prix fixe dès 85 €. Porte du Luberon, ville médiévale. Réservation 24h/24.",
+        metaTitle: "Taxi Marseille → Pertuis | 65 km, dès 85 € | TaxiNeo",
+        metaDescription: "Via A51 en 50 min. Vallée de la Durance, Luberon sud et Pertuis médiéval en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Marseille → Pertuis",
         heroSubtitle: "Votre transfert Marseille → Pertuis au prix fixe de 85 — 110 €. Trajet direct par l'A51. Réservation en ligne.",
         description: "Le trajet Marseille — Pertuis relie la cité phocéenne à la porte sud du Luberon. 65 km par l'A51 à travers la vallée de la Durance et les paysages du sud Luberon.",
@@ -1955,8 +1955,8 @@ export const trajetsMarseille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Marseille → Pertuis | Fixed price from €85 | TaxiNeo",
-        metaDescription: "Book your taxi Marseille → Pertuis. 65 km, 50 min, fixed price from €85. Luberon gateway, medieval town. Online booking 24/7.",
+        metaTitle: "Taxi Marseille → Pertuis | 65 km, from €85 | TaxiNeo",
+        metaDescription: "A51 route, approximately 50 min. Vallée de la Durance, Luberon sud and Pertuis médiéval along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Marseille → Pertuis",
         heroSubtitle: "Your Marseille → Pertuis transfer at a fixed price of €85 — €110. Direct route via A51. Online booking.",
         description: "The Marseille — Pertuis route connects the Phocaean city to the southern gateway of the Luberon. 65 km via the A51 through the Durance valley and southern Luberon landscapes.",
@@ -2004,8 +2004,8 @@ export const trajetsMarseille: Trajet[] = [
     hub: "marseille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Marseille → Cavaillon | Prix fixe dès 95 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Marseille → Cavaillon. 75 km, 55 min, prix fixe dès 95 €. Porte du Luberon, melon, marché provençal. Réservation 24h/24.",
+        metaTitle: "Taxi Marseille → Cavaillon | 75 km, dès 95 € | TaxiNeo",
+        metaDescription: "Trajet direct A7 en 55 min. Passage par Luberon, Melon de Cavaillon, Colline Saint-Jacques et Durance. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Marseille → Cavaillon",
         heroSubtitle: "Votre transfert Marseille → Cavaillon au prix fixe de 95 — 125 €. Trajet direct par l'A7. Réservation en ligne.",
         description: "Le trajet Marseille — Cavaillon relie la cité phocéenne à la capitale du melon et porte occidentale du Luberon. 75 km par l'A7 à travers la plaine de la Durance.",
@@ -2023,8 +2023,8 @@ export const trajetsMarseille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Marseille → Cavaillon | Fixed price from €95 | TaxiNeo",
-        metaDescription: "Book your taxi Marseille → Cavaillon. 75 km, 55 min, fixed price from €95. Luberon gateway, melons, Provencal market. Online booking 24/7.",
+        metaTitle: "Taxi Marseille → Cavaillon | 75 km, from €95 | TaxiNeo",
+        metaDescription: "Direct route via A7, 55 min. Luberon, Melon de Cavaillon, Colline Saint-Jacques and Durance en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Marseille → Cavaillon",
         heroSubtitle: "Your Marseille → Cavaillon transfer at a fixed price of €95 — €125. Direct route via A7. Online booking.",
         description: "The Marseille — Cavaillon route connects the Phocaean city to the melon capital and western gateway to the Luberon. 75 km via the A7 through the Durance plain.",
@@ -2072,8 +2072,8 @@ export const trajetsMarseille: Trajet[] = [
     hub: "marseille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Marseille → L'Isle-sur-la-Sorgue | Dès 110 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Marseille → L'Isle-sur-la-Sorgue. 85 km, 1h, prix fixe dès 110 €. Capitale des antiquaires, marché flottant. Réservation 24h/24.",
+        metaTitle: "Taxi Marseille → L'Isle-sur-la-Sorgue | 85 km | TaxiNeo",
+        metaDescription: "Via A7 en 1h. Antiquaires, Sorgue, Roues à aubes et Brocante en chemin. Arrêt visite possible en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Marseille → L'Isle-sur-la-Sorgue",
         heroSubtitle: "Votre transfert Marseille → L'Isle-sur-la-Sorgue au prix fixe de 110 — 140 €. Trajet par l'A7. Réservation en ligne.",
         description: "Le trajet Marseille — L'Isle-sur-la-Sorgue relie la cité phocéenne à la Venise provençale, capitale européenne des antiquaires. 85 km par l'A7 à travers la plaine du Vaucluse.",
@@ -2091,8 +2091,8 @@ export const trajetsMarseille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Marseille → L'Isle-sur-la-Sorgue | From €110 | TaxiNeo",
-        metaDescription: "Book your taxi Marseille → L'Isle-sur-la-Sorgue. 85 km, 1h, fixed price from €110. Antiques capital, floating market. Online booking 24/7.",
+        metaTitle: "Taxi Marseille → L'Isle-sur-la-Sorgue | 85 km | TaxiNeo",
+        metaDescription: "Via A7, 1 hour ride. Antiquaires, Sorgue, Roues à aubes and Brocante en route. Stops for sightseeing possible en route. Perfect for a day trip without driving.",
         heroTitle: "Taxi Marseille → L'Isle-sur-la-Sorgue",
         heroSubtitle: "Your Marseille → L'Isle-sur-la-Sorgue transfer at a fixed price of €110 — €140. Route via A7. Online booking.",
         description: "The Marseille — L'Isle-sur-la-Sorgue route connects the Phocaean city to the Provencal Venice, Europe's antiques capital. 85 km via the A7 through the Vaucluse plain.",
@@ -2140,8 +2140,8 @@ export const trajetsMarseille: Trajet[] = [
     hub: "marseille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Marseille → Sisteron | Prix fixe dès 195 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Marseille → Sisteron. 150 km, 1h40, prix fixe dès 195 €. Citadelle, clue, porte de Provence. Réservation 24h/24.",
+        metaTitle: "Taxi Marseille → Sisteron | 150 km, dès 195 € | TaxiNeo",
+        metaDescription: "Par A51, 1h40 de trajet. Citadelle de Sisteron, Clue de Sisteron, Durance et Haute-Provence en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Marseille → Sisteron",
         heroSubtitle: "Votre transfert Marseille → Sisteron au prix fixe de 195 — 245 €. Trajet par l'A51. Réservation en ligne.",
         description: "Le trajet Marseille — Sisteron relie la Méditerranée à la porte de la Haute-Provence. 150 km par l'A51 en remontant la vallée de la Durance jusqu'à la spectaculaire clue de Sisteron.",
@@ -2159,8 +2159,8 @@ export const trajetsMarseille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Marseille → Sisteron | Fixed price from €195 | TaxiNeo",
-        metaDescription: "Book your taxi Marseille → Sisteron. 150 km, 1h40, fixed price from €195. Citadel, clue, Provence gateway. Online booking 24/7.",
+        metaTitle: "Taxi Marseille → Sisteron | 150 km, from €195 | TaxiNeo",
+        metaDescription: "Direct route via A51, 1h40. Citadelle de Sisteron, Clue de Sisteron, Durance and Haute-Provence en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Marseille → Sisteron",
         heroSubtitle: "Your Marseille → Sisteron transfer at a fixed price of €195 — €245. Route via A51. Online booking.",
         description: "The Marseille — Sisteron route connects the Mediterranean to the gateway of Haute-Provence. 150 km via the A51, following the Durance valley to the spectacular Sisteron clue.",
@@ -2208,8 +2208,8 @@ export const trajetsMarseille: Trajet[] = [
     hub: "marseille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Marseille → Lourmarin | Dès 90 € | Luberon | TaxiNeo",
-        metaDescription: "Réservez votre taxi Marseille → Lourmarin. 68 km, 55 min, prix fixe dès 90 €. Château, Camus, Luberon. Réservation 24h/24.",
+        metaTitle: "Taxi Marseille → Lourmarin | 68 km, dès 90 € | TaxiNeo",
+        metaDescription: "Via A51 puis D973 en 55 min. Château Renaissance, Albert Camus, Luberon sud et Village perché en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Marseille → Lourmarin",
         heroSubtitle: "Votre transfert Marseille → Lourmarin au prix fixe de 90 — 115 €. Trajet par l'A51 et la D973. Réservation en ligne.",
         description: "Le trajet Marseille — Lourmarin relie la cité phocéenne au plus célèbre village du Luberon, classé parmi les Plus Beaux Villages de France. 68 km par l'A51 puis les routes du sud Luberon.",
@@ -2227,8 +2227,8 @@ export const trajetsMarseille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Marseille → Lourmarin | From €90 | Luberon | TaxiNeo",
-        metaDescription: "Book your taxi Marseille → Lourmarin. 68 km, 55 min, fixed price from €90. Chateau, Camus, Luberon. Online booking 24/7.",
+        metaTitle: "Taxi Marseille → Lourmarin | 68 km, from €90 | TaxiNeo",
+        metaDescription: "Direct route via A51 then D973, 55 min. Château Renaissance, Albert Camus, Luberon sud and Village perché en route. Stops for sightseeing possible en route.",
         heroTitle: "Taxi Marseille → Lourmarin",
         heroSubtitle: "Your Marseille → Lourmarin transfer at a fixed price of €90 — €115. Route via A51 and D973. Online booking.",
         description: "The Marseille — Lourmarin route connects the Phocaean city to the Luberon's most famous village, listed among France's Most Beautiful Villages. 68 km via the A51 then southern Luberon roads.",
@@ -2276,8 +2276,8 @@ export const trajetsMarseille: Trajet[] = [
     hub: "marseille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Marseille → Perpignan | Prix fixe dès 390 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Marseille → Perpignan. 320 km, 3h15, prix fixe dès 390 €. Identité catalane, Castillet, Canigou. Réservation 24h/24.",
+        metaTitle: "Taxi Marseille → Perpignan | 320 km, dès 390 € | TaxiNeo",
+        metaDescription: "Via A7 puis A54 puis A9 en 3h15. Catalogne Nord, Castillet et Canigou en chemin. Dépose à votre adresse exacte. Alternative directe au train ou au bus.",
         heroTitle: "Taxi Marseille → Perpignan",
         heroSubtitle: "Votre transfert Marseille → Perpignan au prix fixe de 390 — 480 €. Trajet direct par l'A7, l'A54 et l'A9.",
         description: "Le trajet Marseille — Perpignan relie la cité phocéenne à la capitale du Roussillon, terre catalane aux portes de l'Espagne. 320 km d'autoroute à travers le Languedoc jusqu'aux Pyrénées-Orientales.",
@@ -2295,8 +2295,8 @@ export const trajetsMarseille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Marseille → Perpignan | Fixed price from €390 | TaxiNeo",
-        metaDescription: "Book your taxi Marseille → Perpignan. 320 km, 3h15, fixed price from €390. Catalan identity, Castillet, Canigou. Online booking 24/7.",
+        metaTitle: "Taxi Marseille → Perpignan | 320 km, from €390 | TaxiNeo",
+        metaDescription: "Via A7 then A54 then A9, 3h15 ride. Catalogne Nord, Castillet and Canigou along the way. Drop-off at your exact address. Door-to-door, luggage included.",
         heroTitle: "Taxi Marseille → Perpignan",
         heroSubtitle: "Your Marseille → Perpignan transfer at a fixed price of €390 — €480. Direct route via A7, A54 and A9.",
         description: "The Marseille — Perpignan route connects the Phocaean city to the capital of Roussillon, a Catalan land at the gates of Spain. 320 km of motorway through Languedoc to the Pyrénées-Orientales.",
@@ -2341,8 +2341,8 @@ export const trajetsMarseille: Trajet[] = [
     hub: "marseille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Marseille → Béziers | Prix fixe dès 290 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Marseille → Béziers. 235 km, 2h25, prix fixe dès 290 €. Canal du Midi UNESCO, écluses de Fonserannes. Réservation 24h/24.",
+        metaTitle: "Taxi Marseille → Béziers | 235 km, dès 290 € | TaxiNeo",
+        metaDescription: "Par A7 puis A54 puis A9, 2h25 de trajet. Passage par Canal du Midi, 9 écluses de Fonserannes et Férias. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Marseille → Béziers",
         heroSubtitle: "Votre transfert Marseille → Béziers au prix fixe de 290 — 360 €. Trajet direct par l'A7, l'A54 et l'A9.",
         description: "Le trajet Marseille — Béziers relie la métropole provençale à la ville du Canal du Midi et des férias. 235 km d'autoroute à travers le Languedoc viticole.",
@@ -2360,8 +2360,8 @@ export const trajetsMarseille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Marseille → Béziers | Fixed price from €290 | TaxiNeo",
-        metaDescription: "Book your taxi Marseille → Béziers. 235 km, 2h25, fixed price from €290. Canal du Midi UNESCO, Fonserannes locks. Online booking 24/7.",
+        metaTitle: "Taxi Marseille → Béziers | 235 km, from €290 | TaxiNeo",
+        metaDescription: "Via A7 then A54 then A9, 2h25 ride. Canal du Midi, 9 écluses de Fonserannes and Férias along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Marseille → Béziers",
         heroSubtitle: "Your Marseille → Béziers transfer at a fixed price of €290 — €360. Direct route via A7, A54 and A9.",
         description: "The Marseille — Béziers route connects the Provençal metropolis to the city of the Canal du Midi and férias. 235 km of motorway through the Languedoc wine country.",
@@ -2406,8 +2406,8 @@ export const trajetsMarseille: Trajet[] = [
     hub: "marseille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Marseille → Sète | Prix fixe dès 250 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Marseille → Sète. 200 km, 2h, prix fixe dès 250 €. Mont Saint-Clair, joutes nautiques, Brassens. Réservation 24h/24.",
+        metaTitle: "Taxi Marseille → Sète | 200 km, dès 250 € | TaxiNeo",
+        metaDescription: "Trajet direct A7 puis A54 puis A9 en 2h. Mont Saint-Clair, Joutes nautiques, Brassens sur le parcours. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Marseille → Sète",
         heroSubtitle: "Votre transfert Marseille → Sète au prix fixe de 250 — 310 €. Trajet direct par l'A7, l'A54 et l'A9.",
         description: "Le trajet Marseille — Sète relie la cité phocéenne à l'île singulière de Sète, port de pêche et de plaisance accroché au mont Saint-Clair entre mer et étang de Thau.",
@@ -2425,8 +2425,8 @@ export const trajetsMarseille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Marseille → Sète | Fixed price from €250 | TaxiNeo",
-        metaDescription: "Book your taxi Marseille → Sète. 200 km, 2h, fixed price from €250. Mont Saint-Clair, water jousting, Brassens. Online booking 24/7.",
+        metaTitle: "Taxi Marseille → Sète | 200 km, from €250 | TaxiNeo",
+        metaDescription: "Via A7 then A54 then A9, 2 hours ride. Mont Saint-Clair, Joutes nautiques and Brassens along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Marseille → Sète",
         heroSubtitle: "Your Marseille → Sète transfer at a fixed price of €250 — €310. Direct route via A7, A54 and A9.",
         description: "The Marseille — Sète route connects the Phocaean city to the singular island of Sète, a fishing and yachting port clinging to Mont Saint-Clair between the sea and the Thau lagoon.",
@@ -2471,8 +2471,8 @@ export const trajetsMarseille: Trajet[] = [
     hub: "marseille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Marseille → Carcassonne | Prix fixe dès 380 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Marseille → Carcassonne. 310 km, 3h05, prix fixe dès 380 €. Cité médiévale UNESCO, pays cathare. Réservation 24h/24.",
+        metaTitle: "Taxi Marseille → Carcassonne | 310 km, dès 380 € | TaxiNeo",
+        metaDescription: "Via A7 puis A54 puis A9 puis A61 en 3h05. Passage par Cité médiévale UNESCO, Cathares et Canal du Midi. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Marseille → Carcassonne",
         heroSubtitle: "Votre transfert Marseille → Carcassonne au prix fixe de 380 — 460 €. Trajet direct par l'A7, l'A54, l'A9 et l'A61.",
         description: "Le trajet Marseille — Carcassonne relie la métropole provençale à la plus grande cité médiévale fortifiée d'Europe, classée UNESCO. 310 km à travers le Languedoc et le pays cathare.",
@@ -2490,8 +2490,8 @@ export const trajetsMarseille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Marseille → Carcassonne | Fixed price from €380 | TaxiNeo",
-        metaDescription: "Book your taxi Marseille → Carcassonne. 310 km, 3h05, fixed price from €380. Medieval citadel UNESCO, Cathar country. Online booking 24/7.",
+        metaTitle: "Taxi Marseille → Carcassonne | 310 km, from €380 | TaxiNeo",
+        metaDescription: "Via A7 then A54 then A9 then A61, 3h05 ride. Cité médiévale UNESCO, Cathares and Canal du Midi along the way. Faster and more direct than train or bus.",
         heroTitle: "Taxi Marseille → Carcassonne",
         heroSubtitle: "Your Marseille → Carcassonne transfer at a fixed price of €380 — €460. Direct route via A7, A54, A9 and A61.",
         description: "The Marseille — Carcassonne route connects the Provençal metropolis to Europe's largest fortified medieval city, a UNESCO World Heritage Site. 310 km through Languedoc and Cathar country.",
@@ -2536,8 +2536,8 @@ export const trajetsMarseille: Trajet[] = [
     hub: "marseille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Marseille → Valence | Prix fixe dès 310 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Marseille → Valence. 250 km, 2h35, prix fixe dès 310 €. Vallée du Rhône, gastronomie Pic, Drôme provençale. Réservation 24h/24.",
+        metaTitle: "Taxi Marseille → Valence | 250 km, dès 310 € | TaxiNeo",
+        metaDescription: "Via A7 en 2h35. Vallée du Rhône, Pic Valence, Drôme provençale et Crest en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Marseille → Valence",
         heroSubtitle: "Votre transfert Marseille → Valence au prix fixe de 310 — 380 €. Trajet direct par l'A7 à travers la vallée du Rhône.",
         description: "Le trajet Marseille — Valence remonte la vallée du Rhône par l'A7 (autoroute du Soleil) sur 250 km. Valence, porte de la Drôme provençale, est une étape gastronomique majeure.",
@@ -2555,8 +2555,8 @@ export const trajetsMarseille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Marseille → Valence | Fixed price from €310 | TaxiNeo",
-        metaDescription: "Book your taxi Marseille → Valence. 250 km, 2h35, fixed price from €310. Rhône Valley, Pic gastronomy, Drôme Provençale. Online booking 24/7.",
+        metaTitle: "Taxi Marseille → Valence | 250 km, from €310 | TaxiNeo",
+        metaDescription: "Via A7, 2h35 ride. Vallée du Rhône, Pic Valence, Drôme provençale and Crest en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Marseille → Valence",
         heroSubtitle: "Your Marseille → Valence transfer at a fixed price of €310 — €380. Direct route via the A7 through the Rhône Valley.",
         description: "The Marseille — Valence route follows the Rhône Valley northward on the A7 (Autoroute du Soleil) for 250 km. Valence, gateway to the Drôme Provençale, is a major gastronomic stop.",
@@ -2601,8 +2601,8 @@ export const trajetsMarseille: Trajet[] = [
     hub: "marseille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Marseille → Gap | Prix fixe dès 250 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Marseille → Gap. 200 km, 2h25, prix fixe dès 250 €. Hautes-Alpes, Écrins, Col Bayard. Réservation 24h/24.",
+        metaTitle: "Taxi Marseille → Gap | 200 km, dès 250 € | TaxiNeo",
+        metaDescription: "Par A51 puis N85, 2h25 de trajet. Passage par Hautes-Alpes, Écrins, Col Bayard et Lac de Serre-Ponçon. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Marseille → Gap",
         heroSubtitle: "Votre transfert Marseille → Gap au prix fixe de 250 — 320 €. Trajet par l'A51 et la Route Napoléon.",
         description: "Le trajet Marseille — Gap relie la Méditerranée aux Hautes-Alpes en remontant la vallée de la Durance par l'A51, puis la Route Napoléon (N85) à travers les Préalpes.",
@@ -2620,8 +2620,8 @@ export const trajetsMarseille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Marseille → Gap | Fixed price from €250 | TaxiNeo",
-        metaDescription: "Book your taxi Marseille → Gap. 200 km, 2h25, fixed price from €250. Hautes-Alpes, Écrins, Col Bayard. Online booking 24/7.",
+        metaTitle: "Taxi Marseille → Gap | 200 km, from €250 | TaxiNeo",
+        metaDescription: "Direct route via A51 then N85, 2h25. Hautes-Alpes, Écrins, Col Bayard and Lac de Serre-Ponçon en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Marseille → Gap",
         heroSubtitle: "Your Marseille → Gap transfer at a fixed price of €250 — €320. Route via A51 and the Route Napoléon.",
         description: "The Marseille — Gap route connects the Mediterranean to the Hautes-Alpes, following the Durance valley on the A51 then the Route Napoléon (N85) through the Pre-Alps.",
@@ -2666,8 +2666,8 @@ export const trajetsMarseille: Trajet[] = [
     hub: "marseille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Marseille → Briançon | Prix fixe dès 340 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Marseille → Briançon. 275 km, 3h15, prix fixe dès 340 €. Plus haute ville de France, Vauban UNESCO, Serre Chevalier. Réservation 24h/24.",
+        metaTitle: "Taxi Marseille → Briançon | 275 km, dès 340 € | TaxiNeo",
+        metaDescription: "Via A51 puis N85 puis N94 en 3h15. Route Napoléon, Vauban UNESCO, Plus haute ville et Serre Chevalier en chemin. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Marseille → Briançon",
         heroSubtitle: "Votre transfert Marseille → Briançon au prix fixe de 340 — 420 €. La plus haute ville de France par l'A51 et la Route Napoléon.",
         description: "Le trajet Marseille — Briançon relie la Méditerranée à la plus haute ville de France (1 326 m). 275 km à travers les Alpes du Sud, de la Durance au col du Lautaret.",
@@ -2685,8 +2685,8 @@ export const trajetsMarseille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Marseille → Briançon | Fixed price from €340 | TaxiNeo",
-        metaDescription: "Book your taxi Marseille → Briançon. 275 km, 3h15, fixed price from €340. France's highest city, Vauban UNESCO, Serre Chevalier. Online booking 24/7.",
+        metaTitle: "Taxi Marseille → Briançon | 275 km, from €340 | TaxiNeo",
+        metaDescription: "Via A51 then N85 then N94, 3h15 ride. Route Napoléon, Vauban UNESCO, Plus haute ville and Serre Chevalier en route. Faster and more direct than train or bus.",
         heroTitle: "Taxi Marseille → Briançon",
         heroSubtitle: "Your Marseille → Briançon transfer at a fixed price of €340 — €420. France's highest city via the A51 and Route Napoléon.",
         description: "The Marseille — Briançon route connects the Mediterranean to France's highest city (1,326 m). 275 km through the Southern Alps, from the Durance to the Col du Lautaret.",
@@ -2731,8 +2731,8 @@ export const trajetsMarseille: Trajet[] = [
     hub: "marseille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Marseille → Lyon | Prix fixe dès 390 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Marseille → Lyon. 315 km, 3h05, prix fixe dès 390 €. Autoroute du Soleil A7, vallée du Rhône. Réservation 24h/24.",
+        metaTitle: "Taxi Marseille → Lyon | 315 km, dès 390 € | TaxiNeo",
+        metaDescription: "Via A7 en 3h05. Passage par Vallée du Rhône, Autoroute du Soleil, Gastronomie lyonnaise et Presqu'île. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Marseille → Lyon",
         heroSubtitle: "Votre transfert Marseille → Lyon au prix fixe de 390 — 470 €. Trajet direct par l'A7 (autoroute du Soleil).",
         description: "Le trajet Marseille — Lyon relie les deux plus grandes métropoles du sud-est de la France par l'A7, autoroute mythique traversant toute la vallée du Rhône sur 315 km.",
@@ -2750,8 +2750,8 @@ export const trajetsMarseille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Marseille → Lyon | Fixed price from €390 | TaxiNeo",
-        metaDescription: "Book your taxi Marseille → Lyon. 315 km, 3h05, fixed price from €390. Autoroute du Soleil A7, Rhône Valley. Online booking 24/7.",
+        metaTitle: "Taxi Marseille → Lyon | 315 km, from €390 | TaxiNeo",
+        metaDescription: "Via A7, 3h05 ride. Vallée du Rhône, Autoroute du Soleil, Gastronomie lyonnaise and Presqu'île en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Marseille → Lyon",
         heroSubtitle: "Your Marseille → Lyon transfer at a fixed price of €390 — €470. Direct route via the A7 (Autoroute du Soleil).",
         description: "The Marseille — Lyon route connects south-eastern France's two largest cities via the A7, the iconic motorway running through the entire Rhône Valley for 315 km.",
@@ -2796,8 +2796,8 @@ export const trajetsMarseille: Trajet[] = [
     hub: "marseille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Marseille → Grenoble | Prix fixe dès 370 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Marseille → Grenoble. 305 km, 3h, prix fixe dès 370 €. Capitale des Alpes, Vercors, Chartreuse. Réservation 24h/24.",
+        metaTitle: "Taxi Marseille → Grenoble | 305 km, dès 370 € | TaxiNeo",
+        metaDescription: "Via A7 puis A49 en 3h. Alpes, Vercors, Chartreuse et Bastille en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Marseille → Grenoble",
         heroSubtitle: "Votre transfert Marseille → Grenoble au prix fixe de 370 — 450 €. Trajet direct par l'A7 et l'A49.",
         description: "Le trajet Marseille — Grenoble relie la Méditerranée à la capitale des Alpes françaises. 305 km par la vallée du Rhône puis la cluse de Voreppe au pied du Vercors.",
@@ -2815,8 +2815,8 @@ export const trajetsMarseille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Marseille → Grenoble | Fixed price from €370 | TaxiNeo",
-        metaDescription: "Book your taxi Marseille → Grenoble. 305 km, 3h, fixed price from €370. Capital of the Alps, Vercors, Chartreuse. Online booking 24/7.",
+        metaTitle: "Taxi Marseille → Grenoble | 305 km, from €370 | TaxiNeo",
+        metaDescription: "Via A7 then A49, 3 hours ride. Alpes, Vercors, Chartreuse and Bastille en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Marseille → Grenoble",
         heroSubtitle: "Your Marseille → Grenoble transfer at a fixed price of €370 — €450. Direct route via A7 and A49.",
         description: "The Marseille — Grenoble route connects the Mediterranean to the capital of the French Alps. 305 km through the Rhône Valley then the Voreppe gorge at the foot of the Vercors.",
@@ -2861,8 +2861,8 @@ export const trajetsMarseille: Trajet[] = [
     hub: "marseille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Marseille → Fréjus | Prix fixe dès 170 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Marseille → Fréjus. 135 km, 1h25, prix fixe dès 170 €. Amphithéâtre romain, Estérel, plages. Réservation 24h/24.",
+        metaTitle: "Taxi Marseille → Fréjus | 135 km, dès 170 € | TaxiNeo",
+        metaDescription: "Par A8, 1h25 de trajet. Passage par Massif de l'Estérel, Amphithéâtre romain, Plages et Saint-Raphaël. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Marseille → Fréjus",
         heroSubtitle: "Votre transfert Marseille → Fréjus au prix fixe de 170 — 220 €. Trajet direct par l'A8 à travers le Var.",
         description: "Le trajet Marseille — Fréjus relie la cité phocéenne à l'ancienne Forum Julii romaine, porte du massif de l'Estérel. 135 km par l'A8 (La Provençale).",
@@ -2880,8 +2880,8 @@ export const trajetsMarseille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Marseille → Fréjus | Fixed price from €170 | TaxiNeo",
-        metaDescription: "Book your taxi Marseille → Fréjus. 135 km, 1h25, fixed price from €170. Roman amphitheatre, Estérel, beaches. Online booking 24/7.",
+        metaTitle: "Taxi Marseille → Fréjus | 135 km, from €170 | TaxiNeo",
+        metaDescription: "Direct route via A8, 1h25. Massif de l'Estérel, Amphithéâtre romain, Plages and Saint-Raphaël en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Marseille → Fréjus",
         heroSubtitle: "Your Marseille → Fréjus transfer at a fixed price of €170 — €220. Direct route via the A8 through the Var.",
         description: "The Marseille — Fréjus route connects the Phocaean city to the ancient Roman Forum Julii, gateway to the Estérel massif. 135 km via the A8 (La Provençale).",
@@ -2926,8 +2926,8 @@ export const trajetsMarseille: Trajet[] = [
     hub: "marseille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Marseille → Draguignan | Prix fixe dès 160 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Marseille → Draguignan. 125 km, 1h20, prix fixe dès 160 €. Haut-Var, gorges de Pennafort, Provence verte. Réservation 24h/24.",
+        metaTitle: "Taxi Marseille → Draguignan | 125 km, dès 160 € | TaxiNeo",
+        metaDescription: "Itinéraire A8, environ 1h20. Haut-Var, Gorges de Pennafort, Dolmen et Musée de l'Artillerie en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Marseille → Draguignan",
         heroSubtitle: "Votre transfert Marseille → Draguignan au prix fixe de 160 — 200 €. Trajet direct par l'A8 à travers le Var.",
         description: "Le trajet Marseille — Draguignan relie la métropole provençale à la sous-préfecture du Var, porte du Haut-Var et de ses gorges spectaculaires. 125 km par l'A8.",
@@ -2945,8 +2945,8 @@ export const trajetsMarseille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Marseille → Draguignan | Fixed price from €160 | TaxiNeo",
-        metaDescription: "Book your taxi Marseille → Draguignan. 125 km, 1h20, fixed price from €160. Haut-Var, Pennafort gorges, Provence Verte. Online booking 24/7.",
+        metaTitle: "Taxi Marseille → Draguignan | 125 km, from €160 | TaxiNeo",
+        metaDescription: "Direct route via A8, 1h20. Haut-Var, Gorges de Pennafort, Dolmen and Musée de l'Artillerie en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Marseille → Draguignan",
         heroSubtitle: "Your Marseille → Draguignan transfer at a fixed price of €160 — €200. Direct route via the A8 through the Var.",
         description: "The Marseille — Draguignan route connects the Provençal metropolis to the Var sub-prefecture, gateway to the Haut-Var and its spectacular gorges. 125 km via the A8.",
@@ -2991,8 +2991,8 @@ export const trajetsMarseille: Trajet[] = [
     hub: "marseille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Marseille → Menton | Prix fixe dès 290 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Marseille → Menton. 230 km, 2h25, prix fixe dès 290 €. Fête du Citron, jardins exceptionnels, frontière italienne. Réservation 24h/24.",
+        metaTitle: "Taxi Marseille → Menton | 230 km, dès 290 € | TaxiNeo",
+        metaDescription: "Via A8 puis A8 littoral en 2h25. Côte d'Azur, Fête du citron, Jardins et Frontière italienne en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Marseille → Menton",
         heroSubtitle: "Votre transfert Marseille → Menton au prix fixe de 290 — 360 €. Trajet direct par l'A8 jusqu'à la frontière italienne.",
         description: "Le trajet Marseille — Menton relie la cité phocéenne à la dernière ville française avant l'Italie, perle de la Riviera française célèbre pour ses citrons et ses jardins.",
@@ -3010,8 +3010,8 @@ export const trajetsMarseille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Marseille → Menton | Fixed price from €290 | TaxiNeo",
-        metaDescription: "Book your taxi Marseille → Menton. 230 km, 2h25, fixed price from €290. Lemon Festival, exceptional gardens, Italian border. Online booking 24/7.",
+        metaTitle: "Taxi Marseille → Menton | 230 km, from €290 | TaxiNeo",
+        metaDescription: "Via A8 then A8 littoral, 2h25 ride. Côte d'Azur, Fête du citron, Jardins and Frontière italienne en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Marseille → Menton",
         heroSubtitle: "Your Marseille → Menton transfer at a fixed price of €290 — €360. Direct route via the A8 to the Italian border.",
         description: "The Marseille — Menton route connects the Phocaean city to the last French town before Italy, a jewel of the French Riviera famous for its lemons and gardens.",
@@ -3056,8 +3056,8 @@ export const trajetsMarseille: Trajet[] = [
     hub: "marseille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Marseille → Alès | Prix fixe dès 195 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Marseille → Alès. 155 km, 1h45, prix fixe dès 195 €. Porte des Cévennes, Bambouseraie, mine témoin. Réservation 24h/24.",
+        metaTitle: "Taxi Marseille → Alès | 155 km, dès 195 € | TaxiNeo",
+        metaDescription: "Via A7 puis A54 puis N106 en 1h45. Passage par Cévennes, Bambouseraie, Grotte de Trabuc et Mine témoin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Marseille → Alès",
         heroSubtitle: "Votre transfert Marseille → Alès au prix fixe de 195 — 250 €. Porte des Cévennes par l'A7, l'A54 et la N106.",
         description: "Le trajet Marseille — Alès relie la Méditerranée à la porte des Cévennes. 155 km par les autoroutes A7/A54 puis la N106 à travers la garrigue gardoise.",
@@ -3075,8 +3075,8 @@ export const trajetsMarseille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Marseille → Alès | Fixed price from €195 | TaxiNeo",
-        metaDescription: "Book your taxi Marseille → Alès. 155 km, 1h45, fixed price from €195. Gateway to the Cévennes, Bamboo Garden, mine museum. Online booking 24/7.",
+        metaTitle: "Taxi Marseille → Alès | 155 km, from €195 | TaxiNeo",
+        metaDescription: "Via A7 then A54 then N106, 1h45 ride. Cévennes, Bambouseraie, Grotte de Trabuc and Mine témoin en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Marseille → Alès",
         heroSubtitle: "Your Marseille → Alès transfer at a fixed price of €195 — €250. Gateway to the Cévennes via A7, A54 and N106.",
         description: "The Marseille — Alès route connects the Mediterranean to the gateway of the Cévennes. 155 km via the A7/A54 motorways then the N106 through the Gard hills.",
@@ -3124,8 +3124,8 @@ export const trajetsMarseille: Trajet[] = [
     hub: "marseille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Marseille → Forcalquier | Prix fixe dès 130 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Marseille → Forcalquier. 100 km, 1h15, prix fixe dès 130 €. Cœur de la Haute-Provence, marchés, lavande. Réservation 24h/24.",
+        metaTitle: "Taxi Marseille → Forcalquier | 100 km, dès 130 € | TaxiNeo",
+        metaDescription: "Trajet direct A51 puis D4096 en 1h15. Passage par Durance, Luberon, Haute-Provence et Marché provençal. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Marseille → Forcalquier",
         heroSubtitle: "Votre transfert Marseille → Forcalquier au prix fixe de 130 — 165 €. Haute-Provence par l'A51 et la vallée de la Durance.",
         description: "Le trajet Marseille — Forcalquier relie la métropole méditerranéenne au cœur de la Haute-Provence. 100 km par l'A51 puis la D4096 à travers la vallée de la Durance et les collines du Luberon.",
@@ -3143,8 +3143,8 @@ export const trajetsMarseille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Marseille → Forcalquier | Fixed price from €130 | TaxiNeo",
-        metaDescription: "Book your taxi Marseille → Forcalquier. 100 km, 1h15, fixed price from €130. Heart of Haute-Provence, markets, lavender. Online booking 24/7.",
+        metaTitle: "Taxi Marseille → Forcalquier | 100 km, from €130 | TaxiNeo",
+        metaDescription: "Direct route via A51 then D4096, 1h15. Durance, Luberon, Haute-Provence and Marché provençal en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Marseille → Forcalquier",
         heroSubtitle: "Your Marseille → Forcalquier transfer at a fixed price of €130 — €165. Haute-Provence via A51 and the Durance valley.",
         description: "The Marseille — Forcalquier route connects the Mediterranean metropolis to the heart of Haute-Provence. 100 km via the A51 then D4096 through the Durance valley and the Luberon hills.",
@@ -3189,8 +3189,8 @@ export const trajetsMarseille: Trajet[] = [
     hub: "marseille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Marseille → Tarascon | Prix fixe dès 120 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Marseille → Tarascon. 98 km, 1h, prix fixe dès 120 €. Château du roi René, Alpilles, Camargue. Réservation 24h/24.",
+        metaTitle: "Taxi Marseille → Tarascon | 98 km, dès 120 € | TaxiNeo",
+        metaDescription: "Via A7 puis A54 en 1h. Château du roi René, Tartarin et Alpilles en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Marseille → Tarascon",
         heroSubtitle: "Votre transfert Marseille → Tarascon au prix fixe de 120 — 155 €. Route directe par l'A7 et l'A54.",
         description: "Le trajet Marseille — Tarascon relie la cité phocéenne à cette ville historique des bords du Rhône. 98 km par les autoroutes A7 et A54 à travers la Crau et la plaine du Rhône.",
@@ -3208,8 +3208,8 @@ export const trajetsMarseille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Marseille → Tarascon | Fixed price from €120 | TaxiNeo",
-        metaDescription: "Book your taxi Marseille → Tarascon. 98 km, 1h, fixed price from €120. King René's Castle, Alpilles, Camargue. Online booking 24/7.",
+        metaTitle: "Taxi Marseille → Tarascon | 98 km, from €120 | TaxiNeo",
+        metaDescription: "Via A7 then A54, 1 hour ride. Château du roi René, Tartarin and Alpilles along the way. Drop-off at your exact address. Door-to-door, luggage included.",
         heroTitle: "Taxi Marseille → Tarascon",
         heroSubtitle: "Your Marseille → Tarascon transfer at a fixed price of €120 — €155. Direct route via A7 and A54.",
         description: "The Marseille — Tarascon route connects the Phocaean city to this historic town on the banks of the Rhône. 98 km via the A7 and A54 motorways across the Crau and Rhône plain.",
@@ -3254,8 +3254,8 @@ export const trajetsMarseille: Trajet[] = [
     hub: "marseille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Marseille → Beaucaire | Prix fixe dès 125 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Marseille → Beaucaire. 100 km, 1h05, prix fixe dès 125 €. Château, canal du Rhône, vignobles Costières. Réservation 24h/24.",
+        metaTitle: "Taxi Marseille → Beaucaire | 100 km, dès 125 € | TaxiNeo",
+        metaDescription: "Itinéraire A7 puis A54, environ 1h05. Château de Beaucaire, Rhône, Foire de Beaucaire sur le parcours. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Marseille → Beaucaire",
         heroSubtitle: "Votre transfert Marseille → Beaucaire au prix fixe de 125 — 160 €. Trajet direct par l'A7 et l'A54.",
         description: "Le trajet Marseille — Beaucaire relie la métropole à cette ville gardoise des bords du Rhône. 100 km par les autoroutes A7 et A54 à travers la Crau et la plaine du Rhône.",
@@ -3273,8 +3273,8 @@ export const trajetsMarseille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Marseille → Beaucaire | Fixed price from €125 | TaxiNeo",
-        metaDescription: "Book your taxi Marseille → Beaucaire. 100 km, 1h05, fixed price from €125. Castle, Rhône canal, Costières vineyards. Online booking 24/7.",
+        metaTitle: "Taxi Marseille → Beaucaire | 100 km, from €125 | TaxiNeo",
+        metaDescription: "Direct route via A7 then A54, 1h05. Château de Beaucaire, Rhône and Foire de Beaucaire along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Marseille → Beaucaire",
         heroSubtitle: "Your Marseille → Beaucaire transfer at a fixed price of €125 — €160. Direct route via A7 and A54.",
         description: "The Marseille — Beaucaire route connects the metropolis to this Gard town on the banks of the Rhône. 100 km via the A7 and A54 motorways across the Crau and Rhône plain.",
@@ -3319,8 +3319,8 @@ export const trajetsMarseille: Trajet[] = [
     hub: "marseille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Marseille → Arles Centre Historique | Dès 115 € | TaxiNeo",
-        metaDescription: "Taxi Marseille → Arles centre historique. 92 km, 55 min, dès 115 €. Arènes romaines, quartier Van Gogh, Rencontres de la Photo. Réservation 24h/24.",
+        metaTitle: "Taxi Marseille → Arles Centre Historique | 92 km | TaxiNeo",
+        metaDescription: "Via A7 puis A54 en 55 min. Arènes, Van Gogh, Rencontres Photo et UNESCO en chemin. Arrêt visite possible en chemin. Arrêt possible pour visites ou photos.",
         heroTitle: "Taxi Marseille → Arles Centre Historique",
         heroSubtitle: "Transfert direct vers le cœur historique d'Arles au prix fixe de 115 — 145 €. Dépose au plus près des arènes et des musées.",
         description: "Ce trajet vous conduit au cœur même du centre historique d'Arles, classé UNESCO. Votre chauffeur vous dépose au plus près des arènes, de la Place du Forum et des principaux sites culturels.",
@@ -3338,8 +3338,8 @@ export const trajetsMarseille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Marseille → Arles Historic Centre | From €115 | TaxiNeo",
-        metaDescription: "Taxi Marseille → Arles historic centre. 92 km, 55 min, from €115. Roman arena, Van Gogh quarter, Photo Rencontres. Online booking 24/7.",
+        metaTitle: "Taxi Marseille → Arles Centre Historique | 92 km | TaxiNeo",
+        metaDescription: "Via A7 then A54, 55 min ride. Arènes, Van Gogh, Rencontres Photo and UNESCO en route. Stops for sightseeing possible en route. Up to 1h20 during rush hour.",
         heroTitle: "Taxi Marseille → Arles Historic Centre",
         heroSubtitle: "Direct transfer to the heart of historic Arles at a fixed price of €115 — €145. Drop-off as close as possible to the arena and museums.",
         description: "This route takes you to the very heart of Arles' UNESCO-listed historic centre. Your driver drops you as close as possible to the arena, Place du Forum and the main cultural sites.",
@@ -3384,8 +3384,8 @@ export const trajetsMarseille: Trajet[] = [
     hub: "marseille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Marseille → Vitrolles | Prix fixe dès 40 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Marseille → Vitrolles. 28 km, 25 min, prix fixe dès 40 €. Proche aéroport Marseille-Provence. Réservation 24h/24.",
+        metaTitle: "Taxi Marseille → Vitrolles | 28 km, dès 40 € | TaxiNeo",
+        metaDescription: "Via A7 ou A55/D9 en 25 min. Étang de Berre, Aéroport Marseille-Provence et Zone commerciale en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Marseille → Vitrolles",
         heroSubtitle: "Votre transfert Marseille → Vitrolles au prix fixe de 40 — 55 €. Trajet rapide de 25 minutes.",
         description: "Le trajet Marseille — Vitrolles relie le centre de Marseille à cette ville dynamique au bord de l'étang de Berre. 28 km par l'A7 ou la D9, à proximité immédiate de l'aéroport Marseille-Provence.",
@@ -3403,8 +3403,8 @@ export const trajetsMarseille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Marseille → Vitrolles | Fixed price from €40 | TaxiNeo",
-        metaDescription: "Book your taxi Marseille → Vitrolles. 28 km, 25 min, fixed price from €40. Near Marseille-Provence Airport. Online booking 24/7.",
+        metaTitle: "Taxi Marseille → Vitrolles | 28 km, from €40 | TaxiNeo",
+        metaDescription: "Via A7 ou A55/D9, 25 min ride. Étang de Berre, Aéroport Marseille-Provence and Zone commerciale along the way. Faster and more direct than train or bus.",
         heroTitle: "Taxi Marseille → Vitrolles",
         heroSubtitle: "Your Marseille → Vitrolles transfer at a fixed price of €40 — €55. Quick 25-minute journey.",
         description: "The Marseille — Vitrolles route connects Marseille centre to this dynamic town on the edge of the Étang de Berre lagoon. 28 km via the A7 or D9, in immediate proximity to Marseille-Provence Airport.",
@@ -3449,8 +3449,8 @@ export const trajetsMarseille: Trajet[] = [
     hub: "marseille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Marseille → Gardanne | Prix fixe dès 38 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Marseille → Gardanne. 25 km, 25 min, prix fixe dès 38 €. Pays de Cézanne, Sainte-Victoire. Réservation 24h/24.",
+        metaTitle: "Taxi Marseille → Gardanne | 25 km, dès 38 € | TaxiNeo",
+        metaDescription: "Par A51 ou D8n, 25 min de trajet. Cézanne, Sainte-Victoire, Mine de bauxite et Microélectronique en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Marseille → Gardanne",
         heroSubtitle: "Votre transfert Marseille → Gardanne au prix fixe de 38 — 52 €. 25 minutes au pied de la Sainte-Victoire.",
         description: "Le trajet Marseille — Gardanne relie la métropole à cette ville au pied de la montagne Sainte-Victoire. 25 km par l'A51 ou la D8n à travers les collines du pays d'Aix.",
@@ -3468,8 +3468,8 @@ export const trajetsMarseille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Marseille → Gardanne | Fixed price from €38 | TaxiNeo",
-        metaDescription: "Book your taxi Marseille → Gardanne. 25 km, 25 min, fixed price from €38. Cézanne country, Sainte-Victoire mountain. Online booking 24/7.",
+        metaTitle: "Taxi Marseille → Gardanne | 25 km, from €38 | TaxiNeo",
+        metaDescription: "Via A51 ou D8n, 25 min ride. Cézanne, Sainte-Victoire, Mine de bauxite and Microélectronique en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Marseille → Gardanne",
         heroSubtitle: "Your Marseille → Gardanne transfer at a fixed price of €38 — €52. 25 minutes at the foot of Sainte-Victoire.",
         description: "The Marseille — Gardanne route connects the metropolis to this town at the foot of Sainte-Victoire mountain. 25 km via the A51 or D8n through the Aix countryside.",
@@ -3514,8 +3514,8 @@ export const trajetsMarseille: Trajet[] = [
     hub: "marseille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Marseille → Fos-sur-Mer | Prix fixe dès 65 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Marseille → Fos-sur-Mer. 50 km, 40 min, prix fixe dès 65 €. Port autonome, golfe de Fos, plages. Réservation 24h/24.",
+        metaTitle: "Taxi Marseille → Fos-sur-Mer | 50 km, dès 65 € | TaxiNeo",
+        metaDescription: "Par A55 puis A56/N568, 40 min de trajet. Port autonome, Golfe de Fos, Plage et Zone industrielle en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Marseille → Fos-sur-Mer",
         heroSubtitle: "Votre transfert Marseille → Fos-sur-Mer au prix fixe de 65 — 85 €. 40 minutes vers le golfe de Fos.",
         description: "Le trajet Marseille — Fos-sur-Mer relie la métropole à cette ville portuaire du golfe de Fos. 50 km par l'A55 et la N568, en longeant l'étang de Berre.",
@@ -3533,8 +3533,8 @@ export const trajetsMarseille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Marseille → Fos-sur-Mer | Fixed price from €65 | TaxiNeo",
-        metaDescription: "Book your taxi Marseille → Fos-sur-Mer. 50 km, 40 min, fixed price from €65. Port of Marseille-Fos, gulf, beaches. Online booking 24/7.",
+        metaTitle: "Taxi Marseille → Fos-sur-Mer | 50 km, from €65 | TaxiNeo",
+        metaDescription: "Via A55 then A56/N568, 40 min ride. Port autonome, Golfe de Fos, Plage and Zone industrielle en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Marseille → Fos-sur-Mer",
         heroSubtitle: "Your Marseille → Fos-sur-Mer transfer at a fixed price of €65 — €85. 40 minutes to the Gulf of Fos.",
         description: "The Marseille — Fos-sur-Mer route connects the metropolis to this port town on the Gulf of Fos. 50 km via the A55 and N568, along the Étang de Berre lagoon.",
@@ -3580,8 +3580,8 @@ export const trajetsMarseille: Trajet[] = [
     hub: "marseille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Marseille → Miramas | Prix fixe dès 65 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Marseille → Miramas. 50 km, 40 min, prix fixe dès 65 €. Nœud ferroviaire, étang de Berre. Réservation 24h/24.",
+        metaTitle: "Taxi Marseille → Miramas | 50 km, dès 65 € | TaxiNeo",
+        metaDescription: "Via A7 puis A54 en 40 min. Gare de triage, Étang de Berre et Crau en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Marseille → Miramas",
         heroSubtitle: "Votre transfert Marseille → Miramas au prix fixe de 65 — 85 €. 40 minutes vers le nœud ferroviaire de Miramas.",
         description: "Le trajet Marseille — Miramas relie la métropole à cette ville ferroviaire au nord-ouest de l'étang de Berre. 50 km par l'A7 puis l'A54, à travers la plaine de la Crau.",
@@ -3599,8 +3599,8 @@ export const trajetsMarseille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Marseille → Miramas | Fixed price from €65 | TaxiNeo",
-        metaDescription: "Book your taxi Marseille → Miramas. 50 km, 40 min, fixed price from €65. Rail junction, Étang de Berre. Online booking 24/7.",
+        metaTitle: "Taxi Marseille → Miramas | 50 km, from €65 | TaxiNeo",
+        metaDescription: "Via A7 then A54, 40 min ride. Gare de triage, Étang de Berre and Crau along the way. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Marseille → Miramas",
         heroSubtitle: "Your Marseille → Miramas transfer at a fixed price of €65 — €85. 40 minutes to the Miramas rail junction.",
         description: "The Marseille — Miramas route connects the metropolis to this railway town northwest of the Étang de Berre. 50 km via the A7 then A54, across the Crau plain.",
@@ -3646,8 +3646,8 @@ export const trajetsMarseille: Trajet[] = [
     hub: "marseille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Marseille → Marignane | Prix fixe dès 35 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Marseille → Marignane. 25 km, 25 min, prix fixe dès 35 €. Aéroport Marseille-Provence, Airbus Helicopters. Réservation 24h/24.",
+        metaTitle: "Taxi Marseille → Marignane | 25 km, dès 35 € | TaxiNeo",
+        metaDescription: "Via A55 ou A7 puis D9 en 25 min. Aéroport Marseille-Provence, Étang de Berre et Airbus Helicopters en chemin. Suivi de vol, dépose directe au terminal.",
         heroTitle: "Taxi Marseille → Marignane",
         heroSubtitle: "Votre transfert Marseille → Marignane au prix fixe de 35 — 50 €. 25 minutes vers l'aéroport Marseille-Provence.",
         description: "Le trajet Marseille — Marignane relie la métropole à la ville qui abrite l'aéroport Marseille-Provence. 25 km par l'A55 ou l'A7 via la D9, en longeant l'étang de Berre.",
@@ -3665,8 +3665,8 @@ export const trajetsMarseille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Marseille → Marignane | Fixed price from €35 | TaxiNeo",
-        metaDescription: "Book your taxi Marseille → Marignane. 25 km, 25 min, fixed price from €35. Marseille Provence Airport, Airbus Helicopters. Online booking 24/7.",
+        metaTitle: "Taxi Marseille → Marignane | 25 km, from €35 | TaxiNeo",
+        metaDescription: "Via A55 ou A7 then D9, 25 min ride. Aéroport Marseille-Provence, Étang de Berre and Airbus Helicopters along the way. Terminal drop-off, flight tracking.",
         heroTitle: "Taxi Marseille → Marignane",
         heroSubtitle: "Your Marseille → Marignane transfer at a fixed price of €35 — €50. 25 minutes to Marseille Provence Airport.",
         description: "The Marseille — Marignane route connects the metropolis to the town hosting Marseille Provence Airport. 25 km via the A55 or A7 via D9, along the Étang de Berre.",
@@ -3712,8 +3712,8 @@ export const trajetsMarseille: Trajet[] = [
     hub: "marseille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Marseille → Allauch | Prix fixe dès 25 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Marseille → Allauch. 15 km, 20 min, prix fixe dès 25 €. Village perché, moulins, Garlaban. Réservation 24h/24.",
+        metaTitle: "Taxi Marseille → Allauch | 15 km, dès 25 € | TaxiNeo",
+        metaDescription: "Via D4a ou A50 puis D44a en 20 min. D4a, Collines, Vieux village et Moulins en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Marseille → Allauch",
         heroSubtitle: "Votre transfert Marseille → Allauch au prix fixe de 25 — 38 €. 20 minutes vers le village perché d'Allauch.",
         description: "Le trajet Marseille — Allauch relie la métropole à ce village perché sur les contreforts du massif du Garlaban. 15 km par la D4a à travers les collines de l'est marseillais.",
@@ -3731,8 +3731,8 @@ export const trajetsMarseille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Marseille → Allauch | Fixed price from €25 | TaxiNeo",
-        metaDescription: "Book your taxi Marseille → Allauch. 15 km, 20 min, fixed price from €25. Hilltop village, windmills, Garlaban. Online booking 24/7.",
+        metaTitle: "Taxi Marseille → Allauch | 15 km, from €25 | TaxiNeo",
+        metaDescription: "D4a ou A50 then D44a route, approximately 20 min. D4a, Collines, Vieux village and Moulins en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Marseille → Allauch",
         heroSubtitle: "Your Marseille → Allauch transfer at a fixed price of €25 — €38. 20 minutes to the hilltop village of Allauch.",
         description: "The Marseille — Allauch route connects the metropolis to this hilltop village on the foothills of the Garlaban massif. 15 km via the D4a through the eastern Marseille hills.",
@@ -3778,8 +3778,8 @@ export const trajetsMarseille: Trajet[] = [
     hub: "marseille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Marseille → Trets | Prix fixe dès 55 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Marseille → Trets. 40 km, 35 min, prix fixe dès 55 €. Sainte-Victoire, vignobles, Provence. Réservation 24h/24.",
+        metaTitle: "Taxi Marseille → Trets | 40 km, dès 55 € | TaxiNeo",
+        metaDescription: "Itinéraire A52 puis D6, environ 35 min. Passage par Sainte-Victoire, Pays d'Aix, Vignobles et Château. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Marseille → Trets",
         heroSubtitle: "Votre transfert Marseille → Trets au prix fixe de 55 — 75 €. 35 minutes au pied de la Sainte-Victoire.",
         description: "Le trajet Marseille — Trets relie la métropole à cette bourgade provençale de l'est des Bouches-du-Rhône, au pied de la montagne Sainte-Victoire. 40 km par l'A52 puis la D6.",
@@ -3797,8 +3797,8 @@ export const trajetsMarseille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Marseille → Trets | Fixed price from €55 | TaxiNeo",
-        metaDescription: "Book your taxi Marseille → Trets. 40 km, 35 min, fixed price from €55. Sainte-Victoire, vineyards, Provence. Online booking 24/7.",
+        metaTitle: "Taxi Marseille → Trets | 40 km, from €55 | TaxiNeo",
+        metaDescription: "A52 then D6 route, approximately 35 min. Sainte-Victoire, Pays d'Aix, Vignobles and Château en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Marseille → Trets",
         heroSubtitle: "Your Marseille → Trets transfer at a fixed price of €55 — €75. 35 minutes at the foot of Sainte-Victoire.",
         description: "The Marseille — Trets route connects the metropolis to this Provençal town in eastern Bouches-du-Rhône, at the foot of Sainte-Victoire mountain. 40 km via the A52 then D6.",
@@ -3844,8 +3844,8 @@ export const trajetsMarseille: Trajet[] = [
     hub: "marseille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Marseille → Berre-l'Étang | Prix fixe dès 48 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Marseille → Berre-l'Étang. 35 km, 30 min, prix fixe dès 48 €. Étang de Berre, plages, industrie. Réservation 24h/24.",
+        metaTitle: "Taxi Marseille → Berre-l'Étang | 35 km, dès 48 € | TaxiNeo",
+        metaDescription: "Par A7 puis D113, 30 min de trajet. Étang de Berre, Pétrochimie, Plages lacustres et Rognac en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Marseille → Berre-l'Étang",
         heroSubtitle: "Votre transfert Marseille → Berre-l'Étang au prix fixe de 48 — 65 €. 30 minutes au bord de l'étang de Berre.",
         description: "Le trajet Marseille — Berre-l'Étang relie la métropole à cette commune de la rive est de l'étang de Berre. 35 km par l'A7 puis la D113, en passant par Vitrolles et Rognac.",
@@ -3863,8 +3863,8 @@ export const trajetsMarseille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Marseille → Berre-l'Étang | Fixed price from €48 | TaxiNeo",
-        metaDescription: "Book your taxi Marseille → Berre-l'Étang. 35 km, 30 min, fixed price from €48. Étang de Berre, beaches, industry. Online booking 24/7.",
+        metaTitle: "Taxi Marseille → Berre-l'Étang | 35 km, from €48 | TaxiNeo",
+        metaDescription: "Direct route via A7 then D113, 30 min. Étang de Berre, Pétrochimie, Plages lacustres and Rognac en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Marseille → Berre-l'Étang",
         heroSubtitle: "Your Marseille → Berre-l'Étang transfer at a fixed price of €48 — €65. 30 minutes on the Étang de Berre shore.",
         description: "The Marseille — Berre-l'Étang route connects the metropolis to this town on the eastern shore of the Étang de Berre. 35 km via the A7 then D113, through Vitrolles and Rognac.",
@@ -3910,8 +3910,8 @@ export const trajetsMarseille: Trajet[] = [
     hub: "marseille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Marseille → Lambesc | Prix fixe dès 60 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Marseille → Lambesc. 45 km, 40 min, prix fixe dès 60 €. Provence, Luberon, patrimoine. Réservation 24h/24.",
+        metaTitle: "Taxi Marseille → Lambesc | 45 km, dès 60 € | TaxiNeo",
+        metaDescription: "Itinéraire A7 puis D7n, environ 40 min. Passage par D7n, Luberon, Salon-de-Provence et Provence verte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Marseille → Lambesc",
         heroSubtitle: "Votre transfert Marseille → Lambesc au prix fixe de 60 — 80 €. 40 minutes au cœur de la Provence.",
         description: "Le trajet Marseille — Lambesc relie la métropole à cette bourgade provençale entre Salon-de-Provence et Aix-en-Provence. 45 km par l'A7 puis la D7n, à travers les paysages de la Trévaresse.",
@@ -3929,8 +3929,8 @@ export const trajetsMarseille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Marseille → Lambesc | Fixed price from €60 | TaxiNeo",
-        metaDescription: "Book your taxi Marseille → Lambesc. 45 km, 40 min, fixed price from €60. Provence, Luberon, heritage. Online booking 24/7.",
+        metaTitle: "Taxi Marseille → Lambesc | 45 km, from €60 | TaxiNeo",
+        metaDescription: "A7 then D7n route, approximately 40 min. D7n, Luberon, Salon-de-Provence and Provence verte en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Marseille → Lambesc",
         heroSubtitle: "Your Marseille → Lambesc transfer at a fixed price of €60 — €80. 40 minutes to the heart of Provence.",
         description: "The Marseille — Lambesc route connects the metropolis to this Provençal town between Salon-de-Provence and Aix-en-Provence. 45 km via the A7 then D7n, through the Trévaresse landscapes.",

@@ -27,8 +27,8 @@ export const trajetsMeauxMarne: Trajet[] = [
     hub: "meaux-marne",
     i18n: {
       fr: {
-        metaTitle: "Taxi Meaux → Paris | Prix fixe dès 65 € | TaxiNeo",
-        metaDescription: "Taxi Meaux → Paris. 50 km, 45 min, dès 65 €. A4, transfert direct porte-à-porte depuis le Pays de Brie. Réservation 24h/24.",
+        metaTitle: "Taxi Meaux → Paris | forfait dès 65 €, 45 min | TaxiNeo",
+        metaDescription: "Trajet direct A4 en 45 min. Passage par Cathédrale Saint-Étienne, Pays de Brie, Marne et Porte-à-porte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Meaux → Paris",
         heroSubtitle: "Transfert Meaux → Paris au prix fixe de 65 — 85 €. 50 km, direct par l'A4, chauffeur professionnel 24h/24.",
         description: "Paris est à 45 min de Meaux par l'autoroute A4, capitale historique du Pays de Brie en Seine-et-Marne.",
@@ -47,7 +47,7 @@ export const trajetsMeauxMarne: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Meaux → Paris | Fixed price from €65 | TaxiNeo",
-        metaDescription: "Taxi Meaux → Paris. 50 km, 45 min, from €65. A4 motorway, direct door-to-door transfer. Book 24/7.",
+        metaDescription: "Direct route via A4, 45 min. Cathédrale Saint-Étienne, Pays de Brie, Marne and Porte-à-porte en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Meaux → Paris",
         heroSubtitle: "Your Meaux → Paris transfer at €65 — €85. 50 km, direct via the A4 motorway.",
         description: "Paris is 45 min from Meaux via the A4 motorway, historic capital of the Brie region in Seine-et-Marne.",
@@ -92,8 +92,8 @@ export const trajetsMeauxMarne: Trajet[] = [
     hub: "meaux-marne",
     i18n: {
       fr: {
-        metaTitle: "Taxi Meaux → Aéroport CDG | Prix fixe dès 50 € | TaxiNeo",
-        metaDescription: "Taxi Meaux → Aéroport CDG. 35 km, 30 min, dès 50 €. A104, transfert direct depuis le Pays de Brie. Réservation 24h/24.",
+        metaTitle: "Taxi Meaux → Aéroport CDG | 35 km, dès 50 € | TaxiNeo",
+        metaDescription: "Via A104 en 30 min. Roissy CDG, Navette aéroport, Pays de Brie et Île-de-France. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Meaux → Aéroport CDG",
         heroSubtitle: "Transfert Meaux → Aéroport Charles de Gaulle au prix fixe de 50 — 65 €. 35 km, direct par l'A104.",
         description: "L'aéroport CDG est à seulement 30 min de Meaux par la Francilienne A104, un trajet rapide et direct.",
@@ -111,8 +111,8 @@ export const trajetsMeauxMarne: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Meaux → CDG Airport | Fixed price from €50 | TaxiNeo",
-        metaDescription: "Taxi Meaux → CDG Airport. 35 km, 30 min, from €50. A104 motorway, direct door-to-door. Book 24/7.",
+        metaTitle: "Taxi Meaux → Aéroport CDG | 35 km, from €50 | TaxiNeo",
+        metaDescription: "Via A104, 30 min ride. Roissy CDG, Navette aéroport, Pays de Brie and Île-de-France. Drop-off at your exact address. Door-to-door, luggage included.",
         heroTitle: "Taxi Meaux → CDG Airport",
         heroSubtitle: "Your Meaux → CDG transfer at €50 — €65. 35 km, direct via the A104 Francilienne.",
         description: "CDG Airport is only 30 min from Meaux via the A104 Francilienne, a quick and direct route.",
@@ -157,8 +157,8 @@ export const trajetsMeauxMarne: Trajet[] = [
     hub: "meaux-marne",
     i18n: {
       fr: {
-        metaTitle: "Taxi Meaux → Disneyland Paris | Prix fixe dès 40 € | TaxiNeo",
-        metaDescription: "Taxi Meaux → Disneyland Paris. 30 km, 25 min, dès 40 €. A4, transfert direct famille. Réservation 24h/24.",
+        metaTitle: "Taxi Meaux → Disneyland Paris | 30 km, dès 40 € | TaxiNeo",
+        metaDescription: "Trajet direct A4 en 25 min. Passage par Disneyland Paris, Walt Disney Studios, Val d'Europe et Famille. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Meaux → Disneyland Paris",
         heroSubtitle: "Transfert Meaux → Disneyland Paris au prix fixe de 40 — 55 €. 30 km, direct par l'A4.",
         description: "Disneyland Paris est à seulement 25 min de Meaux par l'A4, un trajet idéal pour les familles.",
@@ -176,8 +176,8 @@ export const trajetsMeauxMarne: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Meaux → Disneyland Paris | Fixed price from €40 | TaxiNeo",
-        metaDescription: "Taxi Meaux → Disneyland Paris. 30 km, 25 min, from €40. A4, direct family transfer. Book 24/7.",
+        metaTitle: "Taxi Meaux → Disneyland Paris | 30 km, from €40 | TaxiNeo",
+        metaDescription: "Direct route via A4, 25 min. Disneyland Paris, Walt Disney Studios, Val d'Europe and Famille en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Meaux → Disneyland Paris",
         heroSubtitle: "Your Meaux → Disneyland Paris transfer at €40 — €55. 30 km, direct via the A4.",
         description: "Disneyland Paris is only 25 min from Meaux via the A4, ideal for families.",
@@ -222,8 +222,8 @@ export const trajetsMeauxMarne: Trajet[] = [
     hub: "meaux-marne",
     i18n: {
       fr: {
-        metaTitle: "Taxi Marne-la-Vallée → Paris | Prix fixe dès 50 € | TaxiNeo",
-        metaDescription: "Taxi Marne-la-Vallée → Paris. 35 km, 35 min, dès 50 €. A4, transfert direct porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Marne-la-Vallée → Paris | 35 km, dès 50 € | TaxiNeo",
+        metaDescription: "Via A4 en 35 min. Cité Descartes, Val d'Europe, Marne et RER A en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Marne-la-Vallée → Paris",
         heroSubtitle: "Transfert Marne-la-Vallée → Paris au prix fixe de 50 — 65 €. 35 km, direct par l'A4.",
         description: "Paris est à 35 min de Marne-la-Vallée par l'autoroute A4, la ville nouvelle de l'est francilien.",
@@ -241,8 +241,8 @@ export const trajetsMeauxMarne: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Marne-la-Vallée → Paris | Fixed price from €50 | TaxiNeo",
-        metaDescription: "Taxi Marne-la-Vallée → Paris. 35 km, 35 min, from €50. A4 motorway, direct door-to-door. Book 24/7.",
+        metaTitle: "Taxi Marne-la-Vallée → Paris | 35 km, from €50 | TaxiNeo",
+        metaDescription: "Via A4, 35 min ride. Cité Descartes, Val d'Europe, Marne and RER A en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Marne-la-Vallée → Paris",
         heroSubtitle: "Your Marne-la-Vallée → Paris transfer at €50 — €65. 35 km, direct via the A4.",
         description: "Paris is 35 min from Marne-la-Vallee via the A4 motorway, the major new town east of Paris.",
@@ -287,8 +287,8 @@ export const trajetsMeauxMarne: Trajet[] = [
     hub: "meaux-marne",
     i18n: {
       fr: {
-        metaTitle: "Taxi Meaux → Senlis | Prix fixe dès 50 € | TaxiNeo",
-        metaDescription: "Taxi Meaux → Senlis. 40 km, 35 min, dès 50 €. N330, cités médiévales du Valois. Réservation 24h/24.",
+        metaTitle: "Taxi Meaux → Senlis | forfait dès 50 €, 35 min | TaxiNeo",
+        metaDescription: "Par A104 / N330, 35 min de trajet. N330, Forêt d'Ermenonville, Cité médiévale et Pays de Valois en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Meaux → Senlis",
         heroSubtitle: "Transfert Meaux → Senlis au prix fixe de 50 — 65 €. 40 km, à travers le Pays de Valois.",
         description: "Senlis, joyau médiéval du Pays de Valois, est à 35 min de Meaux par la N330 et l'A104.",
@@ -307,7 +307,7 @@ export const trajetsMeauxMarne: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Meaux → Senlis | Fixed price from €50 | TaxiNeo",
-        metaDescription: "Taxi Meaux → Senlis. 40 km, 35 min, from €50. N330, medieval cities of the Valois. Book 24/7.",
+        metaDescription: "Via A104 / N330, 35 min ride. N330, Forêt d'Ermenonville, Cité médiévale and Pays de Valois en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Meaux → Senlis",
         heroSubtitle: "Your Meaux → Senlis transfer at €50 — €65. 40 km, through the Valois countryside.",
         description: "Senlis, a medieval gem of the Valois region, is 35 min from Meaux via the N330 and A104.",

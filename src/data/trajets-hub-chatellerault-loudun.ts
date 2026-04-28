@@ -27,8 +27,8 @@ export const trajetsChatelleraultLoudun: Trajet[] = [
     hub: "chatellerault-loudun",
     i18n: {
       fr: {
-        metaTitle: "Taxi Châtellerault → Poitiers | Prix fixe dès 40 € | TaxiNeo",
-        metaDescription: "Taxi Châtellerault → Poitiers. 35 km, 25 min, dès 40 €. Autoroute A10, vallée de la Vienne. Réservation 24h/24.",
+        metaTitle: "Taxi Châtellerault → Poitiers | 35 km, dès 40 € | TaxiNeo",
+        metaDescription: "Via A10 en 25 min. Vienne, Futuroscope, Confluence et Manufacture d'armes en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Châtellerault → Poitiers",
         heroSubtitle: "Transfert Châtellerault → Poitiers au prix fixe de 40 — 55 €. 35 km, de la cité de la coutellerie à la capitale du Poitou.",
         description: "Poitiers, capitale historique du Poitou et ville universitaire dynamique, est à 25 min de Châtellerault par l'A10.",
@@ -46,8 +46,8 @@ export const trajetsChatelleraultLoudun: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Châtellerault → Poitiers | Fixed price from €40 | TaxiNeo",
-        metaDescription: "Taxi Châtellerault → Poitiers. 35 km, 25 min, from €40. A10 motorway, Vienne valley. Book 24/7.",
+        metaTitle: "Taxi Châtellerault → Poitiers | 35 km, from €40 | TaxiNeo",
+        metaDescription: "Via A10, 25 min ride. Vienne, Futuroscope, Confluence and Manufacture d'armes en route. Drop-off at your exact address. Door-to-door, luggage included.",
         heroTitle: "Taxi Châtellerault → Poitiers",
         heroSubtitle: "Your Châtellerault → Poitiers transfer at €40 — €55. 35 km, from the cutlery capital to the historic Poitou capital.",
         description: "Poitiers, historic capital of Poitou and vibrant university city, is 25 min from Châtellerault via the A10.",
@@ -92,8 +92,8 @@ export const trajetsChatelleraultLoudun: Trajet[] = [
     hub: "chatellerault-loudun",
     i18n: {
       fr: {
-        metaTitle: "Taxi Châtellerault → Tours | Prix fixe dès 85 € | TaxiNeo",
-        metaDescription: "Taxi Châtellerault → Tours. 70 km, 45 min, dès 85 €. Autoroute A10, vallée de la Vienne vers la Loire. Réservation 24h/24.",
+        metaTitle: "Taxi Châtellerault → Tours | 70 km, dès 85 € | TaxiNeo",
+        metaDescription: "Via A10 en 45 min. Loire, Châteaux, Vienne et Touraine en chemin. Dépose porte-à-porte, bagages inclus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Châtellerault → Tours",
         heroSubtitle: "Transfert Châtellerault → Tours au prix fixe de 85 — 110 €. 70 km, de la Vienne à la Loire, porte des châteaux de la Loire.",
         description: "Tours, capitale de la Touraine et porte d'entrée des châteaux de la Loire, est à 45 min de Châtellerault par l'A10.",
@@ -111,8 +111,8 @@ export const trajetsChatelleraultLoudun: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Châtellerault → Tours | Fixed price from €85 | TaxiNeo",
-        metaDescription: "Taxi Châtellerault → Tours. 70 km, 45 min, from €85. A10 motorway, gateway to Loire châteaux. Book 24/7.",
+        metaTitle: "Taxi Châtellerault → Tours | 70 km, from €85 | TaxiNeo",
+        metaDescription: "Via A10, 45 min ride. Loire, Châteaux, Vienne and Touraine en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Châtellerault → Tours",
         heroSubtitle: "Your Châtellerault → Tours transfer at €85 — €110. 70 km, from the Vienne to the Loire, gateway to the châteaux.",
         description: "Tours, capital of Touraine and gateway to the Loire châteaux, is 45 min from Châtellerault via the A10.",
@@ -157,8 +157,8 @@ export const trajetsChatelleraultLoudun: Trajet[] = [
     hub: "chatellerault-loudun",
     i18n: {
       fr: {
-        metaTitle: "Taxi Châtellerault → Paris | Prix fixe dès 355 € | TaxiNeo",
-        metaDescription: "Taxi Châtellerault → Paris. 300 km, 3h05, dès 355 €. Autoroute A10 directe, alternative au TGV. Réservation 24h/24.",
+        metaTitle: "Taxi Châtellerault → Paris | 300 km, dès 355 € | TaxiNeo",
+        metaDescription: "Via A10 en 3h05. TGV alternative, Porte-à-porte, Vienne et Île-de-France en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Châtellerault → Paris",
         heroSubtitle: "Transfert Châtellerault → Paris au prix fixe de 355 — 440 €. 300 km, trajet direct porte-à-porte par l'A10.",
         description: "Paris, capitale de la France, est à 3h05 de Châtellerault par l'autoroute A10.",
@@ -176,8 +176,8 @@ export const trajetsChatelleraultLoudun: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Châtellerault → Paris | Fixed price from €355 | TaxiNeo",
-        metaDescription: "Taxi Châtellerault → Paris. 300 km, 3h05, from €355. Direct A10, TGV alternative. Book 24/7.",
+        metaTitle: "Taxi Châtellerault → Paris | 300 km, from €355 | TaxiNeo",
+        metaDescription: "Via A10, 3h05 ride. TGV alternative, Porte-à-porte, Vienne and Île-de-France en route. Drop-off at your exact address. Door-to-door, luggage included.",
         heroTitle: "Taxi Châtellerault → Paris",
         heroSubtitle: "Your Châtellerault → Paris transfer at €355 — €440. 300 km, direct door-to-door service.",
         description: "Paris, capital of France, is 3h05 from Châtellerault via the A10 motorway.",
@@ -222,8 +222,8 @@ export const trajetsChatelleraultLoudun: Trajet[] = [
     hub: "chatellerault-loudun",
     i18n: {
       fr: {
-        metaTitle: "Taxi Loudun → Poitiers | Prix fixe dès 75 € | TaxiNeo",
-        metaDescription: "Taxi Loudun → Poitiers. 60 km, 45 min, dès 75 €. Route D347, traversée du Loudunais. Réservation 24h/24.",
+        metaTitle: "Taxi Loudun → Poitiers | 60 km, dès 75 € | TaxiNeo",
+        metaDescription: "Via D347 en 45 min. Richelieu, Loudunais, Vienne et Confluence Vienne-Clain en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Loudun → Poitiers",
         heroSubtitle: "Transfert Loudun → Poitiers au prix fixe de 75 — 95 €. 60 km, du Loudunais à la capitale du Poitou.",
         description: "Poitiers, préfecture de la Vienne et capitale historique du Poitou, est à 45 min de Loudun par la D347.",
@@ -241,8 +241,8 @@ export const trajetsChatelleraultLoudun: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Loudun → Poitiers | Fixed price from €75 | TaxiNeo",
-        metaDescription: "Taxi Loudun → Poitiers. 60 km, 45 min, from €75. D347, Loudunais plains. Book 24/7.",
+        metaTitle: "Taxi Loudun → Poitiers | 60 km, from €75 | TaxiNeo",
+        metaDescription: "D347 route, approximately 45 min. Richelieu, Loudunais, Vienne and Confluence Vienne-Clain en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Loudun → Poitiers",
         heroSubtitle: "Your Loudun → Poitiers transfer at €75 — €95. 60 km, from the Loudunais to the historic Poitou capital.",
         description: "Poitiers, prefecture of Vienne and historic capital of Poitou, is 45 min from Loudun via the D347.",
@@ -287,8 +287,8 @@ export const trajetsChatelleraultLoudun: Trajet[] = [
     hub: "chatellerault-loudun",
     i18n: {
       fr: {
-        metaTitle: "Taxi Châtellerault → Limoges | Prix fixe dès 180 € | TaxiNeo",
-        metaDescription: "Taxi Châtellerault → Limoges. 150 km, 1h40, dès 180 €. Routes N10 et D910, traversée du Poitou et du Limousin. Réservation 24h/24.",
+        metaTitle: "Taxi Châtellerault → Limoges | 150 km, dès 180 € | TaxiNeo",
+        metaDescription: "Via N10 / D910 en 1h40. N10, Vienne, Limousin et Porcelaine en chemin. Dépose porte-à-porte, bagages inclus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Châtellerault → Limoges",
         heroSubtitle: "Transfert Châtellerault → Limoges au prix fixe de 180 — 225 €. 150 km, de la manufacture d'armes à la capitale de la porcelaine.",
         description: "Limoges, capitale mondiale de la porcelaine et préfecture de la Haute-Vienne, est à 1h40 de Châtellerault.",
@@ -306,8 +306,8 @@ export const trajetsChatelleraultLoudun: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Châtellerault → Limoges | Fixed price from €180 | TaxiNeo",
-        metaDescription: "Taxi Châtellerault → Limoges. 150 km, 1h40, from €180. N10/D910, Poitou to Limousin. Book 24/7.",
+        metaTitle: "Taxi Châtellerault → Limoges | 150 km, from €180 | TaxiNeo",
+        metaDescription: "Via N10 / D910, 1h40 ride. N10, Vienne, Limousin and Porcelaine en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Châtellerault → Limoges",
         heroSubtitle: "Your Châtellerault → Limoges transfer at €180 — €225. 150 km, from the arms manufactory to the porcelain capital.",
         description: "Limoges, world porcelain capital and prefecture of Haute-Vienne, is 1h40 from Châtellerault.",

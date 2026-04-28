@@ -27,8 +27,8 @@ export const trajetsSalonMartigues: Trajet[] = [
     hub: "salon-martigues",
     i18n: {
       fr: {
-        metaTitle: "Taxi Salon-de-Provence → Marseille | Prix fixe dès 60 € | TaxiNeo",
-        metaDescription: "Taxi Salon-de-Provence → Marseille. 50 km, 35 min, dès 60 €. A7, transfert direct porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Salon-de-Provence → Marseille | 50 km, 60 € | TaxiNeo",
+        metaDescription: "Via A7 en 35 min. Provence, Nostradamus, Vieux-Port et Plaine de la Crau en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Salon-de-Provence → Marseille",
         heroSubtitle: "Transfert Salon-de-Provence → Marseille au prix fixe de 60 — 80 €. 50 km, direct par l'A7.",
         description: "Marseille, cité phocéenne et capitale de la Provence, est à 35 min de Salon-de-Provence par l'A7.",
@@ -46,8 +46,8 @@ export const trajetsSalonMartigues: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Salon-de-Provence → Marseille | Fixed price from €60 | TaxiNeo",
-        metaDescription: "Taxi Salon-de-Provence → Marseille. 50 km, 35 min, from €60. A7, direct door-to-door transfer. Book 24/7.",
+        metaTitle: "Taxi Salon-de-Provence → Marseille | 50 km, €60 | TaxiNeo",
+        metaDescription: "Via A7, 35 min ride. Provence, Nostradamus, Vieux-Port and Plaine de la Crau en route. Drop-off at your exact address. Door-to-door, luggage included.",
         heroTitle: "Taxi Salon-de-Provence → Marseille",
         heroSubtitle: "Your Salon-de-Provence → Marseille transfer at €60 — €80. 50 km, via the A7.",
         description: "Marseille, France's second city, is 35 min from Salon-de-Provence via the A7.",
@@ -92,8 +92,8 @@ export const trajetsSalonMartigues: Trajet[] = [
     hub: "salon-martigues",
     i18n: {
       fr: {
-        metaTitle: "Taxi Salon-de-Provence → Aix-en-Provence | Prix fixe dès 40 € | TaxiNeo",
-        metaDescription: "Taxi Salon-de-Provence → Aix-en-Provence. 35 km, 25 min, dès 40 €. A7, transfert direct porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Salon-de-Provence → Aix-en-Provence | 35 km | TaxiNeo",
+        metaDescription: "Via A7 en 25 min. Cézanne, Cours Mirabeau, Base Aérienne 701 et Provence en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Salon-de-Provence → Aix-en-Provence",
         heroSubtitle: "Transfert Salon-de-Provence → Aix-en-Provence au prix fixe de 40 — 55 €. 35 km, direct par l'A7.",
         description: "Aix-en-Provence, ville d'art et d'eau, est à seulement 25 min de Salon-de-Provence.",
@@ -111,8 +111,8 @@ export const trajetsSalonMartigues: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Salon-de-Provence → Aix-en-Provence | Fixed price from €40 | TaxiNeo",
-        metaDescription: "Taxi Salon-de-Provence → Aix-en-Provence. 35 km, 25 min, from €40. A7, direct door-to-door transfer. Book 24/7.",
+        metaTitle: "Taxi Salon-de-Provence → Aix-en-Provence | 35 km | TaxiNeo",
+        metaDescription: "Via A7, 25 min ride. Cézanne, Cours Mirabeau, Base Aérienne 701 and Provence en route. Drop-off at your exact address. Door-to-door, luggage included.",
         heroTitle: "Taxi Salon-de-Provence → Aix-en-Provence",
         heroSubtitle: "Your Salon-de-Provence → Aix-en-Provence transfer at €40 — €55. 35 km, via the A7.",
         description: "Aix-en-Provence, city of art and fountains, is just 25 min from Salon-de-Provence.",
@@ -157,8 +157,8 @@ export const trajetsSalonMartigues: Trajet[] = [
     hub: "salon-martigues",
     i18n: {
       fr: {
-        metaTitle: "Taxi Martigues → Marseille | Prix fixe dès 40 € | TaxiNeo",
-        metaDescription: "Taxi Martigues → Marseille. 35 km, 30 min, dès 40 €. A55, transfert direct porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Martigues → Marseille | 35 km, dès 40 € | TaxiNeo",
+        metaDescription: "Via A55 en 30 min. Étang de Berre, Côte Bleue, Vieux-Port et Estaque en chemin. Dépose à votre adresse exacte. Alternative directe au train ou au bus.",
         heroTitle: "Taxi Martigues → Marseille",
         heroSubtitle: "Transfert Martigues → Marseille au prix fixe de 40 — 55 €. 35 km, direct par l'A55.",
         description: "Marseille est à 30 min de Martigues par l'A55 le long de la Côte Bleue.",
@@ -176,8 +176,8 @@ export const trajetsSalonMartigues: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Martigues → Marseille | Fixed price from €40 | TaxiNeo",
-        metaDescription: "Taxi Martigues → Marseille. 35 km, 30 min, from €40. A55, direct door-to-door transfer. Book 24/7.",
+        metaTitle: "Taxi Martigues → Marseille | 35 km, from €40 | TaxiNeo",
+        metaDescription: "Via A55, 30 min ride. Étang de Berre, Côte Bleue, Vieux-Port and Estaque en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Martigues → Marseille",
         heroSubtitle: "Your Martigues → Marseille transfer at €40 — €55. 35 km, via the A55.",
         description: "Marseille is 30 min from Martigues via the A55 along the Côte Bleue.",
@@ -222,8 +222,8 @@ export const trajetsSalonMartigues: Trajet[] = [
     hub: "salon-martigues",
     i18n: {
       fr: {
-        metaTitle: "Taxi Salon-de-Provence → Avignon | Prix fixe dès 60 € | TaxiNeo",
-        metaDescription: "Taxi Salon-de-Provence → Avignon. 50 km, 35 min, dès 60 €. A7, Palais des Papes, gare TGV. Réservation 24h/24.",
+        metaTitle: "Taxi Salon-de-Provence → Avignon | 50 km, dès 60 € | TaxiNeo",
+        metaDescription: "Via A7 en 35 min. Alpilles, Palais des Papes, Nostradamus et TGV en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Salon-de-Provence → Avignon",
         heroSubtitle: "Transfert Salon-de-Provence → Avignon au prix fixe de 60 — 80 €. 50 km, direct par l'A7.",
         description: "Avignon, cité des Papes et capitale du théâtre, est à 35 min de Salon-de-Provence.",
@@ -241,8 +241,8 @@ export const trajetsSalonMartigues: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Salon-de-Provence → Avignon | Fixed price from €60 | TaxiNeo",
-        metaDescription: "Taxi Salon-de-Provence → Avignon. 50 km, 35 min, from €60. A7, Papal Palace, TGV station. Book 24/7.",
+        metaTitle: "Taxi Salon-de-Provence → Avignon | 50 km, from €60 | TaxiNeo",
+        metaDescription: "Via A7, 35 min ride. Alpilles, Palais des Papes, Nostradamus and TGV en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Salon-de-Provence → Avignon",
         heroSubtitle: "Your Salon-de-Provence → Avignon transfer at €60 — €80. 50 km, via the A7.",
         description: "Avignon, City of Popes, is 35 min from Salon-de-Provence via the A7.",
@@ -287,8 +287,8 @@ export const trajetsSalonMartigues: Trajet[] = [
     hub: "salon-martigues",
     i18n: {
       fr: {
-        metaTitle: "Taxi Martigues → Aéroport Marseille Provence | Prix fixe dès 20 € | TaxiNeo",
-        metaDescription: "Taxi Martigues → Aéroport Marseille Provence (MRS). 15 km, 15 min, dès 20 €. Transfert direct porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Martigues → Marseille Provence | 15 km, 20 € | TaxiNeo",
+        metaDescription: "Trajet direct N569 en 15 min. Passage par Étang de Berre, Aéroport MRS, Marignane et Navette rapide. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Martigues → Aéroport Marseille Provence",
         heroSubtitle: "Transfert Martigues → Aéroport Marseille Provence au prix fixe de 20 — 30 €. 15 km, 15 min chrono.",
         description: "L'aéroport Marseille Provence (Marignane) est à seulement 15 min de Martigues.",
@@ -306,8 +306,8 @@ export const trajetsSalonMartigues: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Martigues → Marseille Provence Airport | Fixed price from €20 | TaxiNeo",
-        metaDescription: "Taxi Martigues → Marseille Provence Airport (MRS). 15 km, 15 min, from €20. Direct door-to-door transfer. Book 24/7.",
+        metaTitle: "Taxi Martigues → Marseille Provence | 15 km, €20 | TaxiNeo",
+        metaDescription: "Direct route via N569, 15 min. Étang de Berre, Aéroport MRS, Marignane and Navette rapide en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Martigues → Marseille Provence Airport",
         heroSubtitle: "Your Martigues → Marseille Provence Airport transfer at €20 — €30. 15 km, 15 min.",
         description: "Marseille Provence Airport (MRS) is just 15 min from Martigues.",

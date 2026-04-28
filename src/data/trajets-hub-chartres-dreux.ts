@@ -27,8 +27,8 @@ export const trajetsChartresDreux: Trajet[] = [
     hub: "chartres-dreux",
     i18n: {
       fr: {
-        metaTitle: "Taxi Chartres → Paris | Prix fixe dès 95 € | TaxiNeo",
-        metaDescription: "Taxi Chartres → Paris. 90 km, 1h, dès 95 €. A11, transfert direct porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Chartres → Paris | forfait dès 95 € | TaxiNeo",
+        metaDescription: "Via A11 en 1h. Beauce, Île-de-France, Cathédrale et Porte de Paris en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Chartres → Paris",
         heroSubtitle: "Transfert Chartres → Paris au prix fixe de 95 — 120 €. 90 km, direct par l'A11.",
         description: "Paris est à 1h de Chartres par l'A11, traversant la plaine de Beauce puis l'Île-de-France.",
@@ -47,7 +47,7 @@ export const trajetsChartresDreux: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Chartres → Paris | Fixed price from €95 | TaxiNeo",
-        metaDescription: "Taxi Chartres → Paris. 90 km, 1h, from €95. A11, direct door-to-door transfer. Book 24/7.",
+        metaDescription: "Via A11, 1 hour ride. Beauce, Île-de-France, Cathédrale and Porte de Paris en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Chartres → Paris",
         heroSubtitle: "Your Chartres → Paris transfer at €95 — €120. 90 km, direct via the A11.",
         description: "Paris is 1h from Chartres via the A11 through the Beauce plain.",
@@ -92,8 +92,8 @@ export const trajetsChartresDreux: Trajet[] = [
     hub: "chartres-dreux",
     i18n: {
       fr: {
-        metaTitle: "Taxi Chartres → Orléans | Prix fixe dès 85 € | TaxiNeo",
-        metaDescription: "Taxi Chartres → Orléans. 80 km, 55 min, dès 85 €. A10, Beauce, Loire. Réservation 24h/24.",
+        metaTitle: "Taxi Chartres → Orléans | 80 km, dès 85 € | TaxiNeo",
+        metaDescription: "Via A10 en 55 min. Beauce, Loire, Cathédrale et Jeanne d'Arc en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Chartres → Orléans",
         heroSubtitle: "Transfert Chartres → Orléans au prix fixe de 85 — 110 €. 80 km, de cathédrale en cathédrale.",
         description: "Orléans, cité de Jeanne d'Arc sur la Loire, est à 55 min de Chartres par l'A10.",
@@ -111,8 +111,8 @@ export const trajetsChartresDreux: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Chartres → Orléans | Fixed price from €85 | TaxiNeo",
-        metaDescription: "Taxi Chartres → Orléans. 80 km, 55 min, from €85. A10, Beauce, Loire. Book 24/7.",
+        metaTitle: "Taxi Chartres → Orléans | 80 km, from €85 | TaxiNeo",
+        metaDescription: "Via A10, 55 min ride. Beauce, Loire, Cathédrale and Jeanne d'Arc en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Chartres → Orléans",
         heroSubtitle: "Your Chartres → Orléans transfer at €85 — €110. 80 km, cathedral to cathedral.",
         description: "Orléans, Joan of Arc's city on the Loire, is 55 min from Chartres via the A10.",
@@ -157,8 +157,8 @@ export const trajetsChartresDreux: Trajet[] = [
     hub: "chartres-dreux",
     i18n: {
       fr: {
-        metaTitle: "Taxi Chartres → Le Mans | Prix fixe dès 130 € | TaxiNeo",
-        metaDescription: "Taxi Chartres → Le Mans. 120 km, 1h15, dès 130 €. D357/A11, Perche, 24 Heures du Mans. Réservation 24h/24.",
+        metaTitle: "Taxi Chartres → Le Mans | 120 km, dès 130 € | TaxiNeo",
+        metaDescription: "Via D357/A11 en 1h15. Perche, 24 Heures et Cité Plantagenêt en chemin. Dépose porte-à-porte, bagages inclus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Chartres → Le Mans",
         heroSubtitle: "Transfert Chartres → Le Mans au prix fixe de 130 — 165 €. 120 km, via le Perche.",
         description: "Le Mans, cité Plantagenêt et capitale des 24 Heures, est à 1h15 de Chartres.",
@@ -176,8 +176,8 @@ export const trajetsChartresDreux: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Chartres → Le Mans | Fixed price from €130 | TaxiNeo",
-        metaDescription: "Taxi Chartres → Le Mans. 120 km, 1h15, from €130. D357/A11, Perche region, 24 Hours. Book 24/7.",
+        metaTitle: "Taxi Chartres → Le Mans | 120 km, from €130 | TaxiNeo",
+        metaDescription: "Via D357/A11, 1h15 ride. Perche, 24 Heures and Cité Plantagenêt along the way. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Chartres → Le Mans",
         heroSubtitle: "Your Chartres → Le Mans transfer at €130 — €165. 120 km, through the Perche.",
         description: "Le Mans, Plantagenet city and 24 Hours capital, is 1h15 from Chartres.",
@@ -222,8 +222,8 @@ export const trajetsChartresDreux: Trajet[] = [
     hub: "chartres-dreux",
     i18n: {
       fr: {
-        metaTitle: "Taxi Dreux → Paris | Prix fixe dès 85 € | TaxiNeo",
-        metaDescription: "Taxi Dreux → Paris. 82 km, 55 min, dès 85 €. N12, transfert direct porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Dreux → Paris | forfait dès 85 €, 55 min | TaxiNeo",
+        metaDescription: "Trajet direct N12 en 55 min. Passage par Vallée de l'Eure, Yvelines, Île-de-France et Chapelle royale. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Dreux → Paris",
         heroSubtitle: "Transfert Dreux → Paris au prix fixe de 85 — 110 €. 82 km, direct par la N12.",
         description: "Paris est à 55 min de Dreux par la N12, route express gratuite vers la capitale.",
@@ -242,7 +242,7 @@ export const trajetsChartresDreux: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Dreux → Paris | Fixed price from €85 | TaxiNeo",
-        metaDescription: "Taxi Dreux → Paris. 82 km, 55 min, from €85. N12 (toll-free), direct transfer. Book 24/7.",
+        metaDescription: "Direct route via N12, 55 min. Vallée de l'Eure, Yvelines, Île-de-France and Chapelle royale en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Dreux → Paris",
         heroSubtitle: "Your Dreux → Paris transfer at €85 — €110. 82 km, toll-free via the N12.",
         description: "Paris is 55 min from Dreux via the N12, a toll-free expressway to the capital.",
@@ -287,8 +287,8 @@ export const trajetsChartresDreux: Trajet[] = [
     hub: "chartres-dreux",
     i18n: {
       fr: {
-        metaTitle: "Taxi Chartres → Tours | Prix fixe dès 155 € | TaxiNeo",
-        metaDescription: "Taxi Chartres → Tours. 145 km, 1h30, dès 155 €. A10, châteaux de la Loire, Touraine. Réservation 24h/24.",
+        metaTitle: "Taxi Chartres → Tours | 145 km, dès 155 € | TaxiNeo",
+        metaDescription: "Via A10 en 1h30. Beauce, Loire, Châteaux et Touraine en chemin. Alternative directe au train ou au bus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Chartres → Tours",
         heroSubtitle: "Transfert Chartres → Tours au prix fixe de 155 — 195 €. 145 km, direct vers les châteaux de la Loire.",
         description: "Tours, capitale de la Touraine et porte des châteaux de la Loire, est à 1h30 de Chartres.",
@@ -306,8 +306,8 @@ export const trajetsChartresDreux: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Chartres → Tours | Fixed price from €155 | TaxiNeo",
-        metaDescription: "Taxi Chartres → Tours. 145 km, 1h30, from €155. A10, Loire châteaux, Touraine. Book 24/7.",
+        metaTitle: "Taxi Chartres → Tours | 145 km, from €155 | TaxiNeo",
+        metaDescription: "Via A10, 1h30 ride. Beauce, Loire, Châteaux and Touraine en route. Faster and more direct than train or bus. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Chartres → Tours",
         heroSubtitle: "Your Chartres → Tours transfer at €155 — €195. 145 km, direct to the Loire châteaux.",
         description: "Tours, Touraine capital and Loire châteaux gateway, is 1h30 from Chartres.",

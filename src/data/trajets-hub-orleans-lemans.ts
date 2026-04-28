@@ -27,8 +27,8 @@ export const trajetsOrleansLeMans: Trajet[] = [
     hub: "orleans",
     i18n: {
       fr: {
-        metaTitle: "Taxi Orléans → Paris | Prix fixe dès 165 € | TaxiNeo",
-        metaDescription: "Taxi Orléans → Paris. 130 km, 1h20, dès 165 €. A10, transfert direct porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Orléans → Paris | 130 km, dès 165 € | TaxiNeo",
+        metaDescription: "Via A10 en 1h20. Beauce, Île-de-France, TGV et Loire en chemin. Alternative directe au train ou au bus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Orléans → Paris",
         heroSubtitle: "Transfert Orléans → Paris au prix fixe de 165 — 200 €. 130 km, direct par l'A10.",
         description: "Paris est à 1h20 d'Orléans par l'A10, traversant la plaine de Beauce.",
@@ -46,8 +46,8 @@ export const trajetsOrleansLeMans: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Orléans → Paris | Fixed price from €165 | TaxiNeo",
-        metaDescription: "Taxi Orléans → Paris. 130 km, 1h20, from €165. A10, direct door-to-door transfer. Book 24/7.",
+        metaTitle: "Taxi Orléans → Paris | 130 km, from €165 | TaxiNeo",
+        metaDescription: "Via A10, 1h20 ride. Beauce, Île-de-France, TGV and Loire en route. Faster and more direct than train or bus. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Orléans → Paris",
         heroSubtitle: "Your Orléans → Paris transfer at €165 — €200. 130 km, direct via the A10.",
         description: "Paris is 1h20 from Orléans via the A10 through the Beauce plain.",
@@ -92,8 +92,8 @@ export const trajetsOrleansLeMans: Trajet[] = [
     hub: "orleans",
     i18n: {
       fr: {
-        metaTitle: "Taxi Orléans → Tours | Prix fixe dès 145 € | TaxiNeo",
-        metaDescription: "Taxi Orléans → Tours. 115 km, 1h10, dès 145 €. Châteaux de la Loire, Chambord, Blois. Réservation 24h/24.",
+        metaTitle: "Taxi Orléans → Tours | 115 km, dès 145 € | TaxiNeo",
+        metaDescription: "Via A10 en 1h10. Loire, Châteaux, Chambord et Blois en chemin. Alternative directe au train ou au bus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Orléans → Tours",
         heroSubtitle: "Transfert Orléans → Tours au prix fixe de 145 — 175 €. 115 km, cœur des châteaux de la Loire.",
         description: "Tours, porte des châteaux de la Loire, est à 1h10 d'Orléans par l'A10.",
@@ -111,8 +111,8 @@ export const trajetsOrleansLeMans: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Orléans → Tours | Fixed price from €145 | TaxiNeo",
-        metaDescription: "Taxi Orléans → Tours. 115 km, 1h10, from €145. Loire châteaux, Chambord, Blois. Book 24/7.",
+        metaTitle: "Taxi Orléans → Tours | 115 km, from €145 | TaxiNeo",
+        metaDescription: "Via A10, 1h10 ride. Loire, Châteaux, Chambord and Blois en route. Faster and more direct than train or bus. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Orléans → Tours",
         heroSubtitle: "Your Orléans → Tours transfer at €145 — €175. 115 km, heart of the Loire châteaux.",
         description: "Tours, Loire châteaux gateway, is 1h10 from Orléans via the A10.",
@@ -157,8 +157,8 @@ export const trajetsOrleansLeMans: Trajet[] = [
     hub: "orleans",
     i18n: {
       fr: {
-        metaTitle: "Taxi Orléans → Blois | Prix fixe dès 75 € | TaxiNeo",
-        metaDescription: "Taxi Orléans → Blois. 60 km, 45 min, dès 75 €. Château royal, Chambord à 15 km. Réservation 24h/24.",
+        metaTitle: "Taxi Orléans → Blois | forfait dès 75 €, 45 min | TaxiNeo",
+        metaDescription: "Via A10 en 45 min. Loire, Château royal, Chambord et Maison de la Magie en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Orléans → Blois",
         heroSubtitle: "Transfert Orléans → Blois au prix fixe de 75 — 95 €. 60 km, château royal de la Loire.",
         description: "Blois, ville du château royal aux quatre ailes architecturales, est à 45 min d'Orléans.",
@@ -177,7 +177,7 @@ export const trajetsOrleansLeMans: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Orléans → Blois | Fixed price from €75 | TaxiNeo",
-        metaDescription: "Taxi Orléans → Blois. 60 km, 45 min, from €75. Royal castle, Chambord 15 km away. Book 24/7.",
+        metaDescription: "Via A10, 45 min ride. Loire, Château royal, Chambord and Maison de la Magie en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Orléans → Blois",
         heroSubtitle: "Your Orléans → Blois transfer at €75 — €95. 60 km, royal Loire castle.",
         description: "Blois, city of the four-wing royal castle, is 45 min from Orléans.",
@@ -222,8 +222,8 @@ export const trajetsOrleansLeMans: Trajet[] = [
     hub: "orleans",
     i18n: {
       fr: {
-        metaTitle: "Taxi Orléans → Chartres | Prix fixe dès 100 € | TaxiNeo",
-        metaDescription: "Taxi Orléans → Chartres. 80 km, 1h, dès 100 €. Cathédrale UNESCO, vitraux, Chartres en lumières. Réservation 24h/24.",
+        metaTitle: "Taxi Orléans → Chartres | 80 km, dès 100 € | TaxiNeo",
+        metaDescription: "Via A10 puis A19 en 1h. A10/A19, Cathédrale UNESCO, Beauce et Vitraux en chemin. Dépose à votre adresse exacte. Alternative directe au train ou au bus.",
         heroTitle: "Taxi Orléans → Chartres",
         heroSubtitle: "Transfert Orléans → Chartres au prix fixe de 100 — 125 €. 80 km, la plus belle cathédrale de France.",
         description: "Chartres, ville de la plus célèbre cathédrale gothique, est à 1h d'Orléans.",
@@ -241,8 +241,8 @@ export const trajetsOrleansLeMans: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Orléans → Chartres | Fixed price from €100 | TaxiNeo",
-        metaDescription: "Taxi Orléans → Chartres. 80 km, 1h, from €100. UNESCO cathedral, stained glass, light show. Book 24/7.",
+        metaTitle: "Taxi Orléans → Chartres | 80 km, from €100 | TaxiNeo",
+        metaDescription: "Via A10 then A19, 1 hour ride. A10/A19, Cathédrale UNESCO, Beauce and Vitraux en route. Drop-off at your exact address. Door-to-door, luggage included.",
         heroTitle: "Taxi Orléans → Chartres",
         heroSubtitle: "Your Orléans → Chartres transfer at €100 — €125. 80 km, France's finest cathedral.",
         description: "Chartres, home of the most famous Gothic cathedral, is 1h from Orléans.",
@@ -287,8 +287,8 @@ export const trajetsOrleansLeMans: Trajet[] = [
     hub: "orleans",
     i18n: {
       fr: {
-        metaTitle: "Taxi Orléans → Bourges | Prix fixe dès 140 € | TaxiNeo",
-        metaDescription: "Taxi Orléans → Bourges. 110 km, 1h15, dès 140 €. Cathédrale UNESCO, palais Jacques Cœur. Réservation 24h/24.",
+        metaTitle: "Taxi Orléans → Bourges | 110 km, dès 140 € | TaxiNeo",
+        metaDescription: "Trajet direct A71 en 1h15. Passage par Cathédrale UNESCO, Berry, Jacques Cœur et Printemps de Bourges. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Orléans → Bourges",
         heroSubtitle: "Transfert Orléans → Bourges au prix fixe de 140 — 170 €. 110 km, joyau du Berry.",
         description: "Bourges, avec sa cathédrale UNESCO et le palais Jacques Cœur, est à 1h15 d'Orléans.",
@@ -306,8 +306,8 @@ export const trajetsOrleansLeMans: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Orléans → Bourges | Fixed price from €140 | TaxiNeo",
-        metaDescription: "Taxi Orléans → Bourges. 110 km, 1h15, from €140. UNESCO cathedral, Jacques Coeur palace. Book 24/7.",
+        metaTitle: "Taxi Orléans → Bourges | 110 km, from €140 | TaxiNeo",
+        metaDescription: "Direct route via A71, 1h15. Cathédrale UNESCO, Berry, Jacques Cœur and Printemps de Bourges en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Orléans → Bourges",
         heroSubtitle: "Your Orléans → Bourges transfer at €140 — €170. 110 km, Berry jewel.",
         description: "Bourges, with its UNESCO cathedral and Jacques Coeur palace, is 1h15 from Orléans.",
@@ -352,8 +352,8 @@ export const trajetsOrleansLeMans: Trajet[] = [
     hub: "le-mans",
     i18n: {
       fr: {
-        metaTitle: "Taxi Le Mans → Paris | Prix fixe dès 245 € | TaxiNeo",
-        metaDescription: "Taxi Le Mans → Paris. 200 km, 2h, dès 245 €. A11, transfert direct. Réservation 24h/24.",
+        metaTitle: "Taxi Le Mans → Paris | 200 km, dès 245 € | TaxiNeo",
+        metaDescription: "Via A11 en 2h. 24 Heures, TGV, Île-de-France et Sarthe en chemin. Dépose porte-à-porte, bagages inclus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Le Mans → Paris",
         heroSubtitle: "Transfert Le Mans → Paris au prix fixe de 245 — 295 €. 200 km, direct par l'A11.",
         description: "Paris est à 2h du Mans par l'A11.",
@@ -371,8 +371,8 @@ export const trajetsOrleansLeMans: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Le Mans → Paris | Fixed price from €245 | TaxiNeo",
-        metaDescription: "Taxi Le Mans → Paris. 200 km, 2h, from €245. A11, direct transfer. Book 24/7.",
+        metaTitle: "Taxi Le Mans → Paris | 200 km, from €245 | TaxiNeo",
+        metaDescription: "Via A11, 2 hours ride. 24 Heures, TGV, Île-de-France and Sarthe en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Le Mans → Paris",
         heroSubtitle: "Your Le Mans → Paris transfer at €245 — €295. 200 km, direct via the A11.",
         description: "Paris is 2h from Le Mans via the A11.",
@@ -417,8 +417,8 @@ export const trajetsOrleansLeMans: Trajet[] = [
     hub: "le-mans",
     i18n: {
       fr: {
-        metaTitle: "Taxi Le Mans → Tours | Prix fixe dès 100 € | TaxiNeo",
-        metaDescription: "Taxi Le Mans → Tours. 80 km, 55 min, dès 100 €. A28, châteaux de la Loire. Réservation 24h/24.",
+        metaTitle: "Taxi Le Mans → Tours | forfait dès 100 € | TaxiNeo",
+        metaDescription: "Via A28 en 55 min. Touraine, Loire, Châteaux et Rillettes vs rillons en chemin. Dépose à votre adresse exacte. Alternative directe au train ou au bus.",
         heroTitle: "Taxi Le Mans → Tours",
         heroSubtitle: "Transfert Le Mans → Tours au prix fixe de 100 — 120 €. 80 km, porte des châteaux.",
         description: "Tours, porte des châteaux de la Loire, est à 55 min du Mans.",
@@ -437,7 +437,7 @@ export const trajetsOrleansLeMans: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Le Mans → Tours | Fixed price from €100 | TaxiNeo",
-        metaDescription: "Taxi Le Mans → Tours. 80 km, 55 min, from €100. A28, Loire châteaux. Book 24/7.",
+        metaDescription: "Via A28, 55 min ride. Touraine, Loire, Châteaux and Rillettes vs rillons en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Le Mans → Tours",
         heroSubtitle: "Your Le Mans → Tours transfer at €100 — €120. 80 km, châteaux gateway.",
         description: "Tours, Loire châteaux gateway, is 55 min from Le Mans.",
@@ -482,8 +482,8 @@ export const trajetsOrleansLeMans: Trajet[] = [
     hub: "le-mans",
     i18n: {
       fr: {
-        metaTitle: "Taxi Le Mans → Angers | Prix fixe dès 120 € | TaxiNeo",
-        metaDescription: "Taxi Le Mans → Angers. 95 km, 1h, dès 120 €. Château, Tapisserie de l'Apocalypse, Cointreau. Réservation 24h/24.",
+        metaTitle: "Taxi Le Mans → Angers | 95 km, dès 120 € | TaxiNeo",
+        metaDescription: "Via A11 en 1h. Anjou, Château d'Angers, Tapisserie et Cointreau en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Le Mans → Angers",
         heroSubtitle: "Transfert Le Mans → Angers au prix fixe de 120 — 145 €. 95 km, capitale de l'Anjou.",
         description: "Angers, avec son château et la Tapisserie de l'Apocalypse, est à 1h du Mans.",
@@ -501,8 +501,8 @@ export const trajetsOrleansLeMans: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Le Mans → Angers | Fixed price from €120 | TaxiNeo",
-        metaDescription: "Taxi Le Mans → Angers. 95 km, 1h, from €120. Castle, Apocalypse Tapestry. Book 24/7.",
+        metaTitle: "Taxi Le Mans → Angers | 95 km, from €120 | TaxiNeo",
+        metaDescription: "Via A11, 1 hour ride. Anjou, Château d'Angers, Tapisserie and Cointreau en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Le Mans → Angers",
         heroSubtitle: "Your Le Mans → Angers transfer at €120 — €145. 95 km, Anjou capital.",
         description: "Angers, with its 17-tower castle, is 1h from Le Mans.",
@@ -547,8 +547,8 @@ export const trajetsOrleansLeMans: Trajet[] = [
     hub: "le-mans",
     i18n: {
       fr: {
-        metaTitle: "Taxi Le Mans → Laval | Prix fixe dès 110 € | TaxiNeo",
-        metaDescription: "Taxi Le Mans → Laval. 85 km, 55 min, dès 110 €. Château, art naïf, Douanier Rousseau. Réservation 24h/24.",
+        metaTitle: "Taxi Le Mans → Laval | forfait dès 110 € | TaxiNeo",
+        metaDescription: "Via A81 en 55 min. Mayenne, Château, Art naïf et Douanier Rousseau en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Le Mans → Laval",
         heroSubtitle: "Transfert Le Mans → Laval au prix fixe de 110 — 130 €. 85 km, cité du Douanier Rousseau.",
         description: "Laval, préfecture de la Mayenne et patrie du Douanier Rousseau, est à 55 min du Mans.",
@@ -567,7 +567,7 @@ export const trajetsOrleansLeMans: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Le Mans → Laval | Fixed price from €110 | TaxiNeo",
-        metaDescription: "Taxi Le Mans → Laval. 85 km, 55 min, from €110. Castle, naïve art museum. Book 24/7.",
+        metaDescription: "Via A81, 55 min ride. Mayenne, Château, Art naïf and Douanier Rousseau en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Le Mans → Laval",
         heroSubtitle: "Your Le Mans → Laval transfer at €110 — €130. 85 km, Douanier Rousseau's city.",
         description: "Laval, Mayenne prefecture and Douanier Rousseau's birthplace, is 55 min from Le Mans.",
@@ -612,8 +612,8 @@ export const trajetsOrleansLeMans: Trajet[] = [
     hub: "le-mans",
     i18n: {
       fr: {
-        metaTitle: "Taxi Le Mans → Alençon | Prix fixe dès 65 € | TaxiNeo",
-        metaDescription: "Taxi Le Mans → Alençon. 50 km, 45 min, dès 65 €. Dentelle UNESCO, Perche, Normandie. Réservation 24h/24.",
+        metaTitle: "Taxi Le Mans → Alençon | 50 km, dès 65 € | TaxiNeo",
+        metaDescription: "Via N138 en 45 min. Orne, Dentelle, Perche et Normandie en chemin. Dépose porte-à-porte, bagages inclus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Le Mans → Alençon",
         heroSubtitle: "Transfert Le Mans → Alençon au prix fixe de 65 — 80 €. 50 km, cité de la dentelle.",
         description: "Alençon, préfecture de l'Orne et cité de la dentelle UNESCO, est à 45 min du Mans.",
@@ -631,8 +631,8 @@ export const trajetsOrleansLeMans: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Le Mans → Alençon | Fixed price from €65 | TaxiNeo",
-        metaDescription: "Taxi Le Mans → Alençon. 50 km, 45 min, from €65. UNESCO lace, Perche region. Book 24/7.",
+        metaTitle: "Taxi Le Mans → Alençon | 50 km, from €65 | TaxiNeo",
+        metaDescription: "Via N138, 45 min ride. Orne, Dentelle, Perche and Normandie en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Le Mans → Alençon",
         heroSubtitle: "Your Le Mans → Alençon transfer at €65 — €80. 50 km, lace city.",
         description: "Alençon, Orne prefecture and UNESCO lace city, is 45 min from Le Mans.",

@@ -20,7 +20,7 @@ export const trajetsGapBriancon: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Gap → Grenoble | Prix fixe dès 115 € | TaxiNeo",
-        metaDescription: "Taxi Gap → Grenoble. 105 km, 1h20, dès 115 €. N85 (Route Napoléon) à travers les Alpes. Réservation 24h/24.",
+        metaDescription: "Itinéraire N85, environ undefined min. Route Napoléon, Hautes-Alpes, Corps et Lac du Sautet en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Gap → Grenoble",
         heroSubtitle: "Transfert Gap → Grenoble au prix fixe de 115 — 145 €. 105 km, 1h20.",
         description: "Gap — Grenoble emprunte la célèbre Route Napoléon (N85), traversant les Alpes du sud au nord.",
@@ -39,7 +39,7 @@ export const trajetsGapBriancon: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Gap → Grenoble | Fixed price from €115 | TaxiNeo",
-        metaDescription: "Taxi Gap → Grenoble. 105 km, 1h20, from €115. N85 (Route Napoléon) through the Alps. Book 24/7.",
+        metaDescription: "Direct route via N85, undefined min. Route Napoléon, Hautes-Alpes, Corps and Lac du Sautet en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Gap → Grenoble",
         heroSubtitle: "Gap → Grenoble transfer at €115 — €145. 105 km, 1h20.",
         description: "Gap to Grenoble via the famous Route Napoléon (N85) through the southern Alps.",
@@ -76,8 +76,8 @@ export const trajetsGapBriancon: Trajet[] = [
     hub: "gap-briancon",
     i18n: {
       fr: {
-        metaTitle: "Taxi Gap → Marseille | Prix fixe dès 190 € | TaxiNeo",
-        metaDescription: "Taxi Gap → Marseille. 175 km, 1h50, dès 190 €. A51 via Sisteron et la vallée de la Durance. Réservation 24h/24.",
+        metaTitle: "Taxi Gap → Marseille | 175 km, dès 190 € | TaxiNeo",
+        metaDescription: "Via A51 en undefined min. Sisteron, Durance, Provence et Hautes-Alpes en chemin. Dépose à votre adresse exacte. Alternative directe au train ou au bus.",
         heroTitle: "Taxi Gap → Marseille",
         heroSubtitle: "Transfert Gap → Marseille au prix fixe de 190 — 240 €. 175 km, 1h50.",
         description: "Gap — Marseille descend la vallée de la Durance par l'A51, des Alpes à la Méditerranée.",
@@ -95,8 +95,8 @@ export const trajetsGapBriancon: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Gap → Marseille | Fixed price from €190 | TaxiNeo",
-        metaDescription: "Taxi Gap → Marseille. 175 km, 1h50, from €190. A51 via Sisteron and Durance valley. Book 24/7.",
+        metaTitle: "Taxi Gap → Marseille | 175 km, from €190 | TaxiNeo",
+        metaDescription: "Via A51, undefined min ride. Sisteron, Durance, Provence and Hautes-Alpes en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Gap → Marseille",
         heroSubtitle: "Gap → Marseille transfer at €190 — €240. 175 km, 1h50.",
         description: "Gap to Marseille descends from the Alps to the Mediterranean via the Durance valley.",
@@ -134,7 +134,7 @@ export const trajetsGapBriancon: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Gap → Briançon | Prix fixe dès 105 € | TaxiNeo",
-        metaDescription: "Taxi Gap → Briançon. 100 km, 1h10, dès 105 €. N94 via Serre-Chevalier et la vallée de la Durance. Réservation 24h/24.",
+        metaDescription: "Itinéraire N94, environ undefined min. Passage par Serre-Chevalier, Durance, Hautes-Alpes et Montagne. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Gap → Briançon",
         heroSubtitle: "Transfert Gap → Briançon au prix fixe de 105 — 135 €. 100 km, 1h10.",
         description: "Gap — Briançon remonte la vallée de la Durance par la N94, au cœur des Hautes-Alpes.",
@@ -153,7 +153,7 @@ export const trajetsGapBriancon: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Gap → Briançon | Fixed price from €105 | TaxiNeo",
-        metaDescription: "Taxi Gap → Briançon. 100 km, 1h10, from €105. N94 via Serre-Chevalier and Durance valley. Book 24/7.",
+        metaDescription: "N94 route, approximately undefined min. Serre-Chevalier, Durance, Hautes-Alpes and Montagne en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Gap → Briançon",
         heroSubtitle: "Gap → Briançon transfer at €105 — €135. 100 km, 1h10.",
         description: "Gap to Briançon up the Durance valley through the heart of Hautes-Alpes.",
@@ -190,8 +190,8 @@ export const trajetsGapBriancon: Trajet[] = [
     hub: "gap-briancon",
     i18n: {
       fr: {
-        metaTitle: "Taxi Briançon → Grenoble | Prix fixe dès 125 € | TaxiNeo",
-        metaDescription: "Taxi Briançon → Grenoble. 115 km, 1h30, dès 125 €. N91 via le col du Lautaret et l'Oisans. Réservation 24h/24.",
+        metaTitle: "Taxi Briançon → Grenoble | 115 km, dès 125 € | TaxiNeo",
+        metaDescription: "Via N91 / A480 en undefined min. N91, Col du Lautaret, Oisans et Écrins en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Briançon → Grenoble",
         heroSubtitle: "Transfert Briançon → Grenoble au prix fixe de 125 — 160 €. 115 km, 1h30.",
         description: "Briançon — Grenoble traverse le col du Lautaret et la vallée de la Romanche par la N91.",
@@ -209,8 +209,8 @@ export const trajetsGapBriancon: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Briançon → Grenoble | Fixed price from €125 | TaxiNeo",
-        metaDescription: "Taxi Briançon → Grenoble. 115 km, 1h30, from €125. N91 via Col du Lautaret and Oisans valley. Book 24/7.",
+        metaTitle: "Taxi Briançon → Grenoble | 115 km, from €125 | TaxiNeo",
+        metaDescription: "Via N91 / A480, undefined min ride. N91, Col du Lautaret, Oisans and Écrins en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Briançon → Grenoble",
         heroSubtitle: "Briançon → Grenoble transfer at €125 — €160. 115 km, 1h30.",
         description: "Briançon to Grenoble crosses the Col du Lautaret and descends the Romanche valley.",
@@ -247,8 +247,8 @@ export const trajetsGapBriancon: Trajet[] = [
     hub: "gap-briancon",
     i18n: {
       fr: {
-        metaTitle: "Taxi Briançon → Turin | Prix fixe dès 105 € | TaxiNeo",
-        metaDescription: "Taxi Briançon → Turin. 95 km, 1h15, dès 105 €. Via le tunnel du Fréjus, transfert France-Italie. Réservation 24h/24.",
+        metaTitle: "Taxi Briançon → Turin | 95 km, dès 105 € | TaxiNeo",
+        metaDescription: "Par Tunnel du Fréjus, undefined min de trajet. Montgenèvre, Italie, Piémont et Transfrontalier en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Briançon → Turin",
         heroSubtitle: "Transfert Briançon → Turin au prix fixe de 105 — 135 €. 95 km, 1h15.",
         description: "Briançon — Turin traverse les Alpes franco-italiennes via le tunnel du Fréjus.",
@@ -266,8 +266,8 @@ export const trajetsGapBriancon: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Briançon → Turin | Fixed price from €105 | TaxiNeo",
-        metaDescription: "Taxi Briançon → Turin. 95 km, 1h15, from €105. Via Fréjus Tunnel, France-Italy transfer. Book 24/7.",
+        metaTitle: "Taxi Briançon → Turin | 95 km, from €105 | TaxiNeo",
+        metaDescription: "Via Tunnel du Fréjus, undefined min ride. Montgenèvre, Italie, Piémont and Transfrontalier en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Briançon → Turin",
         heroSubtitle: "Briançon → Turin transfer at €105 — €135. 95 km, 1h15.",
         description: "Briançon to Turin crosses the Franco-Italian Alps via the Fréjus Tunnel.",

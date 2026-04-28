@@ -27,8 +27,8 @@ export const trajetsSaintQuentinLaon: Trajet[] = [
     hub: "saint-quentin-laon",
     i18n: {
       fr: {
-        metaTitle: "Taxi Saint-Quentin → Paris | Prix fixe dès 185 € | TaxiNeo",
-        metaDescription: "Taxi Saint-Quentin → Paris. 155 km, 1h35, dès 185 €. A26/A1, transfert direct porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Saint-Quentin → Paris | 155 km, dès 185 € | TaxiNeo",
+        metaDescription: "Via A26 puis A1 en 1h35. A26/A1, Aisne, Basilique Saint-Quentin et Art Déco en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Saint-Quentin → Paris",
         heroSubtitle: "Transfert Saint-Quentin → Paris au prix fixe de 185 — 235 €. 155 km, direct par l'A26 et l'A1.",
         description: "Paris est à 1h35 de Saint-Quentin par l'autoroute A26 puis l'A1.",
@@ -46,8 +46,8 @@ export const trajetsSaintQuentinLaon: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Saint-Quentin → Paris | Fixed price from €185 | TaxiNeo",
-        metaDescription: "Taxi Saint-Quentin → Paris. 155 km, 1h35, from €185. A26/A1, direct door-to-door. Book 24/7.",
+        metaTitle: "Taxi Saint-Quentin → Paris | 155 km, from €185 | TaxiNeo",
+        metaDescription: "A26 then A1 route, approximately 1h35. A26/A1, Aisne, Basilique Saint-Quentin and Art Déco en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Saint-Quentin → Paris",
         heroSubtitle: "Your Saint-Quentin → Paris transfer at €185 — €235. 155 km, via the A26 and A1.",
         description: "Paris is 1h35 from Saint-Quentin via the A26 and A1 motorways.",
@@ -92,8 +92,8 @@ export const trajetsSaintQuentinLaon: Trajet[] = [
     hub: "saint-quentin-laon",
     i18n: {
       fr: {
-        metaTitle: "Taxi Saint-Quentin → Lille | Prix fixe dès 130 € | TaxiNeo",
-        metaDescription: "Taxi Saint-Quentin → Lille. 110 km, 1h10, dès 130 €. A26, transfert direct porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Saint-Quentin → Lille | 110 km, dès 130 € | TaxiNeo",
+        metaDescription: "Trajet direct A26 en 1h10. Passage par Hauts-de-France, Vieux-Lille, Canal de Saint-Quentin et Textile. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Saint-Quentin → Lille",
         heroSubtitle: "Transfert Saint-Quentin → Lille au prix fixe de 130 — 170 €. 110 km, direct par l'A26.",
         description: "Lille, capitale des Flandres, est à 1h10 de Saint-Quentin par l'A26.",
@@ -111,8 +111,8 @@ export const trajetsSaintQuentinLaon: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Saint-Quentin → Lille | Fixed price from €130 | TaxiNeo",
-        metaDescription: "Taxi Saint-Quentin → Lille. 110 km, 1h10, from €130. A26, direct door-to-door. Book 24/7.",
+        metaTitle: "Taxi Saint-Quentin → Lille | 110 km, from €130 | TaxiNeo",
+        metaDescription: "Direct route via A26, 1h10. Hauts-de-France, Vieux-Lille, Canal de Saint-Quentin and Textile en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Saint-Quentin → Lille",
         heroSubtitle: "Your Saint-Quentin → Lille transfer at €130 — €170. 110 km, via the A26.",
         description: "Lille, capital of French Flanders, is 1h10 from Saint-Quentin via the A26.",
@@ -157,8 +157,8 @@ export const trajetsSaintQuentinLaon: Trajet[] = [
     hub: "saint-quentin-laon",
     i18n: {
       fr: {
-        metaTitle: "Taxi Saint-Quentin → Reims | Prix fixe dès 120 € | TaxiNeo",
-        metaDescription: "Taxi Saint-Quentin → Reims. 100 km, 1h05, dès 120 €. A26, Champagne, cathédrale du sacre. Réservation 24h/24.",
+        metaTitle: "Taxi Saint-Quentin → Reims | 100 km, dès 120 € | TaxiNeo",
+        metaDescription: "Trajet direct A26 en 1h05. Passage par Champagne, Cathédrale de Reims, Chemin des Dames et Aisne-Marne. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Saint-Quentin → Reims",
         heroSubtitle: "Transfert Saint-Quentin → Reims au prix fixe de 120 — 155 €. 100 km, cap sur la Champagne.",
         description: "Reims, cité des sacres et capitale du Champagne, est à 1h05 de Saint-Quentin.",
@@ -176,8 +176,8 @@ export const trajetsSaintQuentinLaon: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Saint-Quentin → Reims | Fixed price from €120 | TaxiNeo",
-        metaDescription: "Taxi Saint-Quentin → Reims. 100 km, 1h05, from €120. A26, Champagne, coronation cathedral. Book 24/7.",
+        metaTitle: "Taxi Saint-Quentin → Reims | 100 km, from €120 | TaxiNeo",
+        metaDescription: "Direct route via A26, 1h05. Champagne, Cathédrale de Reims, Chemin des Dames and Aisne-Marne en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Saint-Quentin → Reims",
         heroSubtitle: "Your Saint-Quentin → Reims transfer at €120 — €155. 100 km, towards the Champagne region.",
         description: "Reims, coronation city and Champagne capital, is 1h05 from Saint-Quentin.",
@@ -222,8 +222,8 @@ export const trajetsSaintQuentinLaon: Trajet[] = [
     hub: "saint-quentin-laon",
     i18n: {
       fr: {
-        metaTitle: "Taxi Laon → Paris | Prix fixe dès 170 € | TaxiNeo",
-        metaDescription: "Taxi Laon → Paris. 140 km, 1h30, dès 170 €. A26/A1, cathédrale, cité médiévale perchée. Réservation 24h/24.",
+        metaTitle: "Taxi Laon → Paris | 140 km, dès 170 €, 1h30 | TaxiNeo",
+        metaDescription: "Par A26 puis A1, 1h30 de trajet. A26/A1, Cathédrale de Laon, Cité médiévale et Chemin des Dames en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Laon → Paris",
         heroSubtitle: "Transfert Laon → Paris au prix fixe de 170 — 215 €. 140 km, depuis la cité perchée de l'Aisne.",
         description: "Paris est à 1h30 de Laon, préfecture de l'Aisne perchée sur sa butte.",
@@ -242,7 +242,7 @@ export const trajetsSaintQuentinLaon: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Laon → Paris | Fixed price from €170 | TaxiNeo",
-        metaDescription: "Taxi Laon → Paris. 140 km, 1h30, from €170. A26/A1, hilltop cathedral city. Book 24/7.",
+        metaDescription: "Via A26 then A1, 1h30 ride. A26/A1, Cathédrale de Laon, Cité médiévale and Chemin des Dames en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Laon → Paris",
         heroSubtitle: "Your Laon → Paris transfer at €170 — €215. 140 km, from the hilltop city of the Aisne.",
         description: "Paris is 1h30 from Laon, the hilltop prefecture of the Aisne department.",
@@ -287,8 +287,8 @@ export const trajetsSaintQuentinLaon: Trajet[] = [
     hub: "saint-quentin-laon",
     i18n: {
       fr: {
-        metaTitle: "Taxi Laon → Reims | Prix fixe dès 60 € | TaxiNeo",
-        metaDescription: "Taxi Laon → Reims. 50 km, 35 min, dès 60 €. Chemin des Dames, Champagne, cathédrale. Réservation 24h/24.",
+        metaTitle: "Taxi Laon → Reims | forfait dès 60 €, 35 min | TaxiNeo",
+        metaDescription: "Par N44 puis A26, 35 min de trajet. N44/A26, Chemin des Dames, Cathédrale de Reims et Champagne en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Laon → Reims",
         heroSubtitle: "Transfert Laon → Reims au prix fixe de 60 — 80 €. 50 km, de la cité perchée au pays du Champagne.",
         description: "Reims, capitale du Champagne et cité des sacres, est à seulement 35 min de Laon.",
@@ -307,7 +307,7 @@ export const trajetsSaintQuentinLaon: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Laon → Reims | Fixed price from €60 | TaxiNeo",
-        metaDescription: "Taxi Laon → Reims. 50 km, 35 min, from €60. Chemin des Dames, Champagne, cathedral. Book 24/7.",
+        metaDescription: "Via N44 then A26, 35 min ride. N44/A26, Chemin des Dames, Cathédrale de Reims and Champagne en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Laon → Reims",
         heroSubtitle: "Your Laon → Reims transfer at €60 — €80. 50 km, from the hilltop city to Champagne country.",
         description: "Reims, Champagne capital and coronation city, is just 35 min from Laon.",

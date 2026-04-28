@@ -30,8 +30,8 @@ export const trajetsLyonPart2: Trajet[] = [
     hub: "lyon",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lyon → Aix-les-Bains | Prix fixe dès 150 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Lyon → Aix-les-Bains. 110 km, 1h15, prix fixe dès 150 €. Autoroute A43, chauffeur professionnel. Réservation en ligne 24h/24.",
+        metaTitle: "Taxi Lyon → Aix-les-Bains | 110 km, dès 150 € | TaxiNeo",
+        metaDescription: "Via A43 en 1h15. Lac du Bourget, Thermes, Chambéry et Savoie en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Lyon → Aix-les-Bains",
         heroSubtitle: "Votre transfert Lyon → Aix-les-Bains au prix fixe de 150 — 190 €. Trajet direct par l'A43, 1h15 de route. Réservation en ligne.",
         description: "Le trajet Lyon — Aix-les-Bains relie la métropole lyonnaise à la célèbre station thermale savoyarde, nichée au bord du lac du Bourget. Distantes de 110 km, les deux villes sont reliées par l'autoroute A43, qui traverse les paysages de l'Avant-Pays savoyard. Votre chauffeur TaxiNeo vous prend en charge à Lyon et vous conduit directement à votre hôtel ou établissement thermal.",
@@ -49,8 +49,8 @@ export const trajetsLyonPart2: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Lyon → Aix-les-Bains | Fixed price from €150 | TaxiNeo",
-        metaDescription: "Book your taxi Lyon → Aix-les-Bains. 110 km, 1h15, fixed price from €150. A43 motorway, professional driver. Online booking 24/7.",
+        metaTitle: "Taxi Lyon → Aix-les-Bains | 110 km, from €150 | TaxiNeo",
+        metaDescription: "Via A43, 1h15 ride. Lac du Bourget, Thermes, Chambéry and Savoie en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Lyon → Aix-les-Bains",
         heroSubtitle: "Your Lyon → Aix-les-Bains transfer at a fixed price of €150 — €190. Direct route via A43, 1h15 drive. Online booking.",
         description: "The Lyon — Aix-les-Bains route connects the Lyon metropolitan area to the famous Savoyard thermal spa town, nestled on the shores of Lac du Bourget. 110 km apart, the two cities are linked by the A43 motorway through the Avant-Pays Savoyard landscapes. Your TaxiNeo driver picks you up in Lyon and takes you directly to your hotel or spa establishment.",
@@ -98,8 +98,8 @@ export const trajetsLyonPart2: Trajet[] = [
     hub: "lyon",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lyon → Annemasse | Prix fixe dès 200 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Lyon → Annemasse. 150 km, 1h40, prix fixe dès 200 €. A42/A41, proche frontière suisse. Réservation en ligne 24h/24.",
+        metaTitle: "Taxi Lyon → Annemasse | 150 km, dès 200 € | TaxiNeo",
+        metaDescription: "Par A42 puis A41, 1h40 de trajet. En passant par Nantua, Bellegarde-sur-Valserine et Frontière suisse. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Lyon → Annemasse",
         heroSubtitle: "Votre transfert Lyon → Annemasse au prix fixe de 200 — 250 €. Trajet direct par A42/A41, 1h40 de route. Réservation en ligne.",
         description: "Le trajet Lyon — Annemasse relie la métropole lyonnaise à la ville frontalière de Haute-Savoie, porte d'entrée vers Genève. Distantes de 150 km, les deux villes sont connectées par les autoroutes A42 puis A41, traversant le Bugey et le Genevois. Votre chauffeur TaxiNeo assure un transfert direct, idéal pour les travailleurs frontaliers et les voyageurs en transit vers la Suisse.",
@@ -117,8 +117,8 @@ export const trajetsLyonPart2: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Lyon → Annemasse | Fixed price from €200 | TaxiNeo",
-        metaDescription: "Book your taxi Lyon → Annemasse. 150 km, 1h40, fixed price from €200. A42/A41, near Swiss border. Online booking 24/7.",
+        metaTitle: "Taxi Lyon → Annemasse | 150 km, from €200 | TaxiNeo",
+        metaDescription: "Direct route via A42 then A41, 1h40. Nantua, Bellegarde-sur-Valserine and Frontière suisse along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Lyon → Annemasse",
         heroSubtitle: "Your Lyon → Annemasse transfer at a fixed price of €200 — €250. Direct route via A42/A41, 1h40 drive. Online booking.",
         description: "The Lyon — Annemasse route connects the Lyon metropolitan area to the Haute-Savoie border town, gateway to Geneva. 150 km apart, the two cities are linked by the A42 then A41 motorways through the Bugey and the Genevois regions. Your TaxiNeo driver provides a direct transfer, ideal for cross-border workers and travellers in transit to Switzerland.",
@@ -166,8 +166,8 @@ export const trajetsLyonPart2: Trajet[] = [
     hub: "lyon",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lyon → Montélimar | Prix fixe dès 210 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Lyon → Montélimar. 160 km, 1h40, prix fixe dès 210 €. Autoroute A7, vallée du Rhône. Réservation en ligne 24h/24.",
+        metaTitle: "Taxi Lyon → Montélimar | 160 km, dès 210 € | TaxiNeo",
+        metaDescription: "Via A7 en 1h40. Vallée du Rhône, Valence, Nougat de Montélimar et Provence en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Lyon → Montélimar",
         heroSubtitle: "Votre transfert Lyon → Montélimar au prix fixe de 210 — 260 €. Trajet par l'A7, vallée du Rhône, 1h40 de route. Réservation en ligne.",
         description: "Le trajet Lyon — Montélimar emprunte l'autoroute du Soleil (A7) à travers la vallée du Rhône. Distantes de 160 km, les deux villes sont reliées par l'un des axes autoroutiers les plus fréquentés de France. Votre chauffeur TaxiNeo vous conduit directement de Lyon à la capitale du nougat, porte d'entrée de la Provence.",
@@ -185,8 +185,8 @@ export const trajetsLyonPart2: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Lyon → Montélimar | Fixed price from €210 | TaxiNeo",
-        metaDescription: "Book your taxi Lyon → Montélimar. 160 km, 1h40, fixed price from €210. A7 motorway, Rhône Valley. Online booking 24/7.",
+        metaTitle: "Taxi Lyon → Montélimar | 160 km, from €210 | TaxiNeo",
+        metaDescription: "Via A7, 1h40 ride. Vallée du Rhône, Valence, Nougat de Montélimar and Provence en route. Drop-off at your exact address. Door-to-door, luggage included.",
         heroTitle: "Taxi Lyon → Montélimar",
         heroSubtitle: "Your Lyon → Montélimar transfer at a fixed price of €210 — €260. Route via A7, Rhône Valley, 1h40 drive. Online booking.",
         description: "The Lyon — Montélimar route takes the Autoroute du Soleil (A7) through the Rhône Valley. 160 km apart, the two cities are linked by one of France's busiest motorway corridors. Your TaxiNeo driver takes you directly from Lyon to the nougat capital, gateway to Provence.",
@@ -234,8 +234,8 @@ export const trajetsLyonPart2: Trajet[] = [
     hub: "lyon",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lyon → Clermont-Ferrand | Prix fixe dès 220 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Lyon → Clermont-Ferrand. 170 km, 1h50, prix fixe dès 220 €. Autoroute A89, traversée du Forez. Réservation en ligne 24h/24.",
+        metaTitle: "Taxi Lyon → Clermont-Ferrand | 170 km, dès 220 € | TaxiNeo",
+        metaDescription: "Via A89 en 1h50. Monts du Forez, Thiers, Chaîne des Puys et Vulcania en chemin. Dépose à votre adresse exacte. Alternative directe au train ou au bus.",
         heroTitle: "Taxi Lyon → Clermont-Ferrand",
         heroSubtitle: "Votre transfert Lyon → Clermont-Ferrand au prix fixe de 220 — 280 €. Trajet par l'A89, 1h50 de route. Réservation en ligne.",
         description: "Le trajet Lyon — Clermont-Ferrand relie la capitale des Gaules à la capitale auvergnate, au pied de la chaîne des Puys. Distantes de 170 km, les deux villes sont connectées par l'autoroute A89 qui traverse les monts du Forez. Votre chauffeur TaxiNeo vous conduit confortablement à travers ce parcours vallonné et pittoresque.",
@@ -253,8 +253,8 @@ export const trajetsLyonPart2: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Lyon → Clermont-Ferrand | Fixed price from €220 | TaxiNeo",
-        metaDescription: "Book your taxi Lyon → Clermont-Ferrand. 170 km, 1h50, fixed price from €220. A89 motorway, Forez mountains. Online booking 24/7.",
+        metaTitle: "Taxi Lyon → Clermont-Ferrand | 170 km, from €220 | TaxiNeo",
+        metaDescription: "Via A89, 1h50 ride. Monts du Forez, Thiers, Chaîne des Puys and Vulcania en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Lyon → Clermont-Ferrand",
         heroSubtitle: "Your Lyon → Clermont-Ferrand transfer at a fixed price of €220 — €280. Route via A89, 1h50 drive. Online booking.",
         description: "The Lyon — Clermont-Ferrand route connects the Capital of the Gauls to the Auvergne capital, at the foot of the Chaîne des Puys volcanic chain. 170 km apart, the two cities are linked by the A89 motorway crossing the Forez mountains. Your TaxiNeo driver takes you comfortably through this hilly and picturesque route.",
@@ -302,8 +302,8 @@ export const trajetsLyonPart2: Trajet[] = [
     hub: "lyon",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lyon → Dijon | Prix fixe dès 250 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Lyon → Dijon. 193 km, 1h55, prix fixe dès 250 €. Autoroute A6, vignobles de Bourgogne. Réservation en ligne 24h/24.",
+        metaTitle: "Taxi Lyon → Dijon | 193 km, dès 250 €, 1h55 | TaxiNeo",
+        metaDescription: "Via A6 en 1h55. Beaune, Côte-d'Or, Vignobles de Bourgogne et Mâcon en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Lyon → Dijon",
         heroSubtitle: "Votre transfert Lyon → Dijon au prix fixe de 250 — 310 €. Trajet par l'A6, 1h55 de route à travers la Bourgogne. Réservation en ligne.",
         description: "Le trajet Lyon — Dijon emprunte l'autoroute A6 à travers les vignobles de Bourgogne, l'un des terroirs viticoles les plus prestigieux au monde. Distantes de 193 km, les deux villes sont reliées par un axe autoroutier rapide traversant Mâcon, Tournus et Beaune. Votre chauffeur TaxiNeo vous conduit de la capitale gastronomique lyonnaise à la capitale bourguignonne.",
@@ -322,7 +322,7 @@ export const trajetsLyonPart2: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Lyon → Dijon | Fixed price from €250 | TaxiNeo",
-        metaDescription: "Book your taxi Lyon → Dijon. 193 km, 1h55, fixed price from €250. A6 motorway, Burgundy vineyards. Online booking 24/7.",
+        metaDescription: "Via A6, 1h55 ride. Beaune, Côte-d'Or, Vignobles de Bourgogne and Mâcon en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Lyon → Dijon",
         heroSubtitle: "Your Lyon → Dijon transfer at a fixed price of €250 — €310. Route via A6, 1h55 drive through Burgundy. Online booking.",
         description: "The Lyon — Dijon route takes the A6 motorway through the Burgundy vineyards, one of the world's most prestigious wine regions. 193 km apart, the two cities are connected by a fast motorway corridor through Mâcon, Tournus and Beaune. Your TaxiNeo driver takes you from the gastronomic capital of Lyon to the Burgundian capital.",
@@ -370,8 +370,8 @@ export const trajetsLyonPart2: Trajet[] = [
     hub: "lyon",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lyon → Marseille | Prix fixe dès 390 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Lyon → Marseille. 315 km, 3h05, prix fixe dès 390 €. Autoroute A7, vallée du Rhône. Chauffeur professionnel 24h/24.",
+        metaTitle: "Taxi Lyon → Marseille | 315 km, dès 390 € | TaxiNeo",
+        metaDescription: "Via A7 en 3h05. Vallée du Rhône, Avignon, Aix-en-Provence et Vieux-Port en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Lyon → Marseille",
         heroSubtitle: "Votre transfert Lyon → Marseille au prix fixe de 390 — 480 €. Trajet par l'A7, autoroute du Soleil, 3h05 de route. Réservation en ligne.",
         description: "Le trajet Lyon — Marseille est l'un des grands classiques de la route française, reliant la capitale gastronomique à la cité phocéenne par l'autoroute du Soleil (A7). 315 km séparent les deux métropoles, traversant toute la vallée du Rhône, Montélimar, Orange, Avignon et Aix-en-Provence. Votre chauffeur TaxiNeo vous offre un transfert confortable et sans stress.",
@@ -389,8 +389,8 @@ export const trajetsLyonPart2: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Lyon → Marseille | Fixed price from €390 | TaxiNeo",
-        metaDescription: "Book your taxi Lyon → Marseille. 315 km, 3h05, fixed price from €390. A7 Autoroute du Soleil, Rhône Valley. Professional driver 24/7.",
+        metaTitle: "Taxi Lyon → Marseille | 315 km, from €390 | TaxiNeo",
+        metaDescription: "Via A7, 3h05 ride. Vallée du Rhône, Avignon, Aix-en-Provence and Vieux-Port en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Lyon → Marseille",
         heroSubtitle: "Your Lyon → Marseille transfer at a fixed price of €390 — €480. Route via A7, Autoroute du Soleil, 3h05 drive. Online booking.",
         description: "The Lyon — Marseille route is one of the great classics of French road travel, connecting the gastronomic capital to the Phocaean city via the Autoroute du Soleil (A7). 315 km separate the two metropolises, crossing the entire Rhône Valley through Montélimar, Orange, Avignon and Aix-en-Provence. Your TaxiNeo driver offers you a comfortable, stress-free transfer.",
@@ -438,8 +438,8 @@ export const trajetsLyonPart2: Trajet[] = [
     hub: "lyon",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lyon → Turin | Prix fixe dès 420 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Lyon → Turin (Italie). 310 km, 3h15, prix fixe dès 420 €. A43 et tunnel du Fréjus. Transfert international 24h/24.",
+        metaTitle: "Taxi Lyon → Turin | 310 km, dès 420 €, 3h15 | TaxiNeo",
+        metaDescription: "Par A43 puis tunnel du Fréjus, 3h15 de trajet. Tunnel du Fréjus, Modane, Susa et Val di Susa en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Lyon → Turin",
         heroSubtitle: "Votre transfert Lyon → Turin au prix fixe de 420 — 520 €. Trajet par A43 et tunnel du Fréjus, 3h15 de route. Réservation en ligne.",
         description: "Le trajet Lyon — Turin est un transfert international traversant les Alpes par le tunnel routier du Fréjus. 310 km séparent la capitale des Gaules de la première capitale de l'Italie unie, en passant par Chambéry, la Maurienne et le Val di Susa. Votre chauffeur TaxiNeo assure ce transfert transalpin en toute sécurité et confort.",
@@ -458,7 +458,7 @@ export const trajetsLyonPart2: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Lyon → Turin | Fixed price from €420 | TaxiNeo",
-        metaDescription: "Book your taxi Lyon → Turin (Italy). 310 km, 3h15, fixed price from €420. A43 and Fréjus tunnel. International transfer 24/7.",
+        metaDescription: "Direct route via A43 then tunnel du Fréjus, 3h15. Tunnel du Fréjus, Modane, Susa and Val di Susa en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Lyon → Turin",
         heroSubtitle: "Your Lyon → Turin transfer at a fixed price of €420 — €520. Route via A43 and Fréjus tunnel, 3h15 drive. Online booking.",
         description: "The Lyon — Turin route is an international transfer crossing the Alps through the Fréjus road tunnel. 310 km separate the Capital of the Gauls from the first capital of unified Italy, passing through Chambéry, the Maurienne Valley and the Val di Susa. Your TaxiNeo driver ensures this transalpine transfer safely and comfortably.",
@@ -506,8 +506,8 @@ export const trajetsLyonPart2: Trajet[] = [
     hub: "lyon",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lyon → Genève | Prix fixe dès 210 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Lyon → Genève. 155 km, 1h45, prix fixe dès 210 €. A42/A40, transfert transfrontalier. Réservation en ligne 24h/24.",
+        metaTitle: "Taxi Lyon → Genève | 155 km, dès 210 €, 1h45 | TaxiNeo",
+        metaDescription: "Trajet direct A42 puis A40 en 1h45. En passant par Nantua, Lac Léman et Organisations internationales. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Lyon → Genève",
         heroSubtitle: "Votre transfert Lyon → Genève au prix fixe de 210 — 270 €. Trajet par A42/A40, 1h45 de route. Réservation en ligne.",
         description: "Le trajet Lyon — Genève relie la métropole lyonnaise à la capitale internationale suisse, siège européen de l'ONU et du CERN. Distantes de 155 km, les deux villes sont connectées par les autoroutes A42 et A40 à travers le massif du Jura. Votre chauffeur TaxiNeo assure ce transfert transfrontalier en toute fluidité.",
@@ -526,7 +526,7 @@ export const trajetsLyonPart2: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Lyon → Geneva | Fixed price from €210 | TaxiNeo",
-        metaDescription: "Book your taxi Lyon → Geneva. 155 km, 1h45, fixed price from €210. A42/A40, cross-border transfer. Online booking 24/7.",
+        metaDescription: "Direct route via A42 then A40, 1h45. Nantua, Lac Léman and Organisations internationales along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Lyon → Geneva",
         heroSubtitle: "Your Lyon → Geneva transfer at a fixed price of €210 — €270. Route via A42/A40, 1h45 drive. Online booking.",
         description: "The Lyon — Geneva route connects the Lyon metropolitan area to the Swiss international capital, European seat of the UN and home of CERN. 155 km apart, the two cities are linked by the A42 and A40 motorways through the Jura massif. Your TaxiNeo driver ensures this cross-border transfer seamlessly.",

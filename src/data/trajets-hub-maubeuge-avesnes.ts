@@ -27,8 +27,8 @@ export const trajetsMaubeugeAvesnes: Trajet[] = [
     hub: "maubeuge-avesnes",
     i18n: {
       fr: {
-        metaTitle: "Taxi Maubeuge \u2192 Lille | Prix fixe d\u00e8s 110 \u20ac | TaxiNeo",
-        metaDescription: "Taxi Maubeuge \u2192 Lille. 90 km, 1h, d\u00e8s 110 \u20ac. N2 et A23, transfert direct depuis la vall\u00e9e de la Sambre. R\u00e9servation 24h/24.",
+        metaTitle: "Taxi Maubeuge → Lille | 90 km, dès 110 € | TaxiNeo",
+        metaDescription: "Via N2 / D649 / A23 en 1h. N2, Sambre, Avesnois et Vieux-Lille en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Maubeuge \u2192 Lille",
         heroSubtitle: "Transfert Maubeuge \u2192 Lille au prix fixe de 110 --- 140 \u20ac. 90 km, liaison directe via la N2 et l\u2019A23.",
         description: "Lille est \u00e0 1h de Maubeuge par la N2 et l\u2019A23, reliant la fronti\u00e8re belge \u00e0 la m\u00e9tropole lilloise.",
@@ -46,8 +46,8 @@ export const trajetsMaubeugeAvesnes: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Maubeuge \u2192 Lille | Fixed price from \u20ac110 | TaxiNeo",
-        metaDescription: "Taxi Maubeuge \u2192 Lille. 90 km, 1h, from \u20ac110. N2 and A23, direct transfer from the Belgian border. Book 24/7.",
+        metaTitle: "Taxi Maubeuge → Lille | 90 km, from €110 | TaxiNeo",
+        metaDescription: "Via N2 / D649 / A23, 1 hour ride. N2, Sambre, Avesnois and Vieux-Lille en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Maubeuge \u2192 Lille",
         heroSubtitle: "Your Maubeuge \u2192 Lille transfer at \u20ac110 --- \u20ac140. 90 km, via the N2 and A23.",
         description: "Lille is 1h from Maubeuge via the N2 and A23.",
@@ -92,8 +92,8 @@ export const trajetsMaubeugeAvesnes: Trajet[] = [
     hub: "maubeuge-avesnes",
     i18n: {
       fr: {
-        metaTitle: "Taxi Maubeuge \u2192 Valenciennes | Prix fixe d\u00e8s 50 \u20ac | TaxiNeo",
-        metaDescription: "Taxi Maubeuge \u2192 Valenciennes. 40 km, 30 min, d\u00e8s 50 \u20ac. D649, transfert direct entre les deux villes du Hainaut. R\u00e9servation 24h/24.",
+        metaTitle: "Taxi Maubeuge → Valenciennes | 40 km, dès 50 € | TaxiNeo",
+        metaDescription: "Trajet direct D649 en 30 min. Passage par Sambre, Patrimoine industriel, Mus\u00e9e Matisse et Hainaut. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Maubeuge \u2192 Valenciennes",
         heroSubtitle: "Transfert Maubeuge \u2192 Valenciennes au prix fixe de 50 --- 65 \u20ac. 40 km, route gratuite par la D649.",
         description: "Valenciennes est \u00e0 30 min de Maubeuge par la D649, deux villes du Hainaut fran\u00e7ais.",
@@ -111,8 +111,8 @@ export const trajetsMaubeugeAvesnes: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Maubeuge \u2192 Valenciennes | Fixed price from \u20ac50 | TaxiNeo",
-        metaDescription: "Taxi Maubeuge \u2192 Valenciennes. 40 km, 30 min, from \u20ac50. D649 toll-free. Two historic Hainaut cities. Book 24/7.",
+        metaTitle: "Taxi Maubeuge → Valenciennes | 40 km, from €50 | TaxiNeo",
+        metaDescription: "Direct route via D649, 30 min. Sambre, Patrimoine industriel, Mus\u00e9e Matisse and Hainaut en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Maubeuge \u2192 Valenciennes",
         heroSubtitle: "Your Maubeuge \u2192 Valenciennes transfer at \u20ac50 --- \u20ac65. 40 km, toll-free via the D649.",
         description: "Valenciennes is 30 min from Maubeuge via the toll-free D649.",
@@ -157,8 +157,8 @@ export const trajetsMaubeugeAvesnes: Trajet[] = [
     hub: "maubeuge-avesnes",
     i18n: {
       fr: {
-        metaTitle: "Taxi Maubeuge \u2192 Bruxelles | Prix fixe d\u00e8s 120 \u20ac | TaxiNeo",
-        metaDescription: "Taxi Maubeuge \u2192 Bruxelles. 100 km, 1h05, d\u00e8s 120 \u20ac. Transfert transfrontalier direct, sans p\u00e9age. R\u00e9servation 24h/24.",
+        metaTitle: "Taxi Maubeuge → Bruxelles | 100 km, dès 120 € | TaxiNeo",
+        metaDescription: "Par N2 / E19-E42, 1h05 de trajet. Passage par N2, Fronti\u00e8re belge, Mons et Grand-Place Bruxelles. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Maubeuge \u2192 Bruxelles",
         heroSubtitle: "Transfert Maubeuge \u2192 Bruxelles au prix fixe de 120 --- 155 \u20ac. 100 km, trajet transfrontalier direct.",
         description: "Bruxelles est \u00e0 1h05 de Maubeuge, un trajet transfrontalier naturel par la N2 et les autoroutes belges.",
@@ -176,8 +176,8 @@ export const trajetsMaubeugeAvesnes: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Maubeuge \u2192 Brussels | Fixed price from \u20ac120 | TaxiNeo",
-        metaDescription: "Taxi Maubeuge \u2192 Brussels. 100 km, 1h05, from \u20ac120. Cross-border transfer, toll-free. Book 24/7.",
+        metaTitle: "Taxi Maubeuge → Bruxelles | 100 km, from €120 | TaxiNeo",
+        metaDescription: "Direct route via N2 / E19-E42, 1h05. N2, Fronti\u00e8re belge, Mons and Grand-Place Bruxelles en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Maubeuge \u2192 Brussels",
         heroSubtitle: "Your Maubeuge \u2192 Brussels transfer at \u20ac120 --- \u20ac155. 100 km, cross-border via E19-E42.",
         description: "Brussels is 1h05 from Maubeuge, a natural cross-border route via Belgian motorways.",
@@ -222,8 +222,8 @@ export const trajetsMaubeugeAvesnes: Trajet[] = [
     hub: "maubeuge-avesnes",
     i18n: {
       fr: {
-        metaTitle: "Taxi Maubeuge \u2192 Paris | Prix fixe d\u00e8s 285 \u20ac | TaxiNeo",
-        metaDescription: "Taxi Maubeuge \u2192 Paris. 240 km, 2h30, d\u00e8s 285 \u20ac. A2 et A1, transfert direct depuis la fronti\u00e8re belge. R\u00e9servation 24h/24.",
+        metaTitle: "Taxi Maubeuge → Paris | 240 km, dès 285 € | TaxiNeo",
+        metaDescription: "Via A2 / A1 en 2h30. Sambre, Avesnois et Compi\u00e8gne en chemin. Dépose porte-à-porte, bagages inclus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Maubeuge \u2192 Paris",
         heroSubtitle: "Transfert Maubeuge \u2192 Paris au prix fixe de 285 --- 355 \u20ac. 240 km, direct par l\u2019A2 et l\u2019A1.",
         description: "Paris est \u00e0 2h30 de Maubeuge par l\u2019A2 et l\u2019A1, traversant le Hainaut et la Picardie.",
@@ -241,8 +241,8 @@ export const trajetsMaubeugeAvesnes: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Maubeuge \u2192 Paris | Fixed price from \u20ac285 | TaxiNeo",
-        metaDescription: "Taxi Maubeuge \u2192 Paris. 240 km, 2h30, from \u20ac285. A2 and A1, direct from the Belgian border. Book 24/7.",
+        metaTitle: "Taxi Maubeuge → Paris | 240 km, from €285 | TaxiNeo",
+        metaDescription: "Via A2 / A1, 2h30 ride. Sambre, Avesnois and Compi\u00e8gne along the way. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Maubeuge \u2192 Paris",
         heroSubtitle: "Your Maubeuge \u2192 Paris transfer at \u20ac285 --- \u20ac355. 240 km, via the A2 and A1.",
         description: "Paris is 2h30 from Maubeuge via the A2 and A1 motorways.",
@@ -287,8 +287,8 @@ export const trajetsMaubeugeAvesnes: Trajet[] = [
     hub: "maubeuge-avesnes",
     i18n: {
       fr: {
-        metaTitle: "Taxi Avesnes-sur-Helpe \u2192 Lille | Prix fixe d\u00e8s 120 \u20ac | TaxiNeo",
-        metaDescription: "Taxi Avesnes-sur-Helpe \u2192 Lille. 100 km, 1h05, d\u00e8s 120 \u20ac. D649 et A23, transfert direct depuis l\u2019Avesnois. R\u00e9servation 24h/24.",
+        metaTitle: "Taxi Avesnes-sur-Helpe → Lille | 100 km, dès 120 € | TaxiNeo",
+        metaDescription: "Via D649 / A2 / A23 en 1h05. Avesnois, Bocage, Vieux-Lille et Eurostar en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Avesnes-sur-Helpe \u2192 Lille",
         heroSubtitle: "Transfert Avesnes-sur-Helpe \u2192 Lille au prix fixe de 120 --- 155 \u20ac. 100 km, du coeur de l\u2019Avesnois \u00e0 la m\u00e9tropole lilloise.",
         description: "Lille est \u00e0 1h05 d\u2019Avesnes-sur-Helpe par la D649 et l\u2019A23, reliant le bocage avesnois \u00e0 la m\u00e9tropole.",
@@ -306,8 +306,8 @@ export const trajetsMaubeugeAvesnes: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Avesnes-sur-Helpe \u2192 Lille | Fixed price from \u20ac120 | TaxiNeo",
-        metaDescription: "Taxi Avesnes-sur-Helpe \u2192 Lille. 100 km, 1h05, from \u20ac120. D649 and A23, from the Avesnois countryside. Book 24/7.",
+        metaTitle: "Taxi Avesnes-sur-Helpe → Lille | 100 km, from €120 | TaxiNeo",
+        metaDescription: "Via D649 / A2 / A23, 1h05 ride. Avesnois, Bocage, Vieux-Lille and Eurostar en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Avesnes-sur-Helpe \u2192 Lille",
         heroSubtitle: "Your Avesnes-sur-Helpe \u2192 Lille transfer at \u20ac120 --- \u20ac155. 100 km, from the Avesnois bocage to Lille.",
         description: "Lille is 1h05 from Avesnes-sur-Helpe via the D649 and A23.",

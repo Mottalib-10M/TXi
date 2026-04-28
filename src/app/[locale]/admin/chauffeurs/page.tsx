@@ -11,6 +11,7 @@ export default async function AdminDriversPage() {
       id: true,
       firstName: true,
       lastName: true,
+      companyName: true,
       email: true,
       phone: true,
       slug: true,
@@ -35,6 +36,7 @@ export default async function AdminDriversPage() {
       id: d.id,
       firstName: d.firstName,
       lastName: d.lastName,
+      companyName: d.companyName || null,
       email: d.email,
       phone: d.phone,
       slug: d.slug,
@@ -43,6 +45,8 @@ export default async function AdminDriversPage() {
         : d.vehicleBrand
           ? `${d.vehicleBrand} ${d.vehicleModel || ""}`.trim()
           : null,
+      vehicleBrand: v0?.brand || d.vehicleBrand || null,
+      vehicleModel: v0?.model || d.vehicleModel || null,
       zone: d.zoneAddress || null,
       isActive: d.isActive,
       isVerified: d.isVerified,

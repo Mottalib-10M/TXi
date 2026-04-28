@@ -27,8 +27,8 @@ export const trajetsBeauvaisCompiegne: Trajet[] = [
     hub: "beauvais-compiegne",
     i18n: {
       fr: {
-        metaTitle: "Taxi Beauvais → Paris | Prix fixe dès 85 € | TaxiNeo",
-        metaDescription: "Taxi Beauvais → Paris. 80 km, 55 min, dès 85 €. A16, transfert direct porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Beauvais → Paris | forfait dès 85 € | TaxiNeo",
+        metaDescription: "Via A16 en 55 min. Oise, Cathédrale Saint-Pierre, Porte-à-porte et Nuit en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Beauvais → Paris",
         heroSubtitle: "Transfert Beauvais → Paris au prix fixe de 85 — 110 €. 80 km, direct par l'A16.",
         description: "Paris est à 55 min de Beauvais par l'A16, l'autoroute qui relie la Picardie à la capitale.",
@@ -47,7 +47,7 @@ export const trajetsBeauvaisCompiegne: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Beauvais → Paris | Fixed price from €85 | TaxiNeo",
-        metaDescription: "Taxi Beauvais → Paris. 80 km, 55 min, from €85. A16 motorway, direct door-to-door. Book 24/7.",
+        metaDescription: "Via A16, 55 min ride. Oise, Cathédrale Saint-Pierre, Porte-à-porte and Nuit en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Beauvais → Paris",
         heroSubtitle: "Your Beauvais → Paris transfer at €85 — €110. 80 km, via the A16.",
         description: "Paris is 55 min from Beauvais via the A16 motorway.",
@@ -92,8 +92,8 @@ export const trajetsBeauvaisCompiegne: Trajet[] = [
     hub: "beauvais-compiegne",
     i18n: {
       fr: {
-        metaTitle: "Taxi Aéroport Beauvais → Paris | Prix fixe dès 90 € | TaxiNeo",
-        metaDescription: "Taxi Aéroport Beauvais-Tillé → Paris. 85 km, 1h, dès 90 €. Transfert direct après votre vol Ryanair. Réservation 24h/24.",
+        metaTitle: "Taxi Aéroport Beauvais → Paris | 85 km, dès 90 € | TaxiNeo",
+        metaDescription: "Par A16, 1h de trajet. Passage par Aéroport Beauvais-Tillé, Ryanair, Liaison directe et Nuit. Accueil au terminal, attente gratuite si retard de vol.",
         heroTitle: "Taxi Aéroport Beauvais → Paris",
         heroSubtitle: "Transfert Aéroport Beauvais-Tillé → Paris au prix fixe de 90 — 115 €. 85 km, direct par l'A16.",
         description: "Paris est à 1h de l'aéroport de Beauvais-Tillé par l'A16.",
@@ -111,8 +111,8 @@ export const trajetsBeauvaisCompiegne: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Beauvais Airport → Paris | Fixed price from €90 | TaxiNeo",
-        metaDescription: "Taxi Beauvais-Tillé Airport → Paris. 85 km, 1h, from €90. Direct transfer after your Ryanair flight. Book 24/7.",
+        metaTitle: "Taxi Aéroport Beauvais → Paris | 85 km, from €90 | TaxiNeo",
+        metaDescription: "Direct route via A16, 1 hour. Aéroport Beauvais-Tillé, Ryanair, Liaison directe and Nuit en route. Terminal drop-off, real-time flight tracking included.",
         heroTitle: "Taxi Beauvais Airport → Paris",
         heroSubtitle: "Your Beauvais-Tillé Airport → Paris transfer at €90 — €115. 85 km, via the A16.",
         description: "Paris is 1h from Beauvais-Tillé Airport via the A16.",
@@ -157,8 +157,8 @@ export const trajetsBeauvaisCompiegne: Trajet[] = [
     hub: "beauvais-compiegne",
     i18n: {
       fr: {
-        metaTitle: "Taxi Beauvais → Amiens | Prix fixe dès 65 € | TaxiNeo",
-        metaDescription: "Taxi Beauvais → Amiens. 60 km, 45 min, dès 65 €. D1001, route gratuite, cathédrale gothique. Réservation 24h/24.",
+        metaTitle: "Taxi Beauvais → Amiens | 60 km, dès 65 € | TaxiNeo",
+        metaDescription: "Par D1001, 45 min de trajet. Passage par Picardie, Cathédrale gothique, Hortillonnages et Jules Verne. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Beauvais → Amiens",
         heroSubtitle: "Transfert Beauvais → Amiens au prix fixe de 65 — 80 €. 60 km, route gratuite par la D1001.",
         description: "Amiens, capitale de la Picardie et sa cathédrale UNESCO, est à 45 min de Beauvais.",
@@ -176,8 +176,8 @@ export const trajetsBeauvaisCompiegne: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Beauvais → Amiens | Fixed price from €65 | TaxiNeo",
-        metaDescription: "Taxi Beauvais → Amiens. 60 km, 45 min, from €65. D1001, toll-free, Gothic cathedral. Book 24/7.",
+        metaTitle: "Taxi Beauvais → Amiens | 60 km, from €65 | TaxiNeo",
+        metaDescription: "Direct route via D1001, 45 min. Picardie, Cathédrale gothique, Hortillonnages and Jules Verne en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Beauvais → Amiens",
         heroSubtitle: "Your Beauvais → Amiens transfer at €65 — €80. 60 km, toll-free.",
         description: "Amiens, with France's largest Gothic cathedral (UNESCO), is 45 min from Beauvais.",
@@ -222,8 +222,8 @@ export const trajetsBeauvaisCompiegne: Trajet[] = [
     hub: "beauvais-compiegne",
     i18n: {
       fr: {
-        metaTitle: "Taxi Compiègne → Paris | Prix fixe dès 85 € | TaxiNeo",
-        metaDescription: "Taxi Compiègne → Paris. 80 km, 50 min, dès 85 €. A1, transfert direct porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Compiègne → Paris | 80 km, dès 85 € | TaxiNeo",
+        metaDescription: "Via A1 en 50 min. Palais impérial, Forêt, Armistice et CDG en chemin. Dépose porte-à-porte, bagages inclus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Compiègne → Paris",
         heroSubtitle: "Transfert Compiègne → Paris au prix fixe de 85 — 110 €. 80 km, direct par l'A1.",
         description: "Paris est à 50 min de Compiègne par l'A1, autoroute du Nord.",
@@ -241,8 +241,8 @@ export const trajetsBeauvaisCompiegne: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Compiègne → Paris | Fixed price from €85 | TaxiNeo",
-        metaDescription: "Taxi Compiègne → Paris. 80 km, 50 min, from €85. A1 motorway, direct door-to-door. Book 24/7.",
+        metaTitle: "Taxi Compiègne → Paris | 80 km, from €85 | TaxiNeo",
+        metaDescription: "Via A1, 50 min ride. Palais impérial, Forêt, Armistice and CDG en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Compiègne → Paris",
         heroSubtitle: "Your Compiègne → Paris transfer at €85 — €110. 80 km, via the A1.",
         description: "Paris is 50 min from Compiègne via the A1 motorway.",
@@ -287,8 +287,8 @@ export const trajetsBeauvaisCompiegne: Trajet[] = [
     hub: "beauvais-compiegne",
     i18n: {
       fr: {
-        metaTitle: "Taxi Compiègne → Reims | Prix fixe dès 110 € | TaxiNeo",
-        metaDescription: "Taxi Compiègne → Reims. 105 km, 1h05, dès 110 €. A26, cathédrale des sacres, caves de Champagne. Réservation 24h/24.",
+        metaTitle: "Taxi Compiègne → Reims | 105 km, dès 110 € | TaxiNeo",
+        metaDescription: "Via A26 en 1h05. Champagne, Cathédrale de Reims, Sacre des Rois et Caves en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Compiègne → Reims",
         heroSubtitle: "Transfert Compiègne → Reims au prix fixe de 110 — 140 €. 105 km, capitale du Champagne.",
         description: "Reims, capitale du Champagne et cathédrale des sacres royaux, est à 1h05 de Compiègne.",
@@ -306,8 +306,8 @@ export const trajetsBeauvaisCompiegne: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Compiègne → Reims | Fixed price from €110 | TaxiNeo",
-        metaDescription: "Taxi Compiègne → Reims. 105 km, 1h05, from €110. A26, coronation cathedral, Champagne cellars. Book 24/7.",
+        metaTitle: "Taxi Compiègne → Reims | 105 km, from €110 | TaxiNeo",
+        metaDescription: "Via A26, 1h05 ride. Champagne, Cathédrale de Reims, Sacre des Rois and Caves en route. Drop-off at your exact address. Door-to-door, luggage included.",
         heroTitle: "Taxi Compiègne → Reims",
         heroSubtitle: "Your Compiègne → Reims transfer at €110 — €140. 105 km, Champagne capital.",
         description: "Reims, Champagne capital and coronation cathedral, is 1h05 from Compiègne.",

@@ -30,8 +30,8 @@ export const trajetsNancy: Trajet[] = [
     hub: "nancy",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nancy → Metz | Prix fixe dès 65 € | TaxiNeo",
-        metaDescription: "Taxi Nancy → Metz. 57 km, 45 min, dès 65 €. A31, Centre Pompidou-Metz, cathédrale Saint-Étienne. Réservation 24h/24.",
+        metaTitle: "Taxi Nancy → Metz | forfait dès 65 €, 45 min | TaxiNeo",
+        metaDescription: "Via A31 en 45 min. Deux capitales lorraines, Moselle, Pont-à-Mousson et Centre Pompidou-Metz en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Nancy → Metz",
         heroSubtitle: "Transfert Nancy → Metz au prix fixe de 65 — 85 €. 57 km par l'A31 entre les deux capitales lorraines.",
         description: "Metz, ville d'art et d'histoire avec son Centre Pompidou-Metz et sa cathédrale aux vitraux les plus vastes du monde, est à 45 min de Nancy.",
@@ -50,7 +50,7 @@ export const trajetsNancy: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Nancy → Metz | Fixed price from €65 | TaxiNeo",
-        metaDescription: "Taxi Nancy → Metz. 57 km, 45 min, from €65. A31, Centre Pompidou-Metz, Saint-Étienne Cathedral. Book 24/7.",
+        metaDescription: "Via A31, 45 min ride. Deux capitales lorraines, Moselle, Pont-à-Mousson and Centre Pompidou-Metz en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Nancy → Metz",
         heroSubtitle: "Your Nancy → Metz transfer at €65 — €85. 57 km via the A31 between Lorraine's two capitals.",
         description: "Metz, a city of art and history with its Centre Pompidou-Metz and cathedral boasting the world's largest stained glass surface, is 45 min from Nancy.",
@@ -95,8 +95,8 @@ export const trajetsNancy: Trajet[] = [
     hub: "nancy",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nancy → Strasbourg | Prix fixe dès 170 € | TaxiNeo",
-        metaDescription: "Taxi Nancy → Strasbourg. 155 km, 1h35, dès 170 €. A4, cathédrale, Petite France, Parlement européen. Réservation 24h/24.",
+        metaTitle: "Taxi Nancy → Strasbourg | 155 km, dès 170 € | TaxiNeo",
+        metaDescription: "Par A4, 1h35 de trajet. Cathédrale de Strasbourg, Petite France, Parlement européen et Alsace en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Nancy → Strasbourg",
         heroSubtitle: "Transfert Nancy → Strasbourg au prix fixe de 170 — 220 €. 155 km par l'A4 de la Lorraine à l'Alsace.",
         description: "Strasbourg, capitale européenne et joyau alsacien avec sa cathédrale gothique et son quartier de la Petite France classé UNESCO, est à 1h35 de Nancy.",
@@ -114,8 +114,8 @@ export const trajetsNancy: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nancy → Strasbourg | Fixed price from €170 | TaxiNeo",
-        metaDescription: "Taxi Nancy → Strasbourg. 155 km, 1h35, from €170. A4, cathedral, Petite France, European Parliament. Book 24/7.",
+        metaTitle: "Taxi Nancy → Strasbourg | 155 km, from €170 | TaxiNeo",
+        metaDescription: "Through A4 in 1h35. Cathédrale de Strasbourg, Petite France, Parlement européen and Alsace en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Nancy → Strasbourg",
         heroSubtitle: "Your Nancy → Strasbourg transfer at €170 — €220. 155 km via the A4 from Lorraine to Alsace.",
         description: "Strasbourg, European capital and Alsatian jewel with its Gothic cathedral and UNESCO-listed Petite France quarter, is 1h35 from Nancy.",
@@ -160,8 +160,8 @@ export const trajetsNancy: Trajet[] = [
     hub: "nancy",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nancy → Paris | Prix fixe dès 350 € | TaxiNeo",
-        metaDescription: "Taxi Nancy → Paris. 310 km, 3h10, dès 350 €. A4 via la Champagne. Transfert direct porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Nancy → Paris | 310 km, dès 350 €, 3h10 | TaxiNeo",
+        metaDescription: "Via A4 en 3h10. Champagne, Reims, Marne et Longue distance en chemin. Dépose porte-à-porte, bagages inclus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Nancy → Paris",
         heroSubtitle: "Transfert Nancy → Paris au prix fixe de 350 — 420 €. 310 km par l'A4 à travers la Champagne.",
         description: "Paris, capitale de la France, est à 3h10 de Nancy par l'autoroute A4, un trajet direct et confortable à travers la Champagne.",
@@ -180,7 +180,7 @@ export const trajetsNancy: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Nancy → Paris | Fixed price from €350 | TaxiNeo",
-        metaDescription: "Taxi Nancy → Paris. 310 km, 3h10, from €350. A4 via Champagne. Direct door-to-door transfer. Book 24/7.",
+        metaDescription: "Via A4, 3h10 ride. Champagne, Reims, Marne and Longue distance en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Nancy → Paris",
         heroSubtitle: "Your Nancy → Paris transfer at €350 — €420. 310 km via the A4 through Champagne.",
         description: "Paris, the capital of France, is 3h10 from Nancy via the A4 motorway, a direct and comfortable journey through Champagne.",
@@ -225,8 +225,8 @@ export const trajetsNancy: Trajet[] = [
     hub: "nancy",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nancy → Luxembourg | Prix fixe dès 110 € | TaxiNeo",
-        metaDescription: "Taxi Nancy → Luxembourg. 95 km, 1h10, dès 110 €. A31, Grand-Duché, Kirchberg, Casemates du Bock. Réservation 24h/24.",
+        metaTitle: "Taxi Nancy → Luxembourg-Ville | 95 km, dès 110 € | TaxiNeo",
+        metaDescription: "Via A31 en 1h10. Grand-Duché, Transfrontalier, Metz et Kirchberg en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Nancy → Luxembourg-Ville",
         heroSubtitle: "Transfert Nancy → Luxembourg au prix fixe de 110 — 140 €. 95 km par l'A31 vers le Grand-Duché.",
         description: "Luxembourg-Ville, capitale européenne et place financière mondiale avec ses fortifications UNESCO, est à 1h10 de Nancy.",
@@ -244,8 +244,8 @@ export const trajetsNancy: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nancy → Luxembourg City | Fixed price from €110 | TaxiNeo",
-        metaDescription: "Taxi Nancy → Luxembourg. 95 km, 1h10, from €110. A31, Grand Duchy, Kirchberg, Bock Casemates. Book 24/7.",
+        metaTitle: "Taxi Nancy → Luxembourg-Ville | 95 km, from €110 | TaxiNeo",
+        metaDescription: "Via A31, 1h10 ride. Grand-Duché, Transfrontalier, Metz and Kirchberg en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Nancy → Luxembourg City",
         heroSubtitle: "Your Nancy → Luxembourg transfer at €110 — €140. 95 km via the A31 to the Grand Duchy.",
         description: "Luxembourg City, European capital and global financial centre with UNESCO-listed fortifications, is 1h10 from Nancy.",
@@ -290,8 +290,8 @@ export const trajetsNancy: Trajet[] = [
     hub: "nancy",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nancy → Épinal | Prix fixe dès 75 € | TaxiNeo",
-        metaDescription: "Taxi Nancy → Épinal. 70 km, 55 min, dès 75 €. A33, Imagerie d'Épinal, Vosges, Cité des Images. Réservation 24h/24.",
+        metaTitle: "Taxi Nancy → Épinal | forfait dès 75 €, 55 min | TaxiNeo",
+        metaDescription: "Via A33 en 55 min. Imagerie d'Épinal, Vosges, Moselle et Cité des Images en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Nancy → Épinal",
         heroSubtitle: "Transfert Nancy → Épinal au prix fixe de 75 — 95 €. 70 km par l'A33 vers la préfecture des Vosges.",
         description: "Épinal, préfecture des Vosges célèbre dans le monde entier pour son Imagerie et porte d'entrée du massif vosgien, est à 55 min de Nancy.",
@@ -310,7 +310,7 @@ export const trajetsNancy: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Nancy → Épinal | Fixed price from €75 | TaxiNeo",
-        metaDescription: "Taxi Nancy → Épinal. 70 km, 55 min, from €75. A33, Imagerie d'Épinal, Vosges, Cité des Images. Book 24/7.",
+        metaDescription: "Via A33, 55 min ride. Imagerie d'Épinal, Vosges, Moselle and Cité des Images en route. Drop-off at your exact address. Door-to-door, luggage included.",
         heroTitle: "Taxi Nancy → Épinal",
         heroSubtitle: "Your Nancy → Épinal transfer at €75 — €95. 70 km via the A33 to the Vosges prefecture.",
         description: "Épinal, Vosges prefecture world-famous for its Imagerie and gateway to the Vosges mountains, is 55 min from Nancy.",

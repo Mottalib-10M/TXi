@@ -30,8 +30,8 @@ export const trajetsAjaccioBastia: Trajet[] = [
     hub: "ajaccio-bastia",
     i18n: {
       fr: {
-        metaTitle: "Taxi Ajaccio → Bastia | Traversée de la Corse | TaxiNeo",
-        metaDescription: "Réservez votre taxi Ajaccio–Bastia dès 200 €. 150 km par la N193 via Corte et le col de Vizzavona. Traversée complète de la Corse en 2h30.",
+        metaTitle: "Taxi Ajaccio → Bastia | 150 km, dès 200 € | TaxiNeo",
+        metaDescription: "Via N193 via Corte et col de Vizza en 2h30. Route N193, Col de Vizzavona, Forêt de Vizzavona et Maquis corse en chemin. Dépose à votre adresse exacte.",
         heroTitle: "Taxi Ajaccio — Bastia",
         heroSubtitle: "La grande traversée de l'île de Beauté, d'une capitale à l'autre",
         description: "Transfert en taxi d'Ajaccio à Bastia, la traversée intégrale de la Corse par la route nationale N193 à travers les montagnes et le maquis.",
@@ -49,8 +49,8 @@ export const trajetsAjaccioBastia: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Ajaccio → Bastia | Cross-Corsica Transfer | TaxiNeo",
-        metaDescription: "Book your Ajaccio–Bastia taxi from €200. 150 km via the N193 through Corte and the Vizzavona pass. Full island crossing in 2h30.",
+        metaTitle: "Taxi Ajaccio → Bastia | 150 km, from €200 | TaxiNeo",
+        metaDescription: "Via N193 via Corte et col de Vizzavona, 2h30 ride. Route N193, Col de Vizzavona, Forêt de Vizzavona and Maquis corse en route. Drop-off at your exact address.",
         heroTitle: "Taxi Ajaccio — Bastia",
         heroSubtitle: "The grand crossing of the Isle of Beauty, from one capital to the other",
         description: "Taxi transfer from Ajaccio to Bastia, a complete crossing of Corsica via the N193 national road through mountains and maquis.",
@@ -95,8 +95,8 @@ export const trajetsAjaccioBastia: Trajet[] = [
     hub: "ajaccio-bastia",
     i18n: {
       fr: {
-        metaTitle: "Taxi Ajaccio → Porto-Vecchio | Corse du Sud | TaxiNeo",
-        metaDescription: "Réservez votre taxi Ajaccio–Porto-Vecchio dès 185 €. 140 km par la N196 via Propriano. Rejoignez les plus belles plages de Corse en 2h20.",
+        metaTitle: "Taxi Ajaccio → Porto-Vecchio | 140 km, dès 185 € | TaxiNeo",
+        metaDescription: "Via N196 via Propriano en 2h20. Route N196, Col de Bavella, Aiguilles de Bavella et Plages de Porto-Vecchio en chemin. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Ajaccio — Porto-Vecchio",
         heroSubtitle: "Du golfe impérial aux plages paradisiaques de la Corse du Sud",
         description: "Transfert en taxi d'Ajaccio à Porto-Vecchio, station balnéaire prisée de la Corse du Sud, à travers les paysages sauvages du maquis et des montagnes corses.",
@@ -114,8 +114,8 @@ export const trajetsAjaccioBastia: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Ajaccio → Porto-Vecchio | Southern Corsica | TaxiNeo",
-        metaDescription: "Book your Ajaccio–Porto-Vecchio taxi from €185. 140 km via the N196 through Propriano. Reach Corsica's finest beaches in 2h20.",
+        metaTitle: "Taxi Ajaccio → Porto-Vecchio | 140 km, from €185 | TaxiNeo",
+        metaDescription: "Via N196 via Propriano, 2h20 ride. Route N196, Col de Bavella, Aiguilles de Bavella and Plages de Porto-Vecchio en route. Drop-off at your exact address.",
         heroTitle: "Taxi Ajaccio — Porto-Vecchio",
         heroSubtitle: "From the imperial gulf to the paradise beaches of Southern Corsica",
         description: "Taxi transfer from Ajaccio to Porto-Vecchio, Southern Corsica's premier beach resort, through wild maquis and mountain landscapes.",
@@ -160,8 +160,8 @@ export const trajetsAjaccioBastia: Trajet[] = [
     hub: "ajaccio-bastia",
     i18n: {
       fr: {
-        metaTitle: "Taxi Ajaccio → Bonifacio | Falaises & Citadelle | TaxiNeo",
-        metaDescription: "Réservez votre taxi Ajaccio–Bonifacio dès 175 €. 130 km par la N196 via Sartène. Découvrez la cité des falaises en 2h15.",
+        metaTitle: "Taxi Ajaccio → Bonifacio | 130 km, dès 175 € | TaxiNeo",
+        metaDescription: "Via N196 via Propriano et Sartène en 2h15. Route N196, Sartène, Falaises de Bonifacio et Citadelle génoise en chemin. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Ajaccio — Bonifacio",
         heroSubtitle: "Du golfe d'Ajaccio à la cité spectaculaire perchée sur les falaises",
         description: "Transfert en taxi d'Ajaccio à Bonifacio, la ville fortifiée perchée sur des falaises de calcaire blanc à l'extrême sud de la Corse.",
@@ -179,8 +179,8 @@ export const trajetsAjaccioBastia: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Ajaccio → Bonifacio | Cliffs & Citadel | TaxiNeo",
-        metaDescription: "Book your Ajaccio–Bonifacio taxi from €175. 130 km via the N196 through Sartène. Discover the cliff-top citadel in 2h15.",
+        metaTitle: "Taxi Ajaccio → Bonifacio | 130 km, from €175 | TaxiNeo",
+        metaDescription: "Via N196 via Propriano et Sartène, 2h15 ride. Route N196, Sartène, Falaises de Bonifacio and Citadelle génoise en route. Drop-off at your exact address.",
         heroTitle: "Taxi Ajaccio — Bonifacio",
         heroSubtitle: "From the Gulf of Ajaccio to the spectacular cliff-top citadel",
         description: "Taxi transfer from Ajaccio to Bonifacio, the fortified town perched on white limestone cliffs at the extreme south of Corsica.",
@@ -225,8 +225,8 @@ export const trajetsAjaccioBastia: Trajet[] = [
     hub: "ajaccio-bastia",
     i18n: {
       fr: {
-        metaTitle: "Taxi Bastia → Calvi | Route de la Balagne | TaxiNeo",
-        metaDescription: "Réservez votre taxi Bastia–Calvi dès 130 €. 95 km par la N197 via la Balagne. Rejoignez la citadelle de Calvi en 1h40.",
+        metaTitle: "Taxi Bastia → Calvi | forfait dès 130 €, 1h40 | TaxiNeo",
+        metaDescription: "Via N197 via Ponte Leccia et la Ba en 1h40. Route N197, Balagne, Citadelle de Calvi et Île-Rousse en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Bastia — Calvi",
         heroSubtitle: "Du port de Bastia à la perle de la Balagne, entre mer et montagne",
         description: "Transfert en taxi de Bastia à Calvi, joyau de la Balagne corse, par la route N197 à travers les montagnes et les villages perchés du nord de l'île.",
@@ -244,8 +244,8 @@ export const trajetsAjaccioBastia: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Bastia → Calvi | Balagne Route | TaxiNeo",
-        metaDescription: "Book your Bastia–Calvi taxi from €130. 95 km via the N197 through the Balagne. Reach Calvi's citadel in 1h40.",
+        metaTitle: "Taxi Bastia → Calvi | Fixed price transfer | TaxiNeo",
+        metaDescription: "Via N197 via Ponte Leccia et la Balagne, 1h40 ride. Route N197, Balagne, Citadelle de Calvi and Île-Rousse en route. Faster and more direct than train or bus.",
         heroTitle: "Taxi Bastia — Calvi",
         heroSubtitle: "From Bastia's port to the jewel of the Balagne, between sea and mountains",
         description: "Taxi transfer from Bastia to Calvi, jewel of the Corsican Balagne, via the N197 through mountains and perched villages of northern Corsica.",
@@ -290,8 +290,8 @@ export const trajetsAjaccioBastia: Trajet[] = [
     hub: "ajaccio-bastia",
     i18n: {
       fr: {
-        metaTitle: "Taxi Bastia → Corte | Cœur de la Corse | TaxiNeo",
-        metaDescription: "Réservez votre taxi Bastia–Corte dès 90 €. 70 km par la N193 via le défilé de Lancone. Rejoignez la capitale historique de la Corse en 1h10.",
+        metaTitle: "Taxi Bastia → Corte | forfait dès 90 €, 1h10 | TaxiNeo",
+        metaDescription: "Via N193 via le défilé de Lancone en 1h10. Route N193, Défilé de Lancone, Citadelle de Corte et Université de Corse en chemin. Dépose à votre adresse exacte.",
         heroTitle: "Taxi Bastia — Corte",
         heroSubtitle: "Du port de Bastia au cœur montagneux de la Corse historique",
         description: "Transfert en taxi de Bastia à Corte, ancienne capitale de la Corse indépendante, par la route N193 à travers les gorges et les montagnes de Haute-Corse.",
@@ -309,8 +309,8 @@ export const trajetsAjaccioBastia: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Bastia → Corte | Heart of Corsica | TaxiNeo",
-        metaDescription: "Book your Bastia–Corte taxi from €90. 70 km via the N193 through the Lancone defile. Reach Corsica's historic capital in 1h10.",
+        metaTitle: "Taxi Bastia → Corte | Fixed price transfer | TaxiNeo",
+        metaDescription: "Via N193 via le défilé de Lancone, 1h10 ride. Route N193, Défilé de Lancone, Citadelle de Corte and Université de Corse en route. No toll on this route.",
         heroTitle: "Taxi Bastia — Corte",
         heroSubtitle: "From Bastia's port to the mountainous heart of historic Corsica",
         description: "Taxi transfer from Bastia to Corte, former capital of independent Corsica, via the N193 through gorges and mountains of Upper Corsica.",

@@ -30,8 +30,8 @@ export const trajetsParisArrondissements: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris 1er → CDG | Prix fixe dès 53 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi depuis le 1er arrondissement de Paris vers l'aéroport CDG. 28 km, 40 min, prix fixe dès 53 €. Prise en charge rue de Rivoli, Louvre, Châtelet.",
+        metaTitle: "Taxi Paris 1er → Aéroport CDG | 28 km, dès 53 € | TaxiNeo",
+        metaDescription: "Via A1 en 40 min. Rue de Rivoli, Les Halles et Stade de France en chemin. Dépose au terminal exact, suivi de vol en temps réel. Jusqu'à 1h aux heures de pointe.",
         heroTitle: "Taxi Paris 1er arrondissement → Aéroport CDG",
         heroSubtitle: "Transfert depuis le cœur historique de Paris vers Charles de Gaulle au prix fixe de 53 — 65 €. Prise en charge devant votre hôtel ou adresse.",
         description: "Le 1er arrondissement, cœur battant de Paris avec le Louvre, le Palais Royal et le jardin des Tuileries, bénéficie d'un accès direct vers CDG via les grands axes nord. Votre chauffeur TaxiNeo vous prend en charge à l'adresse exacte de votre choix dans cet arrondissement central et vous conduit au terminal de votre vol en 40 minutes environ.",
@@ -49,8 +49,8 @@ export const trajetsParisArrondissements: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris 1st → CDG | Fixed price from €53 | TaxiNeo",
-        metaDescription: "Book your taxi from Paris 1st arrondissement to CDG Airport. 28 km, 40 min, fixed price from €53. Pickup at Louvre, Châtelet, Rue de Rivoli.",
+        metaTitle: "Taxi Paris 1er → Aéroport CDG | 28 km, from €53 | TaxiNeo",
+        metaDescription: "Via A1, 40 min ride. Rue de Rivoli, Les Halles and Stade de France along the way. Terminal drop-off, flight tracking. Flight tracking, direct terminal drop-off.",
         heroTitle: "Taxi Paris 1st Arrondissement → CDG Airport",
         heroSubtitle: "Transfer from the historic heart of Paris to Charles de Gaulle at a fixed price of €53 — €65. Door-to-door pickup.",
         description: "The 1st arrondissement, the beating heart of Paris with the Louvre, Palais Royal and Tuileries Garden, enjoys direct access to CDG via major northern routes. Your TaxiNeo driver picks you up at your exact address in this central district and takes you to your flight terminal in about 40 minutes.",
@@ -95,8 +95,8 @@ export const trajetsParisArrondissements: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris 1er → Orly | Prix fixe dès 36 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi depuis le 1er arrondissement de Paris vers Orly. 19 km, 30 min, prix fixe dès 36 €. Prise en charge Louvre, Châtelet, Tuileries.",
+        metaTitle: "Taxi Paris 1er → Aéroport d'Orly | 19 km, dès 36 € | TaxiNeo",
+        metaDescription: "Par A6, 30 min de trajet. Quais de Seine, Périphérique Sud et A6 Autoroute du Soleil en chemin. Accueil au terminal, attente gratuite si retard de vol.",
         heroTitle: "Taxi Paris 1er arrondissement → Aéroport d'Orly",
         heroSubtitle: "Transfert depuis le cœur de Paris vers Orly au prix fixe de 36 — 44 €. Réservation en ligne, chauffeur professionnel.",
         description: "Depuis le 1er arrondissement, rejoignez l'aéroport d'Orly en 30 minutes par les quais de Seine et le périphérique sud. Prise en charge à votre adresse exacte dans ce quartier central entre le Louvre et les Halles.",
@@ -114,8 +114,8 @@ export const trajetsParisArrondissements: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris 1st → Orly | Fixed price from €36 | TaxiNeo",
-        metaDescription: "Book your taxi from Paris 1st arrondissement to Orly Airport. 19 km, 30 min, fixed price from €36. Pickup at Louvre, Châtelet, Tuileries.",
+        metaTitle: "Taxi Paris 1er → Aéroport d'Orly | 19 km, from €36 | TaxiNeo",
+        metaDescription: "Via A6, 30 min ride. Quais de Seine, Périphérique Sud and A6 Autoroute du Soleil along the way. Terminal drop-off, real-time flight tracking included.",
         heroTitle: "Taxi Paris 1st Arrondissement → Orly Airport",
         heroSubtitle: "Transfer from the heart of Paris to Orly at a fixed price of €36 — €44. Online booking, professional driver.",
         description: "From the 1st arrondissement, reach Orly Airport in 30 minutes via the Seine quays and the southern ring road. Pickup at your exact address in this central district between the Louvre and Les Halles.",
@@ -160,8 +160,8 @@ export const trajetsParisArrondissements: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris 2e → CDG | Prix fixe dès 53 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi depuis le 2e arrondissement de Paris vers CDG. 29 km, 42 min, prix fixe dès 53 €. Prise en charge Bourse, Grands Boulevards, Sentier.",
+        metaTitle: "Taxi Paris 2e → Aéroport CDG | 29 km, dès 53 € | TaxiNeo",
+        metaDescription: "Par A1, 42 min de trajet. Grands Boulevards, Rue Montorgueil et Porte de la Chapelle en chemin. Accueil au terminal, attente gratuite si retard de vol.",
         heroTitle: "Taxi Paris 2e arrondissement → Aéroport CDG",
         heroSubtitle: "Transfert depuis le quartier de la Bourse et des Grands Boulevards vers Charles de Gaulle au prix fixe de 53 — 65 €. Prise en charge à votre adresse.",
         description: "Le 2e arrondissement, quartier vivant entre la Bourse de Commerce, les Grands Boulevards et la rue Montorgueil, offre un accès rapide vers CDG par les axes nord. Votre chauffeur TaxiNeo vous prend en charge devant votre porte et vous conduit au terminal en 42 minutes environ.",
@@ -179,8 +179,8 @@ export const trajetsParisArrondissements: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris 2nd → CDG | Fixed price from €53 | TaxiNeo",
-        metaDescription: "Book your taxi from Paris 2nd arrondissement to CDG Airport. 29 km, 42 min, fixed price from €53. Pickup at Bourse, Grands Boulevards, Sentier.",
+        metaTitle: "Taxi Paris 2e → Aéroport CDG | 29 km, from €53 | TaxiNeo",
+        metaDescription: "Via A1, 42 min ride. Grands Boulevards, Rue Montorgueil and Porte de la Chapelle along the way. Terminal drop-off, real-time flight tracking included.",
         heroTitle: "Taxi Paris 2nd Arrondissement → CDG Airport",
         heroSubtitle: "Transfer from the Bourse and Grands Boulevards district to Charles de Gaulle at a fixed price of €53 — €65. Door-to-door pickup.",
         description: "The 2nd arrondissement, a lively district between the Bourse de Commerce, the Grands Boulevards and Rue Montorgueil, offers quick access to CDG via northern routes. Your TaxiNeo driver picks you up at your door and takes you to your terminal in about 42 minutes.",
@@ -225,8 +225,8 @@ export const trajetsParisArrondissements: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris 2e → Orly | Prix fixe dès 36 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi depuis le 2e arrondissement de Paris vers Orly. 20 km, 32 min, prix fixe dès 36 €. Prise en charge Bourse, Sentier, Montorgueil.",
+        metaTitle: "Taxi Paris 2e → Aéroport d'Orly | 20 km, dès 36 € | TaxiNeo",
+        metaDescription: "Par A6, 32 min de trajet. Passage par Rue Réaumur, Boulevard de Sébastopol et Périphérique Sud. Accueil au terminal, attente gratuite si retard de vol.",
         heroTitle: "Taxi Paris 2e arrondissement → Aéroport d'Orly",
         heroSubtitle: "Transfert depuis le quartier de la Bourse vers Orly au prix fixe de 36 — 44 €. Réservation en ligne, chauffeur professionnel.",
         description: "Depuis le 2e arrondissement, rejoignez Orly en 32 minutes via le boulevard de Sébastopol et le périphérique sud. Prise en charge devant votre porte dans ce quartier dynamique entre les Grands Boulevards et la rue Montorgueil.",
@@ -244,8 +244,8 @@ export const trajetsParisArrondissements: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris 2nd → Orly | Fixed price from €36 | TaxiNeo",
-        metaDescription: "Book your taxi from Paris 2nd arrondissement to Orly Airport. 20 km, 32 min, fixed price from €36. Pickup at Bourse, Sentier, Montorgueil.",
+        metaTitle: "Taxi Paris 2e → Aéroport d'Orly | 20 km, from €36 | TaxiNeo",
+        metaDescription: "Direct route via A6, 32 min. Rue Réaumur, Boulevard de Sébastopol and Périphérique Sud along the way. Terminal drop-off, real-time flight tracking included.",
         heroTitle: "Taxi Paris 2nd Arrondissement → Orly Airport",
         heroSubtitle: "Transfer from the Bourse district to Orly at a fixed price of €36 — €44. Online booking, professional driver.",
         description: "From the 2nd arrondissement, reach Orly in 32 minutes via Boulevard de Sébastopol and the southern ring road. Pickup at your door in this dynamic district between the Grands Boulevards and Rue Montorgueil.",
@@ -290,8 +290,8 @@ export const trajetsParisArrondissements: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris 3e → CDG | Prix fixe dès 53 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi depuis le 3e arrondissement de Paris vers CDG. 30 km, 43 min, prix fixe dès 53 €. Prise en charge Marais, Arts et Métiers, Temple.",
+        metaTitle: "Taxi Paris 3e → Aéroport CDG | 30 km, dès 53 € | TaxiNeo",
+        metaDescription: "Par A1, 43 min de trajet. Marais, Arts et Métiers, Autoroute A3 et Porte de Bagnolet en chemin. Accueil au terminal, attente gratuite si retard de vol.",
         heroTitle: "Taxi Paris 3e arrondissement → Aéroport CDG",
         heroSubtitle: "Transfert depuis le Haut-Marais et le quartier du Temple vers Charles de Gaulle au prix fixe de 53 — 65 €. Prise en charge devant votre adresse.",
         description: "Le 3e arrondissement, cœur du Haut-Marais avec le Musée Picasso, le Carreau du Temple et le Musée des Arts et Métiers, bénéficie d'un accès direct vers CDG via la République et les axes nord-est. Votre chauffeur TaxiNeo vous prend en charge à votre adresse et vous conduit au terminal en 43 minutes environ.",
@@ -309,8 +309,8 @@ export const trajetsParisArrondissements: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris 3rd → CDG | Fixed price from €53 | TaxiNeo",
-        metaDescription: "Book your taxi from Paris 3rd arrondissement to CDG Airport. 30 km, 43 min, fixed price from €53. Pickup at Marais, Arts et Métiers, Temple.",
+        metaTitle: "Taxi Paris 3e → Aéroport CDG | 30 km, from €53 | TaxiNeo",
+        metaDescription: "Direct route via A1, 43 min. Marais, Arts et Métiers, Autoroute A3 and Porte de Bagnolet en route. Terminal drop-off, real-time flight tracking included.",
         heroTitle: "Taxi Paris 3rd Arrondissement → CDG Airport",
         heroSubtitle: "Transfer from the Upper Marais and Temple district to Charles de Gaulle at a fixed price of €53 — €65. Door-to-door pickup.",
         description: "The 3rd arrondissement, heart of the Upper Marais with the Picasso Museum, Carreau du Temple and Arts et Métiers Museum, enjoys direct access to CDG via République and the north-eastern routes. Your TaxiNeo driver picks you up at your address and takes you to your terminal in about 43 minutes.",
@@ -355,8 +355,8 @@ export const trajetsParisArrondissements: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris 3e → Orly | Prix fixe dès 36 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi depuis le 3e arrondissement de Paris vers Orly. 19 km, 30 min, prix fixe dès 36 €. Prise en charge Marais, Temple, Arts et Métiers.",
+        metaTitle: "Taxi Paris 3e → Aéroport d'Orly | 19 km, dès 36 € | TaxiNeo",
+        metaDescription: "Par A6, 30 min de trajet. En passant par Boulevard Beaumarchais, Bastille et Périphérique Sud. Accueil au terminal, attente gratuite si retard de vol.",
         heroTitle: "Taxi Paris 3e arrondissement → Aéroport d'Orly",
         heroSubtitle: "Transfert depuis le Haut-Marais vers Orly au prix fixe de 36 — 44 €. Réservation en ligne, chauffeur professionnel.",
         description: "Depuis le 3e arrondissement, rejoignez Orly en 30 minutes via le boulevard Beaumarchais, la place de la Bastille et le périphérique sud. Prise en charge à votre adresse dans le Haut-Marais, quartier du Temple ou Arts et Métiers.",
@@ -374,8 +374,8 @@ export const trajetsParisArrondissements: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris 3rd → Orly | Fixed price from €36 | TaxiNeo",
-        metaDescription: "Book your taxi from Paris 3rd arrondissement to Orly Airport. 19 km, 30 min, fixed price from €36. Pickup at Marais, Temple, Arts et Métiers.",
+        metaTitle: "Taxi Paris 3e → Aéroport d'Orly | 19 km, from €36 | TaxiNeo",
+        metaDescription: "Direct route via A6, 30 min. Boulevard Beaumarchais, Bastille and Périphérique Sud along the way. Terminal drop-off, real-time flight tracking included.",
         heroTitle: "Taxi Paris 3rd Arrondissement → Orly Airport",
         heroSubtitle: "Transfer from the Upper Marais to Orly at a fixed price of €36 — €44. Online booking, professional driver.",
         description: "From the 3rd arrondissement, reach Orly in 30 minutes via Boulevard Beaumarchais, Place de la Bastille and the southern ring road. Pickup at your address in the Upper Marais, Temple or Arts et Métiers district.",
@@ -421,8 +421,8 @@ export const trajetsParisArrondissements: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris 4e → CDG | Prix fixe dès 53 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi depuis le 4e arrondissement de Paris vers l'aéroport CDG. 30 km, 45 min, prix fixe dès 53 €. Prise en charge Marais, Notre-Dame, Île Saint-Louis.",
+        metaTitle: "Taxi Paris 4e → Aéroport CDG | 30 km, dès 53 € | TaxiNeo",
+        metaDescription: "Itinéraire A1, environ 45 min. Le Marais, Place des Vosges, Porte de Bagnolet sur le parcours. Accueil au terminal, attente gratuite si retard de vol.",
         heroTitle: "Taxi Paris 4e arrondissement → Aéroport CDG",
         heroSubtitle: "Transfert depuis le Marais et l'Île de la Cité vers Charles de Gaulle au prix fixe de 53 — 65 €. Prise en charge devant votre adresse.",
         description: "Le 4e arrondissement, joyau de Paris avec le Marais, Notre-Dame, la place des Vosges et l'Île Saint-Louis, offre un accès vers CDG via les axes nord-est. Votre chauffeur TaxiNeo vous prend en charge à votre adresse et vous conduit au terminal en 45 minutes environ.",
@@ -440,8 +440,8 @@ export const trajetsParisArrondissements: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris 4th → CDG | Fixed price from €53 | TaxiNeo",
-        metaDescription: "Book your taxi from Paris 4th arrondissement to CDG Airport. 30 km, 45 min, fixed price from €53. Pickup at Marais, Notre-Dame, Île Saint-Louis.",
+        metaTitle: "Taxi Paris 4e → Aéroport CDG | 30 km, from €53 | TaxiNeo",
+        metaDescription: "A1 route, approximately 45 min. Le Marais, Place des Vosges and Porte de Bagnolet along the way. Terminal drop-off, real-time flight tracking included.",
         heroTitle: "Taxi Paris 4th Arrondissement → CDG Airport",
         heroSubtitle: "Transfer from the Marais and Île de la Cité to Charles de Gaulle at a fixed price of €53 — €65. Door-to-door pickup at your address.",
         description: "The 4th arrondissement, a jewel of Paris with the Marais, Notre-Dame, Place des Vosges and Île Saint-Louis, offers access to CDG via the north-eastern routes. Your TaxiNeo driver picks you up at your address and takes you to your terminal in about 45 minutes.",
@@ -486,8 +486,8 @@ export const trajetsParisArrondissements: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris 4e → Orly | Prix fixe dès 36 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi depuis le 4e arrondissement de Paris vers Orly. 18 km, 30 min, prix fixe dès 36 €. Prise en charge Marais, Notre-Dame, place des Vosges.",
+        metaTitle: "Taxi Paris 4e → Aéroport d'Orly | 18 km, dès 36 € | TaxiNeo",
+        metaDescription: "Trajet direct A6 en 30 min. Pont de Sully, Quai de la Rapée, Périphérique Sud sur le parcours. Accueil au terminal, attente gratuite si retard de vol.",
         heroTitle: "Taxi Paris 4e arrondissement → Aéroport d'Orly",
         heroSubtitle: "Transfert depuis le Marais et l'Île de la Cité vers Orly au prix fixe de 36 — 44 €. Réservation en ligne, chauffeur professionnel.",
         description: "Depuis le 4e arrondissement, rejoignez l'aéroport d'Orly en 30 minutes par les quais de Seine et le périphérique sud. Prise en charge à votre adresse dans le Marais, sur l'Île Saint-Louis ou près de Notre-Dame.",
@@ -505,8 +505,8 @@ export const trajetsParisArrondissements: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris 4th → Orly | Fixed price from €36 | TaxiNeo",
-        metaDescription: "Book your taxi from Paris 4th arrondissement to Orly Airport. 18 km, 30 min, fixed price from €36. Pickup at Marais, Notre-Dame, Place des Vosges.",
+        metaTitle: "Taxi Paris 4e → Aéroport d'Orly | 18 km, from €36 | TaxiNeo",
+        metaDescription: "Direct route via A6, 30 min. Pont de Sully, Quai de la Rapée and Périphérique Sud along the way. Terminal drop-off, real-time flight tracking included.",
         heroTitle: "Taxi Paris 4th Arrondissement → Orly Airport",
         heroSubtitle: "Transfer from the Marais and Île de la Cité to Orly at a fixed price of €36 — €44. Online booking, professional driver.",
         description: "From the 4th arrondissement, reach Orly Airport in 30 minutes via the Seine quays and the southern ring road. Pickup at your address in the Marais, on Île Saint-Louis or near Notre-Dame.",
@@ -552,8 +552,8 @@ export const trajetsParisArrondissements: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris 5e → CDG | Prix fixe dès 53 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi depuis le 5e arrondissement de Paris vers CDG. 28 km, 45 min, prix fixe dès 53 €. Prise en charge Quartier Latin, Panthéon, Jussieu.",
+        metaTitle: "Taxi Paris 5e → Aéroport CDG | 28 km, dès 53 € | TaxiNeo",
+        metaDescription: "Itinéraire A1, environ 45 min. Quartier Latin, Panthéon, Jardin du Luxembourg sur le parcours. Accueil au terminal, attente gratuite si retard de vol.",
         heroTitle: "Taxi Paris 5e arrondissement → Aéroport CDG",
         heroSubtitle: "Transfert depuis le Quartier Latin et la Montagne Sainte-Geneviève vers Charles de Gaulle au prix fixe de 53 — 65 €. Prise en charge devant votre adresse.",
         description: "Le 5e arrondissement, berceau intellectuel de Paris avec la Sorbonne, le Panthéon et le Jardin des Plantes, bénéficie d'un accès vers CDG via les quais de Seine et les axes nord. Votre chauffeur TaxiNeo vous prend en charge à votre adresse et vous conduit au terminal en 45 minutes environ.",
@@ -571,8 +571,8 @@ export const trajetsParisArrondissements: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris 5th → CDG | Fixed price from €53 | TaxiNeo",
-        metaDescription: "Book your taxi from Paris 5th arrondissement to CDG Airport. 28 km, 45 min, fixed price from €53. Pickup at Latin Quarter, Panthéon, Jussieu.",
+        metaTitle: "Taxi Paris 5e → Aéroport CDG | 28 km, from €53 | TaxiNeo",
+        metaDescription: "A1 route, approximately 45 min. Quartier Latin, Panthéon and Jardin du Luxembourg along the way. Terminal drop-off, real-time flight tracking included.",
         heroTitle: "Taxi Paris 5th Arrondissement → CDG Airport",
         heroSubtitle: "Transfer from the Latin Quarter and Montagne Sainte-Geneviève to Charles de Gaulle at a fixed price of €53 — €65. Door-to-door pickup at your address.",
         description: "The 5th arrondissement, the intellectual cradle of Paris with the Sorbonne, the Panthéon and the Jardin des Plantes, offers access to CDG via the Seine quays and northern routes. Your TaxiNeo driver picks you up at your address and takes you to your terminal in about 45 minutes.",
@@ -617,8 +617,8 @@ export const trajetsParisArrondissements: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris 5e → Orly | Prix fixe dès 36 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi depuis le 5e arrondissement de Paris vers Orly. 15 km, 25 min, prix fixe dès 36 €. Prise en charge Quartier Latin, Panthéon, Jussieu.",
+        metaTitle: "Taxi Paris 5e → Aéroport d'Orly | 15 km, dès 36 € | TaxiNeo",
+        metaDescription: "Via A6 en 25 min. Boulevard de Port-Royal, Porte d'Italie et A6 Autoroute du Soleil en chemin. Accueil au terminal, attente gratuite si retard de vol.",
         heroTitle: "Taxi Paris 5e arrondissement → Aéroport d'Orly",
         heroSubtitle: "Transfert depuis le Quartier Latin vers Orly au prix fixe de 36 — 44 €. Réservation en ligne, chauffeur professionnel.",
         description: "Depuis le 5e arrondissement, rejoignez l'aéroport d'Orly en seulement 25 minutes par le boulevard de Port-Royal et la Porte d'Italie. Prise en charge à votre adresse dans le Quartier Latin, près du Panthéon ou du Jardin des Plantes.",
@@ -636,8 +636,8 @@ export const trajetsParisArrondissements: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris 5th → Orly | Fixed price from €36 | TaxiNeo",
-        metaDescription: "Book your taxi from Paris 5th arrondissement to Orly Airport. 15 km, 25 min, fixed price from €36. Pickup at Latin Quarter, Panthéon, Jussieu.",
+        metaTitle: "Taxi Paris 5e → Aéroport d'Orly | 15 km, from €36 | TaxiNeo",
+        metaDescription: "Via A6, 25 min ride. Boulevard de Port-Royal, Porte d'Italie and A6 Autoroute du Soleil along the way. Terminal drop-off, real-time flight tracking included.",
         heroTitle: "Taxi Paris 5th Arrondissement → Orly Airport",
         heroSubtitle: "Transfer from the Latin Quarter to Orly at a fixed price of €36 — €44. Online booking, professional driver.",
         description: "From the 5th arrondissement, reach Orly Airport in just 25 minutes via Boulevard de Port-Royal and Porte d'Italie. Pickup at your address in the Latin Quarter, near the Panthéon or Jardin des Plantes.",
@@ -683,8 +683,8 @@ export const trajetsParisArrondissements: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris 6e → CDG | Prix fixe dès 53 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi depuis le 6e arrondissement de Paris vers CDG. 30 km, 50 min, prix fixe dès 53 €. Prise en charge Saint-Germain, Luxembourg, Odéon.",
+        metaTitle: "Taxi Paris 6e → Aéroport CDG | 30 km, dès 53 € | TaxiNeo",
+        metaDescription: "Via A1 en 50 min. En passant par Saint-Germain-des-Prés, Luxembourg et Boulevard Saint-Michel. Accueil au terminal, attente gratuite si retard de vol.",
         heroTitle: "Taxi Paris 6e arrondissement → Aéroport CDG",
         heroSubtitle: "Transfert depuis Saint-Germain-des-Prés et le Jardin du Luxembourg vers Charles de Gaulle au prix fixe de 53 — 65 €. Prise en charge devant votre adresse.",
         description: "Le 6e arrondissement, haut lieu de l'élégance parisienne avec Saint-Germain-des-Prés, le Jardin du Luxembourg et l'Odéon, bénéficie d'un accès vers CDG via le boulevard Saint-Michel et les axes nord. Votre chauffeur TaxiNeo vous prend en charge à votre adresse et vous conduit au terminal en 50 minutes environ.",
@@ -702,8 +702,8 @@ export const trajetsParisArrondissements: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris 6th → CDG | Fixed price from €53 | TaxiNeo",
-        metaDescription: "Book your taxi from Paris 6th arrondissement to CDG Airport. 30 km, 50 min, fixed price from €53. Pickup at Saint-Germain, Luxembourg, Odéon.",
+        metaTitle: "Taxi Paris 6e → Aéroport CDG | 30 km, from €53 | TaxiNeo",
+        metaDescription: "Via A1, 50 min ride. Saint-Germain-des-Prés, Luxembourg and Boulevard Saint-Michel along the way. Terminal drop-off, real-time flight tracking included.",
         heroTitle: "Taxi Paris 6th Arrondissement → CDG Airport",
         heroSubtitle: "Transfer from Saint-Germain-des-Prés and the Luxembourg Garden to Charles de Gaulle at a fixed price of €53 — €65. Door-to-door pickup at your address.",
         description: "The 6th arrondissement, a beacon of Parisian elegance with Saint-Germain-des-Prés, the Luxembourg Garden and the Odéon, offers access to CDG via Boulevard Saint-Michel and northern routes. Your TaxiNeo driver picks you up at your address and takes you to your terminal in about 50 minutes.",
@@ -748,8 +748,8 @@ export const trajetsParisArrondissements: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris 6e → Orly | Prix fixe dès 36 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi depuis le 6e arrondissement de Paris vers Orly. 16 km, 25 min, prix fixe dès 36 €. Prise en charge Saint-Germain, Luxembourg, Odéon.",
+        metaTitle: "Taxi Paris 6e → Aéroport d'Orly | 16 km, dès 36 € | TaxiNeo",
+        metaDescription: "Par A6, 25 min de trajet. Passage par Boulevard Raspail, Denfert-Rochereau et Porte d'Orléans. Accueil au terminal, attente gratuite si retard de vol.",
         heroTitle: "Taxi Paris 6e arrondissement → Aéroport d'Orly",
         heroSubtitle: "Transfert depuis Saint-Germain-des-Prés vers Orly au prix fixe de 36 — 44 €. Réservation en ligne, chauffeur professionnel.",
         description: "Depuis le 6e arrondissement, rejoignez l'aéroport d'Orly en seulement 25 minutes par le boulevard Raspail, Denfert-Rochereau et la Porte d'Orléans. Prise en charge à votre adresse dans le quartier Saint-Germain-des-Prés ou près du Jardin du Luxembourg.",
@@ -767,8 +767,8 @@ export const trajetsParisArrondissements: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris 6th → Orly | Fixed price from €36 | TaxiNeo",
-        metaDescription: "Book your taxi from Paris 6th arrondissement to Orly Airport. 16 km, 25 min, fixed price from €36. Pickup at Saint-Germain, Luxembourg, Odéon.",
+        metaTitle: "Taxi Paris 6e → Aéroport d'Orly | 16 km, from €36 | TaxiNeo",
+        metaDescription: "Direct route via A6, 25 min. Boulevard Raspail, Denfert-Rochereau and Porte d'Orléans along the way. Terminal drop-off, real-time flight tracking included.",
         heroTitle: "Taxi Paris 6th Arrondissement → Orly Airport",
         heroSubtitle: "Transfer from Saint-Germain-des-Prés to Orly at a fixed price of €36 — €44. Online booking, professional driver.",
         description: "From the 6th arrondissement, reach Orly Airport in just 25 minutes via Boulevard Raspail, Denfert-Rochereau and Porte d'Orléans. Pickup at your address in the Saint-Germain-des-Prés district or near the Luxembourg Garden.",
@@ -814,8 +814,8 @@ export const trajetsParisArrondissements: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris 7e → CDG | Prix fixe dès 53 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi depuis le 7e arrondissement de Paris vers CDG. 32 km, 50 min, prix fixe dès 53 €. Prise en charge Tour Eiffel, Invalides, Musée d'Orsay.",
+        metaTitle: "Taxi Paris 7e → Aéroport CDG | 32 km, dès 53 € | TaxiNeo",
+        metaDescription: "Via A1 en 50 min. Tour Eiffel, Invalides et Quais de Seine en chemin. Dépose au terminal, suivi de vol. Dépose au terminal exact, suivi de vol en temps réel.",
         heroTitle: "Taxi Paris 7e arrondissement → Aéroport CDG",
         heroSubtitle: "Transfert depuis le quartier de la Tour Eiffel et des Invalides vers Charles de Gaulle au prix fixe de 53 — 65 €. Prise en charge devant votre adresse.",
         description: "Le 7e arrondissement, quartier prestigieux de Paris avec la Tour Eiffel, les Invalides, le Musée d'Orsay et l'Assemblée nationale, bénéficie d'un accès vers CDG via les quais de Seine et les axes nord. Votre chauffeur TaxiNeo vous prend en charge à votre adresse et vous conduit au terminal en 50 minutes environ.",
@@ -833,8 +833,8 @@ export const trajetsParisArrondissements: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris 7th → CDG | Fixed price from €53 | TaxiNeo",
-        metaDescription: "Book your taxi from Paris 7th arrondissement to CDG Airport. 32 km, 50 min, fixed price from €53. Pickup at Eiffel Tower, Invalides, Musée d'Orsay.",
+        metaTitle: "Taxi Paris 7e → Aéroport CDG | 32 km, from €53 | TaxiNeo",
+        metaDescription: "Via A1, 50 min ride. Tour Eiffel, Invalides and Quais de Seine along the way. Terminal drop-off, flight tracking. Meet at terminal, free wait if flight delayed.",
         heroTitle: "Taxi Paris 7th Arrondissement → CDG Airport",
         heroSubtitle: "Transfer from the Eiffel Tower and Invalides district to Charles de Gaulle at a fixed price of €53 — €65. Door-to-door pickup at your address.",
         description: "The 7th arrondissement, a prestigious Parisian district with the Eiffel Tower, Les Invalides, the Musée d'Orsay and the National Assembly, offers access to CDG via the Seine quays and northern routes. Your TaxiNeo driver picks you up at your address and takes you to your terminal in about 50 minutes.",
@@ -879,8 +879,8 @@ export const trajetsParisArrondissements: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris 7e → Orly | Prix fixe dès 36 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi depuis le 7e arrondissement de Paris vers Orly. 17 km, 28 min, prix fixe dès 36 €. Prise en charge Tour Eiffel, Invalides, rue Cler.",
+        metaTitle: "Taxi Paris 7e → Aéroport d'Orly | 17 km, dès 36 € | TaxiNeo",
+        metaDescription: "Via A6 en 28 min. Boulevard des Invalides, Porte de Sèvres et Boulevard périphérique en chemin. Accueil au terminal, attente gratuite si retard de vol.",
         heroTitle: "Taxi Paris 7e arrondissement → Aéroport d'Orly",
         heroSubtitle: "Transfert depuis le quartier de la Tour Eiffel vers Orly au prix fixe de 36 — 44 €. Réservation en ligne, chauffeur professionnel.",
         description: "Depuis le 7e arrondissement, rejoignez l'aéroport d'Orly en 28 minutes par le boulevard des Invalides et le périphérique sud. Prise en charge à votre adresse près de la Tour Eiffel, des Invalides ou du Musée d'Orsay.",
@@ -898,8 +898,8 @@ export const trajetsParisArrondissements: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris 7th → Orly | Fixed price from €36 | TaxiNeo",
-        metaDescription: "Book your taxi from Paris 7th arrondissement to Orly Airport. 17 km, 28 min, fixed price from €36. Pickup at Eiffel Tower, Invalides, Rue Cler.",
+        metaTitle: "Taxi Paris 7e → Aéroport d'Orly | 17 km, from €36 | TaxiNeo",
+        metaDescription: "Via A6, 28 min ride. Boulevard des Invalides, Porte de Sèvres and Boulevard périphérique along the way. Terminal drop-off, real-time flight tracking included.",
         heroTitle: "Taxi Paris 7th Arrondissement → Orly Airport",
         heroSubtitle: "Transfer from the Eiffel Tower district to Orly at a fixed price of €36 — €44. Online booking, professional driver.",
         description: "From the 7th arrondissement, reach Orly Airport in 28 minutes via Boulevard des Invalides and the southern ring road. Pickup at your address near the Eiffel Tower, Les Invalides or the Musée d'Orsay.",

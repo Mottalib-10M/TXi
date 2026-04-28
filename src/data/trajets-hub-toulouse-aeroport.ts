@@ -30,8 +30,8 @@ export const trajetsToulouseAeroport: Trajet[] = [
     hub: "toulouse-aeroport",
     i18n: {
       fr: {
-        metaTitle: "Taxi Aéroport Toulouse-Blagnac → Centre-Ville | TaxiNeo",
-        metaDescription: "Réservez votre taxi Aéroport Toulouse-Blagnac → Toulouse Centre dès 25 €. 12 km, 20 min. Prise en charge au terminal, service 24h/24.",
+        metaTitle: "Taxi Toulouse-Blagnac → Toulouse Centre | 12 km | TaxiNeo",
+        metaDescription: "Via Rocade / Avenue de Lardenne en 20 min. Aéroport Toulouse-Blagnac, Place du Capitole, Garonne et Ville Rose en chemin. Dépose au terminal, suivi de vol.",
         heroTitle: "Taxi Aéroport Toulouse-Blagnac — Toulouse Centre",
         heroSubtitle: "Transfert direct depuis le terminal vers le coeur de la Ville Rose",
         description: "Transfert en taxi de l'aéroport Toulouse-Blagnac vers le centre-ville de Toulouse, place du Capitole et tous quartiers, en 20 minutes par la rocade ou les boulevards urbains.",
@@ -49,8 +49,8 @@ export const trajetsToulouseAeroport: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Toulouse-Blagnac Airport → City Centre | TaxiNeo",
-        metaDescription: "Book your Toulouse-Blagnac Airport to city centre taxi from €25. 12 km, 20 min. Terminal pickup, 24/7 service.",
+        metaTitle: "Taxi Toulouse-Blagnac → Toulouse Centre | 12 km | TaxiNeo",
+        metaDescription: "Via Rocade / Avenue de Lardenne, 20 min ride. Aéroport Toulouse-Blagnac, Place du Capitole, Garonne and Ville Rose en route. Terminal drop-off, flight tracking.",
         heroTitle: "Taxi Toulouse-Blagnac Airport — Toulouse Centre",
         heroSubtitle: "Direct transfer from the terminal to the heart of the Pink City",
         description: "Taxi transfer from Toulouse-Blagnac Airport to Toulouse city centre, Place du Capitole and all districts, in 20 minutes via the ring road or urban boulevards.",
@@ -95,8 +95,8 @@ export const trajetsToulouseAeroport: Trajet[] = [
     hub: "toulouse-aeroport",
     i18n: {
       fr: {
-        metaTitle: "Taxi Aéroport Toulouse-Blagnac → Carcassonne | TaxiNeo",
-        metaDescription: "Réservez votre taxi Aéroport Toulouse-Blagnac → Carcassonne dès 115 €. 95 km par l'A61, trajet en 1h. Transfert direct vers la Cité médiévale.",
+        metaTitle: "Taxi Toulouse-Blagnac → Carcassonne | 95 km, 115 € | TaxiNeo",
+        metaDescription: "Via A61 en 1h. Aéroport Toulouse-Blagnac, Cité de Carcassonne, Canal du Midi et Vignobles du Minervois en chemin. Suivi de vol, dépose directe au terminal.",
         heroTitle: "Taxi Aéroport Toulouse-Blagnac — Carcassonne",
         heroSubtitle: "De la capitale aérospatiale à la plus grande cité médiévale d'Europe",
         description: "Transfert en taxi de l'aéroport Toulouse-Blagnac à Carcassonne, cité médiévale classée UNESCO, via l'autoroute des Deux Mers A61.",
@@ -114,8 +114,8 @@ export const trajetsToulouseAeroport: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Toulouse-Blagnac Airport → Carcassonne | TaxiNeo",
-        metaDescription: "Book your Toulouse-Blagnac Airport to Carcassonne taxi from €115. 95 km via the A61, 1-hour ride. Direct transfer to the medieval citadel.",
+        metaTitle: "Taxi Toulouse-Blagnac → Carcassonne | 95 km, €115 | TaxiNeo",
+        metaDescription: "Via A61, 1 hour ride. Aéroport Toulouse-Blagnac, Cité de Carcassonne, Canal du Midi and Vignobles du Minervois en route. Terminal drop-off, flight tracking.",
         heroTitle: "Taxi Toulouse-Blagnac Airport — Carcassonne",
         heroSubtitle: "From the aerospace capital to Europe's largest medieval fortress",
         description: "Taxi transfer from Toulouse-Blagnac Airport to Carcassonne, UNESCO-listed medieval citadel, via the A61 motorway.",
@@ -160,8 +160,8 @@ export const trajetsToulouseAeroport: Trajet[] = [
     hub: "toulouse-aeroport",
     i18n: {
       fr: {
-        metaTitle: "Taxi Aéroport Toulouse-Blagnac → Albi | TaxiNeo",
-        metaDescription: "Réservez votre taxi Aéroport Toulouse-Blagnac → Albi dès 95 €. 80 km par l'A68, trajet en 55 min. Transfert direct vers la cité épiscopale.",
+        metaTitle: "Taxi Aéroport Toulouse-Blagnac → Albi | 80 km | TaxiNeo",
+        metaDescription: "Via A68 en 55 min. Aéroport Toulouse-Blagnac, Cathédrale Sainte-Cécile, Musée Toulouse-Lautrec et Cité épiscopale en chemin. Dépose au terminal, suivi de vol.",
         heroTitle: "Taxi Aéroport Toulouse-Blagnac — Albi",
         heroSubtitle: "Du hub aéronautique à la cité épiscopale classée au patrimoine mondial",
         description: "Transfert en taxi de l'aéroport Toulouse-Blagnac à Albi, cité épiscopale classée UNESCO abritant la cathédrale Sainte-Cécile et le musée Toulouse-Lautrec, via l'autoroute A68.",
@@ -179,8 +179,8 @@ export const trajetsToulouseAeroport: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Toulouse-Blagnac Airport → Albi | TaxiNeo",
-        metaDescription: "Book your Toulouse-Blagnac Airport to Albi taxi from €95. 80 km via the A68, 55-min ride. Direct transfer to the episcopal city.",
+        metaTitle: "Taxi Aéroport Toulouse-Blagnac → Albi | 80 km, €95 | TaxiNeo",
+        metaDescription: "Via A68, 55 min ride. Aéroport Toulouse-Blagnac, Cathédrale Sainte-Cécile, Musée Toulouse-Lautrec and Cité épiscopale en route. Up to 1h15 during rush hour.",
         heroTitle: "Taxi Toulouse-Blagnac Airport — Albi",
         heroSubtitle: "From the aerospace hub to the UNESCO-listed episcopal city",
         description: "Taxi transfer from Toulouse-Blagnac Airport to Albi, UNESCO-listed episcopal city home to Sainte-Cecile Cathedral and the Toulouse-Lautrec Museum, via the A68 motorway.",
@@ -225,8 +225,8 @@ export const trajetsToulouseAeroport: Trajet[] = [
     hub: "toulouse-aeroport",
     i18n: {
       fr: {
-        metaTitle: "Taxi Aéroport Toulouse-Blagnac → Montauban | TaxiNeo",
-        metaDescription: "Réservez votre taxi Aéroport Toulouse-Blagnac → Montauban dès 75 €. 60 km par l'A62, trajet en 40 min. Transfert direct vers la cité d'Ingres.",
+        metaTitle: "Taxi Aéroport Toulouse-Blagnac → Montauban | 60 km | TaxiNeo",
+        metaDescription: "Via A62 en 40 min. Aéroport Toulouse-Blagnac, Musée Ingres-Bourdelle, Pont Vieux et Place Nationale en chemin. Suivi de vol, dépose directe au terminal.",
         heroTitle: "Taxi Aéroport Toulouse-Blagnac — Montauban",
         heroSubtitle: "Du terminal à la cité d'Ingres et Bourdelle au bord du Tarn",
         description: "Transfert en taxi de l'aéroport Toulouse-Blagnac à Montauban, préfecture du Tarn-et-Garonne et ville natale d'Ingres, via l'autoroute A62.",
@@ -244,8 +244,8 @@ export const trajetsToulouseAeroport: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Toulouse-Blagnac Airport → Montauban | TaxiNeo",
-        metaDescription: "Book your Toulouse-Blagnac Airport to Montauban taxi from €75. 60 km via the A62, 40-min ride. Direct transfer to the city of Ingres.",
+        metaTitle: "Taxi Aéroport Toulouse-Blagnac → Montauban | 60 km | TaxiNeo",
+        metaDescription: "Via A62, 40 min ride. Aéroport Toulouse-Blagnac, Musée Ingres-Bourdelle, Pont Vieux and Place Nationale en route. Meet at terminal, free wait if flight delayed.",
         heroTitle: "Taxi Toulouse-Blagnac Airport — Montauban",
         heroSubtitle: "From the terminal to the city of Ingres and Bourdelle on the banks of the Tarn",
         description: "Taxi transfer from Toulouse-Blagnac Airport to Montauban, capital of Tarn-et-Garonne and birthplace of Ingres, via the A62 motorway.",
@@ -290,8 +290,8 @@ export const trajetsToulouseAeroport: Trajet[] = [
     hub: "toulouse-aeroport",
     i18n: {
       fr: {
-        metaTitle: "Taxi Aéroport Toulouse-Blagnac → Auch | TaxiNeo",
-        metaDescription: "Réservez votre taxi Aéroport Toulouse-Blagnac → Auch dès 95 €. 80 km par la N124, trajet en 55 min. Transfert direct vers la capitale de la Gascogne.",
+        metaTitle: "Taxi Aéroport Toulouse-Blagnac → Auch | 80 km | TaxiNeo",
+        metaDescription: "Via N124 / A624 en 55 min. Aéroport Toulouse-Blagnac, Route N124, Cathédrale Sainte-Marie et Escalier monumental en chemin. Dépose au terminal, suivi de vol.",
         heroTitle: "Taxi Aéroport Toulouse-Blagnac — Auch",
         heroSubtitle: "Du terminal d'Airbus à la capitale historique de la Gascogne",
         description: "Transfert en taxi de l'aéroport Toulouse-Blagnac à Auch, préfecture du Gers et capitale de la Gascogne, via la voie rapide N124.",
@@ -309,8 +309,8 @@ export const trajetsToulouseAeroport: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Toulouse-Blagnac Airport → Auch | TaxiNeo",
-        metaDescription: "Book your Toulouse-Blagnac Airport to Auch taxi from €95. 80 km via the N124, 55-min ride. Direct transfer to the historic capital of Gascony.",
+        metaTitle: "Taxi Aéroport Toulouse-Blagnac → Auch | 80 km, €95 | TaxiNeo",
+        metaDescription: "Via N124 / A624, 55 min ride. Aéroport Toulouse-Blagnac, Route N124, Cathédrale Sainte-Marie and Escalier monumental en route. Up to 1h15 during rush hour.",
         heroTitle: "Taxi Toulouse-Blagnac Airport — Auch",
         heroSubtitle: "From the Airbus terminal to the historic capital of Gascony",
         description: "Taxi transfer from Toulouse-Blagnac Airport to Auch, capital of the Gers department and historic heart of Gascony, via the N124 expressway.",

@@ -30,8 +30,8 @@ export const trajetsLyonSaintExupery: Trajet[] = [
     hub: "lyon-saint-exupery",
     i18n: {
       fr: {
-        metaTitle: "Taxi Aéroport Lyon-Saint Exupéry → Lyon Centre | TaxiNeo",
-        metaDescription: "Réservez votre taxi Lyon-Saint Exupéry–Lyon Centre dès 55 €. 25 km par l'A43, trajet en 25 min. Prise en charge au terminal, service 24h/24.",
+        metaTitle: "Taxi Lyon-Saint Exupéry → Lyon Centre | 25 km | TaxiNeo",
+        metaDescription: "Via A43 en 25 min. Aéroport Lyon-Saint Exupéry, Gare TGV intégrée, Presqu'île de Lyon et Confluence Rhône-Saône en chemin. Dépose au terminal, suivi de vol.",
         heroTitle: "Taxi Aéroport Lyon-Saint Exupéry — Lyon Centre",
         heroSubtitle: "Transfert direct depuis le terminal vers le centre-ville de Lyon, la capitale des Gaules",
         description: "Transfert en taxi de l'aéroport international Lyon-Saint Exupéry (LYS) vers Lyon Centre, via l'autoroute A43. Service porte-à-porte avec prise en charge au terminal.",
@@ -49,8 +49,8 @@ export const trajetsLyonSaintExupery: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Lyon-Saint Exupéry Airport → Lyon Centre | TaxiNeo",
-        metaDescription: "Book your Lyon-Saint Exupéry–Lyon Centre taxi from €55. 25 km via the A43, 25-min ride. Terminal pickup, 24/7 service.",
+        metaTitle: "Taxi Lyon-Saint Exupéry → Lyon Centre | 25 km, €55 | TaxiNeo",
+        metaDescription: "Via A43, 25 min ride. Aéroport Lyon-Saint Exupéry, Gare TGV intégrée, Presqu'île de Lyon and Confluence Rhône-Saône en route. Up to 40 min during rush hour.",
         heroTitle: "Taxi Lyon-Saint Exupéry Airport — Lyon Centre",
         heroSubtitle: "Direct transfer from the terminal to the heart of Lyon, France's gastronomic capital",
         description: "Taxi transfer from Lyon-Saint Exupéry International Airport (LYS) to Lyon city centre via the A43 motorway. Door-to-door service with terminal pickup.",
@@ -95,8 +95,8 @@ export const trajetsLyonSaintExupery: Trajet[] = [
     hub: "lyon-saint-exupery",
     i18n: {
       fr: {
-        metaTitle: "Taxi Aéroport Lyon-Saint Exupéry → Grenoble | TaxiNeo",
-        metaDescription: "Réservez votre taxi Lyon-Saint Exupéry–Grenoble dès 120 €. 100 km par l'A43/A48, trajet en 1h05. Transfert direct vers la capitale des Alpes.",
+        metaTitle: "Taxi Lyon-Saint Exupéry → Grenoble | 100 km, 120 € | TaxiNeo",
+        metaDescription: "Via A43 / A48 en 1h05. Autoroute A43/A48, Massif de la Chartreuse, Vallée du Grésivaudan et Capitale des Alpes en chemin. Dépose au terminal, suivi de vol.",
         heroTitle: "Taxi Aéroport Lyon-Saint Exupéry — Grenoble",
         heroSubtitle: "Transfert direct depuis l'aéroport vers Grenoble, capitale des Alpes françaises",
         description: "Transfert en taxi de l'aéroport Lyon-Saint Exupéry (LYS) à Grenoble, capitale des Alpes, via les autoroutes A43 et A48. Service porte-à-porte avec prise en charge au terminal.",
@@ -114,8 +114,8 @@ export const trajetsLyonSaintExupery: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Lyon-Saint Exupéry Airport → Grenoble | TaxiNeo",
-        metaDescription: "Book your Lyon-Saint Exupéry–Grenoble taxi from €120. 100 km via A43/A48, 1h05 ride. Direct transfer to the Capital of the Alps.",
+        metaTitle: "Taxi Lyon-Saint Exupéry → Grenoble | 100 km, €120 | TaxiNeo",
+        metaDescription: "Via A43 / A48, 1h05 ride. Autoroute A43/A48, Massif de la Chartreuse, Vallée du Grésivaudan and Capitale des Alpes en route. Terminal drop-off, flight tracking.",
         heroTitle: "Taxi Lyon-Saint Exupéry Airport — Grenoble",
         heroSubtitle: "Direct transfer from the airport to Grenoble, capital of the French Alps",
         description: "Taxi transfer from Lyon-Saint Exupéry Airport (LYS) to Grenoble, capital of the Alps, via the A43 and A48 motorways. Door-to-door service with terminal pickup.",
@@ -160,8 +160,8 @@ export const trajetsLyonSaintExupery: Trajet[] = [
     hub: "lyon-saint-exupery",
     i18n: {
       fr: {
-        metaTitle: "Taxi Aéroport Lyon-Saint Exupéry → Annecy | TaxiNeo",
-        metaDescription: "Réservez votre taxi Lyon-Saint Exupéry–Annecy dès 175 €. 145 km par l'A43/A41, trajet en 1h30. Transfert direct vers la Venise des Alpes.",
+        metaTitle: "Taxi Aéroport Lyon-Saint Exupéry → Annecy | 145 km | TaxiNeo",
+        metaDescription: "Via A43 / A41 en 1h30. Autoroute A43/A41, Lac du Bourget, Massif des Bauges et Lac d'Annecy en chemin. Dépose au terminal exact, suivi de vol en temps réel.",
         heroTitle: "Taxi Aéroport Lyon-Saint Exupéry — Annecy",
         heroSubtitle: "Transfert direct depuis l'aéroport vers Annecy, la Venise des Alpes au bord du plus pur lac d'Europe",
         description: "Transfert en taxi de l'aéroport Lyon-Saint Exupéry (LYS) à Annecy, perle des Alpes au bord de son lac cristallin, via les autoroutes A43 et A41.",
@@ -179,8 +179,8 @@ export const trajetsLyonSaintExupery: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Lyon-Saint Exupéry Airport → Annecy | TaxiNeo",
-        metaDescription: "Book your Lyon-Saint Exupéry–Annecy taxi from €175. 145 km via A43/A41, 1h30 ride. Direct transfer to the Venice of the Alps.",
+        metaTitle: "Taxi Aéroport Lyon-Saint Exupéry → Annecy | 145 km | TaxiNeo",
+        metaDescription: "Via A43 / A41, 1h30 ride. Autoroute A43/A41, Lac du Bourget, Massif des Bauges and Lac d'Annecy en route. Terminal drop-off, real-time flight tracking included.",
         heroTitle: "Taxi Lyon-Saint Exupéry Airport — Annecy",
         heroSubtitle: "Direct transfer from the airport to Annecy, the Venice of the Alps on the shores of Europe's purest lake",
         description: "Taxi transfer from Lyon-Saint Exupéry Airport (LYS) to Annecy, Alpine gem on its crystal-clear lake, via the A43 and A41 motorways.",
@@ -225,8 +225,8 @@ export const trajetsLyonSaintExupery: Trajet[] = [
     hub: "lyon-saint-exupery",
     i18n: {
       fr: {
-        metaTitle: "Taxi Aéroport Lyon-Saint Exupéry → Chambéry | TaxiNeo",
-        metaDescription: "Réservez votre taxi Lyon-Saint Exupéry–Chambéry dès 115 €. 100 km par l'A43, trajet en 1h. Transfert direct vers la capitale historique de la Savoie.",
+        metaTitle: "Taxi Lyon-Saint Exupéry → Chambéry | 100 km, 115 € | TaxiNeo",
+        metaDescription: "Via A43 en 1h. Lac d'Aiguebelette, Ducs de Savoie, Porte des Alpes et Gare TGV aéroport en chemin. Dépose au terminal exact, suivi de vol en temps réel.",
         heroTitle: "Taxi Aéroport Lyon-Saint Exupéry — Chambéry",
         heroSubtitle: "Transfert direct depuis l'aéroport vers Chambéry, capitale historique des Ducs de Savoie",
         description: "Transfert en taxi de l'aéroport Lyon-Saint Exupéry (LYS) à Chambéry, capitale historique de la Savoie et porte d'accès aux grandes stations alpines, via l'autoroute A43.",
@@ -244,8 +244,8 @@ export const trajetsLyonSaintExupery: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Lyon-Saint Exupéry Airport → Chambéry | TaxiNeo",
-        metaDescription: "Book your Lyon-Saint Exupéry–Chambéry taxi from €115. 100 km via A43, 1-hour ride. Direct transfer to the historic capital of Savoy.",
+        metaTitle: "Taxi Lyon-Saint Exupéry → Chambéry | 100 km, €115 | TaxiNeo",
+        metaDescription: "Via A43, 1 hour ride. Lac d'Aiguebelette, Ducs de Savoie, Porte des Alpes and Gare TGV aéroport en route. Terminal drop-off, real-time flight tracking included.",
         heroTitle: "Taxi Lyon-Saint Exupéry Airport — Chambéry",
         heroSubtitle: "Direct transfer from the airport to Chambéry, historic capital of the Dukes of Savoy",
         description: "Taxi transfer from Lyon-Saint Exupéry Airport (LYS) to Chambéry, historic capital of Savoy and gateway to the great Alpine ski resorts, via the A43 motorway.",
@@ -290,8 +290,8 @@ export const trajetsLyonSaintExupery: Trajet[] = [
     hub: "lyon-saint-exupery",
     i18n: {
       fr: {
-        metaTitle: "Taxi Aéroport Lyon-Saint Exupéry → Valence | TaxiNeo",
-        metaDescription: "Réservez votre taxi Lyon-Saint Exupéry–Valence dès 135 €. 115 km par l'A7, trajet en 1h10. Transfert direct vers la porte de la Provence.",
+        metaTitle: "Taxi Lyon-Saint Exupéry → Valence | 115 km, 135 € | TaxiNeo",
+        metaDescription: "Via A7 en 1h10. Vallée du Rhône, Vignobles des Côtes du Rhône, Porte de la Provence et Gare TGV aéroport en chemin. Suivi de vol, dépose directe au terminal.",
         heroTitle: "Taxi Aéroport Lyon-Saint Exupéry — Valence",
         heroSubtitle: "Transfert direct depuis l'aéroport vers Valence, porte du Midi et de la Drôme provençale",
         description: "Transfert en taxi de l'aéroport Lyon-Saint Exupéry (LYS) à Valence, préfecture de la Drôme et porte de la Provence, via l'autoroute A7 le long de la vallée du Rhône.",
@@ -309,8 +309,8 @@ export const trajetsLyonSaintExupery: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Lyon-Saint Exupéry Airport → Valence | TaxiNeo",
-        metaDescription: "Book your Lyon-Saint Exupéry–Valence taxi from €135. 115 km via the A7, 1h10 ride. Direct transfer to the gateway to Provence.",
+        metaTitle: "Taxi Lyon-Saint Exupéry → Valence | 115 km, €135 | TaxiNeo",
+        metaDescription: "Via A7, 1h10 ride. Vallée du Rhône, Vignobles des Côtes du Rhône, Porte de la Provence and Gare TGV aéroport en route. Terminal drop-off, flight tracking.",
         heroTitle: "Taxi Lyon-Saint Exupéry Airport — Valence",
         heroSubtitle: "Direct transfer from the airport to Valence, gateway to the Midi and Drôme Provençale",
         description: "Taxi transfer from Lyon-Saint Exupéry Airport (LYS) to Valence, Drôme prefecture and gateway to Provence, via the A7 motorway along the Rhône valley.",

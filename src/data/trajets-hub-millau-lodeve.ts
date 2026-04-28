@@ -27,8 +27,8 @@ export const trajetsMillauLodeve: Trajet[] = [
     hub: "millau-lodeve",
     i18n: {
       fr: {
-        metaTitle: "Taxi Millau → Montpellier | Prix fixe dès 140 € | TaxiNeo",
-        metaDescription: "Taxi Millau → Montpellier. 115 km, 1h20, dès 140 €. A75, viaduc de Millau, Grands Causses. Réservation 24h/24.",
+        metaTitle: "Taxi Millau → Montpellier | 115 km, dès 140 € | TaxiNeo",
+        metaDescription: "Via A75 en 1h20. Viaduc de Millau, Grands Causses UNESCO, Plateau du Larzac et Languedoc méditerranéen en chemin. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Millau → Montpellier",
         heroSubtitle: "Transfert Millau → Montpellier au prix fixe de 140 — 175 €. 115 km, traversée spectaculaire par l'A75 et le viaduc de Millau.",
         description: "Montpellier est à 1h20 de Millau par l'A75, autoroute gratuite du Massif Central hormis le péage du viaduc.",
@@ -46,8 +46,8 @@ export const trajetsMillauLodeve: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Millau → Montpellier | Fixed price from €140 | TaxiNeo",
-        metaDescription: "Taxi Millau → Montpellier. 115 km, 1h20, from €140. A75, Millau Viaduct, Grands Causses UNESCO. Book 24/7.",
+        metaTitle: "Taxi Millau → Montpellier | 115 km, from €140 | TaxiNeo",
+        metaDescription: "Via A75, 1h20 ride. Viaduc de Millau, Grands Causses UNESCO, Plateau du Larzac and Languedoc méditerranéen en route. Faster and more direct than train or bus.",
         heroTitle: "Taxi Millau → Montpellier",
         heroSubtitle: "Your Millau → Montpellier transfer at €140 — €175. 115 km via the A75 and the world-famous Millau Viaduct.",
         description: "Montpellier is 1h20 from Millau via the A75, crossing the famous Millau Viaduct designed by Norman Foster.",
@@ -92,8 +92,8 @@ export const trajetsMillauLodeve: Trajet[] = [
     hub: "millau-lodeve",
     i18n: {
       fr: {
-        metaTitle: "Taxi Millau → Rodez | Prix fixe dès 85 € | TaxiNeo",
-        metaDescription: "Taxi Millau → Rodez. 70 km, 50 min, dès 85 €. N88, musée Soulages, cathédrale Notre-Dame. Réservation 24h/24.",
+        metaTitle: "Taxi Millau → Rodez | forfait dès 85 €, 50 min | TaxiNeo",
+        metaDescription: "Via N88 en 50 min. Vallée de l'Aveyron, Musée Soulages, Cathédrale de Rodez et Causse Comtal en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Millau → Rodez",
         heroSubtitle: "Transfert Millau → Rodez au prix fixe de 85 — 110 €. 70 km, route gratuite par la N88 à travers l'Aveyron.",
         description: "Rodez, préfecture de l'Aveyron avec son musée Soulages et sa cathédrale en grès rose, est à 50 min de Millau.",
@@ -112,7 +112,7 @@ export const trajetsMillauLodeve: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Millau → Rodez | Fixed price from €85 | TaxiNeo",
-        metaDescription: "Taxi Millau → Rodez. 70 km, 50 min, from €85. N88, Soulages Museum, Gothic cathedral. Book 24/7.",
+        metaDescription: "Via N88, 50 min ride. Vallée de l'Aveyron, Musée Soulages, Cathédrale de Rodez and Causse Comtal en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Millau → Rodez",
         heroSubtitle: "Your Millau → Rodez transfer at €85 — €110. 70 km, toll-free via the N88 through the Aveyron countryside.",
         description: "Rodez, with the Pritzker-winning Soulages Museum and a striking pink sandstone Gothic cathedral, is 50 min from Millau.",
@@ -157,8 +157,8 @@ export const trajetsMillauLodeve: Trajet[] = [
     hub: "millau-lodeve",
     i18n: {
       fr: {
-        metaTitle: "Taxi Millau → Béziers | Prix fixe dès 120 € | TaxiNeo",
-        metaDescription: "Taxi Millau → Béziers. 100 km, 1h10, dès 120 €. A75, viaduc de Millau, Larzac, canal du Midi. Réservation 24h/24.",
+        metaTitle: "Taxi Millau → Béziers | 100 km, dès 120 € | TaxiNeo",
+        metaDescription: "Via A75 en 1h10. Viaduc de Millau, Plateau du Larzac, Canal du Midi UNESCO et Cathédrale Saint-Nazaire en chemin. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Millau → Béziers",
         heroSubtitle: "Transfert Millau → Béziers au prix fixe de 120 — 155 €. 100 km, descente spectaculaire des Causses vers la Méditerranée.",
         description: "Béziers est à 1h10 de Millau par l'A75, en traversant le viaduc de Millau et le plateau du Larzac.",
@@ -176,8 +176,8 @@ export const trajetsMillauLodeve: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Millau → Béziers | Fixed price from €120 | TaxiNeo",
-        metaDescription: "Taxi Millau → Béziers. 100 km, 1h10, from €120. A75, Millau Viaduct, Larzac, Canal du Midi. Book 24/7.",
+        metaTitle: "Taxi Millau → Béziers | 100 km, from €120 | TaxiNeo",
+        metaDescription: "Via A75, 1h10 ride. Viaduc de Millau, Plateau du Larzac, Canal du Midi UNESCO and Cathédrale Saint-Nazaire en route. Faster and more direct than train or bus.",
         heroTitle: "Taxi Millau → Béziers",
         heroSubtitle: "Your Millau → Béziers transfer at €120 — €155. 100 km, from the Causses plateaux to the Mediterranean coast.",
         description: "Béziers is 1h10 from Millau via the A75, crossing the Millau Viaduct and the UNESCO-listed Larzac plateau.",
@@ -222,8 +222,8 @@ export const trajetsMillauLodeve: Trajet[] = [
     hub: "millau-lodeve",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lodève → Montpellier | Prix fixe dès 65 € | TaxiNeo",
-        metaDescription: "Taxi Lodève → Montpellier. 55 km, 40 min, dès 65 €. A750, lac du Salagou, vallée de l'Hérault. Réservation 24h/24.",
+        metaTitle: "Taxi Lodève → Montpellier | 55 km, dès 65 € | TaxiNeo",
+        metaDescription: "Via A750 en 40 min. Lac du Salagou, Vallée de l'Hérault, Musée de Lodève et Garrigue languedocienne en chemin. Alternative directe au train ou au bus.",
         heroTitle: "Taxi Lodève → Montpellier",
         heroSubtitle: "Transfert Lodève → Montpellier au prix fixe de 65 — 85 €. 55 km, route rapide et entièrement gratuite par l'A750.",
         description: "Montpellier est à 40 minutes de Lodève par l'A750, voie express gratuite traversant l'arrière-pays héraultais.",
@@ -241,8 +241,8 @@ export const trajetsMillauLodeve: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Lodève → Montpellier | Fixed price from €65 | TaxiNeo",
-        metaDescription: "Taxi Lodève → Montpellier. 55 km, 40 min, from €65. A750, Lac du Salagou, Hérault valley. Book 24/7.",
+        metaTitle: "Taxi Lodève → Montpellier | 55 km, from €65 | TaxiNeo",
+        metaDescription: "Via A750, 40 min ride. Lac du Salagou, Vallée de l'Hérault, Musée de Lodève and Garrigue languedocienne en route. Faster and more direct than train or bus.",
         heroTitle: "Taxi Lodève → Montpellier",
         heroSubtitle: "Your Lodève → Montpellier transfer at €65 — €85. 55 km, fast toll-free expressway via the A750.",
         description: "Montpellier is 40 minutes from Lodève via the toll-free A750 expressway through the Hérault hinterland.",
@@ -287,8 +287,8 @@ export const trajetsMillauLodeve: Trajet[] = [
     hub: "millau-lodeve",
     i18n: {
       fr: {
-        metaTitle: "Taxi Millau → Clermont-Ferrand | Prix fixe dès 240 € | TaxiNeo",
-        metaDescription: "Taxi Millau → Clermont-Ferrand. 200 km, 2h20, dès 240 €. A75, viaduc de Millau, volcans d'Auvergne. Réservation 24h/24.",
+        metaTitle: "Taxi Millau → Clermont-Ferrand | 200 km, dès 240 € | TaxiNeo",
+        metaDescription: "Par A75, 2h20 de trajet. A75 Méridienne, Viaduc de Millau, Aubrac et Volcans d'Auvergne UNESCO en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Millau → Clermont-Ferrand",
         heroSubtitle: "Transfert Millau → Clermont-Ferrand au prix fixe de 240 — 300 €. 200 km, remontée intégrale de l'A75 à travers le Massif Central.",
         description: "Clermont-Ferrand est à 2h20 de Millau par l'A75, autoroute gratuite traversant les volcans d'Auvergne.",
@@ -306,8 +306,8 @@ export const trajetsMillauLodeve: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Millau → Clermont-Ferrand | Fixed price from €240 | TaxiNeo",
-        metaDescription: "Taxi Millau → Clermont-Ferrand. 200 km, 2h20, from €240. A75, Millau Viaduct, Auvergne Volcanoes. Book 24/7.",
+        metaTitle: "Taxi Millau → Clermont-Ferrand | 200 km, from €240 | TaxiNeo",
+        metaDescription: "Via A75, 2h20 ride. A75 Méridienne, Viaduc de Millau, Aubrac and Volcans d'Auvergne UNESCO en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Millau → Clermont-Ferrand",
         heroSubtitle: "Your Millau → Clermont-Ferrand transfer at €240 — €300. 200 km, the full A75 Meridienne across the Massif Central.",
         description: "Clermont-Ferrand is 2h20 from Millau via the toll-free A75, passing through the Auvergne Volcanoes.",

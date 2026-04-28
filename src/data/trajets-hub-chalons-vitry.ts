@@ -27,8 +27,8 @@ export const trajetsChâlonsVitry: Trajet[] = [
     hub: "chalons-vitry",
     i18n: {
       fr: {
-        metaTitle: "Taxi Châlons-en-Champagne → Reims | Prix fixe dès 60 € | TaxiNeo",
-        metaDescription: "Taxi Châlons-en-Champagne → Reims. 50 km, 35 min, dès 60 €. A26, vignoble champenois, cathédrale UNESCO. Réservation 24h/24.",
+        metaTitle: "Taxi Châlons-en-Champagne → Reims | 50 km, 60 € | TaxiNeo",
+        metaDescription: "Par A26, 35 min de trajet. Vignoble champenois, Cathédrale de Reims, Marne et Patrimoine UNESCO en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Châlons-en-Champagne → Reims",
         heroSubtitle: "Transfert Châlons-en-Champagne → Reims au prix fixe de 60 — 80 €. 50 km, au coeur de la Marne.",
         description: "Reims, cité des sacres et capitale du Champagne, est à seulement 35 minutes de Châlons-en-Champagne.",
@@ -46,8 +46,8 @@ export const trajetsChâlonsVitry: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Châlons-en-Champagne → Reims | Fixed price from €60 | TaxiNeo",
-        metaDescription: "Taxi Châlons-en-Champagne → Reims. 50 km, 35 min, from €60. A26, Champagne vineyards, UNESCO cathedral. Book 24/7.",
+        metaTitle: "Taxi Châlons-en-Champagne → Reims | 50 km, €60 | TaxiNeo",
+        metaDescription: "Via A26, 35 min ride. Vignoble champenois, Cathédrale de Reims, Marne and Patrimoine UNESCO en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Châlons-en-Champagne → Reims",
         heroSubtitle: "Your Châlons-en-Champagne → Reims transfer at €60 — €80. 50 km, heart of the Marne.",
         description: "Reims, coronation city and Champagne capital, is just 35 minutes from Châlons-en-Champagne.",
@@ -92,8 +92,8 @@ export const trajetsChâlonsVitry: Trajet[] = [
     hub: "chalons-vitry",
     i18n: {
       fr: {
-        metaTitle: "Taxi Châlons-en-Champagne → Paris | Prix fixe dès 225 € | TaxiNeo",
-        metaDescription: "Taxi Châlons-en-Champagne → Paris. 190 km, 1h55, dès 225 €. A4, transfert direct porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Châlons-en-Champagne → Paris | 190 km, 225 € | TaxiNeo",
+        metaDescription: "Via A4 en 1h55. Champagne, Marne, Liaison directe et Cathédrale de Châlons en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Châlons-en-Champagne → Paris",
         heroSubtitle: "Transfert Châlons-en-Champagne → Paris au prix fixe de 225 — 280 €. 190 km, direct par l'A4.",
         description: "Paris est à 1h55 de Châlons-en-Champagne par l'autoroute A4.",
@@ -111,8 +111,8 @@ export const trajetsChâlonsVitry: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Châlons-en-Champagne → Paris | Fixed price from €225 | TaxiNeo",
-        metaDescription: "Taxi Châlons-en-Champagne → Paris. 190 km, 1h55, from €225. A4, direct door-to-door. Book 24/7.",
+        metaTitle: "Taxi Châlons-en-Champagne → Paris | 190 km, €225 | TaxiNeo",
+        metaDescription: "A4 route, approximately 1h55. Champagne, Marne, Liaison directe and Cathédrale de Châlons en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Châlons-en-Champagne → Paris",
         heroSubtitle: "Your Châlons-en-Champagne → Paris transfer at €225 — €280. 190 km, via the A4.",
         description: "Paris is 1h55 from Châlons-en-Champagne via the A4 motorway.",
@@ -157,8 +157,8 @@ export const trajetsChâlonsVitry: Trajet[] = [
     hub: "chalons-vitry",
     i18n: {
       fr: {
-        metaTitle: "Taxi Vitry-le-François → Reims | Prix fixe dès 115 € | TaxiNeo",
-        metaDescription: "Taxi Vitry-le-François → Reims. 95 km, 1h, dès 115 €. N44 et A26, lac du Der, vignoble champenois. Réservation 24h/24.",
+        metaTitle: "Taxi Vitry-le-François → Reims | 95 km, dès 115 € | TaxiNeo",
+        metaDescription: "Via N44 / A26 en 1h. N44, Lac du Der, Champagne et Marne en chemin. Dépose porte-à-porte, bagages inclus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Vitry-le-François → Reims",
         heroSubtitle: "Transfert Vitry-le-François → Reims au prix fixe de 115 — 145 €. 95 km, à travers la Champagne.",
         description: "Reims, capitale du Champagne et cité des sacres, est à 1 heure de Vitry-le-François.",
@@ -176,8 +176,8 @@ export const trajetsChâlonsVitry: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Vitry-le-François → Reims | Fixed price from €115 | TaxiNeo",
-        metaDescription: "Taxi Vitry-le-François → Reims. 95 km, 1h, from €115. N44 and A26, Lac du Der, Champagne. Book 24/7.",
+        metaTitle: "Taxi Vitry-le-François → Reims | 95 km, from €115 | TaxiNeo",
+        metaDescription: "Via N44 / A26, 1 hour ride. N44, Lac du Der, Champagne and Marne en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Vitry-le-François → Reims",
         heroSubtitle: "Your Vitry-le-François → Reims transfer at €115 — €145. 95 km, across Champagne.",
         description: "Reims, Champagne capital and coronation city, is 1 hour from Vitry-le-François.",
@@ -222,8 +222,8 @@ export const trajetsChâlonsVitry: Trajet[] = [
     hub: "chalons-vitry",
     i18n: {
       fr: {
-        metaTitle: "Taxi Châlons-en-Champagne → Troyes | Prix fixe dès 95 € | TaxiNeo",
-        metaDescription: "Taxi Châlons-en-Champagne → Troyes. 80 km, 55 min, dès 95 €. N77, Côte des Bar, patrimoine champenois. Réservation 24h/24.",
+        metaTitle: "Taxi Châlons-en-Champagne → Troyes | 80 km, 95 € | TaxiNeo",
+        metaDescription: "Trajet direct N77 / A26 en 55 min. Passage par N77, Champagne, Côte des Bar et Maisons à pans de bois. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Châlons-en-Champagne → Troyes",
         heroSubtitle: "Transfert Châlons-en-Champagne → Troyes au prix fixe de 95 — 125 €. 80 km, entre Marne et Aube.",
         description: "Troyes, cité des vitraux et capitale des magasins d'usine, est à 55 minutes de Châlons-en-Champagne.",
@@ -241,8 +241,8 @@ export const trajetsChâlonsVitry: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Châlons-en-Champagne → Troyes | Fixed price from €95 | TaxiNeo",
-        metaDescription: "Taxi Châlons-en-Champagne → Troyes. 80 km, 55 min, from €95. N77, Côte des Bar, heritage. Book 24/7.",
+        metaTitle: "Taxi Châlons-en-Champagne → Troyes | 80 km, €95 | TaxiNeo",
+        metaDescription: "Direct route via N77 / A26, 55 min. N77, Champagne, Côte des Bar and Maisons à pans de bois en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Châlons-en-Champagne → Troyes",
         heroSubtitle: "Your Châlons-en-Champagne → Troyes transfer at €95 — €125. 80 km, from Marne to Aube.",
         description: "Troyes, city of stained glass and factory outlet capital, is 55 minutes from Châlons-en-Champagne.",
@@ -287,8 +287,8 @@ export const trajetsChâlonsVitry: Trajet[] = [
     hub: "chalons-vitry",
     i18n: {
       fr: {
-        metaTitle: "Taxi Châlons-en-Champagne → Metz | Prix fixe dès 200 € | TaxiNeo",
-        metaDescription: "Taxi Châlons-en-Champagne → Metz. 170 km, 1h45, dès 200 €. A4, de la Champagne à la Lorraine. Réservation 24h/24.",
+        metaTitle: "Taxi Châlons-en-Champagne → Metz | 170 km, 200 € | TaxiNeo",
+        metaDescription: "Via A4 en 1h45. Champagne-Lorraine, Centre Pompidou-Metz, Cathédrale Saint-Etienne et Marne en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Châlons-en-Champagne → Metz",
         heroSubtitle: "Transfert Châlons-en-Champagne → Metz au prix fixe de 200 — 255 €. 170 km, de la Champagne à la Lorraine.",
         description: "Metz, ville d'art et d'histoire aux portes du Luxembourg, est à 1h45 de Châlons-en-Champagne.",
@@ -306,8 +306,8 @@ export const trajetsChâlonsVitry: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Châlons-en-Champagne → Metz | Fixed price from €200 | TaxiNeo",
-        metaDescription: "Taxi Châlons-en-Champagne → Metz. 170 km, 1h45, from €200. A4, from Champagne to Lorraine. Book 24/7.",
+        metaTitle: "Taxi Châlons-en-Champagne → Metz | 170 km, €200 | TaxiNeo",
+        metaDescription: "Via A4, 1h45 ride. Champagne-Lorraine, Centre Pompidou-Metz, Cathédrale Saint-Etienne and Marne en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Châlons-en-Champagne → Metz",
         heroSubtitle: "Your Châlons-en-Champagne → Metz transfer at €200 — €255. 170 km, from Champagne to Lorraine.",
         description: "Metz, city of art and history near Luxembourg, is 1h45 from Châlons-en-Champagne.",

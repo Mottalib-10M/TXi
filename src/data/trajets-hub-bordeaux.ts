@@ -30,8 +30,8 @@ export const trajetsBordeaux: Trajet[] = [
     hub: "bordeaux",
     i18n: {
       fr: {
-        metaTitle: "Taxi Bordeaux → Médoc | Prix fixe dès 80 € | TaxiNeo",
-        metaDescription: "Taxi Bordeaux → Médoc (Pauillac). 60 km, 55 min, dès 80 €. Route des Châteaux, Margaux, Saint-Julien. Réservation 24h/24.",
+        metaTitle: "Taxi Bordeaux → Pauillac (Médoc) | 60 km, dès 80 € | TaxiNeo",
+        metaDescription: "Via D2 en 55 min. Route des Châteaux, Margaux, Pauillac et Saint-Julien en chemin. Arrêt visite possible en chemin. Arrêt possible pour visites ou photos.",
         heroTitle: "Taxi Bordeaux → Médoc",
         heroSubtitle: "Transfert Bordeaux → Pauillac (Médoc) au prix fixe de 80 — 105 €. Route des Châteaux, sans péage.",
         description: "Le Médoc, presqu'île viticole légendaire au nord de Bordeaux, abrite les plus grands crus classés du monde.",
@@ -49,8 +49,8 @@ export const trajetsBordeaux: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Bordeaux → Médoc | Fixed price from €80 | TaxiNeo",
-        metaDescription: "Taxi Bordeaux → Médoc (Pauillac). 60 km, 55 min, from €80. Route des Châteaux, Margaux, Saint-Julien. Book 24/7.",
+        metaTitle: "Taxi Bordeaux → Pauillac (Médoc) | 60 km, from €80 | TaxiNeo",
+        metaDescription: "Via D2, 55 min ride. Route des Châteaux, Margaux, Pauillac and Saint-Julien en route. Stops for sightseeing possible en route. Up to 1h15 during rush hour.",
         heroTitle: "Taxi Bordeaux → Médoc",
         heroSubtitle: "Your Bordeaux → Pauillac (Médoc) transfer at €80 — €105. Route des Châteaux, toll-free.",
         description: "The Médoc, a legendary wine peninsula north of Bordeaux, is home to the world's greatest classified growths.",
@@ -95,8 +95,8 @@ export const trajetsBordeaux: Trajet[] = [
     hub: "bordeaux",
     i18n: {
       fr: {
-        metaTitle: "Taxi Bordeaux → La Rochelle | Dès 250 € | TaxiNeo",
-        metaDescription: "Taxi Bordeaux → La Rochelle. 190 km, 2h, prix fixe dès 250 €. Vieux-Port, île de Ré, aquarium. Réservation 24h/24.",
+        metaTitle: "Taxi Bordeaux → La Rochelle | 190 km, dès 250 € | TaxiNeo",
+        metaDescription: "Via A10 en 2h. Saintes, Rochefort, Île de Ré et Charente-Maritime en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Bordeaux → La Rochelle",
         heroSubtitle: "Transfert Bordeaux → La Rochelle au prix fixe de 250 — 310 €. 190 km par l'A10.",
         description: "La Rochelle, joyau de la côte atlantique, est à 2h de Bordeaux par l'A10 via Saintes.",
@@ -114,8 +114,8 @@ export const trajetsBordeaux: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Bordeaux → La Rochelle | From €250 | TaxiNeo",
-        metaDescription: "Taxi Bordeaux → La Rochelle. 190 km, 2h, fixed price from €250. Old Port, Île de Ré, aquarium. Book 24/7.",
+        metaTitle: "Taxi Bordeaux → La Rochelle | 190 km, from €250 | TaxiNeo",
+        metaDescription: "Via A10, 2 hours ride. Saintes, Rochefort, Île de Ré and Charente-Maritime en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Bordeaux → La Rochelle",
         heroSubtitle: "Your Bordeaux → La Rochelle transfer at €250 — €310. 190 km via the A10.",
         description: "La Rochelle, a jewel of the Atlantic coast, is 2h from Bordeaux via the A10 through Saintes.",
@@ -160,8 +160,8 @@ export const trajetsBordeaux: Trajet[] = [
     hub: "bordeaux",
     i18n: {
       fr: {
-        metaTitle: "Taxi Bordeaux → Cognac | Prix fixe dès 150 € | TaxiNeo",
-        metaDescription: "Taxi Bordeaux → Cognac. 120 km, 1h20, dès 150 €. Maisons Hennessy, Rémy Martin, distilleries. Réservation 24h/24.",
+        metaTitle: "Taxi Bordeaux → Cognac | 120 km, dès 150 € | TaxiNeo",
+        metaDescription: "Via A10 puis N141 en 1h20. N141, Charente, Distilleries et Hennessy en chemin. Arrêt visite possible en chemin. Arrêt possible pour visites ou photos.",
         heroTitle: "Taxi Bordeaux → Cognac",
         heroSubtitle: "Transfert Bordeaux → Cognac au prix fixe de 150 — 190 €. 120 km par l'A10 et la N141.",
         description: "Cognac, capitale mondiale de l'eau-de-vie éponyme, est à 1h20 de Bordeaux. Visite des grandes maisons et distilleries.",
@@ -179,8 +179,8 @@ export const trajetsBordeaux: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Bordeaux → Cognac | Fixed price from €150 | TaxiNeo",
-        metaDescription: "Taxi Bordeaux → Cognac. 120 km, 1h20, from €150. Hennessy, Rémy Martin, distilleries. Book 24/7.",
+        metaTitle: "Taxi Bordeaux → Cognac | 120 km, from €150 | TaxiNeo",
+        metaDescription: "Via A10 then N141, 1h20 ride. N141, Charente, Distilleries and Hennessy en route. Stops for sightseeing possible en route. Up to 1h45 during rush hour.",
         heroTitle: "Taxi Bordeaux → Cognac",
         heroSubtitle: "Your Bordeaux → Cognac transfer at €150 — €190. 120 km via A10 and N141.",
         description: "Cognac, world capital of the eponymous eau-de-vie, is 1h20 from Bordeaux. Visit the great houses and distilleries.",
@@ -225,8 +225,8 @@ export const trajetsBordeaux: Trajet[] = [
     hub: "bordeaux",
     i18n: {
       fr: {
-        metaTitle: "Taxi Bordeaux → Dax | Prix fixe dès 190 € | TaxiNeo",
-        metaDescription: "Taxi Bordeaux → Dax. 150 km, 1h30, dès 190 €. Thermalisme, férias, Adour. Réservation 24h/24.",
+        metaTitle: "Taxi Bordeaux → Dax | 150 km, dès 190 €, 1h30 | TaxiNeo",
+        metaDescription: "Via A63 en 1h30. Landes, Thermalisme, Adour et Férias en chemin. Dépose porte-à-porte, bagages inclus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Bordeaux → Dax",
         heroSubtitle: "Transfert Bordeaux → Dax au prix fixe de 190 — 240 €. 150 km par l'A63.",
         description: "Dax, première station thermale de France, est à 1h30 de Bordeaux par l'autoroute A63 à travers la forêt landaise.",
@@ -245,7 +245,7 @@ export const trajetsBordeaux: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Bordeaux → Dax | Fixed price from €190 | TaxiNeo",
-        metaDescription: "Taxi Bordeaux → Dax. 150 km, 1h30, from €190. Spa town, ferias, Adour river. Book 24/7.",
+        metaDescription: "Via A63, 1h30 ride. Landes, Thermalisme, Adour and Férias en route. Faster and more direct than train or bus. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Bordeaux → Dax",
         heroSubtitle: "Your Bordeaux → Dax transfer at €190 — €240. 150 km via the A63.",
         description: "Dax, France's leading spa town, is 1h30 from Bordeaux via the A63 through the Landes forest.",
@@ -290,8 +290,8 @@ export const trajetsBordeaux: Trajet[] = [
     hub: "bordeaux",
     i18n: {
       fr: {
-        metaTitle: "Taxi Bordeaux → Périgueux | Porte du Périgord | TaxiNeo",
-        metaDescription: "Réservez votre taxi Bordeaux–Périgueux dès 165 €. 130 km en 1h30 par l'A89. Cathédrale Saint-Front, gastronomie périgourdine.",
+        metaTitle: "Taxi Bordeaux → Périgueux | 130 km, dès 165 € | TaxiNeo",
+        metaDescription: "Par A89 sortie Périgueux, 1h30 de trajet. Périgord, Cathédrale byzantine, Gastronomie sur le parcours. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Bordeaux — Périgueux",
         heroSubtitle: "Porte d'entrée du Périgord et de la Dordogne",
         description: "Transfert en taxi de Bordeaux à Périgueux, préfecture de la Dordogne, capitale du Périgord blanc et de la gastronomie.",
@@ -309,8 +309,8 @@ export const trajetsBordeaux: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Bordeaux → Périgueux | Gateway to Périgord | TaxiNeo",
-        metaDescription: "Book your Bordeaux–Périgueux taxi from €165. 130 km in 1h30 via A89. Saint-Front Cathedral, Périgord gastronomy.",
+        metaTitle: "Taxi Bordeaux → Périgueux | 130 km, from €165 | TaxiNeo",
+        metaDescription: "Direct route via A89 sortie Périgueux, 1h30. Périgord, Cathédrale byzantine and Gastronomie along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Bordeaux — Périgueux",
         heroSubtitle: "Gateway to the Périgord and Dordogne",
         description: "Taxi transfer from Bordeaux to Périgueux, prefecture of the Dordogne, capital of Périgord Blanc and its gastronomy.",
@@ -355,8 +355,8 @@ export const trajetsBordeaux: Trajet[] = [
     hub: "bordeaux",
     i18n: {
       fr: {
-        metaTitle: "Taxi Bordeaux → Bergerac | Vignobles & Cyrano | TaxiNeo",
-        metaDescription: "Réservez votre taxi Bordeaux–Bergerac dès 120 €. 95 km en 1h10. Vignobles de Bergerac, vieux port et statue de Cyrano.",
+        metaTitle: "Taxi Bordeaux → Bergerac | 95 km, dès 120 € | TaxiNeo",
+        metaDescription: "Itinéraire A89 sortie Bergerac, puis D936, environ 1h10. En passant par Cyrano, Vignobles et Dordogne. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Bordeaux — Bergerac",
         heroSubtitle: "Au pays de Cyrano et des vignobles de la Dordogne",
         description: "Transfert en taxi de Bordeaux à Bergerac, cité viticole de la Dordogne célèbre pour Cyrano et son vignoble AOC.",
@@ -374,8 +374,8 @@ export const trajetsBordeaux: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Bordeaux → Bergerac | Vineyards & Cyrano | TaxiNeo",
-        metaDescription: "Book your Bordeaux–Bergerac taxi from €120. 95 km in 1h10. Bergerac vineyards, old port and Cyrano's statue.",
+        metaTitle: "Taxi Bordeaux → Bergerac | 95 km, from €120 | TaxiNeo",
+        metaDescription: "Direct route via A89 sortie Bergerac, then D936, 1h10. Cyrano, Vignobles and Dordogne along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Bordeaux — Bergerac",
         heroSubtitle: "In the land of Cyrano and Dordogne vineyards",
         description: "Taxi transfer from Bordeaux to Bergerac, a Dordogne wine town famous for Cyrano and its AOC vineyard.",
@@ -420,8 +420,8 @@ export const trajetsBordeaux: Trajet[] = [
     hub: "bordeaux",
     i18n: {
       fr: {
-        metaTitle: "Taxi Bordeaux → Royan | Plages & Estuaire | TaxiNeo",
-        metaDescription: "Réservez votre taxi Bordeaux–Royan dès 155 €. 120 km en 1h25. Plages de l'Atlantique, architecture des années 50 et estuaire.",
+        metaTitle: "Taxi Bordeaux → Royan | 120 km, dès 155 € | TaxiNeo",
+        metaDescription: "Via A10 puis N150 direction Royan en 1h25. Plages de l'Atlantique, Architecture 50s et Estuaire de la Gironde en chemin. Dépose à votre adresse exacte.",
         heroTitle: "Taxi Bordeaux — Royan",
         heroSubtitle: "Les plages de l'Atlantique et l'estuaire de la Gironde",
         description: "Transfert en taxi de Bordeaux à Royan, station balnéaire de la Charente-Maritime à l'embouchure de l'estuaire de la Gironde.",
@@ -439,8 +439,8 @@ export const trajetsBordeaux: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Bordeaux → Royan | Beaches & Estuary | TaxiNeo",
-        metaDescription: "Book your Bordeaux–Royan taxi from €155. 120 km in 1h25. Atlantic beaches, 1950s architecture and Gironde estuary.",
+        metaTitle: "Taxi Bordeaux → Royan | 120 km, from €155 | TaxiNeo",
+        metaDescription: "Via A10 then N150 direction Royan, 1h25 ride. Plages de l'Atlantique, Architecture 50s and Estuaire de la Gironde along the way. Drop-off at your exact address.",
         heroTitle: "Taxi Bordeaux — Royan",
         heroSubtitle: "Atlantic beaches and the Gironde estuary",
         description: "Taxi transfer from Bordeaux to Royan, a Charente-Maritime seaside resort at the mouth of the Gironde estuary.",
@@ -485,8 +485,8 @@ export const trajetsBordeaux: Trajet[] = [
     hub: "bordeaux",
     i18n: {
       fr: {
-        metaTitle: "Taxi Bordeaux → Sarlat | Périgord Noir & Cité médiévale | TaxiNeo",
-        metaDescription: "Réservez votre taxi Bordeaux–Sarlat dès 220 €. 170 km en 2h. Perle du Périgord Noir, cité médiévale et gastronomie.",
+        metaTitle: "Taxi Bordeaux → Sarlat-la-Canéda | 170 km, 220 € | TaxiNeo",
+        metaDescription: "Via A89 puis D710/D47 en 2h. Périgord Noir, Cité médiévale et Foie gras en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Bordeaux — Sarlat-la-Canéda",
         heroSubtitle: "La perle du Périgord Noir",
         description: "Transfert longue distance en taxi de Bordeaux à Sarlat-la-Canéda, joyau médiéval du Périgord Noir et capitale du foie gras.",
@@ -504,8 +504,8 @@ export const trajetsBordeaux: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Bordeaux → Sarlat | Périgord Noir & Medieval City | TaxiNeo",
-        metaDescription: "Book your Bordeaux–Sarlat taxi from €220. 170 km in 2h. Pearl of Périgord Noir, medieval city and gastronomy.",
+        metaTitle: "Taxi Bordeaux → Sarlat-la-Canéda | 170 km, €220 | TaxiNeo",
+        metaDescription: "Direct route via A89 then D710/D47, 2 hours. Périgord Noir, Cité médiévale and Foie gras along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Bordeaux — Sarlat-la-Canéda",
         heroSubtitle: "The pearl of Périgord Noir",
         description: "Long-distance taxi transfer from Bordeaux to Sarlat-la-Canéda, a medieval jewel of Périgord Noir and foie gras capital.",
@@ -550,8 +550,8 @@ export const trajetsBordeaux: Trajet[] = [
     hub: "bordeaux",
     i18n: {
       fr: {
-        metaTitle: "Taxi Bordeaux → Agen | Pruneaux & Canal de Garonne | TaxiNeo",
-        metaDescription: "Réservez votre taxi Bordeaux–Agen dès 180 €. 140 km en 1h30 par l'A62. Pruneaux d'Agen, canal de Garonne et rugby.",
+        metaTitle: "Taxi Bordeaux → Agen | 140 km, dès 180 € | TaxiNeo",
+        metaDescription: "Par A62 direction Toulouse, 1h30 de trajet. En passant par Pruneaux d'Agen, Canal de Garonne et Rugby. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Bordeaux — Agen",
         heroSubtitle: "La capitale du pruneau et du rugby gascon",
         description: "Transfert en taxi de Bordeaux à Agen, préfecture du Lot-et-Garonne, capitale du pruneau et ville de rugby.",
@@ -569,8 +569,8 @@ export const trajetsBordeaux: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Bordeaux → Agen | Prunes & Canal de Garonne | TaxiNeo",
-        metaDescription: "Book your Bordeaux–Agen taxi from €180. 140 km in 1h30 via A62. Agen prunes, Canal de Garonne and rugby.",
+        metaTitle: "Taxi Bordeaux → Agen | 140 km, from €180 | TaxiNeo",
+        metaDescription: "Direct route via A62 direction Toulouse, 1h30. Pruneaux d'Agen, Canal de Garonne and Rugby along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Bordeaux — Agen",
         heroSubtitle: "The capital of prunes and Gascon rugby",
         description: "Taxi transfer from Bordeaux to Agen, prefecture of Lot-et-Garonne, prune capital and rugby city.",
@@ -615,8 +615,8 @@ export const trajetsBordeaux: Trajet[] = [
     hub: "bordeaux",
     i18n: {
       fr: {
-        metaTitle: "Taxi Bordeaux → Libourne | Dès 50 € | Saint-Émilion & Pomerol | TaxiNeo",
-        metaDescription: "Taxi Bordeaux → Libourne. 35 km, 30 min, dès 50 €. Porte de Saint-Émilion, Pomerol, confluent Isle-Dordogne. Réservation 24h/24.",
+        metaTitle: "Taxi Bordeaux → Libourne | 35 km, dès 50 € | TaxiNeo",
+        metaDescription: "Par A89 sortie Libourne, 30 min de trajet. Saint-Émilion, Pomerol, Isle et Confluent Dordogne en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Bordeaux — Libourne",
         heroSubtitle: "Porte d'entrée de Saint-Émilion et du Libournais, transfert au prix fixe de 50 — 70 €.",
         description: "Libourne, bastide du XIIIe siècle au confluent de l'Isle et de la Dordogne, est la porte d'entrée des vignobles de Saint-Émilion et Pomerol.",
@@ -634,8 +634,8 @@ export const trajetsBordeaux: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Bordeaux → Libourne | From €50 | Saint-Émilion & Pomerol | TaxiNeo",
-        metaDescription: "Taxi Bordeaux → Libourne. 35 km, 30 min, from €50. Gateway to Saint-Émilion, Pomerol, Isle-Dordogne confluence. Book 24/7.",
+        metaTitle: "Taxi Bordeaux → Libourne | 35 km, from €50 | TaxiNeo",
+        metaDescription: "A89 sortie Libourne route, approximately 30 min. Saint-Émilion, Pomerol, Isle and Confluent Dordogne en route. Stops for sightseeing possible en route.",
         heroTitle: "Taxi Bordeaux — Libourne",
         heroSubtitle: "Gateway to Saint-Émilion and the Libournais, fixed-price transfer at €50 — €70.",
         description: "Libourne, a 13th-century bastide at the confluence of the Isle and Dordogne rivers, is the gateway to Saint-Émilion and Pomerol vineyards.",
@@ -680,8 +680,8 @@ export const trajetsBordeaux: Trajet[] = [
     hub: "bordeaux",
     i18n: {
       fr: {
-        metaTitle: "Taxi Bordeaux → Langon | Sauternes & Château d'Yquem | TaxiNeo",
-        metaDescription: "Taxi Bordeaux → Langon. 50 km, 35 min, dès 65 €. Vignoble de Sauternes, Château d'Yquem, Bazadais. Réservation 24h/24.",
+        metaTitle: "Taxi Bordeaux → Langon | 50 km, dès 65 € | TaxiNeo",
+        metaDescription: "Par A62 sortie Langon, 35 min de trajet. Passage par Sauternes, Château d'Yquem, Bazadais et Garonne. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Bordeaux — Langon",
         heroSubtitle: "Transfert Bordeaux → Langon au prix fixe de 65 — 85 €. Porte du Sauternais et du Bazadais.",
         description: "Langon, sous-préfecture de la Gironde au bord de la Garonne, est la porte d'entrée du vignoble de Sauternes et du Bazadais.",
@@ -699,8 +699,8 @@ export const trajetsBordeaux: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Bordeaux → Langon | Sauternes & Château d'Yquem | TaxiNeo",
-        metaDescription: "Taxi Bordeaux → Langon. 50 km, 35 min, from €65. Sauternes vineyard, Château d'Yquem, Bazadais. Book 24/7.",
+        metaTitle: "Taxi Bordeaux → Langon | 50 km, from €65 | TaxiNeo",
+        metaDescription: "Via A62 sortie Langon, 35 min ride. Sauternes, Château d'Yquem, Bazadais and Garonne en route. Stops for sightseeing possible en route. ~€4 toll included.",
         heroTitle: "Taxi Bordeaux — Langon",
         heroSubtitle: "Your Bordeaux → Langon transfer at €65 — €85. Gateway to Sauternes and the Bazadais.",
         description: "Langon, sub-prefecture of the Gironde on the Garonne, is the gateway to the Sauternes vineyard and the Bazadais.",
@@ -745,8 +745,8 @@ export const trajetsBordeaux: Trajet[] = [
     hub: "bordeaux",
     i18n: {
       fr: {
-        metaTitle: "Taxi Bordeaux → Blaye | Citadelle Vauban UNESCO | TaxiNeo",
-        metaDescription: "Taxi Bordeaux → Blaye. 50 km, 45 min, dès 65 €. Citadelle Vauban classée UNESCO, estuaire de la Gironde, vignoble. Réservation 24h/24.",
+        metaTitle: "Taxi Bordeaux → Blaye | forfait dès 65 € | TaxiNeo",
+        metaDescription: "Via A10 puis D137 direction Blaye en 45 min. Citadelle Vauban, UNESCO, Estuaire et Vignoble Côtes de Blaye en chemin. Arrêt visite possible en chemin.",
         heroTitle: "Taxi Bordeaux — Blaye",
         heroSubtitle: "Transfert Bordeaux → Blaye au prix fixe de 65 — 85 €. Citadelle Vauban, estuaire et vignoble.",
         description: "Blaye, citadelle Vauban classée au patrimoine mondial de l'UNESCO, domine l'estuaire de la Gironde depuis la rive droite.",
@@ -765,7 +765,7 @@ export const trajetsBordeaux: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Bordeaux → Blaye | Vauban Citadel UNESCO | TaxiNeo",
-        metaDescription: "Taxi Bordeaux → Blaye. 50 km, 45 min, from €65. Vauban citadel UNESCO World Heritage, Gironde estuary, vineyard. Book 24/7.",
+        metaDescription: "Via A10 then D137 direction Blaye, 45 min ride. Citadelle Vauban, UNESCO, Estuaire and Vignoble Côtes de Blaye en route. Perfect for a day trip without driving.",
         heroTitle: "Taxi Bordeaux — Blaye",
         heroSubtitle: "Your Bordeaux → Blaye transfer at €65 — €85. Vauban citadel, estuary and vineyard.",
         description: "Blaye, a Vauban citadel listed as UNESCO World Heritage, overlooks the Gironde estuary from the right bank.",
@@ -810,8 +810,8 @@ export const trajetsBordeaux: Trajet[] = [
     hub: "bordeaux",
     i18n: {
       fr: {
-        metaTitle: "Taxi Bordeaux → Pau | Pyrénées & Béarn | Dès 260 € | TaxiNeo",
-        metaDescription: "Taxi Bordeaux → Pau. 200 km, 2h15, dès 260 €. Château Henri IV, Boulevard des Pyrénées, Béarn. Réservation 24h/24.",
+        metaTitle: "Taxi Bordeaux → Pau | 200 km, dès 260 €, 2h15 | TaxiNeo",
+        metaDescription: "Itinéraire A65, environ 2h15. Passage par Pyrénées, Béarn, Château Henri IV et Boulevard des Pyrénées. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Bordeaux — Pau",
         heroSubtitle: "Transfert Bordeaux → Pau au prix fixe de 260 — 330 €. 200 km par l'A65, porte des Pyrénées.",
         description: "Pau, préfecture des Pyrénées-Atlantiques, est à 2h15 de Bordeaux par l'A65. Capitale historique du Béarn et ville natale d'Henri IV.",
@@ -830,7 +830,7 @@ export const trajetsBordeaux: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Bordeaux → Pau | Pyrenees & Béarn | From €260 | TaxiNeo",
-        metaDescription: "Taxi Bordeaux → Pau. 200 km, 2h15, from €260. Henri IV Castle, Boulevard des Pyrénées, Béarn. Book 24/7.",
+        metaDescription: "A65 route, approximately 2h15. Pyrénées, Béarn, Château Henri IV and Boulevard des Pyrénées en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Bordeaux — Pau",
         heroSubtitle: "Your Bordeaux → Pau transfer at €260 — €330. 200 km via the A65, gateway to the Pyrenees.",
         description: "Pau, prefecture of the Pyrénées-Atlantiques, is 2h15 from Bordeaux via the A65. Historic capital of Béarn and birthplace of Henri IV.",
@@ -875,8 +875,8 @@ export const trajetsBordeaux: Trajet[] = [
     hub: "bordeaux",
     i18n: {
       fr: {
-        metaTitle: "Taxi Bordeaux → Mont-de-Marsan | Férias & Landes | TaxiNeo",
-        metaDescription: "Taxi Bordeaux → Mont-de-Marsan. 130 km, 1h25, dès 170 €. Férias de la Madeleine, arènes, ville de la sculpture. Réservation 24h/24.",
+        metaTitle: "Taxi Bordeaux → Mont-de-Marsan | 130 km, dès 170 € | TaxiNeo",
+        metaDescription: "Via A65 en 1h25. Landes, Férias, Arènes et Confluent Douze-Midou en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Bordeaux — Mont-de-Marsan",
         heroSubtitle: "Transfert Bordeaux → Mont-de-Marsan au prix fixe de 170 — 215 €. Capitale des Landes.",
         description: "Mont-de-Marsan, préfecture des Landes, est à 1h25 de Bordeaux par l'A65. Ville de la sculpture et des férias de la Madeleine.",
@@ -894,8 +894,8 @@ export const trajetsBordeaux: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Bordeaux → Mont-de-Marsan | Ferias & Landes | TaxiNeo",
-        metaDescription: "Taxi Bordeaux → Mont-de-Marsan. 130 km, 1h25, from €170. Madeleine ferias, arenas, sculpture city. Book 24/7.",
+        metaTitle: "Taxi Bordeaux → Mont-de-Marsan | 130 km, from €170 | TaxiNeo",
+        metaDescription: "Via A65, 1h25 ride. Landes, Férias, Arènes and Confluent Douze-Midou en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Bordeaux — Mont-de-Marsan",
         heroSubtitle: "Your Bordeaux → Mont-de-Marsan transfer at €170 — €215. Capital of the Landes.",
         description: "Mont-de-Marsan, prefecture of the Landes, is 1h25 from Bordeaux via the A65. City of sculpture and the Madeleine ferias.",
@@ -940,8 +940,8 @@ export const trajetsBordeaux: Trajet[] = [
     hub: "bordeaux",
     i18n: {
       fr: {
-        metaTitle: "Taxi Bordeaux → Bayonne | Pays basque, Jambon & Chocolat | TaxiNeo",
-        metaDescription: "Taxi Bordeaux → Bayonne. 190 km, 1h55, dès 245 €. Pays basque, jambon de Bayonne, chocolat, cathédrale UNESCO. Réservation 24h/24.",
+        metaTitle: "Taxi Bordeaux → Bayonne | 190 km, dès 245 € | TaxiNeo",
+        metaDescription: "Via A63 direction Espagne en 1h55. Pays basque, Jambon de Bayonne, Chocolat et Cathédrale Sainte-Marie en chemin. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Bordeaux — Bayonne",
         heroSubtitle: "Transfert Bordeaux → Bayonne au prix fixe de 245 — 310 €. Capitale du Pays basque français.",
         description: "Bayonne, capitale du Pays basque français, est à 1h55 de Bordeaux par l'A63. Jambon, chocolat, pelote basque et patrimoine UNESCO.",
@@ -959,8 +959,8 @@ export const trajetsBordeaux: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Bordeaux → Bayonne | Basque Country, Ham & Chocolate | TaxiNeo",
-        metaDescription: "Taxi Bordeaux → Bayonne. 190 km, 1h55, from €245. Basque Country, Bayonne ham, chocolate, UNESCO cathedral. Book 24/7.",
+        metaTitle: "Taxi Bordeaux → Bayonne | 190 km, from €245 | TaxiNeo",
+        metaDescription: "Via A63 direction Espagne, 1h55 ride. Pays basque, Jambon de Bayonne, Chocolat and Cathédrale Sainte-Marie en route. Faster and more direct than train or bus.",
         heroTitle: "Taxi Bordeaux — Bayonne",
         heroSubtitle: "Your Bordeaux → Bayonne transfer at €245 — €310. Capital of the French Basque Country.",
         description: "Bayonne, capital of the French Basque Country, is 1h55 from Bordeaux via the A63. Ham, chocolate, pelota and UNESCO heritage.",
@@ -1008,8 +1008,8 @@ export const trajetsBordeaux: Trajet[] = [
     hub: "bordeaux",
     i18n: {
       fr: {
-        metaTitle: "Taxi Bordeaux → Saintes | Prix fixe dès 155 € | TaxiNeo",
-        metaDescription: "Taxi Bordeaux → Saintes. 120 km, 1h25, dès 155 €. Arc de Germanicus, Abbaye aux Dames, amphithéâtre. Réservation 24h/24.",
+        metaTitle: "Taxi Bordeaux → Saintes | 120 km, dès 155 € | TaxiNeo",
+        metaDescription: "Via A10 direction Paris en 1h25. Arc de Germanicus, Abbaye aux Dames, Amphithéâtre gallo-romain et Saintonge romane en chemin. Dépose à votre adresse exacte.",
         heroTitle: "Taxi Bordeaux → Saintes",
         heroSubtitle: "Transfert Bordeaux → Saintes au prix fixe de 155 — 195 €. Capitale de la Saintonge romane.",
         description: "Saintes, ancienne capitale de l'Aquitaine romaine, est à 1h25 de Bordeaux par l'A10. Arc de Germanicus, Abbaye aux Dames et patrimoine gallo-romain exceptionnel.",
@@ -1027,8 +1027,8 @@ export const trajetsBordeaux: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Bordeaux → Saintes | Fixed price from €155 | TaxiNeo",
-        metaDescription: "Taxi Bordeaux → Saintes. 120 km, 1h25, from €155. Arc de Germanicus, Abbaye aux Dames, amphitheatre. Book 24/7.",
+        metaTitle: "Taxi Bordeaux → Saintes | 120 km, from €155 | TaxiNeo",
+        metaDescription: "Via A10 direction Paris, 1h25 ride. Arc de Germanicus, Abbaye aux Dames, Amphithéâtre gallo-romain and Saintonge romane en route. Up to 1h50 during rush hour.",
         heroTitle: "Taxi Bordeaux → Saintes",
         heroSubtitle: "Your Bordeaux → Saintes transfer at €155 — €195. Capital of Romanesque Saintonge.",
         description: "Saintes, former capital of Roman Aquitaine, is 1h25 from Bordeaux via the A10. Arc de Germanicus, Abbaye aux Dames and exceptional Gallo-Roman heritage.",
@@ -1073,8 +1073,8 @@ export const trajetsBordeaux: Trajet[] = [
     hub: "bordeaux",
     i18n: {
       fr: {
-        metaTitle: "Taxi Bordeaux → Mimizan | Côte landaise dès 140 € | TaxiNeo",
-        metaDescription: "Taxi Bordeaux → Mimizan. 110 km, 1h20, dès 140 €. Plages, surf, forêt landaise, courant de Mimizan. Réservation 24h/24.",
+        metaTitle: "Taxi Bordeaux → Mimizan | 110 km, dès 140 € | TaxiNeo",
+        metaDescription: "Via A63 puis D44 en 1h20. Côte landaise, Surf, Courant de Mimizan et Leyre en chemin. Arrêt visite possible en chemin. Arrêt possible pour visites ou photos.",
         heroTitle: "Taxi Bordeaux → Mimizan",
         heroSubtitle: "Transfert Bordeaux → Mimizan au prix fixe de 140 — 180 €. Perle de la côte landaise.",
         description: "Mimizan, station balnéaire de la côte landaise, est à 1h20 de Bordeaux. Plages océanes, surf, forêt de pins et rivière Leyre.",
@@ -1092,8 +1092,8 @@ export const trajetsBordeaux: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Bordeaux → Mimizan | Landes Coast from €140 | TaxiNeo",
-        metaDescription: "Taxi Bordeaux → Mimizan. 110 km, 1h20, from €140. Beaches, surfing, pine forest, Mimizan current. Book 24/7.",
+        metaTitle: "Taxi Bordeaux → Mimizan | 110 km, from €140 | TaxiNeo",
+        metaDescription: "Via A63 then D44, 1h20 ride. Côte landaise, Surf, Courant de Mimizan and Leyre en route. Stops for sightseeing possible en route. Up to 1h40 during rush hour.",
         heroTitle: "Taxi Bordeaux → Mimizan",
         heroSubtitle: "Your Bordeaux → Mimizan transfer at €140 — €180. Pearl of the Landes coast.",
         description: "Mimizan, a seaside resort on the Landes coast, is 1h20 from Bordeaux. Ocean beaches, surfing, pine forest and the Leyre river.",
@@ -1138,8 +1138,8 @@ export const trajetsBordeaux: Trajet[] = [
     hub: "bordeaux",
     i18n: {
       fr: {
-        metaTitle: "Taxi Bordeaux → Pauillac | Premiers crus classés dès 75 € | TaxiNeo",
-        metaDescription: "Taxi Bordeaux → Pauillac. 55 km, 50 min, dès 75 €. Lafite, Mouton, Latour. Route des Châteaux. Réservation 24h/24.",
+        metaTitle: "Taxi Bordeaux → Pauillac | 55 km, dès 75 € | TaxiNeo",
+        metaDescription: "Par D2, 50 min de trajet. Lafite Rothschild, Mouton Rothschild, Latour et Port de Pauillac en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Bordeaux → Pauillac",
         heroSubtitle: "Transfert Bordeaux → Pauillac au prix fixe de 75 — 100 €. Capitale des premiers crus classés.",
         description: "Pauillac, bourg viticole légendaire sur l'estuaire de la Gironde, concentre 3 des 5 premiers crus classés de 1855.",
@@ -1157,8 +1157,8 @@ export const trajetsBordeaux: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Bordeaux → Pauillac | First classified growths from €75 | TaxiNeo",
-        metaDescription: "Taxi Bordeaux → Pauillac. 55 km, 50 min, from €75. Lafite, Mouton, Latour. Route des Châteaux. Book 24/7.",
+        metaTitle: "Taxi Bordeaux → Pauillac | 55 km, from €75 | TaxiNeo",
+        metaDescription: "Via D2, 50 min ride. Lafite Rothschild, Mouton Rothschild, Latour and Port de Pauillac en route. Stops for sightseeing possible en route. No toll on this route.",
         heroTitle: "Taxi Bordeaux → Pauillac",
         heroSubtitle: "Your Bordeaux → Pauillac transfer at €75 — €100. Capital of the first classified growths.",
         description: "Pauillac, legendary wine town on the Gironde estuary, is home to 3 of the 5 first classified growths of 1855.",
@@ -1203,8 +1203,8 @@ export const trajetsBordeaux: Trajet[] = [
     hub: "bordeaux",
     i18n: {
       fr: {
-        metaTitle: "Taxi Bordeaux → Saint-Émilion | UNESCO & Grands Crus dès 65 € | TaxiNeo",
-        metaDescription: "Taxi Bordeaux → Saint-Émilion. 45 km, 40 min, dès 65 €. Village UNESCO, église monolithe, grands crus classés. Réservation 24h/24.",
+        metaTitle: "Taxi Bordeaux → Saint-Émilion | 45 km, dès 65 € | TaxiNeo",
+        metaDescription: "Via A89 puis D243 en 40 min. UNESCO, Église monolithe, Grands crus classés et Village médiéval en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Bordeaux → Saint-Émilion",
         heroSubtitle: "Transfert Bordeaux → Saint-Émilion au prix fixe de 65 — 90 €. Joyau UNESCO du vignoble bordelais.",
         description: "Saint-Émilion, village médiéval classé UNESCO, est à 40 min de Bordeaux. Église monolithe unique, grands crus classés et ruelles pavées.",
@@ -1222,8 +1222,8 @@ export const trajetsBordeaux: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Bordeaux → Saint-Émilion | UNESCO & Grand Crus from €65 | TaxiNeo",
-        metaDescription: "Taxi Bordeaux → Saint-Émilion. 45 km, 40 min, from €65. UNESCO village, monolithic church, classified great growths. Book 24/7.",
+        metaTitle: "Taxi Bordeaux → Saint-Émilion | 45 km, from €65 | TaxiNeo",
+        metaDescription: "Through A89 then D243 in 40 min. UNESCO, Église monolithe, Grands crus classés and Village médiéval en route. Stops for sightseeing possible en route.",
         heroTitle: "Taxi Bordeaux → Saint-Émilion",
         heroSubtitle: "Your Bordeaux → Saint-Émilion transfer at €65 — €90. UNESCO jewel of the Bordeaux vineyards.",
         description: "Saint-Émilion, a UNESCO-listed medieval village, is 40 min from Bordeaux. Unique monolithic church, classified great growths and cobbled lanes.",
@@ -1271,8 +1271,8 @@ export const trajetsBordeaux: Trajet[] = [
     hub: "bordeaux",
     i18n: {
       fr: {
-        metaTitle: "Taxi Bordeaux → Lesparre-Médoc | Nord Médoc dès 95 € | TaxiNeo",
-        metaDescription: "Taxi Bordeaux → Lesparre-Médoc. 75 km, 1h05, dès 95 €. Nord Médoc, Pointe de Grave, estuaire. Réservation 24h/24.",
+        metaTitle: "Taxi Bordeaux → Lesparre-Médoc | 75 km, dès 95 € | TaxiNeo",
+        metaDescription: "Via D1215 direction Le Verdon en 1h05. Nord Médoc, Pointe de Grave, Estuaire de la Gironde et Bac du Verdon en chemin. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Bordeaux → Lesparre-Médoc",
         heroSubtitle: "Transfert Bordeaux → Lesparre-Médoc au prix fixe de 95 — 125 €. Porte du Nord Médoc.",
         description: "Lesparre-Médoc, sous-préfecture de la Gironde, est la porte d'entrée du Nord Médoc, entre estuaire et océan.",
@@ -1290,8 +1290,8 @@ export const trajetsBordeaux: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Bordeaux → Lesparre-Médoc | Northern Médoc from €95 | TaxiNeo",
-        metaDescription: "Taxi Bordeaux → Lesparre-Médoc. 75 km, 1h05, from €95. Northern Médoc, Pointe de Grave, estuary. Book 24/7.",
+        metaTitle: "Taxi Bordeaux → Lesparre-Médoc | 75 km, from €95 | TaxiNeo",
+        metaDescription: "Via D1215 direction Le Verdon, 1h05 ride. Nord Médoc, Pointe de Grave, Estuaire de la Gironde and Bac du Verdon en route. Drop-off at your exact address.",
         heroTitle: "Taxi Bordeaux → Lesparre-Médoc",
         heroSubtitle: "Your Bordeaux → Lesparre-Médoc transfer at €95 — €125. Gateway to the Northern Médoc.",
         description: "Lesparre-Médoc, sub-prefecture of the Gironde, is the gateway to the Northern Médoc, between estuary and ocean.",
@@ -1336,8 +1336,8 @@ export const trajetsBordeaux: Trajet[] = [
     hub: "bordeaux",
     i18n: {
       fr: {
-        metaTitle: "Taxi Bordeaux → Angoulême | Cité de la BD dès 180 € | TaxiNeo",
-        metaDescription: "Taxi Bordeaux → Angoulême. 140 km, 1h35, dès 180 €. Cité de la BD, cathédrale, remparts, Festival BD. Réservation 24h/24.",
+        metaTitle: "Taxi Bordeaux → Angoulême | 140 km, dès 180 € | TaxiNeo",
+        metaDescription: "Par A10 direction Paris, 1h35 de trajet. N10, Cité de la BD, Cathédrale Saint-Pierre et Remparts en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Bordeaux → Angoulême",
         heroSubtitle: "Transfert Bordeaux → Angoulême au prix fixe de 180 — 225 €. Capitale mondiale de la bande dessinée.",
         description: "Angoulême, capitale mondiale de la BD, est à 1h35 de Bordeaux. Cité internationale de la BD, cathédrale romane, remparts et murs peints.",
@@ -1355,8 +1355,8 @@ export const trajetsBordeaux: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Bordeaux → Angoulême | Comic Book Capital from €180 | TaxiNeo",
-        metaDescription: "Taxi Bordeaux → Angoulême. 140 km, 1h35, from €180. Comic Book City, cathedral, ramparts, BD Festival. Book 24/7.",
+        metaTitle: "Taxi Bordeaux → Angoulême | 140 km, from €180 | TaxiNeo",
+        metaDescription: "Via A10 direction Paris, 1h35 ride. N10, Cité de la BD, Cathédrale Saint-Pierre and Remparts en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Bordeaux → Angoulême",
         heroSubtitle: "Your Bordeaux → Angoulême transfer at €180 — €225. World capital of comic books.",
         description: "Angoulême, world capital of comic books, is 1h35 from Bordeaux. International Comic Book City, Romanesque cathedral, ramparts and painted walls.",
@@ -1401,8 +1401,8 @@ export const trajetsBordeaux: Trajet[] = [
     hub: "bordeaux",
     i18n: {
       fr: {
-        metaTitle: "Taxi Bordeaux → Niort | Marais Poitevin dès 270 € | TaxiNeo",
-        metaDescription: "Taxi Bordeaux → Niort. 210 km, 2h15, dès 270 €. Marais Poitevin, donjon, mutuelles. Réservation 24h/24.",
+        metaTitle: "Taxi Bordeaux → Niort | 210 km, dès 270 € | TaxiNeo",
+        metaDescription: "Via A10 direction Paris en 2h15. Marais Poitevin, Donjon plantagenêt, Mutuelles et Venise verte en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Bordeaux → Niort",
         heroSubtitle: "Transfert Bordeaux → Niort au prix fixe de 270 — 335 €. Porte du Marais Poitevin.",
         description: "Niort, préfecture des Deux-Sèvres, est à 2h15 de Bordeaux. Capitale des mutuelles, porte d'entrée du Marais Poitevin (Venise verte).",
@@ -1420,8 +1420,8 @@ export const trajetsBordeaux: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Bordeaux → Niort | Marais Poitevin from €270 | TaxiNeo",
-        metaDescription: "Taxi Bordeaux → Niort. 210 km, 2h15, from €270. Marais Poitevin, Plantagenet keep, mutual insurance capital. Book 24/7.",
+        metaTitle: "Taxi Bordeaux → Niort | 210 km, from €270 | TaxiNeo",
+        metaDescription: "Via A10 direction Paris, 2h15 ride. Marais Poitevin, Donjon plantagenêt, Mutuelles and Venise verte en route. Faster and more direct than train or bus.",
         heroTitle: "Taxi Bordeaux → Niort",
         heroSubtitle: "Your Bordeaux → Niort transfer at €270 — €335. Gateway to the Marais Poitevin.",
         description: "Niort, prefecture of the Deux-Sèvres, is 2h15 from Bordeaux. Mutual insurance capital, gateway to the Marais Poitevin (Green Venice).",
@@ -1469,8 +1469,8 @@ export const trajetsBordeaux: Trajet[] = [
     hub: "bordeaux",
     i18n: {
       fr: {
-        metaTitle: "Taxi Bordeaux → Arcachon | Dune du Pilat dès 80 € | TaxiNeo",
-        metaDescription: "Taxi Bordeaux → Arcachon. 65 km, 50 min, dès 80 €. Dune du Pilat, bassin d'Arcachon, huîtres, Ville d'Hiver. Réservation 24h/24.",
+        metaTitle: "Taxi Bordeaux → Arcachon | 65 km, dès 80 € | TaxiNeo",
+        metaDescription: "Par A63 puis A660, 50 min de trajet. Dune du Pilat, Bassin d'Arcachon, Huîtres et Ville d'Hiver en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Bordeaux → Arcachon",
         heroSubtitle: "Transfert Bordeaux → Arcachon au prix fixe de 80 — 110 €. Bassin d'Arcachon et Dune du Pilat.",
         description: "Arcachon, perle du bassin éponyme, est à 50 min de Bordeaux. Dune du Pilat, huîtres, Ville d'Hiver et plages de sable fin.",
@@ -1488,8 +1488,8 @@ export const trajetsBordeaux: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Bordeaux → Arcachon | Dune du Pilat from €80 | TaxiNeo",
-        metaDescription: "Taxi Bordeaux → Arcachon. 65 km, 50 min, from €80. Dune du Pilat, Arcachon basin, oysters, Winter Town. Book 24/7.",
+        metaTitle: "Taxi Bordeaux → Arcachon | 65 km, from €80 | TaxiNeo",
+        metaDescription: "Direct route via A63 then A660, 50 min. Dune du Pilat, Bassin d'Arcachon, Huîtres and Ville d'Hiver en route. Stops for sightseeing possible en route.",
         heroTitle: "Taxi Bordeaux → Arcachon",
         heroSubtitle: "Your Bordeaux → Arcachon transfer at €80 — €110. Arcachon Basin and Dune du Pilat.",
         description: "Arcachon, pearl of the eponymous basin, is 50 min from Bordeaux. Dune du Pilat, oysters, Winter Town and fine sand beaches.",
@@ -1534,8 +1534,8 @@ export const trajetsBordeaux: Trajet[] = [
     hub: "bordeaux",
     i18n: {
       fr: {
-        metaTitle: "Taxi Bordeaux → Biarritz | Surf & Pays basque dès 260 € | TaxiNeo",
-        metaDescription: "Taxi Bordeaux → Biarritz. 200 km, 2h, dès 260 €. Grande Plage, surf, Rocher de la Vierge, Pays basque. Réservation 24h/24.",
+        metaTitle: "Taxi Bordeaux → Biarritz | 200 km, dès 260 € | TaxiNeo",
+        metaDescription: "Par A63 direction Espagne, 2h de trajet. Pays basque, Grande Plage, Surf et Rocher de la Vierge en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Bordeaux → Biarritz",
         heroSubtitle: "Transfert Bordeaux → Biarritz au prix fixe de 260 — 325 €. Reine des plages, plage des rois.",
         description: "Biarritz, élégante station balnéaire du Pays basque, est à 2h de Bordeaux par l'A63. Surf, gastronomie et patrimoine impérial.",
@@ -1553,8 +1553,8 @@ export const trajetsBordeaux: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Bordeaux → Biarritz | Surf & Basque Country from €260 | TaxiNeo",
-        metaDescription: "Taxi Bordeaux → Biarritz. 200 km, 2h, from €260. Grande Plage, surfing, Rocher de la Vierge, Basque Country. Book 24/7.",
+        metaTitle: "Taxi Bordeaux → Biarritz | 200 km, from €260 | TaxiNeo",
+        metaDescription: "Via A63 direction Espagne, 2 hours ride. Pays basque, Grande Plage, Surf and Rocher de la Vierge en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Bordeaux → Biarritz",
         heroSubtitle: "Your Bordeaux → Biarritz transfer at €260 — €325. Queen of beaches, beach of kings.",
         description: "Biarritz, elegant Basque Country seaside resort, is 2h from Bordeaux via the A63. Surfing, gastronomy and imperial heritage.",
@@ -1599,8 +1599,8 @@ export const trajetsBordeaux: Trajet[] = [
     hub: "bordeaux",
     i18n: {
       fr: {
-        metaTitle: "Taxi Bordeaux → Toulouse | Deux métropoles dès 310 € | TaxiNeo",
-        metaDescription: "Taxi Bordeaux → Toulouse. 245 km, 2h25, dès 310 €. A62, Place du Capitole, Cité de l'Espace. Réservation 24h/24.",
+        metaTitle: "Taxi Bordeaux → Toulouse | 245 km, dès 310 € | TaxiNeo",
+        metaDescription: "Via A62 en 2h25. Canal du Midi, Place du Capitole et Cité de l'Espace en chemin. Dépose à votre adresse exacte. Alternative directe au train ou au bus.",
         heroTitle: "Taxi Bordeaux → Toulouse",
         heroSubtitle: "Transfert Bordeaux → Toulouse au prix fixe de 310 — 390 €. Liaison entre les deux métropoles d'Occitanie et Nouvelle-Aquitaine.",
         description: "Toulouse, la Ville rose, est à 2h25 de Bordeaux par l'A62. Place du Capitole, aéronautique, Canal du Midi et gastronomie du Sud-Ouest.",
@@ -1618,8 +1618,8 @@ export const trajetsBordeaux: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Bordeaux → Toulouse | Two Metropolises from €310 | TaxiNeo",
-        metaDescription: "Taxi Bordeaux → Toulouse. 245 km, 2h25, from €310. A62, Place du Capitole, Cité de l'Espace. Book 24/7.",
+        metaTitle: "Taxi Bordeaux → Toulouse | 245 km, from €310 | TaxiNeo",
+        metaDescription: "Via A62, 2h25 ride. Canal du Midi, Place du Capitole and Cité de l'Espace along the way. Drop-off at your exact address. Door-to-door, luggage included.",
         heroTitle: "Taxi Bordeaux → Toulouse",
         heroSubtitle: "Your Bordeaux → Toulouse transfer at €310 — €390. Linking the two great south-western metropolises.",
         description: "Toulouse, the Pink City, is 2h25 from Bordeaux via the A62. Place du Capitole, aerospace, Canal du Midi and south-western gastronomy.",
@@ -1667,8 +1667,8 @@ export const trajetsBordeaux: Trajet[] = [
     hub: "bordeaux",
     i18n: {
       fr: {
-        metaTitle: "Taxi Bordeaux → Marmande | Vallée de la Garonne dès 120 € | TaxiNeo",
-        metaDescription: "Taxi Bordeaux → Marmande. 95 km, 1h05, dès 120 €. Tomate de Marmande, vallée de la Garonne, cloître. Réservation 24h/24.",
+        metaTitle: "Taxi Bordeaux → Marmande | 95 km, dès 120 € | TaxiNeo",
+        metaDescription: "Via A62 direction Toulouse en 1h05. Tomate de Marmande, Vallée de la Garonne, Cloître et Bastides en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Bordeaux → Marmande",
         heroSubtitle: "Transfert Bordeaux → Marmande au prix fixe de 120 — 155 €. Capitale de la tomate et de la vallée de la Garonne.",
         description: "Marmande, sous-préfecture du Lot-et-Garonne, est à 1h05 de Bordeaux par l'A62. Célèbre pour sa tomate, son cloître et ses bastides voisines.",
@@ -1686,8 +1686,8 @@ export const trajetsBordeaux: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Bordeaux → Marmande | Garonne Valley from €120 | TaxiNeo",
-        metaDescription: "Taxi Bordeaux → Marmande. 95 km, 1h05, from €120. Marmande tomato, Garonne valley, cloister. Book 24/7.",
+        metaTitle: "Taxi Bordeaux → Marmande | 95 km, from €120 | TaxiNeo",
+        metaDescription: "Via A62 direction Toulouse, 1h05 ride. Tomate de Marmande, Vallée de la Garonne, Cloître and Bastides en route. Faster and more direct than train or bus.",
         heroTitle: "Taxi Bordeaux → Marmande",
         heroSubtitle: "Your Bordeaux → Marmande transfer at €120 — €155. Capital of the tomato and the Garonne valley.",
         description: "Marmande, sub-prefecture of the Lot-et-Garonne, is 1h05 from Bordeaux via the A62. Famous for its tomato, cloister and neighbouring bastides.",
@@ -1732,8 +1732,8 @@ export const trajetsBordeaux: Trajet[] = [
     hub: "bordeaux",
     i18n: {
       fr: {
-        metaTitle: "Taxi Bordeaux → Villeneuve-sur-Lot | Bastide royale dès 190 € | TaxiNeo",
-        metaDescription: "Taxi Bordeaux → Villeneuve-sur-Lot. 150 km, 1h40, dès 190 €. Bastide royale, pont des Cieutat, vallée du Lot. Réservation 24h/24.",
+        metaTitle: "Taxi Bordeaux → Villeneuve-sur-Lot | 150 km, 190 € | TaxiNeo",
+        metaDescription: "Via A62 puis D911 en 1h40. Bastide royale, Pont des Cieutat, Pruneau d'Agen et Vallée du Lot en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Bordeaux → Villeneuve-sur-Lot",
         heroSubtitle: "Transfert Bordeaux → Villeneuve-sur-Lot au prix fixe de 190 — 240 €. Plus grande bastide royale du Sud-Ouest.",
         description: "Villeneuve-sur-Lot, sous-préfecture du Lot-et-Garonne, est à 1h40 de Bordeaux. Bastide royale du XIIIe siècle, pont médiéval et vallée du Lot.",
@@ -1751,8 +1751,8 @@ export const trajetsBordeaux: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Bordeaux → Villeneuve-sur-Lot | Royal Bastide from €190 | TaxiNeo",
-        metaDescription: "Taxi Bordeaux → Villeneuve-sur-Lot. 150 km, 1h40, from €190. Royal bastide, Cieutat bridge, Lot valley. Book 24/7.",
+        metaTitle: "Taxi Bordeaux → Villeneuve-sur-Lot | 150 km, €190 | TaxiNeo",
+        metaDescription: "Via A62 then D911, 1h40 ride. Bastide royale, Pont des Cieutat, Pruneau d'Agen and Vallée du Lot en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Bordeaux → Villeneuve-sur-Lot",
         heroSubtitle: "Your Bordeaux → Villeneuve-sur-Lot transfer at €190 — €240. Largest royal bastide in the South-West.",
         description: "Villeneuve-sur-Lot, sub-prefecture of the Lot-et-Garonne, is 1h40 from Bordeaux. 13th-century royal bastide, medieval bridge and Lot valley.",
@@ -1797,8 +1797,8 @@ export const trajetsBordeaux: Trajet[] = [
     hub: "bordeaux",
     i18n: {
       fr: {
-        metaTitle: "Taxi Bordeaux → Orthez | Cité de Gaston Fébus dès 250 € | TaxiNeo",
-        metaDescription: "Taxi Bordeaux → Orthez. 195 km, 2h05, dès 250 €. Pont Vieux, Tour Moncade, Gaston Fébus. Réservation 24h/24.",
+        metaTitle: "Taxi Bordeaux → Orthez | 195 km, dès 250 € | TaxiNeo",
+        metaDescription: "Via A65 en 2h05. Pont Vieux, Gaston Fébus, Tour Moncade et Béarn en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Bordeaux → Orthez",
         heroSubtitle: "Transfert Bordeaux → Orthez au prix fixe de 250 — 315 €. Cité médiévale de Gaston Fébus en Béarn.",
         description: "Orthez, ancienne capitale du Béarn, est à 2h05 de Bordeaux par l'A65. Pont Vieux fortifié, Tour Moncade et héritage de Gaston Fébus.",
@@ -1816,8 +1816,8 @@ export const trajetsBordeaux: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Bordeaux → Orthez | Gaston Fébus City from €250 | TaxiNeo",
-        metaDescription: "Taxi Bordeaux → Orthez. 195 km, 2h05, from €250. Pont Vieux, Tour Moncade, Gaston Fébus. Book 24/7.",
+        metaTitle: "Taxi Bordeaux → Orthez | 195 km, from €250 | TaxiNeo",
+        metaDescription: "Via A65, 2h05 ride. Pont Vieux, Gaston Fébus, Tour Moncade and Béarn en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Bordeaux → Orthez",
         heroSubtitle: "Your Bordeaux → Orthez transfer at €250 — €315. Medieval city of Gaston Fébus in Béarn.",
         description: "Orthez, former capital of Béarn, is 2h05 from Bordeaux via the A65. Fortified Pont Vieux, Tour Moncade and the legacy of Gaston Fébus.",
@@ -1862,8 +1862,8 @@ export const trajetsBordeaux: Trajet[] = [
     hub: "bordeaux",
     i18n: {
       fr: {
-        metaTitle: "Taxi Bordeaux → Lège-Cap-Ferret | Dès 90 € | TaxiNeo",
-        metaDescription: "Taxi Bordeaux → Lège-Cap-Ferret. 70 km, 1h, dès 90 €. Presqu'île du Cap Ferret, bassin d'Arcachon, villages ostréicoles. Réservation 24h/24.",
+        metaTitle: "Taxi Bordeaux → Lège-Cap-Ferret | 70 km, dès 90 € | TaxiNeo",
+        metaDescription: "Via D106 via Lège en 1h. Bassin d'Arcachon, Plages océanes, Cabanes tchanquées et Presqu'île en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Bordeaux → Lège-Cap-Ferret",
         heroSubtitle: "Transfert Bordeaux → Lège-Cap-Ferret au prix fixe de 90 — 120 €. Presqu'île mythique du bassin d'Arcachon.",
         description: "Lège-Cap-Ferret, sur la presqu'île entre océan Atlantique et bassin d'Arcachon, est à 1h de Bordeaux. Villages ostréicoles, plages et forêt de pins.",
@@ -1879,8 +1879,8 @@ export const trajetsBordeaux: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Bordeaux → Lège-Cap-Ferret | From €90 | TaxiNeo",
-        metaDescription: "Taxi Bordeaux → Lège-Cap-Ferret. 70 km, 1h, from €90. Cap Ferret peninsula, Arcachon Bay, oyster villages. Book 24/7.",
+        metaTitle: "Taxi Bordeaux → Lège-Cap-Ferret | 70 km, from €90 | TaxiNeo",
+        metaDescription: "Via D106 via Lège, 1 hour ride. Bassin d'Arcachon, Plages océanes, Cabanes tchanquées and Presqu'île en route. Stops for sightseeing possible en route.",
         heroTitle: "Taxi Bordeaux → Lège-Cap-Ferret",
         heroSubtitle: "Your Bordeaux → Lège-Cap-Ferret transfer at €90 — €120. The legendary peninsula of Arcachon Bay.",
         description: "Lège-Cap-Ferret, on the peninsula between the Atlantic Ocean and Arcachon Bay, is 1h from Bordeaux. Oyster villages, beaches and pine forest.",
@@ -1923,8 +1923,8 @@ export const trajetsBordeaux: Trajet[] = [
     hub: "bordeaux",
     i18n: {
       fr: {
-        metaTitle: "Taxi Bordeaux → Hossegor | Capitale du surf dès 210 € | TaxiNeo",
-        metaDescription: "Taxi Bordeaux → Hossegor. 165 km, 1h45, dès 210 €. Surf, plages, lac, Quiksilver Pro. Réservation 24h/24.",
+        metaTitle: "Taxi Bordeaux → Hossegor | 165 km, dès 210 € | TaxiNeo",
+        metaDescription: "Via A63 en 1h45. Surf, Lac d'Hossegor, Plage des Estagnots et Landes en chemin. Dépose à votre adresse exacte. Alternative directe au train ou au bus.",
         heroTitle: "Taxi Bordeaux → Hossegor",
         heroSubtitle: "Transfert Bordeaux → Hossegor au prix fixe de 210 — 270 €. Capitale européenne du surf.",
         description: "Hossegor, capitale européenne du surf, est à 1h45 de Bordeaux par l'A63. Plages mythiques, lac marin et ambiance californienne sur la côte landaise.",
@@ -1940,8 +1940,8 @@ export const trajetsBordeaux: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Bordeaux → Hossegor | Surf Capital from €210 | TaxiNeo",
-        metaDescription: "Taxi Bordeaux → Hossegor. 165 km, 1h45, from €210. Surfing, beaches, lake, Quiksilver Pro. Book 24/7.",
+        metaTitle: "Taxi Bordeaux → Hossegor | 165 km, from €210 | TaxiNeo",
+        metaDescription: "Via A63, 1h45 ride. Surf, Lac d'Hossegor, Plage des Estagnots and Landes en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Bordeaux → Hossegor",
         heroSubtitle: "Your Bordeaux → Hossegor transfer at €210 — €270. Europe's surf capital.",
         description: "Hossegor, Europe's surf capital, is 1h45 from Bordeaux via the A63. Legendary beaches, marine lake and Californian vibes on the Landes coast.",
@@ -1984,8 +1984,8 @@ export const trajetsBordeaux: Trajet[] = [
     hub: "bordeaux",
     i18n: {
       fr: {
-        metaTitle: "Taxi Bordeaux → Biscarrosse | Lacs et plages dès 110 € | TaxiNeo",
-        metaDescription: "Taxi Bordeaux → Biscarrosse. 85 km, 1h05, dès 110 €. Lacs, plages océanes, musée de l'Hydraviation. Réservation 24h/24.",
+        metaTitle: "Taxi Bordeaux → Biscarrosse | 85 km, dès 110 € | TaxiNeo",
+        metaDescription: "Via A63 puis D652 en 1h05. Lacs, Plages océanes, Hydraviation et Dune en chemin. Arrêt visite possible en chemin. Arrêt possible pour visites ou photos.",
         heroTitle: "Taxi Bordeaux → Biscarrosse",
         heroSubtitle: "Transfert Bordeaux → Biscarrosse au prix fixe de 110 — 140 €. Lacs, océan et patrimoine aéronautique.",
         description: "Biscarrosse, entre lacs et océan dans les Landes, est à 1h05 de Bordeaux. Station balnéaire familiale et musée de l'Hydraviation.",
@@ -2001,8 +2001,8 @@ export const trajetsBordeaux: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Bordeaux → Biscarrosse | Lakes & beaches from €110 | TaxiNeo",
-        metaDescription: "Taxi Bordeaux → Biscarrosse. 85 km, 1h05, from €110. Lakes, ocean beaches, Seaplane Museum. Book 24/7.",
+        metaTitle: "Taxi Bordeaux → Biscarrosse | 85 km, from €110 | TaxiNeo",
+        metaDescription: "Via A63 then D652, 1h05 ride. Lacs, Plages océanes, Hydraviation and Dune en route. Stops for sightseeing possible en route. Up to 1h25 during rush hour.",
         heroTitle: "Taxi Bordeaux → Biscarrosse",
         heroSubtitle: "Your Bordeaux → Biscarrosse transfer at €110 — €140. Lakes, ocean and aviation heritage.",
         description: "Biscarrosse, between lakes and ocean in the Landes, is 1h05 from Bordeaux. Family seaside resort and Seaplane Museum.",
@@ -2045,8 +2045,8 @@ export const trajetsBordeaux: Trajet[] = [
     hub: "bordeaux",
     i18n: {
       fr: {
-        metaTitle: "Taxi Bordeaux → Cahors | Pont Valentré et Malbec dès 290 € | TaxiNeo",
-        metaDescription: "Taxi Bordeaux → Cahors. 230 km, 2h25, dès 290 €. Pont Valentré, vignoble de Malbec, vallée du Lot. Réservation 24h/24.",
+        metaTitle: "Taxi Bordeaux → Cahors | 230 km, dès 290 € | TaxiNeo",
+        metaDescription: "Via A62 puis A20 en 2h25. Pont Valentré, Lot, Malbec et Quercy en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Bordeaux → Cahors",
         heroSubtitle: "Transfert Bordeaux → Cahors au prix fixe de 290 — 365 €. Capitale du Malbec et du Quercy.",
         description: "Cahors, préfecture du Lot, est à 2h25 de Bordeaux. Pont Valentré classé UNESCO, vignoble de Malbec et vieille ville médiévale dans un méandre du Lot.",
@@ -2062,8 +2062,8 @@ export const trajetsBordeaux: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Bordeaux → Cahors | Pont Valentré & Malbec from €290 | TaxiNeo",
-        metaDescription: "Taxi Bordeaux → Cahors. 230 km, 2h25, from €290. Pont Valentré, Malbec vineyard, Lot valley. Book 24/7.",
+        metaTitle: "Taxi Bordeaux → Cahors | 230 km, from €290 | TaxiNeo",
+        metaDescription: "Via A62 then A20, 2h25 ride. Pont Valentré, Lot, Malbec and Quercy en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Bordeaux → Cahors",
         heroSubtitle: "Your Bordeaux → Cahors transfer at €290 — €365. Capital of Malbec wine and Quercy.",
         description: "Cahors, prefecture of the Lot, is 2h25 from Bordeaux. UNESCO-listed Pont Valentré, Malbec vineyard and medieval old town in a meander of the Lot river.",
@@ -2106,8 +2106,8 @@ export const trajetsBordeaux: Trajet[] = [
     hub: "bordeaux",
     i18n: {
       fr: {
-        metaTitle: "Taxi Bordeaux → Rochefort | Arsenal maritime dès 220 € | TaxiNeo",
-        metaDescription: "Taxi Bordeaux → Rochefort. 170 km, 1h50, dès 220 €. Corderie Royale, Hermione, arsenal maritime. Réservation 24h/24.",
+        metaTitle: "Taxi Bordeaux → Rochefort | 170 km, dès 220 € | TaxiNeo",
+        metaDescription: "Par A10 direction Paris, 1h50 de trajet. Corderie Royale, Hermione, Arsenal maritime et Charente en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Bordeaux → Rochefort",
         heroSubtitle: "Transfert Bordeaux → Rochefort au prix fixe de 220 — 280 €. Ville-arsenal de Colbert et frégate Hermione.",
         description: "Rochefort, sur l'estuaire de la Charente, est à 1h50 de Bordeaux. Arsenal maritime de Colbert, Corderie Royale et reconstruction de l'Hermione.",
@@ -2123,8 +2123,8 @@ export const trajetsBordeaux: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Bordeaux → Rochefort | Maritime Arsenal from €220 | TaxiNeo",
-        metaDescription: "Taxi Bordeaux → Rochefort. 170 km, 1h50, from €220. Corderie Royale, Hermione, maritime arsenal. Book 24/7.",
+        metaTitle: "Taxi Bordeaux → Rochefort | 170 km, from €220 | TaxiNeo",
+        metaDescription: "Via A10 direction Paris, 1h50 ride. Corderie Royale, Hermione, Arsenal maritime and Charente en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Bordeaux → Rochefort",
         heroSubtitle: "Your Bordeaux → Rochefort transfer at €220 — €280. Colbert's arsenal city and the frigate Hermione.",
         description: "Rochefort, on the Charente estuary, is 1h50 from Bordeaux. Colbert's maritime arsenal, Corderie Royale and the Hermione reconstruction.",
@@ -2167,8 +2167,8 @@ export const trajetsBordeaux: Trajet[] = [
     hub: "bordeaux",
     i18n: {
       fr: {
-        metaTitle: "Taxi Bordeaux → Hendaye | Frontière basque dès 300 € | TaxiNeo",
-        metaDescription: "Taxi Bordeaux → Hendaye. 235 km, 2h25, dès 300 €. Côte basque, frontière espagnole, Château d'Abbadia. Réservation 24h/24.",
+        metaTitle: "Taxi Bordeaux → Hendaye | 235 km, dès 300 € | TaxiNeo",
+        metaDescription: "Trajet direct A63 en 2h25. Passage par Côte Basque, Frontière espagnole, Bidassoa et Château d'Abbadia. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Bordeaux → Hendaye",
         heroSubtitle: "Transfert Bordeaux → Hendaye au prix fixe de 300 — 370 €. Dernière ville avant l'Espagne sur la côte basque.",
         description: "Hendaye, dernière ville française avant l'Espagne, est à 2h25 de Bordeaux par l'A63. Grande plage, Château d'Abbadia et Corniche basque.",
@@ -2184,8 +2184,8 @@ export const trajetsBordeaux: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Bordeaux → Hendaye | Basque Border from €300 | TaxiNeo",
-        metaDescription: "Taxi Bordeaux → Hendaye. 235 km, 2h25, from €300. Basque coast, Spanish border, Château d'Abbadia. Book 24/7.",
+        metaTitle: "Taxi Bordeaux → Hendaye | 235 km, from €300 | TaxiNeo",
+        metaDescription: "Direct route via A63, 2h25. Côte Basque, Frontière espagnole, Bidassoa and Château d'Abbadia en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Bordeaux → Hendaye",
         heroSubtitle: "Your Bordeaux → Hendaye transfer at €300 — €370. Last French town before Spain on the Basque coast.",
         description: "Hendaye, the last French town before Spain, is 2h25 from Bordeaux via the A63. Great beach, Château d'Abbadia and the Basque Corniche.",
@@ -2228,8 +2228,8 @@ export const trajetsBordeaux: Trajet[] = [
     hub: "bordeaux",
     i18n: {
       fr: {
-        metaTitle: "Taxi Bordeaux → Tarbes | Pyrénées centrales dès 380 € | TaxiNeo",
-        metaDescription: "Taxi Bordeaux → Tarbes. 310 km, 3h, dès 380 €. Pyrénées centrales, Pic du Midi, Haras nationaux. Réservation 24h/24.",
+        metaTitle: "Taxi Bordeaux → Tarbes | 310 km, dès 380 € | TaxiNeo",
+        metaDescription: "Via A65 puis A64 en 3h. A65 Autoroute de Gascogne, Vignobles du Madiran, Pic du Midi à proximité et Pyrénées centrales en chemin. Dépose à votre adresse exacte.",
         heroTitle: "Taxi Bordeaux → Tarbes",
         heroSubtitle: "Transfert Bordeaux → Tarbes au prix fixe de 380 — 460 €. Porte des Pyrénées centrales et du Pic du Midi.",
         description: "Tarbes, préfecture des Hautes-Pyrénées, est à 3h de Bordeaux par l'A65 et l'A64. Ville de garnison historique, porte d'entrée du Pic du Midi et des stations pyrénéennes.",
@@ -2245,8 +2245,8 @@ export const trajetsBordeaux: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Bordeaux → Tarbes | Central Pyrenees from €380 | TaxiNeo",
-        metaDescription: "Taxi Bordeaux → Tarbes. 310 km, 3h, from €380. Central Pyrenees, Pic du Midi, National Stud Farm. Book 24/7.",
+        metaTitle: "Taxi Bordeaux → Tarbes | 310 km, from €380 | TaxiNeo",
+        metaDescription: "Via A65 then A64, 3 hours ride. A65 Autoroute de Gascogne, Vignobles du Madiran, Pic du Midi à proximité and Pyrénées centrales en route. ~€25 toll included.",
         heroTitle: "Taxi Bordeaux → Tarbes",
         heroSubtitle: "Your Bordeaux → Tarbes transfer at €380 — €460. Gateway to the central Pyrenees and the Pic du Midi.",
         description: "Tarbes, capital of Hautes-Pyrénées, is 3h from Bordeaux via the A65 and A64. Historic garrison town, gateway to the Pic du Midi and Pyrenean ski resorts.",
@@ -2289,8 +2289,8 @@ export const trajetsBordeaux: Trajet[] = [
     hub: "bordeaux",
     i18n: {
       fr: {
-        metaTitle: "Taxi Bordeaux → Auch | Capitale de Gascogne dès 320 € | TaxiNeo",
-        metaDescription: "Taxi Bordeaux → Auch. 260 km, 2h45, dès 320 €. Cathédrale Sainte-Marie, escalier monumental, pays d'Armagnac. Réservation 24h/24.",
+        metaTitle: "Taxi Bordeaux → Auch | 260 km, dès 320 € | TaxiNeo",
+        metaDescription: "Via A62 puis N21 / D924 en 2h45. A62 puis N21, Gascogne vallonnée, Cathédrale Sainte-Marie et Escalier monumental en chemin. Dépose à votre adresse exacte.",
         heroTitle: "Taxi Bordeaux → Auch",
         heroSubtitle: "Transfert Bordeaux → Auch au prix fixe de 320 — 400 €. Capitale historique de la Gascogne et berceau de d'Artagnan.",
         description: "Auch, préfecture du Gers, est à 2h45 de Bordeaux. Capitale historique de la Gascogne, célèbre pour sa cathédrale, son escalier monumental et le pays d'Armagnac.",
@@ -2306,8 +2306,8 @@ export const trajetsBordeaux: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Bordeaux → Auch | Capital of Gascony from €320 | TaxiNeo",
-        metaDescription: "Taxi Bordeaux → Auch. 260 km, 2h45, from €320. Sainte-Marie Cathedral, monumental staircase, Armagnac country. Book 24/7.",
+        metaTitle: "Taxi Bordeaux → Auch | 260 km, from €320 | TaxiNeo",
+        metaDescription: "Via A62 then N21 / D924, 2h45 ride. A62 puis N21, Gascogne vallonnée, Cathédrale Sainte-Marie and Escalier monumental en route. Drop-off at your exact address.",
         heroTitle: "Taxi Bordeaux → Auch",
         heroSubtitle: "Your Bordeaux → Auch transfer at €320 — €400. Historic capital of Gascony and birthplace of d'Artagnan.",
         description: "Auch, capital of the Gers department, is 2h45 from Bordeaux. Historic capital of Gascony, famous for its cathedral, monumental staircase and Armagnac country.",
@@ -2350,8 +2350,8 @@ export const trajetsBordeaux: Trajet[] = [
     hub: "bordeaux",
     i18n: {
       fr: {
-        metaTitle: "Taxi Bordeaux → Lourdes | Sanctuaires dès 370 € | TaxiNeo",
-        metaDescription: "Taxi Bordeaux → Lourdes. 300 km, 2h55, dès 370 €. Sanctuaires, Grotte de Massabielle, Pic du Jer. Réservation 24h/24.",
+        metaTitle: "Taxi Bordeaux → Lourdes | 300 km, dès 370 € | TaxiNeo",
+        metaDescription: "Via A65 puis A64 en 2h55. A65 puis A64, Sanctuaires de Lourdes, Grotte de Massabielle et Pic du Jer en chemin. Alternative directe au train ou au bus.",
         heroTitle: "Taxi Bordeaux → Lourdes",
         heroSubtitle: "Transfert Bordeaux → Lourdes au prix fixe de 370 — 450 €. Cité mariale au pied des Pyrénées, 2e ville hôtelière de France.",
         description: "Lourdes, ville de pèlerinage mondial, est à 2h55 de Bordeaux par l'A65 et l'A64. Sanctuaires, Grotte de Massabielle, château fort et portes des Pyrénées.",
@@ -2367,8 +2367,8 @@ export const trajetsBordeaux: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Bordeaux → Lourdes | Sanctuary City from €370 | TaxiNeo",
-        metaDescription: "Taxi Bordeaux → Lourdes. 300 km, 2h55, from €370. Sanctuaries, Grotto of Massabielle, Pic du Jer. Book 24/7.",
+        metaTitle: "Taxi Bordeaux → Lourdes | 300 km, from €370 | TaxiNeo",
+        metaDescription: "Via A65 then A64, 2h55 ride. A65 puis A64, Sanctuaires de Lourdes, Grotte de Massabielle and Pic du Jer en route. Faster and more direct than train or bus.",
         heroTitle: "Taxi Bordeaux → Lourdes",
         heroSubtitle: "Your Bordeaux → Lourdes transfer at €370 — €450. Marian city at the foot of the Pyrenees, France's 2nd largest hotel city.",
         description: "Lourdes, a world pilgrimage city, is 2h55 from Bordeaux via the A65 and A64. Sanctuaries, Grotto of Massabielle, medieval castle and gateway to the Pyrenees.",
@@ -2411,8 +2411,8 @@ export const trajetsBordeaux: Trajet[] = [
     hub: "bordeaux",
     i18n: {
       fr: {
-        metaTitle: "Taxi Bordeaux → Capbreton | Côte landaise dès 220 € | TaxiNeo",
-        metaDescription: "Taxi Bordeaux → Capbreton. 175 km, 1h50, dès 220 €. Port de pêche, Estacade, plages de surf, Gouf de Capbreton. Réservation 24h/24.",
+        metaTitle: "Taxi Bordeaux → Capbreton | 175 km, dès 220 € | TaxiNeo",
+        metaDescription: "Itinéraire A63, environ 1h50. Passage par Côte landaise, Port de Capbreton, Estacade et Plages de surf. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Bordeaux → Capbreton",
         heroSubtitle: "Transfert Bordeaux → Capbreton au prix fixe de 220 — 280 €. Seul port de pêche entre Arcachon et Bayonne.",
         description: "Capbreton, station balnéaire des Landes, est à 1h50 de Bordeaux par l'A63. Unique port de pêche entre Arcachon et Bayonne, plages de surf et mystérieux Gouf sous-marin.",
@@ -2428,8 +2428,8 @@ export const trajetsBordeaux: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Bordeaux → Capbreton | Landes Coast from €220 | TaxiNeo",
-        metaDescription: "Taxi Bordeaux → Capbreton. 175 km, 1h50, from €220. Fishing port, Estacade, surf beaches, Gouf de Capbreton. Book 24/7.",
+        metaTitle: "Taxi Bordeaux → Capbreton | 175 km, from €220 | TaxiNeo",
+        metaDescription: "A63 route, approximately 1h50. Côte landaise, Port de Capbreton, Estacade and Plages de surf en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Bordeaux → Capbreton",
         heroSubtitle: "Your Bordeaux → Capbreton transfer at €220 — €280. The only fishing port between Arcachon and Bayonne.",
         description: "Capbreton, a Landes seaside resort, is 1h50 from Bordeaux via the A63. The only fishing port between Arcachon and Bayonne, with surf beaches and the mysterious undersea Gouf canyon.",
@@ -2472,8 +2472,8 @@ export const trajetsBordeaux: Trajet[] = [
     hub: "bordeaux",
     i18n: {
       fr: {
-        metaTitle: "Taxi Bordeaux → Souillac | Vallée de la Dordogne dès 300 € | TaxiNeo",
-        metaDescription: "Taxi Bordeaux → Souillac. 245 km, 2h35, dès 300 €. Abbatiale romane, Musée de l'Automate, Grottes de Lacave. Réservation 24h/24.",
+        metaTitle: "Taxi Bordeaux → Souillac | 245 km, dès 300 € | TaxiNeo",
+        metaDescription: "Via A89 puis A20 en 2h35. Vallée de la Dordogne, Abbatiale Sainte-Marie, Musée de l'Automate et Grottes de Lacave en chemin. Dépose à votre adresse exacte.",
         heroTitle: "Taxi Bordeaux → Souillac",
         heroSubtitle: "Transfert Bordeaux → Souillac au prix fixe de 300 — 370 €. Porte de la vallée de la Dordogne et du Quercy.",
         description: "Souillac, dans le Lot, est à 2h35 de Bordeaux par l'A89 et l'A20. Porte d'entrée de la vallée de la Dordogne, abbatiale romane et carrefour du Périgord-Quercy.",
@@ -2489,8 +2489,8 @@ export const trajetsBordeaux: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Bordeaux → Souillac | Dordogne Valley from €300 | TaxiNeo",
-        metaDescription: "Taxi Bordeaux → Souillac. 245 km, 2h35, from €300. Romanesque abbey, Automaton Museum, Lacave Caves. Book 24/7.",
+        metaTitle: "Taxi Bordeaux → Souillac | 245 km, from €300 | TaxiNeo",
+        metaDescription: "Via A89 then A20, 2h35 ride. Vallée de la Dordogne, Abbatiale Sainte-Marie, Musée de l'Automate and Grottes de Lacave en route. Drop-off at your exact address.",
         heroTitle: "Taxi Bordeaux → Souillac",
         heroSubtitle: "Your Bordeaux → Souillac transfer at €300 — €370. Gateway to the Dordogne valley and Quercy.",
         description: "Souillac, in the Lot department, is 2h35 from Bordeaux via the A89 and A20. Gateway to the Dordogne valley, Romanesque abbey and Périgord-Quercy crossroads.",
@@ -2533,8 +2533,8 @@ export const trajetsBordeaux: Trajet[] = [
     hub: "bordeaux",
     i18n: {
       fr: {
-        metaTitle: "Taxi Bordeaux → Aire-sur-l'Adour | Cœur de Gascogne dès 220 € | TaxiNeo",
-        metaDescription: "Taxi Bordeaux → Aire-sur-l'Adour. 175 km, 1h50, dès 220 €. Cathédrale du Mas, arènes, marchés au gras, vignoble du Tursan. Réservation 24h/24.",
+        metaTitle: "Taxi Bordeaux → Aire-sur-l'Adour | 175 km, 220 € | TaxiNeo",
+        metaDescription: "Par A65, 1h50 de trajet. A65 Autoroute de Gascogne, Cathédrale du Mas, Arènes et Marché au gras en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Bordeaux → Aire-sur-l'Adour",
         heroSubtitle: "Transfert Bordeaux → Aire-sur-l'Adour au prix fixe de 220 — 280 €. Cité épiscopale au cœur de la Gascogne landaise.",
         description: "Aire-sur-l'Adour, sous-préfecture des Landes, est à 1h50 de Bordeaux par l'A65. Cité épiscopale millénaire, arènes, marchés au gras et vignoble du Tursan.",
@@ -2550,8 +2550,8 @@ export const trajetsBordeaux: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Bordeaux → Aire-sur-l'Adour | Heart of Gascony from €220 | TaxiNeo",
-        metaDescription: "Taxi Bordeaux → Aire-sur-l'Adour. 175 km, 1h50, from €220. Cathedral, arenas, foie gras markets, Tursan vineyard. Book 24/7.",
+        metaTitle: "Taxi Bordeaux → Aire-sur-l'Adour | 175 km, €220 | TaxiNeo",
+        metaDescription: "Via A65, 1h50 ride. A65 Autoroute de Gascogne, Cathédrale du Mas, Arènes and Marché au gras en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Bordeaux → Aire-sur-l'Adour",
         heroSubtitle: "Your Bordeaux → Aire-sur-l'Adour transfer at €220 — €280. Episcopal city at the heart of Landes Gascony.",
         description: "Aire-sur-l'Adour, sub-prefecture of the Landes, is 1h50 from Bordeaux via the A65. Millennial episcopal city, arenas, foie gras markets and Tursan vineyard.",

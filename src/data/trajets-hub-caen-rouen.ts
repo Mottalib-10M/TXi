@@ -30,8 +30,8 @@ export const trajetsCaenRouen: Trajet[] = [
     hub: "caen",
     i18n: {
       fr: {
-        metaTitle: "Taxi Caen → Deauville | Prix fixe dès 65 € | TaxiNeo",
-        metaDescription: "Taxi Caen → Deauville. 50 km, 40 min, dès 65 €. Côte Fleurie, planches, casino, hippodrome. Réservation 24h/24.",
+        metaTitle: "Taxi Caen → Deauville | forfait dès 65 € | TaxiNeo",
+        metaDescription: "Via A13 en 40 min. Côte Fleurie, Casino, Planches et Hippodrome en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Caen → Deauville",
         heroSubtitle: "Transfert Caen → Deauville au prix fixe de 65 — 85 €. 50 km par l'A13.",
         description: "Deauville, station balnéaire emblématique de la Côte Fleurie, est à 40 minutes de Caen par l'A13.",
@@ -50,7 +50,7 @@ export const trajetsCaenRouen: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Caen → Deauville | Fixed price from €65 | TaxiNeo",
-        metaDescription: "Taxi Caen → Deauville. 50 km, 40 min, from €65. Côte Fleurie, boardwalk, casino. Book 24/7.",
+        metaDescription: "Via A13, 40 min ride. Côte Fleurie, Casino, Planches and Hippodrome en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Caen → Deauville",
         heroSubtitle: "Your Caen → Deauville transfer at €65 — €85. 50 km via the A13.",
         description: "Deauville, the glamorous Côte Fleurie resort, is 40 minutes from Caen via the A13.",
@@ -95,8 +95,8 @@ export const trajetsCaenRouen: Trajet[] = [
     hub: "caen",
     i18n: {
       fr: {
-        metaTitle: "Taxi Caen → Honfleur | Prix fixe dès 75 € | TaxiNeo",
-        metaDescription: "Taxi Caen → Honfleur. 60 km, 50 min, dès 75 €. Vieux Bassin, Pont de Normandie, Impressionnistes. Réservation 24h/24.",
+        metaTitle: "Taxi Caen → Honfleur | forfait dès 75 €, 50 min | TaxiNeo",
+        metaDescription: "Via A13 puis Pont de Normandie en 50 min. Pont de Normandie, Vieux Bassin, Impressionnistes et Sainte-Catherine en chemin. Arrêt visite possible en chemin.",
         heroTitle: "Taxi Caen → Honfleur",
         heroSubtitle: "Transfert Caen → Honfleur au prix fixe de 75 — 100 €. 60 km via l'A13 et le Pont de Normandie.",
         description: "Honfleur, joyau de l'estuaire de la Seine avec son Vieux Bassin et son église Sainte-Catherine, est à 50 minutes de Caen.",
@@ -115,7 +115,7 @@ export const trajetsCaenRouen: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Caen → Honfleur | Fixed price from €75 | TaxiNeo",
-        metaDescription: "Taxi Caen → Honfleur. 60 km, 50 min, from €75. Vieux Bassin, Pont de Normandie, Impressionists. Book 24/7.",
+        metaDescription: "Via A13 then Pont de Normandie, 50 min ride. Pont de Normandie, Vieux Bassin, Impressionnistes and Sainte-Catherine en route. Up to 1h05 during rush hour.",
         heroTitle: "Taxi Caen → Honfleur",
         heroSubtitle: "Your Caen → Honfleur transfer at €75 — €100. 60 km via A13 and the Normandy Bridge.",
         description: "Honfleur, gem of the Seine estuary with its Old Harbour and Sainte-Catherine church, is 50 minutes from Caen.",
@@ -160,8 +160,8 @@ export const trajetsCaenRouen: Trajet[] = [
     hub: "caen",
     i18n: {
       fr: {
-        metaTitle: "Taxi Caen → Bayeux | Prix fixe dès 40 € | TaxiNeo",
-        metaDescription: "Taxi Caen → Bayeux. 30 km, 25 min, dès 40 €. Tapisserie de Bayeux, cathédrale, plages du Débarquement. Réservation 24h/24.",
+        metaTitle: "Taxi Caen → Bayeux | forfait dès 40 €, 25 min | TaxiNeo",
+        metaDescription: "Par N13, 25 min de trajet. Tapisserie de Bayeux, Cathédrale, Plages du Débarquement et D-Day en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Caen → Bayeux",
         heroSubtitle: "Transfert Caen → Bayeux au prix fixe de 40 — 55 €. 30 km par la N13.",
         description: "Bayeux, ville de la célèbre tapisserie et porte des plages du Débarquement, est à 25 minutes de Caen.",
@@ -180,7 +180,7 @@ export const trajetsCaenRouen: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Caen → Bayeux | Fixed price from €40 | TaxiNeo",
-        metaDescription: "Taxi Caen → Bayeux. 30 km, 25 min, from €40. Bayeux Tapestry, D-Day beaches, cathedral. Book 24/7.",
+        metaDescription: "N13 route, approximately 25 min. Tapisserie de Bayeux, Cathédrale, Plages du Débarquement and D-Day en route. Stops for sightseeing possible en route.",
         heroTitle: "Taxi Caen → Bayeux",
         heroSubtitle: "Your Caen → Bayeux transfer at €40 — €55. 30 km via the N13.",
         description: "Bayeux, home of the famous tapestry and gateway to the D-Day beaches, is 25 minutes from Caen.",
@@ -225,8 +225,8 @@ export const trajetsCaenRouen: Trajet[] = [
     hub: "caen",
     i18n: {
       fr: {
-        metaTitle: "Taxi Caen → Cherbourg | Prix fixe dès 150 € | TaxiNeo",
-        metaDescription: "Taxi Caen → Cherbourg. 120 km, 1h20, dès 150 €. Cotentin, Cité de la Mer, port transmanche. Réservation 24h/24.",
+        metaTitle: "Taxi Caen → Cherbourg | 120 km, dès 150 € | TaxiNeo",
+        metaDescription: "Via N13 en 1h20. Cotentin, Cité de la Mer, Rade et Arsenal en chemin. Dépose porte-à-porte, bagages inclus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Caen → Cherbourg",
         heroSubtitle: "Transfert Caen → Cherbourg au prix fixe de 150 — 190 €. 120 km par la N13.",
         description: "Cherbourg-en-Cotentin, port militaire et transmanche au bout de la presqu'île du Cotentin, est à 1h20 de Caen.",
@@ -244,8 +244,8 @@ export const trajetsCaenRouen: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Caen → Cherbourg | Fixed price from €150 | TaxiNeo",
-        metaDescription: "Taxi Caen → Cherbourg. 120 km, 1h20, from €150. Cotentin, Cité de la Mer, cross-Channel ferries. Book 24/7.",
+        metaTitle: "Taxi Caen → Cherbourg | 120 km, from €150 | TaxiNeo",
+        metaDescription: "Via N13, 1h20 ride. Cotentin, Cité de la Mer, Rade and Arsenal en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Caen → Cherbourg",
         heroSubtitle: "Your Caen → Cherbourg transfer at €150 — €190. 120 km via the N13.",
         description: "Cherbourg-en-Cotentin, naval port and ferry terminal at the tip of the Cotentin peninsula, is 1h20 from Caen.",
@@ -290,8 +290,8 @@ export const trajetsCaenRouen: Trajet[] = [
     hub: "caen",
     i18n: {
       fr: {
-        metaTitle: "Taxi Caen → Mont-Saint-Michel | Prix fixe dès 165 € | TaxiNeo",
-        metaDescription: "Taxi Caen → Mont-Saint-Michel. 130 km, 1h30, dès 165 €. Merveille UNESCO, abbaye, baie, grandes marées. Réservation 24h/24.",
+        metaTitle: "Taxi Caen → Mont-Saint-Michel | 130 km, dès 165 € | TaxiNeo",
+        metaDescription: "Via A84 en 1h30. Merveille UNESCO, Abbaye, Baie et Grandes marées en chemin. Arrêt visite possible en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Caen → Mont-Saint-Michel",
         heroSubtitle: "Transfert Caen → Mont-Saint-Michel au prix fixe de 165 — 210 €. 130 km par l'A84.",
         description: "Le Mont-Saint-Michel, merveille de l'Occident et site UNESCO, est à 1h30 de Caen par l'A84.",
@@ -309,8 +309,8 @@ export const trajetsCaenRouen: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Caen → Mont-Saint-Michel | Fixed price from €165 | TaxiNeo",
-        metaDescription: "Taxi Caen → Mont-Saint-Michel. 130 km, 1h30, from €165. UNESCO Wonder, abbey, bay, tides. Book 24/7.",
+        metaTitle: "Taxi Caen → Mont-Saint-Michel | 130 km, from €165 | TaxiNeo",
+        metaDescription: "Via A84, 1h30 ride. Merveille UNESCO, Abbaye, Baie and Grandes marées en route. Stops for sightseeing possible en route. Perfect for a day trip without driving.",
         heroTitle: "Taxi Caen → Mont-Saint-Michel",
         heroSubtitle: "Your Caen → Mont-Saint-Michel transfer at €165 — €210. 130 km via the A84.",
         description: "Mont-Saint-Michel, the Wonder of the Western World and UNESCO site, is 1h30 from Caen via the A84.",
@@ -355,8 +355,8 @@ export const trajetsCaenRouen: Trajet[] = [
     hub: "caen",
     i18n: {
       fr: {
-        metaTitle: "Taxi Caen → Paris | Prix fixe dès 290 € | TaxiNeo",
-        metaDescription: "Taxi Caen → Paris. 235 km, 2h30, dès 290 €. A13, porte-à-porte, bagages inclus. Réservation 24h/24.",
+        metaTitle: "Taxi Caen → Paris | 235 km, dès 290 €, 2h30 | TaxiNeo",
+        metaDescription: "Par A13, 2h30 de trajet. Vallée de la Seine, Autoroute de Normandie et Porte de Saint-Cloud en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Caen → Paris",
         heroSubtitle: "Transfert Caen → Paris au prix fixe de 290 — 370 €. 235 km par l'A13.",
         description: "Paris est à 2h30 de Caen par l'A13, autoroute de Normandie historique.",
@@ -375,7 +375,7 @@ export const trajetsCaenRouen: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Caen → Paris | Fixed price from €290 | TaxiNeo",
-        metaDescription: "Taxi Caen → Paris. 235 km, 2h30, from €290. A13, door-to-door, luggage included. Book 24/7.",
+        metaDescription: "Via A13, 2h30 ride. Vallée de la Seine, Autoroute de Normandie and Porte de Saint-Cloud along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Caen → Paris",
         heroSubtitle: "Your Caen → Paris transfer at €290 — €370. 235 km via the A13.",
         description: "Paris is 2h30 from Caen via the A13, the historic Normandy motorway.",
@@ -420,8 +420,8 @@ export const trajetsCaenRouen: Trajet[] = [
     hub: "caen",
     i18n: {
       fr: {
-        metaTitle: "Taxi Caen → Rouen | Prix fixe dès 165 € | TaxiNeo",
-        metaDescription: "Taxi Caen → Rouen. 130 km, 1h30, dès 165 €. A13, Pays d'Auge, vallée de la Seine. Réservation 24h/24.",
+        metaTitle: "Taxi Caen → Rouen | 130 km, dès 165 €, 1h30 | TaxiNeo",
+        metaDescription: "Via A13 en 1h30. Pays d'Auge, Vallée de la Seine et Pont-l'Évêque en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Caen → Rouen",
         heroSubtitle: "Transfert Caen → Rouen au prix fixe de 165 — 210 €. 130 km par l'A13.",
         description: "Rouen, capitale de la Haute-Normandie et ville aux cent clochers, est à 1h30 de Caen par l'A13.",
@@ -440,7 +440,7 @@ export const trajetsCaenRouen: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Caen → Rouen | Fixed price from €165 | TaxiNeo",
-        metaDescription: "Taxi Caen → Rouen. 130 km, 1h30, from €165. A13, Pays d'Auge, Seine Valley. Book 24/7.",
+        metaDescription: "Via A13, 1h30 ride. Pays d'Auge, Vallée de la Seine and Pont-l'Évêque along the way. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Caen → Rouen",
         heroSubtitle: "Your Caen → Rouen transfer at €165 — €210. 130 km via the A13.",
         description: "Rouen, former capital of Upper Normandy and city of a hundred spires, is 1h30 from Caen via the A13.",
@@ -485,8 +485,8 @@ export const trajetsCaenRouen: Trajet[] = [
     hub: "caen",
     i18n: {
       fr: {
-        metaTitle: "Taxi Caen → Lisieux | Prix fixe dès 65 € | TaxiNeo",
-        metaDescription: "Taxi Caen → Lisieux. 50 km, 35 min, dès 65 €. Basilique Sainte-Thérèse, Pays d'Auge. Réservation 24h/24.",
+        metaTitle: "Taxi Caen → Lisieux | forfait dès 65 €, 35 min | TaxiNeo",
+        metaDescription: "Via A13 en 35 min. Basilique Sainte-Thérèse, Pays d'Auge et Pèlerinage en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Caen → Lisieux",
         heroSubtitle: "Transfert Caen → Lisieux au prix fixe de 65 — 85 €. 50 km par l'A13.",
         description: "Lisieux, deuxième lieu de pèlerinage de France après Lourdes et capitale du Pays d'Auge, est à 35 minutes de Caen.",
@@ -505,7 +505,7 @@ export const trajetsCaenRouen: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Caen → Lisieux | Fixed price from €65 | TaxiNeo",
-        metaDescription: "Taxi Caen → Lisieux. 50 km, 35 min, from €65. Basilica of St Thérèse, Pays d'Auge. Book 24/7.",
+        metaDescription: "A13 route, approximately 35 min. Basilique Sainte-Thérèse, Pays d'Auge and Pèlerinage along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Caen → Lisieux",
         heroSubtitle: "Your Caen → Lisieux transfer at €65 — €85. 50 km via the A13.",
         description: "Lisieux, France's second-largest pilgrimage site after Lourdes and capital of the Pays d'Auge, is 35 minutes from Caen.",
@@ -550,8 +550,8 @@ export const trajetsCaenRouen: Trajet[] = [
     hub: "caen",
     i18n: {
       fr: {
-        metaTitle: "Taxi Caen → Cabourg | Prix fixe dès 35 € | TaxiNeo",
-        metaDescription: "Taxi Caen → Cabourg. 25 km, 25 min, dès 35 €. Plage Marcel Proust, Grand Hôtel, Côte Fleurie. Réservation 24h/24.",
+        metaTitle: "Taxi Caen → Cabourg | forfait dès 35 €, 25 min | TaxiNeo",
+        metaDescription: "Itinéraire D513 / D400, environ 25 min. Passage par Marcel Proust, Grand Hôtel, Plage et Côte Fleurie. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Caen → Cabourg",
         heroSubtitle: "Transfert Caen → Cabourg au prix fixe de 35 — 50 €. 25 km par la D513.",
         description: "Cabourg, station balnéaire proustienne de la Côte Fleurie avec son Grand Hôtel et sa plage, est à 25 minutes de Caen.",
@@ -570,7 +570,7 @@ export const trajetsCaenRouen: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Caen → Cabourg | Fixed price from €35 | TaxiNeo",
-        metaDescription: "Taxi Caen → Cabourg. 25 km, 25 min, from €35. Proust's beach, Grand Hôtel, Côte Fleurie. Book 24/7.",
+        metaDescription: "D513 / D400 route, approximately 25 min. Marcel Proust, Grand Hôtel, Plage and Côte Fleurie en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Caen → Cabourg",
         heroSubtitle: "Your Caen → Cabourg transfer at €35 — €50. 25 km via the D513.",
         description: "Cabourg, the Proustian Côte Fleurie resort with its Grand Hôtel and beach, is 25 minutes from Caen.",
@@ -615,8 +615,8 @@ export const trajetsCaenRouen: Trajet[] = [
     hub: "caen",
     i18n: {
       fr: {
-        metaTitle: "Taxi Caen → Ouistreham Ferry | Prix fixe dès 25 € | TaxiNeo",
-        metaDescription: "Taxi Caen → Ouistreham (ferry Brittany Ferries). 15 km, 20 min, dès 25 €. Transfert terminal ferry Portsmouth. 24h/24.",
+        metaTitle: "Taxi Caen → Ouistreham | 15 km, dès 25 € | TaxiNeo",
+        metaDescription: "Par D515, 20 min de trajet. Ferry Brittany Ferries, Portsmouth, Sword Beach et Port en chemin. Accueil au terminal, attente gratuite si retard de vol.",
         heroTitle: "Taxi Caen → Ouistreham",
         heroSubtitle: "Transfert Caen → terminal ferry Ouistreham au prix fixe de 25 — 40 €. 15 km.",
         description: "Ouistreham, port des ferries Brittany Ferries vers Portsmouth, est à 20 minutes de Caen.",
@@ -634,8 +634,8 @@ export const trajetsCaenRouen: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Caen → Ouistreham Ferry | Fixed price from €25 | TaxiNeo",
-        metaDescription: "Taxi Caen → Ouistreham (Brittany Ferries). 15 km, 20 min, from €25. Ferry terminal transfer to/from Portsmouth. 24/7.",
+        metaTitle: "Taxi Caen → Ouistreham | 15 km, from €25 | TaxiNeo",
+        metaDescription: "Direct route via D515, 20 min. Ferry Brittany Ferries, Portsmouth, Sword Beach and Port en route. Terminal drop-off, real-time flight tracking included.",
         heroTitle: "Taxi Caen → Ouistreham",
         heroSubtitle: "Your Caen → Ouistreham ferry terminal transfer at €25 — €40. 15 km.",
         description: "Ouistreham, port for Brittany Ferries to Portsmouth, is 20 minutes from Caen.",
@@ -680,8 +680,8 @@ export const trajetsCaenRouen: Trajet[] = [
     hub: "caen",
     i18n: {
       fr: {
-        metaTitle: "Taxi Caen → Aéroport Caen-Carpiquet | Dès 20 € | TaxiNeo",
-        metaDescription: "Taxi Caen → Aéroport de Caen-Carpiquet (CFR). 8 km, 12 min, dès 20 €. Transfert terminal, prise en charge à l'arrivée. 24h/24.",
+        metaTitle: "Taxi Caen → Aéroport de Caen-Carpiquet | 8 km | TaxiNeo",
+        metaDescription: "Via D9 / N13 en 12 min. Aéroport CFR, Terminal et Parking en chemin. Dépose au terminal, suivi de vol. Dépose au terminal exact, suivi de vol en temps réel.",
         heroTitle: "Taxi Caen → Aéroport Caen-Carpiquet",
         heroSubtitle: "Transfert Caen centre → aéroport au prix fixe de 20 — 30 €. 8 km, 12 minutes.",
         description: "L'aéroport de Caen-Carpiquet (CFR) est à seulement 12 minutes du centre-ville de Caen.",
@@ -699,8 +699,8 @@ export const trajetsCaenRouen: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Caen → Caen-Carpiquet Airport | From €20 | TaxiNeo",
-        metaDescription: "Taxi Caen → Caen-Carpiquet Airport (CFR). 8 km, 12 min, from €20. Terminal transfer, arrival pick-up. 24/7.",
+        metaTitle: "Taxi Caen → Aéroport de Caen-Carpiquet | 8 km, €20 | TaxiNeo",
+        metaDescription: "Via D9 / N13, 12 min ride. Aéroport CFR, Terminal and Parking along the way. Terminal drop-off, flight tracking. Meet at terminal, free wait if flight delayed.",
         heroTitle: "Taxi Caen → Caen-Carpiquet Airport",
         heroSubtitle: "Your Caen centre → airport transfer at €20 — €30. 8 km, 12 minutes.",
         description: "Caen-Carpiquet Airport (CFR) is just 12 minutes from Caen city centre.",
@@ -745,8 +745,8 @@ export const trajetsCaenRouen: Trajet[] = [
     hub: "caen",
     i18n: {
       fr: {
-        metaTitle: "Taxi Caen → Arromanches | Prix fixe dès 40 € | TaxiNeo",
-        metaDescription: "Taxi Caen → Arromanches. 30 km, 30 min, dès 40 €. Port Mulberry, D-Day, plages du Débarquement. Réservation 24h/24.",
+        metaTitle: "Taxi Caen → Arromanches-les-Bains | 30 km, 40 € | TaxiNeo",
+        metaDescription: "Par N13 puis D516, 30 min de trajet. Port Mulberry, D-Day, Plages du Débarquement et Gold Beach en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Caen → Arromanches",
         heroSubtitle: "Transfert Caen → Arromanches au prix fixe de 40 — 55 €. 30 km via la D516.",
         description: "Arromanches-les-Bains, site des vestiges du port artificiel Mulberry et coeur des plages du Débarquement, est à 30 minutes de Caen.",
@@ -764,8 +764,8 @@ export const trajetsCaenRouen: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Caen → Arromanches | Fixed price from €40 | TaxiNeo",
-        metaDescription: "Taxi Caen → Arromanches. 30 km, 30 min, from €40. Mulberry Harbour, D-Day beaches. Book 24/7.",
+        metaTitle: "Taxi Caen → Arromanches-les-Bains | 30 km, €40 | TaxiNeo",
+        metaDescription: "Direct route via N13 then D516, 30 min. Port Mulberry, D-Day, Plages du Débarquement and Gold Beach en route. Stops for sightseeing possible en route.",
         heroTitle: "Taxi Caen → Arromanches",
         heroSubtitle: "Your Caen → Arromanches transfer at €40 — €55. 30 km via the D516.",
         description: "Arromanches-les-Bains, site of the Mulberry Harbour remains and heart of the D-Day beaches, is 30 minutes from Caen.",

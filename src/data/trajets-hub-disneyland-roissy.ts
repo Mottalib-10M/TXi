@@ -27,8 +27,8 @@ export const trajetsDisneylandRoissy: Trajet[] = [
     hub: "disneyland-roissy",
     i18n: {
       fr: {
-        metaTitle: "Taxi Disneyland Paris → Paris Centre | Prix fixe dès 55 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Disneyland Paris → Paris Centre. 40 km, 35 min, prix fixe dès 55 €. Transfert familial porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Disneyland Paris → Paris Centre | 40 km, 55 € | TaxiNeo",
+        metaDescription: "Via A4 en 35 min. Marne-la-Vallée, Val d'Europe, Château de Vincennes et Bois de Vincennes en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Disneyland Paris → Paris Centre",
         heroSubtitle: "Votre transfert Disneyland Paris → Paris Centre au prix fixe de 55 — 70 €. Réservation en ligne, chauffeur professionnel 24h/24.",
         description: "Le trajet Disneyland Paris — Paris Centre est l'un des transferts touristiques les plus demandés en Île-de-France. Disneyland Paris, situé à Marne-la-Vallée, accueille plus de 15 millions de visiteurs par an.",
@@ -46,8 +46,8 @@ export const trajetsDisneylandRoissy: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Disneyland Paris → Paris Centre | Fixed price from €55 | TaxiNeo",
-        metaDescription: "Taxi Disneyland Paris → Paris Centre. 40 km, 35 min, from €55. Family-friendly door-to-door transfer. Book 24/7.",
+        metaTitle: "Taxi Disneyland Paris → Paris Centre | 40 km, €55 | TaxiNeo",
+        metaDescription: "Direct route via A4, 35 min. Marne-la-Vallée, Val d'Europe, Château de Vincennes and Bois de Vincennes en route. Stops for sightseeing possible en route.",
         heroTitle: "Taxi Disneyland Paris → Paris Centre",
         heroSubtitle: "Your Disneyland Paris → Paris Centre transfer at €55 — €70. Online booking, professional driver 24/7.",
         description: "Disneyland Paris to Paris Centre is one of the most popular tourist transfers in the Paris region. Disneyland Paris in Marne-la-Vallée welcomes over 15 million visitors annually.",
@@ -92,8 +92,8 @@ export const trajetsDisneylandRoissy: Trajet[] = [
     hub: "disneyland-roissy",
     i18n: {
       fr: {
-        metaTitle: "Taxi Disneyland Paris → Orly | Prix fixe dès 65 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Disneyland Paris → Aéroport d'Orly. 50 km, 40 min, prix fixe dès 65 €. Transfert direct porte-à-terminal. Réservation 24h/24.",
+        metaTitle: "Taxi Disneyland Paris → Aéroport d'Orly | 50 km | TaxiNeo",
+        metaDescription: "Trajet direct A4 puis A86 en 40 min. En passant par Francilienne, Val d'Europe et Navette aéroport. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Disneyland Paris → Aéroport d'Orly",
         heroSubtitle: "Votre transfert Disneyland Paris → Orly au prix fixe de 65 — 85 €. Chauffeur professionnel, réservation en ligne 24h/24.",
         description: "Le transfert Disneyland Paris — Aéroport d'Orly permet de rejoindre directement le terminal de votre vol après votre séjour dans les parcs Disney. Un trajet de 50 km, idéal pour les familles.",
@@ -111,8 +111,8 @@ export const trajetsDisneylandRoissy: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Disneyland Paris → Orly Airport | Fixed price from €65 | TaxiNeo",
-        metaDescription: "Taxi Disneyland Paris → Orly Airport. 50 km, 40 min, from €65. Direct door-to-terminal transfer. Book 24/7.",
+        metaTitle: "Taxi Disneyland Paris → Aéroport d'Orly | 50 km | TaxiNeo",
+        metaDescription: "Via A4 then A86, 40 min ride. Francilienne, Val d'Europe and Navette aéroport along the way. Stops for sightseeing possible en route. ~€5 toll included.",
         heroTitle: "Taxi Disneyland Paris → Orly Airport",
         heroSubtitle: "Your Disneyland Paris → Orly transfer at €65 — €85. Professional driver, online booking 24/7.",
         description: "The Disneyland Paris to Orly Airport transfer takes you directly to your flight terminal after your Disney stay. A 50 km journey ideal for families.",
@@ -157,8 +157,8 @@ export const trajetsDisneylandRoissy: Trajet[] = [
     hub: "disneyland-roissy",
     i18n: {
       fr: {
-        metaTitle: "Taxi Disneyland Paris → Gare de Lyon | Prix fixe dès 55 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Disneyland Paris → Gare de Lyon. 40 km, 35 min, prix fixe dès 55 €. Transfert familial direct. Réservation 24h/24.",
+        metaTitle: "Taxi Disneyland Paris → Gare de Lyon | 40 km, 55 € | TaxiNeo",
+        metaDescription: "Par A4, 35 min de trajet. Marne-la-Vallée-Chessy, TGV, Bois de Vincennes et 12e arrondissement en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Disneyland Paris → Gare de Lyon",
         heroSubtitle: "Votre transfert Disneyland Paris → Gare de Lyon au prix fixe de 55 — 70 €. Chauffeur professionnel, réservation en ligne.",
         description: "Le trajet Disneyland Paris — Gare de Lyon est le transfert idéal pour les familles qui souhaitent prendre un TGV vers Lyon, Marseille ou le sud-est de la France après leur séjour Disney.",
@@ -176,8 +176,8 @@ export const trajetsDisneylandRoissy: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Disneyland Paris → Gare de Lyon | Fixed price from €55 | TaxiNeo",
-        metaDescription: "Taxi Disneyland Paris → Gare de Lyon. 40 km, 35 min, from €55. Direct family transfer to the train station. Book 24/7.",
+        metaTitle: "Taxi Disneyland Paris → Gare de Lyon | 40 km, €55 | TaxiNeo",
+        metaDescription: "A4 route, approximately 35 min. Marne-la-Vallée-Chessy, TGV, Bois de Vincennes and 12e arrondissement en route. Stops for sightseeing possible en route.",
         heroTitle: "Taxi Disneyland Paris → Gare de Lyon",
         heroSubtitle: "Your Disneyland Paris → Gare de Lyon transfer at €55 — €70. Professional driver, online booking.",
         description: "The Disneyland Paris to Gare de Lyon transfer is ideal for families catching a TGV to Lyon, Marseille or the south-east of France after their Disney stay.",
@@ -222,8 +222,8 @@ export const trajetsDisneylandRoissy: Trajet[] = [
     hub: "disneyland-roissy",
     i18n: {
       fr: {
-        metaTitle: "Taxi Roissy-en-France → Paris | Prix fixe dès 35 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Roissy-en-France → Paris. 25 km, 25 min, prix fixe dès 35 €. Transfert rapide et direct. Réservation 24h/24.",
+        metaTitle: "Taxi Roissy-en-France → Paris | 25 km, dès 35 € | TaxiNeo",
+        metaDescription: "Via A1 en 25 min. CDG, Parc des Expositions, Stade de France et Le Bourget en chemin. Arrêt visite possible en chemin. Arrêt possible pour visites ou photos.",
         heroTitle: "Taxi Roissy-en-France → Paris",
         heroSubtitle: "Votre transfert Roissy-en-France → Paris au prix fixe de 35 — 50 €. Chauffeur professionnel, réservation en ligne 24h/24.",
         description: "Le trajet Roissy-en-France — Paris est un transfert court et fréquent. Roissy-en-France, commune qui a donné son nom à l'aéroport CDG, est située à seulement 25 km au nord de Paris.",
@@ -241,8 +241,8 @@ export const trajetsDisneylandRoissy: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Roissy-en-France → Paris | Fixed price from €35 | TaxiNeo",
-        metaDescription: "Taxi Roissy-en-France → Paris. 25 km, 25 min, from €35. Quick direct transfer. Book 24/7.",
+        metaTitle: "Taxi Roissy-en-France → Paris | 25 km, from €35 | TaxiNeo",
+        metaDescription: "Via A1, 25 min ride. CDG, Parc des Expositions, Stade de France and Le Bourget en route. Stops for sightseeing possible en route. No toll on this route.",
         heroTitle: "Taxi Roissy-en-France → Paris",
         heroSubtitle: "Your Roissy-en-France → Paris transfer at €35 — €50. Professional driver, online booking 24/7.",
         description: "Roissy-en-France, the town that gave CDG airport its name, is just 25 km north of Paris. A short, frequent transfer.",
@@ -287,8 +287,8 @@ export const trajetsDisneylandRoissy: Trajet[] = [
     hub: "disneyland-roissy",
     i18n: {
       fr: {
-        metaTitle: "Taxi Disneyland Paris → Versailles | Prix fixe dès 70 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Disneyland Paris → Versailles. 55 km, 45 min, prix fixe dès 70 €. Disney + Versailles, le combo parfait. Réservation 24h/24.",
+        metaTitle: "Taxi Disneyland Paris → Versailles | 55 km, 70 € | TaxiNeo",
+        metaDescription: "Via A4 puis A86 en 45 min. Château de Versailles, Val d'Europe, Jardins de Versailles sur le parcours. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Disneyland Paris → Versailles",
         heroSubtitle: "Votre transfert Disneyland Paris → Versailles au prix fixe de 70 — 90 €. Combinez Disney et Versailles en toute sérénité.",
         description: "Le trajet Disneyland Paris — Versailles relie les deux sites touristiques les plus visités de la région parisienne. 55 km pour passer de la magie Disney à la splendeur du Château de Versailles.",
@@ -306,8 +306,8 @@ export const trajetsDisneylandRoissy: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Disneyland Paris → Versailles | Fixed price from €70 | TaxiNeo",
-        metaDescription: "Taxi Disneyland Paris → Versailles. 55 km, 45 min, from €70. Combine Disney and Versailles. Book 24/7.",
+        metaTitle: "Taxi Disneyland Paris → Versailles | 55 km, €70 | TaxiNeo",
+        metaDescription: "Direct route via A4 then A86, 45 min. Château de Versailles, Val d'Europe and Jardins de Versailles along the way. Stops for sightseeing possible en route.",
         heroTitle: "Taxi Disneyland Paris → Versailles",
         heroSubtitle: "Your Disneyland Paris → Versailles transfer at €70 — €90. Combine Disney and Versailles seamlessly.",
         description: "The Disneyland Paris to Versailles route connects the two most visited tourist sites in the Paris region. 55 km from Disney magic to the splendour of the Palace of Versailles.",

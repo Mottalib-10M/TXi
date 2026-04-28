@@ -19,8 +19,8 @@ export const trajetsGrenobleHub2: Trajet[] = [
     hub: "grenoble",
     i18n: {
       fr: {
-        metaTitle: "Taxi Grenoble → Lyon | Prix fixe dès 130 € | TaxiNeo",
-        metaDescription: "Taxi Grenoble → Lyon. 115 km, 1h15, dès 130 €. A48 directe, transfert porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Grenoble → Lyon | 115 km, dès 130 € | TaxiNeo",
+        metaDescription: "Via A48 en undefined min. Isère, Chartreuse, Direct et Retour en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Grenoble → Lyon",
         heroSubtitle: "Transfert Grenoble → Lyon au prix fixe de 130 — 160 €. 115 km via l'A48.",
         description: "Le retour Grenoble → Lyon par l'A48 est l'un des trajets les plus fréquents de la région Auvergne-Rhône-Alpes.",
@@ -38,8 +38,8 @@ export const trajetsGrenobleHub2: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Grenoble → Lyon | Fixed price from €130 | TaxiNeo",
-        metaDescription: "Taxi Grenoble → Lyon. 115 km, 1h15, from €130. Direct A48. Book 24/7.",
+        metaTitle: "Taxi Grenoble → Lyon | 115 km, from €130 | TaxiNeo",
+        metaDescription: "Via A48, undefined min ride. Isère, Chartreuse, Direct and Retour en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Grenoble → Lyon",
         heroSubtitle: "Grenoble → Lyon transfer at €130 — €160. 115 km via A48.",
         description: "Grenoble to Lyon via A48 is one of the most frequent routes in the Auvergne-Rhône-Alpes region.",
@@ -76,8 +76,8 @@ export const trajetsGrenobleHub2: Trajet[] = [
     hub: "grenoble",
     i18n: {
       fr: {
-        metaTitle: "Taxi Grenoble → Aéroport Lyon Saint-Exupéry | Dès 120 € | TaxiNeo",
-        metaDescription: "Taxi Grenoble → Aéroport Lyon Saint-Exupéry (LYS). 105 km, 1h05, dès 120 €. Transfert aéroport direct. Réservation 24h/24.",
+        metaTitle: "Taxi Grenoble → Lyon St-Exupéry | 105 km, 120 € | TaxiNeo",
+        metaDescription: "Via A48 en undefined min. LYS, Saint-Exupéry, Vol et Direct en chemin. Dépose au terminal, suivi de vol. Dépose au terminal exact, suivi de vol en temps réel.",
         heroTitle: "Taxi Grenoble → Aéroport Lyon",
         heroSubtitle: "Transfert Grenoble → Aéroport Lyon Saint-Exupéry (LYS) au prix fixe de 120 — 150 €.",
         description: "L'aéroport Lyon Saint-Exupéry est l'aéroport international le plus accessible depuis Grenoble.",
@@ -95,8 +95,8 @@ export const trajetsGrenobleHub2: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Grenoble → Lyon Airport LYS | From €120 | TaxiNeo",
-        metaDescription: "Taxi Grenoble → Lyon Saint-Exupéry Airport (LYS). 105 km, 1h05, from €120. Direct transfer. Book 24/7.",
+        metaTitle: "Taxi Grenoble → Lyon St-Exupéry | 105 km, €120 | TaxiNeo",
+        metaDescription: "Via A48, undefined min ride. LYS, Saint-Exupéry, Vol and Direct en route. Terminal drop-off, flight tracking. Meet at terminal, free wait if flight delayed.",
         heroTitle: "Taxi Grenoble → Lyon Airport",
         heroSubtitle: "Grenoble → Lyon Saint-Exupéry Airport (LYS) transfer at €120 — €150.",
         description: "Lyon Saint-Exupéry is the most accessible international airport from Grenoble.",
@@ -133,8 +133,8 @@ export const trajetsGrenobleHub2: Trajet[] = [
     hub: "grenoble",
     i18n: {
       fr: {
-        metaTitle: "Taxi Grenoble → Chambéry | Prix fixe dès 70 € | TaxiNeo",
-        metaDescription: "Taxi Grenoble → Chambéry. 60 km, 45 min, dès 70 €. A41 via la Chartreuse. Réservation 24h/24.",
+        metaTitle: "Taxi Grenoble → Chambéry | 60 km, dès 70 € | TaxiNeo",
+        metaDescription: "Via A41 en undefined min. Chartreuse, Savoie, Lac du Bourget et Direct en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Grenoble → Chambéry",
         heroSubtitle: "Transfert Grenoble → Chambéry au prix fixe de 70 — 90 €. 60 km entre Isère et Savoie.",
         description: "Chambéry, ancienne capitale des États de Savoie, est à 45 min de Grenoble au pied du massif de la Chartreuse.",
@@ -152,8 +152,8 @@ export const trajetsGrenobleHub2: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Grenoble → Chambéry | Fixed price from €70 | TaxiNeo",
-        metaDescription: "Taxi Grenoble → Chambéry. 60 km, 45 min, from €70. A41 via Chartreuse. Book 24/7.",
+        metaTitle: "Taxi Grenoble → Chambéry | 60 km, from €70 | TaxiNeo",
+        metaDescription: "Via A41, undefined min ride. Chartreuse, Savoie, Lac du Bourget and Direct en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Grenoble → Chambéry",
         heroSubtitle: "Grenoble → Chambéry transfer at €70 — €90. 60 km between Isère and Savoie.",
         description: "Chambéry, former capital of the Duchy of Savoy, is 45 min from Grenoble.",
@@ -190,8 +190,8 @@ export const trajetsGrenobleHub2: Trajet[] = [
     hub: "grenoble",
     i18n: {
       fr: {
-        metaTitle: "Taxi Grenoble → Annecy | Prix fixe dès 120 € | TaxiNeo",
-        metaDescription: "Taxi Grenoble → Annecy. 105 km, 1h15, dès 120 €. A41 via Chambéry, lac d'Annecy. Réservation 24h/24.",
+        metaTitle: "Taxi Grenoble → Annecy | 105 km, dès 120 € | TaxiNeo",
+        metaDescription: "Via A41 en undefined min. Lac d'Annecy, Chartreuse, Bauges et Savoie en chemin. Dépose à votre adresse exacte. Alternative directe au train ou au bus.",
         heroTitle: "Taxi Grenoble → Annecy",
         heroSubtitle: "Transfert Grenoble → Annecy au prix fixe de 120 — 150 €. 105 km, vers le plus beau lac de France.",
         description: "Annecy et son lac, réputé le plus pur d'Europe, sont à 1h15 de Grenoble par l'A41.",
@@ -209,8 +209,8 @@ export const trajetsGrenobleHub2: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Grenoble → Annecy | Fixed price from €120 | TaxiNeo",
-        metaDescription: "Taxi Grenoble → Annecy. 105 km, 1h15, from €120. A41 via Chambéry, Lake Annecy. Book 24/7.",
+        metaTitle: "Taxi Grenoble → Annecy | 105 km, from €120 | TaxiNeo",
+        metaDescription: "Via A41, undefined min ride. Lac d'Annecy, Chartreuse, Bauges and Savoie en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Grenoble → Annecy",
         heroSubtitle: "Grenoble → Annecy transfer at €120 — €150. 105 km to Europe's purest lake.",
         description: "Annecy and its lake, Europe's purest, are 1h15 from Grenoble via A41.",
@@ -247,8 +247,8 @@ export const trajetsGrenobleHub2: Trajet[] = [
     hub: "grenoble",
     i18n: {
       fr: {
-        metaTitle: "Taxi Grenoble → Valence | Prix fixe dès 110 € | TaxiNeo",
-        metaDescription: "Taxi Grenoble → Valence. 95 km, 1h05, dès 110 €. A49 directe via le Vercors. Réservation 24h/24.",
+        metaTitle: "Taxi Grenoble → Valence | 95 km, dès 110 € | TaxiNeo",
+        metaDescription: "Via A49 en undefined min. Drôme, Vercors et Gare TGV en chemin. Alternative directe au train ou au bus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Grenoble → Valence",
         heroSubtitle: "Transfert Grenoble → Valence au prix fixe de 110 — 140 €. 95 km via l'A49.",
         description: "Valence, porte du Midi sur le Rhône, est à 1h05 de Grenoble par l'A49.",
@@ -266,8 +266,8 @@ export const trajetsGrenobleHub2: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Grenoble → Valence | Fixed price from €110 | TaxiNeo",
-        metaDescription: "Taxi Grenoble → Valence. 95 km, 1h05, from €110. Direct A49. Book 24/7.",
+        metaTitle: "Taxi Grenoble → Valence | 95 km, from €110 | TaxiNeo",
+        metaDescription: "Via A49, undefined min ride. Drôme, Vercors and Gare TGV along the way. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Grenoble → Valence",
         heroSubtitle: "Grenoble → Valence transfer at €110 — €140. 95 km via A49.",
         description: "Valence, gateway to the Midi on the Rhône, is 1h05 from Grenoble via A49.",
@@ -304,8 +304,8 @@ export const trajetsGrenobleHub2: Trajet[] = [
     hub: "grenoble",
     i18n: {
       fr: {
-        metaTitle: "Taxi Grenoble → Genève | Prix fixe dès 170 € | TaxiNeo",
-        metaDescription: "Taxi Grenoble → Genève. 155 km, 1h45, dès 170 €. A41 via Annecy, transfert international. Réservation 24h/24.",
+        metaTitle: "Taxi Grenoble → Genève | 155 km, dès 170 € | TaxiNeo",
+        metaDescription: "Via A41 en undefined min. Suisse, ONU, Lac Léman et CERN en chemin. Dépose porte-à-porte, bagages inclus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Grenoble → Genève",
         heroSubtitle: "Transfert Grenoble → Genève au prix fixe de 170 — 210 €. 155 km, de l'Isère au Léman.",
         description: "Genève, siège de l'ONU et du CERN, est à 1h45 de Grenoble via Annecy et le lac Léman.",
@@ -323,8 +323,8 @@ export const trajetsGrenobleHub2: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Grenoble → Geneva | Fixed price from €170 | TaxiNeo",
-        metaDescription: "Taxi Grenoble → Geneva. 155 km, 1h45, from €170. A41 via Annecy. Book 24/7.",
+        metaTitle: "Taxi Grenoble → Genève | 155 km, from €170 | TaxiNeo",
+        metaDescription: "Via A41, undefined min ride. Suisse, ONU, Lac Léman and CERN en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Grenoble → Geneva",
         heroSubtitle: "Grenoble → Geneva transfer at €170 — €210. 155 km, from Isère to Lake Geneva.",
         description: "Geneva, home of the UN and CERN, is 1h45 from Grenoble via Annecy.",
@@ -361,8 +361,8 @@ export const trajetsGrenobleHub2: Trajet[] = [
     hub: "grenoble",
     i18n: {
       fr: {
-        metaTitle: "Taxi Grenoble → Briançon | Prix fixe dès 130 € | TaxiNeo",
-        metaDescription: "Taxi Grenoble → Briançon. 115 km, 1h35, dès 130 €. Via le col du Lautaret, porte de Serre Chevalier. Réservation 24h/24.",
+        metaTitle: "Taxi Grenoble → Briançon | 115 km, dès 130 € | TaxiNeo",
+        metaDescription: "Via N91/N85 en undefined min. Hautes-Alpes, Forteresse Vauban, Serre Chevalier et Col du Lautaret en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Grenoble → Briançon",
         heroSubtitle: "Transfert Grenoble → Briançon au prix fixe de 130 — 165 €. 115 km via le Lautaret.",
         description: "Briançon, plus haute ville de France (1 326 m), est une forteresse Vauban classée UNESCO.",
@@ -380,8 +380,8 @@ export const trajetsGrenobleHub2: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Grenoble → Briançon | Fixed price from €130 | TaxiNeo",
-        metaDescription: "Taxi Grenoble → Briançon. 115 km, 1h35, from €130. Via Col du Lautaret, gateway to Serre Chevalier. Book 24/7.",
+        metaTitle: "Taxi Grenoble → Briançon | 115 km, from €130 | TaxiNeo",
+        metaDescription: "Via N91/N85, undefined min ride. Hautes-Alpes, Forteresse Vauban, Serre Chevalier and Col du Lautaret en route. Stops for sightseeing possible en route.",
         heroTitle: "Taxi Grenoble → Briançon",
         heroSubtitle: "Grenoble → Briançon transfer at €130 — €165. 115 km via the Lautaret Pass.",
         description: "Briançon, France's highest city (1,326m), is a UNESCO Vauban fortress.",
@@ -418,8 +418,8 @@ export const trajetsGrenobleHub2: Trajet[] = [
     hub: "grenoble",
     i18n: {
       fr: {
-        metaTitle: "Taxi Grenoble → Serre Chevalier | Dès 125 € | TaxiNeo",
-        metaDescription: "Taxi Grenoble → Serre Chevalier. 110 km, 1h30, dès 125 €. Via le col du Lautaret. Réservation 24h/24.",
+        metaTitle: "Taxi Grenoble → Serre Chevalier | 110 km, 125 € | TaxiNeo",
+        metaDescription: "Via N91 en undefined min. Ski, Lautaret, Oisans et 250 km pistes en chemin. Arrêt visite possible en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Grenoble → Serre Chevalier",
         heroSubtitle: "Transfert Grenoble → Serre Chevalier au prix fixe de 125 — 160 €. 110 km, 250 km de pistes.",
         description: "Serre Chevalier, le plus grand domaine skiable des Alpes du Sud, offre 250 km de pistes entre 1 200 et 2 800 m.",
@@ -437,8 +437,8 @@ export const trajetsGrenobleHub2: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Grenoble → Serre Chevalier | From €125 | TaxiNeo",
-        metaDescription: "Taxi Grenoble → Serre Chevalier. 110 km, 1h30, from €125. Via Col du Lautaret. Book 24/7.",
+        metaTitle: "Taxi Grenoble → Serre Chevalier | 110 km, €125 | TaxiNeo",
+        metaDescription: "Via N91, undefined min ride. Ski, Lautaret, Oisans and 250 km pistes en route. Stops for sightseeing possible en route. Perfect for a day trip without driving.",
         heroTitle: "Taxi Grenoble → Serre Chevalier",
         heroSubtitle: "Grenoble → Serre Chevalier transfer at €125 — €160. 110 km, 250 km of pistes.",
         description: "Serre Chevalier, the largest ski domain in the Southern Alps, offers 250 km of pistes.",
@@ -475,8 +475,8 @@ export const trajetsGrenobleHub2: Trajet[] = [
     hub: "grenoble",
     i18n: {
       fr: {
-        metaTitle: "Taxi Grenoble → La Plagne | Prix fixe dès 170 € | TaxiNeo",
-        metaDescription: "Taxi Grenoble → La Plagne. 160 km, 2h, dès 170 €. Transfert ski Paradiski via Chambéry. Réservation 24h/24.",
+        metaTitle: "Taxi Grenoble → La Plagne | 160 km, dès 170 € | TaxiNeo",
+        metaDescription: "Itinéraire A41/N90, environ undefined min. Paradiski, Tarentaise, Famille et 425 km pistes en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Grenoble → La Plagne",
         heroSubtitle: "Transfert Grenoble → La Plagne au prix fixe de 170 — 215 €. 160 km, domaine Paradiski.",
         description: "La Plagne, station la plus fréquentée au monde, offre le domaine Paradiski (425 km de pistes) relié aux Arcs.",
@@ -494,8 +494,8 @@ export const trajetsGrenobleHub2: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Grenoble → La Plagne | Fixed price from €170 | TaxiNeo",
-        metaDescription: "Taxi Grenoble → La Plagne. 160 km, 2h, from €170. Paradiski ski transfer via Chambéry. Book 24/7.",
+        metaTitle: "Taxi Grenoble → La Plagne | 160 km, from €170 | TaxiNeo",
+        metaDescription: "Via A41/N90, undefined min ride. Paradiski, Tarentaise, Famille and 425 km pistes en route. Stops for sightseeing possible en route. Return trip at same rate.",
         heroTitle: "Taxi Grenoble → La Plagne",
         heroSubtitle: "Grenoble → La Plagne transfer at €170 — €215. 160 km, Paradiski domain.",
         description: "La Plagne, the world's busiest resort, with Paradiski (425 km of pistes) linked to Les Arcs.",
@@ -532,8 +532,8 @@ export const trajetsGrenobleHub2: Trajet[] = [
     hub: "grenoble",
     i18n: {
       fr: {
-        metaTitle: "Taxi Grenoble → Courchevel | Prix fixe dès 165 € | TaxiNeo",
-        metaDescription: "Taxi Grenoble → Courchevel. 150 km, 1h55, dès 165 €. Transfert direct vers les 3 Vallées. Réservation 24h/24.",
+        metaTitle: "Taxi Grenoble → Courchevel | 150 km, dès 165 € | TaxiNeo",
+        metaDescription: "Via A41/N90 en undefined min. 3 Vallées, Luxe, Tarentaise et 600 km pistes en chemin. Arrêt visite possible en chemin. Arrêt possible pour visites ou photos.",
         heroTitle: "Taxi Grenoble → Courchevel",
         heroSubtitle: "Transfert Grenoble → Courchevel au prix fixe de 165 — 205 €. 150 km, domaine des 3 Vallées.",
         description: "Courchevel, station la plus prestigieuse au monde, donne accès aux 3 Vallées (600 km de pistes).",
@@ -551,8 +551,8 @@ export const trajetsGrenobleHub2: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Grenoble → Courchevel | Fixed price from €165 | TaxiNeo",
-        metaDescription: "Taxi Grenoble → Courchevel. 150 km, 1h55, from €165. Direct transfer to the 3 Vallées. Book 24/7.",
+        metaTitle: "Taxi Grenoble → Courchevel | 150 km, from €165 | TaxiNeo",
+        metaDescription: "Via A41/N90, undefined min ride. 3 Vallées, Luxe, Tarentaise and 600 km pistes en route. Stops for sightseeing possible en route. Return trip at same rate.",
         heroTitle: "Taxi Grenoble → Courchevel",
         heroSubtitle: "Grenoble → Courchevel transfer at €165 — €205. 150 km, 3 Vallées domain.",
         description: "Courchevel, the world's most prestigious resort, with access to the 3 Vallées (600 km of pistes).",

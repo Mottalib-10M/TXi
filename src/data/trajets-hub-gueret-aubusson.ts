@@ -27,8 +27,8 @@ export const trajetsGueretAubusson: Trajet[] = [
     hub: "gueret-aubusson",
     i18n: {
       fr: {
-        metaTitle: "Taxi Guéret → Limoges | Prix fixe dès 115 € | TaxiNeo",
-        metaDescription: "Taxi Guéret → Limoges. 95 km, 1h05, dès 115 €. N145, transfert direct de la Creuse au Limousin. Réservation 24h/24.",
+        metaTitle: "Taxi Guéret → Limoges | 95 km, dès 115 € | TaxiNeo",
+        metaDescription: "Via N145 en 1h05. Creuse, Marche limousine, Porcelaine et Bénédictins en chemin. Dépose à votre adresse exacte. Alternative directe au train ou au bus.",
         heroTitle: "Taxi Guéret → Limoges",
         heroSubtitle: "Transfert Guéret → Limoges au prix fixe de 115 — 145 €. 95 km, de la Creuse à la capitale de la porcelaine.",
         description: "Limoges, capitale mondiale de la porcelaine et des arts du feu, est à 1h05 de Guéret par la N145.",
@@ -46,8 +46,8 @@ export const trajetsGueretAubusson: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Guéret → Limoges | Fixed price from €115 | TaxiNeo",
-        metaDescription: "Taxi Guéret → Limoges. 95 km, 1h05, from €115. N145, direct transfer from Creuse to Limousin. Book 24/7.",
+        metaTitle: "Taxi Guéret → Limoges | 95 km, from €115 | TaxiNeo",
+        metaDescription: "Via N145, 1h05 ride. Creuse, Marche limousine, Porcelaine and Bénédictins en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Guéret → Limoges",
         heroSubtitle: "Your Guéret → Limoges transfer at €115 — €145. 95 km, from Creuse to the porcelain capital.",
         description: "Limoges, world capital of porcelain and enamel arts, is 1h05 from Guéret via the N145.",
@@ -92,8 +92,8 @@ export const trajetsGueretAubusson: Trajet[] = [
     hub: "gueret-aubusson",
     i18n: {
       fr: {
-        metaTitle: "Taxi Guéret → Clermont-Ferrand | Prix fixe dès 185 € | TaxiNeo",
-        metaDescription: "Taxi Guéret → Clermont-Ferrand. 155 km, 1h40, dès 185 €. D990/A714, de la Creuse aux volcans d'Auvergne. Réservation 24h/24.",
+        metaTitle: "Taxi Guéret → Clermont-Ferrand | 155 km, dès 185 € | TaxiNeo",
+        metaDescription: "Par D990 / A714, 1h40 de trajet. Combrailles, Chaîne des Puys, Lac de Vassivière et Volcans en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Guéret → Clermont-Ferrand",
         heroSubtitle: "Transfert Guéret → Clermont-Ferrand au prix fixe de 185 — 235 €. 155 km, de la Creuse aux volcans d'Auvergne.",
         description: "Clermont-Ferrand, capitale de l'Auvergne au pied de la chaîne des Puys (UNESCO), est à 1h40 de Guéret.",
@@ -111,8 +111,8 @@ export const trajetsGueretAubusson: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Guéret → Clermont-Ferrand | Fixed price from €185 | TaxiNeo",
-        metaDescription: "Taxi Guéret → Clermont-Ferrand. 155 km, 1h40, from €185. D990/A714, from Creuse to Auvergne volcanoes. Book 24/7.",
+        metaTitle: "Taxi Guéret → Clermont-Ferrand | 155 km, from €185 | TaxiNeo",
+        metaDescription: "Direct route via D990 / A714, 1h40. Combrailles, Chaîne des Puys, Lac de Vassivière and Volcans en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Guéret → Clermont-Ferrand",
         heroSubtitle: "Your Guéret → Clermont-Ferrand transfer at €185 — €235. 155 km, from Creuse to the Auvergne volcanoes.",
         description: "Clermont-Ferrand, Auvergne's capital beneath the Chaîne des Puys (UNESCO), is 1h40 from Guéret.",
@@ -157,8 +157,8 @@ export const trajetsGueretAubusson: Trajet[] = [
     hub: "gueret-aubusson",
     i18n: {
       fr: {
-        metaTitle: "Taxi Guéret → Montluçon | Prix fixe dès 85 € | TaxiNeo",
-        metaDescription: "Taxi Guéret → Montluçon. 70 km, 50 min, dès 85 €. D942, de la Creuse au Bourbonnais. Réservation 24h/24.",
+        metaTitle: "Taxi Guéret → Montluçon | 70 km, dès 85 € | TaxiNeo",
+        metaDescription: "Via D942 en 50 min. Creuse, Combrailles, Château des Ducs et Bourbonnais en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Guéret → Montluçon",
         heroSubtitle: "Transfert Guéret → Montluçon au prix fixe de 85 — 110 €. 70 km, de la Creuse aux portes du Bourbonnais.",
         description: "Montluçon, cité médiévale et industrielle aux confins du Berry et de l'Auvergne, est à 50 min de Guéret.",
@@ -176,8 +176,8 @@ export const trajetsGueretAubusson: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Guéret → Montluçon | Fixed price from €85 | TaxiNeo",
-        metaDescription: "Taxi Guéret → Montluçon. 70 km, 50 min, from €85. D942, from Creuse to Bourbonnais. Book 24/7.",
+        metaTitle: "Taxi Guéret → Montluçon | 70 km, from €85 | TaxiNeo",
+        metaDescription: "Via D942, 50 min ride. Creuse, Combrailles, Château des Ducs and Bourbonnais en route. Drop-off at your exact address. Door-to-door, luggage included.",
         heroTitle: "Taxi Guéret → Montluçon",
         heroSubtitle: "Your Guéret → Montluçon transfer at €85 — €110. 70 km, from Creuse to the medieval Bourbon city.",
         description: "Montluçon, medieval Bourbon city at the crossroads of Berry and Auvergne, is 50 min from Guéret.",
@@ -222,8 +222,8 @@ export const trajetsGueretAubusson: Trajet[] = [
     hub: "gueret-aubusson",
     i18n: {
       fr: {
-        metaTitle: "Taxi Aubusson → Clermont-Ferrand | Prix fixe dès 120 € | TaxiNeo",
-        metaDescription: "Taxi Aubusson → Clermont-Ferrand. 100 km, 1h15, dès 120 €. D990/A89, de la cité de la tapisserie aux volcans d'Auvergne. Réservation 24h/24.",
+        metaTitle: "Taxi Aubusson → Clermont-Ferrand | 100 km, 120 € | TaxiNeo",
+        metaDescription: "Via D990 / A89 en 1h15. Tapisserie UNESCO, Plateau de Millevaches, Chaîne des Puys et Cité de la Tapisserie en chemin. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Aubusson → Clermont-Ferrand",
         heroSubtitle: "Transfert Aubusson → Clermont-Ferrand au prix fixe de 120 — 155 €. 100 km, de la tapisserie UNESCO aux volcans.",
         description: "Clermont-Ferrand, métropole auvergnate dominée par la chaîne des Puys, est à 1h15 d'Aubusson.",
@@ -241,8 +241,8 @@ export const trajetsGueretAubusson: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Aubusson → Clermont-Ferrand | Fixed price from €120 | TaxiNeo",
-        metaDescription: "Taxi Aubusson → Clermont-Ferrand. 100 km, 1h15, from €120. D990/A89, from the UNESCO tapestry city to Auvergne volcanoes. Book 24/7.",
+        metaTitle: "Taxi Aubusson → Clermont-Ferrand | 100 km, €120 | TaxiNeo",
+        metaDescription: "Via D990 / A89, 1h15 ride. Tapisserie UNESCO, Plateau de Millevaches, Chaîne des Puys and Cité de la Tapisserie en route. Drop-off at your exact address.",
         heroTitle: "Taxi Aubusson → Clermont-Ferrand",
         heroSubtitle: "Your Aubusson → Clermont-Ferrand transfer at €120 — €155. 100 km, from UNESCO tapestry to the volcanoes.",
         description: "Clermont-Ferrand, beneath the UNESCO Chaîne des Puys, is 1h15 from the tapestry capital Aubusson.",
@@ -287,8 +287,8 @@ export const trajetsGueretAubusson: Trajet[] = [
     hub: "gueret-aubusson",
     i18n: {
       fr: {
-        metaTitle: "Taxi Aubusson → Limoges | Prix fixe dès 110 € | TaxiNeo",
-        metaDescription: "Taxi Aubusson → Limoges. 90 km, 1h05, dès 110 €. D941/A20, de la tapisserie à la porcelaine. Réservation 24h/24.",
+        metaTitle: "Taxi Aubusson → Limoges | 90 km, dès 110 € | TaxiNeo",
+        metaDescription: "Via D941 / A20 en 1h05. Tapisserie UNESCO, Vallée de la Creuse, Porcelaine et Marche limousine en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Aubusson → Limoges",
         heroSubtitle: "Transfert Aubusson → Limoges au prix fixe de 110 — 140 €. 90 km, de la cité de la tapisserie à la capitale de la porcelaine.",
         description: "Limoges, capitale de la porcelaine et des émaux, est à 1h05 d'Aubusson par la D941 et l'A20.",
@@ -306,8 +306,8 @@ export const trajetsGueretAubusson: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Aubusson → Limoges | Fixed price from €110 | TaxiNeo",
-        metaDescription: "Taxi Aubusson → Limoges. 90 km, 1h05, from €110. D941/A20, from the tapestry capital to the porcelain capital. Book 24/7.",
+        metaTitle: "Taxi Aubusson → Limoges | 90 km, from €110 | TaxiNeo",
+        metaDescription: "Via D941 / A20, 1h05 ride. Tapisserie UNESCO, Vallée de la Creuse, Porcelaine and Marche limousine en route. Faster and more direct than train or bus.",
         heroTitle: "Taxi Aubusson → Limoges",
         heroSubtitle: "Your Aubusson → Limoges transfer at €110 — €140. 90 km, from UNESCO tapestry to porcelain.",
         description: "Limoges, world capital of porcelain and enamel, is 1h05 from the tapestry city of Aubusson.",

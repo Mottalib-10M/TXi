@@ -30,8 +30,8 @@ export const trajetsDeauvilleHonfleur: Trajet[] = [
     hub: "deauville-honfleur",
     i18n: {
       fr: {
-        metaTitle: "Taxi Deauville → Paris | Prix fixe dès 240 € | TaxiNeo",
-        metaDescription: "Taxi Deauville → Paris. 200 km, 2h10, dès 240 €. A13, transfert direct porte-à-porte depuis la Côte Fleurie. Réservation 24h/24.",
+        metaTitle: "Taxi Deauville → Paris | 200 km, dès 240 € | TaxiNeo",
+        metaDescription: "Via A13 en 2h10. Côte Fleurie, Festival du Film Américain, Pont-l'Évêque et Vallée de la Seine en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Deauville → Paris",
         heroSubtitle: "Transfert Deauville → Paris au prix fixe de 240 — 300 €. 200 km par l'A13, autoroute de Normandie.",
         description: "Paris est à 2h10 de Deauville par l'A13, l'autoroute de Normandie qui traverse le pays d'Auge et la vallée de la Seine.",
@@ -49,8 +49,8 @@ export const trajetsDeauvilleHonfleur: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Deauville → Paris | Fixed price from €240 | TaxiNeo",
-        metaDescription: "Taxi Deauville → Paris. 200 km, 2h10, from €240. A13, direct door-to-door from the Cote Fleurie. Book 24/7.",
+        metaTitle: "Taxi Deauville → Paris | 200 km, from €240 | TaxiNeo",
+        metaDescription: "Via A13, 2h10 ride. Côte Fleurie, Festival du Film Américain, Pont-l'Évêque and Vallée de la Seine en route. Faster and more direct than train or bus.",
         heroTitle: "Taxi Deauville → Paris",
         heroSubtitle: "Your Deauville → Paris transfer at €240 — €300. 200 km via the A13 Normandy motorway.",
         description: "Paris is 2h10 from Deauville via the A13 Normandy motorway, crossing the Pays d'Auge and the Seine valley.",
@@ -95,8 +95,8 @@ export const trajetsDeauvilleHonfleur: Trajet[] = [
     hub: "deauville-honfleur",
     i18n: {
       fr: {
-        metaTitle: "Taxi Deauville → Caen | Prix fixe dès 60 € | TaxiNeo",
-        metaDescription: "Taxi Deauville → Caen. 50 km, 35 min, dès 60 €. Côte Fleurie, pays d'Auge, transfert direct. Réservation 24h/24.",
+        metaTitle: "Taxi Deauville → Caen | forfait dès 60 € | TaxiNeo",
+        metaDescription: "Via A13 en 35 min. A13/D677, Côte Fleurie, Cabourg et Pays d'Auge en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Deauville → Caen",
         heroSubtitle: "Transfert Deauville → Caen au prix fixe de 60 — 80 €. 50 km entre la Côte Fleurie et la capitale du Calvados.",
         description: "Caen, préfecture du Calvados et cité de Guillaume le Conquérant, est à 35 minutes de Deauville par l'A13.",
@@ -115,7 +115,7 @@ export const trajetsDeauvilleHonfleur: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Deauville → Caen | Fixed price from €60 | TaxiNeo",
-        metaDescription: "Taxi Deauville → Caen. 50 km, 35 min, from €60. Cote Fleurie to William the Conqueror's city. Book 24/7.",
+        metaDescription: "Via A13, 35 min ride. A13/D677, Côte Fleurie, Cabourg and Pays d'Auge en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Deauville → Caen",
         heroSubtitle: "Your Deauville → Caen transfer at €60 — €80. 50 km between the Cote Fleurie and the Calvados capital.",
         description: "Caen, prefecture of Calvados and William the Conqueror's city, is 35 minutes from Deauville via the A13.",
@@ -160,8 +160,8 @@ export const trajetsDeauvilleHonfleur: Trajet[] = [
     hub: "deauville-honfleur",
     i18n: {
       fr: {
-        metaTitle: "Taxi Deauville → Le Havre | Prix fixe dès 55 € | TaxiNeo",
-        metaDescription: "Taxi Deauville → Le Havre. 45 km, 35 min, dès 55 €. Pont de Normandie, transfert direct. Réservation 24h/24.",
+        metaTitle: "Taxi Deauville → Le Havre | 45 km, dès 55 € | TaxiNeo",
+        metaDescription: "Via A29/Pont de Normandie en 35 min. Pont de Normandie, Estuaire de la Seine, Honfleur et Port du Havre en chemin. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Deauville → Le Havre",
         heroSubtitle: "Transfert Deauville → Le Havre au prix fixe de 55 — 75 €. 45 km via le spectaculaire pont de Normandie.",
         description: "Le Havre, premier port de commerce de France et ville UNESCO, est à 35 minutes de Deauville via le pont de Normandie.",
@@ -179,8 +179,8 @@ export const trajetsDeauvilleHonfleur: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Deauville → Le Havre | Fixed price from €55 | TaxiNeo",
-        metaDescription: "Taxi Deauville → Le Havre. 45 km, 35 min, from €55. Pont de Normandie, direct transfer. Book 24/7.",
+        metaTitle: "Taxi Deauville → Le Havre | 45 km, from €55 | TaxiNeo",
+        metaDescription: "Via A29/Pont de Normandie, 35 min ride. Pont de Normandie, Estuaire de la Seine, Honfleur and Port du Havre en route. Faster and more direct than train or bus.",
         heroTitle: "Taxi Deauville → Le Havre",
         heroSubtitle: "Your Deauville → Le Havre transfer at €55 — €75. 45 km via the spectacular Pont de Normandie.",
         description: "Le Havre, France's largest commercial port and a UNESCO city, is 35 minutes from Deauville via the Pont de Normandie.",
@@ -225,8 +225,8 @@ export const trajetsDeauvilleHonfleur: Trajet[] = [
     hub: "deauville-honfleur",
     i18n: {
       fr: {
-        metaTitle: "Taxi Honfleur → Paris | Prix fixe dès 235 € | TaxiNeo",
-        metaDescription: "Taxi Honfleur → Paris. 195 km, 2h05, dès 235 €. A13, berceau de l'impressionnisme vers la capitale. Réservation 24h/24.",
+        metaTitle: "Taxi Honfleur → Paris | 195 km, dès 235 € | TaxiNeo",
+        metaDescription: "Par A13, 2h05 de trajet. Passage par Vieux Bassin, Impressionnisme, Pays d'Auge et Vallée de la Seine. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Honfleur → Paris",
         heroSubtitle: "Transfert Honfleur → Paris au prix fixe de 235 — 290 €. 195 km par l'A13, du Vieux Bassin à la capitale.",
         description: "Paris est à 2h05 de Honfleur par l'A13, en traversant le pays d'Auge et la vallée de la Seine.",
@@ -244,8 +244,8 @@ export const trajetsDeauvilleHonfleur: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Honfleur → Paris | Fixed price from €235 | TaxiNeo",
-        metaDescription: "Taxi Honfleur → Paris. 195 km, 2h05, from €235. A13, birthplace of Impressionism to the capital. Book 24/7.",
+        metaTitle: "Taxi Honfleur → Paris | 195 km, from €235 | TaxiNeo",
+        metaDescription: "Direct route via A13, 2h05. Vieux Bassin, Impressionnisme, Pays d'Auge and Vallée de la Seine en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Honfleur → Paris",
         heroSubtitle: "Your Honfleur → Paris transfer at €235 — €290. 195 km via the A13, from the Vieux Bassin to the capital.",
         description: "Paris is 2h05 from Honfleur via the A13, crossing the Pays d'Auge and the Seine valley.",
@@ -290,8 +290,8 @@ export const trajetsDeauvilleHonfleur: Trajet[] = [
     hub: "deauville-honfleur",
     i18n: {
       fr: {
-        metaTitle: "Taxi Honfleur → Rouen | Prix fixe dès 100 € | TaxiNeo",
-        metaDescription: "Taxi Honfleur → Rouen. 85 km, 55 min, dès 100 €. Pont de Normandie, cathédrale de Rouen, impressionnisme. Réservation 24h/24.",
+        metaTitle: "Taxi Honfleur → Rouen | 85 km, dès 100 € | TaxiNeo",
+        metaDescription: "Par A29/A13, 55 min de trajet. Pont de Normandie, Cathédrale de Rouen, Monet et Seine-Maritime en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Honfleur → Rouen",
         heroSubtitle: "Transfert Honfleur → Rouen au prix fixe de 100 — 130 €. 85 km, sur les traces des impressionnistes.",
         description: "Rouen, capitale historique de la Normandie et ville aux cent clochers, est à 55 minutes de Honfleur par l'A29 et l'A13.",
@@ -309,8 +309,8 @@ export const trajetsDeauvilleHonfleur: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Honfleur → Rouen | Fixed price from €100 | TaxiNeo",
-        metaDescription: "Taxi Honfleur → Rouen. 85 km, 55 min, from €100. Pont de Normandie, Rouen Cathedral, Impressionism trail. Book 24/7.",
+        metaTitle: "Taxi Honfleur → Rouen | 85 km, from €100 | TaxiNeo",
+        metaDescription: "Via A29/A13, 55 min ride. Pont de Normandie, Cathédrale de Rouen, Monet and Seine-Maritime en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Honfleur → Rouen",
         heroSubtitle: "Your Honfleur → Rouen transfer at €100 — €130. 85 km, in the footsteps of the Impressionists.",
         description: "Rouen, historic capital of Normandy and the city of a hundred spires, is 55 minutes from Honfleur via the A29 and A13.",

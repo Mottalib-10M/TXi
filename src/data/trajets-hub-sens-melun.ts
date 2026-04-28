@@ -27,8 +27,8 @@ export const trajetsSensMelun: Trajet[] = [
     hub: "sens-melun",
     i18n: {
       fr: {
-        metaTitle: "Taxi Sens → Paris | Prix fixe dès 130 € | TaxiNeo",
-        metaDescription: "Taxi Sens → Paris. 120 km, 1h15, dès 130 €. A5, transfert direct porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Sens → Paris | 120 km, dès 130 €, 1h15 | TaxiNeo",
+        metaDescription: "Via A5 en 1h15. Cathédrale Saint-Étienne, Yonne, Porte-à-porte et Nuit en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Sens → Paris",
         heroSubtitle: "Transfert Sens → Paris au prix fixe de 130 — 165 €. 120 km, direct par l'A5.",
         description: "Paris est à 1h15 de Sens par l'autoroute A5, porte d'entrée de la Bourgogne.",
@@ -47,7 +47,7 @@ export const trajetsSensMelun: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Sens → Paris | Fixed price from €130 | TaxiNeo",
-        metaDescription: "Taxi Sens → Paris. 120 km, 1h15, from €130. A5 motorway, direct door-to-door. Book 24/7.",
+        metaDescription: "Via A5, 1h15 ride. Cathédrale Saint-Étienne, Yonne, Porte-à-porte and Nuit en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Sens → Paris",
         heroSubtitle: "Your Sens → Paris transfer at €130 — €165. 120 km, via the A5.",
         description: "Paris is 1h15 from Sens via the A5 motorway, gateway to Burgundy.",
@@ -92,8 +92,8 @@ export const trajetsSensMelun: Trajet[] = [
     hub: "sens-melun",
     i18n: {
       fr: {
-        metaTitle: "Taxi Sens → Auxerre | Prix fixe dès 65 € | TaxiNeo",
-        metaDescription: "Taxi Sens → Auxerre. 60 km, 40 min, dès 65 €. A6, Bourgogne, vignobles de l'Yonne. Réservation 24h/24.",
+        metaTitle: "Taxi Sens → Auxerre | forfait dès 65 €, 40 min | TaxiNeo",
+        metaDescription: "Via A6 en 40 min. Bourgogne, Yonne, Cathédrale Saint-Étienne et Vignobles en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Sens → Auxerre",
         heroSubtitle: "Transfert Sens → Auxerre au prix fixe de 65 — 80 €. 60 km, cœur de la Bourgogne par l'A6.",
         description: "Auxerre, préfecture de l'Yonne et joyau bourguignon, est à 40 min de Sens par l'A6.",
@@ -112,7 +112,7 @@ export const trajetsSensMelun: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Sens → Auxerre | Fixed price from €65 | TaxiNeo",
-        metaDescription: "Taxi Sens → Auxerre. 60 km, 40 min, from €65. A6, Burgundy, Yonne vineyards. Book 24/7.",
+        metaDescription: "Via A6, 40 min ride. Bourgogne, Yonne, Cathédrale Saint-Étienne and Vignobles en route. Drop-off at your exact address. Door-to-door, luggage included.",
         heroTitle: "Taxi Sens → Auxerre",
         heroSubtitle: "Your Sens → Auxerre transfer at €65 — €80. 60 km, heart of Burgundy.",
         description: "Auxerre, capital of the Yonne department and Burgundy gem, is 40 min from Sens.",
@@ -157,8 +157,8 @@ export const trajetsSensMelun: Trajet[] = [
     hub: "sens-melun",
     i18n: {
       fr: {
-        metaTitle: "Taxi Melun → Paris | Prix fixe dès 55 € | TaxiNeo",
-        metaDescription: "Taxi Melun → Paris. 50 km, 35 min, dès 55 €. A5, transfert direct porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Melun → Paris | forfait dès 55 €, 35 min | TaxiNeo",
+        metaDescription: "Via A5 en 35 min. Seine-et-Marne, Préfecture 77, Porte-à-porte et Nuit en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Melun → Paris",
         heroSubtitle: "Transfert Melun → Paris au prix fixe de 55 — 70 €. 50 km, direct par l'A5.",
         description: "Paris est à 35 min de Melun par l'A5, préfecture de Seine-et-Marne.",
@@ -177,7 +177,7 @@ export const trajetsSensMelun: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Melun → Paris | Fixed price from €55 | TaxiNeo",
-        metaDescription: "Taxi Melun → Paris. 50 km, 35 min, from €55. A5 motorway, direct door-to-door. Book 24/7.",
+        metaDescription: "Via A5, 35 min ride. Seine-et-Marne, Préfecture 77, Porte-à-porte and Nuit en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Melun → Paris",
         heroSubtitle: "Your Melun → Paris transfer at €55 — €70. 50 km, via the A5.",
         description: "Paris is 35 min from Melun via the A5, capital of Seine-et-Marne.",
@@ -222,8 +222,8 @@ export const trajetsSensMelun: Trajet[] = [
     hub: "sens-melun",
     i18n: {
       fr: {
-        metaTitle: "Taxi Fontainebleau → Paris | Prix fixe dès 70 € | TaxiNeo",
-        metaDescription: "Taxi Fontainebleau → Paris. 65 km, 45 min, dès 70 €. A6, château UNESCO, forêt. Réservation 24h/24.",
+        metaTitle: "Taxi Fontainebleau → Paris | 65 km, dès 70 € | TaxiNeo",
+        metaDescription: "Via A6 en 45 min. Château de Fontainebleau, Forêt, UNESCO et Nuit en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Fontainebleau → Paris",
         heroSubtitle: "Transfert Fontainebleau → Paris au prix fixe de 70 — 85 €. 65 km, direct par l'A6.",
         description: "Paris est à 45 min de Fontainebleau par l'A6, cité impériale et forestière.",
@@ -241,8 +241,8 @@ export const trajetsSensMelun: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Fontainebleau → Paris | Fixed price from €70 | TaxiNeo",
-        metaDescription: "Taxi Fontainebleau → Paris. 65 km, 45 min, from €70. A6 motorway, UNESCO castle, forest. Book 24/7.",
+        metaTitle: "Taxi Fontainebleau → Paris | 65 km, from €70 | TaxiNeo",
+        metaDescription: "Via A6, 45 min ride. Château de Fontainebleau, Forêt, UNESCO and Nuit en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Fontainebleau → Paris",
         heroSubtitle: "Your Fontainebleau → Paris transfer at €70 — €85. 65 km, via the A6.",
         description: "Paris is 45 min from Fontainebleau via the A6, imperial city and forest.",
@@ -287,8 +287,8 @@ export const trajetsSensMelun: Trajet[] = [
     hub: "sens-melun",
     i18n: {
       fr: {
-        metaTitle: "Taxi Fontainebleau → Aéroport Orly | Prix fixe dès 60 € | TaxiNeo",
-        metaDescription: "Taxi Fontainebleau → Aéroport Orly. 55 km, 35 min, dès 60 €. A6, transfert direct. Réservation 24h/24.",
+        metaTitle: "Taxi Fontainebleau → Aéroport Orly | 55 km, 60 € | TaxiNeo",
+        metaDescription: "Via A6 en 35 min. Orly, Liaison directe, Château et Nuit en chemin. Dépose au terminal, suivi de vol. Dépose au terminal exact, suivi de vol en temps réel.",
         heroTitle: "Taxi Fontainebleau → Aéroport Orly",
         heroSubtitle: "Transfert Fontainebleau → Aéroport Orly au prix fixe de 60 — 75 €. 55 km, direct par l'A6.",
         description: "L'aéroport d'Orly est à 35 min de Fontainebleau par l'A6, le transfert le plus direct.",
@@ -306,8 +306,8 @@ export const trajetsSensMelun: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Fontainebleau → Orly Airport | Fixed price from €60 | TaxiNeo",
-        metaDescription: "Taxi Fontainebleau → Orly Airport. 55 km, 35 min, from €60. A6 motorway, direct transfer. Book 24/7.",
+        metaTitle: "Taxi Fontainebleau → Aéroport Orly | 55 km, €60 | TaxiNeo",
+        metaDescription: "Via A6, 35 min ride. Orly, Liaison directe, Château and Nuit en route. Terminal drop-off, flight tracking. Meet at terminal, free wait if flight delayed.",
         heroTitle: "Taxi Fontainebleau → Orly Airport",
         heroSubtitle: "Your Fontainebleau → Orly Airport transfer at €60 — €75. 55 km, via the A6.",
         description: "Orly Airport is 35 min from Fontainebleau via the A6, the most direct transfer.",

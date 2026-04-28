@@ -27,8 +27,8 @@ export const trajetsAlençonFlers: Trajet[] = [
     hub: "alencon-flers",
     i18n: {
       fr: {
-        metaTitle: "Taxi Alençon → Le Mans | Prix fixe dès 65 € | TaxiNeo",
-        metaDescription: "Taxi Alençon → Le Mans. 55 km, 40 min, dès 65 €. A28, transfert direct porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Alençon → Le Mans | 55 km, dès 65 € | TaxiNeo",
+        metaDescription: "Via A28 en 40 min. Alpes Mancelles, Orne, Sarthe et 24 Heures en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Alençon → Le Mans",
         heroSubtitle: "Transfert Alençon → Le Mans au prix fixe de 65 — 85 €. 55 km, direct par l'A28.",
         description: "Le Mans, capitale de la Sarthe et des 24 Heures, est à 40 min d'Alençon par l'A28.",
@@ -46,8 +46,8 @@ export const trajetsAlençonFlers: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Alençon → Le Mans | Fixed price from €65 | TaxiNeo",
-        metaDescription: "Taxi Alençon → Le Mans. 55 km, 40 min, from €65. A28, direct door-to-door. Book 24/7.",
+        metaTitle: "Taxi Alençon → Le Mans | 55 km, from €65 | TaxiNeo",
+        metaDescription: "Via A28, 40 min ride. Alpes Mancelles, Orne, Sarthe and 24 Heures en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Alençon → Le Mans",
         heroSubtitle: "Your Alençon → Le Mans transfer at €65 — €85. 55 km, via the A28.",
         description: "Le Mans, home of the 24 Hours race and the Plantagenet City, is 40 min from Alençon.",
@@ -92,8 +92,8 @@ export const trajetsAlençonFlers: Trajet[] = [
     hub: "alencon-flers",
     i18n: {
       fr: {
-        metaTitle: "Taxi Alençon → Caen | Prix fixe dès 130 € | TaxiNeo",
-        metaDescription: "Taxi Alençon → Caen. 110 km, 1h10, dès 130 €. Route directe via D438 et N158. Réservation 24h/24.",
+        metaTitle: "Taxi Alençon → Caen | 110 km, dès 130 €, 1h10 | TaxiNeo",
+        metaDescription: "Via N12 / D438 en 1h10. N12, Normandie-Maine, Mémorial et Bocage en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Alençon → Caen",
         heroSubtitle: "Transfert Alençon → Caen au prix fixe de 130 — 170 €. 110 km à travers le bocage normand.",
         description: "Caen, capitale du Calvados et cité de Guillaume le Conquérant, est à 1h10 d'Alençon.",
@@ -112,7 +112,7 @@ export const trajetsAlençonFlers: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Alençon → Caen | Fixed price from €130 | TaxiNeo",
-        metaDescription: "Taxi Alençon → Caen. 110 km, 1h10, from €130. Direct route via D438 and N158. Book 24/7.",
+        metaDescription: "Via N12 / D438, 1h10 ride. N12, Normandie-Maine, Mémorial and Bocage en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Alençon → Caen",
         heroSubtitle: "Your Alençon → Caen transfer at €130 — €170. 110 km through the Norman bocage.",
         description: "Caen, William the Conqueror's city and capital of Calvados, is 1h10 from Alençon.",
@@ -157,8 +157,8 @@ export const trajetsAlençonFlers: Trajet[] = [
     hub: "alencon-flers",
     i18n: {
       fr: {
-        metaTitle: "Taxi Alençon → Paris | Prix fixe dès 235 € | TaxiNeo",
-        metaDescription: "Taxi Alençon → Paris. 195 km, 2h05, dès 235 €. A28 puis A11, transfert direct porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Alençon → Paris | 195 km, dès 235 € | TaxiNeo",
+        metaDescription: "Via A28 / A11 en 2h05. Chartres, Normandie-Maine et Porte Maillot en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Alençon → Paris",
         heroSubtitle: "Transfert Alençon → Paris au prix fixe de 235 — 290 €. 195 km, direct par l'A28 et l'A11.",
         description: "Paris est à 2h05 d'Alençon par l'A28 et l'A11, traversant le Perche et la Beauce.",
@@ -176,8 +176,8 @@ export const trajetsAlençonFlers: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Alençon → Paris | Fixed price from €235 | TaxiNeo",
-        metaDescription: "Taxi Alençon → Paris. 195 km, 2h05, from €235. A28 then A11, direct door-to-door. Book 24/7.",
+        metaTitle: "Taxi Alençon → Paris | 195 km, from €235 | TaxiNeo",
+        metaDescription: "Via A28 / A11, 2h05 ride. Chartres, Normandie-Maine and Porte Maillot along the way. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Alençon → Paris",
         heroSubtitle: "Your Alençon → Paris transfer at €235 — €290. 195 km, via the A28 and A11.",
         description: "Paris is 2h05 from Alençon via the A28 and A11, through the Perche and Beauce regions.",
@@ -222,8 +222,8 @@ export const trajetsAlençonFlers: Trajet[] = [
     hub: "alencon-flers",
     i18n: {
       fr: {
-        metaTitle: "Taxi Flers → Caen | Prix fixe dès 75 € | TaxiNeo",
-        metaDescription: "Taxi Flers → Caen. 60 km, 45 min, dès 75 €. Route directe via D924. Réservation 24h/24.",
+        metaTitle: "Taxi Flers → Caen | forfait dès 75 €, 45 min | TaxiNeo",
+        metaDescription: "Par D924 / D562, 45 min de trajet. Bocage normand, Suisse Normande, Château et Condé-sur-Noireau en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Flers → Caen",
         heroSubtitle: "Transfert Flers → Caen au prix fixe de 75 — 95 €. 60 km à travers la Suisse Normande.",
         description: "Caen, capitale du Calvados, est à 45 min de Flers par la D924 à travers le bocage normand.",
@@ -242,7 +242,7 @@ export const trajetsAlençonFlers: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Flers → Caen | Fixed price from €75 | TaxiNeo",
-        metaDescription: "Taxi Flers → Caen. 60 km, 45 min, from €75. Direct route via D924. Book 24/7.",
+        metaDescription: "Via D924 / D562, 45 min ride. Bocage normand, Suisse Normande, Château and Condé-sur-Noireau en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Flers → Caen",
         heroSubtitle: "Your Flers → Caen transfer at €75 — €95. 60 km through the Swiss Normandy.",
         description: "Caen, capital of Calvados, is 45 min from Flers through the Norman bocage.",
@@ -287,8 +287,8 @@ export const trajetsAlençonFlers: Trajet[] = [
     hub: "alencon-flers",
     i18n: {
       fr: {
-        metaTitle: "Taxi Alençon → Rouen | Prix fixe dès 185 € | TaxiNeo",
-        metaDescription: "Taxi Alençon → Rouen. 155 km, 1h40, dès 185 €. A28, transfert direct porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Alençon → Rouen | 155 km, dès 185 € | TaxiNeo",
+        metaDescription: "Via A28 en 1h40. Pays d'Ouche, Seine, Cathédrale et Normandie-Maine en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Alençon → Rouen",
         heroSubtitle: "Transfert Alençon → Rouen au prix fixe de 185 — 235 €. 155 km, direct par l'A28.",
         description: "Rouen, capitale de la Normandie, est à 1h40 d'Alençon par l'A28.",
@@ -306,8 +306,8 @@ export const trajetsAlençonFlers: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Alençon → Rouen | Fixed price from €185 | TaxiNeo",
-        metaDescription: "Taxi Alençon → Rouen. 155 km, 1h40, from €185. A28, direct door-to-door. Book 24/7.",
+        metaTitle: "Taxi Alençon → Rouen | 155 km, from €185 | TaxiNeo",
+        metaDescription: "Via A28, 1h40 ride. Pays d'Ouche, Seine, Cathédrale and Normandie-Maine en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Alençon → Rouen",
         heroSubtitle: "Your Alençon → Rouen transfer at €185 — €235. 155 km, via the A28.",
         description: "Rouen, capital of Normandy, is 1h40 from Alençon via the A28.",

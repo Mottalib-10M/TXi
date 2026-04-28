@@ -30,8 +30,8 @@ export const trajetsDolFougeres: Trajet[] = [
     hub: "dol-fougeres",
     i18n: {
       fr: {
-        metaTitle: "Taxi Fougères → Rennes | Prix fixe dès 60 € | TaxiNeo",
-        metaDescription: "Taxi Fougères → Rennes. 50 km, 35 min, dès 60 €. N12 gratuite via les marches de Bretagne. Réservation 24h/24.",
+        metaTitle: "Taxi Fougères → Rennes | 50 km, dès 60 € | TaxiNeo",
+        metaDescription: "Via N12 en 35 min. Château de Fougères, Marches de Bretagne, Ille-et-Vilaine et Capitale bretonne en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Fougères → Rennes",
         heroSubtitle: "Transfert Fougères → Rennes au prix fixe de 60 — 80 €. 50 km par la N12.",
         description: "Rennes, capitale de la Bretagne et métropole dynamique, est à seulement 35 minutes de Fougères par la voie express N12 entièrement gratuite.",
@@ -49,8 +49,8 @@ export const trajetsDolFougeres: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Fougères → Rennes | Fixed price from €60 | TaxiNeo",
-        metaDescription: "Taxi Fougères → Rennes. 50 km, 35 min, from €60. Toll-free N12 via the Breton Marches. Book 24/7.",
+        metaTitle: "Taxi Fougères → Rennes | 50 km, from €60 | TaxiNeo",
+        metaDescription: "Via N12, 35 min ride. Château de Fougères, Marches de Bretagne, Ille-et-Vilaine and Capitale bretonne en route. Faster and more direct than train or bus.",
         heroTitle: "Taxi Fougères → Rennes",
         heroSubtitle: "Your Fougères → Rennes transfer at €60 — €80. 50 km via the N12.",
         description: "Rennes, capital of Brittany, is just 35 minutes from Fougères via the toll-free N12 expressway.",
@@ -95,8 +95,8 @@ export const trajetsDolFougeres: Trajet[] = [
     hub: "dol-fougeres",
     i18n: {
       fr: {
-        metaTitle: "Taxi Fougères → Caen | Prix fixe dès 190 € | TaxiNeo",
-        metaDescription: "Taxi Fougères → Caen. 160 km, 1h40, dès 190 €. A84 gratuite via Villedieu-les-Poêles. Réservation 24h/24.",
+        metaTitle: "Taxi Fougères → Caen | 160 km, dès 190 € | TaxiNeo",
+        metaDescription: "Via A84 en 1h40. Normandie, Marches de Bretagne, Mont-Saint-Michel et Plages du Débarquement en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Fougères → Caen",
         heroSubtitle: "Transfert Fougères → Caen au prix fixe de 190 — 240 €. 160 km par l'A84.",
         description: "Caen, capitale de la Normandie et cité de Guillaume le Conquérant, est à 1h40 de Fougères par l'autoroute A84, entièrement gratuite.",
@@ -114,8 +114,8 @@ export const trajetsDolFougeres: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Fougères → Caen | Fixed price from €190 | TaxiNeo",
-        metaDescription: "Taxi Fougères → Caen. 160 km, 100 min, from €190. Toll-free A84 via Villedieu-les-Poêles. Book 24/7.",
+        metaTitle: "Taxi Fougères → Caen | 160 km, from €190 | TaxiNeo",
+        metaDescription: "Via A84, 1h40 ride. Normandie, Marches de Bretagne, Mont-Saint-Michel and Plages du Débarquement en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Fougères → Caen",
         heroSubtitle: "Your Fougères → Caen transfer at €190 — €240. 160 km via the A84.",
         description: "Caen, capital of Normandy and city of William the Conqueror, is 1h40 from Fougères via the toll-free A84 motorway.",
@@ -160,8 +160,8 @@ export const trajetsDolFougeres: Trajet[] = [
     hub: "dol-fougeres",
     i18n: {
       fr: {
-        metaTitle: "Taxi Dol-de-Bretagne → Saint-Malo | Prix fixe dès 30 € | TaxiNeo",
-        metaDescription: "Taxi Dol-de-Bretagne → Saint-Malo. 25 km, 20 min, dès 30 €. Transfert direct via les marais de Dol. Réservation 24h/24.",
+        metaTitle: "Taxi Dol-de-Bretagne → Saint-Malo | 25 km, 30 € | TaxiNeo",
+        metaDescription: "Via D155/D4 en 20 min. Menhir du Champ-Dolent, Marais de Dol, Cité corsaire et Côte d'Émeraude en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Dol-de-Bretagne → Saint-Malo",
         heroSubtitle: "Transfert Dol-de-Bretagne → Saint-Malo au prix fixe de 30 — 40 €. 25 km, trajet direct.",
         description: "Saint-Malo, la célèbre cité corsaire de la Côte d'Émeraude, est à seulement 20 minutes de Dol-de-Bretagne par la route.",
@@ -179,8 +179,8 @@ export const trajetsDolFougeres: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Dol-de-Bretagne → Saint-Malo | Fixed price from €30 | TaxiNeo",
-        metaDescription: "Taxi Dol-de-Bretagne → Saint-Malo. 25 km, 20 min, from €30. Direct transfer via the Dol marshes. Book 24/7.",
+        metaTitle: "Taxi Dol-de-Bretagne → Saint-Malo | 25 km, €30 | TaxiNeo",
+        metaDescription: "Via D155/D4, 20 min ride. Menhir du Champ-Dolent, Marais de Dol, Cité corsaire and Côte d'Émeraude en route. Faster and more direct than train or bus.",
         heroTitle: "Taxi Dol-de-Bretagne → Saint-Malo",
         heroSubtitle: "Your Dol-de-Bretagne → Saint-Malo transfer at €30 — €40. 25 km, direct route.",
         description: "Saint-Malo, the famous corsair walled city on the Emerald Coast, is just 20 minutes from Dol-de-Bretagne.",
@@ -225,8 +225,8 @@ export const trajetsDolFougeres: Trajet[] = [
     hub: "dol-fougeres",
     i18n: {
       fr: {
-        metaTitle: "Taxi Dol-de-Bretagne → Rennes | Prix fixe dès 75 € | TaxiNeo",
-        metaDescription: "Taxi Dol-de-Bretagne → Rennes. 60 km, 40 min, dès 75 €. Via la D795 et N137. Réservation 24h/24.",
+        metaTitle: "Taxi Dol-de-Bretagne → Rennes | 60 km, dès 75 € | TaxiNeo",
+        metaDescription: "Via D795/N137 en 40 min. Menhir du Champ-Dolent, Cathédrale Saint-Samson, Ille-et-Vilaine et Capitale bretonne en chemin. Dépose à votre adresse exacte.",
         heroTitle: "Taxi Dol-de-Bretagne → Rennes",
         heroSubtitle: "Transfert Dol-de-Bretagne → Rennes au prix fixe de 75 — 95 €. 60 km, trajet direct.",
         description: "Rennes, capitale de la Bretagne, est à 40 minutes de Dol-de-Bretagne par la D795 et la N137, un trajet rapide et sans péage.",
@@ -244,8 +244,8 @@ export const trajetsDolFougeres: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Dol-de-Bretagne → Rennes | Fixed price from €75 | TaxiNeo",
-        metaDescription: "Taxi Dol-de-Bretagne → Rennes. 60 km, 40 min, from €75. Via D795 and N137. Book 24/7.",
+        metaTitle: "Taxi Dol-de-Bretagne → Rennes | 60 km, from €75 | TaxiNeo",
+        metaDescription: "Via D795/N137, 40 min ride. Menhir du Champ-Dolent, Cathédrale Saint-Samson, Ille-et-Vilaine and Capitale bretonne en route. Drop-off at your exact address.",
         heroTitle: "Taxi Dol-de-Bretagne → Rennes",
         heroSubtitle: "Your Dol-de-Bretagne → Rennes transfer at €75 — €95. 60 km, direct route.",
         description: "Rennes, capital of Brittany, is 40 minutes from Dol-de-Bretagne via the D795 and N137, a fast toll-free journey.",
@@ -290,8 +290,8 @@ export const trajetsDolFougeres: Trajet[] = [
     hub: "dol-fougeres",
     i18n: {
       fr: {
-        metaTitle: "Taxi Fougères → Mont-Saint-Michel | Prix fixe dès 60 € | TaxiNeo",
-        metaDescription: "Taxi Fougères → Mont-Saint-Michel. 50 km, 35 min, dès 60 €. Transfert direct vers la Merveille de l'Occident. Réservation 24h/24.",
+        metaTitle: "Taxi Fougères → Mont-Saint-Michel | 50 km, 60 € | TaxiNeo",
+        metaDescription: "Via D155/D797 en 35 min. Baie du Mont-Saint-Michel, Marches de Bretagne, UNESCO et Merveille de l'Occident en chemin. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Fougères → Mont-Saint-Michel",
         heroSubtitle: "Transfert Fougères → Mont-Saint-Michel au prix fixe de 60 — 80 €. 50 km, trajet direct.",
         description: "Le Mont-Saint-Michel, Merveille de l'Occident inscrite au patrimoine mondial de l'UNESCO, est à seulement 35 minutes de Fougères.",
@@ -309,8 +309,8 @@ export const trajetsDolFougeres: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Fougères → Mont-Saint-Michel | Fixed price from €60 | TaxiNeo",
-        metaDescription: "Taxi Fougères → Mont-Saint-Michel. 50 km, 35 min, from €60. Direct transfer to the Wonder of the West. Book 24/7.",
+        metaTitle: "Taxi Fougères → Mont-Saint-Michel | 50 km, €60 | TaxiNeo",
+        metaDescription: "Via D155/D797, 35 min ride. Baie du Mont-Saint-Michel, Marches de Bretagne, UNESCO and Merveille de l'Occident en route. Drop-off at your exact address.",
         heroTitle: "Taxi Fougères → Mont-Saint-Michel",
         heroSubtitle: "Your Fougères → Mont-Saint-Michel transfer at €60 — €80. 50 km, direct route.",
         description: "Mont-Saint-Michel, the Wonder of the Western World and UNESCO World Heritage Site, is just 35 minutes from Fougères.",

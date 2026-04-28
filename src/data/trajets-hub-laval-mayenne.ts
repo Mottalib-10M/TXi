@@ -27,8 +27,8 @@ export const trajetsLavalMayenne: Trajet[] = [
     hub: "laval-mayenne",
     i18n: {
       fr: {
-        metaTitle: "Taxi Laval → Rennes | Prix fixe dès 80 € | TaxiNeo",
-        metaDescription: "Taxi Laval → Rennes. 75 km, 50 min, dès 80 €. A81, transfert direct porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Laval → Rennes | forfait dès 80 €, 50 min | TaxiNeo",
+        metaDescription: "Via A81 en 50 min. Mayenne, Bretagne, Parlement et Vitré en chemin. Dépose porte-à-porte, bagages inclus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Laval → Rennes",
         heroSubtitle: "Transfert Laval → Rennes au prix fixe de 80 — 100 €. 75 km, direct par l'A81.",
         description: "Rennes, capitale de la Bretagne, est à 50 min de Laval par l'A81.",
@@ -47,7 +47,7 @@ export const trajetsLavalMayenne: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Laval → Rennes | Fixed price from €80 | TaxiNeo",
-        metaDescription: "Taxi Laval → Rennes. 75 km, 50 min, from €80. A81, direct door-to-door. Book 24/7.",
+        metaDescription: "Via A81, 50 min ride. Mayenne, Bretagne, Parlement and Vitré en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Laval → Rennes",
         heroSubtitle: "Your Laval → Rennes transfer at €80 — €100. 75 km, via the A81.",
         description: "Rennes, capital of Brittany, is 50 min from Laval via the A81.",
@@ -92,8 +92,8 @@ export const trajetsLavalMayenne: Trajet[] = [
     hub: "laval-mayenne",
     i18n: {
       fr: {
-        metaTitle: "Taxi Laval → Le Mans | Prix fixe dès 95 € | TaxiNeo",
-        metaDescription: "Taxi Laval → Le Mans. 90 km, 55 min, dès 95 €. A81, transfert direct porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Laval → Le Mans | forfait dès 95 €, 55 min | TaxiNeo",
+        metaDescription: "Via A81 en 55 min. Sarthe, 24 Heures, Cité Plantagenêt et Circuit en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Laval → Le Mans",
         heroSubtitle: "Transfert Laval → Le Mans au prix fixe de 95 — 120 €. 90 km, direct par l'A81.",
         description: "Le Mans, capitale de la Sarthe et des 24 Heures, est à 55 min de Laval par l'A81.",
@@ -112,7 +112,7 @@ export const trajetsLavalMayenne: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Laval → Le Mans | Fixed price from €95 | TaxiNeo",
-        metaDescription: "Taxi Laval → Le Mans. 90 km, 55 min, from €95. A81, direct door-to-door. Book 24/7.",
+        metaDescription: "Via A81, 55 min ride. Sarthe, 24 Heures, Cité Plantagenêt and Circuit en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Laval → Le Mans",
         heroSubtitle: "Your Laval → Le Mans transfer at €95 — €120. 90 km, via the A81.",
         description: "Le Mans, home of the 24 Hours race and medieval Plantagenet City, is 55 min from Laval.",
@@ -157,8 +157,8 @@ export const trajetsLavalMayenne: Trajet[] = [
     hub: "laval-mayenne",
     i18n: {
       fr: {
-        metaTitle: "Taxi Laval → Nantes | Prix fixe dès 140 € | TaxiNeo",
-        metaDescription: "Taxi Laval → Nantes. 135 km, 1h20, dès 140 €. A81/N137, transfert direct porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Laval → Nantes | 135 km, dès 140 €, 1h20 | TaxiNeo",
+        metaDescription: "Par A81/N137, 1h20 de trajet. N137, Loire-Atlantique, Machines de l'île et Château des ducs en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Laval → Nantes",
         heroSubtitle: "Transfert Laval → Nantes au prix fixe de 140 — 175 €. 135 km, direct par l'A81 et la N137.",
         description: "Nantes, métropole de la Loire, est à 1h20 de Laval par l'A81 et la N137.",
@@ -177,7 +177,7 @@ export const trajetsLavalMayenne: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Laval → Nantes | Fixed price from €140 | TaxiNeo",
-        metaDescription: "Taxi Laval → Nantes. 135 km, 1h20, from €140. A81/N137, direct door-to-door. Book 24/7.",
+        metaDescription: "Direct route via A81/N137, 1h20. N137, Loire-Atlantique, Machines de l'île and Château des ducs en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Laval → Nantes",
         heroSubtitle: "Your Laval → Nantes transfer at €140 — €175. 135 km, via the A81 and N137.",
         description: "Nantes, creative metropolis and home to the Machines de l'île, is 1h20 from Laval.",
@@ -222,8 +222,8 @@ export const trajetsLavalMayenne: Trajet[] = [
     hub: "laval-mayenne",
     i18n: {
       fr: {
-        metaTitle: "Taxi Laval → Paris | Prix fixe dès 330 € | TaxiNeo",
-        metaDescription: "Taxi Laval → Paris. 300 km, 3h, dès 330 €. A81/A11, transfert direct porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Laval → Paris | 300 km, dès 330 €, 3h | TaxiNeo",
+        metaDescription: "Via A81/A11 en 3h. Passage par Île-de-France, TGV, CDG et Orly. Alternative directe au train ou au bus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Laval → Paris",
         heroSubtitle: "Transfert Laval → Paris au prix fixe de 330 — 400 €. 300 km, direct par l'A81 et l'A11.",
         description: "Paris est à 3h de Laval par l'A81 et l'A11, avec possibilité de dépose aéroport.",
@@ -242,7 +242,7 @@ export const trajetsLavalMayenne: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Laval → Paris | Fixed price from €330 | TaxiNeo",
-        metaDescription: "Taxi Laval → Paris. 300 km, 3h, from €330. A81/A11, direct door-to-door. Book 24/7.",
+        metaDescription: "Via A81/A11, 3 hours ride. Île-de-France, TGV, CDG and Orly en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Laval → Paris",
         heroSubtitle: "Your Laval → Paris transfer at €330 — €400. 300 km, via the A81 and A11.",
         description: "Paris is 3h from Laval via the A81 and A11 motorways.",
@@ -287,8 +287,8 @@ export const trajetsLavalMayenne: Trajet[] = [
     hub: "laval-mayenne",
     i18n: {
       fr: {
-        metaTitle: "Taxi Laval → Angers | Prix fixe dès 85 € | TaxiNeo",
-        metaDescription: "Taxi Laval → Angers. 80 km, 50 min, dès 85 €. A81, transfert direct porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Laval → Angers | forfait dès 85 €, 50 min | TaxiNeo",
+        metaDescription: "Par A81, 50 min de trajet. Maine-et-Loire, Château d'Angers, Tapisserie Apocalypse et Cointreau en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Laval → Angers",
         heroSubtitle: "Transfert Laval → Angers au prix fixe de 85 — 105 €. 80 km, direct par l'A81.",
         description: "Angers, capitale de l'Anjou et de la douceur de vivre, est à 50 min de Laval par l'A81.",
@@ -307,7 +307,7 @@ export const trajetsLavalMayenne: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Laval → Angers | Fixed price from €85 | TaxiNeo",
-        metaDescription: "Taxi Laval → Angers. 80 km, 50 min, from €85. A81, direct door-to-door. Book 24/7.",
+        metaDescription: "Via A81, 50 min ride. Maine-et-Loire, Château d'Angers, Tapisserie Apocalypse and Cointreau en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Laval → Angers",
         heroSubtitle: "Your Laval → Angers transfer at €85 — €105. 80 km, via the A81.",
         description: "Angers, capital of Anjou, is 50 min from Laval via the A81.",

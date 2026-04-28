@@ -27,8 +27,8 @@ export const trajetsStrasbourgHub: Trajet[] = [
     hub: "strasbourg",
     i18n: {
       fr: {
-        metaTitle: "Taxi Strasbourg → Colmar | Prix fixe dès 90 € | TaxiNeo",
-        metaDescription: "Taxi Strasbourg → Colmar. 75 km, 45 min, dès 90 €. Route des Vins, Petite Venise, musée Unterlinden. Réservation 24h/24.",
+        metaTitle: "Taxi Strasbourg → Colmar | 75 km, dès 90 € | TaxiNeo",
+        metaDescription: "Par A35, 45 min de trajet. Route des Vins, Petite Venise, Musée Unterlinden et Marché de Noël en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Strasbourg → Colmar",
         heroSubtitle: "Transfert Strasbourg → Colmar au prix fixe de 90 — 120 €. 75 km par l'A35 à travers le vignoble alsacien.",
         description: "Colmar, joyau de l'Alsace avec sa Petite Venise et ses maisons à colombages colorées, est à 45 minutes de Strasbourg par l'autoroute A35.",
@@ -46,8 +46,8 @@ export const trajetsStrasbourgHub: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Strasbourg → Colmar | Fixed price from €90 | TaxiNeo",
-        metaDescription: "Taxi Strasbourg → Colmar. 75 km, 45 min, from €90. Wine Route, Petite Venise, Unterlinden Museum. Book 24/7.",
+        metaTitle: "Taxi Strasbourg → Colmar | 75 km, from €90 | TaxiNeo",
+        metaDescription: "Through A35 in 45 min. Route des Vins, Petite Venise, Musée Unterlinden and Marché de Noël en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Strasbourg → Colmar",
         heroSubtitle: "Your Strasbourg → Colmar transfer at €90 — €120. 75 km via the A35 through Alsatian vineyards.",
         description: "Colmar, the jewel of Alsace with its Petite Venise and colourful half-timbered houses, is 45 minutes from Strasbourg via the A35 motorway.",
@@ -92,8 +92,8 @@ export const trajetsStrasbourgHub: Trajet[] = [
     hub: "strasbourg",
     i18n: {
       fr: {
-        metaTitle: "Taxi Strasbourg → Mulhouse | Prix fixe dès 140 € | TaxiNeo",
-        metaDescription: "Taxi Strasbourg → Mulhouse. 120 km, 1h10, dès 140 €. Cité de l'Automobile, Cité du Train. Réservation 24h/24.",
+        metaTitle: "Taxi Strasbourg → Mulhouse | 120 km, dès 140 € | TaxiNeo",
+        metaDescription: "Via A35 en 1h10. Cité de l'Automobile, Cité du Train et Plaine d'Alsace en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Strasbourg → Mulhouse",
         heroSubtitle: "Transfert Strasbourg → Mulhouse au prix fixe de 140 — 180 €. 120 km par l'A35 gratuite.",
         description: "Mulhouse, capitale industrielle du Haut-Rhin avec ses musées techniques de renommée mondiale, est à 1h10 de Strasbourg par l'A35.",
@@ -111,8 +111,8 @@ export const trajetsStrasbourgHub: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Strasbourg → Mulhouse | Fixed price from €140 | TaxiNeo",
-        metaDescription: "Taxi Strasbourg → Mulhouse. 120 km, 1h10, from €140. Cité de l'Automobile, Cité du Train. Book 24/7.",
+        metaTitle: "Taxi Strasbourg → Mulhouse | 120 km, from €140 | TaxiNeo",
+        metaDescription: "A35 route, approximately 1h10. Cité de l'Automobile, Cité du Train and Plaine d'Alsace along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Strasbourg → Mulhouse",
         heroSubtitle: "Your Strasbourg → Mulhouse transfer at €140 — €180. 120 km via the toll-free A35.",
         description: "Mulhouse, the industrial capital of Haut-Rhin with world-renowned technical museums, is 1h10 from Strasbourg via the A35.",
@@ -156,8 +156,8 @@ export const trajetsStrasbourgHub: Trajet[] = [
     hub: "strasbourg",
     i18n: {
       fr: {
-        metaTitle: "Taxi Strasbourg → Bâle (Suisse) | Prix fixe dès 170 € | TaxiNeo",
-        metaDescription: "Taxi Strasbourg → Bâle. 145 km, 1h25, dès 170 €. Transfert international France-Suisse. Réservation 24h/24.",
+        metaTitle: "Taxi Strasbourg → Bâle | 145 km, dès 170 € | TaxiNeo",
+        metaDescription: "Via A35 puis A36 en 1h25. EuroAirport, Suisse, Art Basel et Rhin en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Strasbourg → Bâle",
         heroSubtitle: "Transfert Strasbourg → Bâle au prix fixe de 170 — 220 €. 145 km, traversée internationale France-Suisse.",
         description: "Bâle, ville trinationale au carrefour de la France, l'Allemagne et la Suisse, est à 1h25 de Strasbourg.",
@@ -175,8 +175,8 @@ export const trajetsStrasbourgHub: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Strasbourg → Basel (Switzerland) | Fixed price from €170 | TaxiNeo",
-        metaDescription: "Taxi Strasbourg → Basel. 145 km, 1h25, from €170. International France-Switzerland transfer. Book 24/7.",
+        metaTitle: "Taxi Strasbourg → Bâle | 145 km, from €170 | TaxiNeo",
+        metaDescription: "Via A35 then A36, 1h25 ride. EuroAirport, Suisse, Art Basel and Rhin en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Strasbourg → Basel",
         heroSubtitle: "Your Strasbourg → Basel transfer at €170 — €220. 145 km, international France-Switzerland crossing.",
         description: "Basel, the trinational city at the crossroads of France, Germany and Switzerland, is 1h25 from Strasbourg.",
@@ -220,8 +220,8 @@ export const trajetsStrasbourgHub: Trajet[] = [
     hub: "strasbourg",
     i18n: {
       fr: {
-        metaTitle: "Taxi Strasbourg → Freiburg (Allemagne) | Dès 100 € | TaxiNeo",
-        metaDescription: "Taxi Strasbourg → Freiburg. 85 km, 55 min, dès 100 €. Traversée du Rhin, Forêt-Noire. Réservation 24h/24.",
+        metaTitle: "Taxi Strasbourg → Freiburg | 85 km, dès 100 € | TaxiNeo",
+        metaDescription: "Itinéraire A35 puis B3/A5, environ 55 min. Passage par Pont de l'Europe, Rhin, Forêt-Noire et Münster. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Strasbourg → Freiburg",
         heroSubtitle: "Transfert Strasbourg → Freiburg au prix fixe de 100 — 135 €. 85 km via le pont de l'Europe et l'A5 allemande.",
         description: "Freiburg im Breisgau, porte de la Forêt-Noire et ville universitaire écologique, est à 55 min de Strasbourg.",
@@ -239,8 +239,8 @@ export const trajetsStrasbourgHub: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Strasbourg → Freiburg (Germany) | From €100 | TaxiNeo",
-        metaDescription: "Taxi Strasbourg → Freiburg. 85 km, 55 min, from €100. Rhine crossing, Black Forest gateway. Book 24/7.",
+        metaTitle: "Taxi Strasbourg → Freiburg | 85 km, from €100 | TaxiNeo",
+        metaDescription: "A35 then B3/A5 route, approximately 55 min. Pont de l'Europe, Rhin, Forêt-Noire and Münster en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Strasbourg → Freiburg",
         heroSubtitle: "Your Strasbourg → Freiburg transfer at €100 — €135. 85 km via the Bridge of Europe and German A5.",
         description: "Freiburg im Breisgau, gateway to the Black Forest and ecological university city, is 55 min from Strasbourg.",
@@ -284,8 +284,8 @@ export const trajetsStrasbourgHub: Trajet[] = [
     hub: "strasbourg",
     i18n: {
       fr: {
-        metaTitle: "Taxi Strasbourg → Obernai | Prix fixe dès 45 € | TaxiNeo",
-        metaDescription: "Taxi Strasbourg → Obernai. 30 km, 25 min, dès 45 €. Route des Vins, Mont Sainte-Odile. Réservation 24h/24.",
+        metaTitle: "Taxi Strasbourg → Obernai | 30 km, dès 45 € | TaxiNeo",
+        metaDescription: "Par A35, 25 min de trajet. Passage par Route des Vins, Mont Sainte-Odile, Remparts et Village alsacien. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Strasbourg → Obernai",
         heroSubtitle: "Transfert Strasbourg → Obernai au prix fixe de 45 — 60 €. 30 km par l'A35.",
         description: "Obernai, perle de la Route des Vins d'Alsace au pied du Mont Sainte-Odile, est à 25 min de Strasbourg.",
@@ -303,8 +303,8 @@ export const trajetsStrasbourgHub: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Strasbourg → Obernai | Fixed price from €45 | TaxiNeo",
-        metaDescription: "Taxi Strasbourg → Obernai. 30 km, 25 min, from €45. Wine Route, Mont Sainte-Odile. Book 24/7.",
+        metaTitle: "Taxi Strasbourg → Obernai | 30 km, from €45 | TaxiNeo",
+        metaDescription: "Direct route via A35, 25 min. Route des Vins, Mont Sainte-Odile, Remparts and Village alsacien en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Strasbourg → Obernai",
         heroSubtitle: "Your Strasbourg → Obernai transfer at €45 — €60. 30 km via the A35.",
         description: "Obernai, a gem on the Alsace Wine Route at the foot of Mont Sainte-Odile, is 25 min from Strasbourg.",
@@ -348,8 +348,8 @@ export const trajetsStrasbourgHub: Trajet[] = [
     hub: "strasbourg",
     i18n: {
       fr: {
-        metaTitle: "Taxi Strasbourg → Haguenau | Prix fixe dès 45 € | TaxiNeo",
-        metaDescription: "Taxi Strasbourg → Haguenau. 32 km, 30 min, dès 45 €. Forêt de Haguenau, ville impériale. Réservation 24h/24.",
+        metaTitle: "Taxi Strasbourg → Haguenau | 32 km, dès 45 € | TaxiNeo",
+        metaDescription: "Par A4 puis N63, 30 min de trajet. N63, Forêt de Haguenau, Musée alsacien et Ville impériale en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Strasbourg → Haguenau",
         heroSubtitle: "Transfert Strasbourg → Haguenau au prix fixe de 45 — 60 €. 32 km par l'A4.",
         description: "Haguenau, ancienne ville impériale au cœur de la plus grande forêt de plaine d'Alsace, est à 30 min de Strasbourg.",
@@ -367,8 +367,8 @@ export const trajetsStrasbourgHub: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Strasbourg → Haguenau | Fixed price from €45 | TaxiNeo",
-        metaDescription: "Taxi Strasbourg → Haguenau. 32 km, 30 min, from €45. Haguenau Forest, imperial city. Book 24/7.",
+        metaTitle: "Taxi Strasbourg → Haguenau | 32 km, from €45 | TaxiNeo",
+        metaDescription: "Direct route via A4 then N63, 30 min. N63, Forêt de Haguenau, Musée alsacien and Ville impériale en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Strasbourg → Haguenau",
         heroSubtitle: "Your Strasbourg → Haguenau transfer at €45 — €60. 32 km via the A4.",
         description: "Haguenau, a former imperial city at the heart of Alsace's largest lowland forest, is 30 min from Strasbourg.",
@@ -412,8 +412,8 @@ export const trajetsStrasbourgHub: Trajet[] = [
     hub: "strasbourg",
     i18n: {
       fr: {
-        metaTitle: "Taxi Strasbourg → Sélestat | Prix fixe dès 65 € | TaxiNeo",
-        metaDescription: "Taxi Strasbourg → Sélestat. 50 km, 35 min, dès 65 €. Haut-Kœnigsbourg, bibliothèque humaniste. Réservation 24h/24.",
+        metaTitle: "Taxi Strasbourg → Sélestat | 50 km, dès 65 € | TaxiNeo",
+        metaDescription: "Trajet direct A35 en 35 min. Haut-Kœnigsbourg, Bibliothèque humaniste, Route des Vins sur le parcours. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Strasbourg → Sélestat",
         heroSubtitle: "Transfert Strasbourg → Sélestat au prix fixe de 65 — 85 €. 50 km par l'A35 gratuite.",
         description: "Sélestat, cité humaniste au pied du château du Haut-Kœnigsbourg, est à 35 min de Strasbourg par l'A35.",
@@ -431,8 +431,8 @@ export const trajetsStrasbourgHub: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Strasbourg → Sélestat | Fixed price from €65 | TaxiNeo",
-        metaDescription: "Taxi Strasbourg → Sélestat. 50 km, 35 min, from €65. Haut-Kœnigsbourg castle, humanist library. Book 24/7.",
+        metaTitle: "Taxi Strasbourg → Sélestat | 50 km, from €65 | TaxiNeo",
+        metaDescription: "Direct route via A35, 35 min. Haut-Kœnigsbourg, Bibliothèque humaniste and Route des Vins along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Strasbourg → Sélestat",
         heroSubtitle: "Your Strasbourg → Sélestat transfer at €65 — €85. 50 km via the toll-free A35.",
         description: "Sélestat, a humanist city at the foot of the Haut-Kœnigsbourg castle, is 35 min from Strasbourg via the A35.",
@@ -476,8 +476,8 @@ export const trajetsStrasbourgHub: Trajet[] = [
     hub: "strasbourg",
     i18n: {
       fr: {
-        metaTitle: "Taxi Strasbourg → Saverne | Prix fixe dès 60 € | TaxiNeo",
-        metaDescription: "Taxi Strasbourg → Saverne. 45 km, 35 min, dès 60 €. Château des Rohan, canal, col de Saverne. Réservation 24h/24.",
+        metaTitle: "Taxi Strasbourg → Saverne | 45 km, dès 60 € | TaxiNeo",
+        metaDescription: "Par A4, 35 min de trajet. Château des Rohan, Canal de la Marne au Rhin, Col de Saverne sur le parcours. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Strasbourg → Saverne",
         heroSubtitle: "Transfert Strasbourg → Saverne au prix fixe de 60 — 80 €. 45 km par l'A4.",
         description: "Saverne, la 'ville des roses' dominée par le château des Rohan et le col de Saverne, est à 35 min de Strasbourg.",
@@ -495,8 +495,8 @@ export const trajetsStrasbourgHub: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Strasbourg → Saverne | Fixed price from €60 | TaxiNeo",
-        metaDescription: "Taxi Strasbourg → Saverne. 45 km, 35 min, from €60. Rohan Castle, canal, Saverne Pass. Book 24/7.",
+        metaTitle: "Taxi Strasbourg → Saverne | 45 km, from €60 | TaxiNeo",
+        metaDescription: "Through A4 in 35 min. Château des Rohan, Canal de la Marne au Rhin and Col de Saverne along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Strasbourg → Saverne",
         heroSubtitle: "Your Strasbourg → Saverne transfer at €60 — €80. 45 km via the A4.",
         description: "Saverne, the 'city of roses' dominated by the Rohan Castle and Saverne Pass, is 35 min from Strasbourg.",
@@ -540,8 +540,8 @@ export const trajetsStrasbourgHub: Trajet[] = [
     hub: "strasbourg",
     i18n: {
       fr: {
-        metaTitle: "Taxi Strasbourg → Europa-Park | Prix fixe dès 70 € | TaxiNeo",
-        metaDescription: "Taxi Strasbourg → Europa-Park. 55 km, 40 min, dès 70 €. Transfert direct au parc d'attractions n°1 en Europe. Réservation 24h/24.",
+        metaTitle: "Taxi Strasbourg → Europa-Park | 55 km, dès 70 € | TaxiNeo",
+        metaDescription: "Itinéraire A35 puis B28/B3, environ 40 min. Pont de Kehl, Rhin, Rust et Parc d'attractions en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Strasbourg → Europa-Park",
         heroSubtitle: "Transfert Strasbourg → Europa-Park au prix fixe de 70 — 95 €. 55 km, le parc d'attractions n°1 en Europe.",
         description: "Europa-Park à Rust (Allemagne), plus grand parc d'attractions d'Europe avec 6 millions de visiteurs par an, est à 40 min de Strasbourg.",
@@ -559,8 +559,8 @@ export const trajetsStrasbourgHub: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Strasbourg → Europa-Park | Fixed price from €70 | TaxiNeo",
-        metaDescription: "Taxi Strasbourg → Europa-Park. 55 km, 40 min, from €70. Direct transfer to Europe's #1 theme park. Book 24/7.",
+        metaTitle: "Taxi Strasbourg → Europa-Park | 55 km, from €70 | TaxiNeo",
+        metaDescription: "Via A35 then B28/B3, 40 min ride. Pont de Kehl, Rhin, Rust and Parc d'attractions en route. Stops for sightseeing possible en route. No toll on this route.",
         heroTitle: "Taxi Strasbourg → Europa-Park",
         heroSubtitle: "Your Strasbourg → Europa-Park transfer at €70 — €95. 55 km to Europe's #1 theme park.",
         description: "Europa-Park in Rust (Germany), Europe's largest theme park with 6 million visitors annually, is 40 min from Strasbourg.",
@@ -604,8 +604,8 @@ export const trajetsStrasbourgHub: Trajet[] = [
     hub: "strasbourg",
     i18n: {
       fr: {
-        metaTitle: "Taxi Strasbourg → Aéroport Entzheim | Dès 30 € | TaxiNeo",
-        metaDescription: "Taxi Strasbourg → Aéroport Entzheim (SXB). 15 km, 15 min, dès 30 €. Transfert aéroport rapide. Réservation 24h/24.",
+        metaTitle: "Taxi Strasbourg → Strasbourg-Entzheim | 15 km | TaxiNeo",
+        metaDescription: "Via A35 en 15 min. Entzheim et Aéroport SXB en chemin. Dépose au terminal exact, suivi de vol en temps réel. Suivi de vol, dépose directe au terminal.",
         heroTitle: "Taxi Strasbourg → Aéroport Entzheim",
         heroSubtitle: "Transfert Strasbourg → Aéroport Entzheim au prix fixe de 30 — 40 €. 15 km, 15 min.",
         description: "L'aéroport de Strasbourg-Entzheim (SXB) est à seulement 15 min et 15 km du centre-ville de Strasbourg.",
@@ -623,8 +623,8 @@ export const trajetsStrasbourgHub: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Strasbourg → Entzheim Airport | From €30 | TaxiNeo",
-        metaDescription: "Taxi Strasbourg → Entzheim Airport (SXB). 15 km, 15 min, from €30. Fast airport transfer. Book 24/7.",
+        metaTitle: "Taxi Strasbourg → Strasbourg-Entzheim | 15 km, €30 | TaxiNeo",
+        metaDescription: "Via A35, 15 min ride. Entzheim and Aéroport SXB along the way. Terminal drop-off, flight tracking. Terminal drop-off, real-time flight tracking included.",
         heroTitle: "Taxi Strasbourg → Entzheim Airport",
         heroSubtitle: "Your Strasbourg → Entzheim Airport transfer at €30 — €40. 15 km, 15 min.",
         description: "Strasbourg-Entzheim Airport (SXB) is just 15 min and 15 km from Strasbourg city centre.",

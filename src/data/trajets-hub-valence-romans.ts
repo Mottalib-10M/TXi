@@ -20,7 +20,7 @@ export const trajetsValenceRomans: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Valence → Lyon | Prix fixe dès 120 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Valence → Lyon. 100 km, 1h05 par l'A7 vallée du Rhône. Prix fixe dès 120 €, chauffeur professionnel 24h/24.",
+        metaDescription: "Via A7 en undefined min. Vallée du Rhône, Vignobles Hermitage, Vienne romaine et Gastronomie Pic en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Valence → Lyon",
         heroSubtitle: "Votre transfert Valence → Lyon au prix fixe de 120 — 155 €. 100 km par l'A7, traversée de la vallée du Rhône en 1h05.",
         description: "Le trajet Valence — Lyon remonte l'A7 à travers la vallée du Rhône, l'un des corridors viticoles les plus prestigieux de France.",
@@ -39,7 +39,7 @@ export const trajetsValenceRomans: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Valence → Lyon | Fixed price from €120 | TaxiNeo",
-        metaDescription: "Book your taxi Valence → Lyon. 100 km, 1h05 via A7 Rhône Valley. Fixed price from €120, professional driver 24/7.",
+        metaDescription: "Via A7, undefined min ride. Vallée du Rhône, Vignobles Hermitage, Vienne romaine and Gastronomie Pic en route. Faster and more direct than train or bus.",
         heroTitle: "Taxi Valence → Lyon",
         heroSubtitle: "Valence → Lyon transfer at a fixed price of €120 — €155. 100 km through the Rhône Valley in 1h05.",
         description: "The Valence to Lyon route follows the A7 through the Rhône Valley, one of France's most prestigious wine corridors.",
@@ -76,8 +76,8 @@ export const trajetsValenceRomans: Trajet[] = [
     hub: "valence-romans",
     i18n: {
       fr: {
-        metaTitle: "Taxi Valence → Grenoble | Prix fixe dès 115 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Valence → Grenoble. 95 km, 1h par l'A49 au pied du Vercors. Prix fixe dès 115 €, réservation 24h/24.",
+        metaTitle: "Taxi Valence → Grenoble | 95 km, dès 115 € | TaxiNeo",
+        metaDescription: "Itinéraire A49, environ undefined min. Passage par Vercors, Romans-sur-Isère, Saint-Marcellin et Isère. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Valence → Grenoble",
         heroSubtitle: "Votre transfert Valence → Grenoble au prix fixe de 115 — 145 €. 95 km par l'A49, les falaises du Vercors en toile de fond.",
         description: "Le trajet Valence — Grenoble emprunte l'A49, longeant le piémont du Vercors entre Drôme et Isère.",
@@ -95,8 +95,8 @@ export const trajetsValenceRomans: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Valence → Grenoble | Fixed price from €115 | TaxiNeo",
-        metaDescription: "Book your taxi Valence → Grenoble. 95 km, 1h via A49 with Vercors views. Fixed price from €115, book 24/7.",
+        metaTitle: "Taxi Valence → Grenoble | 95 km, from €115 | TaxiNeo",
+        metaDescription: "A49 route, approximately undefined min. Vercors, Romans-sur-Isère, Saint-Marcellin and Isère en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Valence → Grenoble",
         heroSubtitle: "Valence → Grenoble transfer at a fixed price of €115 — €145. 95 km along the A49 beneath the Vercors cliffs.",
         description: "The Valence to Grenoble route follows the A49, hugging the Vercors foothills between the Drôme and Isère departments.",
@@ -133,8 +133,8 @@ export const trajetsValenceRomans: Trajet[] = [
     hub: "valence-romans",
     i18n: {
       fr: {
-        metaTitle: "Taxi Valence → Montélimar | Prix fixe dès 60 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Valence → Montélimar. 50 km, 35 min par l'A7. Prix fixe dès 60 €, capitale du nougat. Réservation 24h/24.",
+        metaTitle: "Taxi Valence → Montélimar | 50 km, dès 60 € | TaxiNeo",
+        metaDescription: "Via A7 en undefined min. Nougat de Montélimar, Drôme provençale, Château des Adhémar et Lavande en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Valence → Montélimar",
         heroSubtitle: "Votre transfert Valence → Montélimar au prix fixe de 60 — 80 €. 50 km, 35 min par l'A7 vers la capitale du nougat.",
         description: "Montélimar, capitale mondiale du nougat et porte de la Drôme provençale, est à seulement 35 min de Valence par l'A7.",
@@ -152,8 +152,8 @@ export const trajetsValenceRomans: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Valence → Montélimar | Fixed price from €60 | TaxiNeo",
-        metaDescription: "Book your taxi Valence → Montélimar. 50 km, 35 min via A7. Fixed price from €60, world nougat capital. Book 24/7.",
+        metaTitle: "Taxi Valence → Montélimar | 50 km, from €60 | TaxiNeo",
+        metaDescription: "Via A7, undefined min ride. Nougat de Montélimar, Drôme provençale, Château des Adhémar and Lavande en route. Faster and more direct than train or bus.",
         heroTitle: "Taxi Valence → Montélimar",
         heroSubtitle: "Valence → Montélimar transfer at a fixed price of €60 — €80. 50 km, 35 min via the A7 to the nougat capital.",
         description: "Montélimar, world nougat capital and gateway to Drôme Provençale, is just 35 min from Valence via the A7.",
@@ -190,8 +190,8 @@ export const trajetsValenceRomans: Trajet[] = [
     hub: "valence-romans",
     i18n: {
       fr: {
-        metaTitle: "Taxi Romans-sur-Isère → Grenoble | Prix fixe dès 95 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Romans-sur-Isère → Grenoble. 80 km, 55 min par l'A49 au pied du Vercors. Prix fixe dès 95 €, réservation 24h/24.",
+        metaTitle: "Taxi Romans-sur-Isère → Grenoble | 80 km, dès 95 € | TaxiNeo",
+        metaDescription: "Par A49, undefined min de trajet. Passage par Vercors, Chaussures de Romans, Saint-Marcellin et Isère. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Romans-sur-Isère → Grenoble",
         heroSubtitle: "Votre transfert Romans-sur-Isère → Grenoble au prix fixe de 95 — 125 €. 80 km, 55 min au pied des falaises du Vercors.",
         description: "Romans-sur-Isère, capitale historique de la chaussure française, est reliée à Grenoble en 55 min par l'A49.",
@@ -209,8 +209,8 @@ export const trajetsValenceRomans: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Romans-sur-Isère → Grenoble | Fixed price from €95 | TaxiNeo",
-        metaDescription: "Book your taxi Romans-sur-Isère → Grenoble. 80 km, 55 min via A49 with Vercors views. Fixed price from €95, book 24/7.",
+        metaTitle: "Taxi Romans-sur-Isère → Grenoble | 80 km, from €95 | TaxiNeo",
+        metaDescription: "Direct route via A49, undefined min. Vercors, Chaussures de Romans, Saint-Marcellin and Isère en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Romans-sur-Isère → Grenoble",
         heroSubtitle: "Romans-sur-Isère → Grenoble transfer at a fixed price of €95 — €125. 80 km, 55 min beneath the Vercors cliffs.",
         description: "Romans-sur-Isère, the historic capital of French luxury shoemaking, is connected to Grenoble in 55 min via the A49.",
@@ -247,8 +247,8 @@ export const trajetsValenceRomans: Trajet[] = [
     hub: "valence-romans",
     i18n: {
       fr: {
-        metaTitle: "Taxi Valence → Avignon | Prix fixe dès 150 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Valence → Avignon. 125 km, 1h15 par l'A7 vallée du Rhône. Prix fixe dès 150 €, chauffeur professionnel 24h/24.",
+        metaTitle: "Taxi Valence → Avignon | 125 km, dès 150 € | TaxiNeo",
+        metaDescription: "Par A7, undefined min de trajet. Drôme provençale, Montélimar, Pont du Gard et Palais des Papes en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Valence → Avignon",
         heroSubtitle: "Votre transfert Valence → Avignon au prix fixe de 150 — 190 €. 125 km par l'A7, de la Drôme au Vaucluse en 1h15.",
         description: "Le trajet Valence — Avignon descend toute la vallée du Rhône par l'A7, de la Drôme au Vaucluse, en traversant la Drôme provençale.",
@@ -266,8 +266,8 @@ export const trajetsValenceRomans: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Valence → Avignon | Fixed price from €150 | TaxiNeo",
-        metaDescription: "Book your taxi Valence → Avignon. 125 km, 1h15 via A7 Rhône Valley. Fixed price from €150, professional driver 24/7.",
+        metaTitle: "Taxi Valence → Avignon | 125 km, from €150 | TaxiNeo",
+        metaDescription: "Via A7, undefined min ride. Drôme provençale, Montélimar, Pont du Gard and Palais des Papes en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Valence → Avignon",
         heroSubtitle: "Valence → Avignon transfer at a fixed price of €150 — €190. 125 km through the Rhône Valley from Drôme to Vaucluse in 1h15.",
         description: "The Valence to Avignon route descends the full Rhône Valley via the A7, from the Drôme through Provence to the Vaucluse.",

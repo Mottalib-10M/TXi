@@ -30,8 +30,8 @@ export const trajetsMentonAntibes: Trajet[] = [
     hub: "menton-antibes",
     i18n: {
       fr: {
-        metaTitle: "Taxi Menton → Nice | Prix fixe dès 35 € | TaxiNeo",
-        metaDescription: "Taxi Menton → Nice. 30 km, 25 min, dès 35 €. A8 ou Basse Corniche panoramique. Réservation 24h/24.",
+        metaTitle: "Taxi Menton → Nice | forfait dès 35 €, 25 min | TaxiNeo",
+        metaDescription: "Trajet direct A8 en 25 min. Passage par Basse Corniche, Côte d'Azur, Promenade des Anglais et Riviera. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Menton — Nice",
         heroSubtitle: "De la Perle de la France à la capitale de la Côte d'Azur, dès 35 €",
         description: "Transfert en taxi de Menton à Nice, capitale de la Côte d'Azur, par l'autoroute A8 ou la Basse Corniche panoramique.",
@@ -50,7 +50,7 @@ export const trajetsMentonAntibes: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Menton → Nice | Fixed price from €35 | TaxiNeo",
-        metaDescription: "Taxi Menton → Nice. 30 km, 25 min, from €35. A8 or scenic Basse Corniche. Book 24/7.",
+        metaDescription: "Direct route via A8, 25 min. Basse Corniche, Côte d'Azur, Promenade des Anglais and Riviera en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Menton — Nice",
         heroSubtitle: "From the Pearl of France to the capital of the French Riviera, from €35",
         description: "Taxi transfer from Menton to Nice, capital of the French Riviera, via the A8 motorway or scenic Basse Corniche.",
@@ -95,8 +95,8 @@ export const trajetsMentonAntibes: Trajet[] = [
     hub: "menton-antibes",
     i18n: {
       fr: {
-        metaTitle: "Taxi Menton → Monaco | Prix fixe dès 20 € | TaxiNeo",
-        metaDescription: "Taxi Menton → Monaco. 10 km, 12 min, dès 20 €. Basse Corniche, sans péage. Réservation 24h/24.",
+        metaTitle: "Taxi Menton → Monaco | forfait dès 20 €, 12 min | TaxiNeo",
+        metaDescription: "Par Basse Corniche, 12 min de trajet. Roquebrune-Cap-Martin, Principauté, Monte-Carlo et Casino en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Menton — Monaco",
         heroSubtitle: "De la cité des citrons à la Principauté, en 12 minutes seulement",
         description: "Transfert en taxi de Menton à Monaco par la Basse Corniche, sans péage, en seulement 12 minutes.",
@@ -115,7 +115,7 @@ export const trajetsMentonAntibes: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Menton → Monaco | Fixed price from €20 | TaxiNeo",
-        metaDescription: "Taxi Menton → Monaco. 10 km, 12 min, from €20. Basse Corniche, toll-free. Book 24/7.",
+        metaDescription: "Via Basse Corniche, 12 min ride. Roquebrune-Cap-Martin, Principauté, Monte-Carlo and Casino en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Menton — Monaco",
         heroSubtitle: "From the city of lemons to the Principality, in just 12 minutes",
         description: "Taxi transfer from Menton to Monaco via the toll-free Basse Corniche, arriving in just 12 minutes.",
@@ -160,8 +160,8 @@ export const trajetsMentonAntibes: Trajet[] = [
     hub: "menton-antibes",
     i18n: {
       fr: {
-        metaTitle: "Taxi Antibes → Nice | Prix fixe dès 30 € | TaxiNeo",
-        metaDescription: "Taxi Antibes → Nice. 23 km, 20 min, dès 30 €. A8 direct. Réservation 24h/24.",
+        metaTitle: "Taxi Antibes → Nice | forfait dès 30 €, 20 min | TaxiNeo",
+        metaDescription: "Par A8, 20 min de trajet. Cap d'Antibes, Sophia Antipolis, Promenade des Anglais et Côte d'Azur en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Antibes — Nice",
         heroSubtitle: "Du cap d'Antibes à la capitale azuréenne, en 20 minutes",
         description: "Transfert en taxi d'Antibes à Nice par l'autoroute A8, trajet direct en 20 minutes le long de la Côte d'Azur.",
@@ -180,7 +180,7 @@ export const trajetsMentonAntibes: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Antibes → Nice | Fixed price from €30 | TaxiNeo",
-        metaDescription: "Taxi Antibes → Nice. 23 km, 20 min, from €30. Direct via A8. Book 24/7.",
+        metaDescription: "Via A8, 20 min ride. Cap d'Antibes, Sophia Antipolis, Promenade des Anglais and Côte d'Azur en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Antibes — Nice",
         heroSubtitle: "From Cap d'Antibes to the Riviera capital, in 20 minutes",
         description: "Taxi transfer from Antibes to Nice via the A8 motorway, a direct 20-minute journey along the French Riviera.",
@@ -225,8 +225,8 @@ export const trajetsMentonAntibes: Trajet[] = [
     hub: "menton-antibes",
     i18n: {
       fr: {
-        metaTitle: "Taxi Antibes → Cannes | Prix fixe dès 20 € | TaxiNeo",
-        metaDescription: "Taxi Antibes → Cannes. 12 km, 12 min, dès 20 €. D6007 sans péage. Réservation 24h/24.",
+        metaTitle: "Taxi Antibes → Cannes | forfait dès 20 € | TaxiNeo",
+        metaDescription: "Trajet direct D6007 en 12 min. Passage par Juan-les-Pins, Croisette, Festival de Cannes et Côte d'Azur. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Antibes — Cannes",
         heroSubtitle: "Du vieil Antibes à la Croisette, en 12 minutes sans péage",
         description: "Transfert en taxi d'Antibes à Cannes par la D6007, trajet court et sans péage le long du littoral azuréen.",
@@ -245,7 +245,7 @@ export const trajetsMentonAntibes: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Antibes → Cannes | Fixed price from €20 | TaxiNeo",
-        metaDescription: "Taxi Antibes → Cannes. 12 km, 12 min, from €20. D6007, toll-free. Book 24/7.",
+        metaDescription: "Direct route via D6007, 12 min. Juan-les-Pins, Croisette, Festival de Cannes and Côte d'Azur en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Antibes — Cannes",
         heroSubtitle: "From old Antibes to the Croisette, in 12 minutes toll-free",
         description: "Taxi transfer from Antibes to Cannes via the D6007, a short toll-free ride along the Riviera coastline.",
@@ -290,8 +290,8 @@ export const trajetsMentonAntibes: Trajet[] = [
     hub: "menton-antibes",
     i18n: {
       fr: {
-        metaTitle: "Taxi Grasse → Nice | Prix fixe dès 45 € | TaxiNeo",
-        metaDescription: "Taxi Grasse → Nice. 40 km, 30 min, dès 45 €. A8. Capitale mondiale du parfum → Nice. Réservation 24h/24.",
+        metaTitle: "Taxi Grasse → Nice | forfait dès 45 €, 30 min | TaxiNeo",
+        metaDescription: "Via A8 en 30 min. Parfums, Fragonard, Molinard et Galimard en chemin. Dépose porte-à-porte, bagages inclus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Grasse — Nice",
         heroSubtitle: "De la capitale mondiale du parfum à la Côte d'Azur, dès 45 €",
         description: "Transfert en taxi de Grasse à Nice par l'autoroute A8, 40 km en 30 minutes depuis la capitale du parfum.",
@@ -310,7 +310,7 @@ export const trajetsMentonAntibes: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Grasse → Nice | Fixed price from €45 | TaxiNeo",
-        metaDescription: "Taxi Grasse → Nice. 40 km, 30 min, from €45. A8. World perfume capital → Nice. Book 24/7.",
+        metaDescription: "Via A8, 30 min ride. Parfums, Fragonard, Molinard and Galimard en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Grasse — Nice",
         heroSubtitle: "From the world capital of perfume to the French Riviera, from €45",
         description: "Taxi transfer from Grasse to Nice via the A8 motorway, 40 km in 30 minutes from the world's perfume capital.",

@@ -7,15 +7,19 @@ import { format, formatDistanceToNow } from "date-fns";
 import { enUS, fr } from "date-fns/locale";
 import { Link } from "@/i18n/navigation";
 import { useLocale, useTranslations } from "next-intl";
+import QRCode from "qrcode";
 
 interface Driver {
   id: string;
   firstName: string;
   lastName: string;
+  companyName: string | null;
   email: string;
   phone: string;
   slug: string;
   vehicle: string | null;
+  vehicleBrand: string | null;
+  vehicleModel: string | null;
   zone: string | null;
   isActive: boolean;
   isVerified: boolean;
@@ -109,6 +113,73 @@ export function DriversTable({ drivers }: { drivers: Driver[] }) {
     } finally {
       setUpdating(null);
     }
+  }
+
+  async function printQrLabel(driver: Driver) {
+    const profileUrl = `https://taxineo.fr/taxi/${driver.slug}`;
+    const qrDataUrl = await QRCode.toDataURL(profileUrl, {
+      width: 300,
+      margin: 0,
+      color: { dark: "#171717", light: "#ffffff" },
+    });
+    const { jsPDF } = await import("jspdf");
+    const W = 50, H = 30;
+    const doc = new jsPDF({ orientation: "landscape", unit: "mm", format: [W, H] });
+
+    // QR code — left, vertically centered
+    const qrSize = 24;
+    const qrX = 2;
+    const qrY = (H - qrSize) / 2;
+    doc.addImage(qrDataUrl, "PNG", qrX, qrY, qrSize, qrSize);
+
+    // Text block — right side
+    const textX = qrX + qrSize + 2.5;
+    const maxW = W - textX - 2;
+
+    // Company name (or driver name fallback), truncated to 10 chars
+    const displayName = (driver.companyName || `${driver.firstName} ${driver.lastName}`).slice(0, 10);
+
+    // TaxiNeo — top
+    let y = 7;
+    doc.setFontSize(9); doc.setFont("helvetica", "bold");
+    doc.setTextColor(115, 115, 115); doc.text("Taxi", textX, y);
+    const tw = doc.getTextWidth("Taxi");
+    doc.setTextColor(23, 23, 23); doc.text("Neo", textX + tw, y);
+
+    // Company/taxi name — same size as TaxiNeo
+    y += 5.5;
+    doc.setFontSize(9); doc.setFont("helvetica", "bold"); doc.setTextColor(23, 23, 23);
+    doc.text(displayName, textX, y);
+
+    // Vehicle — brand then model on next line
+    if (driver.vehicleBrand) {
+      y += 4.5;
+      doc.setFontSize(6.5); doc.setFont("helvetica", "normal"); doc.setTextColor(100, 100, 100);
+      doc.text(driver.vehicleBrand, textX, y);
+      if (driver.vehicleModel) {
+        y += 3;
+        doc.text(driver.vehicleModel, textX, y);
+      }
+      y += 4;
+    } else {
+      y += 5;
+    }
+
+    // CTA — italic, big
+    doc.setFontSize(7); doc.setFont("helvetica", "bolditalic"); doc.setTextColor(23, 23, 23);
+    doc.text("Voir ma fiche !", textX, y);
+
+    // Taxi badge — bottom right
+    const badgeW = 10;
+    const badgeH = 4;
+    const badgeX = W - badgeW - 1.5;
+    const badgeY = H - badgeH - 1.5;
+    doc.setFillColor(23, 23, 23);
+    doc.roundedRect(badgeX, badgeY, badgeW, badgeH, 1, 1, "F");
+    doc.setFontSize(5.5); doc.setFont("helvetica", "bold"); doc.setTextColor(255, 255, 255);
+    doc.text("TAXI", badgeX + badgeW / 2, badgeY + badgeH / 2 + 1, { align: "center" });
+
+    doc.save(`qr-label-${driver.slug}.pdf`);
   }
 
   const notSpecifiedLabel = t("notSpecified");
@@ -325,6 +396,13 @@ export function DriversTable({ drivers }: { drivers: Driver[] }) {
                       >
                         <Icon icon="solar:square-arrow-right-linear" />
                         {impersonating === driver.id ? "..." : t("loginAs")}
+                      </button>
+                      <button
+                        onClick={() => printQrLabel(driver)}
+                        className="px-3 py-1.5 rounded-lg text-xs font-medium bg-neutral-50 text-neutral-700 hover:bg-neutral-100 transition-colors flex items-center gap-1 border border-neutral-200"
+                      >
+                        <Icon icon="solar:qr-code-linear" />
+                        QR 50×30
                       </button>
                     </div>
                   </div>

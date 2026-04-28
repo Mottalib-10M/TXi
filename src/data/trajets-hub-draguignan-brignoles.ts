@@ -27,8 +27,8 @@ export const trajetsDraguignanBrignoles: Trajet[] = [
     hub: "draguignan-brignoles",
     i18n: {
       fr: {
-        metaTitle: "Taxi Draguignan → Nice | Prix fixe dès 100 € | TaxiNeo",
-        metaDescription: "Taxi Draguignan → Nice. 85 km, 60 min, dès 100 €. A8 via Le Muy et l'Estérel. Transfert porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Draguignan → Nice | 85 km, dès 100 € | TaxiNeo",
+        metaDescription: "Par A8, 1h de trajet. Haut-Var, Gorges du Verdon, Promenade des Anglais et Côtes de Provence en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Draguignan → Nice",
         heroSubtitle: "Transfert Draguignan → Nice au prix fixe de 100 — 130 €. 85 km, direct par l'A8.",
         description: "Nice, capitale de la Côte d'Azur et ville classée au patrimoine mondial de l'UNESCO, est à 60 min de Draguignan par l'A8.",
@@ -46,8 +46,8 @@ export const trajetsDraguignanBrignoles: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Draguignan → Nice | Fixed price from €100 | TaxiNeo",
-        metaDescription: "Taxi Draguignan → Nice. 85 km, 60 min, from €100. A8 via Estérel massif. Door-to-door transfer. Book 24/7.",
+        metaTitle: "Taxi Draguignan → Nice | 85 km, from €100 | TaxiNeo",
+        metaDescription: "Via A8, 1 hour ride. Haut-Var, Gorges du Verdon, Promenade des Anglais and Côtes de Provence en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Draguignan → Nice",
         heroSubtitle: "Your Draguignan → Nice transfer at €100 — €130. 85 km, via the A8.",
         description: "Nice, capital of the French Riviera and UNESCO World Heritage Site, is 60 min from Draguignan via the A8.",
@@ -92,8 +92,8 @@ export const trajetsDraguignanBrignoles: Trajet[] = [
     hub: "draguignan-brignoles",
     i18n: {
       fr: {
-        metaTitle: "Taxi Draguignan → Toulon | Prix fixe dès 80 € | TaxiNeo",
-        metaDescription: "Taxi Draguignan → Toulon. 65 km, 50 min, dès 80 €. A57 via Brignoles et la Provence Verte. Réservation 24h/24.",
+        metaTitle: "Taxi Draguignan → Toulon | 65 km, dès 80 € | TaxiNeo",
+        metaDescription: "Via A57 en 50 min. Haut-Var, Provence Verte, Port militaire et Mont Faron en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Draguignan → Toulon",
         heroSubtitle: "Transfert Draguignan → Toulon au prix fixe de 80 — 100 €. 65 km, via l'A57.",
         description: "Toulon, préfecture du Var et premier port militaire de Méditerranée, est à 50 min de Draguignan par l'A57.",
@@ -111,8 +111,8 @@ export const trajetsDraguignanBrignoles: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Draguignan → Toulon | Fixed price from €80 | TaxiNeo",
-        metaDescription: "Taxi Draguignan → Toulon. 65 km, 50 min, from €80. A57 through Provence Verte. Door-to-door. Book 24/7.",
+        metaTitle: "Taxi Draguignan → Toulon | 65 km, from €80 | TaxiNeo",
+        metaDescription: "Via A57, 50 min ride. Haut-Var, Provence Verte, Port militaire and Mont Faron en route. Drop-off at your exact address. Door-to-door, luggage included.",
         heroTitle: "Taxi Draguignan → Toulon",
         heroSubtitle: "Your Draguignan → Toulon transfer at €80 — €100. 65 km, via the A57.",
         description: "Toulon, France's main Mediterranean naval base, is 50 min from Draguignan via the A57.",
@@ -157,8 +157,8 @@ export const trajetsDraguignanBrignoles: Trajet[] = [
     hub: "draguignan-brignoles",
     i18n: {
       fr: {
-        metaTitle: "Taxi Draguignan → Fréjus | Prix fixe dès 35 € | TaxiNeo",
-        metaDescription: "Taxi Draguignan → Fréjus. 30 km, 25 min, dès 35 €. DN7 via Le Muy, route gratuite. Réservation 24h/24.",
+        metaTitle: "Taxi Draguignan → Fréjus | 30 km, dès 35 € | TaxiNeo",
+        metaDescription: "Via DN7 en 25 min. Haut-Var, Arènes romaines, Vignobles et Oliveraies en chemin. Dépose à votre adresse exacte. Alternative directe au train ou au bus.",
         heroTitle: "Taxi Draguignan → Fréjus",
         heroSubtitle: "Transfert Draguignan → Fréjus au prix fixe de 35 — 50 €. 30 km, route gratuite via la DN7.",
         description: "Fréjus, cité romaine bimillénaire fondée par Jules César, est à seulement 25 min de Draguignan par la DN7.",
@@ -176,8 +176,8 @@ export const trajetsDraguignanBrignoles: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Draguignan → Fréjus | Fixed price from €35 | TaxiNeo",
-        metaDescription: "Taxi Draguignan → Fréjus. 30 km, 25 min, from €35. DN7, toll-free. Door-to-door transfer. Book 24/7.",
+        metaTitle: "Taxi Draguignan → Fréjus | 30 km, from €35 | TaxiNeo",
+        metaDescription: "Via DN7, 25 min ride. Haut-Var, Arènes romaines, Vignobles and Oliveraies en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Draguignan → Fréjus",
         heroSubtitle: "Your Draguignan → Fréjus transfer at €35 — €50. 30 km, toll-free via the DN7.",
         description: "Fréjus, founded by Julius Caesar in 49 BC, is just 25 min from Draguignan via the DN7.",
@@ -222,8 +222,8 @@ export const trajetsDraguignanBrignoles: Trajet[] = [
     hub: "draguignan-brignoles",
     i18n: {
       fr: {
-        metaTitle: "Taxi Brignoles → Marseille | Prix fixe dès 80 € | TaxiNeo",
-        metaDescription: "Taxi Brignoles → Marseille. 65 km, 50 min, dès 80 €. A8 via Aix-en-Provence. Transfert porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Brignoles → Marseille | 65 km, dès 80 € | TaxiNeo",
+        metaDescription: "Par A8, 50 min de trajet. Provence Verte, Sainte-Victoire, Vieux-Port et Gare Saint-Charles en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Brignoles → Marseille",
         heroSubtitle: "Transfert Brignoles → Marseille au prix fixe de 80 — 100 €. 65 km, direct par l'A8.",
         description: "Marseille, deuxième ville de France et porte de la Méditerranée, est à 50 min de Brignoles par l'A8.",
@@ -241,8 +241,8 @@ export const trajetsDraguignanBrignoles: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Brignoles → Marseille | Fixed price from €80 | TaxiNeo",
-        metaDescription: "Taxi Brignoles → Marseille. 65 km, 50 min, from €80. A8 past Sainte-Victoire. Door-to-door. Book 24/7.",
+        metaTitle: "Taxi Brignoles → Marseille | 65 km, from €80 | TaxiNeo",
+        metaDescription: "Direct route via A8, 50 min. Provence Verte, Sainte-Victoire, Vieux-Port and Gare Saint-Charles en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Brignoles → Marseille",
         heroSubtitle: "Your Brignoles → Marseille transfer at €80 — €100. 65 km, via the A8.",
         description: "Marseille, France's second city and Mediterranean gateway, is 50 min from Brignoles via the A8.",
@@ -287,8 +287,8 @@ export const trajetsDraguignanBrignoles: Trajet[] = [
     hub: "draguignan-brignoles",
     i18n: {
       fr: {
-        metaTitle: "Taxi Brignoles → Toulon | Prix fixe dès 65 € | TaxiNeo",
-        metaDescription: "Taxi Brignoles → Toulon. 55 km, 40 min, dès 65 €. A57 via la Provence Verte. Réservation 24h/24.",
+        metaTitle: "Taxi Brignoles → Toulon | 55 km, dès 65 € | TaxiNeo",
+        metaDescription: "Via A57 en 40 min. Provence Verte, Abbaye du Thoronet et Rade de Toulon en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Brignoles → Toulon",
         heroSubtitle: "Transfert Brignoles → Toulon au prix fixe de 65 — 85 €. 55 km, via l'A57.",
         description: "Toulon, préfecture du Var et premier port militaire de France, est à 40 min de Brignoles par l'A57.",
@@ -306,8 +306,8 @@ export const trajetsDraguignanBrignoles: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Brignoles → Toulon | Fixed price from €65 | TaxiNeo",
-        metaDescription: "Taxi Brignoles → Toulon. 55 km, 40 min, from €65. A57 through Provence Verte. Door-to-door. Book 24/7.",
+        metaTitle: "Taxi Brignoles → Toulon | 55 km, from €65 | TaxiNeo",
+        metaDescription: "A57 route, approximately 40 min. Provence Verte, Abbaye du Thoronet and Rade de Toulon along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Brignoles → Toulon",
         heroSubtitle: "Your Brignoles → Toulon transfer at €65 — €85. 55 km, via the A57.",
         description: "Toulon, France's main naval port and Var prefecture, is 40 min from Brignoles via the A57.",

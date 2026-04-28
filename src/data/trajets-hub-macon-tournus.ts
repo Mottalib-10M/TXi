@@ -19,8 +19,8 @@ export const trajetsMaconTournus: Trajet[] = [
     hub: "macon-tournus",
     i18n: {
       fr: {
-        metaTitle: "Taxi Mâcon → Lyon | Prix fixe dès 85 € | TaxiNeo",
-        metaDescription: "Taxi Mâcon → Lyon. 70 km, 45 min, dès 85 €. A6 directe à travers le vignoble du Beaujolais. Réservation en ligne 24h/24.",
+        metaTitle: "Taxi Mâcon → Lyon | 70 km via A6, dès 85 € | TaxiNeo",
+        metaDescription: "Par A6, undefined min de trajet. Beaujolais, Villefranche-sur-Saône, Saône et Roche de Solutré en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Mâcon → Lyon",
         heroSubtitle: "Transfert Mâcon → Lyon au prix fixe de 85 — 110 €. 70 km, 45 min via l'A6.",
         description: "Mâcon — Lyon emprunte l'autoroute du Soleil (A6) en traversant le vignoble du Beaujolais.",
@@ -39,7 +39,7 @@ export const trajetsMaconTournus: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Mâcon → Lyon | Fixed price from €85 | TaxiNeo",
-        metaDescription: "Taxi Mâcon → Lyon. 70 km, 45 min, from €85. Direct A6 through Beaujolais wine country. Book 24/7.",
+        metaDescription: "Via A6, undefined min ride. Beaujolais, Villefranche-sur-Saône, Saône and Roche de Solutré en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Mâcon → Lyon",
         heroSubtitle: "Mâcon → Lyon transfer at €85 — €110. 70 km, 45 min via A6.",
         description: "Mâcon to Lyon via A6 through the Beaujolais vineyards in 45 min.",
@@ -77,7 +77,7 @@ export const trajetsMaconTournus: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Mâcon → Dijon | Prix fixe dès 155 € | TaxiNeo",
-        metaDescription: "Taxi Mâcon → Dijon. 130 km, 1h20, dès 155 €. A6 à travers la Bourgogne viticole, Tournus et la Côte d'Or. Réservation 24h/24.",
+        metaDescription: "Par A6, undefined min de trajet. Tournus, Côte de Beaune, Côte de Nuits et Bourgogne viticole en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Mâcon → Dijon",
         heroSubtitle: "Transfert Mâcon → Dijon au prix fixe de 155 — 200 €. 130 km, 1h20 via l'A6.",
         description: "Mâcon — Dijon remonte l'A6 au coeur de la Bourgogne viticole, traversant Tournus, Chalon-sur-Saône et la Côte d'Or.",
@@ -96,7 +96,7 @@ export const trajetsMaconTournus: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Mâcon → Dijon | Fixed price from €155 | TaxiNeo",
-        metaDescription: "Taxi Mâcon → Dijon. 130 km, 1h20, from €155. A6 through Burgundy's greatest vineyards and Tournus abbey. Book 24/7.",
+        metaDescription: "Through A6 in undefined min. Tournus, Côte de Beaune, Côte de Nuits and Bourgogne viticole en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Mâcon → Dijon",
         heroSubtitle: "Mâcon → Dijon transfer at €155 — €200. 130 km, 1h20 via A6.",
         description: "Mâcon to Dijon via A6 through the heart of Burgundy's wine country, past Tournus and the Côte d'Or.",
@@ -133,8 +133,8 @@ export const trajetsMaconTournus: Trajet[] = [
     hub: "macon-tournus",
     i18n: {
       fr: {
-        metaTitle: "Taxi Mâcon → Bourg-en-Bresse | Prix fixe dès 40 € | TaxiNeo",
-        metaDescription: "Taxi Mâcon → Bourg-en-Bresse. 35 km, 25 min, dès 40 €. D1079 directe entre Bourgogne du Sud et Bresse. Réservation 24h/24.",
+        metaTitle: "Taxi Mâcon → Bourg-en-Bresse | 35 km, dès 40 € | TaxiNeo",
+        metaDescription: "Par D1079, undefined min de trajet. Bresse, Monastère de Brou, Poulet de Bresse et Lamartine en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Mâcon → Bourg-en-Bresse",
         heroSubtitle: "Transfert Mâcon → Bourg-en-Bresse au prix fixe de 40 — 55 €. 35 km, 25 min.",
         description: "Mâcon — Bourg-en-Bresse relie le vignoble mâconnais à la Bresse par la D1079 en 25 min.",
@@ -152,8 +152,8 @@ export const trajetsMaconTournus: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Mâcon → Bourg-en-Bresse | Fixed price from €40 | TaxiNeo",
-        metaDescription: "Taxi Mâcon → Bourg-en-Bresse. 35 km, 25 min, from €40. D1079 between Burgundy and Bresse region. Book 24/7.",
+        metaTitle: "Taxi Mâcon → Bourg-en-Bresse | 35 km, from €40 | TaxiNeo",
+        metaDescription: "Direct route via D1079, undefined min. Bresse, Monastère de Brou, Poulet de Bresse and Lamartine en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Mâcon → Bourg-en-Bresse",
         heroSubtitle: "Mâcon → Bourg-en-Bresse transfer at €40 — €55. 35 km, 25 min.",
         description: "Mâcon to Bourg-en-Bresse via D1079 in 25 min, from Burgundy wines to Bresse gastronomy.",
@@ -191,7 +191,7 @@ export const trajetsMaconTournus: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Tournus → Lyon | Prix fixe dès 120 € | TaxiNeo",
-        metaDescription: "Taxi Tournus → Lyon. 100 km, 1h, dès 120 €. A6 via Mâcon et le Beaujolais. Réservation en ligne 24h/24.",
+        metaDescription: "Trajet direct A6 en undefined min. Passage par Abbaye Saint-Philibert, Mâconnais, Beaujolais et Saône. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Tournus → Lyon",
         heroSubtitle: "Transfert Tournus → Lyon au prix fixe de 120 — 155 €. 100 km, 1h via l'A6.",
         description: "Tournus — Lyon descend l'A6 le long de la Saône à travers le Mâconnais et le Beaujolais.",
@@ -210,7 +210,7 @@ export const trajetsMaconTournus: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Tournus → Lyon | Fixed price from €120 | TaxiNeo",
-        metaDescription: "Taxi Tournus → Lyon. 100 km, 1h, from €120. A6 via Mâcon and Beaujolais wine country. Book 24/7.",
+        metaDescription: "Direct route via A6, undefined min. Abbaye Saint-Philibert, Mâconnais, Beaujolais and Saône en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Tournus → Lyon",
         heroSubtitle: "Tournus → Lyon transfer at €120 — €155. 100 km, 1h via A6.",
         description: "Tournus to Lyon via A6, through the Mâconnais and Beaujolais vineyards in one hour.",
@@ -247,8 +247,8 @@ export const trajetsMaconTournus: Trajet[] = [
     hub: "macon-tournus",
     i18n: {
       fr: {
-        metaTitle: "Taxi Mâcon → Chalon-sur-Saône | Prix fixe dès 75 € | TaxiNeo",
-        metaDescription: "Taxi Mâcon → Chalon-sur-Saône. 60 km, 40 min, dès 75 €. A6 ou N6 via Tournus, au coeur de la Bourgogne du Sud. Réservation 24h/24.",
+        metaTitle: "Taxi Mâcon → Chalon-sur-Saône | 60 km, dès 75 € | TaxiNeo",
+        metaDescription: "Via A6 / N6 en undefined min. Tournus, Abbaye Saint-Philibert, N6 et Saône en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Mâcon → Chalon-sur-Saône",
         heroSubtitle: "Transfert Mâcon → Chalon-sur-Saône au prix fixe de 75 — 95 €. 60 km, 40 min.",
         description: "Mâcon — Chalon-sur-Saône longe la Saône par l'A6 ou la N6, en passant par Tournus.",
@@ -266,8 +266,8 @@ export const trajetsMaconTournus: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Mâcon → Chalon-sur-Saône | Fixed price from €75 | TaxiNeo",
-        metaDescription: "Taxi Mâcon → Chalon-sur-Saône. 60 km, 40 min, from €75. A6 or N6 via Tournus abbey. Book 24/7.",
+        metaTitle: "Taxi Mâcon → Chalon-sur-Saône | 60 km, from €75 | TaxiNeo",
+        metaDescription: "Via A6 / N6, undefined min ride. Tournus, Abbaye Saint-Philibert, N6 and Saône en route. Drop-off at your exact address. Door-to-door, luggage included.",
         heroTitle: "Taxi Mâcon → Chalon-sur-Saône",
         heroSubtitle: "Mâcon → Chalon-sur-Saône transfer at €75 — €95. 60 km, 40 min.",
         description: "Mâcon to Chalon-sur-Saône along the Saône valley, past the Romanesque abbey of Tournus.",

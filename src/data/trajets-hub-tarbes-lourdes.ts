@@ -19,8 +19,8 @@ export const trajetsTarbesLourdes: Trajet[] = [
     hub: "tarbes-lourdes",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lourdes → Tarbes | Dès 25 € | TaxiNeo",
-        metaDescription: "Taxi Lourdes → Tarbes. 20 km, 18 min, dès 25 €. Transfert rapide entre la cité mariale et la préfecture des Hautes-Pyrénées. Réservation 24h/24.",
+        metaTitle: "Taxi Lourdes → Tarbes | forfait dès 25 € | TaxiNeo",
+        metaDescription: "Via D921 en undefined min. Pyrénées, Bigorre, Pèlerinage et Direct en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Lourdes → Tarbes",
         heroSubtitle: "Transfert Lourdes → Tarbes au prix fixe de 25 — 35 €. 20 km, 18 min.",
         description: "Lourdes — Tarbes relie la cité mariale à la préfecture des Hautes-Pyrénées en 18 min.",
@@ -38,8 +38,8 @@ export const trajetsTarbesLourdes: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Lourdes → Tarbes | From €25 | TaxiNeo",
-        metaDescription: "Taxi Lourdes → Tarbes. 20 km, 18 min, from €25. Fast transfer from the pilgrimage city. Book 24/7.",
+        metaTitle: "Taxi Lourdes → Tarbes | Fixed price transfer | TaxiNeo",
+        metaDescription: "Via D921, undefined min ride. Pyrénées, Bigorre, Pèlerinage and Direct en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Lourdes → Tarbes",
         heroSubtitle: "Lourdes → Tarbes transfer at €25 — €35. 20 km, 18 min.",
         description: "Lourdes to Tarbes, from the pilgrimage city to the Hautes-Pyrénées capital in 18 min.",
@@ -76,8 +76,8 @@ export const trajetsTarbesLourdes: Trajet[] = [
     hub: "tarbes-lourdes",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lourdes → Pau | Dès 50 € | TaxiNeo",
-        metaDescription: "Taxi Lourdes → Pau. 45 km, 35 min, dès 50 €. Transfert de la cité mariale au Béarn par l'A64. Réservation 24h/24.",
+        metaTitle: "Taxi Lourdes → Pau | 45 km A64, dès 50 € | TaxiNeo",
+        metaDescription: "Trajet direct A64 en undefined min. Passage par Pyrénées, Béarn, Pèlerinage et Boulevard des Pyrénées. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Lourdes → Pau",
         heroSubtitle: "Transfert Lourdes → Pau au prix fixe de 50 — 65 €. 45 km, 35 min.",
         description: "Lourdes — Pau relie le sanctuaire marial à la capitale du Béarn en 35 min.",
@@ -95,8 +95,8 @@ export const trajetsTarbesLourdes: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Lourdes → Pau | From €50 | TaxiNeo",
-        metaDescription: "Taxi Lourdes → Pau. 45 km, 35 min, from €50. Pilgrimage city to Béarn capital via A64. Book 24/7.",
+        metaTitle: "Taxi Lourdes → Pau | Fixed price transfer | TaxiNeo",
+        metaDescription: "Direct route via A64, undefined min. Pyrénées, Béarn, Pèlerinage and Boulevard des Pyrénées en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Lourdes → Pau",
         heroSubtitle: "Lourdes → Pau transfer at €50 — €65. 45 km, 35 min.",
         description: "Lourdes to Pau, from the world's top pilgrimage site to the Béarn capital in 35 min.",
@@ -133,8 +133,8 @@ export const trajetsTarbesLourdes: Trajet[] = [
     hub: "tarbes-lourdes",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lourdes → Toulouse | Dès 210 € | TaxiNeo",
-        metaDescription: "Taxi Lourdes → Toulouse. 190 km, 1h55, dès 210 €. Transfert longue distance depuis la cité mariale. Réservation 24h/24.",
+        metaTitle: "Taxi Lourdes → Toulouse | 190 km, dès 210 € | TaxiNeo",
+        metaDescription: "Via A64 en undefined min. Pyrénées, Ville Rose, Pèlerinage et Direct en chemin. Dépose à votre adresse exacte. Alternative directe au train ou au bus.",
         heroTitle: "Taxi Lourdes → Toulouse",
         heroSubtitle: "Transfert Lourdes → Toulouse au prix fixe de 210 — 270 €. 190 km, 1h55.",
         description: "Lourdes — Toulouse relie la cité mariale à la Ville Rose en 1h55 par l'A64.",
@@ -152,8 +152,8 @@ export const trajetsTarbesLourdes: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Lourdes → Toulouse | From €210 | TaxiNeo",
-        metaDescription: "Taxi Lourdes → Toulouse. 190 km, 1h55, from €210. Long-distance transfer from the pilgrimage city. Book 24/7.",
+        metaTitle: "Taxi Lourdes → Toulouse | 190 km, from €210 | TaxiNeo",
+        metaDescription: "Via A64, undefined min ride. Pyrénées, Ville Rose, Pèlerinage and Direct en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Lourdes → Toulouse",
         heroSubtitle: "Lourdes → Toulouse transfer at €210 — €270. 190 km, 1h55.",
         description: "Lourdes to Toulouse, pilgrimage city to the Pink City in under 2 hours.",
@@ -190,8 +190,8 @@ export const trajetsTarbesLourdes: Trajet[] = [
     hub: "tarbes-lourdes",
     i18n: {
       fr: {
-        metaTitle: "Taxi Tarbes → Toulouse | Dès 180 € | TaxiNeo",
-        metaDescription: "Taxi Tarbes → Toulouse. 165 km, 1h40, dès 180 €. A64 directe entre la Bigorre et la Ville Rose. Réservation 24h/24.",
+        metaTitle: "Taxi Tarbes → Toulouse | 165 km, dès 180 € | TaxiNeo",
+        metaDescription: "Via A64 en undefined min. Pyrénées, Bigorre et Ville Rose en chemin. Dépose porte-à-porte, bagages inclus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Tarbes → Toulouse",
         heroSubtitle: "Transfert Tarbes → Toulouse au prix fixe de 180 — 230 €. 165 km, 1h40.",
         description: "Tarbes — Toulouse relie la préfecture des Hautes-Pyrénées à la métropole occitane en 1h40.",
@@ -209,8 +209,8 @@ export const trajetsTarbesLourdes: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Tarbes → Toulouse | From €180 | TaxiNeo",
-        metaDescription: "Taxi Tarbes → Toulouse. 165 km, 1h40, from €180. A64 motorway Pyrenees to the Pink City. Book 24/7.",
+        metaTitle: "Taxi Tarbes → Toulouse | 165 km, from €180 | TaxiNeo",
+        metaDescription: "Via A64, undefined min ride. Pyrénées, Bigorre and Ville Rose along the way. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Tarbes → Toulouse",
         heroSubtitle: "Tarbes → Toulouse transfer at €180 — €230. 165 km, 1h40.",
         description: "Tarbes to Toulouse, Hautes-Pyrénées capital to the Pink City in 1h40.",
@@ -247,8 +247,8 @@ export const trajetsTarbesLourdes: Trajet[] = [
     hub: "tarbes-lourdes",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lourdes → Aéroport Tarbes-Lourdes | Dès 20 € | TaxiNeo",
-        metaDescription: "Taxi Lourdes → Aéroport Tarbes-Lourdes Pyrénées. 10 km, 10 min, dès 20 €. Transfert aéroport pour pèlerins et voyageurs. Réservation 24h/24.",
+        metaTitle: "Taxi Lourdes → Aéroport Tarbes-Lourdes | 10 km | TaxiNeo",
+        metaDescription: "Via D921 en undefined min. Aéroport, Pyrénées, Pèlerinage et Rapide en chemin. Dépose au terminal, suivi de vol. Suivi de vol, dépose directe au terminal.",
         heroTitle: "Taxi Lourdes → Aéroport Tarbes-Lourdes",
         heroSubtitle: "Transfert Lourdes → Aéroport Tarbes-Lourdes au prix fixe de 20 — 30 €. 10 km, 10 min.",
         description: "Transfert rapide entre Lourdes et l'aéroport Tarbes-Lourdes Pyrénées en 10 min.",
@@ -266,8 +266,8 @@ export const trajetsTarbesLourdes: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Lourdes → Tarbes-Lourdes Airport | From €20 | TaxiNeo",
-        metaDescription: "Taxi Lourdes → Tarbes-Lourdes Airport. 10 km, 10 min, from €20. Airport transfer for pilgrims. Book 24/7.",
+        metaTitle: "Taxi Lourdes → Aéroport Tarbes-Lourdes | 10 km | TaxiNeo",
+        metaDescription: "Via D921, undefined min ride. Aéroport, Pyrénées, Pèlerinage and Rapide en route. Terminal drop-off, flight tracking. Flight tracking, direct terminal drop-off.",
         heroTitle: "Taxi Lourdes → Tarbes-Lourdes Airport",
         heroSubtitle: "Lourdes → Tarbes-Lourdes Airport transfer at €20 — €30. 10 km, 10 min.",
         description: "Quick 10-minute transfer between Lourdes and Tarbes-Lourdes Pyrénées Airport.",

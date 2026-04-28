@@ -27,8 +27,8 @@ export const trajetsRennesHub2: Trajet[] = [
     hub: "rennes",
     i18n: {
       fr: {
-        metaTitle: "Taxi Rennes → Saint-Brieuc | Prix fixe dès 125 € | TaxiNeo",
-        metaDescription: "Taxi Rennes → Saint-Brieuc. 100 km, 1h10, dès 125 €. Route gratuite N12, baie de Saint-Brieuc. Réservation 24h/24.",
+        metaTitle: "Taxi Rennes → Saint-Brieuc | 100 km, dès 125 € | TaxiNeo",
+        metaDescription: "Via N12 en 1h10. N12, Côtes-d'Armor, Baie de Saint-Brieuc et Cathédrale en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Rennes → Saint-Brieuc",
         heroSubtitle: "Transfert Rennes → Saint-Brieuc au prix fixe de 125 — 155 €. 100 km, route 100% gratuite.",
         description: "Saint-Brieuc, préfecture des Côtes-d'Armor, est à 1h10 de Rennes par la N12.",
@@ -46,8 +46,8 @@ export const trajetsRennesHub2: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Rennes → Saint-Brieuc | Fixed price from €125 | TaxiNeo",
-        metaDescription: "Taxi Rennes → Saint-Brieuc. 100 km, 1h10, from €125. Toll-free N12, bay views. Book 24/7.",
+        metaTitle: "Taxi Rennes → Saint-Brieuc | 100 km, from €125 | TaxiNeo",
+        metaDescription: "Via N12, 1h10 ride. N12, Côtes-d'Armor, Baie de Saint-Brieuc and Cathédrale en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Rennes → Saint-Brieuc",
         heroSubtitle: "Your Rennes → Saint-Brieuc transfer at €125 — €155. 100 km, 100% toll-free.",
         description: "Saint-Brieuc, Côtes-d'Armor prefecture, is 1h10 from Rennes via the N12.",
@@ -92,8 +92,8 @@ export const trajetsRennesHub2: Trajet[] = [
     hub: "rennes",
     i18n: {
       fr: {
-        metaTitle: "Taxi Rennes → Quimper | Prix fixe dès 265 € | TaxiNeo",
-        metaDescription: "Taxi Rennes → Quimper. 215 km, 2h15, dès 265 €. Capitale de la Cornouaille, faïences. Réservation 24h/24.",
+        metaTitle: "Taxi Rennes → Quimper | 215 km, dès 265 € | TaxiNeo",
+        metaDescription: "Via N24 puis N165 en 2h15. N24/N165, Finistère, Faïences et Cornouaille en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Rennes → Quimper",
         heroSubtitle: "Transfert Rennes → Quimper au prix fixe de 265 — 320 €. 215 km, route 100% gratuite.",
         description: "Quimper, capitale de la Cornouaille et ville des faïences, est à 2h15 de Rennes.",
@@ -111,8 +111,8 @@ export const trajetsRennesHub2: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Rennes → Quimper | Fixed price from €265 | TaxiNeo",
-        metaDescription: "Taxi Rennes → Quimper. 215 km, 2h15, from €265. Cornouaille capital, faïence pottery. Book 24/7.",
+        metaTitle: "Taxi Rennes → Quimper | 215 km, from €265 | TaxiNeo",
+        metaDescription: "Via N24 then N165, 2h15 ride. N24/N165, Finistère, Faïences and Cornouaille en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Rennes → Quimper",
         heroSubtitle: "Your Rennes → Quimper transfer at €265 — €320. 215 km, 100% toll-free.",
         description: "Quimper, Cornouaille capital and pottery city, is 2h15 from Rennes.",
@@ -157,8 +157,8 @@ export const trajetsRennesHub2: Trajet[] = [
     hub: "rennes",
     i18n: {
       fr: {
-        metaTitle: "Taxi Rennes → Lorient | Prix fixe dès 185 € | TaxiNeo",
-        metaDescription: "Taxi Rennes → Lorient. 150 km, 1h35, dès 185 €. Cité de la Voile, Festival Interceltique. Réservation 24h/24.",
+        metaTitle: "Taxi Rennes → Lorient | 150 km, dès 185 € | TaxiNeo",
+        metaDescription: "Par N24 puis N165, 1h35 de trajet. N24/N165, Morbihan, Cité de la Voile et Base sous-marine en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Rennes → Lorient",
         heroSubtitle: "Transfert Rennes → Lorient au prix fixe de 185 — 225 €. 150 km, route gratuite.",
         description: "Lorient, cité de la voile, est à 1h35 de Rennes par les voies express bretonnes.",
@@ -176,8 +176,8 @@ export const trajetsRennesHub2: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Rennes → Lorient | Fixed price from €185 | TaxiNeo",
-        metaDescription: "Taxi Rennes → Lorient. 150 km, 1h35, from €185. Cité de la Voile, Interceltique. Book 24/7.",
+        metaTitle: "Taxi Rennes → Lorient | 150 km, from €185 | TaxiNeo",
+        metaDescription: "Direct route via N24 then N165, 1h35. N24/N165, Morbihan, Cité de la Voile and Base sous-marine en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Rennes → Lorient",
         heroSubtitle: "Your Rennes → Lorient transfer at €185 — €225. 150 km, toll-free.",
         description: "Lorient, sailing city, is 1h35 from Rennes via toll-free expressways.",
@@ -222,8 +222,8 @@ export const trajetsRennesHub2: Trajet[] = [
     hub: "rennes",
     i18n: {
       fr: {
-        metaTitle: "Taxi Rennes → Granville | Prix fixe dès 125 € | TaxiNeo",
-        metaDescription: "Taxi Rennes → Granville. 100 km, 1h20, dès 125 €. Plages, îles Chausey, haute ville. Réservation 24h/24.",
+        metaTitle: "Taxi Rennes → Granville | 100 km, dès 125 € | TaxiNeo",
+        metaDescription: "Via A84 puis D973 en 1h20. A84/D973, Manche, Plage et Îles Chausey en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Rennes → Granville",
         heroSubtitle: "Transfert Rennes → Granville au prix fixe de 125 — 155 €. 100 km, la Monaco du Nord.",
         description: "Granville, surnommée 'la Monaco du Nord', est à 1h20 de Rennes.",
@@ -241,8 +241,8 @@ export const trajetsRennesHub2: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Rennes → Granville | Fixed price from €125 | TaxiNeo",
-        metaDescription: "Taxi Rennes → Granville. 100 km, 1h20, from €125. Beaches, Chausey Islands, Dior museum. Book 24/7.",
+        metaTitle: "Taxi Rennes → Granville | 100 km, from €125 | TaxiNeo",
+        metaDescription: "Via A84 then D973, 1h20 ride. A84/D973, Manche, Plage and Îles Chausey en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Rennes → Granville",
         heroSubtitle: "Your Rennes → Granville transfer at €125 — €155. 100 km, the 'Monaco of the North'.",
         description: "Granville, 'Monaco of the North', is 1h20 from Rennes.",
@@ -287,8 +287,8 @@ export const trajetsRennesHub2: Trajet[] = [
     hub: "rennes",
     i18n: {
       fr: {
-        metaTitle: "Taxi Rennes → Lannion | Prix fixe dès 190 € | TaxiNeo",
-        metaDescription: "Taxi Rennes → Lannion. 155 km, 1h45, dès 190 €. Côte de Granit Rose, Ploumanac'h. Réservation 24h/24.",
+        metaTitle: "Taxi Rennes → Lannion | 155 km, dès 190 € | TaxiNeo",
+        metaDescription: "Trajet direct N12 puis D767 en 1h45. Passage par N12/D767, Côte de Granit Rose, Ploumanac'h et Trégor. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Rennes → Lannion",
         heroSubtitle: "Transfert Rennes → Lannion au prix fixe de 190 — 230 €. 155 km, porte de la Côte de Granit Rose.",
         description: "Lannion, porte de la Côte de Granit Rose, est à 1h45 de Rennes.",
@@ -306,8 +306,8 @@ export const trajetsRennesHub2: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Rennes → Lannion | Fixed price from €190 | TaxiNeo",
-        metaDescription: "Taxi Rennes → Lannion. 155 km, 1h45, from €190. Pink Granite Coast, Ploumanac'h. Book 24/7.",
+        metaTitle: "Taxi Rennes → Lannion | 155 km, from €190 | TaxiNeo",
+        metaDescription: "Direct route via N12 then D767, 1h45. N12/D767, Côte de Granit Rose, Ploumanac'h and Trégor en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Rennes → Lannion",
         heroSubtitle: "Your Rennes → Lannion transfer at €190 — €230. 155 km, Pink Granite Coast gateway.",
         description: "Lannion, gateway to the Pink Granite Coast, is 1h45 from Rennes.",
@@ -352,8 +352,8 @@ export const trajetsRennesHub2: Trajet[] = [
     hub: "rennes",
     i18n: {
       fr: {
-        metaTitle: "Taxi Rennes → Cancale | Prix fixe dès 85 € | TaxiNeo",
-        metaDescription: "Taxi Rennes → Cancale. 65 km, 55 min, dès 85 €. Huîtres, pointe du Grouin, baie du Mont-Saint-Michel. Réservation 24h/24.",
+        metaTitle: "Taxi Rennes → Cancale | forfait dès 85 € | TaxiNeo",
+        metaDescription: "Par D137 puis D76, 55 min de trajet. Huîtres, Pointe du Grouin, Baie Mont-Saint-Michel et Port en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Rennes → Cancale",
         heroSubtitle: "Transfert Rennes → Cancale au prix fixe de 85 — 105 €. 65 km, capitale de l'huître.",
         description: "Cancale, capitale française de l'huître, est à 55 min de Rennes.",
@@ -372,7 +372,7 @@ export const trajetsRennesHub2: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Rennes → Cancale | Fixed price from €85 | TaxiNeo",
-        metaDescription: "Taxi Rennes → Cancale. 65 km, 55 min, from €85. Oysters, Pointe du Grouin. Book 24/7.",
+        metaDescription: "D137 then D76 route, approximately 55 min. Huîtres, Pointe du Grouin, Baie Mont-Saint-Michel and Port en route. Stops for sightseeing possible en route.",
         heroTitle: "Taxi Rennes → Cancale",
         heroSubtitle: "Your Rennes → Cancale transfer at €85 — €105. 65 km, France's oyster capital.",
         description: "Cancale, France's oyster capital, is 55 min from Rennes.",
@@ -417,8 +417,8 @@ export const trajetsRennesHub2: Trajet[] = [
     hub: "rennes",
     i18n: {
       fr: {
-        metaTitle: "Taxi Rennes → Nantes | Prix fixe dès 140 € | TaxiNeo",
-        metaDescription: "Taxi Rennes → Nantes. 110 km, 1h15, dès 140 €. Route gratuite, Machines de l'Île. Réservation 24h/24.",
+        metaTitle: "Taxi Rennes → Nantes | 110 km, dès 140 € | TaxiNeo",
+        metaDescription: "Via N137 en 1h15. N137, Loire, Machines de l'Île et Château des Ducs en chemin. Dépose à votre adresse exacte. Alternative directe au train ou au bus.",
         heroTitle: "Taxi Rennes → Nantes",
         heroSubtitle: "Transfert Rennes → Nantes au prix fixe de 140 — 170 €. 110 km, route 100% gratuite.",
         description: "Nantes, métropole de l'Ouest et ancienne capitale des Ducs de Bretagne, est à 1h15 de Rennes.",
@@ -436,8 +436,8 @@ export const trajetsRennesHub2: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Rennes → Nantes | Fixed price from €140 | TaxiNeo",
-        metaDescription: "Taxi Rennes → Nantes. 110 km, 1h15, from €140. Toll-free, Machines de l'Île. Book 24/7.",
+        metaTitle: "Taxi Rennes → Nantes | 110 km, from €140 | TaxiNeo",
+        metaDescription: "Via N137, 1h15 ride. N137, Loire, Machines de l'Île and Château des Ducs en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Rennes → Nantes",
         heroSubtitle: "Your Rennes → Nantes transfer at €140 — €170. 110 km, 100% toll-free.",
         description: "Nantes, western France's major metropolis, is 1h15 from Rennes.",
@@ -482,8 +482,8 @@ export const trajetsRennesHub2: Trajet[] = [
     hub: "rennes",
     i18n: {
       fr: {
-        metaTitle: "Taxi Rennes → Laval | Prix fixe dès 95 € | TaxiNeo",
-        metaDescription: "Taxi Rennes → Laval. 75 km, 50 min, dès 95 €. Château, art naïf, vieille ville. Réservation 24h/24.",
+        metaTitle: "Taxi Rennes → Laval | forfait dès 95 €, 50 min | TaxiNeo",
+        metaDescription: "Via N157 en 50 min. A84/N157, Mayenne, Château et Art naïf en chemin. Dépose porte-à-porte, bagages inclus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Rennes → Laval",
         heroSubtitle: "Transfert Rennes → Laval au prix fixe de 95 — 115 €. 75 km, cité d'art et d'histoire.",
         description: "Laval, préfecture de la Mayenne et cité d'art naïf, est à 50 min de Rennes.",
@@ -502,7 +502,7 @@ export const trajetsRennesHub2: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Rennes → Laval | Fixed price from €95 | TaxiNeo",
-        metaDescription: "Taxi Rennes → Laval. 75 km, 50 min, from €95. Castle, naïve art, old town. Book 24/7.",
+        metaDescription: "Via N157, 50 min ride. A84/N157, Mayenne, Château and Art naïf en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Rennes → Laval",
         heroSubtitle: "Your Rennes → Laval transfer at €95 — €115. 75 km, toll-free.",
         description: "Laval, Mayenne prefecture and naïve art capital, is 50 min from Rennes.",

@@ -27,8 +27,8 @@ export const trajetsNantesAeroport: Trajet[] = [
     hub: "nantes-aeroport",
     i18n: {
       fr: {
-        metaTitle: "Taxi Aéroport Nantes Atlantique → Centre | Dès 20 € | TaxiNeo",
-        metaDescription: "Taxi Aéroport Nantes Atlantique → Nantes Centre. 10 km, 15 min, dès 20 €. Transfert direct porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Nantes Atlantique → Nantes Centre | 10 km | TaxiNeo",
+        metaDescription: "Via N844 en 15 min. Passage par Loire, Château des ducs, Machines de l'île et Liaison directe. Accueil au terminal, attente gratuite si retard de vol.",
         heroTitle: "Taxi Aéroport Nantes Atlantique → Nantes Centre",
         heroSubtitle: "Transfert Aéroport Nantes Atlantique → Nantes Centre au prix fixe de 20 — 30 €. 10 km, 15 min chrono.",
         description: "Le centre-ville de Nantes est à seulement 15 min de l'aéroport Nantes Atlantique par la N844.",
@@ -46,8 +46,8 @@ export const trajetsNantesAeroport: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nantes Airport → City Centre | From €20 | TaxiNeo",
-        metaDescription: "Taxi Nantes Atlantique Airport → Nantes Centre. 10 km, 15 min, from €20. Direct door-to-door transfer. Book 24/7.",
+        metaTitle: "Taxi Nantes Atlantique → Nantes Centre | 10 km | TaxiNeo",
+        metaDescription: "Via N844, 15 min ride. Loire, Château des ducs, Machines de l'île and Liaison directe en route. Terminal drop-off, real-time flight tracking included.",
         heroTitle: "Taxi Nantes Airport → City Centre",
         heroSubtitle: "Your Nantes Airport → City Centre transfer at €20 — €30. 10 km, 15 min direct.",
         description: "Nantes city centre is just 15 min from Nantes Atlantique Airport via the N844.",
@@ -92,8 +92,8 @@ export const trajetsNantesAeroport: Trajet[] = [
     hub: "nantes-aeroport",
     i18n: {
       fr: {
-        metaTitle: "Taxi Aéroport Nantes → La Baule | Dès 95 € | TaxiNeo",
-        metaDescription: "Taxi Aéroport Nantes Atlantique → La Baule. 80 km, 55 min, dès 95 €. Transfert direct vers la plus belle plage d'Europe. Réservation 24h/24.",
+        metaTitle: "Taxi Aéroport Nantes Atlantique → La Baule | 80 km | TaxiNeo",
+        metaDescription: "Via N844 puis N165 en 55 min. N844, N165, Côte atlantique et Plage en chemin. Dépose au terminal, suivi de vol. Suivi de vol, dépose directe au terminal.",
         heroTitle: "Taxi Aéroport Nantes → La Baule",
         heroSubtitle: "Transfert Aéroport Nantes Atlantique → La Baule au prix fixe de 95 — 125 €. 80 km, direction la côte atlantique.",
         description: "La Baule-Escoublac, station balnéaire de la côte d'Amour, est à 55 min de l'aéroport Nantes Atlantique.",
@@ -111,8 +111,8 @@ export const trajetsNantesAeroport: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nantes Airport → La Baule | From €95 | TaxiNeo",
-        metaDescription: "Taxi Nantes Atlantique Airport → La Baule. 80 km, 55 min, from €95. Direct transfer to one of Europe's finest beaches. Book 24/7.",
+        metaTitle: "Taxi Aéroport Nantes Atlantique → La Baule | 80 km | TaxiNeo",
+        metaDescription: "Via N844 then N165, 55 min ride. N844, N165, Côte atlantique and Plage en route. Terminal drop-off, flight tracking. Flight tracking, direct terminal drop-off.",
         heroTitle: "Taxi Nantes Airport → La Baule",
         heroSubtitle: "Your Nantes Airport → La Baule transfer at €95 — €125. 80 km, Atlantic coast destination.",
         description: "La Baule, prestigious resort on the Cote d'Amour, is 55 min from Nantes Atlantique Airport.",
@@ -157,8 +157,8 @@ export const trajetsNantesAeroport: Trajet[] = [
     hub: "nantes-aeroport",
     i18n: {
       fr: {
-        metaTitle: "Taxi Aéroport Nantes → Saint-Nazaire | Dès 75 € | TaxiNeo",
-        metaDescription: "Taxi Aéroport Nantes Atlantique → Saint-Nazaire. 60 km, 40 min, dès 75 €. Transfert direct via la N165. Réservation 24h/24.",
+        metaTitle: "Taxi Nantes Atlantique → St-Nazaire | 60 km, 75 € | TaxiNeo",
+        metaDescription: "Via N844 puis N165 en 40 min. Passage par N844, N165, Estuaire de la Loire et Chantiers navals. Accueil au terminal, attente gratuite si retard de vol.",
         heroTitle: "Taxi Aéroport Nantes → Saint-Nazaire",
         heroSubtitle: "Transfert Aéroport Nantes Atlantique → Saint-Nazaire au prix fixe de 75 — 95 €. 60 km, la cité des chantiers.",
         description: "Saint-Nazaire, ville portuaire et industrielle à l'embouchure de la Loire, est à 40 min de l'aéroport Nantes Atlantique.",
@@ -176,8 +176,8 @@ export const trajetsNantesAeroport: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nantes Airport → Saint-Nazaire | From €75 | TaxiNeo",
-        metaDescription: "Taxi Nantes Atlantique Airport → Saint-Nazaire. 60 km, 40 min, from €75. Direct transfer. Book 24/7.",
+        metaTitle: "Taxi Nantes Atlantique → St-Nazaire | 60 km, €75 | TaxiNeo",
+        metaDescription: "Via N844 then N165, 40 min ride. N844, N165, Estuaire de la Loire and Chantiers navals en route. Terminal drop-off, real-time flight tracking included.",
         heroTitle: "Taxi Nantes Airport → Saint-Nazaire",
         heroSubtitle: "Your Nantes Airport → Saint-Nazaire transfer at €75 — €95. 60 km, city of shipyards.",
         description: "Saint-Nazaire, major port city at the Loire estuary mouth, is 40 min from Nantes Atlantique Airport.",
@@ -222,8 +222,8 @@ export const trajetsNantesAeroport: Trajet[] = [
     hub: "nantes-aeroport",
     i18n: {
       fr: {
-        metaTitle: "Taxi Aéroport Nantes → Vannes | Dès 145 € | TaxiNeo",
-        metaDescription: "Taxi Aéroport Nantes Atlantique → Vannes. 120 km, 1h15, dès 145 €. Transfert direct vers le golfe du Morbihan. Réservation 24h/24.",
+        metaTitle: "Taxi Aéroport Nantes Atlantique → Vannes | 120 km | TaxiNeo",
+        metaDescription: "Par N844 puis N165, 1h15 de trajet. Passage par N165, Golfe du Morbihan, Bretagne et Remparts. Accueil au terminal, attente gratuite si retard de vol.",
         heroTitle: "Taxi Aéroport Nantes → Vannes",
         heroSubtitle: "Transfert Aéroport Nantes Atlantique → Vannes au prix fixe de 145 — 185 €. 120 km, porte du golfe du Morbihan.",
         description: "Vannes, cité médiévale aux portes du golfe du Morbihan, est à 1h15 de l'aéroport Nantes Atlantique.",
@@ -241,8 +241,8 @@ export const trajetsNantesAeroport: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nantes Airport → Vannes | From €145 | TaxiNeo",
-        metaDescription: "Taxi Nantes Atlantique Airport → Vannes. 120 km, 1h15, from €145. Direct transfer to the Gulf of Morbihan. Book 24/7.",
+        metaTitle: "Taxi Aéroport Nantes Atlantique → Vannes | 120 km | TaxiNeo",
+        metaDescription: "Direct route via N844 then N165, 1h15. N165, Golfe du Morbihan, Bretagne and Remparts en route. Terminal drop-off, real-time flight tracking included.",
         heroTitle: "Taxi Nantes Airport → Vannes",
         heroSubtitle: "Your Nantes Airport → Vannes transfer at €145 — €185. 120 km, gateway to the Gulf of Morbihan.",
         description: "Vannes, medieval city at the gates of the Gulf of Morbihan, is 1h15 from Nantes Atlantique Airport.",
@@ -287,8 +287,8 @@ export const trajetsNantesAeroport: Trajet[] = [
     hub: "nantes-aeroport",
     i18n: {
       fr: {
-        metaTitle: "Taxi Aéroport Nantes → Angers | Dès 120 € | TaxiNeo",
-        metaDescription: "Taxi Aéroport Nantes Atlantique → Angers. 100 km, 1h05, dès 120 €. Transfert direct via l'A11. Réservation 24h/24.",
+        metaTitle: "Taxi Aéroport Nantes Atlantique → Angers | 100 km | TaxiNeo",
+        metaDescription: "Via N844 puis A11 en 1h05. Loire, Château d'Angers, Tapisserie de l'Apocalypse et Pays de la Loire en chemin. Suivi de vol, dépose directe au terminal.",
         heroTitle: "Taxi Aéroport Nantes → Angers",
         heroSubtitle: "Transfert Aéroport Nantes Atlantique → Angers au prix fixe de 120 — 155 €. 100 km, la douceur angevine.",
         description: "Angers, capitale de l'Anjou et préfecture du Maine-et-Loire, est à 1h05 de l'aéroport Nantes Atlantique par l'A11.",
@@ -306,8 +306,8 @@ export const trajetsNantesAeroport: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nantes Airport → Angers | From €120 | TaxiNeo",
-        metaDescription: "Taxi Nantes Atlantique Airport → Angers. 100 km, 1h05, from €120. Direct transfer via A11. Book 24/7.",
+        metaTitle: "Taxi Aéroport Nantes Atlantique → Angers | 100 km | TaxiNeo",
+        metaDescription: "Via N844 then A11, 1h05 ride. Loire, Château d'Angers, Tapisserie de l'Apocalypse and Pays de la Loire en route. Meet at terminal, free wait if flight delayed.",
         heroTitle: "Taxi Nantes Airport → Angers",
         heroSubtitle: "Your Nantes Airport → Angers transfer at €120 — €155. 100 km, the gentle Anjou.",
         description: "Angers, capital of Anjou and Maine-et-Loire prefecture, is 1h05 from Nantes Atlantique Airport via the A11.",

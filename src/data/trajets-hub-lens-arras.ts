@@ -27,8 +27,8 @@ export const trajetsLensArras: Trajet[] = [
     hub: "lens-arras",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lens → Paris | Prix fixe dès 220 € | TaxiNeo",
-        metaDescription: "Taxi Lens → Paris. 200 km, 2h05, dès 220 €. A1, transfert direct porte-à-porte depuis le bassin minier. Réservation 24h/24.",
+        metaTitle: "Taxi Lens → Paris | 200 km, dès 220 €, 2h05 | TaxiNeo",
+        metaDescription: "Via A1 en 2h05. Bassin minier UNESCO, Louvre-Lens, Stade Bollaert et Vimy en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Lens → Paris",
         heroSubtitle: "Transfert Lens → Paris au prix fixe de 220 — 280 €. 200 km, direct par l'A1.",
         description: "Paris est à 2h05 de Lens par l'A1, l'autoroute du Nord.",
@@ -47,7 +47,7 @@ export const trajetsLensArras: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Lens → Paris | Fixed price from €220 | TaxiNeo",
-        metaDescription: "Taxi Lens → Paris. 200 km, 2h05, from €220. A1, direct door-to-door from the mining basin. Book 24/7.",
+        metaDescription: "Via A1, 2h05 ride. Bassin minier UNESCO, Louvre-Lens, Stade Bollaert and Vimy en route. Drop-off at your exact address. Door-to-door, luggage included.",
         heroTitle: "Taxi Lens → Paris",
         heroSubtitle: "Your Lens → Paris transfer at €220 — €280. 200 km, via the A1.",
         description: "Paris is 2h05 from Lens via the A1 motorway.",
@@ -92,8 +92,8 @@ export const trajetsLensArras: Trajet[] = [
     hub: "lens-arras",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lens → Lille | Prix fixe dès 40 € | TaxiNeo",
-        metaDescription: "Taxi Lens → Lille. 35 km, 25 min, dès 40 €. A21, transfert direct. Gare Lille-Europe, Euralille. Réservation 24h/24.",
+        metaTitle: "Taxi Lens → Lille | forfait dès 40 €, 25 min | TaxiNeo",
+        metaDescription: "Itinéraire A21, environ 25 min. Passage par Bassin minier, Louvre-Lens, Euralille et Gare Lille-Europe. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Lens → Lille",
         heroSubtitle: "Transfert Lens → Lille au prix fixe de 40 — 50 €. 35 km, route gratuite par l'A21.",
         description: "Lille est à seulement 25 min de Lens par l'A21, autoroute gratuite.",
@@ -112,7 +112,7 @@ export const trajetsLensArras: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Lens → Lille | Fixed price from €40 | TaxiNeo",
-        metaDescription: "Taxi Lens → Lille. 35 km, 25 min, from €40. A21 toll-free. Eurostar, Thalys connections. Book 24/7.",
+        metaDescription: "A21 route, approximately 25 min. Bassin minier, Louvre-Lens, Euralille and Gare Lille-Europe en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Lens → Lille",
         heroSubtitle: "Your Lens → Lille transfer at €40 — €50. 35 km, toll-free via the A21.",
         description: "Lille is just 25 min from Lens via the toll-free A21.",
@@ -157,8 +157,8 @@ export const trajetsLensArras: Trajet[] = [
     hub: "lens-arras",
     i18n: {
       fr: {
-        metaTitle: "Taxi Arras → Paris | Prix fixe dès 200 € | TaxiNeo",
-        metaDescription: "Taxi Arras → Paris. 185 km, 1h55, dès 200 €. A1, transfert direct depuis la cité des beffrois. Réservation 24h/24.",
+        metaTitle: "Taxi Arras → Paris | 185 km, dès 200 €, 1h55 | TaxiNeo",
+        metaDescription: "Via A1 en 1h55. Grand-Place flamande, Beffroi UNESCO, Artois et Wellington en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Arras → Paris",
         heroSubtitle: "Transfert Arras → Paris au prix fixe de 200 — 255 €. 185 km, direct par l'A1.",
         description: "Paris est à 1h55 d'Arras par l'A1, l'autoroute du Nord.",
@@ -177,7 +177,7 @@ export const trajetsLensArras: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Arras → Paris | Fixed price from €200 | TaxiNeo",
-        metaDescription: "Taxi Arras → Paris. 185 km, 1h55, from €200. A1, direct door-to-door from Flemish Baroque city. Book 24/7.",
+        metaDescription: "Via A1, 1h55 ride. Grand-Place flamande, Beffroi UNESCO, Artois and Wellington en route. Drop-off at your exact address. Door-to-door, luggage included.",
         heroTitle: "Taxi Arras → Paris",
         heroSubtitle: "Your Arras → Paris transfer at €200 — €255. 185 km, via the A1.",
         description: "Paris is 1h55 from Arras via the A1 motorway.",
@@ -222,8 +222,8 @@ export const trajetsLensArras: Trajet[] = [
     hub: "lens-arras",
     i18n: {
       fr: {
-        metaTitle: "Taxi Arras → Lille | Prix fixe dès 55 € | TaxiNeo",
-        metaDescription: "Taxi Arras → Lille. 50 km, 35 min, dès 55 €. A26, transfert direct. Eurostar, Thalys, Vieux-Lille. Réservation 24h/24.",
+        metaTitle: "Taxi Arras → Lille | forfait dès 55 €, 35 min | TaxiNeo",
+        metaDescription: "Via A26 en 35 min. Artois, Beffroi UNESCO, Vieux-Lille et Eurostar en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Arras → Lille",
         heroSubtitle: "Transfert Arras → Lille au prix fixe de 55 — 70 €. 50 km, rapide par l'A26.",
         description: "Lille est à 35 min d'Arras par l'A26, liaison rapide entre deux villes d'art et d'histoire.",
@@ -242,7 +242,7 @@ export const trajetsLensArras: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Arras → Lille | Fixed price from €55 | TaxiNeo",
-        metaDescription: "Taxi Arras → Lille. 50 km, 35 min, from €55. A26, direct. Eurostar, Thalys connections. Book 24/7.",
+        metaDescription: "Via A26, 35 min ride. Artois, Beffroi UNESCO, Vieux-Lille and Eurostar en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Arras → Lille",
         heroSubtitle: "Your Arras → Lille transfer at €55 — €70. 50 km, via the A26.",
         description: "Lille is 35 min from Arras via the A26.",
@@ -287,8 +287,8 @@ export const trajetsLensArras: Trajet[] = [
     hub: "lens-arras",
     i18n: {
       fr: {
-        metaTitle: "Taxi Arras → Amiens | Prix fixe dès 75 € | TaxiNeo",
-        metaDescription: "Taxi Arras → Amiens. 70 km, 45 min, dès 75 €. A26, deux villes UNESCO. Beffrois, cathédrale, hortillonnages. Réservation 24h/24.",
+        metaTitle: "Taxi Arras → Amiens | forfait dès 75 €, 45 min | TaxiNeo",
+        metaDescription: "Itinéraire A26, environ 45 min. Passage par Artois, Somme, Cathédrale Amiens UNESCO et Hortillonnages. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Arras → Amiens",
         heroSubtitle: "Transfert Arras → Amiens au prix fixe de 75 — 95 €. 70 km, deux cités patrimoniales reliées en 45 min.",
         description: "Amiens est à 45 min d'Arras par l'A26, reliant l'Artois à la Picardie.",
@@ -307,7 +307,7 @@ export const trajetsLensArras: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Arras → Amiens | Fixed price from €75 | TaxiNeo",
-        metaDescription: "Taxi Arras → Amiens. 70 km, 45 min, from €75. A26, two UNESCO heritage cities. Book 24/7.",
+        metaDescription: "A26 route, approximately 45 min. Artois, Somme, Cathédrale Amiens UNESCO and Hortillonnages en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Arras → Amiens",
         heroSubtitle: "Your Arras → Amiens transfer at €75 — €95. 70 km, two heritage cities in 45 min.",
         description: "Amiens is 45 min from Arras via the A26.",

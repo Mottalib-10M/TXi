@@ -30,8 +30,8 @@ export const trajetsParisArr14to20: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris 14ème → CDG | Prix fixe dès 53 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi depuis le 14ème arrondissement de Paris vers CDG. 30 km, 45 min, prix fixe dès 53 €. Prise en charge Montparnasse, Denfert, Alésia.",
+        metaTitle: "Taxi Paris 14e → Aéroport CDG | 30 km, dès 53 € | TaxiNeo",
+        metaDescription: "Via A1 en 45 min. Montparnasse, Denfert-Rochereau et Catacombes en chemin. Dépose au terminal, suivi de vol. Suivi de vol, dépose directe au terminal.",
         heroTitle: "Taxi Paris 14ème arrondissement → Aéroport CDG",
         heroSubtitle: "Transfert depuis Montparnasse et Denfert-Rochereau vers Charles de Gaulle au prix fixe de 53 — 65 €. Chauffeur professionnel, prise en charge à domicile.",
         description: "Le 14ème arrondissement, quartier de Montparnasse, des Catacombes et du Parc Montsouris, offre un accès vers CDG via les grands axes nord. Votre chauffeur TaxiNeo vous conduit au terminal en 45 minutes.",
@@ -49,8 +49,8 @@ export const trajetsParisArr14to20: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris 14th → CDG | Fixed price from €53 | TaxiNeo",
-        metaDescription: "Book your taxi from Paris 14th arrondissement to CDG Airport. 30 km, 45 min, fixed price from €53. Pickup at Montparnasse, Denfert, Alésia.",
+        metaTitle: "Taxi Paris 14e → Aéroport CDG | 30 km, from €53 | TaxiNeo",
+        metaDescription: "Via A1, 45 min ride. Montparnasse, Denfert-Rochereau and Catacombes along the way. Terminal drop-off, real-time flight tracking included. No toll on this route.",
         heroTitle: "Taxi Paris 14th Arrondissement → CDG Airport",
         heroSubtitle: "Transfer from Montparnasse and Denfert-Rochereau to Charles de Gaulle at a fixed price of €53 — €65. Professional driver, door-to-door pickup.",
         description: "The 14th arrondissement, home to Montparnasse, the Catacombs and Parc Montsouris, offers access to CDG via the northern axes. Your TaxiNeo driver takes you to the terminal in 45 minutes.",
@@ -98,8 +98,8 @@ export const trajetsParisArr14to20: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris 14ème → Orly | Prix fixe dès 32 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi depuis le 14ème arrondissement de Paris vers Orly. 14 km, 22 min, prix fixe dès 32 €. Prise en charge Montparnasse, Denfert, Alésia.",
+        metaTitle: "Taxi Paris 14e → Aéroport d'Orly | 14 km, dès 32 € | TaxiNeo",
+        metaDescription: "Itinéraire A6, environ 22 min. Denfert-Rochereau, Porte d'Orléans, Orly direct sur le parcours. Accueil au terminal, attente gratuite si retard de vol.",
         heroTitle: "Taxi Paris 14ème arrondissement → Aéroport d'Orly",
         heroSubtitle: "Transfert depuis Montparnasse et Denfert vers Orly en seulement 22 minutes au prix fixe de 32 — 40 €. L'un des trajets les plus courts vers Orly.",
         description: "Le 14ème arrondissement est idéalement situé pour rejoindre Orly. Seulement 14 km et 22 minutes par la Porte d'Orléans et l'A6 pour un forfait à partir de 32 €.",
@@ -117,8 +117,8 @@ export const trajetsParisArr14to20: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris 14th → Orly | Fixed price from €32 | TaxiNeo",
-        metaDescription: "Book your taxi from Paris 14th arrondissement to Orly Airport. 14 km, 22 min, fixed price from €32. Pickup at Montparnasse, Denfert, Alésia.",
+        metaTitle: "Taxi Paris 14e → Aéroport d'Orly | 14 km, from €32 | TaxiNeo",
+        metaDescription: "A6 route, approximately 22 min. Denfert-Rochereau, Porte d'Orléans and Orly direct along the way. Terminal drop-off, real-time flight tracking included.",
         heroTitle: "Taxi Paris 14th Arrondissement → Orly Airport",
         heroSubtitle: "Transfer from Montparnasse and Denfert to Orly in just 22 minutes at a fixed price of €32 — €40. One of the shortest journeys to Orly.",
         description: "The 14th arrondissement is ideally located for reaching Orly. Just 14 km and 22 minutes via Porte d'Orléans and the A6 for a flat rate from €32.",
@@ -166,8 +166,8 @@ export const trajetsParisArr14to20: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris 15ème → CDG | Prix fixe dès 55 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi depuis le 15ème arrondissement de Paris vers CDG. 31 km, 50 min, prix fixe dès 55 €. Prise en charge Convention, Beaugrenelle, Porte de Versailles.",
+        metaTitle: "Taxi Paris 15e → Aéroport CDG | 31 km, dès 55 € | TaxiNeo",
+        metaDescription: "Itinéraire A1, environ 50 min. Tour Eiffel, Porte de Versailles, Beaugrenelle sur le parcours. Accueil au terminal, attente gratuite si retard de vol.",
         heroTitle: "Taxi Paris 15ème arrondissement → Aéroport CDG",
         heroSubtitle: "Transfert depuis le 15ème, plus grand arrondissement de Paris, vers Charles de Gaulle au prix fixe de 55 — 68 €. Prise en charge dans tout le quartier.",
         description: "Le 15ème arrondissement, le plus peuplé et le plus grand de Paris avec la Porte de Versailles, Beaugrenelle et le Parc André Citroën, est relié à CDG en 50 minutes. Chauffeur professionnel TaxiNeo.",
@@ -185,8 +185,8 @@ export const trajetsParisArr14to20: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris 15th → CDG | Fixed price from €55 | TaxiNeo",
-        metaDescription: "Book your taxi from Paris 15th arrondissement to CDG Airport. 31 km, 50 min, fixed price from €55. Pickup at Convention, Beaugrenelle, Porte de Versailles.",
+        metaTitle: "Taxi Paris 15e → Aéroport CDG | 31 km, from €55 | TaxiNeo",
+        metaDescription: "A1 route, approximately 50 min. Tour Eiffel, Porte de Versailles and Beaugrenelle along the way. Terminal drop-off, real-time flight tracking included.",
         heroTitle: "Taxi Paris 15th Arrondissement → CDG Airport",
         heroSubtitle: "Transfer from the 15th, Paris's largest arrondissement, to Charles de Gaulle at a fixed price of €55 — €68. Pickup throughout the district.",
         description: "The 15th arrondissement, the most populated and largest in Paris with Porte de Versailles, Beaugrenelle and Parc André Citroën, is connected to CDG in 50 minutes. Professional TaxiNeo driver.",
@@ -234,8 +234,8 @@ export const trajetsParisArr14to20: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris 15ème → Orly | Prix fixe dès 35 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi depuis le 15ème arrondissement vers Orly. 15 km, 25 min, prix fixe dès 35 €. Prise en charge Convention, Beaugrenelle, Porte de Versailles.",
+        metaTitle: "Taxi Paris 15e → Aéroport d'Orly | 15 km, dès 35 € | TaxiNeo",
+        metaDescription: "Trajet direct A6 en 25 min. Porte de Versailles, Périphérique Sud, Convention sur le parcours. Accueil au terminal, attente gratuite si retard de vol.",
         heroTitle: "Taxi Paris 15ème arrondissement → Aéroport d'Orly",
         heroSubtitle: "Transfert depuis le 15ème vers Orly au prix fixe de 35 — 42 €. Seulement 25 minutes de trajet.",
         description: "Depuis le 15ème arrondissement, rejoignez Orly en 25 minutes. La Porte de Versailles offre un accès rapide au périphérique sud et à l'A6 direction Orly.",
@@ -253,8 +253,8 @@ export const trajetsParisArr14to20: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris 15th → Orly | Fixed price from €35 | TaxiNeo",
-        metaDescription: "Book your taxi from Paris 15th arrondissement to Orly Airport. 15 km, 25 min, fixed price from €35. Pickup at Convention, Beaugrenelle, Porte de Versailles.",
+        metaTitle: "Taxi Paris 15e → Aéroport d'Orly | 15 km, from €35 | TaxiNeo",
+        metaDescription: "Direct route via A6, 25 min. Porte de Versailles, Périphérique Sud and Convention along the way. Terminal drop-off, real-time flight tracking included.",
         heroTitle: "Taxi Paris 15th Arrondissement → Orly Airport",
         heroSubtitle: "Transfer from the 15th to Orly at a fixed price of €35 — €42. Only 25 minutes journey time.",
         description: "From the 15th arrondissement, reach Orly in 25 minutes. Porte de Versailles offers quick access to the southern ring road and A6 towards Orly.",
@@ -302,8 +302,8 @@ export const trajetsParisArr14to20: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris 16ème → CDG | Prix fixe dès 55 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi depuis le 16ème arrondissement de Paris vers CDG. 32 km, 50 min, prix fixe dès 55 €. Prise en charge Trocadéro, Passy, Auteuil.",
+        metaTitle: "Taxi Paris 16e → Aéroport CDG | 32 km, dès 55 € | TaxiNeo",
+        metaDescription: "Via A1 en 50 min. Trocadéro, Tour Eiffel et Bois de Boulogne en chemin. Dépose au terminal, suivi de vol. Dépose au terminal exact, suivi de vol en temps réel.",
         heroTitle: "Taxi Paris 16ème arrondissement → Aéroport CDG",
         heroSubtitle: "Transfert depuis le Trocadéro et Passy vers Charles de Gaulle au prix fixe de 55 — 68 €. Service premium pour un quartier premium.",
         description: "Le 16ème arrondissement, quartier résidentiel huppé du Trocadéro, de Passy et du Bois de Boulogne, est relié à CDG en 50 minutes via le périphérique et l'A1. Service TaxiNeo premium.",
@@ -321,8 +321,8 @@ export const trajetsParisArr14to20: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris 16th → CDG | Fixed price from €55 | TaxiNeo",
-        metaDescription: "Book your taxi from Paris 16th arrondissement to CDG Airport. 32 km, 50 min, fixed price from €55. Pickup at Trocadéro, Passy, Auteuil.",
+        metaTitle: "Taxi Paris 16e → Aéroport CDG | 32 km, from €55 | TaxiNeo",
+        metaDescription: "Via A1, 50 min ride. Trocadéro, Tour Eiffel and Bois de Boulogne along the way. Terminal drop-off, flight tracking. Flight tracking, direct terminal drop-off.",
         heroTitle: "Taxi Paris 16th Arrondissement → CDG Airport",
         heroSubtitle: "Transfer from Trocadéro and Passy to Charles de Gaulle at a fixed price of €55 — €68. Premium service for a premium district.",
         description: "The 16th arrondissement, the upscale residential district of Trocadéro, Passy and the Bois de Boulogne, is connected to CDG in 50 minutes via the ring road and A1. Premium TaxiNeo service.",
@@ -370,8 +370,8 @@ export const trajetsParisArr14to20: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris 16ème → Orly | Prix fixe dès 36 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi depuis le 16ème arrondissement vers Orly. 17 km, 30 min, prix fixe dès 36 €. Prise en charge Trocadéro, Passy, Auteuil.",
+        metaTitle: "Taxi Paris 16e → Aéroport d'Orly | 17 km, dès 36 € | TaxiNeo",
+        metaDescription: "Via A6 en 30 min. Trocadéro, Périphérique Sud et Pont de Sèvres en chemin. Dépose au terminal, suivi de vol. Suivi de vol, dépose directe au terminal.",
         heroTitle: "Taxi Paris 16ème arrondissement → Aéroport d'Orly",
         heroSubtitle: "Transfert depuis le Trocadéro et Passy vers Orly au prix fixe de 36 — 44 €. Service confortable en 30 minutes.",
         description: "Depuis le 16ème arrondissement, rejoignez Orly en 30 minutes par le périphérique sud. Service TaxiNeo premium adapté à la clientèle exigeante du 16ème.",
@@ -389,8 +389,8 @@ export const trajetsParisArr14to20: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris 16th → Orly | Fixed price from €36 | TaxiNeo",
-        metaDescription: "Book your taxi from Paris 16th arrondissement to Orly Airport. 17 km, 30 min, fixed price from €36. Pickup at Trocadéro, Passy, Auteuil.",
+        metaTitle: "Taxi Paris 16e → Aéroport d'Orly | 17 km, from €36 | TaxiNeo",
+        metaDescription: "Via A6, 30 min ride. Trocadéro, Périphérique Sud and Pont de Sèvres along the way. Terminal drop-off, real-time flight tracking included. No toll on this route.",
         heroTitle: "Taxi Paris 16th Arrondissement → Orly Airport",
         heroSubtitle: "Transfer from Trocadéro and Passy to Orly at a fixed price of €36 — €44. Comfortable service in 30 minutes.",
         description: "From the 16th arrondissement, reach Orly in 30 minutes via the southern ring road. Premium TaxiNeo service suited to the 16th's discerning clientele.",
@@ -438,8 +438,8 @@ export const trajetsParisArr14to20: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris 17ème → CDG | Prix fixe dès 53 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi depuis le 17ème arrondissement de Paris vers CDG. 25 km, 40 min, prix fixe dès 53 €. Prise en charge Batignolles, Ternes, Étoile.",
+        metaTitle: "Taxi Paris 17e → Aéroport CDG | 25 km, dès 53 € | TaxiNeo",
+        metaDescription: "Par A1, 40 min de trajet. En passant par Palais des Congrès, Batignolles et Place de l'Étoile. Accueil au terminal, attente gratuite si retard de vol.",
         heroTitle: "Taxi Paris 17ème arrondissement → Aéroport CDG",
         heroSubtitle: "Transfert depuis les Batignolles et les Ternes vers Charles de Gaulle au prix fixe de 53 — 65 €. Accès rapide à l'A1.",
         description: "Le 17ème arrondissement, quartier des Batignolles, des Ternes et du Palais des Congrès, bénéficie d'un accès rapide vers CDG par le périphérique nord et l'A1. Trajet en 40 minutes.",
@@ -457,8 +457,8 @@ export const trajetsParisArr14to20: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris 17th → CDG | Fixed price from €53 | TaxiNeo",
-        metaDescription: "Book your taxi from Paris 17th arrondissement to CDG Airport. 25 km, 40 min, fixed price from €53. Pickup at Batignolles, Ternes, Étoile.",
+        metaTitle: "Taxi Paris 17e → Aéroport CDG | 25 km, from €53 | TaxiNeo",
+        metaDescription: "Direct route via A1, 40 min. Palais des Congrès, Batignolles and Place de l'Étoile along the way. Terminal drop-off, real-time flight tracking included.",
         heroTitle: "Taxi Paris 17th Arrondissement → CDG Airport",
         heroSubtitle: "Transfer from Batignolles and Ternes to Charles de Gaulle at a fixed price of €53 — €65. Quick A1 access.",
         description: "The 17th arrondissement, home to Batignolles, Ternes and the Palais des Congrès, enjoys quick CDG access via the northern ring road and A1. Journey in 40 minutes.",
@@ -506,8 +506,8 @@ export const trajetsParisArr14to20: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris 17ème → Orly | Prix fixe dès 38 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi depuis le 17ème arrondissement vers Orly. 22 km, 40 min, prix fixe dès 38 €. Prise en charge Batignolles, Ternes, Palais des Congrès.",
+        metaTitle: "Taxi Paris 17e → Aéroport d'Orly | 22 km, dès 38 € | TaxiNeo",
+        metaDescription: "Par A6, 40 min de trajet. Périphérique Ouest, Porte de Versailles, Batignolles sur le parcours. Accueil au terminal, attente gratuite si retard de vol.",
         heroTitle: "Taxi Paris 17ème arrondissement → Aéroport d'Orly",
         heroSubtitle: "Transfert depuis les Batignolles et les Ternes vers Orly au prix fixe de 38 — 46 €. Trajet en 40 minutes.",
         description: "Depuis le 17ème arrondissement, rejoignez Orly en 40 minutes par le périphérique ouest et sud. Le chauffeur TaxiNeo vous prend en charge à domicile.",
@@ -525,8 +525,8 @@ export const trajetsParisArr14to20: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris 17th → Orly | Fixed price from €38 | TaxiNeo",
-        metaDescription: "Book your taxi from Paris 17th arrondissement to Orly Airport. 22 km, 40 min, fixed price from €38. Pickup at Batignolles, Ternes, Palais des Congrès.",
+        metaTitle: "Taxi Paris 17e → Aéroport d'Orly | 22 km, from €38 | TaxiNeo",
+        metaDescription: "Direct route via A6, 40 min. Périphérique Ouest, Porte de Versailles and Batignolles along the way. Terminal drop-off, real-time flight tracking included.",
         heroTitle: "Taxi Paris 17th Arrondissement → Orly Airport",
         heroSubtitle: "Transfer from Batignolles and Ternes to Orly at a fixed price of €38 — €46. Journey in 40 minutes.",
         description: "From the 17th arrondissement, reach Orly in 40 minutes via the western and southern ring road. Your TaxiNeo driver picks you up at your door.",
@@ -574,8 +574,8 @@ export const trajetsParisArr14to20: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris 18ème → CDG | Prix fixe dès 50 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi depuis le 18ème arrondissement de Paris vers CDG. 22 km, 35 min, prix fixe dès 50 €. Prise en charge Montmartre, Sacré-Cœur, Barbès.",
+        metaTitle: "Taxi Paris 18e → Aéroport CDG | 22 km, dès 50 € | TaxiNeo",
+        metaDescription: "Via A1 en 35 min. Sacré-Cœur, Montmartre et Porte de la Chapelle en chemin. Dépose au terminal, suivi de vol. Suivi de vol, dépose directe au terminal.",
         heroTitle: "Taxi Paris 18ème arrondissement → Aéroport CDG",
         heroSubtitle: "Transfert depuis Montmartre et le Sacré-Cœur vers Charles de Gaulle au prix fixe de 50 — 62 €. L'un des trajets les plus rapides vers CDG.",
         description: "Le 18ème arrondissement, quartier mythique de Montmartre et du Sacré-Cœur, est l'un des points de départ les plus proches de CDG grâce à la Porte de la Chapelle et l'A1. Trajet en seulement 35 minutes.",
@@ -593,8 +593,8 @@ export const trajetsParisArr14to20: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris 18th → CDG | Fixed price from €50 | TaxiNeo",
-        metaDescription: "Book your taxi from Paris 18th arrondissement to CDG Airport. 22 km, 35 min, fixed price from €50. Pickup at Montmartre, Sacré-Cœur, Barbès.",
+        metaTitle: "Taxi Paris 18e → Aéroport CDG | 22 km, from €50 | TaxiNeo",
+        metaDescription: "Via A1, 35 min ride. Sacré-Cœur, Montmartre and Porte de la Chapelle along the way. Terminal drop-off, flight tracking. Up to 55 min during rush hour.",
         heroTitle: "Taxi Paris 18th Arrondissement → CDG Airport",
         heroSubtitle: "Transfer from Montmartre and the Sacré-Cœur to Charles de Gaulle at a fixed price of €50 — €62. One of the fastest routes to CDG.",
         description: "The 18th arrondissement, mythical home of Montmartre and the Sacré-Cœur, is one of the closest departure points to CDG thanks to Porte de la Chapelle and the A1. Journey in just 35 minutes.",
@@ -642,8 +642,8 @@ export const trajetsParisArr14to20: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris 18ème → Orly | Prix fixe dès 38 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi depuis le 18ème arrondissement vers Orly. 21 km, 40 min, prix fixe dès 38 €. Prise en charge Montmartre, Barbès, Clignancourt.",
+        metaTitle: "Taxi Paris 18e → Aéroport d'Orly | 21 km, dès 38 € | TaxiNeo",
+        metaDescription: "Via A6 en 40 min. Montmartre, Périphérique et Porte d'Orléans en chemin. Dépose au terminal, suivi de vol. Dépose au terminal exact, suivi de vol en temps réel.",
         heroTitle: "Taxi Paris 18ème arrondissement → Aéroport d'Orly",
         heroSubtitle: "Transfert depuis Montmartre vers Orly au prix fixe de 38 — 46 €. Trajet confortable en 40 minutes.",
         description: "Depuis le 18ème arrondissement, rejoignez Orly en 40 minutes par le périphérique. Le chauffeur TaxiNeo vous prend en charge au bas de Montmartre ou à votre adresse.",
@@ -661,8 +661,8 @@ export const trajetsParisArr14to20: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris 18th → Orly | Fixed price from €38 | TaxiNeo",
-        metaDescription: "Book your taxi from Paris 18th arrondissement to Orly Airport. 21 km, 40 min, fixed price from €38. Pickup at Montmartre, Barbès, Clignancourt.",
+        metaTitle: "Taxi Paris 18e → Aéroport d'Orly | 21 km, from €38 | TaxiNeo",
+        metaDescription: "Via A6, 40 min ride. Montmartre, Périphérique and Porte d'Orléans along the way. Terminal drop-off, flight tracking. Flight tracking, direct terminal drop-off.",
         heroTitle: "Taxi Paris 18th Arrondissement → Orly Airport",
         heroSubtitle: "Transfer from Montmartre to Orly at a fixed price of €38 — €46. Comfortable journey in 40 minutes.",
         description: "From the 18th arrondissement, reach Orly in 40 minutes via the ring road. Your TaxiNeo driver picks you up at the foot of Montmartre or at your address.",
@@ -710,8 +710,8 @@ export const trajetsParisArr14to20: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris 19ème → CDG | Prix fixe dès 50 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi depuis le 19ème arrondissement de Paris vers CDG. 21 km, 30 min, prix fixe dès 50 €. Prise en charge Villette, Buttes-Chaumont, Stalingrad.",
+        metaTitle: "Taxi Paris 19e → Aéroport CDG | 21 km, dès 50 € | TaxiNeo",
+        metaDescription: "Par A1, 30 min de trajet. En passant par Parc de la Villette, Buttes-Chaumont et Philharmonie. Accueil au terminal, attente gratuite si retard de vol.",
         heroTitle: "Taxi Paris 19ème arrondissement → Aéroport CDG",
         heroSubtitle: "Transfert depuis la Villette et les Buttes-Chaumont vers Charles de Gaulle au prix fixe de 50 — 62 €. Le trajet le plus court de Paris vers CDG.",
         description: "Le 19ème arrondissement, avec le Parc de la Villette et les Buttes-Chaumont, est l'arrondissement le plus proche de CDG. Seulement 21 km et 30 minutes pour rejoindre votre terminal.",
@@ -729,8 +729,8 @@ export const trajetsParisArr14to20: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris 19th → CDG | Fixed price from €50 | TaxiNeo",
-        metaDescription: "Book your taxi from Paris 19th arrondissement to CDG Airport. 21 km, 30 min, fixed price from €50. Pickup at Villette, Buttes-Chaumont, Stalingrad.",
+        metaTitle: "Taxi Paris 19e → Aéroport CDG | 21 km, from €50 | TaxiNeo",
+        metaDescription: "Direct route via A1, 30 min. Parc de la Villette, Buttes-Chaumont and Philharmonie along the way. Terminal drop-off, real-time flight tracking included.",
         heroTitle: "Taxi Paris 19th Arrondissement → CDG Airport",
         heroSubtitle: "Transfer from La Villette and Buttes-Chaumont to Charles de Gaulle at a fixed price of €50 — €62. The shortest Paris-to-CDG journey.",
         description: "The 19th arrondissement, with Parc de la Villette and Buttes-Chaumont, is the closest arrondissement to CDG. Just 21 km and 30 minutes to your terminal.",
@@ -778,8 +778,8 @@ export const trajetsParisArr14to20: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris 19ème → Orly | Prix fixe dès 38 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi depuis le 19ème arrondissement vers Orly. 20 km, 35 min, prix fixe dès 38 €. Prise en charge Villette, Buttes-Chaumont, Stalingrad.",
+        metaTitle: "Taxi Paris 19e → Aéroport d'Orly | 20 km, dès 38 € | TaxiNeo",
+        metaDescription: "Trajet direct A6 en 35 min. Buttes-Chaumont, Périphérique Est, Porte d'Italie sur le parcours. Accueil au terminal, attente gratuite si retard de vol.",
         heroTitle: "Taxi Paris 19ème arrondissement → Aéroport d'Orly",
         heroSubtitle: "Transfert depuis la Villette et les Buttes-Chaumont vers Orly au prix fixe de 38 — 46 €. Trajet en 35 minutes.",
         description: "Depuis le 19ème arrondissement, rejoignez Orly en 35 minutes via le périphérique est et sud. Le chauffeur TaxiNeo vous prend en charge à domicile.",
@@ -797,8 +797,8 @@ export const trajetsParisArr14to20: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris 19th → Orly | Fixed price from €38 | TaxiNeo",
-        metaDescription: "Book your taxi from Paris 19th arrondissement to Orly Airport. 20 km, 35 min, fixed price from €38. Pickup at Villette, Buttes-Chaumont, Stalingrad.",
+        metaTitle: "Taxi Paris 19e → Aéroport d'Orly | 20 km, from €38 | TaxiNeo",
+        metaDescription: "Direct route via A6, 35 min. Buttes-Chaumont, Périphérique Est and Porte d'Italie along the way. Terminal drop-off, real-time flight tracking included.",
         heroTitle: "Taxi Paris 19th Arrondissement → Orly Airport",
         heroSubtitle: "Transfer from La Villette and Buttes-Chaumont to Orly at a fixed price of €38 — €46. Journey in 35 minutes.",
         description: "From the 19th arrondissement, reach Orly in 35 minutes via the eastern and southern ring road. Your TaxiNeo driver picks you up at your door.",
@@ -846,8 +846,8 @@ export const trajetsParisArr14to20: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris 20ème → CDG | Prix fixe dès 53 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi depuis le 20ème arrondissement de Paris vers CDG. 24 km, 35 min, prix fixe dès 53 €. Prise en charge Père-Lachaise, Belleville, Gambetta.",
+        metaTitle: "Taxi Paris 20e → Aéroport CDG | 24 km, dès 53 € | TaxiNeo",
+        metaDescription: "Via A3 en 35 min. Père-Lachaise, Belleville et Ménilmontant en chemin. Dépose au terminal, suivi de vol. Dépose au terminal exact, suivi de vol en temps réel.",
         heroTitle: "Taxi Paris 20ème arrondissement → Aéroport CDG",
         heroSubtitle: "Transfert depuis le Père-Lachaise et Belleville vers Charles de Gaulle au prix fixe de 53 — 65 €. Accès rapide via l'A3.",
         description: "Le 20ème arrondissement, quartier du Père-Lachaise, de Belleville et de Ménilmontant, est bien connecté à CDG via l'autoroute A3 depuis la Porte de Bagnolet. Trajet en 35 minutes.",
@@ -865,8 +865,8 @@ export const trajetsParisArr14to20: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris 20th → CDG | Fixed price from €53 | TaxiNeo",
-        metaDescription: "Book your taxi from Paris 20th arrondissement to CDG Airport. 24 km, 35 min, fixed price from €53. Pickup at Père-Lachaise, Belleville, Gambetta.",
+        metaTitle: "Taxi Paris 20e → Aéroport CDG | 24 km, from €53 | TaxiNeo",
+        metaDescription: "Via A3, 35 min ride. Père-Lachaise, Belleville and Ménilmontant along the way. Terminal drop-off, flight tracking. Flight tracking, direct terminal drop-off.",
         heroTitle: "Taxi Paris 20th Arrondissement → CDG Airport",
         heroSubtitle: "Transfer from Père-Lachaise and Belleville to Charles de Gaulle at a fixed price of €53 — €65. Quick access via the A3.",
         description: "The 20th arrondissement, home to Père-Lachaise, Belleville and Ménilmontant, is well connected to CDG via the A3 motorway from Porte de Bagnolet. Journey in 35 minutes.",
@@ -914,8 +914,8 @@ export const trajetsParisArr14to20: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris 20ème → Orly | Prix fixe dès 36 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi depuis le 20ème arrondissement vers Orly. 17 km, 30 min, prix fixe dès 36 €. Prise en charge Père-Lachaise, Belleville, Gambetta.",
+        metaTitle: "Taxi Paris 20e → Aéroport d'Orly | 17 km, dès 36 € | TaxiNeo",
+        metaDescription: "Itinéraire A6, environ 30 min. Père-Lachaise, Périphérique Est, Porte d'Italie sur le parcours. Accueil au terminal, attente gratuite si retard de vol.",
         heroTitle: "Taxi Paris 20ème arrondissement → Aéroport d'Orly",
         heroSubtitle: "Transfert depuis le Père-Lachaise et Belleville vers Orly au prix fixe de 36 — 44 €. Trajet en 30 minutes.",
         description: "Depuis le 20ème arrondissement, rejoignez Orly en 30 minutes via le périphérique est et l'A6. Un trajet direct sans traverser le centre de Paris.",
@@ -933,8 +933,8 @@ export const trajetsParisArr14to20: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris 20th → Orly | Fixed price from €36 | TaxiNeo",
-        metaDescription: "Book your taxi from Paris 20th arrondissement to Orly Airport. 17 km, 30 min, fixed price from €36. Pickup at Père-Lachaise, Belleville, Gambetta.",
+        metaTitle: "Taxi Paris 20e → Aéroport d'Orly | 17 km, from €36 | TaxiNeo",
+        metaDescription: "A6 route, approximately 30 min. Père-Lachaise, Périphérique Est and Porte d'Italie along the way. Terminal drop-off, real-time flight tracking included.",
         heroTitle: "Taxi Paris 20th Arrondissement → Orly Airport",
         heroSubtitle: "Transfer from Père-Lachaise and Belleville to Orly at a fixed price of €36 — €44. Journey in 30 minutes.",
         description: "From the 20th arrondissement, reach Orly in 30 minutes via the eastern ring road and A6. A direct route without crossing central Paris.",

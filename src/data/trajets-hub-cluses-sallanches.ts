@@ -30,8 +30,8 @@ export const trajetsCluses: Trajet[] = [
     hub: "cluses-sallanches",
     i18n: {
       fr: {
-        metaTitle: "Taxi Cluses → Genève | Transfert Haute-Savoie | TaxiNeo",
-        metaDescription: "Réservez votre taxi Cluses–Genève dès 65 €. 50 km par l'A40, trajet en 40 min. Service porte-à-porte depuis la vallée de l'Arve.",
+        metaTitle: "Taxi Cluses → Genève | forfait dès 65 €, 40 min | TaxiNeo",
+        metaDescription: "Via A40 en 40 min. Passage par Autoroute Blanche A40, Vallée de l'Arve, Frontière suisse et Lac Léman. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Cluses — Genève",
         heroSubtitle: "De la capitale mondiale du décolletage à la métropole internationale du Léman",
         description: "Transfert en taxi de Cluses à Genève, métropole internationale au bord du lac Léman, via l'autoroute Blanche A40 à travers la Haute-Savoie.",
@@ -50,7 +50,7 @@ export const trajetsCluses: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Cluses → Geneva | Haute-Savoie Transfer | TaxiNeo",
-        metaDescription: "Book your Cluses–Geneva taxi from €65. 50 km via the A40, 40-min ride. Door-to-door service from the Arve valley.",
+        metaDescription: "Via A40, 40 min ride. Autoroute Blanche A40, Vallée de l'Arve, Frontière suisse and Lac Léman en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Cluses — Geneva",
         heroSubtitle: "From the world capital of precision engineering to the international Léman metropolis",
         description: "Taxi transfer from Cluses to Geneva, international metropolis on Lake Geneva, via the A40 Autoroute Blanche through Haute-Savoie.",
@@ -95,8 +95,8 @@ export const trajetsCluses: Trajet[] = [
     hub: "cluses-sallanches",
     i18n: {
       fr: {
-        metaTitle: "Taxi Cluses → Annecy | Transfert Haute-Savoie | TaxiNeo",
-        metaDescription: "Réservez votre taxi Cluses–Annecy dès 65 €. 55 km par l'A40/A41, trajet en 40 min. De la vallée de l'Arve au lac d'Annecy.",
+        metaTitle: "Taxi Cluses → Annecy | forfait dès 65 €, 40 min | TaxiNeo",
+        metaDescription: "Via A40 / A41 en 40 min. Autoroute A40/A41, La Roche-sur-Foron, Lac d'Annecy et Massif des Bornes en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Cluses — Annecy",
         heroSubtitle: "De la vallée de l'Arve aux rives du plus pur lac d'Europe",
         description: "Transfert en taxi de Cluses à Annecy, la Venise des Alpes, via les autoroutes A40 et A41 à travers la Haute-Savoie.",
@@ -115,7 +115,7 @@ export const trajetsCluses: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Cluses → Annecy | Haute-Savoie Transfer | TaxiNeo",
-        metaDescription: "Book your Cluses–Annecy taxi from €65. 55 km via the A40/A41, 40-min ride. From the Arve valley to Lake Annecy.",
+        metaDescription: "Via A40 / A41, 40 min ride. Autoroute A40/A41, La Roche-sur-Foron, Lac d'Annecy and Massif des Bornes en route. Faster and more direct than train or bus.",
         heroTitle: "Taxi Cluses — Annecy",
         heroSubtitle: "From the Arve valley to the shores of Europe's purest lake",
         description: "Taxi transfer from Cluses to Annecy, the Venice of the Alps, via the A40 and A41 motorways through Haute-Savoie.",
@@ -160,8 +160,8 @@ export const trajetsCluses: Trajet[] = [
     hub: "cluses-sallanches",
     i18n: {
       fr: {
-        metaTitle: "Taxi Sallanches → Chamonix | Transfert Mont-Blanc | TaxiNeo",
-        metaDescription: "Réservez votre taxi Sallanches–Chamonix dès 30 €. 25 km par la N205, trajet en 25 min. Accès direct à la vallée du Mont-Blanc.",
+        metaTitle: "Taxi Sallanches → Chamonix | 25 km, dès 30 € | TaxiNeo",
+        metaDescription: "Via N205 en 25 min. RN205 Route Blanche, Mont-Blanc, Passy et Servoz en chemin. Dépose à votre adresse exacte. Alternative directe au train ou au bus.",
         heroTitle: "Taxi Sallanches — Chamonix",
         heroSubtitle: "De la porte du Mont-Blanc au cœur de la capitale mondiale de l'alpinisme",
         description: "Transfert en taxi de Sallanches à Chamonix-Mont-Blanc, berceau de l'alpinisme mondial, par la Route Blanche N205 au pied du toit de l'Europe.",
@@ -179,8 +179,8 @@ export const trajetsCluses: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Sallanches → Chamonix | Mont-Blanc Transfer | TaxiNeo",
-        metaDescription: "Book your Sallanches–Chamonix taxi from €30. 25 km via the N205, 25-min ride. Direct access to the Mont-Blanc valley.",
+        metaTitle: "Taxi Sallanches → Chamonix | 25 km, from €30 | TaxiNeo",
+        metaDescription: "Via N205, 25 min ride. RN205 Route Blanche, Mont-Blanc, Passy and Servoz en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Sallanches — Chamonix",
         heroSubtitle: "From the gateway to Mont-Blanc to the world capital of mountaineering",
         description: "Taxi transfer from Sallanches to Chamonix-Mont-Blanc, birthplace of world mountaineering, via the Route Blanche N205 at the foot of Europe's highest peak.",
@@ -225,8 +225,8 @@ export const trajetsCluses: Trajet[] = [
     hub: "cluses-sallanches",
     i18n: {
       fr: {
-        metaTitle: "Taxi Sallanches → Genève | Transfert Mont-Blanc | TaxiNeo",
-        metaDescription: "Réservez votre taxi Sallanches–Genève dès 80 €. 65 km par l'A40, trajet en 50 min. Depuis la porte du Mont-Blanc vers la Suisse.",
+        metaTitle: "Taxi Sallanches → Genève | 65 km, dès 80 € | TaxiNeo",
+        metaDescription: "Via A40 en 50 min. Passage par Autoroute Blanche A40, Vallée de l'Arve, Mont-Blanc et Frontière suisse. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Sallanches — Genève",
         heroSubtitle: "De la porte du Mont-Blanc à la métropole internationale du Léman",
         description: "Transfert en taxi de Sallanches à Genève, métropole internationale au bord du lac Léman, via l'autoroute Blanche A40 depuis le pays du Mont-Blanc.",
@@ -244,8 +244,8 @@ export const trajetsCluses: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Sallanches → Geneva | Mont-Blanc Transfer | TaxiNeo",
-        metaDescription: "Book your Sallanches–Geneva taxi from €80. 65 km via the A40, 50-min ride. From the gateway to Mont-Blanc to Switzerland.",
+        metaTitle: "Taxi Sallanches → Genève | 65 km, from €80 | TaxiNeo",
+        metaDescription: "Via A40, 50 min ride. Autoroute Blanche A40, Vallée de l'Arve, Mont-Blanc and Frontière suisse en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Sallanches — Geneva",
         heroSubtitle: "From the gateway to Mont-Blanc to the international Léman metropolis",
         description: "Taxi transfer from Sallanches to Geneva, international metropolis on Lake Geneva, via the A40 Autoroute Blanche from the Mont-Blanc country.",
@@ -290,8 +290,8 @@ export const trajetsCluses: Trajet[] = [
     hub: "cluses-sallanches",
     i18n: {
       fr: {
-        metaTitle: "Taxi Cluses → Chamonix | Transfert Mont-Blanc | TaxiNeo",
-        metaDescription: "Réservez votre taxi Cluses–Chamonix dès 50 €. 40 km par l'A40/N205, trajet en 35 min. Du Grand Massif au Mont-Blanc.",
+        metaTitle: "Taxi Cluses → Chamonix | 40 km, dès 50 € | TaxiNeo",
+        metaDescription: "Par A40 / N205, 35 min de trajet. N205 Route Blanche, Vallée de l'Arve, Mont-Blanc et Sallanches en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Cluses — Chamonix",
         heroSubtitle: "Du cœur de la vallée de l'Arve au pied du toit de l'Europe",
         description: "Transfert en taxi de Cluses à Chamonix-Mont-Blanc, berceau de l'alpinisme mondial, via l'A40 et la Route Blanche N205 à travers la haute vallée de l'Arve.",
@@ -309,8 +309,8 @@ export const trajetsCluses: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Cluses → Chamonix | Mont-Blanc Transfer | TaxiNeo",
-        metaDescription: "Book your Cluses–Chamonix taxi from €50. 40 km via the A40/N205, 35-min ride. From the Grand Massif to Mont-Blanc.",
+        metaTitle: "Taxi Cluses → Chamonix | 40 km, from €50 | TaxiNeo",
+        metaDescription: "Via A40 / N205, 35 min ride. N205 Route Blanche, Vallée de l'Arve, Mont-Blanc and Sallanches en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Cluses — Chamonix",
         heroSubtitle: "From the heart of the Arve valley to the foot of the roof of Europe",
         description: "Taxi transfer from Cluses to Chamonix-Mont-Blanc, birthplace of world mountaineering, via the A40 and Route Blanche N205 through the upper Arve valley.",

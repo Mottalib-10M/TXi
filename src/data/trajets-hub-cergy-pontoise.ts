@@ -27,8 +27,8 @@ export const trajetsCergyPontoise: Trajet[] = [
     hub: "cergy-pontoise",
     i18n: {
       fr: {
-        metaTitle: "Taxi Cergy-Pontoise → Paris | Prix fixe dès 50 € | TaxiNeo",
-        metaDescription: "Taxi Cergy-Pontoise → Paris. 35 km, 40 min, dès 50 €. A15, transfert direct porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Cergy-Pontoise → Paris | 35 km, dès 50 € | TaxiNeo",
+        metaDescription: "Via A15 en 40 min. Axe Majeur, Val-d'Oise, Porte-à-porte et Nuit en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Cergy-Pontoise → Paris",
         heroSubtitle: "Transfert Cergy-Pontoise → Paris au prix fixe de 50 — 70 €. 35 km, direct par l'A15.",
         description: "Paris est à 40 min de Cergy-Pontoise par l'A15, l'autoroute qui relie le Val-d'Oise à la capitale.",
@@ -46,8 +46,8 @@ export const trajetsCergyPontoise: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Cergy-Pontoise → Paris | Fixed price from €50 | TaxiNeo",
-        metaDescription: "Taxi Cergy-Pontoise → Paris. 35 km, 40 min, from €50. A15 motorway, toll-free, door-to-door. Book 24/7.",
+        metaTitle: "Taxi Cergy-Pontoise → Paris | 35 km, from €50 | TaxiNeo",
+        metaDescription: "Via A15, 40 min ride. Axe Majeur, Val-d'Oise, Porte-à-porte and Nuit en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Cergy-Pontoise → Paris",
         heroSubtitle: "Your Cergy-Pontoise → Paris transfer at €50 — €70. 35 km, toll-free via the A15.",
         description: "Paris is 40 min from Cergy-Pontoise via the toll-free A15 motorway.",
@@ -92,8 +92,8 @@ export const trajetsCergyPontoise: Trajet[] = [
     hub: "cergy-pontoise",
     i18n: {
       fr: {
-        metaTitle: "Taxi Cergy-Pontoise → Aéroport CDG | Prix fixe dès 70 € | TaxiNeo",
-        metaDescription: "Taxi Cergy-Pontoise → CDG. 55 km, 50 min, dès 70 €. Transfert direct via A104/A1, suivi de vol. Réservation 24h/24.",
+        metaTitle: "Taxi Cergy-Pontoise → Aéroport CDG | 55 km, 70 € | TaxiNeo",
+        metaDescription: "Itinéraire A104 / A1, environ 50 min. A104 Francilienne, Aéroport CDG, Val-d'Oise et Île-de-France. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Cergy-Pontoise → Aéroport CDG",
         heroSubtitle: "Transfert Cergy-Pontoise → Aéroport Charles de Gaulle au prix fixe de 70 — 90 €. 55 km, via la Francilienne.",
         description: "L'aéroport CDG est à 50 min de Cergy-Pontoise par la Francilienne (A104) et l'A1.",
@@ -111,8 +111,8 @@ export const trajetsCergyPontoise: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Cergy-Pontoise → CDG Airport | Fixed price from €70 | TaxiNeo",
-        metaDescription: "Taxi Cergy-Pontoise → CDG. 55 km, 50 min, from €70. Direct transfer via A104/A1. Flight tracking. Book 24/7.",
+        metaTitle: "Taxi Cergy-Pontoise → Aéroport CDG | 55 km, €70 | TaxiNeo",
+        metaDescription: "Direct route via A104 / A1, 50 min. A104 Francilienne, Aéroport CDG, Val-d'Oise and Île-de-France. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Cergy-Pontoise → CDG Airport",
         heroSubtitle: "Your Cergy-Pontoise → CDG Airport transfer at €70 — €90. 55 km, via the Francilienne.",
         description: "CDG Airport is 50 min from Cergy-Pontoise via the Francilienne (A104) and A1.",
@@ -157,8 +157,8 @@ export const trajetsCergyPontoise: Trajet[] = [
     hub: "cergy-pontoise",
     i18n: {
       fr: {
-        metaTitle: "Taxi Cergy-Pontoise → La Défense | Prix fixe dès 35 € | TaxiNeo",
-        metaDescription: "Taxi Cergy-Pontoise → La Défense. 25 km, 25 min, dès 35 €. A15, transfert direct, gratuit sans péage. Réservation 24h/24.",
+        metaTitle: "Taxi Cergy-Pontoise → La Défense | 25 km, dès 35 € | TaxiNeo",
+        metaDescription: "Itinéraire A15, environ 25 min. Passage par Quartier d'affaires, Val-d'Oise, Porte-à-porte et Express. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Cergy-Pontoise → La Défense",
         heroSubtitle: "Transfert Cergy-Pontoise → La Défense au prix fixe de 35 — 50 €. 25 km, direct par l'A15 sans péage.",
         description: "La Défense, premier quartier d'affaires européen, est à 25 min de Cergy-Pontoise par l'A15.",
@@ -176,8 +176,8 @@ export const trajetsCergyPontoise: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Cergy-Pontoise → La Défense | Fixed price from €35 | TaxiNeo",
-        metaDescription: "Taxi Cergy-Pontoise → La Défense. 25 km, 25 min, from €35. A15, toll-free, direct to business district. Book 24/7.",
+        metaTitle: "Taxi Cergy-Pontoise → La Défense | 25 km, from €35 | TaxiNeo",
+        metaDescription: "A15 route, approximately 25 min. Quartier d'affaires, Val-d'Oise, Porte-à-porte and Express en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Cergy-Pontoise → La Défense",
         heroSubtitle: "Your Cergy-Pontoise → La Défense transfer at €35 — €50. 25 km, toll-free via the A15.",
         description: "La Défense, Europe's largest business district, is 25 min from Cergy-Pontoise via the toll-free A15.",
@@ -222,8 +222,8 @@ export const trajetsCergyPontoise: Trajet[] = [
     hub: "cergy-pontoise",
     i18n: {
       fr: {
-        metaTitle: "Taxi Cergy-Pontoise → Rouen | Prix fixe dès 130 € | TaxiNeo",
-        metaDescription: "Taxi Cergy-Pontoise → Rouen. 110 km, 1h15, dès 130 €. Via A15/A13, vallée de la Seine. Réservation 24h/24.",
+        metaTitle: "Taxi Cergy-Pontoise → Rouen | 110 km, dès 130 € | TaxiNeo",
+        metaDescription: "Via A15 / A13 en 1h15. Passage par Normandie, Vallée de la Seine, Cathédrale de Rouen et Porte-à-porte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Cergy-Pontoise → Rouen",
         heroSubtitle: "Transfert Cergy-Pontoise → Rouen au prix fixe de 130 — 165 €. 110 km, par l'A15 et l'A13 le long de la Seine.",
         description: "Rouen, capitale de la Normandie et sa cathédrale peinte par Monet, est à 1h15 de Cergy-Pontoise.",
@@ -241,8 +241,8 @@ export const trajetsCergyPontoise: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Cergy-Pontoise → Rouen | Fixed price from €130 | TaxiNeo",
-        metaDescription: "Taxi Cergy-Pontoise → Rouen. 110 km, 1h15, from €130. Via A15/A13, Seine Valley. Book 24/7.",
+        metaTitle: "Taxi Cergy-Pontoise → Rouen | 110 km, from €130 | TaxiNeo",
+        metaDescription: "Via A15 / A13, 1h15 ride. Normandie, Vallée de la Seine, Cathédrale de Rouen and Porte-à-porte en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Cergy-Pontoise → Rouen",
         heroSubtitle: "Your Cergy-Pontoise → Rouen transfer at €130 — €165. 110 km, along the Seine Valley.",
         description: "Rouen, Normandy's capital with its Monet-painted cathedral, is 1h15 from Cergy-Pontoise.",
@@ -287,8 +287,8 @@ export const trajetsCergyPontoise: Trajet[] = [
     hub: "cergy-pontoise",
     i18n: {
       fr: {
-        metaTitle: "Taxi Cergy-Pontoise → Beauvais | Prix fixe dès 85 € | TaxiNeo",
-        metaDescription: "Taxi Cergy-Pontoise → Beauvais. 70 km, 55 min, dès 85 €. Via D927/A16, Vexin français. Réservation 24h/24.",
+        metaTitle: "Taxi Cergy-Pontoise → Beauvais | 70 km, dès 85 € | TaxiNeo",
+        metaDescription: "Via D927 / A16 en 55 min. Cathédrale de Beauvais, Val-d'Oise, Oise et Vexin en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Cergy-Pontoise → Beauvais",
         heroSubtitle: "Transfert Cergy-Pontoise → Beauvais au prix fixe de 85 — 110 €. 70 km, à travers le Vexin français.",
         description: "Beauvais, préfecture de l'Oise et sa cathédrale au chœur gothique le plus haut du monde, est à 55 min de Cergy.",
@@ -306,8 +306,8 @@ export const trajetsCergyPontoise: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Cergy-Pontoise → Beauvais | Fixed price from €85 | TaxiNeo",
-        metaDescription: "Taxi Cergy-Pontoise → Beauvais. 70 km, 55 min, from €85. Through the Vexin countryside. Book 24/7.",
+        metaTitle: "Taxi Cergy-Pontoise → Beauvais | 70 km, from €85 | TaxiNeo",
+        metaDescription: "D927 / A16 route, approximately 55 min. Cathédrale de Beauvais, Val-d'Oise, Oise and Vexin en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Cergy-Pontoise → Beauvais",
         heroSubtitle: "Your Cergy-Pontoise → Beauvais transfer at €85 — €110. 70 km, through the Vexin Natural Park.",
         description: "Beauvais, with the world's tallest Gothic choir (48.5 m), is 55 min from Cergy-Pontoise.",

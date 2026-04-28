@@ -29,8 +29,8 @@ export const trajetsPerpignan2: Trajet[] = [
     hub: "perpignan",
     i18n: {
       fr: {
-        metaTitle: "Taxi Perpignan → Toulouse | Prix fixe dès 220 € | TaxiNeo",
-        metaDescription: "Taxi Perpignan-Toulouse. 200 km, 2h, dès 220 €. A61 via Narbonne et Carcassonne. Réservation 24h/24.",
+        metaTitle: "Taxi Perpignan → Toulouse | 200 km, dès 220 € | TaxiNeo",
+        metaDescription: "Via A61 en 2h. Carcassonne, Canal du Midi et Capitale occitane en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Perpignan → Toulouse",
         heroSubtitle: "Votre transfert Perpignan → Toulouse au prix fixe de 220 — 280 €. 200 km via l'A61.",
         description: "Toulouse, capitale de l'Occitanie et ville rose de l'aéronautique, est à 2h de Perpignan par l'autoroute A61.",
@@ -48,8 +48,8 @@ export const trajetsPerpignan2: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Perpignan → Toulouse | Fixed price from €220 | TaxiNeo",
-        metaDescription: "Taxi Perpignan-Toulouse. 200 km, 2h, from €220. A61 via Narbonne and Carcassonne. Book 24/7.",
+        metaTitle: "Taxi Perpignan → Toulouse | 200 km, from €220 | TaxiNeo",
+        metaDescription: "Via A61, 2 hours ride. Carcassonne, Canal du Midi and Capitale occitane along the way. Drop-off at your exact address. Door-to-door, luggage included.",
         heroTitle: "Taxi Perpignan → Toulouse",
         heroSubtitle: "Your Perpignan → Toulouse transfer at €220 — €280. 200 km via the A61.",
         description: "Toulouse, capital of Occitanie and pink city of aerospace, is 2 hours from Perpignan via the A61 motorway.",
@@ -93,8 +93,8 @@ export const trajetsPerpignan2: Trajet[] = [
     hub: "perpignan",
     i18n: {
       fr: {
-        metaTitle: "Taxi Perpignan → Montpellier | Prix fixe dès 180 € | TaxiNeo",
-        metaDescription: "Taxi Perpignan-Montpellier. 165 km, 1h40, dès 180 €. A9, Languedoc. Réservation 24h/24.",
+        metaTitle: "Taxi Perpignan → Montpellier | 165 km, dès 180 € | TaxiNeo",
+        metaDescription: "Via A9 en 1h40. En passant par Narbonne, Béziers et Languedoc. Alternative directe au train ou au bus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Perpignan → Montpellier",
         heroSubtitle: "Votre transfert Perpignan → Montpellier au prix fixe de 180 — 230 €. 165 km via l'A9.",
         description: "Montpellier, métropole dynamique du Languedoc et pôle universitaire majeur, est à 1h40 de Perpignan par l'A9.",
@@ -112,8 +112,8 @@ export const trajetsPerpignan2: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Perpignan → Montpellier | Fixed price from €180 | TaxiNeo",
-        metaDescription: "Taxi Perpignan-Montpellier. 165 km, 1h40, from €180. A9 motorway, Languedoc coast. Book 24/7.",
+        metaTitle: "Taxi Perpignan → Montpellier | 165 km, from €180 | TaxiNeo",
+        metaDescription: "Via A9, 1h40 ride. Narbonne, Béziers and Languedoc along the way. Faster and more direct than train or bus. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Perpignan → Montpellier",
         heroSubtitle: "Your Perpignan → Montpellier transfer at €180 — €230. 165 km via the A9.",
         description: "Montpellier, dynamic Languedoc metropolis and major university centre, is 1h40 from Perpignan via the A9.",
@@ -156,8 +156,8 @@ export const trajetsPerpignan2: Trajet[] = [
     hub: "perpignan",
     i18n: {
       fr: {
-        metaTitle: "Taxi Perpignan → Andorre | Prix fixe dès 200 € | TaxiNeo",
-        metaDescription: "Taxi Perpignan-Andorre-la-Vieille. 170 km, 2h10, dès 200 €. N20, Pyrénées. Réservation 24h/24.",
+        metaTitle: "Taxi Perpignan → Andorre-la-Vieille | 170 km | TaxiNeo",
+        metaDescription: "Via N20 en 2h10. Pyrénées, Duty-free et Principauté en chemin. Alternative directe au train ou au bus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Perpignan → Andorre-la-Vieille",
         heroSubtitle: "Votre transfert Perpignan → Andorre-la-Vieille au prix fixe de 200 — 260 €. 170 km via la N20.",
         description: "Andorre-la-Vieille, capitale de la Principauté d'Andorre nichée dans les Pyrénées, est à 2h10 de Perpignan par la N20.",
@@ -175,8 +175,8 @@ export const trajetsPerpignan2: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Perpignan → Andorra | Fixed price from €200 | TaxiNeo",
-        metaDescription: "Taxi Perpignan-Andorra la Vella. 170 km, 2h10, from €200. N20, Pyrenees. Book 24/7.",
+        metaTitle: "Taxi Perpignan → Andorre-la-Vieille | 170 km, €200 | TaxiNeo",
+        metaDescription: "Via N20, 2h10 ride. Pyrénées, Duty-free and Principauté along the way. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Perpignan → Andorra la Vella",
         heroSubtitle: "Your Perpignan → Andorra la Vella transfer at €200 — €260. 170 km via the N20.",
         description: "Andorra la Vella, capital of the Principality of Andorra nestled in the Pyrenees, is 2h10 from Perpignan via the N20.",
@@ -220,8 +220,8 @@ export const trajetsPerpignan2: Trajet[] = [
     hub: "perpignan",
     i18n: {
       fr: {
-        metaTitle: "Taxi Perpignan → Gérone | Prix fixe dès 100 € | TaxiNeo",
-        metaDescription: "Taxi Perpignan-Gérone (Girona). 90 km, 1h, dès 100 €. AP-7, frontière Le Perthus. Réservation 24h/24.",
+        metaTitle: "Taxi Perpignan → Gérone | 90 km, dès 100 € | TaxiNeo",
+        metaDescription: "Via AP-7 en 1h. Costa Brava, Barri Vell et Catalogne espagnole en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Perpignan → Gérone",
         heroSubtitle: "Votre transfert Perpignan → Gérone au prix fixe de 100 — 130 €. 90 km via l'AP-7.",
         description: "Gérone (Girona), joyau médiéval de la Catalogne espagnole et porte de la Costa Brava, est à 1h de Perpignan.",
@@ -239,8 +239,8 @@ export const trajetsPerpignan2: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Perpignan → Girona | Fixed price from €100 | TaxiNeo",
-        metaDescription: "Taxi Perpignan-Girona. 90 km, 1h, from €100. AP-7, Le Perthus border. Book 24/7.",
+        metaTitle: "Taxi Perpignan → Gérone | 90 km, from €100 | TaxiNeo",
+        metaDescription: "Via AP-7, 1 hour ride. Costa Brava, Barri Vell and Catalogne espagnole along the way. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Perpignan → Girona",
         heroSubtitle: "Your Perpignan → Girona transfer at €100 — €130. 90 km via the AP-7.",
         description: "Girona, a medieval jewel of Spanish Catalonia and gateway to the Costa Brava, is just 1 hour from Perpignan.",
@@ -284,8 +284,8 @@ export const trajetsPerpignan2: Trajet[] = [
     hub: "perpignan",
     i18n: {
       fr: {
-        metaTitle: "Taxi Perpignan → Béziers | Prix fixe dès 105 € | TaxiNeo",
-        metaDescription: "Taxi Perpignan-Béziers. 100 km, 1h, dès 105 €. A9, Canal du Midi, Languedoc. Réservation 24h/24.",
+        metaTitle: "Taxi Perpignan → Béziers | 100 km, dès 105 € | TaxiNeo",
+        metaDescription: "Via A9 en 1h. Narbonne, Canal du Midi et Pays cathare en chemin. Dépose porte-à-porte, bagages inclus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Perpignan → Béziers",
         heroSubtitle: "Votre transfert Perpignan → Béziers au prix fixe de 105 — 135 €. 100 km via l'A9.",
         description: "Béziers, cité languedocienne du Canal du Midi et capitale du vin, est à 1h de Perpignan par l'A9.",
@@ -303,8 +303,8 @@ export const trajetsPerpignan2: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Perpignan → Béziers | Fixed price from €105 | TaxiNeo",
-        metaDescription: "Taxi Perpignan-Béziers. 100 km, 1h, from €105. A9, Canal du Midi, Languedoc. Book 24/7.",
+        metaTitle: "Taxi Perpignan → Béziers | 100 km, from €105 | TaxiNeo",
+        metaDescription: "Via A9, 1 hour ride. Narbonne, Canal du Midi and Pays cathare along the way. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Perpignan → Béziers",
         heroSubtitle: "Your Perpignan → Béziers transfer at €105 — €135. 100 km via the A9.",
         description: "Béziers, a Languedoc city on the Canal du Midi and wine capital, is 1 hour from Perpignan via the A9.",

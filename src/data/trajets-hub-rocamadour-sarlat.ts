@@ -27,8 +27,8 @@ export const trajetsRocamadourSarlat: Trajet[] = [
     hub: "rocamadour-sarlat",
     i18n: {
       fr: {
-        metaTitle: "Taxi Sarlat-la-Canéda → Bordeaux | Prix fixe dès 200 € | TaxiNeo",
-        metaDescription: "Taxi Sarlat-la-Canéda → Bordeaux. 170 km, 2h, dès 200 €. Traversée du Périgord noir et des vignobles de Saint-Émilion. Réservation 24h/24.",
+        metaTitle: "Taxi Sarlat-la-Canéda → Bordeaux | 170 km, 200 € | TaxiNeo",
+        metaDescription: "Par D703 / A89, 2h de trajet. Périgord Noir, Vallée de la Dordogne, Saint-Émilion et Lascaux en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Sarlat-la-Canéda → Bordeaux",
         heroSubtitle: "Transfert Sarlat-la-Canéda → Bordeaux au prix fixe de 200 — 260 €. 170 km, du Périgord noir à la capitale mondiale du vin.",
         description: "Bordeaux, métropole inscrite au patrimoine mondial de l'UNESCO, est à 2h de Sarlat-la-Canéda par la D703 et l'A89.",
@@ -46,8 +46,8 @@ export const trajetsRocamadourSarlat: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Sarlat-la-Canéda → Bordeaux | Fixed price from €200 | TaxiNeo",
-        metaDescription: "Taxi Sarlat-la-Canéda → Bordeaux. 170 km, 2h, from €200. Through the Périgord Noir and Saint-Émilion vineyards. Book 24/7.",
+        metaTitle: "Taxi Sarlat-la-Canéda → Bordeaux | 170 km, €200 | TaxiNeo",
+        metaDescription: "Direct route via D703 / A89, 2 hours. Périgord Noir, Vallée de la Dordogne, Saint-Émilion and Lascaux en route. Stops for sightseeing possible en route.",
         heroTitle: "Taxi Sarlat-la-Canéda → Bordeaux",
         heroSubtitle: "Your Sarlat-la-Canéda → Bordeaux transfer at €200 — €260. 170 km from the medieval Périgord Noir to the world wine capital.",
         description: "Bordeaux, a UNESCO World Heritage metropolis, is 2h from Sarlat-la-Canéda via the D703 and A89.",
@@ -92,8 +92,8 @@ export const trajetsRocamadourSarlat: Trajet[] = [
     hub: "rocamadour-sarlat",
     i18n: {
       fr: {
-        metaTitle: "Taxi Sarlat-la-Canéda → Périgueux | Prix fixe dès 80 € | TaxiNeo",
-        metaDescription: "Taxi Sarlat-la-Canéda → Périgueux. 65 km, 50 min, dès 80 €. Route D704 via la vallée de la Vézère et Montignac-Lascaux. Réservation 24h/24.",
+        metaTitle: "Taxi Sarlat-la-Canéda → Périgueux | 65 km, 80 € | TaxiNeo",
+        metaDescription: "Trajet direct D704 en 50 min. Passage par Vallée de la Vézère, Lascaux, Périgord Noir et Préhistoire. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Sarlat-la-Canéda → Périgueux",
         heroSubtitle: "Transfert Sarlat-la-Canéda → Périgueux au prix fixe de 80 — 100 €. 65 km à travers la vallée de la Vézère, berceau de la préhistoire.",
         description: "Périgueux, préfecture de la Dordogne et capitale du Périgord blanc, est à 50 minutes de Sarlat-la-Canéda par la D704.",
@@ -111,8 +111,8 @@ export const trajetsRocamadourSarlat: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Sarlat-la-Canéda → Périgueux | Fixed price from €80 | TaxiNeo",
-        metaDescription: "Taxi Sarlat-la-Canéda → Périgueux. 65 km, 50 min, from €80. D704 through the Vézère valley and Lascaux. Book 24/7.",
+        metaTitle: "Taxi Sarlat-la-Canéda → Périgueux | 65 km, €80 | TaxiNeo",
+        metaDescription: "Via D704, 50 min ride. Vallée de la Vézère, Lascaux, Périgord Noir and Préhistoire en route. Stops for sightseeing possible en route. No toll on this route.",
         heroTitle: "Taxi Sarlat-la-Canéda → Périgueux",
         heroSubtitle: "Your Sarlat-la-Canéda → Périgueux transfer at €80 — €100. 65 km through the Vézère valley, cradle of prehistory.",
         description: "Périgueux, prefecture of the Dordogne and capital of the Périgord Blanc, is 50 minutes from Sarlat-la-Canéda via the D704.",
@@ -157,8 +157,8 @@ export const trajetsRocamadourSarlat: Trajet[] = [
     hub: "rocamadour-sarlat",
     i18n: {
       fr: {
-        metaTitle: "Taxi Rocamadour → Toulouse | Prix fixe dès 200 € | TaxiNeo",
-        metaDescription: "Taxi Rocamadour → Toulouse. 170 km, 1h55, dès 200 €. A20 via Cahors, de la cité médiévale à la Ville Rose. Réservation 24h/24.",
+        metaTitle: "Taxi Rocamadour → Toulouse | 170 km, dès 200 € | TaxiNeo",
+        metaDescription: "Via A20 en 1h55. Cité médiévale, Gouffre de Padirac, Quercy et Cahors en chemin. Arrêt visite possible en chemin. Arrêt possible pour visites ou photos.",
         heroTitle: "Taxi Rocamadour → Toulouse",
         heroSubtitle: "Transfert Rocamadour → Toulouse au prix fixe de 200 — 255 €. 170 km, de la cité sacrée du Quercy à la Ville Rose.",
         description: "Toulouse, capitale de l'Occitanie et métropole de l'aéronautique, est à 1h55 de Rocamadour par l'A20.",
@@ -176,8 +176,8 @@ export const trajetsRocamadourSarlat: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Rocamadour → Toulouse | Fixed price from €200 | TaxiNeo",
-        metaDescription: "Taxi Rocamadour → Toulouse. 170 km, 1h55, from €200. A20 via Cahors, from the medieval citadel to the Pink City. Book 24/7.",
+        metaTitle: "Taxi Rocamadour → Toulouse | 170 km, from €200 | TaxiNeo",
+        metaDescription: "Via A20, 1h55 ride. Cité médiévale, Gouffre de Padirac, Quercy and Cahors en route. Stops for sightseeing possible en route. Up to 2h20 during rush hour.",
         heroTitle: "Taxi Rocamadour → Toulouse",
         heroSubtitle: "Your Rocamadour → Toulouse transfer at €200 — €255. 170 km from the sacred citadel of Quercy to the Pink City.",
         description: "Toulouse, capital of Occitanie and European aerospace hub, is 1h55 from Rocamadour via the A20.",
@@ -222,8 +222,8 @@ export const trajetsRocamadourSarlat: Trajet[] = [
     hub: "rocamadour-sarlat",
     i18n: {
       fr: {
-        metaTitle: "Taxi Rocamadour → Brive-la-Gaillarde | Prix fixe dès 65 € | TaxiNeo",
-        metaDescription: "Taxi Rocamadour → Brive-la-Gaillarde. 55 km, 40 min, dès 65 €. Via la vallée de la Dordogne et la D704. Réservation 24h/24.",
+        metaTitle: "Taxi Rocamadour → Brive-la-Gaillarde | 55 km, 65 € | TaxiNeo",
+        metaDescription: "Par D704 / A20, 40 min de trajet. Gouffre de Padirac, Vallée de la Dordogne, Quercy et Corrèze en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Rocamadour → Brive-la-Gaillarde",
         heroSubtitle: "Transfert Rocamadour → Brive-la-Gaillarde au prix fixe de 65 — 85 €. 55 km, du Quercy sacré à la capitale corrézienne.",
         description: "Brive-la-Gaillarde, ville la plus peuplée de la Corrèze et porte d'entrée du Périgord, est à 40 min de Rocamadour.",
@@ -241,8 +241,8 @@ export const trajetsRocamadourSarlat: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Rocamadour → Brive-la-Gaillarde | Fixed price from €65 | TaxiNeo",
-        metaDescription: "Taxi Rocamadour → Brive-la-Gaillarde. 55 km, 40 min, from €65. Through the Dordogne valley and Quercy. Book 24/7.",
+        metaTitle: "Taxi Rocamadour → Brive-la-Gaillarde | 55 km, €65 | TaxiNeo",
+        metaDescription: "D704 / A20 route, approximately 40 min. Gouffre de Padirac, Vallée de la Dordogne, Quercy and Corrèze en route. Stops for sightseeing possible en route.",
         heroTitle: "Taxi Rocamadour → Brive-la-Gaillarde",
         heroSubtitle: "Your Rocamadour → Brive-la-Gaillarde transfer at €65 — €85. 55 km from the sacred citadel of Quercy to the Corrèze capital.",
         description: "Brive-la-Gaillarde, the most populous city in Corrèze and gateway to the Périgord, is 40 min from Rocamadour.",
@@ -287,8 +287,8 @@ export const trajetsRocamadourSarlat: Trajet[] = [
     hub: "rocamadour-sarlat",
     i18n: {
       fr: {
-        metaTitle: "Taxi Sarlat-la-Canéda → Brive-la-Gaillarde | Prix fixe dès 60 € | TaxiNeo",
-        metaDescription: "Taxi Sarlat-la-Canéda → Brive-la-Gaillarde. 50 km, 40 min, dès 60 €. D704, du Périgord noir à la Corrèze. Réservation 24h/24.",
+        metaTitle: "Taxi Sarlat-la-Canéda → Brive-la-Gaillarde | 50 km | TaxiNeo",
+        metaDescription: "Par D704, 40 min de trajet. Périgord Noir, Vallée de la Dordogne, Noix du Périgord et Corrèze en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Sarlat-la-Canéda → Brive-la-Gaillarde",
         heroSubtitle: "Transfert Sarlat-la-Canéda → Brive-la-Gaillarde au prix fixe de 60 — 80 €. 50 km, du Périgord noir à la porte du Limousin.",
         description: "Brive-la-Gaillarde, la « Gaillarde » aux marchés légendaires, est à 40 minutes de Sarlat-la-Canéda par la D704.",
@@ -306,8 +306,8 @@ export const trajetsRocamadourSarlat: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Sarlat-la-Canéda → Brive-la-Gaillarde | Fixed price from €60 | TaxiNeo",
-        metaDescription: "Taxi Sarlat-la-Canéda → Brive-la-Gaillarde. 50 km, 40 min, from €60. D704 from the Périgord Noir to Corrèze. Book 24/7.",
+        metaTitle: "Taxi Sarlat-la-Canéda → Brive-la-Gaillarde | 50 km | TaxiNeo",
+        metaDescription: "D704 route, approximately 40 min. Périgord Noir, Vallée de la Dordogne, Noix du Périgord and Corrèze en route. Stops for sightseeing possible en route.",
         heroTitle: "Taxi Sarlat-la-Canéda → Brive-la-Gaillarde",
         heroSubtitle: "Your Sarlat-la-Canéda → Brive-la-Gaillarde transfer at €60 — €80. 50 km from the Périgord Noir to the gateway to Limousin.",
         description: "Brive-la-Gaillarde, the 'Gaillarde' with its legendary markets, is 40 minutes from Sarlat-la-Canéda via the D704.",

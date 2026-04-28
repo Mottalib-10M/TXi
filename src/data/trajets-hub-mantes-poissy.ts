@@ -27,8 +27,8 @@ export const trajetsMantesPoissy: Trajet[] = [
     hub: "mantes-poissy",
     i18n: {
       fr: {
-        metaTitle: "Taxi Mantes-la-Jolie → Paris | Prix fixe dès 70 € | TaxiNeo",
-        metaDescription: "Taxi Mantes-la-Jolie → Paris. 55 km, 50 min, dès 70 €. A13, transfert direct porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Mantes-la-Jolie → Paris | 55 km, dès 70 € | TaxiNeo",
+        metaDescription: "Via A13 en 50 min. Seine, Yvelines, Collégiale et La Défense en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Mantes-la-Jolie → Paris",
         heroSubtitle: "Transfert Mantes-la-Jolie → Paris au prix fixe de 70 — 90 €. 55 km, direct par l'A13.",
         description: "Paris est à 50 min de Mantes-la-Jolie par l'A13, le long de la vallée de la Seine.",
@@ -46,8 +46,8 @@ export const trajetsMantesPoissy: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Mantes-la-Jolie → Paris | Fixed price from €70 | TaxiNeo",
-        metaDescription: "Taxi Mantes-la-Jolie → Paris. 55 km, 50 min, from €70. A13, direct door-to-door transfer. Book 24/7.",
+        metaTitle: "Taxi Mantes-la-Jolie → Paris | 55 km, from €70 | TaxiNeo",
+        metaDescription: "Via A13, 50 min ride. Seine, Yvelines, Collégiale and La Défense en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Mantes-la-Jolie → Paris",
         heroSubtitle: "Your Mantes-la-Jolie → Paris transfer at €70 — €90. 55 km, direct via the A13.",
         description: "Paris is 50 min from Mantes-la-Jolie via the A13 along the Seine valley.",
@@ -92,8 +92,8 @@ export const trajetsMantesPoissy: Trajet[] = [
     hub: "mantes-poissy",
     i18n: {
       fr: {
-        metaTitle: "Taxi Mantes-la-Jolie → Rouen | Prix fixe dès 120 € | TaxiNeo",
-        metaDescription: "Taxi Mantes-la-Jolie → Rouen. 100 km, 1h05, dès 120 €. A13, vallée de la Seine, Normandie. Réservation 24h/24.",
+        metaTitle: "Taxi Mantes-la-Jolie → Rouen | 100 km, dès 120 € | TaxiNeo",
+        metaDescription: "Via A13 en 1h05. Seine, Normandie, Vexin et Cathédrale de Rouen en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Mantes-la-Jolie → Rouen",
         heroSubtitle: "Transfert Mantes-la-Jolie → Rouen au prix fixe de 120 — 155 €. 100 km, direct par l'A13.",
         description: "Rouen, capitale de la Normandie, est à 1h05 de Mantes-la-Jolie par l'A13 via la vallée de la Seine.",
@@ -111,8 +111,8 @@ export const trajetsMantesPoissy: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Mantes-la-Jolie → Rouen | Fixed price from €120 | TaxiNeo",
-        metaDescription: "Taxi Mantes-la-Jolie → Rouen. 100 km, 1h05, from €120. A13, Seine valley, Normandy. Book 24/7.",
+        metaTitle: "Taxi Mantes-la-Jolie → Rouen | 100 km, from €120 | TaxiNeo",
+        metaDescription: "Via A13, 1h05 ride. Seine, Normandie, Vexin and Cathédrale de Rouen en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Mantes-la-Jolie → Rouen",
         heroSubtitle: "Your Mantes-la-Jolie → Rouen transfer at €120 — €155. 100 km, direct via the A13.",
         description: "Rouen, capital of Normandy, is 1h05 from Mantes-la-Jolie via the A13 along the Seine valley.",
@@ -157,8 +157,8 @@ export const trajetsMantesPoissy: Trajet[] = [
     hub: "mantes-poissy",
     i18n: {
       fr: {
-        metaTitle: "Taxi Poissy → Paris | Prix fixe dès 40 € | TaxiNeo",
-        metaDescription: "Taxi Poissy → Paris. 30 km, 30 min, dès 40 €. A13/A14, transfert direct porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Poissy → Paris | forfait dès 40 €, 30 min | TaxiNeo",
+        metaDescription: "Via A13/A14 en 30 min. Villa Savoye, Stellantis et La Défense en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Poissy → Paris",
         heroSubtitle: "Transfert Poissy → Paris au prix fixe de 40 — 55 €. 30 km, direct par l'A13 ou l'A14.",
         description: "Paris est à 30 min de Poissy par l'A13 ou l'A14, via La Défense.",
@@ -177,7 +177,7 @@ export const trajetsMantesPoissy: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Poissy → Paris | Fixed price from €40 | TaxiNeo",
-        metaDescription: "Taxi Poissy → Paris. 30 km, 30 min, from €40. A13/A14, direct door-to-door transfer. Book 24/7.",
+        metaDescription: "Via A13/A14, 30 min ride. Villa Savoye, Stellantis and La Défense along the way. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Poissy → Paris",
         heroSubtitle: "Your Poissy → Paris transfer at €40 — €55. 30 km, direct via the A13 or A14.",
         description: "Paris is 30 min from Poissy via the A13 or A14 motorway through La Défense.",
@@ -222,8 +222,8 @@ export const trajetsMantesPoissy: Trajet[] = [
     hub: "mantes-poissy",
     i18n: {
       fr: {
-        metaTitle: "Taxi Poissy → Aéroport CDG | Prix fixe dès 65 € | TaxiNeo",
-        metaDescription: "Taxi Poissy → CDG. 50 km, 45 min, dès 65 €. A14/A86/A1, transfert direct aéroport. Réservation 24h/24.",
+        metaTitle: "Taxi Poissy → Aéroport CDG | 50 km, dès 65 € | TaxiNeo",
+        metaDescription: "Via A14/A86/A1 en 45 min. Roissy et Villa Savoye sur le parcours. Dépose porte-à-porte, bagages inclus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Poissy → Aéroport CDG",
         heroSubtitle: "Transfert Poissy → CDG au prix fixe de 65 — 85 €. 50 km, direct sans passer par Paris.",
         description: "L'aéroport CDG est à 45 min de Poissy via l'A14, l'A86 et l'A1, sans traverser Paris.",
@@ -241,8 +241,8 @@ export const trajetsMantesPoissy: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Poissy → CDG Airport | Fixed price from €65 | TaxiNeo",
-        metaDescription: "Taxi Poissy → CDG. 50 km, 45 min, from €65. A14/A86/A1, direct airport transfer. Book 24/7.",
+        metaTitle: "Taxi Poissy → Aéroport CDG | 50 km, from €65 | TaxiNeo",
+        metaDescription: "Via A14/A86/A1, 45 min ride. Roissy and Villa Savoye along the way. Faster and more direct than train or bus. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Poissy → CDG Airport",
         heroSubtitle: "Your Poissy → CDG transfer at €65 — €85. 50 km, direct bypass around Paris.",
         description: "CDG Airport is 45 min from Poissy via the A14, A86 and A1, bypassing Paris entirely.",
@@ -287,8 +287,8 @@ export const trajetsMantesPoissy: Trajet[] = [
     hub: "mantes-poissy",
     i18n: {
       fr: {
-        metaTitle: "Taxi Mantes-la-Jolie → Versailles | Prix fixe dès 55 € | TaxiNeo",
-        metaDescription: "Taxi Mantes-la-Jolie → Versailles. 45 km, 35 min, dès 55 €. A13/N13, château de Versailles. Réservation 24h/24.",
+        metaTitle: "Taxi Mantes-la-Jolie → Versailles | 45 km, 55 € | TaxiNeo",
+        metaDescription: "Trajet direct A13/N13 en 35 min. Passage par N13, Seine, Château de Versailles et Collégiale de Mantes. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Mantes-la-Jolie → Versailles",
         heroSubtitle: "Transfert Mantes-la-Jolie → Versailles au prix fixe de 55 — 75 €. 45 km, direct par l'A13.",
         description: "Versailles et son château sont à 35 min de Mantes-la-Jolie par l'A13 via les Yvelines.",
@@ -306,8 +306,8 @@ export const trajetsMantesPoissy: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Mantes-la-Jolie → Versailles | Fixed price from €55 | TaxiNeo",
-        metaDescription: "Taxi Mantes-la-Jolie → Versailles. 45 km, 35 min, from €55. A13/N13, Palace of Versailles. Book 24/7.",
+        metaTitle: "Taxi Mantes-la-Jolie → Versailles | 45 km, €55 | TaxiNeo",
+        metaDescription: "Direct route via A13/N13, 35 min. N13, Seine, Château de Versailles and Collégiale de Mantes en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Mantes-la-Jolie → Versailles",
         heroSubtitle: "Your Mantes-la-Jolie → Versailles transfer at €55 — €75. 45 km, direct via the A13.",
         description: "Versailles and its palace are 35 min from Mantes-la-Jolie via the A13 through the Yvelines.",

@@ -27,8 +27,8 @@ export const trajetsNantesHub2: Trajet[] = [
     hub: "nantes",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nantes → Angers | Prix fixe dès 115 € | TaxiNeo",
-        metaDescription: "Taxi Nantes → Angers. 90 km, 1h, dès 115 €. Château d'Angers, Tapisserie de l'Apocalypse. Réservation 24h/24.",
+        metaTitle: "Taxi Nantes → Angers | forfait dès 115 € | TaxiNeo",
+        metaDescription: "Via A11 en 1h. Loire, Château d'Angers, Tapisserie Apocalypse et Cointreau en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Nantes → Angers",
         heroSubtitle: "Transfert Nantes → Angers au prix fixe de 115 — 140 €. 90 km, capitale de l'Anjou.",
         description: "Angers, capitale de l'Anjou et ville d'art, est à 1h de Nantes par l'A11.",
@@ -47,7 +47,7 @@ export const trajetsNantesHub2: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Nantes → Angers | Fixed price from €115 | TaxiNeo",
-        metaDescription: "Taxi Nantes → Angers. 90 km, 1h, from €115. Château d'Angers, Apocalypse Tapestry. Book 24/7.",
+        metaDescription: "Direct route via A11, 1 hour. Loire, Château d'Angers, Tapisserie Apocalypse and Cointreau en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Nantes → Angers",
         heroSubtitle: "Your Nantes → Angers transfer at €115 — €140. 90 km, capital of Anjou.",
         description: "Angers, capital of Anjou, is 1h from Nantes via the A11.",
@@ -92,8 +92,8 @@ export const trajetsNantesHub2: Trajet[] = [
     hub: "nantes",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nantes → Rennes | Prix fixe dès 140 € | TaxiNeo",
-        metaDescription: "Taxi Nantes → Rennes. 110 km, 1h15, dès 140 €. Route gratuite N137, capitale bretonne. Réservation 24h/24.",
+        metaTitle: "Taxi Nantes → Rennes | 110 km, dès 140 € | TaxiNeo",
+        metaDescription: "Via N137 en 1h15. N137, Bretagne, Parlement et Thabor en chemin. Dépose porte-à-porte, bagages inclus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Nantes → Rennes",
         heroSubtitle: "Transfert Nantes → Rennes au prix fixe de 140 — 170 €. 110 km, route 100% gratuite.",
         description: "Rennes, capitale de la Bretagne, est à 1h15 de Nantes par la voie express N137.",
@@ -111,8 +111,8 @@ export const trajetsNantesHub2: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nantes → Rennes | Fixed price from €140 | TaxiNeo",
-        metaDescription: "Taxi Nantes → Rennes. 110 km, 1h15, from €140. Toll-free route, Breton capital. Book 24/7.",
+        metaTitle: "Taxi Nantes → Rennes | 110 km, from €140 | TaxiNeo",
+        metaDescription: "Via N137, 1h15 ride. N137, Bretagne, Parlement and Thabor en route. Faster and more direct than train or bus. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Nantes → Rennes",
         heroSubtitle: "Your Nantes → Rennes transfer at €140 — €170. 110 km, 100% toll-free.",
         description: "Rennes, capital of Brittany, is 1h15 from Nantes via the N137 expressway.",
@@ -157,8 +157,8 @@ export const trajetsNantesHub2: Trajet[] = [
     hub: "nantes",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nantes → Les Sables-d'Olonne | Prix fixe dès 125 € | TaxiNeo",
-        metaDescription: "Taxi Nantes → Les Sables-d'Olonne. 100 km, 1h15, dès 125 €. Vendée Globe, plages, remblai. Réservation 24h/24.",
+        metaTitle: "Taxi Nantes → Les Sables-d'Olonne | 100 km, 125 € | TaxiNeo",
+        metaDescription: "Via A83 puis A87 en 1h15. A83/A87, Vendée, Plage et Vendée Globe en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Nantes → Les Sables-d'Olonne",
         heroSubtitle: "Transfert Nantes → Les Sables au prix fixe de 125 — 155 €. 100 km, port du Vendée Globe.",
         description: "Les Sables-d'Olonne, port de départ du Vendée Globe, est à 1h15 de Nantes.",
@@ -176,8 +176,8 @@ export const trajetsNantesHub2: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nantes → Les Sables-d'Olonne | Fixed price from €125 | TaxiNeo",
-        metaDescription: "Taxi Nantes → Les Sables-d'Olonne. 100 km, 1h15, from €125. Vendée Globe, beaches. Book 24/7.",
+        metaTitle: "Taxi Nantes → Les Sables-d'Olonne | 100 km, €125 | TaxiNeo",
+        metaDescription: "Via A83 then A87, 1h15 ride. A83/A87, Vendée, Plage and Vendée Globe en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Nantes → Les Sables-d'Olonne",
         heroSubtitle: "Your Nantes → Les Sables transfer at €125 — €155. 100 km, Vendée Globe home port.",
         description: "Les Sables-d'Olonne, home port of the Vendée Globe, is 1h15 from Nantes.",
@@ -222,8 +222,8 @@ export const trajetsNantesHub2: Trajet[] = [
     hub: "nantes",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nantes → Noirmoutier | Prix fixe dès 100 € | TaxiNeo",
-        metaDescription: "Taxi Nantes → Noirmoutier. 80 km, 1h10, dès 100 €. Passage du Gois, marais salants, plages. Réservation 24h/24.",
+        metaTitle: "Taxi Nantes → Noirmoutier-en-l'Île | 80 km, 100 € | TaxiNeo",
+        metaDescription: "Par périphérique puis D758, 1h10 de trajet. Passage du Gois, Île, Marais salants et Bonnotte en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Nantes → Noirmoutier",
         heroSubtitle: "Transfert Nantes → Noirmoutier au prix fixe de 100 — 125 €. 80 km, île de charme vendéenne.",
         description: "Noirmoutier, île vendéenne reliée par le pont ou le passage du Gois, est à 1h10 de Nantes.",
@@ -241,8 +241,8 @@ export const trajetsNantesHub2: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nantes → Noirmoutier | Fixed price from €100 | TaxiNeo",
-        metaDescription: "Taxi Nantes → Noirmoutier. 80 km, 1h10, from €100. Passage du Gois, salt marshes, beaches. Book 24/7.",
+        metaTitle: "Taxi Nantes → Noirmoutier-en-l'Île | 80 km, €100 | TaxiNeo",
+        metaDescription: "Via ring road then D758, 1h10 ride. Passage du Gois, Île, Marais salants and Bonnotte en route. Stops for sightseeing possible en route. No toll on this route.",
         heroTitle: "Taxi Nantes → Noirmoutier",
         heroSubtitle: "Your Nantes → Noirmoutier transfer at €100 — €125. 80 km, charming Vendée island.",
         description: "Noirmoutier, a Vendée island linked by bridge or the tidal Passage du Gois, is 1h10 from Nantes.",
@@ -287,8 +287,8 @@ export const trajetsNantesHub2: Trajet[] = [
     hub: "nantes",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nantes → Guérande | Prix fixe dès 100 € | TaxiNeo",
-        metaDescription: "Taxi Nantes → Guérande. 80 km, 1h, dès 100 €. Cité médiévale, marais salants, fleur de sel. Réservation 24h/24.",
+        metaTitle: "Taxi Nantes → Guérande | 80 km, dès 100 € | TaxiNeo",
+        metaDescription: "Via N171/N165 en 1h. N171, Remparts, Marais salants et Sel en chemin. Arrêt visite possible en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Nantes → Guérande",
         heroSubtitle: "Transfert Nantes → Guérande au prix fixe de 100 — 120 €. 80 km, cité du sel.",
         description: "Guérande, cité médiévale fortifiée et capitale du sel, est à 1h de Nantes.",
@@ -306,8 +306,8 @@ export const trajetsNantesHub2: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nantes → Guérande | Fixed price from €100 | TaxiNeo",
-        metaDescription: "Taxi Nantes → Guérande. 80 km, 1h, from €100. Medieval walled city, salt marshes. Book 24/7.",
+        metaTitle: "Taxi Nantes → Guérande | 80 km, from €100 | TaxiNeo",
+        metaDescription: "Via N171/N165, 1 hour ride. N171, Remparts, Marais salants and Sel en route. Stops for sightseeing possible en route. Perfect for a day trip without driving.",
         heroTitle: "Taxi Nantes → Guérande",
         heroSubtitle: "Your Nantes → Guérande transfer at €100 — €120. 80 km, city of salt.",
         description: "Guérande, fortified medieval city and salt capital, is 1h from Nantes.",
@@ -352,8 +352,8 @@ export const trajetsNantesHub2: Trajet[] = [
     hub: "nantes",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nantes → Tours | Prix fixe dès 265 € | TaxiNeo",
-        metaDescription: "Taxi Nantes → Tours. 215 km, 2h15, dès 265 €. Châteaux de la Loire, Touraine. Réservation 24h/24.",
+        metaTitle: "Taxi Nantes → Tours | 215 km, dès 265 €, 2h15 | TaxiNeo",
+        metaDescription: "Via A85 en 2h15. Loire, Châteaux, Touraine et Vignobles en chemin. Dépose porte-à-porte, bagages inclus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Nantes → Tours",
         heroSubtitle: "Transfert Nantes → Tours au prix fixe de 265 — 320 €. 215 km, au cœur des châteaux de la Loire.",
         description: "Tours, porte des châteaux de la Loire, est à 2h15 de Nantes par l'A85.",
@@ -372,7 +372,7 @@ export const trajetsNantesHub2: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Nantes → Tours | Fixed price from €265 | TaxiNeo",
-        metaDescription: "Taxi Nantes → Tours. 215 km, 2h15, from €265. Loire Valley châteaux. Book 24/7.",
+        metaDescription: "Via A85, 2h15 ride. Loire, Châteaux, Touraine and Vignobles en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Nantes → Tours",
         heroSubtitle: "Your Nantes → Tours transfer at €265 — €320. 215 km, Loire châteaux gateway.",
         description: "Tours, gateway to the Loire châteaux, is 2h15 from Nantes via the A85.",
@@ -417,8 +417,8 @@ export const trajetsNantesHub2: Trajet[] = [
     hub: "nantes",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nantes → Le Mans | Prix fixe dès 220 € | TaxiNeo",
-        metaDescription: "Taxi Nantes → Le Mans. 180 km, 1h50, dès 220 €. 24 Heures du Mans, vieille ville, rillettes. Réservation 24h/24.",
+        metaTitle: "Taxi Nantes → Le Mans | 180 km, dès 220 € | TaxiNeo",
+        metaDescription: "Via A11 en 1h50. 24 Heures, Sarthe, Vieille ville et Rillettes en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Nantes → Le Mans",
         heroSubtitle: "Transfert Nantes → Le Mans au prix fixe de 220 — 265 €. 180 km, capitale de l'endurance automobile.",
         description: "Le Mans, célèbre pour ses 24 Heures, est à 1h50 de Nantes par l'A11.",
@@ -436,8 +436,8 @@ export const trajetsNantesHub2: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nantes → Le Mans | Fixed price from €220 | TaxiNeo",
-        metaDescription: "Taxi Nantes → Le Mans. 180 km, 1h50, from €220. 24 Hours of Le Mans, old town. Book 24/7.",
+        metaTitle: "Taxi Nantes → Le Mans | 180 km, from €220 | TaxiNeo",
+        metaDescription: "Via A11, 1h50 ride. 24 Heures, Sarthe, Vieille ville and Rillettes en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Nantes → Le Mans",
         heroSubtitle: "Your Nantes → Le Mans transfer at €220 — €265. 180 km, motorsport capital.",
         description: "Le Mans, famous for its 24 Hours race, is 1h50 from Nantes via the A11.",
@@ -482,8 +482,8 @@ export const trajetsNantesHub2: Trajet[] = [
     hub: "nantes",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nantes → Lorient | Prix fixe dès 185 € | TaxiNeo",
-        metaDescription: "Taxi Nantes → Lorient. 150 km, 1h40, dès 185 €. Cité de la Voile, Festival Interceltique. Réservation 24h/24.",
+        metaTitle: "Taxi Nantes → Lorient | 150 km, dès 185 € | TaxiNeo",
+        metaDescription: "Via N165 en 1h40. N165, Morbihan, Cité de la Voile et Base sous-marine en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Nantes → Lorient",
         heroSubtitle: "Transfert Nantes → Lorient au prix fixe de 185 — 225 €. 150 km, cité de la voile.",
         description: "Lorient, cité de la voile et port du Morbihan, est à 1h40 de Nantes.",
@@ -501,8 +501,8 @@ export const trajetsNantesHub2: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nantes → Lorient | Fixed price from €185 | TaxiNeo",
-        metaDescription: "Taxi Nantes → Lorient. 150 km, 1h40, from €185. Cité de la Voile, Interceltique Festival. Book 24/7.",
+        metaTitle: "Taxi Nantes → Lorient | 150 km, from €185 | TaxiNeo",
+        metaDescription: "Via N165, 1h40 ride. N165, Morbihan, Cité de la Voile and Base sous-marine en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Nantes → Lorient",
         heroSubtitle: "Your Nantes → Lorient transfer at €185 — €225. 150 km, sailing city.",
         description: "Lorient, sailing city and Morbihan port, is 1h40 from Nantes.",

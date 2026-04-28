@@ -27,8 +27,8 @@ export const trajetsColmar: Trajet[] = [
     hub: "colmar",
     i18n: {
       fr: {
-        metaTitle: "Taxi Colmar → Strasbourg | Prix fixe dès 75 € | TaxiNeo",
-        metaDescription: "Taxi Colmar → Strasbourg. 73 km, 45 min, dès 75 €. A35, cathédrale, Petite France. Réservation 24h/24.",
+        metaTitle: "Taxi Colmar → Strasbourg | 73 km, dès 75 € | TaxiNeo",
+        metaDescription: "Via A35 en 45 min. Alsace, Cathédrale, Petite France et Route des Vins en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Colmar → Strasbourg",
         heroSubtitle: "Transfert Colmar → Strasbourg au prix fixe de 75 — 100 €. 73 km, direct par l'A35.",
         description: "Strasbourg, capitale européenne et joyau alsacien, est à 45 min de Colmar par l'A35.",
@@ -46,8 +46,8 @@ export const trajetsColmar: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Colmar → Strasbourg | Fixed price from €75 | TaxiNeo",
-        metaDescription: "Taxi Colmar → Strasbourg. 73 km, 45 min, from €75. A35, cathedral, Petite France. Book 24/7.",
+        metaTitle: "Taxi Colmar → Strasbourg | 73 km, from €75 | TaxiNeo",
+        metaDescription: "Via A35, 45 min ride. Alsace, Cathédrale, Petite France and Route des Vins en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Colmar → Strasbourg",
         heroSubtitle: "Your Colmar → Strasbourg transfer at €75 — €100. 73 km, via the A35.",
         description: "Strasbourg, European capital and Alsatian gem, is 45 min from Colmar via the A35.",
@@ -92,8 +92,8 @@ export const trajetsColmar: Trajet[] = [
     hub: "colmar",
     i18n: {
       fr: {
-        metaTitle: "Taxi Colmar → Mulhouse | Prix fixe dès 50 € | TaxiNeo",
-        metaDescription: "Taxi Colmar → Mulhouse. 45 km, 30 min, dès 50 €. A35, Cité de l'Automobile, Cité du Train. Réservation 24h/24.",
+        metaTitle: "Taxi Colmar → Mulhouse | 45 km, dès 50 € | TaxiNeo",
+        metaDescription: "Via A35 en 30 min. Alsace, Cité de l'Automobile, Cité du Train et Industrie en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Colmar → Mulhouse",
         heroSubtitle: "Transfert Colmar → Mulhouse au prix fixe de 50 — 65 €. 45 km, route gratuite.",
         description: "Mulhouse, capitale des musées techniques, est à 30 min de Colmar par l'A35.",
@@ -111,8 +111,8 @@ export const trajetsColmar: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Colmar → Mulhouse | Fixed price from €50 | TaxiNeo",
-        metaDescription: "Taxi Colmar → Mulhouse. 45 km, 30 min, from €50. A35, Automobile Museum, Train Museum. Book 24/7.",
+        metaTitle: "Taxi Colmar → Mulhouse | 45 km, from €50 | TaxiNeo",
+        metaDescription: "A35 route, approximately 30 min. Alsace, Cité de l'Automobile, Cité du Train and Industrie en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Colmar → Mulhouse",
         heroSubtitle: "Your Colmar → Mulhouse transfer at €50 — €65. 45 km, toll-free.",
         description: "Mulhouse, capital of technical museums, is 30 min from Colmar via the A35.",
@@ -157,8 +157,8 @@ export const trajetsColmar: Trajet[] = [
     hub: "colmar",
     i18n: {
       fr: {
-        metaTitle: "Taxi Colmar → Fribourg-en-Brisgau | Prix fixe dès 70 € | TaxiNeo",
-        metaDescription: "Taxi Colmar → Fribourg-en-Brisgau. 65 km, 45 min, dès 70 €. A35/B31, Forêt-Noire, Münster. Réservation 24h/24.",
+        metaTitle: "Taxi Colmar → Fribourg-en-Brisgau | 65 km, 70 € | TaxiNeo",
+        metaDescription: "Via A35/B31 en 45 min. Transfrontalier, Forêt-Noire, Münster et Allemagne en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Colmar → Fribourg-en-Brisgau",
         heroSubtitle: "Transfert Colmar → Fribourg-en-Brisgau au prix fixe de 70 — 90 €. 65 km, traversée du Rhin.",
         description: "Fribourg-en-Brisgau, perle de la Forêt-Noire allemande, est à 45 min de Colmar.",
@@ -176,8 +176,8 @@ export const trajetsColmar: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Colmar → Freiburg | Fixed price from €70 | TaxiNeo",
-        metaDescription: "Taxi Colmar → Freiburg im Breisgau. 65 km, 45 min, from €70. Cross-border, Black Forest. Book 24/7.",
+        metaTitle: "Taxi Colmar → Fribourg-en-Brisgau | 65 km, €70 | TaxiNeo",
+        metaDescription: "Via A35/B31, 45 min ride. Transfrontalier, Forêt-Noire, Münster and Allemagne en route. Drop-off at your exact address. Door-to-door, luggage included.",
         heroTitle: "Taxi Colmar → Freiburg",
         heroSubtitle: "Your Colmar → Freiburg transfer at €70 — €90. 65 km, across the Rhine.",
         description: "Freiburg im Breisgau, Black Forest gem, is 45 min from Colmar.",
@@ -222,8 +222,8 @@ export const trajetsColmar: Trajet[] = [
     hub: "colmar",
     i18n: {
       fr: {
-        metaTitle: "Taxi Colmar → Bâle | Prix fixe dès 75 € | TaxiNeo",
-        metaDescription: "Taxi Colmar → Bâle (Suisse). 70 km, 45 min, dès 75 €. A35, art, Rhin. Réservation 24h/24.",
+        metaTitle: "Taxi Colmar → Bâle | forfait dès 75 €, 45 min | TaxiNeo",
+        metaDescription: "Via A35 en 45 min. Transfrontalier, Suisse, Art et Rhin en chemin. Dépose porte-à-porte, bagages inclus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Colmar → Bâle",
         heroSubtitle: "Transfert Colmar → Bâle au prix fixe de 75 — 95 €. 70 km, la Suisse à 45 min.",
         description: "Bâle, métropole culturelle suisse au bord du Rhin, est à 45 min de Colmar.",
@@ -242,7 +242,7 @@ export const trajetsColmar: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Colmar → Basel | Fixed price from €75 | TaxiNeo",
-        metaDescription: "Taxi Colmar → Basel (Switzerland). 70 km, 45 min, from €75. A35, art capital, Rhine. Book 24/7.",
+        metaDescription: "Via A35, 45 min ride. Transfrontalier, Suisse, Art and Rhin en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Colmar → Basel",
         heroSubtitle: "Your Colmar → Basel transfer at €75 — €95. 70 km, Switzerland in 45 min.",
         description: "Basel, Swiss cultural metropolis on the Rhine, is 45 min from Colmar.",
@@ -287,8 +287,8 @@ export const trajetsColmar: Trajet[] = [
     hub: "colmar",
     i18n: {
       fr: {
-        metaTitle: "Taxi Colmar → Europa-Park | Prix fixe dès 50 € | TaxiNeo",
-        metaDescription: "Taxi Colmar → Europa-Park (Rust). 45 km, 35 min, dès 50 €. A35/B3, parc d'attractions. Réservation 24h/24.",
+        metaTitle: "Taxi Colmar → Europa-Park | 45 km, dès 50 € | TaxiNeo",
+        metaDescription: "Via A35/B3 en 35 min. Parc d'attractions, Rust, Allemagne et Famille en chemin. Arrêt visite possible en chemin. Arrêt possible pour visites ou photos.",
         heroTitle: "Taxi Colmar → Europa-Park",
         heroSubtitle: "Transfert Colmar → Europa-Park au prix fixe de 50 — 65 €. 45 km, le meilleur parc d'Europe.",
         description: "Europa-Park à Rust, meilleur parc d'attractions d'Europe, est à 35 min de Colmar.",
@@ -306,8 +306,8 @@ export const trajetsColmar: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Colmar → Europa-Park | Fixed price from €50 | TaxiNeo",
-        metaDescription: "Taxi Colmar → Europa-Park (Rust). 45 km, 35 min, from €50. Best theme park in Europe. Book 24/7.",
+        metaTitle: "Taxi Colmar → Europa-Park | 45 km, from €50 | TaxiNeo",
+        metaDescription: "Via A35/B3, 35 min ride. Parc d'attractions, Rust, Allemagne and Famille en route. Stops for sightseeing possible en route. Guaranteed fare, no meter.",
         heroTitle: "Taxi Colmar → Europa-Park",
         heroSubtitle: "Your Colmar → Europa-Park transfer at €50 — €65. 45 km, Europe's best theme park.",
         description: "Europa-Park in Rust, Europe's best theme park, is 35 min from Colmar.",

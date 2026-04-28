@@ -27,8 +27,8 @@ export const trajetsCherbourg: Trajet[] = [
     hub: "cherbourg",
     i18n: {
       fr: {
-        metaTitle: "Taxi Cherbourg → Caen | Prix fixe dès 130 € | TaxiNeo",
-        metaDescription: "Taxi Cherbourg → Caen. 120 km, 1h15, dès 130 €. N13, transfert direct porte-à-porte à travers le Cotentin. Réservation 24h/24.",
+        metaTitle: "Taxi Cherbourg → Caen | 120 km, dès 130 € | TaxiNeo",
+        metaDescription: "Par N13, 1h15 de trajet. Passage par Cotentin, Normandie, Guillaume le Conquérant et Mémorial de Caen. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Cherbourg → Caen",
         heroSubtitle: "Transfert Cherbourg → Caen au prix fixe de 130 — 165 €. 120 km, direct par la N13 à travers le Cotentin.",
         description: "Caen, cité de Guillaume le Conquérant, est à 1h15 de Cherbourg par la N13.",
@@ -46,8 +46,8 @@ export const trajetsCherbourg: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Cherbourg → Caen | Fixed price from €130 | TaxiNeo",
-        metaDescription: "Taxi Cherbourg → Caen. 120 km, 1h15, from €130. N13, direct door-to-door through the Cotentin. Book 24/7.",
+        metaTitle: "Taxi Cherbourg → Caen | 120 km, from €130 | TaxiNeo",
+        metaDescription: "Direct route via N13, 1h15. Cotentin, Normandie, Guillaume le Conquérant and Mémorial de Caen en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Cherbourg → Caen",
         heroSubtitle: "Your Cherbourg → Caen transfer at €130 — €165. 120 km, via the N13 through the Cotentin peninsula.",
         description: "Caen, William the Conqueror's city, is 1h15 from Cherbourg via the N13.",
@@ -92,8 +92,8 @@ export const trajetsCherbourg: Trajet[] = [
     hub: "cherbourg",
     i18n: {
       fr: {
-        metaTitle: "Taxi Cherbourg → Paris | Prix fixe dès 390 € | TaxiNeo",
-        metaDescription: "Taxi Cherbourg → Paris. 360 km, 3h30, dès 390 €. A13, transfert direct porte-à-porte depuis le Cotentin. Réservation 24h/24.",
+        metaTitle: "Taxi Cherbourg → Paris | 360 km, dès 390 € | TaxiNeo",
+        metaDescription: "Via A13 en 3h30. Cotentin, Normandie, Navette ferry et Porte-à-porte en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Cherbourg → Paris",
         heroSubtitle: "Transfert Cherbourg → Paris au prix fixe de 390 — 480 €. 360 km, direct par la N13 et l'A13.",
         description: "Paris est à 3h30 de Cherbourg par la N13 puis l'A13, l'autoroute de Normandie.",
@@ -111,8 +111,8 @@ export const trajetsCherbourg: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Cherbourg → Paris | Fixed price from €390 | TaxiNeo",
-        metaDescription: "Taxi Cherbourg → Paris. 360 km, 3h30, from €390. A13, direct door-to-door from the Cotentin. Book 24/7.",
+        metaTitle: "Taxi Cherbourg → Paris | 360 km, from €390 | TaxiNeo",
+        metaDescription: "Via A13, 3h30 ride. Cotentin, Normandie, Navette ferry and Porte-à-porte en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Cherbourg → Paris",
         heroSubtitle: "Your Cherbourg → Paris transfer at €390 — €480. 360 km, via the N13 and A13.",
         description: "Paris is 3h30 from Cherbourg via the N13 then A13 Normandy motorway.",
@@ -157,8 +157,8 @@ export const trajetsCherbourg: Trajet[] = [
     hub: "cherbourg",
     i18n: {
       fr: {
-        metaTitle: "Taxi Cherbourg → Rouen | Prix fixe dès 250 € | TaxiNeo",
-        metaDescription: "Taxi Cherbourg → Rouen. 230 km, 2h20, dès 250 €. A13, transfert direct porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Cherbourg → Rouen | 230 km, dès 250 € | TaxiNeo",
+        metaDescription: "Itinéraire A13, environ 2h20. Passage par Cotentin, Normandie, Cathédrale de Rouen et Impressionnisme. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Cherbourg → Rouen",
         heroSubtitle: "Transfert Cherbourg → Rouen au prix fixe de 250 — 310 €. 230 km, direct par la N13 et l'A13.",
         description: "Rouen, capitale historique de Normandie, est à 2h20 de Cherbourg par la N13 puis l'A13.",
@@ -176,8 +176,8 @@ export const trajetsCherbourg: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Cherbourg → Rouen | Fixed price from €250 | TaxiNeo",
-        metaDescription: "Taxi Cherbourg → Rouen. 230 km, 2h20, from €250. A13, direct door-to-door. Book 24/7.",
+        metaTitle: "Taxi Cherbourg → Rouen | 230 km, from €250 | TaxiNeo",
+        metaDescription: "A13 route, approximately 2h20. Cotentin, Normandie, Cathédrale de Rouen and Impressionnisme en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Cherbourg → Rouen",
         heroSubtitle: "Your Cherbourg → Rouen transfer at €250 — €310. 230 km, via the N13 and A13.",
         description: "Rouen, historic capital of Normandy, is 2h20 from Cherbourg via the N13 and A13.",
@@ -222,8 +222,8 @@ export const trajetsCherbourg: Trajet[] = [
     hub: "cherbourg",
     i18n: {
       fr: {
-        metaTitle: "Taxi Cherbourg → Rennes | Prix fixe dès 250 € | TaxiNeo",
-        metaDescription: "Taxi Cherbourg → Rennes. 230 km, 2h25, dès 250 €. N175/A84, via le Mont-Saint-Michel. Réservation 24h/24.",
+        metaTitle: "Taxi Cherbourg → Rennes | 230 km, dès 250 € | TaxiNeo",
+        metaDescription: "Itinéraire N175/A84, environ 2h25. Passage par Cotentin, Mont-Saint-Michel, Bretagne et Porte-à-porte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Cherbourg → Rennes",
         heroSubtitle: "Transfert Cherbourg → Rennes au prix fixe de 250 — 310 €. 230 km, direct par la N175 et l'A84.",
         description: "Rennes, capitale de la Bretagne, est à 2h25 de Cherbourg par la N175 et l'A84.",
@@ -241,8 +241,8 @@ export const trajetsCherbourg: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Cherbourg → Rennes | Fixed price from €250 | TaxiNeo",
-        metaDescription: "Taxi Cherbourg → Rennes. 230 km, 2h25, from €250. N175/A84, near Mont-Saint-Michel. Book 24/7.",
+        metaTitle: "Taxi Cherbourg → Rennes | 230 km, from €250 | TaxiNeo",
+        metaDescription: "N175/A84 route, approximately 2h25. Cotentin, Mont-Saint-Michel, Bretagne and Porte-à-porte en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Cherbourg → Rennes",
         heroSubtitle: "Your Cherbourg → Rennes transfer at €250 — €310. 230 km, via the N175 and A84.",
         description: "Rennes, capital of Brittany, is 2h25 from Cherbourg via the N175 and A84.",
@@ -287,8 +287,8 @@ export const trajetsCherbourg: Trajet[] = [
     hub: "cherbourg",
     i18n: {
       fr: {
-        metaTitle: "Taxi Saint-Lô → Caen | Prix fixe dès 70 € | TaxiNeo",
-        metaDescription: "Taxi Saint-Lô → Caen. 65 km, 45 min, dès 70 €. A84, transfert direct porte-à-porte en Normandie. Réservation 24h/24.",
+        metaTitle: "Taxi Saint-Lô → Caen | 65 km, dès 70 €, 45 min | TaxiNeo",
+        metaDescription: "Via A84 en 45 min. Manche, Normandie, Bocage normand et Mémorial de Caen en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Saint-Lô → Caen",
         heroSubtitle: "Transfert Saint-Lô → Caen au prix fixe de 70 — 85 €. 65 km, direct par l'A84.",
         description: "Caen est à 45 min de Saint-Lô par l'A84, au coeur de la Normandie.",
@@ -307,7 +307,7 @@ export const trajetsCherbourg: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Saint-Lô → Caen | Fixed price from €70 | TaxiNeo",
-        metaDescription: "Taxi Saint-Lô → Caen. 65 km, 45 min, from €70. A84, direct door-to-door. Book 24/7.",
+        metaDescription: "Via A84, 45 min ride. Manche, Normandie, Bocage normand and Mémorial de Caen en route. Drop-off at your exact address. Door-to-door, luggage included.",
         heroTitle: "Taxi Saint-Lô → Caen",
         heroSubtitle: "Your Saint-Lô → Caen transfer at €70 — €85. 65 km, via the toll-free A84.",
         description: "Caen is 45 min from Saint-Lô via the toll-free A84 motorway.",

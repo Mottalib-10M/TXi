@@ -32,8 +32,8 @@ export const trajetsParisToursime: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Giverny | Maison de Monet dès 120 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Paris → Giverny. 75 km, 70 min, prix fixe dès 120 €. Visitez la maison et les jardins de Claude Monet. Chauffeur professionnel.",
+        metaTitle: "Taxi Paris → Giverny | forfait dès 120 € | TaxiNeo",
+        metaDescription: "Via A13 en 1h10. Passage par Maison de Claude Monet, Jardins impressionnistes et A13 direction Rouen. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Paris → Giverny",
         heroSubtitle: "Votre transfert vers les jardins de Claude Monet au prix fixe de 120 — 150 €. Réservation en ligne, chauffeur professionnel.",
         description: "Le trajet Paris — Giverny vous conduit au cœur de l'impressionnisme, dans le village où Claude Monet a vécu et peint pendant plus de 40 ans. Située dans l'Eure, à 75 km à l'ouest de Paris, Giverny attire chaque année plus de 500 000 visiteurs venus admirer les célèbres nymphéas et le pont japonais.",
@@ -52,7 +52,7 @@ export const trajetsParisToursime: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Paris → Giverny | Monet's House from €120 | TaxiNeo",
-        metaDescription: "Book your taxi Paris → Giverny. 75 km, 70 min, fixed price from €120. Visit Claude Monet's house and gardens. Professional driver.",
+        metaDescription: "Direct route via A13, 1h10. Maison de Claude Monet, Jardins impressionnistes and A13 direction Rouen along the way. Stops for sightseeing possible en route.",
         heroTitle: "Taxi Paris → Giverny",
         heroSubtitle: "Your transfer to Claude Monet's gardens at a fixed price of €120 — €150. Online booking, professional driver.",
         description: "The Paris — Giverny route takes you to the heart of Impressionism, to the village where Claude Monet lived and painted for over 40 years. Located in the Eure department, 75 km west of Paris, Giverny attracts over 500,000 visitors each year who come to admire the famous water lilies and Japanese bridge.",
@@ -99,8 +99,8 @@ export const trajetsParisToursime: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Deauville | Bord de mer dès 280 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Paris → Deauville. 200 km, 2h15, prix fixe dès 280 €. Les Planches, le casino, la plage. Chauffeur professionnel.",
+        metaTitle: "Taxi Paris → Deauville | 200 km, dès 280 € | TaxiNeo",
+        metaDescription: "Par A13 / A132, 2h15 de trajet. Planches de Deauville, Casino Barrière, A13 puis A132 sur le parcours. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Paris → Deauville",
         heroSubtitle: "Votre transfert vers la station balnéaire la plus chic de Normandie au prix fixe de 280 — 350 €.",
         description: "Le trajet Paris — Deauville vous emmène vers la station balnéaire la plus élégante de la côte normande. Surnommée le « 21e arrondissement de Paris », Deauville est réputée pour ses célèbres Planches, son casino Barrière, ses courses hippiques et le Festival du Cinéma Américain chaque septembre.",
@@ -118,8 +118,8 @@ export const trajetsParisToursime: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Deauville | Seaside from €280 | TaxiNeo",
-        metaDescription: "Book your taxi Paris → Deauville. 200 km, 2h15, fixed price from €280. The Planches, casino, beach. Professional driver.",
+        metaTitle: "Taxi Paris → Deauville | 200 km, from €280 | TaxiNeo",
+        metaDescription: "A13 / A132 route, approximately 2h15. Planches de Deauville, Casino Barrière and A13 puis A132 along the way. Stops for sightseeing possible en route.",
         heroTitle: "Taxi Paris → Deauville",
         heroSubtitle: "Your transfer to Normandy's most elegant seaside resort at a fixed price of €280 — €350.",
         description: "The Paris — Deauville route takes you to the most elegant seaside resort on the Norman coast. Nicknamed the '21st arrondissement of Paris', Deauville is famous for its iconic Planches boardwalk, Barrière casino, horse racing and the American Film Festival each September.",
@@ -166,8 +166,8 @@ export const trajetsParisToursime: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Honfleur | Le Vieux Bassin dès 270 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Paris → Honfleur. 195 km, 2h10, prix fixe dès 270 €. Vieux Bassin, galeries d'art, port pittoresque. Chauffeur professionnel.",
+        metaTitle: "Taxi Paris → Honfleur | 195 km, dès 270 € | TaxiNeo",
+        metaDescription: "Trajet direct A13 / A29 en 2h10. Vieux Bassin, Pont de Normandie, A13 direction Caen sur le parcours. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Paris → Honfleur",
         heroSubtitle: "Votre transfert vers le port le plus pittoresque de Normandie au prix fixe de 270 — 340 €.",
         description: "Le trajet Paris — Honfleur vous conduit vers l'un des ports les plus charmants de France. Classé parmi les « Plus Beaux Détours de France », Honfleur séduit par son Vieux Bassin bordé de maisons à colombages, ses galeries d'art et son église Sainte-Catherine entièrement construite en bois.",
@@ -185,8 +185,8 @@ export const trajetsParisToursime: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Honfleur | Old Harbour from €270 | TaxiNeo",
-        metaDescription: "Book your taxi Paris → Honfleur. 195 km, 2h10, fixed price from €270. Old Harbour, art galleries, picturesque port. Professional driver.",
+        metaTitle: "Taxi Paris → Honfleur | 195 km, from €270 | TaxiNeo",
+        metaDescription: "Via A13 / A29, 2h10 ride. Vieux Bassin, Pont de Normandie and A13 direction Caen along the way. Stops for sightseeing possible en route. ~€20 toll included.",
         heroTitle: "Taxi Paris → Honfleur",
         heroSubtitle: "Your transfer to Normandy's most picturesque port at a fixed price of €270 — €340.",
         description: "The Paris — Honfleur route takes you to one of France's most charming ports. Classified among the 'Most Beautiful Detours of France', Honfleur captivates with its Old Harbour lined with half-timbered houses, art galleries and Sainte-Catherine church built entirely of wood.",
@@ -233,8 +233,8 @@ export const trajetsParisToursime: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Étretat | Les Falaises dès 300 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Paris → Étretat. 220 km, 2h30, prix fixe dès 300 €. Falaises spectaculaires, Aiguille creuse. Chauffeur professionnel.",
+        metaTitle: "Taxi Paris → Étretat | 220 km, dès 300 € | TaxiNeo",
+        metaDescription: "Par A13 / A29 / A150, 2h30 de trajet. Falaises d'Étretat, Aiguille creuse, A13 / A29 sur le parcours. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Paris → Étretat",
         heroSubtitle: "Votre transfert vers les falaises les plus spectaculaires de France au prix fixe de 300 — 370 €.",
         description: "Le trajet Paris — Étretat vous emmène découvrir l'un des sites naturels les plus emblématiques de France. Les falaises de craie blanche d'Étretat, avec leur arche naturelle et l'Aiguille creuse, ont inspiré des générations d'artistes de Monet à Maupassant.",
@@ -252,8 +252,8 @@ export const trajetsParisToursime: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Étretat | The Cliffs from €300 | TaxiNeo",
-        metaDescription: "Book your taxi Paris → Étretat. 220 km, 2h30, fixed price from €300. Spectacular cliffs, Needle rock. Professional driver.",
+        metaTitle: "Taxi Paris → Étretat | 220 km, from €300 | TaxiNeo",
+        metaDescription: "Via A13 / A29 / A150, 2h30 ride. Falaises d'Étretat, Aiguille creuse and A13 / A29 along the way. Stops for sightseeing possible en route. ~€22 toll included.",
         heroTitle: "Taxi Paris → Étretat",
         heroSubtitle: "Your transfer to France's most spectacular cliffs at a fixed price of €300 — €370.",
         description: "The Paris — Étretat route takes you to discover one of France's most iconic natural sites. Étretat's white chalk cliffs, with their natural arch and the Needle rock, have inspired generations of artists from Monet to Maupassant.",
@@ -300,8 +300,8 @@ export const trajetsParisToursime: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Cabourg | Station de Proust dès 290 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Paris → Cabourg. 220 km, 2h20, prix fixe dès 290 €. Grand Hôtel, promenade Marcel Proust. Chauffeur professionnel.",
+        metaTitle: "Taxi Paris → Cabourg | 220 km, dès 290 € | TaxiNeo",
+        metaDescription: "Trajet direct A13 en 2h20. Grand Hôtel de Cabourg, Marcel Proust, A13 direction Caen sur le parcours. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Paris → Cabourg",
         heroSubtitle: "Votre transfert vers la station balnéaire de Marcel Proust au prix fixe de 290 — 360 €.",
         description: "Le trajet Paris — Cabourg vous transporte vers la station balnéaire qui a inspiré le « Balbec » d'À la recherche du temps perdu de Marcel Proust. Son Grand Hôtel Belle Époque face à la mer, sa promenade et sa plage de sable fin en font un lieu de villégiature d'exception.",
@@ -319,8 +319,8 @@ export const trajetsParisToursime: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Cabourg | Proust's Resort from €290 | TaxiNeo",
-        metaDescription: "Book your taxi Paris → Cabourg. 220 km, 2h20, fixed price from €290. Grand Hotel, Marcel Proust promenade. Professional driver.",
+        metaTitle: "Taxi Paris → Cabourg | 220 km, from €290 | TaxiNeo",
+        metaDescription: "Via A13, 2h20 ride. Grand Hôtel de Cabourg, Marcel Proust and A13 direction Caen along the way. Stops for sightseeing possible en route. ~€16 toll included.",
         heroTitle: "Taxi Paris → Cabourg",
         heroSubtitle: "Your transfer to Marcel Proust's seaside resort at a fixed price of €290 — €360.",
         description: "The Paris — Cabourg route transports you to the seaside resort that inspired 'Balbec' in Marcel Proust's In Search of Lost Time. Its Belle Époque Grand Hotel facing the sea, promenade and fine sandy beach make it an exceptional holiday destination.",
@@ -367,8 +367,8 @@ export const trajetsParisToursime: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Le Touquet | Paris-Plage dès 310 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Paris → Le Touquet. 230 km, 2h45, prix fixe dès 310 €. Plage, golf, forêt de pins. Chauffeur professionnel.",
+        metaTitle: "Taxi Paris → Le Touquet-Paris-Plage | 230 km | TaxiNeo",
+        metaDescription: "Via A1 / A26 / A16 en 2h45. En passant par Plage du Touquet, Forêt de pins et A16 direction Boulogne. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Paris → Le Touquet",
         heroSubtitle: "Votre transfert vers la station balnéaire la plus sportive de la Côte d'Opale au prix fixe de 310 — 380 €.",
         description: "Le trajet Paris — Le Touquet vous emmène vers la perle de la Côte d'Opale. Surnommée « Paris-Plage » depuis 1912, cette station balnéaire du Pas-de-Calais allie plage immense, forêt de pins maritimes, golfs prestigieux et architecture Art déco remarquable.",
@@ -386,8 +386,8 @@ export const trajetsParisToursime: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Le Touquet | Paris-Plage from €310 | TaxiNeo",
-        metaDescription: "Book your taxi Paris → Le Touquet. 230 km, 2h45, fixed price from €310. Beach, golf, pine forest. Professional driver.",
+        metaTitle: "Taxi Paris → Le Touquet-Paris-Plage | 230 km, €310 | TaxiNeo",
+        metaDescription: "Direct route via A1 / A26 / A16, 2h45. Plage du Touquet, Forêt de pins and A16 direction Boulogne along the way. Stops for sightseeing possible en route.",
         heroTitle: "Taxi Paris → Le Touquet",
         heroSubtitle: "Your transfer to the Opal Coast's sportiest seaside resort at a fixed price of €310 — €380.",
         description: "The Paris — Le Touquet route takes you to the pearl of the Opal Coast. Nicknamed 'Paris-Plage' since 1912, this Pas-de-Calais resort combines a vast beach, maritime pine forest, prestigious golf courses and remarkable Art Deco architecture.",
@@ -434,8 +434,8 @@ export const trajetsParisToursime: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Mont-Saint-Michel | Merveille UNESCO dès 480 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Paris → Mont-Saint-Michel. 360 km, 4h, prix fixe dès 480 €. Abbaye, baie classée UNESCO. Chauffeur professionnel.",
+        metaTitle: "Taxi Paris → Mont-Saint-Michel | 360 km, dès 480 € | TaxiNeo",
+        metaDescription: "Itinéraire A13 / A84, environ 4h. Abbaye du Mont-Saint-Michel et Baie classée UNESCO sur le parcours. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Paris → Mont-Saint-Michel",
         heroSubtitle: "Votre transfert vers la Merveille de l'Occident au prix fixe de 480 — 580 €. Service porte-à-porte depuis Paris.",
         description: "Le trajet Paris — Mont-Saint-Michel vous conduit vers l'un des sites les plus visités de France et inscrit au patrimoine mondial de l'UNESCO. L'abbaye médiévale perchée sur son rocher granitique au milieu de la baie offre un spectacle unique au monde, magnifié par les plus grandes marées d'Europe continentale.",
@@ -453,8 +453,8 @@ export const trajetsParisToursime: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Mont-Saint-Michel | UNESCO Wonder from €480 | TaxiNeo",
-        metaDescription: "Book your taxi Paris → Mont-Saint-Michel. 360 km, 4h, fixed price from €480. Abbey, UNESCO-listed bay. Professional driver.",
+        metaTitle: "Taxi Paris → Mont-Saint-Michel | 360 km, from €480 | TaxiNeo",
+        metaDescription: "Via A13 / A84, 4 hours ride. Abbaye du Mont-Saint-Michel and Baie classée UNESCO along the way. Stops for sightseeing possible en route. ~€22 toll included.",
         heroTitle: "Taxi Paris → Mont-Saint-Michel",
         heroSubtitle: "Your transfer to the Wonder of the Western World at a fixed price of €480 — €580. Door-to-door service from Paris.",
         description: "The Paris — Mont-Saint-Michel route takes you to one of France's most visited sites, a UNESCO World Heritage Site. The medieval abbey perched on its granite rock in the middle of the bay offers a unique spectacle, magnified by the greatest tides in continental Europe.",
@@ -501,8 +501,8 @@ export const trajetsParisToursime: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Chartres | Cathédrale UNESCO dès 130 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Paris → Chartres. 90 km, 1h15, prix fixe dès 130 €. Cathédrale gothique, vitraux du XIIIe siècle. Chauffeur professionnel.",
+        metaTitle: "Taxi Paris → Chartres | 90 km, dès 130 € | TaxiNeo",
+        metaDescription: "Via A11 en 1h15. Cathédrale Notre-Dame de Chartres, Vitraux médiévaux et A11 direction Le Mans en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Paris → Chartres",
         heroSubtitle: "Votre transfert vers la cathédrale gothique la mieux préservée de France au prix fixe de 130 — 165 €.",
         description: "Le trajet Paris — Chartres vous conduit vers l'une des plus belles cathédrales gothiques au monde. Classée au patrimoine mondial de l'UNESCO, la cathédrale Notre-Dame de Chartres est célèbre pour ses vitraux du XIIIe siècle d'un bleu incomparable, son labyrinthe et ses deux flèches asymétriques.",
@@ -520,8 +520,8 @@ export const trajetsParisToursime: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Chartres | UNESCO Cathedral from €130 | TaxiNeo",
-        metaDescription: "Book your taxi Paris → Chartres. 90 km, 1h15, fixed price from €130. Gothic cathedral, 13th-century stained glass. Professional driver.",
+        metaTitle: "Taxi Paris → Chartres | 90 km, from €130 | TaxiNeo",
+        metaDescription: "Via A11, 1h15 ride. Cathédrale Notre-Dame de Chartres, Vitraux médiévaux and A11 direction Le Mans along the way. Stops for sightseeing possible en route.",
         heroTitle: "Taxi Paris → Chartres",
         heroSubtitle: "Your transfer to France's best-preserved Gothic cathedral at a fixed price of €130 — €165.",
         description: "The Paris — Chartres route takes you to one of the world's most beautiful Gothic cathedrals. A UNESCO World Heritage Site, Chartres Cathedral is famous for its 13th-century stained glass of incomparable blue, its labyrinth and two asymmetric spires.",
@@ -568,8 +568,8 @@ export const trajetsParisToursime: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Compiègne | Château impérial dès 120 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Paris → Compiègne. 80 km, 1h05, prix fixe dès 120 €. Château impérial, forêt de 14 000 ha. Chauffeur professionnel.",
+        metaTitle: "Taxi Paris → Compiègne | 80 km, dès 120 € | TaxiNeo",
+        metaDescription: "Itinéraire A1, environ 1h05. Château impérial, Forêt de Compiègne, A1 direction Lille sur le parcours. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Paris → Compiègne",
         heroSubtitle: "Votre transfert vers le château impérial et la forêt de Compiègne au prix fixe de 120 — 150 €.",
         description: "Le trajet Paris — Compiègne vous conduit vers une ville impériale riche d'histoire. Le château de Compiègne, résidence favorite de Napoléon III et de l'impératrice Eugénie, abrite aujourd'hui trois musées. La forêt de Compiègne, l'une des plus grandes de France avec 14 500 hectares, offre un cadre naturel exceptionnel.",
@@ -587,8 +587,8 @@ export const trajetsParisToursime: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Compiègne | Imperial Palace from €120 | TaxiNeo",
-        metaDescription: "Book your taxi Paris → Compiègne. 80 km, 1h05, fixed price from €120. Imperial palace, 14,000 ha forest. Professional driver.",
+        metaTitle: "Taxi Paris → Compiègne | 80 km, from €120 | TaxiNeo",
+        metaDescription: "Via A1, 1h05 ride. Château impérial, Forêt de Compiègne and A1 direction Lille along the way. Stops for sightseeing possible en route. ~€7 toll included.",
         heroTitle: "Taxi Paris → Compiègne",
         heroSubtitle: "Your transfer to the imperial palace and forest of Compiègne at a fixed price of €120 — €150.",
         description: "The Paris — Compiègne route takes you to a city rich in imperial history. Compiègne Palace, favourite residence of Napoleon III and Empress Eugénie, now houses three museums. The Forest of Compiègne, one of France's largest at 14,500 hectares, offers an exceptional natural setting.",
@@ -635,8 +635,8 @@ export const trajetsParisToursime: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Pierrefonds | Château médiéval dès 125 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Paris → Pierrefonds. 85 km, 1h10, prix fixe dès 125 €. Château médiéval restauré par Viollet-le-Duc. Chauffeur professionnel.",
+        metaTitle: "Taxi Paris → Pierrefonds | 85 km, dès 125 € | TaxiNeo",
+        metaDescription: "Par A1 / N32, 1h10 de trajet. Château de Pierrefonds, Viollet-le-Duc et Forêt de Compiègne en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Paris → Pierrefonds",
         heroSubtitle: "Votre transfert vers le château de conte de fées restauré par Viollet-le-Duc au prix fixe de 125 — 160 €.",
         description: "Le trajet Paris — Pierrefonds vous emmène découvrir l'un des châteaux les plus spectaculaires de France. Construit au XIVe siècle, démantelé sous Louis XIII puis magnifiquement restauré par Viollet-le-Duc pour Napoléon III, le château de Pierrefonds est un chef-d'œuvre de l'architecture médiévale idéalisée.",
@@ -654,8 +654,8 @@ export const trajetsParisToursime: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Pierrefonds | Medieval Castle from €125 | TaxiNeo",
-        metaDescription: "Book your taxi Paris → Pierrefonds. 85 km, 1h10, fixed price from €125. Medieval castle restored by Viollet-le-Duc. Professional driver.",
+        metaTitle: "Taxi Paris → Pierrefonds | 85 km, from €125 | TaxiNeo",
+        metaDescription: "Direct route via A1 / N32, 1h10. Château de Pierrefonds, Viollet-le-Duc and Forêt de Compiègne along the way. Stops for sightseeing possible en route.",
         heroTitle: "Taxi Paris → Pierrefonds",
         heroSubtitle: "Your transfer to the fairy-tale castle restored by Viollet-le-Duc at a fixed price of €125 — €160.",
         description: "The Paris — Pierrefonds route takes you to one of France's most spectacular castles. Built in the 14th century, dismantled under Louis XIII then magnificently restored by Viollet-le-Duc for Napoleon III, Pierrefonds Castle is a masterpiece of idealised medieval architecture.",
@@ -702,8 +702,8 @@ export const trajetsParisToursime: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Auvers-sur-Oise | Village de Van Gogh dès 65 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Paris → Auvers-sur-Oise. 35 km, 45 min, prix fixe dès 65 €. Dernier village de Van Gogh, Auberge Ravoux. Chauffeur professionnel.",
+        metaTitle: "Taxi Paris → Auvers-sur-Oise | 35 km, dès 65 € | TaxiNeo",
+        metaDescription: "Par A15 / N184, 45 min de trajet. Tombe de Van Gogh, Auberge Ravoux, Église d'Auvers sur le parcours. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Paris → Auvers-sur-Oise",
         heroSubtitle: "Votre transfert vers le dernier refuge de Vincent van Gogh au prix fixe de 65 — 85 €.",
         description: "Le trajet Paris — Auvers-sur-Oise vous conduit sur les traces de Vincent van Gogh dans le village où il a peint 70 toiles en 70 jours avant sa mort tragique le 29 juillet 1890. L'église d'Auvers, l'Auberge Ravoux et le cimetière où repose le peintre sont autant de lieux chargés d'émotion.",
@@ -721,8 +721,8 @@ export const trajetsParisToursime: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Auvers-sur-Oise | Van Gogh's Village from €65 | TaxiNeo",
-        metaDescription: "Book your taxi Paris → Auvers-sur-Oise. 35 km, 45 min, fixed price from €65. Van Gogh's last village, Auberge Ravoux. Professional driver.",
+        metaTitle: "Taxi Paris → Auvers-sur-Oise | 35 km, from €65 | TaxiNeo",
+        metaDescription: "Via A15 / N184, 45 min ride. Tombe de Van Gogh, Auberge Ravoux and Église d'Auvers along the way. Stops for sightseeing possible en route. Instant quote online.",
         heroTitle: "Taxi Paris → Auvers-sur-Oise",
         heroSubtitle: "Your transfer to Vincent van Gogh's last refuge at a fixed price of €65 — €85.",
         description: "The Paris — Auvers-sur-Oise route takes you in Van Gogh's footsteps to the village where he painted 70 canvases in 70 days before his tragic death on 29 July 1890. The Church of Auvers, Auberge Ravoux and the cemetery where the painter rests are places charged with emotion.",
@@ -773,8 +773,8 @@ export const trajetsParisToursime: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Reims Champagne | Caves & Cathédrale dès 190 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Paris → Reims. 145 km, 90 min, prix fixe dès 190 €. Visitez les caves de Champagne et la cathédrale des sacres. Chauffeur professionnel.",
+        metaTitle: "Taxi Paris → Reims (Champagne) | 145 km, dès 190 € | TaxiNeo",
+        metaDescription: "Via A4 en 1h30. Caves de Champagne Taittinger, Cathédrale Notre-Dame de Reims et A4 direction Strasbourg en chemin. Arrêt possible pour visites ou photos.",
         heroTitle: "Taxi Paris → Reims Champagne",
         heroSubtitle: "Votre transfert vers la capitale du Champagne au prix fixe de 190 — 250 €. Réservation en ligne, chauffeur professionnel.",
         description: "Le trajet Paris — Reims vous emmène au cœur de la Champagne, ville du sacre des rois de France et capitale mondiale du vin effervescent. À 145 km à l'est de Paris, Reims conjugue patrimoine historique exceptionnel et art de vivre champenois.",
@@ -792,8 +792,8 @@ export const trajetsParisToursime: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Reims Champagne | Cellars & Cathedral from €190 | TaxiNeo",
-        metaDescription: "Book your taxi Paris → Reims. 145 km, 90 min, fixed price from €190. Visit Champagne cellars and the coronation cathedral. Professional driver.",
+        metaTitle: "Taxi Paris → Reims (Champagne) | 145 km, from €190 | TaxiNeo",
+        metaDescription: "Via A4, 1h30 ride. Caves de Champagne Taittinger, Cathédrale Notre-Dame de Reims and A4 direction Strasbourg along the way. Up to 2 hours during rush hour.",
         heroTitle: "Taxi Paris → Reims Champagne",
         heroSubtitle: "Your transfer to the Champagne capital at a fixed price of €190 — €250. Online booking, professional driver.",
         description: "The Paris — Reims route takes you to the heart of Champagne, the city where French kings were crowned and world capital of sparkling wine. 145 km east of Paris, Reims combines exceptional historical heritage with the Champagne art of living.",
@@ -840,8 +840,8 @@ export const trajetsParisToursime: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Barbizon | Village des Peintres dès 85 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Paris → Barbizon. 60 km, 50 min, prix fixe dès 85 €. Village des peintres, forêt de Fontainebleau. Chauffeur professionnel.",
+        metaTitle: "Taxi Paris → Barbizon | forfait dès 85 € | TaxiNeo",
+        metaDescription: "Via A6 / N7 en 50 min. Village des peintres pré-impressionnistes, Forêt de Fontainebleau et A6 puis N7 en chemin. Arrêt possible pour visites ou photos.",
         heroTitle: "Taxi Paris → Barbizon",
         heroSubtitle: "Votre transfert vers le village des peintres au prix fixe de 85 — 110 €. Réservation en ligne, chauffeur professionnel.",
         description: "Le trajet Paris — Barbizon vous emmène dans le village qui a donné naissance à l'école de peinture de Barbizon, mouvement précurseur de l'impressionnisme. Niché en lisière de la forêt de Fontainebleau, ce hameau pittoresque conserve l'atmosphère des ateliers de Millet, Rousseau et Corot.",
@@ -860,7 +860,7 @@ export const trajetsParisToursime: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Paris → Barbizon | Painters' Village from €85 | TaxiNeo",
-        metaDescription: "Book your taxi Paris → Barbizon. 60 km, 50 min, fixed price from €85. Pre-Impressionist painters' village, Fontainebleau forest. Professional driver.",
+        metaDescription: "Via A6 / N7, 50 min ride. Village des peintres pré-impressionnistes, Forêt de Fontainebleau and A6 puis N7 along the way. Up to 1h15 during rush hour.",
         heroTitle: "Taxi Paris → Barbizon",
         heroSubtitle: "Your transfer to the painters' village at a fixed price of €85 — €110. Online booking, professional driver.",
         description: "The Paris — Barbizon route takes you to the village that gave birth to the Barbizon school of painting, a movement that preceded Impressionism. Nestled on the edge of Fontainebleau forest, this picturesque hamlet preserves the atmosphere of the studios of Millet, Rousseau and Corot.",
@@ -907,8 +907,8 @@ export const trajetsParisToursime: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Vaux-le-Vicomte | Château & Jardins dès 80 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Paris → Vaux-le-Vicomte. 55 km, 50 min, prix fixe dès 80 €. Château inspirateur de Versailles, jardins Le Nôtre. Chauffeur professionnel.",
+        metaTitle: "Taxi Paris → Vaux-le-Vicomte | 55 km, dès 80 € | TaxiNeo",
+        metaDescription: "Via A5 en 50 min. Passage par Château de Vaux-le-Vicomte, Jardins de Le Nôtre et A5 direction Troyes. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Paris → Vaux-le-Vicomte",
         heroSubtitle: "Votre transfert vers le château qui inspira Versailles au prix fixe de 80 — 100 €. Réservation en ligne, chauffeur professionnel.",
         description: "Le trajet Paris — Vaux-le-Vicomte vous conduit vers le chef-d'œuvre de Nicolas Fouquet, surintendant des finances de Louis XIV. Ce château du XVIIe siècle, ses jardins signés Le Nôtre et ses intérieurs peints par Le Brun ont directement inspiré la construction de Versailles.",
@@ -926,8 +926,8 @@ export const trajetsParisToursime: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Vaux-le-Vicomte | Château & Gardens from €80 | TaxiNeo",
-        metaDescription: "Book your taxi Paris → Vaux-le-Vicomte. 55 km, 50 min, fixed price from €80. The château that inspired Versailles, Le Nôtre gardens. Professional driver.",
+        metaTitle: "Taxi Paris → Vaux-le-Vicomte | 55 km, from €80 | TaxiNeo",
+        metaDescription: "Direct route via A5, 50 min. Château de Vaux-le-Vicomte, Jardins de Le Nôtre and A5 direction Troyes along the way. Stops for sightseeing possible en route.",
         heroTitle: "Taxi Paris → Vaux-le-Vicomte",
         heroSubtitle: "Your transfer to the château that inspired Versailles at a fixed price of €80 — €100. Online booking, professional driver.",
         description: "The Paris — Vaux-le-Vicomte route takes you to Nicolas Fouquet's masterpiece, superintendent of finances to Louis XIV. This 17th-century château, its Le Nôtre gardens and Le Brun interiors directly inspired the construction of Versailles.",
@@ -974,8 +974,8 @@ export const trajetsParisToursime: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Château-Thierry | Champagne & Histoire dès 130 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Paris → Château-Thierry. 95 km, 70 min, prix fixe dès 130 €. Sites de la Grande Guerre, vignoble champenois. Chauffeur professionnel.",
+        metaTitle: "Taxi Paris → Château-Thierry | 95 km, dès 130 € | TaxiNeo",
+        metaDescription: "Par A4, 1h10 de trajet. Mémorial de la cote 204, Vignoble de Champagne et A4 direction Metz en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Paris → Château-Thierry",
         heroSubtitle: "Votre transfert vers les coteaux du Champagne et les sites de mémoire au prix fixe de 130 — 160 €.",
         description: "Le trajet Paris — Château-Thierry vous emmène au cœur de la vallée de la Marne, terre de Champagne et de mémoire. Cette sous-préfecture de l'Aisne conjugue vignoble champenois classé UNESCO, sites de la Grande Guerre et la maison natale de Jean de La Fontaine.",
@@ -993,8 +993,8 @@ export const trajetsParisToursime: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Château-Thierry | Champagne & History from €130 | TaxiNeo",
-        metaDescription: "Book your taxi Paris → Château-Thierry. 95 km, 70 min, fixed price from €130. WWI sites, Champagne vineyard. Professional driver.",
+        metaTitle: "Taxi Paris → Château-Thierry | 95 km, from €130 | TaxiNeo",
+        metaDescription: "Direct route via A4, 1h10. Mémorial de la cote 204, Vignoble de Champagne and A4 direction Metz along the way. Stops for sightseeing possible en route.",
         heroTitle: "Taxi Paris → Château-Thierry",
         heroSubtitle: "Your transfer to the Champagne hillsides and memorial sites at a fixed price of €130 — €160.",
         description: "The Paris — Château-Thierry route takes you to the heart of the Marne valley, a land of Champagne and remembrance. This sub-prefecture of the Aisne combines UNESCO-listed Champagne vineyards, Great War sites and the birthplace of Jean de La Fontaine.",
@@ -1041,8 +1041,8 @@ export const trajetsParisToursime: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Rambouillet | Château & Forêt dès 75 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Paris → Rambouillet. 55 km, 45 min, prix fixe dès 75 €. Château présidentiel, forêt de 20 000 hectares. Chauffeur professionnel.",
+        metaTitle: "Taxi Paris → Rambouillet | 55 km, dès 75 € | TaxiNeo",
+        metaDescription: "Via N10 en 45 min. Château présidentiel, Forêt de Rambouillet, N10 direction Chartres sur le parcours. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Paris → Rambouillet",
         heroSubtitle: "Votre transfert vers le domaine présidentiel et la grande forêt au prix fixe de 75 — 100 €.",
         description: "Le trajet Paris — Rambouillet vous conduit vers l'ancienne résidence présidentielle et sa forêt majestueuse de 20 000 hectares. Cette ville royale des Yvelines abrite un château chargé d'histoire, de François Ier à la Ve République.",
@@ -1060,8 +1060,8 @@ export const trajetsParisToursime: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Rambouillet | Presidential Château & Forest from €75 | TaxiNeo",
-        metaDescription: "Book your taxi Paris → Rambouillet. 55 km, 45 min, fixed price from €75. Presidential château, 20,000-hectare forest. Professional driver.",
+        metaTitle: "Taxi Paris → Rambouillet | 55 km, from €75 | TaxiNeo",
+        metaDescription: "Direct route via N10, 45 min. Château présidentiel, Forêt de Rambouillet and N10 direction Chartres along the way. Stops for sightseeing possible en route.",
         heroTitle: "Taxi Paris → Rambouillet",
         heroSubtitle: "Your transfer to the presidential estate and great forest at a fixed price of €75 — €100.",
         description: "The Paris — Rambouillet route takes you to the former presidential residence and its majestic 20,000-hectare forest. This royal town in the Yvelines houses a château steeped in history, from Francis I to the Fifth Republic.",
@@ -1108,8 +1108,8 @@ export const trajetsParisToursime: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Moret-sur-Loing | Cité des peintres dès 110 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Paris → Moret-sur-Loing. 78 km, 70 min, prix fixe dès 110 €. Cité médiévale des impressionnistes. Chauffeur professionnel.",
+        metaTitle: "Taxi Paris → Moret-sur-Loing | 78 km, dès 110 € | TaxiNeo",
+        metaDescription: "Via A6 / A5 en 1h10. Cité médiévale des peintres impressionnistes, Église Notre-Dame et Confluence du Loing et de la Seine en chemin. Péage ~7 € inclus.",
         heroTitle: "Taxi Paris → Moret-sur-Loing",
         heroSubtitle: "Votre transfert vers la cité médiévale des peintres impressionnistes au prix fixe de 110 — 140 €. Réservation en ligne, chauffeur professionnel.",
         description: "Le trajet Paris — Moret-sur-Loing vous emmène au cœur d'une cité médiévale fortifiée du sud de la Seine-et-Marne, célèbre pour avoir inspiré Alfred Sisley pendant les 20 dernières années de sa vie. Située à la confluence du Loing et de la Seine, cette petite ville de 4 500 habitants conserve un patrimoine remarquable avec ses remparts, ses portes fortifiées et son église gothique Notre-Dame.",
@@ -1127,8 +1127,8 @@ export const trajetsParisToursime: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Moret-sur-Loing | Impressionist Painters Town from €110 | TaxiNeo",
-        metaDescription: "Book your taxi Paris → Moret-sur-Loing. 78 km, 70 min, fixed price from €110. Medieval town of Impressionist painter Sisley. Professional driver.",
+        metaTitle: "Taxi Paris → Moret-sur-Loing | 78 km, from €110 | TaxiNeo",
+        metaDescription: "Via A6 / A5, 1h10 ride. Cité médiévale des peintres impressionnistes, Église Notre-Dame and Confluence du Loing et de la Seine along the way. ~€7 toll included.",
         heroTitle: "Taxi Paris → Moret-sur-Loing",
         heroSubtitle: "Your transfer to the medieval town of Impressionist painters at a fixed price of €110 — €140. Online booking, professional driver.",
         description: "The Paris — Moret-sur-Loing route takes you to the heart of a fortified medieval town in southern Seine-et-Marne, famous for having inspired Alfred Sisley during the last 20 years of his life. Located at the confluence of the Loing and Seine rivers, this small town of 4,500 inhabitants preserves remarkable heritage with its ramparts, fortified gates and Gothic Notre-Dame church.",
@@ -1175,8 +1175,8 @@ export const trajetsParisToursime: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Champs-sur-Marne | Château classique dès 45 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Paris → Château de Champs-sur-Marne. 25 km, 35 min, prix fixe dès 45 €. Château XVIIIe et jardins à la française. Chauffeur professionnel.",
+        metaTitle: "Taxi Paris → Château de Champs-sur-Marne | 25 km | TaxiNeo",
+        metaDescription: "Via A4 en 35 min. Château classique XVIIIe siècle, Jardins à la française et A4 direction Marne-la-Vallée en chemin. Arrêt possible pour visites ou photos.",
         heroTitle: "Taxi Paris → Château de Champs-sur-Marne",
         heroSubtitle: "Votre transfert vers le joyau méconnu de l'architecture classique au prix fixe de 45 — 60 €. Réservation en ligne, chauffeur professionnel.",
         description: "Le trajet Paris — Champs-sur-Marne vous conduit vers l'un des plus beaux exemples d'architecture classique du XVIIIe siècle en Île-de-France. Ce château, propriété du Centre des monuments nationaux, a été entièrement restauré et offre un témoignage exceptionnel de l'art de vivre aristocratique au siècle des Lumières.",
@@ -1194,8 +1194,8 @@ export const trajetsParisToursime: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Champs-sur-Marne | Classical Château from €45 | TaxiNeo",
-        metaDescription: "Book your taxi Paris → Château de Champs-sur-Marne. 25 km, 35 min, fixed price from €45. 18th-century château and French gardens. Professional driver.",
+        metaTitle: "Taxi Paris → Château de Champs-sur-Marne | 25 km | TaxiNeo",
+        metaDescription: "Via A4, 35 min ride. Château classique XVIIIe siècle, Jardins à la française and A4 direction Marne-la-Vallée along the way. Up to 50 min during rush hour.",
         heroTitle: "Taxi Paris → Château de Champs-sur-Marne",
         heroSubtitle: "Your transfer to a hidden gem of classical French architecture at a fixed price of €45 — €60. Online booking, professional driver.",
         description: "The Paris — Champs-sur-Marne route takes you to one of the finest examples of 18th-century classical architecture in the Île-de-France region. This château, managed by the Centre des monuments nationaux, has been fully restored and offers an exceptional insight into aristocratic life during the Age of Enlightenment.",
@@ -1242,8 +1242,8 @@ export const trajetsParisToursime: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Saint-Cloud | Domaine national dès 30 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Paris → Domaine de Saint-Cloud. 12 km, 25 min, prix fixe dès 30 €. Parc de 460 hectares, Grandes Eaux, vue sur Paris. Chauffeur professionnel.",
+        metaTitle: "Taxi Paris → Domaine de Saint-Cloud | 12 km, 30 € | TaxiNeo",
+        metaDescription: "Via N118 / Périphérique Ouest en 25 min. Parc historique de 460 hectares, Grandes Eaux et cascades et Vue panoramique sur Paris en chemin. Trajet sans péage.",
         heroTitle: "Taxi Paris → Domaine de Saint-Cloud",
         heroSubtitle: "Votre transfert vers le plus grand parc historique aux portes de Paris au prix fixe de 30 — 40 €. Réservation en ligne, chauffeur professionnel.",
         description: "Le trajet Paris — Saint-Cloud vous conduit au Domaine national de Saint-Cloud, un parc historique de 460 hectares surplombant la Seine, classé monument historique et labellisé Jardin remarquable. Ce domaine, où se trouvait autrefois le château des Orléans puis de Napoléon III, offre des panoramas exceptionnels sur Paris et abrite les célèbres Grandes Eaux.",
@@ -1261,8 +1261,8 @@ export const trajetsParisToursime: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Saint-Cloud | National Estate from €30 | TaxiNeo",
-        metaDescription: "Book your taxi Paris → Domaine de Saint-Cloud. 12 km, 25 min, fixed price from €30. 460-hectare park, fountains, Paris panorama. Professional driver.",
+        metaTitle: "Taxi Paris → Domaine de Saint-Cloud | 12 km, €30 | TaxiNeo",
+        metaDescription: "Via N118 / ring road Ouest, 25 min ride. Parc historique de 460 hectares, Grandes Eaux et cascades and Vue panoramique sur Paris along the way. Quote online.",
         heroTitle: "Taxi Paris → Domaine de Saint-Cloud",
         heroSubtitle: "Your transfer to the largest historic park on the doorstep of Paris at a fixed price of €30 — €40. Online booking, professional driver.",
         description: "The Paris — Saint-Cloud route takes you to the Domaine national de Saint-Cloud, a 460-hectare historic park overlooking the Seine, classified as a historic monument and labelled a Remarkable Garden. This estate, once home to the Orléans family château and later Napoléon III, offers exceptional panoramic views of Paris and hosts the famous Grandes Eaux fountain displays.",
@@ -1309,8 +1309,8 @@ export const trajetsParisToursime: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Sceaux | Jardins de Le Nôtre dès 35 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Paris → Parc de Sceaux. 15 km, 30 min, prix fixe dès 35 €. Jardins de Le Nôtre, cerisiers en fleurs, château-musée. Chauffeur professionnel.",
+        metaTitle: "Taxi Paris → Parc de Sceaux | 15 km, dès 35 € | TaxiNeo",
+        metaDescription: "Via A6 / D920 en 30 min. Jardins de Le Nôtre, Château musée de l'Île-de-France et Cerisiers en fleurs au printemps en chemin. Arrêt visite possible en chemin.",
         heroTitle: "Taxi Paris → Parc de Sceaux",
         heroSubtitle: "Votre transfert vers les somptueux jardins de Le Nôtre au prix fixe de 35 — 45 €. Réservation en ligne, chauffeur professionnel.",
         description: "Le trajet Paris — Sceaux vous conduit vers l'un des plus beaux domaines d'Île-de-France, le Parc de Sceaux. Dessiné par André Le Nôtre pour le ministre Colbert, ce parc de 181 hectares est classé monument historique et offre des perspectives grandioses, un Grand Canal, des bassins octogonaux et des cascades. Le château abrite le musée de l'Île-de-France.",
@@ -1328,8 +1328,8 @@ export const trajetsParisToursime: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Sceaux | Le Nôtre Gardens from €35 | TaxiNeo",
-        metaDescription: "Book your taxi Paris → Parc de Sceaux. 15 km, 30 min, fixed price from €35. Le Nôtre gardens, cherry blossoms, château museum. Professional driver.",
+        metaTitle: "Taxi Paris → Parc de Sceaux | 15 km, from €35 | TaxiNeo",
+        metaDescription: "Via A6 / D920, 30 min ride. Jardins de Le Nôtre, Château musée de l'Île-de-France and Cerisiers en fleurs au printemps along the way. No toll on this route.",
         heroTitle: "Taxi Paris → Parc de Sceaux",
         heroSubtitle: "Your transfer to the magnificent Le Nôtre gardens at a fixed price of €35 — €45. Online booking, professional driver.",
         description: "The Paris — Sceaux route takes you to one of the finest estates in the Île-de-France, the Parc de Sceaux. Designed by André Le Nôtre for Minister Colbert, this 181-hectare park is a listed historic monument offering grand perspectives, a Grand Canal, octagonal pools and cascades. The château houses the Île-de-France museum.",
@@ -1376,8 +1376,8 @@ export const trajetsParisToursime: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Disneyland Paris | Prix fixe dès 65 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Paris → Disneyland Paris. 40 km, 40 min, prix fixe dès 65 €. Dépose directe aux parcs ou Val d'Europe. Chauffeur professionnel.",
+        metaTitle: "Taxi Paris → Disneyland Paris | 40 km, dès 65 € | TaxiNeo",
+        metaDescription: "Via A4 en 40 min. Disneyland Park, Walt Disney Studios, Val d'Europe shopping et A4 direction Metz en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Paris → Disneyland Paris",
         heroSubtitle: "Votre transfert vers Disneyland Paris et Val d'Europe au prix fixe de 65 — 85 €. Réservation en ligne, chauffeur professionnel.",
         description: "Le trajet Paris — Disneyland Paris vous conduit vers la première destination touristique privée d'Europe, avec ses deux parcs à thème, le Disney Village et le centre commercial Val d'Europe. Situé à Marne-la-Vallée, à 40 km à l'est de Paris, le resort accueille plus de 15 millions de visiteurs par an.",
@@ -1395,8 +1395,8 @@ export const trajetsParisToursime: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Disneyland Paris | Fixed Price from €65 | TaxiNeo",
-        metaDescription: "Book your taxi Paris → Disneyland Paris. 40 km, 40 min, fixed price from €65. Direct drop-off at parks or Val d'Europe. Professional driver.",
+        metaTitle: "Taxi Paris → Disneyland Paris | 40 km, from €65 | TaxiNeo",
+        metaDescription: "Via A4, 40 min ride. Disneyland Park, Walt Disney Studios, Val d'Europe shopping and A4 direction Metz en route. Stops for sightseeing possible en route.",
         heroTitle: "Taxi Paris → Disneyland Paris",
         heroSubtitle: "Your transfer to Disneyland Paris and Val d'Europe at a fixed price of €65 — €85. Online booking, professional driver.",
         description: "The Paris — Disneyland Paris route takes you to Europe's most visited private tourist destination, with its two theme parks, Disney Village and the Val d'Europe shopping centre. Located in Marne-la-Vallée, 40 km east of Paris, the resort welcomes over 15 million visitors annually.",
@@ -1443,8 +1443,8 @@ export const trajetsParisToursime: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Parc Astérix | Prix fixe dès 60 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Paris → Parc Astérix. 35 km, 35 min, prix fixe dès 60 €. Plus de 50 attractions dont Toutatis. Chauffeur professionnel.",
+        metaTitle: "Taxi Paris → Parc Astérix | 35 km, dès 60 € | TaxiNeo",
+        metaDescription: "Via A1 en 35 min. Parc Astérix, Roller coasters Toutatis & OzIris, A1 direction Lille sur le parcours. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Paris → Parc Astérix",
         heroSubtitle: "Votre transfert vers le Parc Astérix au prix fixe de 60 — 80 €. Réservation en ligne, chauffeur professionnel.",
         description: "Le trajet Paris — Parc Astérix vous emmène vers l'un des parcs d'attractions les plus populaires de France, célèbre pour ses montagnes russes et son univers gaulois. Situé à Plailly dans l'Oise, à 35 km au nord de Paris, le parc accueille plus de 2,3 millions de visiteurs par an.",
@@ -1462,8 +1462,8 @@ export const trajetsParisToursime: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Parc Astérix | Fixed Price from €60 | TaxiNeo",
-        metaDescription: "Book your taxi Paris → Parc Astérix. 35 km, 35 min, fixed price from €60. Over 50 rides including Toutatis coaster. Professional driver.",
+        metaTitle: "Taxi Paris → Parc Astérix | 35 km, from €60 | TaxiNeo",
+        metaDescription: "Direct route via A1, 35 min. Parc Astérix, Roller coasters Toutatis & OzIris and A1 direction Lille along the way. Stops for sightseeing possible en route.",
         heroTitle: "Taxi Paris → Parc Astérix",
         heroSubtitle: "Your transfer to Parc Astérix at a fixed price of €60 — €80. Online booking, professional driver.",
         description: "The Paris — Parc Astérix route takes you to one of France's most popular theme parks, famous for its roller coasters and Gaulish universe. Located in Plailly in the Oise department, 35 km north of Paris, the park welcomes over 2.3 million visitors annually.",
@@ -1510,8 +1510,8 @@ export const trajetsParisToursime: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Zoo de Thoiry | Safari dès 80 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Paris → Zoo de Thoiry. 50 km, 50 min, prix fixe dès 80 €. Safari en voiture, zoo, château. Chauffeur professionnel.",
+        metaTitle: "Taxi Paris → Zoo de Thoiry | 50 km, dès 80 € | TaxiNeo",
+        metaDescription: "Trajet direct A13 / A12 en 50 min. En passant par Safari en voiture, Zoo à pied et Château de Thoiry. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Paris → Zoo de Thoiry",
         heroSubtitle: "Votre transfert vers le Zoo Safari de Thoiry au prix fixe de 80 — 100 €. Réservation en ligne, chauffeur professionnel.",
         description: "Le trajet Paris — Zoo de Thoiry vous emmène vers l'un des plus grands parcs zoologiques de France, unique pour son safari en voiture à travers les enclos d'animaux en liberté. Situé dans les Yvelines à 50 km à l'ouest de Paris, le domaine de Thoiry combine zoo, safari, château Renaissance et jardins botaniques.",
@@ -1529,8 +1529,8 @@ export const trajetsParisToursime: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Thoiry Zoo Safari | Fixed Price from €80 | TaxiNeo",
-        metaDescription: "Book your taxi Paris → Thoiry Zoo. 50 km, 50 min, fixed price from €80. Drive-through safari, zoo, château. Professional driver.",
+        metaTitle: "Taxi Paris → Zoo de Thoiry | 50 km, from €80 | TaxiNeo",
+        metaDescription: "Via A13 / A12, 50 min ride. Safari en voiture, Zoo à pied and Château de Thoiry along the way. Stops for sightseeing possible en route. ~€5 toll included.",
         heroTitle: "Taxi Paris → Zoo de Thoiry",
         heroSubtitle: "Your transfer to Thoiry Zoo Safari at a fixed price of €80 — €100. Online booking, professional driver.",
         description: "The Paris — Thoiry Zoo route takes you to one of France's largest zoological parks, unique for its drive-through safari among free-roaming animals. Located in the Yvelines, 50 km west of Paris, the Thoiry estate combines zoo, safari, Renaissance château and botanical gardens.",
@@ -1577,8 +1577,8 @@ export const trajetsParisToursime: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Mer de Sable | Parc western dès 75 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Paris → Mer de Sable, Ermenonville. 50 km, 50 min, prix fixe dès 75 €. Parc à thème western et spectacles. Chauffeur professionnel.",
+        metaTitle: "Taxi Paris → Mer de Sable | 50 km, dès 75 € | TaxiNeo",
+        metaDescription: "Via A1 en 50 min. Parc à thème western, Spectacles équestres, Forêt d'Ermenonville et A1 direction Senlis en chemin. Arrêt possible pour visites ou photos.",
         heroTitle: "Taxi Paris → Mer de Sable",
         heroSubtitle: "Votre transfert vers la Mer de Sable à Ermenonville au prix fixe de 75 — 95 €. Réservation en ligne, chauffeur professionnel.",
         description: "Le trajet Paris — Mer de Sable vous conduit vers le plus ancien parc à thème de France, fondé en 1963 au cœur de la forêt d'Ermenonville. Ce parc familial unique est dédié à l'univers du Far West avec des spectacles équestres, des attractions et un cadre naturel exceptionnel de dunes de sable.",
@@ -1596,8 +1596,8 @@ export const trajetsParisToursime: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Mer de Sable | Western Theme Park from €75 | TaxiNeo",
-        metaDescription: "Book your taxi Paris → Mer de Sable, Ermenonville. 50 km, 50 min, fixed price from €75. Western theme park and shows. Professional driver.",
+        metaTitle: "Taxi Paris → Mer de Sable | 50 km, from €75 | TaxiNeo",
+        metaDescription: "Via A1, 50 min ride. Parc à thème western, Spectacles équestres, Forêt d'Ermenonville and A1 direction Senlis en route. Stops for sightseeing possible en route.",
         heroTitle: "Taxi Paris → Mer de Sable",
         heroSubtitle: "Your transfer to Mer de Sable in Ermenonville at a fixed price of €75 — €95. Online booking, professional driver.",
         description: "The Paris — Mer de Sable route takes you to France's oldest theme park, founded in 1963 in the heart of the Ermenonville forest. This unique family park is dedicated to the Wild West with equestrian shows, rides and an exceptional natural setting of sand dunes.",
@@ -1644,8 +1644,8 @@ export const trajetsParisToursime: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → France Miniature | Dès 55 € prix fixe | TaxiNeo",
-        metaDescription: "Réservez votre taxi Paris → France Miniature à Élancourt. 35 km, 40 min, prix fixe dès 55 €. 117 monuments en miniature. Chauffeur professionnel.",
+        metaTitle: "Taxi Paris → France Miniature | 35 km, dès 55 € | TaxiNeo",
+        metaDescription: "Via A13 / A12 en 40 min. Maquettes 1/30e de monuments, Parcours en plein air et A13 / A12 direction Trappes en chemin. Arrêt visite possible en chemin.",
         heroTitle: "Taxi Paris → France Miniature",
         heroSubtitle: "Votre transfert vers France Miniature à Élancourt au prix fixe de 55 — 75 €. Réservation en ligne, chauffeur professionnel.",
         description: "Le trajet Paris — France Miniature vous conduit vers un parc unique en son genre, où 117 monuments et sites emblématiques de France sont reproduits à l'échelle 1/30e dans un écrin de verdure de 5 hectares. Situé à Élancourt dans les Yvelines, à 35 km à l'ouest de Paris.",
@@ -1663,8 +1663,8 @@ export const trajetsParisToursime: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → France Miniature | Fixed Price from €55 | TaxiNeo",
-        metaDescription: "Book your taxi Paris → France Miniature, Élancourt. 35 km, 40 min, fixed price from €55. 117 miniature monuments. Professional driver.",
+        metaTitle: "Taxi Paris → France Miniature | 35 km, from €55 | TaxiNeo",
+        metaDescription: "Via A13 / A12, 40 min ride. Maquettes 1/30e de monuments, Parcours en plein air and A13 / A12 direction Trappes along the way. Up to 1 hour during rush hour.",
         heroTitle: "Taxi Paris → France Miniature",
         heroSubtitle: "Your transfer to France Miniature in Élancourt at a fixed price of €55 — €75. Online booking, professional driver.",
         description: "The Paris — France Miniature route takes you to a one-of-a-kind park where 117 iconic French monuments and sites are reproduced at 1/30th scale in 5 hectares of landscaped gardens. Located in Élancourt in the Yvelines, 35 km west of Paris.",
@@ -1711,8 +1711,8 @@ export const trajetsParisToursime: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Val d'Europe & Sea Life | Dès 65 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Paris → Val d'Europe et aquarium Sea Life. 40 km, 40 min, prix fixe dès 65 €. Shopping et découverte marine. Chauffeur professionnel.",
+        metaTitle: "Taxi Paris → Val d'Europe & Sea Life | 40 km, 65 € | TaxiNeo",
+        metaDescription: "Via A4 en 40 min. Aquarium Sea Life, Centre commercial Val d'Europe et La Vallée Village outlet en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Paris → Val d'Europe & Sea Life",
         heroSubtitle: "Votre transfert vers Val d'Europe et l'aquarium Sea Life au prix fixe de 65 — 85 €. Réservation en ligne, chauffeur professionnel.",
         description: "Le trajet Paris — Val d'Europe vous emmène vers le plus grand centre commercial de l'est francilien et son aquarium Sea Life, une sortie idéale combinant shopping de luxe et découverte du monde marin. Situé à Serris-Montévrain, à 40 km de Paris via l'A4.",
@@ -1730,8 +1730,8 @@ export const trajetsParisToursime: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Val d'Europe & Sea Life | From €65 | TaxiNeo",
-        metaDescription: "Book your taxi Paris → Val d'Europe and Sea Life aquarium. 40 km, 40 min, fixed price from €65. Shopping and marine discovery. Professional driver.",
+        metaTitle: "Taxi Paris → Val d'Europe & Sea Life | 40 km, €65 | TaxiNeo",
+        metaDescription: "Via A4, 40 min ride. Aquarium Sea Life, Centre commercial Val d'Europe and La Vallée Village outlet along the way. Stops for sightseeing possible en route.",
         heroTitle: "Taxi Paris → Val d'Europe & Sea Life",
         heroSubtitle: "Your transfer to Val d'Europe and Sea Life aquarium at a fixed price of €65 — €85. Online booking, professional driver.",
         description: "The Paris — Val d'Europe route takes you to eastern Paris's largest shopping centre and its Sea Life aquarium, an ideal outing combining luxury shopping and marine discovery. Located in Serris-Montévrain, 40 km from Paris via the A4.",
@@ -1778,8 +1778,8 @@ export const trajetsParisToursime: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Saint-Germain-en-Laye | Château dès 40 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Paris → Saint-Germain-en-Laye. 22 km, 30 min, prix fixe dès 40 €. Château, musée archéologie, terrasse Le Nôtre. Chauffeur professionnel.",
+        metaTitle: "Taxi Paris → Saint-Germain-en-Laye | 22 km, 40 € | TaxiNeo",
+        metaDescription: "Via A14 / A13 en 30 min. Château Renaissance, Musée d'Archéologie nationale, Grande Terrasse Le Nôtre et Forêt de Saint-Germain en chemin. Péage ~2 € inclus.",
         heroTitle: "Taxi Paris → Château de Saint-Germain-en-Laye",
         heroSubtitle: "Votre transfert vers le Château de Saint-Germain-en-Laye au prix fixe de 40 — 55 €. Réservation en ligne, chauffeur professionnel.",
         description: "Le trajet Paris — Saint-Germain-en-Laye vous conduit vers l'un des plus beaux châteaux royaux d'Île-de-France, ancienne résidence de François Ier et Louis XIV, aujourd'hui Musée d'Archéologie nationale. À 22 km à l'ouest de Paris, la ville offre aussi la Grande Terrasse dessinée par Le Nôtre et la forêt domaniale de 3 500 hectares.",
@@ -1797,8 +1797,8 @@ export const trajetsParisToursime: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Saint-Germain-en-Laye | Château from €40 | TaxiNeo",
-        metaDescription: "Book your taxi Paris → Saint-Germain-en-Laye. 22 km, 30 min, fixed price from €40. Royal château, archaeology museum, Le Nôtre terrace. Professional driver.",
+        metaTitle: "Taxi Paris → Saint-Germain-en-Laye | 22 km, €40 | TaxiNeo",
+        metaDescription: "Via A14 / A13, 30 min ride. Château Renaissance, Musée d'Archéologie nationale, Grande Terrasse Le Nôtre and Forêt de Saint-Germain en route. ~€2 toll included.",
         heroTitle: "Taxi Paris → Château de Saint-Germain-en-Laye",
         heroSubtitle: "Your transfer to the Château de Saint-Germain-en-Laye at a fixed price of €40 — €55. Online booking, professional driver.",
         description: "The Paris — Saint-Germain-en-Laye route takes you to one of the finest royal châteaux in the Île-de-France, former residence of Francis I and Louis XIV, now the National Archaeology Museum. 22 km west of Paris, the town also offers the Grande Terrasse designed by Le Nôtre and the 3,500-hectare state forest.",
@@ -1845,8 +1845,8 @@ export const trajetsParisToursime: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Zoo de Vincennes | Prix fixe dès 20 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Paris → Zoo de Vincennes et Bois de Vincennes. 8 km, 20 min, prix fixe dès 20 €. Parc zoologique rénové, lac, château. Chauffeur professionnel.",
+        metaTitle: "Taxi Paris → Zoo de Vincennes | 8 km, dès 20 € | TaxiNeo",
+        metaDescription: "Via Boulevard périphérique en 20 min. Parc Zoologique de Paris, Bois de Vincennes, Château de Vincennes et Lac Daumesnil en chemin. Trajet sans péage.",
         heroTitle: "Taxi Paris → Zoo de Vincennes",
         heroSubtitle: "Votre transfert vers le Zoo de Vincennes et le Bois de Vincennes au prix fixe de 20 — 30 €. Réservation en ligne, chauffeur professionnel.",
         description: "Le trajet Paris — Zoo de Vincennes vous emmène vers le Parc Zoologique de Paris, entièrement rénové en 2014, et le magnifique Bois de Vincennes de 995 hectares. À seulement 8 km du centre de Paris, c'est l'excursion nature la plus accessible de la capitale, avec le zoo, le château médiéval et le lac Daumesnil.",
@@ -1864,8 +1864,8 @@ export const trajetsParisToursime: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Vincennes Zoo | Fixed Price from €20 | TaxiNeo",
-        metaDescription: "Book your taxi Paris → Vincennes Zoo and Bois de Vincennes. 8 km, 20 min, fixed price from €20. Renovated zoo, lake, medieval château. Professional driver.",
+        metaTitle: "Taxi Paris → Zoo de Vincennes | 8 km, from €20 | TaxiNeo",
+        metaDescription: "Via ring road, 20 min ride. Parc Zoologique de Paris, Bois de Vincennes, Château de Vincennes and Lac Daumesnil en route. Up to 35 min during rush hour.",
         heroTitle: "Taxi Paris → Zoo de Vincennes",
         heroSubtitle: "Your transfer to Vincennes Zoo and Bois de Vincennes at a fixed price of €20 — €30. Online booking, professional driver.",
         description: "The Paris — Vincennes Zoo route takes you to the Parc Zoologique de Paris, fully renovated in 2014, and the magnificent 995-hectare Bois de Vincennes. Just 8 km from central Paris, it's the capital's most accessible nature excursion, with the zoo, medieval château and Lac Daumesnil.",

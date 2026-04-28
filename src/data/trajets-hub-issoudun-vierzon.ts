@@ -27,8 +27,8 @@ export const trajetsIssoudunVierzon: Trajet[] = [
     hub: "issoudun-vierzon",
     i18n: {
       fr: {
-        metaTitle: "Taxi Vierzon → Paris | Prix fixe dès 240 € | TaxiNeo",
-        metaDescription: "Taxi Vierzon → Paris. 200 km, 2h10, dès 240 €. A71 via Sologne et Beauce, transfert direct porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Vierzon → Paris | 200 km, dès 240 € | TaxiNeo",
+        metaDescription: "Via A71 en 2h10. Sologne, Beauce, Berry et Canal de Berry en chemin. Dépose porte-à-porte, bagages inclus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Vierzon → Paris",
         heroSubtitle: "Transfert Vierzon → Paris au prix fixe de 240 — 300 €. 200 km, direct par l'A71.",
         description: "Paris est à 2h10 de Vierzon par l'A71, traversant la Sologne et la Beauce.",
@@ -46,8 +46,8 @@ export const trajetsIssoudunVierzon: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Vierzon → Paris | Fixed price from €240 | TaxiNeo",
-        metaDescription: "Taxi Vierzon → Paris. 200 km, 2h10, from €240. A71, direct door-to-door transfer. Book 24/7.",
+        metaTitle: "Taxi Vierzon → Paris | 200 km, from €240 | TaxiNeo",
+        metaDescription: "Via A71, 2h10 ride. Sologne, Beauce, Berry and Canal de Berry en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Vierzon → Paris",
         heroSubtitle: "Your Vierzon → Paris transfer at €240 — €300. 200 km, direct via the A71.",
         description: "Paris is 2h10 from Vierzon via the A71 through Sologne and Beauce.",
@@ -92,8 +92,8 @@ export const trajetsIssoudunVierzon: Trajet[] = [
     hub: "issoudun-vierzon",
     i18n: {
       fr: {
-        metaTitle: "Taxi Vierzon → Bourges | Prix fixe dès 40 € | TaxiNeo",
-        metaDescription: "Taxi Vierzon → Bourges. 35 km, 25 min, dès 40 €. N76 sans péage, transfert Berry. Réservation 24h/24.",
+        metaTitle: "Taxi Vierzon → Bourges | 35 km, dès 40 € | TaxiNeo",
+        metaDescription: "Via N76 en 25 min. Cher, Berry, Jacques Cœur et Cathédrale en chemin. Dépose porte-à-porte, bagages inclus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Vierzon → Bourges",
         heroSubtitle: "Transfert Vierzon → Bourges au prix fixe de 40 — 55 €. 35 km, 25 min par la N76.",
         description: "Bourges, capitale du Berry et cité de Jacques Cœur, est à 25 minutes de Vierzon par la N76.",
@@ -111,8 +111,8 @@ export const trajetsIssoudunVierzon: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Vierzon → Bourges | Fixed price from €40 | TaxiNeo",
-        metaDescription: "Taxi Vierzon → Bourges. 35 km, 25 min, from €40. N76, no tolls. Book 24/7.",
+        metaTitle: "Taxi Vierzon → Bourges | 35 km, from €40 | TaxiNeo",
+        metaDescription: "Via N76, 25 min ride. Cher, Berry, Jacques Cœur and Cathédrale en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Vierzon → Bourges",
         heroSubtitle: "Your Vierzon → Bourges transfer at €40 — €55. 35 km, 25 min via the N76.",
         description: "Bourges, Berry's capital and home to Jacques Coeur's palace, is 25 min from Vierzon.",
@@ -157,8 +157,8 @@ export const trajetsIssoudunVierzon: Trajet[] = [
     hub: "issoudun-vierzon",
     i18n: {
       fr: {
-        metaTitle: "Taxi Vierzon → Tours | Prix fixe dès 95 € | TaxiNeo",
-        metaDescription: "Taxi Vierzon → Tours. 80 km, 55 min, dès 95 €. A85, du Berry à la Touraine. Réservation 24h/24.",
+        metaTitle: "Taxi Vierzon → Tours | forfait dès 95 €, 55 min | TaxiNeo",
+        metaDescription: "Via A85 en 55 min. Cher, Loire, Châteaux et Sologne en chemin. Alternative directe au train ou au bus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Vierzon → Tours",
         heroSubtitle: "Transfert Vierzon → Tours au prix fixe de 95 — 125 €. 80 km, 55 min par l'A85.",
         description: "Tours, capitale de la Touraine et porte des châteaux de la Loire, est à 55 minutes de Vierzon par l'A85.",
@@ -177,7 +177,7 @@ export const trajetsIssoudunVierzon: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Vierzon → Tours | Fixed price from €95 | TaxiNeo",
-        metaDescription: "Taxi Vierzon → Tours. 80 km, 55 min, from €95. A85, Berry to Touraine. Book 24/7.",
+        metaDescription: "Via A85, 55 min ride. Cher, Loire, Châteaux and Sologne en route. Faster and more direct than train or bus. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Vierzon → Tours",
         heroSubtitle: "Your Vierzon → Tours transfer at €95 — €125. 80 km, 55 min via the A85.",
         description: "Tours, gateway to the Loire châteaux, is 55 min from Vierzon via the A85.",
@@ -222,8 +222,8 @@ export const trajetsIssoudunVierzon: Trajet[] = [
     hub: "issoudun-vierzon",
     i18n: {
       fr: {
-        metaTitle: "Taxi Issoudun → Châteauroux | Prix fixe dès 35 € | TaxiNeo",
-        metaDescription: "Taxi Issoudun → Châteauroux. 30 km, 25 min, dès 35 €. A20 gratuite, transfert Berry. Réservation 24h/24.",
+        metaTitle: "Taxi Issoudun → Châteauroux | 30 km, dès 35 € | TaxiNeo",
+        metaDescription: "Via A20 en 25 min. Berry, Indre, Balzac et George Sand en chemin. Dépose porte-à-porte, bagages inclus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Issoudun → Châteauroux",
         heroSubtitle: "Transfert Issoudun → Châteauroux au prix fixe de 35 — 50 €. 30 km, 25 min par l'A20.",
         description: "Châteauroux, préfecture de l'Indre, est à 25 minutes d'Issoudun par l'A20.",
@@ -241,8 +241,8 @@ export const trajetsIssoudunVierzon: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Issoudun → Châteauroux | Fixed price from €35 | TaxiNeo",
-        metaDescription: "Taxi Issoudun → Châteauroux. 30 km, 25 min, from €35. Toll-free A20. Book 24/7.",
+        metaTitle: "Taxi Issoudun → Châteauroux | 30 km, from €35 | TaxiNeo",
+        metaDescription: "Via A20, 25 min ride. Berry, Indre, Balzac and George Sand en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Issoudun → Châteauroux",
         heroSubtitle: "Your Issoudun → Châteauroux transfer at €35 — €50. 30 km, 25 min via the A20.",
         description: "Châteauroux, Indre's capital, is 25 min from Issoudun via the toll-free A20.",
@@ -287,8 +287,8 @@ export const trajetsIssoudunVierzon: Trajet[] = [
     hub: "issoudun-vierzon",
     i18n: {
       fr: {
-        metaTitle: "Taxi Vierzon → Orléans | Prix fixe dès 115 € | TaxiNeo",
-        metaDescription: "Taxi Vierzon → Orléans. 95 km, 1h, dès 115 €. A71 via la Sologne, transfert Berry-Loire. Réservation 24h/24.",
+        metaTitle: "Taxi Vierzon → Orléans | 95 km, dès 115 € | TaxiNeo",
+        metaDescription: "Par A71, 1h de trajet. Sologne, Loire, Berry et Forêts en chemin. Dépose porte-à-porte, bagages inclus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Vierzon → Orléans",
         heroSubtitle: "Transfert Vierzon → Orléans au prix fixe de 115 — 145 €. 95 km, 1h par l'A71.",
         description: "Orléans, cité de Jeanne d'Arc sur la Loire, est à 1h de Vierzon par l'A71 à travers la Sologne.",
@@ -306,8 +306,8 @@ export const trajetsIssoudunVierzon: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Vierzon → Orléans | Fixed price from €115 | TaxiNeo",
-        metaDescription: "Taxi Vierzon → Orléans. 95 km, 1h, from €115. A71 through Sologne. Book 24/7.",
+        metaTitle: "Taxi Vierzon → Orléans | 95 km, from €115 | TaxiNeo",
+        metaDescription: "Via A71, 1 hour ride. Sologne, Loire, Berry and Forêts en route. Faster and more direct than train or bus. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Vierzon → Orléans",
         heroSubtitle: "Your Vierzon → Orléans transfer at €115 — €145. 95 km, 1h via the A71.",
         description: "Orléans, Joan of Arc's city on the Loire, is 1h from Vierzon via the A71 through Sologne.",

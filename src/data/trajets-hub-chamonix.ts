@@ -30,8 +30,8 @@ export const trajetsChamonix: Trajet[] = [
     hub: "chamonix",
     i18n: {
       fr: {
-        metaTitle: "Taxi Chamonix → Genève | Transfert Mont-Blanc | TaxiNeo",
-        metaDescription: "Réservez votre taxi Chamonix–Genève dès 90 €. 85 km par l'A40, trajet en 1h. Service porte-à-porte depuis la vallée du Mont-Blanc.",
+        metaTitle: "Taxi Chamonix → Genève | 85 km, dès 90 € | TaxiNeo",
+        metaDescription: "Par A40, 1h de trajet. Mont-Blanc, Tunnel sous le Mont-Blanc, Autoroute Blanche A40 et Lac Léman en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Chamonix — Genève",
         heroSubtitle: "De la capitale mondiale de l'alpinisme au cœur de la Suisse romande",
         description: "Transfert en taxi de Chamonix-Mont-Blanc à Genève, métropole internationale au bord du lac Léman, via l'autoroute Blanche A40.",
@@ -49,8 +49,8 @@ export const trajetsChamonix: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Chamonix → Geneva | Mont-Blanc Transfer | TaxiNeo",
-        metaDescription: "Book your Chamonix–Geneva taxi from €90. 85 km via the A40, 1-hour ride. Door-to-door service from the Mont-Blanc valley.",
+        metaTitle: "Taxi Chamonix → Genève | 85 km, from €90 | TaxiNeo",
+        metaDescription: "Via A40, 1 hour ride. Mont-Blanc, Tunnel sous le Mont-Blanc, Autoroute Blanche A40 and Lac Léman en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Chamonix — Geneva",
         heroSubtitle: "From the world capital of mountaineering to the heart of Swiss Romandy",
         description: "Taxi transfer from Chamonix-Mont-Blanc to Geneva, international metropolis on the shores of Lake Geneva, via the A40 Autoroute Blanche.",
@@ -95,8 +95,8 @@ export const trajetsChamonix: Trajet[] = [
     hub: "chamonix",
     i18n: {
       fr: {
-        metaTitle: "Taxi Chamonix → Annecy | Transfert Haute-Savoie | TaxiNeo",
-        metaDescription: "Réservez votre taxi Chamonix–Annecy dès 105 €. 100 km par l'A40, trajet en 1h05. Du Mont-Blanc au lac d'Annecy, service porte-à-porte.",
+        metaTitle: "Taxi Chamonix → Annecy | 100 km, dès 105 € | TaxiNeo",
+        metaDescription: "Itinéraire A40, environ 1h05. En passant par Vallée de l'Arve, Lac d'Annecy et Vieille ville d'Annecy. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Chamonix — Annecy",
         heroSubtitle: "Du massif du Mont-Blanc aux rives du plus pur lac d'Europe",
         description: "Transfert en taxi de Chamonix-Mont-Blanc à Annecy, la Venise des Alpes, via l'autoroute Blanche A40 à travers la Haute-Savoie.",
@@ -114,8 +114,8 @@ export const trajetsChamonix: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Chamonix → Annecy | Haute-Savoie Transfer | TaxiNeo",
-        metaDescription: "Book your Chamonix–Annecy taxi from €105. 100 km via the A40, 1h05 ride. From Mont-Blanc to Lake Annecy, door-to-door service.",
+        metaTitle: "Taxi Chamonix → Annecy | 100 km, from €105 | TaxiNeo",
+        metaDescription: "Direct route via A40, 1h05. Vallée de l'Arve, Lac d'Annecy and Vieille ville d'Annecy along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Chamonix — Annecy",
         heroSubtitle: "From the Mont-Blanc massif to the shores of Europe's purest lake",
         description: "Taxi transfer from Chamonix-Mont-Blanc to Annecy, the Venice of the Alps, via the A40 Autoroute Blanche through Haute-Savoie.",
@@ -160,8 +160,8 @@ export const trajetsChamonix: Trajet[] = [
     hub: "chamonix",
     i18n: {
       fr: {
-        metaTitle: "Taxi Chamonix → Lyon | Transfert longue distance | TaxiNeo",
-        metaDescription: "Réservez votre taxi Chamonix–Lyon dès 240 €. 220 km par l'A40/A43, trajet en 2h20. Du Mont-Blanc à la capitale des Gaules.",
+        metaTitle: "Taxi Chamonix → Lyon | 220 km, dès 240 € | TaxiNeo",
+        metaDescription: "Via A40 / A43 en 2h20. Mont-Blanc, Vallée de l'Arve, Autoroute A40/A43 et Capitale de la gastronomie en chemin. Alternative directe au train ou au bus.",
         heroTitle: "Taxi Chamonix — Lyon",
         heroSubtitle: "Du toit de l'Europe à la capitale mondiale de la gastronomie",
         description: "Transfert longue distance en taxi de Chamonix-Mont-Blanc à Lyon, capitale de la gastronomie française, via les autoroutes A40 et A43.",
@@ -179,8 +179,8 @@ export const trajetsChamonix: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Chamonix → Lyon | Long-Distance Transfer | TaxiNeo",
-        metaDescription: "Book your Chamonix–Lyon taxi from €240. 220 km via A40/A43, 2h20 ride. From Mont-Blanc to France's gastronomic capital.",
+        metaTitle: "Taxi Chamonix → Lyon | 220 km, from €240 | TaxiNeo",
+        metaDescription: "Via A40 / A43, 2h20 ride. Mont-Blanc, Vallée de l'Arve, Autoroute A40/A43 and Capitale de la gastronomie en route. Faster and more direct than train or bus.",
         heroTitle: "Taxi Chamonix — Lyon",
         heroSubtitle: "From the roof of Europe to the world capital of gastronomy",
         description: "Long-distance taxi transfer from Chamonix-Mont-Blanc to Lyon, France's gastronomic capital, via the A40 and A43 motorways.",
@@ -225,8 +225,8 @@ export const trajetsChamonix: Trajet[] = [
     hub: "chamonix",
     i18n: {
       fr: {
-        metaTitle: "Taxi Chamonix → Aéroport Genève | Transfert GVA | TaxiNeo",
-        metaDescription: "Réservez votre taxi Chamonix–Aéroport de Genève dès 95 €. 90 km par l'A40, trajet en 1h05. Prise en charge au terminal, service 24h/24.",
+        metaTitle: "Taxi Chamonix → Aéroport de Genève | 90 km, 95 € | TaxiNeo",
+        metaDescription: "Via A40 en 1h05. Passage par Aéroport Genève-Cointrin, A40 Autoroute Blanche, Mont-Blanc et Vallée de l'Arve. Suivi de vol, dépose directe au terminal.",
         heroTitle: "Taxi Chamonix — Aéroport de Genève",
         heroSubtitle: "Transfert direct depuis la vallée du Mont-Blanc vers l'aéroport international de Genève",
         description: "Transfert en taxi de Chamonix-Mont-Blanc à l'aéroport international de Genève (GVA), principal hub aérien pour les stations de ski des Alpes du Nord.",
@@ -244,8 +244,8 @@ export const trajetsChamonix: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Chamonix → Geneva Airport | GVA Transfer | TaxiNeo",
-        metaDescription: "Book your Chamonix–Geneva Airport taxi from €95. 90 km via the A40, 1h05 ride. Terminal pickup, 24/7 service.",
+        metaTitle: "Taxi Chamonix → Aéroport de Genève | 90 km, €95 | TaxiNeo",
+        metaDescription: "Via A40, 1h05 ride. Aéroport Genève-Cointrin, A40 Autoroute Blanche, Mont-Blanc and Vallée de l'Arve en route. Meet at terminal, free wait if flight delayed.",
         heroTitle: "Taxi Chamonix — Geneva Airport",
         heroSubtitle: "Direct transfer from the Mont-Blanc valley to Geneva International Airport",
         description: "Taxi transfer from Chamonix-Mont-Blanc to Geneva International Airport (GVA), the main air hub for Northern Alps ski resorts.",
@@ -290,8 +290,8 @@ export const trajetsChamonix: Trajet[] = [
     hub: "chamonix",
     i18n: {
       fr: {
-        metaTitle: "Taxi Chamonix → Megève | Transfert stations de ski | TaxiNeo",
-        metaDescription: "Réservez votre taxi Chamonix–Megève dès 40 €. 35 km par la D1205, trajet en 30 min. Entre deux stations mythiques du Mont-Blanc.",
+        metaTitle: "Taxi Chamonix → Megève | 35 km, dès 40 € | TaxiNeo",
+        metaDescription: "Via D1205 en 30 min. Mont-Blanc, Station de ski et Village alpin en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Chamonix — Megève",
         heroSubtitle: "Entre la capitale de l'alpinisme et le joyau du ski chic alpin",
         description: "Transfert en taxi de Chamonix-Mont-Blanc à Megève, station de ski prestigieuse au cœur du pays du Mont-Blanc, par la route D1205.",
@@ -309,8 +309,8 @@ export const trajetsChamonix: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Chamonix → Megève | Ski Resort Transfer | TaxiNeo",
-        metaDescription: "Book your Chamonix–Megève taxi from €40. 35 km via the D1205, 30-min ride. Between two legendary Mont-Blanc ski resorts.",
+        metaTitle: "Taxi Chamonix → Megève | 35 km, from €40 | TaxiNeo",
+        metaDescription: "Via D1205, 30 min ride. Mont-Blanc, Station de ski and Village alpin along the way. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Chamonix — Megève",
         heroSubtitle: "Between the mountaineering capital and the jewel of chic alpine skiing",
         description: "Taxi transfer from Chamonix-Mont-Blanc to Megève, prestigious ski resort in the heart of the Mont-Blanc country, via the D1205 road.",

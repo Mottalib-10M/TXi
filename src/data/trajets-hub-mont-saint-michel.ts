@@ -30,8 +30,8 @@ export const trajetsMontSaintMichel: Trajet[] = [
     hub: "mont-saint-michel",
     i18n: {
       fr: {
-        metaTitle: "Taxi Mont-Saint-Michel → Rennes | Prix fixe dès 95 € | TaxiNeo",
-        metaDescription: "Taxi Mont-Saint-Michel → Rennes. 80 km, 55 min, dès 95 €. Depuis la merveille de l'Occident vers la capitale bretonne. Réservation 24h/24.",
+        metaTitle: "Taxi Mont-Saint-Michel → Rennes | 80 km, dès 95 € | TaxiNeo",
+        metaDescription: "Via A84 en 55 min. Baie du Mont-Saint-Michel, UNESCO, Polders de la Digue et Capitale bretonne en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Mont-Saint-Michel → Rennes",
         heroSubtitle: "Transfert Mont-Saint-Michel → Rennes au prix fixe de 95 — 125 €. 80 km par l'A84.",
         description: "Rennes, capitale de la Bretagne, est à 55 minutes du Mont-Saint-Michel par l'autoroute gratuite A84.",
@@ -49,8 +49,8 @@ export const trajetsMontSaintMichel: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Mont-Saint-Michel → Rennes | Fixed price from €95 | TaxiNeo",
-        metaDescription: "Taxi Mont-Saint-Michel → Rennes. 80 km, 55 min, from €95. From the Wonder of the Western World to the Breton capital. Book 24/7.",
+        metaTitle: "Taxi Mont-Saint-Michel → Rennes | 80 km, from €95 | TaxiNeo",
+        metaDescription: "Through A84 in 55 min. Baie du Mont-Saint-Michel, UNESCO, Polders de la Digue and Capitale bretonne en route. Stops for sightseeing possible en route.",
         heroTitle: "Taxi Mont-Saint-Michel → Rennes",
         heroSubtitle: "Your Mont-Saint-Michel → Rennes transfer at €95 — €125. 80 km via the A84.",
         description: "Rennes, capital of Brittany, is 55 minutes from Mont-Saint-Michel via the toll-free A84 motorway.",
@@ -95,8 +95,8 @@ export const trajetsMontSaintMichel: Trajet[] = [
     hub: "mont-saint-michel",
     i18n: {
       fr: {
-        metaTitle: "Taxi Mont-Saint-Michel → Saint-Malo | Prix fixe dès 65 € | TaxiNeo",
-        metaDescription: "Taxi Mont-Saint-Michel → Saint-Malo. 55 km, 40 min, dès 65 €. De la merveille de l'Occident à la cité corsaire. Réservation 24h/24.",
+        metaTitle: "Taxi Mont-Saint-Michel → Saint-Malo | 55 km, 65 € | TaxiNeo",
+        metaDescription: "Via D976/D155 en 40 min. Baie du Mont-Saint-Michel, Cité corsaire, Remparts de Saint-Malo et Dol-de-Bretagne en chemin. Arrêt visite possible en chemin.",
         heroTitle: "Taxi Mont-Saint-Michel → Saint-Malo",
         heroSubtitle: "Transfert Mont-Saint-Michel → Saint-Malo au prix fixe de 65 — 85 €. 55 km par la D976.",
         description: "Saint-Malo, la cité corsaire, est à 40 minutes du Mont-Saint-Michel par les routes côtières longeant la baie.",
@@ -114,8 +114,8 @@ export const trajetsMontSaintMichel: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Mont-Saint-Michel → Saint-Malo | Fixed price from €65 | TaxiNeo",
-        metaDescription: "Taxi Mont-Saint-Michel → Saint-Malo. 55 km, 40 min, from €65. From the Wonder of the Western World to the Corsair City. Book 24/7.",
+        metaTitle: "Taxi Mont-Saint-Michel → Saint-Malo | 55 km, €65 | TaxiNeo",
+        metaDescription: "Via D976/D155, 40 min ride. Baie du Mont-Saint-Michel, Cité corsaire, Remparts de Saint-Malo and Dol-de-Bretagne en route. Up to 55 min during rush hour.",
         heroTitle: "Taxi Mont-Saint-Michel → Saint-Malo",
         heroSubtitle: "Your Mont-Saint-Michel → Saint-Malo transfer at €65 — €85. 55 km via the D976.",
         description: "Saint-Malo, the historic corsair city, is 40 minutes from Mont-Saint-Michel along coastal roads skirting the bay.",
@@ -160,8 +160,8 @@ export const trajetsMontSaintMichel: Trajet[] = [
     hub: "mont-saint-michel",
     i18n: {
       fr: {
-        metaTitle: "Taxi Mont-Saint-Michel → Caen | Prix fixe dès 155 € | TaxiNeo",
-        metaDescription: "Taxi Mont-Saint-Michel → Caen. 130 km, 1h25, dès 155 €. Abbaye, bocage normand, Mémorial. Réservation 24h/24.",
+        metaTitle: "Taxi Mont-Saint-Michel → Caen | 130 km, dès 155 € | TaxiNeo",
+        metaDescription: "Via A84/A13 en 1h25. Passage par N175, Baie du Mont-Saint-Michel, Bocage normand et Mémorial de Caen. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Mont-Saint-Michel → Caen",
         heroSubtitle: "Transfert Mont-Saint-Michel → Caen au prix fixe de 155 — 200 €. 130 km par l'A84.",
         description: "Caen, capitale du Calvados et ville de Guillaume le Conquérant, est à 1h25 du Mont-Saint-Michel par l'A84 et l'A13.",
@@ -179,8 +179,8 @@ export const trajetsMontSaintMichel: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Mont-Saint-Michel → Caen | Fixed price from €155 | TaxiNeo",
-        metaDescription: "Taxi Mont-Saint-Michel → Caen. 130 km, 1h25, from €155. Abbey, Norman bocage, Memorial. Book 24/7.",
+        metaTitle: "Taxi Mont-Saint-Michel → Caen | 130 km, from €155 | TaxiNeo",
+        metaDescription: "Direct route via A84/A13, 1h25. N175, Baie du Mont-Saint-Michel, Bocage normand and Mémorial de Caen en route. Stops for sightseeing possible en route.",
         heroTitle: "Taxi Mont-Saint-Michel → Caen",
         heroSubtitle: "Your Mont-Saint-Michel → Caen transfer at €155 — €200. 130 km via the A84.",
         description: "Caen, capital of Calvados and city of William the Conqueror, is 1h25 from Mont-Saint-Michel via the A84 and A13.",
@@ -225,8 +225,8 @@ export const trajetsMontSaintMichel: Trajet[] = [
     hub: "mont-saint-michel",
     i18n: {
       fr: {
-        metaTitle: "Taxi Mont-Saint-Michel → Paris | Prix fixe dès 430 € | TaxiNeo",
-        metaDescription: "Taxi Mont-Saint-Michel → Paris. 360 km, 3h50, dès 430 €. Transfert direct depuis la merveille de l'Occident. Réservation 24h/24.",
+        metaTitle: "Taxi Mont-Saint-Michel → Paris | 360 km, dès 430 € | TaxiNeo",
+        metaDescription: "Par A84/A13, 3h50 de trajet. Baie du Mont-Saint-Michel, Bocage normand et Vallée de la Seine en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Mont-Saint-Michel → Paris",
         heroSubtitle: "Transfert Mont-Saint-Michel → Paris au prix fixe de 430 — 530 €. 360 km par l'A84 et l'A13.",
         description: "Paris est à 3h50 du Mont-Saint-Michel par l'A84 et l'A13, traversant la Normandie d'ouest en est.",
@@ -244,8 +244,8 @@ export const trajetsMontSaintMichel: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Mont-Saint-Michel → Paris | Fixed price from €430 | TaxiNeo",
-        metaDescription: "Taxi Mont-Saint-Michel → Paris. 360 km, 3h50, from €430. Direct transfer from the Wonder of the Western World. Book 24/7.",
+        metaTitle: "Taxi Mont-Saint-Michel → Paris | 360 km, from €430 | TaxiNeo",
+        metaDescription: "Direct route via A84/A13, 3h50. Baie du Mont-Saint-Michel, Bocage normand and Vallée de la Seine along the way. Stops for sightseeing possible en route.",
         heroTitle: "Taxi Mont-Saint-Michel → Paris",
         heroSubtitle: "Your Mont-Saint-Michel → Paris transfer at €430 — €530. 360 km via the A84 and A13.",
         description: "Paris is 3h50 from Mont-Saint-Michel via the A84 and A13, crossing Normandy from west to east.",
@@ -290,8 +290,8 @@ export const trajetsMontSaintMichel: Trajet[] = [
     hub: "mont-saint-michel",
     i18n: {
       fr: {
-        metaTitle: "Taxi Mont-Saint-Michel → Granville | Prix fixe dès 35 € | TaxiNeo",
-        metaDescription: "Taxi Mont-Saint-Michel → Granville. 30 km, 25 min, dès 35 €. Baie, Haute Ville, îles Chausey, musée Dior. Réservation 24h/24.",
+        metaTitle: "Taxi Mont-Saint-Michel → Granville | 30 km, 35 € | TaxiNeo",
+        metaDescription: "Via D973 en 25 min. Baie du Mont-Saint-Michel, Haute Ville de Granville, Îles Chausey et Christian Dior en chemin. Arrêt possible pour visites ou photos.",
         heroTitle: "Taxi Mont-Saint-Michel → Granville",
         heroSubtitle: "Transfert Mont-Saint-Michel → Granville au prix fixe de 35 — 50 €. 30 km par la D973.",
         description: "Granville, la Monaco du Nord perchée sur son promontoire granitique, est à 25 minutes du Mont-Saint-Michel.",
@@ -309,8 +309,8 @@ export const trajetsMontSaintMichel: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Mont-Saint-Michel → Granville | Fixed price from €35 | TaxiNeo",
-        metaDescription: "Taxi Mont-Saint-Michel → Granville. 30 km, 25 min, from €35. Bay views, Haute Ville, Chausey Islands, Dior museum. Book 24/7.",
+        metaTitle: "Taxi Mont-Saint-Michel → Granville | 30 km, €35 | TaxiNeo",
+        metaDescription: "Via D973, 25 min ride. Baie du Mont-Saint-Michel, Haute Ville de Granville, Îles Chausey and Christian Dior en route. Stops for sightseeing possible en route.",
         heroTitle: "Taxi Mont-Saint-Michel → Granville",
         heroSubtitle: "Your Mont-Saint-Michel → Granville transfer at €35 — €50. 30 km via the D973.",
         description: "Granville, the Monaco of the North perched on its granite headland, is 25 minutes from Mont-Saint-Michel.",

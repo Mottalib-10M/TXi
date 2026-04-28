@@ -27,8 +27,8 @@ export const trajetsAngers: Trajet[] = [
     hub: "angers",
     i18n: {
       fr: {
-        metaTitle: "Taxi Angers → Nantes | Prix fixe dès 95 € | TaxiNeo",
-        metaDescription: "Taxi Angers → Nantes. 90 km, 55 min, dès 95 €. A11, transfert direct porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Angers → Nantes | forfait dès 95 €, 55 min | TaxiNeo",
+        metaDescription: "Via A11 en 55 min. Loire, Anjou, Muscadet et Nantes métropole en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Angers → Nantes",
         heroSubtitle: "Transfert Angers → Nantes au prix fixe de 95 — 120 €. 90 km, direct par l'A11.",
         description: "Nantes, métropole de l'Ouest, est à 55 min d'Angers par l'A11.",
@@ -47,7 +47,7 @@ export const trajetsAngers: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Angers → Nantes | Fixed price from €95 | TaxiNeo",
-        metaDescription: "Taxi Angers → Nantes. 90 km, 55 min, from €95. A11, direct door-to-door transfer. Book 24/7.",
+        metaDescription: "Via A11, 55 min ride. Loire, Anjou, Muscadet and Nantes métropole en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Angers → Nantes",
         heroSubtitle: "Your Angers → Nantes transfer at €95 — €120. 90 km, direct via the A11.",
         description: "Nantes, western France's major city, is 55 min from Angers via the A11.",
@@ -92,8 +92,8 @@ export const trajetsAngers: Trajet[] = [
     hub: "angers",
     i18n: {
       fr: {
-        metaTitle: "Taxi Angers → Tours | Prix fixe dès 120 € | TaxiNeo",
-        metaDescription: "Taxi Angers → Tours. 115 km, 1h10, dès 120 €. A85, châteaux de la Loire. Réservation 24h/24.",
+        metaTitle: "Taxi Angers → Tours | 115 km, dès 120 €, 1h10 | TaxiNeo",
+        metaDescription: "Via A85 en 1h10. Loire, Châteaux, Saumur et Touraine en chemin. Alternative directe au train ou au bus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Angers → Tours",
         heroSubtitle: "Transfert Angers → Tours au prix fixe de 120 — 150 €. 115 km, au fil des châteaux de la Loire.",
         description: "Tours, capitale de la Touraine et porte des châteaux, est à 1h10 d'Angers par l'A85.",
@@ -112,7 +112,7 @@ export const trajetsAngers: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Angers → Tours | Fixed price from €120 | TaxiNeo",
-        metaDescription: "Taxi Angers → Tours. 115 km, 1h10, from €120. A85, Loire châteaux. Book 24/7.",
+        metaDescription: "Via A85, 1h10 ride. Loire, Châteaux, Saumur and Touraine en route. Faster and more direct than train or bus. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Angers → Tours",
         heroSubtitle: "Your Angers → Tours transfer at €120 — €150. 115 km, through the Loire châteaux.",
         description: "Tours, gateway to the Loire châteaux, is 1h10 from Angers via the A85.",
@@ -157,8 +157,8 @@ export const trajetsAngers: Trajet[] = [
     hub: "angers",
     i18n: {
       fr: {
-        metaTitle: "Taxi Angers → Le Mans | Prix fixe dès 100 € | TaxiNeo",
-        metaDescription: "Taxi Angers → Le Mans. 95 km, 1h, dès 100 €. A11, transfert direct. Réservation 24h/24.",
+        metaTitle: "Taxi Angers → Le Mans | 95 km, dès 100 € | TaxiNeo",
+        metaDescription: "Via A11 en 1h. Sarthe, 24 Heures, Cité Plantagenêt et Anjou en chemin. Dépose porte-à-porte, bagages inclus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Angers → Le Mans",
         heroSubtitle: "Transfert Angers → Le Mans au prix fixe de 100 — 130 €. 95 km, direct par l'A11.",
         description: "Le Mans, cité Plantagenêt et ville des 24 Heures, est à 1h d'Angers par l'A11.",
@@ -176,8 +176,8 @@ export const trajetsAngers: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Angers → Le Mans | Fixed price from €100 | TaxiNeo",
-        metaDescription: "Taxi Angers → Le Mans. 95 km, 1h, from €100. A11, direct transfer. Book 24/7.",
+        metaTitle: "Taxi Angers → Le Mans | 95 km, from €100 | TaxiNeo",
+        metaDescription: "Via A11, 1 hour ride. Sarthe, 24 Heures, Cité Plantagenêt and Anjou en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Angers → Le Mans",
         heroSubtitle: "Your Angers → Le Mans transfer at €100 — €130. 95 km, direct via the A11.",
         description: "Le Mans, home of the 24 Hours race and the Plantagenet old town, is 1h from Angers.",
@@ -222,8 +222,8 @@ export const trajetsAngers: Trajet[] = [
     hub: "angers",
     i18n: {
       fr: {
-        metaTitle: "Taxi Angers → Rennes | Prix fixe dès 140 € | TaxiNeo",
-        metaDescription: "Taxi Angers → Rennes. 130 km, 1h20, dès 140 €. A81, transfert direct Anjou-Bretagne. Réservation 24h/24.",
+        metaTitle: "Taxi Angers → Rennes | 130 km, dès 140 € | TaxiNeo",
+        metaDescription: "Par A81, 1h20 de trajet. Bretagne, Anjou, Vitré et Laval en chemin. Dépose porte-à-porte, bagages inclus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Angers → Rennes",
         heroSubtitle: "Transfert Angers → Rennes au prix fixe de 140 — 180 €. 130 km, de l'Anjou à la Bretagne.",
         description: "Rennes, capitale de la Bretagne, est à 1h20 d'Angers par l'A81.",
@@ -241,8 +241,8 @@ export const trajetsAngers: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Angers → Rennes | Fixed price from €140 | TaxiNeo",
-        metaDescription: "Taxi Angers → Rennes. 130 km, 1h20, from €140. A81, direct Anjou-Brittany transfer. Book 24/7.",
+        metaTitle: "Taxi Angers → Rennes | 130 km, from €140 | TaxiNeo",
+        metaDescription: "Via A81, 1h20 ride. Bretagne, Anjou, Vitré and Laval en route. Faster and more direct than train or bus. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Angers → Rennes",
         heroSubtitle: "Your Angers → Rennes transfer at €140 — €180. 130 km, from Anjou to Brittany.",
         description: "Rennes, capital of Brittany, is 1h20 from Angers via the A81.",
@@ -287,8 +287,8 @@ export const trajetsAngers: Trajet[] = [
     hub: "angers",
     i18n: {
       fr: {
-        metaTitle: "Taxi Angers → Saumur | Prix fixe dès 55 € | TaxiNeo",
-        metaDescription: "Taxi Angers → Saumur. 50 km, 35 min, dès 55 €. D952, château, Cadre Noir, troglodytes. Réservation 24h/24.",
+        metaTitle: "Taxi Angers → Saumur | forfait dès 55 €, 35 min | TaxiNeo",
+        metaDescription: "Via D952 en 35 min. Loire, Château de Saumur, Cadre Noir et Troglodytes en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Angers → Saumur",
         heroSubtitle: "Transfert Angers → Saumur au prix fixe de 55 — 70 €. 50 km, joyau de la Loire.",
         description: "Saumur, avec son château dominant la Loire et le célèbre Cadre Noir, est à 35 min d'Angers.",
@@ -307,7 +307,7 @@ export const trajetsAngers: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Angers → Saumur | Fixed price from €55 | TaxiNeo",
-        metaDescription: "Taxi Angers → Saumur. 50 km, 35 min, from €55. D952, castle, Cadre Noir, troglodyte caves. Book 24/7.",
+        metaDescription: "Via D952, 35 min ride. Loire, Château de Saumur, Cadre Noir and Troglodytes en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Angers → Saumur",
         heroSubtitle: "Your Angers → Saumur transfer at €55 — €70. 50 km, Loire gem.",
         description: "Saumur, with its castle overlooking the Loire and the famous Cadre Noir, is 35 min from Angers.",

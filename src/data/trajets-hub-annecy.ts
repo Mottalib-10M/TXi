@@ -26,8 +26,8 @@ export const trajetsAnnecyHub: Trajet[] = [
     hub: "annecy",
     i18n: {
       fr: {
-        metaTitle: "Taxi Annecy → Chamonix | Prix fixe dès 120 € | TaxiNeo",
-        metaDescription: "Taxi Annecy → Chamonix-Mont-Blanc. 100 km, 1h15, dès 120 €. Aiguille du Midi, Mer de Glace. Réservation 24h/24.",
+        metaTitle: "Taxi Annecy → Chamonix | 100 km, dès 120 € | TaxiNeo",
+        metaDescription: "Via A41 puis A40 en 1h15. Mont Blanc, Aiguille du Midi et Mer de Glace en chemin. Arrêt visite possible en chemin. Arrêt possible pour visites ou photos.",
         heroTitle: "Taxi Annecy → Chamonix",
         heroSubtitle: "Transfert Annecy → Chamonix au prix fixe de 120 — 155 €. 100 km au pied du Mont Blanc.",
         description: "Chamonix-Mont-Blanc, capitale mondiale de l'alpinisme au pied du toit de l'Europe (4 808 m), est à 1h15 d'Annecy.",
@@ -45,8 +45,8 @@ export const trajetsAnnecyHub: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Annecy → Chamonix | Fixed price from €120 | TaxiNeo",
-        metaDescription: "Taxi Annecy → Chamonix-Mont-Blanc. 100 km, 1h15, from €120. Aiguille du Midi, Mer de Glace. Book 24/7.",
+        metaTitle: "Taxi Annecy → Chamonix | 100 km, from €120 | TaxiNeo",
+        metaDescription: "Via A41 then A40, 1h15 ride. Mont Blanc, Aiguille du Midi and Mer de Glace along the way. Stops for sightseeing possible en route. Up to 1h35 during rush hour.",
         heroTitle: "Taxi Annecy → Chamonix",
         heroSubtitle: "Your Annecy → Chamonix transfer at €120 — €155. 100 km at the foot of Mont Blanc.",
         description: "Chamonix-Mont-Blanc, world capital of mountaineering at the foot of Europe's roof (4,808 m), is 1h15 from Annecy.",
@@ -90,8 +90,8 @@ export const trajetsAnnecyHub: Trajet[] = [
     hub: "annecy",
     i18n: {
       fr: {
-        metaTitle: "Taxi Annecy → Megève | Prix fixe dès 75 € | TaxiNeo",
-        metaDescription: "Taxi Annecy → Megève. 60 km, 50 min, dès 75 €. Station chic, Mont Blanc, gastronomie. Réservation 24h/24.",
+        metaTitle: "Taxi Annecy → Megève | forfait dès 75 €, 50 min | TaxiNeo",
+        metaDescription: "Via D1508 puis D909 en 50 min. Mont Blanc, Station chic et Gastronomie en chemin. Arrêt visite possible en chemin. Arrêt possible pour visites ou photos.",
         heroTitle: "Taxi Annecy → Megève",
         heroSubtitle: "Transfert Annecy → Megève au prix fixe de 75 — 100 €. 60 km, la station chic du Mont Blanc.",
         description: "Megève, station de ski la plus élégante des Alpes avec ses trois étoilés Michelin, est à 50 min d'Annecy.",
@@ -110,7 +110,7 @@ export const trajetsAnnecyHub: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Annecy → Megève | Fixed price from €75 | TaxiNeo",
-        metaDescription: "Taxi Annecy → Megève. 60 km, 50 min, from €75. Chic resort, Mont Blanc, gastronomy. Book 24/7.",
+        metaDescription: "Via D1508 then D909, 50 min ride. Mont Blanc, Station chic and Gastronomie along the way. Stops for sightseeing possible en route. No toll on this route.",
         heroTitle: "Taxi Annecy → Megève",
         heroSubtitle: "Your Annecy → Megève transfer at €75 — €100. 60 km, the chic Mont Blanc resort.",
         description: "Megève, the Alps' most elegant ski resort with three Michelin stars, is 50 min from Annecy.",
@@ -154,8 +154,8 @@ export const trajetsAnnecyHub: Trajet[] = [
     hub: "annecy",
     i18n: {
       fr: {
-        metaTitle: "Taxi Annecy → Genève (Suisse) | Prix fixe dès 60 € | TaxiNeo",
-        metaDescription: "Taxi Annecy → Genève. 45 km, 35 min, dès 60 €. Aéroport, ONU, CERN. Réservation 24h/24.",
+        metaTitle: "Taxi Annecy → Genève | forfait dès 60 €, 35 min | TaxiNeo",
+        metaDescription: "Via A41 en 35 min. Lac Léman, ONU, CERN et Jet d'eau en chemin. Alternative directe au train ou au bus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Annecy → Genève",
         heroSubtitle: "Transfert Annecy → Genève au prix fixe de 60 — 80 €. 45 km, traversée France-Suisse.",
         description: "Genève, ville internationale au bord du lac Léman avec l'ONU et le CERN, est à 35 min d'Annecy.",
@@ -174,7 +174,7 @@ export const trajetsAnnecyHub: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Annecy → Geneva (Switzerland) | From €60 | TaxiNeo",
-        metaDescription: "Taxi Annecy → Geneva. 45 km, 35 min, from €60. Airport, UN, CERN. Book 24/7.",
+        metaDescription: "Via A41, 35 min ride. Lac Léman, ONU, CERN and Jet d'eau en route. Faster and more direct than train or bus. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Annecy → Geneva",
         heroSubtitle: "Your Annecy → Geneva transfer at €60 — €80. 45 km, France-Switzerland crossing.",
         description: "Geneva, an international city on Lake Geneva home to the UN and CERN, is 35 min from Annecy.",
@@ -218,8 +218,8 @@ export const trajetsAnnecyHub: Trajet[] = [
     hub: "annecy",
     i18n: {
       fr: {
-        metaTitle: "Taxi Annecy → La Clusaz | Prix fixe dès 50 € | TaxiNeo",
-        metaDescription: "Taxi Annecy → La Clusaz. 32 km, 35 min, dès 50 €. Station familiale, Aravis, reblochon. Réservation 24h/24.",
+        metaTitle: "Taxi Annecy → La Clusaz | 32 km, dès 50 € | TaxiNeo",
+        metaDescription: "Via D909 en 35 min. Aravis, Station familiale, Reblochon et Col des Aravis en chemin. Arrêt visite possible en chemin. Arrêt possible pour visites ou photos.",
         heroTitle: "Taxi Annecy → La Clusaz",
         heroSubtitle: "Transfert Annecy → La Clusaz au prix fixe de 50 — 65 €. 32 km dans les Aravis.",
         description: "La Clusaz, station familiale authentique au cœur des Aravis et pays du reblochon, est à 35 min d'Annecy.",
@@ -237,8 +237,8 @@ export const trajetsAnnecyHub: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Annecy → La Clusaz | Fixed price from €50 | TaxiNeo",
-        metaDescription: "Taxi Annecy → La Clusaz. 32 km, 35 min, from €50. Family resort, Aravis, reblochon. Book 24/7.",
+        metaTitle: "Taxi Annecy → La Clusaz | 32 km, from €50 | TaxiNeo",
+        metaDescription: "Via D909, 35 min ride. Aravis, Station familiale, Reblochon and Col des Aravis en route. Stops for sightseeing possible en route. No toll on this route.",
         heroTitle: "Taxi Annecy → La Clusaz",
         heroSubtitle: "Your Annecy → La Clusaz transfer at €50 — €65. 32 km in the Aravis.",
         description: "La Clusaz, an authentic family resort in the Aravis and reblochon country, is 35 min from Annecy.",
@@ -282,8 +282,8 @@ export const trajetsAnnecyHub: Trajet[] = [
     hub: "annecy",
     i18n: {
       fr: {
-        metaTitle: "Taxi Annecy → Aix-les-Bains | Prix fixe dès 50 € | TaxiNeo",
-        metaDescription: "Taxi Annecy → Aix-les-Bains. 35 km, 30 min, dès 50 €. Lac du Bourget, thermes, Belle Époque. Réservation 24h/24.",
+        metaTitle: "Taxi Annecy → Aix-les-Bains | 35 km, dès 50 € | TaxiNeo",
+        metaDescription: "Via A41 en 30 min. Lac du Bourget, Thermes, Belle Époque et Lamartine en chemin. Dépose à votre adresse exacte. Alternative directe au train ou au bus.",
         heroTitle: "Taxi Annecy → Aix-les-Bains",
         heroSubtitle: "Transfert Annecy → Aix-les-Bains au prix fixe de 50 — 65 €. 35 km, la perle du lac du Bourget.",
         description: "Aix-les-Bains, station thermale Belle Époque sur le plus grand lac naturel de France, est à 30 min d'Annecy.",
@@ -301,8 +301,8 @@ export const trajetsAnnecyHub: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Annecy → Aix-les-Bains | Fixed price from €50 | TaxiNeo",
-        metaDescription: "Taxi Annecy → Aix-les-Bains. 35 km, 30 min, from €50. Lac du Bourget, thermal baths. Book 24/7.",
+        metaTitle: "Taxi Annecy → Aix-les-Bains | 35 km, from €50 | TaxiNeo",
+        metaDescription: "Via A41, 30 min ride. Lac du Bourget, Thermes, Belle Époque and Lamartine en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Annecy → Aix-les-Bains",
         heroSubtitle: "Your Annecy → Aix-les-Bains transfer at €50 — €65. 35 km, the jewel of Lac du Bourget.",
         description: "Aix-les-Bains, a Belle Époque spa town on France's largest natural lake, is 30 min from Annecy.",
@@ -346,8 +346,8 @@ export const trajetsAnnecyHub: Trajet[] = [
     hub: "annecy",
     i18n: {
       fr: {
-        metaTitle: "Taxi Annecy → Albertville | Prix fixe dès 60 € | TaxiNeo",
-        metaDescription: "Taxi Annecy → Albertville. 45 km, 35 min, dès 60 €. JO 1992, porte de la Tarentaise. Réservation 24h/24.",
+        metaTitle: "Taxi Annecy → Albertville | 45 km, dès 60 € | TaxiNeo",
+        metaDescription: "Via A41 puis D1508 en 35 min. JO 1992, Porte des stations et Tarentaise en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Annecy → Albertville",
         heroSubtitle: "Transfert Annecy → Albertville au prix fixe de 60 — 80 €. 45 km, porte des grandes stations.",
         description: "Albertville, ville des JO 1992 et porte d'entrée de la Tarentaise vers les stations de ski, est à 35 min d'Annecy.",
@@ -365,8 +365,8 @@ export const trajetsAnnecyHub: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Annecy → Albertville | Fixed price from €60 | TaxiNeo",
-        metaDescription: "Taxi Annecy → Albertville. 45 km, 35 min, from €60. 1992 Olympics, gateway to ski resorts. Book 24/7.",
+        metaTitle: "Taxi Annecy → Albertville | 45 km, from €60 | TaxiNeo",
+        metaDescription: "A41 then D1508 route, approximately 35 min. JO 1992, Porte des stations and Tarentaise along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Annecy → Albertville",
         heroSubtitle: "Your Annecy → Albertville transfer at €60 — €80. 45 km, gateway to the great resorts.",
         description: "Albertville, 1992 Olympics city and gateway to the Tarentaise ski resorts, is 35 min from Annecy.",

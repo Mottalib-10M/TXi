@@ -19,8 +19,8 @@ export const trajetsLonsLeSaunier: Trajet[] = [
     hub: "lons-le-saunier",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lons-le-Saunier → Besançon | Prix fixe dès 120 € | TaxiNeo",
-        metaDescription: "Taxi Lons-le-Saunier → Besançon. 100 km, 1h05, dès 120 €. A39 à travers le Jura et la Franche-Comté. Réservation 24h/24.",
+        metaTitle: "Taxi Lons-le-Saunier → Besançon | 100 km, 120 € | TaxiNeo",
+        metaDescription: "Via A39 en undefined min. Vignobles jurassiens, Saline royale d'Arc-et-Senans, Reculées et Franche-Comté en chemin. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Lons-le-Saunier → Besançon",
         heroSubtitle: "Transfert Lons-le-Saunier → Besançon au prix fixe de 120 — 155 €. 100 km, 1h05.",
         description: "Lons-le-Saunier — Besançon relie les deux préfectures franc-comtoises par l'A39 à travers le vignoble jurassien.",
@@ -38,8 +38,8 @@ export const trajetsLonsLeSaunier: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Lons-le-Saunier → Besançon | Fixed price from €120 | TaxiNeo",
-        metaDescription: "Taxi Lons-le-Saunier → Besançon. 100 km, 1h05, from €120. A39 through Jura vineyards and Franche-Comté. Book 24/7.",
+        metaTitle: "Taxi Lons-le-Saunier → Besançon | 100 km, €120 | TaxiNeo",
+        metaDescription: "Via A39, undefined min ride. Vignobles jurassiens, Saline royale d'Arc-et-Senans, Reculées and Franche-Comté en route. Drop-off at your exact address.",
         heroTitle: "Taxi Lons-le-Saunier → Besançon",
         heroSubtitle: "Lons-le-Saunier → Besançon transfer at €120 — €155. 100 km, 1h05.",
         description: "Lons-le-Saunier to Besançon connects two Franche-Comté capitals via A39 through Jura vineyards.",
@@ -76,8 +76,8 @@ export const trajetsLonsLeSaunier: Trajet[] = [
     hub: "lons-le-saunier",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lons-le-Saunier → Lyon | Prix fixe dès 170 € | TaxiNeo",
-        metaDescription: "Taxi Lons-le-Saunier → Lyon. 140 km, 1h30, dès 170 €. A39/A40 via Bourg-en-Bresse. Réservation 24h/24.",
+        metaTitle: "Taxi Lons-le-Saunier → Lyon | 140 km, dès 170 € | TaxiNeo",
+        metaDescription: "Via A39 / A40 en undefined min. Bresse, Revermont et Dombes en chemin. Dépose porte-à-porte, bagages inclus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Lons-le-Saunier → Lyon",
         heroSubtitle: "Transfert Lons-le-Saunier → Lyon au prix fixe de 170 — 215 €. 140 km, 1h30.",
         description: "Lons-le-Saunier — Lyon relie le Jura à la métropole lyonnaise par l'A39 et l'A40 via Bourg-en-Bresse.",
@@ -95,8 +95,8 @@ export const trajetsLonsLeSaunier: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Lons-le-Saunier → Lyon | Fixed price from €170 | TaxiNeo",
-        metaDescription: "Taxi Lons-le-Saunier → Lyon. 140 km, 1h30, from €170. A39/A40 via Bourg-en-Bresse. Book 24/7.",
+        metaTitle: "Taxi Lons-le-Saunier → Lyon | 140 km, from €170 | TaxiNeo",
+        metaDescription: "Via A39 / A40, undefined min ride. Bresse, Revermont and Dombes along the way. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Lons-le-Saunier → Lyon",
         heroSubtitle: "Lons-le-Saunier → Lyon transfer at €170 — €215. 140 km, 1h30.",
         description: "Lons-le-Saunier to Lyon connects the Jura to the Lyon metropolitan area via A39 and A40.",
@@ -133,8 +133,8 @@ export const trajetsLonsLeSaunier: Trajet[] = [
     hub: "lons-le-saunier",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lons-le-Saunier → Genève | Prix fixe dès 175 € | TaxiNeo",
-        metaDescription: "Taxi Lons-le-Saunier → Genève. 145 km, 1h35, dès 175 €. A39/A40 via Bourg-en-Bresse et le Pays de Gex. Réservation 24h/24.",
+        metaTitle: "Taxi Lons-le-Saunier → Genève | 145 km, dès 175 € | TaxiNeo",
+        metaDescription: "Trajet direct A39 / A40 en undefined min. En passant par Lac Léman, Vignoble jurassien et Pays de Gex. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Lons-le-Saunier → Genève",
         heroSubtitle: "Transfert Lons-le-Saunier → Genève au prix fixe de 175 — 220 €. 145 km, 1h35.",
         description: "Lons-le-Saunier — Genève traverse le Jura et la Bresse pour rejoindre la capitale internationale sur le Léman.",
@@ -152,8 +152,8 @@ export const trajetsLonsLeSaunier: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Lons-le-Saunier → Geneva | Fixed price from €175 | TaxiNeo",
-        metaDescription: "Taxi Lons-le-Saunier → Geneva. 145 km, 1h35, from €175. A39/A40 through the Jura to Switzerland. Book 24/7.",
+        metaTitle: "Taxi Lons-le-Saunier → Genève | 145 km, from €175 | TaxiNeo",
+        metaDescription: "Direct route via A39 / A40, undefined min. Lac Léman, Vignoble jurassien and Pays de Gex along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Lons-le-Saunier → Geneva",
         heroSubtitle: "Lons-le-Saunier → Geneva transfer at €175 — €220. 145 km, 1h35.",
         description: "Lons-le-Saunier to Geneva crosses the Jura mountains to reach the international lakeside capital.",
@@ -190,8 +190,8 @@ export const trajetsLonsLeSaunier: Trajet[] = [
     hub: "lons-le-saunier",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lons-le-Saunier → Bourg-en-Bresse | Prix fixe dès 80 € | TaxiNeo",
-        metaDescription: "Taxi Lons-le-Saunier → Bourg-en-Bresse. 65 km, 50 min, dès 80 €. Entre Jura et Bresse par la D1083. Réservation 24h/24.",
+        metaTitle: "Taxi Lons-le-Saunier → Bourg-en-Bresse | 65 km | TaxiNeo",
+        metaDescription: "Via D1083 / A39 en undefined min. Passage par Revermont, Bresse, Monastère de Brou et Poulet de Bresse. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Lons-le-Saunier → Bourg-en-Bresse",
         heroSubtitle: "Transfert Lons-le-Saunier → Bourg-en-Bresse au prix fixe de 80 — 100 €. 65 km, 50 min.",
         description: "Lons-le-Saunier — Bourg-en-Bresse relie le Jura à la Bresse, du Comté au poulet AOC.",
@@ -209,8 +209,8 @@ export const trajetsLonsLeSaunier: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Lons-le-Saunier → Bourg-en-Bresse | Fixed price from €80 | TaxiNeo",
-        metaDescription: "Taxi Lons-le-Saunier → Bourg-en-Bresse. 65 km, 50 min, from €80. Jura to Bresse country. Book 24/7.",
+        metaTitle: "Taxi Lons-le-Saunier → Bourg-en-Bresse | 65 km | TaxiNeo",
+        metaDescription: "Via D1083 / A39, undefined min ride. Revermont, Bresse, Monastère de Brou and Poulet de Bresse en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Lons-le-Saunier → Bourg-en-Bresse",
         heroSubtitle: "Lons-le-Saunier → Bourg-en-Bresse transfer at €80 — €100. 65 km, 50 min.",
         description: "Lons-le-Saunier to Bourg-en-Bresse links the Jura to the Bresse, from Comté cheese to AOC chicken.",
@@ -247,8 +247,8 @@ export const trajetsLonsLeSaunier: Trajet[] = [
     hub: "lons-le-saunier",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lons-le-Saunier → Dijon | Prix fixe dès 130 € | TaxiNeo",
-        metaDescription: "Taxi Lons-le-Saunier → Dijon. 110 km, 1h10, dès 130 €. A39 via Poligny et Dole. Réservation 24h/24.",
+        metaTitle: "Taxi Lons-le-Saunier → Dijon | 110 km, dès 130 € | TaxiNeo",
+        metaDescription: "Via A39 en undefined min. Vignoble jurassien, Poligny, Dole et Côte-d'Or en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Lons-le-Saunier → Dijon",
         heroSubtitle: "Transfert Lons-le-Saunier → Dijon au prix fixe de 130 — 170 €. 110 km, 1h10.",
         description: "Lons-le-Saunier — Dijon relie le Jura à la capitale bourguignonne par l'A39 via Poligny et Dole.",
@@ -266,8 +266,8 @@ export const trajetsLonsLeSaunier: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Lons-le-Saunier → Dijon | Fixed price from €130 | TaxiNeo",
-        metaDescription: "Taxi Lons-le-Saunier → Dijon. 110 km, 1h10, from €130. A39 via Poligny and Dole. Book 24/7.",
+        metaTitle: "Taxi Lons-le-Saunier → Dijon | 110 km, from €130 | TaxiNeo",
+        metaDescription: "Via A39, undefined min ride. Vignoble jurassien, Poligny, Dole and Côte-d'Or en route. Drop-off at your exact address. Door-to-door, luggage included.",
         heroTitle: "Taxi Lons-le-Saunier → Dijon",
         heroSubtitle: "Lons-le-Saunier → Dijon transfer at €130 — €170. 110 km, 1h10.",
         description: "Lons-le-Saunier to Dijon connects the Jura heartland to the Burgundy capital via A39.",

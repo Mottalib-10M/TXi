@@ -30,8 +30,8 @@ export const trajetsLorientConcarneau: Trajet[] = [
     hub: "lorient-concarneau",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lorient → Rennes | Prix fixe dès 180 € | TaxiNeo",
-        metaDescription: "Taxi Lorient → Rennes. 150 km, 1h35, dès 180 €. Voies express gratuites via Pontivy et la forêt de Brocéliande. Réservation 24h/24.",
+        metaTitle: "Taxi Lorient → Rennes | 150 km, dès 180 € | TaxiNeo",
+        metaDescription: "Via N24 en 1h35. Pontivy, Forêt de Brocéliande, Festival Interceltique et Capitale bretonne en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Lorient → Rennes",
         heroSubtitle: "Transfert Lorient → Rennes au prix fixe de 180 — 225 €. 150 km par la N24.",
         description: "Rennes, capitale de la Bretagne et métropole dynamique, est à 1h35 de Lorient par les voies express bretonnes entièrement gratuites.",
@@ -49,8 +49,8 @@ export const trajetsLorientConcarneau: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Lorient → Rennes | Fixed price from €180 | TaxiNeo",
-        metaDescription: "Taxi Lorient → Rennes. 150 km, 95 min, from €180. Toll-free expressways via Pontivy and Broceliande forest. Book 24/7.",
+        metaTitle: "Taxi Lorient → Rennes | 150 km, from €180 | TaxiNeo",
+        metaDescription: "Via N24, 1h35 ride. Pontivy, Forêt de Brocéliande, Festival Interceltique and Capitale bretonne en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Lorient → Rennes",
         heroSubtitle: "Your Lorient → Rennes transfer at €180 — €225. 150 km via the N24.",
         description: "Rennes, capital of Brittany and a thriving metropolis, is 95 minutes from Lorient via the toll-free Breton expressways.",
@@ -95,8 +95,8 @@ export const trajetsLorientConcarneau: Trajet[] = [
     hub: "lorient-concarneau",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lorient → Quimper | Prix fixe dès 85 € | TaxiNeo",
-        metaDescription: "Taxi Lorient → Quimper. 70 km, 50 min, dès 85 €. N165 gratuite via Quimperlé, cathédrale Saint-Corentin, faïence. Réservation 24h/24.",
+        metaTitle: "Taxi Lorient → Quimper | 70 km, dès 85 € | TaxiNeo",
+        metaDescription: "Via N165 en 50 min. Quimperlé, Pays de Cornouaille, Vallée de l'Aven et Cathédrale Saint-Corentin en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Lorient → Quimper",
         heroSubtitle: "Transfert Lorient → Quimper au prix fixe de 85 — 110 €. 70 km par la N165.",
         description: "Quimper, préfecture du Finistère et capitale historique de la Cornouaille bretonne, est à 50 minutes de Lorient par la voie express N165 gratuite.",
@@ -114,8 +114,8 @@ export const trajetsLorientConcarneau: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Lorient → Quimper | Fixed price from €85 | TaxiNeo",
-        metaDescription: "Taxi Lorient → Quimper. 70 km, 50 min, from €85. Toll-free N165 via Quimperle, Saint-Corentin Cathedral, faience. Book 24/7.",
+        metaTitle: "Taxi Lorient → Quimper | 70 km, from €85 | TaxiNeo",
+        metaDescription: "Via N165, 50 min ride. Quimperlé, Pays de Cornouaille, Vallée de l'Aven and Cathédrale Saint-Corentin en route. Faster and more direct than train or bus.",
         heroTitle: "Taxi Lorient → Quimper",
         heroSubtitle: "Your Lorient → Quimper transfer at €85 — €110. 70 km via the N165.",
         description: "Quimper, Finistere prefecture and historic capital of Breton Cornouaille, is 50 minutes from Lorient via the toll-free N165 expressway.",
@@ -160,8 +160,8 @@ export const trajetsLorientConcarneau: Trajet[] = [
     hub: "lorient-concarneau",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lorient → Vannes | Prix fixe dès 75 € | TaxiNeo",
-        metaDescription: "Taxi Lorient → Vannes. 60 km, 40 min, dès 75 €. Voie express N165 gratuite, rade de Lorient, golfe du Morbihan. Réservation 24h/24.",
+        metaTitle: "Taxi Lorient → Vannes | forfait dès 75 € | TaxiNeo",
+        metaDescription: "Par N165, 40 min de trajet. Rade de Lorient, Hennebont, Golfe du Morbihan et Cité de la Voile en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Lorient → Vannes",
         heroSubtitle: "Transfert Lorient → Vannes au prix fixe de 75 — 95 €. 60 km par la N165.",
         description: "Vannes, cité médiévale au bord du golfe du Morbihan, est à seulement 40 minutes de Lorient par la voie express N165 entièrement gratuite.",
@@ -180,7 +180,7 @@ export const trajetsLorientConcarneau: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Lorient → Vannes | Fixed price from €75 | TaxiNeo",
-        metaDescription: "Taxi Lorient → Vannes. 60 km, 40 min, from €75. Toll-free N165 expressway, Lorient harbour, Gulf of Morbihan. Book 24/7.",
+        metaDescription: "Through N165 in 40 min. Rade de Lorient, Hennebont, Golfe du Morbihan and Cité de la Voile en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Lorient → Vannes",
         heroSubtitle: "Your Lorient → Vannes transfer at €75 — €95. 60 km via the N165.",
         description: "Vannes, a medieval walled city on the Gulf of Morbihan, is just 40 minutes from Lorient via the toll-free N165 expressway.",
@@ -225,8 +225,8 @@ export const trajetsLorientConcarneau: Trajet[] = [
     hub: "lorient-concarneau",
     i18n: {
       fr: {
-        metaTitle: "Taxi Concarneau → Quimper | Prix fixe dès 30 € | TaxiNeo",
-        metaDescription: "Taxi Concarneau → Quimper. 25 km, 20 min, dès 30 €. D783, Ville Close, cathédrale Saint-Corentin. Réservation 24h/24.",
+        metaTitle: "Taxi Concarneau → Quimper | 25 km, dès 30 € | TaxiNeo",
+        metaDescription: "Via D783 en 20 min. Ville Close de Concarneau, Baie de Concarneau, Cornouaille et Cathédrale Saint-Corentin en chemin. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Concarneau → Quimper",
         heroSubtitle: "Transfert Concarneau → Quimper au prix fixe de 30 — 40 €. 25 km par la D783.",
         description: "Quimper, préfecture du Finistère et capitale de la Cornouaille, est à seulement 20 minutes de Concarneau par la D783.",
@@ -244,8 +244,8 @@ export const trajetsLorientConcarneau: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Concarneau → Quimper | Fixed price from €30 | TaxiNeo",
-        metaDescription: "Taxi Concarneau → Quimper. 25 km, 20 min, from €30. D783, Ville Close, Saint-Corentin Cathedral. Book 24/7.",
+        metaTitle: "Taxi Concarneau → Quimper | 25 km, from €30 | TaxiNeo",
+        metaDescription: "Via D783, 20 min ride. Ville Close de Concarneau, Baie de Concarneau, Cornouaille and Cathédrale Saint-Corentin en route. Drop-off at your exact address.",
         heroTitle: "Taxi Concarneau → Quimper",
         heroSubtitle: "Your Concarneau → Quimper transfer at €30 — €40. 25 km via the D783.",
         description: "Quimper, Finistere prefecture and capital of Cornouaille, is just 20 minutes from Concarneau via the D783.",
@@ -290,8 +290,8 @@ export const trajetsLorientConcarneau: Trajet[] = [
     hub: "lorient-concarneau",
     i18n: {
       fr: {
-        metaTitle: "Taxi Concarneau → Lorient | Prix fixe dès 60 € | TaxiNeo",
-        metaDescription: "Taxi Concarneau → Lorient. 50 km, 35 min, dès 60 €. D783/N165, Ville Close, Pont-Aven, Cité de la Voile. Réservation 24h/24.",
+        metaTitle: "Taxi Concarneau → Lorient | 50 km, dès 60 € | TaxiNeo",
+        metaDescription: "Via D783 puis N165 en 35 min. N165, Ville Close de Concarneau, Pont-Aven et Cité de la Voile en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Concarneau → Lorient",
         heroSubtitle: "Transfert Concarneau → Lorient au prix fixe de 60 — 80 €. 50 km par la D783 et la N165.",
         description: "Lorient, ville aux cinq ports et capitale de la voile, est à 35 minutes de Concarneau par la D783 puis la voie express N165.",
@@ -309,8 +309,8 @@ export const trajetsLorientConcarneau: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Concarneau → Lorient | Fixed price from €60 | TaxiNeo",
-        metaDescription: "Taxi Concarneau → Lorient. 50 km, 35 min, from €60. D783/N165, Ville Close, Pont-Aven, Cite de la Voile. Book 24/7.",
+        metaTitle: "Taxi Concarneau → Lorient | 50 km, from €60 | TaxiNeo",
+        metaDescription: "Via D783 then N165, 35 min ride. N165, Ville Close de Concarneau, Pont-Aven and Cité de la Voile en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Concarneau → Lorient",
         heroSubtitle: "Your Concarneau → Lorient transfer at €60 — €80. 50 km via the D783 and N165.",
         description: "Lorient, city of five ports and sailing capital, is 35 minutes from Concarneau via the D783 and the toll-free N165 expressway.",

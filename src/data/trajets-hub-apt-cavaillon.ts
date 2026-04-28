@@ -27,8 +27,8 @@ export const trajetsAptCavaillon: Trajet[] = [
     hub: "apt-cavaillon",
     i18n: {
       fr: {
-        metaTitle: "Taxi Apt → Avignon | Prix fixe dès 65 € | TaxiNeo",
-        metaDescription: "Taxi Apt → Avignon. 55 km, 45 min, dès 65 €. Route D900 à travers le Luberon. Transfert gare TGV. Réservation 24h/24.",
+        metaTitle: "Taxi Apt → Avignon | forfait dès 65 €, 45 min | TaxiNeo",
+        metaDescription: "Via D900 en 45 min. Luberon, Pont Julien, Gordes et Palais des Papes en chemin. Dépose à votre adresse exacte. Alternative directe au train ou au bus.",
         heroTitle: "Taxi Apt → Avignon",
         heroSubtitle: "Transfert Apt → Avignon au prix fixe de 65 — 85 €. 55 km à travers le Luberon, sans péage.",
         description: "Avignon, cité des Papes et porte d'entrée de la Provence, est à 45 min d'Apt par la D900 à travers le Luberon.",
@@ -47,7 +47,7 @@ export const trajetsAptCavaillon: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Apt → Avignon | Fixed price from €65 | TaxiNeo",
-        metaDescription: "Taxi Apt → Avignon. 55 km, 45 min, from €65. D900 through the Luberon. TGV station transfer. Book 24/7.",
+        metaDescription: "Via D900, 45 min ride. Luberon, Pont Julien, Gordes and Palais des Papes en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Apt → Avignon",
         heroSubtitle: "Your Apt → Avignon transfer at €65 — €85. 55 km through the Luberon, toll-free.",
         description: "Avignon, City of Popes and gateway to Provence, is 45 min from Apt via the D900 through the Luberon.",
@@ -92,8 +92,8 @@ export const trajetsAptCavaillon: Trajet[] = [
     hub: "apt-cavaillon",
     i18n: {
       fr: {
-        metaTitle: "Taxi Apt → Aix-en-Provence | Prix fixe dès 65 € | TaxiNeo",
-        metaDescription: "Taxi Apt → Aix-en-Provence. 55 km, 40 min, dès 65 €. Luberon vers la ville de Cézanne. Réservation 24h/24.",
+        metaTitle: "Taxi Apt → Aix-en-Provence | 55 km, dès 65 € | TaxiNeo",
+        metaDescription: "Via D900 / A51 en 40 min. Luberon, Cézanne et Cours Mirabeau en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Apt → Aix-en-Provence",
         heroSubtitle: "Transfert Apt → Aix-en-Provence au prix fixe de 65 — 85 €. 55 km, du Luberon à la ville de Cézanne.",
         description: "Aix-en-Provence, ville d'art et de Cézanne, est à 40 min d'Apt par la D900 puis l'A51.",
@@ -111,8 +111,8 @@ export const trajetsAptCavaillon: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Apt → Aix-en-Provence | Fixed price from €65 | TaxiNeo",
-        metaDescription: "Taxi Apt → Aix-en-Provence. 55 km, 40 min, from €65. Luberon to Cézanne's city. Book 24/7.",
+        metaTitle: "Taxi Apt → Aix-en-Provence | 55 km, from €65 | TaxiNeo",
+        metaDescription: "Via D900 / A51, 40 min ride. Luberon, Cézanne and Cours Mirabeau along the way. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Apt → Aix-en-Provence",
         heroSubtitle: "Your Apt → Aix-en-Provence transfer at €65 — €85. 55 km from the Luberon to the city of Cézanne.",
         description: "Aix-en-Provence, city of art and Cézanne, is 40 min from Apt via the D900 and A51.",
@@ -157,8 +157,8 @@ export const trajetsAptCavaillon: Trajet[] = [
     hub: "apt-cavaillon",
     i18n: {
       fr: {
-        metaTitle: "Taxi Cavaillon → Avignon | Prix fixe dès 30 € | TaxiNeo",
-        metaDescription: "Taxi Cavaillon → Avignon. 25 km, 20 min, dès 30 €. Route directe sans péage. Gare TGV. Réservation 24h/24.",
+        metaTitle: "Taxi Cavaillon → Avignon | 25 km, dès 30 € | TaxiNeo",
+        metaDescription: "Via D2 / N7 en 20 min. Luberon, Melon de Cavaillon, Palais des Papes et TGV en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Cavaillon → Avignon",
         heroSubtitle: "Transfert Cavaillon → Avignon au prix fixe de 30 — 40 €. 25 km, route directe sans péage.",
         description: "Avignon, cité des Papes, est à seulement 20 min de Cavaillon par la D2 et la N7.",
@@ -176,8 +176,8 @@ export const trajetsAptCavaillon: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Cavaillon → Avignon | Fixed price from €30 | TaxiNeo",
-        metaDescription: "Taxi Cavaillon → Avignon. 25 km, 20 min, from €30. Direct toll-free route. TGV station. Book 24/7.",
+        metaTitle: "Taxi Cavaillon → Avignon | 25 km, from €30 | TaxiNeo",
+        metaDescription: "D2 / N7 route, approximately 20 min. Luberon, Melon de Cavaillon, Palais des Papes and TGV en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Cavaillon → Avignon",
         heroSubtitle: "Your Cavaillon → Avignon transfer at €30 — €40. 25 km, direct toll-free route.",
         description: "Avignon, City of Popes, is just 20 min from Cavaillon via the D2 and N7.",
@@ -222,8 +222,8 @@ export const trajetsAptCavaillon: Trajet[] = [
     hub: "apt-cavaillon",
     i18n: {
       fr: {
-        metaTitle: "Taxi Cavaillon → Marseille | Prix fixe dès 85 € | TaxiNeo",
-        metaDescription: "Taxi Cavaillon → Marseille. 70 km, 50 min, dès 85 €. A7 via Salon-de-Provence. Aéroport Marignane. Réservation 24h/24.",
+        metaTitle: "Taxi Cavaillon → Marseille | 70 km, dès 85 € | TaxiNeo",
+        metaDescription: "Itinéraire A7, environ 50 min. Luberon, Salon-de-Provence, Aéroport Marignane et Vieux-Port en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Cavaillon → Marseille",
         heroSubtitle: "Transfert Cavaillon → Marseille au prix fixe de 85 — 110 €. 70 km par l'A7, aéroport ou centre-ville.",
         description: "Marseille, cité phocéenne, est à 50 min de Cavaillon par l'A7 via Salon-de-Provence.",
@@ -241,8 +241,8 @@ export const trajetsAptCavaillon: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Cavaillon → Marseille | Fixed price from €85 | TaxiNeo",
-        metaDescription: "Taxi Cavaillon → Marseille. 70 km, 50 min, from €85. A7 via Salon-de-Provence. Airport or city centre. Book 24/7.",
+        metaTitle: "Taxi Cavaillon → Marseille | 70 km, from €85 | TaxiNeo",
+        metaDescription: "Direct route via A7, 50 min. Luberon, Salon-de-Provence, Aéroport Marignane and Vieux-Port en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Cavaillon → Marseille",
         heroSubtitle: "Your Cavaillon → Marseille transfer at €85 — €110. 70 km via the A7, airport or city centre.",
         description: "Marseille, France's oldest city, is 50 min from Cavaillon via the A7 motorway.",
@@ -287,8 +287,8 @@ export const trajetsAptCavaillon: Trajet[] = [
     hub: "apt-cavaillon",
     i18n: {
       fr: {
-        metaTitle: "Taxi Apt → Gordes | Prix fixe dès 20 € | TaxiNeo",
-        metaDescription: "Taxi Apt → Gordes. 15 km, 15 min, dès 20 €. Village classé plus beau de France, abbaye de Sénanque. Réservation 24h/24.",
+        metaTitle: "Taxi Apt → Gordes | forfait dès 20 €, 15 min | TaxiNeo",
+        metaDescription: "Par D2 / D15, 15 min de trajet. Luberon, Plus beaux villages, Lavande et Abbaye de Sénanque en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Apt → Gordes",
         heroSubtitle: "Transfert Apt → Gordes au prix fixe de 20 — 30 €. 15 km au coeur du Luberon.",
         description: "Gordes, classé parmi les plus beaux villages de France, est à 15 min d'Apt par la D2.",
@@ -307,7 +307,7 @@ export const trajetsAptCavaillon: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Apt → Gordes | Fixed price from €20 | TaxiNeo",
-        metaDescription: "Taxi Apt → Gordes. 15 km, 15 min, from €20. Most Beautiful Village in France, Sénanque Abbey. Book 24/7.",
+        metaDescription: "Direct route via D2 / D15, 15 min. Luberon, Plus beaux villages, Lavande and Abbaye de Sénanque en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Apt → Gordes",
         heroSubtitle: "Your Apt → Gordes transfer at €20 — €30. 15 km in the heart of the Luberon.",
         description: "Gordes, one of the Most Beautiful Villages in France, is 15 min from Apt via the D2.",

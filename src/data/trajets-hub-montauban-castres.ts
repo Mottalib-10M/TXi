@@ -27,8 +27,8 @@ export const trajetsMontaubanCastres: Trajet[] = [
     hub: "montauban-castres",
     i18n: {
       fr: {
-        metaTitle: "Taxi Montauban → Toulouse | Prix fixe dès 65 € | TaxiNeo",
-        metaDescription: "Taxi Montauban → Toulouse. 55 km, 35 min, dès 65 €. A62, musée Ingres, Ville rose. Réservation 24h/24.",
+        metaTitle: "Taxi Montauban → Toulouse | 55 km, dès 65 € | TaxiNeo",
+        metaDescription: "Par A62, 35 min de trajet. Passage par Tarn-et-Garonne, Musée Ingres-Bourdelle, Ville rose et Capitole. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Montauban → Toulouse",
         heroSubtitle: "Transfert Montauban → Toulouse au prix fixe de 65 — 85 €. 55 km, direct par l'A62.",
         description: "Toulouse, la Ville rose et capitale de l'Occitanie, est à 35 min de Montauban par l'A62.",
@@ -46,8 +46,8 @@ export const trajetsMontaubanCastres: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Montauban → Toulouse | Fixed price from €65 | TaxiNeo",
-        metaDescription: "Taxi Montauban → Toulouse. 55 km, 35 min, from €65. A62, Ingres museum, Pink City. Book 24/7.",
+        metaTitle: "Taxi Montauban → Toulouse | 55 km, from €65 | TaxiNeo",
+        metaDescription: "Direct route via A62, 35 min. Tarn-et-Garonne, Musée Ingres-Bourdelle, Ville rose and Capitole en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Montauban → Toulouse",
         heroSubtitle: "Your Montauban → Toulouse transfer at €65 — €85. 55 km, via the A62.",
         description: "Toulouse, the Pink City and Occitanie capital, is 35 min from Montauban via the A62.",
@@ -92,8 +92,8 @@ export const trajetsMontaubanCastres: Trajet[] = [
     hub: "montauban-castres",
     i18n: {
       fr: {
-        metaTitle: "Taxi Montauban → Cahors | Prix fixe dès 75 € | TaxiNeo",
-        metaDescription: "Taxi Montauban → Cahors. 60 km, 40 min, dès 75 €. A20, pont Valentré, vignoble de Cahors. Réservation 24h/24.",
+        metaTitle: "Taxi Montauban → Cahors | 60 km, dès 75 € | TaxiNeo",
+        metaDescription: "Via A20 en 40 min. Quercy, Pont Valentré, Vignoble de Cahors et Lot en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Montauban → Cahors",
         heroSubtitle: "Transfert Montauban → Cahors au prix fixe de 75 — 95 €. 60 km, par l'A20.",
         description: "Cahors, capitale du Quercy et cité du Malbec, est à 40 min de Montauban par l'A20.",
@@ -111,8 +111,8 @@ export const trajetsMontaubanCastres: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Montauban → Cahors | Fixed price from €75 | TaxiNeo",
-        metaDescription: "Taxi Montauban → Cahors. 60 km, 40 min, from €75. A20, Pont Valentré, Cahors wine. Book 24/7.",
+        metaTitle: "Taxi Montauban → Cahors | 60 km, from €75 | TaxiNeo",
+        metaDescription: "Via A20, 40 min ride. Quercy, Pont Valentré, Vignoble de Cahors and Lot en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Montauban → Cahors",
         heroSubtitle: "Your Montauban → Cahors transfer at €75 — €95. 60 km, via the A20.",
         description: "Cahors, Quercy capital and Malbec wine city, is 40 min from Montauban via the A20.",
@@ -157,8 +157,8 @@ export const trajetsMontaubanCastres: Trajet[] = [
     hub: "montauban-castres",
     i18n: {
       fr: {
-        metaTitle: "Taxi Castres → Toulouse | Prix fixe dès 95 € | TaxiNeo",
-        metaDescription: "Taxi Castres → Toulouse. 80 km, 55 min, dès 95 €. N126, musée Goya, Sidobre, rugby. Réservation 24h/24.",
+        metaTitle: "Taxi Castres → Toulouse | 80 km, dès 95 € | TaxiNeo",
+        metaDescription: "Via N126 en 55 min. Tarn, Musée Goya, Sidobre et Ville rose en chemin. Dépose porte-à-porte, bagages inclus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Castres → Toulouse",
         heroSubtitle: "Transfert Castres → Toulouse au prix fixe de 95 — 125 €. 80 km, par la N126 et la voie rapide.",
         description: "Toulouse, métropole occitane, est à 55 min de Castres par la N126.",
@@ -176,8 +176,8 @@ export const trajetsMontaubanCastres: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Castres → Toulouse | Fixed price from €95 | TaxiNeo",
-        metaDescription: "Taxi Castres → Toulouse. 80 km, 55 min, from €95. N126, Goya museum, Sidobre, rugby. Book 24/7.",
+        metaTitle: "Taxi Castres → Toulouse | 80 km, from €95 | TaxiNeo",
+        metaDescription: "Via N126, 55 min ride. Tarn, Musée Goya, Sidobre and Ville rose en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Castres → Toulouse",
         heroSubtitle: "Your Castres → Toulouse transfer at €95 — €125. 80 km, via the N126.",
         description: "Toulouse, Occitanie capital, is 55 min from Castres via the N126.",
@@ -222,8 +222,8 @@ export const trajetsMontaubanCastres: Trajet[] = [
     hub: "montauban-castres",
     i18n: {
       fr: {
-        metaTitle: "Taxi Castres → Albi | Prix fixe dès 55 € | TaxiNeo",
-        metaDescription: "Taxi Castres → Albi. 45 km, 30 min, dès 55 €. D112, Sidobre, cathédrale UNESCO. Réservation 24h/24.",
+        metaTitle: "Taxi Castres → Albi | forfait dès 55 €, 30 min | TaxiNeo",
+        metaDescription: "Via D112 en 30 min. Tarn, Sidobre, Cathédrale Sainte-Cécile et Musée Goya en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Castres → Albi",
         heroSubtitle: "Transfert Castres → Albi au prix fixe de 55 — 70 €. 45 km, route gratuite par la D112.",
         description: "Albi, cité épiscopale UNESCO et patrie de Toulouse-Lautrec, est à 30 min de Castres.",
@@ -242,7 +242,7 @@ export const trajetsMontaubanCastres: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Castres → Albi | Fixed price from €55 | TaxiNeo",
-        metaDescription: "Taxi Castres → Albi. 45 km, 30 min, from €55. D112, Sidobre, UNESCO cathedral. Book 24/7.",
+        metaDescription: "Via D112, 30 min ride. Tarn, Sidobre, Cathédrale Sainte-Cécile and Musée Goya en route. Drop-off at your exact address. Door-to-door, luggage included.",
         heroTitle: "Taxi Castres → Albi",
         heroSubtitle: "Your Castres → Albi transfer at €55 — €70. 45 km, toll-free via D112.",
         description: "Albi, UNESCO episcopal city and Toulouse-Lautrec's birthplace, is 30 min from Castres.",
@@ -287,8 +287,8 @@ export const trajetsMontaubanCastres: Trajet[] = [
     hub: "montauban-castres",
     i18n: {
       fr: {
-        metaTitle: "Taxi Montauban → Agen | Prix fixe dès 80 € | TaxiNeo",
-        metaDescription: "Taxi Montauban → Agen. 65 km, 45 min, dès 80 €. A62, Garonne, pruneau d'Agen. Réservation 24h/24.",
+        metaTitle: "Taxi Montauban → Agen | forfait dès 80 € | TaxiNeo",
+        metaDescription: "Via A62 en 45 min. Garonne, Pruneau d'Agen, Musée Ingres-Bourdelle et Rugby en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Montauban → Agen",
         heroSubtitle: "Transfert Montauban → Agen au prix fixe de 80 — 100 €. 65 km, par l'A62.",
         description: "Agen, capitale du pruneau et préfecture du Lot-et-Garonne, est à 45 min de Montauban.",
@@ -307,7 +307,7 @@ export const trajetsMontaubanCastres: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Montauban → Agen | Fixed price from €80 | TaxiNeo",
-        metaDescription: "Taxi Montauban → Agen. 65 km, 45 min, from €80. A62, Garonne valley, Agen prunes. Book 24/7.",
+        metaDescription: "A62 route, approximately 45 min. Garonne, Pruneau d'Agen, Musée Ingres-Bourdelle and Rugby en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Montauban → Agen",
         heroSubtitle: "Your Montauban → Agen transfer at €80 — €100. 65 km, via the A62.",
         description: "Agen, prune capital and Lot-et-Garonne prefecture, is 45 min from Montauban.",

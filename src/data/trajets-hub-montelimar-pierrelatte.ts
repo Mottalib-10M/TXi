@@ -19,8 +19,8 @@ export const trajetsMontelimarPierrelatte: Trajet[] = [
     hub: "montelimar-pierrelatte",
     i18n: {
       fr: {
-        metaTitle: "Taxi Montélimar → Avignon | Prix fixe dès 115 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Montélimar → Avignon. 95 km, 1h, prix fixe dès 115 €. A7 autoroute du Soleil, chauffeur professionnel 24h/24.",
+        metaTitle: "Taxi Montélimar → Avignon | 95 km, dès 115 € | TaxiNeo",
+        metaDescription: "Par A7, undefined min de trajet. Vallée du Rhône, Tricastin, Provence et Autoroute du Soleil en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Montélimar → Avignon",
         heroSubtitle: "Transfert Montélimar → Avignon au prix fixe de 115 — 145 €. 95 km, 1h par l'autoroute du Soleil.",
         description: "Montélimar — Avignon relie la capitale du nougat à la cité des Papes par l'A7 en traversant le Tricastin et le nord du Vaucluse.",
@@ -38,8 +38,8 @@ export const trajetsMontelimarPierrelatte: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Montélimar → Avignon | Fixed price from €115 | TaxiNeo",
-        metaDescription: "Taxi Montélimar → Avignon. 95 km, 1h, from €115. A7 Autoroute du Soleil through Provence. Book 24/7.",
+        metaTitle: "Taxi Montélimar → Avignon | 95 km, from €115 | TaxiNeo",
+        metaDescription: "Direct route via A7, undefined min. Vallée du Rhône, Tricastin, Provence and Autoroute du Soleil en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Montélimar → Avignon",
         heroSubtitle: "Montélimar → Avignon transfer at €115 — €145. 95 km, 1h via the Autoroute du Soleil.",
         description: "Montélimar to Avignon through the Rhône Valley via A7, from nougat capital to the City of Popes.",
@@ -76,8 +76,8 @@ export const trajetsMontelimarPierrelatte: Trajet[] = [
     hub: "montelimar-pierrelatte",
     i18n: {
       fr: {
-        metaTitle: "Taxi Montélimar → Lyon | Prix fixe dès 180 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Montélimar → Lyon. 150 km, 1h35, prix fixe dès 180 €. A7 vallée du Rhône. Chauffeur professionnel 24h/24.",
+        metaTitle: "Taxi Montélimar → Lyon | 150 km, dès 180 € | TaxiNeo",
+        metaDescription: "Via A7 en undefined min. Autoroute du Soleil, Vallée du Rhône, Vignobles Côtes du Rhône et Drôme en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Montélimar → Lyon",
         heroSubtitle: "Transfert Montélimar → Lyon au prix fixe de 180 — 225 €. 150 km, 1h35 par l'A7.",
         description: "Montélimar — Lyon remonte toute la vallée du Rhône par l'autoroute du Soleil, traversant les plus grands vignobles des Côtes du Rhône.",
@@ -95,8 +95,8 @@ export const trajetsMontelimarPierrelatte: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Montélimar → Lyon | Fixed price from €180 | TaxiNeo",
-        metaDescription: "Taxi Montélimar → Lyon. 150 km, 1h35, from €180. A7 Autoroute du Soleil through Rhône Valley. Book 24/7.",
+        metaTitle: "Taxi Montélimar → Lyon | 150 km, from €180 | TaxiNeo",
+        metaDescription: "Via A7, undefined min ride. Autoroute du Soleil, Vallée du Rhône, Vignobles Côtes du Rhône and Drôme en route. Faster and more direct than train or bus.",
         heroTitle: "Taxi Montélimar → Lyon",
         heroSubtitle: "Montélimar → Lyon transfer at €180 — €225. 150 km, 1h35 via A7.",
         description: "Montélimar to Lyon up the Rhône Valley on the Autoroute du Soleil, through France's finest wine country.",
@@ -133,8 +133,8 @@ export const trajetsMontelimarPierrelatte: Trajet[] = [
     hub: "montelimar-pierrelatte",
     i18n: {
       fr: {
-        metaTitle: "Taxi Montélimar → Valence | Prix fixe dès 60 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Montélimar → Valence. 50 km, 35 min, prix fixe dès 60 €. A7 directe entre les deux villes drômoises. Réservation 24h/24.",
+        metaTitle: "Taxi Montélimar → Valence | 50 km, dès 60 € | TaxiNeo",
+        metaDescription: "Via A7 en undefined min. Drôme, Nougat, Vallée du Rhône et Provence en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Montélimar → Valence",
         heroSubtitle: "Transfert Montélimar → Valence au prix fixe de 60 — 80 €. 50 km, 35 min par l'A7.",
         description: "Montélimar — Valence relie les deux principales villes de la Drôme par l'A7, de la capitale du nougat à la préfecture drômoise.",
@@ -152,8 +152,8 @@ export const trajetsMontelimarPierrelatte: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Montélimar → Valence | Fixed price from €60 | TaxiNeo",
-        metaDescription: "Taxi Montélimar → Valence. 50 km, 35 min, from €60. Direct A7 between Drôme's two main cities. Book 24/7.",
+        metaTitle: "Taxi Montélimar → Valence | 50 km, from €60 | TaxiNeo",
+        metaDescription: "Via A7, undefined min ride. Drôme, Nougat, Vallée du Rhône and Provence en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Montélimar → Valence",
         heroSubtitle: "Montélimar → Valence transfer at €60 — €80. 50 km, 35 min via A7.",
         description: "Montélimar to Valence connects the nougat capital to the Drôme prefecture via A7 in 35 minutes.",
@@ -190,8 +190,8 @@ export const trajetsMontelimarPierrelatte: Trajet[] = [
     hub: "montelimar-pierrelatte",
     i18n: {
       fr: {
-        metaTitle: "Taxi Pierrelatte → Orange | Prix fixe dès 35 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Pierrelatte → Orange. 30 km, 25 min, prix fixe dès 35 €. Route directe Tricastin-Vaucluse. Réservation 24h/24.",
+        metaTitle: "Taxi Pierrelatte → Orange | 30 km, dès 35 € | TaxiNeo",
+        metaDescription: "Par N7 / D73, undefined min de trajet. Tricastin, Côtes du Rhône, Provence et Théâtre antique en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Pierrelatte → Orange",
         heroSubtitle: "Transfert Pierrelatte → Orange au prix fixe de 35 — 50 €. 30 km, 25 min sans péage.",
         description: "Pierrelatte — Orange relie le Tricastin drômois à la cité romaine d'Orange, porte du Vaucluse, par la D73 et la N7.",
@@ -209,8 +209,8 @@ export const trajetsMontelimarPierrelatte: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Pierrelatte → Orange | Fixed price from €35 | TaxiNeo",
-        metaDescription: "Taxi Pierrelatte → Orange. 30 km, 25 min, from €35. Direct route from Tricastin to Roman Orange. Book 24/7.",
+        metaTitle: "Taxi Pierrelatte → Orange | 30 km, from €35 | TaxiNeo",
+        metaDescription: "Through N7 / D73 in undefined min. Tricastin, Côtes du Rhône, Provence and Théâtre antique en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Pierrelatte → Orange",
         heroSubtitle: "Pierrelatte → Orange transfer at €35 — €50. 30 km, 25 min, no tolls.",
         description: "Pierrelatte to Orange links the Tricastin area to the Roman city of Orange via D73 and N7.",
@@ -247,8 +247,8 @@ export const trajetsMontelimarPierrelatte: Trajet[] = [
     hub: "montelimar-pierrelatte",
     i18n: {
       fr: {
-        metaTitle: "Taxi Montélimar → Grenoble | Prix fixe dès 170 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Montélimar → Grenoble. 140 km, 1h30, prix fixe dès 170 €. A7 puis A49 via Valence. Réservation 24h/24.",
+        metaTitle: "Taxi Montélimar → Grenoble | 140 km, dès 170 € | TaxiNeo",
+        metaDescription: "Via A7 / A49 en undefined min. Vallée du Rhône, Vercors et Drôme en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Montélimar → Grenoble",
         heroSubtitle: "Transfert Montélimar → Grenoble au prix fixe de 170 — 215 €. 140 km, 1h30 par l'A7 et l'A49.",
         description: "Montélimar — Grenoble relie la Drôme provençale à la capitale des Alpes en traversant la vallée du Rhône puis le piémont du Vercors.",
@@ -266,8 +266,8 @@ export const trajetsMontelimarPierrelatte: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Montélimar → Grenoble | Fixed price from €170 | TaxiNeo",
-        metaDescription: "Taxi Montélimar → Grenoble. 140 km, 1h30, from €170. A7 then A49 via Valence and Vercors. Book 24/7.",
+        metaTitle: "Taxi Montélimar → Grenoble | 140 km, from €170 | TaxiNeo",
+        metaDescription: "Via A7 / A49, undefined min ride. Vallée du Rhône, Vercors and Drôme along the way. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Montélimar → Grenoble",
         heroSubtitle: "Montélimar → Grenoble transfer at €170 — €215. 140 km, 1h30 via A7 and A49.",
         description: "Montélimar to Grenoble from Provence to the Alps via the Rhône Valley and Vercors foothills.",

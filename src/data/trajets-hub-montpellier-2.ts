@@ -27,8 +27,8 @@ export const trajetsMontpellierHub2: Trajet[] = [
     hub: "montpellier",
     i18n: {
       fr: {
-        metaTitle: "Taxi Montpellier → Perpignan | Prix fixe dès 190 € | TaxiNeo",
-        metaDescription: "Taxi Montpellier → Perpignan. 155 km, 1h40, dès 190 €. A9, Catalogne nord. Réservation 24h/24.",
+        metaTitle: "Taxi Montpellier → Perpignan | 155 km, dès 190 € | TaxiNeo",
+        metaDescription: "Trajet direct A9 en 1h40. Passage par Catalogne, Méditerranée, Narbonne et Palais des Rois de Majorque. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Montpellier → Perpignan",
         heroSubtitle: "Transfert Montpellier → Perpignan au prix fixe de 190 — 230 €. 155 km, porte de la Catalogne.",
         description: "Perpignan, capitale du Roussillon et porte de la Catalogne, est à 1h40 de Montpellier.",
@@ -46,8 +46,8 @@ export const trajetsMontpellierHub2: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Montpellier → Perpignan | Fixed price from €190 | TaxiNeo",
-        metaDescription: "Taxi Montpellier → Perpignan. 155 km, 1h40, from €190. A9, gateway to Catalonia. Book 24/7.",
+        metaTitle: "Taxi Montpellier → Perpignan | 155 km, from €190 | TaxiNeo",
+        metaDescription: "Direct route via A9, 1h40. Catalogne, Méditerranée, Narbonne and Palais des Rois de Majorque en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Montpellier → Perpignan",
         heroSubtitle: "Your Montpellier → Perpignan transfer at €190 — €230. 155 km, gateway to Catalonia.",
         description: "Perpignan, former capital of the Kingdom of Majorca, is 1h40 from Montpellier.",
@@ -92,8 +92,8 @@ export const trajetsMontpellierHub2: Trajet[] = [
     hub: "montpellier",
     i18n: {
       fr: {
-        metaTitle: "Taxi Montpellier → Narbonne | Prix fixe dès 120 € | TaxiNeo",
-        metaDescription: "Taxi Montpellier → Narbonne. 95 km, 1h, dès 120 €. Cathédrale, canal de la Robine, vins. Réservation 24h/24.",
+        metaTitle: "Taxi Montpellier → Narbonne | 95 km, dès 120 € | TaxiNeo",
+        metaDescription: "Via A9 en 1h. Cathédrale, Canal de la Robine, Vin et Romains en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Montpellier → Narbonne",
         heroSubtitle: "Transfert Montpellier → Narbonne au prix fixe de 120 — 145 €. 95 km, première colonie romaine en Gaule.",
         description: "Narbonne, première colonie romaine en Gaule, est à 1h de Montpellier.",
@@ -111,8 +111,8 @@ export const trajetsMontpellierHub2: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Montpellier → Narbonne | Fixed price from €120 | TaxiNeo",
-        metaDescription: "Taxi Montpellier → Narbonne. 95 km, 1h, from €120. Cathedral, Canal de la Robine, wines. Book 24/7.",
+        metaTitle: "Taxi Montpellier → Narbonne | 95 km, from €120 | TaxiNeo",
+        metaDescription: "Via A9, 1 hour ride. Cathédrale, Canal de la Robine, Vin and Romains en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Montpellier → Narbonne",
         heroSubtitle: "Your Montpellier → Narbonne transfer at €120 — €145. 95 km, Rome's first colony in Gaul.",
         description: "Narbonne, Rome's first colony in Gaul, is 1h from Montpellier.",
@@ -157,8 +157,8 @@ export const trajetsMontpellierHub2: Trajet[] = [
     hub: "montpellier",
     i18n: {
       fr: {
-        metaTitle: "Taxi Montpellier → Arles | Prix fixe dès 95 € | TaxiNeo",
-        metaDescription: "Taxi Montpellier → Arles. 75 km, 55 min, dès 95 €. Arènes romaines, Van Gogh, Camargue. Réservation 24h/24.",
+        metaTitle: "Taxi Montpellier → Arles | 75 km, dès 95 € | TaxiNeo",
+        metaDescription: "Via A9 puis A54 en 55 min. A9/A54, Camargue, Arènes et Van Gogh en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Montpellier → Arles",
         heroSubtitle: "Transfert Montpellier → Arles au prix fixe de 95 — 115 €. 75 km, la Rome des Gaules.",
         description: "Arles, 'la Rome des Gaules' aux monuments UNESCO, est à 55 min de Montpellier.",
@@ -176,8 +176,8 @@ export const trajetsMontpellierHub2: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Montpellier → Arles | Fixed price from €95 | TaxiNeo",
-        metaDescription: "Taxi Montpellier → Arles. 75 km, 55 min, from €95. Roman arena, Van Gogh, Camargue. Book 24/7.",
+        metaTitle: "Taxi Montpellier → Arles | 75 km, from €95 | TaxiNeo",
+        metaDescription: "Via A9 then A54, 55 min ride. A9/A54, Camargue, Arènes and Van Gogh en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Montpellier → Arles",
         heroSubtitle: "Your Montpellier → Arles transfer at €95 — €115. 75 km, 'Rome of the Gauls'.",
         description: "Arles, with 8 UNESCO monuments and Van Gogh heritage, is 55 min from Montpellier.",
@@ -222,8 +222,8 @@ export const trajetsMontpellierHub2: Trajet[] = [
     hub: "montpellier",
     i18n: {
       fr: {
-        metaTitle: "Taxi Montpellier → La Grande-Motte | Prix fixe dès 30 € | TaxiNeo",
-        metaDescription: "Taxi Montpellier → La Grande-Motte. 20 km, 25 min, dès 30 €. Plages, pyramides, station balnéaire. Réservation 24h/24.",
+        metaTitle: "Taxi Montpellier → La Grande-Motte | 20 km, 30 € | TaxiNeo",
+        metaDescription: "Via D62 en 25 min. Plage, Architecture, Pyramides et Station balnéaire en chemin. Arrêt visite possible en chemin. Arrêt possible pour visites ou photos.",
         heroTitle: "Taxi Montpellier → La Grande-Motte",
         heroSubtitle: "Transfert Montpellier → La Grande-Motte au prix fixe de 30 — 40 €. 20 km, la station aux pyramides.",
         description: "La Grande-Motte, station balnéaire aux pyramides architecturales uniques, est à 25 min de Montpellier.",
@@ -241,8 +241,8 @@ export const trajetsMontpellierHub2: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Montpellier → La Grande-Motte | Fixed price from €30 | TaxiNeo",
-        metaDescription: "Taxi Montpellier → La Grande-Motte. 20 km, 25 min, from €30. Beaches, pyramids architecture. Book 24/7.",
+        metaTitle: "Taxi Montpellier → La Grande-Motte | 20 km, €30 | TaxiNeo",
+        metaDescription: "Via D62, 25 min ride. Plage, Architecture, Pyramides and Station balnéaire en route. Stops for sightseeing possible en route. Return trip at same rate.",
         heroTitle: "Taxi Montpellier → La Grande-Motte",
         heroSubtitle: "Your Montpellier → La Grande-Motte transfer at €30 — €40. 20 km, the pyramid resort.",
         description: "La Grande-Motte, unique seaside resort with pyramid buildings, is 25 min from Montpellier.",
@@ -287,8 +287,8 @@ export const trajetsMontpellierHub2: Trajet[] = [
     hub: "montpellier",
     i18n: {
       fr: {
-        metaTitle: "Taxi Montpellier → Palavas-les-Flots | Prix fixe dès 22 € | TaxiNeo",
-        metaDescription: "Taxi Montpellier → Palavas-les-Flots. 12 km, 20 min, dès 22 €. Plage, phare, station balnéaire. Réservation 24h/24.",
+        metaTitle: "Taxi Montpellier → Palavas-les-Flots | 12 km, 22 € | TaxiNeo",
+        metaDescription: "Via D986 en 20 min. Plage, Phare, Albert Dubout et Canal du Midi en chemin. Arrêt visite possible en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Montpellier → Palavas-les-Flots",
         heroSubtitle: "Transfert Montpellier → Palavas au prix fixe de 22 — 30 €. 12 km, la plage des Montpelliérains.",
         description: "Palavas-les-Flots, station balnéaire des Montpelliérains, est à 20 min du centre-ville.",
@@ -306,8 +306,8 @@ export const trajetsMontpellierHub2: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Montpellier → Palavas-les-Flots | Fixed price from €22 | TaxiNeo",
-        metaDescription: "Taxi Montpellier → Palavas. 12 km, 20 min, from €22. Beach, lighthouse, fishing port. Book 24/7.",
+        metaTitle: "Taxi Montpellier → Palavas-les-Flots | 12 km, €22 | TaxiNeo",
+        metaDescription: "Via D986, 20 min ride. Plage, Phare, Albert Dubout and Canal du Midi en route. Stops for sightseeing possible en route. Perfect for a day trip without driving.",
         heroTitle: "Taxi Montpellier → Palavas-les-Flots",
         heroSubtitle: "Your Montpellier → Palavas transfer at €22 — €30. 12 km, Montpellier's beach.",
         description: "Palavas-les-Flots, Montpellier's traditional seaside resort, is 20 min from the city centre.",
@@ -352,8 +352,8 @@ export const trajetsMontpellierHub2: Trajet[] = [
     hub: "montpellier",
     i18n: {
       fr: {
-        metaTitle: "Taxi Montpellier → Pézenas | Prix fixe dès 70 € | TaxiNeo",
-        metaDescription: "Taxi Montpellier → Pézenas. 55 km, 45 min, dès 70 €. Cité de Molière, artisanat d'art. Réservation 24h/24.",
+        metaTitle: "Taxi Montpellier → Pézenas | 55 km, dès 70 € | TaxiNeo",
+        metaDescription: "Via A75 en 45 min. Molière, Patrimoine, Artisanat et Hérault en chemin. Arrêt visite possible en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Montpellier → Pézenas",
         heroSubtitle: "Transfert Montpellier → Pézenas au prix fixe de 70 — 85 €. 55 km, cité de Molière.",
         description: "Pézenas, cité de Molière et ville d'artisanat d'art, est à 45 min de Montpellier.",
@@ -371,8 +371,8 @@ export const trajetsMontpellierHub2: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Montpellier → Pézenas | Fixed price from €70 | TaxiNeo",
-        metaDescription: "Taxi Montpellier → Pézenas. 55 km, 45 min, from €70. Molière's city, art crafts. Book 24/7.",
+        metaTitle: "Taxi Montpellier → Pézenas | 55 km, from €70 | TaxiNeo",
+        metaDescription: "Via A75, 45 min ride. Molière, Patrimoine, Artisanat and Hérault en route. Stops for sightseeing possible en route. Perfect for a day trip without driving.",
         heroTitle: "Taxi Montpellier → Pézenas",
         heroSubtitle: "Your Montpellier → Pézenas transfer at €70 — €85. 55 km, Molière's city.",
         description: "Pézenas, Molière's city and art craft town, is 45 min from Montpellier.",
@@ -417,8 +417,8 @@ export const trajetsMontpellierHub2: Trajet[] = [
     hub: "montpellier",
     i18n: {
       fr: {
-        metaTitle: "Taxi Montpellier → Millau | Prix fixe dès 145 € | TaxiNeo",
-        metaDescription: "Taxi Montpellier → Millau. 115 km, 1h25, dès 145 €. Viaduc de Millau, Roquefort, Grands Causses. Réservation 24h/24.",
+        metaTitle: "Taxi Montpellier → Millau | 115 km, dès 145 € | TaxiNeo",
+        metaDescription: "Par A75 + viaduc, 1h25 de trajet. Passage par Viaduc de Millau, Aveyron, Roquefort et Grands Causses. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Montpellier → Millau",
         heroSubtitle: "Transfert Montpellier → Millau au prix fixe de 145 — 175 €. 115 km, sous le plus haut pont du monde.",
         description: "Millau, dominée par le viaduc le plus haut du monde, est à 1h25 de Montpellier.",
@@ -436,8 +436,8 @@ export const trajetsMontpellierHub2: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Montpellier → Millau | Fixed price from €145 | TaxiNeo",
-        metaDescription: "Taxi Montpellier → Millau. 115 km, 1h25, from €145. Millau Viaduct, Roquefort, Grands Causses. Book 24/7.",
+        metaTitle: "Taxi Montpellier → Millau | 115 km, from €145 | TaxiNeo",
+        metaDescription: "Via A75 + viaduc, 1h25 ride. Viaduc de Millau, Aveyron, Roquefort and Grands Causses en route. Stops for sightseeing possible en route. ~€11 toll included.",
         heroTitle: "Taxi Montpellier → Millau",
         heroSubtitle: "Your Montpellier → Millau transfer at €145 — €175. 115 km, under the world's tallest bridge.",
         description: "Millau, home of the world's tallest bridge, is 1h25 from Montpellier.",

@@ -27,8 +27,8 @@ export const trajetsFontainebleau: Trajet[] = [
     hub: "fontainebleau",
     i18n: {
       fr: {
-        metaTitle: "Taxi Fontainebleau → Paris | Prix fixe dès 80 € | TaxiNeo",
-        metaDescription: "Taxi Fontainebleau → Paris. 65 km, 55 min, dès 80 €. A6, transfert direct porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Fontainebleau → Paris | 65 km, dès 80 € | TaxiNeo",
+        metaDescription: "Par A6, 55 min de trajet. Passage par Château de Fontainebleau, Forêt domaniale, Porte-à-porte et Nuit. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Fontainebleau → Paris",
         heroSubtitle: "Transfert Fontainebleau → Paris au prix fixe de 80 — 105 €. 65 km, direct par l'A6.",
         description: "Paris est à 55 min de Fontainebleau par l'autoroute A6, liaison directe depuis la cité impériale.",
@@ -46,8 +46,8 @@ export const trajetsFontainebleau: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Fontainebleau → Paris | Fixed price from €80 | TaxiNeo",
-        metaDescription: "Taxi Fontainebleau → Paris. 65 km, 55 min, from €80. A6 motorway, direct door-to-door. Book 24/7.",
+        metaTitle: "Taxi Fontainebleau → Paris | 65 km, from €80 | TaxiNeo",
+        metaDescription: "Direct route via A6, 55 min. Château de Fontainebleau, Forêt domaniale, Porte-à-porte and Nuit en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Fontainebleau → Paris",
         heroSubtitle: "Your Fontainebleau → Paris transfer at €80 — €105. 65 km, via the A6.",
         description: "Paris is 55 min from Fontainebleau via the A6 motorway, direct from the imperial city.",
@@ -92,8 +92,8 @@ export const trajetsFontainebleau: Trajet[] = [
     hub: "fontainebleau",
     i18n: {
       fr: {
-        metaTitle: "Taxi Fontainebleau → Orly | Prix fixe dès 70 € | TaxiNeo",
-        metaDescription: "Taxi Fontainebleau → Aéroport d'Orly. 55 km, 45 min, dès 70 €. A6, transfert direct. Réservation 24h/24.",
+        metaTitle: "Taxi Fontainebleau → Aéroport d'Orly | 55 km, 70 € | TaxiNeo",
+        metaDescription: "Via A6 en 45 min. Aéroport Orly, Navette vol, Château UNESCO et Forêt en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Fontainebleau → Aéroport d'Orly",
         heroSubtitle: "Transfert Fontainebleau → Orly au prix fixe de 70 — 90 €. 55 km, direct par l'A6.",
         description: "L'aéroport d'Orly est à 45 min de Fontainebleau par l'autoroute A6, transfert idéal pour vos vols.",
@@ -111,8 +111,8 @@ export const trajetsFontainebleau: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Fontainebleau → Orly Airport | Fixed price from €70 | TaxiNeo",
-        metaDescription: "Taxi Fontainebleau → Orly Airport. 55 km, 45 min, from €70. A6 motorway, direct transfer. Book 24/7.",
+        metaTitle: "Taxi Fontainebleau → Aéroport d'Orly | 55 km, €70 | TaxiNeo",
+        metaDescription: "Via A6, 45 min ride. Aéroport Orly, Navette vol, Château UNESCO and Forêt en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Fontainebleau → Orly Airport",
         heroSubtitle: "Your Fontainebleau → Orly transfer at €70 — €90. 55 km, via the A6.",
         description: "Orly Airport is 45 min from Fontainebleau via the A6 motorway, ideal for your flights.",
@@ -157,8 +157,8 @@ export const trajetsFontainebleau: Trajet[] = [
     hub: "fontainebleau",
     i18n: {
       fr: {
-        metaTitle: "Taxi Fontainebleau → Melun | Prix fixe dès 25 € | TaxiNeo",
-        metaDescription: "Taxi Fontainebleau → Melun. 18 km, 20 min, dès 25 €. D606, transfert direct. Préfecture, gare, tribunal. Réservation 24h/24.",
+        metaTitle: "Taxi Fontainebleau → Melun | 18 km, dès 25 € | TaxiNeo",
+        metaDescription: "Via D606 en 20 min. Seine-et-Marne, Préfecture 77, Gare Transilien et Brie en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Fontainebleau → Melun",
         heroSubtitle: "Transfert Fontainebleau → Melun au prix fixe de 25 — 35 €. 18 km, sans péage.",
         description: "Melun, préfecture de Seine-et-Marne, est à 20 min de Fontainebleau par la D606.",
@@ -176,8 +176,8 @@ export const trajetsFontainebleau: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Fontainebleau → Melun | Fixed price from €25 | TaxiNeo",
-        metaDescription: "Taxi Fontainebleau → Melun. 18 km, 20 min, from €25. D606, direct transfer. Prefecture, station, court. Book 24/7.",
+        metaTitle: "Taxi Fontainebleau → Melun | 18 km, from €25 | TaxiNeo",
+        metaDescription: "Via D606, 20 min ride. Seine-et-Marne, Préfecture 77, Gare Transilien and Brie en route. Drop-off at your exact address. Door-to-door, luggage included.",
         heroTitle: "Taxi Fontainebleau → Melun",
         heroSubtitle: "Your Fontainebleau → Melun transfer at €25 — €35. 18 km, no tolls.",
         description: "Melun, prefecture of Seine-et-Marne, is 20 min from Fontainebleau via the D606.",
@@ -222,8 +222,8 @@ export const trajetsFontainebleau: Trajet[] = [
     hub: "fontainebleau",
     i18n: {
       fr: {
-        metaTitle: "Taxi Fontainebleau → Sens | Prix fixe dès 85 € | TaxiNeo",
-        metaDescription: "Taxi Fontainebleau → Sens. 70 km, 55 min, dès 85 €. A6, cathédrale gothique, Bourgogne. Réservation 24h/24.",
+        metaTitle: "Taxi Fontainebleau → Sens | 70 km, dès 85 € | TaxiNeo",
+        metaDescription: "Via A6 en 55 min. Bourgogne, Cathédrale de Sens, Yonne et Patrimoine en chemin. Dépose à votre adresse exacte. Alternative directe au train ou au bus.",
         heroTitle: "Taxi Fontainebleau → Sens",
         heroSubtitle: "Transfert Fontainebleau → Sens au prix fixe de 85 — 110 €. 70 km, porte de la Bourgogne.",
         description: "Sens, première grande cathédrale gothique de France, est à 55 min de Fontainebleau par l'A6.",
@@ -241,8 +241,8 @@ export const trajetsFontainebleau: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Fontainebleau → Sens | Fixed price from €85 | TaxiNeo",
-        metaDescription: "Taxi Fontainebleau → Sens. 70 km, 55 min, from €85. A6, Gothic cathedral, Burgundy. Book 24/7.",
+        metaTitle: "Taxi Fontainebleau → Sens | 70 km, from €85 | TaxiNeo",
+        metaDescription: "Via A6, 55 min ride. Bourgogne, Cathédrale de Sens, Yonne and Patrimoine en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Fontainebleau → Sens",
         heroSubtitle: "Your Fontainebleau → Sens transfer at €85 — €110. 70 km, gateway to Burgundy.",
         description: "Sens, home to France's first great Gothic cathedral, is 55 min from Fontainebleau.",
@@ -287,8 +287,8 @@ export const trajetsFontainebleau: Trajet[] = [
     hub: "fontainebleau",
     i18n: {
       fr: {
-        metaTitle: "Taxi Fontainebleau → Nemours | Prix fixe dès 25 € | TaxiNeo",
-        metaDescription: "Taxi Fontainebleau → Nemours. 20 km, 20 min, dès 25 €. D607, Gâtinais, château médiéval. Réservation 24h/24.",
+        metaTitle: "Taxi Fontainebleau → Nemours | 20 km, dès 25 € | TaxiNeo",
+        metaDescription: "Itinéraire D607, environ 20 min. Passage par Loing, Gâtinais, Musée de Préhistoire et Château médiéval. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Fontainebleau → Nemours",
         heroSubtitle: "Transfert Fontainebleau → Nemours au prix fixe de 25 — 35 €. 20 km, sans péage.",
         description: "Nemours, cité médiévale au bord du Loing, est à 20 min de Fontainebleau par la D607.",
@@ -306,8 +306,8 @@ export const trajetsFontainebleau: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Fontainebleau → Nemours | Fixed price from €25 | TaxiNeo",
-        metaDescription: "Taxi Fontainebleau → Nemours. 20 km, 20 min, from €25. D607, medieval castle, Gâtinais. Book 24/7.",
+        metaTitle: "Taxi Fontainebleau → Nemours | 20 km, from €25 | TaxiNeo",
+        metaDescription: "D607 route, approximately 20 min. Loing, Gâtinais, Musée de Préhistoire and Château médiéval en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Fontainebleau → Nemours",
         heroSubtitle: "Your Fontainebleau → Nemours transfer at €25 — €35. 20 km, no tolls.",
         description: "Nemours, a medieval town on the Loing river, is 20 min from Fontainebleau via the D607.",

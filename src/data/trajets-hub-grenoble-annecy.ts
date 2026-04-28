@@ -30,8 +30,8 @@ export const trajetsGrenobleAnnecy: Trajet[] = [
     hub: "grenoble",
     i18n: {
       fr: {
-        metaTitle: "Taxi Grenoble → Chamrousse | Prix fixe dès 55 € | TaxiNeo",
-        metaDescription: "Taxi Grenoble → Chamrousse. 30 km, 40 min, dès 55 €. Station de ski de Belledonne, site des JO 1968. Réservation 24h/24.",
+        metaTitle: "Taxi Grenoble → Chamrousse | 30 km, dès 55 € | TaxiNeo",
+        metaDescription: "Via D111 en 40 min. Station de ski, Belledonne et JO 1968 en chemin. Arrêt visite possible en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Grenoble → Chamrousse",
         heroSubtitle: "Transfert Grenoble → Chamrousse au prix fixe de 55 — 70 €. 30 km par la D111.",
         description: "Chamrousse, station de ski mythique de la chaîne de Belledonne ayant accueilli les épreuves de ski alpin des Jeux Olympiques de 1968, est située à seulement 30 km de Grenoble par la route départementale D111. Votre chauffeur TaxiNeo vous conduit directement au pied des pistes, été comme hiver.",
@@ -49,8 +49,8 @@ export const trajetsGrenobleAnnecy: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Grenoble → Chamrousse | Fixed price from €55 | TaxiNeo",
-        metaDescription: "Taxi Grenoble → Chamrousse. 30 km, 40 min, from €55. Belledonne ski resort, 1968 Olympics site. Book 24/7.",
+        metaTitle: "Taxi Grenoble → Chamrousse | 30 km, from €55 | TaxiNeo",
+        metaDescription: "Via D111, 40 min ride. Station de ski, Belledonne and JO 1968 along the way. Stops for sightseeing possible en route. Perfect for a day trip without driving.",
         heroTitle: "Taxi Grenoble → Chamrousse",
         heroSubtitle: "Your Grenoble → Chamrousse transfer at €55 — €70. 30 km via the D111.",
         description: "Chamrousse, the legendary Belledonne ski resort that hosted the 1968 Olympic alpine skiing events, is just 30 km from Grenoble via the D111 mountain road. Your TaxiNeo driver takes you directly to the slopes, summer and winter.",
@@ -95,8 +95,8 @@ export const trajetsGrenobleAnnecy: Trajet[] = [
     hub: "grenoble",
     i18n: {
       fr: {
-        metaTitle: "Taxi Grenoble → L'Alpe d'Huez | Prix fixe dès 100 € | TaxiNeo",
-        metaDescription: "Taxi Grenoble → L'Alpe d'Huez. 63 km, 1h05, dès 100 €. Station mythique du Tour de France, 21 virages légendaires. Réservation 24h/24.",
+        metaTitle: "Taxi Grenoble → L'Alpe d'Huez | 63 km, dès 100 € | TaxiNeo",
+        metaDescription: "Via A480 puis D1091 et D211 en 1h05. N85, 21 virages et Oisans en chemin. Arrêt visite possible en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Grenoble → L'Alpe d'Huez",
         heroSubtitle: "Transfert Grenoble → L'Alpe d'Huez au prix fixe de 100 — 130 €. 63 km via la D1091 et les 21 virages.",
         description: "L'Alpe d'Huez, station de ski mythique de l'Oisans et montée légendaire du Tour de France avec ses 21 virages numérotés, est à 1h05 de Grenoble par la vallée de la Romanche et la D211.",
@@ -114,8 +114,8 @@ export const trajetsGrenobleAnnecy: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Grenoble → Alpe d'Huez | Fixed price from €100 | TaxiNeo",
-        metaDescription: "Taxi Grenoble → Alpe d'Huez. 63 km, 1h05, from €100. Legendary Tour de France climb, 21 hairpin bends. Book 24/7.",
+        metaTitle: "Taxi Grenoble → L'Alpe d'Huez | 63 km, from €100 | TaxiNeo",
+        metaDescription: "Via A480 then D1091 et D211, 1h05 ride. N85, 21 virages and Oisans along the way. Stops for sightseeing possible en route. Up to 1h25 during rush hour.",
         heroTitle: "Taxi Grenoble → L'Alpe d'Huez",
         heroSubtitle: "Your Grenoble → Alpe d'Huez transfer at €100 — €130. 63 km via the D1091 and the 21 hairpin bends.",
         description: "L'Alpe d'Huez, the legendary Oisans ski resort and iconic Tour de France climb with its 21 numbered hairpin bends, is 1h05 from Grenoble via the Romanche valley and the D211.",
@@ -160,8 +160,8 @@ export const trajetsGrenobleAnnecy: Trajet[] = [
     hub: "grenoble",
     i18n: {
       fr: {
-        metaTitle: "Taxi Grenoble → Les Deux Alpes | Prix fixe dès 110 € | TaxiNeo",
-        metaDescription: "Taxi Grenoble → Les Deux Alpes. 71 km, 1h15, dès 110 €. Glacier à 3 600 m, ski d'été, snowpark. Réservation 24h/24.",
+        metaTitle: "Taxi Grenoble → Les Deux Alpes | 71 km, dès 110 € | TaxiNeo",
+        metaDescription: "Via A480 puis D1091 et D213 en 1h15. Glacier de Mont-de-Lans et Oisans en chemin. Arrêt visite possible en chemin. Arrêt possible pour visites ou photos.",
         heroTitle: "Taxi Grenoble → Les Deux Alpes",
         heroSubtitle: "Transfert Grenoble → Les Deux Alpes au prix fixe de 110 — 140 €. 71 km par la D1091 et D213.",
         description: "Les Deux Alpes, station de ski réputée pour son glacier à 3 600 m permettant le ski toute l'année et son snowpark de renommée mondiale, est à 1h15 de Grenoble par la vallée de la Romanche.",
@@ -179,8 +179,8 @@ export const trajetsGrenobleAnnecy: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Grenoble → Les Deux Alpes | Fixed price from €110 | TaxiNeo",
-        metaDescription: "Taxi Grenoble → Les Deux Alpes. 71 km, 1h15, from €110. Glacier at 3,600 m, summer skiing, snowpark. Book 24/7.",
+        metaTitle: "Taxi Grenoble → Les Deux Alpes | 71 km, from €110 | TaxiNeo",
+        metaDescription: "Via A480 then D1091 et D213, 1h15 ride. Glacier de Mont-de-Lans and Oisans along the way. Stops for sightseeing possible en route. No toll on this route.",
         heroTitle: "Taxi Grenoble → Les Deux Alpes",
         heroSubtitle: "Your Grenoble → Les Deux Alpes transfer at €110 — €140. 71 km via the D1091 and D213.",
         description: "Les Deux Alpes, famous for its glacier at 3,600 m offering year-round skiing and its world-class snowpark, is 1h15 from Grenoble via the Romanche valley.",
@@ -225,8 +225,8 @@ export const trajetsGrenobleAnnecy: Trajet[] = [
     hub: "grenoble",
     i18n: {
       fr: {
-        metaTitle: "Taxi Grenoble → Villard-de-Lans | Prix fixe dès 60 € | TaxiNeo",
-        metaDescription: "Taxi Grenoble → Villard-de-Lans. 34 km, 40 min, dès 60 €. Plateau du Vercors, ski nordique, gorges d'Engins. Réservation 24h/24.",
+        metaTitle: "Taxi Grenoble → Villard-de-Lans | 34 km, dès 60 € | TaxiNeo",
+        metaDescription: "Via D531 en 40 min. Vercors, Gorges d'Engins et Plateau du Vercors en chemin. Arrêt visite possible en chemin. Idéal pour une excursion sans conduire.",
         heroTitle: "Taxi Grenoble → Villard-de-Lans",
         heroSubtitle: "Transfert Grenoble → Villard-de-Lans au prix fixe de 60 — 75 €. 34 km par la D531.",
         description: "Villard-de-Lans, station familiale du plateau du Vercors connue pour ses paysages spectaculaires et son ski nordique, est à 40 minutes de Grenoble par les gorges d'Engins.",
@@ -244,8 +244,8 @@ export const trajetsGrenobleAnnecy: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Grenoble → Villard-de-Lans | Fixed price from €60 | TaxiNeo",
-        metaDescription: "Taxi Grenoble → Villard-de-Lans. 34 km, 40 min, from €60. Vercors plateau, cross-country skiing, Engins gorges. Book 24/7.",
+        metaTitle: "Taxi Grenoble → Villard-de-Lans | 34 km, from €60 | TaxiNeo",
+        metaDescription: "Via D531, 40 min ride. Vercors, Gorges d'Engins and Plateau du Vercors along the way. Stops for sightseeing possible en route. Up to 55 min during rush hour.",
         heroTitle: "Taxi Grenoble → Villard-de-Lans",
         heroSubtitle: "Your Grenoble → Villard-de-Lans transfer at €60 — €75. 34 km via the D531.",
         description: "Villard-de-Lans, a family-friendly resort on the Vercors plateau known for its spectacular landscapes and cross-country skiing, is 40 minutes from Grenoble through the Engins gorges.",
@@ -290,8 +290,8 @@ export const trajetsGrenobleAnnecy: Trajet[] = [
     hub: "grenoble",
     i18n: {
       fr: {
-        metaTitle: "Taxi Grenoble → Voiron | Prix fixe dès 45 € | TaxiNeo",
-        metaDescription: "Taxi Grenoble → Voiron. 28 km, 30 min, dès 45 €. Caves de la Chartreuse, lac de Paladru, massif de la Chartreuse. Réservation 24h/24.",
+        metaTitle: "Taxi Grenoble → Voiron | 28 km, dès 45 € | TaxiNeo",
+        metaDescription: "Via A48 en 30 min. Chartreuse, Caves de la Chartreuse et Lac de Paladru en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Grenoble → Voiron",
         heroSubtitle: "Transfert Grenoble → Voiron au prix fixe de 45 — 60 €. 28 km par l'A48.",
         description: "Voiron, porte d'entrée du massif de la Chartreuse et ville abritant les célèbres caves de la Chartreuse où est élaborée la mythique liqueur des moines chartreux, est à 30 minutes de Grenoble par l'A48.",
@@ -309,8 +309,8 @@ export const trajetsGrenobleAnnecy: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Grenoble → Voiron | Fixed price from €45 | TaxiNeo",
-        metaDescription: "Taxi Grenoble → Voiron. 28 km, 30 min, from €45. Chartreuse cellars, Paladru lake, Chartreuse massif. Book 24/7.",
+        metaTitle: "Taxi Grenoble → Voiron | 28 km, from €45 | TaxiNeo",
+        metaDescription: "A48 route, approximately 30 min. Chartreuse, Caves de la Chartreuse and Lac de Paladru along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Grenoble → Voiron",
         heroSubtitle: "Your Grenoble → Voiron transfer at €45 — €60. 28 km via the A48.",
         description: "Voiron, gateway to the Chartreuse massif and home to the famous Chartreuse cellars where the monks' legendary liqueur is produced, is 30 minutes from Grenoble via the A48.",

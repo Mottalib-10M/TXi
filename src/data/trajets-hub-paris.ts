@@ -32,8 +32,8 @@ export const trajetsParis: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Versailles | Dès 45 € | TaxiNeo",
-        metaDescription: "Taxi Paris Versailles : 22 km, 35 min, prix fixe dès 45 €. Transfert direct vers le Château de Versailles. Réservation en ligne 24h/24.",
+        metaTitle: "Taxi Paris → Versailles | 22 km, dès 45 € | TaxiNeo",
+        metaDescription: "Par A13 puis N12, 35 min de trajet. Pont de Sèvres, Forêt de Meudon et Château de Versailles en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Paris → Versailles",
         heroSubtitle: "Votre trajet Paris → Versailles au prix fixe de 45 — 60 €. Chauffeur professionnel, réservation en ligne 24h/24.",
         description: "Le trajet Paris — Versailles est l'un des plus empruntés d'Île-de-France, reliant la capitale à la célèbre ville royale des Yvelines. Que vous visitiez le Château de Versailles, que vous travailliez dans le quartier Satory ou que vous résidiez dans cette ville prisée, TaxiNeo vous offre un transfert confortable et ponctuel en 35 minutes.",
@@ -51,8 +51,8 @@ export const trajetsParis: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Versailles | From €45 | TaxiNeo",
-        metaDescription: "Taxi Paris to Versailles: 22 km, 35 min, fixed price from €45. Direct transfer to the Palace of Versailles. Online booking 24/7.",
+        metaTitle: "Taxi Paris → Versailles | 22 km, from €45 | TaxiNeo",
+        metaDescription: "Via A13 then N12, 35 min ride. Pont de Sèvres, Forêt de Meudon and Château de Versailles along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Paris → Versailles",
         heroSubtitle: "Your Paris → Versailles ride at a fixed price of €45 — €60. Professional driver, online booking 24/7.",
         description: "The Paris — Versailles route is one of the most popular in the Paris region, connecting the capital to the famous royal city. Whether visiting the Palace of Versailles, working in the Satory district, or living in this sought-after city, TaxiNeo offers a comfortable 35-minute transfer.",
@@ -99,8 +99,8 @@ export const trajetsParis: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → La Défense | Dès 30 € | TaxiNeo",
-        metaDescription: "Taxi Paris La Défense : 12 km, 25 min, prix fixe dès 30 €. Transfert direct vers le quartier d'affaires. Réservation 24h/24.",
+        metaTitle: "Taxi Paris → La Défense | 12 km, dès 30 € | TaxiNeo",
+        metaDescription: "Via Avenue Charles de Gaulle / A14 en 25 min. Arc de Triomphe, Grande Arche et Tours Coeur Défense en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Paris → La Défense",
         heroSubtitle: "Votre trajet Paris → La Défense au prix fixe de 30 — 42 €. Chauffeur professionnel, réservation en ligne 24h/24.",
         description: "Le trajet Paris — La Défense relie le cœur de la capitale au premier quartier d'affaires européen. Avec ses 180 000 salariés quotidiens et ses tours emblématiques, La Défense est une destination incontournable pour les professionnels. TaxiNeo vous y conduit en 25 minutes, porte-à-porte.",
@@ -118,8 +118,8 @@ export const trajetsParis: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → La Défense | From €30 | TaxiNeo",
-        metaDescription: "Taxi Paris to La Défense: 12 km, 25 min, fixed price from €30. Direct transfer to the business district. Online booking 24/7.",
+        metaTitle: "Taxi Paris → La Défense | 12 km, from €30 | TaxiNeo",
+        metaDescription: "Via Avenue Charles de Gaulle / A14, 25 min ride. Arc de Triomphe, Grande Arche and Tours Coeur Défense along the way. Faster and more direct than train or bus.",
         heroTitle: "Taxi Paris → La Défense",
         heroSubtitle: "Your Paris → La Défense ride at a fixed price of €30 — €42. Professional driver, online booking 24/7.",
         description: "The Paris — La Défense route connects the heart of the capital to Europe's largest business district. With 180,000 daily workers and iconic towers, La Défense is essential for professionals. TaxiNeo gets you there in 25 minutes, door-to-door.",
@@ -166,8 +166,8 @@ export const trajetsParis: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Saclay | Dès 50 € | TaxiNeo",
-        metaDescription: "Taxi Paris Saclay : 27 km, 40 min, prix fixe dès 50 €. Transfert direct vers le plateau de Saclay et Polytechnique. Réservation 24h/24.",
+        metaTitle: "Taxi Paris → Saclay | forfait dès 50 €, 40 min | TaxiNeo",
+        metaDescription: "Via A6 puis N118 en 40 min. Plateau de Saclay, Polytechnique et CEA en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Paris → Saclay",
         heroSubtitle: "Votre trajet Paris → Saclay au prix fixe de 50 — 70 €. Chauffeur professionnel, réservation en ligne 24h/24.",
         description: "Le plateau de Saclay est devenu le pôle scientifique et technologique majeur de la France, regroupant l'École Polytechnique, CentraleSupélec, le CEA et de nombreuses entreprises innovantes. Le taxi est souvent la solution la plus pratique pour rejoindre ce campus mal desservi par les transports en commun.",
@@ -185,8 +185,8 @@ export const trajetsParis: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Saclay | From €50 | TaxiNeo",
-        metaDescription: "Taxi Paris to Saclay: 27 km, 40 min, fixed price from €50. Direct transfer to the Saclay plateau and Polytechnique. Online booking 24/7.",
+        metaTitle: "Taxi Paris → Saclay | Fixed price from €50 | TaxiNeo",
+        metaDescription: "Via A6 then N118, 40 min ride. Plateau de Saclay, Polytechnique and CEA along the way. Drop-off at your exact address. Door-to-door, luggage included.",
         heroTitle: "Taxi Paris → Saclay",
         heroSubtitle: "Your Paris → Saclay ride at a fixed price of €50 — €70. Professional driver, online booking 24/7.",
         description: "The Saclay plateau has become France's major scientific and technological hub, home to École Polytechnique, CentraleSupélec, CEA and many innovative companies. A taxi is often the most practical solution to reach this campus, poorly served by public transport.",
@@ -233,8 +233,8 @@ export const trajetsParis: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Villepinte | Dès 42 € | TaxiNeo",
-        metaDescription: "Taxi Paris Villepinte : 22 km, 30 min, prix fixe dès 42 €. Transfert direct vers le Parc des Expositions. Réservation en ligne 24h/24.",
+        metaTitle: "Taxi Paris → Villepinte | 22 km, dès 42 € | TaxiNeo",
+        metaDescription: "Itinéraire A1 puis A104, environ 30 min. Parc des Expositions et Parc de la Poudrerie sur le parcours. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Paris → Villepinte",
         heroSubtitle: "Votre trajet Paris → Villepinte au prix fixe de 42 — 58 €. Chauffeur professionnel, réservation en ligne 24h/24.",
         description: "Villepinte est principalement connue pour son Parc des Expositions de Paris-Nord Villepinte, le plus grand centre d'expositions de France. Le taxi est le moyen le plus pratique pour s'y rendre, surtout lors des grands salons comme le Salon de l'Aéronautique du Bourget, le SIAL ou Maison & Objet.",
@@ -252,8 +252,8 @@ export const trajetsParis: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Villepinte | From €42 | TaxiNeo",
-        metaDescription: "Taxi Paris to Villepinte: 22 km, 30 min, fixed price from €42. Direct transfer to the Exhibition Centre. Online booking 24/7.",
+        metaTitle: "Taxi Paris → Villepinte | 22 km, from €42 | TaxiNeo",
+        metaDescription: "A1 then A104 route, approximately 30 min. Parc des Expositions and Parc de la Poudrerie along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Paris → Villepinte",
         heroSubtitle: "Your Paris → Villepinte ride at a fixed price of €42 — €58. Professional driver, online booking 24/7.",
         description: "Villepinte is known for the Paris-Nord Villepinte Exhibition Centre, France's largest. A taxi is the most practical way to get there, especially during major trade shows like the Paris Air Show, SIAL or Maison & Objet.",
@@ -300,8 +300,8 @@ export const trajetsParis: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Stade de France | Dès 25 € | TaxiNeo",
-        metaDescription: "Taxi Paris Stade de France : 8 km, 20 min, dès 25 €. Dépose directe aux portes du stade. Idéal matchs et concerts. Réservation 24h/24.",
+        metaTitle: "Taxi Paris → Stade de France | 8 km, dès 25 € | TaxiNeo",
+        metaDescription: "Via A1 / Porte de la Chapelle en 20 min. Porte de la Chapelle, Saint-Denis et Basilique Saint-Denis en chemin. Alternative directe au train ou au bus.",
         heroTitle: "Taxi Paris → Stade de France",
         heroSubtitle: "Votre trajet Paris → Stade de France au prix fixe de 25 — 35 €. Chauffeur professionnel, réservation en ligne 24h/24.",
         description: "Le Stade de France à Saint-Denis accueille les plus grands événements sportifs et musicaux de France. Avec ses 80 000 places, il est le théâtre des matchs de l'équipe de France de football et de rugby, ainsi que des concerts des plus grandes stars internationales. TaxiNeo vous y conduit en 20 minutes depuis Paris.",
@@ -319,8 +319,8 @@ export const trajetsParis: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Stade de France | From €25 | TaxiNeo",
-        metaDescription: "Taxi Paris to Stade de France: 8 km, 20 min, from €25. Direct drop-off at stadium gates. Ideal for matches and concerts. Booking 24/7.",
+        metaTitle: "Taxi Paris → Stade de France | 8 km, from €25 | TaxiNeo",
+        metaDescription: "Via A1 / Porte de la Chapelle, 20 min ride. Porte de la Chapelle, Saint-Denis and Basilique Saint-Denis along the way. Drop-off at your exact address.",
         heroTitle: "Taxi Paris → Stade de France",
         heroSubtitle: "Your Paris → Stade de France ride at a fixed price of €25 — €35. Professional driver, online booking 24/7.",
         description: "The Stade de France in Saint-Denis hosts France's biggest sporting and musical events. With 80,000 seats, it stages French national football and rugby matches plus concerts by international stars. TaxiNeo gets you there in 20 minutes from Paris.",
@@ -367,8 +367,8 @@ export const trajetsParis: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Val d'Europe | Dès 55 € | TaxiNeo",
-        metaDescription: "Taxi Paris Val d'Europe : 38 km, 40 min, prix fixe dès 55 €. Transfert Disneyland, La Vallée Village, centre commercial. Réservation 24h/24.",
+        metaTitle: "Taxi Paris → Val d'Europe | 38 km, dès 55 € | TaxiNeo",
+        metaDescription: "Via A4 en 40 min. Disneyland Paris, La Vallée Village, Centre commercial Val d'Europe sur le parcours. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Paris → Val d'Europe",
         heroSubtitle: "Votre trajet Paris → Val d'Europe au prix fixe de 55 — 75 €. Chauffeur professionnel, réservation en ligne 24h/24.",
         description: "Val d'Europe, à Marne-la-Vallée, est un pôle touristique et commercial majeur de l'est francilien. Il regroupe Disneyland Paris, La Vallée Village (outlet de luxe), le centre commercial Val d'Europe et le Sea Life Aquarium. TaxiNeo vous y conduit confortablement en 40 minutes.",
@@ -386,8 +386,8 @@ export const trajetsParis: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Val d'Europe | From €55 | TaxiNeo",
-        metaDescription: "Taxi Paris to Val d'Europe: 38 km, 40 min, fixed price from €55. Transfer to Disneyland, La Vallée Village, shopping centre. Booking 24/7.",
+        metaTitle: "Taxi Paris → Val d'Europe | 38 km, from €55 | TaxiNeo",
+        metaDescription: "Via A4, 40 min ride. Disneyland Paris, La Vallée Village and Centre commercial Val d'Europe along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Paris → Val d'Europe",
         heroSubtitle: "Your Paris → Val d'Europe ride at a fixed price of €55 — €75. Professional driver, online booking 24/7.",
         description: "Val d'Europe in Marne-la-Vallée is a major tourist and shopping hub in eastern Paris region. It includes Disneyland Paris, La Vallée Village luxury outlet, Val d'Europe shopping centre and Sea Life Aquarium. TaxiNeo takes you there comfortably in 40 minutes.",
@@ -434,8 +434,8 @@ export const trajetsParis: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Rungis | Dès 30 € | TaxiNeo",
-        metaDescription: "Taxi Paris Rungis : 14 km, 25 min, prix fixe dès 30 €. Transfert direct vers le MIN de Rungis. Service de nuit disponible. Réservation 24h/24.",
+        metaTitle: "Taxi Paris → Rungis | forfait dès 30 €, 25 min | TaxiNeo",
+        metaDescription: "Via A6 puis A86 en 25 min. En passant par Marché de Rungis, A6 Autoroute du Soleil et Aéroport d'Orly. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Paris → Rungis",
         heroSubtitle: "Votre trajet Paris → Rungis au prix fixe de 30 — 42 €. Service de nuit pour les professionnels du MIN. Réservation 24h/24.",
         description: "Rungis est mondialement connue pour son Marché d'Intérêt National (MIN), le plus grand marché de produits frais au monde. Avec ses 234 hectares, il approvisionne quotidiennement les restaurants, hôtels et commerces de toute l'Île-de-France. TaxiNeo propose un service adapté aux horaires atypiques des professionnels du marché.",
@@ -453,8 +453,8 @@ export const trajetsParis: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Rungis | From €30 | TaxiNeo",
-        metaDescription: "Taxi Paris to Rungis: 14 km, 25 min, fixed price from €30. Direct transfer to the Rungis wholesale market. Night service available. Booking 24/7.",
+        metaTitle: "Taxi Paris → Rungis | Fixed price from €30 | TaxiNeo",
+        metaDescription: "Via A6 then A86, 25 min ride. Marché de Rungis, A6 Autoroute du Soleil and Aéroport d'Orly along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Paris → Rungis",
         heroSubtitle: "Your Paris → Rungis ride at a fixed price of €30 — €42. Night service for market professionals. Online booking 24/7.",
         description: "Rungis is world-famous for its International Market (MIN), the world's largest fresh produce market. Covering 234 hectares, it supplies restaurants, hotels and shops across the Paris region daily. TaxiNeo offers a service adapted to market professionals' atypical schedules.",
@@ -501,8 +501,8 @@ export const trajetsParis: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Massy | Dès 38 € | TaxiNeo",
-        metaDescription: "Taxi Paris Massy : 19 km, 30 min, prix fixe dès 38 €. Transfert direct gare TGV Massy. Réservation en ligne 24h/24.",
+        metaTitle: "Taxi Paris → Massy | forfait dès 38 €, 30 min | TaxiNeo",
+        metaDescription: "Via A6 puis N118 ou A10 en 30 min. En passant par Gare TGV Massy, Opéra de Massy et Plateau de Saclay. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Paris → Massy",
         heroSubtitle: "Votre trajet Paris → Massy au prix fixe de 38 — 52 €. Chauffeur professionnel, réservation en ligne 24h/24.",
         description: "Massy, dans l'Essonne, est un nœud de transport stratégique grâce à sa gare TGV qui permet de rejoindre le sud de la France sans passer par Paris. La ville est aussi un pôle économique dynamique avec le quartier d'affaires Atlantis et la proximité du plateau de Saclay.",
@@ -520,8 +520,8 @@ export const trajetsParis: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Massy | From €38 | TaxiNeo",
-        metaDescription: "Taxi Paris to Massy: 19 km, 30 min, fixed price from €38. Direct transfer to Massy TGV station. Online booking 24/7.",
+        metaTitle: "Taxi Paris → Massy | Fixed price from €38 | TaxiNeo",
+        metaDescription: "Via A6 then N118 ou A10, 30 min ride. Gare TGV Massy, Opéra de Massy and Plateau de Saclay along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Paris → Massy",
         heroSubtitle: "Your Paris → Massy ride at a fixed price of €38 — €52. Professional driver, online booking 24/7.",
         description: "Massy in Essonne is a strategic transport hub thanks to its TGV station connecting to southern France without going through Paris. The city is also a dynamic business hub with the Atlantis business district and proximity to the Saclay plateau.",
@@ -568,8 +568,8 @@ export const trajetsParis: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Cergy | Dès 55 € | TaxiNeo",
-        metaDescription: "Taxi Paris Cergy : 35 km, 40 min, prix fixe dès 55 €. Transfert direct vers la préfecture du Val-d'Oise. Réservation en ligne 24h/24.",
+        metaTitle: "Taxi Paris → Cergy | forfait dès 55 €, 40 min | TaxiNeo",
+        metaDescription: "Via A15 en 40 min. En passant par A15 Autoroute, Préfecture du Val-d'Oise et Base de loisirs de Cergy. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Paris → Cergy",
         heroSubtitle: "Votre trajet Paris → Cergy au prix fixe de 55 — 72 €. Chauffeur professionnel, réservation en ligne 24h/24.",
         description: "Cergy-Pontoise, ville nouvelle et préfecture du Val-d'Oise, est un pôle administratif, universitaire et de loisirs au nord-ouest de Paris. Le taxi est une alternative confortable au RER A pour rejoindre cette agglomération de 200 000 habitants.",
@@ -587,8 +587,8 @@ export const trajetsParis: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Cergy | From €55 | TaxiNeo",
-        metaDescription: "Taxi Paris to Cergy: 35 km, 40 min, fixed price from €55. Direct transfer to Val-d'Oise prefecture. Online booking 24/7.",
+        metaTitle: "Taxi Paris → Cergy | Fixed price from €55 | TaxiNeo",
+        metaDescription: "Via A15, 40 min ride. A15 Autoroute, Préfecture du Val-d'Oise and Base de loisirs de Cergy along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Paris → Cergy",
         heroSubtitle: "Your Paris → Cergy ride at a fixed price of €55 — €72. Professional driver, online booking 24/7.",
         description: "Cergy-Pontoise, new town and Val-d'Oise prefecture, is an administrative, university and leisure hub northwest of Paris. A taxi is a comfortable alternative to the RER A to reach this 200,000-inhabitant conurbation.",
@@ -635,8 +635,8 @@ export const trajetsParis: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Évry | Dès 50 € | TaxiNeo",
-        metaDescription: "Taxi Paris Évry : 32 km, 35 min, prix fixe dès 50 €. Transfert direct vers la préfecture de l'Essonne. Réservation en ligne 24h/24.",
+        metaTitle: "Taxi Paris → Évry-Courcouronnes | 32 km, dès 50 € | TaxiNeo",
+        metaDescription: "Par A6 puis N104, 35 min de trajet. Passage par A6 Autoroute du Soleil, Cathédrale d'Évry et Génopole. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Paris → Évry-Courcouronnes",
         heroSubtitle: "Votre trajet Paris → Évry au prix fixe de 50 — 68 €. Chauffeur professionnel, réservation en ligne 24h/24.",
         description: "Évry-Courcouronnes, préfecture de l'Essonne, est un pôle administratif et scientifique majeur du sud de l'Île-de-France. La ville abrite le Génopole, premier biocluster français dédié aux biotechnologies, et la seule cathédrale construite en France au XXe siècle.",
@@ -654,8 +654,8 @@ export const trajetsParis: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Évry | From €50 | TaxiNeo",
-        metaDescription: "Taxi Paris to Évry: 32 km, 35 min, fixed price from €50. Direct transfer to the Essonne prefecture. Online booking 24/7.",
+        metaTitle: "Taxi Paris → Évry-Courcouronnes | 32 km, from €50 | TaxiNeo",
+        metaDescription: "Via A6 then N104, 35 min ride. A6 Autoroute du Soleil, Cathédrale d'Évry and Génopole along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Paris → Évry-Courcouronnes",
         heroSubtitle: "Your Paris → Évry ride at a fixed price of €50 — €68. Professional driver, online booking 24/7.",
         description: "Évry-Courcouronnes, Essonne prefecture, is a major administrative and scientific hub in southern Paris region. The city houses Génopole, France's first biotech cluster, and the only cathedral built in France in the 20th century.",
@@ -702,8 +702,8 @@ export const trajetsParis: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Créteil | Dès 30 € | TaxiNeo",
-        metaDescription: "Taxi Paris Créteil : 14 km, 25 min, dès 30 €. Transfert direct préfecture, hôpital Mondor, université. Réservation 24h/24.",
+        metaTitle: "Taxi Paris → Créteil | forfait dès 30 €, 25 min | TaxiNeo",
+        metaDescription: "Via A4 puis A86 en 25 min. A4 Autoroute de l'Est, Lac de Créteil et Préfecture du Val-de-Marne en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Paris → Créteil",
         heroSubtitle: "Votre trajet Paris → Créteil au prix fixe de 30 — 42 €. Chauffeur professionnel, réservation en ligne 24h/24.",
         description: "Créteil, préfecture du Val-de-Marne, est une ville dynamique du sud-est parisien. Elle abrite l'hôpital Henri-Mondor (CHU), l'université Paris-Est Créteil (UPEC), le lac de Créteil et le centre commercial régional Créteil Soleil.",
@@ -721,8 +721,8 @@ export const trajetsParis: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Créteil | From €30 | TaxiNeo",
-        metaDescription: "Taxi Paris to Créteil: 14 km, 25 min, from €30. Direct transfer to prefecture, Mondor hospital, university. Booking 24/7.",
+        metaTitle: "Taxi Paris → Créteil | Fixed price from €30 | TaxiNeo",
+        metaDescription: "Via A4 then A86, 25 min ride. A4 Autoroute de l'Est, Lac de Créteil and Préfecture du Val-de-Marne along the way. Faster and more direct than train or bus.",
         heroTitle: "Taxi Paris → Créteil",
         heroSubtitle: "Your Paris → Créteil ride at a fixed price of €30 — €42. Professional driver, online booking 24/7.",
         description: "Créteil, Val-de-Marne prefecture, is a dynamic city in southeast Paris. It houses Henri-Mondor university hospital, Paris-Est Créteil University (UPEC), Créteil Lake and the Créteil Soleil shopping centre.",
@@ -769,8 +769,8 @@ export const trajetsParis: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Nanterre | Dès 32 € | TaxiNeo",
-        metaDescription: "Taxi Paris Nanterre : 14 km, 25 min, dès 32 €. Transfert préfecture, université, Paris La Défense Arena. Réservation 24h/24.",
+        metaTitle: "Taxi Paris → Nanterre | forfait dès 32 € | TaxiNeo",
+        metaDescription: "Par A14 / A86, 25 min de trajet. Préfecture des Hauts-de-Seine et Université Paris-Nanterre en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Paris → Nanterre",
         heroSubtitle: "Votre trajet Paris → Nanterre au prix fixe de 32 — 45 €. Chauffeur professionnel, réservation en ligne 24h/24.",
         description: "Nanterre, préfecture des Hauts-de-Seine, est une ville en pleine mutation qui accueille la préfecture départementale, l'université Paris-Nanterre (ancienne Paris X) et le Paris La Défense Arena, plus grande salle de spectacles d'Europe.",
@@ -788,8 +788,8 @@ export const trajetsParis: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Nanterre | From €32 | TaxiNeo",
-        metaDescription: "Taxi Paris to Nanterre: 14 km, 25 min, from €32. Transfer to prefecture, university, Paris La Défense Arena. Booking 24/7.",
+        metaTitle: "Taxi Paris → Nanterre | 25 min, from €32 | TaxiNeo",
+        metaDescription: "Via A14 / A86, 25 min ride. Préfecture des Hauts-de-Seine and Université Paris-Nanterre along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Paris → Nanterre",
         heroSubtitle: "Your Paris → Nanterre ride at a fixed price of €32 — €45. Professional driver, online booking 24/7.",
         description: "Nanterre, Hauts-de-Seine prefecture, is a fast-changing city home to the departmental prefecture, Paris-Nanterre University and the Paris La Défense Arena, Europe's largest indoor venue.",
@@ -836,8 +836,8 @@ export const trajetsParis: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Bobigny | Dès 25 € | TaxiNeo",
-        metaDescription: "Taxi Paris Bobigny : 10 km, 20 min, dès 25 €. Transfert direct préfecture, tribunal, mairie. Réservation en ligne 24h/24.",
+        metaTitle: "Taxi Paris → Bobigny | forfait dès 25 €, 20 min | TaxiNeo",
+        metaDescription: "Via A3 / Porte de Bagnolet en 20 min. Préfecture de Seine-Saint-Denis et Tribunal de Bobigny en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Paris → Bobigny",
         heroSubtitle: "Votre trajet Paris → Bobigny au prix fixe de 25 — 35 €. Chauffeur professionnel, réservation en ligne 24h/24.",
         description: "Bobigny, préfecture de la Seine-Saint-Denis, est un centre administratif et judiciaire essentiel. Le tribunal de grande instance, la préfecture et la mairie concentrent une activité quotidienne intense qui génère un besoin constant de transport fiable depuis Paris.",
@@ -855,8 +855,8 @@ export const trajetsParis: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Bobigny | From €25 | TaxiNeo",
-        metaDescription: "Taxi Paris to Bobigny: 10 km, 20 min, from €25. Direct transfer to prefecture, courthouse, town hall. Booking 24/7.",
+        metaTitle: "Taxi Paris → Bobigny | Fixed price from €25 | TaxiNeo",
+        metaDescription: "Via A3 / Porte de Bagnolet, 20 min ride. Préfecture de Seine-Saint-Denis and Tribunal de Bobigny along the way. Faster and more direct than train or bus.",
         heroTitle: "Taxi Paris → Bobigny",
         heroSubtitle: "Your Paris → Bobigny ride at a fixed price of €25 — €35. Professional driver, online booking 24/7.",
         description: "Bobigny, Seine-Saint-Denis prefecture, is an essential administrative and judicial centre. The courthouse, prefecture and town hall generate constant need for reliable transport from Paris.",
@@ -903,8 +903,8 @@ export const trajetsParis: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Pontoise | Dès 58 € | TaxiNeo",
-        metaDescription: "Taxi Paris Pontoise : 38 km, 42 min, dès 58 €. Transfert direct vers la cité historique. Réservation en ligne 24h/24.",
+        metaTitle: "Taxi Paris → Pontoise | forfait dès 58 € | TaxiNeo",
+        metaDescription: "Via A15 en 42 min. Vallée de l'Oise et Cathédrale Saint-Maclou en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Paris → Pontoise",
         heroSubtitle: "Votre trajet Paris → Pontoise au prix fixe de 58 — 78 €. Chauffeur professionnel, réservation en ligne 24h/24.",
         description: "Pontoise, sous-préfecture du Val-d'Oise et capitale historique du Vexin français, est une ville d'art et d'histoire perchée sur les hauteurs de l'Oise. Lieu de séjour de Camille Pissarro, elle offre un patrimoine exceptionnel à seulement 42 minutes de Paris.",
@@ -922,8 +922,8 @@ export const trajetsParis: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Pontoise | From €58 | TaxiNeo",
-        metaDescription: "Taxi Paris to Pontoise: 38 km, 42 min, from €58. Direct transfer to the historic town. Online booking 24/7.",
+        metaTitle: "Taxi Paris → Pontoise | 42 min, from €58 | TaxiNeo",
+        metaDescription: "Via A15, 42 min ride. Vallée de l'Oise and Cathédrale Saint-Maclou along the way. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Paris → Pontoise",
         heroSubtitle: "Your Paris → Pontoise ride at a fixed price of €58 — €78. Professional driver, online booking 24/7.",
         description: "Pontoise, Val-d'Oise sub-prefecture and historic capital of the Vexin français, is a City of Art and History perched above the Oise river. Former home of Impressionist painter Camille Pissarro, it offers exceptional heritage just 42 minutes from Paris.",
@@ -970,8 +970,8 @@ export const trajetsParis: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Meaux | Dès 72 € | TaxiNeo",
-        metaDescription: "Taxi Paris Meaux : 52 km, 45 min, dès 72 €. Transfert direct vers la sous-préfecture de Seine-et-Marne. Réservation 24h/24.",
+        metaTitle: "Taxi Paris → Meaux | forfait dès 72 €, 45 min | TaxiNeo",
+        metaDescription: "Via A4 puis A140 en 45 min. A4 Autoroute de l'Est, Cathédrale Saint-Étienne et Musée de la Grande Guerre en chemin. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Paris → Meaux",
         heroSubtitle: "Votre trajet Paris → Meaux au prix fixe de 72 — 95 €. Chauffeur professionnel, réservation en ligne 24h/24.",
         description: "Meaux, sous-préfecture de Seine-et-Marne et capitale de la Brie, est une ville de 55 000 habitants riche en histoire et en patrimoine. Son Musée de la Grande Guerre, le plus grand d'Europe sur le sujet, sa cathédrale gothique et son célèbre Brie de Meaux en font une destination captivante.",
@@ -989,8 +989,8 @@ export const trajetsParis: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Meaux | From €72 | TaxiNeo",
-        metaDescription: "Taxi Paris to Meaux: 52 km, 45 min, from €72. Direct transfer to the Seine-et-Marne sub-prefecture. Online booking 24/7.",
+        metaTitle: "Taxi Paris → Meaux | Fixed price from €72 | TaxiNeo",
+        metaDescription: "Via A4 then A140, 45 min ride. A4 Autoroute de l'Est, Cathédrale Saint-Étienne and Musée de la Grande Guerre along the way. Drop-off at your exact address.",
         heroTitle: "Taxi Paris → Meaux",
         heroSubtitle: "Your Paris → Meaux ride at a fixed price of €72 — €95. Professional driver, online booking 24/7.",
         description: "Meaux, Seine-et-Marne sub-prefecture and Brie capital, is a city of 55,000 rich in history. Its Great War Museum, Europe's largest on the subject, Gothic cathedral and famous Brie de Meaux cheese make it a captivating destination.",
@@ -1037,8 +1037,8 @@ export const trajetsParis: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Melun | Dès 70 € | TaxiNeo",
-        metaDescription: "Taxi Paris Melun : 50 km, 45 min, dès 70 €. Transfert direct préfecture Seine-et-Marne. Réservation en ligne 24h/24.",
+        metaTitle: "Taxi Paris → Melun | forfait dès 70 €, 45 min | TaxiNeo",
+        metaDescription: "Via A6 puis A5a ou N6 en 45 min. A6 / A5, Préfecture de Seine-et-Marne, Bords de Seine sur le parcours. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Paris → Melun",
         heroSubtitle: "Votre trajet Paris → Melun au prix fixe de 70 — 92 €. Chauffeur professionnel, réservation en ligne 24h/24.",
         description: "Melun, préfecture de Seine-et-Marne, est une ville historique de 42 000 habitants nichée dans un méandre de la Seine. Centre administratif du plus grand département d'Île-de-France, Melun abrite aussi l'école de gendarmerie nationale et de nombreux services publics.",
@@ -1056,8 +1056,8 @@ export const trajetsParis: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Melun | From €70 | TaxiNeo",
-        metaDescription: "Taxi Paris to Melun: 50 km, 45 min, from €70. Direct transfer to Seine-et-Marne prefecture. Online booking 24/7.",
+        metaTitle: "Taxi Paris → Melun | Fixed price from €70 | TaxiNeo",
+        metaDescription: "Via A6 then A5a ou N6, 45 min ride. A6 / A5, Préfecture de Seine-et-Marne and Bords de Seine along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Paris → Melun",
         heroSubtitle: "Your Paris → Melun ride at a fixed price of €70 — €92. Professional driver, online booking 24/7.",
         description: "Melun, Seine-et-Marne prefecture, is a historic city of 42,000 nestled in a Seine meander. Administrative centre of the Paris region's largest department, Melun also houses the national gendarmerie school.",
@@ -1104,8 +1104,8 @@ export const trajetsParis: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Fontainebleau | Dès 90 € | TaxiNeo",
-        metaDescription: "Taxi Paris Fontainebleau : 68 km, 55 min, dès 90 €. Transfert direct château et forêt de Fontainebleau. Réservation 24h/24.",
+        metaTitle: "Taxi Paris → Fontainebleau | 68 km, dès 90 € | TaxiNeo",
+        metaDescription: "Via A6 en 55 min. A6 Autoroute du Soleil, Château de Fontainebleau et Forêt de Fontainebleau en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Paris → Fontainebleau",
         heroSubtitle: "Votre trajet Paris → Fontainebleau au prix fixe de 90 — 120 €. Chauffeur professionnel, réservation en ligne 24h/24.",
         description: "Fontainebleau, joyau du patrimoine français, abrite l'un des plus grands châteaux royaux d'Europe et une forêt légendaire de 25 000 hectares. TaxiNeo vous y transporte confortablement en 55 minutes depuis Paris.",
@@ -1123,8 +1123,8 @@ export const trajetsParis: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Fontainebleau | From €90 | TaxiNeo",
-        metaDescription: "Taxi Paris to Fontainebleau: 68 km, 55 min, from €90. Direct transfer to the palace and forest. Online booking 24/7.",
+        metaTitle: "Taxi Paris → Fontainebleau | 68 km, from €90 | TaxiNeo",
+        metaDescription: "Via A6, 55 min ride. A6 Autoroute du Soleil, Château de Fontainebleau and Forêt de Fontainebleau along the way. Faster and more direct than train or bus.",
         heroTitle: "Taxi Paris → Fontainebleau",
         heroSubtitle: "Your Paris → Fontainebleau ride at a fixed price of €90 — €120. Professional driver, online booking 24/7.",
         description: "Fontainebleau, a jewel of French heritage, houses one of Europe's largest royal palaces and a legendary 25,000-hectare forest. TaxiNeo takes you there comfortably in 55 minutes from Paris.",
@@ -1171,8 +1171,8 @@ export const trajetsParis: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Chantilly | Dès 68 € | TaxiNeo",
-        metaDescription: "Taxi Paris Chantilly : 48 km, 45 min, dès 68 €. Transfert direct château et hippodrome. Réservation en ligne 24h/24.",
+        metaTitle: "Taxi Paris → Chantilly | 48 km, dès 68 € | TaxiNeo",
+        metaDescription: "Par A1, 45 min de trajet. A1 Autoroute du Nord, Château de Chantilly, Grandes Écuries sur le parcours. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Paris → Chantilly",
         heroSubtitle: "Votre trajet Paris → Chantilly au prix fixe de 68 — 90 €. Chauffeur professionnel, réservation en ligne 24h/24.",
         description: "Chantilly est un joyau du patrimoine français, célèbre pour son château abritant le musée Condé (deuxième collection de peintures anciennes de France après le Louvre), ses Grandes Écuries et son hippodrome accueillant le Prix du Jockey Club et le Prix de Diane.",
@@ -1190,8 +1190,8 @@ export const trajetsParis: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Chantilly | From €68 | TaxiNeo",
-        metaDescription: "Taxi Paris to Chantilly: 48 km, 45 min, from €68. Direct transfer to castle and racecourse. Online booking 24/7.",
+        metaTitle: "Taxi Paris → Chantilly | 48 km, from €68 | TaxiNeo",
+        metaDescription: "Direct route via A1, 45 min. A1 Autoroute du Nord, Château de Chantilly and Grandes Écuries along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Paris → Chantilly",
         heroSubtitle: "Your Paris → Chantilly ride at a fixed price of €68 — €90. Professional driver, online booking 24/7.",
         description: "Chantilly is a jewel of French heritage, famous for its castle housing the Condé Museum, Great Stables and racecourse hosting the Prix du Jockey Club and Prix de Diane.",
@@ -1238,8 +1238,8 @@ export const trajetsParis: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Senlis | Dès 72 € | TaxiNeo",
-        metaDescription: "Taxi Paris Senlis : 52 km, 48 min, dès 72 €. Transfert direct vers la cité médiévale. Réservation en ligne 24h/24.",
+        metaTitle: "Taxi Paris → Senlis | forfait dès 72 €, 48 min | TaxiNeo",
+        metaDescription: "Via A1 en 48 min. Passage par A1 Autoroute du Nord, Cathédrale Notre-Dame de Senlis et Cité médiévale. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Paris → Senlis",
         heroSubtitle: "Votre trajet Paris → Senlis au prix fixe de 72 — 95 €. Chauffeur professionnel, réservation en ligne 24h/24.",
         description: "Senlis est l'une des plus belles cités médiévales de France, à seulement 48 minutes de Paris. Sa cathédrale Notre-Dame, ses remparts gallo-romains, ses ruelles pavées et son ancien palais royal en font un joyau du patrimoine picard.",
@@ -1257,8 +1257,8 @@ export const trajetsParis: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Senlis | From €72 | TaxiNeo",
-        metaDescription: "Taxi Paris to Senlis: 52 km, 48 min, from €72. Direct transfer to the medieval town. Online booking 24/7.",
+        metaTitle: "Taxi Paris → Senlis | Fixed price from €72 | TaxiNeo",
+        metaDescription: "Via A1, 48 min ride. A1 Autoroute du Nord, Cathédrale Notre-Dame de Senlis and Cité médiévale along the way. Faster and more direct than train or bus.",
         heroTitle: "Taxi Paris → Senlis",
         heroSubtitle: "Your Paris → Senlis ride at a fixed price of €72 — €95. Professional driver, online booking 24/7.",
         description: "Senlis is one of France's most beautiful medieval towns, just 48 minutes from Paris. Its Notre-Dame Cathedral, Gallo-Roman ramparts, cobbled lanes and former royal palace make it a heritage jewel.",
@@ -1305,8 +1305,8 @@ export const trajetsParis: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Provins | Dès 110 € | TaxiNeo",
-        metaDescription: "Taxi Paris Provins : 88 km, 70 min, dès 110 €. Transfert direct cité médiévale UNESCO. Réservation en ligne 24h/24.",
+        metaTitle: "Taxi Paris → Provins | forfait dès 110 € | TaxiNeo",
+        metaDescription: "Via A4 puis N36/D231 en 1h10. A4 Autoroute de l'Est, Cité médiévale UNESCO, Tour César sur le parcours. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Paris → Provins",
         heroSubtitle: "Votre trajet Paris → Provins au prix fixe de 110 — 145 €. Chauffeur professionnel, réservation en ligne 24h/24.",
         description: "Provins, inscrite au patrimoine mondial de l'UNESCO, est la plus importante cité médiévale fortifiée d'Île-de-France. Ancienne capitale des comtes de Champagne et ville de foires internationales au XIIIe siècle, elle offre un voyage dans le temps à 70 minutes de Paris.",
@@ -1324,8 +1324,8 @@ export const trajetsParis: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Provins | From €110 | TaxiNeo",
-        metaDescription: "Taxi Paris to Provins: 88 km, 70 min, from €110. Direct transfer to the UNESCO medieval town. Online booking 24/7.",
+        metaTitle: "Taxi Paris → Provins | 70 min, from €110 | TaxiNeo",
+        metaDescription: "Via A4 then N36/D231, 1h10 ride. A4 Autoroute de l'Est, Cité médiévale UNESCO and Tour César along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Paris → Provins",
         heroSubtitle: "Your Paris → Provins ride at a fixed price of €110 — €145. Professional driver, online booking 24/7.",
         description: "Provins, a UNESCO World Heritage Site, is the most important fortified medieval town in the Paris region. Former capital of the Counts of Champagne, it offers a journey through time just 70 minutes from Paris.",
@@ -1363,8 +1363,8 @@ export const trajetsParis: Trajet[] = [
     hub: "paris", tags: ["idf", "culture", "famille"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Saint-Germain-en-Laye | Dès 45 € | TaxiNeo",
-        metaDescription: "Taxi Paris — Saint-Germain-en-Laye, 25 km, 35 min, prix fixe dès 45 €. Château, terrasse Le Nôtre, forêt. Réservation 24h/24.",
+        metaTitle: "Taxi Paris → Saint-Germain-en-Laye | 25 km, 45 € | TaxiNeo",
+        metaDescription: "Via A14 puis A13 en undefined min. La Défense, Forêt de Saint-Germain, Château de Saint-Germain-en-Laye et Terrasse Le Nôtre en chemin. Retour au même tarif.",
         heroTitle: "Taxi Paris → Saint-Germain-en-Laye",
         heroSubtitle: "Votre transfert vers la cité royale à prix fixe de 45 — 60 €. Chauffeur professionnel, réservation en ligne.",
         description: "Saint-Germain-en-Laye, ville royale des Yvelines, séduit par son château Renaissance, sa terrasse dessinée par Le Nôtre et sa forêt domaniale de 3 500 hectares.",
@@ -1382,8 +1382,8 @@ export const trajetsParis: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Saint-Germain-en-Laye | From €45 | TaxiNeo",
-        metaDescription: "Taxi Paris — Saint-Germain-en-Laye, 25 km, 35 min, fixed price from €45. Royal castle, Le Nôtre terrace, forest. 24/7 booking.",
+        metaTitle: "Taxi Paris → Saint-Germain-en-Laye | 25 km, €45 | TaxiNeo",
+        metaDescription: "Via A14 then A13, undefined min ride. La Défense, Forêt de Saint-Germain, Château de Saint-Germain-en-Laye and Terrasse Le Nôtre en route. Instant quote online.",
         heroTitle: "Taxi Paris → Saint-Germain-en-Laye",
         heroSubtitle: "Your transfer to the royal city at a fixed price of €45 — €60. Professional driver, online booking.",
         description: "Saint-Germain-en-Laye, a royal city in the Yvelines, charms visitors with its Renaissance castle, Le Nôtre's terrace and 3,500-hectare royal forest.",
@@ -1417,8 +1417,8 @@ export const trajetsParis: Trajet[] = [
     hub: "paris", tags: ["idf", "business"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Boulogne-Billancourt | Dès 25 € | TaxiNeo",
-        metaDescription: "Taxi Paris — Boulogne-Billancourt, 10 km, 20 min, prix fixe dès 25 €. Île Seguin, sièges sociaux, studios. Réservation 24h/24.",
+        metaTitle: "Taxi Paris → Boulogne-Billancourt | 10 km, 25 € | TaxiNeo",
+        metaDescription: "Via Périphérique en undefined min. Pont de Sèvres, Île Seguin, Musée Albert-Kahn et Studios de Boulogne en chemin. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Paris → Boulogne-Billancourt",
         heroSubtitle: "Votre transfert vers Boulogne-Billancourt à prix fixe de 25 — 35 €.",
         description: "Boulogne-Billancourt, première ville des Hauts-de-Seine par sa population, concentre sièges sociaux et studios télé sur l'Île Seguin rénovée.",
@@ -1436,8 +1436,8 @@ export const trajetsParis: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Boulogne-Billancourt | From €25 | TaxiNeo",
-        metaDescription: "Taxi Paris — Boulogne-Billancourt, 10 km, 20 min, fixed price from €25. Île Seguin, La Seine Musicale, corporate HQs.",
+        metaTitle: "Taxi Paris → Boulogne-Billancourt | 10 km, €25 | TaxiNeo",
+        metaDescription: "Via ring road, undefined min ride. Pont de Sèvres, Île Seguin, Musée Albert-Kahn and Studios de Boulogne en route. Faster and more direct than train or bus.",
         heroTitle: "Taxi Paris → Boulogne-Billancourt",
         heroSubtitle: "Your transfer to Boulogne-Billancourt at a fixed price of €25 — €35.",
         description: "Boulogne-Billancourt, the largest city in the Hauts-de-Seine, is home to major corporate headquarters and the iconic Seine Musicale concert hall on Île Seguin.",
@@ -1471,8 +1471,8 @@ export const trajetsParis: Trajet[] = [
     hub: "paris", tags: ["idf", "business", "résidentiel"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Neuilly-sur-Seine | Dès 22 € | TaxiNeo",
-        metaDescription: "Taxi Paris — Neuilly-sur-Seine, 8 km, 18 min, prix fixe dès 22 €. Île de la Jatte, quartier résidentiel premium.",
+        metaTitle: "Taxi Paris → Neuilly-sur-Seine | 8 km, dès 22 € | TaxiNeo",
+        metaDescription: "Via Avenue de la Grande Armée en undefined min. Avenue Charles de Gaulle, Île de la Jatte, Bois de Boulogne et Porte Maillot en chemin. Retour au même tarif.",
         heroTitle: "Taxi Paris → Neuilly-sur-Seine",
         heroSubtitle: "Votre transfert vers Neuilly-sur-Seine à prix fixe de 22 — 32 €.",
         description: "Neuilly-sur-Seine, commune résidentielle premium aux portes de Paris, allie calme et proximité de La Défense.",
@@ -1490,8 +1490,8 @@ export const trajetsParis: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Neuilly-sur-Seine | From €22 | TaxiNeo",
-        metaDescription: "Taxi Paris — Neuilly-sur-Seine, 8 km, 18 min, fixed price from €22. Île de la Jatte, premium residential area.",
+        metaTitle: "Taxi Paris → Neuilly-sur-Seine | 8 km, from €22 | TaxiNeo",
+        metaDescription: "Via Avenue de la Grande Armée, undefined min ride. Avenue Charles de Gaulle, Île de la Jatte, Bois de Boulogne and Porte Maillot en route. Instant quote online.",
         heroTitle: "Taxi Paris → Neuilly-sur-Seine",
         heroSubtitle: "Your transfer to Neuilly-sur-Seine at a fixed price of €22 — €32.",
         description: "Neuilly-sur-Seine, an upscale residential town at the gates of Paris, combines tranquility with proximity to La Défense.",
@@ -1525,8 +1525,8 @@ export const trajetsParis: Trajet[] = [
     hub: "paris", tags: ["idf", "tourisme", "famille"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Vincennes | Dès 25 € | TaxiNeo",
-        metaDescription: "Taxi Paris — Vincennes, 9 km, 20 min, prix fixe dès 25 €. Château, bois de Vincennes, zoo, Parc Floral.",
+        metaTitle: "Taxi Paris → Vincennes | forfait dès 25 € | TaxiNeo",
+        metaDescription: "Via Cours de Vincennes en undefined min. Château de Vincennes, Bois de Vincennes, Parc Floral et Zoo de Vincennes en chemin. Dépose à votre adresse exacte.",
         heroTitle: "Taxi Paris → Vincennes",
         heroSubtitle: "Votre transfert vers Vincennes à prix fixe de 25 — 35 €.",
         description: "Vincennes, à l'est de Paris, abrite un château médiéval majestueux, le plus grand bois parisien et un zoo modernisé.",
@@ -1544,8 +1544,8 @@ export const trajetsParis: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Vincennes | From €25 | TaxiNeo",
-        metaDescription: "Taxi Paris — Vincennes, 9 km, 20 min, fixed price from €25. Castle, zoo, Parc Floral, Bois de Vincennes.",
+        metaTitle: "Taxi Paris → Vincennes | 70 min, from €25 | TaxiNeo",
+        metaDescription: "Via Cours de Vincennes, undefined min ride. Château de Vincennes, Bois de Vincennes, Parc Floral and Zoo de Vincennes en route. Drop-off at your exact address.",
         heroTitle: "Taxi Paris → Vincennes",
         heroSubtitle: "Your transfer to Vincennes at a fixed price of €25 — €35.",
         description: "Vincennes, east of Paris, is home to a majestic medieval castle, Paris's largest wood and a modernized zoo.",
@@ -1579,8 +1579,8 @@ export const trajetsParis: Trajet[] = [
     hub: "paris", tags: ["idf", "résidentiel"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Argenteuil | Dès 30 € | TaxiNeo",
-        metaDescription: "Taxi Paris — Argenteuil, 15 km, 25 min, prix fixe dès 30 €. Transfert rapide, chauffeur pro 24h/24.",
+        metaTitle: "Taxi Paris → Argenteuil | 15 km, dès 30 € | TaxiNeo",
+        metaDescription: "Par A86, undefined min de trajet. Pont d'Argenteuil, Basilique Saint-Denys et Bords de Seine en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Paris → Argenteuil",
         heroSubtitle: "Votre transfert vers Argenteuil à prix fixe de 30 — 42 €.",
         description: "Argenteuil, troisième ville du Val-d'Oise, offre un accès rapide depuis Paris par l'A15 et les bords de Seine.",
@@ -1598,8 +1598,8 @@ export const trajetsParis: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Argenteuil | From €30 | TaxiNeo",
-        metaDescription: "Taxi Paris — Argenteuil, 15 km, 25 min, fixed price from €30. Fast transfer, professional driver 24/7.",
+        metaTitle: "Taxi Paris → Argenteuil | 15 km, from €30 | TaxiNeo",
+        metaDescription: "Via A86, undefined min ride. Pont d'Argenteuil, Basilique Saint-Denys and Bords de Seine along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Paris → Argenteuil",
         heroSubtitle: "Your transfer to Argenteuil at a fixed price of €30 — €42.",
         description: "Argenteuil, the third-largest city in Val-d'Oise, offers quick access from Paris via the A15 and Seine riverbanks.",
@@ -1633,8 +1633,8 @@ export const trajetsParis: Trajet[] = [
     hub: "paris", tags: ["idf", "résidentiel", "sport"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Colombes | Dès 28 € | TaxiNeo",
-        metaDescription: "Taxi Paris — Colombes, 12 km, 22 min, prix fixe dès 28 €. Stade Yves-du-Manoir, Coulée Verte.",
+        metaTitle: "Taxi Paris → Colombes | forfait dès 28 € | TaxiNeo",
+        metaDescription: "Via A86 via Gennevilliers ou quais en undefined min. Stade Yves-du-Manoir, Coulée Verte et Gare de Colombes en chemin. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Paris → Colombes",
         heroSubtitle: "Votre transfert vers Colombes à prix fixe de 28 — 38 €.",
         description: "Colombes, ville sportive des Hauts-de-Seine, accueille le stade Yves-du-Manoir rénové pour les JO 2024.",
@@ -1652,8 +1652,8 @@ export const trajetsParis: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Colombes | From €28 | TaxiNeo",
-        metaDescription: "Taxi Paris — Colombes, 12 km, 22 min, fixed price from €28. Yves-du-Manoir stadium, Coulée Verte.",
+        metaTitle: "Taxi Paris → Colombes | 70 min, from €28 | TaxiNeo",
+        metaDescription: "Via A86 via Gennevilliers ou quais de Seine via Asnières, undefined min ride. Past Stade Yves-du-Manoir, Coulée Verte and Gare de Colombes. Luggage included.",
         heroTitle: "Taxi Paris → Colombes",
         heroSubtitle: "Your transfer to Colombes at a fixed price of €28 — €38.",
         description: "Colombes, a sporting city in Hauts-de-Seine, hosts the Yves-du-Manoir stadium renovated for the 2024 Olympics.",
@@ -1687,8 +1687,8 @@ export const trajetsParis: Trajet[] = [
     hub: "paris", tags: ["idf", "business", "tech"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Issy-les-Moulineaux | Dès 22 € | TaxiNeo",
-        metaDescription: "Taxi Paris — Issy-les-Moulineaux, 8 km, 18 min, prix fixe dès 22 €. Microsoft, Arte, Île Saint-Germain.",
+        metaTitle: "Taxi Paris → Issy-les-Moulineaux | 8 km, dès 22 € | TaxiNeo",
+        metaDescription: "Via Périphérique sud sortie Porte  en undefined min. Héliport de Paris, Fort d'Issy, Île Saint-Germain et Microsoft France en chemin. Retour au même tarif.",
         heroTitle: "Taxi Paris → Issy-les-Moulineaux",
         heroSubtitle: "Votre transfert vers Issy-les-Moulineaux à prix fixe de 22 — 32 €.",
         description: "Issy-les-Moulineaux, pôle tech et média au sud de Paris, abrite Microsoft France, Arte et de nombreux studios.",
@@ -1706,8 +1706,8 @@ export const trajetsParis: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Issy-les-Moulineaux | From €22 | TaxiNeo",
-        metaDescription: "Taxi Paris — Issy-les-Moulineaux, 8 km, 18 min, fixed price from €22. Microsoft, Arte, tech hub.",
+        metaTitle: "Taxi Paris → Issy-les-Moulineaux | 8 km, from €22 | TaxiNeo",
+        metaDescription: "Via ring road sud sortie Porte d'Issy ou Quai d'Issy, undefined min ride. Héliport de Paris, Fort d'Issy and Île Saint-Germain along the way. Luggage included.",
         heroTitle: "Taxi Paris → Issy-les-Moulineaux",
         heroSubtitle: "Your transfer to Issy-les-Moulineaux at a fixed price of €22 — €32.",
         description: "Issy-les-Moulineaux, a tech and media hub south of Paris, hosts Microsoft France, Arte and many studios.",
@@ -1741,8 +1741,8 @@ export const trajetsParis: Trajet[] = [
     hub: "paris", tags: ["idf", "culture", "sport", "tourisme"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Saint-Denis | Dès 25 € | TaxiNeo",
-        metaDescription: "Taxi Paris — Saint-Denis, 10 km, 20 min, prix fixe dès 25 €. Stade de France, Basilique royale. Réservation 24h/24.",
+        metaTitle: "Taxi Paris → Saint-Denis | 10 km, dès 25 € | TaxiNeo",
+        metaDescription: "Via A1 via Porte de la Chapelle ou en undefined min. Stade de France, Basilique Saint-Denis et Marché de Saint-Denis en chemin. Dépose à votre adresse exacte.",
         heroTitle: "Taxi Paris → Saint-Denis",
         heroSubtitle: "Votre transfert vers Saint-Denis à prix fixe de 25 — 35 €.",
         description: "Saint-Denis, au nord de Paris, est célèbre pour le Stade de France et la Basilique royale, nécropole des rois de France.",
@@ -1760,8 +1760,8 @@ export const trajetsParis: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Saint-Denis | From €25 | TaxiNeo",
-        metaDescription: "Taxi Paris — Saint-Denis, 10 km, 20 min, fixed price from €25. Stade de France, Royal Basilica. Booking 24/7.",
+        metaTitle: "Taxi Paris → Saint-Denis | 10 km, from €25 | TaxiNeo",
+        metaDescription: "Via A1 via Porte de la Chapelle ou A86, undefined min ride. Stade de France, Basilique Saint-Denis and Marché de Saint-Denis along the way. Luggage included.",
         heroTitle: "Taxi Paris → Saint-Denis",
         heroSubtitle: "Your transfer to Saint-Denis at a fixed price of €25 — €35.",
         description: "Saint-Denis, north of Paris, is famous for the Stade de France and the Royal Basilica, necropolis of the kings of France.",
@@ -1795,8 +1795,8 @@ export const trajetsParis: Trajet[] = [
     hub: "paris", tags: ["idf", "culture", "artistes"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Montreuil | Dès 22 € | TaxiNeo",
-        metaDescription: "Taxi Paris — Montreuil, 9 km, 20 min, prix fixe dès 22 €. Murs à Pêches, Puces de Montreuil. Réservation 24h/24.",
+        metaTitle: "Taxi Paris → Montreuil | forfait dès 22 € | TaxiNeo",
+        metaDescription: "Via A3 via Porte de Bagnolet ou Co en undefined min. Murs à Pêches, Marché aux Puces de Montreuil et Théâtre de la Girandole en chemin. Retour au même tarif.",
         heroTitle: "Taxi Paris → Montreuil",
         heroSubtitle: "Votre transfert vers Montreuil à prix fixe de 22 — 30 €.",
         description: "Montreuil, ville créative aux portes de Paris, est connue pour ses ateliers d'artistes, les Murs à Pêches et son marché aux puces.",
@@ -1814,8 +1814,8 @@ export const trajetsParis: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Montreuil | From €22 | TaxiNeo",
-        metaDescription: "Taxi Paris — Montreuil, 9 km, 20 min, fixed price from €22. Murs à Pêches, Montreuil Flea Market. Booking 24/7.",
+        metaTitle: "Taxi Paris → Montreuil | 70 min, from €22 | TaxiNeo",
+        metaDescription: "Via A3 via Porte de Bagnolet ou Cours de Vincennes, undefined min ride. Murs à Pêches and Marché aux Puces de Montreuil along the way. Return trip at same rate.",
         heroTitle: "Taxi Paris → Montreuil",
         heroSubtitle: "Your transfer to Montreuil at a fixed price of €22 — €30.",
         description: "Montreuil, a creative city at Paris's doorstep, is known for its artist workshops, the Murs à Pêches heritage site and its flea market.",
@@ -1849,8 +1849,8 @@ export const trajetsParis: Trajet[] = [
     hub: "paris", tags: ["idf", "résidentiel", "nature"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Clamart | Dès 28 € | TaxiNeo",
-        metaDescription: "Taxi Paris — Clamart, 12 km, 25 min, prix fixe dès 28 €. Forêt de Meudon, Hôpital Percy. Réservation 24h/24.",
+        metaTitle: "Taxi Paris → Clamart | Prix fixe dès 28 € | TaxiNeo",
+        metaDescription: "Via N118 via Porte de Sèvres ou D9 en undefined min. Forêt de Meudon, Étang de Trivaux et Hôpital Percy en chemin. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Paris → Clamart",
         heroSubtitle: "Votre transfert vers Clamart à prix fixe de 28 — 38 €.",
         description: "Clamart, ville résidentielle des Hauts-de-Seine, est prisée pour la forêt de Meudon et son cadre de vie verdoyant.",
@@ -1868,8 +1868,8 @@ export const trajetsParis: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Clamart | From €28 | TaxiNeo",
-        metaDescription: "Taxi Paris — Clamart, 12 km, 25 min, fixed price from €28. Meudon Forest, Percy Hospital. Booking 24/7.",
+        metaTitle: "Taxi Paris → Clamart | Fixed price from €28 | TaxiNeo",
+        metaDescription: "Via N118 via Porte de Sèvres ou D906 par Châtillon, undefined min ride. Forêt de Meudon, Étang de Trivaux and Hôpital Percy along the way. Instant quote online.",
         heroTitle: "Taxi Paris → Clamart",
         heroSubtitle: "Your transfer to Clamart at a fixed price of €28 — €38.",
         description: "Clamart, a residential city in Hauts-de-Seine, is prized for the Meudon Forest and its green living environment.",
@@ -1903,8 +1903,8 @@ export const trajetsParis: Trajet[] = [
     hub: "paris", tags: ["idf", "résidentiel", "val-doise"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Sarcelles | Dès 35 € | TaxiNeo",
-        metaDescription: "Taxi Paris — Sarcelles, 18 km, 30 min, prix fixe dès 35 €. Transfert rapide, chauffeur professionnel 24h/24.",
+        metaTitle: "Taxi Paris → Sarcelles | 18 km, dès 35 € | TaxiNeo",
+        metaDescription: "Via A1 direction Lille sortie Sarcelles ou A3 en undefined min. Grand ensemble de Sarcelles, Parc Kennedy et Village historique en chemin. Retour au même tarif.",
         heroTitle: "Taxi Paris → Sarcelles",
         heroSubtitle: "Votre transfert vers Sarcelles à prix fixe de 35 — 45 €.",
         description: "Sarcelles, ville du Val-d'Oise de 60 000 habitants, est desservie rapidement depuis Paris par l'A1 et le RER D.",
@@ -1922,8 +1922,8 @@ export const trajetsParis: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Sarcelles | From €35 | TaxiNeo",
-        metaDescription: "Taxi Paris — Sarcelles, 18 km, 30 min, fixed price from €35. Fast transfer, professional driver 24/7.",
+        metaTitle: "Taxi Paris → Sarcelles | 18 km, from €35 | TaxiNeo",
+        metaDescription: "Via A1 direction Lille sortie Sarcelles ou A3, undefined min ride. Grand ensemble de Sarcelles, Parc Kennedy and Village historique along the way. Quote online.",
         heroTitle: "Taxi Paris → Sarcelles",
         heroSubtitle: "Your transfer to Sarcelles at a fixed price of €35 — €45.",
         description: "Sarcelles, a city of 60,000 in Val-d'Oise, is quickly accessible from Paris via the A1 and RER D.",
@@ -1974,8 +1974,8 @@ export const trajetsParis: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Étampes | Dès 75 € | TaxiNeo",
-        metaDescription: "Taxi Paris Étampes : 55 km, 50 min, prix fixe dès 75 €. Transfert direct vers la cité royale de l'Essonne. Réservation en ligne 24h/24.",
+        metaTitle: "Taxi Paris → Étampes | forfait dès 75 €, 50 min | TaxiNeo",
+        metaDescription: "Par A6 puis N20, 50 min de trajet. Passage par N20 historique, Tour de Guinette et Vallée de la Juine. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Paris → Étampes",
         heroSubtitle: "Votre trajet Paris → Étampes au prix fixe de 75 — 100 €. Chauffeur professionnel, réservation en ligne 24h/24.",
         description: "Le trajet Paris — Étampes relie la capitale à cette cité royale millénaire nichée dans la vallée de la Juine, au sud de l'Essonne. Que vous vous rendiez au tribunal, à l'hôpital ou que vous découvriez son patrimoine médiéval remarquable, TaxiNeo vous y conduit en 50 minutes.",
@@ -1993,8 +1993,8 @@ export const trajetsParis: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Étampes | From €75 | TaxiNeo",
-        metaDescription: "Taxi Paris to Étampes: 55 km, 50 min, fixed price from €75. Direct transfer to this royal medieval town. Online booking 24/7.",
+        metaTitle: "Taxi Paris → Étampes | Fixed price from €75 | TaxiNeo",
+        metaDescription: "Via A6 then N20, 50 min ride. N20 historique, Tour de Guinette and Vallée de la Juine along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Paris → Étampes",
         heroSubtitle: "Your Paris → Étampes ride at a fixed price of €75 — €100. Professional driver, online booking 24/7.",
         description: "The Paris — Étampes route connects the capital to this thousand-year-old royal city nestled in the Juine valley, in southern Essonne. Whether heading to the courthouse, hospital, or discovering its remarkable medieval heritage, TaxiNeo gets you there in 50 minutes.",
@@ -2041,8 +2041,8 @@ export const trajetsParis: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Dourdan | Dès 72 € | TaxiNeo",
-        metaDescription: "Taxi Paris Dourdan : 52 km, 50 min, prix fixe dès 72 €. Transfert direct vers la cité médiévale de l'Essonne. Réservation en ligne 24h/24.",
+        metaTitle: "Taxi Paris → Dourdan | forfait dès 72 €, 50 min | TaxiNeo",
+        metaDescription: "Par A10 puis D836, 50 min de trajet. Château de Dourdan, Forêt de Dourdan et Vallée de l'Orge en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Paris → Dourdan",
         heroSubtitle: "Votre trajet Paris → Dourdan au prix fixe de 72 — 95 €. Chauffeur professionnel, réservation en ligne 24h/24.",
         description: "Le trajet Paris — Dourdan relie la capitale à cette charmante cité médiévale du sud de l'Essonne, dominée par son château du XIIIe siècle. Résidence royale, ville de marché et porte d'entrée vers la forêt domaniale, Dourdan séduit aussi bien les amateurs d'histoire que les randonneurs.",
@@ -2060,8 +2060,8 @@ export const trajetsParis: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Dourdan | From €72 | TaxiNeo",
-        metaDescription: "Taxi Paris to Dourdan: 52 km, 50 min, fixed price from €72. Direct transfer to this medieval Essonne town. Online booking 24/7.",
+        metaTitle: "Taxi Paris → Dourdan | Fixed price from €72 | TaxiNeo",
+        metaDescription: "Via A10 then D836, 50 min ride. Château de Dourdan, Forêt de Dourdan and Vallée de l'Orge along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Paris → Dourdan",
         heroSubtitle: "Your Paris → Dourdan ride at a fixed price of €72 — €95. Professional driver, online booking 24/7.",
         description: "The Paris — Dourdan route connects the capital to this charming medieval town in southern Essonne, dominated by its 13th-century castle. A royal residence, market town and gateway to the state forest, Dourdan appeals to history lovers and hikers alike.",
@@ -2108,8 +2108,8 @@ export const trajetsParis: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Rambouillet | Dès 73 € | TaxiNeo",
-        metaDescription: "Taxi Paris Rambouillet : 53 km, 50 min, prix fixe dès 73 €. Transfert direct vers la résidence présidentielle. Réservation en ligne 24h/24.",
+        metaTitle: "Taxi Paris → Rambouillet | 53 km, dès 73 € | TaxiNeo",
+        metaDescription: "Via A13 puis N10 en 50 min. Château de Rambouillet, Forêt de Rambouillet et Bergerie nationale en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Paris → Rambouillet",
         heroSubtitle: "Votre trajet Paris → Rambouillet au prix fixe de 73 — 98 €. Chauffeur professionnel, réservation en ligne 24h/24.",
         description: "Le trajet Paris — Rambouillet relie la capitale à cette ville historique des Yvelines, célèbre pour son château présidentiel, sa bergerie nationale et son immense forêt domaniale. À 50 minutes de Paris, Rambouillet offre un dépaysement total entre patrimoine royal et nature préservée.",
@@ -2127,8 +2127,8 @@ export const trajetsParis: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Rambouillet | From €73 | TaxiNeo",
-        metaDescription: "Taxi Paris to Rambouillet: 53 km, 50 min, fixed price from €73. Direct transfer to the presidential residence town. Online booking 24/7.",
+        metaTitle: "Taxi Paris → Rambouillet | 53 km, from €73 | TaxiNeo",
+        metaDescription: "Via A13 then N10, 50 min ride. Château de Rambouillet, Forêt de Rambouillet and Bergerie nationale along the way. Faster and more direct than train or bus.",
         heroTitle: "Taxi Paris → Rambouillet",
         heroSubtitle: "Your Paris → Rambouillet ride at a fixed price of €73 — €98. Professional driver, online booking 24/7.",
         description: "The Paris — Rambouillet route connects the capital to this historic Yvelines town, famous for its presidential château, national sheep farm, and vast state forest. Just 50 minutes from Paris, Rambouillet offers a complete escape into royal heritage and preserved nature.",
@@ -2175,8 +2175,8 @@ export const trajetsParis: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Mantes-la-Jolie | Dès 78 € | TaxiNeo",
-        metaDescription: "Taxi Paris Mantes-la-Jolie : 57 km, 55 min, prix fixe dès 78 €. Transfert direct vers le Mantois. Réservation en ligne 24h/24.",
+        metaTitle: "Taxi Paris → Mantes-la-Jolie | 57 km, dès 78 € | TaxiNeo",
+        metaDescription: "Par A13, 55 min de trajet. En passant par Boucles de la Seine, Collégiale Notre-Dame et Île-aux-Dames. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Paris → Mantes-la-Jolie",
         heroSubtitle: "Votre trajet Paris → Mantes-la-Jolie au prix fixe de 78 — 105 €. Chauffeur professionnel, réservation en ligne 24h/24.",
         description: "Le trajet Paris — Mantes-la-Jolie relie la capitale à cette sous-préfecture des Yvelines nichée dans une boucle de la Seine, à l'entrée du Vexin français. Connue pour sa collégiale Notre-Dame, sœur jumelle de Notre-Dame de Paris, Mantes est aussi un pôle économique et administratif majeur de l'ouest francilien.",
@@ -2194,8 +2194,8 @@ export const trajetsParis: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Mantes-la-Jolie | From €78 | TaxiNeo",
-        metaDescription: "Taxi Paris to Mantes-la-Jolie: 57 km, 55 min, fixed price from €78. Direct transfer to the Mantois area. Online booking 24/7.",
+        metaTitle: "Taxi Paris → Mantes-la-Jolie | 57 km, from €78 | TaxiNeo",
+        metaDescription: "Direct route via A13, 55 min. Boucles de la Seine, Collégiale Notre-Dame and Île-aux-Dames along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Paris → Mantes-la-Jolie",
         heroSubtitle: "Your Paris → Mantes-la-Jolie ride at a fixed price of €78 — €105. Professional driver, online booking 24/7.",
         description: "The Paris — Mantes-la-Jolie route connects the capital to this Yvelines sub-prefecture nestled in a Seine meander at the gateway to the Vexin français. Known for its Notre-Dame collegiate church, a twin of Notre-Dame de Paris, Mantes is also a major economic hub in western Île-de-France.",
@@ -2242,8 +2242,8 @@ export const trajetsParis: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Gonesse | Dès 35 € | TaxiNeo",
-        metaDescription: "Taxi Paris Gonesse : 20 km, 25 min, prix fixe dès 35 €. Transfert direct vers le Val-d'Oise. Réservation en ligne 24h/24.",
+        metaTitle: "Taxi Paris → Gonesse | forfait dès 35 €, 25 min | TaxiNeo",
+        metaDescription: "Via A1 en 25 min. Parc de la Patte d'Oie, Église Saint-Pierre-Saint-Paul et Triangle de Gonesse en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Paris → Gonesse",
         heroSubtitle: "Votre trajet Paris → Gonesse au prix fixe de 35 — 48 €. Chauffeur professionnel, réservation en ligne 24h/24.",
         description: "Le trajet Paris — Gonesse relie la capitale à cette commune de 27 000 habitants du Val-d'Oise, située à mi-chemin entre Paris et l'aéroport Roissy-Charles de Gaulle. Position stratégique, patrimoine historique et projets d'aménagement ambitieux font de Gonesse une destination en pleine transformation.",
@@ -2261,8 +2261,8 @@ export const trajetsParis: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Gonesse | From €35 | TaxiNeo",
-        metaDescription: "Taxi Paris to Gonesse: 20 km, 25 min, fixed price from €35. Direct transfer to Val-d'Oise. Online booking 24/7.",
+        metaTitle: "Taxi Paris → Gonesse | Fixed price from €35 | TaxiNeo",
+        metaDescription: "Via A1, 25 min ride. Parc de la Patte d'Oie, Église Saint-Pierre-Saint-Paul and Triangle de Gonesse along the way. Faster and more direct than train or bus.",
         heroTitle: "Taxi Paris → Gonesse",
         heroSubtitle: "Your Paris → Gonesse ride at a fixed price of €35 — €48. Professional driver, online booking 24/7.",
         description: "The Paris — Gonesse route connects the capital to this 27,000-inhabitant Val-d'Oise commune, located midway between Paris and Roissy-Charles de Gaulle airport. Its strategic location, historic heritage and ambitious development plans make Gonesse a destination in transformation.",
@@ -2313,8 +2313,8 @@ export const trajetsParis: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Fontainebleau | Dès 90 € | TaxiNeo",
-        metaDescription: "Taxi Paris — Fontainebleau, 67 km, 1h, prix fixe dès 90 €. Château, forêt, village de Barbizon. Réservation 24h/24.",
+        metaTitle: "Taxi Paris → Fontainebleau | 67 km, dès 90 € | TaxiNeo",
+        metaDescription: "Via A6 direction Lyon sortie Fonta en 1h. Château de Fontainebleau, Forêt de Fontainebleau et Barbizon village des peintres en chemin. Trajet sans péage.",
         heroTitle: "Taxi Paris → Fontainebleau",
         heroSubtitle: "Votre trajet Paris → Fontainebleau au prix fixe de 90 — 115 €. Chauffeur professionnel, réservation en ligne 24h/24.",
         description: "Fontainebleau, en Seine-et-Marne, possède un château classé UNESCO et une forêt de 25 000 hectares prisée des randonneurs et grimpeurs. TaxiNeo vous y conduit en 1 heure.",
@@ -2332,8 +2332,8 @@ export const trajetsParis: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Fontainebleau | From €90 | TaxiNeo",
-        metaDescription: "Taxi Paris — Fontainebleau, 67 km, 1h, fixed price from €90. Château, forest, Barbizon village. Booking 24/7.",
+        metaTitle: "Taxi Paris → Fontainebleau | 67 km, from €90 | TaxiNeo",
+        metaDescription: "Via A6 direction Lyon sortie Fontainebleau, 1 hour ride. Past Château de Fontainebleau, Forêt de Fontainebleau and Barbizon village des peintres. Quote online.",
         heroTitle: "Taxi Paris → Fontainebleau",
         heroSubtitle: "Your transfer to Fontainebleau at a fixed price of €90 — €115.",
         description: "Fontainebleau in Seine-et-Marne boasts a UNESCO-listed château and a 25,000-hectare forest beloved by hikers and climbers. TaxiNeo takes you there in 1 hour.",
@@ -2380,8 +2380,8 @@ export const trajetsParis: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Poissy | Dès 45 € | TaxiNeo",
-        metaDescription: "Taxi Paris — Poissy, 30 km, 35 min, prix fixe dès 45 €. Villa Savoye, Collégiale Notre-Dame. Réservation 24h/24.",
+        metaTitle: "Taxi Paris → Poissy | forfait dès 45 €, 35 min | TaxiNeo",
+        metaDescription: "Via A14 direction Orgeval sortie P en 35 min. Collégiale Notre-Dame, Villa Savoye Le Corbusier et Usine Stellantis (ex-PSA) en chemin. Péage ~14 € inclus.",
         heroTitle: "Taxi Paris → Poissy",
         heroSubtitle: "Votre trajet Paris → Poissy au prix fixe de 45 — 60 €. Chauffeur professionnel, réservation en ligne 24h/24.",
         description: "Poissy, ville historique des Yvelines au bord de la Seine, abrite la Villa Savoye de Le Corbusier et une collégiale du XIIe siècle. TaxiNeo vous y conduit en 35 minutes.",
@@ -2399,8 +2399,8 @@ export const trajetsParis: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Poissy | From €45 | TaxiNeo",
-        metaDescription: "Taxi Paris — Poissy, 30 km, 35 min, fixed price from €45. Villa Savoye, Collégiale Notre-Dame. Booking 24/7.",
+        metaTitle: "Taxi Paris → Poissy | Fixed price from €45 | TaxiNeo",
+        metaDescription: "Via A14 direction Orgeval sortie Poissy, 35 min ride. Past Collégiale Notre-Dame, Villa Savoye Le Corbusier and Usine Stellantis (ex-PSA). ~€14 toll included.",
         heroTitle: "Taxi Paris → Poissy",
         heroSubtitle: "Your transfer to Poissy at a fixed price of €45 — €60.",
         description: "Poissy, a historic Yvelines town on the Seine, is home to Le Corbusier's Villa Savoye and a 12th-century collegiate church. TaxiNeo takes you there in 35 minutes.",
@@ -2447,8 +2447,8 @@ export const trajetsParis: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Conflans-Sainte-Honorine | Dès 50 € | TaxiNeo",
-        metaDescription: "Taxi Paris — Conflans-Sainte-Honorine, 36 km, 40 min, prix fixe dès 50 €. Capitale de la batellerie. Réservation 24h/24.",
+        metaTitle: "Taxi Paris → Conflans-Sainte-Honorine | 36 km | TaxiNeo",
+        metaDescription: "Via A15 direction Cergy-Pontoise s en 40 min. Confluent Seine-Oise, Musée de la Batellerie et Château du Prieuré en chemin. Dépose à votre adresse exacte.",
         heroTitle: "Taxi Paris → Conflans-Sainte-Honorine",
         heroSubtitle: "Votre trajet Paris → Conflans-Sainte-Honorine au prix fixe de 50 — 65 €. Chauffeur professionnel, réservation en ligne 24h/24.",
         description: "Conflans-Sainte-Honorine, capitale française de la batellerie dans les Yvelines, est située au confluent de la Seine et de l'Oise. TaxiNeo vous y conduit en 40 minutes.",
@@ -2466,8 +2466,8 @@ export const trajetsParis: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Conflans-Sainte-Honorine | From €50 | TaxiNeo",
-        metaDescription: "Taxi Paris — Conflans-Sainte-Honorine, 36 km, 40 min, fixed price from €50. France's barge capital. Booking 24/7.",
+        metaTitle: "Taxi Paris → Conflans-Sainte-Honorine | 36 km, €50 | TaxiNeo",
+        metaDescription: "Via A15 direction Cergy-Pontoise sortie Conflans, 40 min ride. Confluent Seine-Oise, Musée de la Batellerie and Château du Prieuré along the way. Quote online.",
         heroTitle: "Taxi Paris → Conflans-Sainte-Honorine",
         heroSubtitle: "Your transfer to Conflans-Sainte-Honorine at a fixed price of €50 — €65.",
         description: "Conflans-Sainte-Honorine, France's barge capital in the Yvelines, sits at the confluence of the Seine and Oise rivers. TaxiNeo takes you there in 40 minutes.",
@@ -2514,8 +2514,8 @@ export const trajetsParis: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Taverny | Dès 40 € | TaxiNeo",
-        metaDescription: "Taxi Paris — Taverny, 25 km, 35 min, prix fixe dès 40 €. Forêt de Montmorency, ville résidentielle. Réservation 24h/24.",
+        metaTitle: "Taxi Paris → Taverny | forfait dès 40 €, 35 min | TaxiNeo",
+        metaDescription: "Via A15 direction Cergy-Pontoise s en 35 min. Forêt de Montmorency, Base aérienne 921 et Butte de Montmorency en chemin. Dépose à votre adresse exacte.",
         heroTitle: "Taxi Paris → Taverny",
         heroSubtitle: "Votre trajet Paris → Taverny au prix fixe de 40 — 55 €. Chauffeur professionnel, réservation en ligne 24h/24.",
         description: "Taverny, ville résidentielle du Val-d'Oise au pied de la forêt de Montmorency, est accessible en 35 minutes depuis Paris. TaxiNeo assure votre transfert.",
@@ -2533,8 +2533,8 @@ export const trajetsParis: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Taverny | From €40 | TaxiNeo",
-        metaDescription: "Taxi Paris — Taverny, 25 km, 35 min, fixed price from €40. Montmorency Forest, residential town. Booking 24/7.",
+        metaTitle: "Taxi Paris → Taverny | Fixed price from €40 | TaxiNeo",
+        metaDescription: "Via A15 direction Cergy-Pontoise sortie Taverny, 35 min ride. Forêt de Montmorency, Base aérienne 921 and Butte de Montmorency along the way. Luggage included.",
         heroTitle: "Taxi Paris → Taverny",
         heroSubtitle: "Your transfer to Taverny at a fixed price of €40 — €55.",
         description: "Taverny, a residential town in Val-d'Oise at the foot of Montmorency Forest, is accessible in 35 minutes from Paris. TaxiNeo handles your transfer.",
@@ -2581,8 +2581,8 @@ export const trajetsParis: Trajet[] = [
     hub: "paris",
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Herblay | Dès 38 € | TaxiNeo",
-        metaDescription: "Taxi Paris — Herblay-sur-Seine, 22 km, 30 min, prix fixe dès 38 €. Bords de Seine, cadre résidentiel. Réservation 24h/24.",
+        metaTitle: "Taxi Paris → Herblay-sur-Seine | 22 km, dès 38 € | TaxiNeo",
+        metaDescription: "Via A15 direction Cergy-Pontoise s en 30 min. Bords de Seine, Parc du Château et Église Saint-Martin en chemin. Alternative directe au train ou au bus.",
         heroTitle: "Taxi Paris → Herblay-sur-Seine",
         heroSubtitle: "Votre trajet Paris → Herblay-sur-Seine au prix fixe de 38 — 50 €. Chauffeur professionnel, réservation en ligne 24h/24.",
         description: "Herblay-sur-Seine, commune résidentielle du Val-d'Oise en bord de Seine, offre un cadre de vie prisé à 22 km de Paris. TaxiNeo vous y conduit en 30 minutes.",
@@ -2600,8 +2600,8 @@ export const trajetsParis: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Herblay-sur-Seine | From €38 | TaxiNeo",
-        metaDescription: "Taxi Paris — Herblay-sur-Seine, 22 km, 30 min, fixed price from €38. Seine riverbanks, residential setting. Booking 24/7.",
+        metaTitle: "Taxi Paris → Herblay-sur-Seine | 22 km, from €38 | TaxiNeo",
+        metaDescription: "Via A15 direction Cergy-Pontoise sortie Herblay, 30 min ride. Bords de Seine, Parc du Château and Église Saint-Martin along the way. No toll on this route.",
         heroTitle: "Taxi Paris → Herblay-sur-Seine",
         heroSubtitle: "Your transfer to Herblay-sur-Seine at a fixed price of €38 — €50.",
         description: "Herblay-sur-Seine, a residential commune in Val-d'Oise along the Seine, offers a sought-after living environment 22 km from Paris. TaxiNeo gets you there in 30 minutes.",

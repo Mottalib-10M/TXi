@@ -30,8 +30,8 @@ export const trajetsThionvilleLongwy: Trajet[] = [
     hub: "thionville-longwy",
     i18n: {
       fr: {
-        metaTitle: "Taxi Thionville → Metz | Prix fixe dès 35 € | TaxiNeo",
-        metaDescription: "Taxi Thionville → Metz. 30 km, 25 min, dès 35 €. A31 gratuite, Centre Pompidou-Metz, cathédrale Saint-Étienne. Réservation 24h/24.",
+        metaTitle: "Taxi Thionville → Metz | 30 km, dès 35 € | TaxiNeo",
+        metaDescription: "Via A31 en 25 min. Passage par Moselle, Centre Pompidou-Metz, Cathédrale Saint-Étienne et Frontaliers. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Thionville → Metz",
         heroSubtitle: "Transfert Thionville → Metz au prix fixe de 35 — 50 €. 30 km par l'A31 gratuite le long de la Moselle.",
         description: "Metz, capitale de la Moselle avec son Centre Pompidou-Metz et sa cathédrale aux vitraux légendaires, est à 25 min de Thionville.",
@@ -49,8 +49,8 @@ export const trajetsThionvilleLongwy: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Thionville → Metz | Fixed price from €35 | TaxiNeo",
-        metaDescription: "Taxi Thionville → Metz. 30 km, 25 min, from €35. Toll-free A31, Centre Pompidou-Metz, cathedral. Book 24/7.",
+        metaTitle: "Taxi Thionville → Metz | 30 km, from €35 | TaxiNeo",
+        metaDescription: "Via A31, 25 min ride. Moselle, Centre Pompidou-Metz, Cathédrale Saint-Étienne and Frontaliers en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Thionville → Metz",
         heroSubtitle: "Your Thionville → Metz transfer at €35 — €50. 30 km via the toll-free A31 along the Moselle.",
         description: "Metz, Moselle capital with its Centre Pompidou-Metz and cathedral with legendary stained glass, is 25 min from Thionville.",
@@ -95,8 +95,8 @@ export const trajetsThionvilleLongwy: Trajet[] = [
     hub: "thionville-longwy",
     i18n: {
       fr: {
-        metaTitle: "Taxi Thionville → Luxembourg-Ville | Prix fixe dès 45 € | TaxiNeo",
-        metaDescription: "Taxi Thionville → Luxembourg-Ville. 35 km, 30 min, dès 45 €. A31/E25 gratuite, Grand-Duché, Kirchberg, Casemates. Réservation 24h/24.",
+        metaTitle: "Taxi Thionville → Luxembourg-Ville | 35 km, 45 € | TaxiNeo",
+        metaDescription: "Via A31/E25 en 30 min. E25, Grand-Duché, Frontaliers et Kirchberg en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Thionville → Luxembourg-Ville",
         heroSubtitle: "Transfert Thionville → Luxembourg au prix fixe de 45 — 60 €. 35 km vers le Grand-Duché par l'A31/E25.",
         description: "Luxembourg-Ville, capitale européenne et place financière mondiale avec ses casemates UNESCO, est à 30 min de Thionville.",
@@ -114,8 +114,8 @@ export const trajetsThionvilleLongwy: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Thionville → Luxembourg City | Fixed price from €45 | TaxiNeo",
-        metaDescription: "Taxi Thionville → Luxembourg City. 35 km, 30 min, from €45. Toll-free A31/E25, Grand Duchy, Kirchberg. Book 24/7.",
+        metaTitle: "Taxi Thionville → Luxembourg-Ville | 35 km, €45 | TaxiNeo",
+        metaDescription: "Via A31/E25, 30 min ride. E25, Grand-Duché, Frontaliers and Kirchberg en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Thionville → Luxembourg City",
         heroSubtitle: "Your Thionville → Luxembourg transfer at €45 — €60. 35 km to the Grand Duchy via the toll-free A31/E25.",
         description: "Luxembourg City, European capital and global financial centre with UNESCO-listed casemates, is 30 min from Thionville.",
@@ -160,8 +160,8 @@ export const trajetsThionvilleLongwy: Trajet[] = [
     hub: "thionville-longwy",
     i18n: {
       fr: {
-        metaTitle: "Taxi Longwy → Luxembourg-Ville | Prix fixe dès 40 € | TaxiNeo",
-        metaDescription: "Taxi Longwy → Luxembourg-Ville. 30 km, 25 min, dès 40 €. A30, fortifications Vauban, Pays des Trois Frontières. Réservation 24h/24.",
+        metaTitle: "Taxi Longwy → Luxembourg-Ville | 30 km, dès 40 € | TaxiNeo",
+        metaDescription: "Via A30 en 25 min. Fortifications Vauban, Pays des Trois Frontières, Sidérurgie et Grand-Duché en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Longwy → Luxembourg-Ville",
         heroSubtitle: "Transfert Longwy → Luxembourg au prix fixe de 40 — 55 €. 30 km depuis le Pays des Trois Frontières.",
         description: "Luxembourg-Ville, capitale du Grand-Duché avec ses casemates UNESCO et son Kirchberg européen, est à 25 min de Longwy.",
@@ -179,8 +179,8 @@ export const trajetsThionvilleLongwy: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Longwy → Luxembourg City | Fixed price from €40 | TaxiNeo",
-        metaDescription: "Taxi Longwy → Luxembourg City. 30 km, 25 min, from €40. A30, Vauban fortifications, Three Borders Country. Book 24/7.",
+        metaTitle: "Taxi Longwy → Luxembourg-Ville | 30 km, from €40 | TaxiNeo",
+        metaDescription: "Via A30, 25 min ride. Fortifications Vauban, Pays des Trois Frontières, Sidérurgie and Grand-Duché en route. Faster and more direct than train or bus.",
         heroTitle: "Taxi Longwy → Luxembourg City",
         heroSubtitle: "Your Longwy → Luxembourg transfer at €40 — €55. 30 km from the Three Borders Country.",
         description: "Luxembourg City, Grand Duchy capital with UNESCO casemates and European Kirchberg, is 25 min from Longwy.",
@@ -225,8 +225,8 @@ export const trajetsThionvilleLongwy: Trajet[] = [
     hub: "thionville-longwy",
     i18n: {
       fr: {
-        metaTitle: "Taxi Thionville → Nancy | Prix fixe dès 95 € | TaxiNeo",
-        metaDescription: "Taxi Thionville → Nancy. 80 km, 55 min, dès 95 €. A31, Place Stanislas UNESCO, Art Nouveau, traversée de la Lorraine. Réservation 24h/24.",
+        metaTitle: "Taxi Thionville → Nancy | 80 km, dès 95 € | TaxiNeo",
+        metaDescription: "Via A31 en 55 min. Place Stanislas UNESCO, Lorraine, Moselle et Art Nouveau en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Thionville → Nancy",
         heroSubtitle: "Transfert Thionville → Nancy au prix fixe de 95 — 125 €. 80 km par l'A31 à travers le cœur de la Lorraine.",
         description: "Nancy, ancienne capitale du duché de Lorraine avec sa Place Stanislas UNESCO et son patrimoine Art Nouveau, est à 55 min de Thionville.",
@@ -244,8 +244,8 @@ export const trajetsThionvilleLongwy: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Thionville → Nancy | Fixed price from €95 | TaxiNeo",
-        metaDescription: "Taxi Thionville → Nancy. 80 km, 55 min, from €95. A31, Place Stanislas UNESCO, Art Nouveau, across Lorraine. Book 24/7.",
+        metaTitle: "Taxi Thionville → Nancy | 80 km, from €95 | TaxiNeo",
+        metaDescription: "A31 route, approximately 55 min. Place Stanislas UNESCO, Lorraine, Moselle and Art Nouveau en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Thionville → Nancy",
         heroSubtitle: "Your Thionville → Nancy transfer at €95 — €125. 80 km via the A31 through the heart of Lorraine.",
         description: "Nancy, former capital of the Duchy of Lorraine with its UNESCO Place Stanislas and Art Nouveau heritage, is 55 min from Thionville.",
@@ -290,8 +290,8 @@ export const trajetsThionvilleLongwy: Trajet[] = [
     hub: "thionville-longwy",
     i18n: {
       fr: {
-        metaTitle: "Taxi Thionville → Strasbourg | Prix fixe dès 275 € | TaxiNeo",
-        metaDescription: "Taxi Thionville → Strasbourg. 230 km, 2h20, dès 275 €. A31/A4, cathédrale, Petite France, Parlement européen. Réservation 24h/24.",
+        metaTitle: "Taxi Thionville → Strasbourg | 230 km, dès 275 € | TaxiNeo",
+        metaDescription: "Par A31/A4, 2h20 de trajet. Passage par Cathédrale de Strasbourg, Petite France et Parlement européen. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Thionville → Strasbourg",
         heroSubtitle: "Transfert Thionville → Strasbourg au prix fixe de 275 — 340 €. 230 km de la Moselle à l'Alsace par l'A31/A4.",
         description: "Strasbourg, capitale européenne et joyau alsacien avec sa cathédrale gothique et sa Petite France, est à 2h20 de Thionville.",
@@ -309,8 +309,8 @@ export const trajetsThionvilleLongwy: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Thionville → Strasbourg | Fixed price from €275 | TaxiNeo",
-        metaDescription: "Taxi Thionville → Strasbourg. 230 km, 2h20, from €275. A31/A4, cathedral, Petite France, European Parliament. Book 24/7.",
+        metaTitle: "Taxi Thionville → Strasbourg | 230 km, from €275 | TaxiNeo",
+        metaDescription: "Via A31/A4, 2h20 ride. Cathédrale de Strasbourg, Petite France and Parlement européen along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Thionville → Strasbourg",
         heroSubtitle: "Your Thionville → Strasbourg transfer at €275 — €340. 230 km from Moselle to Alsace via the A31/A4.",
         description: "Strasbourg, European capital and Alsatian jewel with its Gothic cathedral and Petite France, is 2h20 from Thionville.",

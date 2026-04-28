@@ -30,8 +30,8 @@ export const trajetsMorlaixRoscoff: Trajet[] = [
     hub: "morlaix-roscoff",
     i18n: {
       fr: {
-        metaTitle: "Taxi Morlaix → Brest | Prix fixe dès 75 € | TaxiNeo",
-        metaDescription: "Taxi Morlaix → Brest. 60 km, 45 min, dès 75 €. Viaduc de Morlaix, plateau du Léon, rade de Brest. Réservation 24h/24.",
+        metaTitle: "Taxi Morlaix → Brest | forfait dès 75 €, 45 min | TaxiNeo",
+        metaDescription: "Via N12 en 45 min. Passage par Viaduc de Morlaix, Plateau du Léon, Rade de Brest et Enclos paroissiaux. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Morlaix → Brest",
         heroSubtitle: "Transfert Morlaix → Brest au prix fixe de 75 — 95 €. 60 km par la N12.",
         description: "Brest, grande ville portuaire du Finistère, est à 45 minutes de Morlaix par la voie express N12 entièrement gratuite.",
@@ -50,7 +50,7 @@ export const trajetsMorlaixRoscoff: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Morlaix → Brest | Fixed price from €75 | TaxiNeo",
-        metaDescription: "Taxi Morlaix → Brest. 60 km, 45 min, from €75. Morlaix viaduct, Leon plateau, Brest harbour. Book 24/7.",
+        metaDescription: "Via N12, 45 min ride. Viaduc de Morlaix, Plateau du Léon, Rade de Brest and Enclos paroissiaux en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Morlaix → Brest",
         heroSubtitle: "Your Morlaix → Brest transfer at €75 — €95. 60 km via the N12.",
         description: "Brest, Finistere's great port city, is 45 minutes from Morlaix via the toll-free N12 expressway.",
@@ -95,8 +95,8 @@ export const trajetsMorlaixRoscoff: Trajet[] = [
     hub: "morlaix-roscoff",
     i18n: {
       fr: {
-        metaTitle: "Taxi Morlaix → Rennes | Prix fixe dès 220 € | TaxiNeo",
-        metaDescription: "Taxi Morlaix → Rennes. 185 km, 2h, dès 220 €. N12 gratuite, traversée de la Bretagne Nord. Réservation 24h/24.",
+        metaTitle: "Taxi Morlaix → Rennes | 185 km, dès 220 € | TaxiNeo",
+        metaDescription: "Trajet direct N12 en 2h. Passage par Traversée de la Bretagne Nord, Guingamp, Saint-Brieuc et Lamballe. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Morlaix → Rennes",
         heroSubtitle: "Transfert Morlaix → Rennes au prix fixe de 220 — 275 €. 185 km par la N12.",
         description: "Rennes, capitale de la Bretagne, est à 2 heures de Morlaix par la voie express N12 entièrement gratuite.",
@@ -114,8 +114,8 @@ export const trajetsMorlaixRoscoff: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Morlaix → Rennes | Fixed price from €220 | TaxiNeo",
-        metaDescription: "Taxi Morlaix → Rennes. 185 km, 2h, from €220. Toll-free N12, crossing northern Brittany. Book 24/7.",
+        metaTitle: "Taxi Morlaix → Rennes | 185 km, from €220 | TaxiNeo",
+        metaDescription: "Through N12 in 2 hours. Traversée de la Bretagne Nord, Guingamp, Saint-Brieuc and Lamballe en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Morlaix → Rennes",
         heroSubtitle: "Your Morlaix → Rennes transfer at €220 — €275. 185 km via the N12.",
         description: "Rennes, capital of Brittany, is 2 hours from Morlaix via the completely toll-free N12 expressway.",
@@ -160,8 +160,8 @@ export const trajetsMorlaixRoscoff: Trajet[] = [
     hub: "morlaix-roscoff",
     i18n: {
       fr: {
-        metaTitle: "Taxi Roscoff → Brest | Prix fixe dès 80 € | TaxiNeo",
-        metaDescription: "Taxi Roscoff → Brest. 65 km, 50 min, dès 80 €. Ferry Plymouth, Île de Batz, port de Roscoff. Réservation 24h/24.",
+        metaTitle: "Taxi Roscoff → Brest | forfait dès 80 €, 50 min | TaxiNeo",
+        metaDescription: "Par D58 puis N12, 50 min de trajet. N12, Port de Roscoff, Île de Batz et Oignons de Roscoff AOP en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Roscoff → Brest",
         heroSubtitle: "Transfert Roscoff → Brest au prix fixe de 80 — 100 €. 65 km par la D58 et N12.",
         description: "Brest, métropole du Finistère, est à 50 minutes de Roscoff par la D58 et la voie express N12.",
@@ -180,7 +180,7 @@ export const trajetsMorlaixRoscoff: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Roscoff → Brest | Fixed price from €80 | TaxiNeo",
-        metaDescription: "Taxi Roscoff → Brest. 65 km, 50 min, from €80. Plymouth ferry, Ile de Batz, Roscoff port. Book 24/7.",
+        metaDescription: "Via D58 then N12, 50 min ride. N12, Port de Roscoff, Île de Batz and Oignons de Roscoff AOP en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Roscoff → Brest",
         heroSubtitle: "Your Roscoff → Brest transfer at €80 — €100. 65 km via the D58 and N12.",
         description: "Brest, Finistere's main city, is 50 minutes from Roscoff via the D58 and the toll-free N12 expressway.",
@@ -225,8 +225,8 @@ export const trajetsMorlaixRoscoff: Trajet[] = [
     hub: "morlaix-roscoff",
     i18n: {
       fr: {
-        metaTitle: "Taxi Roscoff → Morlaix | Prix fixe dès 30 € | TaxiNeo",
-        metaDescription: "Taxi Roscoff → Morlaix. 25 km, 20 min, dès 30 €. Ferry Plymouth, gare TGV Morlaix, Île de Batz. Réservation 24h/24.",
+        metaTitle: "Taxi Roscoff → Morlaix | 25 km, dès 30 € | TaxiNeo",
+        metaDescription: "Via D58/D769 en 20 min. Ferry Roscoff-Plymouth, Île de Batz, Saint-Pol-de-Léon et Oignons de Roscoff AOP en chemin. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Roscoff → Morlaix",
         heroSubtitle: "Transfert Roscoff → Morlaix au prix fixe de 30 — 40 €. 25 km par la D58.",
         description: "Morlaix, ville du viaduc monumental et gare TGV du Finistère Nord, est à seulement 20 minutes de Roscoff.",
@@ -244,8 +244,8 @@ export const trajetsMorlaixRoscoff: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Roscoff → Morlaix | Fixed price from €30 | TaxiNeo",
-        metaDescription: "Taxi Roscoff → Morlaix. 25 km, 20 min, from €30. Plymouth ferry, Morlaix TGV station, Ile de Batz. Book 24/7.",
+        metaTitle: "Taxi Roscoff → Morlaix | 25 km, from €30 | TaxiNeo",
+        metaDescription: "Via D58/D769, 20 min ride. Ferry Roscoff-Plymouth, Île de Batz, Saint-Pol-de-Léon and Oignons de Roscoff AOP en route. Drop-off at your exact address.",
         heroTitle: "Taxi Roscoff → Morlaix",
         heroSubtitle: "Your Roscoff → Morlaix transfer at €30 — €40. 25 km via the D58.",
         description: "Morlaix, home to the monumental viaduct and northern Finistere's TGV station, is just 20 minutes from Roscoff.",
@@ -290,8 +290,8 @@ export const trajetsMorlaixRoscoff: Trajet[] = [
     hub: "morlaix-roscoff",
     i18n: {
       fr: {
-        metaTitle: "Taxi Morlaix → Quimper | Prix fixe dès 100 € | TaxiNeo",
-        metaDescription: "Taxi Morlaix → Quimper. 85 km, 1h, dès 100 €. Monts d'Arrée, Huelgoat, cathédrale Saint-Corentin. Réservation 24h/24.",
+        metaTitle: "Taxi Morlaix → Quimper | 85 km, dès 100 € | TaxiNeo",
+        metaDescription: "Par N12 puis D785/N165, 1h de trajet. N12, Monts d'Arrée, Huelgoat et Cathédrale Saint-Corentin en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Morlaix → Quimper",
         heroSubtitle: "Transfert Morlaix → Quimper au prix fixe de 100 — 130 €. 85 km via les Monts d'Arrée.",
         description: "Quimper, préfecture du Finistère et capitale de la Cornouaille, est à 1 heure de Morlaix par la route intérieure traversant les Monts d'Arrée.",
@@ -309,8 +309,8 @@ export const trajetsMorlaixRoscoff: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Morlaix → Quimper | Fixed price from €100 | TaxiNeo",
-        metaDescription: "Taxi Morlaix → Quimper. 85 km, 1h, from €100. Monts d'Arree, Huelgoat forest, Saint-Corentin Cathedral. Book 24/7.",
+        metaTitle: "Taxi Morlaix → Quimper | 85 km, from €100 | TaxiNeo",
+        metaDescription: "Via N12 then D785/N165, 1 hour ride. N12, Monts d'Arrée, Huelgoat and Cathédrale Saint-Corentin en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Morlaix → Quimper",
         heroSubtitle: "Your Morlaix → Quimper transfer at €100 — €130. 85 km through the Monts d'Arree.",
         description: "Quimper, Finistere's prefecture and capital of Cornouaille, is 1 hour from Morlaix via the inland road through the Monts d'Arree.",

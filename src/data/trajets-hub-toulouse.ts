@@ -30,8 +30,8 @@ export const trajetsToulouse: Trajet[] = [
     hub: "toulouse",
     i18n: {
       fr: {
-        metaTitle: "Taxi Toulouse → Albi | Prix fixe dès 100 € | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Albi. 80 km, 1h, prix fixe dès 100 €. Cathédrale Sainte-Cécile (UNESCO), musée Toulouse-Lautrec. Réservation 24h/24.",
+        metaTitle: "Taxi Toulouse → Albi | forfait dès 100 € | TaxiNeo",
+        metaDescription: "Via A68 en 1h. Cathédrale Sainte-Cécile, Toulouse-Lautrec et Tarn en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Toulouse → Albi",
         heroSubtitle: "Transfert Toulouse → Albi au prix fixe de 100 — 130 €. 80 km par l'A68.",
         description: "Albi, cité épiscopale classée UNESCO, est à 1h de Toulouse par l'autoroute A68 à travers les coteaux du Tarn.",
@@ -50,7 +50,7 @@ export const trajetsToulouse: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Toulouse → Albi | Fixed price from €100 | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Albi. 80 km, 1h, fixed price from €100. Sainte-Cécile Cathedral (UNESCO), Toulouse-Lautrec Museum. Book 24/7.",
+        metaDescription: "Via A68, 1 hour ride. Cathédrale Sainte-Cécile, Toulouse-Lautrec and Tarn along the way. Drop-off at your exact address. Door-to-door, luggage included.",
         heroTitle: "Taxi Toulouse → Albi",
         heroSubtitle: "Your Toulouse → Albi transfer at €100 — €130. 80 km via the A68.",
         description: "Albi, a UNESCO-listed episcopal city, is 1h from Toulouse via the A68 through the Tarn hills.",
@@ -95,8 +95,8 @@ export const trajetsToulouse: Trajet[] = [
     hub: "toulouse",
     i18n: {
       fr: {
-        metaTitle: "Taxi Toulouse → Montauban | Prix fixe dès 70 € | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Montauban. 55 km, 45 min, dès 70 €. Place Nationale, musée Ingres-Bourdelle. Réservation 24h/24.",
+        metaTitle: "Taxi Toulouse → Montauban | 55 km, dès 70 € | TaxiNeo",
+        metaDescription: "Via A62 en 45 min. Tarn-et-Garonne, Place Nationale et Ingres en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Toulouse → Montauban",
         heroSubtitle: "Transfert Toulouse → Montauban au prix fixe de 70 — 90 €. 55 km par l'A62.",
         description: "Montauban, préfecture du Tarn-et-Garonne et ville d'Ingres, est à 45 minutes de Toulouse par l'A62.",
@@ -114,8 +114,8 @@ export const trajetsToulouse: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Toulouse → Montauban | Fixed price from €70 | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Montauban. 55 km, 45 min, from €70. Place Nationale, Ingres-Bourdelle Museum. Book 24/7.",
+        metaTitle: "Taxi Toulouse → Montauban | 55 km, from €70 | TaxiNeo",
+        metaDescription: "Via A62, 45 min ride. Tarn-et-Garonne, Place Nationale and Ingres along the way. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Toulouse → Montauban",
         heroSubtitle: "Your Toulouse → Montauban transfer at €70 — €90. 55 km via the A62.",
         description: "Montauban, prefecture of Tarn-et-Garonne and Ingres' birthplace, is 45 minutes from Toulouse via the A62.",
@@ -160,8 +160,8 @@ export const trajetsToulouse: Trajet[] = [
     hub: "toulouse",
     i18n: {
       fr: {
-        metaTitle: "Taxi Toulouse → Lourdes | Prix fixe dès 240 € | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Lourdes. 190 km, 2h, prix fixe dès 240 €. Sanctuaires, pèlerinage, PMR. Réservation 24h/24.",
+        metaTitle: "Taxi Toulouse → Lourdes | 190 km, dès 240 € | TaxiNeo",
+        metaDescription: "Via A64 en 2h. Pyrénées, Sanctuaires, Pèlerinage et Saint-Gaudens en chemin. Arrêt visite possible en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Toulouse → Lourdes",
         heroSubtitle: "Transfert Toulouse → Lourdes au prix fixe de 240 — 300 €. 190 km par l'A64 vers les Pyrénées.",
         description: "Lourdes, haut lieu de pèlerinage mondial avec 6 millions de visiteurs par an, est à 2h de Toulouse par l'A64.",
@@ -179,8 +179,8 @@ export const trajetsToulouse: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Toulouse → Lourdes | Fixed price from €240 | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Lourdes. 190 km, 2h, fixed price from €240. Sanctuary, pilgrimage, wheelchair accessible. Book 24/7.",
+        metaTitle: "Taxi Toulouse → Lourdes | 190 km, from €240 | TaxiNeo",
+        metaDescription: "Via A64, 2 hours ride. Pyrénées, Sanctuaires, Pèlerinage and Saint-Gaudens en route. Stops for sightseeing possible en route. Up to 2h30 during rush hour.",
         heroTitle: "Taxi Toulouse → Lourdes",
         heroSubtitle: "Your Toulouse → Lourdes transfer at €240 — €300. 190 km via the A64 to the Pyrenees.",
         description: "Lourdes, a world pilgrimage destination with 6 million visitors a year, is 2h from Toulouse via the A64.",
@@ -225,8 +225,8 @@ export const trajetsToulouse: Trajet[] = [
     hub: "toulouse",
     i18n: {
       fr: {
-        metaTitle: "Taxi Toulouse → Pau | Prix fixe dès 250 € | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Pau. 195 km, 2h, prix fixe dès 250 €. Boulevard des Pyrénées, château Henri IV. Réservation 24h/24.",
+        metaTitle: "Taxi Toulouse → Pau | 195 km, dès 250 €, 2h | TaxiNeo",
+        metaDescription: "Via A64 en 2h. Boulevard des Pyrénées, Henri IV et Béarn en chemin. Dépose porte-à-porte, bagages inclus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Toulouse → Pau",
         heroSubtitle: "Transfert Toulouse → Pau au prix fixe de 250 — 310 €. 195 km par l'A64.",
         description: "Pau, préfecture des Pyrénées-Atlantiques, est célèbre pour son boulevard offrant un panorama exceptionnel sur la chaîne des Pyrénées.",
@@ -245,7 +245,7 @@ export const trajetsToulouse: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Toulouse → Pau | Fixed price from €250 | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Pau. 195 km, 2h, fixed price from €250. Boulevard des Pyrénées, Henri IV castle. Book 24/7.",
+        metaDescription: "Via A64, 2 hours ride. Boulevard des Pyrénées, Henri IV and Béarn along the way. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Toulouse → Pau",
         heroSubtitle: "Your Toulouse → Pau transfer at €250 — €310. 195 km via the A64.",
         description: "Pau, capital of the Pyrénées-Atlantiques, is famous for its boulevard offering an exceptional panorama of the Pyrenees mountain chain.",
@@ -290,8 +290,8 @@ export const trajetsToulouse: Trajet[] = [
     hub: "toulouse",
     i18n: {
       fr: {
-        metaTitle: "Taxi Toulouse → Andorre | Prix fixe dès 280 € | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Andorre. 185 km, 2h30, prix fixe dès 280 €. Shopping duty-free, ski, Pyrénées. Réservation 24h/24.",
+        metaTitle: "Taxi Toulouse → Andorre-la-Vieille | 185 km, 280 € | TaxiNeo",
+        metaDescription: "Via A66 puis N20 puis N22 en 2h30. N20, Ariège, Pas de la Case et Duty-free en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Toulouse → Andorre",
         heroSubtitle: "Transfert Toulouse → Andorre-la-Vieille au prix fixe de 280 — 350 €. 185 km via l'A66 et la N20.",
         description: "Andorre, principauté pyrénéenne entre la France et l'Espagne, est à 2h30 de Toulouse via l'Ariège et le col d'Envalira.",
@@ -309,8 +309,8 @@ export const trajetsToulouse: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Toulouse → Andorra | Fixed price from €280 | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Andorra. 185 km, 2h30, fixed price from €280. Duty-free shopping, skiing, Pyrenees. Book 24/7.",
+        metaTitle: "Taxi Toulouse → Andorre-la-Vieille | 185 km, €280 | TaxiNeo",
+        metaDescription: "A66 then N20 then N22 route, approximately 2h30. N20, Ariège, Pas de la Case and Duty-free en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Toulouse → Andorra",
         heroSubtitle: "Your Toulouse → Andorra la Vella transfer at €280 — €350. 185 km via the A66 and N20.",
         description: "Andorra, a Pyrenean principality between France and Spain, is 2h30 from Toulouse via the Ariège and the Envalira pass.",
@@ -355,8 +355,8 @@ export const trajetsToulouse: Trajet[] = [
     hub: "toulouse",
     i18n: {
       fr: {
-        metaTitle: "Taxi Toulouse → Auch | Capitale de la Gascogne | TaxiNeo",
-        metaDescription: "Réservez votre taxi Toulouse–Auch dès 100 €. 80 km en 55 min. Découvrez la cathédrale UNESCO, d'Artagnan et l'Armagnac.",
+        metaTitle: "Taxi Toulouse → Auch | forfait dès 100 € | TaxiNeo",
+        metaDescription: "Trajet direct A124 puis N124 en 55 min. Cathédrale Sainte-Marie, D'Artagnan, Armagnac sur le parcours. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Toulouse — Auch",
         heroSubtitle: "Au cœur de la Gascogne et du pays d'Armagnac",
         description: "Transfert en taxi de Toulouse à Auch, préfecture du Gers, capitale de la Gascogne et berceau de d'Artagnan.",
@@ -375,7 +375,7 @@ export const trajetsToulouse: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Toulouse → Auch | Capital of Gascony | TaxiNeo",
-        metaDescription: "Book your Toulouse–Auch taxi from €100. 80 km in 55 min. Discover the UNESCO cathedral, d'Artagnan and Armagnac.",
+        metaDescription: "Direct route via A124 then N124, 55 min. Cathédrale Sainte-Marie, D'Artagnan and Armagnac along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Toulouse — Auch",
         heroSubtitle: "In the heart of Gascony and Armagnac country",
         description: "Taxi transfer from Toulouse to Auch, prefecture of the Gers, capital of Gascony and birthplace of d'Artagnan.",
@@ -420,8 +420,8 @@ export const trajetsToulouse: Trajet[] = [
     hub: "toulouse",
     i18n: {
       fr: {
-        metaTitle: "Taxi Toulouse → Foix | Château cathare & Pyrénées | TaxiNeo",
-        metaDescription: "Réservez votre taxi Toulouse–Foix dès 110 €. 85 km en 1h par l'A66. Château cathare, grottes préhistoriques et Pyrénées ariégeoises.",
+        metaTitle: "Taxi Toulouse → Foix | forfait dès 110 € | TaxiNeo",
+        metaDescription: "Itinéraire A66 sortie Foix, environ 1h. Château cathare, Pyrénées ariégeoises, Grottes sur le parcours. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Toulouse — Foix",
         heroSubtitle: "La citadelle cathare aux portes des Pyrénées",
         description: "Transfert en taxi de Toulouse à Foix, préfecture de l'Ariège, dominée par son impressionnant château des comtes de Foix.",
@@ -440,7 +440,7 @@ export const trajetsToulouse: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Toulouse → Foix | Cathar Castle & Pyrenees | TaxiNeo",
-        metaDescription: "Book your Toulouse–Foix taxi from €110. 85 km in 1h via A66. Cathar castle, prehistoric caves and Ariège Pyrenees.",
+        metaDescription: "Direct route via A66 sortie Foix, 1 hour. Château cathare, Pyrénées ariégeoises and Grottes along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Toulouse — Foix",
         heroSubtitle: "The Cathar citadel at the gates of the Pyrenees",
         description: "Taxi transfer from Toulouse to Foix, prefecture of Ariège, dominated by its impressive Castle of the Counts of Foix.",
@@ -485,8 +485,8 @@ export const trajetsToulouse: Trajet[] = [
     hub: "toulouse",
     i18n: {
       fr: {
-        metaTitle: "Taxi Toulouse → Castres | Musée Goya & Sidobre | TaxiNeo",
-        metaDescription: "Réservez votre taxi Toulouse–Castres dès 95 €. 75 km en 55 min. Musée Goya, maisons sur l'Agout et chaos granitiques du Sidobre.",
+        metaTitle: "Taxi Toulouse → Castres | 75 km, dès 95 € | TaxiNeo",
+        metaDescription: "Via A68 puis N126 en 55 min. Musée Goya, Tarn et Maisons sur l'Agout en chemin. Dépose à votre adresse exacte. Alternative directe au train ou au bus.",
         heroTitle: "Taxi Toulouse — Castres",
         heroSubtitle: "Cité du pastel et du musée Goya",
         description: "Transfert en taxi de Toulouse à Castres, sous-préfecture du Tarn abritant le plus important musée d'art hispanique de France.",
@@ -504,8 +504,8 @@ export const trajetsToulouse: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Toulouse → Castres | Goya Museum & Sidobre | TaxiNeo",
-        metaDescription: "Book your Toulouse–Castres taxi from €95. 75 km in 55 min. Goya Museum, houses on the Agout and Sidobre granite formations.",
+        metaTitle: "Taxi Toulouse → Castres | 75 km, from €95 | TaxiNeo",
+        metaDescription: "Via A68 then N126, 55 min ride. Musée Goya, Tarn and Maisons sur l'Agout along the way. Drop-off at your exact address. Door-to-door, luggage included.",
         heroTitle: "Taxi Toulouse — Castres",
         heroSubtitle: "City of pastel and the Goya Museum",
         description: "Taxi transfer from Toulouse to Castres, a Tarn sub-prefecture housing France's most important Hispanic art museum.",
@@ -550,8 +550,8 @@ export const trajetsToulouse: Trajet[] = [
     hub: "toulouse",
     i18n: {
       fr: {
-        metaTitle: "Taxi Toulouse → Tarbes | Pyrénées & Pic du Midi | TaxiNeo",
-        metaDescription: "Réservez votre taxi Toulouse–Tarbes dès 195 €. 155 km en 1h40 par l'A64. Accès au Pic du Midi et aux Pyrénées centrales.",
+        metaTitle: "Taxi Toulouse → Tarbes | 155 km, dès 195 € | TaxiNeo",
+        metaDescription: "Via A64 en 1h40. Pyrénées, Pic du Midi et Haras nationaux en chemin. Dépose porte-à-porte, bagages inclus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Toulouse — Tarbes",
         heroSubtitle: "Porte d'entrée des Pyrénées centrales et du Pic du Midi",
         description: "Transfert longue distance en taxi de Toulouse à Tarbes, préfecture des Hautes-Pyrénées et porte du Pic du Midi.",
@@ -569,8 +569,8 @@ export const trajetsToulouse: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Toulouse → Tarbes | Pyrenees & Pic du Midi | TaxiNeo",
-        metaDescription: "Book your Toulouse–Tarbes taxi from €195. 155 km in 1h40 via A64. Access to Pic du Midi and the central Pyrenees.",
+        metaTitle: "Taxi Toulouse → Tarbes | 155 km, from €195 | TaxiNeo",
+        metaDescription: "Via A64, 1h40 ride. Pyrénées, Pic du Midi and Haras nationaux along the way. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Toulouse — Tarbes",
         heroSubtitle: "Gateway to the central Pyrenees and Pic du Midi",
         description: "Long-distance taxi transfer from Toulouse to Tarbes, prefecture of Hautes-Pyrénées and gateway to Pic du Midi.",
@@ -615,8 +615,8 @@ export const trajetsToulouse: Trajet[] = [
     hub: "toulouse",
     i18n: {
       fr: {
-        metaTitle: "Taxi Toulouse → Moissac | Abbaye UNESCO & Cloître | TaxiNeo",
-        metaDescription: "Réservez votre taxi Toulouse–Moissac dès 90 €. 70 km en 50 min. Abbaye Saint-Pierre UNESCO, cloître roman et chasselas.",
+        metaTitle: "Taxi Toulouse → Moissac | 70 km, dès 90 € | TaxiNeo",
+        metaDescription: "Via A62 sortie Moissac en 50 min. En passant par Abbaye UNESCO, Cloître roman et Canal des Deux-Mers. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Toulouse — Moissac",
         heroSubtitle: "L'abbaye UNESCO et le plus beau cloître roman du monde",
         description: "Transfert en taxi de Toulouse à Moissac, étape majeure des chemins de Compostelle, célèbre pour son abbaye classée UNESCO.",
@@ -634,8 +634,8 @@ export const trajetsToulouse: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Toulouse → Moissac | UNESCO Abbey & Cloister | TaxiNeo",
-        metaDescription: "Book your Toulouse–Moissac taxi from €90. 70 km in 50 min. Saint-Pierre Abbey UNESCO, Romanesque cloister and chasselas grapes.",
+        metaTitle: "Taxi Toulouse → Moissac | 70 km, from €90 | TaxiNeo",
+        metaDescription: "Direct route via A62 sortie Moissac, 50 min. Abbaye UNESCO, Cloître roman and Canal des Deux-Mers along the way. Stops for sightseeing possible en route.",
         heroTitle: "Taxi Toulouse — Moissac",
         heroSubtitle: "The UNESCO abbey and the world's finest Romanesque cloister",
         description: "Taxi transfer from Toulouse to Moissac, a major stop on the Compostela pilgrimage, famous for its UNESCO-listed abbey.",
@@ -680,8 +680,8 @@ export const trajetsToulouse: Trajet[] = [
     hub: "toulouse",
     i18n: {
       fr: {
-        metaTitle: "Taxi Toulouse → Saint-Bertrand-de-Comminges | UNESCO | TaxiNeo",
-        metaDescription: "Réservez votre taxi Toulouse–Saint-Bertrand dès 140 €. 110 km en 1h20. Cathédrale UNESCO, ruines romaines et Pyrénées.",
+        metaTitle: "Taxi Toulouse → St-Bertrand-de-Comminges | 110 km | TaxiNeo",
+        metaDescription: "Par A64 sortie Montréjeau,, 1h20 de trajet. Cathédrale UNESCO, Ruines romaines et Comminges en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Toulouse — Saint-Bertrand-de-Comminges",
         heroSubtitle: "Le Mont-Saint-Michel des Pyrénées",
         description: "Transfert en taxi de Toulouse à Saint-Bertrand-de-Comminges, « Mont-Saint-Michel des Pyrénées », classé UNESCO.",
@@ -699,8 +699,8 @@ export const trajetsToulouse: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Toulouse → Saint-Bertrand-de-Comminges | UNESCO | TaxiNeo",
-        metaDescription: "Book your Toulouse–Saint-Bertrand taxi from €140. 110 km in 1h20. UNESCO cathedral, Roman ruins and Pyrenees views.",
+        metaTitle: "Taxi Toulouse → St-Bertrand-de-Comminges | 110 km | TaxiNeo",
+        metaDescription: "Direct route via A64 sortie Montréjeau,, 1h20. Cathédrale UNESCO, Ruines romaines and Comminges along the way. Stops for sightseeing possible en route.",
         heroTitle: "Taxi Toulouse — Saint-Bertrand-de-Comminges",
         heroSubtitle: "The Mont-Saint-Michel of the Pyrenees",
         description: "Taxi transfer from Toulouse to Saint-Bertrand-de-Comminges, the 'Mont-Saint-Michel of the Pyrenees', UNESCO-listed.",
@@ -745,8 +745,8 @@ export const trajetsToulouse: Trajet[] = [
     hub: "toulouse",
     i18n: {
       fr: {
-        metaTitle: "Taxi Toulouse → Rocamadour | Prix fixe dès 210 € | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Rocamadour. 170 km, 1h50, prix fixe dès 210 €. Cité sacrée, gouffre de Padirac, Lot. Réservation 24h/24.",
+        metaTitle: "Taxi Toulouse → Rocamadour | 170 km, dès 210 € | TaxiNeo",
+        metaDescription: "Itinéraire A62 puis A20, environ 1h50. Passage par Cité sacrée, Gouffre de Padirac, Lot et Rocamadour. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Toulouse → Rocamadour",
         heroSubtitle: "Transfert Toulouse → Rocamadour au prix fixe de 210 — 270 €. 170 km par l'A62 et l'A20.",
         description: "Rocamadour, cité sacrée accrochée à la falaise dans le Lot, est à 1h50 de Toulouse par l'A62 et l'A20.",
@@ -764,8 +764,8 @@ export const trajetsToulouse: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Toulouse → Rocamadour | Fixed price from €210 | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Rocamadour. 170 km, 1h50, fixed price from €210. Sacred city, Padirac Chasm, Lot valley. Book 24/7.",
+        metaTitle: "Taxi Toulouse → Rocamadour | 170 km, from €210 | TaxiNeo",
+        metaDescription: "Via A62 then A20, 1h50 ride. Cité sacrée, Gouffre de Padirac, Lot and Rocamadour en route. Stops for sightseeing possible en route. ~€14 toll included.",
         heroTitle: "Taxi Toulouse → Rocamadour",
         heroSubtitle: "Your Toulouse → Rocamadour transfer at €210 — €270. 170 km via the A62 and A20.",
         description: "Rocamadour, a sacred city clinging to the cliff face in the Lot, is 1h50 from Toulouse via the A62 and A20.",
@@ -810,8 +810,8 @@ export const trajetsToulouse: Trajet[] = [
     hub: "toulouse",
     i18n: {
       fr: {
-        metaTitle: "Taxi Toulouse → Cordes-sur-Ciel | Prix fixe dès 110 € | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Cordes-sur-Ciel. 85 km, 1h05, prix fixe dès 110 €. Plus beau village de France, bastide médiévale. Réservation 24h/24.",
+        metaTitle: "Taxi Toulouse → Cordes-sur-Ciel | 85 km, dès 110 € | TaxiNeo",
+        metaDescription: "Par A68 puis D600, 1h05 de trajet. Passage par Plus beau village, Bastide médiévale, Artisans et Tarn. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Toulouse → Cordes-sur-Ciel",
         heroSubtitle: "Transfert Toulouse → Cordes-sur-Ciel au prix fixe de 110 — 140 €. 85 km par l'A68 et la D600.",
         description: "Cordes-sur-Ciel, bastide médiévale du Tarn élue « Plus beau village de France », est à 1h05 de Toulouse par l'A68.",
@@ -829,8 +829,8 @@ export const trajetsToulouse: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Toulouse → Cordes-sur-Ciel | Fixed price from €110 | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Cordes-sur-Ciel. 85 km, 1h05, fixed price from €110. Most Beautiful Village of France, medieval bastide. Book 24/7.",
+        metaTitle: "Taxi Toulouse → Cordes-sur-Ciel | 85 km, from €110 | TaxiNeo",
+        metaDescription: "Via A68 then D600, 1h05 ride. Plus beau village, Bastide médiévale, Artisans and Tarn en route. Stops for sightseeing possible en route. ~€5 toll included.",
         heroTitle: "Taxi Toulouse → Cordes-sur-Ciel",
         heroSubtitle: "Your Toulouse → Cordes-sur-Ciel transfer at €110 — €140. 85 km via the A68 and D600.",
         description: "Cordes-sur-Ciel, a medieval bastide in the Tarn voted 'Most Beautiful Village of France', is 1h05 from Toulouse via the A68.",
@@ -875,8 +875,8 @@ export const trajetsToulouse: Trajet[] = [
     hub: "toulouse",
     i18n: {
       fr: {
-        metaTitle: "Taxi Toulouse → Saint-Cirq-Lapopie | Prix fixe dès 140 € | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Saint-Cirq-Lapopie. 115 km, 1h30, prix fixe dès 140 €. Village perché du Lot, vallée du Lot. Réservation 24h/24.",
+        metaTitle: "Taxi Toulouse → Saint-Cirq-Lapopie | 115 km, 140 € | TaxiNeo",
+        metaDescription: "Via A62 puis A20 en 1h30. A62/A20, Lot, Village perché et André Breton en chemin. Arrêt visite possible en chemin. Arrêt possible pour visites ou photos.",
         heroTitle: "Taxi Toulouse → Saint-Cirq-Lapopie",
         heroSubtitle: "Transfert Toulouse → Saint-Cirq-Lapopie au prix fixe de 140 — 180 €. 115 km par l'A62 et l'A20.",
         description: "Saint-Cirq-Lapopie, village perché au-dessus du Lot élu « Plus beau village de France », est à 1h30 de Toulouse.",
@@ -894,8 +894,8 @@ export const trajetsToulouse: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Toulouse → Saint-Cirq-Lapopie | Fixed price from €140 | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Saint-Cirq-Lapopie. 115 km, 1h30, fixed price from €140. Perched Lot village, André Breton. Book 24/7.",
+        metaTitle: "Taxi Toulouse → Saint-Cirq-Lapopie | 115 km, €140 | TaxiNeo",
+        metaDescription: "Via A62 then A20, 1h30 ride. A62/A20, Lot, Village perché and André Breton en route. Stops for sightseeing possible en route. Up to 1h55 during rush hour.",
         heroTitle: "Taxi Toulouse → Saint-Cirq-Lapopie",
         heroSubtitle: "Your Toulouse → Saint-Cirq-Lapopie transfer at €140 — €180. 115 km via the A62 and A20.",
         description: "Saint-Cirq-Lapopie, a village perched above the Lot river and voted 'Most Beautiful Village of France', is 1h30 from Toulouse.",
@@ -940,8 +940,8 @@ export const trajetsToulouse: Trajet[] = [
     hub: "toulouse",
     i18n: {
       fr: {
-        metaTitle: "Taxi Toulouse → Condom | Prix fixe dès 150 € | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Condom. 120 km, 1h25, prix fixe dès 150 €. Capitale de l'Armagnac, cathédrale, Ténarèze. Réservation 24h/24.",
+        metaTitle: "Taxi Toulouse → Condom | 120 km, dès 150 € | TaxiNeo",
+        metaDescription: "Via A62 puis N124 / D930 en 1h25. Passage par N124/A62, Armagnac, Cathédrale Saint-Pierre et Ténarèze. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Toulouse → Condom",
         heroSubtitle: "Transfert Toulouse → Condom au prix fixe de 150 — 190 €. 120 km à travers le Gers.",
         description: "Condom, capitale de la Ténarèze et cœur de l'Armagnac, est à 1h25 de Toulouse à travers les collines du Gers.",
@@ -959,8 +959,8 @@ export const trajetsToulouse: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Toulouse → Condom | Fixed price from €150 | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Condom. 120 km, 1h25, fixed price from €150. Armagnac capital, cathedral, Tenareze. Book 24/7.",
+        metaTitle: "Taxi Toulouse → Condom | 120 km, from €150 | TaxiNeo",
+        metaDescription: "Direct route via A62 then N124 / D930, 1h25. N124/A62, Armagnac, Cathédrale Saint-Pierre and Ténarèze en route. Stops for sightseeing possible en route.",
         heroTitle: "Taxi Toulouse → Condom",
         heroSubtitle: "Your Toulouse → Condom transfer at €150 — €190. 120 km through the Gers hills.",
         description: "Condom, capital of the Tenareze and heart of Armagnac country, is 1h25 from Toulouse through the Gers hills.",
@@ -1005,8 +1005,8 @@ export const trajetsToulouse: Trajet[] = [
     hub: "toulouse",
     i18n: {
       fr: {
-        metaTitle: "Taxi Toulouse → Bagnères-de-Luchon | Prix fixe dès 170 € | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Bagnères-de-Luchon. 140 km, 1h40, prix fixe dès 170 €. Pyrénées, thermes, ski Superbagnères. Réservation 24h/24.",
+        metaTitle: "Taxi Toulouse → Bagnères-de-Luchon | 140 km, 170 € | TaxiNeo",
+        metaDescription: "Itinéraire A64 puis A645/D125, environ 1h40. Passage par Pyrénées, Thermalisme, Ski et Superbagnères. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Toulouse → Bagnères-de-Luchon",
         heroSubtitle: "Transfert Toulouse → Luchon au prix fixe de 170 — 220 €. 140 km par l'A64 vers les Pyrénées centrales.",
         description: "Bagnères-de-Luchon, « Reine des Pyrénées », est la plus prestigieuse station thermale et de sports d'hiver des Pyrénées centrales, à 1h40 de Toulouse.",
@@ -1024,8 +1024,8 @@ export const trajetsToulouse: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Toulouse → Bagnères-de-Luchon | Fixed price from €170 | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Bagnères-de-Luchon. 140 km, 1h40, fixed price from €170. Pyrenees, thermal spa, Superbagnères ski. Book 24/7.",
+        metaTitle: "Taxi Toulouse → Bagnères-de-Luchon | 140 km, €170 | TaxiNeo",
+        metaDescription: "Via A64 then A645/D125, 1h40 ride. Pyrénées, Thermalisme, Ski and Superbagnères en route. Stops for sightseeing possible en route. ~€11 toll included.",
         heroTitle: "Taxi Toulouse → Bagnères-de-Luchon",
         heroSubtitle: "Your Toulouse → Luchon transfer at €170 — €220. 140 km via the A64 to the central Pyrenees.",
         description: "Bagnères-de-Luchon, the 'Queen of the Pyrenees', is the most prestigious spa and winter sports resort of the central Pyrenees, 1h40 from Toulouse.",
@@ -1070,8 +1070,8 @@ export const trajetsToulouse: Trajet[] = [
     hub: "toulouse",
     i18n: {
       fr: {
-        metaTitle: "Taxi Toulouse → Narbonne | Prix fixe dès 190 € | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Narbonne. 155 km, 1h35, prix fixe dès 190 €. Méditerranée, canal du Midi, cathédrale Saint-Just. Réservation 24h/24.",
+        metaTitle: "Taxi Toulouse → Narbonne | 155 km, dès 190 € | TaxiNeo",
+        metaDescription: "Par A61, 1h35 de trajet. Passage par Méditerranée, Canal du Midi, Cathédrale Saint-Just et Narbonnaise. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Toulouse → Narbonne",
         heroSubtitle: "Transfert Toulouse → Narbonne au prix fixe de 190 — 240 €. 155 km par l'A61.",
         description: "Narbonne, ancienne capitale de la Gaule romaine ouverte sur la Méditerranée, est à 1h35 de Toulouse par l'A61.",
@@ -1089,8 +1089,8 @@ export const trajetsToulouse: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Toulouse → Narbonne | Fixed price from €190 | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Narbonne. 155 km, 1h35, fixed price from €190. Mediterranean, Canal du Midi, Saint-Just Cathedral. Book 24/7.",
+        metaTitle: "Taxi Toulouse → Narbonne | 155 km, from €190 | TaxiNeo",
+        metaDescription: "Direct route via A61, 1h35. Méditerranée, Canal du Midi, Cathédrale Saint-Just and Narbonnaise en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Toulouse → Narbonne",
         heroSubtitle: "Your Toulouse → Narbonne transfer at €190 — €240. 155 km via the A61.",
         description: "Narbonne, the former capital of Roman Gaul opening onto the Mediterranean, is 1h35 from Toulouse via the A61.",
@@ -1136,8 +1136,8 @@ export const trajetsToulouse: Trajet[] = [
     hub: "toulouse",
     i18n: {
       fr: {
-        metaTitle: "Taxi Toulouse → Perpignan | Prix fixe dès 250 € | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Perpignan. 200 km, 2h, prix fixe dès 250 €. Capitale catalane, le Castillet, mont Canigou. Réservation 24h/24.",
+        metaTitle: "Taxi Toulouse → Perpignan | 200 km, dès 250 € | TaxiNeo",
+        metaDescription: "Via A61 puis A9 en 2h. Capitale catalane, Le Castillet et Canigou en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Toulouse → Perpignan",
         heroSubtitle: "Transfert Toulouse → Perpignan au prix fixe de 250 — 320 €. 200 km par l'A61 et l'A9.",
         description: "Perpignan, capitale catalane du Roussillon, est à 2h de Toulouse via l'autoroute des Deux Mers puis l'A9 La Languedocienne.",
@@ -1155,8 +1155,8 @@ export const trajetsToulouse: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Toulouse → Perpignan | Fixed price from €250 | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Perpignan. 200 km, 2h, fixed price from €250. Catalan capital, Le Castillet, Canigou. Book 24/7.",
+        metaTitle: "Taxi Toulouse → Perpignan | 200 km, from €250 | TaxiNeo",
+        metaDescription: "A61 then A9 route, approximately 2 hours. Capitale catalane, Le Castillet and Canigou along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Toulouse → Perpignan",
         heroSubtitle: "Your Toulouse → Perpignan transfer at €250 — €320. 200 km via the A61 and A9.",
         description: "Perpignan, the Catalan capital of Roussillon, is 2h from Toulouse via the A61 and A9 motorways.",
@@ -1202,8 +1202,8 @@ export const trajetsToulouse: Trajet[] = [
     hub: "toulouse",
     i18n: {
       fr: {
-        metaTitle: "Taxi Toulouse → Béziers | Prix fixe dès 190 € | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Béziers. 155 km, 1h40, prix fixe dès 190 €. Canal du Midi, écluses de Fonsérannes, férias. Réservation 24h/24.",
+        metaTitle: "Taxi Toulouse → Béziers | 155 km, dès 190 € | TaxiNeo",
+        metaDescription: "Via A61 en 1h40. Passage par Canal du Midi, Écluses de Fonsérannes, Férias et Cathédrale Saint-Nazaire. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Toulouse → Béziers",
         heroSubtitle: "Transfert Toulouse → Béziers au prix fixe de 190 — 250 €. 155 km par l'A61.",
         description: "Béziers, cité vigneronne au bord de l'Orb, est à 1h40 de Toulouse par l'A61 à travers le Lauragais et le Minervois.",
@@ -1221,8 +1221,8 @@ export const trajetsToulouse: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Toulouse → Béziers | Fixed price from €190 | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Béziers. 155 km, 1h40, fixed price from €190. Canal du Midi, Fonserannes locks, ferias. Book 24/7.",
+        metaTitle: "Taxi Toulouse → Béziers | 155 km, from €190 | TaxiNeo",
+        metaDescription: "Via A61, 1h40 ride. Canal du Midi, Écluses de Fonsérannes, Férias and Cathédrale Saint-Nazaire en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Toulouse → Béziers",
         heroSubtitle: "Your Toulouse → Béziers transfer at €190 — €250. 155 km via the A61.",
         description: "Beziers, a wine city on the banks of the Orb, is 1h40 from Toulouse via the A61 through the Lauragais and Minervois.",
@@ -1268,8 +1268,8 @@ export const trajetsToulouse: Trajet[] = [
     hub: "toulouse",
     i18n: {
       fr: {
-        metaTitle: "Taxi Toulouse → Castelnaudary | Prix fixe dès 75 € | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Castelnaudary. 60 km, 45 min, dès 75 €. Capitale du cassoulet, Canal du Midi, Grand Bassin. Réservation 24h/24.",
+        metaTitle: "Taxi Toulouse → Castelnaudary | 60 km, dès 75 € | TaxiNeo",
+        metaDescription: "Via A61 en 45 min. Cassoulet, Canal du Midi, Grand Bassin et Lauragais en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Toulouse → Castelnaudary",
         heroSubtitle: "Transfert Toulouse → Castelnaudary au prix fixe de 75 — 100 €. 60 km par l'A61.",
         description: "Castelnaudary, capitale mondiale du cassoulet, est à 45 min de Toulouse par l'A61 au cœur du Lauragais.",
@@ -1287,8 +1287,8 @@ export const trajetsToulouse: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Toulouse → Castelnaudary | Fixed price from €75 | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Castelnaudary. 60 km, 45 min, from €75. Cassoulet capital, Canal du Midi, Grand Bassin. Book 24/7.",
+        metaTitle: "Taxi Toulouse → Castelnaudary | 60 km, from €75 | TaxiNeo",
+        metaDescription: "Via A61, 45 min ride. Cassoulet, Canal du Midi, Grand Bassin and Lauragais en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Toulouse → Castelnaudary",
         heroSubtitle: "Your Toulouse → Castelnaudary transfer at €75 — €100. 60 km via the A61.",
         description: "Castelnaudary, the world capital of cassoulet, is 45 min from Toulouse via the A61 in the heart of the Lauragais.",
@@ -1334,8 +1334,8 @@ export const trajetsToulouse: Trajet[] = [
     hub: "toulouse",
     i18n: {
       fr: {
-        metaTitle: "Taxi Toulouse → Mazamet | Prix fixe dès 115 € | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Mazamet. 95 km, 1h10, dès 115 €. Montagne Noire, village médiéval de Hautpoul, patrimoine industriel. Réservation 24h/24.",
+        metaTitle: "Taxi Toulouse → Mazamet | 95 km, dès 115 € | TaxiNeo",
+        metaDescription: "Via A68 puis D612 en 1h10. Montagne Noire, Hautpoul et Délainage en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Toulouse → Mazamet",
         heroSubtitle: "Transfert Toulouse → Mazamet au prix fixe de 115 — 150 €. 95 km via l'A68 et la D612.",
         description: "Mazamet, cité du délainage au pied de la Montagne Noire, est à 1h10 de Toulouse par l'A68 puis la D612 via Castres.",
@@ -1353,8 +1353,8 @@ export const trajetsToulouse: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Toulouse → Mazamet | Fixed price from €115 | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Mazamet. 95 km, 1h10, from €115. Montagne Noire, medieval Hautpoul village, industrial heritage. Book 24/7.",
+        metaTitle: "Taxi Toulouse → Mazamet | 95 km, from €115 | TaxiNeo",
+        metaDescription: "Via A68 then D612, 1h10 ride. Montagne Noire, Hautpoul and Délainage along the way. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Toulouse → Mazamet",
         heroSubtitle: "Your Toulouse → Mazamet transfer at €115 — €150. 95 km via the A68 and D612.",
         description: "Mazamet, a wool-processing town at the foot of the Montagne Noire, is 1h10 from Toulouse via the A68 then D612 through Castres.",
@@ -1400,8 +1400,8 @@ export const trajetsToulouse: Trajet[] = [
     hub: "toulouse",
     i18n: {
       fr: {
-        metaTitle: "Taxi Toulouse → Gaillac | Prix fixe dès 70 € | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Gaillac. 55 km, 45 min, dès 70 €. Vignoble AOC millénaire, abbaye Saint-Michel, fête des vins. Réservation 24h/24.",
+        metaTitle: "Taxi Toulouse → Gaillac | 55 km, dès 70 € | TaxiNeo",
+        metaDescription: "Trajet direct A68 en 45 min. Passage par Vins AOC Gaillac, Abbaye Saint-Michel, Fête des vins et Tarn. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Toulouse → Gaillac",
         heroSubtitle: "Transfert Toulouse → Gaillac au prix fixe de 70 — 95 €. 55 km par l'A68.",
         description: "Gaillac, capitale d'un vignoble millénaire, est à 45 min de Toulouse par l'A68 au cœur des coteaux du Tarn.",
@@ -1419,8 +1419,8 @@ export const trajetsToulouse: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Toulouse → Gaillac | Fixed price from €70 | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Gaillac. 55 km, 45 min, from €70. Millennial AOC vineyard, Saint-Michel Abbey, wine festival. Book 24/7.",
+        metaTitle: "Taxi Toulouse → Gaillac | 55 km, from €70 | TaxiNeo",
+        metaDescription: "Direct route via A68, 45 min. Vins AOC Gaillac, Abbaye Saint-Michel, Fête des vins and Tarn en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Toulouse → Gaillac",
         heroSubtitle: "Your Toulouse → Gaillac transfer at €70 — €95. 55 km via the A68.",
         description: "Gaillac, capital of a millennial vineyard, is 45 min from Toulouse via the A68 in the heart of the Tarn hills.",
@@ -1466,8 +1466,8 @@ export const trajetsToulouse: Trajet[] = [
     hub: "toulouse",
     i18n: {
       fr: {
-        metaTitle: "Taxi Toulouse → Pamiers | Prix fixe dès 85 € | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Pamiers. 70 km, 50 min, dès 85 €. Plaine de l'Ariège, cathédrale, histoire cathare. Réservation 24h/24.",
+        metaTitle: "Taxi Toulouse → Pamiers | 70 km, dès 85 € | TaxiNeo",
+        metaDescription: "Trajet direct A66 en 50 min. Passage par Ariège, Plaine de Pamiers, Histoire cathare et Gabriel Fauré. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Toulouse → Pamiers",
         heroSubtitle: "Transfert Toulouse → Pamiers au prix fixe de 85 — 110 €. 70 km par l'A66.",
         description: "Pamiers, ville épiscopale de la plaine ariégeoise, est à 50 min de Toulouse par l'autoroute A66 en direction des Pyrénées.",
@@ -1485,8 +1485,8 @@ export const trajetsToulouse: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Toulouse → Pamiers | Fixed price from €85 | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Pamiers. 70 km, 50 min, from €85. Ariege plain, cathedral, Cathar history. Book 24/7.",
+        metaTitle: "Taxi Toulouse → Pamiers | 70 km, from €85 | TaxiNeo",
+        metaDescription: "Direct route via A66, 50 min. Ariège, Plaine de Pamiers, Histoire cathare and Gabriel Fauré en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Toulouse → Pamiers",
         heroSubtitle: "Your Toulouse → Pamiers transfer at €85 — €110. 70 km via the A66.",
         description: "Pamiers, an episcopal city on the Ariege plain, is 50 min from Toulouse via the A66 towards the Pyrenees.",
@@ -1532,8 +1532,8 @@ export const trajetsToulouse: Trajet[] = [
     hub: "toulouse",
     i18n: {
       fr: {
-        metaTitle: "Taxi Toulouse → Ax-les-Thermes | Prix fixe dès 160 € | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Ax-les-Thermes. 130 km, 1h35, dès 160 €. Thermalisme, ski Ax 3 Domaines, vallée de l'Ariège. Réservation 24h/24.",
+        metaTitle: "Taxi Toulouse → Ax-les-Thermes | 130 km, dès 160 € | TaxiNeo",
+        metaDescription: "Par A66 puis N20, 1h35 de trajet. N20, Thermalisme, Ski Ax 3 Domaines et Vallée de l'Ariège en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Toulouse → Ax-les-Thermes",
         heroSubtitle: "Transfert Toulouse → Ax-les-Thermes au prix fixe de 160 — 210 €. 130 km par l'A66 et la N20.",
         description: "Ax-les-Thermes, station thermale et de ski au cœur de la haute Ariège, est à 1h35 de Toulouse par l'A66 puis la N20.",
@@ -1551,8 +1551,8 @@ export const trajetsToulouse: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Toulouse → Ax-les-Thermes | Fixed price from €160 | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Ax-les-Thermes. 130 km, 1h35, from €160. Thermal spa, Ax 3 Domaines ski, Ariege valley. Book 24/7.",
+        metaTitle: "Taxi Toulouse → Ax-les-Thermes | 130 km, from €160 | TaxiNeo",
+        metaDescription: "Via A66 then N20, 1h35 ride. N20, Thermalisme, Ski Ax 3 Domaines and Vallée de l'Ariège en route. Stops for sightseeing possible en route. ~€6 toll included.",
         heroTitle: "Taxi Toulouse → Ax-les-Thermes",
         heroSubtitle: "Your Toulouse → Ax-les-Thermes transfer at €160 — €210. 130 km via the A66 and N20.",
         description: "Ax-les-Thermes, a thermal and ski resort in the heart of the upper Ariege, is 1h35 from Toulouse via the A66 then N20.",
@@ -1598,8 +1598,8 @@ export const trajetsToulouse: Trajet[] = [
     hub: "toulouse",
     i18n: {
       fr: {
-        metaTitle: "Taxi Toulouse → Saint-Gaudens | Prix fixe dès 115 € | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Saint-Gaudens. 95 km, 1h05, dès 115 €. Comminges, pré-Pyrénées, collégiale. Réservation 24h/24.",
+        metaTitle: "Taxi Toulouse → Saint-Gaudens | 95 km, dès 115 € | TaxiNeo",
+        metaDescription: "Via A64 en 1h05. Comminges, Pré-Pyrénées, Collégiale et Valentin Abeille en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Toulouse → Saint-Gaudens",
         heroSubtitle: "Transfert Toulouse → Saint-Gaudens au prix fixe de 115 — 150 €. 95 km par l'A64.",
         description: "Saint-Gaudens, sous-préfecture du Comminges au pied des Pyrénées, est à 1h05 de Toulouse par l'autoroute A64.",
@@ -1617,8 +1617,8 @@ export const trajetsToulouse: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Toulouse → Saint-Gaudens | Fixed price from €115 | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Saint-Gaudens. 95 km, 1h05, from €115. Comminges, pre-Pyrenees, collegiate church. Book 24/7.",
+        metaTitle: "Taxi Toulouse → Saint-Gaudens | 95 km, from €115 | TaxiNeo",
+        metaDescription: "Via A64, 1h05 ride. Comminges, Pré-Pyrénées, Collégiale and Valentin Abeille en route. Drop-off at your exact address. Door-to-door, luggage included.",
         heroTitle: "Taxi Toulouse → Saint-Gaudens",
         heroSubtitle: "Your Toulouse → Saint-Gaudens transfer at €115 — €150. 95 km via the A64.",
         description: "Saint-Gaudens, the Comminges sub-prefecture at the foot of the Pyrenees, is 1h05 from Toulouse via the A64 motorway.",
@@ -1664,8 +1664,8 @@ export const trajetsToulouse: Trajet[] = [
     hub: "toulouse",
     i18n: {
       fr: {
-        metaTitle: "Taxi Toulouse → Muret | Prix fixe dès 35 € | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Muret. 22 km, 25 min, dès 35 €. Garonne, bataille de Muret 1213, Clément Ader. Réservation 24h/24.",
+        metaTitle: "Taxi Toulouse → Muret | forfait dès 35 € | TaxiNeo",
+        metaDescription: "Via A64 en 25 min. Garonne, Bataille de Muret 1213, Clément Ader et Marché en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Toulouse → Muret",
         heroSubtitle: "Transfert Toulouse → Muret au prix fixe de 35 — 50 €. 22 km par l'A64.",
         description: "Muret, troisième ville de Haute-Garonne sur les bords de la Garonne, est à 25 min de Toulouse par l'A64.",
@@ -1684,7 +1684,7 @@ export const trajetsToulouse: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Toulouse → Muret | Fixed price from €35 | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Muret. 22 km, 25 min, from €35. Garonne, Battle of Muret 1213, Clement Ader. Book 24/7.",
+        metaDescription: "Via A64, 25 min ride. Garonne, Bataille de Muret 1213, Clément Ader and Marché en route. Drop-off at your exact address. Door-to-door, luggage included.",
         heroTitle: "Taxi Toulouse → Muret",
         heroSubtitle: "Your Toulouse → Muret transfer at €35 — €50. 22 km via the A64.",
         description: "Muret, the third-largest town in Haute-Garonne on the banks of the Garonne, is 25 min from Toulouse via the A64.",
@@ -1730,8 +1730,8 @@ export const trajetsToulouse: Trajet[] = [
     hub: "toulouse",
     i18n: {
       fr: {
-        metaTitle: "Taxi Toulouse → Cahors | Prix fixe dès 140 € | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Cahors. 115 km, 1h15, dès 140 €. Pont Valentré, vin de Cahors Malbec, vallée du Lot. Réservation 24h/24.",
+        metaTitle: "Taxi Toulouse → Cahors | 115 km, dès 140 € | TaxiNeo",
+        metaDescription: "Via A62 en 1h15. Pont Valentré, Vin de Cahors Malbec, Lot et Saint-Jacques en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Toulouse → Cahors",
         heroSubtitle: "Transfert Toulouse → Cahors au prix fixe de 140 — 180 €. 115 km par l'A62.",
         description: "Cahors, cité du pont Valentré et du Malbec noir, est à 1h15 de Toulouse par l'A62 à travers le Quercy.",
@@ -1749,8 +1749,8 @@ export const trajetsToulouse: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Toulouse → Cahors | Fixed price from €140 | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Cahors. 115 km, 1h15, from €140. Pont Valentre, Cahors Malbec wine, Lot valley. Book 24/7.",
+        metaTitle: "Taxi Toulouse → Cahors | 115 km, from €140 | TaxiNeo",
+        metaDescription: "Via A62, 1h15 ride. Pont Valentré, Vin de Cahors Malbec, Lot and Saint-Jacques en route. Drop-off at your exact address. Door-to-door, luggage included.",
         heroTitle: "Taxi Toulouse → Cahors",
         heroSubtitle: "Your Toulouse → Cahors transfer at €140 — €180. 115 km via the A62.",
         description: "Cahors, city of the Pont Valentre and black Malbec wine, is 1h15 from Toulouse via the A62 through the Quercy.",
@@ -1796,8 +1796,8 @@ export const trajetsToulouse: Trajet[] = [
     hub: "toulouse",
     i18n: {
       fr: {
-        metaTitle: "Taxi Toulouse → Agen | Prix fixe dès 140 € | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Agen. 115 km, 1h15, dès 140 €. Pruneaux, Canal de Garonne, pont-canal, rugby. Réservation 24h/24.",
+        metaTitle: "Taxi Toulouse → Agen | 115 km, dès 140 € | TaxiNeo",
+        metaDescription: "Via A62 en 1h15. Pruneaux d'Agen, Canal de Garonne, Pont-canal et Rugby en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Toulouse → Agen",
         heroSubtitle: "Transfert Toulouse → Agen au prix fixe de 140 — 180 €. 115 km par l'A62.",
         description: "Agen, capitale du pruneau et du rugby lot-et-garonnais, est à 1h15 de Toulouse par l'autoroute A62.",
@@ -1815,8 +1815,8 @@ export const trajetsToulouse: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Toulouse → Agen | Fixed price from €140 | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Agen. 115 km, 1h15, from €140. Prunes, Canal de Garonne, canal bridge, rugby. Book 24/7.",
+        metaTitle: "Taxi Toulouse → Agen | 115 km, from €140 | TaxiNeo",
+        metaDescription: "Via A62, 1h15 ride. Pruneaux d'Agen, Canal de Garonne, Pont-canal and Rugby en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Toulouse → Agen",
         heroSubtitle: "Your Toulouse → Agen transfer at €140 — €180. 115 km via the A62.",
         description: "Agen, capital of prunes and Lot-et-Garonne rugby, is 1h15 from Toulouse via the A62 motorway.",
@@ -1862,8 +1862,8 @@ export const trajetsToulouse: Trajet[] = [
     hub: "toulouse",
     i18n: {
       fr: {
-        metaTitle: "Taxi Toulouse → Rodez | Prix fixe dès 185 € | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Rodez. 150 km, 1h40, dès 185 €. Musée Soulages, cathédrale, Aveyron. Réservation 24h/24.",
+        metaTitle: "Taxi Toulouse → Rodez | 150 km, dès 185 € | TaxiNeo",
+        metaDescription: "Trajet direct A68 puis N88 en 1h40. Passage par N88, Musée Soulages, Cathédrale Notre-Dame et Aveyron. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Toulouse → Rodez",
         heroSubtitle: "Transfert Toulouse → Rodez au prix fixe de 185 — 240 €. 150 km par l'A68 et la N88.",
         description: "Rodez, capitale de l'Aveyron avec son musée Soulages et sa cathédrale, est à 1h40 de Toulouse par l'A68 puis la N88.",
@@ -1881,8 +1881,8 @@ export const trajetsToulouse: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Toulouse → Rodez | Fixed price from €185 | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Rodez. 150 km, 1h40, from €185. Soulages Museum, cathedral, Aveyron. Book 24/7.",
+        metaTitle: "Taxi Toulouse → Rodez | 150 km, from €185 | TaxiNeo",
+        metaDescription: "Direct route via A68 then N88, 1h40. N88, Musée Soulages, Cathédrale Notre-Dame and Aveyron en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Toulouse → Rodez",
         heroSubtitle: "Your Toulouse → Rodez transfer at €185 — €240. 150 km via the A68 and N88.",
         description: "Rodez, capital of the Aveyron with its Soulages Museum and cathedral, is 1h40 from Toulouse via the A68 then N88.",
@@ -1928,8 +1928,8 @@ export const trajetsToulouse: Trajet[] = [
     hub: "toulouse",
     i18n: {
       fr: {
-        metaTitle: "Taxi Toulouse → Millau | Prix fixe dès 220 € | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Millau. 180 km, 1h55, dès 220 €. Viaduc de Millau, gorges du Tarn, Roquefort. Réservation 24h/24.",
+        metaTitle: "Taxi Toulouse → Millau | 180 km, dès 220 € | TaxiNeo",
+        metaDescription: "Via A68 puis A75 en 1h55. Viaduc de Millau, Gorges du Tarn et Roquefort en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Toulouse → Millau",
         heroSubtitle: "Transfert Toulouse → Millau au prix fixe de 220 — 280 €. 180 km par l'A68 et l'A75.",
         description: "Millau, cité du viaduc et porte des gorges du Tarn, est à 1h55 de Toulouse par l'A68 puis l'A75.",
@@ -1947,8 +1947,8 @@ export const trajetsToulouse: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Toulouse → Millau | Fixed price from €220 | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Millau. 180 km, 1h55, from €220. Millau Viaduct, Tarn gorges, Roquefort. Book 24/7.",
+        metaTitle: "Taxi Toulouse → Millau | 180 km, from €220 | TaxiNeo",
+        metaDescription: "A68 then A75 route, approximately 1h55. Viaduc de Millau, Gorges du Tarn and Roquefort along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Toulouse → Millau",
         heroSubtitle: "Your Toulouse → Millau transfer at €220 — €280. 180 km via the A68 and A75.",
         description: "Millau, city of the viaduct and gateway to the Tarn gorges, is 1h55 from Toulouse via the A68 then A75.",
@@ -1994,8 +1994,8 @@ export const trajetsToulouse: Trajet[] = [
     hub: "toulouse",
     i18n: {
       fr: {
-        metaTitle: "Taxi Toulouse → Figeac | Prix fixe dès 200 € | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Figeac. 170 km, 1h55, prix fixe dès 200 €. Musée Champollion, cité médiévale du Lot. Réservation 24h/24.",
+        metaTitle: "Taxi Toulouse → Figeac | 170 km, dès 200 € | TaxiNeo",
+        metaDescription: "Par A68 puis N88 / D802, 1h55 de trajet. N88, Champollion, Lot et Saint-Jacques-de-Compostelle en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Toulouse → Figeac",
         heroSubtitle: "Transfert Toulouse → Figeac au prix fixe de 200 — 260 €. 170 km par l'A68 et la N88.",
         description: "Figeac, cité médiévale du Lot et patrie de Champollion, est à 1h55 de Toulouse par l'A68 puis la N88.",
@@ -2011,8 +2011,8 @@ export const trajetsToulouse: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Toulouse → Figeac | Fixed price from €200 | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Figeac. 170 km, 1h55, from €200. Champollion Museum, medieval Lot town. Book 24/7.",
+        metaTitle: "Taxi Toulouse → Figeac | 170 km, from €200 | TaxiNeo",
+        metaDescription: "Via A68 then N88 / D802, 1h55 ride. N88, Champollion, Lot and Saint-Jacques-de-Compostelle en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Toulouse → Figeac",
         heroSubtitle: "Your Toulouse → Figeac transfer at €200 — €260. 170 km via the A68 and N88.",
         description: "Figeac, medieval town in the Lot and birthplace of Champollion, is 1h55 from Toulouse via the A68 then N88.",
@@ -2056,8 +2056,8 @@ export const trajetsToulouse: Trajet[] = [
     hub: "toulouse",
     i18n: {
       fr: {
-        metaTitle: "Taxi Toulouse → Villefranche-de-Rouergue | Dès 175 € | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Villefranche-de-Rouergue. 145 km, 1h45, dès 175 €. Bastide royale, chartreuse, Aveyron. Réservation 24h/24.",
+        metaTitle: "Taxi Toulouse → Villefranche-de-Rouergue | 145 km | TaxiNeo",
+        metaDescription: "Via A68 puis D922 en 1h45. Bastide royale, Chartreuse et Aveyron en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Toulouse → Villefranche-de-Rouergue",
         heroSubtitle: "Transfert Toulouse → Villefranche-de-Rouergue au prix fixe de 175 — 230 €. 145 km par l'A68.",
         description: "Villefranche-de-Rouergue, bastide royale de l'Aveyron avec sa chartreuse Saint-Sauveur, est à 1h45 de Toulouse.",
@@ -2073,8 +2073,8 @@ export const trajetsToulouse: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Toulouse → Villefranche-de-Rouergue | From €175 | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Villefranche-de-Rouergue. 145 km, 1h45, from €175. Royal bastide, Charterhouse, Aveyron. Book 24/7.",
+        metaTitle: "Taxi Toulouse → Villefranche-de-Rouergue | 145 km | TaxiNeo",
+        metaDescription: "Via A68 then D922, 1h45 ride. Bastide royale, Chartreuse and Aveyron along the way. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Toulouse → Villefranche-de-Rouergue",
         heroSubtitle: "Your Toulouse → Villefranche-de-Rouergue transfer at €175 — €230. 145 km via the A68.",
         description: "Villefranche-de-Rouergue, a royal bastide in the Aveyron with its Saint-Sauveur Charterhouse, is 1h45 from Toulouse.",
@@ -2118,8 +2118,8 @@ export const trajetsToulouse: Trajet[] = [
     hub: "toulouse",
     i18n: {
       fr: {
-        metaTitle: "Taxi Toulouse → Limoux | Prix fixe dès 120 € | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Limoux. 100 km, 1h10, dès 120 €. Blanquette de Limoux, carnaval, haute vallée de l'Aude. Réservation 24h/24.",
+        metaTitle: "Taxi Toulouse → Limoux | 100 km, dès 120 € | TaxiNeo",
+        metaDescription: "Par A61 puis D118, 1h10 de trajet. Blanquette de Limoux, Carnaval et Haute Vallée de l'Aude en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Toulouse → Limoux",
         heroSubtitle: "Transfert Toulouse → Limoux au prix fixe de 120 — 155 €. 100 km par l'A61 et la D118.",
         description: "Limoux, berceau de la Blanquette et capitale du plus long carnaval du monde, est à 1h10 de Toulouse.",
@@ -2135,8 +2135,8 @@ export const trajetsToulouse: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Toulouse → Limoux | Fixed price from €120 | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Limoux. 100 km, 1h10, from €120. Blanquette de Limoux, carnival, Aude valley. Book 24/7.",
+        metaTitle: "Taxi Toulouse → Limoux | 100 km, from €120 | TaxiNeo",
+        metaDescription: "Via A61 then D118, 1h10 ride. Blanquette de Limoux, Carnaval and Haute Vallée de l'Aude along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Toulouse → Limoux",
         heroSubtitle: "Your Toulouse → Limoux transfer at €120 — €155. 100 km via the A61 and D118.",
         description: "Limoux, birthplace of Blanquette and home to the world's longest carnival, is 1h10 from Toulouse.",
@@ -2180,8 +2180,8 @@ export const trajetsToulouse: Trajet[] = [
     hub: "toulouse",
     i18n: {
       fr: {
-        metaTitle: "Taxi Toulouse → Mirepoix | Prix fixe dès 100 € | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Mirepoix. 80 km, 1h, dès 100 €. Bastide médiévale, place à couverts, maisons à colombages. Réservation 24h/24.",
+        metaTitle: "Taxi Toulouse → Mirepoix | 80 km, dès 100 € | TaxiNeo",
+        metaDescription: "Par A66 puis D119, 1h de trajet. Bastide médiévale, Maisons à colombages, Pays cathare sur le parcours. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Toulouse → Mirepoix",
         heroSubtitle: "Transfert Toulouse → Mirepoix au prix fixe de 100 — 130 €. 80 km par l'A66 et la D119.",
         description: "Mirepoix, bastide médiévale de l'Ariège avec sa place à couverts exceptionnelle, est à 1h de Toulouse.",
@@ -2197,8 +2197,8 @@ export const trajetsToulouse: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Toulouse → Mirepoix | Fixed price from €100 | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Mirepoix. 80 km, 1h, from €100. Medieval bastide, timber-framed houses, Cathar country. Book 24/7.",
+        metaTitle: "Taxi Toulouse → Mirepoix | 80 km, from €100 | TaxiNeo",
+        metaDescription: "Via A66 then D119, 1 hour ride. Bastide médiévale, Maisons à colombages and Pays cathare along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Toulouse → Mirepoix",
         heroSubtitle: "Your Toulouse → Mirepoix transfer at €100 — €130. 80 km via the A66 and D119.",
         description: "Mirepoix, a medieval bastide in the Ariege with its exceptional arcaded square, is 1h from Toulouse.",
@@ -2242,8 +2242,8 @@ export const trajetsToulouse: Trajet[] = [
     hub: "toulouse",
     i18n: {
       fr: {
-        metaTitle: "Taxi Toulouse → Saint-Girons | Prix fixe dès 125 € | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Saint-Girons. 100 km, 1h15, dès 125 €. Couserans, Saint-Lizier, Pyrénées ariégeoises. Réservation 24h/24.",
+        metaTitle: "Taxi Toulouse → Saint-Girons | 100 km, dès 125 € | TaxiNeo",
+        metaDescription: "Itinéraire A64 puis D117, environ 1h15. Couserans, Pyrénées ariégeoises, Saint-Lizier sur le parcours. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Toulouse → Saint-Girons",
         heroSubtitle: "Transfert Toulouse → Saint-Girons au prix fixe de 125 — 160 €. 100 km par l'A64 et la D117.",
         description: "Saint-Girons, porte du Couserans au pied des Pyrénées ariégeoises, est à 1h15 de Toulouse.",
@@ -2259,8 +2259,8 @@ export const trajetsToulouse: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Toulouse → Saint-Girons | Fixed price from €125 | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Saint-Girons. 100 km, 1h15, from €125. Couserans, Saint-Lizier, Ariege Pyrenees. Book 24/7.",
+        metaTitle: "Taxi Toulouse → Saint-Girons | 100 km, from €125 | TaxiNeo",
+        metaDescription: "Direct route via A64 then D117, 1h15. Couserans, Pyrénées ariégeoises and Saint-Lizier along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Toulouse → Saint-Girons",
         heroSubtitle: "Your Toulouse → Saint-Girons transfer at €125 — €160. 100 km via the A64 and D117.",
         description: "Saint-Girons, gateway to the Couserans at the foot of the Ariege Pyrenees, is 1h15 from Toulouse.",
@@ -2306,8 +2306,8 @@ export const trajetsToulouse: Trajet[] = [
     hub: "toulouse",
     i18n: {
       fr: {
-        metaTitle: "Taxi Toulouse → Lectoure | Prix fixe dès 140 € | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Lectoure. 115 km, 1h20, prix fixe dès 140 €. Cité médiévale gersoise, thermes, chemin de Compostelle. Réservation 24h/24.",
+        metaTitle: "Taxi Toulouse → Lectoure | 115 km, dès 140 € | TaxiNeo",
+        metaDescription: "Via A62 puis D7 en 1h20. Cité médiévale, Thermalisme et Gers en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Toulouse → Lectoure",
         heroSubtitle: "Transfert Toulouse → Lectoure au prix fixe de 140 — 180 €. 115 km par l'A62 et la D7.",
         description: "Lectoure, cité médiévale perchée sur un éperon rocheux dominant la vallée du Gers, est à 1h20 de Toulouse.",
@@ -2325,8 +2325,8 @@ export const trajetsToulouse: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Toulouse → Lectoure | Fixed price from €140 | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Lectoure. 115 km, 1h20, fixed price from €140. Medieval Gers citadel, spa, Camino de Santiago. Book 24/7.",
+        metaTitle: "Taxi Toulouse → Lectoure | 115 km, from €140 | TaxiNeo",
+        metaDescription: "Via A62 then D7, 1h20 ride. Cité médiévale, Thermalisme and Gers along the way. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Toulouse → Lectoure",
         heroSubtitle: "Your Toulouse → Lectoure transfer at €140 — €180. 115 km via the A62 and D7.",
         description: "Lectoure, a medieval citadel perched on a rocky spur overlooking the Gers valley, is 1h20 from Toulouse.",
@@ -2374,8 +2374,8 @@ export const trajetsToulouse: Trajet[] = [
     hub: "toulouse",
     i18n: {
       fr: {
-        metaTitle: "Taxi Toulouse → Lavaur | Prix fixe dès 70 € | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Lavaur. 50 km, 40 min, prix fixe dès 70 €. Cathédrale Saint-Alain, Pays de Cocagne, histoire cathare. Réservation 24h/24.",
+        metaTitle: "Taxi Toulouse → Lavaur | 50 km, dès 70 € | TaxiNeo",
+        metaDescription: "Via A68 en 40 min. Cathédrale Saint-Alain, Pays de Cocagne et Tarn en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Toulouse → Lavaur",
         heroSubtitle: "Transfert Toulouse → Lavaur au prix fixe de 70 — 95 €. 50 km par l'A68.",
         description: "Lavaur, cité cathare au cœur du Pays de Cocagne dans le Tarn, est à seulement 40 minutes de Toulouse.",
@@ -2393,8 +2393,8 @@ export const trajetsToulouse: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Toulouse → Lavaur | Fixed price from €70 | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Lavaur. 50 km, 40 min, fixed price from €70. Cathedral, Land of Plenty, Cathar history. Book 24/7.",
+        metaTitle: "Taxi Toulouse → Lavaur | 50 km, from €70 | TaxiNeo",
+        metaDescription: "Via A68, 40 min ride. Cathédrale Saint-Alain, Pays de Cocagne and Tarn along the way. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Toulouse → Lavaur",
         heroSubtitle: "Your Toulouse → Lavaur transfer at €70 — €95. 50 km via the A68.",
         description: "Lavaur, a Cathar city in the heart of the Pays de Cocagne in the Tarn, is just 40 minutes from Toulouse.",
@@ -2442,8 +2442,8 @@ export const trajetsToulouse: Trajet[] = [
     hub: "toulouse",
     i18n: {
       fr: {
-        metaTitle: "Taxi Toulouse → Revel | Prix fixe dès 75 € | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Revel. 55 km, 45 min, prix fixe dès 75 €. Bastide médiévale, lac de Saint-Ferréol, Montagne Noire. Réservation 24h/24.",
+        metaTitle: "Taxi Toulouse → Revel | forfait dès 75 € | TaxiNeo",
+        metaDescription: "Via A61 puis D622 en 45 min. En passant par Bastide médiévale, Lac de Saint-Ferréol et Montagne Noire. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Toulouse → Revel",
         heroSubtitle: "Transfert Toulouse → Revel au prix fixe de 75 — 100 €. 55 km par l'A61 et la D622.",
         description: "Revel, bastide médiévale au pied de la Montagne Noire, est à 45 minutes de Toulouse.",
@@ -2462,7 +2462,7 @@ export const trajetsToulouse: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Toulouse → Revel | Fixed price from €75 | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Revel. 55 km, 45 min, fixed price from €75. Medieval bastide, Lake Saint-Ferreol, Montagne Noire. Book 24/7.",
+        metaDescription: "Via A61 then D622, 45 min ride. Bastide médiévale, Lac de Saint-Ferréol and Montagne Noire along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Toulouse → Revel",
         heroSubtitle: "Your Toulouse → Revel transfer at €75 — €100. 55 km via the A61 and D622.",
         description: "Revel, a medieval bastide at the foot of the Montagne Noire, is 45 minutes from Toulouse.",
@@ -2510,8 +2510,8 @@ export const trajetsToulouse: Trajet[] = [
     hub: "toulouse",
     i18n: {
       fr: {
-        metaTitle: "Taxi Toulouse → Souillac | Prix fixe dès 200 € | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Souillac. 170 km, 1h50, prix fixe dès 200 €. Abbaye romane, Dordogne, portes du Périgord noir. Réservation 24h/24.",
+        metaTitle: "Taxi Toulouse → Souillac | 170 km, dès 200 € | TaxiNeo",
+        metaDescription: "Via A62 puis A20 en 1h50. Abbaye Sainte-Marie, Dordogne et Périgord noir en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Toulouse → Souillac",
         heroSubtitle: "Transfert Toulouse → Souillac au prix fixe de 200 — 250 €. 170 km par l'A62 et l'A20.",
         description: "Souillac, porte du Périgord noir au confluent de la Dordogne et de la Borrèze, est à 1h50 de Toulouse.",
@@ -2529,8 +2529,8 @@ export const trajetsToulouse: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Toulouse → Souillac | Fixed price from €200 | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Souillac. 170 km, 1h50, fixed price from €200. Romanesque abbey, Dordogne, gateway to Black Perigord. Book 24/7.",
+        metaTitle: "Taxi Toulouse → Souillac | 170 km, from €200 | TaxiNeo",
+        metaDescription: "A62 then A20 route, approximately 1h50. Abbaye Sainte-Marie, Dordogne and Périgord noir along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Toulouse → Souillac",
         heroSubtitle: "Your Toulouse → Souillac transfer at €200 — €250. 170 km via the A62 and A20.",
         description: "Souillac, gateway to the Black Perigord at the confluence of the Dordogne and Borreze, is 1h50 from Toulouse.",
@@ -2578,8 +2578,8 @@ export const trajetsToulouse: Trajet[] = [
     hub: "toulouse",
     i18n: {
       fr: {
-        metaTitle: "Taxi Toulouse → Lombez | Prix fixe dès 95 € | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Lombez. 75 km, 55 min, prix fixe dès 95 €. Cathédrale en brique, vallée de la Save, coteaux gascons. Réservation 24h/24.",
+        metaTitle: "Taxi Toulouse → Lombez | 75 km, dès 95 € | TaxiNeo",
+        metaDescription: "Par N124 puis D632, 55 min de trajet. N124, Cathédrale en brique, Save et Coteaux de Gascogne en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Toulouse → Lombez",
         heroSubtitle: "Transfert Toulouse → Lombez au prix fixe de 95 — 125 €. 75 km par la N124 et la D632.",
         description: "Lombez, petite cité épiscopale gersoise au bord de la Save, est à 55 minutes de Toulouse.",
@@ -2597,8 +2597,8 @@ export const trajetsToulouse: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Toulouse → Lombez | Fixed price from €95 | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Lombez. 75 km, 55 min, fixed price from €95. Brick cathedral, Save valley, Gascon hills. Book 24/7.",
+        metaTitle: "Taxi Toulouse → Lombez | 75 km, from €95 | TaxiNeo",
+        metaDescription: "Through N124 then D632 in 55 min. N124, Cathédrale en brique, Save and Coteaux de Gascogne en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Toulouse → Lombez",
         heroSubtitle: "Your Toulouse → Lombez transfer at €95 — €125. 75 km via the N124 and D632.",
         description: "Lombez, a small episcopal city in the Gers on the banks of the Save, is 55 minutes from Toulouse.",

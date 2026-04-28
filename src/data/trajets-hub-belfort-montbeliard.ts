@@ -19,8 +19,8 @@ export const trajetsBelfortMontbeliard: Trajet[] = [
     hub: "belfort-montbeliard",
     i18n: {
       fr: {
-        metaTitle: "Taxi Belfort \u2192 Mulhouse | Prix fixe d\u00e8s 55 \u20ac | TaxiNeo",
-        metaDescription: "Taxi Belfort \u2192 Mulhouse. 45 km, 35 min, d\u00e8s 55 \u20ac. A36 directe entre Territoire de Belfort et Alsace. R\u00e9servation 24h/24.",
+        metaTitle: "Taxi Belfort → Mulhouse | 45 km, dès 55 € | TaxiNeo",
+        metaDescription: "Itinéraire A36, environ undefined min. Passage par Territoire de Belfort, Alsace, Industrie et Sundgau. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Belfort \u2192 Mulhouse",
         heroSubtitle: "Transfert Belfort \u2192 Mulhouse au prix fixe de 55 -- 75 \u20ac. 45 km, 35 min.",
         description: "Belfort et Mulhouse sont reli\u00e9es en 35 min par l'A36, entre Franche-Comt\u00e9 et Alsace.",
@@ -38,8 +38,8 @@ export const trajetsBelfortMontbeliard: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Belfort \u2192 Mulhouse | Fixed price from \u20ac55 | TaxiNeo",
-        metaDescription: "Taxi Belfort \u2192 Mulhouse. 45 km, 35 min, from \u20ac55. A36 motorway between Territoire de Belfort and Alsace. Book 24/7.",
+        metaTitle: "Taxi Belfort → Mulhouse | 45 km, from €55 | TaxiNeo",
+        metaDescription: "A36 route, approximately undefined min. Territoire de Belfort, Alsace, Industrie and Sundgau en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Belfort \u2192 Mulhouse",
         heroSubtitle: "Belfort \u2192 Mulhouse transfer at \u20ac55 -- \u20ac75. 45 km, 35 min.",
         description: "Belfort and Mulhouse connected in 35 min via the A36 motorway.",
@@ -76,8 +76,8 @@ export const trajetsBelfortMontbeliard: Trajet[] = [
     hub: "belfort-montbeliard",
     i18n: {
       fr: {
-        metaTitle: "Taxi Belfort \u2192 Besan\u00e7on | Prix fixe d\u00e8s 110 \u20ac | TaxiNeo",
-        metaDescription: "Taxi Belfort \u2192 Besan\u00e7on. 90 km, 1h, d\u00e8s 110 \u20ac. A36 entre les deux grandes villes de Franche-Comt\u00e9. R\u00e9servation 24h/24.",
+        metaTitle: "Taxi Belfort → Besan\u00e7on | 90 km, dès 110 € | TaxiNeo",
+        metaDescription: "Via A36 en undefined min. Passage par Franche-Comt\u00e9, Montb\u00e9liard, Citadelle Vauban et Doubs. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Belfort \u2192 Besan\u00e7on",
         heroSubtitle: "Transfert Belfort \u2192 Besan\u00e7on au prix fixe de 110 -- 140 \u20ac. 90 km, 1h.",
         description: "Belfort et Besan\u00e7on, deux villes embl\u00e9matiques de Franche-Comt\u00e9, reli\u00e9es en 1h par l'A36.",
@@ -95,8 +95,8 @@ export const trajetsBelfortMontbeliard: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Belfort \u2192 Besan\u00e7on | Fixed price from \u20ac110 | TaxiNeo",
-        metaDescription: "Taxi Belfort \u2192 Besan\u00e7on. 90 km, 1h, from \u20ac110. A36 through Franche-Comt\u00e9. Book 24/7.",
+        metaTitle: "Taxi Belfort → Besan\u00e7on | 90 km, from €110 | TaxiNeo",
+        metaDescription: "Via A36, undefined min ride. Franche-Comt\u00e9, Montb\u00e9liard, Citadelle Vauban and Doubs en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Belfort \u2192 Besan\u00e7on",
         heroSubtitle: "Belfort \u2192 Besan\u00e7on transfer at \u20ac110 -- \u20ac140. 90 km, 1h.",
         description: "Belfort and Besan\u00e7on, the two main Franche-Comt\u00e9 cities, linked in 1h via A36.",
@@ -133,8 +133,8 @@ export const trajetsBelfortMontbeliard: Trajet[] = [
     hub: "belfort-montbeliard",
     i18n: {
       fr: {
-        metaTitle: "Taxi Belfort \u2192 B\u00e2le | Prix fixe d\u00e8s 85 \u20ac | TaxiNeo",
-        metaDescription: "Taxi Belfort \u2192 B\u00e2le (Basel). 70 km, 50 min, d\u00e8s 85 \u20ac. Transfert transfrontalier France-Suisse. R\u00e9servation 24h/24.",
+        metaTitle: "Taxi Belfort → B\u00e2le | 70 km, dès 85 € | TaxiNeo",
+        metaDescription: "Par A36 / A35, undefined min de trajet. Suisse, Trois fronti\u00e8res, Sundgau et Art Basel en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Belfort \u2192 B\u00e2le",
         heroSubtitle: "Transfert Belfort \u2192 B\u00e2le au prix fixe de 85 -- 110 \u20ac. 70 km, 50 min.",
         description: "Belfort et B\u00e2le, reli\u00e9es en 50 min via l'A36 et l'A35 pour un transfert transfrontalier rapide.",
@@ -152,8 +152,8 @@ export const trajetsBelfortMontbeliard: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Belfort \u2192 Basel | Fixed price from \u20ac85 | TaxiNeo",
-        metaDescription: "Taxi Belfort \u2192 Basel. 70 km, 50 min, from \u20ac85. Cross-border France to Switzerland. Book 24/7.",
+        metaTitle: "Taxi Belfort → B\u00e2le | 70 km, from €85 | TaxiNeo",
+        metaDescription: "Direct route via A36 / A35, undefined min. Suisse, Trois fronti\u00e8res, Sundgau and Art Basel en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Belfort \u2192 Basel",
         heroSubtitle: "Belfort \u2192 Basel transfer at \u20ac85 -- \u20ac110. 70 km, 50 min.",
         description: "Belfort to Basel in 50 min, cross-border transfer to Switzerland's pharma and art capital.",
@@ -190,8 +190,8 @@ export const trajetsBelfortMontbeliard: Trajet[] = [
     hub: "belfort-montbeliard",
     i18n: {
       fr: {
-        metaTitle: "Taxi Montb\u00e9liard \u2192 Besan\u00e7on | Prix fixe d\u00e8s 95 \u20ac | TaxiNeo",
-        metaDescription: "Taxi Montb\u00e9liard \u2192 Besan\u00e7on. 80 km, 55 min, d\u00e8s 95 \u20ac. A36 entre le Pays de Montb\u00e9liard et la capitale comtoise. R\u00e9servation 24h/24.",
+        metaTitle: "Taxi Montb\u00e9liard → Besan\u00e7on | 80 km | TaxiNeo",
+        metaDescription: "Via A36 en undefined min. Peugeot Stellantis, Doubs, Sochaux et Vauban en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Montb\u00e9liard \u2192 Besan\u00e7on",
         heroSubtitle: "Transfert Montb\u00e9liard \u2192 Besan\u00e7on au prix fixe de 95 -- 125 \u20ac. 80 km, 55 min.",
         description: "Montb\u00e9liard, fief historique de Peugeot, et Besan\u00e7on, capitale comtoise, en 55 min.",
@@ -209,8 +209,8 @@ export const trajetsBelfortMontbeliard: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Montb\u00e9liard \u2192 Besan\u00e7on | Fixed price from \u20ac95 | TaxiNeo",
-        metaDescription: "Taxi Montb\u00e9liard \u2192 Besan\u00e7on. 80 km, 55 min, from \u20ac95. A36 through the Doubs valley. Book 24/7.",
+        metaTitle: "Taxi Montb\u00e9liard → Besan\u00e7on | 80 km, €95 | TaxiNeo",
+        metaDescription: "Via A36, undefined min ride. Peugeot Stellantis, Doubs, Sochaux and Vauban en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Montb\u00e9liard \u2192 Besan\u00e7on",
         heroSubtitle: "Montb\u00e9liard \u2192 Besan\u00e7on transfer at \u20ac95 -- \u20ac125. 80 km, 55 min.",
         description: "Montb\u00e9liard, historic home of Peugeot, to Besan\u00e7on, Franche-Comt\u00e9 capital, in 55 min.",
@@ -247,8 +247,8 @@ export const trajetsBelfortMontbeliard: Trajet[] = [
     hub: "belfort-montbeliard",
     i18n: {
       fr: {
-        metaTitle: "Taxi Belfort \u2192 Dijon | Prix fixe d\u00e8s 200 \u20ac | TaxiNeo",
-        metaDescription: "Taxi Belfort \u2192 Dijon. 170 km, 1h40, d\u00e8s 200 \u20ac. A36/A31 entre Territoire de Belfort et Bourgogne. R\u00e9servation 24h/24.",
+        metaTitle: "Taxi Belfort → Dijon | 170 km, dès 200 € | TaxiNeo",
+        metaDescription: "Par A36 / A31, undefined min de trajet. En passant par Franche-Comt\u00e9, Bourgogne et Besan\u00e7on. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Belfort \u2192 Dijon",
         heroSubtitle: "Transfert Belfort \u2192 Dijon au prix fixe de 200 -- 250 \u20ac. 170 km, 1h40.",
         description: "Belfort et Dijon, de la Franche-Comt\u00e9 industrielle \u00e0 la capitale bourguignonne, en 1h40.",
@@ -266,8 +266,8 @@ export const trajetsBelfortMontbeliard: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Belfort \u2192 Dijon | Fixed price from \u20ac200 | TaxiNeo",
-        metaDescription: "Taxi Belfort \u2192 Dijon. 170 km, 1h40, from \u20ac200. A36/A31 from Franche-Comt\u00e9 to Burgundy. Book 24/7.",
+        metaTitle: "Taxi Belfort → Dijon | 170 km, from €200 | TaxiNeo",
+        metaDescription: "Direct route via A36 / A31, undefined min. Franche-Comt\u00e9, Bourgogne and Besan\u00e7on along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Belfort \u2192 Dijon",
         heroSubtitle: "Belfort \u2192 Dijon transfer at \u20ac200 -- \u20ac250. 170 km, 1h40.",
         description: "Belfort to Dijon, from industrial Franche-Comt\u00e9 to the Burgundy wine capital, in 1h40.",

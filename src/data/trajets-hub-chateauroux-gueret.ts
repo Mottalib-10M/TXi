@@ -27,8 +27,8 @@ export const trajetsChateaurouxGueret: Trajet[] = [
     hub: "chateauroux-gueret",
     i18n: {
       fr: {
-        metaTitle: "Taxi Châteauroux → Paris | Prix fixe dès 290 € | TaxiNeo",
-        metaDescription: "Taxi Châteauroux → Paris. 265 km, 2h40, dès 290 €. A20, transfert direct porte-à-porte depuis le Berry. Réservation 24h/24.",
+        metaTitle: "Taxi Châteauroux → Paris | 265 km, dès 290 € | TaxiNeo",
+        metaDescription: "Via A20 en 2h40. Berry, Sologne, Île-de-France et George Sand en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Châteauroux → Paris",
         heroSubtitle: "Transfert Châteauroux → Paris au prix fixe de 290 — 360 €. 265 km, direct par l'A20.",
         description: "Paris est à 2h40 de Châteauroux par l'A20, traversant le Berry et la Sologne.",
@@ -46,8 +46,8 @@ export const trajetsChateaurouxGueret: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Châteauroux → Paris | Fixed price from €290 | TaxiNeo",
-        metaDescription: "Taxi Châteauroux → Paris. 265 km, 2h40, from €290. A20, direct door-to-door transfer from Berry. Book 24/7.",
+        metaTitle: "Taxi Châteauroux → Paris | 265 km, from €290 | TaxiNeo",
+        metaDescription: "Via A20, 2h40 ride. Berry, Sologne, Île-de-France and George Sand en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Châteauroux → Paris",
         heroSubtitle: "Your Châteauroux → Paris transfer at €290 — €360. 265 km, direct via the A20.",
         description: "Paris is 2h40 from Châteauroux via the A20 through Berry and Sologne.",
@@ -92,8 +92,8 @@ export const trajetsChateaurouxGueret: Trajet[] = [
     hub: "chateauroux-gueret",
     i18n: {
       fr: {
-        metaTitle: "Taxi Châteauroux → Tours | Prix fixe dès 120 € | TaxiNeo",
-        metaDescription: "Taxi Châteauroux → Tours. 115 km, 1h10, dès 120 €. A10, du Berry à la Touraine. Réservation 24h/24.",
+        metaTitle: "Taxi Châteauroux → Tours | 115 km, dès 120 € | TaxiNeo",
+        metaDescription: "Via A10 en 1h10. Berry, Touraine, Loire et Châteaux en chemin. Alternative directe au train ou au bus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Châteauroux → Tours",
         heroSubtitle: "Transfert Châteauroux → Tours au prix fixe de 120 — 150 €. 115 km, du Berry aux châteaux de la Loire.",
         description: "Tours, capitale de la Touraine et porte des châteaux de la Loire, est à 1h10 de Châteauroux.",
@@ -111,8 +111,8 @@ export const trajetsChateaurouxGueret: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Châteauroux → Tours | Fixed price from €120 | TaxiNeo",
-        metaDescription: "Taxi Châteauroux → Tours. 115 km, 1h10, from €120. A10, from Berry to Touraine. Book 24/7.",
+        metaTitle: "Taxi Châteauroux → Tours | 115 km, from €120 | TaxiNeo",
+        metaDescription: "Via A10, 1h10 ride. Berry, Touraine, Loire and Châteaux en route. Faster and more direct than train or bus. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Châteauroux → Tours",
         heroSubtitle: "Your Châteauroux → Tours transfer at €120 — €150. 115 km, from Berry to the Loire châteaux.",
         description: "Tours, capital of Touraine and gateway to the Loire châteaux, is 1h10 from Châteauroux.",
@@ -157,8 +157,8 @@ export const trajetsChateaurouxGueret: Trajet[] = [
     hub: "chateauroux-gueret",
     i18n: {
       fr: {
-        metaTitle: "Taxi Châteauroux → Limoges | Prix fixe dès 105 € | TaxiNeo",
-        metaDescription: "Taxi Châteauroux → Limoges. 100 km, 1h05, dès 105 €. A20, du Berry au Limousin. Réservation 24h/24.",
+        metaTitle: "Taxi Châteauroux → Limoges | 100 km, dès 105 € | TaxiNeo",
+        metaDescription: "Via A20 en 1h05. Berry, Limousin, Porcelaine et George Sand en chemin. Dépose porte-à-porte, bagages inclus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Châteauroux → Limoges",
         heroSubtitle: "Transfert Châteauroux → Limoges au prix fixe de 105 — 135 €. 100 km, direct par l'A20.",
         description: "Limoges, capitale des arts du feu et de la porcelaine, est à 1h05 de Châteauroux par l'A20.",
@@ -176,8 +176,8 @@ export const trajetsChateaurouxGueret: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Châteauroux → Limoges | Fixed price from €105 | TaxiNeo",
-        metaDescription: "Taxi Châteauroux → Limoges. 100 km, 1h05, from €105. A20, from Berry to Limousin. Book 24/7.",
+        metaTitle: "Taxi Châteauroux → Limoges | 100 km, from €105 | TaxiNeo",
+        metaDescription: "Via A20, 1h05 ride. Berry, Limousin, Porcelaine and George Sand en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Châteauroux → Limoges",
         heroSubtitle: "Your Châteauroux → Limoges transfer at €105 — €135. 100 km, direct via the A20.",
         description: "Limoges, world capital of porcelain and fire arts, is 1h05 from Châteauroux via the A20.",
@@ -222,8 +222,8 @@ export const trajetsChateaurouxGueret: Trajet[] = [
     hub: "chateauroux-gueret",
     i18n: {
       fr: {
-        metaTitle: "Taxi Guéret → Limoges | Prix fixe dès 100 € | TaxiNeo",
-        metaDescription: "Taxi Guéret → Limoges. 95 km, 1h, dès 100 €. A20, de la Creuse au Limousin. Réservation 24h/24.",
+        metaTitle: "Taxi Guéret → Limoges | 95 km, dès 100 € | TaxiNeo",
+        metaDescription: "Via A20 en 1h. Creuse, Limousin, Tapisseries et Aubusson en chemin. Dépose porte-à-porte, bagages inclus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Guéret → Limoges",
         heroSubtitle: "Transfert Guéret → Limoges au prix fixe de 100 — 125 €. 95 km, de la Creuse à la capitale de la porcelaine.",
         description: "Limoges, capitale de la porcelaine et des arts du feu, est à 1h de Guéret par l'A20.",
@@ -241,8 +241,8 @@ export const trajetsChateaurouxGueret: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Guéret → Limoges | Fixed price from €100 | TaxiNeo",
-        metaDescription: "Taxi Guéret → Limoges. 95 km, 1h, from €100. A20, from Creuse to Limousin. Book 24/7.",
+        metaTitle: "Taxi Guéret → Limoges | 95 km, from €100 | TaxiNeo",
+        metaDescription: "Via A20, 1 hour ride. Creuse, Limousin, Tapisseries and Aubusson en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Guéret → Limoges",
         heroSubtitle: "Your Guéret → Limoges transfer at €100 — €125. 95 km, from Creuse to the porcelain capital.",
         description: "Limoges, world capital of porcelain, is 1h from Guéret via the A20.",
@@ -287,8 +287,8 @@ export const trajetsChateaurouxGueret: Trajet[] = [
     hub: "chateauroux-gueret",
     i18n: {
       fr: {
-        metaTitle: "Taxi Guéret → Clermont-Ferrand | Prix fixe dès 170 € | TaxiNeo",
-        metaDescription: "Taxi Guéret → Clermont-Ferrand. 155 km, 1h35, dès 170 €. A714, de la Creuse aux volcans d'Auvergne. Réservation 24h/24.",
+        metaTitle: "Taxi Guéret → Clermont-Ferrand | 155 km, dès 170 € | TaxiNeo",
+        metaDescription: "Via A714 en 1h35. Creuse, Combrailles, Volcans et Aubusson en chemin. Dépose porte-à-porte, bagages inclus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Guéret → Clermont-Ferrand",
         heroSubtitle: "Transfert Guéret → Clermont-Ferrand au prix fixe de 170 — 215 €. 155 km, de la Creuse aux volcans.",
         description: "Clermont-Ferrand, capitale de l'Auvergne au pied de la chaîne des Puys, est à 1h35 de Guéret.",
@@ -306,8 +306,8 @@ export const trajetsChateaurouxGueret: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Guéret → Clermont-Ferrand | Fixed price from €170 | TaxiNeo",
-        metaDescription: "Taxi Guéret → Clermont-Ferrand. 155 km, 1h35, from €170. A714, from Creuse to Auvergne volcanoes. Book 24/7.",
+        metaTitle: "Taxi Guéret → Clermont-Ferrand | 155 km, from €170 | TaxiNeo",
+        metaDescription: "Via A714, 1h35 ride. Creuse, Combrailles, Volcans and Aubusson en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Guéret → Clermont-Ferrand",
         heroSubtitle: "Your Guéret → Clermont-Ferrand transfer at €170 — €215. 155 km, from Creuse to the volcanoes.",
         description: "Clermont-Ferrand, Auvergne capital at the foot of the Chaîne des Puys, is 1h35 from Guéret.",

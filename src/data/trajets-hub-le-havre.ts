@@ -27,8 +27,8 @@ export const trajetsLeHavre: Trajet[] = [
     hub: "le-havre",
     i18n: {
       fr: {
-        metaTitle: "Taxi Le Havre → Rouen | Prix fixe dès 90 € | TaxiNeo",
-        metaDescription: "Taxi Le Havre → Rouen. 87 km, 1h, dès 90 €. A29/A13, transfert direct porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Le Havre → Rouen | forfait dès 90 € | TaxiNeo",
+        metaDescription: "Par A29/A13, 1h de trajet. Seine-Maritime, Cathédrale de Rouen, Impressionnisme et Normandie en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Le Havre → Rouen",
         heroSubtitle: "Transfert Le Havre → Rouen au prix fixe de 90 — 115 €. 87 km, direct par l'A29 et l'A13.",
         description: "Rouen, capitale historique de la Normandie, est à 1h du Havre par autoroute.",
@@ -47,7 +47,7 @@ export const trajetsLeHavre: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Le Havre → Rouen | Fixed price from €90 | TaxiNeo",
-        metaDescription: "Taxi Le Havre → Rouen. 87 km, 1h, from €90. A29/A13, direct door-to-door. Book 24/7.",
+        metaDescription: "Via A29/A13, 1 hour ride. Seine-Maritime, Cathédrale de Rouen, Impressionnisme and Normandie en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Le Havre → Rouen",
         heroSubtitle: "Your Le Havre → Rouen transfer at €90 — €115. 87 km, via the A29 and A13.",
         description: "Rouen, historic capital of Normandy, is 1h from Le Havre by motorway.",
@@ -92,8 +92,8 @@ export const trajetsLeHavre: Trajet[] = [
     hub: "le-havre",
     i18n: {
       fr: {
-        metaTitle: "Taxi Le Havre → Paris | Prix fixe dès 220 € | TaxiNeo",
-        metaDescription: "Taxi Le Havre → Paris. 200 km, 2h10, dès 220 €. A13, transfert direct porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Le Havre → Paris | 200 km, dès 220 € | TaxiNeo",
+        metaDescription: "Via A13 en 2h10. Normandie, Navette croisière, CDG et Porte-à-porte en chemin. Dépose à votre adresse exacte. Alternative directe au train ou au bus.",
         heroTitle: "Taxi Le Havre → Paris",
         heroSubtitle: "Transfert Le Havre → Paris au prix fixe de 220 — 280 €. 200 km, direct par l'A13.",
         description: "Paris est à 2h10 du Havre par l'A13, l'autoroute de Normandie.",
@@ -111,8 +111,8 @@ export const trajetsLeHavre: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Le Havre → Paris | Fixed price from €220 | TaxiNeo",
-        metaDescription: "Taxi Le Havre → Paris. 200 km, 2h10, from €220. A13, direct door-to-door. Book 24/7.",
+        metaTitle: "Taxi Le Havre → Paris | 200 km, from €220 | TaxiNeo",
+        metaDescription: "Via A13, 2h10 ride. Normandie, Navette croisière, CDG and Porte-à-porte en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Le Havre → Paris",
         heroSubtitle: "Your Le Havre → Paris transfer at €220 — €280. 200 km, via the A13.",
         description: "Paris is 2h10 from Le Havre via the A13 Normandy motorway.",
@@ -157,8 +157,8 @@ export const trajetsLeHavre: Trajet[] = [
     hub: "le-havre",
     i18n: {
       fr: {
-        metaTitle: "Taxi Le Havre → Caen | Prix fixe dès 115 € | TaxiNeo",
-        metaDescription: "Taxi Le Havre → Caen. 110 km, 1h10, dès 115 €. A13, Mémorial, plages du Débarquement. Réservation 24h/24.",
+        metaTitle: "Taxi Le Havre → Caen | 110 km, dès 115 € | TaxiNeo",
+        metaDescription: "Par A13, 1h10 de trajet. Normandie, Plages du Débarquement, Guillaume le Conquérant et Mémorial en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Le Havre → Caen",
         heroSubtitle: "Transfert Le Havre → Caen au prix fixe de 115 — 145 €. 110 km, au coeur de la Normandie historique.",
         description: "Caen, cité de Guillaume le Conquérant, est à 1h10 du Havre par l'A13.",
@@ -176,8 +176,8 @@ export const trajetsLeHavre: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Le Havre → Caen | Fixed price from €115 | TaxiNeo",
-        metaDescription: "Taxi Le Havre → Caen. 110 km, 1h10, from €115. A13, D-Day beaches, Memorial. Book 24/7.",
+        metaTitle: "Taxi Le Havre → Caen | 110 km, from €115 | TaxiNeo",
+        metaDescription: "Via A13, 1h10 ride. Normandie, Plages du Débarquement, Guillaume le Conquérant and Mémorial en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Le Havre → Caen",
         heroSubtitle: "Your Le Havre → Caen transfer at €115 — €145. 110 km, heart of historic Normandy.",
         description: "Caen, William the Conqueror's city, is 1h10 from Le Havre via the A13.",
@@ -222,8 +222,8 @@ export const trajetsLeHavre: Trajet[] = [
     hub: "le-havre",
     i18n: {
       fr: {
-        metaTitle: "Taxi Le Havre → Honfleur | Prix fixe dès 35 € | TaxiNeo",
-        metaDescription: "Taxi Le Havre → Honfleur. 25 km, 20 min, dès 35 €. Pont de Normandie, Vieux Bassin. Réservation 24h/24.",
+        metaTitle: "Taxi Le Havre → Honfleur | 25 km, dès 35 € | TaxiNeo",
+        metaDescription: "Via Pont de Normandie en 20 min. Vieux Bassin, Impressionnisme, Sainte-Catherine et Estuaire de la Seine en chemin. Arrêt possible pour visites ou photos.",
         heroTitle: "Taxi Le Havre → Honfleur",
         heroSubtitle: "Transfert Le Havre → Honfleur au prix fixe de 35 — 45 €. 25 km, joyau de l'estuaire.",
         description: "Honfleur, perle de l'estuaire de la Seine, est à 20 min du Havre par le pont de Normandie.",
@@ -241,8 +241,8 @@ export const trajetsLeHavre: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Le Havre → Honfleur | Fixed price from €35 | TaxiNeo",
-        metaDescription: "Taxi Le Havre → Honfleur. 25 km, 20 min, from €35. Pont de Normandie, Vieux Bassin. Book 24/7.",
+        metaTitle: "Taxi Le Havre → Honfleur | 25 km, from €35 | TaxiNeo",
+        metaDescription: "Via Pont de Normandie, 20 min ride. Vieux Bassin, Impressionnisme, Sainte-Catherine and Estuaire de la Seine en route. Stops for sightseeing possible en route.",
         heroTitle: "Taxi Le Havre → Honfleur",
         heroSubtitle: "Your Le Havre → Honfleur transfer at €35 — €45. 25 km, jewel of the Seine estuary.",
         description: "Honfleur, pearl of the Seine estuary, is 20 min from Le Havre via the Pont de Normandie.",
@@ -287,8 +287,8 @@ export const trajetsLeHavre: Trajet[] = [
     hub: "le-havre",
     i18n: {
       fr: {
-        metaTitle: "Taxi Le Havre → Étretat | Prix fixe dès 35 € | TaxiNeo",
-        metaDescription: "Taxi Le Havre → Étretat. 30 km, 25 min, dès 35 €. D940, falaises, Aiguille creuse. Réservation 24h/24.",
+        metaTitle: "Taxi Le Havre → Étretat | 30 km, dès 35 € | TaxiNeo",
+        metaDescription: "Itinéraire D940, environ 25 min. Falaises, Aiguille creuse, Arsène Lupin et Côte d'Albâtre en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Le Havre → Étretat",
         heroSubtitle: "Transfert Le Havre → Étretat au prix fixe de 35 — 45 €. 30 km, les plus belles falaises de France.",
         description: "Étretat et ses falaises légendaires sont à 25 min du Havre par la D940.",
@@ -306,8 +306,8 @@ export const trajetsLeHavre: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Le Havre → Étretat | Fixed price from €35 | TaxiNeo",
-        metaDescription: "Taxi Le Havre → Étretat. 30 km, 25 min, from €35. D940, famous cliffs, Aiguille creuse. Book 24/7.",
+        metaTitle: "Taxi Le Havre → Étretat | 30 km, from €35 | TaxiNeo",
+        metaDescription: "Via D940, 25 min ride. Falaises, Aiguille creuse, Arsène Lupin and Côte d'Albâtre en route. Stops for sightseeing possible en route. No toll on this route.",
         heroTitle: "Taxi Le Havre → Étretat",
         heroSubtitle: "Your Le Havre → Étretat transfer at €35 — €45. 30 km, France's most famous cliffs.",
         description: "Étretat and its legendary cliffs are 25 min from Le Havre via the D940.",

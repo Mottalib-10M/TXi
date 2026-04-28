@@ -19,8 +19,8 @@ export const trajetsToulouse2: Trajet[] = [
     hub: "toulouse",
     i18n: {
       fr: {
-        metaTitle: "Taxi Toulouse → Font-Romeu | Prix fixe dès 240 € | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Font-Romeu. 200 km, 2h30, dès 240 €. Transfert ski et altitude en Cerdagne. Réservation 24h/24.",
+        metaTitle: "Taxi Toulouse → Font-Romeu | 200 km, dès 240 € | TaxiNeo",
+        metaDescription: "Via A61 / A66 / N116 en undefined min. Pyrénées, Cerdagne, Ski et Altitude en chemin. Arrêt visite possible en chemin. Arrêt possible pour visites ou photos.",
         heroTitle: "Taxi Toulouse → Font-Romeu",
         heroSubtitle: "Transfert Toulouse → Font-Romeu au prix fixe de 240 — 310 €. 200 km, 2h30.",
         description: "Font-Romeu, station d'altitude en Cerdagne, est à 2h30 de Toulouse.",
@@ -38,8 +38,8 @@ export const trajetsToulouse2: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Toulouse → Font-Romeu | Fixed price from €240 | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Font-Romeu. 200 km, 2h30, from €240. Ski and altitude transfer. Book 24/7.",
+        metaTitle: "Taxi Toulouse → Font-Romeu | 200 km, from €240 | TaxiNeo",
+        metaDescription: "Via A61 / A66 / N116, undefined min ride. Pyrénées, Cerdagne, Ski and Altitude en route. Stops for sightseeing possible en route. Return trip at same rate.",
         heroTitle: "Taxi Toulouse → Font-Romeu",
         heroSubtitle: "Toulouse → Font-Romeu transfer at €240 — €310. 200 km, 2h30.",
         description: "Font-Romeu, France's sunniest ski resort in the Cerdagne, 2h30 from Toulouse.",
@@ -76,8 +76,8 @@ export const trajetsToulouse2: Trajet[] = [
     hub: "toulouse",
     i18n: {
       fr: {
-        metaTitle: "Taxi Toulouse → Saint-Girons | Prix fixe dès 130 € | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Saint-Girons. 105 km, 1h20, dès 130 €. Vers le Couserans pyrénéen. Réservation 24h/24.",
+        metaTitle: "Taxi Toulouse → Saint-Girons | 105 km, dès 130 € | TaxiNeo",
+        metaDescription: "Via A64 / D117 en undefined min. Couserans, Pyrénées et Nature en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Toulouse → Saint-Girons",
         heroSubtitle: "Transfert Toulouse → Saint-Girons au prix fixe de 130 — 165 €. 105 km, 1h20.",
         description: "Saint-Girons, capitale du Couserans, porte des Pyrénées ariégeoises.",
@@ -95,8 +95,8 @@ export const trajetsToulouse2: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Toulouse → Saint-Girons | Fixed price from €130 | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Saint-Girons. 105 km, 1h20, from €130. Pyrenean Couserans. Book 24/7.",
+        metaTitle: "Taxi Toulouse → Saint-Girons | 105 km, from €130 | TaxiNeo",
+        metaDescription: "Via A64 / D117, undefined min ride. Couserans, Pyrénées and Nature along the way. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Toulouse → Saint-Girons",
         heroSubtitle: "Toulouse → Saint-Girons transfer at €130 — €165. 105 km, 1h20.",
         description: "Saint-Girons, capital of Couserans, gateway to wild Pyrenean valleys.",
@@ -133,8 +133,8 @@ export const trajetsToulouse2: Trajet[] = [
     hub: "toulouse",
     i18n: {
       fr: {
-        metaTitle: "Taxi Toulouse → Villefranche-de-Rouergue | Dès 155 € | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Villefranche-de-Rouergue. 130 km, 1h35, dès 155 €. Bastide royale en Aveyron. Réservation 24h/24.",
+        metaTitle: "Taxi Toulouse → Villefranche-de-Rouergue | 130 km | TaxiNeo",
+        metaDescription: "Via A68 / D922 en undefined min. Aveyron, Bastide et Patrimoine en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Toulouse → Villefranche-de-Rouergue",
         heroSubtitle: "Transfert au prix fixe de 155 — 200 €. 130 km, 1h35.",
         description: "Villefranche-de-Rouergue, bastide royale du XIIIe siècle, en 1h35.",
@@ -152,8 +152,8 @@ export const trajetsToulouse2: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Toulouse → Villefranche-de-Rouergue | From €155 | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Villefranche-de-Rouergue. 130 km, 1h35, from €155. Royal bastide. Book 24/7.",
+        metaTitle: "Taxi Toulouse → Villefranche-de-Rouergue | 130 km | TaxiNeo",
+        metaDescription: "Via A68 / D922, undefined min ride. Aveyron, Bastide and Patrimoine along the way. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Toulouse → Villefranche-de-Rouergue",
         heroSubtitle: "Transfer at €155 — €200. 130 km, 1h35.",
         description: "Villefranche-de-Rouergue, 13th-century royal bastide in Aveyron.",
@@ -190,8 +190,8 @@ export const trajetsToulouse2: Trajet[] = [
     hub: "toulouse",
     i18n: {
       fr: {
-        metaTitle: "Taxi Toulouse → Béziers | Prix fixe dès 190 € | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Béziers. 160 km, 1h35, dès 190 €. A61 le long du Canal du Midi. Réservation 24h/24.",
+        metaTitle: "Taxi Toulouse → Béziers | 160 km, dès 190 € | TaxiNeo",
+        metaDescription: "Via A61 en undefined min. Canal du Midi, Languedoc et Vignobles en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Toulouse → Béziers",
         heroSubtitle: "Transfert Toulouse → Béziers au prix fixe de 190 — 245 €. 160 km, 1h35.",
         description: "Béziers, cité cathare et viticole, est à 1h35 de Toulouse par l'A61.",
@@ -209,8 +209,8 @@ export const trajetsToulouse2: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Toulouse → Béziers | Fixed price from €190 | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Béziers. 160 km, 1h35, from €190. A61 along Canal du Midi. Book 24/7.",
+        metaTitle: "Taxi Toulouse → Béziers | 160 km, from €190 | TaxiNeo",
+        metaDescription: "Via A61, undefined min ride. Canal du Midi, Languedoc and Vignobles along the way. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Toulouse → Béziers",
         heroSubtitle: "Toulouse → Béziers transfer at €190 — €245. 160 km, 1h35.",
         description: "Béziers, Cathar city and wine capital, 1h35 from Toulouse via A61.",
@@ -247,8 +247,8 @@ export const trajetsToulouse2: Trajet[] = [
     hub: "toulouse",
     i18n: {
       fr: {
-        metaTitle: "Taxi Toulouse → Perpignan | Prix fixe dès 240 € | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Perpignan. 200 km, 2h, dès 240 €. Via A61/A9 vers la Catalogne. Réservation 24h/24.",
+        metaTitle: "Taxi Toulouse → Perpignan | 200 km, dès 240 € | TaxiNeo",
+        metaDescription: "Via A61 / A9 en undefined min. Languedoc, Roussillon et Catalogne en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Toulouse → Perpignan",
         heroSubtitle: "Transfert Toulouse → Perpignan au prix fixe de 240 — 310 €. 200 km, 2h.",
         description: "Perpignan, capitale du Roussillon catalan, est à 2h de Toulouse.",
@@ -266,8 +266,8 @@ export const trajetsToulouse2: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Toulouse → Perpignan | Fixed price from €240 | TaxiNeo",
-        metaDescription: "Taxi Toulouse → Perpignan. 200 km, 2h, from €240. Via A61/A9 to Catalonia. Book 24/7.",
+        metaTitle: "Taxi Toulouse → Perpignan | 200 km, from €240 | TaxiNeo",
+        metaDescription: "Via A61 / A9, undefined min ride. Languedoc, Roussillon and Catalogne along the way. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Toulouse → Perpignan",
         heroSubtitle: "Toulouse → Perpignan transfer at €240 — €310. 200 km, 2h.",
         description: "Perpignan, capital of French Catalonia, 2h from Toulouse.",

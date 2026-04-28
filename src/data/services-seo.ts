@@ -35,9 +35,9 @@ export const services: ServiceSeo[] = [
     category: "transport",
     i18n: {
       fr: {
-        metaTitle: "Taxi 7 places : réservez un minivan pour groupe | TaxiNeo",
+        metaTitle: "Taxi 7 places : Mercedes Classe V, grand coffre | TaxiNeo",
         metaDescription:
-          "Réservez un taxi 7 places en France pour vos déplacements en groupe, en famille ou entre amis. Minivan spacieux, prix fixe garanti, réservation en ligne 24h/24.",
+          "Taxi 7 places pour groupes, familles ou amis en France. Minivan spacieux avec grand coffre pour bagages et poussettes. Tarif fixe annoncé avant le départ.",
         heroTitle: "Taxi 7 places",
         heroSubtitle:
           "Voyagez en groupe confortablement dans un minivan spacieux. Idéal pour les familles nombreuses et les groupes d'amis.",
@@ -80,9 +80,9 @@ export const services: ServiceSeo[] = [
           "Réservez en ligne sur TaxiNeo en sélectionnant l'option « 7 places ». Indiquez le nombre de passagers, le nombre de bagages et précisez si vous avez besoin de sièges enfant. Vous recevez instantanément un prix fixe garanti. Le jour J, votre chauffeur vous attend à l'adresse indiquée avec un minivan spacieux, aide au chargement des bagages et vous conduit à destination en toute sérénité.",
       },
       en: {
-        metaTitle: "7-Seater Taxi: book a minivan for groups | TaxiNeo",
+        metaTitle: "7-Seater Taxi: spacious minivan for groups | TaxiNeo",
         metaDescription:
-          "Book a 7-seater taxi in France for group, family or friends trips. Spacious minivan, guaranteed fixed price, online booking 24/7.",
+          "Book a 7-seater taxi in France for group, family or friends trips. Spacious minivan, guaranteed fixed price, 24/7 online booking on TaxiNeo available now.",
         heroTitle: "7-Seater Taxi",
         heroSubtitle:
           "Travel comfortably as a group in a spacious minivan. Perfect for large families and groups of friends.",
@@ -135,7 +135,7 @@ export const services: ServiceSeo[] = [
       fr: {
         metaTitle: "Taxi Van : transport de groupe jusqu'à 8 passagers | TaxiNeo",
         metaDescription:
-          "Réservez un taxi van pour vos déplacements en grand groupe. Jusqu'à 8 passagers, bagages volumineux, prix fixe. Réservation en ligne.",
+          "Taxi van jusqu'à 8 passagers en France. Coffre XXL pour bagages volumineux et matériel sportif. Tarif fixe annoncé avant départ, paiement CB accepté à bord.",
         heroTitle: "Taxi Van",
         heroSubtitle:
           "Le taxi van pour vos déplacements en grand groupe avec bagages volumineux. Confort et espace garantis.",
@@ -180,7 +180,7 @@ export const services: ServiceSeo[] = [
       en: {
         metaTitle: "Taxi Van: group transport up to 8 passengers | TaxiNeo",
         metaDescription:
-          "Book a taxi van for your large group trips. Up to 8 passengers, oversized luggage, fixed price. Online booking available.",
+          "Book a taxi van for your large group trips with up to 8 passengers. Oversized luggage welcome, guaranteed fixed price. Easy and fast online booking on TaxiNeo.",
         heroTitle: "Taxi Van",
         heroSubtitle:
           "The taxi van for your large group trips with oversized luggage. Comfort and space guaranteed.",
@@ -231,9 +231,9 @@ export const services: ServiceSeo[] = [
     category: "special",
     i18n: {
       fr: {
-        metaTitle: "Taxi PMR : transport adapté handicap et mobilité réduite | TaxiNeo",
+        metaTitle: "Taxi PMR : transport adapté mobilité réduite | TaxiNeo",
         metaDescription:
-          "Réservez un taxi PMR adapté aux personnes à mobilité réduite. Véhicules accessibles fauteuil roulant, rampe d'accès, chauffeur formé. Prix fixe garanti.",
+          "Taxi PMR adapté aux personnes à mobilité réduite. Véhicule accessible fauteuil roulant, rampe d'accès, chauffeur formé. Tarif fixe annoncé avant le départ.",
         heroTitle: "Taxi PMR",
         heroSubtitle:
           "Transport adapté aux personnes à mobilité réduite. Véhicules accessibles et chauffeurs formés à votre service.",
@@ -276,7 +276,7 @@ export const services: ServiceSeo[] = [
           "Lors de la réservation en ligne sur TaxiNeo, sélectionnez l'option « PMR / Fauteuil roulant ». Précisez le type de fauteuil (manuel, électrique ou scooter) et ses dimensions si nécessaire. Un véhicule adapté avec rampe ou plateforme élévatrice est attribué automatiquement. Le chauffeur formé arrive, déploie la rampe, vous assiste pour l'installation et sécurise l'arrimage du fauteuil avant le départ.",
       },
       en: {
-        metaTitle: "Wheelchair Accessible Taxi: adapted transport for reduced mobility | TaxiNeo",
+        metaTitle: "Wheelchair Accessible Taxi: adapted transport | TaxiNeo",
         metaDescription:
           "Book a wheelchair accessible taxi adapted for people with reduced mobility. Wheelchair-accessible vehicles, ramp access, trained driver. Guaranteed fixed price.",
         heroTitle: "Wheelchair Accessible Taxi",
@@ -329,9 +329,9 @@ export const services: ServiceSeo[] = [
     category: "special",
     i18n: {
       fr: {
-        metaTitle: "Taxi Mariage : voiture avec chauffeur pour votre jour J | TaxiNeo",
+        metaTitle: "Taxi Mariage : chauffeur pour votre jour J | TaxiNeo",
         metaDescription:
-          "Réservez un taxi mariage élégant avec chauffeur pour votre jour J. Véhicule décoré, ponctualité garantie, service premium. Devis personnalisé.",
+          "Taxi mariage avec chauffeur dédié pour votre jour J. Berline ou van décoré selon vos souhaits. Navette mariés et invités (mairie, église, salle). Devis gratuit.",
         heroTitle: "Taxi Mariage",
         heroSubtitle:
           "Rendez votre jour J inoubliable avec un service de transport élégant et ponctuel pour les mariés et leurs invités.",
@@ -376,7 +376,7 @@ export const services: ServiceSeo[] = [
       en: {
         metaTitle: "Wedding Taxi: chauffeured car for your big day | TaxiNeo",
         metaDescription:
-          "Book an elegant wedding taxi with chauffeur for your big day. Decorated vehicle, guaranteed punctuality, premium service. Custom quote available.",
+          "Book an elegant wedding taxi with chauffeur for your big day. Decorated vehicle, guaranteed punctuality, premium service for couple and guests. Free quote.",
         heroTitle: "Wedding Taxi",
         heroSubtitle:
           "Make your big day unforgettable with an elegant and punctual transport service for the couple and their guests.",
@@ -427,9 +427,9 @@ export const services: ServiceSeo[] = [
     category: "special",
     i18n: {
       fr: {
-        metaTitle: "Taxi Événement : transport pour concerts, salons et soirées | TaxiNeo",
+        metaTitle: "Taxi Événement : concerts, salons, soirées | TaxiNeo",
         metaDescription:
-          "Réservez un taxi pour vos événements : concerts, salons, soirées, conférences. Service ponctuel, prix fixe, retour garanti. Réservation en ligne.",
+          "Taxi pour vos événements : concerts, salons, soirées et conférences. Service ponctuel, tarif fixe, retour garanti. Chauffeur dédié toute la soirée sur TaxiNeo.",
         heroTitle: "Taxi Événement",
         heroSubtitle:
           "Transport fiable et ponctuel pour tous vos événements. Concerts, salons, galas, conférences : arrivez et repartez sereinement.",
@@ -472,9 +472,9 @@ export const services: ServiceSeo[] = [
           "Réservez sur TaxiNeo en indiquant le lieu de l'événement, l'heure d'arrivée souhaitée et l'heure de retour estimée. Vous pouvez ajuster l'heure de retour jusqu'à 30 minutes avant via l'application ou par SMS au chauffeur. Le prix fixe aller-retour est confirmé instantanément. Le jour de l'événement, votre chauffeur vous conduit sur place puis revient vous chercher à la sortie au point convenu.",
       },
       en: {
-        metaTitle: "Event Taxi: transport for concerts, exhibitions and parties | TaxiNeo",
+        metaTitle: "Event Taxi: concerts, exhibitions and shows | TaxiNeo",
         metaDescription:
-          "Book a taxi for your events: concerts, exhibitions, parties, conferences. Punctual service, fixed price, guaranteed return. Online booking.",
+          "Book a taxi for your events: concerts, exhibitions, parties and conferences. Punctual service, fixed price, guaranteed return journey. Book online on TaxiNeo.",
         heroTitle: "Event Taxi",
         heroSubtitle:
           "Reliable and punctual transport for all your events. Concerts, exhibitions, galas, conferences: arrive and leave with peace of mind.",
@@ -525,9 +525,9 @@ export const services: ServiceSeo[] = [
     category: "special",
     i18n: {
       fr: {
-        metaTitle: "Taxi Médical : transport sanitaire vers hôpitaux et cliniques | TaxiNeo",
+        metaTitle: "Taxi Médical : transport vers hôpitaux et soins | TaxiNeo",
         metaDescription:
-          "Réservez un taxi médical pour vos rendez-vous médicaux, hospitalisations et traitements. Chauffeur ponctuel, véhicule confortable, prix fixe.",
+          "Réservez un taxi médical pour vos rendez-vous médicaux, hospitalisations et traitements. Chauffeur ponctuel et attentionné, véhicule confortable, prix fixe.",
         heroTitle: "Taxi Médical",
         heroSubtitle:
           "Transport fiable et confortable pour tous vos rendez-vous médicaux. Ponctualité et bienveillance à chaque trajet.",
@@ -570,9 +570,9 @@ export const services: ServiceSeo[] = [
           "Réservez en ligne sur TaxiNeo en sélectionnant le service « Médical ». Indiquez l'établissement de santé, la date et l'heure du rendez-vous. Pour les traitements récurrents, configurez un planning hebdomadaire. Le chauffeur arrive à votre domicile en avance, vous aide à monter en voiture, vous conduit à l'accueil de l'établissement et revient vous chercher à l'heure convenue pour le retour.",
       },
       en: {
-        metaTitle: "Medical Taxi: healthcare transport to hospitals and clinics | TaxiNeo",
+        metaTitle: "Medical Taxi: transport to hospitals and clinics | TaxiNeo",
         metaDescription:
-          "Book a medical taxi for your medical appointments, hospitalisations and treatments. Punctual driver, comfortable vehicle, fixed price.",
+          "Book a medical taxi for your appointments, hospitalisations and treatments. Punctual and caring driver, comfortable vehicle, fixed price. Book now on TaxiNeo.",
         heroTitle: "Medical Taxi",
         heroSubtitle:
           "Reliable and comfortable transport for all your medical appointments. Punctuality and care on every journey.",
@@ -623,9 +623,9 @@ export const services: ServiceSeo[] = [
     category: "special",
     i18n: {
       fr: {
-        metaTitle: "Taxi Animaux : transport de vos animaux de compagnie | TaxiNeo",
+        metaTitle: "Taxi Animaux : voyagez avec vos compagnons | TaxiNeo",
         metaDescription:
-          "Réservez un taxi acceptant les animaux de compagnie : chiens, chats et autres. Véhicule adapté, chauffeur bienveillant, prix fixe garanti.",
+          "Taxi acceptant chiens, chats et autres animaux de compagnie. Véhicule protégé (housses siège et coffre), chauffeur bienveillant. Tarif fixe connu à l'avance.",
         heroTitle: "Taxi Animaux",
         heroSubtitle:
           "Voyagez avec vos animaux de compagnie en toute sérénité. Nos chauffeurs accueillent vos compagnons à quatre pattes.",
@@ -668,9 +668,9 @@ export const services: ServiceSeo[] = [
           "Réservez sur TaxiNeo en cochant l'option « Animaux acceptés ». Précisez l'espèce, la race, la taille approximative de l'animal et si vous utiliserez une caisse de transport. Le prix fixe est calculé instantanément, avec le supplément nettoyage éventuel affiché clairement. Le chauffeur arrive avec les protections de siège installées, accueille votre compagnon avec bienveillance et vous conduit à destination en douceur.",
       },
       en: {
-        metaTitle: "Pet Taxi: transport for your pets | TaxiNeo",
+        metaTitle: "Pet Taxi: safe transport for your animals | TaxiNeo",
         metaDescription:
-          "Book a pet-friendly taxi: dogs, cats and more. Adapted vehicle, caring driver, guaranteed fixed price.",
+          "Book a pet-friendly taxi for dogs, cats and other animals. Adapted vehicle with seat protections, caring driver, guaranteed fixed price. Book easily on TaxiNeo.",
         heroTitle: "Pet Taxi",
         heroSubtitle:
           "Travel with your pets with complete peace of mind. Our drivers welcome your four-legged companions.",
@@ -721,9 +721,9 @@ export const services: ServiceSeo[] = [
     category: "special",
     i18n: {
       fr: {
-        metaTitle: "Taxi Colis : livraison express de paquets et documents | TaxiNeo",
+        metaTitle: "Taxi Colis : livraison express de vos paquets | TaxiNeo",
         metaDescription:
-          "Envoyez vos colis et documents urgents par taxi. Livraison express en ville, suivi en temps réel, preuve de livraison. Prix fixe garanti.",
+          "Envoyez vos colis et documents urgents par taxi. Livraison express en ville ou interurbaine, suivi en temps réel, preuve de livraison. Prix fixe sur TaxiNeo.",
         heroTitle: "Taxi Colis",
         heroSubtitle:
           "Livraison express de vos colis et documents urgents. Plus rapide qu'un coursier, avec suivi en temps réel.",
@@ -766,9 +766,9 @@ export const services: ServiceSeo[] = [
           "Créez votre demande de livraison sur TaxiNeo en précisant l'adresse d'enlèvement, l'adresse de livraison, la nature du colis et son poids approximatif. Recevez un prix fixe instantané. Un chauffeur-coursier se présente à l'adresse d'enlèvement en moins de 30 minutes, prend en charge votre colis et le livre en main propre au destinataire. Vous recevez la preuve de livraison signée par SMS.",
       },
       en: {
-        metaTitle: "Parcel Taxi: express delivery of packages and documents | TaxiNeo",
+        metaTitle: "Parcel Taxi: express delivery for your packages | TaxiNeo",
         metaDescription:
-          "Send your urgent parcels and documents by taxi. Express city delivery, real-time tracking, proof of delivery. Guaranteed fixed price.",
+          "Send your urgent parcels and documents by taxi. Express city or intercity delivery, real-time GPS tracking, proof of delivery. Guaranteed fixed price TaxiNeo.",
         heroTitle: "Parcel Taxi",
         heroSubtitle:
           "Express delivery of your urgent parcels and documents. Faster than a courier, with real-time tracking.",
@@ -819,9 +819,9 @@ export const services: ServiceSeo[] = [
     category: "transport",
     i18n: {
       fr: {
-        metaTitle: "Taxi de Nuit : chauffeur disponible 24h/24 partout en France | TaxiNeo",
+        metaTitle: "Taxi de Nuit : courses de 19h à 7h en France | TaxiNeo",
         metaDescription:
-          "Réservez un taxi de nuit en France. Disponible de 19h à 7h, chauffeur professionnel, prix fixe sans majoration surprise. Réservation immédiate.",
+          "Vols tardifs, retours de soirée, urgences et trains de nuit. Chauffeur vérifié, suivi GPS. Prix fixe sans majoration surprise type VTC. Paiement CB à bord.",
         heroTitle: "Taxi de Nuit",
         heroSubtitle:
           "Un chauffeur disponible à toute heure de la nuit. Rentrez chez vous en toute sécurité, sans attendre.",
@@ -866,7 +866,7 @@ export const services: ServiceSeo[] = [
       en: {
         metaTitle: "Night Taxi: driver available 24/7 across France | TaxiNeo",
         metaDescription:
-          "Book a night taxi in France. Available from 7pm to 7am, professional driver, fixed price with no surprise surcharge. Instant booking.",
+          "Book a night taxi in France. Available from 7pm to 7am, professional driver, fixed price with no surprise surcharge. Instant booking available 24/7 on TaxiNeo.",
         heroTitle: "Night Taxi",
         heroSubtitle:
           "A driver available at any hour of the night. Get home safely without waiting.",
@@ -917,9 +917,9 @@ export const services: ServiceSeo[] = [
     category: "special",
     i18n: {
       fr: {
-        metaTitle: "Taxi Femme : chauffeure femme pour voyager en confiance | TaxiNeo",
+        metaTitle: "Taxi Femme : chauffeure femme de confiance | TaxiNeo",
         metaDescription:
-          "Réservez un taxi avec chauffeure femme. Service dédié aux passagères souhaitant voyager en confiance, de jour comme de nuit. Prix fixe garanti.",
+          "Taxi avec chauffeure femme pour voyager en confiance. Service dédié aux passagères, jour et nuit. Même tarif, suivi GPS partageable en temps réel sur TaxiNeo.",
         heroTitle: "Taxi Femme",
         heroSubtitle:
           "Voyagez en toute confiance avec une chauffeure femme. Un service pensé pour votre confort et votre sérénité.",
@@ -964,7 +964,7 @@ export const services: ServiceSeo[] = [
       en: {
         metaTitle: "Female Driver Taxi: travel with confidence | TaxiNeo",
         metaDescription:
-          "Book a taxi with a female driver. Dedicated service for passengers wanting to travel with confidence, day or night. Guaranteed fixed price.",
+          "Book a taxi with a female driver for confident travel. Dedicated service for passengers wanting peace of mind, day or night. Guaranteed fixed price on TaxiNeo.",
         heroTitle: "Female Driver Taxi",
         heroSubtitle:
           "Travel with complete confidence with a female driver. A service designed for your comfort and peace of mind.",
@@ -1062,7 +1062,7 @@ export const services: ServiceSeo[] = [
       en: {
         metaTitle: "Child Taxi: safe transport with child car seat | TaxiNeo",
         metaDescription:
-          "Book a child taxi with an adapted car seat. Safe transport for your children: school, activities, shared custody. Trusted driver, fixed price.",
+          "Book a child taxi with an adapted car seat. Safe transport for your children: school, activities and shared custody. Trusted driver, guaranteed fixed price.",
         heroTitle: "Child Taxi",
         heroSubtitle:
           "Safe and adapted transport for your children. Car seats provided, trusted drivers.",
@@ -1113,9 +1113,9 @@ export const services: ServiceSeo[] = [
     category: "transport",
     i18n: {
       fr: {
-        metaTitle: "Taxi Longue Distance : trajets interurbains partout en France | TaxiNeo",
+        metaTitle: "Taxi Longue Distance : trajets en France | TaxiNeo",
         metaDescription:
-          "Réservez un taxi longue distance pour vos trajets interurbains en France. Paris-Lyon, Paris-Lille, toutes destinations. Prix fixe, confort garanti.",
+          "Réservez un taxi longue distance pour vos trajets interurbains en France. Paris-Lyon, Paris-Lille et toutes destinations. Prix fixe, confort garanti TaxiNeo.",
         heroTitle: "Taxi Longue Distance",
         heroSubtitle:
           "Voyagez sur de longues distances en tout confort. Prix fixe garanti, pas de stress, un seul chauffeur de bout en bout.",
@@ -1160,7 +1160,7 @@ export const services: ServiceSeo[] = [
       en: {
         metaTitle: "Long Distance Taxi: intercity trips across France | TaxiNeo",
         metaDescription:
-          "Book a long distance taxi for intercity trips in France. Paris-Lyon, Paris-Lille, all destinations. Fixed price, guaranteed comfort.",
+          "Book a long distance taxi for intercity trips in France. Paris-Lyon, Paris-Lille, all destinations. Fixed price, guaranteed comfort. Book now on TaxiNeo.",
         heroTitle: "Long Distance Taxi",
         heroSubtitle:
           "Travel long distances in complete comfort. Guaranteed fixed price, no stress, one driver from start to finish.",
@@ -1211,9 +1211,9 @@ export const services: ServiceSeo[] = [
     category: "transport",
     i18n: {
       fr: {
-        metaTitle: "Taxi Aller-Retour : réservez votre trajet complet à prix réduit | TaxiNeo",
+        metaTitle: "Taxi Aller-Retour : trajet complet prix fixe | TaxiNeo",
         metaDescription:
-          "Réservez un taxi aller-retour et bénéficiez d'un tarif préférentiel. Prix fixe pour l'aller et le retour, chauffeur dédié, aucune attente.",
+          "Taxi aller-retour à tarif préférentiel. Un seul tarif aller et retour, chauffeur dédié, aucune attente. Économie jusqu'à 20 % vs deux courses séparées.",
         heroTitle: "Taxi Aller-Retour",
         heroSubtitle:
           "Réservez l'aller et le retour en une seule fois. Tarif préférentiel et chauffeur dédié pour tout votre déplacement.",
@@ -1256,9 +1256,9 @@ export const services: ServiceSeo[] = [
           "Sur TaxiNeo, sélectionnez la formule « Aller-retour ». Entrez l'adresse de départ, la destination, l'heure de départ et l'heure estimée de retour. Le tarif préférentiel aller-retour s'affiche avec l'économie réalisée par rapport à deux courses séparées. Le chauffeur vous conduit à destination, vous confirme sa disponibilité ou son heure de retour, puis vous ramène au point de départ à l'heure convenue.",
       },
       en: {
-        metaTitle: "Round Trip Taxi: book your complete journey at a reduced rate | TaxiNeo",
+        metaTitle: "Round Trip Taxi: complete journey, fixed price | TaxiNeo",
         metaDescription:
-          "Book a round trip taxi and benefit from a preferential rate. Fixed price for outward and return, dedicated driver, no waiting.",
+          "Book a round trip taxi and enjoy a preferential rate. Fixed price for outward and return journeys, dedicated driver, no waiting. Book easily on TaxiNeo.",
         heroTitle: "Round Trip Taxi",
         heroSubtitle:
           "Book the outward and return journey in one go. Preferential rate and dedicated driver for your entire trip.",
@@ -1309,9 +1309,9 @@ export const services: ServiceSeo[] = [
     category: "transport",
     i18n: {
       fr: {
-        metaTitle: "Navette Aéroport : transfert taxi vers tous les aéroports | TaxiNeo",
+        metaTitle: "Navette Aéroport : taxi vers tous aéroports | TaxiNeo",
         metaDescription:
-          "Réservez votre navette aéroport avec TaxiNeo. Transfert vers CDG, Orly, Lyon, Nice et tous les aéroports de France. Prix fixe, suivi de vol inclus.",
+          "Navette taxi vers CDG, Orly, Lyon-Saint-Exupéry, Nice et tous aéroports de France. Tarif fixe, suivi de vol en temps réel. Attente gratuite si retard d'avion.",
         heroTitle: "Navette Aéroport",
         heroSubtitle:
           "Transfert fiable et ponctuel vers tous les aéroports de France. Prix fixe, suivi de vol et attente gratuite en cas de retard.",
@@ -1356,7 +1356,7 @@ export const services: ServiceSeo[] = [
       en: {
         metaTitle: "Airport Shuttle: taxi transfer to all airports | TaxiNeo",
         metaDescription:
-          "Book your airport shuttle with TaxiNeo. Transfer to CDG, Orly, Lyon, Nice and all French airports. Fixed price, flight tracking included.",
+          "Book your airport shuttle with TaxiNeo. Transfers to CDG, Orly, Lyon, Nice and all French airports. Fixed price guaranteed, real-time flight tracking included.",
         heroTitle: "Airport Shuttle",
         heroSubtitle:
           "Reliable and punctual transfer to all French airports. Fixed price, flight tracking and free waiting in case of delay.",
@@ -1407,7 +1407,7 @@ export const services: ServiceSeo[] = [
     category: "special",
     i18n: {
       fr: {
-        metaTitle: "Taxi Conventionné : transport remboursé par la CPAM | TaxiNeo",
+        metaTitle: "Taxi Conventionné : remboursé par la CPAM | TaxiNeo",
         metaDescription:
           "Informations sur le taxi conventionné remboursé par la Sécurité sociale. Conditions, prescription médicale, démarches. Trouvez un chauffeur conventionné.",
         heroTitle: "Taxi Conventionné",
@@ -1452,9 +1452,9 @@ export const services: ServiceSeo[] = [
           "Obtenez une prescription médicale de transport (PMT) auprès de votre médecin. Sur TaxiNeo, sélectionnez le service « Taxi conventionné » et indiquez votre numéro de Sécurité sociale. Nous recherchons un chauffeur conventionné disponible dans votre zone. Si un partenaire conventionné est trouvé, le trajet est réservé en tiers payant. Sinon, nous vous proposons une course standard avec une facture détaillée pour demander le remboursement à votre CPAM.",
       },
       en: {
-        metaTitle: "Conventional Taxi: transport reimbursed by French health insurance | TaxiNeo",
+        metaTitle: "Conventional Taxi: health insurance covered | TaxiNeo",
         metaDescription:
-          "Information about conventional taxis reimbursed by French social security. Conditions, medical prescription, procedures. Find a conventional driver.",
+          "Information on conventional taxis reimbursed by French social security. Conditions, medical prescription and procedures. Find a conventional driver near you.",
         heroTitle: "Conventional Taxi",
         heroSubtitle:
           "Everything you need to know about reimbursed medical transport. Access conditions, procedures and connecting with conventional drivers.",
@@ -1505,9 +1505,9 @@ export const services: ServiceSeo[] = [
     category: "premium",
     i18n: {
       fr: {
-        metaTitle: "Taxi de Luxe : berline premium avec chauffeur privé | TaxiNeo",
+        metaTitle: "Taxi de Luxe : berline premium et chauffeur | TaxiNeo",
         metaDescription:
-          "Réservez un taxi de luxe avec chauffeur privé. Mercedes Classe S, BMW Série 7, Audi A8. Service VIP, confort exceptionnel, prix fixe.",
+          "Taxi de luxe avec chauffeur privé. Mercedes Classe S, BMW Série 7, Audi A8. Accueil VIP, eau et presse à bord, suivi GPS. Aéroports et galas à tarif fixe.",
         heroTitle: "Taxi de Luxe",
         heroSubtitle:
           "Vivez une expérience de transport d'exception. Berlines premium, chauffeurs en costume et service VIP personnalisé.",
@@ -1552,7 +1552,7 @@ export const services: ServiceSeo[] = [
       en: {
         metaTitle: "Luxury Taxi: premium sedan with private chauffeur | TaxiNeo",
         metaDescription:
-          "Book a luxury taxi with private chauffeur. Mercedes S-Class, BMW 7 Series, Audi A8. VIP service, exceptional comfort, fixed price.",
+          "Book a luxury taxi with private chauffeur. Mercedes S-Class, BMW 7 Series, Audi A8. VIP service, exceptional comfort, guaranteed fixed price. Book on TaxiNeo.",
         heroTitle: "Luxury Taxi",
         heroSubtitle:
           "Experience exceptional transport. Premium sedans, suited chauffeurs and personalised VIP service.",
@@ -1605,7 +1605,7 @@ export const services: ServiceSeo[] = [
       fr: {
         metaTitle: "Taxi Écologique : véhicule électrique ou hybride | TaxiNeo",
         metaDescription:
-          "Réservez un taxi écologique : véhicule 100% électrique ou hybride. Réduisez votre empreinte carbone sans compromis sur le confort. Prix fixe garanti.",
+          "Taxi écologique : véhicule 100 % électrique (Tesla, Mercedes EQS) ou hybride. Même tarif qu'un taxi classique. Silencieux, zéro émission en zone urbaine.",
         heroTitle: "Taxi Écologique",
         heroSubtitle:
           "Voyagez responsable en taxi électrique ou hybride. Même confort, même service, empreinte carbone réduite.",
@@ -1648,9 +1648,9 @@ export const services: ServiceSeo[] = [
           "Sur TaxiNeo, cochez l'option « Véhicule écologique » lors de votre réservation. Vous pouvez choisir entre 100 % électrique ou hybride rechargeable selon vos préférences. Le tarif affiché est identique à celui d'un taxi classique. Un véhicule vert disponible dans votre zone est attribué automatiquement. Le chauffeur arrive dans un véhicule silencieux et zéro émission, vous offrant un trajet confortable et responsable jusqu'à votre destination.",
       },
       en: {
-        metaTitle: "Eco Taxi: electric or hybrid vehicle | TaxiNeo",
+        metaTitle: "Eco Taxi: electric or hybrid green vehicle | TaxiNeo",
         metaDescription:
-          "Book an eco taxi: 100% electric or hybrid vehicle. Reduce your carbon footprint without compromising on comfort. Guaranteed fixed price.",
+          "Book an eco taxi with a 100% electric or hybrid vehicle. Reduce your carbon footprint with no compromise on comfort or service. Guaranteed fixed price TaxiNeo.",
         heroTitle: "Eco Taxi",
         heroSubtitle:
           "Travel responsibly in an electric or hybrid taxi. Same comfort, same service, reduced carbon footprint.",

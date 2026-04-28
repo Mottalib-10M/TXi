@@ -30,8 +30,8 @@ export const trajetsLille: Trajet[] = [
     hub: "lille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lille → Calais | Prix fixe dès 140 € | TaxiNeo",
-        metaDescription: "Taxi Lille → Calais. 110 km, 1h10, dès 140 €. Eurotunnel, ferry, Cap Blanc-Nez. Réservation 24h/24.",
+        metaTitle: "Taxi Lille → Calais | 110 km, dès 140 €, 1h10 | TaxiNeo",
+        metaDescription: "Via A26 en 1h10. Cap Blanc-Nez, Eurotunnel, Ferry et Côte d'Opale en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Lille → Calais",
         heroSubtitle: "Transfert Lille → Calais au prix fixe de 140 — 175 €. 110 km par l'A26.",
         description: "Calais, porte de l'Angleterre via le tunnel sous la Manche et les ferries, est à 1h10 de Lille par l'A26.",
@@ -50,7 +50,7 @@ export const trajetsLille: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Lille → Calais | Fixed price from €140 | TaxiNeo",
-        metaDescription: "Taxi Lille → Calais. 110 km, 1h10, from €140. Eurotunnel, ferry, Cap Blanc-Nez. Book 24/7.",
+        metaDescription: "Via A26, 1h10 ride. Cap Blanc-Nez, Eurotunnel, Ferry and Côte d'Opale en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Lille → Calais",
         heroSubtitle: "Your Lille → Calais transfer at €140 — €175. 110 km via the A26.",
         description: "Calais, gateway to England via the Channel Tunnel and ferries, is 1h10 from Lille via the A26.",
@@ -95,8 +95,8 @@ export const trajetsLille: Trajet[] = [
     hub: "lille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lille → Arras | Prix fixe dès 65 € | TaxiNeo",
-        metaDescription: "Taxi Lille → Arras. 50 km, 40 min, dès 65 €. Grand'Place, beffroi UNESCO, boves. Réservation 24h/24.",
+        metaTitle: "Taxi Lille → Arras | forfait dès 65 €, 40 min | TaxiNeo",
+        metaDescription: "Via A1 en 40 min. Grand'Place, Beffroi UNESCO, Boves et Artois en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Lille → Arras",
         heroSubtitle: "Transfert Lille → Arras au prix fixe de 65 — 85 €. 50 km par l'A1.",
         description: "Arras, ville aux deux places baroques classées et au beffroi UNESCO, est à 40 minutes de Lille.",
@@ -115,7 +115,7 @@ export const trajetsLille: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Lille → Arras | Fixed price from €65 | TaxiNeo",
-        metaDescription: "Taxi Lille → Arras. 50 km, 40 min, from €65. Grand'Place, UNESCO belfry, boves. Book 24/7.",
+        metaDescription: "Via A1, 40 min ride. Grand'Place, Beffroi UNESCO, Boves and Artois en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Lille → Arras",
         heroSubtitle: "Your Lille → Arras transfer at €65 — €85. 50 km via the A1.",
         description: "Arras, city of two baroque squares and a UNESCO belfry, is 40 minutes from Lille.",
@@ -160,8 +160,8 @@ export const trajetsLille: Trajet[] = [
     hub: "lille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lille → Bruges | Prix fixe dès 130 € | TaxiNeo",
-        metaDescription: "Taxi Lille → Bruges. 100 km, 1h15, dès 130 €. Venise du Nord, canaux, chocolat. Réservation 24h/24.",
+        metaTitle: "Taxi Lille → Bruges | 100 km, dès 130 €, 1h15 | TaxiNeo",
+        metaDescription: "Via A22 puis E40 en 1h15. E40, Courtrai, Canaux et Belgique en chemin. Arrêt visite possible en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Lille → Bruges",
         heroSubtitle: "Transfert Lille → Bruges au prix fixe de 130 — 165 €. 100 km via la Belgique.",
         description: "Bruges, la Venise du Nord avec ses canaux et son centre médiéval UNESCO, est à 1h15 de Lille en taxi.",
@@ -180,7 +180,7 @@ export const trajetsLille: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Lille → Bruges | Fixed price from €130 | TaxiNeo",
-        metaDescription: "Taxi Lille → Bruges. 100 km, 1h15, from €130. Venice of the North, canals, chocolate. Book 24/7.",
+        metaDescription: "Via A22 then E40, 1h15 ride. E40, Courtrai, Canaux and Belgique en route. Stops for sightseeing possible en route. Perfect for a day trip without driving.",
         heroTitle: "Taxi Lille → Bruges",
         heroSubtitle: "Your Lille → Bruges transfer at €130 — €165. 100 km via Belgium.",
         description: "Bruges, the Venice of the North with its canals and UNESCO medieval centre, is 1h15 from Lille by taxi.",
@@ -225,8 +225,8 @@ export const trajetsLille: Trajet[] = [
     hub: "lille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lille → Boulogne-sur-Mer | Nausicaá & Côte d'Opale | TaxiNeo",
-        metaDescription: "Réservez votre taxi Lille–Boulogne-sur-Mer dès 145 €. 115 km en 1h20. Nausicaá, vieille ville fortifiée et Côte d'Opale.",
+        metaTitle: "Taxi Lille → Boulogne-sur-Mer | 115 km, dès 145 € | TaxiNeo",
+        metaDescription: "Via A25 puis A26 sortie Boulogne en 1h20. Nausicaá, Côte d'Opale et Vieille ville fortifiée en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Lille — Boulogne-sur-Mer",
         heroSubtitle: "Nausicaá et la capitale de la Côte d'Opale",
         description: "Transfert en taxi de Lille à Boulogne-sur-Mer, premier port de pêche de France et capitale de la Côte d'Opale.",
@@ -244,8 +244,8 @@ export const trajetsLille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Lille → Boulogne-sur-Mer | Nausicaá & Opal Coast | TaxiNeo",
-        metaDescription: "Book your Lille–Boulogne-sur-Mer taxi from €145. 115 km in 1h20. Nausicaá, fortified old town and Opal Coast.",
+        metaTitle: "Taxi Lille → Boulogne-sur-Mer | 115 km, from €145 | TaxiNeo",
+        metaDescription: "Via A25 then A26 sortie Boulogne, 1h20 ride. Nausicaá, Côte d'Opale and Vieille ville fortifiée along the way. Faster and more direct than train or bus.",
         heroTitle: "Taxi Lille — Boulogne-sur-Mer",
         heroSubtitle: "Nausicaá and the capital of the Opal Coast",
         description: "Taxi transfer from Lille to Boulogne-sur-Mer, France's leading fishing port and capital of the Opal Coast.",
@@ -290,8 +290,8 @@ export const trajetsLille: Trajet[] = [
     hub: "lille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lille → Gand | Joyau de Flandre | TaxiNeo",
-        metaDescription: "Réservez votre taxi Lille–Gand dès 100 €. 75 km en 55 min. Cathédrale Saint-Bavon, Agneau mystique de Van Eyck et canaux flamands.",
+        metaTitle: "Taxi Lille → Gand (Belgique) | 75 km, dès 100 € | TaxiNeo",
+        metaDescription: "Par A22 puis E17/A14, 55 min de trajet. Passage par Cathédrale Saint-Bavon, Agneau mystique et Canaux. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Lille — Gand",
         heroSubtitle: "Le joyau médiéval de la Flandre belge",
         description: "Transfert transfrontalier en taxi de Lille à Gand (Gent), perle architecturale de la Flandre belge et ville de l'Agneau mystique.",
@@ -309,8 +309,8 @@ export const trajetsLille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Lille → Ghent | Jewel of Flanders | TaxiNeo",
-        metaDescription: "Book your Lille–Ghent taxi from €100. 75 km in 55 min. Saint Bavo's Cathedral, Van Eyck's Mystic Lamb and Flemish canals.",
+        metaTitle: "Taxi Lille → Gand (Belgique) | 75 km, from €100 | TaxiNeo",
+        metaDescription: "Via A22 then E17/A14, 55 min ride. Cathédrale Saint-Bavon, Agneau mystique and Canaux along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Lille — Ghent",
         heroSubtitle: "The medieval jewel of Belgian Flanders",
         description: "Cross-border taxi transfer from Lille to Ghent (Gent), an architectural pearl of Belgian Flanders and city of the Mystic Lamb.",
@@ -355,8 +355,8 @@ export const trajetsLille: Trajet[] = [
     hub: "lille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lille → Lens | Louvre-Lens & Bassin minier | TaxiNeo",
-        metaDescription: "Réservez votre taxi Lille–Lens dès 48 €. 35 km en 30 min. Musée du Louvre-Lens, bassin minier UNESCO et stade Bollaert.",
+        metaTitle: "Taxi Lille → Lens | forfait dès 48 €, 30 min | TaxiNeo",
+        metaDescription: "Via A1 direction Paris, sortie 16  en 30 min. Louvre-Lens, Bassin minier UNESCO et Football en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Lille — Lens",
         heroSubtitle: "Le Louvre-Lens et le patrimoine minier UNESCO",
         description: "Transfert en taxi de Lille à Lens, ville du Louvre-Lens et du bassin minier classé UNESCO.",
@@ -375,7 +375,7 @@ export const trajetsLille: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Lille → Lens | Louvre-Lens & Mining Heritage | TaxiNeo",
-        metaDescription: "Book your Lille–Lens taxi from €48. 35 km in 30 min. Louvre-Lens museum, UNESCO mining basin and Bollaert stadium.",
+        metaDescription: "Via A1 direction Paris, sortie 16 Lens, 30 min ride. Louvre-Lens, Bassin minier UNESCO and Football along the way. Faster and more direct than train or bus.",
         heroTitle: "Taxi Lille — Lens",
         heroSubtitle: "The Louvre-Lens and UNESCO mining heritage",
         description: "Taxi transfer from Lille to Lens, home to the Louvre-Lens and the UNESCO-listed mining basin.",
@@ -420,8 +420,8 @@ export const trajetsLille: Trajet[] = [
     hub: "lille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lille → Valenciennes | Cité de Rubens & Hainaut | TaxiNeo",
-        metaDescription: "Réservez votre taxi Lille–Valenciennes dès 70 €. 55 km en 40 min par l'A23. Musée des Beaux-Arts, patrimoine du Hainaut.",
+        metaTitle: "Taxi Lille → Valenciennes | 55 km, dès 70 € | TaxiNeo",
+        metaDescription: "Par A23 direction Valenciennes, 40 min de trajet. Passage par Musée des Beaux-Arts, Rubens et Hainaut. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Lille — Valenciennes",
         heroSubtitle: "L'Athènes du Nord et la cité de Rubens",
         description: "Transfert en taxi de Lille à Valenciennes, surnommée l'Athènes du Nord pour sa richesse artistique, au cœur du Hainaut.",
@@ -439,8 +439,8 @@ export const trajetsLille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Lille → Valenciennes | City of Rubens & Hainaut | TaxiNeo",
-        metaDescription: "Book your Lille–Valenciennes taxi from €70. 55 km in 40 min via A23. Fine Arts Museum, Hainaut heritage.",
+        metaTitle: "Taxi Lille → Valenciennes | 55 km, from €70 | TaxiNeo",
+        metaDescription: "Via A23 direction Valenciennes, 40 min ride. Musée des Beaux-Arts, Rubens and Hainaut along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Lille — Valenciennes",
         heroSubtitle: "The Athens of the North and Rubens' city",
         description: "Taxi transfer from Lille to Valenciennes, nicknamed the Athens of the North for its artistic richness, in the heart of Hainaut.",
@@ -485,8 +485,8 @@ export const trajetsLille: Trajet[] = [
     hub: "lille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lille → Cambrai | Bêtises & Matisse | TaxiNeo",
-        metaDescription: "Réservez votre taxi Lille–Cambrai dès 85 €. 65 km en 50 min. Bêtises de Cambrai, musée Matisse et cathédrale baroque.",
+        metaTitle: "Taxi Lille → Cambrai | forfait dès 85 €, 50 min | TaxiNeo",
+        metaDescription: "Via A1 puis A26 direction Cambrai en 50 min. En passant par Bêtises de Cambrai, Matisse et Cathédrale. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Lille — Cambrai",
         heroSubtitle: "Cité des Bêtises et ville natale de Matisse",
         description: "Transfert en taxi de Lille à Cambrai, ville d'art et d'histoire, patrie des célèbres Bêtises et de Matisse.",
@@ -505,7 +505,7 @@ export const trajetsLille: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Lille → Cambrai | Bêtises & Matisse | TaxiNeo",
-        metaDescription: "Book your Lille–Cambrai taxi from €85. 65 km in 50 min. Famous Bêtises sweets, Matisse museum and baroque cathedral.",
+        metaDescription: "Via A1 then A26 direction Cambrai, 50 min ride. Bêtises de Cambrai, Matisse and Cathédrale along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Lille — Cambrai",
         heroSubtitle: "City of the Bêtises and Matisse's birthplace",
         description: "Taxi transfer from Lille to Cambrai, a city of art and history, home of the famous Bêtises sweets and Matisse.",
@@ -550,8 +550,8 @@ export const trajetsLille: Trajet[] = [
     hub: "lille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lille → Saint-Omer | Prix fixe dès 85 € | TaxiNeo",
-        metaDescription: "Taxi Lille → Saint-Omer. 65 km, 50 min, dès 85 €. Marais audomarois UNESCO, cristallerie d'Arques. Réservation 24h/24.",
+        metaTitle: "Taxi Lille → Saint-Omer | 65 km, dès 85 € | TaxiNeo",
+        metaDescription: "Via A26 direction Calais, sortie S en 50 min. Marais audomarois UNESCO, Cristallerie d'Arques, Cathédrale et Coupole d'Helfaut en chemin. Péage ~5 € inclus.",
         heroTitle: "Taxi Lille → Saint-Omer",
         heroSubtitle: "Transfert Lille → Saint-Omer au prix fixe de 85 — 110 €. 65 km par l'A26.",
         description: "Saint-Omer, ville d'art et d'histoire aux portes du marais audomarois classé par l'UNESCO, est à 50 minutes de Lille.",
@@ -569,8 +569,8 @@ export const trajetsLille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Lille → Saint-Omer | Fixed price from €85 | TaxiNeo",
-        metaDescription: "Taxi Lille → Saint-Omer. 65 km, 50 min, from €85. Audomarois marshes UNESCO, Arques crystal factory. Book 24/7.",
+        metaTitle: "Taxi Lille → Saint-Omer | 65 km, from €85 | TaxiNeo",
+        metaDescription: "Via A26 direction Calais, sortie Saint-Omer, 50 min ride. Marais audomarois UNESCO, Cristallerie d'Arques and Cathédrale along the way. ~€5 toll included.",
         heroTitle: "Taxi Lille → Saint-Omer",
         heroSubtitle: "Your Lille → Saint-Omer transfer at €85 — €110. 65 km via the A26.",
         description: "Saint-Omer, a city of art and history at the gateway to the UNESCO-listed Audomarois marshes, is 50 minutes from Lille.",
@@ -615,8 +615,8 @@ export const trajetsLille: Trajet[] = [
     hub: "lille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lille → Le Touquet | Prix fixe dès 185 € | TaxiNeo",
-        metaDescription: "Taxi Lille → Le Touquet-Paris-Plage. 150 km, 1h35, dès 185 €. Station balnéaire chic, golf, casino. Réservation 24h/24.",
+        metaTitle: "Taxi Lille → Le Touquet-Paris-Plage | 150 km | TaxiNeo",
+        metaDescription: "Via A25 en 1h35. Paris-Plage, Golf, Casino et Digue promenade en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Lille → Le Touquet-Paris-Plage",
         heroSubtitle: "Transfert Lille → Le Touquet au prix fixe de 185 — 230 €. 150 km par l'A25 et l'A26.",
         description: "Le Touquet-Paris-Plage, station balnéaire la plus élégante du nord de la France, est à 1h35 de Lille en taxi.",
@@ -634,8 +634,8 @@ export const trajetsLille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Lille → Le Touquet | Fixed price from €185 | TaxiNeo",
-        metaDescription: "Taxi Lille → Le Touquet-Paris-Plage. 150 km, 1h35, from €185. Chic seaside resort, golf, casino. Book 24/7.",
+        metaTitle: "Taxi Lille → Le Touquet-Paris-Plage | 150 km, €185 | TaxiNeo",
+        metaDescription: "Via A25, 1h35 ride. Paris-Plage, Golf, Casino and Digue promenade en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Lille → Le Touquet-Paris-Plage",
         heroSubtitle: "Your Lille → Le Touquet transfer at €185 — €230. 150 km via the A25 and A26.",
         description: "Le Touquet-Paris-Plage, northern France's most elegant seaside resort, is 1h35 from Lille by taxi.",
@@ -680,8 +680,8 @@ export const trajetsLille: Trajet[] = [
     hub: "lille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lille → Douai | Prix fixe dès 55 € | TaxiNeo",
-        metaDescription: "Taxi Lille → Douai. 40 km, 35 min, dès 55 €. Beffroi UNESCO, géants Gayant, musée Chartreuse. Réservation 24h/24.",
+        metaTitle: "Taxi Lille → Douai | forfait dès 55 €, 35 min | TaxiNeo",
+        metaDescription: "Via A1 direction Paris, sortie Dou en 35 min. Beffroi UNESCO, Gayant, Musée de la Chartreuse et Scarpe en chemin. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Lille → Douai",
         heroSubtitle: "Transfert Lille → Douai au prix fixe de 55 — 72 €. 40 km par l'A1.",
         description: "Douai, ville du beffroi classé UNESCO et des géants Gayant, est à 35 minutes de Lille par l'A1.",
@@ -700,7 +700,7 @@ export const trajetsLille: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Lille → Douai | Fixed price from €55 | TaxiNeo",
-        metaDescription: "Taxi Lille → Douai. 40 km, 35 min, from €55. UNESCO belfry, Gayant giants, Chartreuse museum. Book 24/7.",
+        metaDescription: "Via A1 direction Paris, sortie Douai Centre, 35 min ride. Beffroi UNESCO, Gayant, Musée de la Chartreuse and Scarpe en route. Drop-off at your exact address.",
         heroTitle: "Taxi Lille → Douai",
         heroSubtitle: "Your Lille → Douai transfer at €55 — €72. 40 km via the A1.",
         description: "Douai, city of the UNESCO-listed belfry and Gayant giants, is 35 minutes from Lille via the A1.",
@@ -745,8 +745,8 @@ export const trajetsLille: Trajet[] = [
     hub: "lille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lille → Maubeuge | Prix fixe dès 120 € | TaxiNeo",
-        metaDescription: "Taxi Lille → Maubeuge. 95 km, 1h05, dès 120 €. Fortifications Vauban, Avesnois, maroilles. Réservation 24h/24.",
+        metaTitle: "Taxi Lille → Maubeuge | 95 km, dès 120 € | TaxiNeo",
+        metaDescription: "Via A23 puis N2 direction Maubeuge en 1h05. Fortifications Vauban, Avesnois, Maroilles et Zoo de Maubeuge en chemin. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Lille → Maubeuge",
         heroSubtitle: "Transfert Lille → Maubeuge au prix fixe de 120 — 155 €. 95 km par l'A23 et la N2.",
         description: "Maubeuge, ville fortifiée par Vauban aux portes de l'Avesnois et du pays du maroilles, est à 1h05 de Lille.",
@@ -764,8 +764,8 @@ export const trajetsLille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Lille → Maubeuge | Fixed price from €120 | TaxiNeo",
-        metaDescription: "Taxi Lille → Maubeuge. 95 km, 1h05, from €120. Vauban fortifications, Avesnois, Maroilles cheese. Book 24/7.",
+        metaTitle: "Taxi Lille → Maubeuge | 95 km, from €120 | TaxiNeo",
+        metaDescription: "Via A23 then N2 direction Maubeuge, 1h05 ride. Fortifications Vauban, Avesnois, Maroilles and Zoo de Maubeuge en route. Drop-off at your exact address.",
         heroTitle: "Taxi Lille → Maubeuge",
         heroSubtitle: "Your Lille → Maubeuge transfer at €120 — €155. 95 km via the A23 and N2.",
         description: "Maubeuge, a town fortified by Vauban at the gateway to the Avesnois and Maroilles cheese country, is 1h05 from Lille.",
@@ -810,8 +810,8 @@ export const trajetsLille: Trajet[] = [
     hub: "lille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lille → Amiens | Prix fixe dès 150 € | TaxiNeo",
-        metaDescription: "Taxi Lille → Amiens. 120 km, 1h20, dès 150 €. Cathédrale UNESCO, hortillonnages, maison Jules Verne. Réservation 24h/24.",
+        metaTitle: "Taxi Lille → Amiens | 120 km, dès 150 €, 1h20 | TaxiNeo",
+        metaDescription: "Via A1 direction Paris, sortie Ami en 1h20. Cathédrale UNESCO, Hortillonnages, Jules Verne et Quartier Saint-Leu en chemin. Dépose à votre adresse exacte.",
         heroTitle: "Taxi Lille → Amiens",
         heroSubtitle: "Transfert Lille → Amiens au prix fixe de 150 — 190 €. 120 km par l'A1.",
         description: "Amiens, ville de la plus grande cathédrale gothique de France et des hortillonnages, est à 1h20 de Lille.",
@@ -830,7 +830,7 @@ export const trajetsLille: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Lille → Amiens | Fixed price from €150 | TaxiNeo",
-        metaDescription: "Taxi Lille → Amiens. 120 km, 1h20, from €150. UNESCO cathedral, hortillonnages, Jules Verne house. Book 24/7.",
+        metaDescription: "Via A1 direction Paris, sortie Amiens Nord, 1h20 ride. Cathédrale UNESCO, Hortillonnages, Jules Verne and Quartier Saint-Leu en route. ~€10 toll included.",
         heroTitle: "Taxi Lille → Amiens",
         heroSubtitle: "Your Lille → Amiens transfer at €150 — €190. 120 km via the A1.",
         description: "Amiens, home to France's largest Gothic cathedral and the hortillonnages floating gardens, is 1h20 from Lille.",
@@ -875,8 +875,8 @@ export const trajetsLille: Trajet[] = [
     hub: "lille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lille → Tournai | Prix fixe dès 45 € | TaxiNeo",
-        metaDescription: "Taxi Lille → Tournai. 30 km, 30 min, dès 45 €. Cathédrale et beffroi UNESCO, Grand-Place, Escaut. Réservation 24h/24.",
+        metaTitle: "Taxi Lille → Tournai (Belgique) | 30 km, dès 45 € | TaxiNeo",
+        metaDescription: "Via A27 direction Tournai en 30 min. Cathédrale UNESCO, Beffroi UNESCO, Escaut et Grand-Place en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Lille → Tournai",
         heroSubtitle: "Transfert Lille → Tournai au prix fixe de 45 — 60 €. 30 km par l'A27.",
         description: "Tournai, la plus ancienne ville de Belgique avec sa cathédrale et son beffroi classés UNESCO, est à seulement 30 minutes de Lille.",
@@ -894,8 +894,8 @@ export const trajetsLille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Lille → Tournai | Fixed price from €45 | TaxiNeo",
-        metaDescription: "Taxi Lille → Tournai. 30 km, 30 min, from €45. UNESCO cathedral and belfry, Grand-Place, Scheldt river. Book 24/7.",
+        metaTitle: "Taxi Lille → Tournai (Belgique) | 30 km, from €45 | TaxiNeo",
+        metaDescription: "Via A27 direction Tournai, 30 min ride. Cathédrale UNESCO, Beffroi UNESCO, Escaut and Grand-Place en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Lille → Tournai",
         heroSubtitle: "Your Lille → Tournai transfer at €45 — €60. 30 km via the A27.",
         description: "Tournai, Belgium's oldest city with its UNESCO-listed cathedral and belfry, is just 30 minutes from Lille.",
@@ -940,8 +940,8 @@ export const trajetsLille: Trajet[] = [
     hub: "lille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lille → Bruxelles | Prix fixe dès 145 € | TaxiNeo",
-        metaDescription: "Taxi Lille → Bruxelles. 115 km, 1h20, dès 145 €. Grand-Place, Atomium, quartier européen. Réservation 24h/24.",
+        metaTitle: "Taxi Lille → Bruxelles | 115 km, dès 145 € | TaxiNeo",
+        metaDescription: "Via A27 puis E42 en 1h20. E42, Grand-Place, Manneken Pis et Atomium en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Lille → Bruxelles",
         heroSubtitle: "Transfert Lille → Bruxelles au prix fixe de 145 — 185 €. 115 km via l'A27 et E42.",
         description: "Bruxelles, capitale de la Belgique et de l'Europe, est à 1h20 de Lille par l'A27 et l'E42.",
@@ -959,8 +959,8 @@ export const trajetsLille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Lille → Brussels | Fixed price from €145 | TaxiNeo",
-        metaDescription: "Taxi Lille → Brussels. 115 km, 1h20, from €145. Grand-Place, Atomium, EU quarter. Book 24/7.",
+        metaTitle: "Taxi Lille → Bruxelles | 115 km, from €145 | TaxiNeo",
+        metaDescription: "Via A27 then E42, 1h20 ride. E42, Grand-Place, Manneken Pis and Atomium en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Lille → Brussels",
         heroSubtitle: "Your Lille → Brussels transfer at €145 — €185. 115 km via the A27 and E42.",
         description: "Brussels, capital of Belgium and the European Union, is 1h20 from Lille via the A27 and E42.",
@@ -1005,8 +1005,8 @@ export const trajetsLille: Trajet[] = [
     hub: "lille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lille → Dunkerque | Prix fixe dès 100 € | TaxiNeo",
-        metaDescription: "Taxi Lille → Dunkerque. 80 km, 55 min, dès 100 €. Port, carnaval, plage, musée portuaire. Réservation 24h/24.",
+        metaTitle: "Taxi Lille → Dunkerque | 80 km, dès 100 € | TaxiNeo",
+        metaDescription: "Via A25 en 55 min. Port, Carnaval, Plage et Musée portuaire en chemin. Dépose porte-à-porte, bagages inclus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Lille → Dunkerque",
         heroSubtitle: "Transfert Lille → Dunkerque au prix fixe de 100 — 130 €. 80 km par l'A25 sans péage.",
         description: "Dunkerque, troisième port de France et ville du carnaval, est à 55 minutes de Lille par l'A25 gratuite.",
@@ -1024,8 +1024,8 @@ export const trajetsLille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Lille → Dunkirk | Fixed price from €100 | TaxiNeo",
-        metaDescription: "Taxi Lille → Dunkirk. 80 km, 55 min, from €100. Port, carnival, beach, harbour museum. Book 24/7.",
+        metaTitle: "Taxi Lille → Dunkerque | 80 km, from €100 | TaxiNeo",
+        metaDescription: "Via A25, 55 min ride. Port, Carnaval, Plage and Musée portuaire en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Lille → Dunkirk",
         heroSubtitle: "Your Lille → Dunkirk transfer at €100 — €130. 80 km via the toll-free A25.",
         description: "Dunkirk, France's third-largest port and carnival city, is 55 minutes from Lille via the toll-free A25.",
@@ -1070,8 +1070,8 @@ export const trajetsLille: Trajet[] = [
     hub: "lille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lille → Roubaix | Prix fixe dès 25 € | TaxiNeo",
-        metaDescription: "Taxi Lille → Roubaix. 15 km, 20 min, dès 25 €. La Piscine, patrimoine textile, métropole lilloise. Réservation 24h/24.",
+        metaTitle: "Taxi Lille → Roubaix | forfait dès 25 €, 20 min | TaxiNeo",
+        metaDescription: "Via Boulevard urbain / N356 en 20 min. La Piscine, Métropole lilloise, Textile et Usines reconverties en chemin. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Lille → Roubaix",
         heroSubtitle: "Transfert Lille → Roubaix au prix fixe de 25 — 35 €. 15 km en métropole lilloise.",
         description: "Roubaix, ville du musée La Piscine et du patrimoine textile, est à 20 minutes de Lille en taxi.",
@@ -1090,7 +1090,7 @@ export const trajetsLille: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Lille → Roubaix | Fixed price from €25 | TaxiNeo",
-        metaDescription: "Taxi Lille → Roubaix. 15 km, 20 min, from €25. La Piscine museum, textile heritage. Book 24/7.",
+        metaDescription: "Via Boulevard urbain / N356, 20 min ride. La Piscine, Métropole lilloise, Textile and Usines reconverties en route. Faster and more direct than train or bus.",
         heroTitle: "Taxi Lille → Roubaix",
         heroSubtitle: "Your Lille → Roubaix transfer at €25 — €35. 15 km within the Lille metropolitan area.",
         description: "Roubaix, home to La Piscine museum and textile heritage, is 20 minutes from Lille by taxi.",
@@ -1135,8 +1135,8 @@ export const trajetsLille: Trajet[] = [
     hub: "lille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lille → Tourcoing | Prix fixe dès 25 € | TaxiNeo",
-        metaDescription: "Taxi Lille → Tourcoing. 14 km, 20 min, dès 25 €. MUba, Hospice d'Havré, marché frontalier. Réservation 24h/24.",
+        metaTitle: "Taxi Lille → Tourcoing | 14 km, dès 25 € | TaxiNeo",
+        metaDescription: "Via Boulevard urbain / N350 en 20 min. MUba Eugène Leroy, Hospice d'Havré, Marché et Belgique proche en chemin. Alternative directe au train ou au bus.",
         heroTitle: "Taxi Lille → Tourcoing",
         heroSubtitle: "Transfert Lille → Tourcoing au prix fixe de 25 — 35 €. 14 km en métropole lilloise.",
         description: "Tourcoing, ville d'art et de marchés à la frontière belge, est à 20 minutes de Lille en taxi.",
@@ -1154,8 +1154,8 @@ export const trajetsLille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Lille → Tourcoing | Fixed price from €25 | TaxiNeo",
-        metaDescription: "Taxi Lille → Tourcoing. 14 km, 20 min, from €25. MUba museum, Hospice d'Havré, border market. Book 24/7.",
+        metaTitle: "Taxi Lille → Tourcoing | 14 km, from €25 | TaxiNeo",
+        metaDescription: "Via Boulevard urbain / N350, 20 min ride. MUba Eugène Leroy, Hospice d'Havré, Marché and Belgique proche en route. Faster and more direct than train or bus.",
         heroTitle: "Taxi Lille → Tourcoing",
         heroSubtitle: "Your Lille → Tourcoing transfer at €25 — €35. 14 km within the Lille metropolitan area.",
         description: "Tourcoing, city of art and markets on the Belgian border, is 20 minutes from Lille by taxi.",
@@ -1200,8 +1200,8 @@ export const trajetsLille: Trajet[] = [
     hub: "lille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lille → Béthune | Prix fixe dès 55 € | TaxiNeo",
-        metaDescription: "Taxi Lille → Béthune. 40 km, 35 min, dès 55 €. Grand-Place, beffroi, bassin minier UNESCO. Réservation 24h/24.",
+        metaTitle: "Taxi Lille → Béthune | forfait dès 55 €, 35 min | TaxiNeo",
+        metaDescription: "Via A26 en 35 min. Grand-Place, Beffroi, Bassin minier UNESCO et Artois en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Lille → Béthune",
         heroSubtitle: "Transfert Lille → Béthune au prix fixe de 55 — 75 €. 40 km par l'A26.",
         description: "Béthune, ville au beffroi classé et au cœur du bassin minier UNESCO, est à 35 minutes de Lille.",
@@ -1220,7 +1220,7 @@ export const trajetsLille: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Lille → Béthune | Fixed price from €55 | TaxiNeo",
-        metaDescription: "Taxi Lille → Béthune. 40 km, 35 min, from €55. Grand-Place, belfry, UNESCO mining basin. Book 24/7.",
+        metaDescription: "Via A26, 35 min ride. Grand-Place, Beffroi, Bassin minier UNESCO and Artois en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Lille → Béthune",
         heroSubtitle: "Your Lille → Béthune transfer at €55 — €75. 40 km via the A26.",
         description: "Béthune, city with a listed belfry at the heart of the UNESCO mining basin, is 35 minutes from Lille.",
@@ -1265,8 +1265,8 @@ export const trajetsLille: Trajet[] = [
     hub: "lille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lille → Berck-sur-Mer | Prix fixe dès 160 € | TaxiNeo",
-        metaDescription: "Taxi Lille → Berck-sur-Mer. 130 km, 1h30, dès 160 €. Plage, cerfs-volants, Côte d'Opale. Réservation 24h/24.",
+        metaTitle: "Taxi Lille → Berck-sur-Mer | 130 km, dès 160 € | TaxiNeo",
+        metaDescription: "Trajet direct A26 puis D940 en 1h30. Passage par Plage, Cerfs-volants, Baie d'Authie et Côte d'Opale. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Lille → Berck-sur-Mer",
         heroSubtitle: "Transfert Lille → Berck-sur-Mer au prix fixe de 160 — 200 €. 130 km via l'A26 et D940.",
         description: "Berck-sur-Mer, station balnéaire de la Côte d'Opale célèbre pour ses cerfs-volants, est à 1h30 de Lille.",
@@ -1284,8 +1284,8 @@ export const trajetsLille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Lille → Berck-sur-Mer | Fixed price from €160 | TaxiNeo",
-        metaDescription: "Taxi Lille → Berck-sur-Mer. 130 km, 1h30, from €160. Beach, kite festival, Opal Coast. Book 24/7.",
+        metaTitle: "Taxi Lille → Berck-sur-Mer | 130 km, from €160 | TaxiNeo",
+        metaDescription: "Via A26 then D940, 1h30 ride. Plage, Cerfs-volants, Baie d'Authie and Côte d'Opale en route. Stops for sightseeing possible en route. ~€6 toll included.",
         heroTitle: "Taxi Lille → Berck-sur-Mer",
         heroSubtitle: "Your Lille → Berck-sur-Mer transfer at €160 — €200. 130 km via the A26 and D940.",
         description: "Berck-sur-Mer, Opal Coast seaside resort famous for its kite festival, is 1h30 from Lille.",
@@ -1333,8 +1333,8 @@ export const trajetsLille: Trajet[] = [
     hub: "lille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lille → Saint-Quentin | Prix fixe dès 150 € | TaxiNeo",
-        metaDescription: "Taxi Lille → Saint-Quentin. 120 km, 1h20, dès 150 €. Art Déco, basilique, pastels de La Tour. Réservation 24h/24.",
+        metaTitle: "Taxi Lille → Saint-Quentin | 120 km, dès 150 € | TaxiNeo",
+        metaDescription: "Via A26 en 1h20. Art Déco, Basilique, Pastels Quentin de La Tour et Aisne en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Lille → Saint-Quentin",
         heroSubtitle: "Transfert Lille → Saint-Quentin au prix fixe de 150 — 190 €. 120 km par l'A26.",
         description: "Saint-Quentin, joyau Art Déco de l'Aisne abritant les pastels de Quentin de La Tour, est à 1h20 de Lille par l'A26.",
@@ -1352,8 +1352,8 @@ export const trajetsLille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Lille → Saint-Quentin | Fixed price from €150 | TaxiNeo",
-        metaDescription: "Taxi Lille → Saint-Quentin. 120 km, 1h20, from €150. Art Deco, basilica, La Tour pastels. Book 24/7.",
+        metaTitle: "Taxi Lille → Saint-Quentin | 120 km, from €150 | TaxiNeo",
+        metaDescription: "Via A26, 1h20 ride. Art Déco, Basilique, Pastels Quentin de La Tour and Aisne en route. Drop-off at your exact address. Door-to-door, luggage included.",
         heroTitle: "Taxi Lille → Saint-Quentin",
         heroSubtitle: "Your Lille → Saint-Quentin transfer at €150 — €190. 120 km via the A26.",
         description: "Saint-Quentin, Art Deco gem of the Aisne with the world's finest La Tour pastel collection, is 1h20 from Lille via the A26.",
@@ -1398,8 +1398,8 @@ export const trajetsLille: Trajet[] = [
     hub: "lille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lille → Laon | Prix fixe dès 210 € | TaxiNeo",
-        metaDescription: "Taxi Lille → Laon. 180 km, 1h50, dès 210 €. Cité médiévale perchée, cathédrale gothique, Poma. Réservation 24h/24.",
+        metaTitle: "Taxi Lille → Laon | 180 km, dès 210 €, 1h50 | TaxiNeo",
+        metaDescription: "Par A26 puis A2/N2, 1h50 de trajet. Cité médiévale perchée, Cathédrale gothique, Poma sur le parcours. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Lille → Laon",
         heroSubtitle: "Transfert Lille → Laon au prix fixe de 210 — 260 €. 180 km par l'A26 et l'A2.",
         description: "Laon, cité médiévale perchée sur sa butte avec sa cathédrale gothique pionnière, est à 1h50 de Lille.",
@@ -1418,7 +1418,7 @@ export const trajetsLille: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Lille → Laon | Fixed price from €210 | TaxiNeo",
-        metaDescription: "Taxi Lille → Laon. 180 km, 1h50, from €210. Hilltop medieval city, Gothic cathedral, Poma cable car. Book 24/7.",
+        metaDescription: "Direct route via A26 then A2/N2, 1h50. Cité médiévale perchée, Cathédrale gothique and Poma along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Lille → Laon",
         heroSubtitle: "Your Lille → Laon transfer at €210 — €260. 180 km via the A26 and A2.",
         description: "Laon, a hilltop medieval city with a pioneering Gothic cathedral, is 1h50 from Lille.",
@@ -1463,8 +1463,8 @@ export const trajetsLille: Trajet[] = [
     hub: "lille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lille → Reims | Prix fixe dès 250 € | TaxiNeo",
-        metaDescription: "Taxi Lille → Reims. 210 km, 2h10, dès 250 €. Champagne, cathédrale des sacres, Veuve Clicquot. Réservation 24h/24.",
+        metaTitle: "Taxi Lille → Reims | 210 km, dès 250 €, 2h10 | TaxiNeo",
+        metaDescription: "Itinéraire A26, environ 2h10. Champagne, Cathédrale des sacres, Veuve Clicquot et Art Déco en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Lille → Reims",
         heroSubtitle: "Transfert Lille → Reims au prix fixe de 250 — 310 €. 210 km par l'A26.",
         description: "Reims, capitale du champagne et cité des sacres des rois de France, est à 2h10 de Lille par l'A26.",
@@ -1483,7 +1483,7 @@ export const trajetsLille: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Lille → Reims | Fixed price from €250 | TaxiNeo",
-        metaDescription: "Taxi Lille → Reims. 210 km, 2h10, from €250. Champagne, coronation cathedral, Veuve Clicquot. Book 24/7.",
+        metaDescription: "Via A26, 2h10 ride. Champagne, Cathédrale des sacres, Veuve Clicquot and Art Déco en route. Stops for sightseeing possible en route. ~€18 toll included.",
         heroTitle: "Taxi Lille → Reims",
         heroSubtitle: "Your Lille → Reims transfer at €250 — €310. 210 km via the A26.",
         description: "Reims, world capital of Champagne and coronation city of the kings of France, is 2h10 from Lille via the A26.",
@@ -1528,8 +1528,8 @@ export const trajetsLille: Trajet[] = [
     hub: "lille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lille → Charleville-Mézières | Prix fixe dès 240 € | TaxiNeo",
-        metaDescription: "Taxi Lille → Charleville-Mézières. 200 km, 2h05, dès 240 €. Rimbaud, marionnettes, Place Ducale. Réservation 24h/24.",
+        metaTitle: "Taxi Lille → Charleville-Mézières | 200 km, 240 € | TaxiNeo",
+        metaDescription: "Via A2 puis A34 en 2h05. Rimbaud, Marionnettes et Place Ducale en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Lille → Charleville-Mézières",
         heroSubtitle: "Transfert Lille → Charleville-Mézières au prix fixe de 240 — 295 €. 200 km par l'A2 et l'A34.",
         description: "Charleville-Mézières, ville natale de Rimbaud et capitale mondiale de la marionnette, est à 2h05 de Lille.",
@@ -1547,8 +1547,8 @@ export const trajetsLille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Lille → Charleville-Mézières | Fixed price from €240 | TaxiNeo",
-        metaDescription: "Taxi Lille → Charleville-Mézières. 200 km, 2h05, from €240. Rimbaud, puppetry, Place Ducale. Book 24/7.",
+        metaTitle: "Taxi Lille → Charleville-Mézières | 200 km, €240 | TaxiNeo",
+        metaDescription: "Via A2 then A34, 2h05 ride. Rimbaud, Marionnettes and Place Ducale along the way. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Lille → Charleville-Mézières",
         heroSubtitle: "Your Lille → Charleville-Mézières transfer at €240 — €295. 200 km via the A2 and A34.",
         description: "Charleville-Mézières, birthplace of Rimbaud and world capital of puppetry, is 2h05 from Lille.",
@@ -1593,8 +1593,8 @@ export const trajetsLille: Trajet[] = [
     hub: "lille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lille → Compiègne | Prix fixe dès 200 € | TaxiNeo",
-        metaDescription: "Taxi Lille → Compiègne. 170 km, 1h45, dès 200 €. Palais impérial, forêt, clairière de l'Armistice. Réservation 24h/24.",
+        metaTitle: "Taxi Lille → Compiègne | 170 km, dès 200 € | TaxiNeo",
+        metaDescription: "Via A1 en 1h45. Palais impérial, Forêt, Clairière de l'Armistice et Oise en chemin. Arrêt visite possible en chemin. Arrêt possible pour visites ou photos.",
         heroTitle: "Taxi Lille → Compiègne",
         heroSubtitle: "Transfert Lille → Compiègne au prix fixe de 200 — 250 €. 170 km par l'A1.",
         description: "Compiègne, cité impériale en lisière de la plus grande forêt d'Île-de-France, est à 1h45 de Lille par l'A1.",
@@ -1612,8 +1612,8 @@ export const trajetsLille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Lille → Compiègne | Fixed price from €200 | TaxiNeo",
-        metaDescription: "Taxi Lille → Compiègne. 170 km, 1h45, from €200. Imperial palace, forest, Armistice Clearing. Book 24/7.",
+        metaTitle: "Taxi Lille → Compiègne | 170 km, from €200 | TaxiNeo",
+        metaDescription: "Via A1, 1h45 ride. Palais impérial, Forêt, Clairière de l'Armistice and Oise en route. Stops for sightseeing possible en route. Up to 2h15 during rush hour.",
         heroTitle: "Taxi Lille → Compiègne",
         heroSubtitle: "Your Lille → Compiègne transfer at €200 — €250. 170 km via the A1.",
         description: "Compiègne, imperial city on the edge of the largest forest in Île-de-France, is 1h45 from Lille via the A1.",
@@ -1661,8 +1661,8 @@ export const trajetsLille: Trajet[] = [
     hub: "lille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lille → Beauvais | Prix fixe dès 250 € | TaxiNeo",
-        metaDescription: "Taxi Lille → Beauvais. 200 km, 2h10, dès 250 €. Cathédrale, aéroport Beauvais-Tillé, tapisserie. Réservation 24h/24.",
+        metaTitle: "Taxi Lille → Beauvais | 200 km, dès 250 € | TaxiNeo",
+        metaDescription: "Par A1/A16, 2h10 de trajet. Cathédrale inachevée, Aéroport Beauvais-Tillé, Tapisserie sur le parcours. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Lille → Beauvais",
         heroSubtitle: "Transfert Lille → Beauvais au prix fixe de 250 — 310 €. 200 km par l'A1 et l'A16.",
         description: "Beauvais, ville d'art célèbre pour sa cathédrale gothique inachevée et son aéroport low-cost, est à 2h10 de Lille.",
@@ -1680,8 +1680,8 @@ export const trajetsLille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Lille → Beauvais | Fixed price from €250 | TaxiNeo",
-        metaDescription: "Taxi Lille → Beauvais. 200 km, 2h10, from €250. Cathedral, Beauvais-Tillé airport, tapestry. Book 24/7.",
+        metaTitle: "Taxi Lille → Beauvais | 200 km, from €250 | TaxiNeo",
+        metaDescription: "Direct route via A1/A16, 2h10. Cathédrale inachevée, Aéroport Beauvais-Tillé and Tapisserie along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Lille → Beauvais",
         heroSubtitle: "Your Lille → Beauvais transfer at €250 — €310. 200 km via the A1 and A16.",
         description: "Beauvais, art city famous for its unfinished Gothic cathedral and low-cost airport, is 2h10 from Lille.",
@@ -1729,8 +1729,8 @@ export const trajetsLille: Trajet[] = [
     hub: "lille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lille → Soissons | Prix fixe dès 230 € | TaxiNeo",
-        metaDescription: "Taxi Lille → Soissons. 180 km, 2h, dès 230 €. Abbaye Saint-Jean-des-Vignes, Chemin des Dames. Réservation 24h/24.",
+        metaTitle: "Taxi Lille → Soissons | 180 km, dès 230 € | TaxiNeo",
+        metaDescription: "Itinéraire A26/A1, environ 2h. En passant par Abbaye Saint-Jean-des-Vignes, Chemin des Dames et Aisne. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Lille → Soissons",
         heroSubtitle: "Transfert Lille → Soissons au prix fixe de 230 — 285 €. 180 km par l'A26 et l'A1.",
         description: "Soissons, ancienne capitale mérovingienne célèbre pour l'abbaye Saint-Jean-des-Vignes et le Chemin des Dames, est à 2h de Lille.",
@@ -1748,8 +1748,8 @@ export const trajetsLille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Lille → Soissons | Fixed price from €230 | TaxiNeo",
-        metaDescription: "Taxi Lille → Soissons. 180 km, 2h, from €230. Saint-Jean-des-Vignes Abbey, Chemin des Dames. Book 24/7.",
+        metaTitle: "Taxi Lille → Soissons | 180 km, from €230 | TaxiNeo",
+        metaDescription: "Direct route via A26/A1, 2 hours. Abbaye Saint-Jean-des-Vignes, Chemin des Dames and Aisne along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Lille → Soissons",
         heroSubtitle: "Your Lille → Soissons transfer at €230 — €285. 180 km via the A26 and A1.",
         description: "Soissons, ancient Merovingian capital famous for Saint-Jean-des-Vignes Abbey and the Chemin des Dames, is 2h from Lille.",
@@ -1797,8 +1797,8 @@ export const trajetsLille: Trajet[] = [
     hub: "lille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lille → Saint-Pol-sur-Ternoise | Prix fixe dès 110 € | TaxiNeo",
-        metaDescription: "Taxi Lille → Saint-Pol-sur-Ternoise. 80 km, 1h, dès 110 €. 7 Vallées, Hesdin, Azincourt. Réservation 24h/24.",
+        metaTitle: "Taxi Lille → Saint-Pol-sur-Ternoise | 80 km, 110 € | TaxiNeo",
+        metaDescription: "Via A26/D941 en 1h. Passage par 7 Vallées, Hesdin et Azincourt. Alternative directe au train ou au bus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Lille → Saint-Pol-sur-Ternoise",
         heroSubtitle: "Transfert Lille → Saint-Pol-sur-Ternoise au prix fixe de 110 — 140 €. 80 km par l'A26 et la D941.",
         description: "Saint-Pol-sur-Ternoise, porte des 7 Vallées et d'Azincourt, est à 1h de Lille par l'A26.",
@@ -1816,8 +1816,8 @@ export const trajetsLille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Lille → Saint-Pol-sur-Ternoise | Fixed price from €110 | TaxiNeo",
-        metaDescription: "Taxi Lille → Saint-Pol-sur-Ternoise. 80 km, 1h, from €110. 7 Valleys, Hesdin, Azincourt. Book 24/7.",
+        metaTitle: "Taxi Lille → Saint-Pol-sur-Ternoise | 80 km, €110 | TaxiNeo",
+        metaDescription: "Via A26/D941, 1 hour ride. 7 Vallées, Hesdin and Azincourt along the way. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Lille → Saint-Pol-sur-Ternoise",
         heroSubtitle: "Your Lille → Saint-Pol-sur-Ternoise transfer at €110 — €140. 80 km via the A26 and D941.",
         description: "Saint-Pol-sur-Ternoise, gateway to the 7 Valleys and Azincourt battlefield, is 1h from Lille via the A26.",
@@ -1865,8 +1865,8 @@ export const trajetsLille: Trajet[] = [
     hub: "lille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lille → Abbeville | Prix fixe dès 190 € | TaxiNeo",
-        metaDescription: "Taxi Lille → Abbeville. 150 km, 1h40, dès 190 €. Baie de Somme, collégiale Saint-Vulfran, Château de Bagatelle. Réservation 24h/24.",
+        metaTitle: "Taxi Lille → Abbeville | 150 km, dès 190 € | TaxiNeo",
+        metaDescription: "Par A1/A16, 1h40 de trajet. Baie de Somme, Collégiale Saint-Vulfran et Château de Bagatelle en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Lille → Abbeville",
         heroSubtitle: "Transfert Lille → Abbeville au prix fixe de 190 — 240 €. 150 km par l'A1 et l'A16.",
         description: "Abbeville, porte de la baie de Somme avec sa collégiale flamboyante et le Château de Bagatelle, est à 1h40 de Lille.",
@@ -1884,8 +1884,8 @@ export const trajetsLille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Lille → Abbeville | Fixed price from €190 | TaxiNeo",
-        metaDescription: "Taxi Lille → Abbeville. 150 km, 1h40, from €190. Baie de Somme, Saint-Vulfran Collegiate, Bagatelle Castle. Book 24/7.",
+        metaTitle: "Taxi Lille → Abbeville | 150 km, from €190 | TaxiNeo",
+        metaDescription: "Via A1/A16, 1h40 ride. Baie de Somme, Collégiale Saint-Vulfran and Château de Bagatelle along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Lille → Abbeville",
         heroSubtitle: "Your Lille → Abbeville transfer at €190 — €240. 150 km via the A1 and A16.",
         description: "Abbeville, gateway to the Baie de Somme with its Flamboyant Gothic collegiate church and Bagatelle Castle, is 1h40 from Lille.",
@@ -1933,8 +1933,8 @@ export const trajetsLille: Trajet[] = [
     hub: "lille",
     i18n: {
       fr: {
-        metaTitle: "Taxi Lille → Charleroi | Prix fixe dès 150 € | TaxiNeo",
-        metaDescription: "Taxi Lille → Charleroi. 110 km, 1h15, dès 150 €. Aéroport Ryanair, Musée de la Photo, Pays Noir. Réservation 24h/24.",
+        metaTitle: "Taxi Lille → Charleroi | 110 km, dès 150 € | TaxiNeo",
+        metaDescription: "Par A27/E42, 1h15 de trajet. Passage par E42, Aéroport Ryanair, Musée de la Photographie et Pays Noir. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Lille → Charleroi",
         heroSubtitle: "Transfert Lille → Charleroi au prix fixe de 150 — 190 €. 110 km par l'A27 et l'E42.",
         description: "Charleroi, métropole wallonne avec son aéroport Ryanair et son patrimoine industriel du Pays Noir, est à 1h15 de Lille.",
@@ -1952,8 +1952,8 @@ export const trajetsLille: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Lille → Charleroi | Fixed price from €150 | TaxiNeo",
-        metaDescription: "Taxi Lille → Charleroi. 110 km, 1h15, from €150. Ryanair airport, Photography Museum, Pays Noir. Book 24/7.",
+        metaTitle: "Taxi Lille → Charleroi | 110 km, from €150 | TaxiNeo",
+        metaDescription: "Direct route via A27/E42, 1h15. E42, Aéroport Ryanair, Musée de la Photographie and Pays Noir en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Lille → Charleroi",
         heroSubtitle: "Your Lille → Charleroi transfer at €150 — €190. 110 km via the A27 and E42.",
         description: "Charleroi, Walloon metropolis with its Ryanair airport and Pays Noir industrial heritage, is 1h15 from Lille.",

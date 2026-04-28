@@ -27,8 +27,8 @@ export const trajetsMendeMillau: Trajet[] = [
     hub: "mende-millau",
     i18n: {
       fr: {
-        metaTitle: "Taxi Millau → Montpellier | Prix fixe dès 125 € | TaxiNeo",
-        metaDescription: "Taxi Millau → Montpellier. 115 km, 1h20, dès 125 €. A75, viaduc de Millau, Grands Causses. Réservation 24h/24.",
+        metaTitle: "Taxi Millau → Montpellier | 115 km, dès 125 € | TaxiNeo",
+        metaDescription: "Via A75 en 1h20. Viaduc de Millau, Grands Causses, Hérault et Languedoc en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Millau → Montpellier",
         heroSubtitle: "Transfert Millau → Montpellier au prix fixe de 125 — 155 €. 115 km, traversée spectaculaire par l'A75.",
         description: "Montpellier est à 1h20 de Millau par l'A75, autoroute gratuite du Massif Central (sauf viaduc).",
@@ -46,8 +46,8 @@ export const trajetsMendeMillau: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Millau → Montpellier | Fixed price from €125 | TaxiNeo",
-        metaDescription: "Taxi Millau → Montpellier. 115 km, 1h20, from €125. A75, Millau Viaduct. Book 24/7.",
+        metaTitle: "Taxi Millau → Montpellier | 115 km, from €125 | TaxiNeo",
+        metaDescription: "Via A75, 1h20 ride. Viaduc de Millau, Grands Causses, Hérault and Languedoc en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Millau → Montpellier",
         heroSubtitle: "Your Millau → Montpellier transfer at €125 — €155. 115 km, via the A75 and Millau Viaduct.",
         description: "Montpellier is 1h20 from Millau via the A75, crossing the famous Millau Viaduct.",
@@ -92,8 +92,8 @@ export const trajetsMendeMillau: Trajet[] = [
     hub: "mende-millau",
     i18n: {
       fr: {
-        metaTitle: "Taxi Millau → Rodez | Prix fixe dès 75 € | TaxiNeo",
-        metaDescription: "Taxi Millau → Rodez. 70 km, 50 min, dès 75 €. N88, musée Soulages, cathédrale. Réservation 24h/24.",
+        metaTitle: "Taxi Millau → Rodez | forfait dès 75 €, 50 min | TaxiNeo",
+        metaDescription: "Trajet direct N88 en 50 min. Passage par Aveyron, Cathédrale de Rodez, Musée Soulages et Causse Comtal. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Millau → Rodez",
         heroSubtitle: "Transfert Millau → Rodez au prix fixe de 75 — 95 €. 70 km, route gratuite par la N88.",
         description: "Rodez, préfecture de l'Aveyron avec son musée Soulages et sa cathédrale, est à 50 min de Millau.",
@@ -112,7 +112,7 @@ export const trajetsMendeMillau: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Millau → Rodez | Fixed price from €75 | TaxiNeo",
-        metaDescription: "Taxi Millau → Rodez. 70 km, 50 min, from €75. N88, Soulages Museum, cathedral. Book 24/7.",
+        metaDescription: "Direct route via N88, 50 min. Aveyron, Cathédrale de Rodez, Musée Soulages and Causse Comtal en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Millau → Rodez",
         heroSubtitle: "Your Millau → Rodez transfer at €75 — €95. 70 km, toll-free via the N88.",
         description: "Rodez, with the Soulages Museum and pink sandstone cathedral, is 50 min from Millau.",
@@ -157,8 +157,8 @@ export const trajetsMendeMillau: Trajet[] = [
     hub: "mende-millau",
     i18n: {
       fr: {
-        metaTitle: "Taxi Millau → Béziers | Prix fixe dès 130 € | TaxiNeo",
-        metaDescription: "Taxi Millau → Béziers. 120 km, 1h20, dès 130 €. A75, viaduc de Millau, Larzac. Réservation 24h/24.",
+        metaTitle: "Taxi Millau → Béziers | 120 km, dès 130 € | TaxiNeo",
+        metaDescription: "Par A75, 1h20 de trajet. Passage par Viaduc de Millau, Larzac, Canal du Midi et Cathédrale de Béziers. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Millau → Béziers",
         heroSubtitle: "Transfert Millau → Béziers au prix fixe de 130 — 160 €. 120 km, descente des Causses vers la Méditerranée.",
         description: "Béziers est à 1h20 de Millau par l'A75, en traversant le plateau du Larzac.",
@@ -176,8 +176,8 @@ export const trajetsMendeMillau: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Millau → Béziers | Fixed price from €130 | TaxiNeo",
-        metaDescription: "Taxi Millau → Béziers. 120 km, 1h20, from €130. A75, Millau Viaduct, Larzac, Canal du Midi. Book 24/7.",
+        metaTitle: "Taxi Millau → Béziers | 120 km, from €130 | TaxiNeo",
+        metaDescription: "Direct route via A75, 1h20. Viaduc de Millau, Larzac, Canal du Midi and Cathédrale de Béziers en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Millau → Béziers",
         heroSubtitle: "Your Millau → Béziers transfer at €130 — €160. 120 km, from the Causses to the Mediterranean.",
         description: "Béziers is 1h20 from Millau via the A75, crossing the Larzac plateau.",
@@ -222,8 +222,8 @@ export const trajetsMendeMillau: Trajet[] = [
     hub: "mende-millau",
     i18n: {
       fr: {
-        metaTitle: "Taxi Mende → Clermont-Ferrand | Prix fixe dès 190 € | TaxiNeo",
-        metaDescription: "Taxi Mende → Clermont-Ferrand. 175 km, 2h, dès 190 €. A75, Lozère, Margeride, Volcans d'Auvergne. Réservation 24h/24.",
+        metaTitle: "Taxi Mende → Clermont-Ferrand | 175 km, dès 190 € | TaxiNeo",
+        metaDescription: "Via A75 en 2h. Lozère, Margeride, Aubrac et Volcans d'Auvergne en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Mende → Clermont-Ferrand",
         heroSubtitle: "Transfert Mende → Clermont-Ferrand au prix fixe de 190 — 240 €. 175 km, traversée du Massif Central par l'A75.",
         description: "Clermont-Ferrand est à 2h de Mende par l'A75, autoroute gratuite du Massif Central.",
@@ -241,8 +241,8 @@ export const trajetsMendeMillau: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Mende → Clermont-Ferrand | Fixed price from €190 | TaxiNeo",
-        metaDescription: "Taxi Mende → Clermont-Ferrand. 175 km, 2h, from €190. A75, toll-free, Massif Central. Book 24/7.",
+        metaTitle: "Taxi Mende → Clermont-Ferrand | 175 km, from €190 | TaxiNeo",
+        metaDescription: "Via A75, 2 hours ride. Lozère, Margeride, Aubrac and Volcans d'Auvergne en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Mende → Clermont-Ferrand",
         heroSubtitle: "Your Mende → Clermont-Ferrand transfer at €190 — €240. 175 km, toll-free across the Massif Central.",
         description: "Clermont-Ferrand is 2h from Mende via the A75, toll-free through the Massif Central.",
@@ -287,8 +287,8 @@ export const trajetsMendeMillau: Trajet[] = [
     hub: "mende-millau",
     i18n: {
       fr: {
-        metaTitle: "Taxi Mende → Montpellier | Prix fixe dès 180 € | TaxiNeo",
-        metaDescription: "Taxi Mende → Montpellier. 165 km, 1h55, dès 180 €. A75, Gorges du Tarn, Lozère. Réservation 24h/24.",
+        metaTitle: "Taxi Mende → Montpellier | 165 km, dès 180 € | TaxiNeo",
+        metaDescription: "Via A75 en 1h55. Gorges du Tarn, Causse Méjean, Lozère et Languedoc en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Mende → Montpellier",
         heroSubtitle: "Transfert Mende → Montpellier au prix fixe de 180 — 230 €. 165 km, de la Lozère à la Méditerranée.",
         description: "Montpellier est à 1h55 de Mende par l'A75, en passant par Millau et le Larzac.",
@@ -306,8 +306,8 @@ export const trajetsMendeMillau: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Mende → Montpellier | Fixed price from €180 | TaxiNeo",
-        metaDescription: "Taxi Mende → Montpellier. 165 km, 1h55, from €180. A75, Tarn Gorges, Lozere to the Med. Book 24/7.",
+        metaTitle: "Taxi Mende → Montpellier | 165 km, from €180 | TaxiNeo",
+        metaDescription: "Via A75, 1h55 ride. Gorges du Tarn, Causse Méjean, Lozère and Languedoc en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Mende → Montpellier",
         heroSubtitle: "Your Mende → Montpellier transfer at €180 — €230. 165 km, from Lozere to the Mediterranean.",
         description: "Montpellier is 1h55 from Mende via the A75, through Millau and the Larzac plateau.",

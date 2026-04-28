@@ -30,8 +30,8 @@ export const trajetsToursAvignon: Trajet[] = [
     hub: "tours",
     i18n: {
       fr: {
-        metaTitle: "Taxi Tours → Amboise | Prix fixe dès 35 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Tours–Amboise dès 35 €. 25 km en 25 min pour rejoindre le Château d'Amboise et le Clos Lucé. Service porte-à-porte, tarif fixé à l'avance.",
+        metaTitle: "Taxi Tours → Amboise | forfait dès 35 €, 25 min | TaxiNeo",
+        metaDescription: "Par D751 / A10, 25 min de trajet. Passage par Château d'Amboise, Clos Lucé, Léonard de Vinci et Loire. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Tours → Amboise",
         heroSubtitle: "Au cœur de la Renaissance et des châteaux de la Loire",
         description: "Transfert en taxi de Tours à Amboise, cité royale de la Renaissance, avec le Château d'Amboise et le Clos Lucé, dernière demeure de Léonard de Vinci.",
@@ -50,7 +50,7 @@ export const trajetsToursAvignon: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Tours → Amboise | Fixed price from €35 | TaxiNeo",
-        metaDescription: "Book your Tours–Amboise taxi from €35. 25 km in 25 min to reach the Château d'Amboise and Clos Lucé. Door-to-door service, price fixed in advance.",
+        metaDescription: "Via D751 / A10, 25 min ride. Château d'Amboise, Clos Lucé, Léonard de Vinci and Loire en route. Stops for sightseeing possible en route. No toll on this route.",
         heroTitle: "Taxi Tours → Amboise",
         heroSubtitle: "Into the heart of the Renaissance and the Loire châteaux",
         description: "Taxi transfer from Tours to Amboise, a royal Renaissance city, home to the Château d'Amboise and Clos Lucé, Leonardo da Vinci's last residence.",
@@ -95,8 +95,8 @@ export const trajetsToursAvignon: Trajet[] = [
     hub: "tours",
     i18n: {
       fr: {
-        metaTitle: "Taxi Tours → Chenonceau | Prix fixe dès 45 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Tours–Chenonceau dès 45 €. 35 km en 35 min pour le Château des Dames enjambant le Cher. Transfert porte-à-porte.",
+        metaTitle: "Taxi Tours → Chenonceau | 35 km, dès 45 € | TaxiNeo",
+        metaDescription: "Par D976 / D40, 35 min de trajet. Château de Chenonceau, Château des Dames, Cher et Jardins en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Tours → Chenonceau",
         heroSubtitle: "Le Château des Dames, joyau de la Renaissance sur le Cher",
         description: "Transfert en taxi de Tours au Château de Chenonceau, le plus visité des châteaux de la Loire après Versailles, bâti en arc sur le Cher.",
@@ -114,8 +114,8 @@ export const trajetsToursAvignon: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Tours → Chenonceau | Fixed price from €45 | TaxiNeo",
-        metaDescription: "Book your Tours–Chenonceau taxi from €45. 35 km in 35 min to the Château des Dames spanning the River Cher. Door-to-door transfer.",
+        metaTitle: "Taxi Tours → Chenonceau | 35 km, from €45 | TaxiNeo",
+        metaDescription: "Via D976 / D40, 35 min ride. Château de Chenonceau, Château des Dames, Cher and Jardins en route. Stops for sightseeing possible en route. Instant quote online.",
         heroTitle: "Taxi Tours → Chenonceau",
         heroSubtitle: "The Ladies' Château, a Renaissance jewel over the River Cher",
         description: "Taxi transfer from Tours to the Château de Chenonceau, the most visited Loire château after Versailles, built as an arch over the River Cher.",
@@ -160,8 +160,8 @@ export const trajetsToursAvignon: Trajet[] = [
     hub: "tours",
     i18n: {
       fr: {
-        metaTitle: "Taxi Tours → Chambord | Prix fixe dès 100 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Tours–Chambord dès 100 €. 85 km en 1h05 pour le plus grand château de la Loire. Escalier de Léonard de Vinci, domaine de 5 440 ha.",
+        metaTitle: "Taxi Tours → Chambord | 85 km, dès 100 € | TaxiNeo",
+        metaDescription: "Via A10 puis D112 en 1h05. Château de Chambord, Plus grand château de la Loire, François Ier et Escalier double en chemin. Arrêt visite possible en chemin.",
         heroTitle: "Taxi Tours → Chambord",
         heroSubtitle: "Le plus grand et le plus majestueux des châteaux de la Loire",
         description: "Transfert en taxi de Tours au Château de Chambord, chef-d'œuvre de la Renaissance, avec son célèbre escalier à double révolution attribué à Léonard de Vinci.",
@@ -179,8 +179,8 @@ export const trajetsToursAvignon: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Tours → Chambord | Fixed price from €100 | TaxiNeo",
-        metaDescription: "Book your Tours–Chambord taxi from €100. 85 km in 1h05 to the largest Loire château. Leonardo's double helix staircase, 5,440-hectare estate.",
+        metaTitle: "Taxi Tours → Chambord | 85 km, from €100 | TaxiNeo",
+        metaDescription: "Via A10 then D112, 1h05 ride. Château de Chambord, Plus grand château de la Loire, François Ier and Escalier double en route. Up to 1h20 during rush hour.",
         heroTitle: "Taxi Tours → Chambord",
         heroSubtitle: "The largest and most majestic of the Loire châteaux",
         description: "Taxi transfer from Tours to the Château de Chambord, a Renaissance masterpiece featuring the famous double helix staircase attributed to Leonardo da Vinci.",
@@ -225,8 +225,8 @@ export const trajetsToursAvignon: Trajet[] = [
     hub: "tours",
     i18n: {
       fr: {
-        metaTitle: "Taxi Tours → Azay-le-Rideau | Prix fixe dès 35 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Tours–Azay-le-Rideau dès 35 €. 25 km en 25 min pour le joyau Renaissance posé sur l'Indre. Transfert porte-à-porte.",
+        metaTitle: "Taxi Tours → Azay-le-Rideau | 25 km, dès 35 € | TaxiNeo",
+        metaDescription: "Via D751 / D57 en 25 min. Château d'Azay-le-Rideau, Renaissance, Indre et Reflet sur l'eau en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Tours → Azay-le-Rideau",
         heroSubtitle: "Un diamant taillé à facettes serti par l'Indre — Balzac",
         description: "Transfert en taxi de Tours au Château d'Azay-le-Rideau, joyau de la Renaissance posé sur une île de l'Indre, décrit par Balzac comme un diamant à facettes.",
@@ -244,8 +244,8 @@ export const trajetsToursAvignon: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Tours → Azay-le-Rideau | Fixed price from €35 | TaxiNeo",
-        metaDescription: "Book your Tours–Azay-le-Rideau taxi from €35. 25 km in 25 min to the Renaissance jewel reflected in the River Indre. Door-to-door transfer.",
+        metaTitle: "Taxi Tours → Azay-le-Rideau | 25 km, from €35 | TaxiNeo",
+        metaDescription: "Direct route via D751 / D57, 25 min. Château d'Azay-le-Rideau, Renaissance, Indre and Reflet sur l'eau en route. Stops for sightseeing possible en route.",
         heroTitle: "Taxi Tours → Azay-le-Rideau",
         heroSubtitle: "A diamond cut in facets, set by the Indre — Balzac",
         description: "Taxi transfer from Tours to the Château d'Azay-le-Rideau, a Renaissance jewel built on an island in the River Indre, described by Balzac as a faceted diamond.",
@@ -290,8 +290,8 @@ export const trajetsToursAvignon: Trajet[] = [
     hub: "tours",
     i18n: {
       fr: {
-        metaTitle: "Taxi Tours → Villandry | Prix fixe dès 25 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Tours–Villandry dès 25 €. 15 km en 20 min pour les plus beaux jardins Renaissance de France. Transfert porte-à-porte.",
+        metaTitle: "Taxi Tours → Villandry | 15 km, dès 25 € | TaxiNeo",
+        metaDescription: "Via D7 en 20 min. Jardins de Villandry, Château Renaissance, Potager ornemental et Loire-Cher confluence en chemin. Arrêt possible pour visites ou photos.",
         heroTitle: "Taxi Tours → Villandry",
         heroSubtitle: "Les jardins Renaissance les plus célèbres de France",
         description: "Transfert en taxi de Tours au Château de Villandry, célèbre dans le monde entier pour ses jardins Renaissance en terrasses et son potager ornemental.",
@@ -309,8 +309,8 @@ export const trajetsToursAvignon: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Tours → Villandry | Fixed price from €25 | TaxiNeo",
-        metaDescription: "Book your Tours–Villandry taxi from €25. 15 km in 20 min to France's most famous Renaissance gardens. Door-to-door transfer.",
+        metaTitle: "Taxi Tours → Villandry | 15 km, from €25 | TaxiNeo",
+        metaDescription: "Via D7, 20 min ride. Jardins de Villandry, Château Renaissance, Potager ornemental and Loire-Cher confluence en route. Stops for sightseeing possible en route.",
         heroTitle: "Taxi Tours → Villandry",
         heroSubtitle: "France's most celebrated Renaissance gardens",
         description: "Taxi transfer from Tours to the Château de Villandry, world-famous for its Renaissance terraced gardens and ornamental vegetable garden.",
@@ -355,8 +355,8 @@ export const trajetsToursAvignon: Trajet[] = [
     hub: "tours",
     i18n: {
       fr: {
-        metaTitle: "Taxi Tours → Chinon | Prix fixe dès 65 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Tours–Chinon dès 65 €. 50 km en 45 min pour la forteresse de Jeanne d'Arc et les vignobles de Chinon. Transfert porte-à-porte.",
+        metaTitle: "Taxi Tours → Chinon | forfait dès 65 €, 45 min | TaxiNeo",
+        metaDescription: "Par D751, 45 min de trajet. Forteresse royale, Vignoble de Chinon, Vieux Chinon et Rabelais en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Tours → Chinon",
         heroSubtitle: "Forteresse royale, vignobles et terre de Rabelais",
         description: "Transfert en taxi de Tours à Chinon, cité médiévale dominée par sa forteresse royale où Jeanne d'Arc rencontra Charles VII, au cœur du vignoble de Chinon.",
@@ -375,7 +375,7 @@ export const trajetsToursAvignon: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Tours → Chinon | Fixed price from €65 | TaxiNeo",
-        metaDescription: "Book your Tours–Chinon taxi from €65. 50 km in 45 min to the royal fortress and Chinon vineyards. Door-to-door transfer.",
+        metaDescription: "Via D751, 45 min ride. Forteresse royale, Vignoble de Chinon, Vieux Chinon and Rabelais en route. Stops for sightseeing possible en route. Instant quote online.",
         heroTitle: "Taxi Tours → Chinon",
         heroSubtitle: "Royal fortress, vineyards and the land of Rabelais",
         description: "Taxi transfer from Tours to Chinon, a medieval city dominated by its royal fortress where Joan of Arc met Charles VII, at the heart of the Chinon wine region.",
@@ -420,8 +420,8 @@ export const trajetsToursAvignon: Trajet[] = [
     hub: "tours",
     i18n: {
       fr: {
-        metaTitle: "Taxi Tours → Saumur | Prix fixe dès 85 € | TaxiNeo",
-        metaDescription: "Réservez votre taxi Tours–Saumur dès 85 €. 70 km en 55 min pour le château blanc, le Cadre Noir et les vignobles de Saumur-Champigny.",
+        metaTitle: "Taxi Tours → Saumur | forfait dès 85 €, 55 min | TaxiNeo",
+        metaDescription: "Via A85 en 55 min. Passage par Château de Saumur, Cadre Noir, Vignoble Saumur-Champigny et Troglodytes. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Tours → Saumur",
         heroSubtitle: "Le château blanc, le Cadre Noir et les bulles de Loire",
         description: "Transfert en taxi de Tours à Saumur, cité du cheval avec le Cadre Noir, ses vins effervescents et son château blanc dominant la Loire.",
@@ -440,7 +440,7 @@ export const trajetsToursAvignon: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Tours → Saumur | Fixed price from €85 | TaxiNeo",
-        metaDescription: "Book your Tours–Saumur taxi from €85. 70 km in 55 min to the white château, Cadre Noir and Saumur-Champigny vineyards.",
+        metaDescription: "Via A85, 55 min ride. Château de Saumur, Cadre Noir, Vignoble Saumur-Champigny and Troglodytes en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Tours → Saumur",
         heroSubtitle: "The white château, Cadre Noir and Loire sparkling wines",
         description: "Taxi transfer from Tours to Saumur, the city of horses with the Cadre Noir, its sparkling wines and white château overlooking the Loire.",

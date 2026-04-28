@@ -19,8 +19,8 @@ export const trajetsParisRetours3: Trajet[] = [
     hub: "paris-retours",
     i18n: {
       fr: {
-        metaTitle: "Taxi Montpellier → Paris | Transfert longue distance | TaxiNeo",
-        metaDescription: "Taxi Montpellier → Paris. 750 km, ~7h, dès 900 €. Via A75 et viaduc de Millau. Réservation 24h/24.",
+        metaTitle: "Taxi Montpellier → Paris | 750 km, dès 900 € | TaxiNeo",
+        metaDescription: "Itinéraire A75 / A71, environ undefined min. Massif Central, Millau, Clermont-Ferrand sur le parcours. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Montpellier → Paris",
         heroSubtitle: "Transfert Montpellier → Paris au prix fixe de 900 — 1 100 €. 750 km via l'A75.",
         description: "Montpellier — Paris traverse le Massif Central par la spectaculaire A75.",
@@ -38,8 +38,8 @@ export const trajetsParisRetours3: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Montpellier → Paris | Long distance transfer | TaxiNeo",
-        metaDescription: "Taxi Montpellier → Paris. 750 km, ~7h, from €900. Via A75 and Millau Viaduct. Book 24/7.",
+        metaTitle: "Taxi Montpellier → Paris | 750 km, from €900 | TaxiNeo",
+        metaDescription: "Direct route via A75 / A71, undefined min. Massif Central, Millau and Clermont-Ferrand along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Montpellier → Paris",
         heroSubtitle: "Montpellier → Paris transfer at €900 — €1,100. 750 km via A75.",
         description: "Montpellier to Paris across the Massif Central on the spectacular A75.",
@@ -77,7 +77,7 @@ export const trajetsParisRetours3: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Lille → Paris | Prix fixe dès 280 € | TaxiNeo",
-        metaDescription: "Taxi Lille → Paris. 225 km, ~2h30, dès 280 €. A1 directe. Réservation 24h/24.",
+        metaDescription: "Via A1 en undefined min. Arras, Direct et Autoroute du Nord en chemin. Dépose porte-à-porte, bagages inclus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Lille → Paris",
         heroSubtitle: "Transfert Lille → Paris au prix fixe de 280 — 360 €. 225 km via l'A1.",
         description: "Lille — Paris emprunte l'A1, l'autoroute du Nord, la plus fréquentée de France.",
@@ -96,7 +96,7 @@ export const trajetsParisRetours3: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Lille → Paris | Fixed price from €280 | TaxiNeo",
-        metaDescription: "Taxi Lille → Paris. 225 km, ~2h30, from €280. Direct A1 motorway. Book 24/7.",
+        metaDescription: "Via A1, undefined min ride. Arras, Direct and Autoroute du Nord along the way. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Lille → Paris",
         heroSubtitle: "Lille → Paris transfer at €280 — €360. 225 km via A1.",
         description: "Lille to Paris via the A1, France's busiest motorway.",
@@ -133,8 +133,8 @@ export const trajetsParisRetours3: Trajet[] = [
     hub: "paris-retours",
     i18n: {
       fr: {
-        metaTitle: "Taxi Grenoble → Paris | Prix fixe dès 680 € | TaxiNeo",
-        metaDescription: "Taxi Grenoble → Paris. 570 km, ~5h40, dès 680 €. Via Lyon et A6. Réservation 24h/24.",
+        metaTitle: "Taxi Grenoble → Paris | 570 km, dès 680 € | TaxiNeo",
+        metaDescription: "Via A48 / A7 / A6 en undefined min. Alpes, Lyon et Bourgogne en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Grenoble → Paris",
         heroSubtitle: "Transfert Grenoble → Paris au prix fixe de 680 — 850 €. 570 km depuis les Alpes.",
         description: "Grenoble — Paris traverse les Alpes puis la Bourgogne en 5h40.",
@@ -152,8 +152,8 @@ export const trajetsParisRetours3: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Grenoble → Paris | Fixed price from €680 | TaxiNeo",
-        metaDescription: "Taxi Grenoble → Paris. 570 km, ~5h40, from €680. Via Lyon and Burgundy. Book 24/7.",
+        metaTitle: "Taxi Grenoble → Paris | 570 km, from €680 | TaxiNeo",
+        metaDescription: "Via A48 / A7 / A6, undefined min ride. Alpes, Lyon and Bourgogne along the way. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Grenoble → Paris",
         heroSubtitle: "Grenoble → Paris transfer at €680 — €850. 570 km from the Alps.",
         description: "Grenoble to Paris crosses the Alps and Burgundy in 5h40.",
@@ -191,7 +191,7 @@ export const trajetsParisRetours3: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Dijon → Paris | Prix fixe dès 370 € | TaxiNeo",
-        metaDescription: "Taxi Dijon → Paris. 310 km, ~3h10, dès 370 €. Via A38/A6 à travers la Bourgogne. Réservation 24h/24.",
+        metaDescription: "Via A38 / A6 en undefined min. Bourgogne, Vignobles et Beaune en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Dijon → Paris",
         heroSubtitle: "Transfert Dijon → Paris au prix fixe de 370 — 480 €. 310 km à travers les vignobles bourguignons.",
         description: "Dijon — Paris traverse le cœur de la Bourgogne viticole en 3h10.",
@@ -210,7 +210,7 @@ export const trajetsParisRetours3: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Dijon → Paris | Fixed price from €370 | TaxiNeo",
-        metaDescription: "Taxi Dijon → Paris. 310 km, ~3h10, from €370. Through Burgundy vineyards. Book 24/7.",
+        metaDescription: "Via A38 / A6, undefined min ride. Bourgogne, Vignobles and Beaune along the way. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Dijon → Paris",
         heroSubtitle: "Dijon → Paris transfer at €370 — €480. 310 km through Burgundy.",
         description: "Dijon to Paris across the heart of Burgundy's wine country.",
@@ -248,7 +248,7 @@ export const trajetsParisRetours3: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Annecy → Paris | Prix fixe dès 650 € | TaxiNeo",
-        metaDescription: "Taxi Annecy → Paris. 545 km, ~5h30, dès 650 €. Via Lyon et A6. Réservation 24h/24.",
+        metaDescription: "Via A41 / A43 / A6 en undefined min. Lac d'Annecy, Lyon et Bourgogne en chemin. Dépose à votre adresse exacte. Alternative directe au train ou au bus.",
         heroTitle: "Taxi Annecy → Paris",
         heroSubtitle: "Transfert Annecy → Paris au prix fixe de 650 — 820 €. 545 km depuis la Haute-Savoie.",
         description: "Annecy — Paris traverse les Alpes, Lyon et la Bourgogne en 5h30.",
@@ -267,7 +267,7 @@ export const trajetsParisRetours3: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Annecy → Paris | Fixed price from €650 | TaxiNeo",
-        metaDescription: "Taxi Annecy → Paris. 545 km, ~5h30, from €650. Via Lyon and Burgundy. Book 24/7.",
+        metaDescription: "Via A41 / A43 / A6, undefined min ride. Lac d'Annecy, Lyon and Bourgogne along the way. Drop-off at your exact address. Door-to-door, luggage included.",
         heroTitle: "Taxi Annecy → Paris",
         heroSubtitle: "Annecy → Paris transfer at €650 — €820. 545 km from Haute-Savoie.",
         description: "Annecy to Paris via the Alps, Lyon and Burgundy in 5h30.",
@@ -304,8 +304,8 @@ export const trajetsParisRetours3: Trajet[] = [
     hub: "paris-retours",
     i18n: {
       fr: {
-        metaTitle: "Taxi Biarritz → Paris | Transfert longue distance | TaxiNeo",
-        metaDescription: "Taxi Biarritz → Paris. 770 km, ~7h20, dès 920 €. Via Bordeaux et A10. Réservation 24h/24.",
+        metaTitle: "Taxi Biarritz → Paris | 770 km, dès 920 € | TaxiNeo",
+        metaDescription: "Via A63 / A10 en undefined min. Pays Basque, Bordeaux et Val de Loire en chemin. Dépose à votre adresse exacte. Alternative directe au train ou au bus.",
         heroTitle: "Taxi Biarritz → Paris",
         heroSubtitle: "Transfert Biarritz → Paris au prix fixe de 920 — 1 150 €. 770 km depuis le Pays Basque.",
         description: "Biarritz — Paris traverse le Pays Basque, les Landes et le Val de Loire.",
@@ -323,8 +323,8 @@ export const trajetsParisRetours3: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Biarritz → Paris | Long distance transfer | TaxiNeo",
-        metaDescription: "Taxi Biarritz → Paris. 770 km, ~7h20, from €920. Via Bordeaux and A10. Book 24/7.",
+        metaTitle: "Taxi Biarritz → Paris | 770 km, from €920 | TaxiNeo",
+        metaDescription: "Via A63 / A10, undefined min ride. Pays Basque, Bordeaux and Val de Loire along the way. Drop-off at your exact address. Door-to-door, luggage included.",
         heroTitle: "Taxi Biarritz → Paris",
         heroSubtitle: "Biarritz → Paris transfer at €920 — €1,150. 770 km from the Basque Country.",
         description: "Biarritz to Paris via the Basque Country, Landes forests and Loire Valley.",

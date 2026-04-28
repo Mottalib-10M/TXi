@@ -27,8 +27,8 @@ export const trajetsFoixAndorre: Trajet[] = [
     hub: "foix-andorre",
     i18n: {
       fr: {
-        metaTitle: "Taxi Foix → Toulouse | Prix fixe dès 90 € | TaxiNeo",
-        metaDescription: "Taxi Foix → Toulouse. 85 km, 55 min, dès 90 €. N20, route des Pyrénées ariégeoises. Réservation 24h/24.",
+        metaTitle: "Taxi Foix → Toulouse | forfait dès 90 €, 55 min | TaxiNeo",
+        metaDescription: "Via N20 en 55 min. Ariège, Pyrénées, Château de Foix et Ville rose en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Foix → Toulouse",
         heroSubtitle: "Transfert Foix → Toulouse au prix fixe de 90 — 115 €. 85 km, direct par la N20.",
         description: "Toulouse, la Ville rose, est à 55 min de Foix par la N20.",
@@ -47,7 +47,7 @@ export const trajetsFoixAndorre: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Foix → Toulouse | Fixed price from €90 | TaxiNeo",
-        metaDescription: "Taxi Foix → Toulouse. 85 km, 55 min, from €90. N20, door-to-door. Book 24/7.",
+        metaDescription: "Via N20, 55 min ride. Ariège, Pyrénées, Château de Foix and Ville rose en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Foix → Toulouse",
         heroSubtitle: "Your Foix → Toulouse transfer at €90 — €115. 85 km, via the N20.",
         description: "Toulouse, the Pink City, is 55 min from Foix via the N20.",
@@ -92,8 +92,8 @@ export const trajetsFoixAndorre: Trajet[] = [
     hub: "foix-andorre",
     i18n: {
       fr: {
-        metaTitle: "Taxi Foix → Andorre-la-Vieille | Prix fixe dès 115 € | TaxiNeo",
-        metaDescription: "Taxi Foix → Andorre-la-Vieille. 105 km, 1h25, dès 115 €. N20, col de montagne, shopping détaxé. Réservation 24h/24.",
+        metaTitle: "Taxi Foix → Andorre-la-Vieille | 105 km, dès 115 € | TaxiNeo",
+        metaDescription: "Itinéraire N20, environ 1h25. Passage par Pyrénées, Shopping détaxé, Pas de la Case et Stations de ski. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Foix → Andorre-la-Vieille",
         heroSubtitle: "Transfert Foix → Andorre-la-Vieille au prix fixe de 115 — 145 €. 105 km, route des Pyrénées.",
         description: "Andorre-la-Vieille, capitale de la principauté, est à 1h25 de Foix par la N20.",
@@ -111,8 +111,8 @@ export const trajetsFoixAndorre: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Foix → Andorra la Vella | Fixed price from €115 | TaxiNeo",
-        metaDescription: "Taxi Foix → Andorra la Vella. 105 km, 1h25, from €115. N20, Pyrenees crossing, duty-free shopping. Book 24/7.",
+        metaTitle: "Taxi Foix → Andorre-la-Vieille | 105 km, from €115 | TaxiNeo",
+        metaDescription: "N20 route, approximately 1h25. Pyrénées, Shopping détaxé, Pas de la Case and Stations de ski en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Foix → Andorra la Vella",
         heroSubtitle: "Your Foix → Andorra la Vella transfer at €115 — €145. 105 km, through the Pyrenees.",
         description: "Andorra la Vella, Europe's highest capital, is 1h25 from Foix via the N20.",
@@ -157,8 +157,8 @@ export const trajetsFoixAndorre: Trajet[] = [
     hub: "foix-andorre",
     i18n: {
       fr: {
-        metaTitle: "Taxi Andorre → Toulouse | Prix fixe dès 200 € | TaxiNeo",
-        metaDescription: "Taxi Andorre-la-Vieille → Toulouse. 185 km, 2h20, dès 200 €. N20, traversée des Pyrénées. Réservation 24h/24.",
+        metaTitle: "Taxi Andorre-la-Vieille → Toulouse | 185 km, 200 € | TaxiNeo",
+        metaDescription: "Via N20 en 2h20. Pyrénées, Principauté, Aéroport Blagnac et Ville rose en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Andorre → Toulouse",
         heroSubtitle: "Transfert Andorre-la-Vieille → Toulouse au prix fixe de 200 — 260 €. 185 km, traversée pyrénéenne.",
         description: "Toulouse est à 2h20 d'Andorre-la-Vieille par la N20 à travers les Pyrénées.",
@@ -176,8 +176,8 @@ export const trajetsFoixAndorre: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Andorra → Toulouse | Fixed price from €200 | TaxiNeo",
-        metaDescription: "Taxi Andorra la Vella → Toulouse. 185 km, 2h20, from €200. N20, Pyrenees crossing. Book 24/7.",
+        metaTitle: "Taxi Andorre-la-Vieille → Toulouse | 185 km, €200 | TaxiNeo",
+        metaDescription: "Via N20, 2h20 ride. Pyrénées, Principauté, Aéroport Blagnac and Ville rose en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Andorra → Toulouse",
         heroSubtitle: "Your Andorra la Vella → Toulouse transfer at €200 — €260. 185 km, across the Pyrenees.",
         description: "Toulouse is 2h20 from Andorra la Vella via the N20 across the Pyrenees.",
@@ -222,8 +222,8 @@ export const trajetsFoixAndorre: Trajet[] = [
     hub: "foix-andorre",
     i18n: {
       fr: {
-        metaTitle: "Taxi Andorre → Barcelone | Prix fixe dès 220 € | TaxiNeo",
-        metaDescription: "Taxi Andorre-la-Vieille → Barcelone. 200 km, 2h40, dès 220 €. C16, tunnel d'Envalira, Catalogne. Réservation 24h/24.",
+        metaTitle: "Taxi Andorre-la-Vieille → Barcelone | 200 km | TaxiNeo",
+        metaDescription: "Via C16 en 2h40. Pyrénées, Catalogne, Shopping et Aéroport El Prat en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Andorre → Barcelone",
         heroSubtitle: "Transfert Andorre-la-Vieille → Barcelone au prix fixe de 220 — 280 €. 200 km, direction la Catalogne.",
         description: "Barcelone, capitale de la Catalogne, est à 2h40 d'Andorre-la-Vieille par la C16.",
@@ -241,8 +241,8 @@ export const trajetsFoixAndorre: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Andorra → Barcelona | Fixed price from €220 | TaxiNeo",
-        metaDescription: "Taxi Andorra la Vella → Barcelona. 200 km, 2h40, from €220. C16, Cadí tunnel. Book 24/7.",
+        metaTitle: "Taxi Andorre-la-Vieille → Barcelone | 200 km, €220 | TaxiNeo",
+        metaDescription: "Via C16, 2h40 ride. Pyrénées, Catalogne, Shopping and Aéroport El Prat en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Andorra → Barcelona",
         heroSubtitle: "Your Andorra la Vella → Barcelona transfer at €220 — €280. 200 km, via the C16.",
         description: "Barcelona, Catalonia's capital, is 2h40 from Andorra la Vella via the C16.",
@@ -287,8 +287,8 @@ export const trajetsFoixAndorre: Trajet[] = [
     hub: "foix-andorre",
     i18n: {
       fr: {
-        metaTitle: "Taxi Foix → Carcassonne | Prix fixe dès 70 € | TaxiNeo",
-        metaDescription: "Taxi Foix → Carcassonne. 65 km, 45 min, dès 70 €. D119, route cathare, Cité médiévale UNESCO. Réservation 24h/24.",
+        metaTitle: "Taxi Foix → Carcassonne | 65 km, dès 70 € | TaxiNeo",
+        metaDescription: "Via D119 en 45 min. Pays cathare, Cité médiévale, UNESCO et Vignobles en chemin. Dépose à votre adresse exacte. Alternative directe au train ou au bus.",
         heroTitle: "Taxi Foix → Carcassonne",
         heroSubtitle: "Transfert Foix → Carcassonne au prix fixe de 70 — 90 €. 65 km, au coeur du pays cathare.",
         description: "Carcassonne et sa Cité médiévale UNESCO sont à 45 min de Foix par la D119.",
@@ -306,8 +306,8 @@ export const trajetsFoixAndorre: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Foix → Carcassonne | Fixed price from €70 | TaxiNeo",
-        metaDescription: "Taxi Foix → Carcassonne. 65 km, 45 min, from €70. D119, Cathar country, UNESCO medieval citadel. Book 24/7.",
+        metaTitle: "Taxi Foix → Carcassonne | 65 km, from €70 | TaxiNeo",
+        metaDescription: "Via D119, 45 min ride. Pays cathare, Cité médiévale, UNESCO and Vignobles en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Foix → Carcassonne",
         heroSubtitle: "Your Foix → Carcassonne transfer at €70 — €90. 65 km, through Cathar country.",
         description: "Carcassonne and its UNESCO medieval citadel are 45 min from Foix via the D119.",

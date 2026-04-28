@@ -19,8 +19,8 @@ export const trajetsPrivasAubenas: Trajet[] = [
     hub: "privas-aubenas",
     i18n: {
       fr: {
-        metaTitle: "Taxi Privas → Valence | Prix fixe dès 50 € | TaxiNeo",
-        metaDescription: "Taxi Privas → Valence. 40 km, 35 min, dès 50 €. Route directe entre la préfecture de l'Ardèche et la vallée du Rhône. Réservation 24h/24.",
+        metaTitle: "Taxi Privas → Valence | forfait dès 50 € | TaxiNeo",
+        metaDescription: "Itinéraire N304 / D104, environ undefined min. Passage par N304, Vallée du Rhône, Ardèche et Vivarais. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Privas → Valence",
         heroSubtitle: "Transfert Privas → Valence au prix fixe de 50 — 65 €. 40 km, 35 min.",
         description: "Privas — Valence relie la préfecture de l'Ardèche à la vallée du Rhône en 35 min.",
@@ -39,7 +39,7 @@ export const trajetsPrivasAubenas: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Privas → Valence | Fixed price from €50 | TaxiNeo",
-        metaDescription: "Taxi Privas → Valence. 40 km, 35 min, from €50. Direct route from the Ardèche prefecture to the Rhône Valley. Book 24/7.",
+        metaDescription: "N304 / D104 route, approximately undefined min. N304, Vallée du Rhône, Ardèche and Vivarais en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Privas → Valence",
         heroSubtitle: "Privas → Valence transfer at €50 — €65. 40 km, 35 min.",
         description: "Privas to Valence connects the Ardèche prefecture to the Rhône Valley in 35 min.",
@@ -76,8 +76,8 @@ export const trajetsPrivasAubenas: Trajet[] = [
     hub: "privas-aubenas",
     i18n: {
       fr: {
-        metaTitle: "Taxi Aubenas → Montélimar | Prix fixe dès 55 € | TaxiNeo",
-        metaDescription: "Taxi Aubenas → Montélimar. 45 km, 40 min, dès 55 €. N102 via le Bas-Vivarais et la vallée du Rhône. Réservation 24h/24.",
+        metaTitle: "Taxi Aubenas → Montélimar | 45 km, dès 55 € | TaxiNeo",
+        metaDescription: "Trajet direct N102 en undefined min. Passage par Gorges de l'Ardèche, Vivarais, Nougat et Bas-Vivarais. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Aubenas → Montélimar",
         heroSubtitle: "Transfert Aubenas → Montélimar au prix fixe de 55 — 70 €. 45 km, 40 min.",
         description: "Aubenas — Montélimar en 40 min par la N102, des collines ardéchoises à la capitale du nougat.",
@@ -95,8 +95,8 @@ export const trajetsPrivasAubenas: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Aubenas → Montélimar | Fixed price from €55 | TaxiNeo",
-        metaDescription: "Taxi Aubenas → Montélimar. 45 km, 40 min, from €55. N102 through lower Vivarais to the nougat capital. Book 24/7.",
+        metaTitle: "Taxi Aubenas → Montélimar | 45 km, from €55 | TaxiNeo",
+        metaDescription: "Direct route via N102, undefined min. Gorges de l'Ardèche, Vivarais, Nougat and Bas-Vivarais en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Aubenas → Montélimar",
         heroSubtitle: "Aubenas → Montélimar transfer at €55 — €70. 45 km, 40 min.",
         description: "Aubenas to Montélimar in 40 min via N102, from the Ardèche hills to the world nougat capital.",
@@ -133,8 +133,8 @@ export const trajetsPrivasAubenas: Trajet[] = [
     hub: "privas-aubenas",
     i18n: {
       fr: {
-        metaTitle: "Taxi Aubenas → Avignon | Prix fixe dès 130 € | TaxiNeo",
-        metaDescription: "Taxi Aubenas → Avignon. 110 km, 1h20, dès 130 €. Des gorges de l'Ardèche à la Cité des Papes. Réservation 24h/24.",
+        metaTitle: "Taxi Aubenas → Avignon | 110 km, dès 130 € | TaxiNeo",
+        metaDescription: "Par N102 / A7, undefined min de trajet. Passage par N102, Gorges de l'Ardèche, Pont d'Arc et Provence. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Aubenas → Avignon",
         heroSubtitle: "Transfert Aubenas → Avignon au prix fixe de 130 — 170 €. 110 km, 1h20.",
         description: "Aubenas — Avignon en 1h20, des gorges de l'Ardèche à la Cité des Papes.",
@@ -152,8 +152,8 @@ export const trajetsPrivasAubenas: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Aubenas → Avignon | Fixed price from €130 | TaxiNeo",
-        metaDescription: "Taxi Aubenas → Avignon. 110 km, 1h20, from €130. From the Ardèche Gorges to the City of Popes. Book 24/7.",
+        metaTitle: "Taxi Aubenas → Avignon | 110 km, from €130 | TaxiNeo",
+        metaDescription: "Direct route via N102 / A7, undefined min. N102, Gorges de l'Ardèche, Pont d'Arc and Provence en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Aubenas → Avignon",
         heroSubtitle: "Aubenas → Avignon transfer at €130 — €170. 110 km, 1h20.",
         description: "Aubenas to Avignon in 1h20, from the Ardèche Gorges to the City of Popes.",
@@ -191,7 +191,7 @@ export const trajetsPrivasAubenas: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Privas → Lyon | Prix fixe dès 170 € | TaxiNeo",
-        metaDescription: "Taxi Privas → Lyon. 140 km, 1h35, dès 170 €. Via la N304 et l'A7, depuis l'Ardèche vers la métropole lyonnaise. Réservation 24h/24.",
+        metaDescription: "Par N304 / A7, undefined min de trajet. N304, Vallée du Rhône, Vivarais et Cévennes ardéchoises en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Privas → Lyon",
         heroSubtitle: "Transfert Privas → Lyon au prix fixe de 170 — 215 €. 140 km, 1h35.",
         description: "Privas — Lyon en 1h35, de la préfecture ardéchoise à la métropole lyonnaise via la vallée du Rhône.",
@@ -210,7 +210,7 @@ export const trajetsPrivasAubenas: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Privas → Lyon | Fixed price from €170 | TaxiNeo",
-        metaDescription: "Taxi Privas → Lyon. 140 km, 1h35, from €170. From the Ardèche prefecture to Lyon via the Rhône Valley. Book 24/7.",
+        metaDescription: "Via N304 / A7, undefined min ride. N304, Vallée du Rhône, Vivarais and Cévennes ardéchoises en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Privas → Lyon",
         heroSubtitle: "Privas → Lyon transfer at €170 — €215. 140 km, 1h35.",
         description: "Privas to Lyon in 1h35, from the Ardèche prefecture to France's gastronomic capital via the Rhône Valley.",
@@ -247,8 +247,8 @@ export const trajetsPrivasAubenas: Trajet[] = [
     hub: "privas-aubenas",
     i18n: {
       fr: {
-        metaTitle: "Taxi Aubenas → Le Puy-en-Velay | Prix fixe dès 100 € | TaxiNeo",
-        metaDescription: "Taxi Aubenas → Le Puy-en-Velay. 85 km, 1h15, dès 100 €. N102 à travers les Cévennes ardéchoises et le Velay volcanique. Réservation 24h/24.",
+        metaTitle: "Taxi Aubenas → Le Puy-en-Velay | 85 km, dès 100 € | TaxiNeo",
+        metaDescription: "Via N102 en undefined min. Cévennes, Volcans, Vivarais et Compostelle en chemin. Dépose à votre adresse exacte. Alternative directe au train ou au bus.",
         heroTitle: "Taxi Aubenas → Le Puy-en-Velay",
         heroSubtitle: "Transfert Aubenas → Le Puy-en-Velay au prix fixe de 100 — 130 €. 85 km, 1h15.",
         description: "Aubenas — Le Puy-en-Velay en 1h15, des gorges de l'Ardèche au cœur volcanique du Velay.",
@@ -266,8 +266,8 @@ export const trajetsPrivasAubenas: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Aubenas → Le Puy-en-Velay | Fixed price from €100 | TaxiNeo",
-        metaDescription: "Taxi Aubenas → Le Puy-en-Velay. 85 km, 1h15, from €100. N102 through the Cévennes and volcanic Velay. Book 24/7.",
+        metaTitle: "Taxi Aubenas → Le Puy-en-Velay | 85 km, from €100 | TaxiNeo",
+        metaDescription: "Via N102, undefined min ride. Cévennes, Volcans, Vivarais and Compostelle en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Aubenas → Le Puy-en-Velay",
         heroSubtitle: "Aubenas → Le Puy-en-Velay transfer at €100 — €130. 85 km, 1h15.",
         description: "Aubenas to Le Puy-en-Velay in 1h15, from the Ardèche Gorges to the volcanic heart of the Velay.",

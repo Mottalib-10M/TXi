@@ -27,8 +27,8 @@ export const trajetsAubagneCassis: Trajet[] = [
     hub: "aubagne-cassis",
     i18n: {
       fr: {
-        metaTitle: "Taxi Aubagne → Marseille | Prix fixe dès 25 € | TaxiNeo",
-        metaDescription: "Taxi Aubagne → Marseille. 18 km, 20 min, dès 25 €. A50, transfert direct porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Aubagne → Marseille | 18 km, dès 25 € | TaxiNeo",
+        metaDescription: "Via A50 en 20 min. Passage par Santons d'Aubagne, Marcel Pagnol, Vieux-Port et Notre-Dame de la Garde. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Aubagne → Marseille",
         heroSubtitle: "Transfert Aubagne → Marseille au prix fixe de 25 — 35 €. 18 km, direct par l'A50.",
         description: "Marseille, deuxième ville de France et capitale de la Provence, est à seulement 20 min d'Aubagne par l'A50.",
@@ -46,8 +46,8 @@ export const trajetsAubagneCassis: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Aubagne → Marseille | Fixed price from €25 | TaxiNeo",
-        metaDescription: "Taxi Aubagne → Marseille. 18 km, 20 min, from €25. A50 motorway. Door-to-door transfer. Book 24/7.",
+        metaTitle: "Taxi Aubagne → Marseille | 18 km, from €25 | TaxiNeo",
+        metaDescription: "Via A50, 20 min ride. Santons d'Aubagne, Marcel Pagnol, Vieux-Port and Notre-Dame de la Garde en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Aubagne → Marseille",
         heroSubtitle: "Your Aubagne → Marseille transfer at €25 — €35. 18 km, via the A50.",
         description: "Marseille, France's second city and Provence's capital, is just 20 min from Aubagne via the A50.",
@@ -92,8 +92,8 @@ export const trajetsAubagneCassis: Trajet[] = [
     hub: "aubagne-cassis",
     i18n: {
       fr: {
-        metaTitle: "Taxi Cassis → Marseille | Prix fixe dès 30 € | TaxiNeo",
-        metaDescription: "Taxi Cassis → Marseille. 23 km, 25 min, dès 30 €. A50, Calanques, transfert direct. Réservation 24h/24.",
+        metaTitle: "Taxi Cassis → Marseille | 23 km, dès 30 € | TaxiNeo",
+        metaDescription: "Itinéraire A50, environ 25 min. Calanques, Parc National, Vieux-Port et Vin blanc de Cassis en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Cassis → Marseille",
         heroSubtitle: "Transfert Cassis → Marseille au prix fixe de 30 — 45 €. 23 km, direct par l'A50.",
         description: "Marseille, cité phocéenne et métropole méditerranéenne, est à 25 min de Cassis par l'A50.",
@@ -111,8 +111,8 @@ export const trajetsAubagneCassis: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Cassis → Marseille | Fixed price from €30 | TaxiNeo",
-        metaDescription: "Taxi Cassis → Marseille. 23 km, 25 min, from €30. A50, Calanques National Park. Book 24/7.",
+        metaTitle: "Taxi Cassis → Marseille | 23 km, from €30 | TaxiNeo",
+        metaDescription: "Direct route via A50, 25 min. Calanques, Parc National, Vieux-Port and Vin blanc de Cassis en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Cassis → Marseille",
         heroSubtitle: "Your Cassis → Marseille transfer at €30 — €45. 23 km, via the A50.",
         description: "Marseille, France's Mediterranean capital, is just 25 min from Cassis via the A50.",
@@ -157,8 +157,8 @@ export const trajetsAubagneCassis: Trajet[] = [
     hub: "aubagne-cassis",
     i18n: {
       fr: {
-        metaTitle: "Taxi Cassis → Aix-en-Provence | Prix fixe dès 55 € | TaxiNeo",
-        metaDescription: "Taxi Cassis → Aix-en-Provence. 45 km, 35 min, dès 55 €. A50/A52, transfert direct. Réservation 24h/24.",
+        metaTitle: "Taxi Cassis → Aix-en-Provence | 45 km, dès 55 € | TaxiNeo",
+        metaDescription: "Par A50 / A52, 35 min de trajet. En passant par Montagne Sainte-Victoire, Cours Mirabeau et Calanques. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Cassis → Aix-en-Provence",
         heroSubtitle: "Transfert Cassis → Aix-en-Provence au prix fixe de 55 — 75 €. 45 km, via l'A50 et l'A52.",
         description: "Aix-en-Provence, ville d'art et d'eau, capitale historique de la Provence, est à 35 min de Cassis.",
@@ -176,8 +176,8 @@ export const trajetsAubagneCassis: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Cassis → Aix-en-Provence | Fixed price from €55 | TaxiNeo",
-        metaDescription: "Taxi Cassis → Aix-en-Provence. 45 km, 35 min, from €55. A50/A52. Door-to-door. Book 24/7.",
+        metaTitle: "Taxi Cassis → Aix-en-Provence | 45 km, from €55 | TaxiNeo",
+        metaDescription: "Direct route via A50 / A52, 35 min. Montagne Sainte-Victoire, Cours Mirabeau and Calanques along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Cassis → Aix-en-Provence",
         heroSubtitle: "Your Cassis → Aix-en-Provence transfer at €55 — €75. 45 km, via the A50 and A52.",
         description: "Aix-en-Provence, historic capital of Provence and city of art, is 35 min from Cassis.",
@@ -222,8 +222,8 @@ export const trajetsAubagneCassis: Trajet[] = [
     hub: "aubagne-cassis",
     i18n: {
       fr: {
-        metaTitle: "Taxi Aubagne → Toulon | Prix fixe dès 55 € | TaxiNeo",
-        metaDescription: "Taxi Aubagne → Toulon. 45 km, 35 min, dès 55 €. A50, transfert direct porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Aubagne → Toulon | forfait dès 55 € | TaxiNeo",
+        metaDescription: "Trajet direct A50 en 35 min. Passage par Côte varoise, Rade de Toulon, Mont Faron et Santons d'Aubagne. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Aubagne → Toulon",
         heroSubtitle: "Transfert Aubagne → Toulon au prix fixe de 55 — 75 €. 45 km, direct par l'A50.",
         description: "Toulon, préfecture du Var et premier port militaire français, est à 35 min d'Aubagne par l'A50.",
@@ -242,7 +242,7 @@ export const trajetsAubagneCassis: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Aubagne → Toulon | Fixed price from €55 | TaxiNeo",
-        metaDescription: "Taxi Aubagne → Toulon. 45 km, 35 min, from €55. A50 coastal motorway. Door-to-door. Book 24/7.",
+        metaDescription: "Direct route via A50, 35 min. Côte varoise, Rade de Toulon, Mont Faron and Santons d'Aubagne en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Aubagne → Toulon",
         heroSubtitle: "Your Aubagne → Toulon transfer at €55 — €75. 45 km, via the A50.",
         description: "Toulon, capital of the Var and France's main naval base, is 35 min from Aubagne via the A50.",
@@ -287,8 +287,8 @@ export const trajetsAubagneCassis: Trajet[] = [
     hub: "aubagne-cassis",
     i18n: {
       fr: {
-        metaTitle: "Taxi Cassis → La Ciotat | Prix fixe dès 20 € | TaxiNeo",
-        metaDescription: "Taxi Cassis → La Ciotat. 12 km, 15 min, dès 20 €. D559, Route des Crêtes, Cap Canaille. Réservation 24h/24.",
+        metaTitle: "Taxi Cassis → La Ciotat | 12 km, dès 20 € | TaxiNeo",
+        metaDescription: "Par D559, 15 min de trajet. Passage par Route des Crêtes, Cap Canaille, Calanques et Berceau du cinéma. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Cassis → La Ciotat",
         heroSubtitle: "Transfert Cassis → La Ciotat au prix fixe de 20 — 30 €. 12 km, route gratuite via la D559.",
         description: "La Ciotat, berceau du cinéma et port provençal authentique, est à seulement 15 min de Cassis.",
@@ -306,8 +306,8 @@ export const trajetsAubagneCassis: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Cassis → La Ciotat | Fixed price from €20 | TaxiNeo",
-        metaDescription: "Taxi Cassis → La Ciotat. 12 km, 15 min, from €20. D559 or Route des Crêtes. Book 24/7.",
+        metaTitle: "Taxi Cassis → La Ciotat | 12 km, from €20 | TaxiNeo",
+        metaDescription: "Direct route via D559, 15 min. Route des Crêtes, Cap Canaille, Calanques and Berceau du cinéma en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Cassis → La Ciotat",
         heroSubtitle: "Your Cassis → La Ciotat transfer at €20 — €30. 12 km, toll-free via the D559.",
         description: "La Ciotat, birthplace of cinema, is just 15 min from Cassis along the spectacular coastline.",

@@ -27,8 +27,8 @@ export const trajetsNimes: Trajet[] = [
     hub: "nimes",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nîmes → Avignon | Prix fixe dès 50 € | TaxiNeo",
-        metaDescription: "Taxi Nîmes → Avignon. 44 km, 35 min, dès 50 €. A9, Pont du Gard, Palais des Papes. Réservation 24h/24.",
+        metaTitle: "Taxi Nîmes → Avignon | forfait dès 50 €, 35 min | TaxiNeo",
+        metaDescription: "Via A9 en 35 min. Pont du Gard, Palais des Papes, Provence et Camargue en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Nîmes → Avignon",
         heroSubtitle: "Transfert Nîmes → Avignon au prix fixe de 50 — 65 €. 44 km, direct par l'A9.",
         description: "Avignon, cité des Papes et du festival, est à 35 min de Nîmes par l'A9.",
@@ -47,7 +47,7 @@ export const trajetsNimes: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Nîmes → Avignon | Fixed price from €50 | TaxiNeo",
-        metaDescription: "Taxi Nîmes → Avignon. 44 km, 35 min, from €50. A9, Pont du Gard, Palais des Papes. Book 24/7.",
+        metaDescription: "Via A9, 35 min ride. Pont du Gard, Palais des Papes, Provence and Camargue en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Nîmes → Avignon",
         heroSubtitle: "Your Nîmes → Avignon transfer at €50 — €65. 44 km, via the A9.",
         description: "Avignon, city of Popes and its famous festival, is 35 min from Nîmes via the A9.",
@@ -92,8 +92,8 @@ export const trajetsNimes: Trajet[] = [
     hub: "nimes",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nîmes → Montpellier | Prix fixe dès 60 € | TaxiNeo",
-        metaDescription: "Taxi Nîmes → Montpellier. 55 km, 40 min, dès 60 €. A9, Écusson, faculté de médecine. Réservation 24h/24.",
+        metaTitle: "Taxi Nîmes → Montpellier | 55 km, dès 60 € | TaxiNeo",
+        metaDescription: "Via A9 en 40 min. Languedoc, Écusson, Faculté de médecine et Tramway en chemin. Dépose à votre adresse exacte. Alternative directe au train ou au bus.",
         heroTitle: "Taxi Nîmes → Montpellier",
         heroSubtitle: "Transfert Nîmes → Montpellier au prix fixe de 60 — 80 €. 55 km, direct par l'A9.",
         description: "Montpellier, capitale dynamique du Languedoc, est à 40 min de Nîmes par l'A9.",
@@ -111,8 +111,8 @@ export const trajetsNimes: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nîmes → Montpellier | Fixed price from €60 | TaxiNeo",
-        metaDescription: "Taxi Nîmes → Montpellier. 55 km, 40 min, from €60. A9, Écusson, oldest medical school. Book 24/7.",
+        metaTitle: "Taxi Nîmes → Montpellier | 55 km, from €60 | TaxiNeo",
+        metaDescription: "Via A9, 40 min ride. Languedoc, Écusson, Faculté de médecine and Tramway en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Nîmes → Montpellier",
         heroSubtitle: "Your Nîmes → Montpellier transfer at €60 — €80. 55 km, via the A9.",
         description: "Montpellier, dynamic Languedoc capital, is 40 min from Nîmes via the A9.",
@@ -157,8 +157,8 @@ export const trajetsNimes: Trajet[] = [
     hub: "nimes",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nîmes → Arles | Prix fixe dès 40 € | TaxiNeo",
-        metaDescription: "Taxi Nîmes → Arles. 32 km, 25 min, dès 40 €. A54, arènes, Van Gogh, Camargue. Réservation 24h/24.",
+        metaTitle: "Taxi Nîmes → Arles | forfait dès 40 €, 25 min | TaxiNeo",
+        metaDescription: "Via A54 en 25 min. Camargue, Arènes, Van Gogh et Provence en chemin. Dépose porte-à-porte, bagages inclus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Nîmes → Arles",
         heroSubtitle: "Transfert Nîmes → Arles au prix fixe de 40 — 50 €. 32 km, direct par l'A54.",
         description: "Arles, cité romaine et ville de Van Gogh, est à 25 min de Nîmes par l'A54.",
@@ -177,7 +177,7 @@ export const trajetsNimes: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Nîmes → Arles | Fixed price from €40 | TaxiNeo",
-        metaDescription: "Taxi Nîmes → Arles. 32 km, 25 min, from €40. A54, arena, Van Gogh, Camargue. Book 24/7.",
+        metaDescription: "Via A54, 25 min ride. Camargue, Arènes, Van Gogh and Provence en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Nîmes → Arles",
         heroSubtitle: "Your Nîmes → Arles transfer at €40 — €50. 32 km, via the A54.",
         description: "Arles, Roman city and Van Gogh's home, is 25 min from Nîmes via the A54.",
@@ -222,8 +222,8 @@ export const trajetsNimes: Trajet[] = [
     hub: "nimes",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nîmes → Alès | Prix fixe dès 50 € | TaxiNeo",
-        metaDescription: "Taxi Nîmes → Alès. 45 km, 35 min, dès 50 €. Cévennes, Mine témoin, Bambouseraie. Réservation 24h/24.",
+        metaTitle: "Taxi Nîmes → Alès | forfait dès 50 €, 35 min | TaxiNeo",
+        metaDescription: "Via D6110/A54 en 35 min. Cévennes, Mine témoin, Bambouseraie et Gardon en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Nîmes → Alès",
         heroSubtitle: "Transfert Nîmes → Alès au prix fixe de 50 — 65 €. 45 km, porte des Cévennes.",
         description: "Alès, porte des Cévennes et ancienne capitale minière, est à 35 min de Nîmes.",
@@ -242,7 +242,7 @@ export const trajetsNimes: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Nîmes → Alès | Fixed price from €50 | TaxiNeo",
-        metaDescription: "Taxi Nîmes → Alès. 45 km, 35 min, from €50. Cévennes, mining museum, Bambouseraie. Book 24/7.",
+        metaDescription: "Via D6110/A54, 35 min ride. Cévennes, Mine témoin, Bambouseraie and Gardon en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Nîmes → Alès",
         heroSubtitle: "Your Nîmes → Alès transfer at €50 — €65. 45 km, gateway to the Cévennes.",
         description: "Alès, gateway to the Cévennes and former mining capital, is 35 min from Nîmes.",
@@ -287,8 +287,8 @@ export const trajetsNimes: Trajet[] = [
     hub: "nimes",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nîmes → Uzès | Prix fixe dès 35 € | TaxiNeo",
-        metaDescription: "Taxi Nîmes → Uzès. 25 km, 25 min, dès 35 €. Premier duché de France, Pont du Gard, marché. Réservation 24h/24.",
+        metaTitle: "Taxi Nîmes → Uzès | forfait dès 35 €, 25 min | TaxiNeo",
+        metaDescription: "Via D979 en 25 min. Premier duché, Pont du Gard, Marché et Haribo en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Nîmes → Uzès",
         heroSubtitle: "Transfert Nîmes → Uzès au prix fixe de 35 — 45 €. 25 km, premier duché de France.",
         description: "Uzès, premier duché de France et ville d'art, est à 25 min de Nîmes.",
@@ -307,7 +307,7 @@ export const trajetsNimes: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Nîmes → Uzès | Fixed price from €35 | TaxiNeo",
-        metaDescription: "Taxi Nîmes → Uzès. 25 km, 25 min, from €35. First duchy of France, Pont du Gard, market. Book 24/7.",
+        metaDescription: "Via D979, 25 min ride. Premier duché, Pont du Gard, Marché and Haribo en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Nîmes → Uzès",
         heroSubtitle: "Your Nîmes → Uzès transfer at €35 — €45. 25 km, France's first duchy.",
         description: "Uzès, first duchy of France and art town, is 25 min from Nîmes.",

@@ -27,8 +27,8 @@ export const trajetsCreteilVitry: Trajet[] = [
     hub: "creteil-vitry",
     i18n: {
       fr: {
-        metaTitle: "Taxi Créteil → Aéroport Orly | Prix fixe dès 22 € | TaxiNeo",
-        metaDescription: "Taxi Créteil → Aéroport Orly. 15 km, 18 min, dès 22 €. A86, transfert direct porte-à-terminal. Réservation 24h/24.",
+        metaTitle: "Taxi Créteil → Aéroport Orly | 15 km, dès 22 € | TaxiNeo",
+        metaDescription: "Via A86 en 18 min. Orly, Val-de-Marne, Préfecture et Nuit en chemin. Dépose au terminal, suivi de vol. Dépose au terminal exact, suivi de vol en temps réel.",
         heroTitle: "Taxi Créteil → Aéroport Orly",
         heroSubtitle: "Transfert Créteil → Aéroport Orly au prix fixe de 22 — 32 €. 15 km, direct par l'A86.",
         description: "L'aéroport d'Orly est à seulement 18 minutes de Créteil, préfecture du Val-de-Marne.",
@@ -46,8 +46,8 @@ export const trajetsCreteilVitry: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Créteil → Orly Airport | Fixed price from €22 | TaxiNeo",
-        metaDescription: "Taxi Créteil → Orly Airport. 15 km, 18 min, from €22. A86 motorway, direct door-to-terminal. Book 24/7.",
+        metaTitle: "Taxi Créteil → Aéroport Orly | 15 km, from €22 | TaxiNeo",
+        metaDescription: "Via A86, 18 min ride. Orly, Val-de-Marne, Préfecture and Nuit en route. Terminal drop-off, flight tracking. Meet at terminal, free wait if flight delayed.",
         heroTitle: "Taxi Créteil → Orly Airport",
         heroSubtitle: "Your Créteil → Orly Airport transfer at €22 — €32. 15 km, via the A86.",
         description: "Orly Airport is just 18 minutes from Créteil, capital of Val-de-Marne.",
@@ -92,8 +92,8 @@ export const trajetsCreteilVitry: Trajet[] = [
     hub: "creteil-vitry",
     i18n: {
       fr: {
-        metaTitle: "Taxi Créteil → Aéroport CDG | Prix fixe dès 50 € | TaxiNeo",
-        metaDescription: "Taxi Créteil → Aéroport CDG. 35 km, 35 min, dès 50 €. A86 puis A4/A104, transfert direct. Réservation 24h/24.",
+        metaTitle: "Taxi Créteil → Aéroport CDG | 35 km, dès 50 € | TaxiNeo",
+        metaDescription: "Via A86 / A4 en 35 min. CDG, Val-de-Marne et Nuit en chemin. Dépose au terminal, suivi de vol. Accueil au terminal, attente gratuite si retard de vol.",
         heroTitle: "Taxi Créteil → Aéroport CDG",
         heroSubtitle: "Transfert Créteil → Aéroport CDG au prix fixe de 50 — 65 €. 35 km, direct par l'A86 et l'A4.",
         description: "L'aéroport Charles de Gaulle est à 35 minutes de Créteil par l'A86 et l'A4, le transfert le plus direct.",
@@ -111,8 +111,8 @@ export const trajetsCreteilVitry: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Créteil → CDG Airport | Fixed price from €50 | TaxiNeo",
-        metaDescription: "Taxi Créteil → CDG Airport. 35 km, 35 min, from €50. A86 then A4/A104, direct transfer. Book 24/7.",
+        metaTitle: "Taxi Créteil → Aéroport CDG | 35 km, from €50 | TaxiNeo",
+        metaDescription: "Via A86 / A4, 35 min ride. CDG, Val-de-Marne and Nuit along the way. Terminal drop-off, flight tracking. Terminal drop-off, real-time flight tracking included.",
         heroTitle: "Taxi Créteil → CDG Airport",
         heroSubtitle: "Your Créteil → CDG Airport transfer at €50 — €65. 35 km, via the A86 and A4.",
         description: "CDG Airport is 35 minutes from Créteil via the A86 and A4, the most direct route.",
@@ -157,8 +157,8 @@ export const trajetsCreteilVitry: Trajet[] = [
     hub: "creteil-vitry",
     i18n: {
       fr: {
-        metaTitle: "Taxi Vitry-sur-Seine → Aéroport Orly | Prix fixe dès 18 € | TaxiNeo",
-        metaDescription: "Taxi Vitry-sur-Seine → Aéroport Orly. 10 km, 12 min, dès 18 €. N406, transfert direct sans péage. Réservation 24h/24.",
+        metaTitle: "Taxi Vitry-sur-Seine → Aéroport Orly | 10 km, 18 € | TaxiNeo",
+        metaDescription: "Via N406 en 12 min. Orly, Val-de-Marne, MAC/VAL et Nuit en chemin. Dépose au terminal, suivi de vol. Dépose au terminal exact, suivi de vol en temps réel.",
         heroTitle: "Taxi Vitry-sur-Seine → Aéroport Orly",
         heroSubtitle: "Transfert Vitry-sur-Seine → Aéroport Orly au prix fixe de 18 — 25 €. 10 km, direct par la N406.",
         description: "L'aéroport d'Orly est à seulement 12 minutes de Vitry-sur-Seine, l'un des transferts les plus courts vers un aéroport parisien.",
@@ -176,8 +176,8 @@ export const trajetsCreteilVitry: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Vitry-sur-Seine → Orly Airport | Fixed price from €18 | TaxiNeo",
-        metaDescription: "Taxi Vitry-sur-Seine → Orly Airport. 10 km, 12 min, from €18. N406, direct toll-free transfer. Book 24/7.",
+        metaTitle: "Taxi Vitry-sur-Seine → Aéroport Orly | 10 km, €18 | TaxiNeo",
+        metaDescription: "Via N406, 12 min ride. Orly, Val-de-Marne, MAC/VAL and Nuit en route. Terminal drop-off, flight tracking. Terminal drop-off, real-time flight tracking included.",
         heroTitle: "Taxi Vitry-sur-Seine → Orly Airport",
         heroSubtitle: "Your Vitry-sur-Seine → Orly Airport transfer at €18 — €25. 10 km, via the N406.",
         description: "Orly Airport is just 12 minutes from Vitry-sur-Seine, one of the shortest airport transfers in the Paris region.",
@@ -222,8 +222,8 @@ export const trajetsCreteilVitry: Trajet[] = [
     hub: "creteil-vitry",
     i18n: {
       fr: {
-        metaTitle: "Taxi Créteil → Disneyland Paris | Prix fixe dès 45 € | TaxiNeo",
-        metaDescription: "Taxi Créteil → Disneyland Paris. 35 km, 30 min, dès 45 €. A4, transfert direct porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Créteil → Disneyland Paris | 35 km, dès 45 € | TaxiNeo",
+        metaDescription: "Via A4 en 30 min. Disneyland, Val-de-Marne, Marne et Famille en chemin. Dépose au terminal, suivi de vol. Dépose au terminal exact, suivi de vol en temps réel.",
         heroTitle: "Taxi Créteil → Disneyland Paris",
         heroSubtitle: "Transfert Créteil → Disneyland Paris au prix fixe de 45 — 60 €. 35 km, direct par l'A4.",
         description: "Disneyland Paris est à seulement 30 minutes de Créteil par l'autoroute A4, un trajet rapide et direct.",
@@ -241,8 +241,8 @@ export const trajetsCreteilVitry: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Créteil → Disneyland Paris | Fixed price from €45 | TaxiNeo",
-        metaDescription: "Taxi Créteil → Disneyland Paris. 35 km, 30 min, from €45. A4 motorway, direct door-to-door. Book 24/7.",
+        metaTitle: "Taxi Créteil → Disneyland Paris | 35 km, from €45 | TaxiNeo",
+        metaDescription: "Via A4, 30 min ride. Disneyland, Val-de-Marne, Marne and Famille en route. Terminal drop-off, flight tracking. Meet at terminal, free wait if flight delayed.",
         heroTitle: "Taxi Créteil → Disneyland Paris",
         heroSubtitle: "Your Créteil → Disneyland Paris transfer at €45 — €60. 35 km, via the A4.",
         description: "Disneyland Paris is just 30 minutes from Créteil via the A4 motorway.",
@@ -287,8 +287,8 @@ export const trajetsCreteilVitry: Trajet[] = [
     hub: "creteil-vitry",
     i18n: {
       fr: {
-        metaTitle: "Taxi Créteil → Fontainebleau | Prix fixe dès 65 € | TaxiNeo",
-        metaDescription: "Taxi Créteil → Fontainebleau. 55 km, 40 min, dès 65 €. A86 puis A6, château UNESCO, forêt. Réservation 24h/24.",
+        metaTitle: "Taxi Créteil → Fontainebleau | 55 km, dès 65 € | TaxiNeo",
+        metaDescription: "Itinéraire A86 / A6, environ 40 min. Passage par Périphérique, Fontainebleau, Château et Forêt. Accueil au terminal, attente gratuite si retard de vol.",
         heroTitle: "Taxi Créteil → Fontainebleau",
         heroSubtitle: "Transfert Créteil → Fontainebleau au prix fixe de 65 — 85 €. 55 km, direct par l'A86 et l'A6.",
         description: "Fontainebleau et son château UNESCO sont à 40 minutes de Créteil par l'A86 et l'A6.",
@@ -306,8 +306,8 @@ export const trajetsCreteilVitry: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Créteil → Fontainebleau | Fixed price from €65 | TaxiNeo",
-        metaDescription: "Taxi Créteil → Fontainebleau. 55 km, 40 min, from €65. A86 then A6, UNESCO castle, forest. Book 24/7.",
+        metaTitle: "Taxi Créteil → Fontainebleau | 55 km, from €65 | TaxiNeo",
+        metaDescription: "Via A86 / A6, 40 min ride. Périphérique, Fontainebleau, Château and Forêt en route. Terminal drop-off, flight tracking. Up to 1 hour during rush hour.",
         heroTitle: "Taxi Créteil → Fontainebleau",
         heroSubtitle: "Your Créteil → Fontainebleau transfer at €65 — €85. 55 km, via the A86 and A6.",
         description: "Fontainebleau and its UNESCO castle are 40 minutes from Créteil via the A86 and A6.",

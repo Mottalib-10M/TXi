@@ -27,8 +27,8 @@ export const trajetsVersailles: Trajet[] = [
     hub: "versailles",
     i18n: {
       fr: {
-        metaTitle: "Taxi Versailles → Paris | Dès 40 € | TaxiNeo",
-        metaDescription: "Taxi Versailles → Paris. 25 km, 35 min, dès 40 €. Réservation 24h/24.",
+        metaTitle: "Taxi Versailles → Paris | 25 km, dès 40 € | TaxiNeo",
+        metaDescription: "Via A13 en 35 min. Château de Versailles, Porte de Saint-Cloud, Bois de Boulogne et Tour Eiffel en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Versailles → Paris",
         heroSubtitle: "Transfert Versailles → Paris au prix fixe de 40 — 55 €. 25 km, 35 min.",
         description: "Du Château de Versailles au cœur de Paris en 35 minutes.",
@@ -46,8 +46,8 @@ export const trajetsVersailles: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Versailles → Paris | From €40 | TaxiNeo",
-        metaDescription: "Taxi Versailles → Paris. 25 km, 35 min, from €40. Book 24/7.",
+        metaTitle: "Taxi Versailles → Paris | 25 km, from €40 | TaxiNeo",
+        metaDescription: "Via A13, 35 min ride. Château de Versailles, Porte de Saint-Cloud, Bois de Boulogne and Tour Eiffel en route. Faster and more direct than train or bus.",
         heroTitle: "Taxi Versailles → Paris",
         heroSubtitle: "Versailles → Paris transfer at €40 — €55. 25 km, 35 min.",
         description: "From the Palace of Versailles to central Paris in 35 minutes.",
@@ -92,8 +92,8 @@ export const trajetsVersailles: Trajet[] = [
     hub: "versailles",
     i18n: {
       fr: {
-        metaTitle: "Taxi Versailles → Orly | Dès 45 € | TaxiNeo",
-        metaDescription: "Taxi Versailles → Aéroport d'Orly. 30 km, 30 min, dès 45 €. Transfert direct. Réservation 24h/24.",
+        metaTitle: "Taxi Versailles → Aéroport d'Orly | 30 km, 45 € | TaxiNeo",
+        metaDescription: "Par A86 / N118, 30 min de trajet. Passage par Aéroport d'Orly, N118, Pont de Sèvres et Vélizy. Accueil au terminal, attente gratuite si retard de vol.",
         heroTitle: "Taxi Versailles → Aéroport d'Orly",
         heroSubtitle: "Transfert Versailles → Orly au prix fixe de 45 — 60 €. 30 km, 30 min.",
         description: "Rejoignez l'aéroport d'Orly depuis Versailles en 30 minutes.",
@@ -111,8 +111,8 @@ export const trajetsVersailles: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Versailles → Orly Airport | From €45 | TaxiNeo",
-        metaDescription: "Taxi Versailles → Orly Airport. 30 km, 30 min, from €45. Direct transfer. Book 24/7.",
+        metaTitle: "Taxi Versailles → Aéroport d'Orly | 30 km, €45 | TaxiNeo",
+        metaDescription: "Direct route via A86 / N118, 30 min. Aéroport d'Orly, N118, Pont de Sèvres and Vélizy en route. Terminal drop-off, real-time flight tracking included.",
         heroTitle: "Taxi Versailles → Orly Airport",
         heroSubtitle: "Versailles → Orly transfer at €45 — €60. 30 km, 30 min.",
         description: "Reach Orly Airport from Versailles in 30 minutes.",
@@ -157,8 +157,8 @@ export const trajetsVersailles: Trajet[] = [
     hub: "versailles",
     i18n: {
       fr: {
-        metaTitle: "Taxi Versailles → CDG | Dès 70 € | TaxiNeo",
-        metaDescription: "Taxi Versailles → Aéroport CDG. 50 km, 50 min, dès 70 €. Transfert direct. Réservation 24h/24.",
+        metaTitle: "Taxi Versailles → Aéroport CDG | 50 km, dès 70 € | TaxiNeo",
+        metaDescription: "Par A13 / A86 / A1, 50 min de trajet. En passant par Aéroport CDG, Périphérique et La Défense. Accueil au terminal, attente gratuite si retard de vol.",
         heroTitle: "Taxi Versailles → Aéroport CDG",
         heroSubtitle: "Transfert Versailles → CDG au prix fixe de 70 — 95 €. 50 km, 50 min.",
         description: "Transfert direct de Versailles à l'aéroport Roissy-Charles de Gaulle en 50 minutes.",
@@ -176,8 +176,8 @@ export const trajetsVersailles: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Versailles → CDG Airport | From €70 | TaxiNeo",
-        metaDescription: "Taxi Versailles → CDG Airport. 50 km, 50 min, from €70. Direct transfer. Book 24/7.",
+        metaTitle: "Taxi Versailles → Aéroport CDG | 50 km, from €70 | TaxiNeo",
+        metaDescription: "Direct route via A13 / A86 / A1, 50 min. Aéroport CDG, Périphérique and La Défense along the way. Terminal drop-off, real-time flight tracking included.",
         heroTitle: "Taxi Versailles → CDG Airport",
         heroSubtitle: "Versailles → CDG transfer at €70 — €95. 50 km, 50 min.",
         description: "Direct transfer from Versailles to Charles de Gaulle Airport in 50 minutes.",
@@ -222,8 +222,8 @@ export const trajetsVersailles: Trajet[] = [
     hub: "versailles",
     i18n: {
       fr: {
-        metaTitle: "Taxi Versailles → Saint-Germain-en-Laye | Dès 25 € | TaxiNeo",
-        metaDescription: "Taxi Versailles → Saint-Germain-en-Laye. 15 km, 20 min, dès 25 €. Réservation 24h/24.",
+        metaTitle: "Taxi Versailles → Saint-Germain-en-Laye | 15 km | TaxiNeo",
+        metaDescription: "Via N186 / D186 en 20 min. Château de Saint-Germain, Forêt de Marly, N186 et Terrasse Le Nôtre en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Versailles → Saint-Germain-en-Laye",
         heroSubtitle: "Transfert Versailles → Saint-Germain-en-Laye au prix fixe de 25 — 35 €. 15 km, 20 min.",
         description: "De Versailles à Saint-Germain-en-Laye en 20 minutes à travers les Yvelines.",
@@ -241,8 +241,8 @@ export const trajetsVersailles: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Versailles → Saint-Germain-en-Laye | From €25 | TaxiNeo",
-        metaDescription: "Taxi Versailles → Saint-Germain-en-Laye. 15 km, 20 min, from €25. Book 24/7.",
+        metaTitle: "Taxi Versailles → Saint-Germain-en-Laye | 15 km | TaxiNeo",
+        metaDescription: "Via N186 / D186, 20 min ride. Château de Saint-Germain, Forêt de Marly, N186 and Terrasse Le Nôtre en route. Faster and more direct than train or bus.",
         heroTitle: "Taxi Versailles → Saint-Germain-en-Laye",
         heroSubtitle: "Versailles → Saint-Germain-en-Laye transfer at €25 — €35. 15 km, 20 min.",
         description: "From Versailles to Saint-Germain-en-Laye in 20 minutes through the Yvelines.",
@@ -287,8 +287,8 @@ export const trajetsVersailles: Trajet[] = [
     hub: "versailles",
     i18n: {
       fr: {
-        metaTitle: "Taxi Versailles → Chartres | Dès 95 € | TaxiNeo",
-        metaDescription: "Taxi Versailles → Chartres. 80 km, 1h, dès 95 €. Cathédrale, Rambouillet. Réservation 24h/24.",
+        metaTitle: "Taxi Versailles → Chartres | 80 km, dès 95 € | TaxiNeo",
+        metaDescription: "Via A12 / N10 en 1h. Cathédrale de Chartres, N10, Rambouillet et Beauce en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Versailles → Chartres",
         heroSubtitle: "Transfert Versailles → Chartres au prix fixe de 95 — 125 €. 80 km, 1h.",
         description: "De Versailles à Chartres et sa cathédrale gothique en 1 heure.",
@@ -306,8 +306,8 @@ export const trajetsVersailles: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Versailles → Chartres | From €95 | TaxiNeo",
-        metaDescription: "Taxi Versailles → Chartres. 80 km, 1h, from €95. Cathedral, Rambouillet. Book 24/7.",
+        metaTitle: "Taxi Versailles → Chartres | 80 km, from €95 | TaxiNeo",
+        metaDescription: "A12 / N10 route, approximately 1 hour. Cathédrale de Chartres, N10, Rambouillet and Beauce en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Versailles → Chartres",
         heroSubtitle: "Versailles → Chartres transfer at €95 — €125. 80 km, 1 hour.",
         description: "From Versailles to Chartres and its Gothic cathedral in 1 hour.",

@@ -27,8 +27,8 @@ export const trajetsPoitiers: Trajet[] = [
     hub: "poitiers",
     i18n: {
       fr: {
-        metaTitle: "Taxi Poitiers → Tours | Prix fixe dès 120 € | TaxiNeo",
-        metaDescription: "Taxi Poitiers → Tours. 100 km, 1h05, dès 120 €. Autoroute A10 via Châtellerault. Porte des châteaux de la Loire. Réservation 24h/24.",
+        metaTitle: "Taxi Poitiers → Tours | 100 km, dès 120 € | TaxiNeo",
+        metaDescription: "Itinéraire A10, environ 1h05. Châteaux de la Loire, Châtellerault, Val de Loire et Gare TGV en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Poitiers → Tours",
         heroSubtitle: "Transfert Poitiers → Tours au prix fixe de 120 — 155 €. 100 km par l'A10, porte des châteaux de la Loire.",
         description: "Tours, capitale de la Touraine et porte d'entrée des châteaux de la Loire, est à 1h05 de Poitiers par l'autoroute A10.",
@@ -46,8 +46,8 @@ export const trajetsPoitiers: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Poitiers → Tours | Fixed price from €120 | TaxiNeo",
-        metaDescription: "Taxi Poitiers → Tours. 100 km, 1h05, from €120. A10 motorway via Châtellerault. Gateway to the Loire châteaux. Book 24/7.",
+        metaTitle: "Taxi Poitiers → Tours | 100 km, from €120 | TaxiNeo",
+        metaDescription: "Direct route via A10, 1h05. Châteaux de la Loire, Châtellerault, Val de Loire and Gare TGV en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Poitiers → Tours",
         heroSubtitle: "Your Poitiers → Tours transfer at €120 — €155. 100 km via the A10, gateway to the Loire châteaux.",
         description: "Tours, capital of Touraine and gateway to the Loire Valley châteaux, is 1h05 from Poitiers via the A10 motorway.",
@@ -92,8 +92,8 @@ export const trajetsPoitiers: Trajet[] = [
     hub: "poitiers",
     i18n: {
       fr: {
-        metaTitle: "Taxi Poitiers → Limoges | Prix fixe dès 145 € | TaxiNeo",
-        metaDescription: "Taxi Poitiers → Limoges. 120 km, 1h20, dès 145 €. RN147, route gratuite via Lussac-les-Châteaux et Bellac. Réservation 24h/24.",
+        metaTitle: "Taxi Poitiers → Limoges | 120 km, dès 145 € | TaxiNeo",
+        metaDescription: "Via RN147 en 1h20. Limousin, Porcelaine, Vienne et Confolens en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Poitiers → Limoges",
         heroSubtitle: "Transfert Poitiers → Limoges au prix fixe de 145 — 185 €. 120 km, route nationale gratuite à travers le Poitou et le Limousin.",
         description: "Limoges, préfecture de la Haute-Vienne et capitale mondiale de la porcelaine, est à 1h20 de Poitiers par la RN147.",
@@ -111,8 +111,8 @@ export const trajetsPoitiers: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Poitiers → Limoges | Fixed price from €145 | TaxiNeo",
-        metaDescription: "Taxi Poitiers → Limoges. 120 km, 1h20, from €145. RN147, toll-free route via Lussac-les-Châteaux and Bellac. Book 24/7.",
+        metaTitle: "Taxi Poitiers → Limoges | 120 km, from €145 | TaxiNeo",
+        metaDescription: "Via RN147, 1h20 ride. Limousin, Porcelaine, Vienne and Confolens en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Poitiers → Limoges",
         heroSubtitle: "Your Poitiers → Limoges transfer at €145 — €185. 120 km, toll-free national road through Poitou and Limousin.",
         description: "Limoges, prefecture of Haute-Vienne and world capital of porcelain, is 1h20 from Poitiers via the RN147.",
@@ -157,8 +157,8 @@ export const trajetsPoitiers: Trajet[] = [
     hub: "poitiers",
     i18n: {
       fr: {
-        metaTitle: "Taxi Poitiers → La Rochelle | Prix fixe dès 165 € | TaxiNeo",
-        metaDescription: "Taxi Poitiers → La Rochelle. 140 km, 1h30, dès 165 €. A10 et N11, Vieux-Port, Île de Ré. Réservation 24h/24.",
+        metaTitle: "Taxi Poitiers → La Rochelle | 140 km, dès 165 € | TaxiNeo",
+        metaDescription: "Via A10 puis N11 en 1h30. A10/N11, Atlantique, Vieux-Port et Île de Ré en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Poitiers → La Rochelle",
         heroSubtitle: "Transfert Poitiers → La Rochelle au prix fixe de 165 — 210 €. 140 km, du cœur du Poitou à l'Atlantique.",
         description: "La Rochelle, joyau de la côte atlantique avec son Vieux-Port historique et l'Île de Ré, est à 1h30 de Poitiers.",
@@ -176,8 +176,8 @@ export const trajetsPoitiers: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Poitiers → La Rochelle | Fixed price from €165 | TaxiNeo",
-        metaDescription: "Taxi Poitiers → La Rochelle. 140 km, 1h30, from €165. A10 and N11, Old Port, Île de Ré. Book 24/7.",
+        metaTitle: "Taxi Poitiers → La Rochelle | 140 km, from €165 | TaxiNeo",
+        metaDescription: "Via A10 then N11, 1h30 ride. A10/N11, Atlantique, Vieux-Port and Île de Ré en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Poitiers → La Rochelle",
         heroSubtitle: "Your Poitiers → La Rochelle transfer at €165 — €210. 140 km, from the heart of Poitou to the Atlantic coast.",
         description: "La Rochelle, jewel of the Atlantic coast with its historic Old Port and Île de Ré, is 1h30 from Poitiers.",
@@ -222,8 +222,8 @@ export const trajetsPoitiers: Trajet[] = [
     hub: "poitiers",
     i18n: {
       fr: {
-        metaTitle: "Taxi Poitiers → Futuroscope | Prix fixe dès 20 € | TaxiNeo",
-        metaDescription: "Taxi Poitiers → Futuroscope. 12 km, 15 min, dès 20 €. Transfert direct gare-parc ou hôtel-parc. Réservation 24h/24.",
+        metaTitle: "Taxi Poitiers → Futuroscope | 12 km, dès 20 € | TaxiNeo",
+        metaDescription: "Par N10, 15 min de trajet. Passage par Parc d'attractions, Technologie, Famille et Spectacle nocturne. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Poitiers → Futuroscope",
         heroSubtitle: "Transfert Poitiers → Futuroscope au prix fixe de 20 — 30 €. 12 km, 15 min, sans péage.",
         description: "Le Futuroscope, deuxième parc d'attractions de France, est à seulement 15 min du centre de Poitiers par la N10.",
@@ -241,8 +241,8 @@ export const trajetsPoitiers: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Poitiers → Futuroscope | Fixed price from €20 | TaxiNeo",
-        metaDescription: "Taxi Poitiers → Futuroscope. 12 km, 15 min, from €20. Direct station-to-park or hotel-to-park transfer. Book 24/7.",
+        metaTitle: "Taxi Poitiers → Futuroscope | 12 km, from €20 | TaxiNeo",
+        metaDescription: "Direct route via N10, 15 min. Parc d'attractions, Technologie, Famille and Spectacle nocturne en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Poitiers → Futuroscope",
         heroSubtitle: "Your Poitiers → Futuroscope transfer at €20 — €30. 12 km, 15 min, toll-free.",
         description: "Futuroscope, France's second-largest theme park with nearly 2 million visitors per year, is just 15 min from central Poitiers.",
@@ -287,8 +287,8 @@ export const trajetsPoitiers: Trajet[] = [
     hub: "poitiers",
     i18n: {
       fr: {
-        metaTitle: "Taxi Poitiers → Angoulême | Prix fixe dès 135 € | TaxiNeo",
-        metaDescription: "Taxi Poitiers → Angoulême. 115 km, 1h15, dès 135 €. N10 gratuite, capitale de la BD, remparts. Réservation 24h/24.",
+        metaTitle: "Taxi Poitiers → Angoulême | 115 km, dès 135 € | TaxiNeo",
+        metaDescription: "Via N10 en 1h15. Charente, Bande dessinée, Cognac et Remparts en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Poitiers → Angoulême",
         heroSubtitle: "Transfert Poitiers → Angoulême au prix fixe de 135 — 175 €. 115 km par la N10, capitale mondiale de la bande dessinée.",
         description: "Angoulême, capitale mondiale de la bande dessinée et préfecture de la Charente, est à 1h15 de Poitiers par la N10.",
@@ -306,8 +306,8 @@ export const trajetsPoitiers: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Poitiers → Angoulême | Fixed price from €135 | TaxiNeo",
-        metaDescription: "Taxi Poitiers → Angoulême. 115 km, 1h15, from €135. Toll-free N10, comic strip capital, ramparts. Book 24/7.",
+        metaTitle: "Taxi Poitiers → Angoulême | 115 km, from €135 | TaxiNeo",
+        metaDescription: "Via N10, 1h15 ride. Charente, Bande dessinée, Cognac and Remparts en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Poitiers → Angoulême",
         heroSubtitle: "Your Poitiers → Angoulême transfer at €135 — €175. 115 km via the toll-free N10, world capital of comic strips.",
         description: "Angoulême, world capital of comic strips and Charente prefecture, is 1h15 from Poitiers via the N10.",

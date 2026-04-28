@@ -27,8 +27,8 @@ export const trajetsMoulinsMontlucon: Trajet[] = [
     hub: "moulins-montlucon",
     i18n: {
       fr: {
-        metaTitle: "Taxi Moulins → Paris | Prix fixe dès 320 € | TaxiNeo",
-        metaDescription: "Taxi Moulins → Paris. 290 km, 2h55, dès 320 €. A77, transfert direct porte-à-porte depuis le Bourbonnais. Réservation 24h/24.",
+        metaTitle: "Taxi Moulins → Paris | 290 km, dès 320 € | TaxiNeo",
+        metaDescription: "Via A77 en 2h55. Bourbonnais, Allier, Île-de-France et Gâtinais en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Moulins → Paris",
         heroSubtitle: "Transfert Moulins → Paris au prix fixe de 320 — 395 €. 290 km, direct par l'A77.",
         description: "Paris est à 2h55 de Moulins par l'A77, à travers le Gâtinais et le sud de l'Île-de-France.",
@@ -46,8 +46,8 @@ export const trajetsMoulinsMontlucon: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Moulins → Paris | Fixed price from €320 | TaxiNeo",
-        metaDescription: "Taxi Moulins → Paris. 290 km, 2h55, from €320. A77, direct door-to-door transfer from Bourbonnais. Book 24/7.",
+        metaTitle: "Taxi Moulins → Paris | 290 km, from €320 | TaxiNeo",
+        metaDescription: "Via A77, 2h55 ride. Bourbonnais, Allier, Île-de-France and Gâtinais en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Moulins → Paris",
         heroSubtitle: "Your Moulins → Paris transfer at €320 — €395. 290 km, direct via the A77.",
         description: "Paris is 2h55 from Moulins via the A77 through Gâtinais and Fontainebleau.",
@@ -92,8 +92,8 @@ export const trajetsMoulinsMontlucon: Trajet[] = [
     hub: "moulins-montlucon",
     i18n: {
       fr: {
-        metaTitle: "Taxi Moulins → Clermont-Ferrand | Prix fixe dès 100 € | TaxiNeo",
-        metaDescription: "Taxi Moulins → Clermont-Ferrand. 95 km, 1h, dès 100 €. A71, du Bourbonnais aux volcans d'Auvergne. Réservation 24h/24.",
+        metaTitle: "Taxi Moulins → Clermont-Ferrand | 95 km, dès 100 € | TaxiNeo",
+        metaDescription: "Via A71 en 1h. Bourbonnais, Limagne, Allier et Volcans en chemin. Dépose porte-à-porte, bagages inclus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Moulins → Clermont-Ferrand",
         heroSubtitle: "Transfert Moulins → Clermont-Ferrand au prix fixe de 100 — 130 €. 95 km, du Bourbonnais à l'Auvergne.",
         description: "Clermont-Ferrand, capitale de l'Auvergne au pied de la chaîne des Puys, est à 1h de Moulins.",
@@ -111,8 +111,8 @@ export const trajetsMoulinsMontlucon: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Moulins → Clermont-Ferrand | Fixed price from €100 | TaxiNeo",
-        metaDescription: "Taxi Moulins → Clermont-Ferrand. 95 km, 1h, from €100. A71, from Bourbonnais to Auvergne volcanoes. Book 24/7.",
+        metaTitle: "Taxi Moulins → Clermont-Ferrand | 95 km, from €100 | TaxiNeo",
+        metaDescription: "Via A71, 1 hour ride. Bourbonnais, Limagne, Allier and Volcans en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Moulins → Clermont-Ferrand",
         heroSubtitle: "Your Moulins → Clermont-Ferrand transfer at €100 — €130. 95 km, from Bourbonnais to Auvergne.",
         description: "Clermont-Ferrand, Auvergne capital at the foot of the volcanoes, is 1h from Moulins.",
@@ -157,8 +157,8 @@ export const trajetsMoulinsMontlucon: Trajet[] = [
     hub: "moulins-montlucon",
     i18n: {
       fr: {
-        metaTitle: "Taxi Moulins → Lyon | Prix fixe dès 215 € | TaxiNeo",
-        metaDescription: "Taxi Moulins → Lyon. 195 km, 2h, dès 215 €. A77/A6, du Bourbonnais à la métropole lyonnaise. Réservation 24h/24.",
+        metaTitle: "Taxi Moulins → Lyon | 195 km, dès 215 €, 2h | TaxiNeo",
+        metaDescription: "Via A77/A6 en 2h. Bourbonnais, Beaujolais, Saône et Gastronomie en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Moulins → Lyon",
         heroSubtitle: "Transfert Moulins → Lyon au prix fixe de 215 — 270 €. 195 km, direct par l'A77/A6.",
         description: "Lyon, capitale de la gastronomie, est à 2h de Moulins par l'A77 et l'A6.",
@@ -177,7 +177,7 @@ export const trajetsMoulinsMontlucon: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Moulins → Lyon | Fixed price from €215 | TaxiNeo",
-        metaDescription: "Taxi Moulins → Lyon. 195 km, 2h, from €215. A77/A6, from Bourbonnais to Lyon. Book 24/7.",
+        metaDescription: "Via A77/A6, 2 hours ride. Bourbonnais, Beaujolais, Saône and Gastronomie en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Moulins → Lyon",
         heroSubtitle: "Your Moulins → Lyon transfer at €215 — €270. 195 km, direct via the A77/A6.",
         description: "Lyon, France's gastronomic capital, is 2h from Moulins via the A77 and A6.",
@@ -222,8 +222,8 @@ export const trajetsMoulinsMontlucon: Trajet[] = [
     hub: "moulins-montlucon",
     i18n: {
       fr: {
-        metaTitle: "Taxi Montluçon → Paris | Prix fixe dès 355 € | TaxiNeo",
-        metaDescription: "Taxi Montluçon → Paris. 325 km, 3h15, dès 355 €. A71, transfert direct porte-à-porte depuis l'Allier. Réservation 24h/24.",
+        metaTitle: "Taxi Montluçon → Paris | 325 km, dès 355 € | TaxiNeo",
+        metaDescription: "Via A71 en 3h15. Bourbonnais, Berry, Beauce et Île-de-France en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Montluçon → Paris",
         heroSubtitle: "Transfert Montluçon → Paris au prix fixe de 355 — 430 €. 325 km, direct par l'A71.",
         description: "Paris est à 3h15 de Montluçon par l'A71, à travers le Berry et la Beauce.",
@@ -241,8 +241,8 @@ export const trajetsMoulinsMontlucon: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Montluçon → Paris | Fixed price from €355 | TaxiNeo",
-        metaDescription: "Taxi Montluçon → Paris. 325 km, 3h15, from €355. A71, direct door-to-door transfer. Book 24/7.",
+        metaTitle: "Taxi Montluçon → Paris | 325 km, from €355 | TaxiNeo",
+        metaDescription: "Via A71, 3h15 ride. Bourbonnais, Berry, Beauce and Île-de-France en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Montluçon → Paris",
         heroSubtitle: "Your Montluçon → Paris transfer at €355 — €430. 325 km, direct via the A71.",
         description: "Paris is 3h15 from Montluçon via the A71 through Berry, Sologne and Beauce.",
@@ -287,8 +287,8 @@ export const trajetsMoulinsMontlucon: Trajet[] = [
     hub: "moulins-montlucon",
     i18n: {
       fr: {
-        metaTitle: "Taxi Montluçon → Clermont-Ferrand | Prix fixe dès 110 € | TaxiNeo",
-        metaDescription: "Taxi Montluçon → Clermont-Ferrand. 105 km, 1h05, dès 110 €. A71, des Combrailles aux volcans d'Auvergne. Réservation 24h/24.",
+        metaTitle: "Taxi Montluçon → Clermont-Ferrand | 105 km, 110 € | TaxiNeo",
+        metaDescription: "Via A71 en 1h05. Combrailles, Volcans, Bourbonnais et Massif Central en chemin. Dépose à votre adresse exacte. Alternative directe au train ou au bus.",
         heroTitle: "Taxi Montluçon → Clermont-Ferrand",
         heroSubtitle: "Transfert Montluçon → Clermont-Ferrand au prix fixe de 110 — 140 €. 105 km, via l'A71.",
         description: "Clermont-Ferrand, au pied de la chaîne des Puys, est à 1h05 de Montluçon par l'A71.",
@@ -306,8 +306,8 @@ export const trajetsMoulinsMontlucon: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Montluçon → Clermont-Ferrand | Fixed price from €110 | TaxiNeo",
-        metaDescription: "Taxi Montluçon → Clermont-Ferrand. 105 km, 1h05, from €110. A71, from Combrailles to Auvergne volcanoes. Book 24/7.",
+        metaTitle: "Taxi Montluçon → Clermont-Ferrand | 105 km, €110 | TaxiNeo",
+        metaDescription: "Via A71, 1h05 ride. Combrailles, Volcans, Bourbonnais and Massif Central en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Montluçon → Clermont-Ferrand",
         heroSubtitle: "Your Montluçon → Clermont-Ferrand transfer at €110 — €140. 105 km, via the A71.",
         description: "Clermont-Ferrand, at the foot of the Chaîne des Puys, is 1h05 from Montluçon.",

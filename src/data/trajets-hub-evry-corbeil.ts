@@ -27,8 +27,8 @@ export const trajetsEvryCorbeil: Trajet[] = [
     hub: "evry-corbeil",
     i18n: {
       fr: {
-        metaTitle: "Taxi Évry-Courcouronnes → Paris | Prix fixe dès 45 € | TaxiNeo",
-        metaDescription: "Taxi Évry-Courcouronnes → Paris. 35 km, 35 min, dès 45 €. A6, transfert direct porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Évry-Courcouronnes → Paris | 35 km, dès 45 € | TaxiNeo",
+        metaDescription: "Via A6 en 35 min. Genopole, Essonne, Cathédrale d'Évry et Porte-à-porte en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Évry-Courcouronnes → Paris",
         heroSubtitle: "Transfert Évry-Courcouronnes → Paris au prix fixe de 45 — 60 €. 35 km, direct par l'A6.",
         description: "Paris est à 35 min d'Évry-Courcouronnes par l'A6, préfecture de l'Essonne.",
@@ -46,8 +46,8 @@ export const trajetsEvryCorbeil: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Évry-Courcouronnes → Paris | Fixed price from €45 | TaxiNeo",
-        metaDescription: "Taxi Évry-Courcouronnes → Paris. 35 km, 35 min, from €45. A6 motorway, direct door-to-door. Book 24/7.",
+        metaTitle: "Taxi Évry-Courcouronnes → Paris | 35 km, from €45 | TaxiNeo",
+        metaDescription: "Via A6, 35 min ride. Genopole, Essonne, Cathédrale d'Évry and Porte-à-porte en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Évry-Courcouronnes → Paris",
         heroSubtitle: "Your Évry-Courcouronnes → Paris transfer at €45 — €60. 35 km, via the A6.",
         description: "Paris is 35 min from Évry-Courcouronnes via the A6, capital of the Essonne department.",
@@ -92,8 +92,8 @@ export const trajetsEvryCorbeil: Trajet[] = [
     hub: "evry-corbeil",
     i18n: {
       fr: {
-        metaTitle: "Taxi Évry-Courcouronnes → Aéroport Orly | Prix fixe dès 25 € | TaxiNeo",
-        metaDescription: "Taxi Évry-Courcouronnes → Aéroport Orly. 18 km, 18 min, dès 25 €. Transfert direct sans péage. Réservation 24h/24.",
+        metaTitle: "Taxi Évry-Courcouronnes → Aéroport Orly | 18 km | TaxiNeo",
+        metaDescription: "Via N7 / A6 en 18 min. N7, Orly, Essonne et Navette rapide en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Évry-Courcouronnes → Aéroport Orly",
         heroSubtitle: "Transfert Évry-Courcouronnes → Aéroport Orly au prix fixe de 25 — 35 €. 18 km, direct par la N7.",
         description: "L'aéroport d'Orly est à seulement 18 min d'Évry-Courcouronnes, le transfert aéroport le plus proche de l'Essonne.",
@@ -111,8 +111,8 @@ export const trajetsEvryCorbeil: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Évry-Courcouronnes → Orly Airport | Fixed price from €25 | TaxiNeo",
-        metaDescription: "Taxi Évry-Courcouronnes → Orly Airport. 18 km, 18 min, from €25. Direct transfer, no tolls. Book 24/7.",
+        metaTitle: "Taxi Évry-Courcouronnes → Aéroport Orly | 18 km | TaxiNeo",
+        metaDescription: "Via N7 / A6, 18 min ride. N7, Orly, Essonne and Navette rapide en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Évry-Courcouronnes → Orly Airport",
         heroSubtitle: "Your Évry-Courcouronnes → Orly Airport transfer at €25 — €35. 18 km, via the N7.",
         description: "Orly Airport is just 18 min from Évry-Courcouronnes, the closest airport transfer in Essonne.",
@@ -157,8 +157,8 @@ export const trajetsEvryCorbeil: Trajet[] = [
     hub: "evry-corbeil",
     i18n: {
       fr: {
-        metaTitle: "Taxi Corbeil-Essonnes → Paris | Prix fixe dès 50 € | TaxiNeo",
-        metaDescription: "Taxi Corbeil-Essonnes → Paris. 40 km, 40 min, dès 50 €. A6/N7, transfert direct porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Corbeil-Essonnes → Paris | 40 km, dès 50 € | TaxiNeo",
+        metaDescription: "Via A6 / N7 en 40 min. Seine, Essonne, N7 et Porte-à-porte en chemin. Dépose porte-à-porte, bagages inclus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Corbeil-Essonnes → Paris",
         heroSubtitle: "Transfert Corbeil-Essonnes → Paris au prix fixe de 50 — 65 €. 40 km, direct par l'A6.",
         description: "Paris est à 40 min de Corbeil-Essonnes par l'A6 ou la N7, au confluent de la Seine et de l'Essonne.",
@@ -176,8 +176,8 @@ export const trajetsEvryCorbeil: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Corbeil-Essonnes → Paris | Fixed price from €50 | TaxiNeo",
-        metaDescription: "Taxi Corbeil-Essonnes → Paris. 40 km, 40 min, from €50. A6/N7, direct door-to-door. Book 24/7.",
+        metaTitle: "Taxi Corbeil-Essonnes → Paris | 40 km, from €50 | TaxiNeo",
+        metaDescription: "Via A6 / N7, 40 min ride. Seine, Essonne, N7 and Porte-à-porte en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Corbeil-Essonnes → Paris",
         heroSubtitle: "Your Corbeil-Essonnes → Paris transfer at €50 — €65. 40 km, via the A6.",
         description: "Paris is 40 min from Corbeil-Essonnes via the A6, at the confluence of the Seine and Essonne rivers.",
@@ -222,8 +222,8 @@ export const trajetsEvryCorbeil: Trajet[] = [
     hub: "evry-corbeil",
     i18n: {
       fr: {
-        metaTitle: "Taxi Évry-Courcouronnes → Fontainebleau | Prix fixe dès 50 € | TaxiNeo",
-        metaDescription: "Taxi Évry-Courcouronnes → Fontainebleau. 40 km, 35 min, dès 50 €. N104/Francilienne, château UNESCO. Réservation 24h/24.",
+        metaTitle: "Taxi Évry-Courcouronnes → Fontainebleau | 40 km | TaxiNeo",
+        metaDescription: "Via N104 / D448 en 35 min. N104, Francilienne, Forêt et Château UNESCO en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Évry-Courcouronnes → Fontainebleau",
         heroSubtitle: "Transfert Évry-Courcouronnes → Fontainebleau au prix fixe de 50 — 65 €. 40 km, direct par la Francilienne.",
         description: "Fontainebleau est à 35 min d'Évry-Courcouronnes par la Francilienne, cité impériale et forestière.",
@@ -241,8 +241,8 @@ export const trajetsEvryCorbeil: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Évry-Courcouronnes → Fontainebleau | Fixed price from €50 | TaxiNeo",
-        metaDescription: "Taxi Évry-Courcouronnes → Fontainebleau. 40 km, 35 min, from €50. Francilienne, UNESCO castle. Book 24/7.",
+        metaTitle: "Taxi Évry-Courcouronnes → Fontainebleau | 40 km | TaxiNeo",
+        metaDescription: "Via N104 / D448, 35 min ride. N104, Francilienne, Forêt and Château UNESCO en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Évry-Courcouronnes → Fontainebleau",
         heroSubtitle: "Your Évry-Courcouronnes → Fontainebleau transfer at €50 — €65. 40 km, via the Francilienne.",
         description: "Fontainebleau is 35 min from Évry-Courcouronnes via the Francilienne, imperial city and forest.",
@@ -287,8 +287,8 @@ export const trajetsEvryCorbeil: Trajet[] = [
     hub: "evry-corbeil",
     i18n: {
       fr: {
-        metaTitle: "Taxi Évry-Courcouronnes → Versailles | Prix fixe dès 50 € | TaxiNeo",
-        metaDescription: "Taxi Évry-Courcouronnes → Versailles. 40 km, 35 min, dès 50 €. Francilienne/A10, château de Versailles. Réservation 24h/24.",
+        metaTitle: "Taxi Évry-Courcouronnes → Versailles | 40 km, 50 € | TaxiNeo",
+        metaDescription: "Par N104 / A6 / A10, 35 min de trajet. N104, Francilienne, Château de Versailles et Yvelines en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Évry-Courcouronnes → Versailles",
         heroSubtitle: "Transfert Évry-Courcouronnes → Versailles au prix fixe de 50 — 65 €. 40 km, direct par la Francilienne.",
         description: "Versailles est à 35 min d'Évry-Courcouronnes par la Francilienne et l'A10, préfecture des Yvelines.",
@@ -306,8 +306,8 @@ export const trajetsEvryCorbeil: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Évry-Courcouronnes → Versailles | Fixed price from €50 | TaxiNeo",
-        metaDescription: "Taxi Évry-Courcouronnes → Versailles. 40 km, 35 min, from €50. Francilienne/A10, Palace of Versailles. Book 24/7.",
+        metaTitle: "Taxi Évry-Courcouronnes → Versailles | 40 km, €50 | TaxiNeo",
+        metaDescription: "Direct route via N104 / A6 / A10, 35 min. N104, Francilienne, Château de Versailles and Yvelines en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Évry-Courcouronnes → Versailles",
         heroSubtitle: "Your Évry-Courcouronnes → Versailles transfer at €50 — €65. 40 km, via the Francilienne.",
         description: "Versailles is 35 min from Évry-Courcouronnes via the Francilienne and A10, capital of the Yvelines.",

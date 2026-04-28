@@ -30,8 +30,8 @@ export const trajetsNice: Trajet[] = [
     hub: "nice",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nice → Menton | Transfert Côte d'Azur | TaxiNeo",
-        metaDescription: "Réservez votre taxi Nice–Menton dès 45 €. Trajet de 30 km le long de la Riviera française, via la Moyenne Corniche ou l'autoroute A8. Service porte-à-porte.",
+        metaTitle: "Taxi Nice → Menton | forfait dès 45 €, 35 min | TaxiNeo",
+        metaDescription: "Via A8 en 35 min. Bord de mer, Côte d'Azur et Frontière italienne en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Nice — Menton",
         heroSubtitle: "La Riviera française jusqu'à la frontière italienne",
         description: "Transfert en taxi de Nice à Menton, dernière ville française avant l'Italie, le long de la magnifique Côte d'Azur.",
@@ -50,7 +50,7 @@ export const trajetsNice: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Nice → Menton | French Riviera Transfer | TaxiNeo",
-        metaDescription: "Book your Nice–Menton taxi from €45. 30 km along the French Riviera via the Moyenne Corniche or A8 motorway. Door-to-door service.",
+        metaDescription: "Via A8, 35 min ride. Bord de mer, Côte d'Azur and Frontière italienne along the way. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Nice — Menton",
         heroSubtitle: "Along the French Riviera to the Italian border",
         description: "Taxi transfer from Nice to Menton, the last French town before Italy, along the stunning Côte d'Azur coastline.",
@@ -95,8 +95,8 @@ export const trajetsNice: Trajet[] = [
     hub: "nice",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nice → Fréjus | Transfert Estérel | TaxiNeo",
-        metaDescription: "Réservez votre taxi Nice–Fréjus dès 110 €. 85 km par l'A8 à travers le massif de l'Estérel. Trajet en 1h, service porte-à-porte 24h/24.",
+        metaTitle: "Taxi Nice → Fréjus | forfait dès 110 €, 1h | TaxiNeo",
+        metaDescription: "Via A8 en 1h. Ruines romaines, Plages et Massif de l'Estérel en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Nice — Fréjus",
         heroSubtitle: "À travers le massif de l'Estérel jusqu'aux plages varoises",
         description: "Transfert en taxi de Nice à Fréjus, cité romaine au cœur du Var, via l'autoroute A8 et le spectaculaire massif de l'Estérel.",
@@ -114,8 +114,8 @@ export const trajetsNice: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nice → Fréjus | Estérel Transfer | TaxiNeo",
-        metaDescription: "Book your Nice–Fréjus taxi from €110. 85 km via the A8 through the Estérel massif. 1-hour journey, 24/7 door-to-door service.",
+        metaTitle: "Taxi Nice → Fréjus | Fixed price from €110 | TaxiNeo",
+        metaDescription: "Via A8, 1 hour ride. Ruines romaines, Plages and Massif de l'Estérel along the way. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Nice — Fréjus",
         heroSubtitle: "Through the Estérel massif to the Var beaches",
         description: "Taxi transfer from Nice to Fréjus, a Roman city in the heart of the Var, via the A8 motorway and the spectacular Estérel massif.",
@@ -160,8 +160,8 @@ export const trajetsNice: Trajet[] = [
     hub: "nice",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nice → Toulon | Transfert longue distance | TaxiNeo",
-        metaDescription: "Réservez votre taxi Nice–Toulon dès 195 €. 150 km par l'A8 et l'A57, trajet en 1h40. Service porte-à-porte, véhicule confortable.",
+        metaTitle: "Taxi Nice → Toulon | 150 km, dès 195 €, 1h40 | TaxiNeo",
+        metaDescription: "Via A8 puis A57 en 1h40. Port militaire, Rade de Toulon et Côte varoise en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Nice — Toulon",
         heroSubtitle: "De la Riviera au plus grand port militaire d'Europe",
         description: "Transfert longue distance en taxi de Nice à Toulon, préfecture du Var et premier port militaire français.",
@@ -180,7 +180,7 @@ export const trajetsNice: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Nice → Toulon | Long-Distance Transfer | TaxiNeo",
-        metaDescription: "Book your Nice–Toulon taxi from €195. 150 km via A8 and A57, 1h40 journey. Door-to-door service, comfortable vehicle.",
+        metaDescription: "A8 then A57 route, approximately 1h40. Port militaire, Rade de Toulon and Côte varoise along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Nice — Toulon",
         heroSubtitle: "From the Riviera to Europe's largest naval port",
         description: "Long-distance taxi transfer from Nice to Toulon, prefecture of the Var and France's main naval base.",
@@ -225,8 +225,8 @@ export const trajetsNice: Trajet[] = [
     hub: "nice",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nice → Draguignan | Transfert Haut-Var | TaxiNeo",
-        metaDescription: "Réservez votre taxi Nice–Draguignan dès 125 €. 95 km via l'A8 et la D555, trajet en 1h10. Accès aux vignobles et gorges du Verdon.",
+        metaTitle: "Taxi Nice → Draguignan | 95 km, dès 125 € | TaxiNeo",
+        metaDescription: "Via A8 sortie Le Muy, puis D555 en 1h10. Haut-Var, Dolmen de la Pierre de la Fée et Vignobles en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Nice — Draguignan",
         heroSubtitle: "Porte d'entrée du Haut-Var et des gorges du Verdon",
         description: "Transfert en taxi de Nice à Draguignan, sous-préfecture du Var et porte d'entrée vers les gorges du Verdon et la Provence verte.",
@@ -244,8 +244,8 @@ export const trajetsNice: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nice → Draguignan | Haut-Var Transfer | TaxiNeo",
-        metaDescription: "Book your Nice–Draguignan taxi from €125. 95 km via A8 and D555, 1h10 journey. Gateway to Verdon Gorges and Provence vineyards.",
+        metaTitle: "Taxi Nice → Draguignan | 95 km, from €125 | TaxiNeo",
+        metaDescription: "Via A8 sortie Le Muy, then D555, 1h10 ride. Haut-Var, Dolmen de la Pierre de la Fée and Vignobles along the way. Faster and more direct than train or bus.",
         heroTitle: "Taxi Nice — Draguignan",
         heroSubtitle: "Gateway to the Haut-Var and Verdon Gorges",
         description: "Taxi transfer from Nice to Draguignan, sub-prefecture of the Var and gateway to the Verdon Gorges and green Provence.",
@@ -290,8 +290,8 @@ export const trajetsNice: Trajet[] = [
     hub: "nice",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nice → Vintimille | Transfert transfrontalier | TaxiNeo",
-        metaDescription: "Réservez votre taxi Nice–Vintimille dès 55 €. 40 km, trajet de 40 minutes via l'A8 et la frontière italienne. Idéal pour le marché du vendredi.",
+        metaTitle: "Taxi Nice → Vintimille (Italie) | 40 km, dès 55 € | TaxiNeo",
+        metaDescription: "Par A8 puis Autoroute des Fleurs, 40 min de trajet. Italie, Marché de Vintimille et Frontière en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Nice — Vintimille",
         heroSubtitle: "Traversez la frontière pour le célèbre marché italien",
         description: "Transfert transfrontalier en taxi de Nice à Vintimille (Ventimiglia), première ville italienne après la frontière, célèbre pour son grand marché.",
@@ -309,8 +309,8 @@ export const trajetsNice: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nice → Ventimiglia | Cross-Border Transfer | TaxiNeo",
-        metaDescription: "Book your Nice–Ventimiglia taxi from €55. 40 km, 40-minute journey via A8 and Italian border. Perfect for the famous Friday market.",
+        metaTitle: "Taxi Nice → Vintimille (Italie) | 40 km, from €55 | TaxiNeo",
+        metaDescription: "Via A8 then Autoroute des Fleurs, 40 min ride. Italie, Marché de Vintimille and Frontière along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Nice — Ventimiglia",
         heroSubtitle: "Cross the border to Italy's famous market town",
         description: "Cross-border taxi transfer from Nice to Ventimiglia, the first Italian town after the French border, famous for its huge market.",
@@ -355,8 +355,8 @@ export const trajetsNice: Trajet[] = [
     hub: "nice",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nice → Saint-Paul-de-Vence | Village d'art | TaxiNeo",
-        metaDescription: "Réservez votre taxi Nice–Saint-Paul-de-Vence dès 35 €. 20 km, 25 min de trajet. Accès au village d'art et à la Fondation Maeght.",
+        metaTitle: "Taxi Nice → Saint-Paul-de-Vence | 20 km, dès 35 € | TaxiNeo",
+        metaDescription: "Par M6098 puis D36, 25 min de trajet. Village perché, Fondation Maeght et Art contemporain en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Nice — Saint-Paul-de-Vence",
         heroSubtitle: "Le village d'art le plus célèbre de la Côte d'Azur",
         description: "Transfert en taxi de Nice à Saint-Paul-de-Vence, joyau perché de l'arrière-pays niçois, haut lieu de l'art contemporain.",
@@ -374,8 +374,8 @@ export const trajetsNice: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nice → Saint-Paul-de-Vence | Art Village | TaxiNeo",
-        metaDescription: "Book your Nice–Saint-Paul-de-Vence taxi from €35. 20 km, 25-min ride. Access the art village and Fondation Maeght.",
+        metaTitle: "Taxi Nice → Saint-Paul-de-Vence | 20 km, from €35 | TaxiNeo",
+        metaDescription: "Direct route via M6098 then D36, 25 min. Village perché, Fondation Maeght and Art contemporain along the way. Stops for sightseeing possible en route.",
         heroTitle: "Taxi Nice — Saint-Paul-de-Vence",
         heroSubtitle: "The Côte d'Azur's most famous art village",
         description: "Taxi transfer from Nice to Saint-Paul-de-Vence, a perched gem of the Nice hinterland and a centre for contemporary art.",
@@ -420,8 +420,8 @@ export const trajetsNice: Trajet[] = [
     hub: "nice",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nice → Vence | Chapelle Matisse & Baous | TaxiNeo",
-        metaDescription: "Réservez votre taxi Nice–Vence dès 38 €. 22 km en 30 min. Visitez la chapelle du Rosaire de Matisse et la cité médiévale.",
+        metaTitle: "Taxi Nice → Vence | forfait dès 38 €, 30 min | TaxiNeo",
+        metaDescription: "Via D6098 puis D36 en 30 min. Chapelle Matisse, Vieille ville et Baous en chemin. Arrêt visite possible en chemin. Arrêt possible pour visites ou photos.",
         heroTitle: "Taxi Nice — Vence",
         heroSubtitle: "La cité des arts au pied des Baous",
         description: "Transfert en taxi de Nice à Vence, cité médiévale abritant la chapelle du Rosaire de Matisse, au pied des falaises des Baous.",
@@ -440,7 +440,7 @@ export const trajetsNice: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Nice → Vence | Matisse Chapel & Baous | TaxiNeo",
-        metaDescription: "Book your Nice–Vence taxi from €38. 22 km in 30 min. Visit the Matisse Chapel of the Rosary and the medieval town.",
+        metaDescription: "Via D6098 then D36, 30 min ride. Chapelle Matisse, Vieille ville and Baous along the way. Stops for sightseeing possible en route. No toll on this route.",
         heroTitle: "Taxi Nice — Vence",
         heroSubtitle: "The art city at the foot of the Baous cliffs",
         description: "Taxi transfer from Nice to Vence, a medieval city home to Matisse's Chapel of the Rosary, at the foot of the Baous cliffs.",
@@ -485,8 +485,8 @@ export const trajetsNice: Trajet[] = [
     hub: "nice",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nice → Sophia Antipolis | Transfert business | TaxiNeo",
-        metaDescription: "Réservez votre taxi Nice–Sophia Antipolis dès 40 €. 25 km, 30 min. Transfert professionnel vers la première technopole d'Europe.",
+        metaTitle: "Taxi Nice → Sophia Antipolis | 25 km, dès 40 € | TaxiNeo",
+        metaDescription: "Par A8 sortie 44 Antibes/Sophia An, 30 min de trajet. Technopole, Innovation, Business sur le parcours. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Nice — Sophia Antipolis",
         heroSubtitle: "Transfert professionnel vers la Silicon Valley européenne",
         description: "Transfert en taxi de Nice vers Sophia Antipolis, première technopole d'Europe, nichée dans la pinède d'Antibes.",
@@ -504,8 +504,8 @@ export const trajetsNice: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nice → Sophia Antipolis | Business Transfer | TaxiNeo",
-        metaDescription: "Book your Nice–Sophia Antipolis taxi from €40. 25 km, 30 min. Professional transfer to Europe's leading technology park.",
+        metaTitle: "Taxi Nice → Sophia Antipolis | 25 km, from €40 | TaxiNeo",
+        metaDescription: "Via A8 sortie 44 Antibes/Sophia Antipolis, 30 min ride. Technopole, Innovation and Business along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Nice — Sophia Antipolis",
         heroSubtitle: "Professional transfer to Europe's Silicon Valley",
         description: "Taxi transfer from Nice to Sophia Antipolis, Europe's leading technology park, nestled in the Antibes pine forest.",
@@ -550,8 +550,8 @@ export const trajetsNice: Trajet[] = [
     hub: "nice",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nice → Vallauris | Musée Picasso & Céramique | TaxiNeo",
-        metaDescription: "Réservez votre taxi Nice–Vallauris dès 38 €. 25 km en 30 min. Musée Picasso, ateliers de céramique et village d'artisans.",
+        metaTitle: "Taxi Nice → Vallauris | forfait dès 38 € | TaxiNeo",
+        metaDescription: "Via A8 sortie 44 puis D135 en 30 min. Musée Picasso, Céramique et Biot en chemin. Arrêt visite possible en chemin. Arrêt possible pour visites ou photos.",
         heroTitle: "Taxi Nice — Vallauris",
         heroSubtitle: "La cité de la céramique et de Picasso",
         description: "Transfert en taxi de Nice à Vallauris, cité des potiers où Picasso créa ses célèbres céramiques.",
@@ -570,7 +570,7 @@ export const trajetsNice: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Nice → Vallauris | Picasso Museum & Ceramics | TaxiNeo",
-        metaDescription: "Book your Nice–Vallauris taxi from €38. 25 km in 30 min. Picasso Museum, ceramic workshops and artisan village.",
+        metaDescription: "Via A8 sortie 44 then D135, 30 min ride. Musée Picasso, Céramique and Biot along the way. Stops for sightseeing possible en route. Return trip at same rate.",
         heroTitle: "Taxi Nice — Vallauris",
         heroSubtitle: "The city of ceramics and Picasso",
         description: "Taxi transfer from Nice to Vallauris, the potters' city where Picasso created his famous ceramics.",
@@ -615,8 +615,8 @@ export const trajetsNice: Trajet[] = [
     hub: "nice",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nice → Roquebrune-Cap-Martin | Le Corbusier | TaxiNeo",
-        metaDescription: "Réservez votre taxi Nice–Roquebrune-Cap-Martin dès 35 €. 22 km en 25 min. Village perché, Cap Martin et cabanon Le Corbusier.",
+        metaTitle: "Taxi Nice → Roquebrune-Cap-Martin | 22 km, 35 € | TaxiNeo",
+        metaDescription: "Par A8 ou Moyenne Corniche, 25 min de trajet. Le Corbusier, Olivier millénaire et Cap Martin en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Nice — Roquebrune-Cap-Martin",
         heroSubtitle: "Village perché et Cap Martin entre Nice et Menton",
         description: "Transfert en taxi de Nice à Roquebrune-Cap-Martin, village médiéval perché au-dessus de la Méditerranée et presqu'île prisée.",
@@ -634,8 +634,8 @@ export const trajetsNice: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nice → Roquebrune-Cap-Martin | Le Corbusier | TaxiNeo",
-        metaDescription: "Book your Nice–Roquebrune-Cap-Martin taxi from €35. 22 km in 25 min. Perched village, Cap Martin and Le Corbusier's Cabanon.",
+        metaTitle: "Taxi Nice → Roquebrune-Cap-Martin | 22 km, €35 | TaxiNeo",
+        metaDescription: "Direct route via A8 ou Moyenne Corniche, 25 min. Le Corbusier, Olivier millénaire and Cap Martin along the way. Stops for sightseeing possible en route.",
         heroTitle: "Taxi Nice — Roquebrune-Cap-Martin",
         heroSubtitle: "Perched village and Cap Martin between Nice and Menton",
         description: "Taxi transfer from Nice to Roquebrune-Cap-Martin, a medieval perched village above the Mediterranean and a chic peninsula.",
@@ -680,8 +680,8 @@ export const trajetsNice: Trajet[] = [
     hub: "nice",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nice → Cagnes-sur-Mer | Musée Renoir | TaxiNeo",
-        metaDescription: "Réservez votre taxi Nice–Cagnes-sur-Mer dès 25 €. 13 km en 20 min. Musée Renoir, Haut-de-Cagnes médiéval et hippodrome.",
+        metaTitle: "Taxi Nice → Cagnes-sur-Mer | 13 km, dès 25 € | TaxiNeo",
+        metaDescription: "Via A8 sortie 48 ou Promenade des  en 20 min. Passage par Musée Renoir, Haut-de-Cagnes et Hippodrome. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Nice — Cagnes-sur-Mer",
         heroSubtitle: "Sur les traces de Renoir dans le Haut-de-Cagnes",
         description: "Transfert en taxi de Nice à Cagnes-sur-Mer, cité de Renoir avec son village médiéval perché et son hippodrome en bord de mer.",
@@ -699,8 +699,8 @@ export const trajetsNice: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nice → Cagnes-sur-Mer | Renoir Museum | TaxiNeo",
-        metaDescription: "Book your Nice–Cagnes-sur-Mer taxi from €25. 13 km in 20 min. Renoir Museum, medieval Haut-de-Cagnes and racecourse.",
+        metaTitle: "Taxi Nice → Cagnes-sur-Mer | 13 km, from €25 | TaxiNeo",
+        metaDescription: "Via A8 sortie 48 ou Promenade des Anglais / M6098, 20 min ride. Past Musée Renoir, Haut-de-Cagnes and Hippodrome. Stops for sightseeing possible en route.",
         heroTitle: "Taxi Nice — Cagnes-sur-Mer",
         heroSubtitle: "In Renoir's footsteps in Haut-de-Cagnes",
         description: "Taxi transfer from Nice to Cagnes-sur-Mer, Renoir's city with its perched medieval village and seaside racecourse.",
@@ -745,8 +745,8 @@ export const trajetsNice: Trajet[] = [
     hub: "nice",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nice → Gorges du Verdon | Grand Canyon de Provence | TaxiNeo",
-        metaDescription: "Réservez votre taxi Nice–Gorges du Verdon dès 210 €. 155 km en 2h. Lac de Sainte-Croix, Moustiers-Sainte-Marie, route des Crêtes.",
+        metaTitle: "Taxi Nice → Gorges du Verdon | 155 km, dès 210 € | TaxiNeo",
+        metaDescription: "Via A8 en 2h. Grand Canyon d'Europe, Lac de Sainte-Croix et Moustiers en chemin. Dépose à votre adresse exacte. Alternative directe au train ou au bus.",
         heroTitle: "Taxi Nice — Gorges du Verdon",
         heroSubtitle: "Le Grand Canyon d'Europe et le lac de Sainte-Croix",
         description: "Transfert en taxi de Nice aux Gorges du Verdon, plus grand canyon d'Europe, avec accès au lac de Sainte-Croix et Moustiers-Sainte-Marie.",
@@ -764,8 +764,8 @@ export const trajetsNice: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nice → Verdon Gorges | Europe's Grand Canyon | TaxiNeo",
-        metaDescription: "Book your Nice–Verdon Gorges taxi from €210. 155 km in 2h. Lake Sainte-Croix, Moustiers-Sainte-Marie, Route des Crêtes.",
+        metaTitle: "Taxi Nice → Gorges du Verdon | 155 km, from €210 | TaxiNeo",
+        metaDescription: "Direct route via A8, 2 hours. Grand Canyon d'Europe, Lac de Sainte-Croix and Moustiers along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Nice — Verdon Gorges",
         heroSubtitle: "Europe's Grand Canyon and Lake Sainte-Croix",
         description: "Taxi transfer from Nice to the Verdon Gorges, Europe's largest canyon, with access to Lake Sainte-Croix and Moustiers-Sainte-Marie.",
@@ -810,8 +810,8 @@ export const trajetsNice: Trajet[] = [
     hub: "nice",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nice → Villefranche-sur-Mer | Rade & Cocteau | TaxiNeo",
-        metaDescription: "Réservez votre taxi Nice–Villefranche-sur-Mer dès 18 €. 6 km en 12 min. Rade sublime, citadelle du XVIe siècle et chapelle Cocteau.",
+        metaTitle: "Taxi Nice → Villefranche-sur-Mer | 6 km, dès 18 € | TaxiNeo",
+        metaDescription: "Via Basse Corniche ou Moyenne Corn en 12 min. Rade de Villefranche, Citadelle XVIe et Chapelle Cocteau en chemin. Arrêt possible pour visites ou photos.",
         heroTitle: "Taxi Nice — Villefranche-sur-Mer",
         heroSubtitle: "La plus belle rade de la Côte d'Azur",
         description: "Transfert en taxi de Nice à Villefranche-sur-Mer, joyau de la Riviera avec sa rade légendaire et la chapelle décorée par Jean Cocteau.",
@@ -829,8 +829,8 @@ export const trajetsNice: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nice → Villefranche-sur-Mer | Harbour & Cocteau | TaxiNeo",
-        metaDescription: "Book your Nice–Villefranche-sur-Mer taxi from €18. 6 km in 12 min. Stunning harbour, 16th-century citadel and Cocteau chapel.",
+        metaTitle: "Taxi Nice → Villefranche-sur-Mer | 6 km, from €18 | TaxiNeo",
+        metaDescription: "Via Basse Corniche ou Moyenne Corniche, 12 min ride. Rade de Villefranche, Citadelle XVIe and Chapelle Cocteau along the way. Return trip at same rate.",
         heroTitle: "Taxi Nice — Villefranche-sur-Mer",
         heroSubtitle: "The most beautiful harbour on the Côte d'Azur",
         description: "Taxi transfer from Nice to Villefranche-sur-Mer, a Riviera gem with its legendary harbour and the chapel decorated by Jean Cocteau.",
@@ -875,8 +875,8 @@ export const trajetsNice: Trajet[] = [
     hub: "nice",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nice → Beaulieu-sur-Mer | Villa Kérylos | TaxiNeo",
-        metaDescription: "Réservez votre taxi Nice–Beaulieu-sur-Mer dès 22 €. 9 km en 15 min. Villa Kérylos, baie des Fourmis et station balnéaire Belle Époque.",
+        metaTitle: "Taxi Nice → Beaulieu-sur-Mer | 9 km, dès 22 € | TaxiNeo",
+        metaDescription: "Via Basse Corniche ou A8 sortie 58 en 15 min. Villa Kérylos, Architecture grecque et Baie des Fourmis en chemin. Arrêt possible pour visites ou photos.",
         heroTitle: "Taxi Nice — Beaulieu-sur-Mer",
         heroSubtitle: "La villa grecque et la douceur de la Belle Époque",
         description: "Transfert en taxi de Nice à Beaulieu-sur-Mer, station balnéaire Belle Époque abritant la célèbre Villa Kérylos, réplique d'une demeure de la Grèce antique.",
@@ -894,8 +894,8 @@ export const trajetsNice: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nice → Beaulieu-sur-Mer | Villa Kérylos | TaxiNeo",
-        metaDescription: "Book your Nice–Beaulieu-sur-Mer taxi from €22. 9 km in 15 min. Villa Kérylos, Baie des Fourmis and Belle Époque seaside resort.",
+        metaTitle: "Taxi Nice → Beaulieu-sur-Mer | 9 km, from €22 | TaxiNeo",
+        metaDescription: "Via Basse Corniche ou A8 sortie 58, 15 min ride. Villa Kérylos, Architecture grecque and Baie des Fourmis along the way. Perfect for a day trip without driving.",
         heroTitle: "Taxi Nice — Beaulieu-sur-Mer",
         heroSubtitle: "The Greek villa and Belle Époque elegance",
         description: "Taxi transfer from Nice to Beaulieu-sur-Mer, a refined Belle Époque seaside resort home to the famous Villa Kérylos, a replica of an ancient Greek villa.",
@@ -940,8 +940,8 @@ export const trajetsNice: Trajet[] = [
     hub: "nice",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nice → Mandelieu-la-Napoule | Golf & Château | TaxiNeo",
-        metaDescription: "Réservez votre taxi Nice–Mandelieu-la-Napoule dès 55 €. 38 km en 35 min par l'A8. Golf de Riviera, château médiéval et porte de l'Estérel.",
+        metaTitle: "Taxi Nice → Mandelieu-la-Napoule | 38 km, dès 55 € | TaxiNeo",
+        metaDescription: "Via A8 sortie 40 Mandelieu en 35 min. Golf de Riviera, Château de la Napoule et Massif de l'Estérel en chemin. Alternative directe au train ou au bus.",
         heroTitle: "Taxi Nice — Mandelieu-la-Napoule",
         heroSubtitle: "Golf, château et porte de l'Estérel",
         description: "Transfert en taxi de Nice à Mandelieu-la-Napoule, station balnéaire entre Cannes et l'Estérel, réputée pour ses golfs et son château au bord de l'eau.",
@@ -959,8 +959,8 @@ export const trajetsNice: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nice → Mandelieu-la-Napoule | Golf & Castle | TaxiNeo",
-        metaDescription: "Book your Nice–Mandelieu-la-Napoule taxi from €55. 38 km in 35 min via A8. Riviera Golf, medieval castle and gateway to the Estérel.",
+        metaTitle: "Taxi Nice → Mandelieu-la-Napoule | 38 km, from €55 | TaxiNeo",
+        metaDescription: "Via A8 sortie 40 Mandelieu, 35 min ride. Golf de Riviera, Château de la Napoule and Massif de l'Estérel along the way. Drop-off at your exact address.",
         heroTitle: "Taxi Nice — Mandelieu-la-Napoule",
         heroSubtitle: "Golf, castle and gateway to the Estérel",
         description: "Taxi transfer from Nice to Mandelieu-la-Napoule, a seaside resort between Cannes and the Estérel, renowned for its golf courses and waterside castle.",
@@ -1005,8 +1005,8 @@ export const trajetsNice: Trajet[] = [
     hub: "nice",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nice → Mougins | Gastronomie & Art | TaxiNeo",
-        metaDescription: "Réservez votre taxi Nice–Mougins dès 45 €. 30 km en 30 min. Village gastronomique, musée de la Photographie et mémoire de Picasso.",
+        metaTitle: "Taxi Nice → Mougins | forfait dès 45 €, 30 min | TaxiNeo",
+        metaDescription: "Via A8 sortie 42 Mougins en 30 min. Gastronomie étoilée, Musée de la Photo et Village de Picasso en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Nice — Mougins",
         heroSubtitle: "Le village de la gastronomie et de Picasso",
         description: "Transfert en taxi de Nice à Mougins, village perché de l'arrière-pays cannois célèbre pour sa gastronomie étoilée et le souvenir de Picasso.",
@@ -1024,8 +1024,8 @@ export const trajetsNice: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nice → Mougins | Gastronomy & Art | TaxiNeo",
-        metaDescription: "Book your Nice–Mougins taxi from €45. 30 km in 30 min. Gourmet village, Photography Museum and Picasso's last home.",
+        metaTitle: "Taxi Nice → Mougins | Fixed price from €45 | TaxiNeo",
+        metaDescription: "Via A8 sortie 42 Mougins, 30 min ride. Gastronomie étoilée, Musée de la Photo and Village de Picasso along the way. Stops for sightseeing possible en route.",
         heroTitle: "Taxi Nice — Mougins",
         heroSubtitle: "The village of gastronomy and Picasso",
         description: "Taxi transfer from Nice to Mougins, a perched village in the Cannes hinterland famous for its Michelin-starred dining and Picasso heritage.",
@@ -1070,8 +1070,8 @@ export const trajetsNice: Trajet[] = [
     hub: "nice",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nice → Théoule-sur-Mer | Corniche d'Or & Estérel | TaxiNeo",
-        metaDescription: "Réservez votre taxi Nice–Théoule-sur-Mer dès 60 €. 42 km en 40 min. Corniche d'Or, roches rouges de l'Estérel et calanques secrètes.",
+        metaTitle: "Taxi Nice → Théoule-sur-Mer | 42 km, dès 60 € | TaxiNeo",
+        metaDescription: "Via A8 sortie 40 puis D6098 en 40 min. Corniche d'Or, Roches rouges de l'Estérel et Calanques en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Nice — Théoule-sur-Mer",
         heroSubtitle: "La Corniche d'Or et les roches rouges de l'Estérel",
         description: "Transfert en taxi de Nice à Théoule-sur-Mer, porte de la Corniche d'Or et des calanques rouges du massif de l'Estérel.",
@@ -1089,8 +1089,8 @@ export const trajetsNice: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nice → Théoule-sur-Mer | Corniche d'Or & Estérel | TaxiNeo",
-        metaDescription: "Book your Nice–Théoule-sur-Mer taxi from €60. 42 km in 40 min. Corniche d'Or, red Estérel rocks and secret calanques.",
+        metaTitle: "Taxi Nice → Théoule-sur-Mer | 42 km, from €60 | TaxiNeo",
+        metaDescription: "Via A8 sortie 40 then D6098, 40 min ride. Corniche d'Or, Roches rouges de l'Estérel and Calanques along the way. Stops for sightseeing possible en route.",
         heroTitle: "Taxi Nice — Théoule-sur-Mer",
         heroSubtitle: "The Corniche d'Or and the red rocks of the Estérel",
         description: "Taxi transfer from Nice to Théoule-sur-Mer, gateway to the Corniche d'Or and the red calanques of the Estérel massif.",
@@ -1135,8 +1135,8 @@ export const trajetsNice: Trajet[] = [
     hub: "nice",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nice → Tende | Vallée des Merveilles | TaxiNeo",
-        metaDescription: "Réservez votre taxi Nice–Tende dès 140 €. 95 km en 1h40. Vallée des Merveilles, gravures rupestres et train des Merveilles.",
+        metaTitle: "Taxi Nice → Tende | forfait dès 140 €, 1h40 | TaxiNeo",
+        metaDescription: "Via M6204 vallée de la Roya en 1h40. Vallée des Merveilles, Train des Merveilles et Gravures rupestres en chemin. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Nice — Tende",
         heroSubtitle: "La Vallée des Merveilles et le train mythique de la Roya",
         description: "Transfert en taxi de Nice à Tende, porte de la Vallée des Merveilles et de ses 40 000 gravures rupestres de l'âge du Bronze.",
@@ -1154,8 +1154,8 @@ export const trajetsNice: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nice → Tende | Valley of Wonders | TaxiNeo",
-        metaDescription: "Book your Nice–Tende taxi from €140. 95 km in 1h40. Valley of Wonders, Bronze Age rock engravings and the legendary Train des Merveilles.",
+        metaTitle: "Taxi Nice → Tende | Fixed price from €140 | TaxiNeo",
+        metaDescription: "Via M6204 vallée de la Roya, 1h40 ride. Vallée des Merveilles, Train des Merveilles and Gravures rupestres along the way. Drop-off at your exact address.",
         heroTitle: "Taxi Nice — Tende",
         heroSubtitle: "The Valley of Wonders and the legendary Roya railway",
         description: "Taxi transfer from Nice to Tende, gateway to the Valley of Wonders and its 40,000 Bronze Age rock engravings.",
@@ -1200,8 +1200,8 @@ export const trajetsNice: Trajet[] = [
     hub: "nice",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nice → Sospel | Village médiéval & Pont Vieux | TaxiNeo",
-        metaDescription: "Réservez votre taxi Nice–Sospel dès 60 €. 40 km en 45 min par le col de Braus. Pont vieux médiéval, cathédrale baroque et vallée de la Bévéra.",
+        metaTitle: "Taxi Nice → Sospel | forfait dès 60 €, 45 min | TaxiNeo",
+        metaDescription: "Via M6204 via col de Braus en 45 min. Pont vieux médiéval, Village provençal et Vallée de la Bévéra en chemin. Idéal pour une excursion sans conduire.",
         heroTitle: "Taxi Nice — Sospel",
         heroSubtitle: "Le village médiéval au pont vieux sur la Bévéra",
         description: "Transfert en taxi de Nice à Sospel, village médiéval de la vallée de la Bévéra célèbre pour son pont vieux à péage et son patrimoine baroque.",
@@ -1220,7 +1220,7 @@ export const trajetsNice: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Nice → Sospel | Medieval Village & Old Bridge | TaxiNeo",
-        metaDescription: "Book your Nice–Sospel taxi from €60. 40 km in 45 min via Col de Braus. Medieval toll bridge, baroque cathedral and Bévéra valley.",
+        metaDescription: "Via M6204 via col de Braus, 45 min ride. Pont vieux médiéval, Village provençal and Vallée de la Bévéra along the way. Stops for sightseeing possible en route.",
         heroTitle: "Taxi Nice — Sospel",
         heroSubtitle: "The medieval village with the old bridge over the Bévéra",
         description: "Taxi transfer from Nice to Sospel, a medieval village in the Bévéra valley famous for its old toll bridge and baroque heritage.",
@@ -1265,8 +1265,8 @@ export const trajetsNice: Trajet[] = [
     hub: "nice",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nice → Peille | Village perché secret | TaxiNeo",
-        metaDescription: "Réservez votre taxi Nice–Peille dès 38 €. 22 km en 30 min. Village perché médiéval, panorama exceptionnel et arrière-pays niçois authentique.",
+        metaTitle: "Taxi Nice → Peille | forfait dès 38 €, 30 min | TaxiNeo",
+        metaDescription: "Via D21 puis D53 en 30 min. Village perché secret, Arrière-pays niçois et Panorama mer-montagne en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Nice — Peille",
         heroSubtitle: "Le village perché secret de l'arrière-pays niçois",
         description: "Transfert en taxi de Nice à Peille, village perché médiéval de l'arrière-pays niçois offrant un panorama spectaculaire entre mer et montagne.",
@@ -1285,7 +1285,7 @@ export const trajetsNice: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Nice → Peille | Secret Perched Village | TaxiNeo",
-        metaDescription: "Book your Nice–Peille taxi from €38. 22 km in 30 min. Medieval perched village, exceptional panorama and authentic Nice hinterland.",
+        metaDescription: "Via D21 then D53, 30 min ride. Village perché secret, Arrière-pays niçois and Panorama mer-montagne along the way. Stops for sightseeing possible en route.",
         heroTitle: "Taxi Nice — Peille",
         heroSubtitle: "The secret perched village of the Nice hinterland",
         description: "Taxi transfer from Nice to Peille, a medieval perched village in the Nice hinterland offering a spectacular panorama between sea and mountains.",
@@ -1330,8 +1330,8 @@ export const trajetsNice: Trajet[] = [
     hub: "nice",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nice → Monaco | Transfert Principauté | TaxiNeo",
-        metaDescription: "Réservez votre taxi Nice–Monaco dès 35 €. Trajet de 20 km en 25 minutes via l'A8 ou la Basse Corniche. Service porte-à-porte 24h/24.",
+        metaTitle: "Taxi Nice → Monaco | forfait dès 35 €, 25 min | TaxiNeo",
+        metaDescription: "Par A8 ou Basse Corniche, 25 min de trajet. Passage par Principauté, Casino Monte-Carlo et Grand Prix. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Nice — Monaco",
         heroSubtitle: "Rejoignez la Principauté en toute élégance",
         description: "Transfert en taxi de Nice à Monaco, la célèbre Principauté de la Côte d'Azur, via l'autoroute A8 ou la spectaculaire Basse Corniche.",
@@ -1350,7 +1350,7 @@ export const trajetsNice: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Nice → Monaco | Principality Transfer | TaxiNeo",
-        metaDescription: "Book your Nice–Monaco taxi from €35. 20 km in 25 minutes via the A8 or the Lower Corniche. Door-to-door service 24/7.",
+        metaDescription: "Via A8 ou Basse Corniche, 25 min ride. Principauté, Casino Monte-Carlo and Grand Prix along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Nice — Monaco",
         heroSubtitle: "Reach the Principality in style",
         description: "Taxi transfer from Nice to Monaco, the famous Principality on the French Riviera, via the A8 motorway or the spectacular Lower Corniche.",
@@ -1395,8 +1395,8 @@ export const trajetsNice: Trajet[] = [
     hub: "nice",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nice → Antibes | Transfert Côte d'Azur | TaxiNeo",
-        metaDescription: "Réservez votre taxi Nice–Antibes dès 35 €. 23 km en 25 minutes par l'A8. Vieille ville, Cap d'Antibes, Juan-les-Pins. Service porte-à-porte.",
+        metaTitle: "Taxi Nice → Antibes | forfait dès 35 €, 25 min | TaxiNeo",
+        metaDescription: "Via A8 en 25 min. Vieille ville, Musée Picasso et Cap d'Antibes en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Nice — Antibes",
         heroSubtitle: "Du cœur de Nice au charme provençal d'Antibes",
         description: "Transfert en taxi de Nice à Antibes, joyau de la Côte d'Azur avec sa vieille ville fortifiée, le musée Picasso et le prestigieux Cap d'Antibes.",
@@ -1415,7 +1415,7 @@ export const trajetsNice: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Nice → Antibes | French Riviera Transfer | TaxiNeo",
-        metaDescription: "Book your Nice–Antibes taxi from €35. 23 km in 25 minutes via the A8. Old town, Cap d'Antibes, Juan-les-Pins. Door-to-door service.",
+        metaDescription: "Via A8, 25 min ride. Vieille ville, Musée Picasso and Cap d'Antibes along the way. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Nice — Antibes",
         heroSubtitle: "From the heart of Nice to the Provençal charm of Antibes",
         description: "Taxi transfer from Nice to Antibes, a jewel of the Côte d'Azur with its fortified old town, the Picasso Museum and the prestigious Cap d'Antibes.",
@@ -1460,8 +1460,8 @@ export const trajetsNice: Trajet[] = [
     hub: "nice",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nice → Cannes | Transfert Croisette | TaxiNeo",
-        metaDescription: "Réservez votre taxi Nice–Cannes dès 50 €. 33 km en 30 minutes par l'A8. Croisette, Palais des Festivals, Vieux Port. Service 24h/24.",
+        metaTitle: "Taxi Nice → Cannes | forfait dès 50 €, 30 min | TaxiNeo",
+        metaDescription: "Via A8 en 30 min. Croisette, Festival de Cannes et Palais des Festivals en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Nice — Cannes",
         heroSubtitle: "De Nice à la capitale mondiale du cinéma",
         description: "Transfert en taxi de Nice à Cannes, ville du Festival international du film, de la Croisette et du glamour méditerranéen.",
@@ -1479,8 +1479,8 @@ export const trajetsNice: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nice → Cannes | Croisette Transfer | TaxiNeo",
-        metaDescription: "Book your Nice–Cannes taxi from €50. 33 km in 30 minutes via the A8. Croisette, Palais des Festivals, Old Port. 24/7 service.",
+        metaTitle: "Taxi Nice → Cannes | Fixed price from €50 | TaxiNeo",
+        metaDescription: "A8 route, approximately 30 min. Croisette, Festival de Cannes and Palais des Festivals along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Nice — Cannes",
         heroSubtitle: "From Nice to the world capital of cinema",
         description: "Taxi transfer from Nice to Cannes, home of the International Film Festival, the Croisette and Mediterranean glamour.",
@@ -1525,8 +1525,8 @@ export const trajetsNice: Trajet[] = [
     hub: "nice",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nice → Grasse | Capitale du Parfum | TaxiNeo",
-        metaDescription: "Réservez votre taxi Nice–Grasse dès 55 €. 40 km en 40 minutes. Visitez la capitale mondiale du parfum. Service porte-à-porte.",
+        metaTitle: "Taxi Nice → Grasse | forfait dès 55 €, 40 min | TaxiNeo",
+        metaDescription: "Via A8 puis sortie 42, D6085 en 40 min. Capitale du parfum, Fragonard et Vieille ville provençale en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Nice — Grasse",
         heroSubtitle: "Vers la capitale mondiale du parfum",
         description: "Transfert en taxi de Nice à Grasse, capitale historique de la parfumerie mondiale, perchée dans l'arrière-pays provençal de la Côte d'Azur.",
@@ -1544,8 +1544,8 @@ export const trajetsNice: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nice → Grasse | Perfume Capital | TaxiNeo",
-        metaDescription: "Book your Nice–Grasse taxi from €55. 40 km in 40 minutes. Visit the world capital of perfume. Door-to-door service.",
+        metaTitle: "Taxi Nice → Grasse | Fixed price from €55 | TaxiNeo",
+        metaDescription: "Via A8 then sortie 42, D6085, 40 min ride. Capitale du parfum, Fragonard and Vieille ville provençale along the way. Faster and more direct than train or bus.",
         heroTitle: "Taxi Nice — Grasse",
         heroSubtitle: "To the world capital of perfume",
         description: "Taxi transfer from Nice to Grasse, the historic capital of world perfumery, perched in the Provençal hinterland of the Côte d'Azur.",
@@ -1590,8 +1590,8 @@ export const trajetsNice: Trajet[] = [
     hub: "nice",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nice → Èze Village | Village Perché & Panoramas | TaxiNeo",
-        metaDescription: "Réservez votre taxi Nice–Èze dès 25 €. 12 km en 20 minutes par la Moyenne Corniche. Village perché, Jardin Exotique, vues spectaculaires.",
+        metaTitle: "Taxi Nice → Èze | Village Perché & Panoramas | TaxiNeo",
+        metaDescription: "Via Moyenne Corniche en 20 min. Village perché, Jardin Exotique et Vue sur la Méditerranée en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Nice — Èze",
         heroSubtitle: "L'un des plus beaux villages perchés de la Côte d'Azur",
         description: "Transfert en taxi de Nice à Èze, village médiéval perché à 429 mètres d'altitude avec des vues à couper le souffle sur la Méditerranée.",
@@ -1609,8 +1609,8 @@ export const trajetsNice: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nice → Èze Village | Perched Village & Panoramas | TaxiNeo",
-        metaDescription: "Book your Nice–Èze taxi from €25. 12 km in 20 minutes via the Middle Corniche. Perched village, Exotic Garden, spectacular views.",
+        metaTitle: "Taxi Nice → Èze | Perched Village & Panoramas | TaxiNeo",
+        metaDescription: "Via Moyenne Corniche, 20 min ride. Village perché, Jardin Exotique and Vue sur la Méditerranée along the way. Stops for sightseeing possible en route.",
         heroTitle: "Taxi Nice — Èze",
         heroSubtitle: "One of the most beautiful perched villages on the Côte d'Azur",
         description: "Taxi transfer from Nice to Èze, a medieval village perched at 429 metres altitude with breathtaking views over the Mediterranean.",
@@ -1655,8 +1655,8 @@ export const trajetsNice: Trajet[] = [
     hub: "nice",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nice → Saint-Jean-Cap-Ferrat | Presqu'île de Luxe | TaxiNeo",
-        metaDescription: "Réservez votre taxi Nice–Saint-Jean-Cap-Ferrat dès 25 €. 10 km en 20 minutes. Villa Ephrussi, sentier du littoral. Service porte-à-porte.",
+        metaTitle: "Taxi Nice → Saint-Jean-Cap-Ferrat | 10 km, 25 € | TaxiNeo",
+        metaDescription: "Via Basse Corniche puis D25 en 20 min. Villa Ephrussi de Rothschild, Sentier du littoral et Presqu'île de luxe en chemin. Arrêt visite possible en chemin.",
         heroTitle: "Taxi Nice — Saint-Jean-Cap-Ferrat",
         heroSubtitle: "La presqu'île la plus exclusive de la Côte d'Azur",
         description: "Transfert en taxi de Nice à Saint-Jean-Cap-Ferrat, presqu'île de luxe abritant la Villa Ephrussi de Rothschild et des sentiers côtiers paradisiaques.",
@@ -1674,8 +1674,8 @@ export const trajetsNice: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nice → Saint-Jean-Cap-Ferrat | Luxury Peninsula | TaxiNeo",
-        metaDescription: "Book your Nice–Saint-Jean-Cap-Ferrat taxi from €25. 10 km in 20 minutes. Villa Ephrussi, coastal path. Door-to-door service.",
+        metaTitle: "Taxi Nice → Saint-Jean-Cap-Ferrat | 10 km, €25 | TaxiNeo",
+        metaDescription: "Via Basse Corniche then D25, 20 min ride. Villa Ephrussi de Rothschild, Sentier du littoral and Presqu'île de luxe along the way. No toll on this route.",
         heroTitle: "Taxi Nice — Saint-Jean-Cap-Ferrat",
         heroSubtitle: "The most exclusive peninsula on the Côte d'Azur",
         description: "Taxi transfer from Nice to Saint-Jean-Cap-Ferrat, a luxury peninsula home to the Villa Ephrussi de Rothschild and paradise coastal paths.",
@@ -1720,8 +1720,8 @@ export const trajetsNice: Trajet[] = [
     hub: "nice",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nice → Cap-d'Ail | Plage Mala & Sentier | TaxiNeo",
-        metaDescription: "Réservez votre taxi Nice–Cap-d'Ail dès 28 €. 15 km en 20 minutes. Plage Mala, sentier du littoral, porte de Monaco. Service 24h/24.",
+        metaTitle: "Taxi Nice → Cap-d'Ail | forfait dès 28 € | TaxiNeo",
+        metaDescription: "Via Basse Corniche ou A8 en 20 min. En passant par Plage Mala, Sentier du littoral et Porte de Monaco. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Nice — Cap-d'Ail",
         heroSubtitle: "Entre falaises et mer, aux portes de Monaco",
         description: "Transfert en taxi de Nice à Cap-d'Ail, station balnéaire discrète aux portes de Monaco, célèbre pour sa plage Mala et son sentier du littoral.",
@@ -1740,7 +1740,7 @@ export const trajetsNice: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Nice → Cap-d'Ail | Mala Beach & Coastal Path | TaxiNeo",
-        metaDescription: "Book your Nice–Cap-d'Ail taxi from €28. 15 km in 20 minutes. Mala Beach, coastal path, gateway to Monaco. 24/7 service.",
+        metaDescription: "Via Basse Corniche ou A8, 20 min ride. Plage Mala, Sentier du littoral and Porte de Monaco along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Nice — Cap-d'Ail",
         heroSubtitle: "Between cliffs and sea, at the gateway to Monaco",
         description: "Taxi transfer from Nice to Cap-d'Ail, a discreet seaside resort at the gates of Monaco, famous for its Mala beach and coastal path.",
@@ -1785,8 +1785,8 @@ export const trajetsNice: Trajet[] = [
     hub: "nice",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nice → La Turbie | Trophée des Alpes & Vue Monaco | TaxiNeo",
-        metaDescription: "Réservez votre taxi Nice–La Turbie dès 28 €. 16 km en 22 minutes. Trophée des Alpes, panorama sur Monaco. Service porte-à-porte.",
+        metaTitle: "Taxi Nice → La Turbie | forfait dès 28 € | TaxiNeo",
+        metaDescription: "Via Grande Corniche ou A8 sortie 5 en 22 min. Trophée des Alpes, Vue sur Monaco et Village romain en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Nice — La Turbie",
         heroSubtitle: "Le monument romain qui domine Monaco",
         description: "Transfert en taxi de Nice à La Turbie, village perché abritant le Trophée des Alpes et offrant un panorama exceptionnel sur Monaco et la mer.",
@@ -1804,8 +1804,8 @@ export const trajetsNice: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nice → La Turbie | Trophy of the Alps & Monaco Views | TaxiNeo",
-        metaDescription: "Book your Nice–La Turbie taxi from €28. 16 km in 22 minutes. Trophy of the Alps, Monaco panorama. Door-to-door service.",
+        metaTitle: "Taxi Nice → La Turbie | 22 min, from €28 | TaxiNeo",
+        metaDescription: "Via Grande Corniche ou A8 sortie 57, 22 min ride. Trophée des Alpes, Vue sur Monaco and Village romain along the way. Stops for sightseeing possible en route.",
         heroTitle: "Taxi Nice — La Turbie",
         heroSubtitle: "The Roman monument overlooking Monaco",
         description: "Taxi transfer from Nice to La Turbie, a perched village home to the Trophy of the Alps and offering an exceptional panorama over Monaco and the sea.",
@@ -1850,8 +1850,8 @@ export const trajetsNice: Trajet[] = [
     hub: "nice",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nice → Isola 2000 | Transfert Station de Ski | TaxiNeo",
-        metaDescription: "Réservez votre taxi Nice–Isola 2000 dès 130 €. 95 km en 1h30. Station de ski la plus proche de Nice, au cœur du Mercantour. Service 24h/24.",
+        metaTitle: "Taxi Nice → Isola 2000 | 95 km, dès 130 € | TaxiNeo",
+        metaDescription: "Via M6202 puis D2205, D97 en 1h30. Station de ski, Mercantour, Montagne depuis la mer sur le parcours. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Nice — Isola 2000",
         heroSubtitle: "De la mer à la neige en 1h30",
         description: "Transfert en taxi de Nice à Isola 2000, station de ski du Mercantour, la plus proche de la Côte d'Azur à seulement 95 km de la mer.",
@@ -1869,8 +1869,8 @@ export const trajetsNice: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nice → Isola 2000 | Ski Resort Transfer | TaxiNeo",
-        metaDescription: "Book your Nice–Isola 2000 taxi from €130. 95 km in 1h30. Closest ski resort to Nice, in the heart of Mercantour. 24/7 service.",
+        metaTitle: "Taxi Nice → Isola 2000 | 95 km, from €130 | TaxiNeo",
+        metaDescription: "Via M6202 then D2205, D97, 1h30 ride. Station de ski, Mercantour and Montagne depuis la mer along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Nice — Isola 2000",
         heroSubtitle: "From the sea to the snow in 1h30",
         description: "Taxi transfer from Nice to Isola 2000, a Mercantour ski resort, the closest to the Côte d'Azur at just 95 km from the sea.",
@@ -1915,8 +1915,8 @@ export const trajetsNice: Trajet[] = [
     hub: "nice",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nice → Auron | Transfert Station de Ski | TaxiNeo",
-        metaDescription: "Réservez votre taxi Nice–Auron dès 140 €. 100 km en 1h35. Station de ski familiale du Mercantour. Service porte-à-porte, véhicules équipés.",
+        metaTitle: "Taxi Nice → Auron | 100 km, dès 140 €, 1h35 | TaxiNeo",
+        metaDescription: "Par M6202 puis D2205, 1h35 de trajet. Station de ski, Haute Tinée, Village authentique sur le parcours. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Nice — Auron",
         heroSubtitle: "La station de ski familiale au cœur du Mercantour",
         description: "Transfert en taxi de Nice à Auron, station de ski familiale de la haute vallée de la Tinée, dans le Parc National du Mercantour.",
@@ -1934,8 +1934,8 @@ export const trajetsNice: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nice → Auron | Ski Resort Transfer | TaxiNeo",
-        metaDescription: "Book your Nice–Auron taxi from €140. 100 km in 1h35. Family ski resort in the Mercantour. Door-to-door service, equipped vehicles.",
+        metaTitle: "Taxi Nice → Auron | Fixed price from €140 | TaxiNeo",
+        metaDescription: "Through M6202 then D2205 in 1h35. Station de ski, Haute Tinée and Village authentique along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Nice — Auron",
         heroSubtitle: "The family ski resort in the heart of the Mercantour",
         description: "Taxi transfer from Nice to Auron, a family ski resort in the upper Tinée valley, in the Mercantour National Park.",
@@ -1981,8 +1981,8 @@ export const trajetsNice: Trajet[] = [
     hub: "nice",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nice → Sainte-Maxime | Golfe de Saint-Tropez | TaxiNeo",
-        metaDescription: "Réservez votre taxi Nice–Sainte-Maxime dès 145 €. 110 km en 1h20 via l'A8 et la D25. Transfert direct vers le Golfe de Saint-Tropez.",
+        metaTitle: "Taxi Nice → Sainte-Maxime | 110 km, dès 145 € | TaxiNeo",
+        metaDescription: "Via A8 puis D25 via Le Muy en 1h20. Golfe de Saint-Tropez, Plages de sable fin, Port de plaisance et Massif des Maures en chemin. Dépose à votre adresse exacte.",
         heroTitle: "Taxi Nice — Sainte-Maxime",
         heroSubtitle: "Cap sur le Golfe de Saint-Tropez et ses plages dorées",
         description: "Transfert en taxi de Nice à Sainte-Maxime, station balnéaire prisée sur la rive nord du Golfe de Saint-Tropez.",
@@ -2000,8 +2000,8 @@ export const trajetsNice: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nice → Sainte-Maxime | Gulf of Saint-Tropez | TaxiNeo",
-        metaDescription: "Book your Nice–Sainte-Maxime taxi from €145. 110 km in 1h20 via the A8 and D25. Direct transfer to the Gulf of Saint-Tropez.",
+        metaTitle: "Taxi Nice → Sainte-Maxime | 110 km, from €145 | TaxiNeo",
+        metaDescription: "Via A8 then D25 via Le Muy, 1h20 ride. Golfe de Saint-Tropez, Plages de sable fin, Port de plaisance and Massif des Maures en route. ~€9 toll included.",
         heroTitle: "Taxi Nice — Sainte-Maxime",
         heroSubtitle: "Heading to the Gulf of Saint-Tropez and its golden beaches",
         description: "Taxi transfer from Nice to Sainte-Maxime, a popular seaside resort on the north shore of the Gulf of Saint-Tropez.",
@@ -2046,8 +2046,8 @@ export const trajetsNice: Trajet[] = [
     hub: "nice",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nice → Brignoles | Provence Verte | TaxiNeo",
-        metaDescription: "Réservez votre taxi Nice–Brignoles dès 185 €. 140 km en 1h35 par l'A8. Provence Verte, Sainte-Baume, Abbaye du Thoronet. Service porte-à-porte.",
+        metaTitle: "Taxi Nice → Brignoles | 140 km, dès 185 € | TaxiNeo",
+        metaDescription: "Via A8 en 1h35. Provence Verte, Massif de la Sainte-Baume, Abbaye du Thoronet et Vins de Provence en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Nice — Brignoles",
         heroSubtitle: "Au cœur de la Provence Verte, entre vignobles et abbayes",
         description: "Transfert en taxi de Nice à Brignoles, porte d'entrée de la Provence Verte et du massif de la Sainte-Baume.",
@@ -2065,8 +2065,8 @@ export const trajetsNice: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nice → Brignoles | Green Provence | TaxiNeo",
-        metaDescription: "Book your Nice–Brignoles taxi from €185. 140 km in 1h35 via the A8. Green Provence, Sainte-Baume, Thoronet Abbey. Door-to-door service.",
+        metaTitle: "Taxi Nice → Brignoles | 140 km, from €185 | TaxiNeo",
+        metaDescription: "Via A8, 1h35 ride. Provence Verte, Massif de la Sainte-Baume, Abbaye du Thoronet and Vins de Provence en route. Faster and more direct than train or bus.",
         heroTitle: "Taxi Nice — Brignoles",
         heroSubtitle: "Into the heart of Green Provence, between vineyards and abbeys",
         description: "Taxi transfer from Nice to Brignoles, gateway to Green Provence and the Sainte-Baume massif.",
@@ -2111,8 +2111,8 @@ export const trajetsNice: Trajet[] = [
     hub: "nice",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nice → Digne-les-Bains | Haute-Provence & Lavande | TaxiNeo",
-        metaDescription: "Réservez votre taxi Nice–Digne-les-Bains dès 200 €. 155 km en 1h55. Lavande, Train des Pignes, thermes. Service porte-à-porte.",
+        metaTitle: "Taxi Nice → Digne-les-Bains | 155 km, dès 200 € | TaxiNeo",
+        metaDescription: "Via M6202 puis N202 / D900 en 1h55. Lavande, Train des Pignes, Réserve Géologique et Thermes en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Nice — Digne-les-Bains",
         heroSubtitle: "Vers la capitale de la lavande et les Alpes de Haute-Provence",
         description: "Transfert en taxi de Nice à Digne-les-Bains, préfecture des Alpes-de-Haute-Provence, célèbre pour sa lavande et ses thermes.",
@@ -2130,8 +2130,8 @@ export const trajetsNice: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nice → Digne-les-Bains | Lavender & Haute-Provence | TaxiNeo",
-        metaDescription: "Book your Nice–Digne-les-Bains taxi from €200. 155 km in 1h55. Lavender fields, Train des Pignes, thermal baths. Door-to-door service.",
+        metaTitle: "Taxi Nice → Digne-les-Bains | 155 km, from €200 | TaxiNeo",
+        metaDescription: "Via M6202 then N202 / D900, 1h55 ride. Lavande, Train des Pignes, Réserve Géologique and Thermes en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Nice — Digne-les-Bains",
         heroSubtitle: "To the lavender capital and the Alps of Haute-Provence",
         description: "Taxi transfer from Nice to Digne-les-Bains, prefecture of the Alpes-de-Haute-Provence, famous for its lavender and thermal baths.",
@@ -2176,8 +2176,8 @@ export const trajetsNice: Trajet[] = [
     hub: "nice",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nice → Barcelonnette | Vallée de l'Ubaye | TaxiNeo",
-        metaDescription: "Réservez votre taxi Nice–Barcelonnette dès 230 €. 175 km en 2h25. Vallée de l'Ubaye, héritage mexicain, ski Pra-Loup. Service porte-à-porte.",
+        metaTitle: "Taxi Nice → Barcelonnette | 175 km, dès 230 € | TaxiNeo",
+        metaDescription: "Via M6202 en 2h25. Héritage mexicain, Vallée de l'Ubaye, Col de la Cayolle et Ski Pra-Loup / Le Sauze en chemin. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Nice — Barcelonnette",
         heroSubtitle: "La vallée de l'Ubaye et son étonnant héritage mexicain",
         description: "Transfert en taxi de Nice à Barcelonnette, capitale de la vallée de l'Ubaye aux Alpes-de-Haute-Provence, connue pour ses villas mexicaines.",
@@ -2195,8 +2195,8 @@ export const trajetsNice: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nice → Barcelonnette | Ubaye Valley | TaxiNeo",
-        metaDescription: "Book your Nice–Barcelonnette taxi from €230. 175 km in 2h25. Ubaye Valley, Mexican heritage, Pra-Loup skiing. Door-to-door service.",
+        metaTitle: "Taxi Nice → Barcelonnette | 175 km, from €230 | TaxiNeo",
+        metaDescription: "Via M6202, 2h25 ride. Héritage mexicain, Vallée de l'Ubaye, Col de la Cayolle and Ski Pra-Loup / Le Sauze en route. Faster and more direct than train or bus.",
         heroTitle: "Taxi Nice — Barcelonnette",
         heroSubtitle: "The Ubaye Valley and its surprising Mexican heritage",
         description: "Taxi transfer from Nice to Barcelonnette, capital of the Ubaye Valley in the Alpes-de-Haute-Provence, known for its Mexican villas.",
@@ -2241,8 +2241,8 @@ export const trajetsNice: Trajet[] = [
     hub: "nice",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nice → Gap | Hautes-Alpes & Écrins | TaxiNeo",
-        metaDescription: "Réservez votre taxi Nice–Gap dès 255 €. 195 km en 2h35. Hautes-Alpes, Parc des Écrins, Route Napoléon. Service porte-à-porte.",
+        metaTitle: "Taxi Nice → Gap | 195 km, dès 255 €, 2h35 | TaxiNeo",
+        metaDescription: "Via N202 puis N85 ou A51 via Digne en 2h35. Hautes-Alpes, Parc National des Écrins, Lac de Serre-Ponçon et Route Napoléon en chemin. Trajet sans péage.",
         heroTitle: "Taxi Nice — Gap",
         heroSubtitle: "Vers les Hautes-Alpes et le Parc National des Écrins",
         description: "Transfert en taxi de Nice à Gap, préfecture des Hautes-Alpes, aux portes du Parc National des Écrins et du lac de Serre-Ponçon.",
@@ -2260,8 +2260,8 @@ export const trajetsNice: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nice → Gap | Hautes-Alpes & Écrins | TaxiNeo",
-        metaDescription: "Book your Nice–Gap taxi from €255. 195 km in 2h35. Hautes-Alpes, Écrins National Park, Napoléon Route. Door-to-door service.",
+        metaTitle: "Taxi Nice → Gap | Hautes-Alpes, from €255 | TaxiNeo",
+        metaDescription: "Via N202 then N85 ou A51 via Digne, 2h35 ride. Hautes-Alpes, Parc National des Écrins, Lac de Serre-Ponçon and Route Napoléon en route. No toll on this route.",
         heroTitle: "Taxi Nice — Gap",
         heroSubtitle: "To the Hautes-Alpes and the Écrins National Park",
         description: "Taxi transfer from Nice to Gap, prefecture of the Hautes-Alpes, gateway to the Écrins National Park and Serre-Ponçon lake.",
@@ -2306,8 +2306,8 @@ export const trajetsNice: Trajet[] = [
     hub: "nice",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nice → San Remo | Riviera Italienne | TaxiNeo",
-        metaDescription: "Réservez votre taxi Nice–San Remo dès 85 €. 60 km en 55 min via l'A8 et l'autoroute italienne. Marché aux fleurs, casino, vieille ville.",
+        metaTitle: "Taxi Nice → San Remo | forfait dès 85 €, 55 min | TaxiNeo",
+        metaDescription: "Par A8, 55 min de trajet. Riviera italienne, Marché aux fleurs, Casino et Vieille ville La Pigna en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Nice — San Remo",
         heroSubtitle: "La Riviera italienne, son marché aux fleurs et son casino légendaire",
         description: "Transfert en taxi de Nice à San Remo, joyau de la Riviera italienne célèbre pour ses fleurs, son casino et le festival de musique.",
@@ -2325,8 +2325,8 @@ export const trajetsNice: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nice → San Remo | Italian Riviera | TaxiNeo",
-        metaDescription: "Book your Nice–San Remo taxi from €85. 60 km in 55 min via the A8 and Italian motorway. Flower market, casino, old town.",
+        metaTitle: "Taxi Nice → San Remo | Fixed price from €85 | TaxiNeo",
+        metaDescription: "Via A8, 55 min ride. Riviera italienne, Marché aux fleurs, Casino and Vieille ville La Pigna en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Nice — San Remo",
         heroSubtitle: "The Italian Riviera, its flower market and legendary casino",
         description: "Taxi transfer from Nice to San Remo, jewel of the Italian Riviera famous for its flowers, casino and music festival.",
@@ -2371,8 +2371,8 @@ export const trajetsNice: Trajet[] = [
     hub: "nice",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nice → Menton-Garavan | Musée Cocteau & Jardins | TaxiNeo",
-        metaDescription: "Réservez votre taxi Nice–Menton-Garavan dès 50 €. 33 km en 40 min. Musée Cocteau, Fête du Citron, Jardin Serre de la Madone. Porte-à-porte.",
+        metaTitle: "Taxi Nice → Menton-Garavan | 33 km, dès 50 € | TaxiNeo",
+        metaDescription: "Via A8 ou Moyenne Corniche en 40 min. Musée Jean Cocteau, Fête du Citron, Jardin Serre de la Madone et Quartier Garavan en chemin. Retour au même tarif.",
         heroTitle: "Taxi Nice — Menton-Garavan",
         heroSubtitle: "Le Musée Cocteau, la Fête du Citron et les jardins secrets de Garavan",
         description: "Transfert en taxi de Nice au quartier de Garavan à Menton, entre musée Cocteau, jardins d'exception et patrimoine citronnier.",
@@ -2390,8 +2390,8 @@ export const trajetsNice: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nice → Menton-Garavan | Cocteau Museum & Gardens | TaxiNeo",
-        metaDescription: "Book your Nice–Menton-Garavan taxi from €50. 33 km in 40 min. Cocteau Museum, Lemon Festival, Serre de la Madone Garden. Door-to-door.",
+        metaTitle: "Taxi Nice → Menton-Garavan | 33 km, from €50 | TaxiNeo",
+        metaDescription: "Via A8 ou Moyenne Corniche, 40 min ride. Musée Jean Cocteau, Fête du Citron, Jardin Serre de la Madone and Quartier Garavan en route. ~€2 toll included.",
         heroTitle: "Taxi Nice — Menton-Garavan",
         heroSubtitle: "The Cocteau Museum, Lemon Festival and Garavan's secret gardens",
         description: "Taxi transfer from Nice to the Garavan quarter in Menton, featuring the Cocteau Museum, exceptional gardens and citrus heritage.",
@@ -2436,8 +2436,8 @@ export const trajetsNice: Trajet[] = [
     hub: "nice",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nice → Lucéram | Crèches de Noël & Village Médiéval | TaxiNeo",
-        metaDescription: "Réservez votre taxi Nice–Lucéram dès 50 €. 30 km en 40 min. Village médiéval, crèches de Noël célèbres, retables de Bréa. Porte-à-porte.",
+        metaTitle: "Taxi Nice → Lucéram | forfait dès 50 €, 40 min | TaxiNeo",
+        metaDescription: "Via D2566 via L'Escarène en 40 min. Crèches de Noël, Village médiéval, Église Sainte-Marguerite et Retables de Bréa en chemin. Arrêt visite possible en chemin.",
         heroTitle: "Taxi Nice — Lucéram",
         heroSubtitle: "Le village médiéval aux crèches de Noël et aux retables de Bréa",
         description: "Transfert en taxi de Nice à Lucéram, village médiéval perché de l'arrière-pays niçois, célèbre pour son circuit de crèches et ses retables Renaissance.",
@@ -2455,8 +2455,8 @@ export const trajetsNice: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nice → Lucéram | Christmas Nativity Trail & Medieval Village | TaxiNeo",
-        metaDescription: "Book your Nice–Lucéram taxi from €50. 30 km in 40 min. Medieval village, famous Christmas nativity trail, Bréa altarpieces. Door-to-door.",
+        metaTitle: "Taxi Nice → Lucéram | Fixed price from €50 | TaxiNeo",
+        metaDescription: "Via D2566 via L'Escarène, 40 min ride. Crèches de Noël, Village médiéval, Église Sainte-Marguerite and Retables de Bréa en route. No toll on this route.",
         heroTitle: "Taxi Nice — Lucéram",
         heroSubtitle: "The medieval village with Christmas nativity scenes and Bréa altarpieces",
         description: "Taxi transfer from Nice to Lucéram, a perched medieval village in the Nice hinterland, famous for its nativity trail and Renaissance altarpieces.",
@@ -2501,8 +2501,8 @@ export const trajetsNice: Trajet[] = [
     hub: "nice",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nice → Valberg | Station de Ski Familiale | TaxiNeo",
-        metaDescription: "Réservez votre taxi Nice–Valberg dès 120 €. 86 km en 1h25. Station familiale, Mercantour, Gorges du Cians. Véhicules équipés montagne.",
+        metaTitle: "Taxi Nice → Valberg | forfait dès 120 €, 1h25 | TaxiNeo",
+        metaDescription: "Via M6202 puis D28 via Guillaumes en 1h25. Station de ski familiale, Parc du Mercantour, Villages perchés et Gorges du Cians en chemin. Trajet sans péage.",
         heroTitle: "Taxi Nice — Valberg",
         heroSubtitle: "La station de ski familiale aux portes du Mercantour",
         description: "Transfert en taxi de Nice à Valberg, station de ski familiale des Alpes-Maritimes, dans un cadre naturel exceptionnel du Mercantour.",
@@ -2520,8 +2520,8 @@ export const trajetsNice: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nice → Valberg | Family Ski Resort | TaxiNeo",
-        metaDescription: "Book your Nice–Valberg taxi from €120. 86 km in 1h25. Family resort, Mercantour, Cians Gorges. Mountain-equipped vehicles.",
+        metaTitle: "Taxi Nice → Valberg | Fixed price from €120 | TaxiNeo",
+        metaDescription: "Via M6202 then D28 via Guillaumes, 1h25 ride. Station de ski familiale, Parc du Mercantour, Villages perchés and Gorges du Cians en route. Instant quote online.",
         heroTitle: "Taxi Nice — Valberg",
         heroSubtitle: "The family ski resort at the gateway to the Mercantour",
         description: "Taxi transfer from Nice to Valberg, a family ski resort in the Alpes-Maritimes, in the exceptional natural setting of the Mercantour.",
@@ -2566,8 +2566,8 @@ export const trajetsNice: Trajet[] = [
     hub: "nice",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nice → Saint-Tropez | La Presqu'île Mythique | TaxiNeo",
-        metaDescription: "Réservez votre taxi Nice–Saint-Tropez dès 160 €. 120 km en 1h35. Port mythique, Pampelonne, Musée de l'Annonciade. Porte-à-porte.",
+        metaTitle: "Taxi Nice → Saint-Tropez | 120 km, dès 160 € | TaxiNeo",
+        metaDescription: "Via A8 puis D25 et D98A en 1h35. Presqu'île mythique, Port de Saint-Tropez, Plage de Pampelonne et Musée de l'Annonciade en chemin. Péage ~9 € inclus.",
         heroTitle: "Taxi Nice — Saint-Tropez",
         heroSubtitle: "La presqu'île mythique de la Côte d'Azur",
         description: "Transfert en taxi de Nice à Saint-Tropez, village de pêcheurs devenu légende de la Côte d'Azur, avec son port, ses plages et sa dolce vita.",
@@ -2585,8 +2585,8 @@ export const trajetsNice: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nice → Saint-Tropez | The Legendary Peninsula | TaxiNeo",
-        metaDescription: "Book your Nice–Saint-Tropez taxi from €160. 120 km in 1h35. Legendary port, Pampelonne, Annonciade Museum. Door-to-door.",
+        metaTitle: "Taxi Nice → Saint-Tropez | 120 km, from €160 | TaxiNeo",
+        metaDescription: "Via A8 then D25 et D98A, 1h35 ride. Presqu'île mythique, Port de Saint-Tropez, Plage de Pampelonne and Musée de l'Annonciade en route. ~€9 toll included.",
         heroTitle: "Taxi Nice — Saint-Tropez",
         heroSubtitle: "The legendary peninsula of the Côte d'Azur",
         description: "Taxi transfer from Nice to Saint-Tropez, a fishing village turned Côte d'Azur legend, with its port, beaches and dolce vita.",
@@ -2631,8 +2631,8 @@ export const trajetsNice: Trajet[] = [
     hub: "nice",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nice → Aix-en-Provence | Capitale de la Provence | TaxiNeo",
-        metaDescription: "Réservez votre taxi Nice–Aix-en-Provence dès 260 €. 200 km en 2h par l'A8. Cours Mirabeau, Cézanne, Sainte-Victoire. Service porte-à-porte.",
+        metaTitle: "Taxi Nice → Aix-en-Provence | 200 km, dès 260 € | TaxiNeo",
+        metaDescription: "Par A8, 2h de trajet. Cours Mirabeau, Atelier de Cézanne, Montagne Sainte-Victoire et Calissons en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Nice — Aix-en-Provence",
         heroSubtitle: "La capitale culturelle de la Provence et la lumière de Cézanne",
         description: "Transfert en taxi de Nice à Aix-en-Provence, capitale historique de la Provence, ville d'art, de fontaines et du peintre Cézanne.",
@@ -2650,8 +2650,8 @@ export const trajetsNice: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nice → Aix-en-Provence | Capital of Provence | TaxiNeo",
-        metaDescription: "Book your Nice–Aix-en-Provence taxi from €260. 200 km in 2h via the A8. Cours Mirabeau, Cézanne, Sainte-Victoire. Door-to-door service.",
+        metaTitle: "Taxi Nice → Aix-en-Provence | 200 km, from €260 | TaxiNeo",
+        metaDescription: "Via A8, 2 hours ride. Cours Mirabeau, Atelier de Cézanne, Montagne Sainte-Victoire and Calissons en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Nice — Aix-en-Provence",
         heroSubtitle: "The cultural capital of Provence and Cézanne's light",
         description: "Taxi transfer from Nice to Aix-en-Provence, historic capital of Provence, city of art, fountains and the painter Cézanne.",
@@ -2696,8 +2696,8 @@ export const trajetsNice: Trajet[] = [
     hub: "nice",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nice → Sisteron | Citadelle & Porte de Provence | TaxiNeo",
-        metaDescription: "Réservez votre taxi Nice–Sisteron dès 240 €. 185 km en 2h20. Citadelle de Sisteron, Porte de la Provence, vallée de la Durance. Porte-à-porte.",
+        metaTitle: "Taxi Nice → Sisteron | 185 km, dès 240 € | TaxiNeo",
+        metaDescription: "Via N202 via Digne-les-Bains en 2h20. Citadelle de Sisteron, Porte de la Provence, Vallée de la Durance et Rocher de la Baume en chemin. Trajet sans péage.",
         heroTitle: "Taxi Nice — Sisteron",
         heroSubtitle: "La Citadelle imprenable et la Porte de la Provence",
         description: "Transfert en taxi de Nice à Sisteron, sentinelle de la Haute-Provence, gardienne de la cluse de la Durance et de sa citadelle millénaire.",
@@ -2715,8 +2715,8 @@ export const trajetsNice: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nice → Sisteron | Citadel & Gateway to Provence | TaxiNeo",
-        metaDescription: "Book your Nice–Sisteron taxi from €240. 185 km in 2h20. Sisteron Citadel, Gateway to Provence, Durance valley. Door-to-door.",
+        metaTitle: "Taxi Nice → Sisteron | 185 km, from €240 | TaxiNeo",
+        metaDescription: "Via N202 via Digne-les-Bains, 2h20 ride. Citadelle de Sisteron, Porte de la Provence, Vallée de la Durance and Rocher de la Baume en route. Luggage included.",
         heroTitle: "Taxi Nice — Sisteron",
         heroSubtitle: "The impregnable Citadel and the Gateway to Provence",
         description: "Taxi transfer from Nice to Sisteron, sentinel of Haute-Provence, guardian of the Durance gorge and its ancient citadel.",
@@ -2761,8 +2761,8 @@ export const trajetsNice: Trajet[] = [
     hub: "nice",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nice → Puget-Théniers | Vallée du Var & Train des Pignes | TaxiNeo",
-        metaDescription: "Réservez votre taxi Nice–Puget-Théniers dès 85 €. 62 km en 55 min. Village médiéval, Train des Pignes, vallée du Var. Porte-à-porte.",
+        metaTitle: "Taxi Nice → Puget-Théniers | 62 km, dès 85 € | TaxiNeo",
+        metaDescription: "Via M6202 en 55 min. Vallée du Var, Train des Pignes, Village médiéval et Retable de Mirailhet en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Nice — Puget-Théniers",
         heroSubtitle: "Au cœur de la vallée du Var, entre histoire et Train des Pignes",
         description: "Transfert en taxi de Nice à Puget-Théniers, bourg médiéval de la vallée du Var, étape du célèbre Train des Pignes.",
@@ -2780,8 +2780,8 @@ export const trajetsNice: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nice → Puget-Théniers | Var Valley & Train des Pignes | TaxiNeo",
-        metaDescription: "Book your Nice–Puget-Théniers taxi from €85. 62 km in 55 min. Medieval village, Train des Pignes, Var valley. Door-to-door.",
+        metaTitle: "Taxi Nice → Puget-Théniers | 62 km, from €85 | TaxiNeo",
+        metaDescription: "Via M6202, 55 min ride. Vallée du Var, Train des Pignes, Village médiéval and Retable de Mirailhet en route. Faster and more direct than train or bus.",
         heroTitle: "Taxi Nice — Puget-Théniers",
         heroSubtitle: "In the heart of the Var valley, between history and the Train des Pignes",
         description: "Taxi transfer from Nice to Puget-Théniers, a medieval town in the Var valley, a stop on the famous Train des Pignes railway.",
@@ -2829,8 +2829,8 @@ export const trajetsNice: Trajet[] = [
     hub: "nice",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nice → Peillon | Village perché médiéval | TaxiNeo",
-        metaDescription: "Réservez votre taxi Nice–Peillon dès 35 €. 20 km en 25 min. Village perché médiéval, chapelle des Pénitents Blancs, arrière-pays niçois. Porte-à-porte.",
+        metaTitle: "Taxi Nice → Peillon | forfait dès 35 €, 25 min | TaxiNeo",
+        metaDescription: "Via D2204 puis D21 en 25 min. Village perché médiéval, Chapelle des Pénitents Blancs et Arrière-pays niçois en chemin. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Nice — Peillon",
         heroSubtitle: "Un nid d'aigle médiéval suspendu au-dessus de la vallée du Paillon",
         description: "Transfert en taxi de Nice à Peillon, l'un des plus beaux villages perchés de l'arrière-pays niçois, figé dans le temps depuis le Moyen Âge.",
@@ -2847,7 +2847,7 @@ export const trajetsNice: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Nice → Peillon | Medieval Perched Village | TaxiNeo",
-        metaDescription: "Book your Nice–Peillon taxi from €35. 20 km in 25 min. Medieval perched village, White Penitents Chapel, Nice hinterland. Door-to-door.",
+        metaDescription: "Via D2204 then D21, 25 min ride. Village perché médiéval, Chapelle des Pénitents Blancs and Arrière-pays niçois along the way. Drop-off at your exact address.",
         heroTitle: "Taxi Nice — Peillon",
         heroSubtitle: "A medieval eagle's nest suspended above the Paillon valley",
         description: "Taxi transfer from Nice to Peillon, one of the most beautiful perched villages in the Nice hinterland, frozen in time since the Middle Ages.",
@@ -2890,8 +2890,8 @@ export const trajetsNice: Trajet[] = [
     hub: "nice",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nice → Biot | Village des Verriers & Musée Léger | TaxiNeo",
-        metaDescription: "Réservez votre taxi Nice–Biot dès 35 €. 22 km en 25 min. Verreries artisanales, musée Fernand Léger, village médiéval. Porte-à-porte.",
+        metaTitle: "Taxi Nice → Biot | forfait dès 35 €, 25 min | TaxiNeo",
+        metaDescription: "Via A8 sortie 44 Biot en 25 min. Verrerie artisanale, Musée Fernand Léger, Village médiéval et Marineland en chemin. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Nice — Biot",
         heroSubtitle: "Le village des verriers et de Fernand Léger sur la Côte d'Azur",
         description: "Transfert en taxi de Nice à Biot, village médiéval célèbre pour ses verreries artisanales et le musée national Fernand Léger.",
@@ -2907,8 +2907,8 @@ export const trajetsNice: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nice → Biot | Glassblowing Village & Léger Museum | TaxiNeo",
-        metaDescription: "Book your Nice–Biot taxi from €35. 22 km in 25 min. Artisan glassworks, Fernand Léger museum, medieval village. Door-to-door.",
+        metaTitle: "Taxi Nice → Biot | Glassblowing & Léger Museum | TaxiNeo",
+        metaDescription: "Via A8 sortie 44 Biot, 25 min ride. Verrerie artisanale, Musée Fernand Léger, Village médiéval and Marineland en route. Drop-off at your exact address.",
         heroTitle: "Taxi Nice — Biot",
         heroSubtitle: "The glassblowers' village and Fernand Léger on the Côte d'Azur",
         description: "Taxi transfer from Nice to Biot, a medieval village famous for its artisan glassworks and the Fernand Léger National Museum.",
@@ -2951,8 +2951,8 @@ export const trajetsNice: Trajet[] = [
     hub: "nice",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nice → Carros | Château & Centre d'Art Contemporain | TaxiNeo",
-        metaDescription: "Réservez votre taxi Nice–Carros dès 30 €. 18 km en 25 min. Château médiéval, centre d'art contemporain, vallée du Var. Porte-à-porte.",
+        metaTitle: "Taxi Nice → Carros | forfait dès 30 €, 25 min | TaxiNeo",
+        metaDescription: "Via M6202 puis D1 en 25 min. Château médiéval, Centre d'Art Contemporain, Vallée du Var et Village perché en chemin. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Nice — Carros",
         heroSubtitle: "Un château médiéval transformé en écrin d'art contemporain",
         description: "Transfert en taxi de Nice à Carros, village perché au-dessus de la vallée du Var, dont le château médiéval abrite un centre d'art contemporain.",
@@ -2968,8 +2968,8 @@ export const trajetsNice: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nice → Carros | Castle & Contemporary Art Centre | TaxiNeo",
-        metaDescription: "Book your Nice–Carros taxi from €30. 18 km in 25 min. Medieval castle, contemporary art centre, Var valley. Door-to-door.",
+        metaTitle: "Taxi Nice → Carros | Fixed price from €30 | TaxiNeo",
+        metaDescription: "Via M6202 then D1, 25 min ride. Château médiéval, Centre d'Art Contemporain, Vallée du Var and Village perché en route. Drop-off at your exact address.",
         heroTitle: "Taxi Nice — Carros",
         heroSubtitle: "A medieval castle transformed into a contemporary art showcase",
         description: "Taxi transfer from Nice to Carros, a perched village above the Var valley, whose medieval castle houses a contemporary art centre.",
@@ -3012,8 +3012,8 @@ export const trajetsNice: Trajet[] = [
     hub: "nice",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nice → Saint-Martin-Vésubie | Mercantour & Alpha Loup | TaxiNeo",
-        metaDescription: "Réservez votre taxi Nice–Saint-Martin-Vésubie dès 95 €. 65 km en 1h10. Parc du Mercantour, Alpha Loup, vallée de la Vésubie. Porte-à-porte.",
+        metaTitle: "Taxi Nice → Saint-Martin-Vésubie | 65 km, dès 95 € | TaxiNeo",
+        metaDescription: "Via M6202 puis M2565 en 1h10. Parc du Mercantour, Alpha Loup, Station verte et Vallée de la Vésubie en chemin. Alternative directe au train ou au bus.",
         heroTitle: "Taxi Nice — Saint-Martin-Vésubie",
         heroSubtitle: "La porte du Mercantour et la capitale du loup dans les Alpes du Sud",
         description: "Transfert en taxi de Nice à Saint-Martin-Vésubie, village de montagne au cœur de la vallée de la Vésubie, porte d'entrée du Parc national du Mercantour.",
@@ -3029,8 +3029,8 @@ export const trajetsNice: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nice → Saint-Martin-Vésubie | Mercantour & Alpha Wolf Park | TaxiNeo",
-        metaDescription: "Book your Nice–Saint-Martin-Vésubie taxi from €95. 65 km in 1h10. Mercantour National Park, Alpha Wolf Park, Vésubie valley. Door-to-door.",
+        metaTitle: "Taxi Nice → Saint-Martin-Vésubie | 65 km, from €95 | TaxiNeo",
+        metaDescription: "Via M6202 then M2565, 1h10 ride. Parc du Mercantour, Alpha Loup, Station verte and Vallée de la Vésubie en route. Faster and more direct than train or bus.",
         heroTitle: "Taxi Nice — Saint-Martin-Vésubie",
         heroSubtitle: "The gateway to the Mercantour and wolf capital of the Southern Alps",
         description: "Taxi transfer from Nice to Saint-Martin-Vésubie, a mountain village in the heart of the Vésubie valley, gateway to the Mercantour National Park.",
@@ -3073,8 +3073,8 @@ export const trajetsNice: Trajet[] = [
     hub: "nice",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nice → Tourrettes-sur-Loup | Cité des Violettes | TaxiNeo",
-        metaDescription: "Réservez votre taxi Nice–Tourrettes-sur-Loup dès 45 €. 28 km en 35 min. Cité des Violettes, artisans d'art, gorges du Loup. Porte-à-porte.",
+        metaTitle: "Taxi Nice → Tourrettes-sur-Loup | 28 km, dès 45 € | TaxiNeo",
+        metaDescription: "Via D2210 puis D2210 en 35 min. Cité des Violettes, Village médiéval, Artisans d'art et Gorges du Loup en chemin. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Nice — Tourrettes-sur-Loup",
         heroSubtitle: "La cité médiévale des Violettes et des artisans d'art",
         description: "Transfert en taxi de Nice à Tourrettes-sur-Loup, village médiéval fortifié surnommé la « Cité des Violettes », célèbre pour ses artisans et ses gorges du Loup.",
@@ -3090,8 +3090,8 @@ export const trajetsNice: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nice → Tourrettes-sur-Loup | City of Violets | TaxiNeo",
-        metaDescription: "Book your Nice–Tourrettes-sur-Loup taxi from €45. 28 km in 35 min. City of Violets, art craftsmen, Loup Gorges. Door-to-door.",
+        metaTitle: "Taxi Nice → Tourrettes-sur-Loup | 28 km, from €45 | TaxiNeo",
+        metaDescription: "Via D2210 then D2210, 35 min ride. Cité des Violettes, Village médiéval, Artisans d'art and Gorges du Loup en route. Faster and more direct than train or bus.",
         heroTitle: "Taxi Nice — Tourrettes-sur-Loup",
         heroSubtitle: "The medieval city of Violets and art craftsmen",
         description: "Taxi transfer from Nice to Tourrettes-sur-Loup, a fortified medieval village nicknamed the 'City of Violets', famed for its artisans and the Loup Gorges.",
@@ -3134,8 +3134,8 @@ export const trajetsNice: Trajet[] = [
     hub: "nice",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nice → Levens | Saut des Français & Village perché | TaxiNeo",
-        metaDescription: "Réservez votre taxi Nice–Levens dès 40 €. 27 km en 35 min. Saut des Français, village perché, maison Masséna. Porte-à-porte.",
+        metaTitle: "Taxi Nice → Levens | forfait dès 40 €, 35 min | TaxiNeo",
+        metaDescription: "Via M6202 puis D19 en 35 min. Saut des Français, Village perché, Masséna et Gorges de la Vésubie en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Nice — Levens",
         heroSubtitle: "Le belvédère spectaculaire au-dessus de la vallée du Var",
         description: "Transfert en taxi de Nice à Levens, village perché dominant la vallée du Var, célèbre pour le vertigineux Saut des Français et sa place ombragée.",
@@ -3151,8 +3151,8 @@ export const trajetsNice: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nice → Levens | Saut des Français & Perched Village | TaxiNeo",
-        metaDescription: "Book your Nice–Levens taxi from €40. 27 km in 35 min. Saut des Français viewpoint, perched village, Masséna birthplace. Door-to-door.",
+        metaTitle: "Taxi Nice → Levens | Fixed price from €40 | TaxiNeo",
+        metaDescription: "Via M6202 then D19, 35 min ride. Saut des Français, Village perché, Masséna and Gorges de la Vésubie en route. Faster and more direct than train or bus.",
         heroTitle: "Taxi Nice — Levens",
         heroSubtitle: "The spectacular belvedere above the Var valley",
         description: "Taxi transfer from Nice to Levens, a perched village overlooking the Var valley, famous for the vertiginous Saut des Français and its shaded square.",
@@ -3195,8 +3195,8 @@ export const trajetsNice: Trajet[] = [
     hub: "nice",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nice → Contes | Village médiéval & Moulin à huile | TaxiNeo",
-        metaDescription: "Réservez votre taxi Nice–Contes dès 35 €. 20 km en 25 min. Village médiéval, moulin à huile, forêt de châtaigniers. Porte-à-porte.",
+        metaTitle: "Taxi Nice → Contes | forfait dès 35 €, 25 min | TaxiNeo",
+        metaDescription: "Via D2204 en 25 min. Village médiéval, Forêt de Châtaigniers, Moulin à huile et Vallée du Paillon en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Nice — Contes",
         heroSubtitle: "Un village médiéval au cœur de la vallée du Paillon",
         description: "Transfert en taxi de Nice à Contes, bourg médiéval de la vallée du Paillon réputé pour ses moulins à huile et sa forêt de châtaigniers centenaires.",
@@ -3212,8 +3212,8 @@ export const trajetsNice: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nice → Contes | Medieval Village & Olive Oil Mill | TaxiNeo",
-        metaDescription: "Book your Nice–Contes taxi from €35. 20 km in 25 min. Medieval village, olive oil mill, chestnut forests. Door-to-door.",
+        metaTitle: "Taxi Nice → Contes | Fixed price from €35 | TaxiNeo",
+        metaDescription: "Via D2204, 25 min ride. Village médiéval, Forêt de Châtaigniers, Moulin à huile and Vallée du Paillon en route. Faster and more direct than train or bus.",
         heroTitle: "Taxi Nice — Contes",
         heroSubtitle: "A medieval village in the heart of the Paillon valley",
         description: "Taxi transfer from Nice to Contes, a medieval town in the Paillon valley renowned for its olive oil mills and centuries-old chestnut forests.",
@@ -3256,8 +3256,8 @@ export const trajetsNice: Trajet[] = [
     hub: "nice",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nice → La Colle-sur-Loup | Village provençal & Gorges du Loup | TaxiNeo",
-        metaDescription: "Réservez votre taxi Nice–La Colle-sur-Loup dès 35 €. 19 km en 25 min. Village provençal, gorges du Loup, voisin de Saint-Paul-de-Vence. Porte-à-porte.",
+        metaTitle: "Taxi Nice → La Colle-sur-Loup | 19 km, dès 35 € | TaxiNeo",
+        metaDescription: "Via A8 sortie Cagnes en 25 min. Village provençal, Loup gorges, Saint-Paul-de-Vence voisin et Marché artisanal en chemin. Dépose à votre adresse exacte.",
         heroTitle: "Taxi Nice — La Colle-sur-Loup",
         heroSubtitle: "Un village provençal authentique aux portes de Saint-Paul-de-Vence",
         description: "Transfert en taxi de Nice à La Colle-sur-Loup, charmant village provençal niché entre les gorges du Loup et le célèbre village d'artistes de Saint-Paul-de-Vence.",
@@ -3273,8 +3273,8 @@ export const trajetsNice: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nice → La Colle-sur-Loup | Provençal Village & Loup Gorges | TaxiNeo",
-        metaDescription: "Book your Nice–La Colle-sur-Loup taxi from €35. 19 km in 25 min. Provençal village, Loup gorges, neighbour of Saint-Paul-de-Vence. Door-to-door.",
+        metaTitle: "Taxi Nice → La Colle-sur-Loup | 19 km, from €35 | TaxiNeo",
+        metaDescription: "Via A8 sortie Cagnes, 25 min ride. Village provençal, Loup gorges, Saint-Paul-de-Vence voisin and Marché artisanal en route. Drop-off at your exact address.",
         heroTitle: "Taxi Nice — La Colle-sur-Loup",
         heroSubtitle: "An authentic Provençal village at the gates of Saint-Paul-de-Vence",
         description: "Taxi transfer from Nice to La Colle-sur-Loup, a charming Provençal village nestled between the Loup gorges and the famous artists' village of Saint-Paul-de-Vence.",
@@ -3317,8 +3317,8 @@ export const trajetsNice: Trajet[] = [
     hub: "nice",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nice → Aspremont | Village perché & Panorama 360° | TaxiNeo",
-        metaDescription: "Réservez votre taxi Nice–Aspremont dès 30 €. 12 km en 20 min. Village perché, panorama 360°, église baroque. Porte-à-porte.",
+        metaTitle: "Taxi Nice → Aspremont | forfait dès 30 € | TaxiNeo",
+        metaDescription: "Par D14, 20 min de trajet. Village perché, Panorama 360°, Église baroque et Sentier du Mont Cima en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Nice — Aspremont",
         heroSubtitle: "Le belvédère de l'arrière-pays niçois avec vue de la mer aux Alpes",
         description: "Transfert en taxi de Nice à Aspremont, village perché offrant un panorama exceptionnel à 360° depuis la mer Méditerranée jusqu'aux sommets enneigés du Mercantour.",
@@ -3334,8 +3334,8 @@ export const trajetsNice: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nice → Aspremont | Perched Village & 360° Panorama | TaxiNeo",
-        metaDescription: "Book your Nice–Aspremont taxi from €30. 12 km in 20 min. Perched village, 360° panorama, baroque church. Door-to-door.",
+        metaTitle: "Taxi Nice → Aspremont | 20 min, from €30 | TaxiNeo",
+        metaDescription: "Via D14, 20 min ride. Village perché, Panorama 360°, Église baroque and Sentier du Mont Cima en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Nice — Aspremont",
         heroSubtitle: "The hinterland belvedere with views from sea to Alps",
         description: "Taxi transfer from Nice to Aspremont, a perched village offering an exceptional 360° panorama from the Mediterranean Sea to the snow-capped Mercantour peaks.",
@@ -3378,8 +3378,8 @@ export const trajetsNice: Trajet[] = [
     hub: "nice",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nice → Châteauneuf-Grasse | Village fortifié & Oliveraies | TaxiNeo",
-        metaDescription: "Réservez votre taxi Nice–Châteauneuf-Grasse dès 45 €. 30 km en 35 min. Village fortifié, panorama côtier, oliveraies séculaires. Porte-à-porte.",
+        metaTitle: "Taxi Nice → Châteauneuf-Grasse | 30 km, dès 45 € | TaxiNeo",
+        metaDescription: "Via A8 sortie 44 Opio/Châteauneuf en 35 min. Village fortifié, Panorama Côte d'Azur, Oliveraies et Château médiéval en chemin. Dépose à votre adresse exacte.",
         heroTitle: "Taxi Nice — Châteauneuf-Grasse",
         heroSubtitle: "Un village fortifié entre ciel et mer, gardien des oliveraies du pays grassois",
         description: "Transfert en taxi de Nice à Châteauneuf-Grasse, village médiéval fortifié dominant la côte, entouré d'oliveraies centenaires et offrant un panorama exceptionnel de l'Estérel au cap d'Antibes.",
@@ -3395,8 +3395,8 @@ export const trajetsNice: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nice → Châteauneuf-Grasse | Fortified Village & Olive Groves | TaxiNeo",
-        metaDescription: "Book your Nice–Châteauneuf-Grasse taxi from €45. 30 km in 35 min. Fortified village, coastal panorama, centuries-old olive groves. Door-to-door.",
+        metaTitle: "Taxi Nice → Châteauneuf-Grasse | 30 km, from €45 | TaxiNeo",
+        metaDescription: "Via A8 sortie 44 Opio/Châteauneuf, 35 min ride. Village fortifié, Panorama Côte d'Azur, Oliveraies and Château médiéval en route. Up to 50 min during rush hour.",
         heroTitle: "Taxi Nice — Châteauneuf-Grasse",
         heroSubtitle: "A fortified village between sky and sea, guardian of the Grasse olive groves",
         description: "Taxi transfer from Nice to Châteauneuf-Grasse, a medieval fortified village overlooking the coast, surrounded by centuries-old olive groves and offering an exceptional panorama from the Estérel to Cap d'Antibes.",
@@ -3439,8 +3439,8 @@ export const trajetsNice: Trajet[] = [
     hub: "nice",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nice → Gattières | Village perché & Vallée du Var | TaxiNeo",
-        metaDescription: "Réservez votre taxi Nice–Gattières dès 30 €. 15 km en 20 min. Village perché, panorama sur la vallée du Var, église romane. Porte-à-porte.",
+        metaTitle: "Taxi Nice → Gattières | forfait dès 30 € | TaxiNeo",
+        metaDescription: "Via M6202 puis D2209/D1 en 20 min. Village perché, Vallée du Var, Église romane et Sentiers de randonnée en chemin. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Nice — Gattières",
         heroSubtitle: "Un village perché dominant la vallée du Var à deux pas de Nice",
         description: "Transfert en taxi de Nice à Gattières, village perché pittoresque surplombant la large vallée du Var, avec ses ruelles médiévales et son panorama sur les Préalpes.",
@@ -3456,8 +3456,8 @@ export const trajetsNice: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nice → Gattières | Perched Village & Var Valley | TaxiNeo",
-        metaDescription: "Book your Nice–Gattières taxi from €30. 15 km in 20 min. Perched village, Var valley panorama, Romanesque church. Door-to-door.",
+        metaTitle: "Taxi Nice → Gattières | 20 min, from €30 | TaxiNeo",
+        metaDescription: "Via M6202 then D2209/D1, 20 min ride. Village perché, Vallée du Var, Église romane and Sentiers de randonnée en route. Drop-off at your exact address.",
         heroTitle: "Taxi Nice — Gattières",
         heroSubtitle: "A perched village overlooking the Var valley, a stone's throw from Nice",
         description: "Taxi transfer from Nice to Gattières, a picturesque perched village overlooking the broad Var valley, with its medieval lanes and panoramic views of the Pre-Alps.",
@@ -3500,8 +3500,8 @@ export const trajetsNice: Trajet[] = [
     hub: "nice",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nice → Tourette-Levens | Château des Lascaris & Musée des Papillons | TaxiNeo",
-        metaDescription: "Réservez votre taxi Nice–Tourette-Levens dès 30 €. 14 km en 20 min. Château des Lascaris, musée des Papillons, grottes préhistoriques. Porte-à-porte.",
+        metaTitle: "Taxi Nice → Tourette-Levens | 14 km, dès 30 € | TaxiNeo",
+        metaDescription: "Via D2204 puis D19 en 20 min. Château des Lascaris, Musée des Papillons, Village médiéval et Grottes préhistoriques en chemin. Dépose à votre adresse exacte.",
         heroTitle: "Taxi Nice — Tourette-Levens",
         heroSubtitle: "Un village médiéval aux portes de Nice, entre château et papillons",
         description: "Transfert en taxi de Nice à Tourette-Levens, village médiéval dominé par le château des Lascaris, abritant un musée des Papillons unique et des grottes préhistoriques remarquables.",
@@ -3517,8 +3517,8 @@ export const trajetsNice: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nice → Tourette-Levens | Lascaris Castle & Butterfly Museum | TaxiNeo",
-        metaDescription: "Book your Nice–Tourette-Levens taxi from €30. 14 km in 20 min. Lascaris Castle, Butterfly Museum, prehistoric caves. Door-to-door.",
+        metaTitle: "Taxi Nice → Tourette-Levens | 14 km, from €30 | TaxiNeo",
+        metaDescription: "Via D2204 then D19, 20 min ride. Château des Lascaris, Musée des Papillons, Village médiéval and Grottes préhistoriques en route. No toll on this route.",
         heroTitle: "Taxi Nice — Tourette-Levens",
         heroSubtitle: "A medieval village at the gates of Nice, between castle and butterflies",
         description: "Taxi transfer from Nice to Tourette-Levens, a medieval village dominated by the Lascaris Castle, home to a unique Butterfly Museum and remarkable prehistoric caves.",
@@ -3561,8 +3561,8 @@ export const trajetsNice: Trajet[] = [
     hub: "nice",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nice → Saint-André-de-la-Roche | Transfert rapide | TaxiNeo",
-        metaDescription: "Réservez votre taxi Nice–Saint-André-de-la-Roche dès 20 €. 6 km en 12 min. Commune résidentielle, vallée du Paillon. Porte-à-porte.",
+        metaTitle: "Taxi Nice → Saint-André-de-la-Roche | 6 km, 20 € | TaxiNeo",
+        metaDescription: "Via D2204 en 12 min. Commune résidentielle, Vallée du Paillon, Église Saint-André et Proximité Nice en chemin. Alternative directe au train ou au bus.",
         heroTitle: "Taxi Nice — Saint-André-de-la-Roche",
         heroSubtitle: "Un transfert rapide vers la commune résidentielle de la vallée du Paillon",
         description: "Transfert en taxi de Nice à Saint-André-de-la-Roche, commune résidentielle paisible de la première couronne niçoise, nichée à l'entrée de la vallée du Paillon.",
@@ -3578,8 +3578,8 @@ export const trajetsNice: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nice → Saint-André-de-la-Roche | Quick Transfer | TaxiNeo",
-        metaDescription: "Book your Nice–Saint-André-de-la-Roche taxi from €20. 6 km in 12 min. Residential commune, Paillon valley. Door-to-door.",
+        metaTitle: "Taxi Nice → Saint-André-de-la-Roche | 6 km, €20 | TaxiNeo",
+        metaDescription: "Via D2204, 12 min ride. Commune résidentielle, Vallée du Paillon, Église Saint-André and Proximité Nice en route. Faster and more direct than train or bus.",
         heroTitle: "Taxi Nice — Saint-André-de-la-Roche",
         heroSubtitle: "A quick transfer to the residential commune in the Paillon valley",
         description: "Taxi transfer from Nice to Saint-André-de-la-Roche, a peaceful residential commune on Nice's first ring, nestled at the entrance to the Paillon valley.",
@@ -3622,8 +3622,8 @@ export const trajetsNice: Trajet[] = [
     hub: "nice",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nice → Falicon | Village perché & Grotte des Ratapignata | TaxiNeo",
-        metaDescription: "Réservez votre taxi Nice–Falicon dès 25 €. 8 km en 15 min. Village perché, grotte mystérieuse, panorama baie des Anges. Porte-à-porte.",
+        metaTitle: "Taxi Nice → Falicon | forfait dès 25 €, 15 min | TaxiNeo",
+        metaDescription: "Via D2204 puis D114 en 15 min. Village perché, Grotte des Ratapignata, Panorama baie des Anges et Mont Chauve en chemin. Dépose à votre adresse exacte.",
         heroTitle: "Taxi Nice — Falicon",
         heroSubtitle: "Le village perché le plus proche de Nice, entre mystère souterrain et panorama marin",
         description: "Transfert en taxi de Nice à Falicon, village perché à 380 mètres d'altitude offrant un panorama grandiose sur la baie des Anges et abritant la mystérieuse grotte des Ratapignata.",
@@ -3639,8 +3639,8 @@ export const trajetsNice: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nice → Falicon | Perched Village & Ratapignata Cave | TaxiNeo",
-        metaDescription: "Book your Nice–Falicon taxi from €25. 8 km in 15 min. Perched village, mysterious cave, Baie des Anges panorama. Door-to-door.",
+        metaTitle: "Taxi Nice → Falicon | Fixed price from €25 | TaxiNeo",
+        metaDescription: "Via D2204 then D114, 15 min ride. Village perché, Grotte des Ratapignata, Panorama baie des Anges and Mont Chauve en route. Drop-off at your exact address.",
         heroTitle: "Taxi Nice — Falicon",
         heroSubtitle: "The closest perched village to Nice, between underground mystery and sea views",
         description: "Taxi transfer from Nice to Falicon, a village perched at 380 metres altitude offering a sweeping panorama over the Baie des Anges and home to the mysterious Ratapignata cave.",
@@ -3686,8 +3686,8 @@ export const trajetsNice: Trajet[] = [
     hub: "nice",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nice → Castellane | Gorges du Verdon & Lac de Castillon | TaxiNeo",
-        metaDescription: "Réservez votre taxi Nice–Castellane dès 130 €. 96 km en 1h30. Porte d'entrée des Gorges du Verdon, lac de Castillon, Route Napoléon. Porte-à-porte.",
+        metaTitle: "Taxi Nice → Castellane | 96 km, dès 130 € | TaxiNeo",
+        metaDescription: "Via N202 puis D6085 en 1h30. Gorges du Verdon, Sous-préfecture des Alpes-de-Haute-Provence et Roc surplombant le village en chemin. Trajet sans péage.",
         heroTitle: "Taxi Nice — Castellane",
         heroSubtitle: "La porte d'entrée des Gorges du Verdon depuis la Côte d'Azur",
         description: "Transfert en taxi de Nice à Castellane, sous-préfecture des Alpes-de-Haute-Provence et point de départ privilégié pour explorer les Gorges du Verdon.",
@@ -3703,8 +3703,8 @@ export const trajetsNice: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nice → Castellane | Verdon Gorges & Castillon Lake | TaxiNeo",
-        metaDescription: "Book your Nice–Castellane taxi from €130. 96 km in 1h30. Gateway to the Verdon Gorges, Castillon lake, Route Napoléon. Door-to-door.",
+        metaTitle: "Taxi Nice → Castellane | 96 km, from €130 | TaxiNeo",
+        metaDescription: "Via N202 then D6085, 1h30 ride. Gorges du Verdon, Sous-préfecture des Alpes-de-Haute-Provence and Roc surplombant le village along the way. Luggage included.",
         heroTitle: "Taxi Nice — Castellane",
         heroSubtitle: "The gateway to the Verdon Gorges from the Côte d'Azur",
         description: "Taxi transfer from Nice to Castellane, sub-prefecture of Alpes-de-Haute-Provence and the prime starting point for exploring the Verdon Gorges.",
@@ -3747,8 +3747,8 @@ export const trajetsNice: Trajet[] = [
     hub: "nice",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nice → Entrevaux | Citadelle de Vauban & Train des Pignes | TaxiNeo",
-        metaDescription: "Réservez votre taxi Nice–Entrevaux dès 100 €. 75 km en 1h10. Citadelle de Vauban, pont-levis, Train des Pignes. Porte-à-porte.",
+        metaTitle: "Taxi Nice → Entrevaux | 75 km, dès 100 € | TaxiNeo",
+        metaDescription: "Par M6202, 1h10 de trajet. Citadelle de Vauban, Train des Pignes, Pont-levis et Vallée du Var en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Nice — Entrevaux",
         heroSubtitle: "Une cité fortifiée par Vauban au cœur de la vallée du Var",
         description: "Transfert en taxi de Nice à Entrevaux, cité médiévale fortifiée par Vauban, étape emblématique du Train des Pignes dans la vallée du Var.",
@@ -3764,8 +3764,8 @@ export const trajetsNice: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nice → Entrevaux | Vauban Citadel & Train des Pignes | TaxiNeo",
-        metaDescription: "Book your Nice–Entrevaux taxi from €100. 75 km in 1h10. Vauban citadel, drawbridge, Train des Pignes. Door-to-door.",
+        metaTitle: "Taxi Nice → Entrevaux | 75 km, from €100 | TaxiNeo",
+        metaDescription: "Through M6202 in 1h10. Citadelle de Vauban, Train des Pignes, Pont-levis and Vallée du Var en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Nice — Entrevaux",
         heroSubtitle: "A Vauban-fortified citadel town in the heart of the Var valley",
         description: "Taxi transfer from Nice to Entrevaux, a medieval walled town fortified by Vauban, an iconic stop on the Train des Pignes railway in the Var valley.",
@@ -3808,8 +3808,8 @@ export const trajetsNice: Trajet[] = [
     hub: "nice",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nice → Annot | Grès d'Annot & Train des Pignes | TaxiNeo",
-        metaDescription: "Réservez votre taxi Nice–Annot dès 110 €. 82 km en 1h20. Grès d'Annot, Train des Pignes, vieille ville médiévale. Porte-à-porte.",
+        metaTitle: "Taxi Nice → Annot | forfait dès 110 €, 1h20 | TaxiNeo",
+        metaDescription: "Via N202 en 1h20. Grès d'Annot, Train des Pignes, Vieille ville médiévale et Escalade & randonnée en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Nice — Annot",
         heroSubtitle: "Un village médiéval cerné de blocs de grès géants, sur la ligne du Train des Pignes",
         description: "Transfert en taxi de Nice à Annot, village médiéval des Alpes-de-Haute-Provence célèbre pour ses formations de grès monumentales et sa gare du Train des Pignes.",
@@ -3825,8 +3825,8 @@ export const trajetsNice: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nice → Annot | Annot Sandstones & Train des Pignes | TaxiNeo",
-        metaDescription: "Book your Nice–Annot taxi from €110. 82 km in 1h20. Annot sandstones, Train des Pignes, medieval old town. Door-to-door.",
+        metaTitle: "Taxi Nice → Annot | Fixed price from €110 | TaxiNeo",
+        metaDescription: "Via N202, 1h20 ride. Grès d'Annot, Train des Pignes, Vieille ville médiévale and Escalade & randonnée en route. Faster and more direct than train or bus.",
         heroTitle: "Taxi Nice — Annot",
         heroSubtitle: "A medieval village surrounded by giant sandstone boulders, on the Train des Pignes line",
         description: "Taxi transfer from Nice to Annot, a medieval village in the Alpes-de-Haute-Provence famous for its monumental sandstone formations and its Train des Pignes railway station.",
@@ -3869,8 +3869,8 @@ export const trajetsNice: Trajet[] = [
     hub: "nice",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nice → Puget-sur-Argens | Rocher de Roquebrune & Vallée de l'Argens | TaxiNeo",
-        metaDescription: "Réservez votre taxi Nice–Puget-sur-Argens dès 95 €. 75 km en 55 min. Vallée de l'Argens, Rocher de Roquebrune, vignobles. Porte-à-porte.",
+        metaTitle: "Taxi Nice → Puget-sur-Argens | 75 km, dès 95 € | TaxiNeo",
+        metaDescription: "Via A8 en 55 min. Rocher de Roquebrune, Vallée de l'Argens, Base Nature & vignobles et Proximité Fréjus en chemin. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Nice — Puget-sur-Argens",
         heroSubtitle: "Au pied du Rocher de Roquebrune, entre vignobles et vallée de l'Argens",
         description: "Transfert en taxi de Nice à Puget-sur-Argens, commune varoise au pied du spectaculaire Rocher de Roquebrune, entre vignobles provençaux et vallée de l'Argens.",
@@ -3886,8 +3886,8 @@ export const trajetsNice: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nice → Puget-sur-Argens | Roquebrune Rock & Argens Valley | TaxiNeo",
-        metaDescription: "Book your Nice–Puget-sur-Argens taxi from €95. 75 km in 55 min. Argens valley, Roquebrune Rock, vineyards. Door-to-door.",
+        metaTitle: "Taxi Nice → Puget-sur-Argens | 75 km, from €95 | TaxiNeo",
+        metaDescription: "Via A8, 55 min ride. Rocher de Roquebrune, Vallée de l'Argens, Base Nature & vignobles and Proximité Fréjus en route. Faster and more direct than train or bus.",
         heroTitle: "Taxi Nice — Puget-sur-Argens",
         heroSubtitle: "At the foot of the Roquebrune Rock, between vineyards and the Argens valley",
         description: "Taxi transfer from Nice to Puget-sur-Argens, a Var commune at the foot of the spectacular Roquebrune Rock, amid Provençal vineyards and the Argens valley.",
@@ -3930,8 +3930,8 @@ export const trajetsNice: Trajet[] = [
     hub: "nice",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nice → Le Cannet | Musée Bonnard & Vieux Cannet | TaxiNeo",
-        metaDescription: "Réservez votre taxi Nice–Le Cannet dès 50 €. 32 km en 30 min. Musée Bonnard, Vieux Cannet, panorama sur Cannes. Porte-à-porte.",
+        metaTitle: "Taxi Nice → Le Cannet | forfait dès 50 € | TaxiNeo",
+        metaDescription: "Via A8 en 30 min. Musée Bonnard, Vieux Cannet, Panorama sur la baie de Cannes et Collines boisées en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Nice — Le Cannet",
         heroSubtitle: "La ville de Bonnard et ses panoramas sur la baie de Cannes",
         description: "Transfert en taxi de Nice au Cannet, ville d'art surplombant Cannes, célèbre pour le musée Bonnard et son vieux village pittoresque.",
@@ -3947,8 +3947,8 @@ export const trajetsNice: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nice → Le Cannet | Bonnard Museum & Old Cannet | TaxiNeo",
-        metaDescription: "Book your Nice–Le Cannet taxi from €50. 32 km in 30 min. Bonnard Museum, Old Cannet, panorama over Cannes. Door-to-door.",
+        metaTitle: "Taxi Nice → Le Cannet | 30 min, from €50 | TaxiNeo",
+        metaDescription: "Via A8, 30 min ride. Musée Bonnard, Vieux Cannet, Panorama sur la baie de Cannes and Collines boisées en route. Faster and more direct than train or bus.",
         heroTitle: "Taxi Nice — Le Cannet",
         heroSubtitle: "Bonnard's town and its panoramas over the Bay of Cannes",
         description: "Taxi transfer from Nice to Le Cannet, an artistic town overlooking Cannes, famous for the Bonnard Museum and its picturesque old village.",
@@ -3991,8 +3991,8 @@ export const trajetsNice: Trajet[] = [
     hub: "nice",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nice → Pégomas | Village du Mimosa & Vallée de la Siagne | TaxiNeo",
-        metaDescription: "Réservez votre taxi Nice–Pégomas dès 55 €. 38 km en 35 min. Village du mimosa, vallée de la Siagne, Provence authentique. Porte-à-porte.",
+        metaTitle: "Taxi Nice → Pégomas | forfait dès 55 €, 35 min | TaxiNeo",
+        metaDescription: "Via A8 puis D9 en 35 min. Vallée de la Siagne, Mimosas en février, Village provençal et Chapelle Saint-Jean en chemin. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Nice — Pégomas",
         heroSubtitle: "Le village du mimosa au cœur de la vallée de la Siagne",
         description: "Transfert en taxi de Nice à Pégomas, village provençal de la vallée de la Siagne célèbre pour ses forêts de mimosas et son cadre champêtre.",
@@ -4008,8 +4008,8 @@ export const trajetsNice: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nice → Pégomas | Mimosa Village & Siagne Valley | TaxiNeo",
-        metaDescription: "Book your Nice–Pégomas taxi from €55. 38 km in 35 min. Mimosa village, Siagne valley, authentic Provence. Door-to-door.",
+        metaTitle: "Taxi Nice → Pégomas | Fixed price from €55 | TaxiNeo",
+        metaDescription: "Via A8 then D9, 35 min ride. Vallée de la Siagne, Mimosas en février, Village provençal and Chapelle Saint-Jean en route. Drop-off at your exact address.",
         heroTitle: "Taxi Nice — Pégomas",
         heroSubtitle: "The mimosa village in the heart of the Siagne valley",
         description: "Taxi transfer from Nice to Pégomas, a Provençal village in the Siagne valley famous for its mimosa forests and its bucolic setting.",
@@ -4052,8 +4052,8 @@ export const trajetsNice: Trajet[] = [
     hub: "nice",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nice → La Roquette-sur-Siagne | Village perché & Vallée de la Siagne | TaxiNeo",
-        metaDescription: "Réservez votre taxi Nice–La Roquette-sur-Siagne dès 50 €. 36 km en 30 min. Village perché, oliveraies, vallée de la Siagne. Porte-à-porte.",
+        metaTitle: "Taxi Nice → La Roquette-sur-Siagne | 36 km, 50 € | TaxiNeo",
+        metaDescription: "Via A8 puis D409/D509 en 30 min. Village perché, Vallée de la Siagne, Oliveraies et Vue sur les collines de Grasse en chemin. Dépose à votre adresse exacte.",
         heroTitle: "Taxi Nice — La Roquette-sur-Siagne",
         heroSubtitle: "Un village perché entre oliveraies et vallée de la Siagne",
         description: "Transfert en taxi de Nice à La Roquette-sur-Siagne, village perché de l'arrière-pays cannois dominant la vallée de la Siagne, entre oliveraies et collines provençales.",
@@ -4069,8 +4069,8 @@ export const trajetsNice: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nice → La Roquette-sur-Siagne | Perched Village & Siagne Valley | TaxiNeo",
-        metaDescription: "Book your Nice–La Roquette-sur-Siagne taxi from €50. 36 km in 30 min. Perched village, olive groves, Siagne valley. Door-to-door.",
+        metaTitle: "Taxi Nice → La Roquette-sur-Siagne | 36 km, €50 | TaxiNeo",
+        metaDescription: "Via A8 then D409/D509, 30 min ride. Village perché, Vallée de la Siagne, Oliveraies and Vue sur les collines de Grasse en route. Drop-off at your exact address.",
         heroTitle: "Taxi Nice — La Roquette-sur-Siagne",
         heroSubtitle: "A perched village between olive groves and the Siagne valley",
         description: "Taxi transfer from Nice to La Roquette-sur-Siagne, a perched village in the Cannes hinterland overlooking the Siagne valley, amid olive groves and Provençal hills.",
@@ -4113,8 +4113,8 @@ export const trajetsNice: Trajet[] = [
     hub: "nice",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nice → Sospel | Village médiéval & Col de Braus | TaxiNeo",
-        metaDescription: "Réservez votre taxi Nice–Sospel dès 60 €. 40 km à travers le Col de Braus jusqu'au village médiéval de la vallée de la Bévéra. Service porte-à-porte 24h/24.",
+        metaTitle: "Taxi Nice → Sospel | forfait dès 60 €, 45 min | TaxiNeo",
+        metaDescription: "Itinéraire D2204, environ 45 min. Village médiéval, Col de Braus, Pont Vieux fortifié sur le parcours. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Nice — Sospel",
         heroSubtitle: "À travers le Col de Braus vers le joyau médiéval de la Bévéra",
         description: "Transfert en taxi de Nice à Sospel, village médiéval niché dans la vallée de la Bévéra, accessible par la route spectaculaire du Col de Braus.",
@@ -4130,8 +4130,8 @@ export const trajetsNice: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nice → Sospel | Medieval Village & Col de Braus | TaxiNeo",
-        metaDescription: "Book your Nice–Sospel taxi from €60. 40 km through the Col de Braus to the medieval village in the Bévéra valley. Door-to-door 24/7.",
+        metaTitle: "Taxi Nice → Sospel | Fixed price from €60 | TaxiNeo",
+        metaDescription: "Direct route via D2204, 45 min. Village médiéval, Col de Braus and Pont Vieux fortifié along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Nice — Sospel",
         heroSubtitle: "Through the Col de Braus to the medieval gem of the Bévéra valley",
         description: "Taxi transfer from Nice to Sospel, a medieval village nestled in the Bévéra valley, reached via the spectacular Col de Braus mountain road.",
@@ -4174,8 +4174,8 @@ export const trajetsNice: Trajet[] = [
     hub: "nice",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nice → Tende | Vallée des Merveilles & Roya | TaxiNeo",
-        metaDescription: "Réservez votre taxi Nice–Tende dès 120 €. 80 km par la vallée de la Roya jusqu'aux portes de la Vallée des Merveilles. Transfert porte-à-porte.",
+        metaTitle: "Taxi Nice → Tende | forfait dès 120 €, 1h30 | TaxiNeo",
+        metaDescription: "Par A8, 1h30 de trajet. Passage par Vallée des Merveilles, Frontière italienne et Musée des Merveilles. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Nice — Tende",
         heroSubtitle: "Aux portes de la Vallée des Merveilles, entre France et Italie",
         description: "Transfert en taxi de Nice à Tende, village montagnard de la haute vallée de la Roya, porte d'entrée vers la mythique Vallée des Merveilles et ses gravures rupestres.",
@@ -4191,8 +4191,8 @@ export const trajetsNice: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nice → Tende | Valley of Wonders & Roya Valley | TaxiNeo",
-        metaDescription: "Book your Nice–Tende taxi from €120. 80 km through the Roya valley to the gateway of the Valley of Wonders. Door-to-door transfer.",
+        metaTitle: "Taxi Nice → Tende | Fixed price from €120 | TaxiNeo",
+        metaDescription: "Via A8, 1h30 ride. Vallée des Merveilles, Frontière italienne and Musée des Merveilles along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Nice — Tende",
         heroSubtitle: "Gateway to the Valley of Wonders, between France and Italy",
         description: "Taxi transfer from Nice to Tende, a mountain village in the upper Roya valley, gateway to the legendary Valley of Wonders and its Bronze Age rock engravings.",
@@ -4235,8 +4235,8 @@ export const trajetsNice: Trajet[] = [
     hub: "nice",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nice → Breil-sur-Roya | Vallée de la Roya & Rafting | TaxiNeo",
-        metaDescription: "Réservez votre taxi Nice–Breil-sur-Roya dès 85 €. 60 km par la vallée de la Roya. Village provençal, rafting, nature préservée. Service 24h/24.",
+        metaTitle: "Taxi Nice → Breil-sur-Roya | 60 km, dès 85 € | TaxiNeo",
+        metaDescription: "Via A8 en 1h05. Vallée de la Roya, Rafting et Lac de breil en chemin. Dépose porte-à-porte, bagages inclus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Nice — Breil-sur-Roya",
         heroSubtitle: "Au cœur de la vallée de la Roya, entre eaux vives et villages perchés",
         description: "Transfert en taxi de Nice à Breil-sur-Roya, village provençal de la vallée de la Roya, réputé pour ses activités d'eaux vives et son cadre naturel préservé.",
@@ -4252,8 +4252,8 @@ export const trajetsNice: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nice → Breil-sur-Roya | Roya Valley & Rafting | TaxiNeo",
-        metaDescription: "Book your Nice–Breil-sur-Roya taxi from €85. 60 km through the Roya valley. Provençal village, whitewater rafting, unspoilt nature. 24/7 service.",
+        metaTitle: "Taxi Nice → Breil-sur-Roya | 60 km, from €85 | TaxiNeo",
+        metaDescription: "Via A8, 1h05 ride. Vallée de la Roya, Rafting and Lac de breil along the way. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Nice — Breil-sur-Roya",
         heroSubtitle: "In the heart of the Roya valley, between whitewater and perched villages",
         description: "Taxi transfer from Nice to Breil-sur-Roya, a Provençal village in the Roya valley, renowned for its whitewater activities and unspoilt natural setting.",
@@ -4296,8 +4296,8 @@ export const trajetsNice: Trajet[] = [
     hub: "nice",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nice → Lucéram | Village médiéval & Circuit des crèches | TaxiNeo",
-        metaDescription: "Réservez votre taxi Nice–Lucéram dès 45 €. 25 km vers le village médiéval perché, célèbre pour son circuit des crèches de Noël et ses retables de Louis Bréa.",
+        metaTitle: "Taxi Nice → Lucéram | forfait dès 45 €, 35 min | TaxiNeo",
+        metaDescription: "Via D2204 via L'Escarène en 35 min. Village médiéval perché, Circuit des crèches et Retables de Bréa en chemin. Alternative directe au train ou au bus.",
         heroTitle: "Taxi Nice — Lucéram",
         heroSubtitle: "Village médiéval perché, des retables de Bréa au circuit des crèches",
         description: "Transfert en taxi de Nice à Lucéram, village médiéval perché de l'arrière-pays niçois, célèbre pour son circuit des crèches et ses trésors artistiques.",
@@ -4313,8 +4313,8 @@ export const trajetsNice: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nice → Lucéram | Medieval Village & Christmas Nativity Trail | TaxiNeo",
-        metaDescription: "Book your Nice–Lucéram taxi from €45. 25 km to the perched medieval village, famous for its Christmas nativity trail and Louis Bréa altarpieces.",
+        metaTitle: "Taxi Nice → Lucéram | Fixed price from €45 | TaxiNeo",
+        metaDescription: "Via D2204 via L'Escarène, 35 min ride. Village médiéval perché, Circuit des crèches and Retables de Bréa along the way. Drop-off at your exact address.",
         heroTitle: "Taxi Nice — Lucéram",
         heroSubtitle: "Perched medieval village, from Bréa altarpieces to the nativity circuit",
         description: "Taxi transfer from Nice to Lucéram, a perched medieval village in the Nice hinterland, famous for its Christmas nativity circuit and artistic treasures.",
@@ -4357,8 +4357,8 @@ export const trajetsNice: Trajet[] = [
     hub: "nice",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nice → Peillon | Plus beau village perché de la Riviera | TaxiNeo",
-        metaDescription: "Réservez votre taxi Nice–Peillon dès 30 €. 15 km vers l'un des plus beaux villages perchés de France, joyau médiéval intact de l'arrière-pays niçois.",
+        metaTitle: "Taxi Nice → Peillon | forfait dès 30 €, 25 min | TaxiNeo",
+        metaDescription: "Via D2204 puis D21 en 25 min. Plus beau village perché, Chapelle des Pénitents Blancs et Moyen Âge préservé en chemin. Arrêt visite possible en chemin.",
         heroTitle: "Taxi Nice — Peillon",
         heroSubtitle: "L'un des plus beaux villages perchés de la Riviera française",
         description: "Transfert en taxi de Nice à Peillon, village médiéval perché considéré comme l'un des plus beaux et des mieux préservés de la Côte d'Azur.",
@@ -4374,8 +4374,8 @@ export const trajetsNice: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nice → Peillon | Most Beautiful Perched Village on the Riviera | TaxiNeo",
-        metaDescription: "Book your Nice–Peillon taxi from €30. 15 km to one of France's most beautiful perched villages, an intact medieval gem in the Nice hinterland.",
+        metaTitle: "Taxi Nice → Peillon | Fixed price from €30 | TaxiNeo",
+        metaDescription: "Via D2204 then D21, 25 min ride. Plus beau village perché, Chapelle des Pénitents Blancs and Moyen Âge préservé along the way. Return trip at same rate.",
         heroTitle: "Taxi Nice — Peillon",
         heroSubtitle: "One of the most beautiful perched villages on the French Riviera",
         description: "Taxi transfer from Nice to Peillon, a perched medieval village considered one of the most beautiful and best-preserved on the Côte d'Azur.",
@@ -4418,8 +4418,8 @@ export const trajetsNice: Trajet[] = [
     hub: "nice",
     i18n: {
       fr: {
-        metaTitle: "Taxi Nice → Théoule-sur-Mer | Estérel & Roches rouges | TaxiNeo",
-        metaDescription: "Réservez votre taxi Nice–Théoule-sur-Mer dès 58 €. 40 km jusqu'aux calanques de l'Estérel et ses roches rouges spectaculaires. Service porte-à-porte.",
+        metaTitle: "Taxi Nice → Théoule-sur-Mer | 40 km, dès 58 € | TaxiNeo",
+        metaDescription: "Via A8 sortie 40 Mandelieu en 40 min. Massif de l'Estérel, Roches rouges et Calanques de Théoule en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Nice — Théoule-sur-Mer",
         heroSubtitle: "Les calanques de l'Estérel et ses roches rouges flamboyantes",
         description: "Transfert en taxi de Nice à Théoule-sur-Mer, station balnéaire nichée au pied du massif de l'Estérel, célèbre pour ses calanques et ses roches rouges spectaculaires.",
@@ -4435,8 +4435,8 @@ export const trajetsNice: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Nice → Théoule-sur-Mer | Estérel Red Rocks & Creeks | TaxiNeo",
-        metaDescription: "Book your Nice–Théoule-sur-Mer taxi from €58. 40 km to the Estérel creeks and their spectacular red rocks. Door-to-door service.",
+        metaTitle: "Taxi Nice → Théoule-sur-Mer | 40 km, from €58 | TaxiNeo",
+        metaDescription: "Via A8 sortie 40 Mandelieu, 40 min ride. Massif de l'Estérel, Roches rouges and Calanques de Théoule along the way. Faster and more direct than train or bus.",
         heroTitle: "Taxi Nice — Théoule-sur-Mer",
         heroSubtitle: "The Estérel creeks and their blazing red rocks",
         description: "Taxi transfer from Nice to Théoule-sur-Mer, a seaside resort nestled at the foot of the Estérel massif, famous for its creeks and spectacular red rocks.",

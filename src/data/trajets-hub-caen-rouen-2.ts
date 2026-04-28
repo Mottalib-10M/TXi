@@ -30,8 +30,8 @@ export const trajetsCaenRouen2: Trajet[] = [
     hub: "caen",
     i18n: {
       fr: {
-        metaTitle: "Taxi Caen → Ouistreham | Prix fixe dès 25 € | TaxiNeo",
-        metaDescription: "Taxi Caen → Ouistreham. 15 km, 20 min, dès 25 €. Ferry Brittany Ferries, Sword Beach, D-Day. Réservation 24h/24.",
+        metaTitle: "Taxi Caen → Ouistreham | 15 km, dès 25 € | TaxiNeo",
+        metaDescription: "Itinéraire D515, environ 20 min. Passage par Ferry Brittany Ferries, Plage Sword Beach, D-Day et Port. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Caen → Ouistreham",
         heroSubtitle: "Transfert Caen → Ouistreham au prix fixe de 25 — 35 €. 15 km par la D515.",
         description: "Ouistreham, porte maritime de Caen et plage historique du Débarquement (Sword Beach), est à 20 minutes de Caen par la D515.",
@@ -49,8 +49,8 @@ export const trajetsCaenRouen2: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Caen → Ouistreham | Fixed price from €25 | TaxiNeo",
-        metaDescription: "Taxi Caen → Ouistreham. 15 km, 20 min, from €25. Brittany Ferries terminal, Sword Beach, D-Day. Book 24/7.",
+        metaTitle: "Taxi Caen → Ouistreham | 15 km, from €25 | TaxiNeo",
+        metaDescription: "D515 route, approximately 20 min. Ferry Brittany Ferries, Plage Sword Beach, D-Day and Port en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Caen → Ouistreham",
         heroSubtitle: "Your Caen → Ouistreham transfer at €25 — €35. 15 km via the D515.",
         description: "Ouistreham, Caen's maritime gateway and historic D-Day beach (Sword Beach), is 20 minutes from Caen via the D515.",
@@ -95,8 +95,8 @@ export const trajetsCaenRouen2: Trajet[] = [
     hub: "caen",
     i18n: {
       fr: {
-        metaTitle: "Taxi Caen → Falaise | Prix fixe dès 50 € | TaxiNeo",
-        metaDescription: "Taxi Caen → Falaise. 35 km, 35 min, dès 50 €. Château de Guillaume le Conquérant, patrimoine médiéval. Réservation 24h/24.",
+        metaTitle: "Taxi Caen → Falaise | forfait dès 50 €, 35 min | TaxiNeo",
+        metaDescription: "Par N158, 35 min de trajet. Château Guillaume le Conquérant, Automates, Bocage normand sur le parcours. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Caen → Falaise",
         heroSubtitle: "Transfert Caen → Falaise au prix fixe de 50 — 60 €. 35 km par la N158.",
         description: "Falaise, cité natale de Guillaume le Conquérant et joyau du patrimoine médiéval normand, est à 35 minutes de Caen par la N158.",
@@ -115,7 +115,7 @@ export const trajetsCaenRouen2: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Caen → Falaise | Fixed price from €50 | TaxiNeo",
-        metaDescription: "Taxi Caen → Falaise. 35 km, 35 min, from €50. William the Conqueror's castle, medieval heritage. Book 24/7.",
+        metaDescription: "Through N158 in 35 min. Château Guillaume le Conquérant, Automates and Bocage normand along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Caen → Falaise",
         heroSubtitle: "Your Caen → Falaise transfer at €50 — €60. 35 km via the N158.",
         description: "Falaise, birthplace of William the Conqueror and a jewel of Norman medieval heritage, is 35 minutes from Caen via the N158.",
@@ -160,8 +160,8 @@ export const trajetsCaenRouen2: Trajet[] = [
     hub: "caen",
     i18n: {
       fr: {
-        metaTitle: "Taxi Caen → Honfleur | Prix fixe dès 70 € | TaxiNeo",
-        metaDescription: "Taxi Caen → Honfleur. 55 km, 50 min, dès 70 €. Pont de Normandie, Vieux Bassin, impressionnisme. Réservation 24h/24.",
+        metaTitle: "Taxi Caen → Honfleur | forfait dès 70 €, 50 min | TaxiNeo",
+        metaDescription: "Via A13 / Pont de Normandie en 50 min. Pont de Normandie, Vieux Bassin, Impressionnisme et Eugène Boudin en chemin. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Caen → Honfleur",
         heroSubtitle: "Transfert Caen → Honfleur au prix fixe de 70 — 90 €. 55 km via l'A13 et le Pont de Normandie.",
         description: "Honfleur, joyau pittoresque de l'estuaire de la Seine et berceau de l'impressionnisme, est à 50 minutes de Caen via l'A13 et le Pont de Normandie.",
@@ -180,7 +180,7 @@ export const trajetsCaenRouen2: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Caen → Honfleur | Fixed price from €70 | TaxiNeo",
-        metaDescription: "Taxi Caen → Honfleur. 55 km, 50 min, from €70. Pont de Normandie, Vieux Bassin, Impressionism. Book 24/7.",
+        metaDescription: "Via A13 / Pont de Normandie, 50 min ride. Pont de Normandie, Vieux Bassin, Impressionnisme and Eugène Boudin en route. Drop-off at your exact address.",
         heroTitle: "Taxi Caen → Honfleur",
         heroSubtitle: "Your Caen → Honfleur transfer at €70 — €90. 55 km via the A13 and Pont de Normandie.",
         description: "Honfleur, a picturesque jewel of the Seine estuary and birthplace of Impressionism, is 50 minutes from Caen via the A13 and Pont de Normandie.",
@@ -225,8 +225,8 @@ export const trajetsCaenRouen2: Trajet[] = [
     hub: "caen",
     i18n: {
       fr: {
-        metaTitle: "Taxi Caen → Mont-Saint-Michel | Prix fixe dès 165 € | TaxiNeo",
-        metaDescription: "Taxi Caen → Mont-Saint-Michel. 130 km, 1h30, dès 165 €. Merveille de l'Occident, UNESCO, abbaye. Réservation 24h/24.",
+        metaTitle: "Taxi Caen → Mont-Saint-Michel | 130 km, dès 165 € | TaxiNeo",
+        metaDescription: "Via A84 en 1h30. Merveille de l'Occident, Abbaye, Baie et UNESCO en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Caen → Mont-Saint-Michel",
         heroSubtitle: "Transfert Caen → Mont-Saint-Michel au prix fixe de 165 — 200 €. 130 km par l'A84 gratuite.",
         description: "Le Mont-Saint-Michel, Merveille de l'Occident et site UNESCO parmi les plus visités de France, est à 1h30 de Caen par l'autoroute A84 gratuite.",
@@ -244,8 +244,8 @@ export const trajetsCaenRouen2: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Caen → Mont-Saint-Michel | Fixed price from €165 | TaxiNeo",
-        metaDescription: "Taxi Caen → Mont-Saint-Michel. 130 km, 1h30, from €165. Wonder of the Western World, UNESCO, abbey. Book 24/7.",
+        metaTitle: "Taxi Caen → Mont-Saint-Michel | 130 km, from €165 | TaxiNeo",
+        metaDescription: "Via A84, 1h30 ride. Merveille de l'Occident, Abbaye, Baie and UNESCO en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Caen → Mont-Saint-Michel",
         heroSubtitle: "Your Caen → Mont-Saint-Michel transfer at €165 — €200. 130 km via the toll-free A84.",
         description: "Mont-Saint-Michel, the Wonder of the Western World and one of France's most visited UNESCO sites, is 1h30 from Caen via the toll-free A84 motorway.",
@@ -294,8 +294,8 @@ export const trajetsCaenRouen2: Trajet[] = [
     hub: "caen",
     i18n: {
       fr: {
-        metaTitle: "Taxi Rouen → Paris | Prix fixe dès 170 € | TaxiNeo",
-        metaDescription: "Taxi Rouen → Paris. 135 km, 1h30, dès 170 €. A13, vallée de la Seine, porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Rouen → Paris | 135 km, dès 170 €, 1h30 | TaxiNeo",
+        metaDescription: "Via A13 en 1h30. Vallée de la Seine, La Défense et Porte de Saint-Cloud en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Rouen → Paris",
         heroSubtitle: "Transfert Rouen → Paris au prix fixe de 170 — 200 €. 135 km par l'A13.",
         description: "Paris, la capitale, est à 1h30 de Rouen par l'autoroute A13 qui longe la vallée de la Seine.",
@@ -314,7 +314,7 @@ export const trajetsCaenRouen2: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Rouen → Paris | Fixed price from €170 | TaxiNeo",
-        metaDescription: "Taxi Rouen → Paris. 135 km, 1h30, from €170. A13, Seine Valley, door-to-door. Book 24/7.",
+        metaDescription: "A13 route, approximately 1h30. Vallée de la Seine, La Défense and Porte de Saint-Cloud along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Rouen → Paris",
         heroSubtitle: "Your Rouen → Paris transfer at €170 — €200. 135 km via the A13.",
         description: "Paris, the capital, is 1h30 from Rouen via the A13 motorway along the Seine valley.",
@@ -359,8 +359,8 @@ export const trajetsCaenRouen2: Trajet[] = [
     hub: "caen",
     i18n: {
       fr: {
-        metaTitle: "Taxi Rouen → Amiens | Prix fixe dès 150 € | TaxiNeo",
-        metaDescription: "Taxi Rouen → Amiens. 120 km, 1h20, dès 150 €. Cathédrale UNESCO, hortillonnages, Jules Verne. Réservation 24h/24.",
+        metaTitle: "Taxi Rouen → Amiens | 120 km, dès 150 €, 1h20 | TaxiNeo",
+        metaDescription: "Itinéraire A28 / A29, environ 1h20. En passant par Cathédrale d'Amiens, Hortillonnages et Jules Verne. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Rouen → Amiens",
         heroSubtitle: "Transfert Rouen → Amiens au prix fixe de 150 — 185 €. 120 km par l'A28 et l'A29.",
         description: "Amiens, ville de la plus grande cathédrale gothique de France (UNESCO) et des hortillonnages, est à 1h20 de Rouen par l'A28 et l'A29.",
@@ -379,7 +379,7 @@ export const trajetsCaenRouen2: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Rouen → Amiens | Fixed price from €150 | TaxiNeo",
-        metaDescription: "Taxi Rouen → Amiens. 120 km, 1h20, from €150. UNESCO cathedral, hortillonnages, Jules Verne. Book 24/7.",
+        metaDescription: "Direct route via A28 / A29, 1h20. Cathédrale d'Amiens, Hortillonnages and Jules Verne along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Rouen → Amiens",
         heroSubtitle: "Your Rouen → Amiens transfer at €150 — €185. 120 km via the A28 and A29.",
         description: "Amiens, home to France's largest Gothic cathedral (UNESCO) and the floating gardens of the hortillonnages, is 1h20 from Rouen via the A28 and A29.",
@@ -424,8 +424,8 @@ export const trajetsCaenRouen2: Trajet[] = [
     hub: "caen",
     i18n: {
       fr: {
-        metaTitle: "Taxi Rouen → Fécamp | Prix fixe dès 90 € | TaxiNeo",
-        metaDescription: "Taxi Rouen → Fécamp. 70 km, 1h, dès 90 €. Palais Bénédictine, falaises, port de pêche, Côte d'Albâtre. Réservation 24h/24.",
+        metaTitle: "Taxi Rouen → Fécamp | forfait dès 90 €, 1h | TaxiNeo",
+        metaDescription: "Itinéraire D926, environ 1h. Passage par Palais Bénédictine, Falaises, Port de pêche et Côte d'Albâtre. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Rouen → Fécamp",
         heroSubtitle: "Transfert Rouen → Fécamp au prix fixe de 90 — 110 €. 70 km par la D926.",
         description: "Fécamp, cité des Terre-Neuvas et du Palais Bénédictine sur la Côte d'Albâtre, est à 1h de Rouen par la D926.",
@@ -444,7 +444,7 @@ export const trajetsCaenRouen2: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Rouen → Fécamp | Fixed price from €90 | TaxiNeo",
-        metaDescription: "Taxi Rouen → Fécamp. 70 km, 1h, from €90. Palais Bénédictine, cliffs, fishing port, Côte d'Albâtre. Book 24/7.",
+        metaDescription: "Direct route via D926, 1 hour. Palais Bénédictine, Falaises, Port de pêche and Côte d'Albâtre en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Rouen → Fécamp",
         heroSubtitle: "Your Rouen → Fécamp transfer at €90 — €110. 70 km via the D926.",
         description: "Fécamp, city of the Terre-Neuvas fishermen and the Palais Bénédictine on the Côte d'Albâtre, is 1h from Rouen via the D926.",
@@ -489,8 +489,8 @@ export const trajetsCaenRouen2: Trajet[] = [
     hub: "caen",
     i18n: {
       fr: {
-        metaTitle: "Taxi Rouen → Vernon | Prix fixe dès 80 € | TaxiNeo",
-        metaDescription: "Taxi Rouen → Vernon-Giverny. 60 km, 45 min, dès 80 €. Maison de Monet, jardins, impressionnisme. Réservation 24h/24.",
+        metaTitle: "Taxi Rouen → Vernon | forfait dès 80 €, 45 min | TaxiNeo",
+        metaDescription: "Via A13 en 45 min. Giverny, Monet, Impressionnisme et Vallée de la Seine en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Rouen → Vernon",
         heroSubtitle: "Transfert Rouen → Vernon au prix fixe de 80 — 95 €. 60 km par l'A13, porte d'entrée de Giverny.",
         description: "Vernon, porte d'entrée de Giverny et des jardins de Claude Monet, est à 45 minutes de Rouen par l'A13.",
@@ -509,7 +509,7 @@ export const trajetsCaenRouen2: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Rouen → Vernon-Giverny | Fixed price from €80 | TaxiNeo",
-        metaDescription: "Taxi Rouen → Vernon-Giverny. 60 km, 45 min, from €80. Monet's house, gardens, Impressionism. Book 24/7.",
+        metaDescription: "Via A13, 45 min ride. Giverny, Monet, Impressionnisme and Vallée de la Seine en route. Drop-off at your exact address. Door-to-door, luggage included.",
         heroTitle: "Taxi Rouen → Vernon",
         heroSubtitle: "Your Rouen → Vernon transfer at €80 — €95. 60 km via the A13, gateway to Giverny.",
         description: "Vernon, gateway to Giverny and Claude Monet's gardens, is 45 minutes from Rouen via the A13.",

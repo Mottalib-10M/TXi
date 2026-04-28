@@ -30,8 +30,8 @@ export const trajetsSaintTropez: Trajet[] = [
     hub: "saint-tropez",
     i18n: {
       fr: {
-        metaTitle: "Taxi Saint-Tropez → Nice | Transfert Côte d'Azur | TaxiNeo",
-        metaDescription: "Réservez votre taxi Saint-Tropez–Nice dès 160 €. 110 km via le massif des Maures et l'A8. Trajet en 1h30, service porte-à-porte 24h/24.",
+        metaTitle: "Taxi Saint-Tropez → Nice | 110 km, dès 160 € | TaxiNeo",
+        metaDescription: "Via D98A + A8 en 1h30. Golfe de Saint-Tropez, Massif des Maures, Promenade des Anglais et Côte d'Azur en chemin. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Saint-Tropez — Nice",
         heroSubtitle: "Du port mythique de la jet-set à la capitale de la Côte d'Azur",
         description: "Transfert en taxi de Saint-Tropez à Nice, capitale de la Côte d'Azur, via le massif des Maures et l'autoroute A8.",
@@ -49,8 +49,8 @@ export const trajetsSaintTropez: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Saint-Tropez → Nice | Côte d'Azur Transfer | TaxiNeo",
-        metaDescription: "Book your Saint-Tropez–Nice taxi from €160. 110 km via the Maures massif and A8. 90-min ride, door-to-door 24/7.",
+        metaTitle: "Taxi Saint-Tropez → Nice | 110 km, from €160 | TaxiNeo",
+        metaDescription: "Via D98A + A8, 1h30 ride. Golfe de Saint-Tropez, Massif des Maures, Promenade des Anglais and Côte d'Azur en route. Faster and more direct than train or bus.",
         heroTitle: "Taxi Saint-Tropez — Nice",
         heroSubtitle: "From the jet-set's legendary port to the capital of the French Riviera",
         description: "Taxi transfer from Saint-Tropez to Nice, capital of the Côte d'Azur, via the Maures massif and the A8 motorway.",
@@ -95,8 +95,8 @@ export const trajetsSaintTropez: Trajet[] = [
     hub: "saint-tropez",
     i18n: {
       fr: {
-        metaTitle: "Taxi Saint-Tropez → Toulon | Transfert Var | TaxiNeo",
-        metaDescription: "Réservez votre taxi Saint-Tropez–Toulon dès 85 €. 70 km via la côte varoise. Trajet en 1h, service porte-à-porte 24h/24.",
+        metaTitle: "Taxi Saint-Tropez → Toulon | 70 km, dès 85 € | TaxiNeo",
+        metaDescription: "Via D98A + D559 + A57 en 1h. Golfe de Saint-Tropez, Massif des Maures, Rade de Toulon et Marine nationale en chemin. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Saint-Tropez — Toulon",
         heroSubtitle: "De la presqu'île dorée à la grande cité maritime du Var",
         description: "Transfert en taxi de Saint-Tropez à Toulon, préfecture du Var et premier port militaire français, via la D559 et le littoral varois.",
@@ -114,8 +114,8 @@ export const trajetsSaintTropez: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Saint-Tropez → Toulon | Var Transfer | TaxiNeo",
-        metaDescription: "Book your Saint-Tropez–Toulon taxi from €85. 70 km via the Var coast. 60-min ride, door-to-door 24/7.",
+        metaTitle: "Taxi Saint-Tropez → Toulon | 70 km, from €85 | TaxiNeo",
+        metaDescription: "Via D98A + D559 + A57, 1 hour ride. Golfe de Saint-Tropez, Massif des Maures, Rade de Toulon and Marine nationale en route. Drop-off at your exact address.",
         heroTitle: "Taxi Saint-Tropez — Toulon",
         heroSubtitle: "From the golden peninsula to the Var's great maritime city",
         description: "Taxi transfer from Saint-Tropez to Toulon, capital of the Var and France's main naval base, via the D559 and the Var coastline.",
@@ -160,8 +160,8 @@ export const trajetsSaintTropez: Trajet[] = [
     hub: "saint-tropez",
     i18n: {
       fr: {
-        metaTitle: "Taxi Saint-Tropez → Marseille | Transfert Provence | TaxiNeo",
-        metaDescription: "Réservez votre taxi Saint-Tropez–Marseille dès 175 €. 140 km via Toulon et l'A50. Trajet en 1h40, service porte-à-porte 24h/24.",
+        metaTitle: "Taxi Saint-Tropez → Marseille | 140 km, dès 175 € | TaxiNeo",
+        metaDescription: "Via D98A + A57 + A50 en 1h40. Golfe de Saint-Tropez, Massif des Maures, A57/A50 et Vieux-Port de Marseille en chemin. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Saint-Tropez — Marseille",
         heroSubtitle: "De la presqu'île dorée à la cité phocéenne",
         description: "Transfert en taxi de Saint-Tropez à Marseille, deuxième ville de France, via la côte varoise, Toulon et l'autoroute A50.",
@@ -179,8 +179,8 @@ export const trajetsSaintTropez: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Saint-Tropez → Marseille | Provence Transfer | TaxiNeo",
-        metaDescription: "Book your Saint-Tropez–Marseille taxi from €175. 140 km via Toulon and A50. 100-min ride, door-to-door 24/7.",
+        metaTitle: "Taxi Saint-Tropez → Marseille | 140 km, from €175 | TaxiNeo",
+        metaDescription: "Via D98A + A57 + A50, 1h40 ride. Golfe de Saint-Tropez, Massif des Maures, A57/A50 and Vieux-Port de Marseille en route. Drop-off at your exact address.",
         heroTitle: "Taxi Saint-Tropez — Marseille",
         heroSubtitle: "From the golden peninsula to the Phocaean city",
         description: "Taxi transfer from Saint-Tropez to Marseille, France's second city, via the Var coast, Toulon and the A50 motorway.",
@@ -225,8 +225,8 @@ export const trajetsSaintTropez: Trajet[] = [
     hub: "saint-tropez",
     i18n: {
       fr: {
-        metaTitle: "Taxi Saint-Tropez → Fréjus | Transfert Var | TaxiNeo",
-        metaDescription: "Réservez votre taxi Saint-Tropez–Fréjus dès 45 €. 35 km par la D559. Trajet en 35 min, service porte-à-porte 24h/24.",
+        metaTitle: "Taxi Saint-Tropez → Fréjus | 35 km, dès 45 € | TaxiNeo",
+        metaDescription: "Via D98A + D559 en 35 min. Golfe de Saint-Tropez, Amphithéâtre romain, Port-Fréjus et Massif de l'Estérel en chemin. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Saint-Tropez — Fréjus",
         heroSubtitle: "De la presqu'île tropézienne à la cité romaine au pied de l'Estérel",
         description: "Transfert en taxi de Saint-Tropez à Fréjus, ville romaine aux portes du massif de l'Estérel, via la D559 et Sainte-Maxime.",
@@ -244,8 +244,8 @@ export const trajetsSaintTropez: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Saint-Tropez → Fréjus | Var Transfer | TaxiNeo",
-        metaDescription: "Book your Saint-Tropez–Fréjus taxi from €45. 35 km via D559. 35-min ride, door-to-door 24/7.",
+        metaTitle: "Taxi Saint-Tropez → Fréjus | 35 km, from €45 | TaxiNeo",
+        metaDescription: "Via D98A + D559, 35 min ride. Golfe de Saint-Tropez, Amphithéâtre romain, Port-Fréjus and Massif de l'Estérel en route. Drop-off at your exact address.",
         heroTitle: "Taxi Saint-Tropez — Fréjus",
         heroSubtitle: "From the Tropezian peninsula to the Roman city at the foot of the Esterel",
         description: "Taxi transfer from Saint-Tropez to Frejus, a Roman city at the gateway to the Esterel massif, via the D559 and Sainte-Maxime.",
@@ -290,8 +290,8 @@ export const trajetsSaintTropez: Trajet[] = [
     hub: "saint-tropez",
     i18n: {
       fr: {
-        metaTitle: "Taxi Saint-Tropez → Cannes | Transfert Riviera | TaxiNeo",
-        metaDescription: "Réservez votre taxi Saint-Tropez–Cannes dès 100 €. 80 km via le massif des Maures et l'A8. Trajet en 1h10, service porte-à-porte 24h/24.",
+        metaTitle: "Taxi Saint-Tropez → Cannes | 80 km, dès 100 € | TaxiNeo",
+        metaDescription: "Via D98A + D25 + A8 en 1h10. Golfe de Saint-Tropez, D25 / A8, La Croisette et Festival de Cannes en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Saint-Tropez — Cannes",
         heroSubtitle: "De la presqu'île des yachts à la Croisette du cinéma",
         description: "Transfert en taxi de Saint-Tropez à Cannes, ville du Festival International du Film, via le massif des Maures et l'autoroute A8.",
@@ -309,8 +309,8 @@ export const trajetsSaintTropez: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Saint-Tropez → Cannes | Riviera Transfer | TaxiNeo",
-        metaDescription: "Book your Saint-Tropez–Cannes taxi from €100. 80 km via the Maures massif and A8. 70-min ride, door-to-door 24/7.",
+        metaTitle: "Taxi Saint-Tropez → Cannes | 80 km, from €100 | TaxiNeo",
+        metaDescription: "Via D98A + D25 + A8, 1h10 ride. Golfe de Saint-Tropez, D25 / A8, La Croisette and Festival de Cannes en route. Faster and more direct than train or bus.",
         heroTitle: "Taxi Saint-Tropez — Cannes",
         heroSubtitle: "From the yacht peninsula to the Croisette of cinema",
         description: "Taxi transfer from Saint-Tropez to Cannes, home of the International Film Festival, via the Maures massif and the A8 motorway.",

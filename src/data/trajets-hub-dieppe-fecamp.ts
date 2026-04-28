@@ -27,8 +27,8 @@ export const trajetsDieppeFecamp: Trajet[] = [
     hub: "dieppe-fecamp",
     i18n: {
       fr: {
-        metaTitle: "Taxi Dieppe → Rouen | Prix fixe dès 80 € | TaxiNeo",
-        metaDescription: "Taxi Dieppe → Rouen. 65 km, 50 min, dès 80 €. A151/D915, transfert direct porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Dieppe → Rouen | forfait dès 80 €, 50 min | TaxiNeo",
+        metaDescription: "Par A151/D915, 50 min de trajet. D915/A151, Côte d'Albâtre, Pays de Caux et Cathédrale de Rouen en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Dieppe → Rouen",
         heroSubtitle: "Transfert Dieppe → Rouen au prix fixe de 80 — 100 €. 65 km, route directe à travers le Pays de Caux.",
         description: "Rouen, capitale historique de la Normandie, est à 50 min de Dieppe par la route directe.",
@@ -47,7 +47,7 @@ export const trajetsDieppeFecamp: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Dieppe → Rouen | Fixed price from €80 | TaxiNeo",
-        metaDescription: "Taxi Dieppe → Rouen. 65 km, 50 min, from €80. A151/D915, direct door-to-door. Book 24/7.",
+        metaDescription: "Via A151/D915, 50 min ride. D915/A151, Côte d'Albâtre, Pays de Caux and Cathédrale de Rouen en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Dieppe → Rouen",
         heroSubtitle: "Your Dieppe → Rouen transfer at €80 — €100. 65 km, toll-free through Pays de Caux.",
         description: "Rouen, historic capital of Normandy, is 50 min from Dieppe via the direct route.",
@@ -92,8 +92,8 @@ export const trajetsDieppeFecamp: Trajet[] = [
     hub: "dieppe-fecamp",
     i18n: {
       fr: {
-        metaTitle: "Taxi Dieppe → Paris | Prix fixe dès 200 € | TaxiNeo",
-        metaDescription: "Taxi Dieppe → Paris. 170 km, 1h50, dès 200 €. A151/A13, transfert direct porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Dieppe → Paris | 170 km, dès 200 €, 1h50 | TaxiNeo",
+        metaDescription: "Via A151 puis A13 en 1h50. A151/A13, Côte d'Albâtre, Ferry Newhaven et Trajet porte-à-porte en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Dieppe → Paris",
         heroSubtitle: "Transfert Dieppe → Paris au prix fixe de 200 — 255 €. 170 km, direct via Rouen et l'A13.",
         description: "Paris est à 1h50 de Dieppe par l'A151 et l'A13, autoroute de Normandie.",
@@ -112,7 +112,7 @@ export const trajetsDieppeFecamp: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Dieppe → Paris | Fixed price from €200 | TaxiNeo",
-        metaDescription: "Taxi Dieppe → Paris. 170 km, 1h50, from €200. A151/A13, direct door-to-door. Book 24/7.",
+        metaDescription: "Via A151 then A13, 1h50 ride. A151/A13, Côte d'Albâtre, Ferry Newhaven and Trajet porte-à-porte en route. Faster and more direct than train or bus.",
         heroTitle: "Taxi Dieppe → Paris",
         heroSubtitle: "Your Dieppe → Paris transfer at €200 — €255. 170 km, via Rouen and the A13.",
         description: "Paris is 1h50 from Dieppe via the A151 and A13 Normandy motorway.",
@@ -157,8 +157,8 @@ export const trajetsDieppeFecamp: Trajet[] = [
     hub: "dieppe-fecamp",
     i18n: {
       fr: {
-        metaTitle: "Taxi Fécamp → Le Havre | Prix fixe dès 50 € | TaxiNeo",
-        metaDescription: "Taxi Fécamp → Le Havre. 40 km, 35 min, dès 50 €. D940, Étretat en route, transfert direct. Réservation 24h/24.",
+        metaTitle: "Taxi Fécamp → Le Havre | 40 km, dès 50 € | TaxiNeo",
+        metaDescription: "Par D940, 35 min de trajet. Côte d'Albâtre, Étretat, Palais Bénédictine et Falaises de craie en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Fécamp → Le Havre",
         heroSubtitle: "Transfert Fécamp → Le Havre au prix fixe de 50 — 65 €. 40 km, route côtière le long de la Côte d'Albâtre.",
         description: "Le Havre est à 35 min de Fécamp par la D940, route longeant les falaises de la Côte d'Albâtre.",
@@ -176,8 +176,8 @@ export const trajetsDieppeFecamp: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Fécamp → Le Havre | Fixed price from €50 | TaxiNeo",
-        metaDescription: "Taxi Fécamp → Le Havre. 40 km, 35 min, from €50. D940, Étretat nearby, direct transfer. Book 24/7.",
+        metaTitle: "Taxi Fécamp → Le Havre | 40 km, from €50 | TaxiNeo",
+        metaDescription: "Direct route via D940, 35 min. Côte d'Albâtre, Étretat, Palais Bénédictine and Falaises de craie en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Fécamp → Le Havre",
         heroSubtitle: "Your Fécamp → Le Havre transfer at €50 — €65. 40 km, toll-free along the Alabaster Coast.",
         description: "Le Havre is 35 min from Fécamp via the D940 coastal road along the Côte d'Albâtre.",
@@ -222,8 +222,8 @@ export const trajetsDieppeFecamp: Trajet[] = [
     hub: "dieppe-fecamp",
     i18n: {
       fr: {
-        metaTitle: "Taxi Fécamp → Rouen | Prix fixe dès 90 € | TaxiNeo",
-        metaDescription: "Taxi Fécamp → Rouen. 75 km, 55 min, dès 90 €. D925/D927, Pays de Caux. Réservation 24h/24.",
+        metaTitle: "Taxi Fécamp → Rouen | forfait dès 90 €, 55 min | TaxiNeo",
+        metaDescription: "Via D925/D927 en 55 min. Pays de Caux, Palais Bénédictine, Vallée de la Seine et Cathédrale de Rouen en chemin. Alternative directe au train ou au bus.",
         heroTitle: "Taxi Fécamp → Rouen",
         heroSubtitle: "Transfert Fécamp → Rouen au prix fixe de 90 — 115 €. 75 km, à travers le coeur du Pays de Caux.",
         description: "Rouen est à 55 min de Fécamp par les routes départementales traversant le Pays de Caux.",
@@ -242,7 +242,7 @@ export const trajetsDieppeFecamp: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Fécamp → Rouen | Fixed price from €90 | TaxiNeo",
-        metaDescription: "Taxi Fécamp → Rouen. 75 km, 55 min, from €90. D925/D927, Pays de Caux. Book 24/7.",
+        metaDescription: "Via D925/D927, 55 min ride. Pays de Caux, Palais Bénédictine, Vallée de la Seine and Cathédrale de Rouen en route. Faster and more direct than train or bus.",
         heroTitle: "Taxi Fécamp → Rouen",
         heroSubtitle: "Your Fécamp → Rouen transfer at €90 — €115. 75 km, toll-free across the Pays de Caux.",
         description: "Rouen is 55 min from Fécamp via the departmental roads crossing the Pays de Caux.",
@@ -287,8 +287,8 @@ export const trajetsDieppeFecamp: Trajet[] = [
     hub: "dieppe-fecamp",
     i18n: {
       fr: {
-        metaTitle: "Taxi Dieppe → Amiens | Prix fixe dès 120 € | TaxiNeo",
-        metaDescription: "Taxi Dieppe → Amiens. 100 km, 1h10, dès 120 €. D925/A29, cathédrale UNESCO. Réservation 24h/24.",
+        metaTitle: "Taxi Dieppe → Amiens | 100 km, dès 120 € | TaxiNeo",
+        metaDescription: "Par D925/A29, 1h10 de trajet. Côte d'Albâtre, Cathédrale d'Amiens, Picardie et Pays de Bray en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Dieppe → Amiens",
         heroSubtitle: "Transfert Dieppe → Amiens au prix fixe de 120 — 155 €. 100 km, de la Côte d'Albâtre à la Picardie.",
         description: "Amiens, avec sa cathédrale UNESCO, est à 1h10 de Dieppe en traversant le Pays de Bray.",
@@ -306,8 +306,8 @@ export const trajetsDieppeFecamp: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Dieppe → Amiens | Fixed price from €120 | TaxiNeo",
-        metaDescription: "Taxi Dieppe → Amiens. 100 km, 1h10, from €120. D925/A29, UNESCO cathedral. Book 24/7.",
+        metaTitle: "Taxi Dieppe → Amiens | 100 km, from €120 | TaxiNeo",
+        metaDescription: "Direct route via D925/A29, 1h10. Côte d'Albâtre, Cathédrale d'Amiens, Picardie and Pays de Bray en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Dieppe → Amiens",
         heroSubtitle: "Your Dieppe → Amiens transfer at €120 — €155. 100 km, from the Alabaster Coast to Picardy.",
         description: "Amiens, with its UNESCO cathedral, is 1h10 from Dieppe across the Pays de Bray.",

@@ -26,8 +26,8 @@ export const trajetsClermontHub: Trajet[] = [
     hub: "clermont-ferrand",
     i18n: {
       fr: {
-        metaTitle: "Taxi Clermont-Ferrand → Vichy | Prix fixe dès 70 € | TaxiNeo",
-        metaDescription: "Taxi Clermont-Ferrand → Vichy. 55 km, 40 min, dès 70 €. Thermes, opéra, patrimoine Napoléon III. Réservation 24h/24.",
+        metaTitle: "Taxi Clermont-Ferrand → Vichy | 55 km, dès 70 € | TaxiNeo",
+        metaDescription: "Via A719 en 40 min. Thermes, Napoléon III, Opéra et Allier en chemin. Dépose porte-à-porte, bagages inclus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Clermont-Ferrand → Vichy",
         heroSubtitle: "Transfert Clermont-Ferrand → Vichy au prix fixe de 70 — 90 €. 55 km, reine des villes d'eaux.",
         description: "Vichy, reine des villes d'eaux classée au patrimoine mondial de l'UNESCO, est à 40 min de Clermont-Ferrand.",
@@ -45,8 +45,8 @@ export const trajetsClermontHub: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Clermont-Ferrand → Vichy | Fixed price from €70 | TaxiNeo",
-        metaDescription: "Taxi Clermont-Ferrand → Vichy. 55 km, 40 min, from €70. Thermal baths, Napoléon III heritage. Book 24/7.",
+        metaTitle: "Taxi Clermont-Ferrand → Vichy | 55 km, from €70 | TaxiNeo",
+        metaDescription: "Via A719, 40 min ride. Thermes, Napoléon III, Opéra and Allier en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Clermont-Ferrand → Vichy",
         heroSubtitle: "Your Clermont-Ferrand → Vichy transfer at €70 — €90. 55 km, queen of spa towns.",
         description: "Vichy, queen of spa towns and UNESCO World Heritage Site, is 40 min from Clermont-Ferrand.",
@@ -90,8 +90,8 @@ export const trajetsClermontHub: Trajet[] = [
     hub: "clermont-ferrand",
     i18n: {
       fr: {
-        metaTitle: "Taxi Clermont-Ferrand → Le Mont-Dore | Dès 65 € | TaxiNeo",
-        metaDescription: "Taxi Clermont-Ferrand → Le Mont-Dore. 50 km, 45 min, dès 65 €. Puy de Sancy, thermes, ski. Réservation 24h/24.",
+        metaTitle: "Taxi Clermont-Ferrand → Le Mont-Dore | 50 km, 65 € | TaxiNeo",
+        metaDescription: "Par D2089, 45 min de trajet. Passage par Puy de Sancy, Thermes, Station de ski et Volcans d'Auvergne. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Clermont-Ferrand → Le Mont-Dore",
         heroSubtitle: "Transfert Clermont-Ferrand → Le Mont-Dore au prix fixe de 65 — 85 €. 50 km au pied du Puy de Sancy.",
         description: "Le Mont-Dore, station thermale et de ski au pied du Puy de Sancy (1 886 m, point culminant du Massif central), est à 45 min de Clermont-Ferrand.",
@@ -109,8 +109,8 @@ export const trajetsClermontHub: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Clermont-Ferrand → Le Mont-Dore | From €65 | TaxiNeo",
-        metaDescription: "Taxi Clermont-Ferrand → Le Mont-Dore. 50 km, 45 min, from €65. Puy de Sancy, thermal baths, skiing. Book 24/7.",
+        metaTitle: "Taxi Clermont-Ferrand → Le Mont-Dore | 50 km, €65 | TaxiNeo",
+        metaDescription: "Via D2089, 45 min ride. Puy de Sancy, Thermes, Station de ski and Volcans d'Auvergne en route. Stops for sightseeing possible en route. No toll on this route.",
         heroTitle: "Taxi Clermont-Ferrand → Le Mont-Dore",
         heroSubtitle: "Your Clermont-Ferrand → Le Mont-Dore transfer at €65 — €85. 50 km at the foot of the Puy de Sancy.",
         description: "Le Mont-Dore, a spa and ski resort at the foot of the Puy de Sancy (1,886 m, Massif Central's highest point), is 45 min from Clermont-Ferrand.",
@@ -154,8 +154,8 @@ export const trajetsClermontHub: Trajet[] = [
     hub: "clermont-ferrand",
     i18n: {
       fr: {
-        metaTitle: "Taxi Clermont-Ferrand → Super Besse | Dès 70 € | TaxiNeo",
-        metaDescription: "Taxi Clermont-Ferrand → Super Besse. 55 km, 50 min, dès 70 €. Ski, lac Pavin, volcans. Réservation 24h/24.",
+        metaTitle: "Taxi Clermont-Ferrand → Super Besse | 55 km, 70 € | TaxiNeo",
+        metaDescription: "Par D2089 puis D978, 50 min de trajet. Station de ski, Lac Pavin, Volcans d'Auvergne sur le parcours. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Clermont-Ferrand → Super Besse",
         heroSubtitle: "Transfert Clermont-Ferrand → Super Besse au prix fixe de 70 — 90 €. 55 km, station des volcans.",
         description: "Super Besse, station de ski familiale au cœur des volcans d'Auvergne près du mystérieux lac Pavin, est à 50 min de Clermont-Ferrand.",
@@ -173,8 +173,8 @@ export const trajetsClermontHub: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Clermont-Ferrand → Super Besse | From €70 | TaxiNeo",
-        metaDescription: "Taxi Clermont-Ferrand → Super Besse. 55 km, 50 min, from €70. Skiing, Lac Pavin, volcanoes. Book 24/7.",
+        metaTitle: "Taxi Clermont-Ferrand → Super Besse | 55 km, €70 | TaxiNeo",
+        metaDescription: "Via D2089 then D978, 50 min ride. Station de ski, Lac Pavin and Volcans d'Auvergne along the way. Stops for sightseeing possible en route. Instant quote online.",
         heroTitle: "Taxi Clermont-Ferrand → Super Besse",
         heroSubtitle: "Your Clermont-Ferrand → Super Besse transfer at €70 — €90. 55 km, the volcano resort.",
         description: "Super Besse, a family ski resort in the Auvergne volcanoes near the mysterious Lac Pavin, is 50 min from Clermont-Ferrand.",
@@ -218,8 +218,8 @@ export const trajetsClermontHub: Trajet[] = [
     hub: "clermont-ferrand",
     i18n: {
       fr: {
-        metaTitle: "Taxi Clermont-Ferrand → Aurillac | Prix fixe dès 190 € | TaxiNeo",
-        metaDescription: "Taxi Clermont-Ferrand → Aurillac. 160 km, 1h40, dès 190 €. Cantal, volcans, fromage. Réservation 24h/24.",
+        metaTitle: "Taxi Clermont-Ferrand → Aurillac | 160 km, 190 € | TaxiNeo",
+        metaDescription: "Via A75 puis D922 en 1h40. Cantal, Volcans et Fromage en chemin. Dépose porte-à-porte, bagages inclus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Clermont-Ferrand → Aurillac",
         heroSubtitle: "Transfert Clermont-Ferrand → Aurillac au prix fixe de 190 — 240 €. 160 km, capitale du Cantal.",
         description: "Aurillac, préfecture du Cantal au cœur des volcans d'Auvergne et pays du fromage cantal, est à 1h40 de Clermont-Ferrand.",
@@ -237,8 +237,8 @@ export const trajetsClermontHub: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Clermont-Ferrand → Aurillac | Fixed price from €190 | TaxiNeo",
-        metaDescription: "Taxi Clermont-Ferrand → Aurillac. 160 km, 1h40, from €190. Cantal, volcanoes, cheese. Book 24/7.",
+        metaTitle: "Taxi Clermont-Ferrand → Aurillac | 160 km, €190 | TaxiNeo",
+        metaDescription: "Via A75 then D922, 1h40 ride. Cantal, Volcans and Fromage along the way. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Clermont-Ferrand → Aurillac",
         heroSubtitle: "Your Clermont-Ferrand → Aurillac transfer at €190 — €240. 160 km, capital of Cantal.",
         description: "Aurillac, capital of Cantal in the heart of the Auvergne volcanoes and cantal cheese country, is 1h40 from Clermont-Ferrand.",
@@ -282,8 +282,8 @@ export const trajetsClermontHub: Trajet[] = [
     hub: "clermont-ferrand",
     i18n: {
       fr: {
-        metaTitle: "Taxi Clermont-Ferrand → Saint-Étienne | Dès 170 € | TaxiNeo",
-        metaDescription: "Taxi Clermont-Ferrand → Saint-Étienne. 145 km, 1h30, dès 170 €. Ville du design, musée de la Mine. Réservation 24h/24.",
+        metaTitle: "Taxi Clermont-Ferrand → Saint-Étienne | 145 km | TaxiNeo",
+        metaDescription: "Via A89 puis A72 en 1h30. Design, Musée de la Mine et Chaudron vert en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Clermont-Ferrand → Saint-Étienne",
         heroSubtitle: "Transfert Clermont-Ferrand → Saint-Étienne au prix fixe de 170 — 220 €. 145 km, ville UNESCO du design.",
         description: "Saint-Étienne, ville créative UNESCO du design et ancien bassin minier reconverti, est à 1h30 de Clermont-Ferrand.",
@@ -301,8 +301,8 @@ export const trajetsClermontHub: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Clermont-Ferrand → Saint-Étienne | From €170 | TaxiNeo",
-        metaDescription: "Taxi Clermont-Ferrand → Saint-Étienne. 145 km, 1h30, from €170. UNESCO Design City, Mine Museum. Book 24/7.",
+        metaTitle: "Taxi Clermont-Ferrand → Saint-Étienne | 145 km | TaxiNeo",
+        metaDescription: "Via A89 then A72, 1h30 ride. Design, Musée de la Mine and Chaudron vert along the way. Drop-off at your exact address. Door-to-door, luggage included.",
         heroTitle: "Taxi Clermont-Ferrand → Saint-Étienne",
         heroSubtitle: "Your Clermont-Ferrand → Saint-Étienne transfer at €170 — €220. 145 km, UNESCO City of Design.",
         description: "Saint-Étienne, UNESCO Creative City of Design and former mining basin reinvented, is 1h30 from Clermont-Ferrand.",

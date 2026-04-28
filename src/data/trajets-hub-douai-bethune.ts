@@ -27,8 +27,8 @@ export const trajetsDouaiBethune: Trajet[] = [
     hub: "douai-bethune",
     i18n: {
       fr: {
-        metaTitle: "Taxi Douai → Lille | Prix fixe dès 40 € | TaxiNeo",
-        metaDescription: "Taxi Douai → Lille. 35 km, 25 min, dès 40 €. A1, transfert direct depuis la cité du beffroi UNESCO. Réservation 24h/24.",
+        metaTitle: "Taxi Douai → Lille | forfait dès 40 €, 25 min | TaxiNeo",
+        metaDescription: "Par A1, 25 min de trajet. Beffroi UNESCO Douai, Bassin minier, Vieux-Lille et Gare Lille-Europe en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Douai → Lille",
         heroSubtitle: "Transfert Douai → Lille au prix fixe de 40 — 55 €. 35 km, rapide par l'A1.",
         description: "Lille est à seulement 25 min de Douai par l'A1, l'autoroute du Nord.",
@@ -47,7 +47,7 @@ export const trajetsDouaiBethune: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Douai → Lille | Fixed price from €40 | TaxiNeo",
-        metaDescription: "Taxi Douai → Lille. 35 km, 25 min, from €40. A1, direct transfer from UNESCO belfry city. Book 24/7.",
+        metaDescription: "Via A1, 25 min ride. Beffroi UNESCO Douai, Bassin minier, Vieux-Lille and Gare Lille-Europe en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Douai → Lille",
         heroSubtitle: "Your Douai → Lille transfer at €40 — €55. 35 km, via the A1.",
         description: "Lille is just 25 min from Douai via the A1 motorway.",
@@ -92,8 +92,8 @@ export const trajetsDouaiBethune: Trajet[] = [
     hub: "douai-bethune",
     i18n: {
       fr: {
-        metaTitle: "Taxi Douai → Arras | Prix fixe dès 30 € | TaxiNeo",
-        metaDescription: "Taxi Douai → Arras. 25 km, 20 min, dès 30 €. Route gratuite, deux villes aux beffrois UNESCO. Réservation 24h/24.",
+        metaTitle: "Taxi Douai → Arras | forfait dès 30 €, 20 min | TaxiNeo",
+        metaDescription: "Itinéraire D917, environ 20 min. Passage par Scarpe, Beffroi Douai UNESCO, Grand-Place Arras et Artois. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Douai → Arras",
         heroSubtitle: "Transfert Douai → Arras au prix fixe de 30 — 40 €. 25 km, sans péage par la D917.",
         description: "Arras est à 20 min de Douai par la D917, liaison directe entre deux cités aux beffrois classés UNESCO.",
@@ -112,7 +112,7 @@ export const trajetsDouaiBethune: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Douai → Arras | Fixed price from €30 | TaxiNeo",
-        metaDescription: "Taxi Douai → Arras. 25 km, 20 min, from €30. Toll-free, two UNESCO belfry cities. Book 24/7.",
+        metaDescription: "D917 route, approximately 20 min. Scarpe, Beffroi Douai UNESCO, Grand-Place Arras and Artois en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Douai → Arras",
         heroSubtitle: "Your Douai → Arras transfer at €30 — €40. 25 km, toll-free via the D917.",
         description: "Arras is just 20 min from Douai via the toll-free D917.",
@@ -157,8 +157,8 @@ export const trajetsDouaiBethune: Trajet[] = [
     hub: "douai-bethune",
     i18n: {
       fr: {
-        metaTitle: "Taxi Béthune → Lille | Prix fixe dès 40 € | TaxiNeo",
-        metaDescription: "Taxi Béthune → Lille. 35 km, 25 min, dès 40 €. A26, transfert direct depuis le coeur du bassin minier. Réservation 24h/24.",
+        metaTitle: "Taxi Béthune → Lille | forfait dès 40 €, 25 min | TaxiNeo",
+        metaDescription: "Par A26, 25 min de trajet. Passage par Beffroi Béthune, Bassin minier UNESCO, Vieux-Lille et Eurostar. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Béthune → Lille",
         heroSubtitle: "Transfert Béthune → Lille au prix fixe de 40 — 55 €. 35 km, rapide par l'A26.",
         description: "Lille est à 25 min de Béthune par l'A26, liaison directe entre l'Artois et la métropole lilloise.",
@@ -177,7 +177,7 @@ export const trajetsDouaiBethune: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Béthune → Lille | Fixed price from €40 | TaxiNeo",
-        metaDescription: "Taxi Béthune → Lille. 35 km, 25 min, from €40. A26, direct from the UNESCO mining basin. Book 24/7.",
+        metaDescription: "Direct route via A26, 25 min. Beffroi Béthune, Bassin minier UNESCO, Vieux-Lille and Eurostar en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Béthune → Lille",
         heroSubtitle: "Your Béthune → Lille transfer at €40 — €55. 35 km, via the A26.",
         description: "Lille is 25 min from Béthune via the A26 motorway.",
@@ -222,8 +222,8 @@ export const trajetsDouaiBethune: Trajet[] = [
     hub: "douai-bethune",
     i18n: {
       fr: {
-        metaTitle: "Taxi Douai → Paris | Prix fixe dès 235 € | TaxiNeo",
-        metaDescription: "Taxi Douai → Paris. 195 km, 2h05, dès 235 €. A1 directe, transfert porte-à-porte depuis le Nord. Réservation 24h/24.",
+        metaTitle: "Taxi Douai → Paris | 195 km, dès 235 €, 2h05 | TaxiNeo",
+        metaDescription: "Via A1 en 2h05. Beffroi UNESCO, Bassin minier, Scarpe et Chantilly en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Douai → Paris",
         heroSubtitle: "Transfert Douai → Paris au prix fixe de 235 — 290 €. 195 km, direct par l'A1.",
         description: "Paris est à 2h05 de Douai par l'A1, l'autoroute du Nord.",
@@ -242,7 +242,7 @@ export const trajetsDouaiBethune: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Douai → Paris | Fixed price from €235 | TaxiNeo",
-        metaDescription: "Taxi Douai → Paris. 195 km, 2h05, from €235. A1, direct door-to-door from the Nord. Book 24/7.",
+        metaDescription: "Via A1, 2h05 ride. Beffroi UNESCO, Bassin minier, Scarpe and Chantilly en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Douai → Paris",
         heroSubtitle: "Your Douai → Paris transfer at €235 — €290. 195 km, via the A1.",
         description: "Paris is 2h05 from Douai via the A1 motorway.",
@@ -287,8 +287,8 @@ export const trajetsDouaiBethune: Trajet[] = [
     hub: "douai-bethune",
     i18n: {
       fr: {
-        metaTitle: "Taxi Béthune → Calais | Prix fixe dès 95 € | TaxiNeo",
-        metaDescription: "Taxi Béthune → Calais. 80 km, 55 min, dès 95 €. A26 directe, transfert ferry et tunnel sous la Manche. Réservation 24h/24.",
+        metaTitle: "Taxi Béthune → Calais | forfait dès 95 € | TaxiNeo",
+        metaDescription: "Par A26, 55 min de trajet. Bassin minier UNESCO, Artois, Côte d'Opale et Tunnel sous la Manche en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Béthune → Calais",
         heroSubtitle: "Transfert Béthune → Calais au prix fixe de 95 — 125 €. 80 km, direct par l'A26.",
         description: "Calais est à 55 min de Béthune par l'A26, porte d'entrée vers l'Angleterre.",
@@ -307,7 +307,7 @@ export const trajetsDouaiBethune: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Béthune → Calais | Fixed price from €95 | TaxiNeo",
-        metaDescription: "Taxi Béthune → Calais. 80 km, 55 min, from €95. A26, direct to ferry port and Channel Tunnel. Book 24/7.",
+        metaDescription: "Via A26, 55 min ride. Bassin minier UNESCO, Artois, Côte d'Opale and Tunnel sous la Manche en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Béthune → Calais",
         heroSubtitle: "Your Béthune → Calais transfer at €95 — €125. 80 km, via the A26.",
         description: "Calais is 55 min from Béthune via the A26 motorway.",

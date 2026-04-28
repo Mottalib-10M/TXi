@@ -27,8 +27,8 @@ export const trajetsBiarritzHub: Trajet[] = [
     hub: "biarritz",
     i18n: {
       fr: {
-        metaTitle: "Taxi Biarritz → Bayonne | Prix fixe dès 20 € | TaxiNeo",
-        metaDescription: "Taxi Biarritz → Bayonne. 8 km, 15 min, dès 20 €. Cathédrale, chocolat basque, rives de la Nive. Réservation 24h/24.",
+        metaTitle: "Taxi Biarritz → Bayonne | 8 km, dès 20 € | TaxiNeo",
+        metaDescription: "Itinéraire Route directe, environ 15 min. Passage par Cathédrale Sainte-Marie, Chocolat, Nive et Adour. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Biarritz → Bayonne",
         heroSubtitle: "Transfert Biarritz → Bayonne au prix fixe de 20 — 30 €. 8 km, capitale du Pays Basque français.",
         description: "Bayonne, capitale historique du Pays Basque français, est à seulement 15 min de Biarritz par la route directe.",
@@ -46,8 +46,8 @@ export const trajetsBiarritzHub: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Biarritz → Bayonne | Fixed price from €20 | TaxiNeo",
-        metaDescription: "Taxi Biarritz → Bayonne. 8 km, 15 min, from €20. Cathedral, Basque chocolate, Nive riverbanks. Book 24/7.",
+        metaTitle: "Taxi Biarritz → Bayonne | 8 km, from €20 | TaxiNeo",
+        metaDescription: "Route directe route, approximately 15 min. Cathédrale Sainte-Marie, Chocolat, Nive and Adour en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Biarritz → Bayonne",
         heroSubtitle: "Your Biarritz → Bayonne transfer at €20 — €30. 8 km, capital of the French Basque Country.",
         description: "Bayonne, historic capital of the French Basque Country, is just 15 min from Biarritz by direct road.",
@@ -92,8 +92,8 @@ export const trajetsBiarritzHub: Trajet[] = [
     hub: "biarritz",
     i18n: {
       fr: {
-        metaTitle: "Taxi Biarritz → Saint-Jean-de-Luz | Prix fixe dès 30 € | TaxiNeo",
-        metaDescription: "Taxi Biarritz → Saint-Jean-de-Luz. 17 km, 20 min, dès 30 €. Port de pêche, Maison Louis XIV, plage. Réservation 24h/24.",
+        metaTitle: "Taxi Biarritz → Saint-Jean-de-Luz | 17 km, 30 € | TaxiNeo",
+        metaDescription: "Par A63, 20 min de trajet. Port de pêche, Maison Louis XIV, Plage et Église Saint-Jean-Baptiste en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Biarritz → Saint-Jean-de-Luz",
         heroSubtitle: "Transfert Biarritz → Saint-Jean-de-Luz au prix fixe de 30 — 40 €. 17 km, joyau de la côte basque.",
         description: "Saint-Jean-de-Luz, charmant port de pêche basque et lieu du mariage de Louis XIV, est à 20 min de Biarritz par l'A63.",
@@ -111,8 +111,8 @@ export const trajetsBiarritzHub: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Biarritz → Saint-Jean-de-Luz | Fixed price from €30 | TaxiNeo",
-        metaDescription: "Taxi Biarritz → Saint-Jean-de-Luz. 17 km, 20 min, from €30. Fishing port, Louis XIV's wedding church. Book 24/7.",
+        metaTitle: "Taxi Biarritz → Saint-Jean-de-Luz | 17 km, €30 | TaxiNeo",
+        metaDescription: "Via A63, 20 min ride. Port de pêche, Maison Louis XIV, Plage and Église Saint-Jean-Baptiste en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Biarritz → Saint-Jean-de-Luz",
         heroSubtitle: "Your Biarritz → Saint-Jean-de-Luz transfer at €30 — €40. 17 km, jewel of the Basque coast.",
         description: "Saint-Jean-de-Luz, a charming Basque fishing port where Louis XIV married in 1660, is 20 min from Biarritz via the A63.",
@@ -157,8 +157,8 @@ export const trajetsBiarritzHub: Trajet[] = [
     hub: "biarritz",
     i18n: {
       fr: {
-        metaTitle: "Taxi Biarritz → San Sebastián | Transfert transfrontalier dès 75 € | TaxiNeo",
-        metaDescription: "Taxi Biarritz → San Sebastián. 50 km, 45 min, dès 75 €. A63/AP-8, plage de La Concha, pintxos. Réservation 24h/24.",
+        metaTitle: "Taxi Biarritz → San Sebastián (Espagne) | 50 km | TaxiNeo",
+        metaDescription: "Via A63 / AP-8 en 45 min. AP-8, Frontière, La Concha et Pintxos en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Biarritz → San Sebastián",
         heroSubtitle: "Transfert transfrontalier Biarritz → San Sebastián au prix fixe de 75 — 95 €. 50 km, capitale gastronomique du Pays Basque espagnol.",
         description: "San Sebastián (Donostia), capitale gastronomique du Pays Basque espagnol et perle de la côte cantabrique, est à 45 min de Biarritz par l'A63 et l'AP-8.",
@@ -176,8 +176,8 @@ export const trajetsBiarritzHub: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Biarritz → San Sebastián | Cross-border transfer from €75 | TaxiNeo",
-        metaDescription: "Taxi Biarritz → San Sebastián. 50 km, 45 min, from €75. A63/AP-8, La Concha beach, pintxos. Book 24/7.",
+        metaTitle: "Taxi Biarritz → San Sebastián (Espagne) | 50 km | TaxiNeo",
+        metaDescription: "Via A63 / AP-8, 45 min ride. AP-8, Frontière, La Concha and Pintxos en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Biarritz → San Sebastián",
         heroSubtitle: "Your cross-border Biarritz → San Sebastián transfer at €75 — €95. 50 km, gastronomic capital of the Spanish Basque Country.",
         description: "San Sebastián (Donostia), gastronomic capital of the Spanish Basque Country and pearl of the Cantabrian coast, is 45 min from Biarritz via the A63 and AP-8.",
@@ -222,8 +222,8 @@ export const trajetsBiarritzHub: Trajet[] = [
     hub: "biarritz",
     i18n: {
       fr: {
-        metaTitle: "Taxi Biarritz → Hendaye | Prix fixe dès 50 € | TaxiNeo",
-        metaDescription: "Taxi Biarritz → Hendaye. 35 km, 30 min, dès 50 €. Corniche basque, frontière, plage des Deux Jumeaux. Réservation 24h/24.",
+        metaTitle: "Taxi Biarritz → Hendaye | 35 km, dès 50 € | TaxiNeo",
+        metaDescription: "Via A63 en 30 min. Frontière espagnole, Château d'Abbadia, Plage des Deux Jumeaux et Corniche basque en chemin. Alternative directe au train ou au bus.",
         heroTitle: "Taxi Biarritz → Hendaye",
         heroSubtitle: "Transfert Biarritz → Hendaye au prix fixe de 50 — 65 €. 35 km, dernière ville avant l'Espagne.",
         description: "Hendaye, dernière ville française avant l'Espagne avec sa grande plage familiale et la corniche basque, est à 30 min de Biarritz par l'A63.",
@@ -241,8 +241,8 @@ export const trajetsBiarritzHub: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Biarritz → Hendaye | Fixed price from €50 | TaxiNeo",
-        metaDescription: "Taxi Biarritz → Hendaye. 35 km, 30 min, from €50. Basque corniche, border town, family beach. Book 24/7.",
+        metaTitle: "Taxi Biarritz → Hendaye | 35 km, from €50 | TaxiNeo",
+        metaDescription: "Via A63, 30 min ride. Frontière espagnole, Château d'Abbadia, Plage des Deux Jumeaux and Corniche basque en route. Faster and more direct than train or bus.",
         heroTitle: "Taxi Biarritz → Hendaye",
         heroSubtitle: "Your Biarritz → Hendaye transfer at €50 — €65. 35 km, last town before Spain.",
         description: "Hendaye, the last French town before Spain with its long family beach and the Basque corniche, is 30 min from Biarritz via the A63.",
@@ -287,8 +287,8 @@ export const trajetsBiarritzHub: Trajet[] = [
     hub: "biarritz",
     i18n: {
       fr: {
-        metaTitle: "Taxi Biarritz → Dax | Prix fixe dès 75 € | TaxiNeo",
-        metaDescription: "Taxi Biarritz → Dax. 55 km, 45 min, dès 75 €. Thermes, Feria, Adour. Réservation 24h/24.",
+        metaTitle: "Taxi Biarritz → Dax | forfait dès 75 €, 45 min | TaxiNeo",
+        metaDescription: "Via A63 en 45 min. Passage par Thermes, Adour, Arènes et Feria. Alternative directe au train ou au bus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Biarritz → Dax",
         heroSubtitle: "Transfert Biarritz → Dax au prix fixe de 75 — 90 €. 55 km, première ville thermale de France.",
         description: "Dax, première ville thermale de France par le nombre de curistes, est à 45 min de Biarritz par l'A63.",
@@ -307,7 +307,7 @@ export const trajetsBiarritzHub: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Biarritz → Dax | Fixed price from €75 | TaxiNeo",
-        metaDescription: "Taxi Biarritz → Dax. 55 km, 45 min, from €75. Thermal baths, Feria, Adour river. Book 24/7.",
+        metaDescription: "Via A63, 45 min ride. Thermes, Adour, Arènes and Feria en route. Faster and more direct than train or bus. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Biarritz → Dax",
         heroSubtitle: "Your Biarritz → Dax transfer at €75 — €90. 55 km, France's top spa town.",
         description: "Dax, France's leading spa town by number of spa-goers, is 45 min from Biarritz via the A63.",
@@ -352,8 +352,8 @@ export const trajetsBiarritzHub: Trajet[] = [
     hub: "biarritz",
     i18n: {
       fr: {
-        metaTitle: "Taxi Biarritz → Aéroport Biarritz-Pays Basque | Dès 15 € | TaxiNeo",
-        metaDescription: "Taxi Biarritz → Aéroport Biarritz-Pays Basque. 3 km, 8 min, dès 15 €. Transfert rapide, terminal unique. Réservation 24h/24.",
+        metaTitle: "Taxi Biarritz → de Biarritz-Pays Basque | 3 km | TaxiNeo",
+        metaDescription: "Par Route directe, 8 min de trajet. Aéroport BOD, Terminal unique et Navette rapide en chemin. Accueil au terminal, attente gratuite si retard de vol.",
         heroTitle: "Taxi Biarritz → Aéroport Biarritz-Pays Basque",
         heroSubtitle: "Transfert Biarritz → Aéroport de Biarritz-Pays Basque au prix fixe de 15 — 20 €. 3 km, à 8 minutes du centre-ville.",
         description: "L'Aéroport de Biarritz-Pays Basque (BIQ), à seulement 3 km du centre-ville, est accessible en 8 min en taxi.",
@@ -371,8 +371,8 @@ export const trajetsBiarritzHub: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Biarritz → Biarritz-Pays Basque Airport | From €15 | TaxiNeo",
-        metaDescription: "Taxi Biarritz → Biarritz Airport (BIQ). 3 km, 8 min, from €15. Quick transfer, single terminal. Book 24/7.",
+        metaTitle: "Taxi Biarritz → de Biarritz-Pays Basque | 3 km | TaxiNeo",
+        metaDescription: "Through Route directe in 8 min. Aéroport BOD, Terminal unique and Navette rapide along the way. Terminal drop-off, real-time flight tracking included.",
         heroTitle: "Taxi Biarritz → Biarritz-Pays Basque Airport",
         heroSubtitle: "Your Biarritz → Biarritz-Pays Basque Airport transfer at €15 — €20. 3 km, just 8 minutes from the city centre.",
         description: "Biarritz-Pays Basque Airport (BIQ), just 3 km from the city centre, is reachable in 8 min by taxi.",

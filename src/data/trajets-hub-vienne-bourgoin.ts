@@ -19,8 +19,8 @@ export const trajetsVienneBourgoin: Trajet[] = [
     hub: "vienne-bourgoin",
     i18n: {
       fr: {
-        metaTitle: "Taxi Vienne → Lyon | Prix fixe dès 35 € | TaxiNeo",
-        metaDescription: "Taxi Vienne → Lyon. 30 km, 25 min, dès 35 €. A7 directe vallée du Rhône. Réservation 24h/24.",
+        metaTitle: "Taxi Vienne → Lyon | 30 km via A7, dès 35 € | TaxiNeo",
+        metaDescription: "Via A7 en undefined min. Vallée du Rhône, Temple d'Auguste et Livie, Théâtre antique et Jazz à Vienne en chemin. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Vienne → Lyon",
         heroSubtitle: "Transfert Vienne → Lyon au prix fixe de 35 — 50 €. 30 km, 25 min.",
         description: "Vienne — Lyon remonte la vallée du Rhône par l'A7 en 25 minutes.",
@@ -39,7 +39,7 @@ export const trajetsVienneBourgoin: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Vienne → Lyon | Fixed price from €35 | TaxiNeo",
-        metaDescription: "Taxi Vienne → Lyon. 30 km, 25 min, from €35. Direct A7 Rhône Valley. Book 24/7.",
+        metaDescription: "Via A7, undefined min ride. Vallée du Rhône, Temple d'Auguste et Livie, Théâtre antique and Jazz à Vienne en route. Faster and more direct than train or bus.",
         heroTitle: "Taxi Vienne → Lyon",
         heroSubtitle: "Vienne → Lyon transfer at €35 — €50. 30 km, 25 min.",
         description: "Vienne to Lyon via A7 along the Rhône Valley in 25 minutes.",
@@ -76,8 +76,8 @@ export const trajetsVienneBourgoin: Trajet[] = [
     hub: "vienne-bourgoin",
     i18n: {
       fr: {
-        metaTitle: "Taxi Vienne → Grenoble | Prix fixe dès 115 € | TaxiNeo",
-        metaDescription: "Taxi Vienne → Grenoble. 95 km, 1h, dès 115 €. Via A48 et la Chartreuse. Réservation 24h/24.",
+        metaTitle: "Taxi Vienne → Grenoble | 95 km, dès 115 € | TaxiNeo",
+        metaDescription: "Via A48 en undefined min. N7, Isère, Voiron et Massif de la Chartreuse en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Vienne → Grenoble",
         heroSubtitle: "Transfert Vienne → Grenoble au prix fixe de 115 — 145 €. 95 km, 1h.",
         description: "Vienne — Grenoble traverse l'Isère nord en longeant le massif de la Chartreuse.",
@@ -95,8 +95,8 @@ export const trajetsVienneBourgoin: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Vienne → Grenoble | Fixed price from €115 | TaxiNeo",
-        metaDescription: "Taxi Vienne → Grenoble. 95 km, 1h, from €115. Via A48 and Chartreuse massif. Book 24/7.",
+        metaTitle: "Taxi Vienne → Grenoble | 95 km, from €115 | TaxiNeo",
+        metaDescription: "Via A48, undefined min ride. N7, Isère, Voiron and Massif de la Chartreuse en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Vienne → Grenoble",
         heroSubtitle: "Vienne → Grenoble transfer at €115 — €145. 95 km, 1h.",
         description: "Vienne to Grenoble across northern Isère, past the Chartreuse massif.",
@@ -133,8 +133,8 @@ export const trajetsVienneBourgoin: Trajet[] = [
     hub: "vienne-bourgoin",
     i18n: {
       fr: {
-        metaTitle: "Taxi Vienne → Valence | Prix fixe dès 85 € | TaxiNeo",
-        metaDescription: "Taxi Vienne → Valence. 70 km, 45 min, dès 85 €. A7 vallée du Rhône, vignobles. Réservation 24h/24.",
+        metaTitle: "Taxi Vienne → Valence | forfait dès 85 € | TaxiNeo",
+        metaDescription: "Via A7 en undefined min. Passage par Vallée du Rhône, Vignobles Côte-Rôtie, Tain-l'Hermitage et Rhône. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Vienne → Valence",
         heroSubtitle: "Transfert Vienne → Valence au prix fixe de 85 — 110 €. 70 km, 45 min.",
         description: "Vienne — Valence descend la vallée du Rhône par l'A7, au cœur des grands vignobles.",
@@ -153,7 +153,7 @@ export const trajetsVienneBourgoin: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Vienne → Valence | Fixed price from €85 | TaxiNeo",
-        metaDescription: "Taxi Vienne → Valence. 70 km, 45 min, from €85. A7 Rhône Valley vineyards. Book 24/7.",
+        metaDescription: "Via A7, undefined min ride. Vallée du Rhône, Vignobles Côte-Rôtie, Tain-l'Hermitage and Rhône en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Vienne → Valence",
         heroSubtitle: "Vienne → Valence transfer at €85 — €110. 70 km, 45 min.",
         description: "Vienne to Valence via A7, through the legendary Rhône Valley vineyards.",
@@ -190,8 +190,8 @@ export const trajetsVienneBourgoin: Trajet[] = [
     hub: "vienne-bourgoin",
     i18n: {
       fr: {
-        metaTitle: "Taxi Bourgoin-Jallieu → Lyon | Prix fixe dès 55 € | TaxiNeo",
-        metaDescription: "Taxi Bourgoin-Jallieu → Lyon. 45 km, 35 min, dès 55 €. A43 directe via l'aéroport Saint Exupéry. Réservation 24h/24.",
+        metaTitle: "Taxi Bourgoin-Jallieu → Lyon | 45 km, dès 55 € | TaxiNeo",
+        metaDescription: "Via A43 en undefined min. Isère Nord, Lyon-Saint Exupéry, Satolas et Plaine de l'Est lyonnais en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Bourgoin-Jallieu → Lyon",
         heroSubtitle: "Transfert Bourgoin-Jallieu → Lyon au prix fixe de 55 — 75 €. 45 km, 35 min.",
         description: "Bourgoin-Jallieu — Lyon emprunte l'A43, passant à proximité de l'aéroport Lyon-Saint Exupéry.",
@@ -209,8 +209,8 @@ export const trajetsVienneBourgoin: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Bourgoin-Jallieu → Lyon | Fixed price from €55 | TaxiNeo",
-        metaDescription: "Taxi Bourgoin-Jallieu → Lyon. 45 km, 35 min, from €55. Direct A43 via Saint Exupéry airport. Book 24/7.",
+        metaTitle: "Taxi Bourgoin-Jallieu → Lyon | 45 km, from €55 | TaxiNeo",
+        metaDescription: "Via A43, undefined min ride. Isère Nord, Lyon-Saint Exupéry, Satolas and Plaine de l'Est lyonnais en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Bourgoin-Jallieu → Lyon",
         heroSubtitle: "Bourgoin-Jallieu → Lyon transfer at €55 — €75. 45 km, 35 min.",
         description: "Bourgoin-Jallieu to Lyon via A43, passing near Lyon-Saint Exupéry airport.",
@@ -247,8 +247,8 @@ export const trajetsVienneBourgoin: Trajet[] = [
     hub: "vienne-bourgoin",
     i18n: {
       fr: {
-        metaTitle: "Taxi Bourgoin-Jallieu → Chambéry | Prix fixe dès 80 € | TaxiNeo",
-        metaDescription: "Taxi Bourgoin-Jallieu → Chambéry. 65 km, 45 min, dès 80 €. A43 via le lac d'Aiguebelette. Réservation 24h/24.",
+        metaTitle: "Taxi Bourgoin-Jallieu → Chambéry | 65 km, dès 80 € | TaxiNeo",
+        metaDescription: "Via A43 en undefined min. Lac d'Aiguebelette, Avant-Pays Savoyard, Pont-de-Beauvoisin et Savoie en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Bourgoin-Jallieu → Chambéry",
         heroSubtitle: "Transfert Bourgoin-Jallieu → Chambéry au prix fixe de 80 — 100 €. 65 km, 45 min.",
         description: "Bourgoin-Jallieu — Chambéry emprunte l'A43 via l'Avant-Pays Savoyard et le lac d'Aiguebelette.",
@@ -266,8 +266,8 @@ export const trajetsVienneBourgoin: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Bourgoin-Jallieu → Chambéry | Fixed price from €80 | TaxiNeo",
-        metaDescription: "Taxi Bourgoin-Jallieu → Chambéry. 65 km, 45 min, from €80. A43 via Aiguebelette lake. Book 24/7.",
+        metaTitle: "Taxi Bourgoin-Jallieu → Chambéry | 65 km, from €80 | TaxiNeo",
+        metaDescription: "Via A43, undefined min ride. Lac d'Aiguebelette, Avant-Pays Savoyard, Pont-de-Beauvoisin and Savoie en route. Faster and more direct than train or bus.",
         heroTitle: "Taxi Bourgoin-Jallieu → Chambéry",
         heroSubtitle: "Bourgoin-Jallieu → Chambéry transfer at €80 — €100. 65 km, 45 min.",
         description: "Bourgoin-Jallieu to Chambéry via A43, through Avant-Pays Savoyard and past Aiguebelette lake.",

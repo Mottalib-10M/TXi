@@ -19,8 +19,8 @@ export const trajetsAurillacLePuy: Trajet[] = [
     hub: "aurillac-lepuy",
     i18n: {
       fr: {
-        metaTitle: "Taxi Aurillac → Clermont-Ferrand | Prix fixe dès 175 € | TaxiNeo",
-        metaDescription: "Taxi Aurillac → Clermont-Ferrand. 160 km, 1h40, dès 175 €. A75 gratuite à travers les volcans d'Auvergne. Réservation 24h/24.",
+        metaTitle: "Taxi Aurillac → Clermont-Ferrand | 160 km, 175 € | TaxiNeo",
+        metaDescription: "Via A75 en undefined min. Cantal, Volcans d'Auvergne et Massif central en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Aurillac → Clermont-Ferrand",
         heroSubtitle: "Transfert Aurillac → Clermont-Ferrand au prix fixe de 175 — 220 €. 160 km, 1h40.",
         description: "Aurillac — Clermont-Ferrand par l'A75 gratuite en 1h40, au cœur des volcans d'Auvergne.",
@@ -38,8 +38,8 @@ export const trajetsAurillacLePuy: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Aurillac → Clermont-Ferrand | Fixed price from €175 | TaxiNeo",
-        metaDescription: "Taxi Aurillac → Clermont-Ferrand. 160 km, 1h40, from €175. Toll-free A75 through Auvergne volcanoes. Book 24/7.",
+        metaTitle: "Taxi Aurillac → Clermont-Ferrand | 160 km, €175 | TaxiNeo",
+        metaDescription: "A75 route, approximately undefined min. Cantal, Volcans d'Auvergne and Massif central along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Aurillac → Clermont-Ferrand",
         heroSubtitle: "Aurillac → Clermont-Ferrand transfer at €175 — €220. 160 km, 1h40.",
         description: "Aurillac to Clermont-Ferrand via the toll-free A75 through the Auvergne volcanoes in 1h40.",
@@ -76,8 +76,8 @@ export const trajetsAurillacLePuy: Trajet[] = [
     hub: "aurillac-lepuy",
     i18n: {
       fr: {
-        metaTitle: "Taxi Aurillac → Toulouse | Prix fixe dès 250 € | TaxiNeo",
-        metaDescription: "Taxi Aurillac → Toulouse. 230 km, 2h30, dès 250 €. Via A75 et A62. Réservation 24h/24.",
+        metaTitle: "Taxi Aurillac → Toulouse | 230 km, dès 250 € | TaxiNeo",
+        metaDescription: "Via A75/A62 en undefined min. Cantal, Lot et Longue distance en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Aurillac → Toulouse",
         heroSubtitle: "Transfert Aurillac → Toulouse au prix fixe de 250 — 320 €. 230 km, 2h30.",
         description: "Aurillac — Toulouse en 2h30 via l'A75 et l'A62, des volcans du Cantal à la ville rose.",
@@ -95,8 +95,8 @@ export const trajetsAurillacLePuy: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Aurillac → Toulouse | Fixed price from €250 | TaxiNeo",
-        metaDescription: "Taxi Aurillac → Toulouse. 230 km, 2h30, from €250. Via A75 and A62. Book 24/7.",
+        metaTitle: "Taxi Aurillac → Toulouse | 230 km, from €250 | TaxiNeo",
+        metaDescription: "Via A75/A62, undefined min ride. Cantal, Lot and Longue distance along the way. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Aurillac → Toulouse",
         heroSubtitle: "Aurillac → Toulouse transfer at €250 — €320. 230 km, 2h30.",
         description: "Aurillac to Toulouse via A75 and A62, from Cantal volcanoes to the Pink City in 2h30.",
@@ -133,8 +133,8 @@ export const trajetsAurillacLePuy: Trajet[] = [
     hub: "aurillac-lepuy",
     i18n: {
       fr: {
-        metaTitle: "Taxi Aurillac → Brive-la-Gaillarde | Prix fixe dès 105 € | TaxiNeo",
-        metaDescription: "Taxi Aurillac → Brive-la-Gaillarde. 100 km, 1h10, dès 105 €. N122 via la Xaintrie. Réservation 24h/24.",
+        metaTitle: "Taxi Aurillac → Brive-la-Gaillarde | 100 km, 105 € | TaxiNeo",
+        metaDescription: "Via N122 en undefined min. Cantal, Xaintrie et Corrèze en chemin. Dépose porte-à-porte, bagages inclus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Aurillac → Brive-la-Gaillarde",
         heroSubtitle: "Transfert Aurillac → Brive-la-Gaillarde au prix fixe de 105 — 135 €. 100 km, 1h10.",
         description: "Aurillac — Brive-la-Gaillarde par la N122 en 1h10, à travers la Xaintrie et les gorges de la Dordogne.",
@@ -152,8 +152,8 @@ export const trajetsAurillacLePuy: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Aurillac → Brive-la-Gaillarde | Fixed price from €105 | TaxiNeo",
-        metaDescription: "Taxi Aurillac → Brive-la-Gaillarde. 100 km, 1h10, from €105. N122 through Xaintrie countryside. Book 24/7.",
+        metaTitle: "Taxi Aurillac → Brive-la-Gaillarde | 100 km, €105 | TaxiNeo",
+        metaDescription: "Via N122, undefined min ride. Cantal, Xaintrie and Corrèze along the way. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Aurillac → Brive-la-Gaillarde",
         heroSubtitle: "Aurillac → Brive-la-Gaillarde transfer at €105 — €135. 100 km, 1h10.",
         description: "Aurillac to Brive-la-Gaillarde via N122 through the Xaintrie and Dordogne gorges in 1h10.",
@@ -190,8 +190,8 @@ export const trajetsAurillacLePuy: Trajet[] = [
     hub: "aurillac-lepuy",
     i18n: {
       fr: {
-        metaTitle: "Taxi Le Puy-en-Velay → Lyon | Prix fixe dès 145 € | TaxiNeo",
-        metaDescription: "Taxi Le Puy-en-Velay → Lyon. 135 km, 1h30, dès 145 €. Via A47 et vallée de la Loire. Réservation 24h/24.",
+        metaTitle: "Taxi Le Puy-en-Velay → Lyon | 135 km, dès 145 € | TaxiNeo",
+        metaDescription: "Via A47 en undefined min. Velay, Loire et Compostelle en chemin. Dépose porte-à-porte, bagages inclus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Le Puy-en-Velay → Lyon",
         heroSubtitle: "Transfert Le Puy-en-Velay → Lyon au prix fixe de 145 — 185 €. 135 km, 1h30.",
         description: "Le Puy-en-Velay — Lyon en 1h30, depuis la cité mariale et jacquaire vers la métropole lyonnaise.",
@@ -209,8 +209,8 @@ export const trajetsAurillacLePuy: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Le Puy-en-Velay → Lyon | Fixed price from €145 | TaxiNeo",
-        metaDescription: "Taxi Le Puy-en-Velay → Lyon. 135 km, 1h30, from €145. Via A47 through Loire valley. Book 24/7.",
+        metaTitle: "Taxi Le Puy-en-Velay → Lyon | 135 km, from €145 | TaxiNeo",
+        metaDescription: "Via A47, undefined min ride. Velay, Loire and Compostelle along the way. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Le Puy-en-Velay → Lyon",
         heroSubtitle: "Le Puy-en-Velay → Lyon transfer at €145 — €185. 135 km, 1h30.",
         description: "Le Puy-en-Velay to Lyon via A47, from the Compostela pilgrimage start to France's gastronomic capital.",
@@ -247,8 +247,8 @@ export const trajetsAurillacLePuy: Trajet[] = [
     hub: "aurillac-lepuy",
     i18n: {
       fr: {
-        metaTitle: "Taxi Le Puy-en-Velay → Clermont-Ferrand | Prix fixe dès 140 € | TaxiNeo",
-        metaDescription: "Taxi Le Puy-en-Velay → Clermont-Ferrand. 130 km, 1h25, dès 140 €. N102 via le Livradois. Réservation 24h/24.",
+        metaTitle: "Taxi Le Puy-en-Velay → Clermont-Ferrand | 130 km | TaxiNeo",
+        metaDescription: "Via N102 en undefined min. Velay, Livradois et Volcans en chemin. Dépose porte-à-porte, bagages inclus. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Le Puy-en-Velay → Clermont-Ferrand",
         heroSubtitle: "Transfert Le Puy-en-Velay → Clermont-Ferrand au prix fixe de 140 — 175 €. 130 km, 1h25.",
         description: "Le Puy-en-Velay — Clermont-Ferrand par la N102 en 1h25, à travers le Livradois et le Velay volcanique.",
@@ -266,8 +266,8 @@ export const trajetsAurillacLePuy: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Le Puy-en-Velay → Clermont-Ferrand | Fixed price from €140 | TaxiNeo",
-        metaDescription: "Taxi Le Puy-en-Velay → Clermont-Ferrand. 130 km, 1h25, from €140. N102 through Livradois. Book 24/7.",
+        metaTitle: "Taxi Le Puy-en-Velay → Clermont-Ferrand | 130 km | TaxiNeo",
+        metaDescription: "Via N102, undefined min ride. Velay, Livradois and Volcans along the way. Drop-off at your exact address. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Le Puy-en-Velay → Clermont-Ferrand",
         heroSubtitle: "Le Puy-en-Velay → Clermont-Ferrand transfer at €140 — €175. 130 km, 1h25.",
         description: "Le Puy-en-Velay to Clermont-Ferrand via N102 through the Livradois-Forez natural park in 1h25.",

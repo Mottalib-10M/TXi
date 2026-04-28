@@ -27,8 +27,8 @@ export const trajetsSaintEtienne: Trajet[] = [
     hub: "saint-etienne",
     i18n: {
       fr: {
-        metaTitle: "Taxi Saint-Étienne → Lyon | Prix fixe dès 65 € | TaxiNeo",
-        metaDescription: "Taxi Saint-Étienne → Lyon. 62 km, 45 min, dès 65 €. A47, transfert direct porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Saint-Étienne → Lyon | 62 km, dès 65 € | TaxiNeo",
+        metaDescription: "Via A47 en 45 min. Vallée du Gier, Pilat, Part-Dieu et Perrache en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Saint-Étienne → Lyon",
         heroSubtitle: "Transfert Saint-Étienne → Lyon au prix fixe de 65 — 85 €. 62 km, direct par l'A47.",
         description: "Lyon est à 45 minutes de Saint-Étienne par l'A47, l'autoroute de la vallée du Gier.",
@@ -46,8 +46,8 @@ export const trajetsSaintEtienne: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Saint-Étienne → Lyon | Fixed price from €65 | TaxiNeo",
-        metaDescription: "Taxi Saint-Étienne → Lyon. 62 km, 45 min, from €65. A47, direct door-to-door transfer. Book 24/7.",
+        metaTitle: "Taxi Saint-Étienne → Lyon | 62 km, from €65 | TaxiNeo",
+        metaDescription: "Via A47, 45 min ride. Vallée du Gier, Pilat, Part-Dieu and Perrache en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Saint-Étienne → Lyon",
         heroSubtitle: "Your Saint-Étienne → Lyon transfer at €65 — €85. 62 km, via the A47.",
         description: "Lyon is 45 minutes from Saint-Étienne via the toll-free A47 motorway.",
@@ -92,8 +92,8 @@ export const trajetsSaintEtienne: Trajet[] = [
     hub: "saint-etienne",
     i18n: {
       fr: {
-        metaTitle: "Taxi Saint-Étienne → Clermont-Ferrand | Prix fixe dès 150 € | TaxiNeo",
-        metaDescription: "Taxi Saint-Étienne → Clermont-Ferrand. 145 km, 1h30, dès 150 €. A89, transfert direct porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Saint-Étienne → Clermont-Ferrand | 145 km | TaxiNeo",
+        metaDescription: "Via A89 en 1h30. Livradois-Forez, Thiers, Puy de Dôme et Michelin en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Saint-Étienne → Clermont-Ferrand",
         heroSubtitle: "Transfert Saint-Étienne → Clermont-Ferrand au prix fixe de 150 — 190 €. 145 km, direct par l'A89.",
         description: "Clermont-Ferrand est à 1h30 de Saint-Étienne par l'A89 à travers le Livradois-Forez.",
@@ -111,8 +111,8 @@ export const trajetsSaintEtienne: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Saint-Étienne → Clermont-Ferrand | Fixed price from €150 | TaxiNeo",
-        metaDescription: "Taxi Saint-Étienne → Clermont-Ferrand. 145 km, 1h30, from €150. A89, direct door-to-door. Book 24/7.",
+        metaTitle: "Taxi Saint-Étienne → Clermont-Ferrand | 145 km | TaxiNeo",
+        metaDescription: "Via A89, 1h30 ride. Livradois-Forez, Thiers, Puy de Dôme and Michelin en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Saint-Étienne → Clermont-Ferrand",
         heroSubtitle: "Your Saint-Étienne → Clermont-Ferrand transfer at €150 — €190. 145 km, via the A89.",
         description: "Clermont-Ferrand is 1h30 from Saint-Étienne via the A89 through the Livradois-Forez mountains.",
@@ -157,8 +157,8 @@ export const trajetsSaintEtienne: Trajet[] = [
     hub: "saint-etienne",
     i18n: {
       fr: {
-        metaTitle: "Taxi Saint-Étienne → Grenoble | Prix fixe dès 160 € | TaxiNeo",
-        metaDescription: "Taxi Saint-Étienne → Grenoble. 150 km, 1h35, dès 160 €. A48, transfert direct porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Saint-Étienne → Grenoble | 150 km, dès 160 € | TaxiNeo",
+        metaDescription: "Via A48 en 1h35. Vercors, Chartreuse, Alpes et Grenoble-Bastille en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Saint-Étienne → Grenoble",
         heroSubtitle: "Transfert Saint-Étienne → Grenoble au prix fixe de 160 — 200 €. 150 km, porte des Alpes.",
         description: "Grenoble est à 1h35 de Saint-Étienne, en traversant Lyon puis l'A48 vers les Alpes.",
@@ -176,8 +176,8 @@ export const trajetsSaintEtienne: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Saint-Étienne → Grenoble | Fixed price from €160 | TaxiNeo",
-        metaDescription: "Taxi Saint-Étienne → Grenoble. 150 km, 1h35, from €160. A48, direct door-to-door. Book 24/7.",
+        metaTitle: "Taxi Saint-Étienne → Grenoble | 150 km, from €160 | TaxiNeo",
+        metaDescription: "Via A48, 1h35 ride. Vercors, Chartreuse, Alpes and Grenoble-Bastille en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Saint-Étienne → Grenoble",
         heroSubtitle: "Your Saint-Étienne → Grenoble transfer at €160 — €200. 150 km, gateway to the Alps.",
         description: "Grenoble is 1h35 from Saint-Étienne via Lyon and the A48 motorway.",
@@ -222,8 +222,8 @@ export const trajetsSaintEtienne: Trajet[] = [
     hub: "saint-etienne",
     i18n: {
       fr: {
-        metaTitle: "Taxi Saint-Étienne → Valence | Prix fixe dès 130 € | TaxiNeo",
-        metaDescription: "Taxi Saint-Étienne → Valence. 120 km, 1h15, dès 130 €. A7, transfert direct porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Saint-Étienne → Valence | 120 km, dès 130 € | TaxiNeo",
+        metaDescription: "Via A7 en 1h15. Vallée du Rhône, Drôme, TGV Valence et Provençal en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Saint-Étienne → Valence",
         heroSubtitle: "Transfert Saint-Étienne → Valence au prix fixe de 130 — 160 €. 120 km, porte de la Provence.",
         description: "Valence est à 1h15 de Saint-Étienne en descendant la vallée du Rhône par l'A7.",
@@ -241,8 +241,8 @@ export const trajetsSaintEtienne: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Saint-Étienne → Valence | Fixed price from €130 | TaxiNeo",
-        metaDescription: "Taxi Saint-Étienne → Valence. 120 km, 1h15, from €130. A7, direct door-to-door. Book 24/7.",
+        metaTitle: "Taxi Saint-Étienne → Valence | 120 km, from €130 | TaxiNeo",
+        metaDescription: "Via A7, 1h15 ride. Vallée du Rhône, Drôme, TGV Valence and Provençal en route. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Saint-Étienne → Valence",
         heroSubtitle: "Your Saint-Étienne → Valence transfer at €130 — €160. 120 km, gateway to Provence.",
         description: "Valence is 1h15 from Saint-Étienne via the A7 Autoroute du Soleil.",
@@ -287,8 +287,8 @@ export const trajetsSaintEtienne: Trajet[] = [
     hub: "saint-etienne",
     i18n: {
       fr: {
-        metaTitle: "Taxi Saint-Étienne → Le Puy-en-Velay | Prix fixe dès 85 € | TaxiNeo",
-        metaDescription: "Taxi Saint-Étienne → Le Puy-en-Velay. 80 km, 1h05, dès 85 €. N88, transfert direct porte-à-porte. Réservation 24h/24.",
+        metaTitle: "Taxi Saint-Étienne → Le Puy-en-Velay | 80 km, 85 € | TaxiNeo",
+        metaDescription: "Par N88, 1h05 de trajet. Passage par Haute-Loire, Saint-Jacques, Lentilles vertes et Rocher Corneille. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Saint-Étienne → Le Puy-en-Velay",
         heroSubtitle: "Transfert Saint-Étienne → Le Puy-en-Velay au prix fixe de 85 — 110 €. 80 km, route gratuite.",
         description: "Le Puy-en-Velay, ville sainte des pèlerins de Compostelle, est à 1h05 de Saint-Étienne par la N88.",
@@ -306,8 +306,8 @@ export const trajetsSaintEtienne: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Saint-Étienne → Le Puy-en-Velay | Fixed price from €85 | TaxiNeo",
-        metaDescription: "Taxi Saint-Étienne → Le Puy-en-Velay. 80 km, 1h05, from €85. N88, direct door-to-door. Book 24/7.",
+        metaTitle: "Taxi Saint-Étienne → Le Puy-en-Velay | 80 km, €85 | TaxiNeo",
+        metaDescription: "Direct route via N88, 1h05. Haute-Loire, Saint-Jacques, Lentilles vertes and Rocher Corneille en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Saint-Étienne → Le Puy-en-Velay",
         heroSubtitle: "Your Saint-Étienne → Le Puy-en-Velay transfer at €85 — €110. 80 km, toll-free.",
         description: "Le Puy-en-Velay, starting point of the Camino de Santiago, is 1h05 from Saint-Étienne.",
