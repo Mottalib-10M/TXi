@@ -134,8 +134,6 @@ export function DriversTable({ drivers }: { drivers: Driver[] }) {
 
     // Text block — right side
     const textX = qrX + qrSize + 2.5;
-    const maxW = W - textX - 2;
-
     // Company name (or driver name fallback), truncated to 10 chars
     const displayName = (driver.companyName || `${driver.firstName} ${driver.lastName}`).slice(0, 10);
 
