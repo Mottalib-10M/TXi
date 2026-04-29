@@ -163,8 +163,8 @@ Pour les trajets entre Paris et les deux grands aéroports parisiens, un **tarif
 
 | Trajet | Forfait 2026 |
 |---|---|
-| Paris Rive droite → Orly | 37 € |
-| Paris Rive gauche → Orly | 32 € |
+| Paris Rive droite → Orly | 45 € |
+| Paris Rive gauche → Orly | 36 € |
 
 ### Points importants sur le forfait aéroport
 
@@ -378,8 +378,8 @@ For trips between Paris and the two major Parisian airports, a **flat rate** rep
 
 | Trip | 2026 flat rate |
 |---|---|
-| Paris Right Bank to Orly | 37 euros |
-| Paris Left Bank to Orly | 32 euros |
+| Paris Right Bank to Orly | 45 euros |
+| Paris Left Bank to Orly | 36 euros |
 
 ### Important points about the airport flat rate
 
@@ -489,8 +489,8 @@ At TaxiNeo, we wanted to solve the main problem with taxi fares: **uncertainty**
       en: "Paris Orly taxi: 2026 flat rates and tips | TaxiNeo Blog",
     },
     metaDescription: {
-      fr: "Tarifs forfaitaires taxi Paris-Orly (32€ à 37€), terminaux, itinéraires, comparaison avec les autres transports et conseils pratiques pour votre transfert.",
-      en: "Paris-Orly taxi flat rates from 32 to 37 euros, terminal pickup details, route options, transport alternatives and practical booking tips for your trip.",
+      fr: "Tarifs forfaitaires taxi Paris-Orly (36€ à 45€), terminaux, itinéraires, comparaison avec les autres transports et conseils pratiques pour votre transfert.",
+      en: "Paris-Orly taxi flat rates from 36 to 45 euros, terminal pickup details, route options, transport alternatives and practical booking tips for your trip.",
     },
     excerpt: {
       fr: "Tarifs forfaitaires taxi Paris-Orly, terminaux, itinéraires et comparaison avec les autres transports pour un transfert réussi.",
@@ -513,10 +513,10 @@ Le tarif forfaitaire dépend de la position de votre adresse parisienne par rapp
 
 | Trajet | Forfait 2026 |
 |---|---|
-| **Paris Rive gauche → Orly** | **32 €** |
-| **Paris Rive droite → Orly** | **37 €** |
+| **Paris Rive gauche → Orly** | **36 €** |
+| **Paris Rive droite → Orly** | **45 €** |
 
-La **Rive gauche** (5e, 6e, 7e, 13e, 14e, 15e arrondissements principalement) est plus proche d'Orly, d'où un tarif légèrement inférieur. La **Rive droite** (1er, 2e, 3e, 4e, 8e, 9e, 10e, 11e, 12e, 16e, 17e, 18e, 19e, 20e arrondissements) implique un trajet plus long, d'où le forfait à 37 €.
+La **Rive gauche** (5e, 6e, 7e, 13e, 14e, 15e arrondissements principalement) est plus proche d'Orly, d'où un tarif légèrement inférieur. La **Rive droite** (1er, 2e, 3e, 4e, 8e, 9e, 10e, 11e, 12e, 16e, 17e, 18e, 19e, 20e arrondissements) implique un trajet plus long, d'où le forfait à 45 €.
 
 ### Ce que le forfait inclut
 
@@ -552,7 +552,7 @@ Vérifiez votre terminal **avant** de réserver votre taxi. Les terminaux 1 et 2
 
 ## L'itinéraire optimal Paris-Orly
 
-### Depuis la Rive gauche (forfait 32 €)
+### Depuis la Rive gauche (forfait 36 €)
 
 L'itinéraire le plus direct depuis la Rive gauche passe généralement par :
 
@@ -562,7 +562,7 @@ L'itinéraire le plus direct depuis la Rive gauche passe généralement par :
 
 **Durée estimée** : 20 à 35 minutes selon le trafic.
 
-### Depuis la Rive droite (forfait 37 €)
+### Depuis la Rive droite (forfait 45 €)
 
 Depuis la Rive droite, l'itinéraire passe par :
 
@@ -595,7 +595,7 @@ Comment le taxi se compare-t-il aux autres modes de transport pour rejoindre Orl
 
 | Transport | Prix | Durée | Confort | Bagages | Disponibilité |
 |---|---|---|---|---|---|
-| **Taxi (forfait)** | 32-37 € | 20-50 min | Excellent | Illimité | 24h/24 |
+| **Taxi (forfait)** | 36-45 € | 20-50 min | Excellent | Illimité | 24h/24 |
 | **VTC (Uber/Bolt)** | 25-70 € | 20-50 min | Bon | Limité | 24h/24 |
 | **Orlyval + RER B** | 14,10 € | 35-50 min | Moyen | Difficile | 6h-23h |
 | **Bus Orlybus** | 11,50 € | 30-45 min | Moyen | Difficile | 5h30-0h |
@@ -605,7 +605,7 @@ Comment le taxi se compare-t-il aux autres modes de transport pour rejoindre Orl
 ### Analyse détaillée
 
 **Le taxi est le meilleur choix quand** :
-- Vous voyagez à 2, 3 ou 4 personnes (le forfait est partagé : 32 € à 4, c'est 8 € par personne)
+- Vous voyagez à 2, 3 ou 4 personnes (le forfait est partagé : 36 € à 4, c'est 9 € par personne)
 - Vous avez des bagages volumineux ou nombreux
 - Vous voyagez tôt le matin ou tard le soir (les transports en commun ne circulent pas)
 - Vous avez un horaire serré et ne pouvez pas vous permettre de retard
@@ -668,7 +668,7 @@ Tous les taxis français sont équipés d'un **terminal de paiement par carte ba
 
 TaxiNeo simplifie votre transfert vers Orly avec plusieurs avantages exclusifs :
 
-- **Prix fixe garanti** : 32 € (Rive gauche) ou 37 € (Rive droite), sans surprise
+- **Prix fixe garanti** : 36 € (Rive gauche) ou 45 € (Rive droite), sans surprise
 - **Chauffeur qui vous attend** : à votre adresse pour l'aller, à la sortie du terminal pour le retour
 - **Suivi de vol en temps réel** : le chauffeur s'adapte aux retards de votre vol
 - **Réservation en 30 secondes** : entrez vos adresses et confirmez
@@ -691,10 +691,10 @@ The flat rate depends on the position of your Paris address relative to the Sein
 
 | Trip | 2026 flat rate |
 |---|---|
-| **Paris Left Bank to Orly** | **32 euros** |
-| **Paris Right Bank to Orly** | **37 euros** |
+| **Paris Left Bank to Orly** | **36 euros** |
+| **Paris Right Bank to Orly** | **45 euros** |
 
-The **Left Bank** (5th, 6th, 7th, 13th, 14th, 15th arrondissements primarily) is closer to Orly, hence the slightly lower fare. The **Right Bank** (1st, 2nd, 3rd, 4th, 8th, 9th, 10th, 11th, 12th, 16th, 17th, 18th, 19th, 20th arrondissements) involves a longer trip, hence the 37 euro flat rate.
+The **Left Bank** (5th, 6th, 7th, 13th, 14th, 15th arrondissements primarily) is closer to Orly, hence the slightly lower fare. The **Right Bank** (1st, 2nd, 3rd, 4th, 8th, 9th, 10th, 11th, 12th, 16th, 17th, 18th, 19th, 20th arrondissements) involves a longer trip, hence the 45 euro flat rate.
 
 ### What the flat rate includes
 
@@ -730,7 +730,7 @@ Check your terminal **before** booking your taxi. Terminals 1 and 2 are located 
 
 ## The optimal Paris-Orly route
 
-### From the Left Bank (32 euro flat rate)
+### From the Left Bank (36 euro flat rate)
 
 The most direct route from the Left Bank generally passes through:
 
@@ -740,7 +740,7 @@ The most direct route from the Left Bank generally passes through:
 
 **Estimated duration**: 20 to 35 minutes depending on traffic.
 
-### From the Right Bank (37 euro flat rate)
+### From the Right Bank (45 euro flat rate)
 
 From the Right Bank, the route passes through:
 
@@ -773,7 +773,7 @@ How does a taxi compare to other transport modes for reaching Orly from Paris? H
 
 | Transport | Price | Duration | Comfort | Luggage | Availability |
 |---|---|---|---|---|---|
-| **Taxi (flat rate)** | 32-37 euros | 20-50 min | Excellent | Unlimited | 24/7 |
+| **Taxi (flat rate)** | 36-45 euros | 20-50 min | Excellent | Unlimited | 24/7 |
 | **Rideshare (Uber/Bolt)** | 25-70 euros | 20-50 min | Good | Limited | 24/7 |
 | **Orlyval + RER B** | 14.10 euros | 35-50 min | Average | Difficult | 6am-11pm |
 | **Orlybus** | 11.50 euros | 30-45 min | Average | Difficult | 5:30am-midnight |
@@ -783,7 +783,7 @@ How does a taxi compare to other transport modes for reaching Orly from Paris? H
 ### Detailed analysis
 
 **A taxi is the best choice when**:
-- You are traveling with 2, 3, or 4 people (the flat rate is shared: 32 euros for 4 people is 8 euros per person)
+- You are traveling with 2, 3, or 4 people (the flat rate is shared: 36 euros for 4 people is 9 euros per person)
 - You have bulky or numerous luggage
 - You are traveling early in the morning or late at night (public transport is not running)
 - You have a tight schedule and cannot afford delays
@@ -846,7 +846,7 @@ All French taxis are equipped with a **card payment terminal**. You can pay in c
 
 TaxiNeo simplifies your Orly transfer with several exclusive advantages:
 
-- **Guaranteed fixed price**: 32 euros (Left Bank) or 37 euros (Right Bank), no surprises
+- **Guaranteed fixed price**: 36 euros (Left Bank) or 45 euros (Right Bank), no surprises
 - **Driver waiting for you**: at your address for departure, at the terminal exit for return
 - **Real-time flight tracking**: the driver adapts to your flight delays
 - **Booking in 30 seconds**: enter your addresses and confirm
@@ -3843,7 +3843,7 @@ Pour les trajets entre Paris intra-muros et les aéroports parisiens, des **forf
 |---|---|
 | Paris Rive droite vers CDG | 56 euros |
 | Paris Rive gauche vers CDG | 65 euros |
-| Paris Rive droite vers Orly | 44 euros |
+| Paris Rive droite vers Orly | 45 euros |
 | Paris Rive gauche vers Orly | 36 euros |
 
 Ces forfaits sont fixes, identiques de jour comme de nuit, et ne peuvent pas être majorés.
@@ -4136,7 +4136,7 @@ For trips between central Paris and Parisian airports, **mandatory flat rates** 
 |---|---|
 | Paris Right Bank to CDG | 56 euros |
 | Paris Left Bank to CDG | 65 euros |
-| Paris Right Bank to Orly | 44 euros |
+| Paris Right Bank to Orly | 45 euros |
 | Paris Left Bank to Orly | 36 euros |
 
 These flat rates are fixed, identical day and night, and cannot be increased.
@@ -8265,7 +8265,7 @@ Le trajet vers l'aéroport est la situation la plus courante où les bagages son
 Pour les trajets aéroport, les forfaits sont souvent plus avantageux. En Île-de-France :
 
 - **Paris → Roissy CDG** : forfait de 56 € (rive droite) ou 65 € (rive gauche)
-- **Paris → Orly** : forfait de 41 € (rive gauche) ou 47 € (rive droite)
+- **Paris → Orly** : forfait de 36 € (rive gauche) ou 45 € (rive droite)
 
 Ces forfaits incluent les bagages standards. Aucun supplément bagage ne peut s'ajouter aux forfaits aéroport.
 
@@ -8419,7 +8419,7 @@ The airport transfer is the most common situation where luggage is plentiful. He
 For airport transfers, flat rates are often more advantageous. In Ile-de-France:
 
 - **Paris to Roissy CDG**: EUR 56 (right bank) or EUR 65 (left bank)
-- **Paris to Orly**: EUR 41 (left bank) or EUR 47 (right bank)
+- **Paris to Orly**: EUR 36 (left bank) or EUR 45 (right bank)
 
 These flat rates include standard luggage. No luggage surcharge may be added to airport flat rates.
 
@@ -9857,7 +9857,7 @@ Les trajets entre Paris et les aéroports bénéficient de **forfaits fixes** de
 | Trajet | Forfait Rive Droite | Forfait Rive Gauche |
 |---|---|---|
 | Paris ↔ Roissy CDG | 56 € | 65 € |
-| Paris ↔ Orly | 41 € (rive gauche) | 47 € (rive droite) |
+| Paris ↔ Orly | 36 € (rive gauche) | 45 € (rive droite) |
 
 **Important** :
 - Ces forfaits s'appliquent **jour et nuit**, 7j/7
@@ -10064,7 +10064,7 @@ Journeys between Paris and the airports benefit from **fixed flat fares** since 
 | Journey | Right Bank Flat Fare | Left Bank Flat Fare |
 |---|---|---|
 | Paris to/from Roissy CDG | EUR 56 | EUR 65 |
-| Paris to/from Orly | EUR 41 (left bank) | EUR 47 (right bank) |
+| Paris to/from Orly | EUR 36 (left bank) | EUR 45 (right bank) |
 
 **Important**:
 - These flat fares apply **day and night**, 7 days a week

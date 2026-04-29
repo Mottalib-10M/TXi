@@ -1372,7 +1372,23 @@
     "testimonialsSubtitle": "Témoignages",
     "testimonialsTitle": "Avis sur les transferts {name}",
     "departementLink": "Département",
-    "relatedTrajets": "Trajets depuis cet aéroport"
+    "relatedTrajets": "Trajets depuis cet aéroport",
+    "forfaitTable": {
+      "title": "Forfaits aéroport réglementés 2026",
+      "subtitle": "Tarifs fixés par arrêté préfectoral",
+      "route": "Trajet",
+      "price": "Forfait TTC",
+      "cdgRiveDroite": "CDG ↔ Paris rive droite",
+      "cdgRiveGauche": "CDG ↔ Paris rive gauche",
+      "orlyRiveGauche": "Orly ↔ Paris rive gauche",
+      "orlyRiveDroite": "Orly ↔ Paris rive droite",
+      "supplementsTitle": "Suppléments applicables",
+      "reservationImmediate": "Réservation immédiate",
+      "reservationAvance": "Réservation à l'avance",
+      "minimumPerception": "Minimum de perception",
+      "priseEnCharge": "Prise en charge maximale",
+      "legalMention": "Tarifs réglementés par arrêté préfectoral de Paris, applicables du 1er février 2026 au 31 janvier 2027. Source : service-public.gouv.fr."
+    }
   },
   "station": {
     "breadcrumbHome": "Accueil",

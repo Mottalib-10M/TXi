@@ -198,7 +198,7 @@ export const stations: Station[] = [
     "148 millions",
     [
       { name: "Aéroport CDG", price: "58 €", time: "35-55 min" },
-      { name: "Aéroport d'Orly", price: "35 €", time: "20-35 min" },
+      { name: "Aéroport d'Orly", price: "36 €", time: "20-35 min" },
       { name: "La Défense", price: "38 €", time: "25-40 min" },
       { name: "Paris Gare du Nord", price: "18 €", time: "10-20 min" },
       { name: "Disneyland Paris", price: "60 €", time: "35-50 min" },
@@ -209,7 +209,7 @@ export const stations: Station[] = [
       { text: "Habitué des TGV Lyon-Paris, TaxiNeo est mon réflexe à l'arrivée. Toujours là.", name: "Laurent B.", initials: "LB", role: "Entrepreneur" },
     ],
     [
-      { question: "Quel est le forfait taxi Gare de Lyon – Orly ?", answer: "Le forfait taxi Gare de Lyon – Aéroport d'Orly est d'environ 35 €. Trajet de 20-35 minutes." },
+      { question: "Quel est le forfait taxi Gare de Lyon – Orly ?", answer: "Le forfait taxi Gare de Lyon – Aéroport d'Orly est d'environ 36 €. Trajet de 20-35 minutes." },
     ],
     ["paris-gare-du-nord", "paris-gare-d-austerlitz", "paris-gare-de-bercy", "paris-montparnasse"],
     ["TGV vers Lyon (2h), Marseille (3h15), Nice (5h30)", "Restaurant Le Train Bleu dans la gare", "Attente gratuite en cas de retard de train", "Sièges enfant disponibles sur demande", "Wi-Fi à bord et chargeurs USB"],
@@ -248,7 +248,7 @@ export const stations: Station[] = [
     "90 millions",
     [
       { name: "Aéroport CDG", price: "60 €", time: "40-60 min" },
-      { name: "Aéroport d'Orly", price: "32 €", time: "20-30 min" },
+      { name: "Aéroport d'Orly", price: "36 €", time: "20-30 min" },
       { name: "La Défense", price: "35 €", time: "20-35 min" },
       { name: "Paris Gare du Nord", price: "20 €", time: "12-22 min" },
       { name: "Versailles", price: "35 €", time: "20-30 min" },
@@ -259,7 +259,7 @@ export const stations: Station[] = [
       { text: "TGV depuis Rennes, taxi impeccable à l'arrivée. Je recommande à tous les Bretons montant à Paris !", name: "Yann L.", initials: "YL", role: "Rennais" },
     ],
     [
-      { question: "Comment rejoindre Orly depuis Montparnasse ?", answer: "Le forfait taxi Montparnasse – Orly est d'environ 32 €, pour un trajet de 20-30 minutes. Plus rapide et confortable que le bus." },
+      { question: "Comment rejoindre Orly depuis Montparnasse ?", answer: "Le forfait taxi Montparnasse – Orly est d'environ 36 €, pour un trajet de 20-30 minutes. Plus rapide et confortable que le bus." },
     ],
     ["paris-gare-de-lyon", "paris-gare-d-austerlitz", "paris-saint-lazare", "paris-gare-du-nord"],
     ["TGV vers Bordeaux (2h04), Rennes (1h27), Nantes (2h15)", "Gare rénovée avec hall 1, 2 et 3", "Attente gratuite en cas de retard", "Paiement par carte ou application", "Transferts vers Orly en 20 min"],
@@ -298,7 +298,7 @@ export const stations: Station[] = [
     "30 millions",
     [
       { name: "Aéroport CDG", price: "58 €", time: "35-55 min" },
-      { name: "Aéroport d'Orly", price: "30 €", time: "20-30 min" },
+      { name: "Aéroport d'Orly", price: "36 €", time: "20-30 min" },
       { name: "Paris Gare de Lyon", price: "10 €", time: "5-10 min" },
       { name: "La Défense", price: "38 €", time: "25-40 min" },
       { name: "Quartier Latin", price: "10 €", time: "5-8 min" },
@@ -323,7 +323,7 @@ export const stations: Station[] = [
     "2 millions",
     [
       { name: "Aéroport CDG", price: "58 €", time: "35-55 min" },
-      { name: "Aéroport d'Orly", price: "32 €", time: "20-35 min" },
+      { name: "Aéroport d'Orly", price: "36 €", time: "20-35 min" },
       { name: "Paris Gare de Lyon", price: "8 €", time: "3-5 min" },
       { name: "Bercy Village", price: "6 €", time: "2-3 min" },
       { name: "Paris centre (Châtelet)", price: "15 €", time: "10-15 min" },

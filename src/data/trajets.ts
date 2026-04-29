@@ -172,33 +172,33 @@ export const trajets: Trajet[] = [
     toLng: 2.3652,
     distanceKm: 18,
     durationMin: 30,
-    priceEstimate: "35 — 45 €",
+    priceEstimate: "36 — 45 €",
     category: "aeroport",
     highlights: ["Périphérique Sud", "A6 Autoroute du Soleil", "Rungis"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Aéroport d'Orly | 18 km, dès 35 € | TaxiNeo",
+        metaTitle: "Taxi Paris → Aéroport d'Orly | 18 km, dès 36 € | TaxiNeo",
         metaDescription: "Via A6 Autoroute du Soleil en 30 min. Périphérique Sud, A6 Autoroute du Soleil et Rungis en chemin. Dépose au terminal exact, suivi de vol en temps réel.",
         heroTitle: "Taxi Paris → Aéroport d'Orly",
-        heroSubtitle: "Votre transfert Paris → Orly au prix fixe de 35 — 45 €. Réservation en ligne, chauffeur professionnel 24h/24.",
+        heroSubtitle: "Votre transfert Paris → Orly au prix fixe de 36 — 45 €. Réservation en ligne, chauffeur professionnel 24h/24.",
         description: "Le transfert Paris — Orly est rapide et direct. Orly, deuxième aéroport parisien, accueille principalement des vols domestiques et européens. Situé à seulement 18 km au sud de Paris, le trajet est généralement fluide hors heures de pointe.",
         routeDescription: "Le trajet emprunte le périphérique sud puis l'autoroute A6 en direction de Lyon. La sortie Orly permet d'accéder directement aux terminaux Orly 1, 2, 3 et 4.",
         faq: [
-          { question: "Quel est le prix d'un taxi Paris — Orly ?", answer: "Le prix est fixé entre 35 € et 45 € selon l'adresse de prise en charge. Ce forfait est garanti et inclut les bagages." },
+          { question: "Quel est le prix d'un taxi Paris — Orly ?", answer: "Le prix est fixé entre 36 € et 45 € selon l'adresse de prise en charge. Ce forfait est garanti et inclut les bagages." },
           { question: "Combien de temps faut-il pour rejoindre Orly ?", answer: "Comptez environ 30 minutes en conditions normales. Aux heures de pointe, le trajet peut prendre 40 à 50 minutes." },
           { question: "Le chauffeur dépose directement au terminal ?", answer: "Oui, votre chauffeur vous dépose devant le terminal exact de votre vol (Orly 1, 2, 3 ou 4)." },
           { question: "Peut-on partager un taxi vers Orly ?", answer: "TaxiNeo propose un service de taxi partagé pour les trajets aéroport, permettant de réduire le coût par passager." },
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Aéroport d'Orly | 18 km, from €35 | TaxiNeo",
+        metaTitle: "Taxi Paris → Aéroport d'Orly | 18 km, from €36 | TaxiNeo",
         metaDescription: "Via A6 Autoroute du Soleil, 30 min ride. Périphérique Sud, A6 Autoroute du Soleil and Rungis along the way. Meet at terminal, free wait if flight delayed.",
         heroTitle: "Taxi Paris → Orly Airport",
-        heroSubtitle: "Your Paris → Orly transfer at a fixed price of €35 — €45. Online booking, professional driver 24/7.",
+        heroSubtitle: "Your Paris → Orly transfer at a fixed price of €36 — €45. Online booking, professional driver 24/7.",
         description: "The Paris — Orly transfer is quick and direct. Orly, Paris's second airport, mainly handles domestic and European flights. Located just 18 km south of Paris, the journey is generally smooth outside rush hours.",
         routeDescription: "The route takes the southern ring road then the A6 motorway towards Lyon. The Orly exit provides direct access to terminals Orly 1, 2, 3 and 4.",
         faq: [
-          { question: "What is the price of a taxi Paris — Orly?", answer: "The price is fixed between €35 and €45 depending on the pick-up address. This flat rate is guaranteed and includes luggage." },
+          { question: "What is the price of a taxi Paris — Orly?", answer: "The price is fixed between €36 and €45 depending on the pick-up address. This flat rate is guaranteed and includes luggage." },
           { question: "How long does it take to reach Orly?", answer: "Allow about 30 minutes under normal conditions. During rush hours, the journey may take 40 to 50 minutes." },
           { question: "Does the driver drop off directly at the terminal?", answer: "Yes, your driver drops you off in front of the exact terminal of your flight (Orly 1, 2, 3 or 4)." },
           { question: "Can I share a taxi to Orly?", answer: "TaxiNeo offers a shared taxi service for airport journeys, allowing you to reduce the cost per passenger." },
@@ -221,7 +221,7 @@ export const trajets: Trajet[] = [
     highlights: ["A6 Autoroute du Soleil", "Porte d'Italie", "Paris Rive Gauche"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Aéroport d'Orly → Paris | 18 km, dès 35 € | TaxiNeo",
+        metaTitle: "Taxi Aéroport d'Orly → Paris | 18 km, dès 36 € | TaxiNeo",
         metaDescription: "Via A6 Autoroute du Soleil en 30 min. A6 Autoroute du Soleil, Porte d'Italie et Paris Rive Gauche en chemin. Suivi de vol, dépose directe au terminal.",
         heroTitle: "Taxi Aéroport d'Orly → Paris",
         heroSubtitle: "Votre transfert Orly → Paris au prix fixe de 35 — 45 €. Accueil personnalisé, suivi de vol en temps réel.",
@@ -235,7 +235,7 @@ export const trajets: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Aéroport d'Orly → Paris | 18 km, from €35 | TaxiNeo",
+        metaTitle: "Taxi Aéroport d'Orly → Paris | 18 km, from €36 | TaxiNeo",
         metaDescription: "Via A6 Autoroute du Soleil, 30 min ride. A6 Autoroute du Soleil, Porte d'Italie and Paris Rive Gauche along the way. Terminal drop-off, flight tracking.",
         heroTitle: "Taxi Orly Airport → Paris",
         heroSubtitle: "Your Orly → Paris transfer at a fixed price of €35 — €45. Personalised welcome, real-time flight tracking.",
@@ -969,7 +969,7 @@ export const trajets: Trajet[] = [
     highlights: ["A6", "Bercy", "Paris Rive Gauche"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Aéroport d'Orly → Gare de Lyon | 18 km, 35 € | TaxiNeo",
+        metaTitle: "Taxi Aéroport d'Orly → Gare de Lyon | 18 km, 36 € | TaxiNeo",
         metaDescription: "Via A6 en 25 min. Bercy et Paris Rive Gauche en chemin. Dépose au terminal exact, suivi de vol en temps réel. Suivi de vol, dépose directe au terminal.",
         heroTitle: "Taxi Aéroport d'Orly → Gare de Lyon",
         heroSubtitle: "Votre transfert Aéroport d'Orly → Gare de Lyon au prix fixe de 35 — 50 €. Réservation en ligne, chauffeur professionnel 24h/24.",
@@ -1189,7 +1189,7 @@ export const trajets: Trajet[] = [
     highlights: ["A6", "Rungis"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Gare de Lyon → Aéroport d'Orly | 18 km, 35 € | TaxiNeo",
+        metaTitle: "Taxi Gare de Lyon → Aéroport d'Orly | 18 km, 36 € | TaxiNeo",
         metaDescription: "Via A6 en 25 min, dépose directe au terminal (Orly 1 à 4). Plus rapide que métro + OrlyVal avec des bagages. Prise en charge devant la gare. Devis en ligne.",
         heroTitle: "Taxi Gare de Lyon → Aéroport d'Orly",
         heroSubtitle: "Votre transfert Gare de Lyon → Aéroport d'Orly au prix fixe de 35 — 50 €. Réservation en ligne, chauffeur professionnel 24h/24.",

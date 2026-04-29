@@ -12,6 +12,7 @@ declare module "next-auth" {
   interface User {
     role?: "driver" | "organization";
     orgType?: OrgType;
+    phone?: string;
   }
 
   interface Session {
@@ -21,6 +22,7 @@ declare module "next-auth" {
       name: string;
       role: "driver" | "organization";
       orgType?: OrgType;
+      phone?: string;
       impersonatingFrom?: ImpersonatingFrom;
     };
   }
@@ -31,6 +33,7 @@ declare module "next-auth/jwt" {
     id?: string;
     role?: "driver" | "organization";
     orgType?: OrgType;
+    phone?: string;
     impersonatingFrom?: ImpersonatingFrom;
   }
 }

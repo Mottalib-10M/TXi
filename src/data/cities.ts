@@ -164,7 +164,7 @@ export const cities: City[] = [
     "Auteuil", "Passy", "Bercy", "Les Halles",
   ], [
     { from: "Paris Centre", to: "Aéroport CDG", price: "56-65 €" },
-    { from: "Paris Centre", to: "Aéroport Orly", price: "35-45 €" },
+    { from: "Paris Centre", to: "Aéroport Orly", price: "36-45 €" },
     { from: "Gare du Nord", to: "Tour Eiffel", price: "15-20 €" },
     { from: "Paris", to: "Disneyland", price: "65-80 €" },
     { from: "Paris", to: "Versailles", price: "40-55 €" },
@@ -176,7 +176,7 @@ export const cities: City[] = [
   ], [
     { question: "Combien coûte un taxi Paris-CDG ?", answer: "Le trajet Paris-CDG est au forfait réglementé : 56 € depuis la rive droite, 65 € depuis la rive gauche. Pas de surprise avec TaxiNeo." },
     { question: "Les taxis TaxiNeo utilisent-ils les voies de bus à Paris ?", answer: "Oui, en tant que taxis officiels, nos chauffeurs ont accès aux couloirs de bus parisiens, ce qui réduit considérablement les temps de trajet." },
-    { question: "Combien de temps met un taxi de Montmartre à l'aéroport d'Orly ?", answer: "Comptez environ 45-60 minutes selon la circulation. Le forfait depuis la rive droite est de 37 €. Nos chauffeurs connaissent les meilleurs itinéraires." },
+    { question: "Combien de temps met un taxi de Montmartre à l'aéroport d'Orly ?", answer: "Comptez environ 45-60 minutes selon la circulation. Le forfait depuis la rive droite est de 45 €. Nos chauffeurs connaissent les meilleurs itinéraires." },
     { question: "Peut-on payer un taxi par carte bancaire à Paris ?", answer: "Oui, tous nos taxis à Paris acceptent le paiement par carte bancaire, sans supplément. Vous pouvez aussi payer via l'application TaxiNeo." },
   ], 2500, "4 min"),
 
@@ -1394,21 +1394,21 @@ const cityContent: Record<string, { introFr: string; introEn: string; descriptio
   paris: {
     introFr: "Paris, capitale mondiale du tourisme et centre économique majeur, génère des millions de déplacements quotidiens entre ses 20 arrondissements, ses 6 grandes gares (Gare du Nord, Gare de Lyon, Montparnasse, Saint-Lazare, Gare de l'Est, Austerlitz) et ses 2 aéroports internationaux. TaxiNeo vous connecte avec les meilleurs taxis parisiens pour tous vos trajets : transferts aéroport CDG et Orly au forfait réglementé, courses vers La Défense, navettes médicales ou sorties nocturnes.",
     introEn: "Paris, the world tourism capital and major economic hub, generates millions of daily trips between its 20 arrondissements, 6 major stations (Gare du Nord, Gare de Lyon, Montparnasse, Saint-Lazare, Gare de l'Est, Austerlitz) and 2 international airports. TaxiNeo connects you with the best Parisian taxis for all your journeys: regulated flat-rate CDG and Orly airport transfers, rides to La Défense, medical shuttles or late-night outings.",
-    descriptionFr: "Avec TaxiNeo à Paris, profitez de l'accès exclusif aux couloirs de bus qui permet à nos chauffeurs de traverser la capitale bien plus rapidement qu'un VTC classique. Forfaits aéroport réglementés (56 € rive droite vers CDG, 37 € vers Orly), paiement par carte garanti, et chauffeurs qui connaissent chaque raccourci parisien. Réservez en 30 secondes et recevez une estimation de prix avant de confirmer.",
-    descriptionEn: "With TaxiNeo in Paris, enjoy exclusive bus lane access that lets our drivers cross the capital much faster than a standard rideshare. Regulated airport flat rates (€56 right bank to CDG, €37 to Orly), guaranteed card payment, and drivers who know every Parisian shortcut. Book in 30 seconds and get a price estimate before confirming.",
-    metaDescriptionFr: "Taxi à Paris : forfait aéroport CDG dès 56 €, Orly dès 37 €. Réservation en ligne 24h/24, accès voies de bus, 20 000 chauffeurs agréés. Réservez maintenant.",
-    metaDescriptionEn: "Taxi in Paris: flat-rate to CDG airport from €56, Orly from €37. Book online 24/7 with bus lane access and 20,000 licensed drivers. Reserve on TaxiNeo.",
+    descriptionFr: "Avec TaxiNeo à Paris, profitez de l'accès exclusif aux couloirs de bus qui permet à nos chauffeurs de traverser la capitale bien plus rapidement qu'un VTC classique. Forfaits aéroport réglementés (56 € rive droite vers CDG, 36 € vers Orly), paiement par carte garanti, et chauffeurs qui connaissent chaque raccourci parisien. Réservez en 30 secondes et recevez une estimation de prix avant de confirmer.",
+    descriptionEn: "With TaxiNeo in Paris, enjoy exclusive bus lane access that lets our drivers cross the capital much faster than a standard rideshare. Regulated airport flat rates (€56 right bank to CDG, €36 to Orly), guaranteed card payment, and drivers who know every Parisian shortcut. Book in 30 seconds and get a price estimate before confirming.",
+    metaDescriptionFr: "Taxi à Paris : forfait aéroport CDG dès 56 €, Orly dès 36 €. Réservation en ligne 24h/24, accès voies de bus, 20 000 chauffeurs agréés. Réservez maintenant.",
+    metaDescriptionEn: "Taxi in Paris: flat-rate to CDG airport from €56, Orly from €36. Book online 24/7 with bus lane access and 20,000 licensed drivers. Reserve on TaxiNeo.",
     heroSubtitleFr: "Capitale mondiale du tourisme, Paris compte 6 grandes gares et 2 aéroports internationaux. Réservez un taxi parisien en 30 secondes : forfait aéroport réglementé, accès exclusif aux couloirs de bus et chauffeurs connaissant chaque raccourci de la ville.",
     heroSubtitleEn: "The world's tourism capital, Paris has 6 major train stations and 2 international airports. Book a Parisian taxi in 30 seconds: regulated airport flat rate, exclusive bus lane access and drivers who know every shortcut in the city.",
     whyUsFr: [
       { title: "Accès couloirs de bus parisiens", desc: "Nos taxis empruntent les 60 km de voies réservées sur les grands axes (Rivoli, Champs-Élysées, boulevards des Maréchaux) pour traverser Paris 30 % plus vite qu'un VTC classique." },
       { title: "Experts des 20 arrondissements", desc: "Chauffeurs formés à la géographie parisienne : raccourcis Montmartre–Bastille, accès Pitié-Salpêtrière par le quai, itinéraires alternatifs pendant les manifestations et événements." },
-      { title: "Forfait aéroport réglementé CDG/Orly", desc: "Tarif fixe 56 € rive droite ou 65 € rive gauche vers CDG, 37 € ou 42 € vers Orly. Prix garanti par arrêté préfectoral, sans surcharge ni tarification dynamique." },
+      { title: "Forfait aéroport réglementé CDG/Orly", desc: "Tarif fixe 56 € rive droite ou 65 € rive gauche vers CDG, 36 € ou 45 € vers Orly. Prix garanti par arrêté préfectoral, sans surcharge ni tarification dynamique." },
     ],
     whyUsEn: [
       { title: "Paris bus lane access", desc: "Our taxis use 60 km of reserved lanes on major roads (Rivoli, Champs-Élysées, boulevards des Maréchaux) to cross Paris 30% faster than a standard rideshare." },
       { title: "20-arrondissement experts", desc: "Drivers trained in Parisian geography: Montmartre–Bastille shortcuts, Pitié-Salpêtrière access via the quay, alternative routes during demonstrations and events." },
-      { title: "Regulated CDG/Orly flat rate", desc: "Fixed fare €56 right bank or €65 left bank to CDG, €37 or €42 to Orly. Price guaranteed by prefectural order, no surge pricing." },
+      { title: "Regulated CDG/Orly flat rate", desc: "Fixed fare €56 right bank or €65 left bank to CDG, €36 or €45 to Orly. Price guaranteed by prefectural order, no surge pricing." },
     ],
   },
   marseille: {

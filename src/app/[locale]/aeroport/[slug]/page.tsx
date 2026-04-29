@@ -17,8 +17,11 @@ import { CityFAQ } from "@/components/city/CityFAQ";
 import { CityContactForm } from "@/components/city/CityContactForm";
 import { CityCTA } from "@/components/city/CityCTA";
 import { AirportInternalLinks } from "@/components/airport/AirportInternalLinks";
+import { ForfaitAeroportTable } from "@/components/airport/ForfaitAeroportTable";
 import { airports, getAirportBySlug } from "@/data/airports";
 import { ILE_DE_FRANCE_SLUGS } from "@/data/regions";
+
+const PARIS_AIRPORT_SLUGS = new Set(["paris-charles-de-gaulle", "paris-orly"]);
 
 interface PageProps {
   params: Promise<{ locale: string; slug: string }>;
@@ -74,6 +77,7 @@ export default async function AirportPage({ params }: PageProps) {
         <AirportIntro airport={ap} />
         <AirportInfo airport={ap} />
         <AirportPricing airport={ap} />
+        {PARIS_AIRPORT_SLUGS.has(ap.slug) && <ForfaitAeroportTable />}
         <AirportServices airportName={ap.name} />
         <AirportPractical airport={ap} />
         <AirportWhyUs airport={ap} />

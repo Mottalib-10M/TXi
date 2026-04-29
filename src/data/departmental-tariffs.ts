@@ -138,6 +138,35 @@ export interface AirportFareGroup {
   fares: AirportFare[];
 }
 
+/**
+ * Suppléments réglementés 2026 pour les taxis parisiens.
+ * Source : arrêté préfectoral de Paris, applicable du 01/02/2026 au 31/01/2027.
+ */
+export const AIRPORT_SUPPLEMENTS = {
+  reservationImmediate: 4,    // € — supplément réservation immédiate
+  reservationAvance: 7,       // € — supplément réservation à l'avance
+  minimumPerception: 8,       // € — minimum de perception
+  priseEnChargeMax: 4.48,     // € — prise en charge maximale
+  validFrom: "2026-02-01",
+  validThrough: "2027-01-31",
+} as const;
+
+/**
+ * Accès simplifié aux forfaits aéroports Paris (CDG & Orly).
+ */
+export function getParisAirportFares() {
+  const group = AIRPORT_FARES.find((g) => g.airport === "Paris CDG & Orly");
+  if (!group) throw new Error("Paris airport fares not found");
+  return {
+    cdgRiveDroite: group.fares.find((f) => f.route.includes("CDG") && f.route.includes("droite"))!.price,
+    cdgRiveGauche: group.fares.find((f) => f.route.includes("CDG") && f.route.includes("gauche"))!.price,
+    orlyRiveDroite: group.fares.find((f) => f.route.includes("Orly") && f.route.includes("droite"))!.price,
+    orlyRiveGauche: group.fares.find((f) => f.route.includes("Orly") && f.route.includes("gauche"))!.price,
+    fares: group.fares,
+    supplements: AIRPORT_SUPPLEMENTS,
+  };
+}
+
 export const AIRPORT_FARES: AirportFareGroup[] = [
   {
     airport: "Paris CDG & Orly",

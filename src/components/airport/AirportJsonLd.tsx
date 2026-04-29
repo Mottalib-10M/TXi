@@ -1,9 +1,16 @@
 import type { Airport } from "@/data/airports";
 import { getLocale } from "next-intl/server";
+import { AIRPORT_FARES, AIRPORT_SUPPLEMENTS } from "@/data/departmental-tariffs";
+
+const PARIS_AIRPORT_SLUGS = new Set(["paris-charles-de-gaulle", "paris-orly"]);
 
 export async function AirportJsonLd({ airport }: { airport: Airport }) {
   const locale = await getLocale();
   const loc = locale === "en" ? "en" : "fr";
+
+  const parisGroup = PARIS_AIRPORT_SLUGS.has(airport.slug)
+    ? AIRPORT_FARES.find((g) => g.airport === "Paris CDG & Orly")
+    : null;
 
   const localBusiness = {
     "@context": "https://schema.org",
@@ -33,6 +40,16 @@ export async function AirportJsonLd({ airport }: { airport: Airport }) {
       opens: "00:00",
       closes: "23:59",
     },
+    ...(parisGroup && {
+      priceSpecification: parisGroup.fares.map((fare) => ({
+        "@type": "PriceSpecification",
+        name: fare.route,
+        price: fare.price,
+        priceCurrency: "EUR",
+        validFrom: AIRPORT_SUPPLEMENTS.validFrom,
+        validThrough: AIRPORT_SUPPLEMENTS.validThrough,
+      })),
+    }),
   };
 
   const faqPage = {

@@ -198,13 +198,13 @@ export const airports: Airport[] = [
   airport(
     "Paris-Orly", "paris-orly", "ORY",
     "Paris", "paris", 48.7262, 2.3652,
-    "14 km du centre de Paris", "20-40 min", "38 €",
+    "14 km du centre de Paris", "20-40 min", "36 €",
     ["Orly 1", "Orly 2", "Orly 3", "Orly 4"],
     ["Air France", "Transavia", "easyJet", "Vueling", "TAP Portugal", "Royal Air Maroc"],
     "33 millions",
     [
-      { name: "Paris centre (rive gauche)", price: "38 €", time: "20-35 min" },
-      { name: "Paris centre (rive droite)", price: "44 €", time: "25-40 min" },
+      { name: "Paris centre (rive gauche)", price: "36 €", time: "20-35 min" },
+      { name: "Paris centre (rive droite)", price: "45 €", time: "25-40 min" },
       { name: "La Défense", price: "55 €", time: "35-50 min" },
       { name: "Versailles", price: "45 €", time: "25-35 min" },
       { name: "Gare de Lyon", price: "35 €", time: "20-30 min" },
@@ -215,7 +215,7 @@ export const airports: Airport[] = [
       { text: "Je prends TaxiNeo à chaque vol depuis Orly. Toujours fiable, même à 4h du matin.", name: "Farid A.", initials: "FA", role: "Entrepreneur" },
     ],
     [
-      { question: "Quel est le forfait taxi Paris-Orly ?", answer: "Le forfait réglementé est de 38 € vers la rive gauche et 44 € vers la rive droite. Prix fixe garanti." },
+      { question: "Quel est le forfait taxi Paris-Orly ?", answer: "Le forfait réglementé est de 36 € vers la rive gauche et 45 € vers la rive droite. Prix fixe garanti." },
       { question: "Orly 1, 2, 3 ou 4 : comment choisir ?", answer: "Vérifiez votre terminal sur votre billet d'avion. Le chauffeur vous dépose ou vous récupère directement au bon terminal." },
     ],
     ["paris-charles-de-gaulle", "paris-beauvais"],
@@ -1457,9 +1457,9 @@ const AIRPORT_CONTENT: Record<string, { fr: { intro: string; description: string
   },
   "paris-orly": {
     fr: {
-      intro: "L'aéroport Paris-Orly (ORY) est le deuxième aéroport parisien, situé à seulement 14 km au sud de Paris. Rénové et réorganisé en quatre secteurs — Orly 1, 2, 3 et 4 — il accueille 33 millions de passagers par an sur des vols domestiques, européens et vers le Maghreb, opérés par Air France, Transavia, easyJet et Vueling notamment. TaxiNeo vous propose un forfait réglementé de 38 € vers la rive gauche et 44 € vers la rive droite, avec un chauffeur présent en zone d'arrivée dès votre atterrissage.",
+      intro: "L'aéroport Paris-Orly (ORY) est le deuxième aéroport parisien, situé à seulement 14 km au sud de Paris. Rénové et réorganisé en quatre secteurs — Orly 1, 2, 3 et 4 — il accueille 33 millions de passagers par an sur des vols domestiques, européens et vers le Maghreb, opérés par Air France, Transavia, easyJet et Vueling notamment. TaxiNeo vous propose un forfait réglementé de 36 € vers la rive gauche et 45 € vers la rive droite, avec un chauffeur présent en zone d'arrivée dès votre atterrissage.",
       description: "À Orly, votre taxi vous attend directement en zone de récupération des bagages côté arrivée — pas besoin de marcher jusqu'au parking P0 comme pour un VTC. Nos chauffeurs utilisent les voies réservées taxi sur l'A6 et l'A106 (l'Orlyval routier) pour rejoindre Paris rapidement. Disponible 24h/24, le service couvre aussi les vols de nuit et les départs matinaux vers Orly 4 (anciennement Orly Sud). Plus proche de Paris que CDG, Orly est idéal pour un transfert rapide. Réservez à l'avance pour que votre chauffeur soit positionné au bon secteur.",
-      metaDescription: "Taxi Orly : forfait 38-44 €, prise en charge en zone arrivée secteurs 1 à 4, voies réservées A6. Transfert Paris-Orly rapide, réservation en ligne 24h/24.",
+      metaDescription: "Taxi Orly : forfait 36-45 €, prise en charge en zone arrivée secteurs 1 à 4, voies réservées A6. Transfert Paris-Orly rapide, réservation en ligne 24h/24.",
       heroSubtitle: "À 14 km de Paris, Orly est l'aéroport le plus proche de la capitale avec 33 millions de voyageurs par an. Votre chauffeur TaxiNeo se positionne au bon secteur grâce au suivi de vol, vous récupère en zone d'arrivée et rejoint Paris par les voies réservées de l'A6 — forfait réglementé, service de nuit inclus.",
       whyUs: [
         { title: "Voies réservées A6 et A106", desc: "Nos chauffeurs empruntent les couloirs taxi de l'A6 et l'A106 (Orlyval routier), contournant le trafic de Rungis pour un trajet de 25 min vers la rive gauche." },
@@ -1468,9 +1468,9 @@ const AIRPORT_CONTENT: Record<string, { fr: { intro: string; description: string
       ],
     },
     en: {
-      intro: "Paris-Orly Airport (ORY) is the second-largest Parisian airport, located just 14 km south of the city centre. Renovated and reorganised into four sectors — Orly 1, 2, 3 and 4 — it serves 33 million passengers a year on domestic, European and North African routes operated by Air France, Transavia, easyJet and Vueling among others. TaxiNeo offers a regulated fixed fare of 38 EUR to the Left Bank and 44 EUR to the Right Bank, with a driver present in the arrivals area as soon as you land.",
+      intro: "Paris-Orly Airport (ORY) is the second-largest Parisian airport, located just 14 km south of the city centre. Renovated and reorganised into four sectors — Orly 1, 2, 3 and 4 — it serves 33 million passengers a year on domestic, European and North African routes operated by Air France, Transavia, easyJet and Vueling among others. TaxiNeo offers a regulated fixed fare of 36 EUR to the Left Bank and 45 EUR to the Right Bank, with a driver present in the arrivals area as soon as you land.",
       description: "At Orly, your taxi waits directly in the baggage reclaim arrivals zone — no need to walk to the P0 car park as you would for a ride-hailing service. Our drivers use reserved taxi lanes on the A6 and A106 motorways for a swift journey into Paris. Available 24/7, the service covers night flights and early morning departures from Orly 4 (formerly Orly Sud). Closer to Paris than CDG, Orly is ideal for a quick transfer. Book ahead so your driver is positioned at the correct sector.",
-      metaDescription: "Orly airport taxi: regulated fixed fare 38-44 EUR, pickup in arrivals across all 4 sectors, reserved A6 lanes. Book your Paris-Orly transfer online 24/7.",
+      metaDescription: "Orly airport taxi: regulated fixed fare 36-45 EUR, pickup in arrivals across all 4 sectors, reserved A6 lanes. Book your Paris-Orly transfer online 24/7.",
       heroSubtitle: "Just 14 km from Paris, Orly is the closest airport to the capital serving 33 million travellers a year. Your TaxiNeo driver positions at the right sector using flight tracking, collects you in arrivals and reaches Paris via reserved A6 lanes — regulated fixed fare with night service included.",
       whyUs: [
         { title: "Reserved A6 and A106 lanes", desc: "Our drivers use dedicated taxi lanes on the A6 and A106 (road Orlyval), bypassing Rungis traffic for a 25-min ride to the Left Bank." },

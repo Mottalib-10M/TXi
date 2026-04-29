@@ -1372,7 +1372,23 @@
     "testimonialsSubtitle": "Testimonials",
     "testimonialsTitle": "Reviews of {name} transfers",
     "departementLink": "Department",
-    "relatedTrajets": "Routes from this airport"
+    "relatedTrajets": "Routes from this airport",
+    "forfaitTable": {
+      "title": "Regulated airport fares 2026",
+      "subtitle": "Rates set by prefectural decree",
+      "route": "Route",
+      "price": "Fixed fare incl. tax",
+      "cdgRiveDroite": "CDG ↔ Paris Right Bank",
+      "cdgRiveGauche": "CDG ↔ Paris Left Bank",
+      "orlyRiveGauche": "Orly ↔ Paris Left Bank",
+      "orlyRiveDroite": "Orly ↔ Paris Right Bank",
+      "supplementsTitle": "Applicable surcharges",
+      "reservationImmediate": "Immediate booking",
+      "reservationAvance": "Advance booking",
+      "minimumPerception": "Minimum fare",
+      "priseEnCharge": "Maximum pickup charge",
+      "legalMention": "Rates regulated by Paris prefectural decree, applicable from 1 February 2026 to 31 January 2027. Source: service-public.gouv.fr."
+    }
   },
   "station": {
     "breadcrumbHome": "Home",

@@ -569,7 +569,7 @@ export const guides: Guide[] = [
           {
             title: "Les forfaits aéroport obligatoires",
             content:
-              "Depuis 2016, les forfaits pour les trajets entre Paris et les aéroports sont obligatoires. Le forfait Paris-CDG est de 56 euros (rive droite) ou 65 euros (rive gauche). Le forfait Paris-Orly est de 44 euros (rive gauche) ou 52 euros (rive droite). Ces forfaits s'appliquent quel que soit le trafic ou l'heure. Avec TaxiNeo, tous les trajets bénéficient de prix fixes, pas seulement les aéroports.",
+              "Depuis 2016, les forfaits pour les trajets entre Paris et les aéroports sont obligatoires. Le forfait Paris-CDG est de 56 euros (rive droite) ou 65 euros (rive gauche). Le forfait Paris-Orly est de 36 euros (rive gauche) ou 45 euros (rive droite). Ces forfaits s'appliquent quel que soit le trafic ou l'heure. Avec TaxiNeo, tous les trajets bénéficient de prix fixes, pas seulement les aéroports.",
           },
           {
             title: "Les suppléments autorisés",
@@ -630,7 +630,7 @@ export const guides: Guide[] = [
           {
             title: "Mandatory airport flat fares",
             content:
-              "Since 2016, flat fares for journeys between Paris and the airports are mandatory. The Paris-CDG fare is 56 euros (right bank) or 65 euros (left bank). The Paris-Orly fare is 44 euros (left bank) or 52 euros (right bank). These flat fares apply regardless of traffic or time. With TaxiNeo, all journeys benefit from fixed prices, not just airports.",
+              "Since 2016, flat fares for journeys between Paris and the airports are mandatory. The Paris-CDG fare is 56 euros (right bank) or 65 euros (left bank). The Paris-Orly fare is 36 euros (left bank) or 45 euros (right bank). These flat fares apply regardless of traffic or time. With TaxiNeo, all journeys benefit from fixed prices, not just airports.",
           },
           {
             title: "Authorised surcharges",

@@ -40,6 +40,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
             email: driver.email,
             name: driver.companyName || driver.firstName,
             role: "driver" as const,
+            phone: driver.phone || "",
           };
         }
 
@@ -65,6 +66,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
             name: org.name,
             role: "organization" as const,
             orgType: org.type,
+            phone: org.phone || "",
           };
         }
 
@@ -83,6 +85,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         token.id = user.id;
         token.role = user.role;
         token.orgType = user.orgType;
+        token.phone = user.phone;
       }
       if (trigger === "update" && token.id) {
         const role = (token.role as string) || "driver";
@@ -111,6 +114,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         session.user.id = token.id as string;
         session.user.role = (token.role as "driver" | "organization") || "driver";
         session.user.orgType = token.orgType;
+        session.user.phone = (token.phone as string) || "";
         if (token.impersonatingFrom) {
           session.user.impersonatingFrom = token.impersonatingFrom;
         }

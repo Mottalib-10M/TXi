@@ -2,6 +2,28 @@ import { NextResponse } from "next/server";
 import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
 
+export async function GET() {
+  const session = await auth();
+  if (!session?.user?.id) {
+    return NextResponse.json({ error: "Non autorisé" }, { status: 401 });
+  }
+
+  try {
+    const driver = await prisma.driver.findUnique({
+      where: { id: session.user.id },
+      select: { phone: true, firstName: true, lastName: true },
+    });
+
+    if (!driver) {
+      return NextResponse.json({ error: "Chauffeur introuvable" }, { status: 404 });
+    }
+
+    return NextResponse.json(driver);
+  } catch {
+    return NextResponse.json({ error: "Erreur serveur" }, { status: 500 });
+  }
+}
+
 export async function PATCH(request: Request) {
   const session = await auth();
   if (!session?.user?.id) {

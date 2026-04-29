@@ -47,7 +47,7 @@ export function ProfileBookingForm({
 
   const isLoggedIn = Boolean(session?.user?.email);
 
-  // Pre-fill client info from session + fetch phone
+  // Pre-fill client info from session
   useEffect(() => {
     if (session?.user) {
       if (session.user.name) {
@@ -56,15 +56,10 @@ export function ProfileBookingForm({
       if (session.user.email) {
         setClientEmail(session.user.email);
       }
-
-      const role = (session.user as { role?: string }).role;
-      const endpoint = role === "organization" ? "/api/org/profile" : "/api/driver/profile";
-      fetch(endpoint)
-        .then((r) => r.ok ? r.json() : null)
-        .then((data) => {
-          if (data?.phone && !clientPhone) setClientPhone(data.phone);
-        })
-        .catch(() => {});
+      const phone = (session.user as { phone?: string }).phone;
+      if (phone && !clientPhone) {
+        setClientPhone(phone);
+      }
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [session]);
