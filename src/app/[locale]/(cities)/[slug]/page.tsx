@@ -25,8 +25,6 @@ interface PageProps {
   params: Promise<{ locale: string; slug: string }>;
 }
 
-export const dynamicParams = false;
-
 export async function generateStaticParams() {
   return ["fr", "en"].flatMap((locale) =>
     cities.map((city) => ({ locale, slug: city.slug }))
@@ -36,7 +34,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { locale, slug } = await params;
   const city = getCityBySlug(slug);
-  if (!city) return {};
+  if (!city) notFound();
   const loc = locale === "en" ? "en" : "fr";
 
   const canonical = `https://www.taxineo.fr/${locale}/taxi-${city.slug}`;

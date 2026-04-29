@@ -30,7 +30,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { locale, slug } = await params;
   const trajet = getTrajetBySlug(slug);
-  if (!trajet) return {};
+  if (!trajet) notFound();
   const loc = locale === "en" ? "en" : "fr";
 
   const canonical = `https://www.taxineo.fr/${locale}/trajet/${trajet.slug}`;

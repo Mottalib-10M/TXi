@@ -22,7 +22,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { locale, slug } = await params;
   const article = getArticleBySlug(slug);
-  if (!article) return {};
+  if (!article) notFound();
 
   const lang = locale as "fr" | "en";
   const canonical = `https://taxineo.fr/${locale === "fr" ? "" : locale + "/"}blog/${slug}`;

@@ -36,7 +36,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { locale, slug } = await params;
   const ap = getAirportBySlug(slug);
-  if (!ap) return {};
+  if (!ap) notFound();
   const loc = locale === "en" ? "en" : "fr";
 
   const canonical = `https://www.taxineo.fr/${locale}/taxi-aeroport-${ap.slug}`;

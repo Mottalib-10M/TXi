@@ -29,7 +29,7 @@ export async function generateMetadata({
 }: PageProps): Promise<Metadata> {
   const { locale, slug } = await params;
   const guide = getGuideBySlug(slug);
-  if (!guide) return {};
+  if (!guide) notFound();
   const loc = locale === "en" ? "en" : "fr";
 
   const canonical = `https://www.taxineo.fr/${locale}/guide/${guide.slug}`;
