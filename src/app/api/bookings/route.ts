@@ -10,6 +10,7 @@ import {
 } from "@/lib/email";
 import { sendSms } from "@/lib/sms";
 import { runEscalation } from "@/lib/escalation";
+import { createNotification } from "@/lib/notifications";
 import { format } from "date-fns";
 import { fr, enUS } from "date-fns/locale";
 
@@ -149,12 +150,20 @@ export async function POST(request: Request) {
       include: { driver: true },
     });
 
+    createNotification({
+      type: "BOOKING_CREATED",
+      title: `Réservation #${reference}`,
+      body: `${data.clientName} — ${data.departureName} → ${data.arrivalName}`,
+      metadata: { bookingId: booking.id, reference, clientName: data.clientName },
+    });
+
     const locale = data.locale || "fr";
     const dateFnsLocale = locale === "en" ? enUS : fr;
     const dateFormat = locale === "en" ? "dd MMMM yyyy 'at' HH:mm" : "dd MMMM yyyy 'à' HH:mm";
     const dateFormatted = format(requestedDate, dateFormat, { locale: dateFnsLocale });
 
-    // Send notifications to driver
+    // Send notifications to driver (always in French)
+    const dateFrFormatted = format(requestedDate, "dd MMMM yyyy 'à' HH:mm", { locale: fr });
     if (booking.driver) {
       if (booking.driver.notifyEmail) {
         const emailData = buildDriverNotificationEmail({
@@ -162,12 +171,12 @@ export async function POST(request: Request) {
           clientName: data.clientName,
           departure: data.departureName,
           arrival: data.arrivalName,
-          date: dateFormatted,
+          date: dateFrFormatted,
           reference,
           bookingId: booking.id,
           price: booking.lockedPrice,
           source: data.source,
-          locale,
+          locale: "fr",
         });
         await sendEmail({ to: booking.driver.email, ...emailData });
       }
@@ -191,6 +200,7 @@ export async function POST(request: Request) {
         driverName: booking.driver
           ? `${booking.driver.firstName} ${booking.driver.lastName}`
           : undefined,
+        driverPhone: booking.driver?.phone || undefined,
         price: booking.lockedPrice,
         locale,
       });

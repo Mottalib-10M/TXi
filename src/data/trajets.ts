@@ -4668,6 +4668,16 @@ import { trajetsCahorsGourdon } from "./trajets-hub-cahors-gourdon";
 import { trajetsAuxerreTonnerre } from "./trajets-hub-auxerre-tonnerre";
 import { trajetsOleronRochefort } from "./trajets-hub-oleron-rochefort";
 import { trajetsMontaubanCastres } from "./trajets-hub-montauban-castres";
+import { trajetsSeineMarneNord } from "./trajets-hub-seine-et-marne-nord";
+import { trajetsMarnelaVallee } from "./trajets-hub-marne-la-vallee";
+import { trajetsMelunSenart } from "./trajets-hub-melun-senart";
+import { trajetsSeineMarneEst } from "./trajets-hub-seine-et-marne-est";
+import { trajetsHautsDeSeinNord } from "./trajets-hub-hauts-de-seine-nord";
+import { trajetsHautsDeSeineSud } from "./trajets-hub-hauts-de-seine-sud";
+import { trajetsHdsNordExt } from "./trajets-hub-hds-nord-ext";
+import { trajetsHdsOuest } from "./trajets-hub-hds-ouest";
+import { trajetsHdsSudEst } from "./trajets-hub-hds-sud-est";
+import { trajetsHdsSudExt } from "./trajets-hub-hds-sud-ext";
 
 // Merge hub trajets into the main array
 trajets.push(
@@ -4861,6 +4871,16 @@ trajets.push(
   ...trajetsAuxerreTonnerre,
   ...trajetsOleronRochefort,
   ...trajetsMontaubanCastres,
+  ...trajetsSeineMarneNord,
+  ...trajetsMarnelaVallee,
+  ...trajetsMelunSenart,
+  ...trajetsSeineMarneEst,
+  ...trajetsHautsDeSeinNord,
+  ...trajetsHautsDeSeineSud,
+  ...trajetsHdsNordExt,
+  ...trajetsHdsOuest,
+  ...trajetsHdsSudEst,
+  ...trajetsHdsSudExt,
 );
 
 export function getTrajetBySlug(slug: string): Trajet | undefined {

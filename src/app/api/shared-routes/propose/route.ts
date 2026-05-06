@@ -5,6 +5,7 @@ import { auth } from "@/lib/auth";
 import { getLocationById } from "@/data/predefined-locations";
 import { haversineDistance } from "@/lib/geo";
 import { sendEmail, buildSharedTaxiProposalEmail } from "@/lib/email";
+import { createNotification } from "@/lib/notifications";
 
 const proposeSchema = z.object({
   departureLocationId: z.string().min(1),
@@ -146,6 +147,13 @@ export async function POST(request: Request) {
     }
 
     console.log(`[SharedRoute] Proposed route ${route.id} by ${proposerName}, notified ${eligibleDrivers.length} drivers`);
+
+    createNotification({
+      type: "SHARED_ROUTE_PROPOSED",
+      title: `Trajet partagé proposé`,
+      body: `${proposerName} — ${departure.name} → ${destination.name}`,
+      metadata: { routeId: route.id, proposerName, proposerEmail },
+    });
 
     return NextResponse.json({ id: route.id, driversNotified: eligibleDrivers.length }, { status: 201 });
   } catch (error) {

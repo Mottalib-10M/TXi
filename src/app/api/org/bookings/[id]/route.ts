@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
+import { createNotification } from "@/lib/notifications";
 
 export async function PATCH(
   request: Request,
@@ -36,7 +37,14 @@ export async function PATCH(
 
     await prisma.booking.update({
       where: { id: params.id },
-      data: { status: "CANCELLED" },
+      data: { status: "CANCELLED", cancelledBy: "CLIENT" },
+    });
+
+    createNotification({
+      type: "BOOKING_CANCELLED",
+      title: `Annulation #${booking.reference}`,
+      body: `${booking.clientName} — annulée par l'organisation`,
+      metadata: { bookingId: booking.id, reference: booking.reference },
     });
 
     return NextResponse.json({ message: "Course annulée" });

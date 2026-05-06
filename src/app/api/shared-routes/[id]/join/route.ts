@@ -3,6 +3,7 @@ import { z } from "zod";
 import { prisma } from "@/lib/prisma";
 import { auth } from "@/lib/auth";
 import { sendEmail, buildSharedTaxiPassengerConfirmEmail } from "@/lib/email";
+import { createNotification } from "@/lib/notifications";
 
 const joinSchema = z.object({
   passengerName: z.string().min(2).optional(),
@@ -145,6 +146,13 @@ export async function POST(
       to: passengerEmail,
       subject: confirmEmail.subject,
       html: confirmEmail.html,
+    });
+
+    createNotification({
+      type: "SHARED_ROUTE_JOINED",
+      title: `Passager rejoint trajet`,
+      body: `${passengerName} — ${result.route.departureName} → ${result.route.destinationName} (${data.seatCount} place(s))`,
+      metadata: { routeId: id, passengerName, passengerEmail },
     });
 
     return NextResponse.json({ message: "Inscription confirmée" }, { status: 201 });

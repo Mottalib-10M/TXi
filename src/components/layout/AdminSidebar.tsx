@@ -18,6 +18,8 @@ export function AdminSidebar({ userName }: { userName: string }) {
     { href: "/admin/chauffeurs", label: t("drivers"), icon: "solar:user-hands-linear" },
     { href: "/admin/organisations", label: t("organisations"), icon: "solar:buildings-2-linear" },
     { href: "/admin/reservations", label: t("reservations"), icon: "solar:calendar-linear" },
+    { href: "/admin/activite", label: t("activity"), icon: "solar:history-linear" },
+    { href: "/admin/notifications", label: t("notifications"), icon: "solar:bell-linear" },
   ];
 
   return (

@@ -1,11 +1,12 @@
 import { prisma } from "@/lib/prisma";
 import { haversineDistance } from "@/lib/geo";
-import { sendEmail, buildDriverNotificationEmail } from "@/lib/email";
+import { sendEmail, buildDriverNotificationEmail, buildEscalationTimeoutEmail } from "@/lib/email";
 import { sendSms } from "@/lib/sms";
+import { createNotification } from "@/lib/notifications";
 import { format } from "date-fns";
 import { fr } from "date-fns/locale";
 
-const ESCALATION_DELAY_MS = 5 * 60 * 1000; // 5 minutes
+const ESCALATION_DELAY_MS = 15 * 60 * 1000; // 15 minutes
 
 /**
  * Run escalation checks for pending bookings.
@@ -83,6 +84,28 @@ export async function runEscalation(): Promise<{ phase1: number; phase2: number 
 
     const dateFormatted = format(new Date(booking.requestedDate), "dd MMMM yyyy 'à' HH:mm", { locale: fr });
 
+    // Notify the original driver that the 15-min window has expired
+    if (booking.driver) {
+      const originalDriver = await prisma.driver.findUnique({
+        where: { id: booking.driver.id },
+        select: { email: true, notifyEmail: true, firstName: true },
+      });
+      if (originalDriver?.notifyEmail) {
+        const timeoutEmail = buildEscalationTimeoutEmail({
+          driverName: originalDriver.firstName,
+          reference: booking.reference,
+          departure: booking.departureName,
+          arrival: booking.arrivalName,
+          date: dateFormatted,
+          bookingId: booking.id,
+          price: booking.lockedPrice,
+          locale: "fr",
+        });
+        await sendEmail({ to: originalDriver.email, ...timeoutEmail });
+        console.log(`[Escalation] Timeout email sent to original driver ${originalDriver.firstName} for #${booking.reference}`);
+      }
+    }
+
     for (const driver of nearbyDrivers) {
       if (driver.notifyEmail) {
         const emailData = buildDriverNotificationEmail({
@@ -105,6 +128,13 @@ export async function runEscalation(): Promise<{ phase1: number; phase2: number 
         await sendSms(driver.phone, smsText);
       }
     }
+
+    createNotification({
+      type: "ESCALATION_PHASE1",
+      title: `Escalade phase 1 — #${booking.reference}`,
+      body: `${booking.clientName} — ${nearbyDrivers.length} chauffeur(s) invité(s)`,
+      metadata: { bookingId: booking.id, reference: booking.reference, invitedCount: nearbyDrivers.length },
+    });
   }
 
   // --- Phase 2: Escalated bookings still pending after another 5 min ---
@@ -127,6 +157,13 @@ export async function runEscalation(): Promise<{ phase1: number; phase2: number 
     await prisma.booking.update({
       where: { id: booking.id },
       data: { escalationPhase: 2 },
+    });
+
+    createNotification({
+      type: "ESCALATION_PHASE2",
+      title: `Escalade phase 2 — #${booking.reference}`,
+      body: `${booking.clientName} — aucun chauffeur n'a répondu, admin notifié`,
+      metadata: { bookingId: booking.id, reference: booking.reference },
     });
   }
 
@@ -187,9 +224,10 @@ async function notifyAdmin(booking: {
     </div>
   `;
 
-  console.log(`[Escalation] Sending admin alert email for #${booking.reference} to amradif@gmail.com`);
+  const adminEmail = (process.env.ADMIN_EMAILS || "amradif@gmail.com").split(",")[0].trim();
+  console.log(`[Escalation] Sending admin alert email for #${booking.reference} to ${adminEmail}`);
   await sendEmail({
-    to: "amradif@gmail.com",
+    to: adminEmail,
     subject: `[ALERTE] Course #${booking.reference} sans chauffeur`,
     html,
   });

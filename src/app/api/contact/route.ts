@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { sendEmail } from "@/lib/email";
+import { createNotification } from "@/lib/notifications";
 
 const contactSchema = z.object({
   name: z.string().min(1),
@@ -39,6 +40,13 @@ export async function POST(req: Request) {
           <p style="color: #a3a3a3; font-size: 12px;">— TaxiNeo Contact Form</p>
         </div>
       `,
+    });
+
+    createNotification({
+      type: "CONTACT_FORM",
+      title: `Message de contact`,
+      body: `${data.name}${data.city ? ` (${data.city})` : ""} — ${data.message.slice(0, 100)}`,
+      metadata: { name: data.name, email: data.email, phone: data.phone, city: data.city },
     });
 
     return NextResponse.json({ success: true });

@@ -10,6 +10,7 @@ import {
   buildEscalationResolvedEmail,
 } from "@/lib/email";
 import { sendSms } from "@/lib/sms";
+import { createNotification } from "@/lib/notifications";
 import { format } from "date-fns";
 import { fr } from "date-fns/locale";
 
@@ -84,6 +85,12 @@ export async function PATCH(
             }),
           ]);
 
+          createNotification({
+            type: "BOOKING_COMPLETED",
+            title: `Course terminée #${booking.reference}`,
+            body: `${booking.clientName} — ${booking.departureName} → ${booking.arrivalName}`,
+            metadata: { bookingId: booking.id, reference: booking.reference },
+          });
           return NextResponse.json({ message: "Statut mis à jour, cagnotte créditée" });
         }
       }
@@ -91,6 +98,13 @@ export async function PATCH(
       await prisma.booking.update({
         where: { id: params.id },
         data: { status },
+      });
+
+      createNotification({
+        type: "BOOKING_COMPLETED",
+        title: `Course terminée #${booking.reference}`,
+        body: `${booking.clientName} — ${booking.departureName} → ${booking.arrivalName}`,
+        metadata: { bookingId: booking.id, reference: booking.reference },
       });
 
       return NextResponse.json({ message: "Statut mis à jour" });
@@ -113,6 +127,13 @@ export async function PATCH(
           { status: 409 }
         );
       }
+
+      createNotification({
+        type: "BOOKING_ACCEPTED",
+        title: `Course acceptée #${booking.reference}`,
+        body: `${booking.clientName} — ${booking.departureName} → ${booking.arrivalName}`,
+        metadata: { bookingId: booking.id, reference: booking.reference, driverId: session.user.id },
+      });
 
       // Notify other drivers that the ride is taken
       try {
@@ -319,6 +340,13 @@ export async function PATCH(
         data: { status: "REJECTED" },
       });
 
+      createNotification({
+        type: "BOOKING_REJECTED",
+        title: `Course refusée #${booking.reference}`,
+        body: `${booking.clientName} — ${booking.departureName} → ${booking.arrivalName}`,
+        metadata: { bookingId: booking.id, reference: booking.reference, driverId: session.user.id },
+      });
+
       // Send rejection email to client
       if (booking.clientEmail && booking.clientEmail !== "noemail@taxineo.fr") {
         try {
@@ -426,8 +454,9 @@ async function notifyAdmin(booking: {
     </div>
   `;
 
+  const adminEmail = (process.env.ADMIN_EMAILS || "amradif@gmail.com").split(",")[0].trim();
   await sendEmail({
-    to: "amradif@gmail.com",
+    to: adminEmail,
     subject: `[ALERTE] Course #${booking.reference} sans chauffeur`,
     html,
   });

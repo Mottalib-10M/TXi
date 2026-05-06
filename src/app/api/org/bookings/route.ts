@@ -7,6 +7,7 @@ import { generateUniqueReference } from "@/lib/reference";
 import { sendEmail, buildDriverNotificationEmail } from "@/lib/email";
 import { sendSms } from "@/lib/sms";
 import { runEscalation } from "@/lib/escalation";
+import { createNotification } from "@/lib/notifications";
 import { format } from "date-fns";
 import { fr } from "date-fns/locale";
 
@@ -83,7 +84,9 @@ export async function POST(request: Request) {
             estimatedDistance,
             nearbyDrivers[0].baseFare,
             nearbyDrivers[0].pricePerKm,
-            nearbyDrivers[0].minimumFare
+            nearbyDrivers[0].minimumFare,
+            nearbyDrivers[0].pricePerKmNight,
+            requestedDate,
           );
         }
       }
@@ -98,7 +101,9 @@ export async function POST(request: Request) {
           estimatedDistance,
           driver.baseFare,
           driver.pricePerKm,
-          driver.minimumFare
+          driver.minimumFare,
+          driver.pricePerKmNight,
+          requestedDate,
         );
       }
     }
@@ -135,6 +140,13 @@ export async function POST(request: Request) {
         source: "ORGANIZATION",
       },
       include: { driver: true },
+    });
+
+    createNotification({
+      type: "ORG_BOOKING_CREATED",
+      title: `Réservation org #${reference}`,
+      body: `${data.beneficiaryName} — ${data.departureName} → ${data.arrivalName}`,
+      metadata: { bookingId: booking.id, reference, organizationId: session.user.id },
     });
 
     // Send notifications to assigned driver
@@ -204,6 +216,9 @@ export async function GET(request: NextRequest) {
               phone: true,
               zoneLat: true,
               zoneLng: true,
+              vehicleBrand: true,
+              vehicleModel: true,
+              vehicles: true,
             },
           },
         },

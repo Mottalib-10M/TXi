@@ -39,6 +39,9 @@ interface RecentBooking {
     firstName: string;
     lastName: string;
     phone: string | null;
+    vehicleBrand: string | null;
+    vehicleModel: string | null;
+    vehicles: Array<{ brand?: string; model?: string }> | null;
   } | null;
 }
 
@@ -376,90 +379,164 @@ export default function OrgDashboard() {
         )}
       </div>}
 
-      {/* Zone 3: Recent bookings */}
-      <div className="bg-white rounded-2xl border border-neutral-200">
-        <div className="flex items-center justify-between p-5 border-b border-neutral-100">
-          <h2 className="font-semibold">{t("recentRides")}</h2>
-          <Link href="/org/courses" className="text-sm text-neutral-500 hover:text-neutral-900">
-            {tc("seeAll")}
-          </Link>
-        </div>
-        {otherBookings.length === 0 && activeBookings.length === 0 ? (
-          <div className="p-8 text-center text-sm text-neutral-500">
-            {t("noRidesYet")}
-          </div>
-        ) : otherBookings.length === 0 ? (
-          <div className="p-8 text-center text-sm text-neutral-500">
-            {t("noRidesYet")}
-          </div>
-        ) : (
-          <div className="divide-y divide-neutral-100">
-            {otherBookings.map((b) => (
-              <div key={b.id} className="flex items-center justify-between p-4 px-5">
-                <div className="min-w-0 flex-1">
-                  <p className="text-sm font-medium truncate">
-                    {b.departureName} → {b.arrivalName}
-                  </p>
-                  <div className="flex items-center gap-3 mt-0.5 text-xs text-neutral-500">
-                    <span>
-                      {format(new Date(b.requestedDate), locale === "en" ? "dd MMM yyyy 'at' HH:mm" : "dd MMM yyyy 'à' HH:mm", { locale: locale === "en" ? enUS : fr })}
-                    </span>
-                    {b.beneficiaryName && (
-                      <span className="flex items-center gap-1">
-                        <Icon icon="solar:user-linear" className="text-xs" />
-                        {b.beneficiaryName}
-                      </span>
-                    )}
-                    {b.driver && (
-                      <span className="flex items-center gap-1">
-                        <Icon icon="solar:wheel-linear" className="text-xs" />
-                        {b.driver.firstName} {b.driver.lastName}
-                      </span>
-                    )}
-                  </div>
-                  {b.status === "ACCEPTED" && (
-                    <p className="text-xs text-green-600 font-medium mt-0.5 flex items-center gap-1">
-                      {isDriverOnTheWay(b.requestedDate) ? (
-                        <>
-                          <Icon icon="solar:map-arrow-right-bold" className="text-xs animate-pulse" />
-                          {t("driverOnTheWay")}
-                        </>
-                      ) : (
-                        <>
-                          <Icon icon="solar:check-circle-bold" className="text-xs" />
-                          {t("rideAccepted")}
-                        </>
-                      )}
-                      {b.driver?.phone && (
-                        <a href={`tel:${b.driver.phone}`} className="inline-flex items-center gap-1 text-blue-600 hover:text-blue-800 ml-1">
-                          <Icon icon="solar:phone-bold" className="text-xs" />
-                          {b.driver.phone}
-                        </a>
-                      )}
-                    </p>
-                  )}
-                  {b.status === "PENDING" && (
-                    <p className="text-xs text-blue-600 font-medium mt-0.5 flex items-center gap-1">
-                      <Icon icon="solar:phone-calling-linear" className="text-xs" />
-                      {isBookingSoon(b.requestedDate)
-                        ? t("driverWillContactSoon")
-                        : t("driverWillContactHour")}
-                    </p>
-                  )}
-                </div>
-                <div className="flex items-center gap-3 ml-4">
-                  {b.lockedPrice != null && (
-                    <span className="text-sm font-medium">{b.lockedPrice.toFixed(0)} €</span>
-                  )}
-                  <span className={`text-xs px-2 py-1 rounded-full font-medium ${statusColors[b.status] || ""}`}>
-                    {statusLabels[b.status] || b.status}
-                  </span>
-                </div>
+      {/* Zone 3: Recent bookings — active first, then others */}
+      {(() => {
+        const allDisplayed = [...activeBookings, ...otherBookings];
+        return (
+          <div className="bg-white rounded-2xl border border-neutral-200">
+            <div className="flex items-center justify-between p-5 border-b border-neutral-100">
+              <h2 className="font-semibold">{t("recentRides")}</h2>
+              <Link href="/org/courses" className="text-sm text-neutral-500 hover:text-neutral-900">
+                {tc("seeAll")}
+              </Link>
+            </div>
+            {allDisplayed.length === 0 ? (
+              <div className="p-8 text-center text-sm text-neutral-500">
+                {t("noRidesYet")}
               </div>
-            ))}
+            ) : (
+              <div className="divide-y divide-neutral-100">
+                {allDisplayed.map((b) => {
+                  const isActive = b.status === "PENDING" || b.status === "ACCEPTED";
+                  return (
+                    <div
+                      key={b.id}
+                      className={`flex items-center justify-between p-4 px-5 transition-colors ${
+                        isActive
+                          ? b.status === "ACCEPTED"
+                            ? "bg-green-50/60 border-l-4 border-l-green-500"
+                            : "bg-amber-50/60 border-l-4 border-l-amber-400"
+                          : ""
+                      }`}
+                    >
+                      <div className="min-w-0 flex-1">
+                        <div className="flex items-center gap-2">
+                          {isActive && (
+                            <span className={`w-2 h-2 rounded-full shrink-0 ${b.status === "ACCEPTED" ? "bg-green-500" : "bg-amber-400 animate-pulse"}`} />
+                          )}
+                          <p className="text-sm font-medium truncate">
+                            {b.departureName} → {b.arrivalName}
+                          </p>
+                        </div>
+                        <div className="flex items-center gap-3 mt-0.5 text-xs text-neutral-500">
+                          <span>
+                            {format(new Date(b.requestedDate), locale === "en" ? "dd MMM yyyy 'at' HH:mm" : "dd MMM yyyy 'à' HH:mm", { locale: locale === "en" ? enUS : fr })}
+                          </span>
+                          {b.beneficiaryName && (
+                            <span className="flex items-center gap-1">
+                              <Icon icon="solar:user-linear" className="text-xs" />
+                              {b.beneficiaryName}
+                            </span>
+                          )}
+                          {b.driver && (
+                            <span className="flex items-center gap-1">
+                              <Icon icon="solar:wheel-linear" className="text-xs" />
+                              {b.driver.firstName} {b.driver.lastName}
+                            </span>
+                          )}
+                        </div>
+                        {b.status === "ACCEPTED" && (
+                          <div className="mt-1.5">
+                            <p className="text-xs text-green-600 font-medium flex items-center gap-1 mb-1.5">
+                              {isDriverOnTheWay(b.requestedDate) ? (
+                                <>
+                                  <Icon icon="solar:map-arrow-right-bold" className="text-xs animate-pulse" />
+                                  {t("driverOnTheWay")}
+                                </>
+                              ) : (
+                                <>
+                                  <Icon icon="solar:check-circle-bold" className="text-xs" />
+                                  {t("rideAccepted")}
+                                </>
+                              )}
+                            </p>
+                            {b.driver && (
+                              <div className="flex items-center gap-2 flex-wrap">
+                                <span className="inline-flex items-center gap-1.5 bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full">
+                                  <Icon icon="solar:user-bold" className="text-sm" />
+                                  {b.driver.firstName} {b.driver.lastName}
+                                </span>
+                                {(() => {
+                                  const v = Array.isArray(b.driver!.vehicles) ? (b.driver!.vehicles as Array<{ brand?: string; model?: string }>)[0] : null;
+                                  const vehicle = v ? `${v.brand || ""} ${v.model || ""}`.trim() : `${b.driver!.vehicleBrand || ""} ${b.driver!.vehicleModel || ""}`.trim();
+                                  return vehicle ? (
+                                    <span className="inline-flex items-center gap-1 bg-green-50 text-green-700 text-xs px-2.5 py-1 rounded-full border border-green-200">
+                                      <Icon icon="mdi:car-outline" className="text-sm" />
+                                      {vehicle}
+                                    </span>
+                                  ) : null;
+                                })()}
+                                {b.driver.phone && (
+                                  <a
+                                    href={`tel:${b.driver.phone}`}
+                                    onClick={(e) => e.stopPropagation()}
+                                    className="inline-flex items-center gap-1.5 bg-green-600 hover:bg-green-700 text-white text-xs font-semibold px-3 py-1 rounded-full transition-colors"
+                                  >
+                                    <Icon icon="solar:phone-bold" className="text-sm" />
+                                    {b.driver.phone}
+                                  </a>
+                                )}
+                              </div>
+                            )}
+                          </div>
+                        )}
+                        {b.status === "PENDING" && (
+                          <div className="mt-1.5">
+                            <p className="text-xs text-amber-700 font-medium flex items-center gap-1 mb-1.5">
+                              <Icon icon="solar:phone-calling-linear" className="text-xs" />
+                              {isBookingSoon(b.requestedDate)
+                                ? t("driverWillContactSoon")
+                                : t("driverWillContactHour")}
+                            </p>
+                            {b.driver && (
+                              <div className="flex items-center gap-2 flex-wrap">
+                                <span className="inline-flex items-center gap-1.5 bg-amber-100 text-amber-800 text-xs font-semibold px-3 py-1 rounded-full">
+                                  <Icon icon="solar:user-bold" className="text-sm" />
+                                  {b.driver.firstName} {b.driver.lastName}
+                                </span>
+                                {(() => {
+                                  const v = Array.isArray(b.driver!.vehicles) ? (b.driver!.vehicles as Array<{ brand?: string; model?: string }>)[0] : null;
+                                  const vehicle = v ? `${v.brand || ""} ${v.model || ""}`.trim() : `${b.driver!.vehicleBrand || ""} ${b.driver!.vehicleModel || ""}`.trim();
+                                  return vehicle ? (
+                                    <span className="inline-flex items-center gap-1 bg-amber-50 text-amber-700 text-xs px-2.5 py-1 rounded-full border border-amber-200">
+                                      <Icon icon="mdi:car-outline" className="text-sm" />
+                                      {vehicle}
+                                    </span>
+                                  ) : null;
+                                })()}
+                                {b.driver.phone && (
+                                  <a
+                                    href={`tel:${b.driver.phone}`}
+                                    onClick={(e) => e.stopPropagation()}
+                                    className="inline-flex items-center gap-1.5 bg-amber-500 hover:bg-amber-600 text-white text-xs font-semibold px-3 py-1 rounded-full transition-colors"
+                                  >
+                                    <Icon icon="solar:phone-bold" className="text-sm" />
+                                    {b.driver.phone}
+                                  </a>
+                                )}
+                              </div>
+                            )}
+                          </div>
+                        )}
+                      </div>
+                      <div className="flex items-center gap-3 ml-4">
+                        {b.lockedPrice != null && (
+                          <span className={`text-sm font-semibold ${isActive ? (b.status === "ACCEPTED" ? "text-green-700" : "text-amber-700") : ""}`}>
+                            {b.lockedPrice.toFixed(0)} €
+                          </span>
+                        )}
+                        <span className={`text-xs px-2 py-1 rounded-full font-medium ${statusColors[b.status] || ""}`}>
+                          {statusLabels[b.status] || b.status}
+                        </span>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            )}
           </div>
-        )}
-      </div>
+        );
+      })()}
     </div>
   );
 }

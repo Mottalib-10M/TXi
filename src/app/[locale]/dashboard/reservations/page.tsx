@@ -33,6 +33,7 @@ export default async function ReservationsPage() {
     createdAt: b.createdAt.toISOString(),
     updatedAt: b.updatedAt.toISOString(),
     requestedDate: b.requestedDate.toISOString(),
+    cancelledBy: b.cancelledBy || null,
   }));
 
   return (

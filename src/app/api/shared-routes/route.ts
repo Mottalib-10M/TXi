@@ -4,6 +4,7 @@ import { prisma } from "@/lib/prisma";
 import { auth } from "@/lib/auth";
 import { getLocationById } from "@/data/predefined-locations";
 import { haversineDistance, calculateSharedRidePrice } from "@/lib/geo";
+import { createNotification } from "@/lib/notifications";
 
 const createSchema = z.object({
   departureLocationId: z.string().min(1),
@@ -45,6 +46,13 @@ export async function POST(request: Request) {
         departureTime: new Date(data.departureTime),
         totalSeats: data.totalSeats,
       },
+    });
+
+    createNotification({
+      type: "SHARED_ROUTE_CREATED",
+      title: `Trajet partagé créé`,
+      body: `${departure.name} → ${destination.name} — ${data.totalSeats} places`,
+      metadata: { routeId: route.id, driverId: session.user.id },
     });
 
     return NextResponse.json(route, { status: 201 });

@@ -39,6 +39,12 @@ enum BookingSource {
   ORGANIZATION
 }
 
+enum CancelledBy {
+  SYSTEM
+  CLIENT
+  DRIVER
+}
+
 enum OrgType {
   HOTEL
   HOSPITAL
@@ -143,8 +149,9 @@ model Booking {
   lockedPrice Float?
 
   // Status
-  status BookingStatus @default(PENDING)
-  source BookingSource @default(LANDING)
+  status      BookingStatus @default(PENDING)
+  source      BookingSource @default(LANDING)
+  cancelledBy CancelledBy?
 
   // Escalation
   escalationPhase  Int       @default(0)   // 0=initial, 1=escalated, 2=admin notified
@@ -261,6 +268,36 @@ model SharedRoutePassenger {
   createdAt       DateTime        @default(now())
 
   @@map("shared_route_passengers")
+}
+
+enum NotificationType {
+  BOOKING_CREATED
+  BOOKING_ACCEPTED
+  BOOKING_REJECTED
+  BOOKING_COMPLETED
+  BOOKING_CANCELLED
+  ORG_BOOKING_CREATED
+  ESCALATION_PHASE1
+  ESCALATION_PHASE2
+  CONTACT_REQUEST
+  CONTACT_FORM
+  SHARED_ROUTE_CREATED
+  SHARED_ROUTE_PROPOSED
+  SHARED_ROUTE_JOINED
+  SHARED_ROUTE_DRIVER_ACCEPTED
+}
+
+model AdminNotification {
+  id        String           @id @default(cuid())
+  type      NotificationType
+  title     String
+  body      String
+  metadata  Json?
+  createdAt DateTime         @default(now())
+
+  @@index([type])
+  @@index([createdAt])
+  @@map("admin_notifications")
 }
 
 model EmailVerificationToken {

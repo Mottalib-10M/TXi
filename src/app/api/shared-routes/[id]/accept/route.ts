@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { auth } from "@/lib/auth";
 import { sendEmail, buildSharedTaxiDriverFoundEmail } from "@/lib/email";
+import { createNotification } from "@/lib/notifications";
 
 export async function POST(
   request: Request,
@@ -87,6 +88,13 @@ export async function POST(
         html: emailData.html,
       });
     }
+
+    createNotification({
+      type: "SHARED_ROUTE_DRIVER_ACCEPTED",
+      title: `Chauffeur accepte trajet partagé`,
+      body: `${result.departureName} → ${result.destinationName}`,
+      metadata: { routeId: id, driverId: session.user.id },
+    });
 
     return NextResponse.json({ success: true });
   } catch (error) {

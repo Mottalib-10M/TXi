@@ -53,6 +53,10 @@ export function BookingForm() {
   const [clientComments, setClientComments] = useState("");
   const [submitting, setSubmitting] = useState(false);
 
+  // Contact request (no drivers available)
+  const [contactSent, setContactSent] = useState(false);
+  const [contactSubmitting, setContactSubmitting] = useState(false);
+
   const isLoggedIn = Boolean(session?.user?.email);
 
   // Pre-fill client info from session + fetch phone
@@ -93,9 +97,25 @@ export function BookingForm() {
       const res = await fetch(`/api/taxis?${params}`);
       const data = await res.json();
       const drivers = data.drivers || [];
+      const tripDuration = data.tripDuration || 0;
       setResults(drivers);
       setStep("results");
       trackViewResults({ departure, arrival, resultCount: drivers.length });
+
+      // Notify HeroIllustration with real data
+      if (drivers.length > 0) {
+        const first = drivers[0];
+        window.dispatchEvent(new CustomEvent("booking-results", {
+          detail: {
+            departure,
+            arrival,
+            tripDuration,
+            price: first.estimatedPrice,
+            driverName: first.companyName || `${first.firstName} ${first.lastName ? first.lastName.charAt(0) + "." : ""}`.trim(),
+            driverPhoto: first.photoUrl,
+          }
+        }));
+      }
     } catch {
       // Error
     } finally {
@@ -142,6 +162,37 @@ export function BookingForm() {
       // Error
     } finally {
       setSubmitting(false);
+    }
+  }
+
+  async function handleContactRequest() {
+    if (!clientName || !clientEmail || !clientPhone) return;
+    setContactSubmitting(true);
+
+    try {
+      const res = await fetch("/api/contact-request", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          clientName,
+          clientEmail,
+          clientPhone,
+          departure,
+          arrival,
+          scheduledDate: scheduleLater && scheduledDate
+            ? new Date(scheduledDate).toISOString()
+            : undefined,
+          passengers,
+        }),
+      });
+
+      if (res.ok) {
+        setContactSent(true);
+      }
+    } catch {
+      // Error
+    } finally {
+      setContactSubmitting(false);
     }
   }
 
@@ -275,7 +326,7 @@ export function BookingForm() {
               {t("availableTaxis")}
             </h2>
             <button
-              onClick={() => setStep("search")}
+              onClick={() => { setStep("search"); setContactSent(false); }}
               className="text-xs text-neutral-500 hover:text-neutral-900 transition-colors"
             >
               {tc("edit")}
@@ -300,11 +351,65 @@ export function BookingForm() {
           </div>
 
           {results.length === 0 ? (
-            <div className="text-center py-8">
-              <Icon icon="solar:car-linear" className="text-3xl text-neutral-300 mx-auto mb-2" />
-              <p className="text-sm text-neutral-500 font-light">
-                {t("noTaxisAvailable")}
-              </p>
+            <div className="py-4">
+              {contactSent ? (
+                <div className="text-center py-6">
+                  <Icon icon="solar:check-circle-bold" className="text-4xl text-green-500 mx-auto mb-3" />
+                  <p className="text-sm font-medium text-neutral-900 mb-1">
+                    {t("contactRequestSent")}
+                  </p>
+                  <p className="text-xs text-neutral-500 font-light">
+                    {t("driverWillContact")}
+                  </p>
+                </div>
+              ) : (
+                <>
+                  <div className="text-center mb-4">
+                    <Icon icon="solar:car-linear" className="text-3xl text-neutral-300 mx-auto mb-2" />
+                    <p className="text-sm text-neutral-500 font-light mb-1">
+                      {t("noTaxisAvailable")}
+                    </p>
+                    <p className="text-xs text-neutral-400">
+                      {t("leaveYourDetails")}
+                    </p>
+                  </div>
+                  <div className="space-y-3">
+                    <input
+                      value={clientName}
+                      onChange={(e) => setClientName(e.target.value)}
+                      placeholder={t("fullName")}
+                      className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all"
+                    />
+                    <input
+                      type="tel"
+                      value={clientPhone}
+                      onChange={(e) => setClientPhone(e.target.value)}
+                      placeholder={t("yourPhone")}
+                      className={`w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all ${phoneError(clientPhone) ? "ring-2 ring-red-300 bg-red-50/50" : ""}`}
+                    />
+                    {phoneError(clientPhone) && (
+                      <p className="text-xs text-red-500 -mt-2">{phoneError(clientPhone)}</p>
+                    )}
+                    <input
+                      type="email"
+                      value={clientEmail}
+                      onChange={(e) => setClientEmail(e.target.value)}
+                      placeholder={t("yourEmail")}
+                      className={`w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all ${emailError(clientEmail) ? "ring-2 ring-red-300 bg-red-50/50" : ""}`}
+                    />
+                    {emailError(clientEmail) && (
+                      <p className="text-xs text-red-500 -mt-2">{emailError(clientEmail)}</p>
+                    )}
+                  </div>
+                  <button
+                    onClick={handleContactRequest}
+                    disabled={!clientName || !clientEmail || !clientPhone || !isValidEmail(clientEmail) || !!phoneError(clientPhone) || contactSubmitting}
+                    className="w-full mt-4 bg-neutral-950 text-white rounded-xl py-3.5 text-sm font-medium hover:bg-neutral-800 transition-colors btn-lift disabled:opacity-50 disabled:cursor-not-allowed"
+                  >
+                    {contactSubmitting ? t("sending") : t("sendContactRequest")}
+                  </button>
+                </>
+              )}
             </div>
           ) : (
             <>
@@ -318,6 +423,7 @@ export function BookingForm() {
                       {/* Avatar - clickable to see profile */}
                       <Link
                         href={`/taxi/${taxi.slug}`}
+                        target="_blank"
                         className="shrink-0"
                         title={t("viewProfile")}
                       >
@@ -333,9 +439,9 @@ export function BookingForm() {
 
                       {/* Driver info */}
                       <div className="min-w-0 flex-1">
-                        <p className="text-sm font-medium truncate">
+                        <Link href={`/taxi/${taxi.slug}`} target="_blank" className="text-sm font-medium truncate hover:underline">
                           {taxi.companyName || `${taxi.firstName} ${taxi.lastName ? taxi.lastName.charAt(0) + "." : ""}`.trim()}
-                        </p>
+                        </Link>
                         <p className="text-xs text-neutral-500 font-light truncate">
                           {taxi.vehicleBrand} {taxi.vehicleModel}
                         </p>
@@ -397,8 +503,13 @@ export function BookingForm() {
 
           <div className="bg-neutral-50 border border-neutral-200 rounded-xl p-3 mb-4">
             <div className="flex items-center gap-3">
-              <div className="w-8 h-8 bg-neutral-200 rounded-full flex items-center justify-center">
-                <Icon icon="solar:user-linear" className="text-neutral-500 text-sm" />
+              <div className="w-8 h-8 bg-neutral-200 rounded-full flex items-center justify-center overflow-hidden">
+                {selectedTaxi.photoUrl ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img src={selectedTaxi.photoUrl} alt={selectedTaxi.firstName} className="w-full h-full object-cover" />
+                ) : (
+                  <Icon icon="solar:user-linear" className="text-neutral-500 text-sm" />
+                )}
               </div>
               <div>
                 <p className="text-sm font-medium">

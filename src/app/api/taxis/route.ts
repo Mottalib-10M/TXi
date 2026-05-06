@@ -69,11 +69,13 @@ export async function GET(request: NextRequest) {
       },
     });
 
-    // Calculate trip distance (real driving distance via OSRM)
+    // Calculate trip distance & duration (real driving distance via OSRM)
     let tripDistance = 0;
+    let tripDuration = 0;
     if (departureLat && departureLng && arrivalLat && arrivalLng) {
       const routing = await getRoutingDistance(departureLat, departureLng, arrivalLat, arrivalLng);
       tripDistance = routing.distanceKm;
+      tripDuration = routing.durationMinutes;
     }
 
     // Filter drivers by coverage zone (haversine is fine for approximate zone check)
@@ -99,9 +101,9 @@ export async function GET(request: NextRequest) {
       .filter((d) => d.distance <= d.zoneRadius)
       .sort((a, b) => a.distance - b.distance);
 
-    return NextResponse.json({ drivers: results, tripDistance });
+    return NextResponse.json({ drivers: results, tripDistance, tripDuration });
   } catch (error) {
     console.error("Taxi search error:", error);
-    return NextResponse.json({ drivers: [], tripDistance: 0 });
+    return NextResponse.json({ drivers: [], tripDistance: 0, tripDuration: 0 });
   }
 }

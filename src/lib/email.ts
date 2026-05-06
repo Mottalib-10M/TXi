@@ -71,6 +71,8 @@ const t = {
     confirmTitle: "Réservation confirmée",
     confirmBody: "Votre demande de réservation a bien été enregistrée.",
     confirmContact: "Votre chauffeur vous contactera sous peu pour confirmer la course.",
+    confirmYourDriver: "Votre chauffeur",
+    confirmDriverMsg: "N'hésitez pas à le contacter pour toute question concernant votre trajet.",
     acceptedClientSubject: (ref: string) => `Course confirmée — #${ref}`,
     acceptedClientTitle: "Votre course est confirmée !",
     acceptedClientBody: "Bonne nouvelle ! Votre chauffeur a accepté votre demande de course. Voici le récapitulatif :",
@@ -129,6 +131,10 @@ const t = {
     escalationResolvedSubject: (ref: string) => `Course #${ref} — acceptée par un autre chauffeur`,
     escalationResolvedTitle: "Course prise en charge",
     escalationResolvedBody: (ref: string) => `La course <strong>#${ref}</strong> a été acceptée par un autre chauffeur. Aucune action n'est requise de votre part.`,
+    escalationTimeoutSubject: (ref: string) => `Course #${ref} — délai de réponse dépassé`,
+    escalationTimeoutTitle: "Délai de réponse dépassé",
+    escalationTimeoutBody: (ref: string) => `Le délai de 15 minutes pour accepter la course <strong>#${ref}</strong> s'est écoulé sans réponse de votre part.`,
+    escalationTimeoutNote: "Nous proposons maintenant cette course à d'autres chauffeurs à proximité. Pensez à répondre rapidement aux prochaines demandes pour ne pas manquer de courses.",
   },
   en: {
     hello: "Hello",
@@ -162,6 +168,8 @@ const t = {
     confirmTitle: "Booking confirmed",
     confirmBody: "Your booking request has been recorded.",
     confirmContact: "Your driver will contact you shortly to confirm the ride.",
+    confirmYourDriver: "Your driver",
+    confirmDriverMsg: "Feel free to contact them for any questions about your ride.",
     acceptedClientSubject: (ref: string) => `Ride confirmed — #${ref}`,
     acceptedClientTitle: "Your ride is confirmed!",
     acceptedClientBody: "Great news! Your driver has accepted your ride request. Here's the summary:",
@@ -220,6 +228,10 @@ const t = {
     escalationResolvedSubject: (ref: string) => `Ride #${ref} — accepted by another driver`,
     escalationResolvedTitle: "Ride taken",
     escalationResolvedBody: (ref: string) => `Ride <strong>#${ref}</strong> has been accepted by another driver. No action is required from you.`,
+    escalationTimeoutSubject: (ref: string) => `Ride #${ref} — response time exceeded`,
+    escalationTimeoutTitle: "Response time exceeded",
+    escalationTimeoutBody: (ref: string) => `The 15-minute window to accept ride <strong>#${ref}</strong> has passed without a response.`,
+    escalationTimeoutNote: "We are now offering this ride to other nearby drivers. Make sure to respond quickly to future requests so you don't miss out on rides.",
   },
 } as const;
 
@@ -323,6 +335,7 @@ export function buildClientConfirmationEmail(data: {
   date: string;
   reference: string;
   driverName?: string;
+  driverPhone?: string;
   price?: number | null;
   locale?: Locale;
 }) {
@@ -330,6 +343,27 @@ export function buildClientConfirmationEmail(data: {
   const locale = data.locale || "fr";
   const baseUrl = process.env.NEXTAUTH_URL || "https://taxineo.fr";
   const reservationsUrl = `${baseUrl}/mes-reservations`;
+
+  const driverCardHtml = data.driverName && data.driverPhone
+    ? `
+        <div style="background-color: #fafafa; border: 1px solid #e5e5e5; border-radius: 12px; padding: 20px; margin: 24px 0;">
+          <h3 style="color: #171717; font-size: 15px; margin: 0 0 14px;">${l.confirmYourDriver}</h3>
+          <table style="width: 100%; border-collapse: collapse;">
+            <tr>
+              <td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.name}</td>
+              <td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.driverName}</td>
+            </tr>
+            <tr>
+              <td style="padding: 8px; color: #737373;">${l.phone}</td>
+              <td style="padding: 8px; font-weight: 500;">
+                <a href="tel:${data.driverPhone}" style="color: #171717; text-decoration: none;">${data.driverPhone}</a>
+              </td>
+            </tr>
+          </table>
+          <p style="color: #737373; font-size: 13px; margin: 14px 0 0;">${l.confirmDriverMsg}</p>
+        </div>`
+    : `<p>${l.confirmContact}</p>`;
+
   return {
     subject: l.confirmSubject(data.reference),
     html: `
@@ -341,11 +375,10 @@ export function buildClientConfirmationEmail(data: {
           <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.departure}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.departure}</td></tr>
           <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.arrival}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.arrival}</td></tr>
           <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.date}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.date}</td></tr>
-          ${data.driverName ? `<tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.driver}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.driverName}</td></tr>` : ""}
           ${data.price ? `<tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.estimatedPrice}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${formatEmailPrice(data.price, locale)}</td></tr>` : ""}
           <tr><td style="padding: 8px; color: #737373;">${l.reference}</td><td style="padding: 8px; font-weight: 500;">#${data.reference}</td></tr>
         </table>
-        <p>${l.confirmContact}</p>
+        ${driverCardHtml}
         <div style="text-align: center; margin: 24px 0;">
           <a href="${reservationsUrl}" style="background-color: #171717; color: #ffffff; padding: 14px 28px; border-radius: 12px; text-decoration: none; font-weight: 500; font-size: 14px; display: inline-block;">
             ${l.viewMyBookings}
@@ -662,6 +695,48 @@ export function buildSharedTaxiDriverFoundEmail(data: {
         <div style="text-align: center; margin: 24px 0;">
           <a href="${baseUrl}/taxi-partage" style="background-color: #171717; color: #ffffff; padding: 14px 28px; border-radius: 12px; text-decoration: none; font-weight: 500; font-size: 14px; display: inline-block;">
             ${l.sharedTaxiDriverFoundCta}
+          </a>
+        </div>
+        <p style="color: #a3a3a3; font-size: 12px;">${l.team}</p>
+      </div>
+    `,
+  };
+}
+
+export function buildEscalationTimeoutEmail(data: {
+  driverName: string;
+  reference: string;
+  departure: string;
+  arrival: string;
+  date: string;
+  bookingId: string;
+  price?: number | null;
+  locale?: Locale;
+}) {
+  const l = t[data.locale || "fr"];
+  const locale = data.locale || "fr";
+  const baseUrl = process.env.NEXTAUTH_URL || "https://taxineo.fr";
+  const dashboardUrl = `${baseUrl}/dashboard/reservations?id=${data.bookingId}`;
+  return {
+    subject: l.escalationTimeoutSubject(data.reference),
+    html: `
+      <div style="font-family: Inter, sans-serif; max-width: 600px; margin: 0 auto;">
+        <h2 style="color: #171717;">${l.escalationTimeoutTitle}</h2>
+        <p>${l.hello} ${data.driverName},</p>
+        <p>${l.escalationTimeoutBody(data.reference)}</p>
+        <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.departure}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.departure}</td></tr>
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.arrival}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.arrival}</td></tr>
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.date}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.date}</td></tr>
+          ${data.price ? `<tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.estimatedPrice}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${formatEmailPrice(data.price, locale)}</td></tr>` : ""}
+          <tr><td style="padding: 8px; color: #737373;">${l.reference}</td><td style="padding: 8px; font-weight: 500;">#${data.reference}</td></tr>
+        </table>
+        <p style="background-color: #fef3c7; padding: 12px 16px; border-radius: 12px; font-size: 13px; color: #92400e;">
+          ${l.escalationTimeoutNote}
+        </p>
+        <div style="text-align: center; margin: 24px 0;">
+          <a href="${dashboardUrl}" style="background-color: #171717; color: #ffffff; padding: 14px 28px; border-radius: 12px; text-decoration: none; font-weight: 500; font-size: 14px; display: inline-block;">
+            ${l.viewDashboard}
           </a>
         </div>
         <p style="color: #a3a3a3; font-size: 12px;">${l.team}</p>

@@ -22,6 +22,7 @@ interface Booking {
   estimatedPrice: number | null;
   status: string;
   source: string;
+  cancelledBy: string | null;
   createdAt: string;
 }
 
@@ -97,6 +98,7 @@ export function ReservationsTable({ bookings }: { bookings: Booking[] }) {
           { key: "ACCEPTED", label: t("acceptedPlural") },
           { key: "COMPLETED", label: t("completed") },
           { key: "REJECTED", label: t("rejected") },
+          { key: "CANCELLED", label: t("cancelled") },
           { key: "ALL", label: tc("all") },
         ].map((f) => (
           <button
@@ -163,6 +165,11 @@ export function ReservationsTable({ bookings }: { bookings: Booking[] }) {
                   }`}
                 >
                   {statusConfig[booking.status]?.label || booking.status}
+                  {booking.status === "CANCELLED" && booking.cancelledBy && (
+                    <span className="ml-1 opacity-70">
+                      ({booking.cancelledBy === "SYSTEM" ? t("bySystem") : booking.cancelledBy === "CLIENT" ? t("byClient") : t("byDriver")})
+                    </span>
+                  )}
                 </span>
                 <span className="text-xs text-neutral-400">
                   #{booking.reference}

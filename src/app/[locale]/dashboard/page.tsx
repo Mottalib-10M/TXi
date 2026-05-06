@@ -12,6 +12,8 @@ export default async function DashboardPage() {
   if (!session?.user?.id) return null;
 
   // Auto-cancel expired PENDING bookings ONLY if fully escalated (phase 2 = admin already notified)
+  // and more than 48h past their requested date, to avoid cancelling recent bookings
+  const twoDaysAgo = new Date(Date.now() - 48 * 60 * 60 * 1000);
   await prisma.booking.updateMany({
     where: {
       OR: [
@@ -19,10 +21,10 @@ export default async function DashboardPage() {
         { invitedDriverIds: { has: session.user.id } },
       ],
       status: "PENDING",
-      requestedDate: { lt: new Date() },
+      requestedDate: { lt: twoDaysAgo },
       escalationPhase: 2,
     },
-    data: { status: "CANCELLED" },
+    data: { status: "CANCELLED", cancelledBy: "SYSTEM" },
   });
 
   const driver = await prisma.driver.findUnique({
@@ -49,7 +51,7 @@ export default async function DashboardPage() {
         },
         {
           OR: [
-            { status: "PENDING", requestedDate: { gte: now } },
+            { status: "PENDING" },
             { status: "ACCEPTED", requestedDate: { gte: oneDayAgo } },
           ],
         },
