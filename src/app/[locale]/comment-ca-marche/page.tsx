@@ -21,6 +21,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: t("metaTitle"),
       description: t("metaDescription"),
     },
+    alternates: {
+      canonical: `https://www.taxineo.fr/${locale}/comment-ca-marche`,
+      languages: {
+        fr: "https://www.taxineo.fr/fr/comment-ca-marche",
+        en: "https://www.taxineo.fr/en/comment-ca-marche",
+      },
+    },
   };
 }
 
@@ -293,8 +300,97 @@ export default async function HowItWorksPage() {
         </div>
       </section>
 
-      {/* Section 4 — FAQ */}
+      {/* Section — Comprendre le taxi à prix fixe */}
+      <section className="py-20 md:py-28">
+        <div className="max-w-4xl mx-auto px-6 fade-up">
+          <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-6">
+            {t("understandTitle")}
+          </h2>
+          <p className="text-base text-neutral-600 font-light leading-relaxed mb-4">
+            {t("understandText1")}
+          </p>
+          <p className="text-base text-neutral-600 font-light leading-relaxed">
+            {t("understandText2")}
+          </p>
+        </div>
+      </section>
+
+      {/* Section — Sécurité et confiance */}
       <section className="bg-neutral-50 border-t border-b border-neutral-100 py-20 md:py-28">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16 fade-up">
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
+              {t("trustTitle")}
+            </h2>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              { icon: "solar:user-id-linear", title: t("trustPillar1Title"), desc: t("trustPillar1Desc") },
+              { icon: "solar:shield-check-linear", title: t("trustPillar2Title"), desc: t("trustPillar2Desc") },
+              { icon: "solar:map-point-wave-linear", title: t("trustPillar3Title"), desc: t("trustPillar3Desc") },
+            ].map((item, i) => (
+              <div
+                key={item.title}
+                className={`bg-white border border-neutral-200 rounded-2xl p-6 fade-up fade-up-delay-${i + 1}`}
+              >
+                <div className="w-12 h-12 bg-neutral-50 border border-neutral-200 rounded-xl flex items-center justify-center mb-5">
+                  <Icon icon={item.icon} className="text-neutral-900 text-2xl" />
+                </div>
+                <h3 className="text-lg font-medium tracking-tight mb-2">{item.title}</h3>
+                <p className="text-sm text-neutral-500 font-light leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Section — Paiement et transparence */}
+      <section className="py-20 md:py-28">
+        <div className="max-w-4xl mx-auto px-6 fade-up">
+          <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-6">
+            {t("paymentTitle")}
+          </h2>
+          <p className="text-base text-neutral-600 font-light leading-relaxed mb-4">
+            {t("paymentText1")}
+          </p>
+          <p className="text-base text-neutral-600 font-light leading-relaxed">
+            {t("paymentText2")}
+          </p>
+        </div>
+      </section>
+
+      {/* Section — Cas d'usage */}
+      <section className="bg-neutral-50 border-t border-b border-neutral-100 py-20 md:py-28">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16 fade-up">
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
+              {t("useCasesTitle")}
+            </h2>
+          </div>
+          <div className="grid md:grid-cols-2 gap-8">
+            {[
+              { icon: "mdi:airplane", title: t("useCase1Title"), desc: t("useCase1Desc") },
+              { icon: "solar:buildings-linear", title: t("useCase2Title"), desc: t("useCase2Desc") },
+              { icon: "solar:health-linear", title: t("useCase3Title"), desc: t("useCase3Desc") },
+              { icon: "solar:moon-sleep-linear", title: t("useCase4Title"), desc: t("useCase4Desc") },
+            ].map((item, i) => (
+              <div
+                key={item.title}
+                className={`bg-white border border-neutral-200 rounded-2xl p-6 fade-up fade-up-delay-${(i % 2) + 1}`}
+              >
+                <div className="w-12 h-12 bg-neutral-50 border border-neutral-200 rounded-xl flex items-center justify-center mb-5">
+                  <Icon icon={item.icon} className="text-neutral-900 text-2xl" />
+                </div>
+                <h3 className="text-lg font-medium tracking-tight mb-2">{item.title}</h3>
+                <p className="text-sm text-neutral-500 font-light leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Section — FAQ (extended to 8) */}
+      <section className="py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16 fade-up">
             <p className="text-sm font-medium text-neutral-500 mb-2 uppercase tracking-wider">
@@ -312,6 +408,9 @@ export default async function HowItWorksPage() {
               { q: t("faq3Q"), a: t("faq3A") },
               { q: t("faq4Q"), a: t("faq4A") },
               { q: t("faq5Q"), a: t("faq5A") },
+              { q: t("faq6Q"), a: t("faq6A") },
+              { q: t("faq7Q"), a: t("faq7A") },
+              { q: t("faq8Q"), a: t("faq8A") },
             ].map((faq, i) => (
               <div
                 key={i}

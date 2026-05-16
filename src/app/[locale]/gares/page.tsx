@@ -25,7 +25,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       description: t("metaDescription"),
       url: canonical,
     },
-    alternates: { canonical },
+    alternates: {
+      canonical,
+      languages: {
+        fr: "https://www.taxineo.fr/fr/gares",
+        en: "https://www.taxineo.fr/en/gares",
+      },
+    },
   };
 }
 
@@ -251,6 +257,60 @@ export default async function GaresPage({ params }: PageProps) {
                 </div>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* Rail context */}
+        <section className="py-16 md:py-20">
+          <div className="max-w-4xl mx-auto px-6 fade-up">
+            <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-6">
+              {t("railContextTitle")}
+            </h2>
+            <p className="text-base text-neutral-600 font-light leading-relaxed mb-4">
+              {t("railContextText1")}
+            </p>
+            <p className="text-base text-neutral-600 font-light leading-relaxed">
+              {t("railContextText2")}
+            </p>
+          </div>
+        </section>
+
+        {/* Station-specific tips */}
+        <section className="bg-neutral-50 border-t border-b border-neutral-100 py-20 md:py-28">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="text-center mb-16 fade-up">
+              <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
+                {t("stationTipsTitle")}
+              </h2>
+            </div>
+            <div className="grid md:grid-cols-2 gap-8">
+              {[
+                { icon: "solar:city-linear", title: t("stationTip1Title"), desc: t("stationTip1Desc") },
+                { icon: "mdi:train", title: t("stationTip2Title"), desc: t("stationTip2Desc") },
+                { icon: "solar:route-linear", title: t("stationTip3Title"), desc: t("stationTip3Desc") },
+                { icon: "solar:map-point-linear", title: t("stationTip4Title"), desc: t("stationTip4Desc") },
+              ].map((item, i) => (
+                <div
+                  key={item.title}
+                  className={`bg-white border border-neutral-200 rounded-2xl p-6 fade-up fade-up-delay-${(i % 2) + 1}`}
+                >
+                  <div className="w-12 h-12 bg-neutral-50 border border-neutral-200 rounded-xl flex items-center justify-center mb-5">
+                    <Icon icon={item.icon} className="text-neutral-900 text-2xl" />
+                  </div>
+                  <h3 className="text-lg font-medium tracking-tight mb-2">{item.title}</h3>
+                  <p className="text-sm text-neutral-500 font-light leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* SEO extra paragraph */}
+        <section className="py-16 md:py-20">
+          <div className="max-w-4xl mx-auto px-6 fade-up">
+            <p className="text-base text-neutral-600 font-light leading-relaxed">
+              {t("seoParagraph3")}
+            </p>
           </div>
         </section>
 

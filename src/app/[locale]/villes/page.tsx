@@ -25,7 +25,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       description: t("metaDescription"),
       url: canonical,
     },
-    alternates: { canonical },
+    alternates: {
+      canonical,
+      languages: {
+        fr: "https://www.taxineo.fr/fr/villes",
+        en: "https://www.taxineo.fr/en/villes",
+      },
+    },
   };
 }
 
@@ -260,6 +266,60 @@ export default async function VillesPage({ params }: PageProps) {
                 </div>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* Urban taxi network */}
+        <section className="py-16 md:py-20">
+          <div className="max-w-4xl mx-auto px-6 fade-up">
+            <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-6">
+              {t("networkTitle")}
+            </h2>
+            <p className="text-base text-neutral-600 font-light leading-relaxed mb-4">
+              {t("networkText1")}
+            </p>
+            <p className="text-base text-neutral-600 font-light leading-relaxed">
+              {t("networkText2")}
+            </p>
+          </div>
+        </section>
+
+        {/* Taxi vs other options */}
+        <section className="bg-neutral-50 border-t border-b border-neutral-100 py-20 md:py-28">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="text-center mb-16 fade-up">
+              <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
+                {t("taxiVsTitle")}
+              </h2>
+            </div>
+            <div className="grid md:grid-cols-2 gap-8">
+              {[
+                { icon: "solar:car-linear", title: t("taxiVs1Title"), desc: t("taxiVs1Desc") },
+                { icon: "solar:bus-linear", title: t("taxiVs2Title"), desc: t("taxiVs2Desc") },
+                { icon: "solar:steering-wheel-linear", title: t("taxiVs3Title"), desc: t("taxiVs3Desc") },
+                { icon: "solar:key-linear", title: t("taxiVs4Title"), desc: t("taxiVs4Desc") },
+              ].map((item, i) => (
+                <div
+                  key={item.title}
+                  className={`bg-white border border-neutral-200 rounded-2xl p-6 fade-up fade-up-delay-${(i % 2) + 1}`}
+                >
+                  <div className="w-12 h-12 bg-neutral-50 border border-neutral-200 rounded-xl flex items-center justify-center mb-5">
+                    <Icon icon={item.icon} className="text-neutral-900 text-2xl" />
+                  </div>
+                  <h3 className="text-lg font-medium tracking-tight mb-2">{item.title}</h3>
+                  <p className="text-sm text-neutral-500 font-light leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* SEO extra paragraph */}
+        <section className="py-16 md:py-20">
+          <div className="max-w-4xl mx-auto px-6 fade-up">
+            <p className="text-base text-neutral-600 font-light leading-relaxed">
+              {t("seoParagraph3")}
+            </p>
           </div>
         </section>
 

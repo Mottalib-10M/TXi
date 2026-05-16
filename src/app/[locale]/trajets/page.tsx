@@ -25,7 +25,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       description: t("metaDescription"),
       url: canonical,
     },
-    alternates: { canonical },
+    alternates: {
+      canonical,
+      languages: {
+        fr: "https://www.taxineo.fr/fr/trajets",
+        en: "https://www.taxineo.fr/en/trajets",
+      },
+    },
   };
 }
 
@@ -74,6 +80,18 @@ export default async function TrajetsPage({ params }: PageProps) {
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: [
+          { "@type": "Question", name: t("faq1Q"), acceptedAnswer: { "@type": "Answer", text: t("faq1A") } },
+          { "@type": "Question", name: t("faq2Q"), acceptedAnswer: { "@type": "Answer", text: t("faq2A") } },
+          { "@type": "Question", name: t("faq3Q"), acceptedAnswer: { "@type": "Answer", text: t("faq3A") } },
+          { "@type": "Question", name: t("faq4Q"), acceptedAnswer: { "@type": "Answer", text: t("faq4A") } },
+          { "@type": "Question", name: t("faq5Q"), acceptedAnswer: { "@type": "Answer", text: t("faq5A") } },
+          { "@type": "Question", name: t("faq6Q"), acceptedAnswer: { "@type": "Answer", text: t("faq6A") } },
+        ],
+      }) }} />
 
       <main className="flex-grow pt-24 pb-16">
         <div className="max-w-7xl mx-auto px-6">
@@ -150,6 +168,121 @@ export default async function TrajetsPage({ params }: PageProps) {
           );
         })}
 
+        {/* How fixed-price routes work */}
+        <section className="py-20 md:py-28">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="text-center mb-16 fade-up">
+              <p className="text-sm font-medium text-neutral-500 mb-2 uppercase tracking-wider">3 {loc === "en" ? "steps" : "étapes"}</p>
+              <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
+                {t("howForfaitsWorkTitle")}
+              </h2>
+            </div>
+            <div className="grid md:grid-cols-3 gap-8 md:gap-12">
+              {[
+                { step: "1", icon: "solar:map-point-linear", title: t("howForfaitsStep1Title"), desc: t("howForfaitsStep1Desc") },
+                { step: "2", icon: "solar:tag-price-linear", title: t("howForfaitsStep2Title"), desc: t("howForfaitsStep2Desc") },
+                { step: "3", icon: "solar:car-linear", title: t("howForfaitsStep3Title"), desc: t("howForfaitsStep3Desc") },
+              ].map((item, i) => (
+                <div key={item.step} className={`relative fade-up fade-up-delay-${i + 1}`}>
+                  <div className="flex items-start gap-5">
+                    <div className="w-12 h-12 bg-neutral-900 text-white rounded-2xl flex items-center justify-center shrink-0 text-lg font-semibold">
+                      {item.step}
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-medium tracking-tight mb-2">{item.title}</h3>
+                      <p className="text-sm text-neutral-500 font-light leading-relaxed">{item.desc}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Route categories detail */}
+        <section className="bg-neutral-50 border-t border-b border-neutral-100 py-20 md:py-28">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="text-center mb-12 fade-up">
+              <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-4">
+                {t("categoriesTitle")}
+              </h2>
+              <p className="text-base text-neutral-500 font-light max-w-2xl mx-auto">
+                {t("categoriesText")}
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+              {[
+                { icon: "mdi:airplane", title: loc === "en" ? "Airport" : "Aéroport", desc: t("categoryAirportDesc") },
+                { icon: "mdi:train", title: loc === "en" ? "Train station" : "Gare", desc: t("categoryGareDesc") },
+                { icon: "solar:camera-linear", title: loc === "en" ? "Tourist" : "Touristique", desc: t("categoryTouristiqueDesc") },
+                { icon: "solar:city-linear", title: loc === "en" ? "City-to-city" : "Ville à ville", desc: t("categoryVilleDesc") },
+                { icon: "solar:route-linear", title: loc === "en" ? "Long distance" : "Longue distance", desc: t("categoryLongueDistanceDesc") },
+              ].map((item, i) => (
+                <div
+                  key={item.title}
+                  className={`bg-white border border-neutral-200 rounded-2xl p-6 fade-up fade-up-delay-${(i % 3) + 1}`}
+                >
+                  <div className="w-10 h-10 bg-neutral-50 border border-neutral-200 rounded-xl flex items-center justify-center mb-4">
+                    <Icon icon={item.icon} className="text-neutral-700 text-xl" />
+                  </div>
+                  <h3 className="text-base font-medium tracking-tight mb-2">{item.title}</h3>
+                  <p className="text-sm text-neutral-500 font-light leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Popular routes & fares */}
+        <section className="py-16 md:py-20">
+          <div className="max-w-4xl mx-auto px-6 fade-up">
+            <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-6">
+              {t("popularRoutesTitle")}
+            </h2>
+            <p className="text-base text-neutral-600 font-light leading-relaxed mb-4">
+              {t("popularRoutesText")}
+            </p>
+            <p className="text-base text-neutral-600 font-light leading-relaxed">
+              {t("popularRoutesText2")}
+            </p>
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section className="bg-neutral-50 border-t border-b border-neutral-100 py-20 md:py-28">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="text-center mb-16 fade-up">
+              <p className="text-sm font-medium text-neutral-500 mb-2 uppercase tracking-wider">FAQ</p>
+              <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
+                {t("faqTitle")}
+              </h2>
+            </div>
+            <div className="max-w-3xl mx-auto space-y-4">
+              {[
+                { q: t("faq1Q"), a: t("faq1A") },
+                { q: t("faq2Q"), a: t("faq2A") },
+                { q: t("faq3Q"), a: t("faq3A") },
+                { q: t("faq4Q"), a: t("faq4A") },
+                { q: t("faq5Q"), a: t("faq5A") },
+                { q: t("faq6Q"), a: t("faq6A") },
+              ].map((faq, i) => (
+                <div
+                  key={i}
+                  className={`bg-white border border-neutral-200 rounded-2xl p-6 fade-up fade-up-delay-${(i % 3) + 1}`}
+                >
+                  <h3 className="text-sm font-medium tracking-tight mb-2 flex items-start gap-3">
+                    <Icon icon="solar:question-circle-linear" className="text-neutral-400 text-lg shrink-0 mt-0.5" />
+                    {faq.q}
+                  </h3>
+                  <p className="text-sm text-neutral-500 font-light leading-relaxed pl-[30px]">
+                    {faq.a}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* SEO Content */}
         <section className="py-16 md:py-20">
           <div className="max-w-4xl mx-auto px-6 fade-up">
@@ -159,8 +292,14 @@ export default async function TrajetsPage({ params }: PageProps) {
             <p className="text-base text-neutral-600 font-light leading-relaxed mb-4">
               {t("seoText1")}
             </p>
-            <p className="text-base text-neutral-600 font-light leading-relaxed">
+            <p className="text-base text-neutral-600 font-light leading-relaxed mb-4">
               {t("seoText2")}
+            </p>
+            <p className="text-base text-neutral-600 font-light leading-relaxed mb-4">
+              {t("seoText3")}
+            </p>
+            <p className="text-base text-neutral-600 font-light leading-relaxed">
+              {t("seoText4")}
             </p>
           </div>
         </section>

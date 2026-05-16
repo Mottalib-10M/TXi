@@ -25,7 +25,13 @@ export async function generateMetadata({
       description: t("metaDescription"),
       url: canonical,
     },
-    alternates: { canonical },
+    alternates: {
+      canonical,
+      languages: {
+        fr: "https://www.taxineo.fr/fr/guides",
+        en: "https://www.taxineo.fr/en/guides",
+      },
+    },
   };
 }
 
@@ -38,6 +44,19 @@ export default async function GuidesPage({ params }: PageProps) {
     <div className="flex flex-col min-h-screen">
       <Navbar />
       <ScrollAnimation />
+
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: [
+          { "@type": "Question", name: t("faq1Q"), acceptedAnswer: { "@type": "Answer", text: t("faq1A") } },
+          { "@type": "Question", name: t("faq2Q"), acceptedAnswer: { "@type": "Answer", text: t("faq2A") } },
+          { "@type": "Question", name: t("faq3Q"), acceptedAnswer: { "@type": "Answer", text: t("faq3A") } },
+          { "@type": "Question", name: t("faq4Q"), acceptedAnswer: { "@type": "Answer", text: t("faq4A") } },
+          { "@type": "Question", name: t("faq5Q"), acceptedAnswer: { "@type": "Answer", text: t("faq5A") } },
+          { "@type": "Question", name: t("faq6Q"), acceptedAnswer: { "@type": "Answer", text: t("faq6A") } },
+        ],
+      }) }} />
 
       <main className="flex-grow pt-24 pb-16">
         <div className="max-w-7xl mx-auto px-6">
@@ -106,6 +125,117 @@ export default async function GuidesPage({ params }: PageProps) {
           </div>
         </div>
 
+        {/* Why our guides */}
+        <section className="py-16 md:py-20">
+          <div className="max-w-4xl mx-auto px-6 fade-up">
+            <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-6">
+              {t("whyGuidesTitle")}
+            </h2>
+            <p className="text-neutral-600 font-light leading-relaxed mb-4">
+              {t("whyGuidesText1")}
+            </p>
+            <p className="text-neutral-600 font-light leading-relaxed">
+              {t("whyGuidesText2")}
+            </p>
+          </div>
+        </section>
+
+        {/* Popular Topics */}
+        <section className="bg-neutral-50 border-t border-b border-neutral-100 py-20 md:py-28">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="text-center mb-16 fade-up">
+              <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
+                {t("popularTopicsTitle")}
+              </h2>
+            </div>
+            <div className="grid md:grid-cols-2 gap-8">
+              {[
+                { icon: "solar:tag-price-linear", title: t("popularTopic1Title"), desc: t("popularTopic1Desc") },
+                { icon: "solar:shield-check-linear", title: t("popularTopic2Title"), desc: t("popularTopic2Desc") },
+                { icon: "mdi:airplane", title: t("popularTopic3Title"), desc: t("popularTopic3Desc") },
+                { icon: "solar:health-linear", title: t("popularTopic4Title"), desc: t("popularTopic4Desc") },
+              ].map((item, i) => (
+                <div
+                  key={item.title}
+                  className={`bg-white border border-neutral-200 rounded-2xl p-6 fade-up fade-up-delay-${(i % 2) + 1}`}
+                >
+                  <div className="w-12 h-12 bg-neutral-50 border border-neutral-200 rounded-xl flex items-center justify-center mb-5">
+                    <Icon icon={item.icon} className="text-neutral-900 text-2xl" />
+                  </div>
+                  <h3 className="text-lg font-medium tracking-tight mb-2">{item.title}</h3>
+                  <p className="text-sm text-neutral-500 font-light leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Tips for passengers */}
+        <section className="py-20 md:py-28">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="text-center mb-16 fade-up">
+              <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
+                {t("tipsTitle")}
+              </h2>
+            </div>
+            <div className="max-w-3xl mx-auto space-y-6">
+              {[
+                { title: t("tip1Title"), desc: t("tip1Desc") },
+                { title: t("tip2Title"), desc: t("tip2Desc") },
+                { title: t("tip3Title"), desc: t("tip3Desc") },
+                { title: t("tip4Title"), desc: t("tip4Desc") },
+                { title: t("tip5Title"), desc: t("tip5Desc") },
+              ].map((tip, i) => (
+                <div key={i} className={`flex items-start gap-4 fade-up fade-up-delay-${(i % 3) + 1}`}>
+                  <div className="w-10 h-10 bg-neutral-900 text-white rounded-xl flex items-center justify-center shrink-0 text-sm font-semibold">
+                    {i + 1}
+                  </div>
+                  <div>
+                    <h3 className="text-base font-medium tracking-tight mb-1">{tip.title}</h3>
+                    <p className="text-sm text-neutral-500 font-light leading-relaxed">{tip.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section className="bg-neutral-50 border-t border-b border-neutral-100 py-20 md:py-28">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="text-center mb-16 fade-up">
+              <p className="text-sm font-medium text-neutral-500 mb-2 uppercase tracking-wider">FAQ</p>
+              <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
+                {t("faqTitle")}
+              </h2>
+            </div>
+            <div className="max-w-3xl mx-auto space-y-4">
+              {[
+                { q: t("faq1Q"), a: t("faq1A") },
+                { q: t("faq2Q"), a: t("faq2A") },
+                { q: t("faq3Q"), a: t("faq3A") },
+                { q: t("faq4Q"), a: t("faq4A") },
+                { q: t("faq5Q"), a: t("faq5A") },
+                { q: t("faq6Q"), a: t("faq6A") },
+              ].map((faq, i) => (
+                <div
+                  key={i}
+                  className={`bg-white border border-neutral-200 rounded-2xl p-6 fade-up fade-up-delay-${(i % 3) + 1}`}
+                >
+                  <h3 className="text-sm font-medium tracking-tight mb-2 flex items-start gap-3">
+                    <Icon icon="solar:question-circle-linear" className="text-neutral-400 text-lg shrink-0 mt-0.5" />
+                    {faq.q}
+                  </h3>
+                  <p className="text-sm text-neutral-500 font-light leading-relaxed pl-[30px]">
+                    {faq.a}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* SEO Content */}
         <section className="py-16 md:py-20">
           <div className="max-w-4xl mx-auto px-6 fade-up">
             <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-6">
@@ -114,8 +244,11 @@ export default async function GuidesPage({ params }: PageProps) {
             <p className="text-neutral-600 font-light leading-relaxed mb-4">
               {t("seoParagraph1")}
             </p>
-            <p className="text-neutral-600 font-light leading-relaxed mb-6">
+            <p className="text-neutral-600 font-light leading-relaxed mb-4">
               {t("seoParagraph2")}
+            </p>
+            <p className="text-neutral-600 font-light leading-relaxed mb-6">
+              {t("seoParagraph3")}
             </p>
             <div className="flex flex-wrap gap-3">
               <Link href="/tarifs" className="inline-flex items-center gap-1.5 text-sm font-medium text-neutral-900 hover:text-neutral-600 transition-colors">

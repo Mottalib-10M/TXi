@@ -25,7 +25,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       description: t("metaDescription"),
       url: canonical,
     },
-    alternates: { canonical },
+    alternates: {
+      canonical,
+      languages: {
+        fr: "https://www.taxineo.fr/fr/aeroports",
+        en: "https://www.taxineo.fr/en/aeroports",
+      },
+    },
   };
 }
 
@@ -251,6 +257,63 @@ export default async function AeroportsPage({ params }: PageProps) {
                 </div>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* Airport fare guide */}
+        <section className="py-16 md:py-20">
+          <div className="max-w-4xl mx-auto px-6 fade-up">
+            <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-6">
+              {t("guideTitle")}
+            </h2>
+            <p className="text-base text-neutral-600 font-light leading-relaxed mb-4">
+              {t("guideText1")}
+            </p>
+            <p className="text-base text-neutral-600 font-light leading-relaxed mb-4">
+              {t("guideText2")}
+            </p>
+            <p className="text-base text-neutral-600 font-light leading-relaxed">
+              {t("guideText3")}
+            </p>
+          </div>
+        </section>
+
+        {/* Transfer tips */}
+        <section className="bg-neutral-50 border-t border-b border-neutral-100 py-20 md:py-28">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="text-center mb-16 fade-up">
+              <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
+                {t("tipsTitle")}
+              </h2>
+            </div>
+            <div className="max-w-3xl mx-auto space-y-6">
+              {[
+                { title: t("tip1Title"), desc: t("tip1Desc") },
+                { title: t("tip2Title"), desc: t("tip2Desc") },
+                { title: t("tip3Title"), desc: t("tip3Desc") },
+                { title: t("tip4Title"), desc: t("tip4Desc") },
+                { title: t("tip5Title"), desc: t("tip5Desc") },
+              ].map((tip, i) => (
+                <div key={i} className={`flex items-start gap-4 fade-up fade-up-delay-${(i % 3) + 1}`}>
+                  <div className="w-10 h-10 bg-neutral-900 text-white rounded-xl flex items-center justify-center shrink-0 text-sm font-semibold">
+                    {i + 1}
+                  </div>
+                  <div>
+                    <h3 className="text-base font-medium tracking-tight mb-1">{tip.title}</h3>
+                    <p className="text-sm text-neutral-500 font-light leading-relaxed">{tip.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* SEO extra paragraph */}
+        <section className="py-16 md:py-20">
+          <div className="max-w-4xl mx-auto px-6 fade-up">
+            <p className="text-base text-neutral-600 font-light leading-relaxed">
+              {t("seoParagraph3")}
+            </p>
           </div>
         </section>
 
