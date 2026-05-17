@@ -42,7 +42,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       siteName: "TaxiNeo",
       type: "website",
     },
-    alternates: { canonical },
+    alternates: {
+      canonical,
+      languages: {
+        fr: `https://www.taxineo.fr/fr/tarif/${tarif.slug}`,
+        en: `https://www.taxineo.fr/en/tarif/${tarif.slug}`,
+      },
+    },
   };
 }
 

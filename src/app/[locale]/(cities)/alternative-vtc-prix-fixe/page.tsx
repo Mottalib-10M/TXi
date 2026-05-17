@@ -21,6 +21,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: t("metaTitle"),
       description: t("metaDescription"),
     },
+    alternates: {
+      canonical: `https://www.taxineo.fr/${locale}/alternative-vtc-prix-fixe`,
+      languages: {
+        fr: "https://www.taxineo.fr/fr/alternative-vtc-prix-fixe",
+        en: "https://www.taxineo.fr/en/alternative-vtc-prix-fixe",
+      },
+    },
   };
 }
 
@@ -49,8 +56,8 @@ export default async function AlternativeVtcPage() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "TaxiNeo", item: "https://taxineo.fr" },
-      { "@type": "ListItem", position: 2, name: t("heroTitle"), item: "https://taxineo.fr/alternative-vtc-prix-fixe" },
+      { "@type": "ListItem", position: 1, name: "TaxiNeo", item: "https://www.taxineo.fr" },
+      { "@type": "ListItem", position: 2, name: t("heroTitle"), item: "https://www.taxineo.fr/alternative-vtc-prix-fixe" },
     ],
   };
 

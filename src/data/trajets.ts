@@ -4678,6 +4678,10 @@ import { trajetsHdsNordExt } from "./trajets-hub-hds-nord-ext";
 import { trajetsHdsOuest } from "./trajets-hub-hds-ouest";
 import { trajetsHdsSudEst } from "./trajets-hub-hds-sud-est";
 import { trajetsHdsSudExt } from "./trajets-hub-hds-sud-ext";
+import { trajetsHdsComplement } from "./trajets-hub-hds-complement";
+import { trajetsMarnelaVallee2 } from "./trajets-hub-marne-la-vallee-2";
+import { trajetsSenart } from "./trajets-hub-senart";
+import { trajetsMelunSenart2 } from "./trajets-hub-melun-senart-2";
 
 // Merge hub trajets into the main array
 trajets.push(
@@ -4881,6 +4885,10 @@ trajets.push(
   ...trajetsHdsOuest,
   ...trajetsHdsSudEst,
   ...trajetsHdsSudExt,
+  ...trajetsHdsComplement,
+  ...trajetsMarnelaVallee2,
+  ...trajetsSenart,
+  ...trajetsMelunSenart2,
 );
 
 export function getTrajetBySlug(slug: string): Trajet | undefined {

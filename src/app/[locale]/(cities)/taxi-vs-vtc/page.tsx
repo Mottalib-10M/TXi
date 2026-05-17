@@ -21,6 +21,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: t("metaTitle"),
       description: t("metaDescription"),
     },
+    alternates: {
+      canonical: `https://www.taxineo.fr/${locale}/taxi-vs-vtc`,
+      languages: {
+        fr: "https://www.taxineo.fr/fr/taxi-vs-vtc",
+        en: "https://www.taxineo.fr/en/taxi-vs-vtc",
+      },
+    },
   };
 }
 
@@ -40,8 +47,8 @@ export default async function TaxiVsVtcPage() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "TaxiNeo", item: "https://taxineo.fr" },
-      { "@type": "ListItem", position: 2, name: t("heroTitle"), item: "https://taxineo.fr/taxi-vs-vtc" },
+      { "@type": "ListItem", position: 1, name: "TaxiNeo", item: "https://www.taxineo.fr" },
+      { "@type": "ListItem", position: 2, name: t("heroTitle"), item: "https://www.taxineo.fr/taxi-vs-vtc" },
     ],
   };
 

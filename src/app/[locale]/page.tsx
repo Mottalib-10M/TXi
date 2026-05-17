@@ -30,12 +30,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: t("metaTitle"),
       description: t("metaDescription"),
-      url: `https://taxineo.fr/${locale === "fr" ? "" : locale}`,
+      url: `https://www.taxineo.fr/${locale}`,
       siteName: "TaxiNeo",
       type: "website",
       images: [
         {
-          url: "https://taxineo.fr/og-image.png",
+          url: "https://www.taxineo.fr/og-image.png",
           width: 1200,
           height: 630,
           alt: "TaxiNeo",
@@ -46,7 +46,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       card: "summary_large_image",
       title: t("metaTitle"),
       description: t("metaDescription"),
-      images: ["https://taxineo.fr/og-image.png"],
+      images: ["https://www.taxineo.fr/og-image.png"],
+    },
+    alternates: {
+      canonical: `https://www.taxineo.fr/${locale}`,
+      languages: {
+        fr: "https://www.taxineo.fr/fr",
+        en: "https://www.taxineo.fr/en",
+      },
     },
   };
 }
@@ -70,8 +77,8 @@ export default async function HomePage() {
       {
         "@type": "Organization",
         name: "TaxiNeo",
-        url: "https://taxineo.fr",
-        logo: "https://taxineo.fr/logo.png",
+        url: "https://www.taxineo.fr",
+        logo: "https://www.taxineo.fr/logo.png",
         contactPoint: {
           "@type": "ContactPoint",
           telephone: "+33759592934",
@@ -84,7 +91,7 @@ export default async function HomePage() {
         "@type": "TaxiService",
         name: "TaxiNeo",
         description: t("metaDescription"),
-        url: "https://taxineo.fr",
+        url: "https://www.taxineo.fr",
         areaServed: {
           "@type": "Country",
           name: "France",

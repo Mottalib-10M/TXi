@@ -41,7 +41,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       siteName: "TaxiNeo",
       type: "website",
     },
-    alternates: { canonical },
+    alternates: {
+      canonical,
+      languages: {
+        fr: `https://www.taxineo.fr/fr/service/${service.slug}`,
+        en: `https://www.taxineo.fr/en/service/${service.slug}`,
+      },
+    },
   };
 }
 

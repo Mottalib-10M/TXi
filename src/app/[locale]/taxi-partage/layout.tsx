@@ -17,6 +17,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: t("metaTitle"),
       description: t("metaDescription"),
     },
+    alternates: {
+      canonical: `https://www.taxineo.fr/${locale}/taxi-partage`,
+      languages: {
+        fr: "https://www.taxineo.fr/fr/taxi-partage",
+        en: "https://www.taxineo.fr/en/taxi-partage",
+      },
+    },
   };
 }
 

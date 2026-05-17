@@ -52,6 +52,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     },
     alternates: {
       canonical,
+      languages: {
+        fr: `https://www.taxineo.fr/fr/taxi-aeroport-${ap.slug}`,
+        en: `https://www.taxineo.fr/en/taxi-aeroport-${ap.slug}`,
+      },
     },
   };
 }

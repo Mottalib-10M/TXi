@@ -49,6 +49,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     },
     alternates: {
       canonical,
+      languages: {
+        fr: `https://www.taxineo.fr/fr/taxi-gare-${st.slug}`,
+        en: `https://www.taxineo.fr/en/taxi-gare-${st.slug}`,
+      },
     },
   };
 }

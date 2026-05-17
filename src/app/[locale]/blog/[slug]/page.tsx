@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!article) notFound();
 
   const lang = locale as "fr" | "en";
-  const canonical = `https://taxineo.fr/${locale === "fr" ? "" : locale + "/"}blog/${slug}`;
+  const canonical = `https://www.taxineo.fr/${locale}/blog/${slug}`;
 
   return {
     title: article.metaTitle[lang],
@@ -37,7 +37,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       type: "article",
       publishedTime: article.date,
     },
-    alternates: { canonical },
+    alternates: {
+      canonical,
+      languages: {
+        fr: `https://www.taxineo.fr/fr/blog/${slug}`,
+        en: `https://www.taxineo.fr/en/blog/${slug}`,
+      },
+    },
   };
 }
 
@@ -240,12 +246,12 @@ export default async function BlogArticlePage({ params }: PageProps) {
       name: "TaxiNeo",
       logo: {
         "@type": "ImageObject",
-        url: "https://taxineo.fr/logo.png",
+        url: "https://www.taxineo.fr/logo.png",
       },
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://taxineo.fr/blog/${slug}`,
+      "@id": `https://www.taxineo.fr/${locale}/blog/${slug}`,
     },
   };
 

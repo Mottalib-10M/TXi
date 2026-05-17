@@ -227,7 +227,7 @@ export const services: ServiceSeo[] = [
   {
     slug: "taxi-pmr",
     title: "Taxi PMR",
-    icon: "solar:wheelchair-linear",
+    icon: "mdi:wheelchair-accessibility",
     category: "special",
     i18n: {
       fr: {

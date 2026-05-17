@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "blog" });
 
-  const canonical = `https://taxineo.fr/${locale === "fr" ? "" : locale + "/"}blog`;
+  const canonical = `https://www.taxineo.fr/${locale}/blog`;
   return {
     title: t("metaTitle"),
     description: t("metaDescription"),
@@ -24,7 +24,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       description: t("metaDescription"),
       url: canonical,
     },
-    alternates: { canonical },
+    alternates: {
+      canonical,
+      languages: {
+        fr: "https://www.taxineo.fr/fr/blog",
+        en: "https://www.taxineo.fr/en/blog",
+      },
+    },
   };
 }
 

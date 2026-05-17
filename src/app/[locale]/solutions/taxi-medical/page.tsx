@@ -6,6 +6,8 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { ScrollAnimation } from "@/components/ui/ScrollAnimation";
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
+import { taxiMedicalCities } from "@/data/taxi-medical-cities";
+import { getCityBySlug } from "@/data/cities";
 
 interface Props {
   params: Promise<{ locale: string }>;
@@ -13,7 +15,7 @@ interface Props {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "miseADisposition" });
+  const t = await getTranslations({ locale, namespace: "taxiMedical" });
 
   return {
     title: t("metaTitle"),
@@ -22,34 +24,41 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: t("metaTitle"),
       description: t("metaDescription"),
     },
+    alternates: {
+      canonical: `https://www.taxineo.fr/${locale}/solutions/taxi-medical`,
+      languages: {
+        fr: "https://www.taxineo.fr/fr/solutions/taxi-medical",
+        en: "https://www.taxineo.fr/en/solutions/taxi-medical",
+      },
+    },
   };
 }
 
 const advantageIcons = [
-  "solar:tag-price-linear",
-  "solar:user-check-linear",
+  "solar:shield-check-linear",
+  "mdi:wheelchair-accessibility",
+  "solar:clock-circle-linear",
+  "solar:user-heart-linear",
   "solar:calendar-minimalistic-linear",
-  "solar:buildings-2-linear",
-  "solar:diploma-verified-linear",
-  "solar:map-linear",
+  "solar:route-linear",
 ];
 
 const useCaseIcons = [
-  "solar:buildings-linear",
-  "solar:route-linear",
-  "mdi:airplane",
-  "solar:star-shine-linear",
-  "solar:compass-linear",
-  "solar:users-group-rounded-linear",
+  "solar:heart-pulse-linear",
+  "solar:test-tube-linear",
+  "solar:running-2-linear",
+  "solar:stethoscope-linear",
+  "mdi:wheelchair-accessibility",
+  "solar:hospital-linear",
 ];
 
-export default async function MiseADispositionChauffeurPage() {
-  const t = await getTranslations("miseADisposition");
+export default async function TaxiMedicalPage() {
+  const t = await getTranslations("taxiMedical");
 
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: Array.from({ length: 5 }, (_, i) => ({
+    mainEntity: Array.from({ length: 6 }, (_, i) => ({
       "@type": "Question",
       name: t(`faq${i + 1}Q`),
       acceptedAnswer: { "@type": "Answer", text: t(`faq${i + 1}A`) },
@@ -58,8 +67,8 @@ export default async function MiseADispositionChauffeurPage() {
 
   const serviceJsonLd = {
     "@context": "https://schema.org",
-    "@type": "Service",
-    serviceType: "Taxi mise à disposition",
+    "@type": ["MedicalBusiness", "TaxiService"],
+    serviceType: "Taxi m\u00e9dical conventionn\u00e9 CPAM",
     name: t("heroTitle"),
     description: t("metaDescription"),
     provider: {
@@ -82,7 +91,7 @@ export default async function MiseADispositionChauffeurPage() {
     desc: t(`useCase${i + 1}Desc`),
   }));
 
-  const faqs = Array.from({ length: 5 }, (_, i) => ({
+  const faqs = Array.from({ length: 6 }, (_, i) => ({
     q: t(`faq${i + 1}Q`),
     a: t(`faq${i + 1}A`),
   }));
@@ -126,9 +135,9 @@ export default async function MiseADispositionChauffeurPage() {
       <main className="flex-grow pt-8 pb-12 md:pt-12 md:pb-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-3xl fade-up">
-            <div className="inline-flex items-center gap-2 bg-neutral-100 rounded-full px-4 py-1.5 mb-6">
+            <div className="inline-flex items-center gap-2 bg-green-50 border border-green-200 rounded-full px-4 py-1.5 mb-6">
               <span className="w-2 h-2 bg-green-500 rounded-full" />
-              <span className="text-xs font-medium text-neutral-600">{t("badge")}</span>
+              <span className="text-xs font-medium text-green-700">{t("badge")}</span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.1] mb-4">
               {t("heroTitle")}
@@ -137,7 +146,7 @@ export default async function MiseADispositionChauffeurPage() {
               {t("heroSubtitle")}
             </p>
             <Link
-              href="/contact?sujet=mise-a-disposition"
+              href="/contact?sujet=taxi-medical"
               className="inline-flex items-center gap-2 bg-neutral-950 text-white text-sm font-medium px-6 py-3 rounded-full hover:bg-neutral-800 transition-colors btn-lift"
             >
               {t("heroCta")}
@@ -222,8 +231,35 @@ export default async function MiseADispositionChauffeurPage() {
         </div>
       </section>
 
-      {/* FAQ */}
+      {/* How it works */}
       <section className="bg-neutral-50 border-t border-b border-neutral-100 py-20 md:py-28">
+        <div className="max-w-3xl mx-auto px-6">
+          <div className="text-center mb-16 fade-up">
+            <p className="text-sm font-medium text-neutral-500 mb-2 uppercase tracking-wider">
+              {t("howItWorksSubtitle")}
+            </p>
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
+              {t("howItWorksTitle")}
+            </h2>
+          </div>
+          <div className="space-y-8 fade-up">
+            {[1, 2, 3, 4].map((step) => (
+              <div key={step} className="flex gap-6 items-start">
+                <div className="w-10 h-10 bg-neutral-950 rounded-full flex items-center justify-center shrink-0">
+                  <span className="text-white text-sm font-semibold">{step}</span>
+                </div>
+                <div className="flex-1 pt-1">
+                  <h3 className="text-lg font-semibold tracking-tight mb-2">{t(`step${step}Title`)}</h3>
+                  <p className="text-sm text-neutral-600 font-light leading-relaxed">{t(`step${step}Desc`)}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16 fade-up">
             <p className="text-sm font-medium text-neutral-500 mb-2 uppercase tracking-wider">
@@ -250,6 +286,45 @@ export default async function MiseADispositionChauffeurPage() {
         </div>
       </section>
 
+      {/* City pages */}
+      <section className="bg-neutral-50 border-t border-b border-neutral-100 py-20 md:py-28">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-12 fade-up">
+            <p className="text-sm font-medium text-neutral-500 mb-2 uppercase tracking-wider">
+              {t("citiesSubtitle")}
+            </p>
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
+              {t("citiesTitle")}
+            </h2>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
+            {taxiMedicalCities.map((m) => {
+              const city = getCityBySlug(m.citySlug);
+              if (!city) return null;
+              return (
+                <Link
+                  key={m.citySlug}
+                  href={`/taxi-medical/${m.citySlug}`}
+                  className="card-hover bg-white border border-neutral-200 rounded-xl px-4 py-3 text-sm font-light text-neutral-700 hover:text-neutral-900 transition-colors text-center"
+                >
+                  {city.name}
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* SEO text */}
+      <section className="py-16 md:py-20">
+        <div className="max-w-4xl mx-auto px-6 fade-up">
+          <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-6">{t("seoTitle")}</h2>
+          <p className="text-neutral-600 font-light leading-relaxed mb-4">{t("seoParagraph1")}</p>
+          <p className="text-neutral-600 font-light leading-relaxed mb-4">{t("seoParagraph2")}</p>
+          <p className="text-neutral-600 font-light leading-relaxed">{t("seoParagraph3")}</p>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="bg-neutral-950 py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-6 text-center">
@@ -260,7 +335,7 @@ export default async function MiseADispositionChauffeurPage() {
             {t("ctaSubtitle")}
           </p>
           <Link
-            href="/contact?sujet=mise-a-disposition"
+            href="/contact?sujet=taxi-medical"
             className="inline-flex items-center gap-2 bg-white text-neutral-950 text-sm font-medium px-6 py-3 rounded-full hover:bg-neutral-100 transition-colors btn-lift fade-up fade-up-delay-2"
           >
             {t("ctaButton")}

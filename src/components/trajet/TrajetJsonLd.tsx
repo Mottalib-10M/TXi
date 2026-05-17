@@ -11,7 +11,7 @@ export async function TrajetJsonLd({ trajet }: { trajet: Trajet }) {
     name: `TaxiNeo - Taxi ${trajet.from} → ${trajet.to}`,
     description: trajet.i18n[loc].metaDescription,
     url: `https://www.taxineo.fr/${locale}/trajet/${trajet.slug}`,
-    telephone: "+33 1 00 00 00 00",
+    telephone: "+33759592934",
     areaServed: [
       {
         "@type": "Place",

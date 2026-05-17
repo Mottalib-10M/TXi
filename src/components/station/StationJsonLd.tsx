@@ -11,7 +11,7 @@ export async function StationJsonLd({ station }: { station: Station }) {
     name: `TaxiNeo - Transfert Gare ${station.name}`,
     description: station.i18n[loc].metaDescription,
     url: `https://www.taxineo.fr/taxi-gare-${station.slug}`,
-    telephone: "+33 1 00 00 00 00",
+    telephone: "+33759592934",
     areaServed: {
       "@type": "TrainStation",
       name: station.name,

@@ -31,7 +31,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       description: t("metaDescription"),
       url: canonical,
     },
-    alternates: { canonical },
+    alternates: {
+      canonical,
+      languages: {
+        fr: "https://www.taxineo.fr/fr/plan-du-site",
+        en: "https://www.taxineo.fr/en/plan-du-site",
+      },
+    },
   };
 }
 
@@ -57,7 +63,7 @@ export default async function PlanDuSitePage({ params }: PageProps) {
     { href: "/taxi-vs-vtc", label: "Taxi vs VTC" },
     { href: "/chauffeur-prive", label: "Chauffeur privé" },
     { href: "/alternative-vtc-prix-fixe", label: "Alternative VTC prix fixe" },
-    { href: "/mise-a-disposition-chauffeur", label: "Taxi à disposition" },
+    { href: "/solutions/mise-a-disposition", label: "Taxi à disposition" },
   ];
 
   // Group trajets by category

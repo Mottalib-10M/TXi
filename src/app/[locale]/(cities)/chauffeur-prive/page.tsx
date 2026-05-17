@@ -21,6 +21,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: t("metaTitle"),
       description: t("metaDescription"),
     },
+    alternates: {
+      canonical: `https://www.taxineo.fr/${locale}/chauffeur-prive`,
+      languages: {
+        fr: "https://www.taxineo.fr/fr/chauffeur-prive",
+        en: "https://www.taxineo.fr/en/chauffeur-prive",
+      },
+    },
   };
 }
 
@@ -49,8 +56,8 @@ export default async function ChauffeurPrivePage() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "TaxiNeo", item: "https://taxineo.fr" },
-      { "@type": "ListItem", position: 2, name: t("heroTitle"), item: "https://taxineo.fr/chauffeur-prive" },
+      { "@type": "ListItem", position: 1, name: "TaxiNeo", item: "https://www.taxineo.fr" },
+      { "@type": "ListItem", position: 2, name: t("heroTitle"), item: "https://www.taxineo.fr/chauffeur-prive" },
     ],
   };
 

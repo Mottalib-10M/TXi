@@ -1174,7 +1174,7 @@ export const guides: Guide[] = [
   {
     slug: "taxi-handicape-guide",
     title: "Taxi et handicap",
-    icon: "solar:wheelchair-linear",
+    icon: "mdi:wheelchair-accessibility",
     readingTime: 7,
     i18n: {
       fr: {

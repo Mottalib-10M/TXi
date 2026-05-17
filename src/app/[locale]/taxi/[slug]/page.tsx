@@ -38,6 +38,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: t("metaOgTitle", { name: fullName }),
       description: t("metaOgDescription", { firstName: driver.firstName, vehicle }),
     },
+    alternates: {
+      languages: {
+        fr: `https://www.taxineo.fr/fr/taxi/${slug}`,
+        en: `https://www.taxineo.fr/en/taxi/${slug}`,
+      },
+    },
   };
 }
 

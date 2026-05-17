@@ -43,7 +43,13 @@ export async function generateMetadata({
       siteName: "TaxiNeo",
       type: "article",
     },
-    alternates: { canonical },
+    alternates: {
+      canonical,
+      languages: {
+        fr: `https://www.taxineo.fr/fr/guide/${guide.slug}`,
+        en: `https://www.taxineo.fr/en/guide/${guide.slug}`,
+      },
+    },
   };
 }
 

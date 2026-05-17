@@ -60,6 +60,16 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/solutions/taxi-medical" className="hover:text-neutral-900 transition-colors">
+                  {t("solutionTaxiMedical")}
+                </Link>
+              </li>
+              <li>
+                <Link href="/solutions/assistance-depannage" className="hover:text-neutral-900 transition-colors">
+                  {t("solutionDepannage")}
+                </Link>
+              </li>
+              <li>
                 <Link href="/solutions/mise-a-disposition" className="hover:text-neutral-900 transition-colors">
                   {t("solutionMiseADispo")}
                 </Link>
@@ -82,11 +92,6 @@ export function Footer() {
               <li>
                 <Link href="/alternative-vtc-prix-fixe" className="hover:text-neutral-900 transition-colors">
                   {t("alternativeVtc")}
-                </Link>
-              </li>
-              <li>
-                <Link href="/mise-a-disposition-chauffeur" className="hover:text-neutral-900 transition-colors">
-                  {t("miseADisposChauffeur")}
                 </Link>
               </li>
               <li>

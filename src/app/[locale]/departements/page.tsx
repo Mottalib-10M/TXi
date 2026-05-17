@@ -19,7 +19,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title: t("metaTitle"),
     description: t("metaDescription"),
     openGraph: { title: t("metaTitle"), description: t("metaDescription"), url: canonical },
-    alternates: { canonical },
+    alternates: {
+      canonical,
+      languages: {
+        fr: "https://www.taxineo.fr/fr/departements",
+        en: "https://www.taxineo.fr/en/departements",
+      },
+    },
   };
 }
 

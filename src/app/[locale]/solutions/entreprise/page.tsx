@@ -17,6 +17,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: t("metaTitle"),
       description: t("metaDescription"),
     },
+    alternates: {
+      canonical: `https://www.taxineo.fr/${locale}/solutions/entreprise`,
+      languages: {
+        fr: "https://www.taxineo.fr/fr/solutions/entreprise",
+        en: "https://www.taxineo.fr/en/solutions/entreprise",
+      },
+    },
   };
 }
 

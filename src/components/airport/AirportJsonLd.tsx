@@ -18,7 +18,7 @@ export async function AirportJsonLd({ airport }: { airport: Airport }) {
     name: `TaxiNeo - Transfert Aéroport ${airport.name}`,
     description: airport.i18n[loc].metaDescription,
     url: `https://www.taxineo.fr/taxi-aeroport-${airport.slug}`,
-    telephone: "+33 1 00 00 00 00",
+    telephone: "+33759592934",
     areaServed: {
       "@type": "Airport",
       name: airport.name,

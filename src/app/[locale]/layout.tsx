@@ -9,7 +9,7 @@ import { Providers } from "@/components/Providers";
 import { ImpersonationBanner } from "@/components/ui/ImpersonationBanner";
 import { routing } from "@/i18n/routing";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], display: "swap" });
 
 export default async function LocaleLayout({
   children,

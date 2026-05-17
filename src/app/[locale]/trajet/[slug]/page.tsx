@@ -46,6 +46,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     },
     alternates: {
       canonical,
+      languages: {
+        fr: `https://www.taxineo.fr/fr/trajet/${trajet.slug}`,
+        en: `https://www.taxineo.fr/en/trajet/${trajet.slug}`,
+      },
     },
   };
 }

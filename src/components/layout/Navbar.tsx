@@ -103,12 +103,13 @@ export function Navbar({ minimal = false }: { minimal?: boolean }) {
                 {solutionsOpen && (
                   <div className="absolute right-0 top-full mt-2 w-72 bg-white border border-neutral-200 rounded-xl shadow-lg shadow-black/5 z-50 py-2 overflow-hidden">
                     {[
+                      { href: "/solutions/particulier", icon: "solar:user-linear", label: t("solutionParticulier"), desc: t("solutionParticulierDesc") },
+                      { href: "/solutions/taxi-medical", icon: "solar:heart-pulse-linear", label: t("solutionTaxiMedical"), desc: t("solutionTaxiMedicalDesc") },
+                      { href: "/solutions/assistance-depannage", icon: "solar:shield-warning-linear", label: t("solutionDepannage"), desc: t("solutionDepannageDesc") },
+                      { href: "/solutions/mise-a-disposition", icon: "solar:clock-circle-linear", label: t("solutionMiseADispo"), desc: t("solutionMiseADispoDesc") },
                       { href: "/solutions/hotel", icon: "solar:buildings-2-linear", label: t("solutionHotel"), desc: t("solutionHotelDesc") },
                       { href: "/solutions/hopital", icon: "solar:health-linear", label: t("solutionHospital"), desc: t("solutionHospitalDesc") },
                       { href: "/solutions/entreprise", icon: "solar:case-linear", label: t("solutionEnterprise"), desc: t("solutionEnterpriseDesc") },
-                      { href: "/solutions/particulier", icon: "solar:user-linear", label: t("solutionParticulier"), desc: t("solutionParticulierDesc") },
-                      { href: "/solutions/mise-a-disposition", icon: "solar:clock-circle-linear", label: t("solutionMiseADispo"), desc: t("solutionMiseADispoDesc") },
-                      { href: "/solutions/assistance", icon: "solar:shield-warning-linear", label: t("solutionAssistance"), desc: t("solutionAssistanceDesc") },
                       { href: "/devenir-chauffeur", icon: "solar:steering-wheel-linear", label: t("becomeDriver"), desc: t("becomeDriverDesc") },
                     ].map((item) => (
                       <Link
@@ -183,10 +184,10 @@ export function Navbar({ minimal = false }: { minimal?: boolean }) {
         <div className="flex items-center gap-4">
           <a
             href="tel:0759592934"
-            className="hidden md:flex items-center gap-1.5 text-sm font-medium text-neutral-500 hover:text-neutral-900 transition-colors"
+            className="flex items-center gap-1.5 text-sm font-medium text-neutral-500 hover:text-neutral-900 transition-colors"
           >
             <Icon icon="solar:phone-linear" className="text-base" />
-            07 59 59 29 34
+            <span className="hidden md:inline">07 59 59 29 34</span>
           </a>
           <LanguageSwitcher />
           {isLoggedIn ? (
@@ -320,12 +321,13 @@ export function Navbar({ minimal = false }: { minimal?: boolean }) {
               {mobileSolutionsOpen && (
                 <div className="pl-4 space-y-0.5">
                   {[
+                    { href: "/solutions/particulier", label: t("solutionParticulier") },
+                    { href: "/solutions/taxi-medical", label: t("solutionTaxiMedical") },
+                    { href: "/solutions/assistance-depannage", label: t("solutionDepannage") },
+                    { href: "/solutions/mise-a-disposition", label: t("solutionMiseADispo") },
                     { href: "/solutions/hotel", label: t("solutionHotel") },
                     { href: "/solutions/hopital", label: t("solutionHospital") },
                     { href: "/solutions/entreprise", label: t("solutionEnterprise") },
-                    { href: "/solutions/particulier", label: t("solutionParticulier") },
-                    { href: "/solutions/mise-a-disposition", label: t("solutionMiseADispo") },
-                    { href: "/solutions/assistance", label: t("solutionAssistance") },
                     { href: "/devenir-chauffeur", label: t("becomeDriver") },
                   ].map((item) => (
                     <Link
