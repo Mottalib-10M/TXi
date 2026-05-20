@@ -25,6 +25,7 @@ interface Booking {
   estimatedDistance: number | null;
   status: string;
   source: string;
+  cancelledBy: string | null;
   driver: { name: string; slug: string; phone: string; email: string } | null;
   organization: { name: string; type: string } | null;
   regionCode: string | null;
@@ -44,7 +45,6 @@ interface RegionGroup {
 
 export function AdminBookingsTable({ bookings }: { bookings: Booking[] }) {
   const t = useTranslations("admin");
-  const tc = useTranslations("common");
   const locale = useLocale();
   const router = useRouter();
 
@@ -130,12 +130,20 @@ export function AdminBookingsTable({ bookings }: { bookings: Booking[] }) {
     });
   };
 
-  const formatDate = (dateStr: string) =>
+  const formatShortDate = (dateStr: string) =>
     format(
       new Date(dateStr),
-      locale === "en" ? "dd MMM yyyy 'at' HH:mm" : "dd MMM yyyy 'à' HH:mm",
+      locale === "en" ? "dd MMM yy, HH:mm" : "dd MMM yy, HH:mm",
       { locale: locale === "en" ? enUS : fr }
     );
+
+  const cancelledByLabel = (cancelledBy: string | null): string | null => {
+    if (!cancelledBy) return locale === "en" ? "by driver" : "par chauffeur";
+    const labels: Record<string, string> = locale === "en"
+      ? { SYSTEM: "by admin", CLIENT: "by client", DRIVER: "by driver" }
+      : { SYSTEM: "par admin", CLIENT: "par client", DRIVER: "par chauffeur" };
+    return labels[cancelledBy] || cancelledBy;
+  };
 
   const handleAction = async (bookingId: string, action: "remind-driver" | "apologize-refuse") => {
     if (action === "apologize-refuse") {
@@ -254,8 +262,10 @@ export function AdminBookingsTable({ bookings }: { bookings: Booking[] }) {
                       <table className="w-full text-xs">
                         <thead>
                           <tr className="bg-neutral-50 text-neutral-400 text-left">
-                            <th className="px-3 py-2 font-medium">{t("filterAll") === "Tous" ? "Trajet" : "Route"}</th>
-                            <th className="px-3 py-2 font-medium">Distance</th>
+                            <th className="px-3 py-2 font-medium">{locale === "en" ? "Route" : "Trajet"}</th>
+                            <th className="px-3 py-2 font-medium">{locale === "en" ? "Booked" : "Réservé le"}</th>
+                            <th className="px-3 py-2 font-medium">{locale === "en" ? "Ride date" : "Prestation"}</th>
+                            <th className="px-3 py-2 font-medium">Dist.</th>
                             <th className="px-3 py-2 font-medium">{locale === "en" ? "Price" : "Prix"}</th>
                             <th className="px-3 py-2 font-medium">{t("driver")}</th>
                             <th className="px-3 py-2 font-medium">{t("client")}</th>
@@ -277,9 +287,14 @@ export function AdminBookingsTable({ bookings }: { bookings: Booking[] }) {
                                   <div className="truncate text-neutral-400">
                                     → {booking.arrivalName}
                                   </div>
-                                  <div className="text-neutral-400 mt-0.5">
-                                    {formatDate(booking.requestedDate)}
-                                  </div>
+                                </td>
+                                {/* Booked date */}
+                                <td className="px-3 py-2.5 text-neutral-400 whitespace-nowrap">
+                                  {formatShortDate(booking.createdAt)}
+                                </td>
+                                {/* Ride date */}
+                                <td className="px-3 py-2.5 text-neutral-700 font-medium whitespace-nowrap">
+                                  {formatShortDate(booking.requestedDate)}
                                 </td>
                                 {/* Distance */}
                                 <td className="px-3 py-2.5 text-neutral-500 whitespace-nowrap">
@@ -344,6 +359,11 @@ export function AdminBookingsTable({ bookings }: { bookings: Booking[] }) {
                                   >
                                     {statusConfig[booking.status]?.label || booking.status}
                                   </span>
+                                  {(booking.status === "REJECTED" || booking.status === "CANCELLED") && (
+                                    <div className="text-[10px] text-neutral-400 mt-0.5">
+                                      {cancelledByLabel(booking.cancelledBy)}
+                                    </div>
+                                  )}
                                   {booking.organization && (
                                     <div className="mt-1">
                                       <span className="text-xs px-1.5 py-0.5 rounded-full bg-violet-50 text-violet-700">
@@ -401,6 +421,11 @@ export function AdminBookingsTable({ bookings }: { bookings: Booking[] }) {
                               >
                                 {statusConfig[booking.status]?.label || booking.status}
                               </span>
+                              {(booking.status === "REJECTED" || booking.status === "CANCELLED") && (
+                                <span className="text-[10px] text-neutral-400">
+                                  {cancelledByLabel(booking.cancelledBy)}
+                                </span>
+                              )}
                               <span className="text-xs text-neutral-400 font-mono">#{booking.reference}</span>
                               {booking.organization && (
                                 <span className="text-xs px-1.5 py-0.5 rounded-full bg-violet-50 text-violet-700">
@@ -418,8 +443,12 @@ export function AdminBookingsTable({ bookings }: { bookings: Booking[] }) {
                             {/* Meta grid */}
                             <div className="grid grid-cols-2 gap-x-4 gap-y-1.5 text-xs">
                               <div>
-                                <span className="text-neutral-400">Date : </span>
-                                <span className="text-neutral-600">{formatDate(booking.requestedDate)}</span>
+                                <span className="text-neutral-400">{locale === "en" ? "Booked" : "Réservé le"} : </span>
+                                <span className="text-neutral-600">{formatShortDate(booking.createdAt)}</span>
+                              </div>
+                              <div>
+                                <span className="text-neutral-400">{locale === "en" ? "Ride" : "Prestation"} : </span>
+                                <span className="text-neutral-700 font-medium">{formatShortDate(booking.requestedDate)}</span>
                               </div>
                               <div>
                                 <span className="text-neutral-400">Distance : </span>
@@ -432,9 +461,6 @@ export function AdminBookingsTable({ bookings }: { bookings: Booking[] }) {
                                 <span className="text-neutral-700 font-medium">
                                   {price != null ? `${price.toFixed(2)} €` : "—"}
                                 </span>
-                              </div>
-                              <div>
-                                <span className="text-neutral-400">{booking.passengerCount} {booking.passengerCount > 1 ? tc("passengers") : tc("passenger")}</span>
                               </div>
                             </div>
 

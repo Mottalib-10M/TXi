@@ -1,7 +1,7 @@
 import { prisma } from "@/lib/prisma";
 import { AdminBookingsTable } from "@/components/admin/AdminBookingsTable";
 import { getTranslations } from "next-intl/server";
-import { getDepartmentCode } from "@/lib/department-lookup";
+import { getDepartmentCode, getDepartmentFromCoords } from "@/lib/department-lookup";
 import { DEPARTMENT_NAMES } from "@/data/departmental-tariffs";
 
 export default async function AdminReservationsPage() {
@@ -16,7 +16,7 @@ export default async function AdminReservationsPage() {
   });
 
   const serialized = bookings.map((b: typeof bookings[number]) => {
-    const regionCode = getDepartmentCode(b.departureName);
+    const regionCode = getDepartmentCode(b.departureName) || getDepartmentFromCoords(b.departureLat, b.departureLng);
     return {
       id: b.id,
       reference: b.reference,
@@ -45,6 +45,7 @@ export default async function AdminReservationsPage() {
       organization: b.organization
         ? { name: b.organization.name, type: b.organization.type }
         : null,
+      cancelledBy: b.cancelledBy,
       regionCode,
       regionName: regionCode ? (DEPARTMENT_NAMES[regionCode] || "Inconnu") : null,
       createdAt: b.createdAt.toISOString(),
