@@ -135,6 +135,16 @@ const t = {
     escalationTimeoutTitle: "Délai de réponse dépassé",
     escalationTimeoutBody: (ref: string) => `Le délai de 15 minutes pour accepter la course <strong>#${ref}</strong> s'est écoulé sans réponse de votre part.`,
     escalationTimeoutNote: "Nous proposons maintenant cette course à d'autres chauffeurs à proximité. Pensez à répondre rapidement aux prochaines demandes pour ne pas manquer de courses.",
+    driverReminderSubject: (ref: string) => `Rappel — Course #${ref} en attente`,
+    driverReminderTitle: "Rappel : course en attente",
+    driverReminderBody: "Une demande de course est toujours en attente de votre réponse. Merci de bien vouloir l'accepter ou la refuser dès que possible :",
+    driverReminderAction: "Connectez-vous à votre tableau de bord pour traiter cette demande.",
+    driverReminderCta: "Voir la course",
+    clientApologySubject: (ref: string) => `Réservation #${ref} — Indisponibilité`,
+    clientApologyTitle: "Mise à jour de votre réservation",
+    clientApologyBody: "Nous sommes sincèrement désolés, mais tous nos chauffeurs sont actuellement mobilisés et nous ne sommes pas en mesure d'honorer votre demande de course :",
+    clientApologyClosing: "Nous espérons vous retrouver très prochainement sur TaxiNeo. Toute l'équipe vous présente ses excuses pour ce désagrément.",
+    clientApologyCta: "Rechercher un taxi",
   },
   en: {
     hello: "Hello",
@@ -232,6 +242,16 @@ const t = {
     escalationTimeoutTitle: "Response time exceeded",
     escalationTimeoutBody: (ref: string) => `The 15-minute window to accept ride <strong>#${ref}</strong> has passed without a response.`,
     escalationTimeoutNote: "We are now offering this ride to other nearby drivers. Make sure to respond quickly to future requests so you don't miss out on rides.",
+    driverReminderSubject: (ref: string) => `Reminder — Ride #${ref} awaiting response`,
+    driverReminderTitle: "Reminder: ride awaiting response",
+    driverReminderBody: "A ride request is still awaiting your response. Please accept or decline it as soon as possible:",
+    driverReminderAction: "Log in to your dashboard to handle this request.",
+    driverReminderCta: "View the ride",
+    clientApologySubject: (ref: string) => `Booking #${ref} — Unavailability`,
+    clientApologyTitle: "Update on your booking",
+    clientApologyBody: "We are sincerely sorry, but all our drivers are currently busy and we are unable to fulfil your ride request:",
+    clientApologyClosing: "We hope to see you again very soon on TaxiNeo. The entire team apologises for the inconvenience.",
+    clientApologyCta: "Search for a taxi",
   },
 } as const;
 
@@ -758,6 +778,84 @@ export function buildEscalationResolvedEmail(data: {
         <h2 style="color: #171717;">${l.escalationResolvedTitle}</h2>
         <p>${l.hello} ${data.driverName},</p>
         <p>${l.escalationResolvedBody(data.reference)}</p>
+        <p style="color: #a3a3a3; font-size: 12px;">${l.team}</p>
+      </div>
+    `,
+  };
+}
+
+export function buildDriverReminderEmail(data: {
+  driverName: string;
+  clientName: string;
+  departure: string;
+  arrival: string;
+  date: string;
+  reference: string;
+  bookingId: string;
+  locale?: Locale;
+}) {
+  const l = t[data.locale || "fr"];
+  const baseUrl = process.env.NEXTAUTH_URL || "https://taxineo.fr";
+  const dashboardUrl = `${baseUrl}/dashboard/reservations?id=${data.bookingId}`;
+  return {
+    subject: l.driverReminderSubject(data.reference),
+    html: `
+      <div style="font-family: Inter, sans-serif; max-width: 600px; margin: 0 auto;">
+        <h2 style="color: #171717;">${l.driverReminderTitle}</h2>
+        <p>${l.hello} ${data.driverName},</p>
+        <p>${l.driverReminderBody}</p>
+        <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.client}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.clientName}</td></tr>
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.departure}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.departure}</td></tr>
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.arrival}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.arrival}</td></tr>
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.date}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.date}</td></tr>
+          <tr><td style="padding: 8px; color: #737373;">${l.reference}</td><td style="padding: 8px; font-weight: 500;">#${data.reference}</td></tr>
+        </table>
+        <p style="color: #525252; font-size: 13px;">${l.driverReminderAction}</p>
+        <div style="text-align: center; margin: 24px 0;">
+          <a href="${dashboardUrl}" style="background-color: #171717; color: #ffffff; padding: 14px 28px; border-radius: 12px; text-decoration: none; font-weight: 500; font-size: 14px; display: inline-block;">
+            ${l.driverReminderCta}
+          </a>
+        </div>
+        <p style="color: #737373; font-size: 13px;">${l.buttonFallback}</p>
+        <p style="color: #737373; font-size: 13px; word-break: break-all;">${dashboardUrl}</p>
+        <p style="color: #a3a3a3; font-size: 12px;">${l.team}</p>
+      </div>
+    `,
+  };
+}
+
+export function buildClientApologyEmail(data: {
+  clientName: string;
+  departure: string;
+  arrival: string;
+  date: string;
+  reference: string;
+  price?: number | null;
+  locale?: Locale;
+}) {
+  const l = t[data.locale || "fr"];
+  const locale = data.locale || "fr";
+  return {
+    subject: l.clientApologySubject(data.reference),
+    html: `
+      <div style="font-family: Inter, sans-serif; max-width: 600px; margin: 0 auto;">
+        <h2 style="color: #171717;">${l.clientApologyTitle}</h2>
+        <p>${l.hello} ${data.clientName},</p>
+        <p>${l.clientApologyBody}</p>
+        <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.departure}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.departure}</td></tr>
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.arrival}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.arrival}</td></tr>
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.date}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.date}</td></tr>
+          ${data.price ? `<tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.estimatedPrice}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${formatEmailPrice(data.price, locale)}</td></tr>` : ""}
+          <tr><td style="padding: 8px; color: #737373;">${l.reference}</td><td style="padding: 8px; font-weight: 500;">#${data.reference}</td></tr>
+        </table>
+        <p>${l.clientApologyClosing}</p>
+        <div style="text-align: center; margin: 24px 0;">
+          <a href="https://taxineo.fr" style="background-color: #171717; color: #ffffff; padding: 14px 28px; border-radius: 12px; text-decoration: none; font-weight: 500; font-size: 14px; display: inline-block;">
+            ${l.clientApologyCta}
+          </a>
+        </div>
         <p style="color: #a3a3a3; font-size: 12px;">${l.team}</p>
       </div>
     `,

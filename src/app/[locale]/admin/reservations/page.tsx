@@ -1,6 +1,8 @@
 import { prisma } from "@/lib/prisma";
 import { AdminBookingsTable } from "@/components/admin/AdminBookingsTable";
 import { getTranslations } from "next-intl/server";
+import { getDepartmentCode } from "@/lib/department-lookup";
+import { DEPARTMENT_NAMES } from "@/data/departmental-tariffs";
 
 export default async function AdminReservationsPage() {
   const t = await getTranslations("admin");
@@ -8,35 +10,46 @@ export default async function AdminReservationsPage() {
   const bookings = await prisma.booking.findMany({
     orderBy: { createdAt: "desc" },
     include: {
-      driver: { select: { firstName: true, lastName: true, slug: true } },
+      driver: { select: { firstName: true, lastName: true, slug: true, phone: true, email: true } },
       organization: { select: { name: true, type: true } },
     },
   });
 
-  const serialized = bookings.map((b: typeof bookings[number]) => ({
-    id: b.id,
-    reference: b.reference,
-    clientName: b.clientName,
-    clientEmail: b.clientEmail,
-    clientPhone: b.clientPhone,
-    clientComments: b.clientComments,
-    beneficiaryName: b.beneficiaryName,
-    departureName: b.departureName,
-    arrivalName: b.arrivalName,
-    requestedDate: b.requestedDate.toISOString(),
-    passengerCount: b.passengerCount,
-    estimatedPrice: b.estimatedPrice,
-    lockedPrice: b.lockedPrice,
-    status: b.status,
-    source: b.source,
-    driver: b.driver
-      ? { name: `${b.driver.firstName} ${b.driver.lastName}`, slug: b.driver.slug }
-      : null,
-    organization: b.organization
-      ? { name: b.organization.name, type: b.organization.type }
-      : null,
-    createdAt: b.createdAt.toISOString(),
-  }));
+  const serialized = bookings.map((b: typeof bookings[number]) => {
+    const regionCode = getDepartmentCode(b.departureName);
+    return {
+      id: b.id,
+      reference: b.reference,
+      clientName: b.clientName,
+      clientEmail: b.clientEmail,
+      clientPhone: b.clientPhone,
+      clientComments: b.clientComments,
+      beneficiaryName: b.beneficiaryName,
+      departureName: b.departureName,
+      arrivalName: b.arrivalName,
+      requestedDate: b.requestedDate.toISOString(),
+      passengerCount: b.passengerCount,
+      estimatedPrice: b.estimatedPrice,
+      lockedPrice: b.lockedPrice,
+      estimatedDistance: b.estimatedDistance,
+      status: b.status,
+      source: b.source,
+      driver: b.driver
+        ? {
+            name: `${b.driver.firstName} ${b.driver.lastName}`,
+            slug: b.driver.slug,
+            phone: b.driver.phone,
+            email: b.driver.email,
+          }
+        : null,
+      organization: b.organization
+        ? { name: b.organization.name, type: b.organization.type }
+        : null,
+      regionCode,
+      regionName: regionCode ? (DEPARTMENT_NAMES[regionCode] || "Inconnu") : null,
+      createdAt: b.createdAt.toISOString(),
+    };
+  });
 
   return (
     <div>
