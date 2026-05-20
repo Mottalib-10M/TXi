@@ -45,7 +45,7 @@ export async function POST(request: Request) {
     let estimatedDistance: number | undefined;
     let estimatedPrice = data.estimatedPrice;
 
-    if (data.departureLat && data.departureLng && data.arrivalLat && data.arrivalLng) {
+    if (data.departureLat != null && data.departureLng != null && data.arrivalLat != null && data.arrivalLng != null) {
       const routing = await getRoutingDistance(
         data.departureLat,
         data.departureLng,
@@ -119,6 +119,31 @@ export async function POST(request: Request) {
             nearbyDrivers[0].pricePerKm,
             nearbyDrivers[0].minimumFare,
             nearbyDrivers[0].pricePerKmNight,
+            requestedDate,
+          );
+        }
+      }
+    }
+
+    // Safety net: if we have a driver but still no price, recalculate using driver rates
+    if (driverId && !estimatedPrice) {
+      const driver = await prisma.driver.findUnique({ where: { id: driverId } });
+      if (driver) {
+        // Recalculate distance if needed
+        if (!estimatedDistance && data.departureLat != null && data.arrivalLat != null) {
+          const routing = await getRoutingDistance(
+            data.departureLat, data.departureLng,
+            data.arrivalLat, data.arrivalLng
+          );
+          estimatedDistance = routing.distanceKm;
+        }
+        if (estimatedDistance) {
+          estimatedPrice = estimatePrice(
+            estimatedDistance,
+            driver.baseFare,
+            driver.pricePerKm,
+            driver.minimumFare,
+            driver.pricePerKmNight,
             requestedDate,
           );
         }

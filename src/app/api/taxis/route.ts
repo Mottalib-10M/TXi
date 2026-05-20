@@ -72,7 +72,7 @@ export async function GET(request: NextRequest) {
     // Calculate trip distance & duration (real driving distance via OSRM)
     let tripDistance = 0;
     let tripDuration = 0;
-    if (departureLat && departureLng && arrivalLat && arrivalLng) {
+    if (departureLat != null && departureLng != null && arrivalLat != null && arrivalLng != null) {
       const routing = await getRoutingDistance(departureLat, departureLng, arrivalLat, arrivalLng);
       tripDistance = routing.distanceKm;
       tripDuration = routing.durationMinutes;
