@@ -278,7 +278,6 @@ export default async function DashboardPage() {
                             href={buildWhatsAppUrl(booking)}
                             target="_blank"
                             rel="noopener noreferrer"
-                            onClick={(e) => e.stopPropagation()}
                             className="inline-flex items-center gap-1 text-xs text-green-600 hover:text-green-800 font-medium transition-colors"
                           >
                             <Icon icon="mdi:whatsapp" className="text-base" />
@@ -362,7 +361,6 @@ export default async function DashboardPage() {
                             href={buildWhatsAppUrl(booking)}
                             target="_blank"
                             rel="noopener noreferrer"
-                            onClick={(e) => e.stopPropagation()}
                             className="inline-flex items-center gap-1 text-xs text-green-600 hover:text-green-800 font-medium transition-colors"
                           >
                             <Icon icon="mdi:whatsapp" className="text-base" />
