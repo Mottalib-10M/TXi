@@ -1,7 +1,12 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
-import { sendEmail } from "@/lib/email";
+import { prisma } from "@/lib/prisma";
+import { sendEmail, buildNoDriverConfirmEmail } from "@/lib/email";
 import { createNotification } from "@/lib/notifications";
+import { generateUniqueReference } from "@/lib/reference";
+import { getRoutingDistance, estimateDefaultPrice, isValidCoords, geocodeAddress } from "@/lib/geo";
+import { format } from "date-fns";
+import { fr } from "date-fns/locale";
 
 const contactRequestSchema = z.object({
   clientName: z.string().min(1),
@@ -9,6 +14,10 @@ const contactRequestSchema = z.object({
   clientPhone: z.string().min(1),
   departure: z.string().min(1),
   arrival: z.string().min(1),
+  departureLat: z.number().optional().default(0),
+  departureLng: z.number().optional().default(0),
+  arrivalLat: z.number().optional().default(0),
+  arrivalLng: z.number().optional().default(0),
   scheduledDate: z.string().optional(),
   passengers: z.number().int().min(1).max(8),
 });
@@ -29,6 +38,59 @@ export async function POST(req: Request) {
         })
       : "Dès que possible";
 
+    // --- Create booking in DB ---
+    const reference = await generateUniqueReference();
+    const requestedDate = data.scheduledDate ? new Date(data.scheduledDate) : new Date();
+
+    let depLat = data.departureLat;
+    let depLng = data.departureLng;
+    let arrLat = data.arrivalLat;
+    let arrLng = data.arrivalLng;
+
+    if (!isValidCoords(depLat, depLng)) {
+      const geo = await geocodeAddress(data.departure);
+      if (geo) { depLat = geo.lat; depLng = geo.lng; }
+    }
+    if (!isValidCoords(arrLat, arrLng)) {
+      const geo = await geocodeAddress(data.arrival);
+      if (geo) { arrLat = geo.lat; arrLng = geo.lng; }
+    }
+
+    let estimatedDistance: number | undefined;
+    let estimatedPrice: number | undefined;
+
+    if (isValidCoords(depLat, depLng) && isValidCoords(arrLat, arrLng)) {
+      const routing = await getRoutingDistance(depLat, depLng, arrLat, arrLng);
+      estimatedDistance = routing.distanceKm;
+    }
+
+    if (estimatedDistance) {
+      estimatedPrice = estimateDefaultPrice(estimatedDistance);
+    }
+
+    await prisma.booking.create({
+      data: {
+        reference,
+        clientName: data.clientName,
+        clientEmail: data.clientEmail,
+        clientPhone: data.clientPhone,
+        departureName: data.departure,
+        departureLat: depLat,
+        departureLng: depLng,
+        arrivalName: data.arrival,
+        arrivalLat: arrLat,
+        arrivalLng: arrLng,
+        requestedDate,
+        passengerCount: data.passengers,
+        estimatedDistance,
+        estimatedPrice,
+        lockedPrice: estimatedPrice || null,
+        driverId: null,
+        source: "LANDING",
+      },
+    });
+
+    // --- Send admin notification email ---
     const adminEmail = (process.env.ADMIN_EMAILS || "amradif@gmail.com").split(",")[0].trim();
     await sendEmail({
       to: adminEmail,
@@ -44,6 +106,7 @@ export async function POST(req: Request) {
             <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">Départ</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.departure}</td></tr>
             <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">Arrivée</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.arrival}</td></tr>
             <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">Date souhaitée</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${dateLabel}</td></tr>
+            <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">Référence</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">#${reference}</td></tr>
             <tr><td style="padding: 8px; color: #737373;">Passagers</td><td style="padding: 8px; font-weight: 500;">${data.passengers}</td></tr>
           </table>
           <p style="color: #a3a3a3; font-size: 12px;">— TaxiNeo (demande automatique)</p>
@@ -51,18 +114,32 @@ export async function POST(req: Request) {
       `,
     });
 
+    // --- Send confirmation email to client ---
+    const dateFormatted = format(requestedDate, "dd MMMM yyyy 'à' HH:mm", { locale: fr });
+    const clientEmailData = buildNoDriverConfirmEmail({
+      clientName: data.clientName,
+      departure: data.departure,
+      arrival: data.arrival,
+      date: dateFormatted,
+      reference,
+      price: estimatedPrice,
+      locale: "fr",
+    });
+    await sendEmail({ to: data.clientEmail, ...clientEmailData });
+
     createNotification({
       type: "CONTACT_REQUEST",
-      title: `Demande sans chauffeur`,
+      title: `Demande sans chauffeur #${reference}`,
       body: `${data.clientName} — ${data.departure} → ${data.arrival}`,
-      metadata: { clientName: data.clientName, clientEmail: data.clientEmail, clientPhone: data.clientPhone },
+      metadata: { clientName: data.clientName, clientEmail: data.clientEmail, clientPhone: data.clientPhone, reference },
     });
 
-    return NextResponse.json({ success: true });
+    return NextResponse.json({ success: true, reference });
   } catch (error) {
     if (error instanceof z.ZodError) {
       return NextResponse.json({ error: "Données invalides", issues: error.issues }, { status: 400 });
     }
+    console.error("Contact request error:", error);
     return NextResponse.json({ error: "Erreur serveur" }, { status: 500 });
   }
 }

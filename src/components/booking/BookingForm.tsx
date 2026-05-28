@@ -179,6 +179,10 @@ export function BookingForm() {
           clientPhone,
           departure,
           arrival,
+          departureLat: departureLat ?? 0,
+          departureLng: departureLng ?? 0,
+          arrivalLat: arrivalLat ?? 0,
+          arrivalLng: arrivalLng ?? 0,
           scheduledDate: scheduleLater && scheduledDate
             ? new Date(scheduledDate).toISOString()
             : undefined,

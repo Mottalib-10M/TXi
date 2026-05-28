@@ -67,8 +67,15 @@ export function AdminBookingsTable({ bookings }: { bookings: Booking[] }) {
     onConfirm: () => void;
   } | null>(null);
 
+  const noDriverCount = bookings.filter((b) => b.driver === null).length;
+
   const filtered = bookings.filter((b) => {
-    const matchesStatus = filter === "ALL" || b.status === filter;
+    const matchesStatus =
+      filter === "ALL"
+        ? true
+        : filter === "NO_DRIVER"
+          ? b.driver === null
+          : b.status === filter;
     const q = search.toLowerCase();
     const matchesSearch =
       !q ||
@@ -224,6 +231,7 @@ export function AdminBookingsTable({ bookings }: { bookings: Booking[] }) {
           { key: "COMPLETED", label: t("filterCompleted") },
           { key: "REJECTED", label: t("filterRejected") },
           { key: "CANCELLED", label: t("filterCancelled") },
+          { key: "NO_DRIVER", label: t("filterNoDriver") },
           { key: "ALL", label: t("filterAll") },
         ].map((f) => (
           <button
@@ -236,6 +244,9 @@ export function AdminBookingsTable({ bookings }: { bookings: Booking[] }) {
             }`}
           >
             {f.label}
+            {f.key === "NO_DRIVER" && (
+              <span className="ml-1.5 text-neutral-400">({noDriverCount})</span>
+            )}
             {f.key === "ALL" && (
               <span className="ml-1.5 text-neutral-400">({bookings.length})</span>
             )}
@@ -298,15 +309,15 @@ export function AdminBookingsTable({ bookings }: { bookings: Booking[] }) {
                       <table className="w-full text-xs table-fixed">
                         <thead>
                           <tr className="bg-neutral-50 text-neutral-400 text-left">
-                            <th className="px-2 py-2 font-medium w-[18%]">{locale === "en" ? "Route" : "Trajet"}</th>
-                            <th className="px-2 py-2 font-medium w-[9%]">{locale === "en" ? "Booked" : "Réservé"}</th>
-                            <th className="px-2 py-2 font-medium w-[9%]">{locale === "en" ? "Ride" : "Prestation"}</th>
-                            <th className="px-2 py-2 font-medium w-[6%]">Dist.</th>
-                            <th className="px-2 py-2 font-medium w-[6%]">{locale === "en" ? "Price" : "Prix"}</th>
-                            <th className="px-2 py-2 font-medium w-[14%]">{t("driver")}</th>
-                            <th className="px-2 py-2 font-medium w-[14%]">{t("client")}</th>
+                            <th className="px-2 py-2 font-medium w-[24%]">{locale === "en" ? "Route" : "Trajet"}</th>
+                            <th className="px-2 py-2 font-medium w-[8%]">{locale === "en" ? "Booked" : "Réservé"}</th>
+                            <th className="px-2 py-2 font-medium w-[8%]">{locale === "en" ? "Ride" : "Prestation"}</th>
+                            <th className="px-2 py-2 font-medium w-[5%]">Dist.</th>
+                            <th className="px-2 py-2 font-medium w-[5%]">{locale === "en" ? "Price" : "Prix"}</th>
+                            <th className="px-2 py-2 font-medium w-[12%]">{t("driver")}</th>
+                            <th className="px-2 py-2 font-medium w-[12%]">{t("client")}</th>
                             <th className="px-2 py-2 font-medium w-[10%]">{locale === "en" ? "Status" : "Statut"}</th>
-                            <th className="px-2 py-2 font-medium w-[14%]">Actions</th>
+                            <th className="px-2 py-2 font-medium w-[16%]">Actions</th>
                           </tr>
                         </thead>
                         <tbody className="divide-y divide-neutral-100">
@@ -316,10 +327,10 @@ export function AdminBookingsTable({ bookings }: { bookings: Booking[] }) {
                               <tr key={booking.id} className="hover:bg-neutral-50/50">
                                 {/* Route */}
                                 <td className="px-2 py-2">
-                                  <div className="truncate font-medium text-neutral-700">
+                                  <div className="font-medium text-neutral-700 break-words leading-snug">
                                     {booking.departureName}
                                   </div>
-                                  <div className="truncate text-neutral-400">
+                                  <div className="text-neutral-400 break-words leading-snug mt-0.5">
                                     → {booking.arrivalName}
                                   </div>
                                 </td>

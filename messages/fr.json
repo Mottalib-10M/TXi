@@ -866,6 +866,7 @@
     "filterCompleted": "Terminées",
     "filterRejected": "Refusées",
     "filterCancelled": "Annulées",
+    "filterNoDriver": "Zone sans chauffeur",
     "notSpecified": "Non renseignée",
     "connectionsCount": "{count} connexion(s)",
     "lastSeen": "Vu {time}",

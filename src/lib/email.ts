@@ -140,11 +140,15 @@ const t = {
     driverReminderBody: "Une demande de course est toujours en attente de votre réponse. Merci de bien vouloir l'accepter ou la refuser dès que possible :",
     driverReminderAction: "Connectez-vous à votre tableau de bord pour traiter cette demande.",
     driverReminderCta: "Voir la course",
-    clientApologySubject: (ref: string) => `Réservation #${ref} — Indisponibilité`,
-    clientApologyTitle: "Mise à jour de votre réservation",
+    clientApologySubject: (_ref: string) => `Chauffeur indisponible`,
+    clientApologyTitle: "Désolé, aucun chauffeur disponible pour la date demandée",
     clientApologyBody: "Nous sommes sincèrement désolés, mais tous nos chauffeurs sont actuellement mobilisés et nous ne sommes pas en mesure d'honorer votre demande de course :",
     clientApologyClosing: "Nous espérons vous retrouver très prochainement sur TaxiNeo. Toute l'équipe vous présente ses excuses pour ce désagrément.",
     clientApologyCta: "Rechercher un taxi",
+    noDriverConfirmSubject: "TaxiNeo : Désolé aucun chauffeur n'est disponible",
+    noDriverConfirmTitle: "Désolé, aucun chauffeur disponible dans votre zone actuellement",
+    noDriverConfirmBody: "N'hésitez pas à retenter votre recherche pour un autre créneau.",
+    noDriverConfirmCta: "Réessayer sur TaxiNeo",
   },
   en: {
     hello: "Hello",
@@ -247,11 +251,15 @@ const t = {
     driverReminderBody: "A ride request is still awaiting your response. Please accept or decline it as soon as possible:",
     driverReminderAction: "Log in to your dashboard to handle this request.",
     driverReminderCta: "View the ride",
-    clientApologySubject: (ref: string) => `Booking #${ref} — Unavailability`,
-    clientApologyTitle: "Update on your booking",
+    clientApologySubject: (_ref: string) => `Driver unavailable`,
+    clientApologyTitle: "Sorry, no driver available for the requested date",
     clientApologyBody: "We are sincerely sorry, but all our drivers are currently busy and we are unable to fulfil your ride request:",
     clientApologyClosing: "We hope to see you again very soon on TaxiNeo. The entire team apologises for the inconvenience.",
     clientApologyCta: "Search for a taxi",
+    noDriverConfirmSubject: "TaxiNeo: Sorry, no driver available",
+    noDriverConfirmTitle: "Sorry, no driver available in your area at the moment",
+    noDriverConfirmBody: "Feel free to try again for a different time slot.",
+    noDriverConfirmCta: "Try again on TaxiNeo",
   },
 } as const;
 
@@ -854,6 +862,44 @@ export function buildClientApologyEmail(data: {
         <div style="text-align: center; margin: 24px 0;">
           <a href="https://taxineo.fr" style="background-color: #171717; color: #ffffff; padding: 14px 28px; border-radius: 12px; text-decoration: none; font-weight: 500; font-size: 14px; display: inline-block;">
             ${l.clientApologyCta}
+          </a>
+        </div>
+        <p style="color: #a3a3a3; font-size: 12px;">${l.team}</p>
+      </div>
+    `,
+  };
+}
+
+export function buildNoDriverConfirmEmail(data: {
+  clientName: string;
+  departure: string;
+  arrival: string;
+  date: string;
+  reference: string;
+  price?: number | null;
+  locale?: Locale;
+}) {
+  const l = t[data.locale || "fr"];
+  const locale = data.locale || "fr";
+  const baseUrl = process.env.NEXTAUTH_URL || "https://taxineo.fr";
+  const siteUrl = `${baseUrl}/${locale}`;
+  return {
+    subject: l.noDriverConfirmSubject,
+    html: `
+      <div style="font-family: Inter, sans-serif; max-width: 600px; margin: 0 auto;">
+        <h2 style="color: #171717;">${l.noDriverConfirmTitle}</h2>
+        <p>${l.hello} ${data.clientName},</p>
+        <p>${l.noDriverConfirmBody}</p>
+        <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.departure}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.departure}</td></tr>
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.arrival}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.arrival}</td></tr>
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.date}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.date}</td></tr>
+          ${data.price ? `<tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.estimatedPrice}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${formatEmailPrice(data.price, locale)}</td></tr>` : ""}
+          <tr><td style="padding: 8px; color: #737373;">${l.reference}</td><td style="padding: 8px; font-weight: 500;">#${data.reference}</td></tr>
+        </table>
+        <div style="text-align: center; margin: 24px 0;">
+          <a href="${siteUrl}" style="background-color: #171717; color: #ffffff; padding: 14px 28px; border-radius: 12px; text-decoration: none; font-weight: 500; font-size: 14px; display: inline-block;">
+            ${l.noDriverConfirmCta}
           </a>
         </div>
         <p style="color: #a3a3a3; font-size: 12px;">${l.team}</p>

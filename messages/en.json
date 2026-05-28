@@ -866,6 +866,7 @@
     "filterCompleted": "Completed",
     "filterRejected": "Rejected",
     "filterCancelled": "Cancelled",
+    "filterNoDriver": "No driver zone",
     "notSpecified": "Not specified",
     "connectionsCount": "{count} login(s)",
     "lastSeen": "Seen {time}",
