@@ -1,5 +1,7 @@
 import { prisma } from "@/lib/prisma";
 import { AdminOverview } from "@/components/admin/AdminOverview";
+import { getDepartmentCode, getDepartmentFromCoords } from "@/lib/department-lookup";
+import { DEPARTMENT_NAMES } from "@/data/departmental-tariffs";
 
 export const dynamic = "force-dynamic";
 
@@ -37,12 +39,19 @@ export default async function AdminOverviewPage() {
           id: true,
           reference: true,
           clientName: true,
+          clientPhone: true,
           departureName: true,
+          departureLat: true,
+          departureLng: true,
           arrivalName: true,
-          status: true,
+          requestedDate: true,
+          estimatedDistance: true,
+          estimatedPrice: true,
           lockedPrice: true,
+          status: true,
+          cancelledBy: true,
           createdAt: true,
-          driver: { select: { firstName: true, lastName: true } },
+          driver: { select: { firstName: true, lastName: true, phone: true, slug: true } },
           organization: { select: { name: true } },
         },
         orderBy: { createdAt: "desc" },
@@ -101,16 +110,34 @@ export default async function AdminOverviewPage() {
         type: o.type,
         createdAt: o.createdAt.toISOString(),
       })),
-      recentBookings: bookings.slice(0, 10).map((b: typeof bookings[number]) => ({
+      chartBookings: bookings.map((b: typeof bookings[number]) => {
+        const regionCode = getDepartmentCode(b.departureName) || getDepartmentFromCoords(b.departureLat, b.departureLng);
+        return {
+          hasDriver: !!b.driver,
+          status: b.status,
+          regionCode,
+          regionName: regionCode ? (DEPARTMENT_NAMES[regionCode] || "Inconnu") : null,
+          createdAt: b.createdAt.toISOString(),
+          price: b.lockedPrice ? Number(b.lockedPrice) : (b.estimatedPrice ? Number(b.estimatedPrice) : 0),
+        };
+      }),
+      recentBookings: bookings.slice(0, 5).map((b: typeof bookings[number]) => ({
         id: b.id,
         reference: b.reference,
         clientName: b.clientName,
+        clientPhone: b.clientPhone,
         departureName: b.departureName,
         arrivalName: b.arrivalName,
+        requestedDate: b.requestedDate.toISOString(),
+        estimatedDistance: b.estimatedDistance,
         status: b.status,
+        cancelledBy: b.cancelledBy,
         lockedPrice: b.lockedPrice ? Number(b.lockedPrice) : null,
+        estimatedPrice: b.estimatedPrice ? Number(b.estimatedPrice) : null,
         createdAt: b.createdAt.toISOString(),
         driverName: b.driver ? `${b.driver.firstName} ${b.driver.lastName}` : null,
+        driverPhone: b.driver?.phone || null,
+        driverSlug: b.driver?.slug || null,
         orgName: b.organization?.name || null,
       })),
       activeUsers: {

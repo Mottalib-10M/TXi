@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { signOut } from "next-auth/react";
+import { useRouter as useNextRouter } from "next/navigation";
 import { Icon } from "@iconify/react";
 import { useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
@@ -11,7 +11,14 @@ import { LanguageSwitcher } from "@/components/ui/LanguageSwitcher";
 export function AdminSidebar({ userName }: { userName: string }) {
   const t = useTranslations("admin.sidebar");
   const pathname = usePathname();
+  const nextRouter = useNextRouter();
   const [mobileOpen, setMobileOpen] = useState(false);
+
+  const handleLogout = async () => {
+    await fetch("/api/admin/logout", { method: "POST" });
+    nextRouter.push("/admin/login");
+    nextRouter.refresh();
+  };
 
   const navItems = [
     { href: "/admin", label: t("dashboard"), icon: "solar:chart-square-linear" },
@@ -114,7 +121,7 @@ export function AdminSidebar({ userName }: { userName: string }) {
             </div>
             <LanguageSwitcher variant="full" />
             <button
-              onClick={() => signOut({ callbackUrl: "/" })}
+              onClick={handleLogout}
               className="w-full flex items-center gap-2 px-3 py-2 text-sm text-neutral-500 hover:text-red-600 hover:bg-red-50 rounded-xl transition-colors"
             >
               <Icon icon="solar:logout-2-linear" className="text-lg" />

@@ -147,7 +147,8 @@ const t = {
     clientApologyCta: "Rechercher un taxi",
     noDriverConfirmSubject: "TaxiNeo : Désolé aucun chauffeur n'est disponible",
     noDriverConfirmTitle: "Désolé, aucun chauffeur disponible dans votre zone actuellement",
-    noDriverConfirmBody: "N'hésitez pas à retenter votre recherche pour un autre créneau.",
+    noDriverConfirmBody: "N'hésitez pas à retenter votre recherche dans quelques heures.",
+    noDriverConfirmClosing: "Nous faisons notre maximum pour vous servir.",
     noDriverConfirmCta: "Réessayer sur TaxiNeo",
   },
   en: {
@@ -258,7 +259,8 @@ const t = {
     clientApologyCta: "Search for a taxi",
     noDriverConfirmSubject: "TaxiNeo: Sorry, no driver available",
     noDriverConfirmTitle: "Sorry, no driver available in your area at the moment",
-    noDriverConfirmBody: "Feel free to try again for a different time slot.",
+    noDriverConfirmBody: "Feel free to try again in a few hours.",
+    noDriverConfirmClosing: "We are doing our best to serve you.",
     noDriverConfirmCta: "Try again on TaxiNeo",
   },
 } as const;
@@ -872,11 +874,6 @@ export function buildClientApologyEmail(data: {
 
 export function buildNoDriverConfirmEmail(data: {
   clientName: string;
-  departure: string;
-  arrival: string;
-  date: string;
-  reference: string;
-  price?: number | null;
   locale?: Locale;
 }) {
   const l = t[data.locale || "fr"];
@@ -890,13 +887,7 @@ export function buildNoDriverConfirmEmail(data: {
         <h2 style="color: #171717;">${l.noDriverConfirmTitle}</h2>
         <p>${l.hello} ${data.clientName},</p>
         <p>${l.noDriverConfirmBody}</p>
-        <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
-          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.departure}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.departure}</td></tr>
-          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.arrival}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.arrival}</td></tr>
-          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.date}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.date}</td></tr>
-          ${data.price ? `<tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.estimatedPrice}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${formatEmailPrice(data.price, locale)}</td></tr>` : ""}
-          <tr><td style="padding: 8px; color: #737373;">${l.reference}</td><td style="padding: 8px; font-weight: 500;">#${data.reference}</td></tr>
-        </table>
+        <p>${l.noDriverConfirmClosing}</p>
         <div style="text-align: center; margin: 24px 0;">
           <a href="${siteUrl}" style="background-color: #171717; color: #ffffff; padding: 14px 28px; border-radius: 12px; text-decoration: none; font-weight: 500; font-size: 14px; display: inline-block;">
             ${l.noDriverConfirmCta}

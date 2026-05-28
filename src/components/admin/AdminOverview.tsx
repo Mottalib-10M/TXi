@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useMemo } from "react";
 import { Link } from "@/i18n/navigation";
 import { Icon } from "@iconify/react";
 import { format, formatDistanceToNow } from "date-fns";
@@ -16,16 +17,31 @@ interface OverviewData {
   totalRevenue: number;
   recentDrivers: { id: string; firstName: string; lastName: string; email: string; isActive: boolean; createdAt: string }[];
   recentOrgs: { id: string; name: string; email: string; type: string; createdAt: string }[];
+  chartBookings: {
+    hasDriver: boolean;
+    status: string;
+    regionCode: string | null;
+    regionName: string | null;
+    createdAt: string;
+    price: number;
+  }[];
   recentBookings: {
     id: string;
     reference: string;
     clientName: string;
+    clientPhone: string;
     departureName: string;
     arrivalName: string;
+    requestedDate: string;
+    estimatedDistance: number | null;
     status: string;
+    cancelledBy: string | null;
     lockedPrice: number | null;
+    estimatedPrice: number | null;
     createdAt: string;
     driverName: string | null;
+    driverPhone: string | null;
+    driverSlug: string | null;
     orgName: string | null;
   }[];
   activeUsers: {
@@ -57,6 +73,56 @@ export function AdminOverview({ data }: { data: OverviewData }) {
     COMPLETED: { label: t("statusCompleted"), color: "bg-blue-50 text-blue-700 ring-1 ring-blue-200", dot: "bg-blue-500" },
   };
 
+  const [chartPeriod, setChartPeriod] = useState<"24h" | "7d" | "30d">("24h");
+
+  const chartData = useMemo(() => {
+    const now = new Date();
+    const cutoff = new Date(
+      chartPeriod === "24h" ? now.getTime() - 24 * 60 * 60 * 1000
+        : chartPeriod === "7d" ? now.getTime() - 7 * 24 * 60 * 60 * 1000
+        : now.getTime() - 30 * 24 * 60 * 60 * 1000
+    );
+    const periodBookings = data.chartBookings.filter((b) => new Date(b.createdAt) >= cutoff);
+    const deptMap = new Map<string, { label: string; withDriver: number; noDriver: number; pending: number; accepted: number; rejected: number; cancelled: number; completed: number }>();
+    for (const b of periodBookings) {
+      const key = b.regionName || "Non localisé";
+      if (!deptMap.has(key)) {
+        deptMap.set(key, {
+          label: b.regionCode ? `${b.regionName} (${b.regionCode})` : key,
+          withDriver: 0, noDriver: 0,
+          pending: 0, accepted: 0, rejected: 0, cancelled: 0, completed: 0,
+        });
+      }
+      const entry = deptMap.get(key)!;
+      if (b.hasDriver) entry.withDriver++; else entry.noDriver++;
+      if (b.status === "PENDING") entry.pending++;
+      else if (b.status === "ACCEPTED") entry.accepted++;
+      else if (b.status === "REJECTED") entry.rejected++;
+      else if (b.status === "CANCELLED") entry.cancelled++;
+      else if (b.status === "COMPLETED") entry.completed++;
+    }
+    const entries = Array.from(deptMap.values()).sort((a, b) => (b.withDriver + b.noDriver) - (a.withDriver + a.noDriver));
+    const maxTotal = Math.max(...entries.map((e) => e.withDriver + e.noDriver), 1);
+    return { entries, maxTotal, total: periodBookings.length, periodBookings };
+  }, [data.chartBookings, chartPeriod]);
+
+  const periodKpis = useMemo(() => {
+    const pb = chartData.periodBookings;
+    const withDriver = pb.filter((b) => b.hasDriver);
+    const noDriver = pb.filter((b) => !b.hasDriver);
+    const driversConnected =
+      chartPeriod === "24h" ? data.activeUsers.drivers24h
+        : chartPeriod === "7d" ? data.activeUsers.drivers7d
+        : data.activeUsers.drivers30d;
+    return {
+      driversConnected,
+      withDriverCount: withDriver.length,
+      withDriverRevenue: withDriver.reduce((sum, b) => sum + b.price, 0),
+      noDriverCount: noDriver.length,
+      noDriverRevenue: noDriver.reduce((sum, b) => sum + b.price, 0),
+    };
+  }, [chartData.periodBookings, chartPeriod, data.activeUsers]);
+
   const orgTypeConfig: Record<string, { label: string; color: string }> = {
     HOTEL: { label: t("typeHotel"), color: "bg-blue-50 text-blue-700" },
     HOSPITAL: { label: t("typeHospital"), color: "bg-red-50 text-red-700" },
@@ -66,134 +132,139 @@ export function AdminOverview({ data }: { data: OverviewData }) {
 
   return (
     <div>
-      {/* Header */}
-      <div className="mb-8">
-        <div className="flex items-center gap-3 mb-1">
+      {/* Header + Period selector */}
+      <div className="flex items-center justify-between mb-6">
+        <div className="flex items-center gap-3">
           <div className="w-10 h-10 bg-violet-100 rounded-xl flex items-center justify-center">
             <Icon icon="solar:chart-square-bold" className="text-violet-600 text-xl" />
           </div>
           <div>
             <h1 className="text-2xl font-semibold tracking-tight">{t("overview")}</h1>
-            <p className="text-sm text-neutral-500 font-light">
-              {t("adminDashboard")}
-            </p>
+            <p className="text-sm text-neutral-500 font-light">{t("adminDashboard")}</p>
           </div>
+        </div>
+        <div className="flex gap-1 bg-neutral-100 p-1 rounded-xl">
+          {([["24h", "24h"], ["7d", "7j"], ["30d", "30j"]] as const).map(([key, label]) => (
+            <button
+              key={key}
+              onClick={() => setChartPeriod(key)}
+              className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors ${
+                chartPeriod === key
+                  ? "bg-neutral-900 text-white shadow-sm"
+                  : "text-neutral-500 hover:text-neutral-700"
+              }`}
+            >
+              {locale === "en" ? key : label}
+            </button>
+          ))}
         </div>
       </div>
 
       {/* KPI Cards */}
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-        <Link
-          href="/admin/chauffeurs"
-          className="group bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl p-5 text-white shadow-sm hover:shadow-md transition-all hover:-translate-y-0.5"
-        >
-          <div className="flex items-center justify-between mb-4">
-            <div className="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center backdrop-blur-sm">
-              <Icon icon="solar:user-hands-bold" className="text-white text-xl" />
-            </div>
-            <Icon icon="solar:arrow-right-up-linear" className="text-white/50 group-hover:text-white/80 transition-colors" />
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-6">
+        <Link href="/admin/chauffeurs" className="group flex items-center gap-3 bg-white border border-neutral-200 rounded-xl px-4 py-3 hover:border-blue-300 transition-colors">
+          <div className="w-9 h-9 bg-blue-50 rounded-lg flex items-center justify-center shrink-0">
+            <Icon icon="solar:user-hands-bold" className="text-blue-500 text-lg" />
           </div>
-          <p className="text-3xl font-bold">{data.totalDrivers}</p>
-          <p className="text-sm text-blue-100 mt-1">{t("drivers")}</p>
-          <div className="flex gap-3 mt-3 pt-3 border-t border-white/20">
-            <span className="text-xs text-blue-100 flex items-center gap-1">
-              <span className="w-1.5 h-1.5 bg-green-300 rounded-full" />
-              {t("activeDrivers", { count: data.activeDrivers })}
-            </span>
-            <span className="text-xs text-blue-200 flex items-center gap-1">
-              <span className="w-1.5 h-1.5 bg-white/40 rounded-full" />
-              {t("inactiveDrivers", { count: data.inactiveDrivers })}
-            </span>
+          <div>
+            <p className="text-xl font-bold text-neutral-900">{periodKpis.driversConnected}</p>
+            <p className="text-[11px] text-neutral-500">{locale === "en" ? "Drivers connected" : "Chauffeurs connectés"}</p>
           </div>
         </Link>
 
-        <Link
-          href="/admin/organisations"
-          className="group bg-gradient-to-br from-violet-500 to-violet-600 rounded-2xl p-5 text-white shadow-sm hover:shadow-md transition-all hover:-translate-y-0.5"
-        >
-          <div className="flex items-center justify-between mb-4">
-            <div className="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center backdrop-blur-sm">
-              <Icon icon="solar:buildings-2-bold" className="text-white text-xl" />
-            </div>
-            <Icon icon="solar:arrow-right-up-linear" className="text-white/50 group-hover:text-white/80 transition-colors" />
+        <Link href="/admin/reservations" className="group flex items-center gap-3 bg-white border border-neutral-200 rounded-xl px-4 py-3 hover:border-emerald-300 transition-colors">
+          <div className="w-9 h-9 bg-emerald-50 rounded-lg flex items-center justify-center shrink-0">
+            <Icon icon="solar:calendar-bold" className="text-emerald-500 text-lg" />
           </div>
-          <p className="text-3xl font-bold">{data.totalOrgs}</p>
-          <p className="text-sm text-violet-100 mt-1">{t("organisations")}</p>
-        </Link>
-
-        <Link
-          href="/admin/reservations"
-          className="group bg-gradient-to-br from-amber-500 to-orange-500 rounded-2xl p-5 text-white shadow-sm hover:shadow-md transition-all hover:-translate-y-0.5"
-        >
-          <div className="flex items-center justify-between mb-4">
-            <div className="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center backdrop-blur-sm">
-              <Icon icon="solar:calendar-bold" className="text-white text-xl" />
-            </div>
-            <Icon icon="solar:arrow-right-up-linear" className="text-white/50 group-hover:text-white/80 transition-colors" />
-          </div>
-          <p className="text-3xl font-bold">{data.totalBookings}</p>
-          <p className="text-sm text-amber-100 mt-1">{t("reservations")}</p>
-          <div className="flex gap-3 mt-3 pt-3 border-t border-white/20">
-            <span className="text-xs text-amber-100 flex items-center gap-1">
-              <span className="w-1.5 h-1.5 bg-yellow-300 rounded-full animate-pulse" />
-              {t("pendingCount", { count: data.bookingsByStatus.PENDING || 0 })}
-            </span>
-            <span className="text-xs text-amber-100 flex items-center gap-1">
-              <span className="w-1.5 h-1.5 bg-green-300 rounded-full" />
-              {t("acceptedCount", { count: data.bookingsByStatus.ACCEPTED || 0 })}
-            </span>
+          <div>
+            <p className="text-xl font-bold text-neutral-900">{periodKpis.withDriverCount} <span className="text-sm font-normal text-neutral-400">· {periodKpis.withDriverRevenue.toFixed(0)} &euro;</span></p>
+            <p className="text-[11px] text-neutral-500">{locale === "en" ? "With driver" : "Avec chauffeur"}</p>
           </div>
         </Link>
 
-        <div className="bg-gradient-to-br from-emerald-500 to-green-600 rounded-2xl p-5 text-white shadow-sm">
-          <div className="flex items-center justify-between mb-4">
-            <div className="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center backdrop-blur-sm">
-              <Icon icon="solar:wallet-money-bold" className="text-white text-xl" />
-            </div>
+        <Link href="/admin/reservations" className="group flex items-center gap-3 bg-white border border-neutral-200 rounded-xl px-4 py-3 hover:border-orange-300 transition-colors">
+          <div className="w-9 h-9 bg-orange-50 rounded-lg flex items-center justify-center shrink-0">
+            <Icon icon="solar:map-point-wave-bold" className="text-orange-500 text-lg" />
           </div>
-          <p className="text-3xl font-bold">{data.totalRevenue.toFixed(0)}<span className="text-lg ml-1">&euro;</span></p>
-          <p className="text-sm text-green-100 mt-1">{t("totalRevenue")}</p>
-          <div className="mt-3 pt-3 border-t border-white/20">
-            <span className="text-xs text-green-100">
-              {t("completedRides", { count: data.bookingsByStatus.COMPLETED || 0 })}
-            </span>
+          <div>
+            <p className="text-xl font-bold text-neutral-900">{periodKpis.noDriverCount} <span className="text-sm font-normal text-neutral-400">· {periodKpis.noDriverRevenue.toFixed(0)} &euro;</span></p>
+            <p className="text-[11px] text-neutral-500">{locale === "en" ? "No driver" : "Sans chauffeur"}</p>
+          </div>
+        </Link>
+
+        <div className="flex items-center gap-3 bg-white border border-neutral-200 rounded-xl px-4 py-3">
+          <div className="w-9 h-9 bg-violet-50 rounded-lg flex items-center justify-center shrink-0">
+            <Icon icon="solar:wallet-money-bold" className="text-violet-500 text-lg" />
+          </div>
+          <div>
+            <p className="text-xl font-bold text-neutral-900">{(periodKpis.withDriverRevenue + periodKpis.noDriverRevenue).toFixed(0)} &euro;</p>
+            <p className="text-[11px] text-neutral-500">{chartData.total} {locale === "en" ? "bookings" : "réservations"}</p>
           </div>
         </div>
       </div>
 
-      {/* Status breakdown bar */}
-      {data.totalBookings > 0 && (
-        <div className="bg-white border border-neutral-200 rounded-2xl p-5 mb-8">
-          <h3 className="text-sm font-semibold mb-3">{t("bookingsBreakdown")}</h3>
-          <div className="flex rounded-full overflow-hidden h-3 bg-neutral-100">
-            {Object.entries(statusConfig).map(([key, config]) => {
-              const count = data.bookingsByStatus[key] || 0;
-              const pct = (count / data.totalBookings) * 100;
-              if (pct === 0) return null;
+      {/* Histogram by department */}
+      <div className="bg-white border border-neutral-200 rounded-2xl p-4 sm:p-5 mb-8">
+        <div className="mb-4">
+          <h3 className="text-sm font-semibold text-neutral-700">
+            {locale === "en" ? "Bookings by department" : "Réservations par département"}
+            <span className="ml-2 text-neutral-400 font-normal">({chartData.total})</span>
+          </h3>
+        </div>
+        {chartData.entries.length === 0 ? (
+          <p className="text-xs text-neutral-400 text-center py-4">
+            {locale === "en" ? "No bookings for this period" : "Aucune réservation sur cette période"}
+          </p>
+        ) : (
+          <div className="space-y-2">
+            {chartData.entries.map((entry) => {
+              const total = entry.withDriver + entry.noDriver;
+              const widthPercent = (total / chartData.maxTotal) * 100;
+              const driverPercent = total > 0 ? (entry.withDriver / total) * 100 : 0;
               return (
-                <div
-                  key={key}
-                  className={`${config.dot} transition-all`}
-                  style={{ width: `${pct}%` }}
-                  title={`${config.label}: ${count}`}
-                />
+                <div key={entry.label} className="flex items-center gap-3">
+                  <div className="w-[140px] sm:w-[180px] text-[11px] text-neutral-600 truncate shrink-0 text-right">
+                    {entry.label}
+                  </div>
+                  <div className="flex-1 h-6 bg-neutral-50 rounded-lg overflow-hidden relative">
+                    <div
+                      className="h-full rounded-lg flex overflow-hidden"
+                      style={{ width: `${Math.max(widthPercent, 2)}%` }}
+                    >
+                      {entry.withDriver > 0 && (
+                        <div className="h-full bg-emerald-400" style={{ width: `${driverPercent}%` }} />
+                      )}
+                      {entry.noDriver > 0 && (
+                        <div className="h-full bg-orange-400" style={{ width: `${100 - driverPercent}%` }} />
+                      )}
+                    </div>
+                    <span className="absolute right-2 top-1/2 -translate-y-1/2 text-[10px] font-medium text-neutral-500">
+                      {total}
+                    </span>
+                  </div>
+                  <div className="flex gap-1 shrink-0">
+                    {entry.pending > 0 && <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-amber-50 text-amber-700 font-medium">{entry.pending} att.</span>}
+                    {entry.accepted > 0 && <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-green-50 text-green-700 font-medium">{entry.accepted} acc.</span>}
+                    {entry.completed > 0 && <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-blue-50 text-blue-700 font-medium">{entry.completed} term.</span>}
+                    {entry.rejected > 0 && <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-red-50 text-red-700 font-medium">{entry.rejected} ref.</span>}
+                    {entry.cancelled > 0 && <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-neutral-100 text-neutral-500 font-medium">{entry.cancelled} ann.</span>}
+                  </div>
+                </div>
               );
             })}
           </div>
-          <div className="flex flex-wrap gap-4 mt-3">
-            {Object.entries(statusConfig).map(([key, config]) => {
-              const count = data.bookingsByStatus[key] || 0;
-              if (count === 0) return null;
-              return (
-                <span key={key} className="flex items-center gap-1.5 text-xs text-neutral-500">
-                  <span className={`w-2 h-2 rounded-full ${config.dot}`} />
-                  {config.label} ({count})
-                </span>
-              );
-            })}
+        )}
+        <div className="flex items-center gap-4 mt-3 pt-3 border-t border-neutral-100">
+          <div className="flex items-center gap-1.5">
+            <div className="w-3 h-3 rounded-sm bg-emerald-400" />
+            <span className="text-[11px] text-neutral-500">{locale === "en" ? "With driver" : "Avec chauffeur"}</span>
+          </div>
+          <div className="flex items-center gap-1.5">
+            <div className="w-3 h-3 rounded-sm bg-orange-400" />
+            <span className="text-[11px] text-neutral-500">{locale === "en" ? "No driver" : "Sans chauffeur"}</span>
           </div>
         </div>
-      )}
+      </div>
 
       {/* Active users + Recent activity feed */}
       <div className="grid lg:grid-cols-2 gap-6 mb-8">
@@ -365,12 +436,12 @@ export function AdminOverview({ data }: { data: OverviewData }) {
         </div>
       </div>
 
-      {/* Recent bookings */}
+      {/* Recent bookings - detailed */}
       <div className="bg-white border border-neutral-200 rounded-2xl overflow-hidden">
         <div className="flex items-center justify-between px-5 py-4 border-b border-neutral-100">
           <div className="flex items-center gap-2">
             <Icon icon="solar:calendar-linear" className="text-amber-500" />
-            <h2 className="font-semibold text-sm">{t("recentBookings")}</h2>
+            <h2 className="font-semibold text-sm">{locale === "en" ? "Last 5 bookings" : "5 dernières réservations"}</h2>
           </div>
           <Link href="/admin/reservations" className="text-xs text-neutral-500 hover:text-neutral-900 transition-colors flex items-center gap-1">
             {tc("seeAll")}
@@ -383,52 +454,122 @@ export function AdminOverview({ data }: { data: OverviewData }) {
             <p className="text-sm text-neutral-400 font-light">{t("noBookings")}</p>
           </div>
         ) : (
-          <div className="divide-y divide-neutral-100">
-            {data.recentBookings.map((booking) => (
-              <div
-                key={booking.id}
-                className="flex items-center gap-4 px-5 py-3.5 hover:bg-neutral-50 transition-colors"
-              >
-                {/* Status dot */}
-                <div className={`w-2.5 h-2.5 rounded-full shrink-0 ${statusConfig[booking.status]?.dot || "bg-neutral-300"}`} />
-
-                {/* Main info */}
-                <div className="min-w-0 flex-1">
-                  <div className="flex flex-wrap items-center gap-2">
-                    <p className="text-sm font-medium">{booking.clientName}</p>
-                    <span className="text-[11px] text-neutral-400 font-mono">#{booking.reference}</span>
-                    <span
-                      className={`text-[10px] px-2 py-0.5 rounded-full font-medium ${statusConfig[booking.status]?.color || ""}`}
-                    >
-                      {statusConfig[booking.status]?.label || booking.status}
-                    </span>
-                    {booking.orgName && (
-                      <span className="text-[10px] px-2 py-0.5 rounded-full bg-violet-50 text-violet-600 ring-1 ring-violet-200">
-                        {booking.orgName}
+          <>
+            {/* Desktop table */}
+            <div className="hidden lg:block">
+              <table className="w-full text-xs">
+                <thead>
+                  <tr className="bg-neutral-50 text-neutral-400 text-left">
+                    <th className="px-3 py-2 font-medium">{locale === "en" ? "Route" : "Trajet"}</th>
+                    <th className="px-3 py-2 font-medium">{locale === "en" ? "Booked" : "Réservé"}</th>
+                    <th className="px-3 py-2 font-medium">{locale === "en" ? "Ride" : "Prestation"}</th>
+                    <th className="px-3 py-2 font-medium">Dist.</th>
+                    <th className="px-3 py-2 font-medium">{locale === "en" ? "Price" : "Prix"}</th>
+                    <th className="px-3 py-2 font-medium">{t("driver")}</th>
+                    <th className="px-3 py-2 font-medium">{t("client")}</th>
+                    <th className="px-3 py-2 font-medium">{locale === "en" ? "Status" : "Statut"}</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-neutral-100">
+                  {data.recentBookings.map((booking) => {
+                    const price = booking.lockedPrice ?? booking.estimatedPrice;
+                    const dateFnsLoc = locale === "en" ? enUS : fr;
+                    return (
+                      <tr key={booking.id} className="hover:bg-neutral-50/50">
+                        <td className="px-3 py-2">
+                          <div className="font-medium text-neutral-700 break-words leading-snug">{booking.departureName}</div>
+                          <div className="text-neutral-400 break-words leading-snug mt-0.5">→ {booking.arrivalName}</div>
+                        </td>
+                        <td className="px-3 py-2 text-neutral-400">
+                          {format(new Date(booking.createdAt), "dd MMM yy, HH:mm", { locale: dateFnsLoc })}
+                        </td>
+                        <td className="px-3 py-2 text-neutral-700 font-medium">
+                          {format(new Date(booking.requestedDate), "dd MMM yy, HH:mm", { locale: dateFnsLoc })}
+                        </td>
+                        <td className="px-3 py-2 text-neutral-500">
+                          {booking.estimatedDistance ? `${booking.estimatedDistance.toFixed(1)} km` : "—"}
+                        </td>
+                        <td className="px-3 py-2 text-neutral-700 font-medium">
+                          {price != null ? `${price.toFixed(0)} €` : "—"}
+                        </td>
+                        <td className="px-3 py-2">
+                          {booking.driverName ? (
+                            <div>
+                              <Link href={`/taxi/${booking.driverSlug}`} target="_blank" className="text-blue-600 hover:underline font-medium">
+                                {booking.driverName}
+                              </Link>
+                              {booking.driverPhone && (
+                                <div className="text-neutral-400">{booking.driverPhone}</div>
+                              )}
+                            </div>
+                          ) : (
+                            <span className="text-neutral-300">—</span>
+                          )}
+                        </td>
+                        <td className="px-3 py-2">
+                          <div className="font-medium text-neutral-700">{booking.clientName}</div>
+                          {booking.clientPhone && (
+                            <div className="text-neutral-400">{booking.clientPhone}</div>
+                          )}
+                        </td>
+                        <td className="px-3 py-2">
+                          <span className={`inline-block text-[10px] px-1.5 py-0.5 rounded-full font-medium ${statusConfig[booking.status]?.color || ""}`}>
+                            {statusConfig[booking.status]?.label || booking.status}
+                          </span>
+                          <div className="text-[10px] text-neutral-400 font-mono mt-0.5">#{booking.reference}</div>
+                          {booking.orgName && (
+                            <span className="text-[10px] px-1 py-0.5 rounded-full bg-violet-50 text-violet-700">{booking.orgName}</span>
+                          )}
+                        </td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </div>
+            {/* Mobile cards */}
+            <div className="lg:hidden divide-y divide-neutral-100">
+              {data.recentBookings.map((booking) => {
+                const price = booking.lockedPrice ?? booking.estimatedPrice;
+                const dateFnsLoc = locale === "en" ? enUS : fr;
+                return (
+                  <div key={booking.id} className="p-4 space-y-2">
+                    <div className="flex flex-wrap items-center gap-2">
+                      <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${statusConfig[booking.status]?.color || ""}`}>
+                        {statusConfig[booking.status]?.label || booking.status}
                       </span>
+                      <span className="text-xs text-neutral-400 font-mono">#{booking.reference}</span>
+                    </div>
+                    <div className="text-xs">
+                      <div className="text-neutral-700 font-medium">{booking.departureName}</div>
+                      <div className="text-neutral-400">→ {booking.arrivalName}</div>
+                    </div>
+                    <div className="grid grid-cols-2 gap-x-4 gap-y-1.5 text-xs">
+                      <div>
+                        <span className="text-neutral-400">{locale === "en" ? "Ride" : "Prestation"} : </span>
+                        <span className="text-neutral-700 font-medium">{format(new Date(booking.requestedDate), "dd MMM yy, HH:mm", { locale: dateFnsLoc })}</span>
+                      </div>
+                      <div>
+                        <span className="text-neutral-400">{locale === "en" ? "Price" : "Prix"} : </span>
+                        <span className="text-neutral-700 font-medium">{price != null ? `${price.toFixed(0)} €` : "—"}</span>
+                      </div>
+                    </div>
+                    <div className="text-xs">
+                      <span className="text-neutral-400">{t("client")} : </span>
+                      <span className="text-neutral-700 font-medium">{booking.clientName}</span>
+                      {booking.clientPhone && <span className="text-neutral-400 ml-2">{booking.clientPhone}</span>}
+                    </div>
+                    {booking.driverName && (
+                      <div className="text-xs">
+                        <span className="text-neutral-400">{t("driver")} : </span>
+                        <span className="text-blue-600 font-medium">{booking.driverName}</span>
+                      </div>
                     )}
                   </div>
-                  <p className="text-xs text-neutral-400 font-light truncate mt-0.5">
-                    <Icon icon="solar:map-point-linear" className="inline text-neutral-300 mr-1" />
-                    {booking.departureName} → {booking.arrivalName}
-                  </p>
-                </div>
-
-                {/* Right side */}
-                <div className="text-right shrink-0 hidden sm:block">
-                  {booking.driverName && (
-                    <p className="text-xs text-neutral-500 flex items-center gap-1 justify-end">
-                      <Icon icon="solar:user-linear" className="text-neutral-300" />
-                      {booking.driverName}
-                    </p>
-                  )}
-                  <p className="text-xs text-neutral-400">
-                    {format(new Date(booking.createdAt), "dd MMM yyyy", { locale: locale === "en" ? enUS : fr })}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
+                );
+              })}
+            </div>
+          </>
         )}
       </div>
     </div>

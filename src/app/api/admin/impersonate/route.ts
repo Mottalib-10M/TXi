@@ -1,13 +1,11 @@
 import { NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import { encode } from "next-auth/jwt";
-import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
-import { isAdminEmail } from "@/lib/admin";
+import { isAdmin } from "@/lib/admin";
 
 export async function POST(request: Request) {
-  const session = await auth();
-  if (!session?.user?.email || !isAdminEmail(session.user.email)) {
+  if (!(await isAdmin())) {
     return NextResponse.json({ error: "Non autorisé" }, { status: 403 });
   }
 
@@ -25,9 +23,9 @@ export async function POST(request: Request) {
   const cookieName = isSecure ? "__Secure-authjs.session-token" : "authjs.session-token";
 
   const impersonatingFrom = {
-    id: session.user.id,
-    email: session.user.email,
-    name: session.user.name,
+    id: "admin",
+    email: "admin",
+    name: "Admin",
   };
 
   let tokenPayload: Record<string, unknown>;

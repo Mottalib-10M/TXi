@@ -60,6 +60,8 @@ export function AdminBookingsTable({ bookings }: { bookings: Booking[] }) {
   const [filter, setFilter] = useState<string>("PENDING");
   const [search, setSearch] = useState("");
   const [collapsedRegions, setCollapsedRegions] = useState<Set<string>>(new Set());
+  const [visibleCounts, setVisibleCounts] = useState<Record<string, number>>({});
+  const [chartPeriod, setChartPeriod] = useState<"24h" | "7d" | "30d">("24h");
   const [loadingAction, setLoadingAction] = useState<string | null>(null);
   const [confirmModal, setConfirmModal] = useState<{
     title: string;
@@ -104,7 +106,7 @@ export function AdminBookingsTable({ bookings }: { bookings: Booking[] }) {
             ? `${first.regionName} (${first.regionCode})`
             : regionKey,
         regionCode: first.regionCode,
-        bookings: regionBookings,
+        bookings: regionBookings.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()),
         hasPending: pendingCount > 0,
         pendingCount,
         latestCreatedAt: regionBookings[0].createdAt,
@@ -119,6 +121,38 @@ export function AdminBookingsTable({ bookings }: { bookings: Booking[] }) {
 
     return groups;
   }, [filtered]);
+
+  const chartData = useMemo(() => {
+    const now = new Date();
+    const cutoff = new Date(
+      chartPeriod === "24h" ? now.getTime() - 24 * 60 * 60 * 1000
+        : chartPeriod === "7d" ? now.getTime() - 7 * 24 * 60 * 60 * 1000
+        : now.getTime() - 30 * 24 * 60 * 60 * 1000
+    );
+    const periodBookings = bookings.filter((b) => new Date(b.createdAt) >= cutoff);
+    const deptMap = new Map<string, { label: string; withDriver: number; noDriver: number; pending: number; accepted: number; rejected: number; cancelled: number; completed: number }>();
+    for (const b of periodBookings) {
+      const key = b.regionName || "Non localisé";
+      if (!deptMap.has(key)) {
+        deptMap.set(key, {
+          label: b.regionCode ? `${b.regionName} (${b.regionCode})` : key,
+          withDriver: 0, noDriver: 0,
+          pending: 0, accepted: 0, rejected: 0, cancelled: 0, completed: 0,
+        });
+      }
+      const entry = deptMap.get(key)!;
+      if (b.driver) entry.withDriver++;
+      else entry.noDriver++;
+      if (b.status === "PENDING") entry.pending++;
+      else if (b.status === "ACCEPTED") entry.accepted++;
+      else if (b.status === "REJECTED") entry.rejected++;
+      else if (b.status === "CANCELLED") entry.cancelled++;
+      else if (b.status === "COMPLETED") entry.completed++;
+    }
+    const entries = Array.from(deptMap.values()).sort((a, b) => (b.withDriver + b.noDriver) - (a.withDriver + a.noDriver));
+    const maxTotal = Math.max(...entries.map((e) => e.withDriver + e.noDriver), 1);
+    return { entries, maxTotal, total: periodBookings.length };
+  }, [bookings, chartPeriod]);
 
   // Regions without PENDING are collapsed by default
   const isCollapsed = (regionKey: string, hasPending: boolean) => {
@@ -223,6 +257,90 @@ export function AdminBookingsTable({ bookings }: { bookings: Booking[] }) {
 
   return (
     <div>
+      {/* Histogram */}
+      <div className="bg-white border border-neutral-200 rounded-2xl p-4 sm:p-5 mb-6">
+        <div className="flex items-center justify-between mb-4">
+          <h3 className="text-sm font-semibold text-neutral-700">
+            {locale === "en" ? "Bookings by department" : "Réservations par département"}
+            <span className="ml-2 text-neutral-400 font-normal">({chartData.total})</span>
+          </h3>
+          <div className="flex gap-1">
+            {([["24h", "24h"], ["7d", "7j"], ["30d", "30j"]] as const).map(([key, label]) => (
+              <button
+                key={key}
+                onClick={() => setChartPeriod(key)}
+                className={`px-2.5 py-1 rounded-lg text-[11px] font-medium transition-colors ${
+                  chartPeriod === key
+                    ? "bg-neutral-900 text-white"
+                    : "bg-neutral-100 text-neutral-500 hover:bg-neutral-200"
+                }`}
+              >
+                {locale === "en" ? key : label}
+              </button>
+            ))}
+          </div>
+        </div>
+        {chartData.entries.length === 0 ? (
+          <p className="text-xs text-neutral-400 text-center py-4">
+            {locale === "en" ? "No bookings for this period" : "Aucune réservation sur cette période"}
+          </p>
+        ) : (
+          <div className="space-y-2">
+            {chartData.entries.map((entry) => {
+              const total = entry.withDriver + entry.noDriver;
+              const widthPercent = (total / chartData.maxTotal) * 100;
+              const driverPercent = total > 0 ? (entry.withDriver / total) * 100 : 0;
+              return (
+                <div key={entry.label} className="flex items-center gap-3">
+                  <div className="w-[140px] sm:w-[180px] text-[11px] text-neutral-600 truncate shrink-0 text-right">
+                    {entry.label}
+                  </div>
+                  <div className="flex-1 h-6 bg-neutral-50 rounded-lg overflow-hidden relative">
+                    <div
+                      className="h-full rounded-lg flex overflow-hidden"
+                      style={{ width: `${Math.max(widthPercent, 2)}%` }}
+                    >
+                      {entry.withDriver > 0 && (
+                        <div
+                          className="h-full bg-emerald-400"
+                          style={{ width: `${driverPercent}%` }}
+                        />
+                      )}
+                      {entry.noDriver > 0 && (
+                        <div
+                          className="h-full bg-orange-400"
+                          style={{ width: `${100 - driverPercent}%` }}
+                        />
+                      )}
+                    </div>
+                    <span className="absolute right-2 top-1/2 -translate-y-1/2 text-[10px] font-medium text-neutral-500">
+                      {total}
+                    </span>
+                  </div>
+                  <div className="flex gap-1 shrink-0">
+                    {entry.pending > 0 && <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-amber-50 text-amber-700 font-medium">{entry.pending} {locale === "en" ? "pend." : "att."}</span>}
+                    {entry.accepted > 0 && <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-green-50 text-green-700 font-medium">{entry.accepted} {locale === "en" ? "acc." : "acc."}</span>}
+                    {entry.completed > 0 && <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-blue-50 text-blue-700 font-medium">{entry.completed} {locale === "en" ? "done" : "term."}</span>}
+                    {entry.rejected > 0 && <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-red-50 text-red-700 font-medium">{entry.rejected} {locale === "en" ? "rej." : "ref."}</span>}
+                    {entry.cancelled > 0 && <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-neutral-100 text-neutral-500 font-medium">{entry.cancelled} {locale === "en" ? "canc." : "ann."}</span>}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        )}
+        <div className="flex items-center gap-4 mt-3 pt-3 border-t border-neutral-100">
+          <div className="flex items-center gap-1.5">
+            <div className="w-3 h-3 rounded-sm bg-emerald-400" />
+            <span className="text-[11px] text-neutral-500">{locale === "en" ? "With driver" : "Avec chauffeur"}</span>
+          </div>
+          <div className="flex items-center gap-1.5">
+            <div className="w-3 h-3 rounded-sm bg-orange-400" />
+            <span className="text-[11px] text-neutral-500">{locale === "en" ? "No driver" : "Sans chauffeur"}</span>
+          </div>
+        </div>
+      </div>
+
       {/* Filters */}
       <div className="flex gap-2 mb-4 overflow-x-auto pb-2">
         {[
@@ -236,7 +354,7 @@ export function AdminBookingsTable({ bookings }: { bookings: Booking[] }) {
         ].map((f) => (
           <button
             key={f.key}
-            onClick={() => setFilter(f.key)}
+            onClick={() => { setFilter(f.key); setVisibleCounts({}); }}
             className={`px-4 py-2 rounded-full text-xs font-medium transition-colors whitespace-nowrap ${
               filter === f.key
                 ? "bg-neutral-900 text-white"
@@ -275,6 +393,9 @@ export function AdminBookingsTable({ bookings }: { bookings: Booking[] }) {
         <div className="space-y-4">
           {regionGroups.map((group) => {
             const collapsed = isCollapsed(group.regionKey, group.hasPending);
+            const maxVisible = visibleCounts[group.regionKey] || 3;
+            const visibleBookings = group.bookings.slice(0, maxVisible);
+            const hasMore = group.bookings.length > maxVisible;
             return (
               <div
                 key={group.regionKey}
@@ -314,14 +435,14 @@ export function AdminBookingsTable({ bookings }: { bookings: Booking[] }) {
                             <th className="px-2 py-2 font-medium w-[8%]">{locale === "en" ? "Ride" : "Prestation"}</th>
                             <th className="px-2 py-2 font-medium w-[5%]">Dist.</th>
                             <th className="px-2 py-2 font-medium w-[5%]">{locale === "en" ? "Price" : "Prix"}</th>
-                            <th className="px-2 py-2 font-medium w-[12%]">{t("driver")}</th>
+                            {filter !== "NO_DRIVER" && <th className="px-2 py-2 font-medium w-[12%]">{t("driver")}</th>}
                             <th className="px-2 py-2 font-medium w-[12%]">{t("client")}</th>
                             <th className="px-2 py-2 font-medium w-[10%]">{locale === "en" ? "Status" : "Statut"}</th>
-                            <th className="px-2 py-2 font-medium w-[16%]">Actions</th>
+                            {filter !== "NO_DRIVER" && <th className="px-2 py-2 font-medium w-[16%]">Actions</th>}
                           </tr>
                         </thead>
                         <tbody className="divide-y divide-neutral-100">
-                          {group.bookings.map((booking) => {
+                          {visibleBookings.map((booking) => {
                             const price = booking.lockedPrice ?? booking.estimatedPrice;
                             return (
                               <tr key={booking.id} className="hover:bg-neutral-50/50">
@@ -361,28 +482,30 @@ export function AdminBookingsTable({ bookings }: { bookings: Booking[] }) {
                                   {price != null ? `${price.toFixed(0)} €` : "—"}
                                 </td>
                                 {/* Driver */}
-                                <td className="px-2 py-2">
-                                  {booking.driver ? (
-                                    <div>
-                                      <Link
-                                        href={`/taxi/${booking.driver.slug}`}
-                                        target="_blank"
-                                        className="text-blue-600 hover:underline font-medium truncate block"
-                                      >
-                                        {booking.driver.name}
-                                      </Link>
-                                      {booking.driver.phone && (
-                                        <div className="text-neutral-400 truncate">
-                                          <a href={`tel:${booking.driver.phone}`} className="hover:text-neutral-600">
-                                            {booking.driver.phone}
-                                          </a>
-                                        </div>
-                                      )}
-                                    </div>
-                                  ) : (
-                                    <span className="text-neutral-300">—</span>
-                                  )}
-                                </td>
+                                {filter !== "NO_DRIVER" && (
+                                  <td className="px-2 py-2">
+                                    {booking.driver ? (
+                                      <div>
+                                        <Link
+                                          href={`/taxi/${booking.driver.slug}`}
+                                          target="_blank"
+                                          className="text-blue-600 hover:underline font-medium truncate block"
+                                        >
+                                          {booking.driver.name}
+                                        </Link>
+                                        {booking.driver.phone && (
+                                          <div className="text-neutral-400 truncate">
+                                            <a href={`tel:${booking.driver.phone}`} className="hover:text-neutral-600">
+                                              {booking.driver.phone}
+                                            </a>
+                                          </div>
+                                        )}
+                                      </div>
+                                    ) : (
+                                      <span className="text-neutral-300">—</span>
+                                    )}
+                                  </td>
+                                )}
                                 {/* Client */}
                                 <td className="px-2 py-2">
                                   <div className="font-medium text-neutral-700 truncate">{booking.clientName}</div>
@@ -396,17 +519,25 @@ export function AdminBookingsTable({ bookings }: { bookings: Booking[] }) {
                                 </td>
                                 {/* Status + Ref */}
                                 <td className="px-2 py-2">
-                                  <span
-                                    className={`inline-block text-[10px] px-1.5 py-0.5 rounded-full font-medium ${
-                                      statusConfig[booking.status]?.color || ""
-                                    }`}
-                                  >
-                                    {statusConfig[booking.status]?.label || booking.status}
-                                  </span>
-                                  {(booking.status === "REJECTED" || booking.status === "CANCELLED") && (
-                                    <div className="text-[10px] text-neutral-400 mt-0.5">
-                                      {cancelledByLabel(booking.cancelledBy)}
-                                    </div>
+                                  {filter === "NO_DRIVER" && !booking.driver ? (
+                                    <span className="inline-block text-[10px] px-1.5 py-0.5 rounded-full font-medium bg-orange-50 text-orange-700">
+                                      Mail d&apos;excuse envoyé
+                                    </span>
+                                  ) : (
+                                    <>
+                                      <span
+                                        className={`inline-block text-[10px] px-1.5 py-0.5 rounded-full font-medium ${
+                                          statusConfig[booking.status]?.color || ""
+                                        }`}
+                                      >
+                                        {statusConfig[booking.status]?.label || booking.status}
+                                      </span>
+                                      {(booking.status === "REJECTED" || booking.status === "CANCELLED") && (
+                                        <div className="text-[10px] text-neutral-400 mt-0.5">
+                                          {cancelledByLabel(booking.cancelledBy)}
+                                        </div>
+                                      )}
+                                    </>
                                   )}
                                   <div className="text-[10px] text-neutral-400 font-mono mt-0.5">
                                     #{booking.reference}
@@ -420,10 +551,10 @@ export function AdminBookingsTable({ bookings }: { bookings: Booking[] }) {
                                   )}
                                 </td>
                                 {/* Actions */}
-                                <td className="px-2 py-2">
-                                  {booking.status === "PENDING" && (
-                                    <div className="flex gap-1">
-                                      {booking.driver && (
+                                {filter !== "NO_DRIVER" && (
+                                  <td className="px-2 py-2">
+                                    {booking.status === "PENDING" && booking.driver && (
+                                      <div className="flex gap-1">
                                         <button
                                           onClick={() => handleAction(booking.id, "remind-driver")}
                                           disabled={loadingAction === `${booking.id}-remind-driver`}
@@ -431,17 +562,17 @@ export function AdminBookingsTable({ bookings }: { bookings: Booking[] }) {
                                         >
                                           {loadingAction === `${booking.id}-remind-driver` ? "..." : "Relancer"}
                                         </button>
-                                      )}
-                                      <button
-                                        onClick={() => handleAction(booking.id, "apologize-refuse")}
-                                        disabled={loadingAction === `${booking.id}-apologize-refuse`}
-                                        className="px-2 py-1 rounded-lg bg-red-50 text-red-700 hover:bg-red-100 transition-colors text-[10px] font-medium whitespace-nowrap disabled:opacity-50"
-                                      >
-                                        {loadingAction === `${booking.id}-apologize-refuse` ? "..." : "Refuser"}
-                                      </button>
-                                    </div>
-                                  )}
-                                </td>
+                                        <button
+                                          onClick={() => handleAction(booking.id, "apologize-refuse")}
+                                          disabled={loadingAction === `${booking.id}-apologize-refuse`}
+                                          className="px-2 py-1 rounded-lg bg-red-50 text-red-700 hover:bg-red-100 transition-colors text-[10px] font-medium whitespace-nowrap disabled:opacity-50"
+                                        >
+                                          {loadingAction === `${booking.id}-apologize-refuse` ? "..." : "Refuser"}
+                                        </button>
+                                      </div>
+                                    )}
+                                  </td>
+                                )}
                               </tr>
                             );
                           })}
@@ -451,23 +582,31 @@ export function AdminBookingsTable({ bookings }: { bookings: Booking[] }) {
 
                     {/* Mobile cards */}
                     <div className="lg:hidden divide-y divide-neutral-100">
-                      {group.bookings.map((booking) => {
+                      {visibleBookings.map((booking) => {
                         const price = booking.lockedPrice ?? booking.estimatedPrice;
                         return (
                           <div key={booking.id} className="p-4 space-y-2">
                             {/* Header */}
                             <div className="flex flex-wrap items-center gap-2">
-                              <span
-                                className={`text-xs px-2 py-0.5 rounded-full font-medium ${
-                                  statusConfig[booking.status]?.color || ""
-                                }`}
-                              >
-                                {statusConfig[booking.status]?.label || booking.status}
-                              </span>
-                              {(booking.status === "REJECTED" || booking.status === "CANCELLED") && (
-                                <span className="text-[10px] text-neutral-400">
-                                  {cancelledByLabel(booking.cancelledBy)}
+                              {filter === "NO_DRIVER" && !booking.driver ? (
+                                <span className="text-xs px-2 py-0.5 rounded-full font-medium bg-orange-50 text-orange-700">
+                                  Mail d&apos;excuse envoyé
                                 </span>
+                              ) : (
+                                <>
+                                  <span
+                                    className={`text-xs px-2 py-0.5 rounded-full font-medium ${
+                                      statusConfig[booking.status]?.color || ""
+                                    }`}
+                                  >
+                                    {statusConfig[booking.status]?.label || booking.status}
+                                  </span>
+                                  {(booking.status === "REJECTED" || booking.status === "CANCELLED") && (
+                                    <span className="text-[10px] text-neutral-400">
+                                      {cancelledByLabel(booking.cancelledBy)}
+                                    </span>
+                                  )}
+                                </>
                               )}
                               <span className="text-xs text-neutral-400 font-mono">#{booking.reference}</span>
                               {booking.organization && (
@@ -550,17 +689,15 @@ export function AdminBookingsTable({ bookings }: { bookings: Booking[] }) {
                             </div>
 
                             {/* Actions */}
-                            {booking.status === "PENDING" && (
+                            {filter !== "NO_DRIVER" && booking.status === "PENDING" && booking.driver && (
                               <div className="flex gap-2 pt-1">
-                                {booking.driver && (
-                                  <button
-                                    onClick={() => handleAction(booking.id, "remind-driver")}
-                                    disabled={loadingAction === `${booking.id}-remind-driver`}
-                                    className="px-3 py-1.5 rounded-lg bg-amber-50 text-amber-700 hover:bg-amber-100 transition-colors text-xs font-medium disabled:opacity-50"
-                                  >
-                                    {loadingAction === `${booking.id}-remind-driver` ? "..." : "Relancer"}
-                                  </button>
-                                )}
+                                <button
+                                  onClick={() => handleAction(booking.id, "remind-driver")}
+                                  disabled={loadingAction === `${booking.id}-remind-driver`}
+                                  className="px-3 py-1.5 rounded-lg bg-amber-50 text-amber-700 hover:bg-amber-100 transition-colors text-xs font-medium disabled:opacity-50"
+                                >
+                                  {loadingAction === `${booking.id}-remind-driver` ? "..." : "Relancer"}
+                                </button>
                                 <button
                                   onClick={() => handleAction(booking.id, "apologize-refuse")}
                                   disabled={loadingAction === `${booking.id}-apologize-refuse`}
@@ -574,6 +711,18 @@ export function AdminBookingsTable({ bookings }: { bookings: Booking[] }) {
                         );
                       })}
                     </div>
+                    {/* Show more button */}
+                    {hasMore && (
+                      <button
+                        onClick={() => setVisibleCounts((prev) => ({
+                          ...prev,
+                          [group.regionKey]: maxVisible + 10,
+                        }))}
+                        className="w-full py-2.5 text-xs font-medium text-neutral-500 hover:text-neutral-700 hover:bg-neutral-50 transition-colors border-t border-neutral-100"
+                      >
+                        {locale === "en" ? "Show more" : "Afficher plus"} ({group.bookings.length - maxVisible} {locale === "en" ? "remaining" : "restantes"})
+                      </button>
+                    )}
                   </div>
                 )}
               </div>

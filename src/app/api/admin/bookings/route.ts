@@ -1,13 +1,11 @@
 import { NextResponse } from "next/server";
-import { auth } from "@/lib/auth";
-import { isAdminEmail } from "@/lib/admin";
+import { isAdmin } from "@/lib/admin";
 import { prisma } from "@/lib/prisma";
 import { Prisma } from "@prisma/client";
 import { runEscalation } from "@/lib/escalation";
 
 export async function GET(request: Request) {
-  const session = await auth();
-  if (!session?.user?.email || !isAdminEmail(session.user.email)) {
+  if (!(await isAdmin())) {
     return NextResponse.json({ error: "Non autorisé" }, { status: 401 });
   }
 

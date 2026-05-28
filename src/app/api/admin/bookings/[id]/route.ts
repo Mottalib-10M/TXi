@@ -1,6 +1,5 @@
 import { NextResponse } from "next/server";
-import { auth } from "@/lib/auth";
-import { isAdminEmail } from "@/lib/admin";
+import { isAdmin } from "@/lib/admin";
 import { prisma } from "@/lib/prisma";
 import { getRoutingDistance, estimatePrice, estimateDefaultPrice, isValidCoords, geocodeAddress } from "@/lib/geo";
 
@@ -12,8 +11,7 @@ export async function PATCH(
   _request: Request,
   { params }: { params: Promise<{ id: string }> }
 ) {
-  const session = await auth();
-  if (!session?.user?.email || !isAdminEmail(session.user.email)) {
+  if (!(await isAdmin())) {
     return NextResponse.json({ error: "Non autorisé" }, { status: 401 });
   }
 

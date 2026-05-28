@@ -5,8 +5,6 @@ import { sendEmail, buildNoDriverConfirmEmail } from "@/lib/email";
 import { createNotification } from "@/lib/notifications";
 import { generateUniqueReference } from "@/lib/reference";
 import { getRoutingDistance, estimateDefaultPrice, isValidCoords, geocodeAddress } from "@/lib/geo";
-import { format } from "date-fns";
-import { fr } from "date-fns/locale";
 
 const contactRequestSchema = z.object({
   clientName: z.string().min(1),
@@ -115,14 +113,8 @@ export async function POST(req: Request) {
     });
 
     // --- Send confirmation email to client ---
-    const dateFormatted = format(requestedDate, "dd MMMM yyyy 'à' HH:mm", { locale: fr });
     const clientEmailData = buildNoDriverConfirmEmail({
       clientName: data.clientName,
-      departure: data.departure,
-      arrival: data.arrival,
-      date: dateFormatted,
-      reference,
-      price: estimatedPrice,
       locale: "fr",
     });
     await sendEmail({ to: data.clientEmail, ...clientEmailData });

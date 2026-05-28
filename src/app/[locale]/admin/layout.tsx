@@ -1,6 +1,4 @@
-import { redirect } from "next/navigation";
-import { auth } from "@/lib/auth";
-import { isAdminEmail } from "@/lib/admin";
+import { isAdmin } from "@/lib/admin";
 import { AdminSidebar } from "@/components/layout/AdminSidebar";
 
 export default async function AdminLayout({
@@ -8,15 +6,17 @@ export default async function AdminLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const session = await auth();
+  const authenticated = await isAdmin();
 
-  if (!session?.user?.email || !isAdminEmail(session.user.email)) {
-    redirect("/");
+  if (!authenticated) {
+    // Middleware handles redirecting non-login admin pages to /admin/login.
+    // If we reach here without auth, we're on the login page — render bare.
+    return <>{children}</>;
   }
 
   return (
     <div className="min-h-screen bg-neutral-50">
-      <AdminSidebar userName={session.user.name || ""} />
+      <AdminSidebar userName="Admin" />
       <div className="lg:pl-64">
         <main className="p-6 lg:p-8">{children}</main>
       </div>
