@@ -7,11 +7,13 @@ import { format } from "date-fns";
 import { fr, enUS } from "date-fns/locale";
 import { Navbar } from "@/components/layout/Navbar";
 import { CreateAccountPrompt } from "@/components/booking/CreateAccountPrompt";
+import { auth } from "@/lib/auth";
 
 async function ConfirmationContent({ reference }: { reference: string }) {
   const t = await getTranslations("confirmation");
   const tc = await getTranslations("common");
   const locale = await getLocale();
+  const session = await auth();
 
   const booking = reference
     ? await prisma.booking.findUnique({
@@ -117,13 +119,23 @@ async function ConfirmationContent({ reference }: { reference: string }) {
         />
       )}
 
-      <Link
-        href="/"
-        className="inline-flex items-center gap-2 bg-neutral-950 text-white text-sm font-medium px-6 py-3 rounded-full hover:bg-neutral-800 transition-colors btn-lift"
-      >
-        <Icon icon="solar:arrow-left-linear" />
-        {tc("backToHome")}
-      </Link>
+      {session?.user ? (
+        <Link
+          href="/dashboard/reservations"
+          className="inline-flex items-center gap-2 bg-neutral-950 text-white text-sm font-medium px-6 py-3 rounded-full hover:bg-neutral-800 transition-colors btn-lift"
+        >
+          <Icon icon="solar:eye-linear" />
+          {locale === "en" ? "View my booking" : "Voir ma réservation"}
+        </Link>
+      ) : (
+        <Link
+          href="/"
+          className="inline-flex items-center gap-2 bg-neutral-950 text-white text-sm font-medium px-6 py-3 rounded-full hover:bg-neutral-800 transition-colors btn-lift"
+        >
+          <Icon icon="solar:arrow-left-linear" />
+          {tc("backToHome")}
+        </Link>
+      )}
     </div>
   );
 }

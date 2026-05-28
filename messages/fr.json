@@ -309,14 +309,14 @@
     "driverWillContact": "Notre chauffeur vous contactera au plus vite"
   },
   "confirmation": {
-    "title": "Réservation confirmée !",
-    "subtitle": "Votre demande a bien été enregistrée. Vous recevrez un email de confirmation.",
+    "title": "Demande de réservation enregistrée !",
+    "subtitle": "Votre demande a bien été envoyée à notre chauffeur. Vous recevrez un email de confirmation.",
     "pending": "En attente de confirmation",
     "departureLabel": "Départ",
     "arrivalLabel": "Arrivée",
     "dateLabel": "Date",
     "driverLabel": "Chauffeur",
-    "estimatedPrice": "Prix estimé",
+    "estimatedPrice": "Prix pour la course",
     "createAccountTitle": "Finalisez votre inscription et suivez votre réservation",
     "createAccountDesc": "Créez votre mot de passe pour accéder à votre espace personnel : suivi de course, historique et reçus.",
     "choosePassword": "Votre mot de passe",

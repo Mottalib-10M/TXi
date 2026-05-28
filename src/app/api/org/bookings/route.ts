@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
 import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
-import { haversineDistance, getRoutingDistance, estimatePrice } from "@/lib/geo";
+import { haversineDistance, getRoutingDistance, estimatePrice, estimateDefaultPrice, isValidCoords, geocodeAddress } from "@/lib/geo";
 import { generateUniqueReference } from "@/lib/reference";
 import { sendEmail, buildDriverNotificationEmail } from "@/lib/email";
 import { sendSms } from "@/lib/sms";
@@ -38,14 +38,27 @@ export async function POST(request: Request) {
     const reference = await generateUniqueReference();
     const requestedDate = new Date(data.requestedDate);
 
+    // Resolve coordinates — fallback to Google Geocoding if (0,0) or null
+    let depLat = data.departureLat;
+    let depLng = data.departureLng;
+    let arrLat = data.arrivalLat;
+    let arrLng = data.arrivalLng;
+
+    if (!isValidCoords(depLat, depLng)) {
+      const geo = await geocodeAddress(data.departureName);
+      if (geo) { depLat = geo.lat; depLng = geo.lng; }
+    }
+    if (!isValidCoords(arrLat, arrLng)) {
+      const geo = await geocodeAddress(data.arrivalName);
+      if (geo) { arrLat = geo.lat; arrLng = geo.lng; }
+    }
+
     // Calculate distance (real driving distance via OSRM)
-    const routing = await getRoutingDistance(
-      data.departureLat,
-      data.departureLng,
-      data.arrivalLat,
-      data.arrivalLng
-    );
-    const estimatedDistance = routing.distanceKm;
+    let estimatedDistance: number | undefined;
+    if (isValidCoords(depLat, depLng) && isValidCoords(arrLat, arrLng)) {
+      const routing = await getRoutingDistance(depLat, depLng, arrLat, arrLng);
+      estimatedDistance = routing.distanceKm;
+    }
 
     let driverId = data.driverId;
     let estimatedPrice = data.estimatedPrice;
@@ -64,16 +77,16 @@ export async function POST(request: Request) {
         .filter((d) => {
           if (!d.zoneLat || !d.zoneLng) return false;
           const distance = haversineDistance(
-            data.departureLat,
-            data.departureLng,
+            depLat,
+            depLng,
             d.zoneLat,
             d.zoneLng
           );
           return distance <= d.zoneRadius;
         })
         .sort((a, b) => {
-          const distA = haversineDistance(data.departureLat, data.departureLng, a.zoneLat!, a.zoneLng!);
-          const distB = haversineDistance(data.departureLat, data.departureLng, b.zoneLat!, b.zoneLng!);
+          const distA = haversineDistance(depLat, depLng, a.zoneLat!, a.zoneLng!);
+          const distB = haversineDistance(depLat, depLng, b.zoneLat!, b.zoneLng!);
           return distA - distB;
         });
 
@@ -108,6 +121,11 @@ export async function POST(request: Request) {
       }
     }
 
+    // Fallback: if we have distance but no price (no driver), use national regulated tariffs
+    if (estimatedDistance && !estimatedPrice) {
+      estimatedPrice = estimateDefaultPrice(estimatedDistance);
+    }
+
     // Lock the price
     const lockedPrice = estimatedPrice || null;
 
@@ -124,11 +142,11 @@ export async function POST(request: Request) {
         clientEmail: org?.email || session.user.email || "",
         clientPhone: org?.phone || "",
         departureName: data.departureName,
-        departureLat: data.departureLat,
-        departureLng: data.departureLng,
+        departureLat: depLat,
+        departureLng: depLng,
         arrivalName: data.arrivalName,
-        arrivalLat: data.arrivalLat,
-        arrivalLng: data.arrivalLng,
+        arrivalLat: arrLat,
+        arrivalLng: arrLng,
         requestedDate,
         passengerCount: data.passengerCount,
         estimatedDistance,

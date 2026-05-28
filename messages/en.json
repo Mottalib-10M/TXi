@@ -309,14 +309,14 @@
     "driverWillContact": "Our driver will contact you as soon as possible"
   },
   "confirmation": {
-    "title": "Booking confirmed!",
-    "subtitle": "Your request has been recorded. You will receive a confirmation email.",
+    "title": "Booking request registered!",
+    "subtitle": "Your request has been sent to our driver. You will receive a confirmation email.",
     "pending": "Awaiting confirmation",
     "departureLabel": "Pickup",
     "arrivalLabel": "Drop-off",
     "dateLabel": "Date",
     "driverLabel": "Driver",
-    "estimatedPrice": "Estimated price",
+    "estimatedPrice": "Ride fare",
     "createAccountTitle": "Finalize your registration and track your booking",
     "createAccountDesc": "Create your password to access your personal space: ride tracking, history and receipts.",
     "choosePassword": "Your password",

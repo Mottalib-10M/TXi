@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { prisma } from "@/lib/prisma";
-import { haversineDistance, getRoutingDistance, estimatePrice } from "@/lib/geo";
+import { haversineDistance, getRoutingDistance, estimatePrice, estimateDefaultPrice, isValidCoords, geocodeAddress } from "@/lib/geo";
 import { generateUniqueReference } from "@/lib/reference";
 import {
   sendEmail,
@@ -41,17 +41,27 @@ export async function POST(request: Request) {
     const reference = await generateUniqueReference();
     const requestedDate = new Date(data.requestedDate);
 
+    // Resolve coordinates — fallback to Google Geocoding if (0,0) or null
+    let depLat = data.departureLat;
+    let depLng = data.departureLng;
+    let arrLat = data.arrivalLat;
+    let arrLng = data.arrivalLng;
+
+    if (!isValidCoords(depLat, depLng)) {
+      const geo = await geocodeAddress(data.departureName);
+      if (geo) { depLat = geo.lat; depLng = geo.lng; }
+    }
+    if (!isValidCoords(arrLat, arrLng)) {
+      const geo = await geocodeAddress(data.arrivalName);
+      if (geo) { arrLat = geo.lat; arrLng = geo.lng; }
+    }
+
     // Calculate distance between departure and arrival
     let estimatedDistance: number | undefined;
     let estimatedPrice = data.estimatedPrice;
 
-    if (data.departureLat != null && data.departureLng != null && data.arrivalLat != null && data.arrivalLng != null) {
-      const routing = await getRoutingDistance(
-        data.departureLat,
-        data.departureLng,
-        data.arrivalLat,
-        data.arrivalLng
-      );
+    if (isValidCoords(depLat, depLng) && isValidCoords(arrLat, arrLng)) {
+      const routing = await getRoutingDistance(depLat, depLng, arrLat, arrLng);
       estimatedDistance = routing.distanceKm;
     }
 
@@ -86,8 +96,8 @@ export async function POST(request: Request) {
         .filter((d) => {
           if (!d.zoneLat || !d.zoneLng) return false;
           const distance = haversineDistance(
-            data.departureLat,
-            data.departureLng,
+            depLat,
+            depLng,
             d.zoneLat,
             d.zoneLng
           );
@@ -95,14 +105,14 @@ export async function POST(request: Request) {
         })
         .sort((a, b) => {
           const distA = haversineDistance(
-            data.departureLat,
-            data.departureLng,
+            depLat,
+            depLng,
             a.zoneLat!,
             a.zoneLng!
           );
           const distB = haversineDistance(
-            data.departureLat,
-            data.departureLng,
+            depLat,
+            depLng,
             b.zoneLat!,
             b.zoneLng!
           );
@@ -130,11 +140,8 @@ export async function POST(request: Request) {
       const driver = await prisma.driver.findUnique({ where: { id: driverId } });
       if (driver) {
         // Recalculate distance if needed
-        if (!estimatedDistance && data.departureLat != null && data.arrivalLat != null) {
-          const routing = await getRoutingDistance(
-            data.departureLat, data.departureLng,
-            data.arrivalLat, data.arrivalLng
-          );
+        if (!estimatedDistance && isValidCoords(depLat, depLng) && isValidCoords(arrLat, arrLng)) {
+          const routing = await getRoutingDistance(depLat, depLng, arrLat, arrLng);
           estimatedDistance = routing.distanceKm;
         }
         if (estimatedDistance) {
@@ -150,6 +157,11 @@ export async function POST(request: Request) {
       }
     }
 
+    // Fallback: if we have distance but no price (no driver), use national regulated tariffs
+    if (estimatedDistance && !estimatedPrice) {
+      estimatedPrice = estimateDefaultPrice(estimatedDistance);
+    }
+
     // Create booking (lock the price at creation time)
     const booking = await prisma.booking.create({
       data: {
@@ -159,11 +171,11 @@ export async function POST(request: Request) {
         clientPhone: data.clientPhone || "",
         clientComments: data.clientComments,
         departureName: data.departureName,
-        departureLat: data.departureLat,
-        departureLng: data.departureLng,
+        departureLat: depLat,
+        departureLng: depLng,
         arrivalName: data.arrivalName,
-        arrivalLat: data.arrivalLat,
-        arrivalLng: data.arrivalLng,
+        arrivalLat: arrLat,
+        arrivalLng: arrLng,
         requestedDate,
         passengerCount: data.passengerCount,
         estimatedDistance,

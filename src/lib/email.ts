@@ -53,8 +53,8 @@ const t = {
     resetBody: "Vous avez demandé la réinitialisation de votre mot de passe. Cliquez sur le bouton ci-dessous pour choisir un nouveau mot de passe :",
     resetButton: "Réinitialiser mon mot de passe",
     resetExpires: "Ce lien expire dans 1 heure. Si vous n'avez pas demandé cette réinitialisation, ignorez cet email.",
-    newBookingSubject: (ref: string) => `Nouvelle réservation #${ref}`,
-    newBookingTitle: "Nouvelle demande de réservation",
+    newBookingSubject: (_ref: string, price?: string, departure?: string) => `Nouvelle réservation${price ? ` ${price}` : ""}${departure ? ` à ${departure}` : ""}`,
+    newBookingTitle: "Nouvelle demande de réservation, merci de répondre rapidement !",
     newBookingBody: "Vous avez reçu une nouvelle demande de réservation :",
     newBookingAction: "Connectez-vous à votre tableau de bord pour accepter ou refuser cette demande.",
     newBookingNote: "Retrouvez cette course dans l'onglet <strong>Réservations</strong> de votre tableau de bord.",
@@ -67,9 +67,9 @@ const t = {
     driver: "Chauffeur",
     name: "Nom",
     phone: "Téléphone",
-    confirmSubject: (ref: string) => `Confirmation de réservation #${ref}`,
-    confirmTitle: "Réservation confirmée",
-    confirmBody: "Votre demande de réservation a bien été enregistrée.",
+    confirmSubject: (_ref: string, arrival?: string) => `Demande de réservation enregistrée${arrival ? ` pour ${arrival}` : ""}`,
+    confirmTitle: "Demande envoyée à notre chauffeur",
+    confirmBody: "Votre demande de réservation a bien été envoyée. Votre chauffeur reviendra vers vous rapidement.",
     confirmContact: "Votre chauffeur vous contactera sous peu pour confirmer la course.",
     confirmYourDriver: "Votre chauffeur",
     confirmDriverMsg: "N'hésitez pas à le contacter pour toute question concernant votre trajet.",
@@ -89,7 +89,7 @@ const t = {
     addToCalendar: "Ajouter à mon calendrier",
     viewBooking: "Voir la réservation",
     clientDetails: "Coordonnées du client",
-    estimatedPrice: "Prix estimé",
+    estimatedPrice: "Prix pour la course",
     source: "Origine",
     sourceLanding: "Page d'accueil",
     sourceProfile: "Fiche chauffeur",
@@ -160,8 +160,8 @@ const t = {
     resetBody: "You requested a password reset. Click the button below to choose a new password:",
     resetButton: "Reset my password",
     resetExpires: "This link expires in 1 hour. If you didn't request this reset, please ignore this email.",
-    newBookingSubject: (ref: string) => `New booking #${ref}`,
-    newBookingTitle: "New booking request",
+    newBookingSubject: (_ref: string, price?: string, departure?: string) => `New booking${price ? ` ${price}` : ""}${departure ? ` in ${departure}` : ""}`,
+    newBookingTitle: "New booking request — please respond quickly!",
     newBookingBody: "You have received a new booking request:",
     newBookingAction: "Log in to your dashboard to accept or decline this request.",
     newBookingNote: "You will find this booking under <strong>Reservations</strong> in your dashboard.",
@@ -174,9 +174,9 @@ const t = {
     driver: "Driver",
     name: "Name",
     phone: "Phone",
-    confirmSubject: (ref: string) => `Booking confirmation #${ref}`,
-    confirmTitle: "Booking confirmed",
-    confirmBody: "Your booking request has been recorded.",
+    confirmSubject: (_ref: string, arrival?: string) => `Booking request registered${arrival ? ` for ${arrival}` : ""}`,
+    confirmTitle: "Request sent to our driver",
+    confirmBody: "Your booking request has been sent. Your driver will get back to you shortly.",
     confirmContact: "Your driver will contact you shortly to confirm the ride.",
     confirmYourDriver: "Your driver",
     confirmDriverMsg: "Feel free to contact them for any questions about your ride.",
@@ -196,7 +196,7 @@ const t = {
     addToCalendar: "Add to my calendar",
     viewBooking: "View booking",
     clientDetails: "Client details",
-    estimatedPrice: "Estimated price",
+    estimatedPrice: "Ride fare",
     source: "Source",
     sourceLanding: "Homepage",
     sourceProfile: "Driver profile",
@@ -322,7 +322,7 @@ export function buildDriverNotificationEmail(data: {
   const baseUrl = process.env.NEXTAUTH_URL || "https://taxineo.fr";
   const dashboardUrl = `${baseUrl}/dashboard/reservations?id=${data.bookingId}`;
   return {
-    subject: l.newBookingSubject(data.reference),
+    subject: l.newBookingSubject(data.reference, data.price ? formatEmailPrice(data.price, locale) : undefined, data.departure.replace(/, France$/i, "")),
     html: `
       <div style="font-family: Inter, sans-serif; max-width: 600px; margin: 0 auto;">
         <h2 style="color: #171717;">${l.newBookingTitle}</h2>
@@ -385,7 +385,7 @@ export function buildClientConfirmationEmail(data: {
     : `<p>${l.confirmContact}</p>`;
 
   return {
-    subject: l.confirmSubject(data.reference),
+    subject: l.confirmSubject(data.reference, data.arrival.replace(/, France$/i, "")),
     html: `
       <div style="font-family: Inter, sans-serif; max-width: 600px; margin: 0 auto;">
         <h2 style="color: #171717;">${l.confirmTitle}</h2>

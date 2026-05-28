@@ -1,4 +1,42 @@
 /**
+ * Check if coordinates are valid (not null, undefined, or (0,0))
+ */
+export function isValidCoords(
+  lat: number | null | undefined,
+  lng: number | null | undefined
+): boolean {
+  if (lat == null || lng == null) return false;
+  if (lat === 0 && lng === 0) return false;
+  return true;
+}
+
+/**
+ * Geocode an address using Google Geocoding API (restricted to France).
+ * Returns { lat, lng } or null on failure.
+ */
+export async function geocodeAddress(
+  address: string
+): Promise<{ lat: number; lng: number } | null> {
+  const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
+  if (!apiKey) {
+    console.error("geocodeAddress: NEXT_PUBLIC_GOOGLE_MAPS_API_KEY not set");
+    return null;
+  }
+  try {
+    const url = `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(address)}&key=${apiKey}`;
+    const res = await fetch(url, { signal: AbortSignal.timeout(5000) });
+    if (!res.ok) return null;
+    const json = await res.json();
+    const loc = json.results?.[0]?.geometry?.location;
+    if (!loc) return null;
+    return { lat: loc.lat, lng: loc.lng };
+  } catch (e) {
+    console.error("geocodeAddress error:", e);
+    return null;
+  }
+}
+
+/**
  * Calculate distance between two coordinates using the Haversine formula
  * @returns distance in kilometers
  */
@@ -123,4 +161,17 @@ export function estimatePrice(
 
   const calculated = baseFare + distanceKm * pricePerKm;
   return Math.max(calculated, minimumFare);
+}
+
+/**
+ * Estimate price using national regulated tariffs (plafonds 2026).
+ * Used as fallback when no driver is assigned.
+ * Formula: prise en charge + distance × tarif/km, minimum 8 €.
+ */
+export function estimateDefaultPrice(distanceKm: number): number {
+  const PRISE_EN_CHARGE = 4.48;
+  const TARIF_KM = 1.30;
+  const MINIMUM = 8.00;
+  const calculated = PRISE_EN_CHARGE + distanceKm * TARIF_KM;
+  return Math.max(calculated, MINIMUM);
 }
