@@ -101,6 +101,56 @@ export default async function DashboardPage() {
     return Math.max(0, Math.round((new Date(date).getTime() - now.getTime()) / (1000 * 60 * 60)));
   }
 
+  function normalizePhone(phone: string): string {
+    let cleaned = phone.replace(/[\s\-().+]/g, "");
+    if (cleaned.startsWith("0") && cleaned.length === 10) {
+      cleaned = "33" + cleaned.slice(1);
+    }
+    return cleaned;
+  }
+
+  function buildWhatsAppUrl(booking: typeof activeBookings[number]): string {
+    const clientLang = booking.clientLocale || "fr";
+    const dateStr = new Date(booking.requestedDate).toLocaleDateString(
+      clientLang === "en" ? "en-US" : "fr-FR",
+      { weekday: "long", day: "numeric", month: "long", year: "numeric", hour: "2-digit", minute: "2-digit" }
+    );
+    const price = booking.lockedPrice ? `${booking.lockedPrice.toFixed(0)} €` : "";
+    const driverFullName = `${driver!.firstName} ${driver!.lastName}`;
+
+    const message = clientLang === "en"
+      ? [
+          `Hello ${booking.clientName},`,
+          ``,
+          `I'm ${driverFullName}, your TaxiNeo driver.`,
+          `I've just confirmed your booking:`,
+          ``,
+          `📍 ${booking.departureName} → ${booking.arrivalName}`,
+          `📅 ${dateStr}`,
+          price ? `💰 ${price}` : "",
+          ``,
+          `Don't hesitate to contact me here for any questions.`,
+          ``,
+          `See you soon!`,
+        ].filter(Boolean).join("\n")
+      : [
+          `Bonjour ${booking.clientName},`,
+          ``,
+          `Je suis ${driverFullName}, votre chauffeur TaxiNeo.`,
+          `Je viens de confirmer votre réservation :`,
+          ``,
+          `📍 ${booking.departureName} → ${booking.arrivalName}`,
+          `📅 ${dateStr}`,
+          price ? `💰 ${price}` : "",
+          ``,
+          `N'hésitez pas à me contacter ici pour toutes questions.`,
+          ``,
+          `À bientôt !`,
+        ].filter(Boolean).join("\n");
+
+    return `https://wa.me/${normalizePhone(booking.clientPhone)}?text=${encodeURIComponent(message)}`;
+  }
+
   return (
     <div className="min-w-0">
       <div className="flex flex-wrap items-center justify-between gap-2 mb-6">
@@ -222,7 +272,19 @@ export default async function DashboardPage() {
                     <span className="flex items-center gap-2 min-w-0">
                       <span className="text-sm text-neutral-500">{booking.clientName}</span>
                       {booking.clientPhone && (
-                        <PhoneLink phone={booking.clientPhone} label={td("callClient")} className="text-amber-600 hover:text-amber-800" />
+                        <>
+                          <PhoneLink phone={booking.clientPhone} label={td("callClient")} className="text-amber-600 hover:text-amber-800" />
+                          <a
+                            href={buildWhatsAppUrl(booking)}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={(e) => e.stopPropagation()}
+                            className="inline-flex items-center gap-1 text-xs text-green-600 hover:text-green-800 font-medium transition-colors"
+                          >
+                            <Icon icon="mdi:whatsapp" className="text-base" />
+                            WhatsApp
+                          </a>
+                        </>
                       )}
                     </span>
                     <Icon
@@ -294,7 +356,19 @@ export default async function DashboardPage() {
                     <span className="flex items-center gap-2 min-w-0">
                       <span className="text-sm text-neutral-500">{booking.clientName}</span>
                       {booking.clientPhone && (
-                        <PhoneLink phone={booking.clientPhone} label={td("callClient")} className="text-green-600 hover:text-green-800" />
+                        <>
+                          <PhoneLink phone={booking.clientPhone} label={td("callClient")} className="text-green-600 hover:text-green-800" />
+                          <a
+                            href={buildWhatsAppUrl(booking)}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={(e) => e.stopPropagation()}
+                            className="inline-flex items-center gap-1 text-xs text-green-600 hover:text-green-800 font-medium transition-colors"
+                          >
+                            <Icon icon="mdi:whatsapp" className="text-base" />
+                            WhatsApp
+                          </a>
+                        </>
                       )}
                     </span>
                     <Icon

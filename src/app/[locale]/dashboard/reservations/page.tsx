@@ -55,7 +55,7 @@ export default async function ReservationsPage() {
           })()}
         />
       </div>
-      <ReservationsTable bookings={serialized} />
+      <ReservationsTable bookings={serialized} driverName={`${driver.firstName} ${driver.lastName}`} />
     </div>
   );
 }

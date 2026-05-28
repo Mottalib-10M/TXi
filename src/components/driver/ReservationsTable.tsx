@@ -23,10 +23,23 @@ interface Booking {
   status: string;
   source: string;
   cancelledBy: string | null;
+  clientLocale?: string;
   createdAt: string;
 }
 
-export function ReservationsTable({ bookings }: { bookings: Booking[] }) {
+function normalizePhone(phone: string): string {
+  let cleaned = phone.replace(/[\s\-().+]/g, "");
+  if (cleaned.startsWith("0") && cleaned.length === 10) {
+    cleaned = "33" + cleaned.slice(1);
+  }
+  return cleaned;
+}
+
+function buildWhatsAppUrl(phone: string, message: string): string {
+  return `https://wa.me/${normalizePhone(phone)}?text=${encodeURIComponent(message)}`;
+}
+
+export function ReservationsTable({ bookings, driverName }: { bookings: Booking[]; driverName: string }) {
   const t = useTranslations("dashboard");
   const tc = useTranslations("common");
   const locale = useLocale();
@@ -89,6 +102,45 @@ export function ReservationsTable({ bookings }: { bookings: Booking[] }) {
     }
   }
 
+  function getWhatsAppMessage(booking: Booking): string {
+    const clientLang = booking.clientLocale || "fr";
+    const dateFnsLoc = clientLang === "en" ? enUS : fr;
+    const dateStr = format(new Date(booking.requestedDate), clientLang === "en" ? "EEEE dd MMMM yyyy 'at' HH:mm" : "EEEE dd MMMM yyyy 'à' HH:mm", { locale: dateFnsLoc });
+    const price = booking.estimatedPrice ? `${booking.estimatedPrice.toFixed(0)} €` : "";
+
+    if (clientLang === "en") {
+      return [
+        `Hello ${booking.clientName},`,
+        ``,
+        `I'm ${driverName}, your TaxiNeo driver.`,
+        `I've just confirmed your booking:`,
+        ``,
+        `📍 ${booking.departureName} → ${booking.arrivalName}`,
+        `📅 ${dateStr}`,
+        price ? `💰 ${price}` : "",
+        ``,
+        `Don't hesitate to contact me here for any questions.`,
+        ``,
+        `See you soon!`,
+      ].filter(Boolean).join("\n");
+    }
+
+    return [
+      `Bonjour ${booking.clientName},`,
+      ``,
+      `Je suis ${driverName}, votre chauffeur TaxiNeo.`,
+      `Je viens de confirmer votre réservation :`,
+      ``,
+      `📍 ${booking.departureName} → ${booking.arrivalName}`,
+      `📅 ${dateStr}`,
+      price ? `💰 ${price}` : "",
+      ``,
+      `N'hésitez pas à me contacter ici pour toutes questions.`,
+      ``,
+      `À bientôt !`,
+    ].filter(Boolean).join("\n");
+  }
+
   return (
     <div>
       {/* Filters */}
@@ -149,15 +201,28 @@ export function ReservationsTable({ bookings }: { bookings: Booking[] }) {
               <div className="flex flex-wrap items-center gap-2 mb-2">
                 <p className="text-sm font-semibold">{booking.clientName}</p>
                 {booking.clientPhone && (
-                  <a
-                    href={`tel:${booking.clientPhone}`}
-                    onClick={(e) => e.stopPropagation()}
-                    className="inline-flex items-center gap-1 text-xs text-neutral-500 hover:text-neutral-900 font-medium transition-colors"
-                    title={t("callClient")}
-                  >
-                    <Icon icon="solar:phone-bold" className="text-sm" />
-                    {booking.clientPhone}
-                  </a>
+                  <>
+                    <a
+                      href={`tel:${booking.clientPhone}`}
+                      onClick={(e) => e.stopPropagation()}
+                      className="inline-flex items-center gap-1 text-xs text-neutral-500 hover:text-neutral-900 font-medium transition-colors"
+                      title={t("callClient")}
+                    >
+                      <Icon icon="solar:phone-bold" className="text-sm" />
+                      {booking.clientPhone}
+                    </a>
+                    <a
+                      href={buildWhatsAppUrl(booking.clientPhone, getWhatsAppMessage(booking))}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
+                      className="inline-flex items-center gap-1 text-xs text-green-600 hover:text-green-800 font-medium transition-colors"
+                      title="WhatsApp"
+                    >
+                      <Icon icon="mdi:whatsapp" className="text-sm" />
+                      WhatsApp
+                    </a>
+                  </>
                 )}
                 <span
                   className={`text-xs px-2.5 py-0.5 rounded-full font-medium ${

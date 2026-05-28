@@ -187,6 +187,7 @@ export function BookingForm() {
             ? new Date(scheduledDate).toISOString()
             : undefined,
           passengers,
+          locale,
         }),
       });
 

@@ -166,6 +166,9 @@ model Booking {
   organization   Organization? @relation(fields: [organizationId], references: [id])
   organizationId String?
 
+  // Langue du client lors de la réservation
+  clientLocale String @default("fr")
+
   // Nom du bénéficiaire (patient, client hôtel, salarié)
   beneficiaryName String?
 

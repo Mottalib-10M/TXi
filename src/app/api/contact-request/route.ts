@@ -18,6 +18,7 @@ const contactRequestSchema = z.object({
   arrivalLng: z.number().optional().default(0),
   scheduledDate: z.string().optional(),
   passengers: z.number().int().min(1).max(8),
+  locale: z.enum(["fr", "en"]).optional().default("fr"),
 });
 
 export async function POST(req: Request) {
@@ -85,6 +86,7 @@ export async function POST(req: Request) {
         lockedPrice: estimatedPrice || null,
         driverId: null,
         source: "LANDING",
+        clientLocale: data.locale || "fr",
       },
     });
 

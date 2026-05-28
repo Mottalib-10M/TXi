@@ -156,6 +156,7 @@ export async function POST(request: Request) {
         organizationId: session.user.id,
         beneficiaryName: data.beneficiaryName,
         source: "ORGANIZATION",
+        clientLocale: "fr",
       },
       include: { driver: true },
     });

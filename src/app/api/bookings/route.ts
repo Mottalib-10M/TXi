@@ -183,6 +183,7 @@ export async function POST(request: Request) {
         lockedPrice: estimatedPrice || null,
         driverId,
         source: data.source,
+        clientLocale: data.locale || "fr",
       },
       include: { driver: true },
     });
