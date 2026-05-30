@@ -104,7 +104,9 @@ export async function POST(req: Request) {
             <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">Arrivée</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.arrival}</td></tr>
             <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">Date souhaitée</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${dateLabel}</td></tr>
             <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">Référence</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">#${reference}</td></tr>
-            <tr><td style="padding: 8px; color: #737373;">Passagers</td><td style="padding: 8px; font-weight: 500;">${data.passengers}</td></tr>
+            <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">Passagers</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.passengers}</td></tr>
+            <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">Distance estimée</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${estimatedDistance ? `${estimatedDistance.toFixed(1)} km` : "—"}</td></tr>
+            <tr><td style="padding: 8px; color: #737373;">Prix estimé</td><td style="padding: 8px; font-weight: 500; color: #059669;">${estimatedPrice ? `${estimatedPrice.toFixed(2).replace(".", ",")} €` : "—"}</td></tr>
           </table>
           <p style="color: #a3a3a3; font-size: 12px;">— TaxiNeo (demande automatique)</p>
         </div>

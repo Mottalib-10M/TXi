@@ -181,6 +181,7 @@ async function notifyAdmin(booking: {
   arrivalName: string;
   requestedDate: Date;
   lockedPrice: number | null;
+  estimatedPrice: number | null;
   driverId: string | null;
   invitedDriverIds: string[];
 }) {
@@ -215,7 +216,7 @@ async function notifyAdmin(booking: {
         <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">Départ</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${booking.departureName}</td></tr>
         <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">Arrivée</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${booking.arrivalName}</td></tr>
         <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">Date</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${dateFormatted}</td></tr>
-        <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">Prix</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${booking.lockedPrice ? `${booking.lockedPrice.toFixed(2).replace(".", ",")} €` : "—"}</td></tr>
+        <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">Prix</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500; color: #059669;">${(booking.lockedPrice || booking.estimatedPrice) ? `${(booking.lockedPrice || booking.estimatedPrice)!.toFixed(2).replace(".", ",")} €` : "—"}</td></tr>
         <tr><td style="padding: 8px; color: #737373;">Référence</td><td style="padding: 8px; font-weight: 500;">#${booking.reference}</td></tr>
       </table>
       <h3 style="color: #171717; font-size: 15px;">Chauffeurs contactés</h3>
