@@ -11,6 +11,12 @@ export default async function DashboardPage() {
   const session = await auth();
   if (!session?.user?.id) return null;
 
+  // Track dashboard visit as activity
+  prisma.driver.update({
+    where: { id: session.user.id },
+    data: { lastLoginAt: new Date() },
+  }).catch(() => {});
+
   // Auto-cancel expired PENDING bookings ONLY if fully escalated (phase 2 = admin already notified)
   // and more than 48h past their requested date, to avoid cancelling recent bookings
   const twoDaysAgo = new Date(Date.now() - 48 * 60 * 60 * 1000);

@@ -3,6 +3,17 @@ import { AdminOverview } from "@/components/admin/AdminOverview";
 import { getDepartmentCode, getDepartmentFromCoords } from "@/lib/department-lookup";
 import { DEPARTMENT_NAMES } from "@/data/departmental-tariffs";
 
+function extractCityFromAddress(address: string): string | null {
+  if (!address) return null;
+  // Match "postal_code City" pattern: "63000 Clermont-Ferrand" or "31700 Blagnac"
+  const match = address.match(/\b\d{5}\s+([^,]+)/);
+  if (match) return match[1].trim();
+  // Fallback: second-to-last comma-separated part (before "France")
+  const parts = address.split(",").map((s) => s.trim());
+  if (parts.length >= 2) return parts[parts.length - 2];
+  return null;
+}
+
 export const dynamic = "force-dynamic";
 
 export default async function AdminOverviewPage() {
@@ -69,13 +80,13 @@ export default async function AdminOverviewPage() {
       prisma.driver.findMany({
         where: { lastLoginAt: { not: null } },
         orderBy: { lastLoginAt: "desc" },
-        take: 5,
+        take: 8,
         select: { id: true, firstName: true, lastName: true, lastLoginAt: true },
       }),
       prisma.organization.findMany({
         where: { lastLoginAt: { not: null } },
         orderBy: { lastLoginAt: "desc" },
-        take: 5,
+        take: 8,
         select: { id: true, name: true, lastLoginAt: true },
       }),
     ]);
@@ -117,6 +128,7 @@ export default async function AdminOverviewPage() {
           status: b.status,
           regionCode,
           regionName: regionCode ? (DEPARTMENT_NAMES[regionCode] || "Inconnu") : null,
+          cityName: extractCityFromAddress(b.departureName),
           createdAt: b.createdAt.toISOString(),
           price: b.lockedPrice ? Number(b.lockedPrice) : (b.estimatedPrice ? Number(b.estimatedPrice) : 0),
         };
@@ -161,7 +173,7 @@ export default async function AdminOverviewPage() {
           name: o.name,
           at: o.lastLoginAt!.toISOString(),
         })),
-      ].sort((a, b) => new Date(b.at).getTime() - new Date(a.at).getTime()).slice(0, 8),
+      ].sort((a, b) => new Date(b.at).getTime() - new Date(a.at).getTime()),
     };
 
     return <AdminOverview data={data} />;

@@ -9,6 +9,12 @@ export default async function ReservationsPage() {
   const session = await auth();
   if (!session?.user?.id) redirect("/connexion");
 
+  // Track dashboard visit as activity
+  prisma.driver.update({
+    where: { id: session.user.id },
+    data: { lastLoginAt: new Date() },
+  }).catch(() => {});
+
   const driver = await prisma.driver.findUnique({
     where: { id: session.user.id },
     select: { slug: true, firstName: true, lastName: true, companyName: true, vehicleBrand: true, vehicleModel: true, vehicles: true },

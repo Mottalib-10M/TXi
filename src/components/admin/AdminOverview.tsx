@@ -22,6 +22,7 @@ interface OverviewData {
     status: string;
     regionCode: string | null;
     regionName: string | null;
+    cityName: string | null;
     createdAt: string;
     price: number;
   }[];
@@ -74,6 +75,7 @@ export function AdminOverview({ data }: { data: OverviewData }) {
   };
 
   const [chartPeriod, setChartPeriod] = useState<"24h" | "7d" | "30d">("24h");
+  const [chartGroupBy, setChartGroupBy] = useState<"city" | "department">("city");
 
   const chartData = useMemo(() => {
     const now = new Date();
@@ -83,17 +85,21 @@ export function AdminOverview({ data }: { data: OverviewData }) {
         : now.getTime() - 30 * 24 * 60 * 60 * 1000
     );
     const periodBookings = data.chartBookings.filter((b) => new Date(b.createdAt) >= cutoff);
-    const deptMap = new Map<string, { label: string; withDriver: number; noDriver: number; pending: number; accepted: number; rejected: number; cancelled: number; completed: number }>();
+    const groupMap = new Map<string, { label: string; withDriver: number; noDriver: number; pending: number; accepted: number; rejected: number; cancelled: number; completed: number }>();
     for (const b of periodBookings) {
-      const key = b.regionName || "Non localisé";
-      if (!deptMap.has(key)) {
-        deptMap.set(key, {
-          label: b.regionCode ? `${b.regionName} (${b.regionCode})` : key,
+      const key = chartGroupBy === "city"
+        ? (b.cityName || "Non localisé")
+        : (b.regionName || "Non localisé");
+      if (!groupMap.has(key)) {
+        groupMap.set(key, {
+          label: chartGroupBy === "city"
+            ? key
+            : (b.regionCode ? `${b.regionName} (${b.regionCode})` : key),
           withDriver: 0, noDriver: 0,
           pending: 0, accepted: 0, rejected: 0, cancelled: 0, completed: 0,
         });
       }
-      const entry = deptMap.get(key)!;
+      const entry = groupMap.get(key)!;
       if (b.hasDriver) entry.withDriver++; else entry.noDriver++;
       if (b.status === "PENDING") entry.pending++;
       else if (b.status === "ACCEPTED") entry.accepted++;
@@ -101,10 +107,10 @@ export function AdminOverview({ data }: { data: OverviewData }) {
       else if (b.status === "CANCELLED") entry.cancelled++;
       else if (b.status === "COMPLETED") entry.completed++;
     }
-    const entries = Array.from(deptMap.values()).sort((a, b) => (b.withDriver + b.noDriver) - (a.withDriver + a.noDriver));
+    const entries = Array.from(groupMap.values()).sort((a, b) => (b.withDriver + b.noDriver) - (a.withDriver + a.noDriver));
     const maxTotal = Math.max(...entries.map((e) => e.withDriver + e.noDriver), 1);
     return { entries, maxTotal, total: periodBookings.length, periodBookings };
-  }, [data.chartBookings, chartPeriod]);
+  }, [data.chartBookings, chartPeriod, chartGroupBy]);
 
   const periodKpis = useMemo(() => {
     const pb = chartData.periodBookings;
@@ -203,13 +209,37 @@ export function AdminOverview({ data }: { data: OverviewData }) {
         </div>
       </div>
 
-      {/* Histogram by department */}
+      {/* Histogram by city/department */}
       <div className="bg-white border border-neutral-200 rounded-2xl p-4 sm:p-5 mb-8">
-        <div className="mb-4">
+        <div className="flex items-center justify-between mb-4">
           <h3 className="text-sm font-semibold text-neutral-700">
-            {locale === "en" ? "Bookings by department" : "Réservations par département"}
+            {chartGroupBy === "city"
+              ? (locale === "en" ? "Bookings by city" : "Réservations par ville")
+              : (locale === "en" ? "Bookings by department" : "Réservations par département")}
             <span className="ml-2 text-neutral-400 font-normal">({chartData.total})</span>
           </h3>
+          <div className="flex gap-1 bg-neutral-100 p-0.5 rounded-lg">
+            <button
+              onClick={() => setChartGroupBy("city")}
+              className={`px-2.5 py-1 rounded-md text-[11px] font-medium transition-colors ${
+                chartGroupBy === "city"
+                  ? "bg-white text-neutral-900 shadow-sm"
+                  : "text-neutral-500 hover:text-neutral-700"
+              }`}
+            >
+              {locale === "en" ? "City" : "Ville"}
+            </button>
+            <button
+              onClick={() => setChartGroupBy("department")}
+              className={`px-2.5 py-1 rounded-md text-[11px] font-medium transition-colors ${
+                chartGroupBy === "department"
+                  ? "bg-white text-neutral-900 shadow-sm"
+                  : "text-neutral-500 hover:text-neutral-700"
+              }`}
+            >
+              {locale === "en" ? "Dept." : "Dépt."}
+            </button>
+          </div>
         </div>
         {chartData.entries.length === 0 ? (
           <p className="text-xs text-neutral-400 text-center py-4">
@@ -266,76 +296,123 @@ export function AdminOverview({ data }: { data: OverviewData }) {
         </div>
       </div>
 
-      {/* Active users + Recent activity feed */}
-      <div className="grid lg:grid-cols-2 gap-6 mb-8">
-        {/* Active users card */}
+      {/* Active users */}
+      <div className="mb-6">
+        {/* Active users card — 2 columns */}
         <div className="bg-white border border-neutral-200 rounded-2xl p-5">
           <div className="flex items-center gap-2 mb-4">
             <Icon icon="solar:users-group-rounded-bold" className="text-green-500" />
             <h3 className="text-sm font-semibold">{t("activeUsersTitle")}</h3>
           </div>
-          <div className="space-y-3">
-            <div className="flex items-center justify-between">
-              <span className="text-xs text-neutral-500">{t("last24h")}</span>
-              <div className="flex items-center gap-3">
-                <span className="text-xs bg-blue-50 text-blue-700 px-2 py-0.5 rounded-full">
-                  {data.activeUsers.drivers24h} {t("drivers").toLowerCase()}
-                </span>
-                <span className="text-xs bg-violet-50 text-violet-700 px-2 py-0.5 rounded-full">
-                  {data.activeUsers.orgs24h} {t("organisations").toLowerCase()}
-                </span>
+          <div className="grid grid-cols-2 gap-4">
+            {/* Chauffeurs column */}
+            <div>
+              <div className="flex items-center gap-1.5 mb-3">
+                <Icon icon="solar:user-hands-linear" className="text-blue-500 text-sm" />
+                <span className="text-xs font-semibold text-neutral-700">{locale === "en" ? "Drivers" : "Chauffeurs"}</span>
+              </div>
+              <div className="space-y-2">
+                <div className="flex items-center justify-between">
+                  <span className="text-[11px] text-neutral-400">{t("last24h")}</span>
+                  <span className="text-xs bg-blue-50 text-blue-700 px-2 py-0.5 rounded-full font-medium">{data.activeUsers.drivers24h}</span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-[11px] text-neutral-400">{t("last7d")}</span>
+                  <span className="text-xs bg-blue-50 text-blue-700 px-2 py-0.5 rounded-full font-medium">{data.activeUsers.drivers7d}</span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-[11px] text-neutral-400">{t("last30d")}</span>
+                  <span className="text-xs bg-blue-50 text-blue-700 px-2 py-0.5 rounded-full font-medium">{data.activeUsers.drivers30d}</span>
+                </div>
               </div>
             </div>
-            <div className="flex items-center justify-between">
-              <span className="text-xs text-neutral-500">{t("last7d")}</span>
-              <div className="flex items-center gap-3">
-                <span className="text-xs bg-blue-50 text-blue-700 px-2 py-0.5 rounded-full">
-                  {data.activeUsers.drivers7d} {t("drivers").toLowerCase()}
-                </span>
-                <span className="text-xs bg-violet-50 text-violet-700 px-2 py-0.5 rounded-full">
-                  {data.activeUsers.orgs7d} {t("organisations").toLowerCase()}
-                </span>
+            {/* Clients particuliers column */}
+            <div className="border-l border-neutral-100 pl-4">
+              <div className="flex items-center gap-1.5 mb-3">
+                <Icon icon="solar:buildings-2-linear" className="text-violet-500 text-sm" />
+                <span className="text-xs font-semibold text-neutral-700">{locale === "en" ? "Clients" : "Clients particuliers"}</span>
               </div>
-            </div>
-            <div className="flex items-center justify-between">
-              <span className="text-xs text-neutral-500">{t("last30d")}</span>
-              <div className="flex items-center gap-3">
-                <span className="text-xs bg-blue-50 text-blue-700 px-2 py-0.5 rounded-full">
-                  {data.activeUsers.drivers30d} {t("drivers").toLowerCase()}
-                </span>
-                <span className="text-xs bg-violet-50 text-violet-700 px-2 py-0.5 rounded-full">
-                  {data.activeUsers.orgs30d} {t("organisations").toLowerCase()}
-                </span>
+              <div className="space-y-2">
+                <div className="flex items-center justify-between">
+                  <span className="text-[11px] text-neutral-400">{t("last24h")}</span>
+                  <span className="text-xs bg-violet-50 text-violet-700 px-2 py-0.5 rounded-full font-medium">{data.activeUsers.orgs24h}</span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-[11px] text-neutral-400">{t("last7d")}</span>
+                  <span className="text-xs bg-violet-50 text-violet-700 px-2 py-0.5 rounded-full font-medium">{data.activeUsers.orgs7d}</span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-[11px] text-neutral-400">{t("last30d")}</span>
+                  <span className="text-xs bg-violet-50 text-violet-700 px-2 py-0.5 rounded-full font-medium">{data.activeUsers.orgs30d}</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
+      </div>
 
-        {/* Recent activity feed */}
+      {/* Recent activity — 2 columns: Chauffeurs + Clients */}
+      <div className="grid lg:grid-cols-2 gap-6 mb-8">
+        {/* Recent drivers activity */}
         <div className="bg-white border border-neutral-200 rounded-2xl overflow-hidden">
           <div className="px-5 py-4 border-b border-neutral-100">
             <div className="flex items-center gap-2">
-              <Icon icon="solar:history-linear" className="text-amber-500" />
-              <h3 className="font-semibold text-sm">{t("activityFeed")}</h3>
+              <Icon icon="solar:user-hands-linear" className="text-blue-500" />
+              <h3 className="font-semibold text-sm">{locale === "en" ? "Drivers" : "Chauffeurs"}</h3>
             </div>
           </div>
-          {data.recentActivity.length === 0 ? (
+          {data.recentActivity.filter((i) => i.type === "driver").length === 0 ? (
             <div className="px-5 py-8 text-center">
-              <Icon icon="solar:history-linear" className="text-3xl text-neutral-200 mx-auto mb-2" />
+              <Icon icon="solar:user-hands-linear" className="text-3xl text-neutral-200 mx-auto mb-2" />
               <p className="text-sm text-neutral-400 font-light">{t("noActivity")}</p>
             </div>
           ) : (
             <div className="divide-y divide-neutral-100">
-              {data.recentActivity.map((item) => (
+              {data.recentActivity.filter((i) => i.type === "driver").map((item) => (
                 <Link
-                  key={`${item.type}-${item.id}`}
-                  href={item.type === "driver" ? `/admin/chauffeurs/${item.id}` : `/admin/organisations/${item.id}`}
+                  key={`driver-${item.id}`}
+                  href={`/admin/chauffeurs/${item.id}`}
                   className="flex items-center gap-3 px-5 py-3 hover:bg-neutral-50 transition-colors"
                 >
-                  <div className={`w-8 h-8 rounded-full flex items-center justify-center text-xs font-semibold shrink-0 ${
-                    item.type === "driver" ? "bg-blue-50 text-blue-600" : "bg-violet-50 text-violet-600"
-                  }`}>
-                    <Icon icon={item.type === "driver" ? "solar:user-hands-linear" : "solar:buildings-2-linear"} className="text-sm" />
+                  <div className="w-8 h-8 rounded-full flex items-center justify-center text-xs font-semibold shrink-0 bg-blue-50 text-blue-600">
+                    <Icon icon="solar:user-hands-linear" className="text-sm" />
+                  </div>
+                  <div className="min-w-0 flex-1">
+                    <p className="text-sm font-medium truncate">{item.name}</p>
+                    <p className="text-xs text-neutral-400">{t("loggedIn")}</p>
+                  </div>
+                  <span className="text-xs text-neutral-400 shrink-0">
+                    {formatDistanceToNow(new Date(item.at), { addSuffix: true, locale: locale === "en" ? enUS : fr })}
+                  </span>
+                </Link>
+              ))}
+            </div>
+          )}
+        </div>
+
+        {/* Recent clients activity */}
+        <div className="bg-white border border-neutral-200 rounded-2xl overflow-hidden">
+          <div className="px-5 py-4 border-b border-neutral-100">
+            <div className="flex items-center gap-2">
+              <Icon icon="solar:buildings-2-linear" className="text-violet-500" />
+              <h3 className="font-semibold text-sm">{locale === "en" ? "Clients" : "Clients particuliers"}</h3>
+            </div>
+          </div>
+          {data.recentActivity.filter((i) => i.type === "org").length === 0 ? (
+            <div className="px-5 py-8 text-center">
+              <Icon icon="solar:buildings-2-linear" className="text-3xl text-neutral-200 mx-auto mb-2" />
+              <p className="text-sm text-neutral-400 font-light">{t("noActivity")}</p>
+            </div>
+          ) : (
+            <div className="divide-y divide-neutral-100">
+              {data.recentActivity.filter((i) => i.type === "org").map((item) => (
+                <Link
+                  key={`org-${item.id}`}
+                  href={`/admin/organisations/${item.id}`}
+                  className="flex items-center gap-3 px-5 py-3 hover:bg-neutral-50 transition-colors"
+                >
+                  <div className="w-8 h-8 rounded-full flex items-center justify-center text-xs font-semibold shrink-0 bg-violet-50 text-violet-600">
+                    <Icon icon="solar:buildings-2-linear" className="text-sm" />
                   </div>
                   <div className="min-w-0 flex-1">
                     <p className="text-sm font-medium truncate">{item.name}</p>
