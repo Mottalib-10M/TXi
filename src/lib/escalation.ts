@@ -224,12 +224,14 @@ async function notifyAdmin(booking: {
     </div>
   `;
 
-  const adminEmail = (process.env.ADMIN_EMAILS || "amradif@gmail.com").split(",")[0].trim();
-  console.log(`[Escalation] Sending admin alert email for #${booking.reference} to ${adminEmail}`);
-  await sendEmail({
-    to: adminEmail,
-    subject: `[ALERTE] Course #${booking.reference} sans chauffeur`,
-    html,
-  });
+  const adminEmails = (process.env.ADMIN_EMAILS || "amradif@gmail.com,sni.taxi@outlook.fr").split(",").map((e) => e.trim()).filter(Boolean);
+  console.log(`[Escalation] Sending admin alert email for #${booking.reference} to ${adminEmails.join(", ")}`);
+  for (const adminEmail of adminEmails) {
+    await sendEmail({
+      to: adminEmail,
+      subject: `[ALERTE] Course #${booking.reference} sans chauffeur`,
+      html,
+    });
+  }
   console.log(`[Escalation] Admin alert email sent for #${booking.reference}`);
 }

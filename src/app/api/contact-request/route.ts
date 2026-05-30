@@ -91,11 +91,8 @@ export async function POST(req: Request) {
     });
 
     // --- Send admin notification email ---
-    const adminEmail = (process.env.ADMIN_EMAILS || "amradif@gmail.com").split(",")[0].trim();
-    await sendEmail({
-      to: adminEmail,
-      subject: "Trajet sans chauffeur dispo !",
-      html: `
+    const adminEmails = (process.env.ADMIN_EMAILS || "amradif@gmail.com,sni.taxi@outlook.fr").split(",").map((e) => e.trim()).filter(Boolean);
+    const adminHtml = `
         <div style="font-family: Inter, sans-serif; max-width: 600px; margin: 0 auto;">
           <h2 style="color: #dc2626;">Trajet sans chauffeur disponible</h2>
           <p>Un client a recherché un trajet mais aucun chauffeur n'était disponible dans la zone.</p>
@@ -111,8 +108,14 @@ export async function POST(req: Request) {
           </table>
           <p style="color: #a3a3a3; font-size: 12px;">— TaxiNeo (demande automatique)</p>
         </div>
-      `,
-    });
+      `;
+    for (const adminEmail of adminEmails) {
+      await sendEmail({
+        to: adminEmail,
+        subject: "Trajet sans chauffeur dispo !",
+        html: adminHtml,
+      });
+    }
 
     // --- Send confirmation email to client ---
     const clientEmailData = buildNoDriverConfirmEmail({
