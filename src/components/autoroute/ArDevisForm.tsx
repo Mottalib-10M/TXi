@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Icon } from "@iconify/react";
 import { emailError, phoneError, isValidEmail, isValidPhone } from "@/lib/validation";
 import { useTranslations } from "next-intl";
+import { trackDevisSubmission } from "@/lib/analytics";
 
 export function ArDevisForm({ autorouteName }: { autorouteName: string }) {
   const t = useTranslations("ar");
@@ -42,6 +43,7 @@ export function ArDevisForm({ autorouteName }: { autorouteName: string }) {
       });
       if (res.ok) {
         setSuccess(true);
+        trackDevisSubmission({ formType: "autoroute", city: autorouteName });
         setForm({ name: "", email: "", phone: "", position: "", direction: "", passengers: "1", destination: "", message: "" });
       }
     } catch {

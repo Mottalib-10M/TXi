@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Icon } from "@iconify/react";
 import { emailError, phoneError, isValidEmail, isValidPhone } from "@/lib/validation";
 import { useTranslations } from "next-intl";
+import { trackDevisSubmission } from "@/lib/analytics";
 
 export function MadDevisForm({ cityName }: { cityName: string }) {
   const t = useTranslations("mad");
@@ -44,6 +45,7 @@ export function MadDevisForm({ cityName }: { cityName: string }) {
       });
       if (res.ok) {
         setSuccess(true);
+        trackDevisSubmission({ formType: "mise_a_disposition", city: cityName, vehicleType: form.vehicleType, duration: form.duration });
         setForm({ name: "", email: "", phone: "", date: "", duration: "", vehicleType: "", passengers: "1", pickup: cityName, message: "" });
       }
     } catch {

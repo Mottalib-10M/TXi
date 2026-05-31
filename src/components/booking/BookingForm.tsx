@@ -7,7 +7,7 @@ import { useTranslations, useLocale } from "next-intl";
 import { Link, useRouter } from "@/i18n/navigation";
 import { PlacesAutocomplete } from "./PlacesAutocomplete";
 import { emailError, phoneError, isValidEmail, formatPrice } from "@/lib/validation";
-import { trackSearch, trackViewResults, trackSelectTaxi, trackBeginBooking, trackBookingComplete } from "@/lib/analytics";
+import { trackSearch, trackViewResults, trackSelectTaxi, trackBeginBooking, trackBookingComplete, trackContactRequest, trackError } from "@/lib/analytics";
 
 interface TaxiResult {
   id: string;
@@ -117,7 +117,7 @@ export function BookingForm() {
         }));
       }
     } catch {
-      // Error
+      trackError({ errorType: "search_failed", context: "booking_search" });
     } finally {
       setLoading(false);
     }
@@ -159,7 +159,7 @@ export function BookingForm() {
         router.push(`/confirmation?ref=${data.reference}` as never);
       }
     } catch {
-      // Error
+      trackError({ errorType: "booking_failed", context: "booking_confirm" });
     } finally {
       setSubmitting(false);
     }
@@ -193,9 +193,10 @@ export function BookingForm() {
 
       if (res.ok) {
         setContactSent(true);
+        trackContactRequest({ departure, arrival, passengers });
       }
     } catch {
-      // Error
+      trackError({ errorType: "contact_request_failed", context: "booking_contact" });
     } finally {
       setContactSubmitting(false);
     }

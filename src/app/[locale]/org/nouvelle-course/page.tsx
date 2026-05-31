@@ -5,6 +5,7 @@ import { useRouter } from "@/i18n/navigation";
 import { Icon } from "@iconify/react";
 import { PlacesAutocomplete } from "@/components/booking/PlacesAutocomplete";
 import { useTranslations } from "next-intl";
+import { trackSearch, trackViewResults, trackOrgBooking, trackError } from "@/lib/analytics";
 
 interface DriverResult {
   id: string;
@@ -118,6 +119,7 @@ export default function NouvelleCourse() {
     }
 
     setLoading(true);
+    trackSearch({ departure: departure.name, arrival: arrival.name, passengers: passengerCount });
 
     try {
       const params = new URLSearchParams();
@@ -134,7 +136,9 @@ export default function NouvelleCourse() {
 
       setDriverResults(drivers);
       setStep("results");
+      trackViewResults({ departure: departure.name, arrival: arrival.name, resultCount: drivers.length });
     } catch {
+      trackError({ errorType: "search_failed", context: "org_booking" });
       setError(tc("serverError"));
     } finally {
       setLoading(false);
@@ -174,9 +178,11 @@ export default function NouvelleCourse() {
         return;
       }
 
+      trackOrgBooking({ driverName: selectedDriver?.companyName || `${selectedDriver?.firstName} ${selectedDriver?.lastName}`, departure: departure.name, arrival: arrival.name });
       setSuccess(t("rideCreated", { reference: json.reference }));
       setTimeout(() => router.push("/org"), 2000);
     } catch {
+      trackError({ errorType: "booking_failed", context: "org_booking" });
       setError(tc("serverError"));
     } finally {
       setLoading(false);

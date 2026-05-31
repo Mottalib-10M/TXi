@@ -5,6 +5,7 @@ import { Link } from "@/i18n/navigation";
 import { QRCodeButton } from "@/components/dashboard/QRCodeButton";
 import { BookingQuickActions } from "@/components/dashboard/BookingQuickActions";
 import { PhoneLink } from "@/components/ui/PhoneLink";
+import { WhatsAppLink } from "@/components/ui/WhatsAppLink";
 import { getTranslations, getLocale } from "next-intl/server";
 
 export default async function DashboardPage() {
@@ -280,15 +281,7 @@ export default async function DashboardPage() {
                       {booking.clientPhone && (
                         <>
                           <PhoneLink phone={booking.clientPhone} label={td("callClient")} className="text-amber-600 hover:text-amber-800" />
-                          <a
-                            href={buildWhatsAppUrl(booking)}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-1 text-xs text-green-600 hover:text-green-800 font-medium transition-colors"
-                          >
-                            <Icon icon="mdi:whatsapp" className="text-base" />
-                            WhatsApp
-                          </a>
+                          <WhatsAppLink href={buildWhatsAppUrl(booking)} context="dashboard_pending" bookingId={booking.id} />
                         </>
                       )}
                     </span>
@@ -363,15 +356,7 @@ export default async function DashboardPage() {
                       {booking.clientPhone && (
                         <>
                           <PhoneLink phone={booking.clientPhone} label={td("callClient")} className="text-green-600 hover:text-green-800" />
-                          <a
-                            href={buildWhatsAppUrl(booking)}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-1 text-xs text-green-600 hover:text-green-800 font-medium transition-colors"
-                          >
-                            <Icon icon="mdi:whatsapp" className="text-base" />
-                            WhatsApp
-                          </a>
+                          <WhatsAppLink href={buildWhatsAppUrl(booking)} context="dashboard_accepted" bookingId={booking.id} />
                         </>
                       )}
                     </span>

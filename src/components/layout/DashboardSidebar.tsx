@@ -7,6 +7,7 @@ import { useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
 import { Logo } from "@/components/ui/Logo";
 import { LanguageSwitcher } from "@/components/ui/LanguageSwitcher";
+import { trackLogout } from "@/lib/analytics";
 
 export function DashboardSidebar({ userName }: { userName: string }) {
   const t = useTranslations("dashboard.sidebar");
@@ -136,7 +137,7 @@ export function DashboardSidebar({ userName }: { userName: string }) {
             </div>
             <LanguageSwitcher variant="full" />
             <button
-              onClick={() => signOut({ callbackUrl: "/" })}
+              onClick={() => { trackLogout(); signOut({ callbackUrl: "/" }); }}
               className="w-full flex items-center gap-2 px-3 py-2 text-sm text-neutral-500 hover:text-red-600 hover:bg-red-50 rounded-xl transition-colors"
             >
               <Icon icon="solar:logout-2-linear" className="text-lg" />

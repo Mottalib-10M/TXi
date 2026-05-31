@@ -15,6 +15,7 @@ import { VEHICLE_BRANDS, BRAND_NAMES, VEHICLE_COLORS } from "@/data/vehicle-mode
 import { useTranslations } from "next-intl";
 import { getDepartmentCode, getAirportFares } from "@/lib/department-lookup";
 import { DEPARTMENT_NAMES } from "@/data/departmental-tariffs";
+import { trackProfileUpdate } from "@/lib/analytics";
 
 interface DriverData {
   id: string;
@@ -222,6 +223,7 @@ export function ProfileForm({ driver }: { driver: DriverData }) {
 
       if (res.ok) {
         setSuccess(true);
+        trackProfileUpdate(activeSection);
         await updateSession();
       } else {
         setError(true);

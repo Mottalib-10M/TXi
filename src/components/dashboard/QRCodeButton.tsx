@@ -5,6 +5,7 @@ import { Icon } from "@iconify/react";
 import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 import QRCode from "qrcode";
+import { trackDownloadCard } from "@/lib/analytics";
 
 interface QRCodeButtonProps {
   slug: string;
@@ -93,6 +94,7 @@ export function QRCodeButton({ slug, driverName, companyName, vehicleModel }: QR
                   <button
                     onClick={async () => {
                       if (!qrDataUrl) return;
+                      trackDownloadCard({ driverName: driverName || "" });
                       const res = await fetch(qrDataUrl);
                       const blob = await res.blob();
                       const file = new File([blob], `qrcode-${slug}.png`, { type: "image/png" });

@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Icon } from "@iconify/react";
 import { emailError, phoneError, isValidEmail, isValidPhone } from "@/lib/validation";
 import { useTranslations } from "next-intl";
+import { trackDevisSubmission } from "@/lib/analytics";
 
 export function TmDevisForm({ cityName }: { cityName: string }) {
   const t = useTranslations("tm");
@@ -48,6 +49,7 @@ export function TmDevisForm({ cityName }: { cityName: string }) {
       });
       if (res.ok) {
         setSuccess(true);
+        trackDevisSubmission({ formType: "taxi_medical", city: cityName, transportType: form.transportType, vehicleType: form.vehicleType });
         setForm({ name: "", email: "", phone: "", date: "", transportType: "", medicalReason: "", vehicleType: "", companion: false, reducedMobility: false, pickup: cityName, hospital: "", message: "" });
       }
     } catch {

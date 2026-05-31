@@ -7,6 +7,7 @@ import { format } from "date-fns";
 import { fr, enUS } from "date-fns/locale";
 import { useTranslations, useLocale } from "next-intl";
 import { trackBookingAction } from "@/lib/analytics";
+import { WhatsAppLink } from "@/components/ui/WhatsAppLink";
 
 interface Booking {
   id: string;
@@ -211,17 +212,7 @@ export function ReservationsTable({ bookings, driverName }: { bookings: Booking[
                       <Icon icon="solar:phone-bold" className="text-sm" />
                       {booking.clientPhone}
                     </a>
-                    <a
-                      href={buildWhatsAppUrl(booking.clientPhone, getWhatsAppMessage(booking))}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      onClick={(e) => e.stopPropagation()}
-                      className="inline-flex items-center gap-1 text-xs text-green-600 hover:text-green-800 font-medium transition-colors"
-                      title="WhatsApp"
-                    >
-                      <Icon icon="mdi:whatsapp" className="text-sm" />
-                      WhatsApp
-                    </a>
+                    <WhatsAppLink href={buildWhatsAppUrl(booking.clientPhone, getWhatsAppMessage(booking))} context="reservations" bookingId={booking.id} iconClassName="text-sm" />
                   </>
                 )}
                 <span

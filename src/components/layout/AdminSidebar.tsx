@@ -7,6 +7,7 @@ import { useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
 import { Logo } from "@/components/ui/Logo";
 import { LanguageSwitcher } from "@/components/ui/LanguageSwitcher";
+import { trackLogout } from "@/lib/analytics";
 
 export function AdminSidebar({ userName }: { userName: string }) {
   const t = useTranslations("admin.sidebar");
@@ -15,6 +16,7 @@ export function AdminSidebar({ userName }: { userName: string }) {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const handleLogout = async () => {
+    trackLogout();
     await fetch("/api/admin/logout", { method: "POST" });
     nextRouter.push("/admin/login");
     nextRouter.refresh();

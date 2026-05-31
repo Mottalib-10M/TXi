@@ -7,6 +7,7 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { Logo } from "@/components/ui/Logo";
 import { LanguageSwitcher } from "@/components/ui/LanguageSwitcher";
+import { trackLogout } from "@/lib/analytics";
 
 export function Navbar({ minimal = false }: { minimal?: boolean }) {
   const t = useTranslations("nav");
@@ -238,7 +239,7 @@ export function Navbar({ minimal = false }: { minimal?: boolean }) {
                     </Link>
                     <div className="border-t border-neutral-100 mt-1.5 pt-1.5">
                       <button
-                        onClick={() => { setMenuOpen(false); signOut({ callbackUrl: "/" }); }}
+                        onClick={() => { setMenuOpen(false); trackLogout(); signOut({ callbackUrl: "/" }); }}
                         className="flex items-center gap-2.5 px-4 py-2.5 text-sm text-red-600 hover:bg-red-50 transition-colors w-full"
                       >
                         <Icon icon="solar:logout-2-linear" className="text-lg" />
@@ -401,7 +402,7 @@ export function Navbar({ minimal = false }: { minimal?: boolean }) {
                 {t("reservations")}
               </Link>
               <button
-                onClick={() => { setMobileOpen(false); signOut({ callbackUrl: "/" }); }}
+                onClick={() => { setMobileOpen(false); trackLogout(); signOut({ callbackUrl: "/" }); }}
                 className="block w-full text-left py-3 text-sm font-medium text-red-600 hover:bg-red-50 rounded-lg px-3 transition-colors"
               >
                 {t("logout")}

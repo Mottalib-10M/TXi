@@ -65,14 +65,20 @@ export function trackBeginBooking(params: { driverName: string; departure: strin
 }
 
 export function trackBookingComplete(params: { reference: string; price?: number; driverName: string; source: string }) {
-  event({
-    action: "purchase",
-    category: "booking",
-    label: params.reference,
+  gtag("event", "purchase", {
+    transaction_id: params.reference,
     value: params.price,
-    driver_name: params.driverName,
-    booking_source: params.source,
     currency: "EUR",
+    items: [
+      {
+        item_name: `Taxi ${params.driverName}`,
+        item_category: "booking",
+        price: params.price,
+        quantity: 1,
+      },
+    ],
+    booking_source: params.source,
+    driver_name: params.driverName,
   });
 }
 
@@ -155,4 +161,60 @@ export function trackDownloadCard(params: { driverName: string }) {
 
 export function trackOrgBooking(params: { driverName: string; departure: string; arrival: string }) {
   event({ action: "org_booking", category: "organization", label: `${params.departure} → ${params.arrival}`, driver_name: params.driverName });
+}
+
+/* ─── Devis (quotes) ─────────────────────────────────────────────── */
+
+export function trackDevisSubmission(params: { formType: string; city: string; transportType?: string; vehicleType?: string; duration?: string }) {
+  event({
+    action: "generate_lead",
+    category: "devis",
+    label: params.formType,
+    form_type: params.formType,
+    city: params.city,
+    transport_type: params.transportType,
+    vehicle_type: params.vehicleType,
+    duration: params.duration,
+  });
+}
+
+/* ─── Contact request (no drivers) ───────────────────────────────── */
+
+export function trackContactRequest(params: { departure: string; arrival: string; passengers: number }) {
+  event({
+    action: "generate_lead",
+    category: "contact_request",
+    label: `${params.departure} → ${params.arrival}`,
+    passengers: params.passengers,
+  });
+}
+
+/* ─── WhatsApp clicks ────────────────────────────────────────────── */
+
+export function trackWhatsAppClick(params: { context: string; bookingId?: string }) {
+  event({
+    action: "click_whatsapp",
+    category: "engagement",
+    label: params.bookingId,
+    context: params.context,
+  });
+}
+
+/* ─── Error tracking ─────────────────────────────────────────────── */
+
+export function trackError(params: { errorType: string; errorMessage?: string; context: string }) {
+  event({
+    action: "exception",
+    category: "error",
+    label: params.errorType,
+    error_type: params.errorType,
+    error_message: params.errorMessage,
+    context: params.context,
+  });
+}
+
+/* ─── User properties ────────────────────────────────────────────── */
+
+export function setUserProperties(props: { user_role?: string; org_type?: string; city?: string }) {
+  gtag("set", "user_properties", props);
 }
