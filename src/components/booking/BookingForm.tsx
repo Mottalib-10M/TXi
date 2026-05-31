@@ -7,7 +7,7 @@ import { useTranslations, useLocale } from "next-intl";
 import { Link, useRouter } from "@/i18n/navigation";
 import { PlacesAutocomplete } from "./PlacesAutocomplete";
 import { emailError, phoneError, isValidEmail, formatPrice } from "@/lib/validation";
-import { trackSearch, trackViewResults, trackSelectTaxi, trackBeginBooking, trackBookingComplete, trackContactRequest, trackError } from "@/lib/analytics";
+import { trackSearch, trackViewResults, trackSearchHasResults, trackSearchNoResults, trackSelectTaxi, trackBeginBooking, trackBookingComplete, trackContactRequest, trackError } from "@/lib/analytics";
 
 interface TaxiResult {
   id: string;
@@ -101,6 +101,11 @@ export function BookingForm() {
       setResults(drivers);
       setStep("results");
       trackViewResults({ departure, arrival, resultCount: drivers.length });
+      if (drivers.length > 0) {
+        trackSearchHasResults({ departure, arrival, resultCount: drivers.length });
+      } else {
+        trackSearchNoResults({ departure, arrival });
+      }
 
       // Notify HeroIllustration with real data
       if (drivers.length > 0) {

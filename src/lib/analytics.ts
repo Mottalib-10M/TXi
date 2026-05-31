@@ -44,6 +44,23 @@ export function trackViewResults(params: { departure: string; arrival: string; r
   });
 }
 
+export function trackSearchHasResults(params: { departure: string; arrival: string; resultCount: number }) {
+  event({
+    action: "search_has_results",
+    category: "booking",
+    label: `${params.departure} → ${params.arrival}`,
+    result_count: params.resultCount,
+  });
+}
+
+export function trackSearchNoResults(params: { departure: string; arrival: string }) {
+  event({
+    action: "search_no_results",
+    category: "booking",
+    label: `${params.departure} → ${params.arrival}`,
+  });
+}
+
 export function trackSelectTaxi(params: { driverName: string; price?: number; slug: string }) {
   event({
     action: "select_item",

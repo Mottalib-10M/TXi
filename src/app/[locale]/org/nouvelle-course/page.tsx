@@ -5,7 +5,7 @@ import { useRouter } from "@/i18n/navigation";
 import { Icon } from "@iconify/react";
 import { PlacesAutocomplete } from "@/components/booking/PlacesAutocomplete";
 import { useTranslations } from "next-intl";
-import { trackSearch, trackViewResults, trackOrgBooking, trackError } from "@/lib/analytics";
+import { trackSearch, trackViewResults, trackSearchHasResults, trackSearchNoResults, trackOrgBooking, trackError } from "@/lib/analytics";
 
 interface DriverResult {
   id: string;
@@ -137,6 +137,11 @@ export default function NouvelleCourse() {
       setDriverResults(drivers);
       setStep("results");
       trackViewResults({ departure: departure.name, arrival: arrival.name, resultCount: drivers.length });
+      if (drivers.length > 0) {
+        trackSearchHasResults({ departure: departure.name, arrival: arrival.name, resultCount: drivers.length });
+      } else {
+        trackSearchNoResults({ departure: departure.name, arrival: arrival.name });
+      }
     } catch {
       trackError({ errorType: "search_failed", context: "org_booking" });
       setError(tc("serverError"));
