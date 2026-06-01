@@ -138,7 +138,7 @@ export function trackPhoneClick(params: { phone: string; context: string }) {
 
 /* ─── Driver dashboard actions ────────────────────────────────────── */
 
-export function trackBookingAction(params: { action: "accept" | "reject" | "complete"; bookingId: string }) {
+export function trackBookingAction(params: { action: "accept" | "reject" | "complete" | "cancel"; bookingId: string }) {
   event({
     action: `booking_${params.action}`,
     category: "driver",

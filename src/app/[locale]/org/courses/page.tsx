@@ -63,6 +63,9 @@ export default function CoursesPage() {
   const [alternatives, setAlternatives] = useState<Record<string, Alternative[]>>({});
   const [loadingAlts, setLoadingAlts] = useState<string | null>(null);
   const [cancellingId, setCancellingId] = useState<string | null>(null);
+  const [confirmModal, setConfirmModal] = useState<{
+    bookingId: string;
+  } | null>(null);
 
   const statusLabels: Record<string, string> = {
     PENDING: t("pending"),
@@ -162,6 +165,14 @@ export default function CoursesPage() {
     }
   }
 
+  function handleCancel(bookingId: string, status: string) {
+    if (status === "ACCEPTED") {
+      setConfirmModal({ bookingId });
+    } else {
+      cancelBooking(bookingId);
+    }
+  }
+
   return (
     <div className="max-w-5xl">
       <div className="mb-8">
@@ -223,9 +234,9 @@ export default function CoursesPage() {
                   <span className={`text-xs px-2.5 py-1 rounded-full font-medium ${statusColors[b.status] || ""}`}>
                     {statusLabels[b.status] || b.status}
                   </span>
-                  {b.status === "PENDING" && (
+                  {(b.status === "PENDING" || b.status === "ACCEPTED") && (
                     <button
-                      onClick={() => cancelBooking(b.id)}
+                      onClick={() => handleCancel(b.id, b.status)}
                       disabled={cancellingId === b.id}
                       className="text-xs text-red-600 hover:text-red-700 hover:underline disabled:opacity-50"
                     >
@@ -276,6 +287,43 @@ export default function CoursesPage() {
               )}
             </div>
           ))}
+        </div>
+      )}
+
+      {/* Confirmation modal for cancelling accepted bookings */}
+      {confirmModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center">
+          <div
+            className="absolute inset-0 bg-black/40 backdrop-blur-sm"
+            onClick={() => setConfirmModal(null)}
+          />
+          <div className="relative bg-white rounded-2xl shadow-xl max-w-md w-full mx-4 p-6 animate-in fade-in zoom-in-95 duration-200">
+            <div className="flex items-center gap-3 mb-3">
+              <div className="w-10 h-10 rounded-full bg-red-50 flex items-center justify-center shrink-0">
+                <Icon icon="solar:danger-triangle-bold" className="text-red-500 text-xl" />
+              </div>
+              <h3 className="text-base font-semibold text-neutral-900">{t("confirmCancelTitle")}</h3>
+            </div>
+            <p className="text-sm text-neutral-500 mb-6 ml-[52px]">{t("confirmCancelAcceptedMsg")}</p>
+            <div className="flex justify-end gap-3">
+              <button
+                onClick={() => setConfirmModal(null)}
+                className="px-4 py-2 rounded-xl text-sm font-medium text-neutral-600 bg-neutral-100 hover:bg-neutral-200 transition-colors"
+              >
+                {tc("cancel")}
+              </button>
+              <button
+                onClick={() => {
+                  const bookingId = confirmModal.bookingId;
+                  setConfirmModal(null);
+                  cancelBooking(bookingId);
+                }}
+                className="px-4 py-2 rounded-xl text-sm font-medium text-white bg-red-600 hover:bg-red-700 transition-colors"
+              >
+                {t("confirmCancelBtn")}
+              </button>
+            </div>
+          </div>
         </div>
       )}
     </div>

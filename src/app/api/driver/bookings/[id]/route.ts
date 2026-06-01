@@ -8,6 +8,7 @@ import {
   buildBookingAcceptedDriverEmail,
   buildDriverNotificationEmail,
   buildEscalationResolvedEmail,
+  buildCancelledByDriverClientEmail,
 } from "@/lib/email";
 import { sendSms } from "@/lib/sms";
 import { createNotification } from "@/lib/notifications";
@@ -28,7 +29,7 @@ export async function PATCH(
     const { status, locale: reqLocale } = body;
     const locale: "fr" | "en" = reqLocale === "en" ? "en" : "fr";
 
-    if (!["ACCEPTED", "REJECTED", "COMPLETED"].includes(status)) {
+    if (!["ACCEPTED", "REJECTED", "COMPLETED", "CANCELLED"].includes(status)) {
       return NextResponse.json({ error: "Statut invalide" }, { status: 400 });
     }
 
@@ -47,6 +48,68 @@ export async function PATCH(
 
     if (!isOriginalDriver && !isInvitedDriver) {
       return NextResponse.json({ error: "Réservation non trouvée" }, { status: 404 });
+    }
+
+    // --- CANCELLED (by driver) ---
+    if (status === "CANCELLED") {
+      if (!isOriginalDriver) {
+        return NextResponse.json({ error: "Seul le chauffeur assigné peut annuler la course" }, { status: 403 });
+      }
+      if (booking.status !== "ACCEPTED") {
+        return NextResponse.json({ error: "Seules les courses acceptées peuvent être annulées" }, { status: 400 });
+      }
+
+      await prisma.booking.update({
+        where: { id: params.id },
+        data: { status: "CANCELLED", cancelledBy: "DRIVER" },
+      });
+
+      createNotification({
+        type: "BOOKING_CANCELLED",
+        title: `Course annulée #${booking.reference}`,
+        body: `${booking.clientName} — annulée par le chauffeur`,
+        metadata: { bookingId: booking.id, reference: booking.reference, driverId: session.user.id },
+      });
+
+      // Send email to client/org
+      try {
+        const driver = await prisma.driver.findUnique({
+          where: { id: session.user.id },
+          select: { firstName: true, lastName: true, companyName: true },
+        });
+
+        const dateLocale = locale === "en" ? "en-US" : "fr-FR";
+        const dateFormatted = new Date(booking.requestedDate).toLocaleDateString(dateLocale, {
+          weekday: "long",
+          day: "numeric",
+          month: "long",
+          year: "numeric",
+          hour: "2-digit",
+          minute: "2-digit",
+        });
+
+        const clientEmailTo = booking.organization ? booking.organization.email : booking.clientEmail;
+        const clientDisplayName = booking.organization ? booking.organization.contactName : booking.clientName;
+        const driverDisplayName = driver
+          ? (driver.companyName || `${driver.firstName} ${driver.lastName}`)
+          : "le chauffeur";
+
+        const cancelMail = buildCancelledByDriverClientEmail({
+          clientName: clientDisplayName,
+          driverName: driverDisplayName,
+          departure: booking.departureName,
+          arrival: booking.arrivalName,
+          date: dateFormatted,
+          reference: booking.reference,
+          price: booking.lockedPrice,
+          locale,
+        });
+        await sendEmail({ to: clientEmailTo, ...cancelMail });
+      } catch (error) {
+        console.error("Failed to send cancellation email:", error);
+      }
+
+      return NextResponse.json({ message: "Course annulée" });
     }
 
     // --- COMPLETED ---

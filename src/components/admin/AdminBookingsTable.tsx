@@ -212,7 +212,7 @@ export function AdminBookingsTable({ bookings }: { bookings: Booking[] }) {
     }
   };
 
-  const executeAction = useCallback(async (bookingId: string, action: "remind-driver" | "apologize-refuse") => {
+  const executeAction = useCallback(async (bookingId: string, action: "remind-driver" | "apologize-refuse" | "cancel-booking") => {
     setLoadingAction(`${bookingId}-${action}`);
     try {
       const res = await fetch(`/api/admin/bookings/${bookingId}/actions`, {
@@ -227,8 +227,11 @@ export function AdminBookingsTable({ bookings }: { bookings: Booking[] }) {
       }
       if (action === "remind-driver") {
         toast.success(locale === "en" ? "Reminder sent to driver" : "Rappel envoyé au chauffeur");
-      } else {
+      } else if (action === "apologize-refuse") {
         toast.success(locale === "en" ? "Booking refused, apology email sent" : "Réservation refusée, email d'excuse envoyé");
+        router.refresh();
+      } else if (action === "cancel-booking") {
+        toast.success(locale === "en" ? "Booking cancelled" : "Course annulée");
         router.refresh();
       }
     } catch {
@@ -238,13 +241,26 @@ export function AdminBookingsTable({ bookings }: { bookings: Booking[] }) {
     }
   }, [locale, router]);
 
-  const handleAction = (bookingId: string, action: "remind-driver" | "apologize-refuse") => {
+  const handleAction = (bookingId: string, action: "remind-driver" | "apologize-refuse" | "cancel-booking") => {
     if (action === "apologize-refuse") {
       setConfirmModal({
         title: locale === "en" ? "Refuse this booking?" : "Refuser cette réservation ?",
         message: locale === "en"
           ? "The booking will be cancelled and an apology email will be sent to the client."
           : "La réservation sera annulée et un email d'excuse sera envoyé au client.",
+        onConfirm: () => {
+          setConfirmModal(null);
+          executeAction(bookingId, action);
+        },
+      });
+      return;
+    }
+    if (action === "cancel-booking") {
+      setConfirmModal({
+        title: locale === "en" ? "Cancel this booking?" : "Annuler cette course ?",
+        message: locale === "en"
+          ? "The booking will be cancelled and the client (and driver if applicable) will be notified by email."
+          : "La course sera annulée et le client (et le chauffeur si applicable) seront notifiés par email.",
         onConfirm: () => {
           setConfirmModal(null);
           executeAction(bookingId, action);
@@ -571,6 +587,15 @@ export function AdminBookingsTable({ bookings }: { bookings: Booking[] }) {
                                         </button>
                                       </div>
                                     )}
+                                    {(booking.status === "PENDING" || booking.status === "ACCEPTED") && (
+                                      <button
+                                        onClick={() => handleAction(booking.id, "cancel-booking")}
+                                        disabled={loadingAction === `${booking.id}-cancel-booking`}
+                                        className="px-2 py-1 rounded-lg bg-neutral-100 text-neutral-600 hover:bg-neutral-200 transition-colors text-[10px] font-medium whitespace-nowrap disabled:opacity-50 mt-1"
+                                      >
+                                        {loadingAction === `${booking.id}-cancel-booking` ? "..." : (locale === "en" ? "Cancel" : "Annuler")}
+                                      </button>
+                                    )}
                                   </td>
                                 )}
                               </tr>
@@ -707,6 +732,17 @@ export function AdminBookingsTable({ bookings }: { bookings: Booking[] }) {
                                 </button>
                               </div>
                             )}
+                            {filter !== "NO_DRIVER" && (booking.status === "PENDING" || booking.status === "ACCEPTED") && (
+                              <div className="pt-1">
+                                <button
+                                  onClick={() => handleAction(booking.id, "cancel-booking")}
+                                  disabled={loadingAction === `${booking.id}-cancel-booking`}
+                                  className="px-3 py-1.5 rounded-lg bg-neutral-100 text-neutral-600 hover:bg-neutral-200 transition-colors text-xs font-medium disabled:opacity-50"
+                                >
+                                  {loadingAction === `${booking.id}-cancel-booking` ? "..." : (locale === "en" ? "Cancel" : "Annuler")}
+                                </button>
+                              </div>
+                            )}
                           </div>
                         );
                       })}
@@ -756,7 +792,7 @@ export function AdminBookingsTable({ bookings }: { bookings: Booking[] }) {
                 onClick={confirmModal.onConfirm}
                 className="px-4 py-2 rounded-xl text-sm font-medium text-white bg-red-600 hover:bg-red-700 transition-colors"
               >
-                {locale === "en" ? "Refuse" : "Refuser"}
+                {locale === "en" ? "Confirm" : "Confirmer"}
               </button>
             </div>
           </div>

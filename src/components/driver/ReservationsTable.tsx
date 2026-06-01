@@ -47,6 +47,11 @@ export function ReservationsTable({ bookings, driverName }: { bookings: Booking[
   const router = useRouter();
   const [filter, setFilter] = useState<string>("PENDING");
   const [updating, setUpdating] = useState<string | null>(null);
+  const [confirmModal, setConfirmModal] = useState<{
+    bookingId: string;
+    title: string;
+    message: string;
+  } | null>(null);
 
   const statusConfig: Record<string, { label: string; color: string }> = {
     PENDING: { label: t("pending"), color: "bg-amber-50 text-amber-700" },
@@ -85,8 +90,8 @@ export function ReservationsTable({ bookings, driverName }: { bookings: Booking[
       return new Date(a.requestedDate).getTime() - new Date(b.requestedDate).getTime();
     });
 
-  async function updateStatus(bookingId: string, status: "ACCEPTED" | "REJECTED" | "COMPLETED") {
-    const actionMap = { ACCEPTED: "accept", REJECTED: "reject", COMPLETED: "complete" } as const;
+  async function updateStatus(bookingId: string, status: "ACCEPTED" | "REJECTED" | "COMPLETED" | "CANCELLED") {
+    const actionMap = { ACCEPTED: "accept", REJECTED: "reject", COMPLETED: "complete", CANCELLED: "cancel" } as const;
     trackBookingAction({ action: actionMap[status], bookingId });
     setUpdating(bookingId);
     try {
@@ -101,6 +106,14 @@ export function ReservationsTable({ bookings, driverName }: { bookings: Booking[
     } finally {
       setUpdating(null);
     }
+  }
+
+  function handleCancelAccepted(bookingId: string) {
+    setConfirmModal({
+      bookingId,
+      title: t("confirmCancelTitle"),
+      message: t("confirmCancelMsg"),
+    });
   }
 
   function getWhatsAppMessage(booking: Booking): string {
@@ -309,19 +322,63 @@ export function ReservationsTable({ bookings, driverName }: { bookings: Booking[
               )}
 
               {booking.status === "ACCEPTED" && (
-                <div className="mt-3 pt-3 border-t border-neutral-100">
+                <div className="flex items-center gap-3 mt-3 pt-3 border-t border-neutral-100">
                   <button
                     onClick={() => updateStatus(booking.id, "COMPLETED")}
                     disabled={updating === booking.id}
-                    className="w-full sm:w-auto bg-blue-50 text-blue-700 hover:bg-blue-100 px-4 py-2 rounded-lg text-xs font-medium transition-colors disabled:opacity-50"
+                    className="bg-blue-50 text-blue-700 hover:bg-blue-100 px-4 py-2 rounded-lg text-xs font-medium transition-colors disabled:opacity-50"
                   >
                     {t("complete")}
+                  </button>
+                  <button
+                    onClick={() => handleCancelAccepted(booking.id)}
+                    disabled={updating === booking.id}
+                    className="text-xs text-neutral-400 hover:text-red-600 transition-colors disabled:opacity-50"
+                  >
+                    {t("cancelRide")}
                   </button>
                 </div>
               )}
             </div>
             );
           })}
+        </div>
+      )}
+
+      {/* Confirmation modal */}
+      {confirmModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center">
+          <div
+            className="absolute inset-0 bg-black/40 backdrop-blur-sm"
+            onClick={() => setConfirmModal(null)}
+          />
+          <div className="relative bg-white rounded-2xl shadow-xl max-w-md w-full mx-4 p-6 animate-in fade-in zoom-in-95 duration-200">
+            <div className="flex items-center gap-3 mb-3">
+              <div className="w-10 h-10 rounded-full bg-red-50 flex items-center justify-center shrink-0">
+                <Icon icon="solar:danger-triangle-bold" className="text-red-500 text-xl" />
+              </div>
+              <h3 className="text-base font-semibold text-neutral-900">{confirmModal.title}</h3>
+            </div>
+            <p className="text-sm text-neutral-500 mb-6 ml-[52px]">{confirmModal.message}</p>
+            <div className="flex justify-end gap-3">
+              <button
+                onClick={() => setConfirmModal(null)}
+                className="px-4 py-2 rounded-xl text-sm font-medium text-neutral-600 bg-neutral-100 hover:bg-neutral-200 transition-colors"
+              >
+                {tc("cancel")}
+              </button>
+              <button
+                onClick={() => {
+                  const bookingId = confirmModal.bookingId;
+                  setConfirmModal(null);
+                  updateStatus(bookingId, "CANCELLED");
+                }}
+                className="px-4 py-2 rounded-xl text-sm font-medium text-white bg-red-600 hover:bg-red-700 transition-colors"
+              >
+                {t("confirmCancelBtn")}
+              </button>
+            </div>
+          </div>
         </div>
       )}
     </div>

@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { isAdmin } from "@/lib/admin";
 import { prisma } from "@/lib/prisma";
-import { sendEmail, buildDriverReminderEmail, buildClientApologyEmail } from "@/lib/email";
+import { sendEmail, buildDriverReminderEmail, buildClientApologyEmail, buildCancelledByAdminDriverEmail } from "@/lib/email";
 import { format } from "date-fns";
 import { fr } from "date-fns/locale";
 
@@ -17,14 +17,15 @@ export async function POST(
   const body = await request.json();
   const { action } = body as { action: string };
 
-  if (!["remind-driver", "apologize-refuse"].includes(action)) {
+  if (!["remind-driver", "apologize-refuse", "cancel-booking"].includes(action)) {
     return NextResponse.json({ error: "Action invalide" }, { status: 400 });
   }
 
   const booking = await prisma.booking.findUnique({
     where: { id },
     include: {
-      driver: { select: { firstName: true, lastName: true, email: true, phone: true } },
+      driver: { select: { firstName: true, lastName: true, email: true, phone: true, notifyEmail: true } },
+      organization: { select: { name: true, contactName: true, email: true } },
     },
   });
 
@@ -32,12 +33,11 @@ export async function POST(
     return NextResponse.json({ error: "Réservation introuvable" }, { status: 404 });
   }
 
-  if (booking.status !== "PENDING") {
-    return NextResponse.json({ error: "La réservation n'est pas en attente" }, { status: 400 });
-  }
-
   try {
     if (action === "remind-driver") {
+      if (booking.status !== "PENDING") {
+        return NextResponse.json({ error: "La réservation n'est pas en attente" }, { status: 400 });
+      }
       if (!booking.driver) {
         return NextResponse.json({ error: "Aucun chauffeur assigné" }, { status: 400 });
       }
@@ -68,6 +68,10 @@ export async function POST(
     }
 
     if (action === "apologize-refuse") {
+      if (booking.status !== "PENDING") {
+        return NextResponse.json({ error: "La réservation n'est pas en attente" }, { status: 400 });
+      }
+
       const dateStr = format(booking.requestedDate, "dd MMM yyyy 'à' HH:mm", { locale: fr });
       const email = buildClientApologyEmail({
         clientName: booking.clientName,
@@ -95,6 +99,58 @@ export async function POST(
       });
 
       return NextResponse.json({ success: true, message: "Réservation refusée et email envoyé" });
+    }
+
+    if (action === "cancel-booking") {
+      if (!["PENDING", "ACCEPTED"].includes(booking.status)) {
+        return NextResponse.json({ error: "Seules les courses en attente ou acceptées peuvent être annulées" }, { status: 400 });
+      }
+
+      const wasAccepted = booking.status === "ACCEPTED";
+
+      await prisma.booking.update({
+        where: { id },
+        data: { status: "CANCELLED", cancelledBy: "SYSTEM" },
+      });
+
+      const dateStr = format(booking.requestedDate, "dd MMM yyyy 'à' HH:mm", { locale: fr });
+
+      // Send apology email to client
+      const clientEmailTo = booking.organization ? booking.organization.email : booking.clientEmail;
+      const clientDisplayName = booking.organization ? booking.organization.contactName : booking.clientName;
+      const clientMail = buildClientApologyEmail({
+        clientName: clientDisplayName,
+        departure: booking.departureName,
+        arrival: booking.arrivalName,
+        date: dateStr,
+        reference: booking.reference,
+        price: booking.lockedPrice ?? booking.estimatedPrice,
+      });
+      await sendEmail({ to: clientEmailTo, ...clientMail });
+
+      // If was ACCEPTED with a driver, notify the driver too
+      if (wasAccepted && booking.driver && booking.driver.notifyEmail) {
+        const driverMail = buildCancelledByAdminDriverEmail({
+          driverName: booking.driver.firstName,
+          departure: booking.departureName,
+          arrival: booking.arrivalName,
+          date: dateStr,
+          reference: booking.reference,
+          price: booking.lockedPrice ?? booking.estimatedPrice,
+        });
+        await sendEmail({ to: booking.driver.email, ...driverMail });
+      }
+
+      await prisma.adminNotification.create({
+        data: {
+          type: "BOOKING_CANCELLED",
+          title: `Annulation admin — #${booking.reference}`,
+          body: `Course #${booking.reference} annulée par l'admin. Email envoyé au client${wasAccepted && booking.driver ? " et au chauffeur" : ""}.`,
+          metadata: { bookingId: booking.id, action: "cancel-booking" },
+        },
+      });
+
+      return NextResponse.json({ success: true, message: "Course annulée" });
     }
   } catch (error) {
     console.error("Admin action error:", error);

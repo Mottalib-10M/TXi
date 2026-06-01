@@ -150,6 +150,17 @@ const t = {
     noDriverConfirmBody: "N'hésitez pas à retenter votre recherche dans quelques heures.",
     noDriverConfirmClosing: "Nous faisons notre maximum pour vous servir.",
     noDriverConfirmCta: "Réessayer sur TaxiNeo",
+    cancelledByDriverSubject: (ref: string) => `Course #${ref} annulée par le chauffeur`,
+    cancelledByDriverTitle: "Votre course a été annulée",
+    cancelledByDriverBody: (driverName: string) => `Nous sommes désolés, mais <strong>${driverName}</strong> a dû annuler votre course :`,
+    cancelledByDriverApology: "Nous vous prions de bien vouloir refaire une demande et choisir un autre taxi disponible.",
+    cancelledByClientSubject: (ref: string) => `Course #${ref} annulée par le client`,
+    cancelledByClientTitle: "Course annulée par le client",
+    cancelledByClientBody: (ref: string) => `Le client a annulé la course <strong>#${ref}</strong>. Voici le récapitulatif :`,
+    cancelledByClientNote: "Aucune action n'est requise de votre part.",
+    cancelledByAdminDriverSubject: (ref: string) => `Course #${ref} annulée par l'administration`,
+    cancelledByAdminDriverTitle: "Course annulée par l'administration",
+    cancelledByAdminDriverBody: (ref: string) => `La course <strong>#${ref}</strong> a été annulée par l'équipe TaxiNeo. Voici le récapitulatif :`,
   },
   en: {
     hello: "Hello",
@@ -262,6 +273,17 @@ const t = {
     noDriverConfirmBody: "Feel free to try again in a few hours.",
     noDriverConfirmClosing: "We are doing our best to serve you.",
     noDriverConfirmCta: "Try again on TaxiNeo",
+    cancelledByDriverSubject: (ref: string) => `Ride #${ref} cancelled by the driver`,
+    cancelledByDriverTitle: "Your ride has been cancelled",
+    cancelledByDriverBody: (driverName: string) => `We're sorry, but <strong>${driverName}</strong> had to cancel your ride:`,
+    cancelledByDriverApology: "Please submit a new request and choose another available taxi.",
+    cancelledByClientSubject: (ref: string) => `Ride #${ref} cancelled by the client`,
+    cancelledByClientTitle: "Ride cancelled by the client",
+    cancelledByClientBody: (ref: string) => `The client has cancelled ride <strong>#${ref}</strong>. Here's the summary:`,
+    cancelledByClientNote: "No action is required from you.",
+    cancelledByAdminDriverSubject: (ref: string) => `Ride #${ref} cancelled by administration`,
+    cancelledByAdminDriverTitle: "Ride cancelled by administration",
+    cancelledByAdminDriverBody: (ref: string) => `Ride <strong>#${ref}</strong> has been cancelled by the TaxiNeo team. Here's the summary:`,
   },
 } as const;
 
@@ -864,6 +886,123 @@ export function buildClientApologyEmail(data: {
         <div style="text-align: center; margin: 24px 0;">
           <a href="https://taxineo.fr" style="background-color: #171717; color: #ffffff; padding: 14px 28px; border-radius: 12px; text-decoration: none; font-weight: 500; font-size: 14px; display: inline-block;">
             ${l.clientApologyCta}
+          </a>
+        </div>
+        <p style="color: #a3a3a3; font-size: 12px;">${l.team}</p>
+      </div>
+    `,
+  };
+}
+
+export function buildCancelledByDriverClientEmail(data: {
+  clientName: string;
+  driverName: string;
+  departure: string;
+  arrival: string;
+  date: string;
+  reference: string;
+  price?: number | null;
+  locale?: Locale;
+}) {
+  const l = t[data.locale || "fr"];
+  const locale = data.locale || "fr";
+  return {
+    subject: l.cancelledByDriverSubject(data.reference),
+    html: `
+      <div style="font-family: Inter, sans-serif; max-width: 600px; margin: 0 auto;">
+        <h2 style="color: #171717;">${l.cancelledByDriverTitle}</h2>
+        <p>${l.hello} ${data.clientName},</p>
+        <p>${l.cancelledByDriverBody(data.driverName)}</p>
+        <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.departure}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.departure}</td></tr>
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.arrival}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.arrival}</td></tr>
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.date}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.date}</td></tr>
+          ${data.price ? `<tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.estimatedPrice}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${formatEmailPrice(data.price, locale)}</td></tr>` : ""}
+          <tr><td style="padding: 8px; color: #737373;">${l.reference}</td><td style="padding: 8px; font-weight: 500;">#${data.reference}</td></tr>
+        </table>
+        <p>${l.cancelledByDriverApology}</p>
+        <div style="text-align: center; margin: 24px 0;">
+          <a href="https://taxineo.fr" style="background-color: #171717; color: #ffffff; padding: 14px 28px; border-radius: 12px; text-decoration: none; font-weight: 500; font-size: 14px; display: inline-block;">
+            ${l.searchAgain}
+          </a>
+        </div>
+        <p style="color: #a3a3a3; font-size: 12px;">${l.team}</p>
+      </div>
+    `,
+  };
+}
+
+export function buildCancelledByClientDriverEmail(data: {
+  driverName: string;
+  clientName: string;
+  departure: string;
+  arrival: string;
+  date: string;
+  reference: string;
+  price?: number | null;
+  locale?: Locale;
+}) {
+  const l = t[data.locale || "fr"];
+  const locale = data.locale || "fr";
+  const baseUrl = process.env.NEXTAUTH_URL || "https://taxineo.fr";
+  const dashboardUrl = `${baseUrl}/dashboard/reservations`;
+  return {
+    subject: l.cancelledByClientSubject(data.reference),
+    html: `
+      <div style="font-family: Inter, sans-serif; max-width: 600px; margin: 0 auto;">
+        <h2 style="color: #171717;">${l.cancelledByClientTitle}</h2>
+        <p>${l.hello} ${data.driverName},</p>
+        <p>${l.cancelledByClientBody(data.reference)}</p>
+        <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.client}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.clientName}</td></tr>
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.departure}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.departure}</td></tr>
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.arrival}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.arrival}</td></tr>
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.date}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.date}</td></tr>
+          ${data.price ? `<tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.estimatedPrice}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${formatEmailPrice(data.price, locale)}</td></tr>` : ""}
+          <tr><td style="padding: 8px; color: #737373;">${l.reference}</td><td style="padding: 8px; font-weight: 500;">#${data.reference}</td></tr>
+        </table>
+        <p style="color: #525252; font-size: 13px;">${l.cancelledByClientNote}</p>
+        <div style="text-align: center; margin: 24px 0;">
+          <a href="${dashboardUrl}" style="background-color: #171717; color: #ffffff; padding: 14px 28px; border-radius: 12px; text-decoration: none; font-weight: 500; font-size: 14px; display: inline-block;">
+            ${l.viewDashboard}
+          </a>
+        </div>
+        <p style="color: #a3a3a3; font-size: 12px;">${l.team}</p>
+      </div>
+    `,
+  };
+}
+
+export function buildCancelledByAdminDriverEmail(data: {
+  driverName: string;
+  departure: string;
+  arrival: string;
+  date: string;
+  reference: string;
+  price?: number | null;
+  locale?: Locale;
+}) {
+  const l = t[data.locale || "fr"];
+  const locale = data.locale || "fr";
+  const baseUrl = process.env.NEXTAUTH_URL || "https://taxineo.fr";
+  const dashboardUrl = `${baseUrl}/dashboard/reservations`;
+  return {
+    subject: l.cancelledByAdminDriverSubject(data.reference),
+    html: `
+      <div style="font-family: Inter, sans-serif; max-width: 600px; margin: 0 auto;">
+        <h2 style="color: #171717;">${l.cancelledByAdminDriverTitle}</h2>
+        <p>${l.hello} ${data.driverName},</p>
+        <p>${l.cancelledByAdminDriverBody(data.reference)}</p>
+        <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.departure}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.departure}</td></tr>
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.arrival}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.arrival}</td></tr>
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.date}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.date}</td></tr>
+          ${data.price ? `<tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.estimatedPrice}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${formatEmailPrice(data.price, locale)}</td></tr>` : ""}
+          <tr><td style="padding: 8px; color: #737373;">${l.reference}</td><td style="padding: 8px; font-weight: 500;">#${data.reference}</td></tr>
+        </table>
+        <div style="text-align: center; margin: 24px 0;">
+          <a href="${dashboardUrl}" style="background-color: #171717; color: #ffffff; padding: 14px 28px; border-radius: 12px; text-decoration: none; font-weight: 500; font-size: 14px; display: inline-block;">
+            ${l.viewDashboard}
           </a>
         </div>
         <p style="color: #a3a3a3; font-size: 12px;">${l.team}</p>
