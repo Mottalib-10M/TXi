@@ -108,7 +108,7 @@ export default function NouvelleCourse() {
     setError("");
     setSuccess("");
 
-    if (!departure.name || !arrival.name) {
+    if (!departure.name || !arrival.name || !departure.lat || !departure.lng || !arrival.lat || !arrival.lng) {
       setError(t("missingDeparture"));
       return;
     }

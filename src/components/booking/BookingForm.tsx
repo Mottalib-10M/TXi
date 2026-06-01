@@ -79,7 +79,7 @@ export function BookingForm() {
   }, [session]);
 
   async function searchTaxis() {
-    if (!departure || !arrival) return;
+    if (!departure || !arrival || !departureLat || !departureLng || !arrivalLat || !arrivalLng) return;
     setLoading(true);
 
     try {
@@ -223,8 +223,8 @@ export function BookingForm() {
               value={departure}
               onChange={(val, lat, lng) => {
                 setDeparture(val);
-                if (lat) setDepartureLat(lat);
-                if (lng) setDepartureLng(lng);
+                setDepartureLat(lat);
+                setDepartureLng(lng);
               }}
               icon="solar:record-circle-linear"
               showGeolocation
@@ -252,8 +252,8 @@ export function BookingForm() {
               value={arrival}
               onChange={(val, lat, lng) => {
                 setArrival(val);
-                if (lat) setArrivalLat(lat);
-                if (lng) setArrivalLng(lng);
+                setArrivalLat(lat);
+                setArrivalLng(lng);
               }}
               icon="solar:map-point-linear"
             />
@@ -322,7 +322,7 @@ export function BookingForm() {
 
           <button
             onClick={searchTaxis}
-            disabled={!departure || !arrival || loading}
+            disabled={!departure || !arrival || !departureLat || !arrivalLat || loading}
             className="w-full mt-6 bg-neutral-950 text-white rounded-xl py-4 text-sm font-medium hover:bg-neutral-800 transition-colors focus:ring-4 focus:ring-neutral-200 btn-lift disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {loading ? t("searching") : t("seePrices")}

@@ -61,7 +61,7 @@ export function DirectBookingForm({
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    if (!departure || !arrival || !clientName || !clientEmail) return;
+    if (!departure || !arrival || !clientName || !clientEmail || !departureLat || !departureLng || !arrivalLat || !arrivalLng) return;
     trackBeginBooking({ driverName, departure, arrival });
     setSubmitting(true);
     setError("");
@@ -126,8 +126,8 @@ export function DirectBookingForm({
           value={departure}
           onChange={(val, lat, lng) => {
             setDeparture(val);
-            if (lat) setDepartureLat(lat);
-            if (lng) setDepartureLng(lng);
+            setDepartureLat(lat ?? 0);
+            setDepartureLng(lng ?? 0);
           }}
           icon="solar:record-circle-linear"
           showGeolocation
@@ -138,8 +138,8 @@ export function DirectBookingForm({
           value={arrival}
           onChange={(val, lat, lng) => {
             setArrival(val);
-            if (lat) setArrivalLat(lat);
-            if (lng) setArrivalLng(lng);
+            setArrivalLat(lat ?? 0);
+            setArrivalLng(lng ?? 0);
           }}
           icon="solar:stop-linear"
         />
@@ -239,7 +239,7 @@ export function DirectBookingForm({
 
         <button
           type="submit"
-          disabled={!departure || !arrival || !clientName || !clientEmail || !isValidEmail(clientEmail) || !!phoneError(clientPhone) || submitting}
+          disabled={!departure || !arrival || !departureLat || !arrivalLat || !clientName || !clientEmail || !isValidEmail(clientEmail) || !!phoneError(clientPhone) || submitting}
           className="w-full bg-neutral-950 text-white rounded-xl py-3.5 text-sm font-medium hover:bg-neutral-800 transition-colors btn-lift disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {submitting ? t("bookingInProgress") : t("bookNow")}

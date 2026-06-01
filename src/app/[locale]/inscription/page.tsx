@@ -439,7 +439,8 @@ export default function InscriptionPage() {
                   value={cityAddress}
                   onChange={(val, lat, lng) => {
                     setCityAddress(val);
-                    if (lat && lng) { setCityLat(lat); setCityLng(lng); }
+                    setCityLat(lat);
+                    setCityLng(lng);
                   }}
                   icon="solar:map-point-linear"
                 />
