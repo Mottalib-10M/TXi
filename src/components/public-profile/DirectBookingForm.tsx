@@ -8,6 +8,7 @@ import { Icon } from "@iconify/react";
 import { PlacesAutocomplete } from "@/components/booking/PlacesAutocomplete";
 import { emailError, phoneError, isValidEmail } from "@/lib/validation";
 import { trackBeginBooking, trackBookingComplete } from "@/lib/analytics";
+import TurnstileWidget from "@/components/TurnstileWidget";
 
 interface DirectBookingFormProps {
   driverId: string;
@@ -38,6 +39,8 @@ export function DirectBookingForm({
   const [scheduledDate, setScheduledDate] = useState("");
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState("");
+  const [turnstileToken, setTurnstileToken] = useState("");
+  const [hp, setHp] = useState("");
 
   const isLoggedIn = Boolean(session?.user?.email);
 
@@ -88,6 +91,8 @@ export function DirectBookingForm({
           driverId,
           source: "PROFILE",
           locale,
+          turnstileToken,
+          _hp: hp,
         }),
       });
 
@@ -236,6 +241,9 @@ export function DirectBookingForm({
             />
           </div>
         )}
+
+        <input type="text" name="company_url" value={hp} onChange={(e) => setHp(e.target.value)} tabIndex={-1} autoComplete="off" aria-hidden="true" className="absolute opacity-0 h-0 w-0 overflow-hidden pointer-events-none" />
+        <TurnstileWidget onToken={setTurnstileToken} />
 
         <button
           type="submit"

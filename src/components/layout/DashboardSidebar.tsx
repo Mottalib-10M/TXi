@@ -17,8 +17,9 @@ export function DashboardSidebar({ userName }: { userName: string }) {
 
   const navItems = [
     { href: "/dashboard", label: t("dashboard"), icon: "solar:chart-square-linear" },
+    { href: "/dashboard/reservations", label: t("receivedRides"), icon: "solar:inbox-line-linear" },
+    { href: "/dashboard/p2p", label: t("transmittedRides"), icon: "solar:transfer-horizontal-linear" },
     { href: "/dashboard/carte", label: t("freeCard"), icon: "solar:card-linear" },
-    { href: "/dashboard/reservations", label: t("reservations"), icon: "solar:calendar-linear" },
     { href: "/dashboard/profil-public", label: t("publicProfile"), icon: "solar:eye-linear" },
     { href: "/dashboard/profil", label: t("profile"), icon: "solar:user-linear" },
   ];
@@ -96,7 +97,7 @@ export function DashboardSidebar({ userName }: { userName: string }) {
                     <Icon icon={item.icon} className="text-lg" />
                     {item.label}
                   </Link>
-                  {item.href === "/dashboard/profil" && isOnProfil && (
+                  {item.href === "/dashboard/profil" && (
                     <div className="ml-4 pl-3 border-l border-neutral-200 mb-2 mt-1 space-y-0.5">
                       {profilSections.map((s) => (
                         <Link

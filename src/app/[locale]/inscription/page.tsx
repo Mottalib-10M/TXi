@@ -8,6 +8,7 @@ import { Link, useRouter } from "@/i18n/navigation";
 import { PlacesAutocomplete } from "@/components/booking/PlacesAutocomplete";
 import { emailError, phoneError, isValidEmail, isValidPhone } from "@/lib/validation";
 import { trackSignUp } from "@/lib/analytics";
+import TurnstileWidget from "@/components/TurnstileWidget";
 import { ComboBox } from "@/components/ui/ComboBox";
 import { VEHICLE_BRANDS, BRAND_NAMES } from "@/data/vehicle-models";
 
@@ -20,6 +21,7 @@ export default function InscriptionPage() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const initialType = searchParams.get("type") as ProfileType | null;
+  const redirect = searchParams.get("redirect");
   const prefillName = searchParams.get("name") || "";
   const prefillPhone = searchParams.get("phone") || "";
   const prefillEmail = searchParams.get("email") || "";
@@ -51,6 +53,8 @@ export default function InscriptionPage() {
   ];
 
   const [emailExists, setEmailExists] = useState(false);
+  const [turnstileToken, setTurnstileToken] = useState("");
+  const [hp, setHp] = useState("");
 
   async function handleDriverStep1(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -153,6 +157,8 @@ export default function InscriptionPage() {
       vehiclePlate: vehiclePlate || undefined,
       vehiclePhotoBase64: vehiclePhotoBase64 || undefined,
       locale,
+      turnstileToken,
+      _hp: hp,
     };
 
     try {
@@ -170,7 +176,8 @@ export default function InscriptionPage() {
       }
 
       trackSignUp({ method: "credentials", role: "driver" });
-      router.push("/connexion?registered=true");
+      const redirectParam = redirect ? `&redirect=${encodeURIComponent(redirect)}` : "";
+      router.push(`/connexion?registered=true${redirectParam}` as "/connexion");
     } catch {
       setError(tc("serverError"));
     } finally {
@@ -191,6 +198,8 @@ export default function InscriptionPage() {
       phone: formData.get("phone") as string,
       password: formData.get("password") as string,
       locale,
+      turnstileToken,
+      _hp: hp,
     };
 
     try {
@@ -208,7 +217,8 @@ export default function InscriptionPage() {
       }
 
       trackSignUp({ method: "credentials", role: "particulier" });
-      router.push("/connexion?registered=true");
+      const redirectParam = redirect ? `&redirect=${encodeURIComponent(redirect)}` : "";
+      router.push(`/connexion?registered=true${redirectParam}` as "/connexion");
     } catch {
       setError(tc("serverError"));
     } finally {
@@ -231,6 +241,8 @@ export default function InscriptionPage() {
       address: orgAddress,
       password: formData.get("password") as string,
       locale,
+      turnstileToken,
+      _hp: hp,
     };
 
     try {
@@ -248,7 +260,8 @@ export default function InscriptionPage() {
       }
 
       trackSignUp({ method: "credentials", role: profileType || "unknown" });
-      router.push("/connexion?registered=true");
+      const redirectParam = redirect ? `&redirect=${encodeURIComponent(redirect)}` : "";
+      router.push(`/connexion?registered=true${redirectParam}` as "/connexion");
     } catch {
       setError(tc("serverError"));
     } finally {
@@ -394,7 +407,7 @@ export default function InscriptionPage() {
 
               <div>
                 <label htmlFor="password" className="block text-sm font-medium mb-1">{t("password")}</label>
-                <input id="password" name="password" type="password" required minLength={6} className={inputClass} placeholder={t("passwordMinLength")} defaultValue={driverPassword} />
+                <input id="password" name="password" type="password" required minLength={8} className={inputClass} placeholder={t("passwordMinLength")} defaultValue={driverPassword} />
               </div>
 
               <button
@@ -505,6 +518,8 @@ export default function InscriptionPage() {
                 )}
               </div>
 
+              <input type="text" name="company_url" value={hp} onChange={(e) => setHp(e.target.value)} tabIndex={-1} autoComplete="off" aria-hidden="true" className="absolute opacity-0 h-0 w-0 overflow-hidden pointer-events-none" />
+              <TurnstileWidget onToken={setTurnstileToken} />
               <button
                 type="submit"
                 disabled={loading}
@@ -575,9 +590,11 @@ export default function InscriptionPage() {
 
               <div>
                 <label htmlFor="password" className="block text-sm font-medium mb-1.5">{t("password")}</label>
-                <input id="password" name="password" type="password" required minLength={6} className={inputClass} placeholder={t("passwordMinLength")} />
+                <input id="password" name="password" type="password" required minLength={8} className={inputClass} placeholder={t("passwordMinLength")} />
               </div>
 
+              <input type="text" name="company_url" value={hp} onChange={(e) => setHp(e.target.value)} tabIndex={-1} autoComplete="off" aria-hidden="true" className="absolute opacity-0 h-0 w-0 overflow-hidden pointer-events-none" />
+              <TurnstileWidget onToken={setTurnstileToken} />
               <button
                 type="submit"
                 disabled={loading || (!!formEmail && !isValidEmail(formEmail)) || (!!formPhone && !isValidPhone(formPhone))}
@@ -649,9 +666,11 @@ export default function InscriptionPage() {
 
               <div>
                 <label htmlFor="password" className="block text-sm font-medium mb-1.5">{t("password")}</label>
-                <input id="password" name="password" type="password" required minLength={6} className={inputClass} placeholder={t("passwordMinLength")} />
+                <input id="password" name="password" type="password" required minLength={8} className={inputClass} placeholder={t("passwordMinLength")} />
               </div>
 
+              <input type="text" name="company_url" value={hp} onChange={(e) => setHp(e.target.value)} tabIndex={-1} autoComplete="off" aria-hidden="true" className="absolute opacity-0 h-0 w-0 overflow-hidden pointer-events-none" />
+              <TurnstileWidget onToken={setTurnstileToken} />
               <button
                 type="submit"
                 disabled={loading || (!!formEmail && !isValidEmail(formEmail)) || (!!formPhone && !isValidPhone(formPhone))}

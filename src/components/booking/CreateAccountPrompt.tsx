@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Icon } from "@iconify/react";
 import { useTranslations } from "next-intl";
+import TurnstileWidget from "@/components/TurnstileWidget";
 
 interface CreateAccountPromptProps {
   clientName: string;
@@ -22,6 +23,8 @@ export function CreateAccountPrompt({
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState("");
+  const [turnstileToken, setTurnstileToken] = useState("");
+  const [hp, setHp] = useState("");
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -39,6 +42,8 @@ export function CreateAccountPrompt({
           phone: clientPhone,
           password,
           locale,
+          turnstileToken,
+          _hp: hp,
         }),
       });
 
@@ -93,7 +98,7 @@ export function CreateAccountPrompt({
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            minLength={6}
+            minLength={8}
             required
             className="w-full border border-neutral-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-neutral-900 focus:border-transparent"
             placeholder="••••••••"
@@ -104,9 +109,11 @@ export function CreateAccountPrompt({
           <p className="text-xs text-red-600">{error}</p>
         )}
 
+        <input type="text" name="company_url" value={hp} onChange={(e) => setHp(e.target.value)} tabIndex={-1} autoComplete="off" aria-hidden="true" className="absolute opacity-0 h-0 w-0 overflow-hidden pointer-events-none" />
+        <TurnstileWidget onToken={setTurnstileToken} />
         <button
           type="submit"
-          disabled={loading || password.length < 6}
+          disabled={loading || password.length < 8}
           className="w-full bg-neutral-900 text-white text-sm font-medium py-2.5 rounded-full hover:bg-neutral-800 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {loading ? t("creating") : t("finalize")}

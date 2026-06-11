@@ -151,7 +151,7 @@ export default function ParametresPage() {
               onChange={(e) => setNewPassword(e.target.value)}
               className={inputClass}
               placeholder={t("leaveBlank")}
-              minLength={6}
+              minLength={8}
             />
           </div>
         </div>

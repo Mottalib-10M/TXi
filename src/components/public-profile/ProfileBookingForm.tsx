@@ -7,6 +7,7 @@ import { useTranslations, useLocale } from "next-intl";
 import { Icon } from "@iconify/react";
 import { phoneError } from "@/lib/validation";
 import { trackBeginBooking, trackBookingComplete } from "@/lib/analytics";
+import TurnstileWidget from "@/components/TurnstileWidget";
 
 interface ProfileBookingFormProps {
   driverId: string;
@@ -44,6 +45,8 @@ export function ProfileBookingForm({
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState("");
   const [editingPhone, setEditingPhone] = useState(false);
+  const [turnstileToken, setTurnstileToken] = useState("");
+  const [hp, setHp] = useState("");
 
   const isLoggedIn = Boolean(session?.user?.email);
 
@@ -100,6 +103,8 @@ export function ProfileBookingForm({
           driverId,
           source: "PROFILE",
           locale,
+          turnstileToken,
+          _hp: hp,
         }),
       });
 
@@ -236,6 +241,9 @@ export function ProfileBookingForm({
             </button>
           </div>
         </div>
+
+        <input type="text" name="company_url" value={hp} onChange={(e) => setHp(e.target.value)} tabIndex={-1} autoComplete="off" aria-hidden="true" className="absolute opacity-0 h-0 w-0 overflow-hidden pointer-events-none" />
+        <TurnstileWidget onToken={setTurnstileToken} />
 
         <button
           type="submit"

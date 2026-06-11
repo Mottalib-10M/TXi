@@ -17,6 +17,7 @@ function ConnexionForm() {
   const verified = searchParams.get("verified");
   const resetSuccess = searchParams.get("reset");
   const tokenError = searchParams.get("error");
+  const redirect = searchParams.get("redirect");
   const [error, setError] = useState("");
   const [emailNotVerified, setEmailNotVerified] = useState(false);
   const [resendEmail, setResendEmail] = useState("");
@@ -79,8 +80,12 @@ function ConnexionForm() {
 
       // Success — redirect with full page load
       trackLogin(data.role === "organization" ? "organization" : "driver");
-      const dest = data.role === "organization" ? "/org" : "/dashboard";
-      window.location.href = `/${locale}${dest}`;
+      if (redirect && redirect.startsWith("/")) {
+        window.location.href = `/${locale}${redirect}`;
+      } else {
+        const dest = data.role === "organization" ? "/org" : "/dashboard";
+        window.location.href = `/${locale}${dest}`;
+      }
     } catch {
       setError(tc("serverError"));
       setLoading(false);

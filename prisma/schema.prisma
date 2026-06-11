@@ -37,6 +37,7 @@ enum BookingSource {
   LANDING
   PROFILE
   ORGANIZATION
+  P2P
 }
 
 enum CancelledBy {
@@ -108,9 +109,10 @@ model Driver {
   lastLoginAt DateTime?
   loginCount  Int       @default(0)
 
-  bookings     Booking[]
-  favoritedBy  FavoriteDriver[]
-  sharedRoutes SharedRoute[]
+  bookings         Booking[]       @relation("DriverBookings")
+  referredBookings Booking[]       @relation("ReferredBookings")
+  favoritedBy      FavoriteDriver[]
+  sharedRoutes     SharedRoute[]
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -159,12 +161,21 @@ model Booking {
   invitedDriverIds String[]  @default([])
 
   // Driver relation
-  driver   Driver? @relation(fields: [driverId], references: [id])
+  driver   Driver? @relation("DriverBookings", fields: [driverId], references: [id])
   driverId String?
 
   // Organisation (optionnel - null = booking direct client)
   organization   Organization? @relation(fields: [organizationId], references: [id])
   organizationId String?
+
+  // P2P ride sharing
+  referrerDriverId     String?
+  referrerDriver       Driver?  @relation("ReferredBookings", fields: [referrerDriverId], references: [id])
+  targetDriverName     String?
+  targetDriverPhone    String?
+  p2pCommissionRate    Float?
+  p2pCommissionAmount  Float?
+  p2pToken             String?  @unique
 
   // Langue du client lors de la réservation
   clientLocale String @default("fr")
@@ -288,6 +299,7 @@ enum NotificationType {
   SHARED_ROUTE_PROPOSED
   SHARED_ROUTE_JOINED
   SHARED_ROUTE_DRIVER_ACCEPTED
+  P2P_CREATED
 }
 
 model AdminNotification {

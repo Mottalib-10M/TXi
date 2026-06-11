@@ -5,6 +5,7 @@ import { Icon } from "@iconify/react";
 import { useTranslations } from "next-intl";
 import { emailError, phoneError, isValidEmail } from "@/lib/validation";
 import { trackContact } from "@/lib/analytics";
+import TurnstileWidget from "@/components/TurnstileWidget";
 
 export function ContactFormSection() {
   const t = useTranslations("contact");
@@ -17,6 +18,8 @@ export function ContactFormSection() {
   });
   const [submitting, setSubmitting] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [turnstileToken, setTurnstileToken] = useState("");
+  const [hp, setHp] = useState("");
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -32,6 +35,8 @@ export function ContactFormSection() {
           email: form.email,
           phone: form.phone,
           message: form.message,
+          turnstileToken,
+          _hp: hp,
         }),
       });
       if (res.ok) {
@@ -114,6 +119,8 @@ export function ContactFormSection() {
             rows={4}
             className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all resize-none"
           />
+          <input type="text" name="company_url" value={hp} onChange={(e) => setHp(e.target.value)} tabIndex={-1} autoComplete="off" aria-hidden="true" className="absolute opacity-0 h-0 w-0 overflow-hidden pointer-events-none" />
+          <TurnstileWidget onToken={setTurnstileToken} />
           <button
             type="submit"
             disabled={submitting || !form.name || !form.email || !isValidEmail(form.email) || !!phoneError(form.phone) || !form.message}

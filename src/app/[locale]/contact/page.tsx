@@ -8,6 +8,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { emailError, phoneError, isValidEmail } from "@/lib/validation";
 import { trackContact } from "@/lib/analytics";
+import TurnstileWidget from "@/components/TurnstileWidget";
 
 export default function ContactPage() {
   const t = useTranslations("contact");
@@ -59,6 +60,8 @@ export default function ContactPage() {
   const [submitting, setSubmitting] = useState(false);
   const [success, setSuccess] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [turnstileToken, setTurnstileToken] = useState("");
+  const [hp, setHp] = useState("");
 
   useEffect(() => {
     if (sujetParam && sujets.some((s) => s.value === sujetParam)) {
@@ -87,6 +90,8 @@ export default function ContactPage() {
           email: form.email,
           phone: form.phone,
           message: `[${sujetLabel}] ${form.message}`,
+          turnstileToken,
+          _hp: hp,
         }),
       });
       if (res.ok) {
@@ -217,6 +222,8 @@ export default function ContactPage() {
                     rows={4}
                     className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all resize-none"
                   />
+                  <input type="text" name="company_url" value={hp} onChange={(e) => setHp(e.target.value)} tabIndex={-1} autoComplete="off" aria-hidden="true" className="absolute opacity-0 h-0 w-0 overflow-hidden pointer-events-none" />
+                  <TurnstileWidget onToken={setTurnstileToken} />
                   <button
                     type="submit"
                     disabled={submitting || !form.name || !form.email || !isValidEmail(form.email) || !!phoneError(form.phone) || !form.message}

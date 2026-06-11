@@ -103,7 +103,6 @@ export async function GET(request: Request) {
           select: {
             firstName: true,
             lastName: true,
-            phone: true,
             photoUrl: true,
           },
         },

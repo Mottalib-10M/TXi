@@ -4,6 +4,8 @@ import slugify from "slugify";
 import { prisma } from "@/lib/prisma";
 import { z } from "zod";
 import { sendEmail, buildVerificationEmail } from "@/lib/email";
+import { applyStrictRateLimit } from "@/lib/rate-limit";
+import { verifyTurnstileToken } from "@/lib/turnstile";
 
 const driverSchema = z.object({
   profileType: z.literal("driver"),
@@ -11,7 +13,7 @@ const driverSchema = z.object({
   companyName: z.string().min(2, "Minimum 2 caractères"),
   email: z.string().email("Email invalide"),
   phone: z.string().min(10, "Numéro invalide"),
-  password: z.string().min(6, "Minimum 6 caractères"),
+  password: z.string().min(8, "Minimum 8 caractères"),
   cityAddress: z.string().optional(),
   cityLat: z.number().optional(),
   cityLng: z.number().optional(),
@@ -28,7 +30,7 @@ const orgSchema = z.object({
   email: z.string().email("Email invalide"),
   phone: z.string().min(10, "Numéro invalide"),
   address: z.string().optional(),
-  password: z.string().min(6, "Minimum 6 caractères"),
+  password: z.string().min(8, "Minimum 8 caractères"),
 });
 
 const particulierSchema = z.object({
@@ -36,7 +38,7 @@ const particulierSchema = z.object({
   name: z.string().min(2, "Minimum 2 caractères"),
   email: z.string().email("Email invalide"),
   phone: z.string().min(10, "Numéro invalide"),
-  password: z.string().min(6, "Minimum 6 caractères"),
+  password: z.string().min(8, "Minimum 8 caractères"),
 });
 
 const registerSchema = z.discriminatedUnion("profileType", [driverSchema, orgSchema, particulierSchema]);
@@ -82,7 +84,21 @@ async function sendVerificationEmail(email: string, name: string, locale: "fr" |
 
 export async function POST(request: Request) {
   try {
+    const rateLimited = await applyStrictRateLimit();
+    if (rateLimited) return rateLimited;
+
     const body = await request.json();
+
+    // Honeypot — bots fill hidden fields
+    if (body._hp) {
+      return NextResponse.json({ success: true }); // silent success
+    }
+
+    // Turnstile CAPTCHA
+    if (!(await verifyTurnstileToken(body.turnstileToken))) {
+      return NextResponse.json({ error: "Vérification anti-bot échouée" }, { status: 403 });
+    }
+
     const data = registerSchema.parse(body);
     const locale: "fr" | "en" = body.locale === "en" ? "en" : "fr";
 
@@ -102,7 +118,14 @@ export async function POST(request: Request) {
       // Handle vehicle photo if provided
       let photoUrl: string | undefined;
       if (data.vehiclePhotoBase64) {
-        // Store as data URI (base64) — works without external storage
+        const validPrefixes = ["data:image/jpeg;base64,", "data:image/png;base64,", "data:image/webp;base64,"];
+        if (!validPrefixes.some((p) => data.vehiclePhotoBase64!.startsWith(p))) {
+          return NextResponse.json({ error: "Format de photo invalide" }, { status: 400 });
+        }
+        // Limit base64 size (~5MB image = ~6.7MB base64)
+        if (data.vehiclePhotoBase64.length > 7 * 1024 * 1024) {
+          return NextResponse.json({ error: "Photo trop volumineuse" }, { status: 400 });
+        }
         photoUrl = data.vehiclePhotoBase64;
       }
 

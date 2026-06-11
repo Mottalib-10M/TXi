@@ -2,6 +2,8 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 import { sendEmail } from "@/lib/email";
 import { createNotification } from "@/lib/notifications";
+import { applyModerateRateLimit } from "@/lib/rate-limit";
+import { verifyTurnstileToken } from "@/lib/turnstile";
 
 const devisTaxiMedicalSchema = z.object({
   name: z.string().min(1),
@@ -37,14 +39,25 @@ const reasonLabels: Record<string, string> = {
 
 export async function POST(req: Request) {
   try {
+    const rateLimited = await applyModerateRateLimit();
+    if (rateLimited) return rateLimited;
+
     const body = await req.json();
+
+    if (body._hp) {
+      return NextResponse.json({ success: true });
+    }
+    if (!(await verifyTurnstileToken(body.turnstileToken))) {
+      return NextResponse.json({ error: "Vérification anti-bot échouée" }, { status: 403 });
+    }
+
     const data = devisTaxiMedicalSchema.parse(body);
 
     const transportLabel = transportLabels[data.transportType] || data.transportType;
     const reasonLabel = reasonLabels[data.medicalReason] || data.medicalReason;
 
     await sendEmail({
-      to: process.env.CONTACT_EMAIL || "Radif.mottalib@gmail.com",
+      to: process.env.CONTACT_EMAIL || "support@taxineo.fr",
       subject: `Demande taxi m\u00e9dical${data.city ? ` \u2014 ${data.city}` : ""}`,
       html: `
         <div style="font-family: Inter, sans-serif; max-width: 600px; margin: 0 auto;">

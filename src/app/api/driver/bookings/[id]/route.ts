@@ -518,7 +518,7 @@ async function notifyAdmin(booking: {
     </div>
   `;
 
-  const adminEmails = (process.env.ADMIN_EMAILS || "amradif@gmail.com,sni.taxi@outlook.fr").split(",").map((e) => e.trim()).filter(Boolean);
+  const adminEmails = (process.env.ADMIN_EMAILS || "support@taxineo.fr,sni.taxi@outlook.fr").split(",").map((e) => e.trim()).filter(Boolean);
   for (const adminEmail of adminEmails) {
     await sendEmail({
       to: adminEmail,

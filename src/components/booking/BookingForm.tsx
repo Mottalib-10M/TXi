@@ -8,6 +8,7 @@ import { Link, useRouter } from "@/i18n/navigation";
 import { PlacesAutocomplete } from "./PlacesAutocomplete";
 import { emailError, phoneError, isValidEmail, formatPrice } from "@/lib/validation";
 import { trackSearch, trackViewResults, trackSearchHasResults, trackSearchNoResults, trackSelectTaxi, trackBeginBooking, trackBookingComplete, trackContactRequest, trackError } from "@/lib/analytics";
+import TurnstileWidget from "@/components/TurnstileWidget";
 
 interface TaxiResult {
   id: string;
@@ -56,6 +57,10 @@ export function BookingForm() {
   // Contact request (no drivers available)
   const [contactSent, setContactSent] = useState(false);
   const [contactSubmitting, setContactSubmitting] = useState(false);
+
+  // Anti-bot
+  const [turnstileToken, setTurnstileToken] = useState("");
+  const [hp, setHp] = useState("");
 
   const isLoggedIn = Boolean(session?.user?.email);
 
@@ -155,6 +160,8 @@ export function BookingForm() {
           estimatedPrice: selectedTaxi.estimatedPrice,
           source: "LANDING",
           locale,
+          turnstileToken,
+          _hp: hp,
         }),
       });
 
@@ -193,6 +200,8 @@ export function BookingForm() {
             : undefined,
           passengers,
           locale,
+          turnstileToken,
+          _hp: hp,
         }),
       });
 
@@ -600,6 +609,18 @@ export function BookingForm() {
               />
             </div>
           )}
+
+          <input
+            type="text"
+            name="company_url"
+            value={hp}
+            onChange={(e) => setHp(e.target.value)}
+            tabIndex={-1}
+            autoComplete="off"
+            aria-hidden="true"
+            className="absolute opacity-0 h-0 w-0 overflow-hidden pointer-events-none"
+          />
+          <TurnstileWidget onToken={setTurnstileToken} />
 
           <button
             onClick={handleBooking}

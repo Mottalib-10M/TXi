@@ -12,9 +12,11 @@ interface QRCodeButtonProps {
   driverName?: string;
   companyName?: string;
   vehicleModel?: string;
+  variant?: "default" | "quickLink";
+  label?: string;
 }
 
-export function QRCodeButton({ slug, driverName, companyName, vehicleModel }: QRCodeButtonProps) {
+export function QRCodeButton({ slug, driverName, companyName, vehicleModel, variant = "default", label }: QRCodeButtonProps) {
   const t = useTranslations("dashboard");
   const [open, setOpen] = useState(false);
   const [qrDataUrl, setQrDataUrl] = useState("");
@@ -40,13 +42,23 @@ export function QRCodeButton({ slug, driverName, companyName, vehicleModel }: QR
 
   return (
     <>
-      <button
-        onClick={() => setOpen(true)}
-        className="flex items-center gap-2 bg-neutral-900 text-white px-4 py-2 rounded-xl text-sm font-medium hover:bg-neutral-800 transition-colors"
-      >
-        <Icon icon="solar:qr-code-linear" className="text-lg" />
-        {t("qrCode")}
-      </button>
+      {variant === "quickLink" ? (
+        <button
+          onClick={() => setOpen(true)}
+          className="bg-white border border-neutral-200 rounded-xl p-3 text-center hover:border-neutral-300 transition-colors"
+        >
+          <Icon icon="solar:qr-code-linear" className="text-neutral-500 text-xl mx-auto mb-1" />
+          <span className="text-xs font-medium text-neutral-700">{label || t("qrCode")}</span>
+        </button>
+      ) : (
+        <button
+          onClick={() => setOpen(true)}
+          className="flex items-center gap-2 bg-neutral-900 text-white px-4 py-2 rounded-xl text-sm font-medium hover:bg-neutral-800 transition-colors"
+        >
+          <Icon icon="solar:qr-code-linear" className="text-lg" />
+          {t("qrCode")}
+        </button>
+      )}
 
       {open && (
         <>

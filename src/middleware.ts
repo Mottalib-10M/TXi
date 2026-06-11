@@ -94,6 +94,10 @@ export async function middleware(req: NextRequest) {
   // Redirect authenticated users away from login/register pages
   if (isAuthPage && token) {
     const locale = getLocale(pathname);
+    const redirectParam = req.nextUrl.searchParams.get("redirect");
+    if (redirectParam && redirectParam.startsWith("/")) {
+      return NextResponse.redirect(new URL(`/${locale}${redirectParam}`, req.nextUrl.origin));
+    }
     const dest = (token as { role?: string }).role === "organization" ? "/org" : "/dashboard";
     const dashUrl = new URL(`/${locale}${dest}`, req.nextUrl.origin);
     return NextResponse.redirect(dashUrl);

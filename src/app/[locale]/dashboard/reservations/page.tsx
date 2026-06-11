@@ -32,14 +32,22 @@ export default async function ReservationsPage() {
       ],
     },
     orderBy: { createdAt: "desc" },
+    include: {
+      referrerDriver: { select: { firstName: true, lastName: true } },
+      organization: { select: { name: true } },
+    },
   });
 
-  const serialized = bookings.map((b: typeof bookings[number]) => ({
+  const serialized = bookings.map((b) => ({
     ...b,
     createdAt: b.createdAt.toISOString(),
     updatedAt: b.updatedAt.toISOString(),
     requestedDate: b.requestedDate.toISOString(),
     cancelledBy: b.cancelledBy || null,
+    referrerDriverName: b.referrerDriver
+      ? `${b.referrerDriver.firstName} ${b.referrerDriver.lastName}`
+      : null,
+    organizationName: b.organization?.name || null,
   }));
 
   return (

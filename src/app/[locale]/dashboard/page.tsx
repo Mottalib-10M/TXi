@@ -69,10 +69,37 @@ export default async function DashboardPage() {
 
   if (!driver) return null;
 
+  // P2P transmitted courses stats
+  const transmittedBookings = await prisma.booking.findMany({
+    where: { referrerDriverId: session.user.id },
+    select: {
+      status: true,
+      p2pCommissionAmount: true,
+      lockedPrice: true,
+    },
+  });
+  const transmittedCount = transmittedBookings.length;
+  const totalCommission = transmittedBookings
+    .filter((b) => b.status === "ACCEPTED" || b.status === "COMPLETED")
+    .reduce((sum, b) => sum + (b.p2pCommissionAmount || 0), 0);
+
+  // Weekly bookings count
+  const startOfWeek = new Date(now);
+  startOfWeek.setDate(now.getDate() - now.getDay() + (now.getDay() === 0 ? -6 : 1)); // Monday
+  startOfWeek.setHours(0, 0, 0, 0);
+  const weeklyBookingsCount = await prisma.booking.count({
+    where: {
+      OR: [
+        { driverId: session.user.id },
+        { invitedDriverIds: { has: session.user.id } },
+      ],
+      createdAt: { gte: startOfWeek },
+    },
+  });
+
   const td = await getTranslations("dashboard");
   const locale = await getLocale();
 
-  const totalBookings = driver._count.bookings;
   const pendingBookings = activeBookings.filter((b) => b.status === "PENDING");
   const acceptedBookings = activeBookings.filter((b) => b.status === "ACCEPTED");
 
@@ -160,70 +187,85 @@ export default async function DashboardPage() {
 
   return (
     <div className="min-w-0">
-      <div className="flex flex-wrap items-center justify-between gap-2 mb-6">
-        <h1 className="text-2xl font-semibold tracking-tight">
-          {td("hello", { name: driver.firstName })}
-        </h1>
-        <div className="flex items-center gap-2">
-          <Link
-            href="/dashboard/carte"
-            className="inline-flex items-center gap-2 bg-amber-500 text-white text-sm font-semibold px-4 py-2 rounded-xl hover:bg-amber-600 shadow-sm transition-colors whitespace-nowrap"
-          >
-            <Icon icon="solar:card-2-linear" className="text-base" />
-            {td("freeCard")}
-          </Link>
-          <QRCodeButton
-            slug={driver.slug}
-            driverName={`${driver.firstName} ${driver.lastName}`}
-            companyName={driver.companyName || ""}
-            vehicleModel={v0?.brand ? `${(v0 as { brand?: string; model?: string }).brand || ""} ${(v0 as { brand?: string; model?: string }).model || ""}`.trim() : `${driver.vehicleBrand || ""} ${driver.vehicleModel || ""}`.trim()}
-          />
-        </div>
+      {/* 1. Header simplifié */}
+      <h1 className="text-2xl font-semibold tracking-tight mb-4">
+        {td("hello", { name: driver.firstName })}
+      </h1>
+
+      {/* 2. Boutons d'action principaux */}
+      <div className="grid grid-cols-2 gap-3 mb-6">
+        <Link
+          href="/dashboard/reservations"
+          className="relative flex flex-col items-center justify-center gap-1 bg-neutral-900 text-white rounded-2xl px-4 py-5 shadow-lg shadow-neutral-900/25 hover:bg-neutral-800 hover:shadow-xl hover:shadow-neutral-900/30 hover:-translate-y-0.5 active:scale-[0.98] transition-all"
+        >
+          {pendingBookings.length > 0 && (
+            <span className="absolute -top-1.5 -right-1.5 flex items-center justify-center min-w-[20px] h-5 px-1 bg-red-500 text-white text-xs font-bold rounded-full shadow animate-pulse">
+              {pendingBookings.length}
+            </span>
+          )}
+          <Icon icon="solar:inbox-line-linear" className="text-2xl" />
+          <span className="text-sm font-semibold">{td("ctaViewRides")}</span>
+        </Link>
+        <Link
+          href="/dashboard/p2p"
+          className="relative flex flex-col items-center justify-center gap-1 bg-violet-600 text-white rounded-2xl px-4 py-5 shadow-lg shadow-violet-600/25 hover:bg-violet-500 hover:shadow-xl hover:shadow-violet-500/30 hover:-translate-y-0.5 active:scale-[0.98] transition-all"
+        >
+          <Icon icon="solar:transfer-horizontal-linear" className="text-2xl" />
+          <span className="text-sm font-semibold">{td("ctaTransferRide")}</span>
+          <span className="text-[11px] font-light text-white/80 leading-tight text-center">{td("ctaTransferHint")}</span>
+        </Link>
       </div>
 
-      {/* Stats bar - compact */}
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-6">
+      {/* 3. Barre de stats compacte */}
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
         <Link
           href="/dashboard/reservations"
-          className="flex items-center gap-2 bg-white border border-neutral-200 rounded-xl px-3 py-2.5 hover:border-neutral-300 transition-colors min-w-0"
+          className="bg-white border border-neutral-200 rounded-xl p-3 hover:border-neutral-300 transition-colors"
         >
-          <Icon icon="solar:calendar-linear" className="text-neutral-500 text-lg shrink-0" />
-          <span className="text-xs text-neutral-500 truncate">{td("total")}</span>
-          <span className="text-sm font-semibold ml-auto">{totalBookings}</span>
+          <div className="flex items-center gap-2 mb-1">
+            <Icon icon="solar:clipboard-list-linear" className="text-neutral-500 text-base" />
+            <span className="text-xs text-neutral-500">{td("statsWeekRides")}</span>
+          </div>
+          <p className="text-lg font-bold text-neutral-900">{weeklyBookingsCount}</p>
         </Link>
-
         <Link
           href="/dashboard/reservations"
-          className="flex items-center gap-2 bg-white border border-neutral-200 rounded-xl px-3 py-2.5 hover:border-neutral-300 transition-colors min-w-0"
+          className="bg-white border border-neutral-200 rounded-xl p-3 hover:border-amber-300 transition-colors"
         >
-          <Icon icon="solar:clock-circle-linear" className="text-amber-500 text-lg shrink-0" />
-          <span className="text-xs text-neutral-500 truncate">{td("pending")}</span>
-          <span className="text-sm font-semibold ml-auto">{pendingBookings.length}</span>
+          <div className="flex items-center gap-2 mb-1">
+            {pendingBookings.length > 0 && (
+              <div className="w-2 h-2 bg-amber-400 rounded-full animate-pulse" />
+            )}
+            <Icon icon="solar:hourglass-linear" className="text-amber-500 text-base" />
+            <span className="text-xs text-neutral-500">{td("statsPending")}</span>
+          </div>
+          <p className="text-lg font-bold text-neutral-900">{pendingBookings.length}</p>
         </Link>
-
         <Link
           href="/dashboard/reservations"
-          className="flex items-center gap-2 bg-white border border-neutral-200 rounded-xl px-3 py-2.5 hover:border-neutral-300 transition-colors min-w-0"
+          className="bg-white border border-neutral-200 rounded-xl p-3 hover:border-green-300 transition-colors"
         >
-          <Icon icon="solar:check-circle-linear" className="text-green-500 text-lg shrink-0" />
-          <span className="text-xs text-neutral-500 truncate">{td("acceptedPlural")}</span>
-          <span className="text-sm font-semibold ml-auto">{acceptedBookings.length}</span>
+          <div className="flex items-center gap-2 mb-1">
+            <Icon icon="solar:check-circle-linear" className="text-green-500 text-base" />
+            <span className="text-xs text-neutral-500">{td("statsAccepted")}</span>
+          </div>
+          <p className="text-lg font-bold text-neutral-900">{acceptedBookings.length}</p>
         </Link>
-
         <Link
           href="/dashboard/profil"
-          className="flex items-center gap-2 bg-white border border-neutral-200 rounded-xl px-3 py-2.5 hover:border-neutral-300 transition-colors min-w-0"
+          className="bg-white border border-neutral-200 rounded-xl p-3 hover:border-neutral-300 transition-colors"
         >
-          <Icon
-            icon={completeness === 100 ? "solar:check-circle-bold" : "solar:user-check-linear"}
-            className={`text-lg shrink-0 ${completeness === 100 ? "text-green-500" : "text-blue-500"}`}
-          />
-          <span className="text-xs text-neutral-500 truncate">{td("fromProfile")}</span>
-          <span className="text-sm font-semibold ml-auto">{completeness}%</span>
+          <div className="flex items-center gap-2 mb-1">
+            <Icon icon="solar:user-circle-linear" className="text-neutral-500 text-base" />
+            <span className="text-xs text-neutral-500">{td("statsProfile")}</span>
+          </div>
+          <p className={`text-lg font-bold ${completeness < 100 ? "text-amber-600" : "text-neutral-900"}`}>
+            {completeness}%
+          </p>
         </Link>
       </div>
 
-      {/* Pending bookings - priority */}
+      {/* 3. Courses en attente */}
       {pendingBookings.length > 0 && (
         <div className="mb-4">
           <div className="flex items-center justify-between mb-3">
@@ -268,6 +310,12 @@ export default async function DashboardPage() {
                       <Icon icon="solar:calendar-linear" className="text-sm" />
                       {formatDate(booking.requestedDate)}
                     </span>
+                    {booking.source === "P2P" && (
+                      <span className="inline-flex items-center gap-1 bg-violet-100 text-violet-700 text-xs font-medium px-2 py-0.5 rounded-full">
+                        <Icon icon="solar:transfer-horizontal-linear" className="text-xs" />
+                        {td("transmittedBadge")}
+                      </span>
+                    )}
                     {urgent && (
                       <span className="inline-flex items-center gap-1 bg-red-100 text-red-700 text-xs font-semibold px-2 py-0.5 rounded-full">
                         <Icon icon="solar:alarm-bold" className="text-xs" />
@@ -298,7 +346,7 @@ export default async function DashboardPage() {
         </div>
       )}
 
-      {/* Accepted bookings - upcoming rides */}
+      {/* 4. Courses confirmées / à venir */}
       {acceptedBookings.length > 0 && (
         <div className="mb-6">
           <div className="flex items-center justify-between mb-3">
@@ -343,6 +391,12 @@ export default async function DashboardPage() {
                       <Icon icon="solar:calendar-linear" className="text-sm" />
                       {formatDate(booking.requestedDate)}
                     </span>
+                    {booking.source === "P2P" && (
+                      <span className="inline-flex items-center gap-1 bg-violet-100 text-violet-700 text-xs font-medium px-2 py-0.5 rounded-full">
+                        <Icon icon="solar:transfer-horizontal-linear" className="text-xs" />
+                        {td("transmittedBadge")}
+                      </span>
+                    )}
                     {urgent && (
                       <span className="inline-flex items-center gap-1 bg-red-100 text-red-700 text-xs font-semibold px-2 py-0.5 rounded-full">
                         <Icon icon="solar:alarm-bold" className="text-xs" />
@@ -372,7 +426,7 @@ export default async function DashboardPage() {
         </div>
       )}
 
-      {/* Missing profile items */}
+      {/* 5. Infos profil manquantes avec barre de progression */}
       {missingChecks.length > 0 && (
         <div className="bg-white border border-neutral-200 rounded-2xl p-5 mb-6">
           <div className="flex items-center gap-2 mb-3">
@@ -382,6 +436,13 @@ export default async function DashboardPage() {
                 ? td("missingInfo", { count: missingChecks.length })
                 : td("missingInfoPlural", { count: missingChecks.length })}
             </h2>
+          </div>
+          {/* Progress bar */}
+          <div className="w-full h-1.5 bg-neutral-100 rounded-full mb-3">
+            <div
+              className="h-1.5 bg-amber-400 rounded-full transition-all"
+              style={{ width: `${completeness}%` }}
+            />
           </div>
           <div className="space-y-1">
             {missingChecks.map((check) => (
@@ -410,49 +471,48 @@ export default async function DashboardPage() {
         </div>
       )}
 
-      {/* Card promo banner */}
-      <div className="bg-gradient-to-br from-neutral-900 to-neutral-800 rounded-2xl p-5 text-white">
-        <div className="flex items-start justify-between gap-4 mb-3">
-          <div>
-            <h2 className="font-semibold text-sm flex items-center gap-2">
-              <Icon icon="solar:card-2-bold" className="text-amber-400 text-lg" />
-              {td("cardPromoTitle")}
-            </h2>
-            <p className="text-xs text-neutral-400 mt-1">
-              {td("cardPromoDesc")}
-            </p>
-          </div>
-        </div>
-        <div className="flex flex-wrap gap-x-4 gap-y-1.5 mb-4">
-          <span className="flex items-center gap-1.5 text-xs text-neutral-300">
-            <Icon icon="solar:check-circle-bold" className="text-amber-400 text-sm" />
-            {td("cardBenefit1")}
+      {/* 6. Liens rapides */}
+      <div className="grid grid-cols-3 gap-3 mb-6">
+        <Link
+          href="/dashboard/carte"
+          className="relative overflow-hidden bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl p-3 text-center shadow-md hover:shadow-lg hover:from-orange-400 hover:to-orange-500 transition-all"
+        >
+          <Icon icon="solar:card-2-bold" className="text-white text-xl mx-auto mb-1" />
+          <span className="text-xs font-semibold text-white">{td("quickLinkCard")}</span>
+        </Link>
+        <QRCodeButton
+          slug={driver.slug}
+          driverName={`${driver.firstName} ${driver.lastName}`}
+          companyName={driver.companyName || ""}
+          vehicleModel={v0?.brand ? `${(v0 as { brand?: string; model?: string }).brand || ""} ${(v0 as { brand?: string; model?: string }).model || ""}`.trim() : `${driver.vehicleBrand || ""} ${driver.vehicleModel || ""}`.trim()}
+          variant="quickLink"
+          label={td("quickLinkQR")}
+        />
+        <Link
+          href="/dashboard/profil-public"
+          className="bg-white border border-neutral-200 rounded-xl p-3 text-center hover:border-neutral-300 transition-colors"
+        >
+          <Icon icon="solar:eye-linear" className="text-neutral-500 text-xl mx-auto mb-1" />
+          <span className="text-xs font-medium text-neutral-700">{td("quickLinkPublicProfile")}</span>
+        </Link>
+      </div>
+
+      {/* 7. Bannière P2P subtile */}
+      <div className="bg-violet-50 border border-violet-200 rounded-xl px-4 py-3 flex items-center justify-between gap-3">
+        <div className="flex items-center gap-2 min-w-0">
+          <Icon icon="solar:transfer-horizontal-linear" className="text-violet-500 text-base shrink-0" />
+          <span className="text-sm text-violet-700 truncate">
+            {transmittedCount > 0
+              ? td("p2pBannerActive", { count: transmittedCount, total: totalCommission.toFixed(0) })
+              : td("p2pBannerNew")}
           </span>
-          <span className="flex items-center gap-1.5 text-xs text-neutral-300">
-            <Icon icon="solar:check-circle-bold" className="text-amber-400 text-sm" />
-            {td("cardBenefit2")}
-          </span>
-          <span className="flex items-center gap-1.5 text-xs text-neutral-300">
-            <Icon icon="solar:check-circle-bold" className="text-amber-400 text-sm" />
-            {td("cardBenefit3")}
-          </span>
         </div>
-        <div className="flex items-center gap-2">
-          <Link
-            href="/dashboard/carte"
-            className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-neutral-900 text-xs font-semibold px-4 py-2 rounded-lg transition-colors"
-          >
-            <Icon icon="solar:card-2-linear" className="text-sm" />
-            {td("cardPromoCta")}
-          </Link>
-          <Link
-            href="/dashboard/profil-public"
-            className="inline-flex items-center gap-2 text-xs text-neutral-400 hover:text-white px-3 py-2 rounded-lg transition-colors"
-          >
-            <Icon icon="solar:eye-linear" className="text-sm" />
-            {td("viewPublicProfile")}
-          </Link>
-        </div>
+        <Link
+          href="/dashboard/p2p"
+          className="text-xs font-semibold text-violet-600 hover:text-violet-800 transition-colors whitespace-nowrap shrink-0"
+        >
+          {transmittedCount > 0 ? td("p2pBannerCtaActive") : td("p2pBannerCtaNew")}
+        </Link>
       </div>
     </div>
   );

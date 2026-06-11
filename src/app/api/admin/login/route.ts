@@ -1,9 +1,13 @@
 import { NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import { createAdminToken, ADMIN_COOKIE_NAME } from "@/lib/admin";
+import { applyStrictRateLimit } from "@/lib/rate-limit";
 
 export async function POST(request: Request) {
   try {
+    const rateLimited = await applyStrictRateLimit();
+    if (rateLimited) return rateLimited;
+
     const { password } = await request.json();
 
     const adminPassword = process.env.ADMIN_PASSWORD;

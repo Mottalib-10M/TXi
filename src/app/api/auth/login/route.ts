@@ -3,12 +3,16 @@ import { compare } from "bcryptjs";
 import { prisma } from "@/lib/prisma";
 import { encode } from "@auth/core/jwt";
 import { cookies } from "next/headers";
+import { applyStrictRateLimit } from "@/lib/rate-limit";
 
 const IS_PROD = process.env.NODE_ENV === "production";
 const COOKIE_NAME = IS_PROD ? "__Secure-authjs.session-token" : "authjs.session-token";
 
 export async function POST(request: Request) {
   try {
+    const rateLimited = await applyStrictRateLimit();
+    if (rateLimited) return rateLimited;
+
     const { email, password } = await request.json();
 
     if (!email || !password) {

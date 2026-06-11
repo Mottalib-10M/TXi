@@ -5,6 +5,7 @@ import { Icon } from "@iconify/react";
 import { emailError, phoneError, isValidEmail } from "@/lib/validation";
 import { useTranslations } from "next-intl";
 import { trackContact } from "@/lib/analytics";
+import TurnstileWidget from "@/components/TurnstileWidget";
 
 export function CityContactForm({ cityName }: { cityName: string }) {
   const t = useTranslations("city");
@@ -17,6 +18,8 @@ export function CityContactForm({ cityName }: { cityName: string }) {
   });
   const [submitting, setSubmitting] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [turnstileToken, setTurnstileToken] = useState("");
+  const [hp, setHp] = useState("");
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -27,7 +30,7 @@ export function CityContactForm({ cityName }: { cityName: string }) {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...form, city: cityName }),
+        body: JSON.stringify({ ...form, city: cityName, turnstileToken, _hp: hp }),
       });
       if (res.ok) {
         trackContact({ formName: "city_contact", subject: cityName });
@@ -124,6 +127,8 @@ export function CityContactForm({ cityName }: { cityName: string }) {
             <option value="apres-midi">{t("contactAfternoon")}</option>
             <option value="soir">{t("contactEvening")}</option>
           </select>
+          <input type="text" name="company_url" value={hp} onChange={(e) => setHp(e.target.value)} tabIndex={-1} autoComplete="off" aria-hidden="true" className="absolute opacity-0 h-0 w-0 overflow-hidden pointer-events-none" />
+          <TurnstileWidget onToken={setTurnstileToken} />
           <button
             type="submit"
             disabled={submitting || !form.name || !form.email || !isValidEmail(form.email) || !!phoneError(form.phone) || !form.message}

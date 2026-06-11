@@ -1,11 +1,17 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
+import { auth } from "@/lib/auth";
 
 function toICSDate(date: Date): string {
   return date.toISOString().replace(/[-:]/g, "").replace(/\.\d{3}/, "");
 }
 
 export async function GET(request: NextRequest) {
+  const session = await auth();
+  if (!session?.user?.id) {
+    return NextResponse.json({ error: "Non autorisé" }, { status: 401 });
+  }
+
   const bookingId = request.nextUrl.searchParams.get("id");
 
   if (!bookingId) {
@@ -22,6 +28,17 @@ export async function GET(request: NextRequest) {
 
   if (!booking) {
     return NextResponse.json({ error: "Not found" }, { status: 404 });
+  }
+
+  // Ownership check: user must be the assigned driver, the org, or the referrer
+  const userId = session.user.id;
+  const isAssignedDriver = booking.driverId === userId;
+  const isOrg = booking.organizationId === userId;
+  const isReferrer = booking.referrerDriverId === userId;
+  const isInvited = booking.invitedDriverIds.includes(userId);
+
+  if (!isAssignedDriver && !isOrg && !isReferrer && !isInvited) {
+    return NextResponse.json({ error: "Accès interdit" }, { status: 403 });
   }
 
   const startDate = booking.requestedDate;

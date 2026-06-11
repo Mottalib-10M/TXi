@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { prisma } from "@/lib/prisma";
+import { applyModerateRateLimit } from "@/lib/rate-limit";
+import { verifyTurnstileToken } from "@/lib/turnstile";
 import { haversineDistance, getRoutingDistance, estimatePrice, estimateDefaultPrice, isValidCoords, geocodeAddress } from "@/lib/geo";
 import { generateUniqueReference } from "@/lib/reference";
 import {
@@ -35,7 +37,18 @@ const bookingSchema = z.object({
 
 export async function POST(request: Request) {
   try {
+    const rateLimited = await applyModerateRateLimit();
+    if (rateLimited) return rateLimited;
+
     const body = await request.json();
+
+    if (body._hp) {
+      return NextResponse.json({ success: true });
+    }
+    if (!(await verifyTurnstileToken(body.turnstileToken))) {
+      return NextResponse.json({ error: "Vérification anti-bot échouée" }, { status: 403 });
+    }
+
     const data = bookingSchema.parse(body);
 
     const reference = await generateUniqueReference();

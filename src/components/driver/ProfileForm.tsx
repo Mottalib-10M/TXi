@@ -452,100 +452,113 @@ export function ProfileForm({ driver }: { driver: DriverData }) {
           />
         )}
 
-        {/* Pricing */}
-        {activeSection === "pricing" && (
-          <PricingGrid
-            pricing={{
-              baseFare: form.baseFare,
-              pricePerKm: form.pricePerKm,
-              pricePerKmNight: form.pricePerKmNight,
-              pricePerMinute: form.pricePerMinute,
-              minimumFare: form.minimumFare,
-            }}
-            onChange={(pricing) => setForm((prev) => ({ ...prev, ...pricing }))}
-            departmentName={departmentName}
-            zoneAddress={form.zoneAddress}
-            onGoToZone={() => setActiveSection("zone")}
-            airportFares={airportFares}
-          />
-        )}
-
-        {/* Availability */}
-        {activeSection === "availability" && (
-          <AvailabilityEditor
-            availability={form.availability || []}
-            onChange={(availability) => updateField("availability", availability)}
-          />
-        )}
-
-        {/* Notifications */}
-        {activeSection === "notifications" && (
-          <div className="space-y-3">
-            <h2 className="text-lg font-semibold tracking-tight mb-2">
-              {t("notificationPrefs")}
-            </h2>
-            <label className="flex items-center justify-between py-2.5 border-b border-neutral-100">
-              <div>
-                <p className="text-sm font-medium">{t("emailNotifications")}</p>
-                <p className="text-xs text-neutral-500 font-light">
-                  {t("emailNotificationsDesc")}
-                </p>
-              </div>
-              <button
-                type="button"
-                onClick={() => updateField("notifyEmail", !form.notifyEmail)}
-                className={`w-11 h-6 rounded-full transition-colors relative ${
-                  form.notifyEmail ? "bg-neutral-900" : "bg-neutral-200"
+        {/* Save button — shared across all sections */}
+        {(() => {
+          const saveBlock = (
+            <div className="mt-4 pt-4 border-t border-neutral-100 flex items-center justify-end gap-3">
+              {error && (
+                <span className="flex items-center gap-1.5 text-red-500 text-sm">
+                  <Icon icon="solar:danger-circle-linear" />
+                  {t("errorRetry")}
+                </span>
+              )}
+              <span
+                className={`flex items-center gap-1.5 text-green-600 text-sm transition-opacity duration-300 ${
+                  success && !error ? "opacity-100" : "opacity-0"
                 }`}
               >
-                <div
-                  className={`w-5 h-5 bg-white rounded-full shadow absolute top-0.5 transition-transform ${
-                    form.notifyEmail ? "translate-x-5" : "translate-x-0.5"
-                  }`}
-                />
+                <Icon icon="solar:check-circle-bold" />
+                {t("saved")}
+              </span>
+              <button
+                onClick={handleSave}
+                disabled={saving}
+                className="bg-neutral-950 text-white rounded-xl w-36 py-2.5 text-sm font-medium hover:bg-neutral-800 transition-colors disabled:opacity-50 btn-lift text-center"
+              >
+                {saving ? t("saving") : t("saveButton")}
               </button>
-            </label>
-            <div className="flex items-center justify-between py-2.5 opacity-50">
-              <div>
-                <p className="text-sm font-medium flex items-center gap-2">
-                  {t("smsNotifications")}
-                  <span className="text-[10px] font-medium bg-neutral-100 text-neutral-500 px-1.5 py-0.5 rounded-full">{t("comingSoon")}</span>
-                </p>
-                <p className="text-xs text-neutral-500 font-light">
-                  {t("smsNotificationsDesc")}
-                </p>
-              </div>
-              <div className="w-11 h-6 rounded-full bg-neutral-200 relative cursor-not-allowed">
-                <div className="w-5 h-5 bg-white rounded-full shadow absolute top-0.5 translate-x-0.5" />
-              </div>
             </div>
-          </div>
-        )}
+          );
 
-        {/* Save button */}
-        <div className="mt-4 pt-4 border-t border-neutral-100 flex items-center justify-end gap-3">
-          {error && (
-            <span className="flex items-center gap-1.5 text-red-500 text-sm">
-              <Icon icon="solar:danger-circle-linear" />
-              {t("errorRetry")}
-            </span>
-          )}
-          <span
-            className={`flex items-center gap-1.5 text-green-600 text-sm transition-opacity duration-300 ${
-              success && !error ? "opacity-100" : "opacity-0"
-            }`}
-          >
-            <Icon icon="solar:check-circle-bold" />
-            {t("saved")}
-          </span>
-          <button
-            onClick={handleSave}
-            disabled={saving}
-            className="bg-neutral-950 text-white rounded-xl w-36 py-2.5 text-sm font-medium hover:bg-neutral-800 transition-colors disabled:opacity-50 btn-lift text-center"
-          >
-            {saving ? t("saving") : t("saveButton")}
-          </button>
-        </div>
+          return (
+            <>
+              {/* Pricing */}
+              {activeSection === "pricing" && (
+                <PricingGrid
+                  pricing={{
+                    baseFare: form.baseFare,
+                    pricePerKm: form.pricePerKm,
+                    pricePerKmNight: form.pricePerKmNight,
+                    pricePerMinute: form.pricePerMinute,
+                    minimumFare: form.minimumFare,
+                  }}
+                  onChange={(pricing) => setForm((prev) => ({ ...prev, ...pricing }))}
+                  departmentName={departmentName}
+                  zoneAddress={form.zoneAddress}
+                  onGoToZone={() => setActiveSection("zone")}
+                  airportFares={airportFares}
+                >
+                  {saveBlock}
+                </PricingGrid>
+              )}
+
+              {/* Availability */}
+              {activeSection === "availability" && (
+                <AvailabilityEditor
+                  availability={form.availability || []}
+                  onChange={(availability) => updateField("availability", availability)}
+                />
+              )}
+
+              {/* Notifications */}
+              {activeSection === "notifications" && (
+                <div className="space-y-3">
+                  <h2 className="text-lg font-semibold tracking-tight mb-2">
+                    {t("notificationPrefs")}
+                  </h2>
+                  <label className="flex items-center justify-between py-2.5 border-b border-neutral-100">
+                    <div>
+                      <p className="text-sm font-medium">{t("emailNotifications")}</p>
+                      <p className="text-xs text-neutral-500 font-light">
+                        {t("emailNotificationsDesc")}
+                      </p>
+                    </div>
+                    <button
+                      type="button"
+                      onClick={() => updateField("notifyEmail", !form.notifyEmail)}
+                      className={`w-11 h-6 rounded-full transition-colors relative ${
+                        form.notifyEmail ? "bg-neutral-900" : "bg-neutral-200"
+                      }`}
+                    >
+                      <div
+                        className={`w-5 h-5 bg-white rounded-full shadow absolute top-0.5 transition-transform ${
+                          form.notifyEmail ? "translate-x-5" : "translate-x-0.5"
+                        }`}
+                      />
+                    </button>
+                  </label>
+                  <div className="flex items-center justify-between py-2.5 opacity-50">
+                    <div>
+                      <p className="text-sm font-medium flex items-center gap-2">
+                        {t("smsNotifications")}
+                        <span className="text-[10px] font-medium bg-neutral-100 text-neutral-500 px-1.5 py-0.5 rounded-full">{t("comingSoon")}</span>
+                      </p>
+                      <p className="text-xs text-neutral-500 font-light">
+                        {t("smsNotificationsDesc")}
+                      </p>
+                    </div>
+                    <div className="w-11 h-6 rounded-full bg-neutral-200 relative cursor-not-allowed">
+                      <div className="w-5 h-5 bg-white rounded-full shadow absolute top-0.5 translate-x-0.5" />
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {/* Save button below for non-pricing sections */}
+              {activeSection !== "pricing" && saveBlock}
+            </>
+          );
+        })()}
       </div>
     </div>
   );

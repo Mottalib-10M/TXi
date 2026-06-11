@@ -13,6 +13,36 @@ const nextConfig = {
       },
     ],
   },
+  async headers() {
+    return [
+      {
+        source: "/(.*)",
+        headers: [
+          { key: "X-Content-Type-Options", value: "nosniff" },
+          { key: "X-Frame-Options", value: "DENY" },
+          { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+          { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=(self)" },
+          { key: "Strict-Transport-Security", value: "max-age=63072000; includeSubDomains; preload" },
+          // CSP report-only — monitors violations without blocking anything.
+          // Review reports at /api/csp-report (or browser console) then promote to Content-Security-Policy.
+          {
+            key: "Content-Security-Policy-Report-Only",
+            value: [
+              "default-src 'self'",
+              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://maps.googleapis.com https://challenges.cloudflare.com",
+              "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+              "img-src 'self' data: blob: https://res.cloudinary.com https://maps.googleapis.com https://maps.gstatic.com https://*.google.com https://*.googleusercontent.com",
+              "font-src 'self' https://fonts.gstatic.com",
+              "connect-src 'self' https://www.google-analytics.com https://maps.googleapis.com https://challenges.cloudflare.com https://api.resend.com https://*.upstash.io",
+              "frame-src https://challenges.cloudflare.com https://www.google.com",
+              "object-src 'none'",
+              "base-uri 'self'",
+            ].join("; "),
+          },
+        ],
+      },
+    ];
+  },
   async rewrites() {
     return [
       // French locale

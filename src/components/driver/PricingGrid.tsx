@@ -22,6 +22,7 @@ interface PricingGridProps {
   zoneAddress?: string;
   onGoToZone?: () => void;
   airportFares?: AirportFareGroup[];
+  children?: React.ReactNode;
 }
 
 // National ceilings mapped to our pricing fields
@@ -33,7 +34,7 @@ const CEILINGS: Record<PricingKey, number> = {
   minimumFare: NATIONAL_TARIFFS.minimumCourse,
 };
 
-export function PricingGrid({ pricing, onChange, departmentName, zoneAddress, onGoToZone, airportFares }: PricingGridProps) {
+export function PricingGrid({ pricing, onChange, departmentName, zoneAddress, onGoToZone, airportFares, children }: PricingGridProps) {
   const t = useTranslations("pricingGrid");
   const [rawValues, setRawValues] = useState<Record<string, string>>({});
 
@@ -102,6 +103,8 @@ export function PricingGrid({ pricing, onChange, departmentName, zoneAddress, on
           );
         })}
       </div>
+
+      {children}
 
       {/* Bandeau réglementaire — en bas, après les champs */}
       <div className="bg-blue-50 border border-blue-200 rounded-xl p-3 mt-3">

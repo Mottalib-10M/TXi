@@ -1,9 +1,13 @@
 import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { sendEmail, buildVerificationEmail } from "@/lib/email";
+import { applyStrictRateLimit } from "@/lib/rate-limit";
 
 export async function POST(request: Request) {
   try {
+    const rateLimited = await applyStrictRateLimit();
+    if (rateLimited) return rateLimited;
+
     const body = await request.json();
     const { email } = body;
     const locale: "fr" | "en" = body.locale === "en" ? "en" : "fr";

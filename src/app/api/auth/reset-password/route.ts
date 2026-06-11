@@ -1,17 +1,21 @@
 import { NextResponse } from "next/server";
 import { hash } from "bcryptjs";
 import { prisma } from "@/lib/prisma";
+import { applyStrictRateLimit } from "@/lib/rate-limit";
 
 export async function POST(request: Request) {
   try {
+    const rateLimited = await applyStrictRateLimit();
+    if (rateLimited) return rateLimited;
+
     const { token, password } = await request.json();
 
     if (!token || !password) {
       return NextResponse.json({ error: "Données manquantes" }, { status: 400 });
     }
 
-    if (password.length < 6) {
-      return NextResponse.json({ error: "Le mot de passe doit contenir au moins 6 caractères" }, { status: 400 });
+    if (password.length < 8) {
+      return NextResponse.json({ error: "Le mot de passe doit contenir au moins 8 caractères" }, { status: 400 });
     }
 
     const record = await prisma.passwordResetToken.findUnique({

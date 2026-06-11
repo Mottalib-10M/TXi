@@ -1,3 +1,15 @@
+import { checkEmailRateLimit } from "@/lib/rate-limit";
+
+/** Escape HTML special characters to prevent XSS in email templates */
+function esc(str: string): string {
+  return str
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
 interface EmailOptions {
   to: string;
   subject: string;
@@ -11,6 +23,13 @@ export async function sendEmail({ to, subject, html }: EmailOptions) {
   if (!apiKey) {
     console.log(`[Email] Would send to ${to}: ${subject}`);
     console.log(`[Email] Content: ${html.substring(0, 200)}...`);
+    return;
+  }
+
+  // Rate limit: per-recipient + global
+  const allowed = await checkEmailRateLimit(to);
+  if (!allowed) {
+    console.warn(`[Email] Rate limited — skipping send to ${to}: ${subject}`);
     return;
   }
 
@@ -298,7 +317,7 @@ export function buildVerificationEmail(name: string, verifyUrl: string, locale: 
     html: `
       <div style="font-family: Inter, sans-serif; max-width: 600px; margin: 0 auto;">
         <h2 style="color: #171717;">${l.verifyTitle}</h2>
-        <p>${l.hello} ${name},</p>
+        <p>${l.hello} ${esc(name)},</p>
         <p>${l.verifyBody}</p>
         <div style="text-align: center; margin: 30px 0;">
           <a href="${verifyUrl}" style="background-color: #171717; color: #ffffff; padding: 14px 28px; border-radius: 12px; text-decoration: none; font-weight: 500; font-size: 14px; display: inline-block;">
@@ -321,7 +340,7 @@ export function buildPasswordResetEmail(name: string, resetUrl: string, locale: 
     html: `
       <div style="font-family: Inter, sans-serif; max-width: 600px; margin: 0 auto;">
         <h2 style="color: #171717;">${l.resetTitle}</h2>
-        <p>${l.hello} ${name},</p>
+        <p>${l.hello} ${esc(name)},</p>
         <p>${l.resetBody}</p>
         <div style="text-align: center; margin: 30px 0;">
           <a href="${resetUrl}" style="background-color: #171717; color: #ffffff; padding: 14px 28px; border-radius: 12px; text-decoration: none; font-weight: 500; font-size: 14px; display: inline-block;">
@@ -346,7 +365,7 @@ export function buildDriverNotificationEmail(data: {
   reference: string;
   bookingId: string;
   price?: number | null;
-  source?: "LANDING" | "PROFILE" | "ORGANIZATION";
+  source?: "LANDING" | "PROFILE" | "ORGANIZATION" | "P2P";
   locale?: Locale;
 }) {
   const l = t[data.locale || "fr"];
@@ -358,15 +377,15 @@ export function buildDriverNotificationEmail(data: {
     html: `
       <div style="font-family: Inter, sans-serif; max-width: 600px; margin: 0 auto;">
         <h2 style="color: #171717;">${l.newBookingTitle}</h2>
-        <p>${l.hello} ${data.driverName},</p>
+        <p>${l.hello} ${esc(data.driverName)},</p>
         <p>${l.newBookingBody}</p>
         <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
-          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.client}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.clientName}</td></tr>
-          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.departure}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.departure}</td></tr>
-          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.arrival}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.arrival}</td></tr>
-          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.date}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.date}</td></tr>
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.client}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${esc(data.clientName)}</td></tr>
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.departure}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${esc(data.departure)}</td></tr>
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.arrival}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${esc(data.arrival)}</td></tr>
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.date}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${esc(data.date)}</td></tr>
           ${data.price ? `<tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.estimatedPrice}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${formatEmailPrice(data.price, locale)}</td></tr>` : ""}
-          <tr><td style="padding: 8px; color: #737373;">${l.reference}</td><td style="padding: 8px; font-weight: 500;">#${data.reference}</td></tr>
+          <tr><td style="padding: 8px; color: #737373;">${l.reference}</td><td style="padding: 8px; font-weight: 500;">#${esc(data.reference)}</td></tr>
         </table>
         <p style="color: #525252; font-size: 13px;">${l.newBookingNote}</p>
         <div style="text-align: center; margin: 24px 0;">
@@ -403,12 +422,12 @@ export function buildClientConfirmationEmail(data: {
           <table style="width: 100%; border-collapse: collapse;">
             <tr>
               <td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.name}</td>
-              <td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.driverName}</td>
+              <td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${esc(data.driverName)}</td>
             </tr>
             <tr>
               <td style="padding: 8px; color: #737373;">${l.phone}</td>
               <td style="padding: 8px; font-weight: 500;">
-                <a href="tel:${data.driverPhone}" style="color: #171717; text-decoration: none;">${data.driverPhone}</a>
+                <a href="tel:${esc(data.driverPhone)}" style="color: #171717; text-decoration: none;">${esc(data.driverPhone)}</a>
               </td>
             </tr>
           </table>
@@ -421,14 +440,14 @@ export function buildClientConfirmationEmail(data: {
     html: `
       <div style="font-family: Inter, sans-serif; max-width: 600px; margin: 0 auto;">
         <h2 style="color: #171717;">${l.confirmTitle}</h2>
-        <p>${l.hello} ${data.clientName},</p>
+        <p>${l.hello} ${esc(data.clientName)},</p>
         <p>${l.confirmBody}</p>
         <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
-          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.departure}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.departure}</td></tr>
-          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.arrival}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.arrival}</td></tr>
-          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.date}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.date}</td></tr>
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.departure}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${esc(data.departure)}</td></tr>
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.arrival}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${esc(data.arrival)}</td></tr>
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.date}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${esc(data.date)}</td></tr>
           ${data.price ? `<tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.estimatedPrice}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${formatEmailPrice(data.price, locale)}</td></tr>` : ""}
-          <tr><td style="padding: 8px; color: #737373;">${l.reference}</td><td style="padding: 8px; font-weight: 500;">#${data.reference}</td></tr>
+          <tr><td style="padding: 8px; color: #737373;">${l.reference}</td><td style="padding: 8px; font-weight: 500;">#${esc(data.reference)}</td></tr>
         </table>
         ${driverCardHtml}
         <div style="text-align: center; margin: 24px 0;">
@@ -465,20 +484,20 @@ export function buildBookingAcceptedClientEmail(data: {
     html: `
       <div style="font-family: Inter, sans-serif; max-width: 600px; margin: 0 auto;">
         <h2 style="color: #171717;">${l.acceptedClientTitle}</h2>
-        <p>${l.hello} ${data.clientName},</p>
+        <p>${l.hello} ${esc(data.clientName)},</p>
         <p>${l.acceptedClientBody}</p>
         <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
-          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.departure}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.departure}</td></tr>
-          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.arrival}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.arrival}</td></tr>
-          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.dateTime}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.date}</td></tr>
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.departure}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${esc(data.departure)}</td></tr>
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.arrival}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${esc(data.arrival)}</td></tr>
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.dateTime}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${esc(data.date)}</td></tr>
           ${data.price ? `<tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.estimatedPrice}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${formatEmailPrice(data.price, locale)}</td></tr>` : ""}
-          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.reference}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">#${data.reference}</td></tr>
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.reference}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">#${esc(data.reference)}</td></tr>
         </table>
         <h3 style="color: #171717; font-size: 15px; margin-top: 24px;">${l.yourDriver}</h3>
         <table style="width: 100%; border-collapse: collapse; margin: 12px 0 20px;">
-          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.name}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.driverName}</td></tr>
-          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.phone}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;"><a href="tel:${data.driverPhone}" style="color: #171717; text-decoration: none;">${data.driverPhone}</a></td></tr>
-          <tr><td style="padding: 8px; color: #737373;">Email</td><td style="padding: 8px; font-weight: 500;"><a href="mailto:${data.driverEmail}" style="color: #171717; text-decoration: none;">${data.driverEmail}</a></td></tr>
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.name}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${esc(data.driverName)}</td></tr>
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.phone}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;"><a href="tel:${esc(data.driverPhone)}" style="color: #171717; text-decoration: none;">${esc(data.driverPhone)}</a></td></tr>
+          <tr><td style="padding: 8px; color: #737373;">Email</td><td style="padding: 8px; font-weight: 500;"><a href="mailto:${esc(data.driverEmail)}" style="color: #171717; text-decoration: none;">${esc(data.driverEmail)}</a></td></tr>
         </table>
         <div style="text-align: center; margin: 24px 0;">
           <a href="${reservationsUrl}" style="background-color: #171717; color: #ffffff; padding: 14px 28px; border-radius: 12px; text-decoration: none; font-weight: 500; font-size: 14px; display: inline-block;">
@@ -509,14 +528,14 @@ export function buildBookingRejectedClientEmail(data: {
     html: `
       <div style="font-family: Inter, sans-serif; max-width: 600px; margin: 0 auto;">
         <h2 style="color: #171717;">${l.rejectedTitle}</h2>
-        <p>${l.hello} ${data.clientName},</p>
+        <p>${l.hello} ${esc(data.clientName)},</p>
         <p>${l.rejectedBody(data.driverName)}</p>
         <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
-          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.departure}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.departure}</td></tr>
-          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.arrival}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.arrival}</td></tr>
-          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.date}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.date}</td></tr>
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.departure}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${esc(data.departure)}</td></tr>
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.arrival}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${esc(data.arrival)}</td></tr>
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.date}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${esc(data.date)}</td></tr>
           ${data.price ? `<tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.estimatedPrice}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${formatEmailPrice(data.price, locale)}</td></tr>` : ""}
-          <tr><td style="padding: 8px; color: #737373;">${l.reference}</td><td style="padding: 8px; font-weight: 500;">#${data.reference}</td></tr>
+          <tr><td style="padding: 8px; color: #737373;">${l.reference}</td><td style="padding: 8px; font-weight: 500;">#${esc(data.reference)}</td></tr>
         </table>
         <p>${l.rejectedApology}</p>
         <div style="text-align: center; margin: 24px 0;">
@@ -554,14 +573,14 @@ export function buildBookingAcceptedDriverEmail(data: {
     html: `
       <div style="font-family: Inter, sans-serif; max-width: 600px; margin: 0 auto;">
         <h2 style="color: #171717;">${l.acceptedDriverTitle}</h2>
-        <p>${l.hello} ${data.driverName},</p>
+        <p>${l.hello} ${esc(data.driverName)},</p>
         <p>${l.acceptedDriverBody(data.reference)}</p>
         <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
-          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.departure}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.departure}</td></tr>
-          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.arrival}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.arrival}</td></tr>
-          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.dateTime}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.date}</td></tr>
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.departure}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${esc(data.departure)}</td></tr>
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.arrival}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${esc(data.arrival)}</td></tr>
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.dateTime}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${esc(data.date)}</td></tr>
           ${data.price ? `<tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.estimatedPrice}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${formatEmailPrice(data.price, locale)}</td></tr>` : ""}
-          <tr><td style="padding: 8px; color: #737373;">${l.reference}</td><td style="padding: 8px; font-weight: 500;">#${data.reference}</td></tr>
+          <tr><td style="padding: 8px; color: #737373;">${l.reference}</td><td style="padding: 8px; font-weight: 500;">#${esc(data.reference)}</td></tr>
         </table>
 
         <div style="text-align: center; margin: 24px 0;">
@@ -577,9 +596,9 @@ export function buildBookingAcceptedDriverEmail(data: {
 
         <h3 style="color: #171717; font-size: 15px; margin-top: 24px;">${l.clientDetails}</h3>
         <table style="width: 100%; border-collapse: collapse; margin: 12px 0 20px;">
-          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.name}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.clientName}</td></tr>
-          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.phone}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;"><a href="tel:${data.clientPhone}" style="color: #171717; text-decoration: none;">${data.clientPhone}</a></td></tr>
-          <tr><td style="padding: 8px; color: #737373;">Email</td><td style="padding: 8px; font-weight: 500;"><a href="mailto:${data.clientEmail}" style="color: #171717; text-decoration: none;">${data.clientEmail}</a></td></tr>
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.name}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${esc(data.clientName)}</td></tr>
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.phone}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;"><a href="tel:${esc(data.clientPhone)}" style="color: #171717; text-decoration: none;">${esc(data.clientPhone)}</a></td></tr>
+          <tr><td style="padding: 8px; color: #737373;">Email</td><td style="padding: 8px; font-weight: 500;"><a href="mailto:${esc(data.clientEmail)}" style="color: #171717; text-decoration: none;">${esc(data.clientEmail)}</a></td></tr>
         </table>
         <p style="color: #a3a3a3; font-size: 12px;">${l.team}</p>
       </div>
@@ -607,7 +626,7 @@ export function buildSharedTaxiPassengerConfirmEmail(data: {
 }) {
   const l = t[data.locale || "fr"];
   const locale = data.locale || "fr";
-  const routeLabel = `${data.departure} → ${data.destination}`;
+  const routeLabel = `${esc(data.departure)} → ${esc(data.destination)}`;
   const baseUrl = process.env.NEXTAUTH_URL || "https://taxineo.fr";
 
   return {
@@ -615,14 +634,14 @@ export function buildSharedTaxiPassengerConfirmEmail(data: {
     html: `
       <div style="font-family: Inter, sans-serif; max-width: 600px; margin: 0 auto;">
         <h2 style="color: #171717;">${l.sharedTaxiJoinTitle}</h2>
-        <p>${l.hello} ${data.passengerName},</p>
+        <p>${l.hello} ${esc(data.passengerName)},</p>
         <p>${l.sharedTaxiJoinBody}</p>
         <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
           <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.sharedTaxiRoute}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${routeLabel}</td></tr>
-          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.sharedTaxiDeparture}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.departureDate}</td></tr>
-          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.sharedTaxiSeats}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.seatCount}</td></tr>
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.sharedTaxiDeparture}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${esc(data.departureDate)}</td></tr>
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.sharedTaxiSeats}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${esc(String(data.seatCount))}</td></tr>
           <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.sharedTaxiLuggage}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${luggageLabel(data.luggageType, locale)}</td></tr>
-          <tr><td style="padding: 8px; color: #737373;">${l.sharedTaxiDriver}</td><td style="padding: 8px; font-weight: 500;">${data.driverName}</td></tr>
+          <tr><td style="padding: 8px; color: #737373;">${l.sharedTaxiDriver}</td><td style="padding: 8px; font-weight: 500;">${esc(data.driverName)}</td></tr>
         </table>
         <p>${l.sharedTaxiContact}</p>
         <div style="text-align: center; margin: 24px 0;">
@@ -645,7 +664,7 @@ export function buildSharedTaxiCancelEmail(data: {
   locale?: Locale;
 }) {
   const l = t[data.locale || "fr"];
-  const routeLabel = `${data.departure} → ${data.destination}`;
+  const routeLabel = `${esc(data.departure)} → ${esc(data.destination)}`;
   const baseUrl = process.env.NEXTAUTH_URL || "https://taxineo.fr";
 
   return {
@@ -653,11 +672,11 @@ export function buildSharedTaxiCancelEmail(data: {
     html: `
       <div style="font-family: Inter, sans-serif; max-width: 600px; margin: 0 auto;">
         <h2 style="color: #171717;">${l.sharedTaxiCancelTitle}</h2>
-        <p>${l.hello} ${data.passengerName},</p>
+        <p>${l.hello} ${esc(data.passengerName)},</p>
         <p>${l.sharedTaxiCancelBody(data.driverName)}</p>
         <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
           <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.sharedTaxiRoute}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${routeLabel}</td></tr>
-          <tr><td style="padding: 8px; color: #737373;">${l.sharedTaxiDeparture}</td><td style="padding: 8px; font-weight: 500;">${data.departureDate}</td></tr>
+          <tr><td style="padding: 8px; color: #737373;">${l.sharedTaxiDeparture}</td><td style="padding: 8px; font-weight: 500;">${esc(data.departureDate)}</td></tr>
         </table>
         <p>${l.sharedTaxiCancelApology}</p>
         <div style="text-align: center; margin: 24px 0;">
@@ -683,7 +702,7 @@ export function buildSharedTaxiProposalEmail(data: {
   locale?: Locale;
 }) {
   const l = t[data.locale || "fr"];
-  const routeLabel = `${data.departure} → ${data.destination}`;
+  const routeLabel = `${esc(data.departure)} → ${esc(data.destination)}`;
   const baseUrl = process.env.NEXTAUTH_URL || "https://taxineo.fr";
   const acceptUrl = `${baseUrl}/dashboard/taxi-partage?accept=${data.routeId}`;
 
@@ -692,13 +711,13 @@ export function buildSharedTaxiProposalEmail(data: {
     html: `
       <div style="font-family: Inter, sans-serif; max-width: 600px; margin: 0 auto;">
         <h2 style="color: #171717;">${l.sharedTaxiProposalTitle}</h2>
-        <p>${l.hello} ${data.driverName},</p>
+        <p>${l.hello} ${esc(data.driverName)},</p>
         <p>${l.sharedTaxiProposalBody(data.proposerName)}</p>
         <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
           <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.sharedTaxiRoute}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${routeLabel}</td></tr>
-          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.sharedTaxiDeparture}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.departureDate}</td></tr>
-          <tr><td style="padding: 8px; ${data.comment ? 'border-bottom: 1px solid #e5e5e5; ' : ''}color: #737373;">${l.sharedTaxiProposalSeats}</td><td style="padding: 8px; ${data.comment ? 'border-bottom: 1px solid #e5e5e5; ' : ''}font-weight: 500;">${data.totalSeats}</td></tr>
-          ${data.comment ? `<tr><td style="padding: 8px; color: #737373;">${l.sharedTaxiProposalComment}</td><td style="padding: 8px; font-weight: 500;">${data.comment}</td></tr>` : ''}
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.sharedTaxiDeparture}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${esc(data.departureDate)}</td></tr>
+          <tr><td style="padding: 8px; ${data.comment ? 'border-bottom: 1px solid #e5e5e5; ' : ''}color: #737373;">${l.sharedTaxiProposalSeats}</td><td style="padding: 8px; ${data.comment ? 'border-bottom: 1px solid #e5e5e5; ' : ''}font-weight: 500;">${esc(String(data.totalSeats))}</td></tr>
+          ${data.comment ? `<tr><td style="padding: 8px; color: #737373;">${l.sharedTaxiProposalComment}</td><td style="padding: 8px; font-weight: 500;">${esc(data.comment)}</td></tr>` : ''}
         </table>
         <div style="text-align: center; margin: 24px 0;">
           <a href="${acceptUrl}" style="background-color: #171717; color: #ffffff; padding: 14px 28px; border-radius: 12px; text-decoration: none; font-weight: 500; font-size: 14px; display: inline-block;">
@@ -724,7 +743,7 @@ export function buildSharedTaxiDriverFoundEmail(data: {
   locale?: Locale;
 }) {
   const l = t[data.locale || "fr"];
-  const routeLabel = `${data.departure} → ${data.destination}`;
+  const routeLabel = `${esc(data.departure)} → ${esc(data.destination)}`;
   const baseUrl = process.env.NEXTAUTH_URL || "https://taxineo.fr";
 
   return {
@@ -732,14 +751,14 @@ export function buildSharedTaxiDriverFoundEmail(data: {
     html: `
       <div style="font-family: Inter, sans-serif; max-width: 600px; margin: 0 auto;">
         <h2 style="color: #171717;">${l.sharedTaxiDriverFoundTitle}</h2>
-        <p>${l.hello} ${data.proposerName},</p>
+        <p>${l.hello} ${esc(data.proposerName)},</p>
         <p>${l.sharedTaxiDriverFoundBody(data.driverName)}</p>
         <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
           <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.sharedTaxiRoute}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${routeLabel}</td></tr>
-          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.sharedTaxiDeparture}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.departureDate}</td></tr>
-          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.sharedTaxiDriver}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.driverName}</td></tr>
-          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.phone}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;"><a href="tel:${data.driverPhone}" style="color: #171717; text-decoration: none;">${data.driverPhone}</a></td></tr>
-          <tr><td style="padding: 8px; color: #737373;">${l.sharedTaxiDriverFoundVehicle}</td><td style="padding: 8px; font-weight: 500;">${data.vehicleDescription}</td></tr>
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.sharedTaxiDeparture}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${esc(data.departureDate)}</td></tr>
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.sharedTaxiDriver}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${esc(data.driverName)}</td></tr>
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.phone}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;"><a href="tel:${esc(data.driverPhone)}" style="color: #171717; text-decoration: none;">${esc(data.driverPhone)}</a></td></tr>
+          <tr><td style="padding: 8px; color: #737373;">${l.sharedTaxiDriverFoundVehicle}</td><td style="padding: 8px; font-weight: 500;">${esc(data.vehicleDescription)}</td></tr>
         </table>
         <p style="background-color: #fef3c7; padding: 12px 16px; border-radius: 12px; font-size: 13px; color: #92400e;">
           ${l.sharedTaxiDriverFoundReminder}
@@ -774,14 +793,14 @@ export function buildEscalationTimeoutEmail(data: {
     html: `
       <div style="font-family: Inter, sans-serif; max-width: 600px; margin: 0 auto;">
         <h2 style="color: #171717;">${l.escalationTimeoutTitle}</h2>
-        <p>${l.hello} ${data.driverName},</p>
+        <p>${l.hello} ${esc(data.driverName)},</p>
         <p>${l.escalationTimeoutBody(data.reference)}</p>
         <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
-          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.departure}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.departure}</td></tr>
-          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.arrival}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.arrival}</td></tr>
-          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.date}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.date}</td></tr>
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.departure}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${esc(data.departure)}</td></tr>
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.arrival}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${esc(data.arrival)}</td></tr>
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.date}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${esc(data.date)}</td></tr>
           ${data.price ? `<tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.estimatedPrice}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${formatEmailPrice(data.price, locale)}</td></tr>` : ""}
-          <tr><td style="padding: 8px; color: #737373;">${l.reference}</td><td style="padding: 8px; font-weight: 500;">#${data.reference}</td></tr>
+          <tr><td style="padding: 8px; color: #737373;">${l.reference}</td><td style="padding: 8px; font-weight: 500;">#${esc(data.reference)}</td></tr>
         </table>
         <p style="background-color: #fef3c7; padding: 12px 16px; border-radius: 12px; font-size: 13px; color: #92400e;">
           ${l.escalationTimeoutNote}
@@ -808,7 +827,7 @@ export function buildEscalationResolvedEmail(data: {
     html: `
       <div style="font-family: Inter, sans-serif; max-width: 600px; margin: 0 auto;">
         <h2 style="color: #171717;">${l.escalationResolvedTitle}</h2>
-        <p>${l.hello} ${data.driverName},</p>
+        <p>${l.hello} ${esc(data.driverName)},</p>
         <p>${l.escalationResolvedBody(data.reference)}</p>
         <p style="color: #a3a3a3; font-size: 12px;">${l.team}</p>
       </div>
@@ -834,14 +853,14 @@ export function buildDriverReminderEmail(data: {
     html: `
       <div style="font-family: Inter, sans-serif; max-width: 600px; margin: 0 auto;">
         <h2 style="color: #171717;">${l.driverReminderTitle}</h2>
-        <p>${l.hello} ${data.driverName},</p>
+        <p>${l.hello} ${esc(data.driverName)},</p>
         <p>${l.driverReminderBody}</p>
         <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
-          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.client}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.clientName}</td></tr>
-          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.departure}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.departure}</td></tr>
-          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.arrival}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.arrival}</td></tr>
-          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.date}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.date}</td></tr>
-          <tr><td style="padding: 8px; color: #737373;">${l.reference}</td><td style="padding: 8px; font-weight: 500;">#${data.reference}</td></tr>
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.client}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${esc(data.clientName)}</td></tr>
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.departure}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${esc(data.departure)}</td></tr>
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.arrival}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${esc(data.arrival)}</td></tr>
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.date}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${esc(data.date)}</td></tr>
+          <tr><td style="padding: 8px; color: #737373;">${l.reference}</td><td style="padding: 8px; font-weight: 500;">#${esc(data.reference)}</td></tr>
         </table>
         <p style="color: #525252; font-size: 13px;">${l.driverReminderAction}</p>
         <div style="text-align: center; margin: 24px 0;">
@@ -873,14 +892,14 @@ export function buildClientApologyEmail(data: {
     html: `
       <div style="font-family: Inter, sans-serif; max-width: 600px; margin: 0 auto;">
         <h2 style="color: #171717;">${l.clientApologyTitle}</h2>
-        <p>${l.hello} ${data.clientName},</p>
+        <p>${l.hello} ${esc(data.clientName)},</p>
         <p>${l.clientApologyBody}</p>
         <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
-          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.departure}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.departure}</td></tr>
-          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.arrival}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.arrival}</td></tr>
-          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.date}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.date}</td></tr>
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.departure}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${esc(data.departure)}</td></tr>
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.arrival}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${esc(data.arrival)}</td></tr>
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.date}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${esc(data.date)}</td></tr>
           ${data.price ? `<tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.estimatedPrice}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${formatEmailPrice(data.price, locale)}</td></tr>` : ""}
-          <tr><td style="padding: 8px; color: #737373;">${l.reference}</td><td style="padding: 8px; font-weight: 500;">#${data.reference}</td></tr>
+          <tr><td style="padding: 8px; color: #737373;">${l.reference}</td><td style="padding: 8px; font-weight: 500;">#${esc(data.reference)}</td></tr>
         </table>
         <p>${l.clientApologyClosing}</p>
         <div style="text-align: center; margin: 24px 0;">
@@ -911,14 +930,14 @@ export function buildCancelledByDriverClientEmail(data: {
     html: `
       <div style="font-family: Inter, sans-serif; max-width: 600px; margin: 0 auto;">
         <h2 style="color: #171717;">${l.cancelledByDriverTitle}</h2>
-        <p>${l.hello} ${data.clientName},</p>
+        <p>${l.hello} ${esc(data.clientName)},</p>
         <p>${l.cancelledByDriverBody(data.driverName)}</p>
         <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
-          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.departure}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.departure}</td></tr>
-          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.arrival}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.arrival}</td></tr>
-          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.date}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.date}</td></tr>
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.departure}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${esc(data.departure)}</td></tr>
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.arrival}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${esc(data.arrival)}</td></tr>
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.date}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${esc(data.date)}</td></tr>
           ${data.price ? `<tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.estimatedPrice}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${formatEmailPrice(data.price, locale)}</td></tr>` : ""}
-          <tr><td style="padding: 8px; color: #737373;">${l.reference}</td><td style="padding: 8px; font-weight: 500;">#${data.reference}</td></tr>
+          <tr><td style="padding: 8px; color: #737373;">${l.reference}</td><td style="padding: 8px; font-weight: 500;">#${esc(data.reference)}</td></tr>
         </table>
         <p>${l.cancelledByDriverApology}</p>
         <div style="text-align: center; margin: 24px 0;">
@@ -951,15 +970,15 @@ export function buildCancelledByClientDriverEmail(data: {
     html: `
       <div style="font-family: Inter, sans-serif; max-width: 600px; margin: 0 auto;">
         <h2 style="color: #171717;">${l.cancelledByClientTitle}</h2>
-        <p>${l.hello} ${data.driverName},</p>
+        <p>${l.hello} ${esc(data.driverName)},</p>
         <p>${l.cancelledByClientBody(data.reference)}</p>
         <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
-          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.client}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.clientName}</td></tr>
-          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.departure}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.departure}</td></tr>
-          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.arrival}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.arrival}</td></tr>
-          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.date}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.date}</td></tr>
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.client}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${esc(data.clientName)}</td></tr>
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.departure}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${esc(data.departure)}</td></tr>
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.arrival}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${esc(data.arrival)}</td></tr>
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.date}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${esc(data.date)}</td></tr>
           ${data.price ? `<tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.estimatedPrice}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${formatEmailPrice(data.price, locale)}</td></tr>` : ""}
-          <tr><td style="padding: 8px; color: #737373;">${l.reference}</td><td style="padding: 8px; font-weight: 500;">#${data.reference}</td></tr>
+          <tr><td style="padding: 8px; color: #737373;">${l.reference}</td><td style="padding: 8px; font-weight: 500;">#${esc(data.reference)}</td></tr>
         </table>
         <p style="color: #525252; font-size: 13px;">${l.cancelledByClientNote}</p>
         <div style="text-align: center; margin: 24px 0;">
@@ -991,14 +1010,14 @@ export function buildCancelledByAdminDriverEmail(data: {
     html: `
       <div style="font-family: Inter, sans-serif; max-width: 600px; margin: 0 auto;">
         <h2 style="color: #171717;">${l.cancelledByAdminDriverTitle}</h2>
-        <p>${l.hello} ${data.driverName},</p>
+        <p>${l.hello} ${esc(data.driverName)},</p>
         <p>${l.cancelledByAdminDriverBody(data.reference)}</p>
         <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
-          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.departure}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.departure}</td></tr>
-          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.arrival}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.arrival}</td></tr>
-          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.date}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.date}</td></tr>
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.departure}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${esc(data.departure)}</td></tr>
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.arrival}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${esc(data.arrival)}</td></tr>
+          <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.date}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${esc(data.date)}</td></tr>
           ${data.price ? `<tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">${l.estimatedPrice}</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${formatEmailPrice(data.price, locale)}</td></tr>` : ""}
-          <tr><td style="padding: 8px; color: #737373;">${l.reference}</td><td style="padding: 8px; font-weight: 500;">#${data.reference}</td></tr>
+          <tr><td style="padding: 8px; color: #737373;">${l.reference}</td><td style="padding: 8px; font-weight: 500;">#${esc(data.reference)}</td></tr>
         </table>
         <div style="text-align: center; margin: 24px 0;">
           <a href="${dashboardUrl}" style="background-color: #171717; color: #ffffff; padding: 14px 28px; border-radius: 12px; text-decoration: none; font-weight: 500; font-size: 14px; display: inline-block;">
@@ -1024,7 +1043,7 @@ export function buildNoDriverConfirmEmail(data: {
     html: `
       <div style="font-family: Inter, sans-serif; max-width: 600px; margin: 0 auto;">
         <h2 style="color: #171717;">${l.noDriverConfirmTitle}</h2>
-        <p>${l.hello} ${data.clientName},</p>
+        <p>${l.hello} ${esc(data.clientName)},</p>
         <p>${l.noDriverConfirmBody}</p>
         <p>${l.noDriverConfirmClosing}</p>
         <div style="text-align: center; margin: 24px 0;">

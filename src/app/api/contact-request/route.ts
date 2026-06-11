@@ -5,6 +5,8 @@ import { sendEmail, buildNoDriverConfirmEmail } from "@/lib/email";
 import { createNotification } from "@/lib/notifications";
 import { generateUniqueReference } from "@/lib/reference";
 import { getRoutingDistance, estimateDefaultPrice, isValidCoords, geocodeAddress } from "@/lib/geo";
+import { applyModerateRateLimit } from "@/lib/rate-limit";
+import { verifyTurnstileToken } from "@/lib/turnstile";
 
 const contactRequestSchema = z.object({
   clientName: z.string().min(1),
@@ -23,7 +25,18 @@ const contactRequestSchema = z.object({
 
 export async function POST(req: Request) {
   try {
+    const rateLimited = await applyModerateRateLimit();
+    if (rateLimited) return rateLimited;
+
     const body = await req.json();
+
+    if (body._hp) {
+      return NextResponse.json({ success: true });
+    }
+    if (!(await verifyTurnstileToken(body.turnstileToken))) {
+      return NextResponse.json({ error: "Vérification anti-bot échouée" }, { status: 403 });
+    }
+
     const data = contactRequestSchema.parse(body);
 
     const dateLabel = data.scheduledDate
@@ -91,7 +104,7 @@ export async function POST(req: Request) {
     });
 
     // --- Send admin notification email ---
-    const adminEmails = (process.env.ADMIN_EMAILS || "amradif@gmail.com,sni.taxi@outlook.fr").split(",").map((e) => e.trim()).filter(Boolean);
+    const adminEmails = (process.env.ADMIN_EMAILS || "support@taxineo.fr,sni.taxi@outlook.fr").split(",").map((e) => e.trim()).filter(Boolean);
     const adminHtml = `
         <div style="font-family: Inter, sans-serif; max-width: 600px; margin: 0 auto;">
           <h2 style="color: #dc2626;">Trajet sans chauffeur disponible</h2>

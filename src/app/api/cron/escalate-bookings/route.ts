@@ -6,8 +6,7 @@ export async function GET(request: NextRequest) {
   const authHeader = request.headers.get("authorization");
   const expectedSecret = process.env.CRON_SECRET;
 
-  if (authHeader !== `Bearer ${expectedSecret}`) {
-    console.log(`[Cron] Unauthorized - auth: ${authHeader ? "present" : "missing"}, secret configured: ${expectedSecret ? "yes" : "NO"}`);
+  if (!expectedSecret || authHeader !== `Bearer ${expectedSecret}`) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 

@@ -23,6 +23,8 @@ interface Booking {
   estimatedPrice: number | null;
   status: string;
   source: string;
+  referrerDriverName?: string | null;
+  organizationName?: string | null;
   cancelledBy: string | null;
   clientLocale?: string;
   createdAt: string;
@@ -45,7 +47,7 @@ export function ReservationsTable({ bookings, driverName }: { bookings: Booking[
   const tc = useTranslations("common");
   const locale = useLocale();
   const router = useRouter();
-  const [filter, setFilter] = useState<string>("PENDING");
+  const [filter, setFilter] = useState<string>("ACTIVE");
   const [updating, setUpdating] = useState<string | null>(null);
   const [confirmModal, setConfirmModal] = useState<{
     bookingId: string;
@@ -56,7 +58,7 @@ export function ReservationsTable({ bookings, driverName }: { bookings: Booking[
   const statusConfig: Record<string, { label: string; color: string }> = {
     PENDING: { label: t("pending"), color: "bg-amber-50 text-amber-700" },
     ACCEPTED: { label: t("accepted"), color: "bg-green-50 text-green-700" },
-    REJECTED: { label: t("rejected"), color: "bg-red-50 text-red-700" },
+    REJECTED: { label: t("rejected"), color: "bg-orange-50 text-orange-700" },
     CANCELLED: { label: t("cancelled"), color: "bg-neutral-100 text-neutral-500" },
     COMPLETED: { label: t("completed"), color: "bg-blue-50 text-blue-700" },
   };
@@ -81,7 +83,7 @@ export function ReservationsTable({ bookings, driverName }: { bookings: Booking[
 
   const statusPriority: Record<string, number> = { PENDING: 0, ACCEPTED: 1, COMPLETED: 2, REJECTED: 3, CANCELLED: 4 };
 
-  const filtered = (filter === "ALL" ? bookings : bookings.filter((b) => b.status === filter))
+  const filtered = (filter === "ALL" ? bookings : filter === "ACTIVE" ? bookings.filter((b) => b.status === "PENDING" || b.status === "ACCEPTED") : bookings.filter((b) => b.status === filter))
     .slice()
     .sort((a, b) => {
       const pa = statusPriority[a.status] ?? 9;
@@ -160,28 +162,28 @@ export function ReservationsTable({ bookings, driverName }: { bookings: Booking[
       {/* Filters */}
       <div className="flex gap-2 mb-6 overflow-x-auto pb-2">
         {[
-          { key: "PENDING", label: t("pending") },
-          { key: "ACCEPTED", label: t("acceptedPlural") },
-          { key: "COMPLETED", label: t("completed") },
-          { key: "REJECTED", label: t("rejected") },
-          { key: "CANCELLED", label: t("cancelled") },
-          { key: "ALL", label: tc("all") },
-        ].map((f) => (
+          { key: "ACTIVE", label: t("pending"), activeClass: "bg-amber-500 text-white", inactiveClass: "bg-amber-50 border border-amber-200 text-amber-700 hover:bg-amber-100" },
+          { key: "COMPLETED", label: t("completed"), activeClass: "bg-neutral-600 text-white", inactiveClass: "bg-neutral-100 border border-neutral-200 text-neutral-600 hover:bg-neutral-200" },
+          { key: "REJECTED", label: t("rejected"), activeClass: "bg-orange-500 text-white", inactiveClass: "bg-orange-50 border border-orange-200 text-orange-700 hover:bg-orange-100" },
+          { key: "CANCELLED", label: t("cancelled"), activeClass: "bg-neutral-400 text-white", inactiveClass: "bg-neutral-50 border border-neutral-200 text-neutral-500 hover:bg-neutral-100" },
+          { key: "ALL", label: tc("all"), activeClass: "bg-neutral-900 text-white", inactiveClass: "bg-white border border-neutral-200 text-neutral-600 hover:border-neutral-300" },
+        ].map((f) => {
+          const count = f.key === "ALL" ? bookings.length : f.key === "ACTIVE" ? bookings.filter((b) => b.status === "PENDING" || b.status === "ACCEPTED").length : bookings.filter((b) => b.status === f.key).length;
+          return (
           <button
             key={f.key}
             onClick={() => setFilter(f.key)}
             className={`px-4 py-2 rounded-full text-xs font-medium transition-colors whitespace-nowrap ${
-              filter === f.key
-                ? "bg-neutral-900 text-white"
-                : "bg-white border border-neutral-200 text-neutral-600 hover:border-neutral-300"
+              filter === f.key ? f.activeClass : f.inactiveClass
             }`}
           >
             {f.label}
-            {f.key === "ALL" && (
-              <span className="ml-1.5 text-neutral-400">({bookings.length})</span>
+            {count > 0 && (
+              <span className={`ml-1.5 ${filter === f.key ? "opacity-70" : "opacity-50"}`}>({count})</span>
             )}
           </button>
-        ))}
+          );
+        })}
       </div>
 
       {filtered.length === 0 ? (
@@ -197,19 +199,32 @@ export function ReservationsTable({ bookings, driverName }: { bookings: Booking[
             const urgent = isUrgent(booking.requestedDate);
             const isPending = booking.status === "PENDING";
             const isAccepted = booking.status === "ACCEPTED";
-            const highlight =
-              (isPending && (today || tomorrow || urgent))
-                ? "border-2 border-amber-300 bg-amber-50/40"
-                : (isAccepted && today)
-                  ? "border-2 border-green-300 bg-green-50/40"
-                  : (isAccepted && tomorrow)
-                    ? "border border-green-200 bg-green-50/20"
-                    : "border border-neutral-200 bg-white";
+            const isCompleted = booking.status === "COMPLETED";
+            const isRejected = booking.status === "REJECTED";
+            const isCancelled = booking.status === "CANCELLED";
+
+            const statusStyle = isPending
+              ? (today || tomorrow || urgent)
+                ? "border-l-4 border-l-amber-400 border border-amber-200 bg-amber-50/40"
+                : "border-l-4 border-l-amber-400 border border-neutral-200 bg-white"
+              : isAccepted
+                ? today
+                  ? "border-l-4 border-l-green-500 border border-green-200 bg-green-50/40"
+                  : tomorrow
+                    ? "border-l-4 border-l-green-500 border border-green-100 bg-green-50/20"
+                    : "border-l-4 border-l-green-500 border border-neutral-200 bg-white"
+              : isCompleted
+                ? "border-l-4 border-l-neutral-300 border border-neutral-200 bg-neutral-50/50"
+              : isRejected
+                ? "border-l-4 border-l-orange-400 border border-neutral-200 bg-orange-50/30"
+              : isCancelled
+                ? "border-l-4 border-l-neutral-300 border border-neutral-200 bg-neutral-50/30 opacity-70"
+                : "border border-neutral-200 bg-white";
 
             return (
             <div
               key={booking.id}
-              className={`rounded-2xl p-4 sm:p-5 ${highlight}`}
+              className={`rounded-2xl p-4 sm:p-5 ${statusStyle}`}
             >
               {/* Header: name + phone + status + ref */}
               <div className="flex flex-wrap items-center gap-2 mb-2">
@@ -271,8 +286,16 @@ export function ReservationsTable({ bookings, driverName }: { bookings: Booking[
                     {booking.estimatedPrice.toFixed(2).replace(".", ",")} €
                   </span>
                 )}
-                <span className="text-neutral-300">
-                  via {booking.source === "PROFILE" ? t("fromProfile") : "Landing"}
+                <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium ${
+                  booking.source === "P2P"
+                    ? "bg-violet-100 text-violet-700"
+                    : "bg-neutral-100 text-neutral-500"
+                }`}>
+                  {booking.source === "P2P" && booking.referrerDriverName
+                    ? `via ${booking.referrerDriverName}`
+                    : booking.source === "ORGANIZATION" && booking.organizationName
+                      ? `via ${booking.organizationName}`
+                      : "via TaxiNeo"}
                 </span>
                 {today && (isPending || isAccepted) && (
                   <span className="inline-flex items-center gap-1 bg-red-100 text-red-700 text-xs font-semibold px-2 py-0.5 rounded-full">

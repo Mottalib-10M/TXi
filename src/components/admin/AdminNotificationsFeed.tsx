@@ -18,7 +18,8 @@ type NotificationType =
   | "SHARED_ROUTE_CREATED"
   | "SHARED_ROUTE_PROPOSED"
   | "SHARED_ROUTE_JOINED"
-  | "SHARED_ROUTE_DRIVER_ACCEPTED";
+  | "SHARED_ROUTE_DRIVER_ACCEPTED"
+  | "P2P_CREATED";
 
 interface Notification {
   id: string;
@@ -66,6 +67,7 @@ const TYPE_CONFIG: Record<NotificationType, { icon: string; color: string }> = {
   SHARED_ROUTE_PROPOSED: { icon: "solar:hand-stars-linear", color: "text-teal-600 bg-teal-50" },
   SHARED_ROUTE_JOINED: { icon: "solar:users-group-two-rounded-linear", color: "text-sky-600 bg-sky-50" },
   SHARED_ROUTE_DRIVER_ACCEPTED: { icon: "solar:steering-wheel-linear", color: "text-green-600 bg-green-50" },
+  P2P_CREATED: { icon: "solar:users-group-two-rounded-linear", color: "text-amber-600 bg-amber-50" },
 };
 
 function relativeTime(dateStr: string): string {

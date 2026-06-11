@@ -5,6 +5,7 @@ import { Icon } from "@iconify/react";
 import { emailError, phoneError, isValidEmail, isValidPhone } from "@/lib/validation";
 import { useTranslations } from "next-intl";
 import { trackDevisSubmission } from "@/lib/analytics";
+import TurnstileWidget from "@/components/TurnstileWidget";
 
 export function MadDevisForm({ cityName }: { cityName: string }) {
   const t = useTranslations("mad");
@@ -21,6 +22,8 @@ export function MadDevisForm({ cityName }: { cityName: string }) {
   });
   const [submitting, setSubmitting] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [turnstileToken, setTurnstileToken] = useState("");
+  const [hp, setHp] = useState("");
 
   const isValid =
     form.name &&
@@ -41,7 +44,7 @@ export function MadDevisForm({ cityName }: { cityName: string }) {
       const res = await fetch("/api/devis-mad", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...form, passengers: parseInt(form.passengers, 10), city: cityName }),
+        body: JSON.stringify({ ...form, passengers: parseInt(form.passengers, 10), city: cityName, turnstileToken, _hp: hp }),
       });
       if (res.ok) {
         setSuccess(true);
@@ -164,6 +167,8 @@ export function MadDevisForm({ cityName }: { cityName: string }) {
           rows={3}
           className="w-full rounded-lg border border-neutral-200 px-4 py-2.5 text-sm outline-none focus:ring-2 focus:ring-neutral-900 transition-all resize-none"
         />
+        <input type="text" name="company_url" value={hp} onChange={(e) => setHp(e.target.value)} tabIndex={-1} autoComplete="off" aria-hidden="true" className="absolute opacity-0 h-0 w-0 overflow-hidden pointer-events-none" />
+        <TurnstileWidget onToken={setTurnstileToken} />
         <button
           type="submit"
           disabled={submitting || !isValid}
