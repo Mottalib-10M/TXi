@@ -395,7 +395,7 @@ export function AdminOverview({ data }: { data: OverviewData }) {
           <div className="px-5 py-4 border-b border-neutral-100">
             <div className="flex items-center gap-2">
               <Icon icon="solar:buildings-2-linear" className="text-violet-500" />
-              <h3 className="font-semibold text-sm">{locale === "en" ? "Clients" : "Clients particuliers"}</h3>
+              <h3 className="font-semibold text-sm">{locale === "en" ? "Recently active clients" : "Clients actifs récemment"}</h3>
             </div>
           </div>
           {data.recentActivity.filter((i) => i.type === "org").length === 0 ? (

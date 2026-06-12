@@ -57,6 +57,7 @@ export function BookingForm() {
   // Contact request (no drivers available)
   const [contactSent, setContactSent] = useState(false);
   const [contactSubmitting, setContactSubmitting] = useState(false);
+  const [contactError, setContactError] = useState(false);
 
   // Anti-bot
   const [turnstileToken, setTurnstileToken] = useState("");
@@ -180,6 +181,7 @@ export function BookingForm() {
   async function handleContactRequest() {
     if (!clientName || !clientEmail || !clientPhone) return;
     setContactSubmitting(true);
+    setContactError(false);
 
     try {
       const res = await fetch("/api/contact-request", {
@@ -208,8 +210,12 @@ export function BookingForm() {
       if (res.ok) {
         setContactSent(true);
         trackContactRequest({ departure, arrival, passengers });
+      } else {
+        setContactError(true);
+        trackError({ errorType: "contact_request_failed", context: "booking_contact" });
       }
     } catch {
+      setContactError(true);
       trackError({ errorType: "contact_request_failed", context: "booking_contact" });
     } finally {
       setContactSubmitting(false);
@@ -421,6 +427,7 @@ export function BookingForm() {
                       <p className="text-xs text-red-500 -mt-2">{emailError(clientEmail)}</p>
                     )}
                   </div>
+                  <TurnstileWidget onToken={setTurnstileToken} />
                   <button
                     onClick={handleContactRequest}
                     disabled={!clientName || !clientEmail || !clientPhone || !isValidEmail(clientEmail) || !!phoneError(clientPhone) || contactSubmitting}
@@ -428,6 +435,11 @@ export function BookingForm() {
                   >
                     {contactSubmitting ? t("sending") : t("sendContactRequest")}
                   </button>
+                  {contactError && (
+                    <p className="text-xs text-red-500 text-center mt-2">
+                      {t("contactRequestError")}
+                    </p>
+                  )}
                 </>
               )}
             </div>
