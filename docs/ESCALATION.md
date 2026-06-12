@@ -31,7 +31,7 @@ PHASE 1 : CHAUFFEURS A PROXIMITE
        v
 PHASE 2 : ALERTE ADMIN
        |
-       | - Email détaillé à l'admin (amradif@gmail.com)
+       | - Email détaillé à l'admin (support@taxineo.fr)
        |   avec infos client + liste chauffeurs contactés
        | - Notification admin ESCALATION_PHASE2
        |
@@ -106,7 +106,7 @@ La fonction `runEscalation()` est **idempotente** : elle vérifie `escalationPha
 
 | Destinataire | Email | Contenu |
 |---|---|---|
-| Admin (amradif@gmail.com) | Email HTML détaillé | Alerte avec infos client, téléphone, email, trajet, prix, liste des chauffeurs contactés |
+| Admin (support@taxineo.fr) | Email HTML détaillé | Alerte avec infos client, téléphone, email, trajet, prix, liste des chauffeurs contactés |
 
 ### Quand un chauffeur accepte
 
@@ -146,10 +146,8 @@ L'escalation est déclenchée par les appels API (fire-and-forget). Si personne 
 
 **Suggestion** : Configurer un Vercel Cron qui appelle `GET /api/cron/escalate-bookings` toutes les 5 minutes.
 
-### 3. Email admin en dur
-L'adresse `amradif@gmail.com` est codée en dur dans 3 fichiers différents.
-
-**Suggestion** : Utiliser une variable d'environnement `ADMIN_EMAIL`.
+### 3. Email admin configurable
+L'adresse admin est configurée via les variables d'environnement `CONTACT_EMAIL` et `ADMIN_EMAILS` (avec fallback sur `support@taxineo.fr`).
 
 ### 4. Pas de Phase 3 / annulation automatique
 Après Phase 2, rien ne se passe. Si l'admin ne réagit pas, le booking reste en PENDING pour toujours.
