@@ -8,6 +8,7 @@ import { Link, useRouter } from "@/i18n/navigation";
 import { PlacesAutocomplete } from "./PlacesAutocomplete";
 import { emailError, phoneError, isValidEmail, formatPrice } from "@/lib/validation";
 import { trackSearch, trackViewResults, trackSearchHasResults, trackSearchNoResults, trackSelectTaxi, trackBeginBooking, trackBookingComplete, trackContactRequest, trackError } from "@/lib/analytics";
+
 import TurnstileWidget from "@/components/TurnstileWidget";
 
 interface TaxiResult {

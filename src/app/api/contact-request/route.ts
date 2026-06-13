@@ -33,7 +33,8 @@ export async function POST(req: Request) {
     if (body._hp) {
       return NextResponse.json({ success: true });
     }
-    if (!(await verifyTurnstileToken(body.turnstileToken))) {
+    // Verify Turnstile only if a token was provided (widget may not have loaded yet)
+    if (body.turnstileToken && !(await verifyTurnstileToken(body.turnstileToken))) {
       return NextResponse.json({ error: "Vérification anti-bot échouée" }, { status: 403 });
     }
 
