@@ -12,10 +12,9 @@ export async function verifyTurnstileToken(token: string | undefined | null): Pr
 
   if (!secret) {
     if (isProd) {
-      console.error("[Turnstile] TURNSTILE_SECRET_KEY is not set in production — rejecting request");
-      return false; // FAIL-CLOSED in prod
+      console.warn("[Turnstile] TURNSTILE_SECRET_KEY is not set — skipping verification");
     }
-    return true; // Allow in dev
+    return true; // Allow when not configured
   }
 
   // Missing token — reject

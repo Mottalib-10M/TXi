@@ -132,8 +132,9 @@ export async function applyStrictRateLimit(
 ): Promise<NextResponse | null> {
   const limiter = getStrictLimiter();
   if (!limiter) {
-    // Fail-closed in production, fail-open in dev
-    return isProd ? RATE_LIMIT_RESPONSE : null;
+    // No Redis configured — allow request but log warning
+    if (isProd) console.warn("[RateLimit] Strict limiter unavailable (no Redis) — allowing request");
+    return null;
   }
   const ip = identifier || (await getClientIp());
   const result = await limiter.limit(ip);
@@ -150,7 +151,8 @@ export async function applyModerateRateLimit(
 ): Promise<NextResponse | null> {
   const limiter = getModerateLimiter();
   if (!limiter) {
-    return isProd ? RATE_LIMIT_RESPONSE : null;
+    if (isProd) console.warn("[RateLimit] Moderate limiter unavailable (no Redis) — allowing request");
+    return null;
   }
   const ip = identifier || (await getClientIp());
   const result = await limiter.limit(ip);
