@@ -30,10 +30,10 @@ const transportLabels: Record<string, string> = {
 
 const reasonLabels: Record<string, string> = {
   dialyse: "Dialyse",
-  chimio: "Chimioth\u00e9rapie",
-  consult: "Consultation sp\u00e9cialiste",
-  kine: "R\u00e9\u00e9ducation / Kin\u00e9sith\u00e9rapie",
-  hospitalisation: "Hospitalisation programm\u00e9e",
+  chimio: "Chimiothérapie",
+  consult: "Consultation spécialiste",
+  kine: "Rééducation / Kinésithérapie",
+  hospitalisation: "Hospitalisation programmée",
   autre: "Autre",
 };
 
@@ -58,33 +58,33 @@ export async function POST(req: Request) {
 
     await sendEmail({
       to: process.env.CONTACT_EMAIL || "support@taxineo.fr",
-      subject: `Demande taxi m\u00e9dical${data.city ? ` \u2014 ${data.city}` : ""}`,
+      subject: `Demande taxi médical${data.city ? ` — ${data.city}` : ""}`,
       html: `
         <div style="font-family: Inter, sans-serif; max-width: 600px; margin: 0 auto;">
-          <h2 style="color: #171717;">Nouveau devis taxi m\u00e9dical</h2>
+          <h2 style="color: #171717;">Nouveau devis taxi médical</h2>
           <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
             <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">Nom</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.name}</td></tr>
             <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">Email</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.email}</td></tr>
-            <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">T\u00e9l\u00e9phone</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.phone}</td></tr>
-            <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">Date souhait\u00e9e</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.date}</td></tr>
+            <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">Téléphone</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.phone}</td></tr>
+            <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">Date souhaitée</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.date}</td></tr>
             <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">Type de transport</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${transportLabel}</td></tr>
-            <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">Motif m\u00e9dical</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${reasonLabel}</td></tr>
+            <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">Motif médical</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${reasonLabel}</td></tr>
             <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">Prise en charge</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.pickup}</td></tr>
-            <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">\u00c9tablissement</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.hospital}</td></tr>
+            <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">Établissement</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.hospital}</td></tr>
             <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">PMR</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.reducedMobility ? "Oui" : "Non"}</td></tr>
             <tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">Accompagnant</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.companion ? "Oui" : "Non"}</td></tr>
             ${data.city ? `<tr><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; color: #737373;">Ville</td><td style="padding: 8px; border-bottom: 1px solid #e5e5e5; font-weight: 500;">${data.city}</td></tr>` : ""}
-            <tr><td style="padding: 8px; color: #737373;">Message</td><td style="padding: 8px; font-weight: 500;">${data.message || "\u2014"}</td></tr>
+            <tr><td style="padding: 8px; color: #737373;">Message</td><td style="padding: 8px; font-weight: 500;">${data.message || "—"}</td></tr>
           </table>
-          <p style="color: #a3a3a3; font-size: 12px;">\u2014 TaxiNeo Taxi M\u00e9dical</p>
+          <p style="color: #a3a3a3; font-size: 12px;">— TaxiNeo Taxi Médical</p>
         </div>
       `,
     });
 
     createNotification({
       type: "CONTACT_FORM",
-      title: `Devis taxi m\u00e9dical`,
-      body: `${data.name}${data.city ? ` (${data.city})` : ""} \u2014 ${transportLabel}, ${reasonLabel}`,
+      title: `Devis taxi médical`,
+      body: `${data.name}${data.city ? ` (${data.city})` : ""} — ${transportLabel}, ${reasonLabel}`,
       metadata: {
         name: data.name,
         email: data.email,
@@ -103,7 +103,7 @@ export async function POST(req: Request) {
     return NextResponse.json({ success: true });
   } catch (error) {
     if (error instanceof z.ZodError) {
-      return NextResponse.json({ error: "Donn\u00e9es invalides", issues: error.issues }, { status: 400 });
+      return NextResponse.json({ error: "Données invalides", issues: error.issues }, { status: 400 });
     }
     return NextResponse.json({ error: "Erreur serveur" }, { status: 500 });
   }

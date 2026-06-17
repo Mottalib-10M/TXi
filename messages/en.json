@@ -128,7 +128,9 @@
     "villes": "Cities",
     "aeroports2": "Airports",
     "gares": "Stations",
-    "sitemap": "Sitemap"
+    "sitemap": "Sitemap",
+    "about": "About",
+    "legal": "Legal"
   },
   "home": {
     "metaTitle": "TaxiNeo — Fixed-Price Taxi 24/7 | Licensed Drivers | France",

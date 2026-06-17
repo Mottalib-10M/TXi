@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "TaxiNeo — Taxi prix fixe 24h/24 | Chauffeurs agréés | France",
   description:
     "Réservez un taxi agréé en quelques secondes. Prix fixe garanti, chauffeurs professionnels, disponible 24h/24 dans 50+ villes françaises. Pas de mauvaise surprise.",
+  authors: [{ name: "Mottalib Radif", url: "https://www.taxineo.fr" }],
+  creator: "Mottalib Radif",
+  publisher: "TaxiNeo",
   openGraph: {
     title: "TaxiNeo — Taxi prix fixe 24h/24 | Chauffeurs agréés | France",
     description:
@@ -30,6 +33,7 @@ export const metadata: Metadata = {
       "Réservez un taxi agréé en quelques secondes. Prix fixe garanti, chauffeurs professionnels, disponible 24h/24 dans 50+ villes françaises.",
     images: ["https://www.taxineo.fr/og-image.png"],
   },
+  manifest: "/manifest.webmanifest",
 };
 
 export default function RootLayout({

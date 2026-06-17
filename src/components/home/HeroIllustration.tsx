@@ -49,7 +49,7 @@ export function HeroIllustration() {
   const driverName = data?.driverName || t("driverName");
   const departureLabel = data ? shortenAddress(data.departure) : t("departure");
   const arrivalLabel = data ? shortenAddress(data.arrival) : t("arrival");
-  const priceDisplay = data?.price ? formatPrice(data.price) : "18,50 \u20AC";
+  const priceDisplay = data?.price ? formatPrice(data.price) : "18,50 €";
   const durationDisplay = data?.tripDuration ? formatDuration(data.tripDuration) : null;
 
   return (

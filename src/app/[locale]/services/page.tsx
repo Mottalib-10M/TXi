@@ -38,7 +38,7 @@ const CATEGORY_ICONS: Record<ServiceSeo["category"], string> = {
 
 const CATEGORY_LABELS = {
   transport: { fr: "Transport", en: "Transport" },
-  special: { fr: "Services sp\u00e9ciaux", en: "Special services" },
+  special: { fr: "Services spéciaux", en: "Special services" },
   premium: { fr: "Premium", en: "Premium" },
 };
 

@@ -91,17 +91,17 @@ export function generateMeta(city: City, loc: Loc): { metaTitle: string; metaDes
   if (loc === "fr") {
     return {
       metaTitle: isLongName
-        ? `Chauffeur privé ${city.name} | Dès 45 \u20ac/h`
-        : `Chauffeur privé ${city.name} \u2014 Mise à disposition dès 45 \u20ac`,
+        ? `Chauffeur privé ${city.name} | Dès 45 €/h`
+        : `Chauffeur privé ${city.name} — Mise à disposition dès 45 €`,
       metaDescription: isLongName
-        ? `Mise à disposition d\u2019un chauffeur privé à ${city.name}. Berline, SUV ou van à l\u2019heure ou à la journée. Tarif fixe garanti, devis gratuit sous 2h.`
+        ? `Mise à disposition d’un chauffeur privé à ${city.name}. Berline, SUV ou van à l’heure ou à la journée. Tarif fixe garanti, devis gratuit sous 2h.`
         : `Réservez un chauffeur avec véhicule premium à ${city.name}. Mise à disposition 1h, demi-journée ou journée complète. Tarif fixe garanti, devis gratuit sous 2h.`,
     };
   }
   return {
     metaTitle: isLongName
-      ? `Private chauffeur in ${city.name} \u2014 From \u20ac45/hour`
-      : `Hire a private chauffeur in ${city.name} \u2014 From \u20ac45/hour`,
+      ? `Private chauffeur in ${city.name} — From €45/hour`
+      : `Hire a private chauffeur in ${city.name} — From €45/hour`,
     metaDescription: isLongName
       ? `Hire a dedicated chauffeur with premium vehicle in ${city.name}. Hourly, half-day or full-day service. Fixed rate guaranteed, free quote within 2 hours.`
       : `Book a private chauffeur with premium sedan, SUV or van in ${city.name}. Hourly, half-day or full-day hire. Fixed rate guaranteed, free quote within 2 hours.`,
@@ -133,7 +133,7 @@ export function generateIntro(city: City, loc: Loc): { introBody: string; introC
 
   if (loc === "fr") {
     return {
-      introBody: `${city.name}, commune de ${pop} habitants ${isIDF(city) ? "au cœur de l\u2019Île-de-France" : "en France"}, est un territoire aux multiples facettes qui nécessite une mobilité sur mesure. Que vous soyez un professionnel en déplacement, un touriste découvrant la région, ou un particulier avec des besoins ponctuels, la mise à disposition d'un chauffeur privé à ${city.name} vous offre une liberté totale de mouvement sans les contraintes de la conduite, du stationnement ou des transports en commun.
+      introBody: `${city.name}, commune de ${pop} habitants ${isIDF(city) ? "au cœur de l’Île-de-France" : "en France"}, est un territoire aux multiples facettes qui nécessite une mobilité sur mesure. Que vous soyez un professionnel en déplacement, un touriste découvrant la région, ou un particulier avec des besoins ponctuels, la mise à disposition d'un chauffeur privé à ${city.name} vous offre une liberté totale de mouvement sans les contraintes de la conduite, du stationnement ou des transports en commun.
 
 Avec TaxiNeo, la mise à disposition à ${city.name} est pensée pour s'adapter à chaque besoin : une heure pour un rendez-vous d'affaires, une demi-journée pour enchaîner les visites, ou une journée complète pour un événement. Votre chauffeur vous attend à chaque étape, connaît parfaitement ${city.name} et ses environs, et adapte son itinéraire en temps réel aux conditions de circulation.
 
@@ -208,7 +208,7 @@ export function generateCityGuide(city: City, loc: Loc): string {
 
   if (loc === "fr") {
     const routesText = routes.map((r) => `${r.from} → ${r.to} (${r.price})`).join(", ");
-    return `${city.name} est une commune dynamique de ${pop} habitants ${isIDF(city) ? "qui s\u2019inscrit pleinement dans le tissu urbain de l\u2019Île-de-France" : "au dynamisme reconnu"}. La ville est structurée autour de ses principaux quartiers — ${quartiers} — et bénéficie de la proximité de ${landmarks}.
+    return `${city.name} est une commune dynamique de ${pop} habitants ${isIDF(city) ? "qui s’inscrit pleinement dans le tissu urbain de l’Île-de-France" : "au dynamisme reconnu"}. La ville est structurée autour de ses principaux quartiers — ${quartiers} — et bénéficie de la proximité de ${landmarks}.
 
 **Circulation et accès routier** — La circulation à ${city.name} varie considérablement selon les heures de la journée et les jours de la semaine. Les heures de pointe (7h30-9h30 et 17h-19h30) concentrent l'essentiel des ralentissements, particulièrement sur les axes principaux reliant ${city.name} aux autoroutes et aux communes voisines. Les soirs de week-end et les jours de marché connaissent également des pics de circulation dans le centre-ville. Nos chauffeurs en mise à disposition connaissent parfaitement ces rythmes et adaptent leurs itinéraires en conséquence.
 
@@ -328,7 +328,7 @@ export function generateUseCases(city: City, loc: Loc): MadUseCase[] {
         icon: "mdi:airplane",
         title: "Transferts aéroport VIP",
         desc: `Accueil personnalisé à l'aéroport avec panneau nominatif, aide aux bagages et trajet direct vers ${city.name}. Suivi des vols en temps réel pour adapter l'heure d'arrivée.`,
-        example: `Accueil d'un partenaire japonais à ${isIDF(city) ? "CDG" : "l\u2019aéroport"} : panneau nominatif, bouteille d'eau, wifi à bord. Transfert vers son hôtel à ${city.name} puis mise à disposition pour les visites de la journée.`,
+        example: `Accueil d'un partenaire japonais à ${isIDF(city) ? "CDG" : "l’aéroport"} : panneau nominatif, bouteille d'eau, wifi à bord. Transfert vers son hôtel à ${city.name} puis mise à disposition pour les visites de la journée.`,
       },
       {
         icon: "solar:calendar-linear",
@@ -345,7 +345,7 @@ export function generateUseCases(city: City, loc: Loc): MadUseCase[] {
       {
         icon: "solar:map-linear",
         title: "Journées touristiques",
-        desc: `Découvrez ${city.name} et ${isIDF(city) ? "l\u2019Île-de-France" : "sa région"} avec un chauffeur-guide local. Visitez les points d'intérêt, les marchés, les parcs et les villages voisins à votre rythme.`,
+        desc: `Découvrez ${city.name} et ${isIDF(city) ? "l’Île-de-France" : "sa région"} avec un chauffeur-guide local. Visitez les points d'intérêt, les marchés, les parcs et les villages voisins à votre rythme.`,
         example: `Famille américaine en mise à disposition à la journée : visite de ${topLandmarks(city, 2).join(", ")} le matin, déjeuner dans le centre, puis excursion dans les communes voisines l'après-midi.`,
       },
       {
@@ -424,7 +424,7 @@ export function generateAdvantages(city: City, loc: Loc): MadAdvantage[] {
         icon: "solar:route-linear",
         title: "Accès aux voies réservées",
         shortDesc: "Couloirs de bus et files taxi pour des trajets plus rapides",
-        longDesc: `En tant que taxis professionnels, nos chauffeurs en mise à disposition à ${city.name} bénéficient de l'accès aux voies de bus et aux files réservées aux taxis. C'est un avantage considérable ${isIDF(city) ? "en Île-de-France, où les couloirs de bus représentent des dizaines de kilomètres de voies prioritaires" : "dans les grandes agglomérations, où les couloirs de bus permettent d\u2019éviter les embouteillages"}. Sur un trajet ${isIDF(city) ? `${city.name}\u2013Paris` : `à travers ${city.name}`} en heure de pointe, cet accès peut faire gagner 15 à 25 minutes par rapport à un VTC qui reste dans la circulation générale.`,
+        longDesc: `En tant que taxis professionnels, nos chauffeurs en mise à disposition à ${city.name} bénéficient de l'accès aux voies de bus et aux files réservées aux taxis. C'est un avantage considérable ${isIDF(city) ? "en Île-de-France, où les couloirs de bus représentent des dizaines de kilomètres de voies prioritaires" : "dans les grandes agglomérations, où les couloirs de bus permettent d’éviter les embouteillages"}. Sur un trajet ${isIDF(city) ? `${city.name}–Paris` : `à travers ${city.name}`} en heure de pointe, cet accès peut faire gagner 15 à 25 minutes par rapport à un VTC qui reste dans la circulation générale.`,
       },
       {
         icon: "solar:document-text-linear",
@@ -464,7 +464,7 @@ export function generateAdvantages(city: City, loc: Loc): MadAdvantage[] {
       icon: "solar:route-linear",
       title: "Reserved lane access",
       shortDesc: "Bus lanes and taxi lanes for faster journeys",
-      longDesc: `As professional taxis, our chauffeur service drivers in ${city.name} have access to bus lanes and taxi-reserved lanes. This is a considerable advantage ${isIDF(city) ? "in Île-de-France, where bus lanes represent dozens of kilometres of priority routes" : "in major urban areas, where bus lanes help avoid traffic jams"}. On a ${isIDF(city) ? `${city.name}\u2013Paris` : `cross-${city.name}`} journey during rush hour, this access can save 15 to 25 minutes compared to a rideshare stuck in general traffic.`,
+      longDesc: `As professional taxis, our chauffeur service drivers in ${city.name} have access to bus lanes and taxi-reserved lanes. This is a considerable advantage ${isIDF(city) ? "in Île-de-France, where bus lanes represent dozens of kilometres of priority routes" : "in major urban areas, where bus lanes help avoid traffic jams"}. On a ${isIDF(city) ? `${city.name}–Paris` : `cross-${city.name}`} journey during rush hour, this access can save 15 to 25 minutes compared to a rideshare stuck in general traffic.`,
     },
     {
       icon: "solar:document-text-linear",
@@ -505,7 +505,7 @@ export function generateTestimonials(city: City, loc: Loc): MadTestimonial[] {
         role: `Jeunes mariés, ${city.name}`,
       },
       {
-        text: `En tant qu'entreprise basée à ${city.name}, nous utilisons régulièrement la mise à disposition TaxiNeo pour nos clients internationaux. Accueil VIP à ${isIDF(city) ? "CDG" : "l\u2019aéroport"}, transfert vers nos bureaux, puis mise à disposition pour les visites de la journée. La facturation professionnelle nous simplifie la comptabilité. Service recommandé sans hésitation.`,
+        text: `En tant qu'entreprise basée à ${city.name}, nous utilisons régulièrement la mise à disposition TaxiNeo pour nos clients internationaux. Accueil VIP à ${isIDF(city) ? "CDG" : "l’aéroport"}, transfert vers nos bureaux, puis mise à disposition pour les visites de la journée. La facturation professionnelle nous simplifie la comptabilité. Service recommandé sans hésitation.`,
         name: "Jean-François M.",
         initials: "JM",
         role: `DG, entreprise à ${city.name}`,

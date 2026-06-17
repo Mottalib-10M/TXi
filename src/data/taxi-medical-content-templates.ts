@@ -84,12 +84,12 @@ function isIDF(city: City): boolean {
 export function generateTmMeta(city: City, loc: Loc): { metaTitle: string; metaDescription: string } {
   if (loc === "fr") {
     return {
-      metaTitle: `Taxi m\u00e9dical ${city.name} \u2014 Conventionn\u00e9 CPAM | Prise en charge S\u00e9cu`,
-      metaDescription: `Taxi m\u00e9dical conventionn\u00e9 CPAM \u00e0 ${city.name}. Transport assis professionnalis\u00e9 (TAP) vers h\u00f4pitaux, dialyse, chimioth\u00e9rapie, r\u00e9\u00e9ducation. Tiers payant, v\u00e9hicule PMR, devis gratuit.`,
+      metaTitle: `Taxi médical ${city.name} — Conventionné CPAM | Prise en charge Sécu`,
+      metaDescription: `Taxi médical conventionné CPAM à ${city.name}. Transport assis professionnalisé (TAP) vers hôpitaux, dialyse, chimiothérapie, rééducation. Tiers payant, véhicule PMR, devis gratuit.`,
     };
   }
   return {
-    metaTitle: `Medical taxi ${city.name} \u2014 CPAM approved | Health insurance covered`,
+    metaTitle: `Medical taxi ${city.name} — CPAM approved | Health insurance covered`,
     metaDescription: `CPAM-approved medical taxi in ${city.name}. Professional seated transport (TAP) to hospitals, dialysis, chemotherapy, rehabilitation. Third-party billing, wheelchair-accessible vehicles, free quote.`,
   };
 }
@@ -99,12 +99,12 @@ export function generateTmMeta(city: City, loc: Loc): { metaTitle: string; metaD
 export function generateTmHero(city: City, loc: Loc): { heroTitle: string; heroSubtitle: string } {
   if (loc === "fr") {
     return {
-      heroTitle: `Taxi m\u00e9dical conventionn\u00e9 \u00e0 ${city.name}`,
-      heroSubtitle: `Transport sanitaire assis professionnalis\u00e9 (TAP) \u00e0 ${city.name}. Chauffeur form\u00e9 au transport de patients, v\u00e9hicule adapt\u00e9 PMR, prise en charge CPAM en tiers payant. Dialyse, chimioth\u00e9rapie, consultations sp\u00e9cialistes, r\u00e9\u00e9ducation.`,
+      heroTitle: `Taxi médical conventionné à ${city.name}`,
+      heroSubtitle: `Transport sanitaire assis professionnalisé (TAP) à ${city.name}. Chauffeur formé au transport de patients, véhicule adapté PMR, prise en charge CPAM en tiers payant. Dialyse, chimiothérapie, consultations spécialistes, rééducation.`,
     };
   }
   return {
-    heroTitle: `Medical taxi in ${city.name} \u2014 CPAM approved`,
+    heroTitle: `Medical taxi in ${city.name} — CPAM approved`,
     heroSubtitle: `Professional seated medical transport (TAP) in ${city.name}. Drivers trained in patient care, wheelchair-accessible vehicles, direct CPAM billing. Dialysis, chemotherapy, specialist appointments, rehabilitation.`,
   };
 }
@@ -118,25 +118,25 @@ export function generateTmIntro(city: City, tmCity: TaxiMedicalCityData, loc: Lo
 
   if (loc === "fr") {
     return {
-      introBody: `${city.name}, commune de ${pop} habitants ${isIDF(city) ? "en \u00cele-de-France" : "en France"}, dispose d\u2019un r\u00e9seau hospitalier dense qui n\u00e9cessite un acc\u00e8s fiable au transport m\u00e9dical. Le taxi m\u00e9dical conventionn\u00e9 CPAM \u00e0 ${city.name} est la solution de r\u00e9f\u00e9rence pour les patients qui doivent se rendre r\u00e9guli\u00e8rement dans un \u00e9tablissement de sant\u00e9 : h\u00f4pital, centre de dialyse, service de chimioth\u00e9rapie, cabinet de kin\u00e9sith\u00e9rapie ou consultation sp\u00e9cialiste.
+      introBody: `${city.name}, commune de ${pop} habitants ${isIDF(city) ? "en Île-de-France" : "en France"}, dispose d’un réseau hospitalier dense qui nécessite un accès fiable au transport médical. Le taxi médical conventionné CPAM à ${city.name} est la solution de référence pour les patients qui doivent se rendre régulièrement dans un établissement de santé : hôpital, centre de dialyse, service de chimiothérapie, cabinet de kinésithérapie ou consultation spécialiste.
 
-Le transport assis professionnalis\u00e9 (TAP) est un mode de transport sanitaire r\u00e9glement\u00e9 par le Code de la sant\u00e9 publique. Contrairement \u00e0 une course de taxi classique, le taxi m\u00e9dical conventionn\u00e9 implique un v\u00e9hicule agr\u00e9\u00e9 par la CPAM, un chauffeur form\u00e9 au transport de personnes malades ou \u00e0 mobilit\u00e9 r\u00e9duite, et la possibilit\u00e9 de b\u00e9n\u00e9ficier du tiers payant \u2014 c\u2019est-\u00e0-dire que la CPAM r\u00e8gle directement le taxi, sans avance de frais pour le patient.
+Le transport assis professionnalisé (TAP) est un mode de transport sanitaire réglementé par le Code de la santé publique. Contrairement à une course de taxi classique, le taxi médical conventionné implique un véhicule agréé par la CPAM, un chauffeur formé au transport de personnes malades ou à mobilité réduite, et la possibilité de bénéficier du tiers payant — c’est-à-dire que la CPAM règle directement le taxi, sans avance de frais pour le patient.
 
-\u00c0 ${city.name}, nos chauffeurs assurent quotidiennement des transports vers ${hospitals}. Chaque trajet est organis\u00e9 en coordination avec votre \u00e9tablissement de sant\u00e9 pour respecter vos horaires de rendez-vous. Le chauffeur vous prend en charge \u00e0 domicile, vous accompagne jusqu\u2019\u00e0 l\u2019accueil de l\u2019\u00e9tablissement, attend la fin de votre s\u00e9ance ou consultation, puis vous ram\u00e8ne chez vous.
+À ${city.name}, nos chauffeurs assurent quotidiennement des transports vers ${hospitals}. Chaque trajet est organisé en coordination avec votre établissement de santé pour respecter vos horaires de rendez-vous. Le chauffeur vous prend en charge à domicile, vous accompagne jusqu’à l’accueil de l’établissement, attend la fin de votre séance ou consultation, puis vous ramène chez vous.
 
-Pour les patients suivant un traitement r\u00e9gulier (dialyse 3 fois par semaine, chimioth\u00e9rapie toutes les 2 semaines, s\u00e9ances de kin\u00e9sith\u00e9rapie quotidiennes), le taxi m\u00e9dical conventionn\u00e9 \u00e0 ${city.name} propose des forfaits s\u00e9ries (5 ou 10 aller-retour) qui r\u00e9duisent le co\u00fbt par trajet et simplifient la gestion administrative. Un seul bon de transport couvre l\u2019ensemble de la s\u00e9rie.`,
-      introComplement: `Le conventionnement CPAM est le point central du taxi m\u00e9dical \u00e0 ${city.name}. Pour en b\u00e9n\u00e9ficier, le patient doit disposer d\u2019une prescription m\u00e9dicale de transport (PMT) \u00e9tablie par son m\u00e9decin traitant ou le m\u00e9decin hospitalier avant le transport. Cette prescription indique le mode de transport prescrit (taxi, VSL ou ambulance), le lieu de consultation et la dur\u00e9e pr\u00e9visible du traitement.
+Pour les patients suivant un traitement régulier (dialyse 3 fois par semaine, chimiothérapie toutes les 2 semaines, séances de kinésithérapie quotidiennes), le taxi médical conventionné à ${city.name} propose des forfaits séries (5 ou 10 aller-retour) qui réduisent le coût par trajet et simplifient la gestion administrative. Un seul bon de transport couvre l’ensemble de la série.`,
+      introComplement: `Le conventionnement CPAM est le point central du taxi médical à ${city.name}. Pour en bénéficier, le patient doit disposer d’une prescription médicale de transport (PMT) établie par son médecin traitant ou le médecin hospitalier avant le transport. Cette prescription indique le mode de transport prescrit (taxi, VSL ou ambulance), le lieu de consultation et la durée prévisible du traitement.
 
-Les patients en affection de longue dur\u00e9e (ALD), en accident du travail (AT), en invalidit\u00e9, ou b\u00e9n\u00e9ficiant de la CMU-C ou de l\u2019ACS b\u00e9n\u00e9ficient d\u2019une prise en charge \u00e0 100 % par la S\u00e9curit\u00e9 sociale. Pour les autres patients, la prise en charge est de 65 %, le compl\u00e9ment pouvant \u00eatre assur\u00e9 par la mutuelle.
+Les patients en affection de longue durée (ALD), en accident du travail (AT), en invalidité, ou bénéficiant de la CMU-C ou de l’ACS bénéficient d’une prise en charge à 100 % par la Sécurité sociale. Pour les autres patients, la prise en charge est de 65 %, le complément pouvant être assuré par la mutuelle.
 
-Nos ${drivers}+ chauffeurs partenaires \u00e0 ${city.name} sont tous conventionn\u00e9s CPAM, \u00e9quip\u00e9s pour le tiers payant (t\u00e9l\u00e9transmission des feuilles de soins), et form\u00e9s \u00e0 l\u2019accueil des patients fragiles, \u00e2g\u00e9s ou \u00e0 mobilit\u00e9 r\u00e9duite. Chaque v\u00e9hicule est \u00e9quip\u00e9 d\u2019une trousse de premiers secours, d\u2019un brancard et, pour les v\u00e9hicules PMR, d\u2019une rampe d\u2019acc\u00e8s et de fixations pour fauteuil roulant.`,
+Nos ${drivers}+ chauffeurs partenaires à ${city.name} sont tous conventionnés CPAM, équipés pour le tiers payant (télétransmission des feuilles de soins), et formés à l’accueil des patients fragiles, âgés ou à mobilité réduite. Chaque véhicule est équipé d’une trousse de premiers secours, d’un brancard et, pour les véhicules PMR, d’une rampe d’accès et de fixations pour fauteuil roulant.`,
     };
   }
 
   return {
-    introBody: `${city.name}, a municipality of ${pop} inhabitants ${isIDF(city) ? "in \u00cele-de-France" : "in France"}, has a dense hospital network that requires reliable medical transport. The CPAM-approved medical taxi in ${city.name} is the go-to solution for patients who need regular transport to healthcare facilities: hospitals, dialysis centres, chemotherapy units, physiotherapy clinics or specialist consultations.
+    introBody: `${city.name}, a municipality of ${pop} inhabitants ${isIDF(city) ? "in Île-de-France" : "in France"}, has a dense hospital network that requires reliable medical transport. The CPAM-approved medical taxi in ${city.name} is the go-to solution for patients who need regular transport to healthcare facilities: hospitals, dialysis centres, chemotherapy units, physiotherapy clinics or specialist consultations.
 
-Professional seated transport (TAP \u2014 Transport Assis Professionnalis\u00e9) is a healthcare transport mode regulated by the French Public Health Code. Unlike a standard taxi ride, an approved medical taxi involves a CPAM-certified vehicle, a driver trained in transporting patients with reduced mobility or medical conditions, and the option for third-party billing (tiers payant) \u2014 meaning the CPAM pays the taxi directly, with no upfront cost for the patient.
+Professional seated transport (TAP — Transport Assis Professionnalisé) is a healthcare transport mode regulated by the French Public Health Code. Unlike a standard taxi ride, an approved medical taxi involves a CPAM-certified vehicle, a driver trained in transporting patients with reduced mobility or medical conditions, and the option for third-party billing (tiers payant) — meaning the CPAM pays the taxi directly, with no upfront cost for the patient.
 
 In ${city.name}, our drivers provide daily transport to ${hospitals}. Each journey is coordinated with your healthcare facility to respect your appointment times. The driver picks you up at home, accompanies you to the facility entrance, waits for your session or consultation to end, then takes you home.
 
@@ -154,9 +154,9 @@ Our ${drivers}+ partner drivers in ${city.name} are all CPAM-approved, equipped 
 export function generateTmHospitalsGuide(city: City, tmCity: TaxiMedicalCityData, loc: Loc): string {
   const paragraphs = tmCity.hospitals.map((hospital) => {
     if (loc === "fr") {
-      return `**${hospital}** \u2014 Le taxi m\u00e9dical conventionn\u00e9 pour ${hospital} \u00e0 ${city.name} assure un trajet direct depuis votre domicile, sans d\u00e9tour ni attente inutile. Notre chauffeur conna\u00eet les acc\u00e8s sp\u00e9cifiques de ${hospital} : entr\u00e9e des urgences, d\u00e9pose patients, acc\u00e8s handicap\u00e9s, parking r\u00e9serv\u00e9 aux taxis m\u00e9dicaux. Pour les patients en dialyse ou en chimioth\u00e9rapie \u00e0 ${hospital}, le chauffeur vous accompagne jusqu\u2019au service concern\u00e9, attend la fin de la s\u00e9ance (g\u00e9n\u00e9ralement 3 \u00e0 4 heures pour la dialyse), puis vous reconduit \u00e0 domicile. Le tiers payant est appliqu\u00e9 syst\u00e9matiquement pour ${hospital}, sous r\u00e9serve de pr\u00e9sentation de la prescription m\u00e9dicale de transport et de la carte Vitale.`;
+      return `**${hospital}** — Le taxi médical conventionné pour ${hospital} à ${city.name} assure un trajet direct depuis votre domicile, sans détour ni attente inutile. Notre chauffeur connaît les accès spécifiques de ${hospital} : entrée des urgences, dépose patients, accès handicapés, parking réservé aux taxis médicaux. Pour les patients en dialyse ou en chimiothérapie à ${hospital}, le chauffeur vous accompagne jusqu’au service concerné, attend la fin de la séance (généralement 3 à 4 heures pour la dialyse), puis vous reconduit à domicile. Le tiers payant est appliqué systématiquement pour ${hospital}, sous réserve de présentation de la prescription médicale de transport et de la carte Vitale.`;
     }
-    return `**${hospital}** \u2014 The CPAM-approved medical taxi to ${hospital} in ${city.name} provides a direct journey from your home, with no detours or unnecessary waiting. Our driver knows the specific access points for ${hospital}: emergency entrance, patient drop-off, disabled access, and taxi-reserved parking. For dialysis or chemotherapy patients at ${hospital}, the driver accompanies you to the relevant department, waits for the session to end (typically 3 to 4 hours for dialysis), then takes you home. Third-party billing is systematically applied for ${hospital}, subject to presenting the medical transport prescription and Carte Vitale.`;
+    return `**${hospital}** — The CPAM-approved medical taxi to ${hospital} in ${city.name} provides a direct journey from your home, with no detours or unnecessary waiting. Our driver knows the specific access points for ${hospital}: emergency entrance, patient drop-off, disabled access, and taxi-reserved parking. For dialysis or chemotherapy patients at ${hospital}, the driver accompanies you to the relevant department, waits for the session to end (typically 3 to 4 hours for dialysis), then takes you home. Third-party billing is systematically applied for ${hospital}, subject to presenting the medical transport prescription and Carte Vitale.`;
   });
 
   return paragraphs.join("\n\n");
@@ -167,9 +167,9 @@ export function generateTmHospitalsGuide(city: City, tmCity: TaxiMedicalCityData
 export function generateTmQuartiersAccess(city: City, loc: Loc): string {
   const paragraphs = city.quartiers.slice(0, 6).map((quartier) => {
     if (loc === "fr") {
-      return `**${quartier}** \u2014 La prise en charge taxi m\u00e9dical depuis le quartier ${quartier} \u00e0 ${city.name} est assur\u00e9e par nos chauffeurs qui connaissent parfaitement les acc\u00e8s, les sens uniques et les zones de stationnement de ${quartier}. Pour les patients \u00e0 mobilit\u00e9 r\u00e9duite dans ${quartier}, le chauffeur se pr\u00e9sente \u00e0 votre porte, vous aide \u00e0 monter dans le v\u00e9hicule et s\u2019assure de votre confort tout au long du trajet. Les patients r\u00e9guliers de ${quartier} b\u00e9n\u00e9ficient souvent du m\u00eame chauffeur, cr\u00e9ant une relation de confiance essentielle pour les personnes fragilis\u00e9es par la maladie.`;
+      return `**${quartier}** — La prise en charge taxi médical depuis le quartier ${quartier} à ${city.name} est assurée par nos chauffeurs qui connaissent parfaitement les accès, les sens uniques et les zones de stationnement de ${quartier}. Pour les patients à mobilité réduite dans ${quartier}, le chauffeur se présente à votre porte, vous aide à monter dans le véhicule et s’assure de votre confort tout au long du trajet. Les patients réguliers de ${quartier} bénéficient souvent du même chauffeur, créant une relation de confiance essentielle pour les personnes fragilisées par la maladie.`;
     }
-    return `**${quartier}** \u2014 Medical taxi pickup from the ${quartier} area of ${city.name} is handled by drivers who know the access points, one-way streets and parking areas of ${quartier} inside out. For patients with reduced mobility in ${quartier}, the driver comes to your door, helps you into the vehicle and ensures your comfort throughout the journey. Regular patients from ${quartier} often benefit from the same driver, creating a trust relationship that is essential for people weakened by illness.`;
+    return `**${quartier}** — Medical taxi pickup from the ${quartier} area of ${city.name} is handled by drivers who know the access points, one-way streets and parking areas of ${quartier} inside out. For patients with reduced mobility in ${quartier}, the driver comes to your door, helps you into the vehicle and ensures your comfort throughout the journey. Regular patients from ${quartier} often benefit from the same driver, creating a trust relationship that is essential for people weakened by illness.`;
   });
 
   return paragraphs.join("\n\n");
@@ -179,68 +179,68 @@ export function generateTmQuartiersAccess(city: City, loc: Loc): string {
 
 export function generateTmPracticalInfo(city: City, loc: Loc): string {
   if (loc === "fr") {
-    return `**Prescription m\u00e9dicale de transport (PMT)** \u2014 La PMT est obligatoire pour b\u00e9n\u00e9ficier du remboursement CPAM de votre taxi m\u00e9dical \u00e0 ${city.name}. Elle doit \u00eatre \u00e9tablie par votre m\u00e9decin traitant ou le m\u00e9decin hospitalier AVANT le transport. La prescription mentionne le mode de transport prescrit (taxi/TAP), la destination, le motif m\u00e9dical et le nombre de trajets autoris\u00e9s. Sans prescription pr\u00e9alable, le transport ne sera pas rembours\u00e9.
+    return `**Prescription médicale de transport (PMT)** — La PMT est obligatoire pour bénéficier du remboursement CPAM de votre taxi médical à ${city.name}. Elle doit être établie par votre médecin traitant ou le médecin hospitalier AVANT le transport. La prescription mentionne le mode de transport prescrit (taxi/TAP), la destination, le motif médical et le nombre de trajets autorisés. Sans prescription préalable, le transport ne sera pas remboursé.
 
-**Carte Vitale et mutuelle** \u2014 Pr\u00e9sentez votre carte Vitale et votre carte de mutuelle au chauffeur \u00e0 chaque trajet. Le chauffeur proc\u00e8de \u00e0 la t\u00e9l\u00e9transmission de la feuille de soins directement depuis le v\u00e9hicule. En tiers payant int\u00e9gral (ALD, AT, CMU-C), vous n\u2019avancez aucun frais. En tiers payant partiel, la part compl\u00e9mentaire est factur\u00e9e \u00e0 votre mutuelle.
+**Carte Vitale et mutuelle** — Présentez votre carte Vitale et votre carte de mutuelle au chauffeur à chaque trajet. Le chauffeur procède à la télétransmission de la feuille de soins directement depuis le véhicule. En tiers payant intégral (ALD, AT, CMU-C), vous n’avancez aucun frais. En tiers payant partiel, la part complémentaire est facturée à votre mutuelle.
 
-**ALD et prise en charge \u00e0 100 %** \u2014 Les patients en Affection de Longue Dur\u00e9e (ALD) reconnue par la S\u00e9curit\u00e9 sociale b\u00e9n\u00e9ficient d\u2019une prise en charge \u00e0 100 % de leurs transports m\u00e9dicaux \u00e0 ${city.name}. C\u2019est le cas notamment pour la dialyse r\u00e9nale, les traitements de chimioth\u00e9rapie, la radioth\u00e9rapie, certaines maladies chroniques (diab\u00e8te, scl\u00e9rose en plaques, insuffisance cardiaque) et les soins post-AVC.
+**ALD et prise en charge à 100 %** — Les patients en Affection de Longue Durée (ALD) reconnue par la Sécurité sociale bénéficient d’une prise en charge à 100 % de leurs transports médicaux à ${city.name}. C’est le cas notamment pour la dialyse rénale, les traitements de chimiothérapie, la radiothérapie, certaines maladies chroniques (diabète, sclérose en plaques, insuffisance cardiaque) et les soins post-AVC.
 
-**Transport Assis Professionnalis\u00e9 (TAP)** \u2014 Le TAP est le mode de transport m\u00e9dical adapt\u00e9 aux patients qui peuvent se d\u00e9placer assis mais n\u00e9cessitent une aide ou une surveillance pendant le trajet. C\u2019est la cat\u00e9gorie de transport m\u00e9dical la plus fr\u00e9quente \u00e0 ${city.name}. Le taxi conventionn\u00e9 TAP est \u00e9quip\u00e9 pour accueillir les patients en fauteuil roulant (v\u00e9hicule PMR) ou les patients n\u00e9cessitant une position semi-allong\u00e9e.
+**Transport Assis Professionnalisé (TAP)** — Le TAP est le mode de transport médical adapté aux patients qui peuvent se déplacer assis mais nécessitent une aide ou une surveillance pendant le trajet. C’est la catégorie de transport médical la plus fréquente à ${city.name}. Le taxi conventionné TAP est équipé pour accueillir les patients en fauteuil roulant (véhicule PMR) ou les patients nécessitant une position semi-allongée.
 
-**Documents \u00e0 fournir** \u2014 Pour votre premier taxi m\u00e9dical \u00e0 ${city.name}, pr\u00e9parez : (1) la prescription m\u00e9dicale de transport, (2) votre carte Vitale \u00e0 jour, (3) votre carte de mutuelle, (4) une pi\u00e8ce d\u2019identit\u00e9. Pour les s\u00e9ries de transports (dialyse, chimio), un seul bon de transport couvre l\u2019ensemble de la s\u00e9rie.
+**Documents à fournir** — Pour votre premier taxi médical à ${city.name}, préparez : (1) la prescription médicale de transport, (2) votre carte Vitale à jour, (3) votre carte de mutuelle, (4) une pièce d’identité. Pour les séries de transports (dialyse, chimio), un seul bon de transport couvre l’ensemble de la série.
 
-**R\u00e9servation et annulation** \u2014 R\u00e9servez votre taxi m\u00e9dical \u00e0 ${city.name} par t\u00e9l\u00e9phone au 07 59 59 29 34, via le formulaire en ligne ou par email. La r\u00e9servation est possible jusqu\u2019\u00e0 30 jours \u00e0 l\u2019avance. Pour les transports r\u00e9guliers, nous mettons en place un planning r\u00e9current automatique. L\u2019annulation est gratuite jusqu\u2019\u00e0 12 heures avant le transport.
+**Réservation et annulation** — Réservez votre taxi médical à ${city.name} par téléphone au 07 59 59 29 34, via le formulaire en ligne ou par email. La réservation est possible jusqu’à 30 jours à l’avance. Pour les transports réguliers, nous mettons en place un planning récurrent automatique. L’annulation est gratuite jusqu’à 12 heures avant le transport.
 
-**Urgences m\u00e9dicales** \u2014 Le taxi m\u00e9dical conventionn\u00e9 n\u2019est PAS un service d\u2019urgence. En cas d\u2019urgence m\u00e9dicale, appelez le 15 (SAMU) ou le 112. Le taxi m\u00e9dical est destin\u00e9 aux transports programm\u00e9s et r\u00e9guliers vers les \u00e9tablissements de sant\u00e9.`;
+**Urgences médicales** — Le taxi médical conventionné n’est PAS un service d’urgence. En cas d’urgence médicale, appelez le 15 (SAMU) ou le 112. Le taxi médical est destiné aux transports programmés et réguliers vers les établissements de santé.`;
   }
 
-  return `**Medical transport prescription (PMT)** \u2014 The PMT is mandatory to qualify for CPAM reimbursement of your medical taxi in ${city.name}. It must be issued by your GP or hospital doctor BEFORE the transport. The prescription states the prescribed transport mode (taxi/TAP), the destination, the medical reason and the number of authorised trips. Without a prior prescription, the transport will not be reimbursed.
+  return `**Medical transport prescription (PMT)** — The PMT is mandatory to qualify for CPAM reimbursement of your medical taxi in ${city.name}. It must be issued by your GP or hospital doctor BEFORE the transport. The prescription states the prescribed transport mode (taxi/TAP), the destination, the medical reason and the number of authorised trips. Without a prior prescription, the transport will not be reimbursed.
 
-**Carte Vitale and supplementary insurance** \u2014 Present your Carte Vitale and supplementary insurance card (mutuelle) to the driver at each trip. The driver processes the electronic claims form directly from the vehicle. With full third-party billing (ALD, AT, CMU-C), you pay nothing upfront. With partial third-party billing, the complementary portion is invoiced to your mutuelle.
+**Carte Vitale and supplementary insurance** — Present your Carte Vitale and supplementary insurance card (mutuelle) to the driver at each trip. The driver processes the electronic claims form directly from the vehicle. With full third-party billing (ALD, AT, CMU-C), you pay nothing upfront. With partial third-party billing, the complementary portion is invoiced to your mutuelle.
 
-**ALD and 100% coverage** \u2014 Patients with a recognised Long-Term Condition (ALD \u2014 Affection de Longue Dur\u00e9e) benefit from 100% coverage of their medical transport in ${city.name}. This includes kidney dialysis, chemotherapy, radiotherapy, certain chronic conditions (diabetes, multiple sclerosis, heart failure) and post-stroke care.
+**ALD and 100% coverage** — Patients with a recognised Long-Term Condition (ALD — Affection de Longue Durée) benefit from 100% coverage of their medical transport in ${city.name}. This includes kidney dialysis, chemotherapy, radiotherapy, certain chronic conditions (diabetes, multiple sclerosis, heart failure) and post-stroke care.
 
-**Professional Seated Transport (TAP)** \u2014 TAP is the medical transport mode designed for patients who can travel seated but need assistance or monitoring during the journey. It is the most common category of medical transport in ${city.name}. The TAP-approved taxi is equipped to accommodate wheelchair patients (PMR vehicle) or patients requiring a semi-reclined position.
+**Professional Seated Transport (TAP)** — TAP is the medical transport mode designed for patients who can travel seated but need assistance or monitoring during the journey. It is the most common category of medical transport in ${city.name}. The TAP-approved taxi is equipped to accommodate wheelchair patients (PMR vehicle) or patients requiring a semi-reclined position.
 
-**Documents required** \u2014 For your first medical taxi in ${city.name}, please have ready: (1) the medical transport prescription, (2) your up-to-date Carte Vitale, (3) your supplementary insurance card, (4) a form of ID. For transport series (dialysis, chemotherapy), a single transport prescription covers the entire series.
+**Documents required** — For your first medical taxi in ${city.name}, please have ready: (1) the medical transport prescription, (2) your up-to-date Carte Vitale, (3) your supplementary insurance card, (4) a form of ID. For transport series (dialysis, chemotherapy), a single transport prescription covers the entire series.
 
-**Booking and cancellation** \u2014 Book your medical taxi in ${city.name} by phone at +33 7 59 59 29 34, via the online form or by email. Booking is possible up to 30 days in advance. For regular transports, we set up an automatic recurring schedule. Cancellation is free up to 12 hours before the transport.
+**Booking and cancellation** — Book your medical taxi in ${city.name} by phone at +33 7 59 59 29 34, via the online form or by email. Booking is possible up to 30 days in advance. For regular transports, we set up an automatic recurring schedule. Cancellation is free up to 12 hours before the transport.
 
-**Medical emergencies** \u2014 The CPAM-approved medical taxi is NOT an emergency service. In case of medical emergency, call 15 (SAMU) or 112. The medical taxi is intended for scheduled and regular transport to healthcare facilities.`;
+**Medical emergencies** — The CPAM-approved medical taxi is NOT an emergency service. In case of medical emergency, call 15 (SAMU) or 112. The medical taxi is intended for scheduled and regular transport to healthcare facilities.`;
 }
 
 // ─── Comparison (~800 mots) ─────────────────────────
 
 export function generateTmComparison(city: City, loc: Loc): string {
   if (loc === "fr") {
-    return `Le transport m\u00e9dical \u00e0 ${city.name} peut \u00eatre assur\u00e9 par trois types de v\u00e9hicules, chacun adapt\u00e9 \u00e0 un niveau de d\u00e9pendance diff\u00e9rent. Comprendre les diff\u00e9rences permet de choisir le mode de transport le plus adapt\u00e9 et le plus \u00e9conomique.
+    return `Le transport médical à ${city.name} peut être assuré par trois types de véhicules, chacun adapté à un niveau de dépendance différent. Comprendre les différences permet de choisir le mode de transport le plus adapté et le plus économique.
 
-**Taxi m\u00e9dical conventionn\u00e9 (TAP)** \u2014 Le taxi m\u00e9dical conventionn\u00e9 CPAM \u00e0 ${city.name} est destin\u00e9 aux patients capables de se d\u00e9placer assis, avec ou sans aide. C\u2019est le mode de transport m\u00e9dical le plus fr\u00e9quent et le plus \u00e9conomique pour la S\u00e9curit\u00e9 sociale. Le patient est pris en charge \u00e0 domicile, transport\u00e9 directement \u00e0 l\u2019\u00e9tablissement de sant\u00e9, puis reconduit apr\u00e8s sa consultation ou s\u00e9ance. Le v\u00e9hicule peut \u00eatre une berline standard ou un v\u00e9hicule adapt\u00e9 PMR (fauteuil roulant).
+**Taxi médical conventionné (TAP)** — Le taxi médical conventionné CPAM à ${city.name} est destiné aux patients capables de se déplacer assis, avec ou sans aide. C’est le mode de transport médical le plus fréquent et le plus économique pour la Sécurité sociale. Le patient est pris en charge à domicile, transporté directement à l’établissement de santé, puis reconduit après sa consultation ou séance. Le véhicule peut être une berline standard ou un véhicule adapté PMR (fauteuil roulant).
 
-**V\u00e9hicule Sanitaire L\u00e9ger (VSL)** \u2014 Le VSL est un v\u00e9hicule exploit\u00e9 par une entreprise d\u2019ambulances, avec un conducteur form\u00e9 au transport sanitaire. Il est prescrit pour les patients n\u00e9cessitant une surveillance l\u00e9g\u00e8re pendant le trajet (perfusion, oxyg\u00e8ne). Le VSL est g\u00e9n\u00e9ralement plus cher que le taxi m\u00e9dical car il int\u00e8gre le co\u00fbt d\u2019un \u00e9quipement sanitaire embarqu\u00e9. Pour les patients autonomes ou semi-autonomes, le taxi m\u00e9dical est souvent privil\u00e9gi\u00e9 par le m\u00e9decin prescripteur.
+**Véhicule Sanitaire Léger (VSL)** — Le VSL est un véhicule exploité par une entreprise d’ambulances, avec un conducteur formé au transport sanitaire. Il est prescrit pour les patients nécessitant une surveillance légère pendant le trajet (perfusion, oxygène). Le VSL est généralement plus cher que le taxi médical car il intègre le coût d’un équipement sanitaire embarqué. Pour les patients autonomes ou semi-autonomes, le taxi médical est souvent privilégié par le médecin prescripteur.
 
-**Ambulance** \u2014 L\u2019ambulance est r\u00e9serv\u00e9e aux patients devant \u00eatre transport\u00e9s en position allong\u00e9e ou n\u00e9cessitant une surveillance m\u00e9dicale continue pendant le trajet. C\u2019est le mode de transport le plus co\u00fbteux, avec un \u00e9quipage de 2 personnes (ambulancier + auxiliaire). L\u2019ambulance est obligatoire pour certaines situations (post-op\u00e9ratoire imm\u00e9diat, patients intub\u00e9s, urgences vitales).
+**Ambulance** — L’ambulance est réservée aux patients devant être transportés en position allongée ou nécessitant une surveillance médicale continue pendant le trajet. C’est le mode de transport le plus coûteux, avec un équipage de 2 personnes (ambulancier + auxiliaire). L’ambulance est obligatoire pour certaines situations (post-opératoire immédiat, patients intubés, urgences vitales).
 
-| Crit\u00e8re | Taxi m\u00e9dical (TAP) | VSL | Ambulance |
+| Critère | Taxi médical (TAP) | VSL | Ambulance |
 |---------|-------------------|-----|-----------|
-| Position patient | Assis | Assis | Allong\u00e9 |
-| Surveillance m\u00e9dicale | Non | L\u00e9g\u00e8re | Continue |
-| \u00c9quipage | 1 chauffeur | 1 conducteur | 2 personnes |
-| Co\u00fbt pour la CPAM | Le moins cher | Interm\u00e9diaire | Le plus cher |
-| Acc\u00e8s fauteuil roulant | Oui (v\u00e9hicule PMR) | Oui | Oui |
+| Position patient | Assis | Assis | Allongé |
+| Surveillance médicale | Non | Légère | Continue |
+| Équipage | 1 chauffeur | 1 conducteur | 2 personnes |
+| Coût pour la CPAM | Le moins cher | Intermédiaire | Le plus cher |
+| Accès fauteuil roulant | Oui (véhicule PMR) | Oui | Oui |
 | Tiers payant | Oui | Oui | Oui |
 | Voies de bus | Oui | Non | Oui (urgence) |
 
-Pour la grande majorit\u00e9 des transports m\u00e9dicaux r\u00e9guliers \u00e0 ${city.name} (dialyse, chimioth\u00e9rapie, r\u00e9\u00e9ducation, consultations), le taxi m\u00e9dical conventionn\u00e9 est le mode de transport le plus adapt\u00e9, le plus \u00e9conomique et le plus confortable.`;
+Pour la grande majorité des transports médicaux réguliers à ${city.name} (dialyse, chimiothérapie, rééducation, consultations), le taxi médical conventionné est le mode de transport le plus adapté, le plus économique et le plus confortable.`;
   }
 
   return `Medical transport in ${city.name} can be provided by three types of vehicles, each suited to a different level of patient dependency. Understanding the differences helps choose the most appropriate and cost-effective transport mode.
 
-**CPAM-approved medical taxi (TAP)** \u2014 The CPAM-approved medical taxi in ${city.name} is designed for patients who can travel seated, with or without assistance. It is the most common and most cost-effective medical transport mode for the national health insurance. The patient is picked up at home, transported directly to the healthcare facility, then taken home after their consultation or session. The vehicle can be a standard sedan or a wheelchair-accessible vehicle (PMR).
+**CPAM-approved medical taxi (TAP)** — The CPAM-approved medical taxi in ${city.name} is designed for patients who can travel seated, with or without assistance. It is the most common and most cost-effective medical transport mode for the national health insurance. The patient is picked up at home, transported directly to the healthcare facility, then taken home after their consultation or session. The vehicle can be a standard sedan or a wheelchair-accessible vehicle (PMR).
 
-**Light Sanitary Vehicle (VSL)** \u2014 The VSL is a vehicle operated by an ambulance company, with a driver trained in healthcare transport. It is prescribed for patients requiring light monitoring during the journey (IV drip, oxygen). The VSL is generally more expensive than a medical taxi as it includes onboard medical equipment costs. For autonomous or semi-autonomous patients, the medical taxi is often preferred by the prescribing doctor.
+**Light Sanitary Vehicle (VSL)** — The VSL is a vehicle operated by an ambulance company, with a driver trained in healthcare transport. It is prescribed for patients requiring light monitoring during the journey (IV drip, oxygen). The VSL is generally more expensive than a medical taxi as it includes onboard medical equipment costs. For autonomous or semi-autonomous patients, the medical taxi is often preferred by the prescribing doctor.
 
-**Ambulance** \u2014 The ambulance is reserved for patients who must be transported in a lying position or require continuous medical monitoring during the journey. It is the most expensive transport mode, with a 2-person crew (paramedic + auxiliary). Ambulances are mandatory in certain situations (immediate post-operative, intubated patients, life-threatening emergencies).
+**Ambulance** — The ambulance is reserved for patients who must be transported in a lying position or require continuous medical monitoring during the journey. It is the most expensive transport mode, with a 2-person crew (paramedic + auxiliary). Ambulances are mandatory in certain situations (immediate post-operative, intubated patients, life-threatening emergencies).
 
 | Criteria | Medical taxi (TAP) | VSL | Ambulance |
 |----------|-------------------|-----|-----------|
@@ -266,39 +266,39 @@ export function generateTmUseCases(city: City, tmCity: TaxiMedicalCityData, loc:
     return [
       {
         icon: "solar:heart-pulse-linear",
-        title: "S\u00e9ances de dialyse",
-        desc: `Transport r\u00e9gulier 3 fois par semaine vers le centre de dialyse depuis ${city.name}. Prise en charge \u00e0 domicile, accompagnement jusqu\u2019au service, attente pendant la s\u00e9ance (3-4h), retour \u00e0 domicile. Prise en charge CPAM 100 % en ALD.`,
-        example: `Patient de ${q1} transport\u00e9 3 fois par semaine vers ${mainHospital} pour h\u00e9modialyse. M\u00eame chauffeur \u00e0 chaque s\u00e9ance, forfait s\u00e9rie 10 aller-retour, tiers payant int\u00e9gral.`,
+        title: "Séances de dialyse",
+        desc: `Transport régulier 3 fois par semaine vers le centre de dialyse depuis ${city.name}. Prise en charge à domicile, accompagnement jusqu’au service, attente pendant la séance (3-4h), retour à domicile. Prise en charge CPAM 100 % en ALD.`,
+        example: `Patient de ${q1} transporté 3 fois par semaine vers ${mainHospital} pour hémodialyse. Même chauffeur à chaque séance, forfait série 10 aller-retour, tiers payant intégral.`,
       },
       {
         icon: "solar:test-tube-linear",
-        title: "Chimioth\u00e9rapie",
-        desc: `Transport vers les centres de chimioth\u00e9rapie \u00e0 ${city.name}. Le chauffeur adapte sa conduite au confort du patient (conduite douce, temp\u00e9rature contr\u00f4l\u00e9e). Retour s\u00e9curis\u00e9 apr\u00e8s la s\u00e9ance, m\u00eame en cas de fatigue ou de naus\u00e9es.`,
-        example: `Patiente de ${q2} suivant un protocole de chimio toutes les 3 semaines \u00e0 ${tmCity.hospitals[1] || mainHospital}. V\u00e9hicule climatis\u00e9, sac vomitoire \u00e0 disposition, couverture chauffante en hiver.`,
+        title: "Chimiothérapie",
+        desc: `Transport vers les centres de chimiothérapie à ${city.name}. Le chauffeur adapte sa conduite au confort du patient (conduite douce, température contrôlée). Retour sécurisé après la séance, même en cas de fatigue ou de nausées.`,
+        example: `Patiente de ${q2} suivant un protocole de chimio toutes les 3 semaines à ${tmCity.hospitals[1] || mainHospital}. Véhicule climatisé, sac vomitoire à disposition, couverture chauffante en hiver.`,
       },
       {
         icon: "solar:running-2-linear",
-        title: "R\u00e9\u00e9ducation et kin\u00e9sith\u00e9rapie",
-        desc: `Transport quotidien ou plurihebdomadaire vers les centres de r\u00e9\u00e9ducation \u00e0 ${city.name}. Id\u00e9al pour les patients post-op\u00e9ratoires (proth\u00e8se de hanche, genou) ou post-AVC n\u00e9cessitant une kin\u00e9sith\u00e9rapie intensive.`,
-        example: `Patient op\u00e9r\u00e9 de la hanche transport\u00e9 5 jours par semaine vers le centre de r\u00e9\u00e9ducation depuis ${city.name}. Aide \u00e0 la mont\u00e9e/descente du v\u00e9hicule, transport du fauteuil roulant.`,
+        title: "Rééducation et kinésithérapie",
+        desc: `Transport quotidien ou plurihebdomadaire vers les centres de rééducation à ${city.name}. Idéal pour les patients post-opératoires (prothèse de hanche, genou) ou post-AVC nécessitant une kinésithérapie intensive.`,
+        example: `Patient opéré de la hanche transporté 5 jours par semaine vers le centre de rééducation depuis ${city.name}. Aide à la montée/descente du véhicule, transport du fauteuil roulant.`,
       },
       {
         icon: "solar:stethoscope-linear",
-        title: "Consultations sp\u00e9cialistes",
-        desc: `Transport ponctuel vers les consultations sp\u00e9cialistes (cardiologue, oncologue, n\u00e9phrologue, neurologue) dans les h\u00f4pitaux de ${city.name} ou ${isIDF(city) ? "de Paris" : "de la r\u00e9gion"}.`,
-        example: `Patient \u00e2g\u00e9 de ${city.name} se rendant \u00e0 une consultation cardiologique \u00e0 ${mainHospital}. Prise en charge \u00e0 domicile, accompagnement jusqu\u2019au service, attente, retour.`,
+        title: "Consultations spécialistes",
+        desc: `Transport ponctuel vers les consultations spécialistes (cardiologue, oncologue, néphrologue, neurologue) dans les hôpitaux de ${city.name} ou ${isIDF(city) ? "de Paris" : "de la région"}.`,
+        example: `Patient âgé de ${city.name} se rendant à une consultation cardiologique à ${mainHospital}. Prise en charge à domicile, accompagnement jusqu’au service, attente, retour.`,
       },
       {
         icon: "mdi:wheelchair-accessibility",
-        title: "Personnes \u00e0 mobilit\u00e9 r\u00e9duite (PMR)",
-        desc: `V\u00e9hicules sp\u00e9cialement \u00e9quip\u00e9s pour le transport de patients en fauteuil roulant \u00e0 ${city.name}. Rampe d\u2019acc\u00e8s, fixations int\u00e9rieures, espace adapt\u00e9.`,
-        example: `Patiente en fauteuil roulant de ${city.name} transport\u00e9e 2 fois par semaine vers son centre de soins. V\u00e9hicule van PMR avec rampe \u00e9lectrique, chauffeur form\u00e9 \u00e0 la manipulation du fauteuil.`,
+        title: "Personnes à mobilité réduite (PMR)",
+        desc: `Véhicules spécialement équipés pour le transport de patients en fauteuil roulant à ${city.name}. Rampe d’accès, fixations intérieures, espace adapté.`,
+        example: `Patiente en fauteuil roulant de ${city.name} transportée 2 fois par semaine vers son centre de soins. Véhicule van PMR avec rampe électrique, chauffeur formé à la manipulation du fauteuil.`,
       },
       {
         icon: "solar:hospital-linear",
-        title: "Hospitalisations programm\u00e9es",
-        desc: `Transport aller vers l\u2019h\u00f4pital pour une hospitalisation programm\u00e9e \u00e0 ${city.name}, puis retour \u00e0 la sortie. Le chauffeur vous aide avec vos bagages et vous accompagne jusqu\u2019au service d\u2019accueil.`,
-        example: `Patient de ${city.name} admis pour une intervention chirurgicale \u00e0 ${mainHospital}. Aller le dimanche soir, retour le vendredi. Aide aux bagages, accompagnement \u00e0 l\u2019accueil.`,
+        title: "Hospitalisations programmées",
+        desc: `Transport aller vers l’hôpital pour une hospitalisation programmée à ${city.name}, puis retour à la sortie. Le chauffeur vous aide avec vos bagages et vous accompagne jusqu’au service d’accueil.`,
+        example: `Patient de ${city.name} admis pour une intervention chirurgicale à ${mainHospital}. Aller le dimanche soir, retour le vendredi. Aide aux bagages, accompagnement à l’accueil.`,
       },
     ];
   }
@@ -350,39 +350,39 @@ export function generateTmAdvantages(city: City, loc: Loc): TmAdvantage[] {
     return [
       {
         icon: "solar:shield-check-linear",
-        title: "Conventionn\u00e9 CPAM — Tiers payant",
-        shortDesc: "Pas d\u2019avance de frais, la CPAM r\u00e8gle directement le taxi",
-        longDesc: `Le taxi m\u00e9dical conventionn\u00e9 \u00e0 ${city.name} fonctionne en tiers payant : la CPAM r\u00e8gle directement le chauffeur, vous n\u2019avancez aucun frais (en ALD, AT, CMU-C). Pour les patients non exon\u00e9r\u00e9s, le ticket mod\u00e9rateur de 35 % est factur\u00e9 \u00e0 la mutuelle. La t\u00e9l\u00e9transmission des feuilles de soins est r\u00e9alis\u00e9e en temps r\u00e9el depuis le v\u00e9hicule.`,
+        title: "Conventionné CPAM — Tiers payant",
+        shortDesc: "Pas d’avance de frais, la CPAM règle directement le taxi",
+        longDesc: `Le taxi médical conventionné à ${city.name} fonctionne en tiers payant : la CPAM règle directement le chauffeur, vous n’avancez aucun frais (en ALD, AT, CMU-C). Pour les patients non exonérés, le ticket modérateur de 35 % est facturé à la mutuelle. La télétransmission des feuilles de soins est réalisée en temps réel depuis le véhicule.`,
       },
       {
         icon: "mdi:wheelchair-accessibility",
-        title: "V\u00e9hicules adapt\u00e9s PMR",
-        shortDesc: "Rampe d\u2019acc\u00e8s, fixations fauteuil roulant, espace adapt\u00e9",
-        longDesc: `Notre flotte de taxi m\u00e9dical \u00e0 ${city.name} inclut des v\u00e9hicules sp\u00e9cialement am\u00e9nag\u00e9s pour les personnes \u00e0 mobilit\u00e9 r\u00e9duite : vans avec rampe d\u2019acc\u00e8s \u00e9lectrique ou manuelle, fixations au sol pour fauteuil roulant, espace int\u00e9rieur suffisant pour les fauteuils \u00e9lectriques. Les chauffeurs sont form\u00e9s \u00e0 la manipulation des fauteuils et \u00e0 l\u2019aide \u00e0 la mont\u00e9e et descente du v\u00e9hicule.`,
+        title: "Véhicules adaptés PMR",
+        shortDesc: "Rampe d’accès, fixations fauteuil roulant, espace adapté",
+        longDesc: `Notre flotte de taxi médical à ${city.name} inclut des véhicules spécialement aménagés pour les personnes à mobilité réduite : vans avec rampe d’accès électrique ou manuelle, fixations au sol pour fauteuil roulant, espace intérieur suffisant pour les fauteuils électriques. Les chauffeurs sont formés à la manipulation des fauteuils et à l’aide à la montée et descente du véhicule.`,
       },
       {
         icon: "solar:clock-circle-linear",
-        title: "Ponctualit\u00e9 garantie",
-        shortDesc: "Arriv\u00e9e 10 minutes avant l\u2019heure de rendez-vous m\u00e9dical",
-        longDesc: `La ponctualit\u00e9 est critique pour les transports m\u00e9dicaux : un retard \u00e0 la dialyse peut d\u00e9caler l\u2019ensemble du planning du centre, un retard en chimioth\u00e9rapie peut reporter la s\u00e9ance. Nos chauffeurs \u00e0 ${city.name} s\u2019engagent \u00e0 arriver 10 minutes avant l\u2019heure de votre rendez-vous. Le temps de trajet est calcul\u00e9 en tenant compte des conditions de circulation en temps r\u00e9el et des sp\u00e9cificit\u00e9s de ${city.name}.`,
+        title: "Ponctualité garantie",
+        shortDesc: "Arrivée 10 minutes avant l’heure de rendez-vous médical",
+        longDesc: `La ponctualité est critique pour les transports médicaux : un retard à la dialyse peut décaler l’ensemble du planning du centre, un retard en chimiothérapie peut reporter la séance. Nos chauffeurs à ${city.name} s’engagent à arriver 10 minutes avant l’heure de votre rendez-vous. Le temps de trajet est calculé en tenant compte des conditions de circulation en temps réel et des spécificités de ${city.name}.`,
       },
       {
         icon: "solar:user-heart-linear",
-        title: "Chauffeurs form\u00e9s au m\u00e9dical",
-        shortDesc: "Formation premiers secours, accueil patient, gestes adapt\u00e9s",
-        longDesc: `Nos chauffeurs de taxi m\u00e9dical \u00e0 ${city.name} suivent une formation sp\u00e9cifique au transport sanitaire : premiers secours (PSC1), gestes d\u2019aide aux personnes \u00e0 mobilit\u00e9 r\u00e9duite, accueil et communication avec les patients fragillis\u00e9s, conduite adapt\u00e9e (douce, sans \u00e0-coups). Ils sont \u00e9galement form\u00e9s aux protocoles d\u2019hygi\u00e8ne sp\u00e9cifiques au transport sanitaire.`,
+        title: "Chauffeurs formés au médical",
+        shortDesc: "Formation premiers secours, accueil patient, gestes adaptés",
+        longDesc: `Nos chauffeurs de taxi médical à ${city.name} suivent une formation spécifique au transport sanitaire : premiers secours (PSC1), gestes d’aide aux personnes à mobilité réduite, accueil et communication avec les patients fragillisés, conduite adaptée (douce, sans à-coups). Ils sont également formés aux protocoles d’hygiène spécifiques au transport sanitaire.`,
       },
       {
         icon: "solar:calendar-minimalistic-linear",
-        title: "Planning r\u00e9current automatique",
-        shortDesc: "Un seul appel pour programmer toutes vos s\u00e9ances de la semaine",
-        longDesc: `Pour les transports r\u00e9guliers (dialyse, chimio, r\u00e9\u00e9ducation), nous mettons en place un planning r\u00e9current \u00e0 ${city.name}. Vous appelez une seule fois, nous programmons tous vos trajets pour la semaine ou le mois. Le m\u00eame chauffeur est attribu\u00e9 \u00e0 chaque s\u00e9ance dans la mesure du possible, cr\u00e9ant une relation de confiance essentielle pour le bien-\u00eatre du patient.`,
+        title: "Planning récurrent automatique",
+        shortDesc: "Un seul appel pour programmer toutes vos séances de la semaine",
+        longDesc: `Pour les transports réguliers (dialyse, chimio, rééducation), nous mettons en place un planning récurrent à ${city.name}. Vous appelez une seule fois, nous programmons tous vos trajets pour la semaine ou le mois. Le même chauffeur est attribué à chaque séance dans la mesure du possible, créant une relation de confiance essentielle pour le bien-être du patient.`,
       },
       {
         icon: "solar:route-linear",
-        title: "Voies de bus et acc\u00e8s taxis",
-        shortDesc: "Trajets plus rapides gr\u00e2ce aux couloirs r\u00e9serv\u00e9s",
-        longDesc: `En tant que taxis professionnels, nos chauffeurs de taxi m\u00e9dical \u00e0 ${city.name} acc\u00e8dent aux voies de bus et aux files r\u00e9serv\u00e9es aux taxis. C\u2019est un avantage majeur pour les transports m\u00e9dicaux ${isIDF(city) ? "en \u00cele-de-France, o\u00f9 les couloirs de bus repr\u00e9sentent des dizaines de kilom\u00e8tres de voies prioritaires" : "en agglom\u00e9ration, o\u00f9 les embouteillages peuvent retarder un rendez-vous m\u00e9dical"}. Un trajet plus rapide, c\u2019est aussi moins de fatigue pour le patient.`,
+        title: "Voies de bus et accès taxis",
+        shortDesc: "Trajets plus rapides grâce aux couloirs réservés",
+        longDesc: `En tant que taxis professionnels, nos chauffeurs de taxi médical à ${city.name} accèdent aux voies de bus et aux files réservées aux taxis. C’est un avantage majeur pour les transports médicaux ${isIDF(city) ? "en Île-de-France, où les couloirs de bus représentent des dizaines de kilomètres de voies prioritaires" : "en agglomération, où les embouteillages peuvent retarder un rendez-vous médical"}. Un trajet plus rapide, c’est aussi moins de fatigue pour le patient.`,
       },
     ];
   }
@@ -390,7 +390,7 @@ export function generateTmAdvantages(city: City, loc: Loc): TmAdvantage[] {
   return [
     {
       icon: "solar:shield-check-linear",
-      title: "CPAM approved \u2014 Third-party billing",
+      title: "CPAM approved — Third-party billing",
       shortDesc: "No upfront payment, CPAM pays the taxi directly",
       longDesc: `The CPAM-approved medical taxi in ${city.name} operates on third-party billing: CPAM pays the driver directly, you pay nothing upfront (under ALD, AT, CMU-C). For non-exempt patients, the 35% co-payment is invoiced to your supplementary insurance. Electronic claims are processed in real time from the vehicle.`,
     },
@@ -422,7 +422,7 @@ export function generateTmAdvantages(city: City, loc: Loc): TmAdvantage[] {
       icon: "solar:route-linear",
       title: "Bus lanes and taxi access",
       shortDesc: "Faster journeys through reserved lanes",
-      longDesc: `As professional taxis, our medical taxi drivers in ${city.name} have access to bus lanes and taxi-reserved lanes. This is a major advantage for medical transports ${isIDF(city) ? "in \u00cele-de-France, where bus lanes represent dozens of kilometres of priority routes" : "in urban areas, where traffic jams can delay a medical appointment"}. A faster journey also means less fatigue for the patient.`,
+      longDesc: `As professional taxis, our medical taxi drivers in ${city.name} have access to bus lanes and taxi-reserved lanes. This is a major advantage for medical transports ${isIDF(city) ? "in Île-de-France, where bus lanes represent dozens of kilometres of priority routes" : "in urban areas, where traffic jams can delay a medical appointment"}. A faster journey also means less fatigue for the patient.`,
     },
   ];
 }
@@ -435,44 +435,44 @@ export function generateTmTestimonials(city: City, tmCity: TaxiMedicalCityData, 
   if (loc === "fr") {
     return [
       {
-        text: `Je suis dialys\u00e9 3 fois par semaine \u00e0 ${mainHospital} depuis ${city.name}. Le chauffeur TaxiNeo est toujours l\u00e0 10 minutes avant l\u2019heure, il m\u2019aide \u00e0 monter dans le v\u00e9hicule et m\u2019accompagne jusqu\u2019au service. Apr\u00e8s 4 heures de dialyse, il est l\u00e0 pour me ramener. Le tiers payant fait que je ne paie rien. Apr\u00e8s 2 ans, c\u2019est devenu un ami.`,
+        text: `Je suis dialysé 3 fois par semaine à ${mainHospital} depuis ${city.name}. Le chauffeur TaxiNeo est toujours là 10 minutes avant l’heure, il m’aide à monter dans le véhicule et m’accompagne jusqu’au service. Après 4 heures de dialyse, il est là pour me ramener. Le tiers payant fait que je ne paie rien. Après 2 ans, c’est devenu un ami.`,
         name: "Robert M.",
         initials: "RM",
-        role: `Patient dialys\u00e9, ${city.name}`,
+        role: `Patient dialysé, ${city.name}`,
       },
       {
-        text: `Ma m\u00e8re suit un traitement de chimioth\u00e9rapie \u00e0 ${tmCity.hospitals[1] || mainHospital}. Le taxi m\u00e9dical la prend \u00e0 la maison, la conduit doucement (elle est tr\u00e8s sensible aux mouvements apr\u00e8s les s\u00e9ances), attend et la ram\u00e8ne. Le m\u00eame chauffeur \u00e0 chaque fois, il conna\u00eet ses besoins. La prise en charge CPAM est totale en ALD.`,
+        text: `Ma mère suit un traitement de chimiothérapie à ${tmCity.hospitals[1] || mainHospital}. Le taxi médical la prend à la maison, la conduit doucement (elle est très sensible aux mouvements après les séances), attend et la ramène. Le même chauffeur à chaque fois, il connaît ses besoins. La prise en charge CPAM est totale en ALD.`,
         name: "Catherine D.",
         initials: "CD",
         role: `Fille de patiente, ${city.name}`,
       },
       {
-        text: `Apr\u00e8s mon op\u00e9ration du genou, j\u2019ai eu besoin d\u2019un taxi m\u00e9dical \u00e0 ${city.name} pour mes s\u00e9ances de kin\u00e9 quotidiennes pendant 6 semaines. Le chauffeur transportait mon fauteuil roulant, m\u2019aidait \u00e0 chaque transfert. Le forfait s\u00e9rie de 10 aller-retour \u00e9tait tr\u00e8s avantageux.`,
+        text: `Après mon opération du genou, j’ai eu besoin d’un taxi médical à ${city.name} pour mes séances de kiné quotidiennes pendant 6 semaines. Le chauffeur transportait mon fauteuil roulant, m’aidait à chaque transfert. Le forfait série de 10 aller-retour était très avantageux.`,
         name: "Philippe G.",
         initials: "PG",
-        role: `Patient en r\u00e9\u00e9ducation, ${city.name}`,
+        role: `Patient en rééducation, ${city.name}`,
       },
       {
-        text: `En tant qu\u2019infirmi\u00e8re coordinatrice, je recommande TaxiNeo pour le transport des patients de notre service \u00e0 ${mainHospital}. Ponctualit\u00e9 irr\u00e9prochable, v\u00e9hicules propres, chauffeurs respectueux et patients. Le conventionnement CPAM simplifie tout pour nos patients \u00e2g\u00e9s.`,
+        text: `En tant qu’infirmière coordinatrice, je recommande TaxiNeo pour le transport des patients de notre service à ${mainHospital}. Ponctualité irréprochable, véhicules propres, chauffeurs respectueux et patients. Le conventionnement CPAM simplifie tout pour nos patients âgés.`,
         name: "Nathalie P.",
         initials: "NP",
-        role: `Infirmi\u00e8re coordinatrice, ${mainHospital}`,
+        role: `Infirmière coordinatrice, ${mainHospital}`,
       },
     ];
   }
 
   return [
     {
-      text: `I\u2019ve been on dialysis 3 times a week at ${mainHospital} from ${city.name}. The TaxiNeo driver is always there 10 minutes early, helps me into the vehicle and accompanies me to the department. After 4 hours of dialysis, they\u2019re there to take me home. With third-party billing, I pay nothing. After 2 years, they\u2019ve become a friend.`,
+      text: `I’ve been on dialysis 3 times a week at ${mainHospital} from ${city.name}. The TaxiNeo driver is always there 10 minutes early, helps me into the vehicle and accompanies me to the department. After 4 hours of dialysis, they’re there to take me home. With third-party billing, I pay nothing. After 2 years, they’ve become a friend.`,
       name: "Robert M.",
       initials: "RM",
       role: `Dialysis patient, ${city.name}`,
     },
     {
-      text: `My mother is undergoing chemotherapy at ${tmCity.hospitals[1] || mainHospital}. The medical taxi picks her up at home, drives gently (she\u2019s very sensitive to movement after sessions), waits and brings her back. Same driver every time, they know her needs. The CPAM coverage is total under ALD.`,
+      text: `My mother is undergoing chemotherapy at ${tmCity.hospitals[1] || mainHospital}. The medical taxi picks her up at home, drives gently (she’s very sensitive to movement after sessions), waits and brings her back. Same driver every time, they know her needs. The CPAM coverage is total under ALD.`,
       name: "Catherine D.",
       initials: "CD",
-      role: `Patient\u2019s daughter, ${city.name}`,
+      role: `Patient’s daughter, ${city.name}`,
     },
     {
       text: `After my knee surgery, I needed a medical taxi in ${city.name} for daily physiotherapy sessions for 6 weeks. The driver transported my wheelchair, helped me at every transfer. The 10 round-trip series package was excellent value.`,
@@ -495,44 +495,44 @@ export function generateTmFAQ(city: City, loc: Loc): TmFAQ[] {
   if (loc === "fr") {
     return [
       {
-        question: `Qu\u2019est-ce qu\u2019un taxi m\u00e9dical conventionn\u00e9 \u00e0 ${city.name} ?`,
-        answer: `Un taxi m\u00e9dical conventionn\u00e9 est un taxi ayant sign\u00e9 une convention avec la CPAM pour le transport sanitaire assis professionnalis\u00e9 (TAP). Le chauffeur est form\u00e9 au transport de patients, le v\u00e9hicule est agr\u00e9\u00e9, et le service fonctionne en tiers payant : la CPAM r\u00e8gle directement le taxi. \u00c0 ${city.name}, tous nos chauffeurs partenaires sont conventionn\u00e9s CPAM.`,
+        question: `Qu’est-ce qu’un taxi médical conventionné à ${city.name} ?`,
+        answer: `Un taxi médical conventionné est un taxi ayant signé une convention avec la CPAM pour le transport sanitaire assis professionnalisé (TAP). Le chauffeur est formé au transport de patients, le véhicule est agréé, et le service fonctionne en tiers payant : la CPAM règle directement le taxi. À ${city.name}, tous nos chauffeurs partenaires sont conventionnés CPAM.`,
       },
       {
-        question: `Comment b\u00e9n\u00e9ficier du tiers payant pour mon taxi m\u00e9dical \u00e0 ${city.name} ?`,
-        answer: `Pour b\u00e9n\u00e9ficier du tiers payant, vous devez disposer d\u2019une prescription m\u00e9dicale de transport (PMT) \u00e9tablie par votre m\u00e9decin AVANT le transport. Pr\u00e9sentez la PMT, votre carte Vitale et votre carte de mutuelle au chauffeur. Si vous \u00eates en ALD, AT, invalidit\u00e9 ou CMU-C, la prise en charge est \u00e0 100 % sans avance de frais. Sinon, la CPAM couvre 65 % et votre mutuelle le compl\u00e9ment.`,
+        question: `Comment bénéficier du tiers payant pour mon taxi médical à ${city.name} ?`,
+        answer: `Pour bénéficier du tiers payant, vous devez disposer d’une prescription médicale de transport (PMT) établie par votre médecin AVANT le transport. Présentez la PMT, votre carte Vitale et votre carte de mutuelle au chauffeur. Si vous êtes en ALD, AT, invalidité ou CMU-C, la prise en charge est à 100 % sans avance de frais. Sinon, la CPAM couvre 65 % et votre mutuelle le complément.`,
       },
       {
-        question: `Ai-je besoin d\u2019une prescription m\u00e9dicale pour prendre un taxi m\u00e9dical ?`,
-        answer: `Oui, la prescription m\u00e9dicale de transport (PMT) est obligatoire pour le remboursement par la CPAM. Elle doit \u00eatre \u00e9tablie AVANT le transport par votre m\u00e9decin traitant ou le m\u00e9decin hospitalier. Sans prescription, le transport sera factur\u00e9 comme un taxi classique, sans remboursement. En urgence, la prescription peut \u00eatre \u00e9tablie a posteriori par le m\u00e9decin hospitalier.`,
+        question: `Ai-je besoin d’une prescription médicale pour prendre un taxi médical ?`,
+        answer: `Oui, la prescription médicale de transport (PMT) est obligatoire pour le remboursement par la CPAM. Elle doit être établie AVANT le transport par votre médecin traitant ou le médecin hospitalier. Sans prescription, le transport sera facturé comme un taxi classique, sans remboursement. En urgence, la prescription peut être établie a posteriori par le médecin hospitalier.`,
       },
       {
-        question: `Quels traitements sont couverts par le taxi m\u00e9dical \u00e0 ${city.name} ?`,
-        answer: `Le taxi m\u00e9dical conventionn\u00e9 couvre tous les transports li\u00e9s \u00e0 des soins m\u00e9dicaux prescrits : dialyse r\u00e9nale, chimioth\u00e9rapie, radioth\u00e9rapie, r\u00e9\u00e9ducation fonctionnelle, consultations sp\u00e9cialistes, hospitalisations programm\u00e9es, examens m\u00e9dicaux (IRM, scanner, biopsie), soins post-op\u00e9ratoires. La condition est d\u2019avoir une prescription m\u00e9dicale de transport.`,
+        question: `Quels traitements sont couverts par le taxi médical à ${city.name} ?`,
+        answer: `Le taxi médical conventionné couvre tous les transports liés à des soins médicaux prescrits : dialyse rénale, chimiothérapie, radiothérapie, rééducation fonctionnelle, consultations spécialistes, hospitalisations programmées, examens médicaux (IRM, scanner, biopsie), soins post-opératoires. La condition est d’avoir une prescription médicale de transport.`,
       },
       {
-        question: `Combien co\u00fbte un taxi m\u00e9dical \u00e0 ${city.name} ?`,
-        answer: `Le tarif du taxi m\u00e9dical \u00e0 ${city.name} est calcul\u00e9 selon le tarif conventionnel fix\u00e9 par la CPAM (forfait de prise en charge + kilom\u00e8tres). En tiers payant, vous ne payez rien si vous \u00eates en ALD, AT ou CMU-C. Pour les patients non exon\u00e9r\u00e9s, la part restante (35 %) est g\u00e9n\u00e9ralement couverte par la mutuelle. Nous proposons des forfaits s\u00e9ries (5 ou 10 aller-retour) pour les traitements r\u00e9guliers.`,
+        question: `Combien coûte un taxi médical à ${city.name} ?`,
+        answer: `Le tarif du taxi médical à ${city.name} est calculé selon le tarif conventionnel fixé par la CPAM (forfait de prise en charge + kilomètres). En tiers payant, vous ne payez rien si vous êtes en ALD, AT ou CMU-C. Pour les patients non exonérés, la part restante (35 %) est généralement couverte par la mutuelle. Nous proposons des forfaits séries (5 ou 10 aller-retour) pour les traitements réguliers.`,
       },
       {
-        question: `Avez-vous des v\u00e9hicules adapt\u00e9s aux fauteuils roulants \u00e0 ${city.name} ?`,
-        answer: `Oui, notre flotte \u00e0 ${city.name} comprend des v\u00e9hicules PMR (Personnes \u00e0 Mobilit\u00e9 R\u00e9duite) : vans \u00e9quip\u00e9s de rampes d\u2019acc\u00e8s \u00e9lectriques ou manuelles, de fixations au sol pour fauteuil roulant, et d\u2019un espace int\u00e9rieur suffisant pour les fauteuils \u00e9lectriques. Pr\u00e9cisez votre besoin PMR lors de la r\u00e9servation pour garantir la disponibilit\u00e9 d\u2019un v\u00e9hicule adapt\u00e9.`,
+        question: `Avez-vous des véhicules adaptés aux fauteuils roulants à ${city.name} ?`,
+        answer: `Oui, notre flotte à ${city.name} comprend des véhicules PMR (Personnes à Mobilité Réduite) : vans équipés de rampes d’accès électriques ou manuelles, de fixations au sol pour fauteuil roulant, et d’un espace intérieur suffisant pour les fauteuils électriques. Précisez votre besoin PMR lors de la réservation pour garantir la disponibilité d’un véhicule adapté.`,
       },
       {
-        question: `Le chauffeur attend-il pendant ma consultation ou ma s\u00e9ance ?`,
-        answer: `Oui, pour les transports aller-retour, le chauffeur de taxi m\u00e9dical attend pendant toute la dur\u00e9e de votre consultation ou s\u00e9ance \u00e0 ${city.name}. Pour les s\u00e9ances de dialyse (3-4h), le chauffeur reste disponible et vous reprend d\u00e8s la fin de la s\u00e9ance. Le temps d\u2019attente est inclus dans le tarif conventionnel et pris en charge par la CPAM.`,
+        question: `Le chauffeur attend-il pendant ma consultation ou ma séance ?`,
+        answer: `Oui, pour les transports aller-retour, le chauffeur de taxi médical attend pendant toute la durée de votre consultation ou séance à ${city.name}. Pour les séances de dialyse (3-4h), le chauffeur reste disponible et vous reprend dès la fin de la séance. Le temps d’attente est inclus dans le tarif conventionnel et pris en charge par la CPAM.`,
       },
       {
-        question: `Comment r\u00e9server un taxi m\u00e9dical r\u00e9gulier \u00e0 ${city.name} ?`,
-        answer: `Pour les transports r\u00e9guliers (dialyse, chimio, r\u00e9\u00e9ducation), appelez-nous au 07 59 59 29 34 ou remplissez le formulaire en ligne. Nous mettons en place un planning r\u00e9current : m\u00eames jours, m\u00eames horaires, m\u00eame chauffeur autant que possible. Une seule prescription m\u00e9dicale de transport couvre l\u2019ensemble de la s\u00e9rie. Modification et annulation possibles avec un pr\u00e9avis de 12h.`,
+        question: `Comment réserver un taxi médical régulier à ${city.name} ?`,
+        answer: `Pour les transports réguliers (dialyse, chimio, rééducation), appelez-nous au 07 59 59 29 34 ou remplissez le formulaire en ligne. Nous mettons en place un planning récurrent : mêmes jours, mêmes horaires, même chauffeur autant que possible. Une seule prescription médicale de transport couvre l’ensemble de la série. Modification et annulation possibles avec un préavis de 12h.`,
       },
       {
-        question: `Quelle est la diff\u00e9rence entre un taxi m\u00e9dical et un VSL ?`,
-        answer: `Le taxi m\u00e9dical (TAP) est un taxi conventionn\u00e9 CPAM pour le transport assis de patients autonomes ou semi-autonomes. Le VSL (V\u00e9hicule Sanitaire L\u00e9ger) est exploit\u00e9 par une soci\u00e9t\u00e9 d\u2019ambulances et convient aux patients n\u00e9cessitant une surveillance l\u00e9g\u00e8re (perfusion, oxyg\u00e8ne). Le taxi m\u00e9dical est g\u00e9n\u00e9ralement moins cher, plus rapide (acc\u00e8s voies de bus) et offre un service porte-\u00e0-porte plus personnalis\u00e9.`,
+        question: `Quelle est la différence entre un taxi médical et un VSL ?`,
+        answer: `Le taxi médical (TAP) est un taxi conventionné CPAM pour le transport assis de patients autonomes ou semi-autonomes. Le VSL (Véhicule Sanitaire Léger) est exploité par une société d’ambulances et convient aux patients nécessitant une surveillance légère (perfusion, oxygène). Le taxi médical est généralement moins cher, plus rapide (accès voies de bus) et offre un service porte-à-porte plus personnalisé.`,
       },
       {
-        question: `Un accompagnant peut-il voyager dans le taxi m\u00e9dical ?`,
-        answer: `Oui, un accompagnant peut voyager gratuitement dans le taxi m\u00e9dical \u00e0 ${city.name}. C\u2019est fr\u00e9quent pour les enfants accompagn\u00e9s d\u2019un parent, les patients \u00e2g\u00e9s accompagn\u00e9s d\u2019un proche, ou les patients dont l\u2019\u00e9tat n\u00e9cessite la pr\u00e9sence d\u2019un aidant. L\u2019accompagnant n\u2019engendre pas de co\u00fbt suppl\u00e9mentaire. Si la pr\u00e9sence de l\u2019accompagnant est m\u00e9dicalement justifi\u00e9e, elle peut \u00eatre mentionn\u00e9e sur la prescription.`,
+        question: `Un accompagnant peut-il voyager dans le taxi médical ?`,
+        answer: `Oui, un accompagnant peut voyager gratuitement dans le taxi médical à ${city.name}. C’est fréquent pour les enfants accompagnés d’un parent, les patients âgés accompagnés d’un proche, ou les patients dont l’état nécessite la présence d’un aidant. L’accompagnant n’engendre pas de coût supplémentaire. Si la présence de l’accompagnant est médicalement justifiée, elle peut être mentionnée sur la prescription.`,
       },
     ];
   }
@@ -589,22 +589,22 @@ export function generateTmHowItWorks(city: City, loc: Loc): TmHowItWorksStep[] {
       {
         step: "1",
         title: "Obtenez votre prescription",
-        desc: `Demandez \u00e0 votre m\u00e9decin traitant ou au m\u00e9decin hospitalier une prescription m\u00e9dicale de transport (PMT) mentionnant le mode \u00ab taxi \u00bb ou \u00ab TAP \u00bb. Cette prescription est obligatoire pour la prise en charge CPAM de votre taxi m\u00e9dical \u00e0 ${city.name}.`,
+        desc: `Demandez à votre médecin traitant ou au médecin hospitalier une prescription médicale de transport (PMT) mentionnant le mode « taxi » ou « TAP ». Cette prescription est obligatoire pour la prise en charge CPAM de votre taxi médical à ${city.name}.`,
       },
       {
         step: "2",
-        title: "R\u00e9servez votre taxi m\u00e9dical",
-        desc: `Appelez-nous au 07 59 59 29 34 ou remplissez le formulaire en ligne. Indiquez la date, l\u2019heure de rendez-vous, l\u2019\u00e9tablissement de sant\u00e9, le type de v\u00e9hicule souhait\u00e9 (berline ou van PMR), et si un accompagnant sera pr\u00e9sent. Pour les s\u00e9ries, un seul appel suffit pour programmer toutes les s\u00e9ances.`,
+        title: "Réservez votre taxi médical",
+        desc: `Appelez-nous au 07 59 59 29 34 ou remplissez le formulaire en ligne. Indiquez la date, l’heure de rendez-vous, l’établissement de santé, le type de véhicule souhaité (berline ou van PMR), et si un accompagnant sera présent. Pour les séries, un seul appel suffit pour programmer toutes les séances.`,
       },
       {
         step: "3",
         title: "Le chauffeur vous transporte",
-        desc: `Le jour du rendez-vous, votre chauffeur se pr\u00e9sente \u00e0 votre domicile \u00e0 ${city.name} avec 10 minutes d\u2019avance. Il vous aide \u00e0 monter dans le v\u00e9hicule, vous conduit directement \u00e0 l\u2019\u00e9tablissement de sant\u00e9, vous accompagne jusqu\u2019au service, attend la fin de votre s\u00e9ance, puis vous ram\u00e8ne chez vous.`,
+        desc: `Le jour du rendez-vous, votre chauffeur se présente à votre domicile à ${city.name} avec 10 minutes d’avance. Il vous aide à monter dans le véhicule, vous conduit directement à l’établissement de santé, vous accompagne jusqu’au service, attend la fin de votre séance, puis vous ramène chez vous.`,
       },
       {
         step: "4",
-        title: "La CPAM r\u00e8gle directement",
-        desc: `\u00c0 la fin du transport, le chauffeur proc\u00e8de \u00e0 la t\u00e9l\u00e9transmission de la feuille de soins avec votre carte Vitale. La CPAM r\u00e8gle directement le taxi. Vous n\u2019avancez aucun frais si vous \u00eates en ALD, AT, CMU-C ou invalidit\u00e9. Sinon, seul le ticket mod\u00e9rateur (35 %) reste \u00e0 votre charge ou est factur\u00e9 \u00e0 votre mutuelle.`,
+        title: "La CPAM règle directement",
+        desc: `À la fin du transport, le chauffeur procède à la télétransmission de la feuille de soins avec votre carte Vitale. La CPAM règle directement le taxi. Vous n’avancez aucun frais si vous êtes en ALD, AT, CMU-C ou invalidité. Sinon, seul le ticket modérateur (35 %) reste à votre charge ou est facturé à votre mutuelle.`,
       },
     ];
   }
@@ -613,7 +613,7 @@ export function generateTmHowItWorks(city: City, loc: Loc): TmHowItWorksStep[] {
     {
       step: "1",
       title: "Get your prescription",
-      desc: `Ask your GP or hospital doctor for a medical transport prescription (PMT) specifying \u201ctaxi\u201d or \u201cTAP\u201d mode. This prescription is mandatory for CPAM coverage of your medical taxi in ${city.name}.`,
+      desc: `Ask your GP or hospital doctor for a medical transport prescription (PMT) specifying “taxi” or “TAP” mode. This prescription is mandatory for CPAM coverage of your medical taxi in ${city.name}.`,
     },
     {
       step: "2",

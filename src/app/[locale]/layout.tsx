@@ -27,9 +27,90 @@ export default async function LocaleLayout({
 
   const messages = await getMessages();
 
+  const siteJsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        name: "TaxiNeo",
+        url: "https://www.taxineo.fr",
+        inLanguage: locale === "en" ? "en-FR" : "fr-FR",
+        publisher: { "@id": "https://www.taxineo.fr/#organization" },
+        potentialAction: {
+          "@type": "SearchAction",
+          target: "https://www.taxineo.fr/villes?q={search_term_string}",
+          "query-input": "required name=search_term_string",
+        },
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://www.taxineo.fr/#organization",
+        name: "TaxiNeo",
+        url: "https://www.taxineo.fr",
+        logo: {
+          "@type": "ImageObject",
+          url: "https://www.taxineo.fr/logo.svg",
+          width: 180,
+          height: 40,
+        },
+        founder: {
+          "@type": "Person",
+          name: "Mottalib Radif",
+          image: "https://www.taxineo.fr/team/mottalib-radif.jpg",
+          jobTitle: "Fondateur",
+          url: "https://www.taxineo.fr/a-propos",
+        },
+        contactPoint: {
+          "@type": "ContactPoint",
+          telephone: "+33759592934",
+          contactType: "customer service",
+          areaServed: "FR",
+          availableLanguage: ["French", "English"],
+        },
+        address: {
+          "@type": "PostalAddress",
+          addressCountry: "FR",
+        },
+        sameAs: [],
+      },
+      {
+        "@type": "TaxiService",
+        name: "TaxiNeo",
+        url: "https://www.taxineo.fr",
+        provider: { "@id": "https://www.taxineo.fr/#organization" },
+        areaServed: { "@type": "Country", name: "France" },
+        serviceType: "Taxi",
+        description:
+          locale === "en"
+            ? "Book a licensed taxi in seconds. Fixed price guaranteed, professional drivers, available 24/7 in 50+ French cities."
+            : "Reservez un taxi agree en quelques secondes. Prix fixe garanti, chauffeurs professionnels, disponible 24h/24 dans 50+ villes francaises.",
+        offers: {
+          "@type": "Offer",
+          priceCurrency: "EUR",
+          availability: "https://schema.org/InStock",
+        },
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Accueil",
+            item: `https://www.taxineo.fr/${locale}`,
+          },
+        ],
+      },
+    ],
+  };
+
   return (
     <html lang={locale}>
       <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(siteJsonLd) }}
+        />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-2Z22GS67QY"
           strategy="afterInteractive"

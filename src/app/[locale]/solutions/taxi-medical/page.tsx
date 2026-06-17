@@ -68,7 +68,7 @@ export default async function TaxiMedicalPage() {
   const serviceJsonLd = {
     "@context": "https://schema.org",
     "@type": ["MedicalBusiness", "TaxiService"],
-    serviceType: "Taxi m\u00e9dical conventionn\u00e9 CPAM",
+    serviceType: "Taxi médical conventionné CPAM",
     name: t("heroTitle"),
     description: t("metaDescription"),
     provider: {

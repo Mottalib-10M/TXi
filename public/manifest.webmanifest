@@ -1,0 +1,20 @@
+{
+  "name": "TaxiNeo — Taxi prix fixe en France",
+  "short_name": "TaxiNeo",
+  "description": "Reservez un taxi agree a prix fixe en quelques secondes. Chauffeurs professionnels, disponible 24h/24 dans 50+ villes francaises.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0a0a0a",
+  "orientation": "portrait-primary",
+  "lang": "fr",
+  "categories": ["transportation", "travel"],
+  "icons": [
+    {
+      "src": "/logo.svg",
+      "type": "image/svg+xml",
+      "sizes": "any",
+      "purpose": "any maskable"
+    }
+  ]
+}

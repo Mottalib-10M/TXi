@@ -39,11 +39,11 @@ export function PricingGrid({ pricing, onChange, departmentName, zoneAddress, on
   const [rawValues, setRawValues] = useState<Record<string, string>>({});
 
   const pricingFields: { key: PricingKey; label: string; suffix: string; description: string }[] = [
-    { key: "baseFare", label: t("baseFare"), suffix: "\u20AC", description: t("baseFareDesc") },
-    { key: "pricePerKm", label: t("dayRate"), suffix: "\u20AC/km", description: t("dayRateDesc") },
-    { key: "pricePerKmNight", label: t("nightRate"), suffix: "\u20AC/km", description: t("nightRateDesc") },
-    { key: "pricePerMinute", label: t("waitRate"), suffix: "\u20AC/min", description: t("waitRateDesc") },
-    { key: "minimumFare", label: t("minFare"), suffix: "\u20AC", description: t("minFareDesc") },
+    { key: "baseFare", label: t("baseFare"), suffix: "€", description: t("baseFareDesc") },
+    { key: "pricePerKm", label: t("dayRate"), suffix: "€/km", description: t("dayRateDesc") },
+    { key: "pricePerKmNight", label: t("nightRate"), suffix: "€/km", description: t("nightRateDesc") },
+    { key: "pricePerMinute", label: t("waitRate"), suffix: "€/min", description: t("waitRateDesc") },
+    { key: "minimumFare", label: t("minFare"), suffix: "€", description: t("minFareDesc") },
   ];
 
   function applyOfficialRates() {
