@@ -50,7 +50,10 @@ export default async function AboutPage({ params }: Props) {
         "@type": "Person",
         name: "Mottalib Radif",
         image: "https://www.taxineo.fr/team/mottalib-radif.jpg",
-        jobTitle: isFr ? "Fondateur" : "Founder",
+        jobTitle: isFr ? "Expert en mobilité urbaine et transport" : "Urban Mobility and Transportation Expert",
+        description: isFr
+          ? "Expert en mobilité urbaine et solutions de transport, diplômé MBA de l'INSEAD. Passionné par l'innovation dans le secteur du taxi et du transport de personnes."
+          : "Urban mobility and transportation solutions expert, MBA INSEAD graduate. Passionate about innovation in taxi services and passenger transport.",
       },
     },
   };
@@ -94,13 +97,14 @@ export default async function AboutPage({ params }: Props) {
                 </div>
                 <div>
                   <h2 className="text-xl font-semibold mb-1">Mottalib Radif</h2>
-                  <p className="text-sm text-neutral-500 font-light mb-4">
-                    {isFr ? "Fondateur de TaxiNeo" : "Founder of TaxiNeo"}
+                  <p className="text-sm text-neutral-500 font-light mb-1">
+                    {isFr ? "Expert en mobilité urbaine et transport" : "Urban Mobility and Transportation Expert"}
                   </p>
+                  <p className="text-xs text-neutral-400 font-light mb-4">MBA INSEAD</p>
                   <p className="text-sm text-neutral-600 font-light leading-relaxed">
                     {isFr
-                      ? "Passione par la mobilite et la technologie, j'ai cree TaxiNeo pour offrir une alternative simple et transparente aux plateformes VTC. Notre objectif est de valoriser les chauffeurs de taxi agrees tout en garantissant aux passagers un service de qualite a prix fixe."
-                      : "Passionate about mobility and technology, I created TaxiNeo to offer a simple and transparent alternative to VTC platforms. Our goal is to value licensed taxi drivers while guaranteeing passengers a quality fixed-price service."}
+                      ? "Expert en mobilité urbaine et solutions de transport, diplômé MBA de l'INSEAD. Passionné par l'innovation dans le secteur du taxi et du transport de personnes, j'ai créé TaxiNeo pour offrir une alternative simple et transparente aux plateformes VTC."
+                      : "Urban mobility and transportation solutions expert, MBA INSEAD graduate. Passionate about innovation in taxi services and passenger transport, I created TaxiNeo to offer a simple and transparent alternative to VTC platforms."}
                   </p>
                 </div>
               </div>

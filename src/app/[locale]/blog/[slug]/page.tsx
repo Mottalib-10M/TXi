@@ -238,8 +238,14 @@ export default async function BlogArticlePage({ params }: PageProps) {
     description: article.metaDescription[lang],
     datePublished: article.date,
     author: {
-      "@type": "Organization",
-      name: "TaxiNeo",
+      "@type": "Person",
+      name: "Mottalib Radif",
+      jobTitle: lang === "en" ? "Urban Mobility and Transportation Expert" : "Expert en mobilité urbaine et transport",
+      description: lang === "en"
+        ? "Urban mobility and transportation solutions expert, MBA INSEAD graduate. Passionate about innovation in taxi services and passenger transport."
+        : "Expert en mobilité urbaine et solutions de transport, diplômé MBA de l'INSEAD. Passionné par l'innovation dans le secteur du taxi et du transport de personnes.",
+      url: "https://www.taxineo.fr/a-propos",
+      image: "https://www.taxineo.fr/team/mottalib-radif.jpg",
     },
     publisher: {
       "@type": "Organization",

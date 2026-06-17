@@ -57,7 +57,10 @@ export default async function LocaleLayout({
           "@type": "Person",
           name: "Mottalib Radif",
           image: "https://www.taxineo.fr/team/mottalib-radif.jpg",
-          jobTitle: "Fondateur",
+          jobTitle: locale === "en" ? "Urban Mobility and Transportation Expert" : "Expert en mobilité urbaine et transport",
+          description: locale === "en"
+            ? "Urban mobility and transportation solutions expert, MBA INSEAD graduate. Passionate about innovation in taxi services and passenger transport."
+            : "Expert en mobilité urbaine et solutions de transport, diplômé MBA de l'INSEAD. Passionné par l'innovation dans le secteur du taxi et du transport de personnes.",
           url: "https://www.taxineo.fr/a-propos",
         },
         contactPoint: {
