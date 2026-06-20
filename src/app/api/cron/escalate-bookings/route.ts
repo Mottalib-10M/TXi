@@ -4,9 +4,14 @@ import { prisma } from "@/lib/prisma";
 
 export async function GET(request: NextRequest) {
   const authHeader = request.headers.get("authorization");
+  const querySecret = request.nextUrl.searchParams.get("secret");
   const expectedSecret = process.env.CRON_SECRET;
 
-  if (!expectedSecret || authHeader !== `Bearer ${expectedSecret}`) {
+  const isAuthorized =
+    expectedSecret &&
+    (authHeader === `Bearer ${expectedSecret}` || querySecret === expectedSecret);
+
+  if (!isAuthorized) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
