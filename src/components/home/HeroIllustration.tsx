@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { Icon } from "@iconify/react";
 import { useTranslations } from "next-intl";
 import { formatPrice } from "@/lib/validation";
@@ -78,8 +79,7 @@ export function HeroIllustration() {
         <div className="flex items-center gap-4 mb-3">
           <div className="w-10 h-10 rounded-full bg-neutral-100 flex items-center justify-center overflow-hidden">
             {data?.driverPhoto ? (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img src={data.driverPhoto} alt={driverName} className="w-full h-full object-cover" />
+              <Image src={data.driverPhoto} alt={driverName} width={40} height={40} className="object-cover" priority />
             ) : (
               <Icon icon="solar:user-linear" className="text-neutral-400 text-xl" />
             )}

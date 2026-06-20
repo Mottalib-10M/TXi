@@ -83,7 +83,8 @@ export function QRCodeButton({ slug, driverName, companyName, vehicleModel, vari
 
                 {qrDataUrl ? (
                   <div className="bg-neutral-50 border border-neutral-200 rounded-xl p-4 inline-block mb-4">
-                    <img src={qrDataUrl} alt="QR Code" className="w-56 h-56" />
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={qrDataUrl} alt="QR Code" className="w-56 h-56" loading="lazy" decoding="async" />
                     {(companyName || driverName || vehicleModel) && (
                       <div className="mt-3 pt-3 border-t border-neutral-200 space-y-0.5">
                         {companyName && (

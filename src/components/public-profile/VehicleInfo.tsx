@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useCallback, useEffect } from "react";
+import Image from "next/image";
 import { Icon } from "@iconify/react";
 import { useTranslations } from "next-intl";
 import type { Vehicle } from "@/types/vehicle";
@@ -142,10 +143,9 @@ function VehicleCard({ vehicle, index, total, onPhotoClick, photoIndexOffset }: 
               key={i}
               type="button"
               onClick={() => onPhotoClick(photoIndexOffset + i)}
-              className="w-36 h-28 rounded-xl overflow-hidden bg-neutral-100 shrink-0 cursor-zoom-in hover:opacity-90 transition-opacity"
+              className="w-36 h-28 rounded-xl overflow-hidden bg-neutral-100 shrink-0 cursor-zoom-in hover:opacity-90 transition-opacity relative"
             >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={url} alt={`${fullName} - ${i + 1}`} className="w-full h-full object-cover" />
+              <Image src={url} alt={`${fullName} - ${i + 1}`} fill sizes="144px" className="object-cover" />
             </button>
           ))}
         </div>
@@ -159,7 +159,7 @@ function VehicleCard({ vehicle, index, total, onPhotoClick, photoIndexOffset }: 
         >
           {brandLogoUrl ? (
             /* eslint-disable-next-line @next/next/no-img-element */
-            <img src={brandLogoUrl} alt={vehicle.brand} className="w-7 h-7 object-contain" />
+            <img src={brandLogoUrl} alt={vehicle.brand} className="w-7 h-7 object-contain" loading="lazy" decoding="async" />
           ) : (
             <Icon icon={config.icon} className="text-2xl text-neutral-600" />
           )}
@@ -315,13 +315,15 @@ export function VehicleInfo({ vehicles }: VehicleInfoProps) {
           )}
 
           {/* Image */}
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={allPhotos[lightboxIndex]}
-            alt="Photo du véhicule"
-            className="max-w-full max-h-[85vh] object-contain rounded-2xl"
-            onClick={(e) => e.stopPropagation()}
-          />
+          <div className="relative w-full max-w-5xl h-[85vh]" onClick={(e) => e.stopPropagation()}>
+            <Image
+              src={allPhotos[lightboxIndex]}
+              alt="Photo du véhicule"
+              fill
+              sizes="100vw"
+              className="object-contain rounded-2xl"
+            />
+          </div>
 
           {/* Next button */}
           {lightboxIndex < allPhotos.length - 1 && (

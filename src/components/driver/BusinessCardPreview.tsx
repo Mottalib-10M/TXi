@@ -433,7 +433,7 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
               {qrDataUrl && (
                 <div className="w-24 h-24 sm:w-20 sm:h-20 bg-white rounded-lg p-1.5 mb-1.5">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={qrDataUrl} alt="QR Code" className="w-full h-full object-cover rounded" />
+                  <img src={qrDataUrl} alt="QR Code" className="w-full h-full object-cover rounded" loading="lazy" decoding="async" />
                 </div>
               )}
               <div className="text-center space-y-0 mb-1">
@@ -490,7 +490,7 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
               {qrDataUrl && (
                 <div className="w-28 h-28 sm:w-[5.5rem] sm:h-[5.5rem] bg-white rounded-lg p-1.5 mb-2">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={qrDataUrl} alt="QR Code" className="w-full h-full object-cover rounded" />
+                  <img src={qrDataUrl} alt="QR Code" className="w-full h-full object-cover rounded" loading="lazy" decoding="async" />
                 </div>
               )}
               <div className="mb-2 space-y-0">
@@ -541,7 +541,7 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
               {qrDataUrl && (
                 <div className="w-32 h-32 border-2 border-neutral-200 rounded-xl p-2 mb-2">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={qrDataUrl} alt="QR Code" className="w-full h-full object-cover rounded-lg" />
+                  <img src={qrDataUrl} alt="QR Code" className="w-full h-full object-cover rounded-lg" loading="lazy" decoding="async" />
                 </div>
               )}
               <div className="text-center mb-1">

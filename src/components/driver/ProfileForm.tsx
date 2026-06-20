@@ -316,6 +316,8 @@ export function ProfileForm({ driver }: { driver: DriverData }) {
                     src={form.photoUrl}
                     alt="Photo de profil"
                     className="w-full h-full object-cover"
+                    loading="lazy"
+                    decoding="async"
                   />
                 ) : (
                   <div className="w-full h-full bg-neutral-200 flex items-center justify-center text-neutral-500 text-lg font-semibold">
@@ -838,7 +840,7 @@ function VehiclePhotos({
         {photos.map((url, i) => (
           <div key={i} className="relative group aspect-square rounded-xl overflow-hidden bg-neutral-100">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={url} alt={t("vehiclePhotoAlt", { number: i + 1 })} className="w-full h-full object-cover" />
+            <img src={url} alt={t("vehiclePhotoAlt", { number: i + 1 })} className="w-full h-full object-cover" loading="lazy" decoding="async" />
             <button
               type="button"
               onClick={() => removePhoto(i)}

@@ -514,7 +514,7 @@ export default function InscriptionPage() {
                 </div>
                 {vehiclePhotoPreview && (
                   // eslint-disable-next-line @next/next/no-img-element
-                  <img src={vehiclePhotoPreview} alt={t("preview")} className="mt-2 w-full h-32 object-cover rounded-xl border border-neutral-200" />
+                  <img src={vehiclePhotoPreview} alt={t("preview")} className="mt-2 w-full h-32 object-cover rounded-xl border border-neutral-200" loading="lazy" decoding="async" />
                 )}
               </div>
 

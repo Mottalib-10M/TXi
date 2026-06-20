@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Icon } from "@iconify/react";
 import { useTranslations } from "next-intl";
 
@@ -51,10 +52,9 @@ export function DriverHeader({
   return (
     <div className="bg-white border border-neutral-200 rounded-2xl p-6">
       <div className="flex flex-col items-center text-center">
-        <div className="w-24 h-24 rounded-full bg-neutral-100 flex items-center justify-center overflow-hidden ring-4 ring-neutral-50">
+        <div className="w-24 h-24 rounded-full bg-neutral-100 flex items-center justify-center overflow-hidden ring-4 ring-neutral-50 relative">
           {photoUrl ? (
-            /* eslint-disable-next-line @next/next/no-img-element */
-            <img src={photoUrl} alt={firstName} className="w-full h-full object-cover" />
+            <Image src={photoUrl} alt={firstName} fill sizes="96px" className="object-cover" />
           ) : (
             <span className="text-2xl font-semibold text-neutral-400">
               {firstName[0]}

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { useSession } from "next-auth/react";
+import Image from "next/image";
 import { Icon } from "@iconify/react";
 import { useTranslations, useLocale } from "next-intl";
 import { Link, useRouter } from "@/i18n/navigation";
@@ -460,10 +461,9 @@ export function BookingForm() {
                         className="shrink-0"
                         title={t("viewProfile")}
                       >
-                        <div className="w-10 h-10 bg-neutral-100 rounded-full flex items-center justify-center overflow-hidden hover:ring-2 hover:ring-neutral-900 transition-all cursor-pointer">
+                        <div className="w-10 h-10 bg-neutral-100 rounded-full flex items-center justify-center overflow-hidden hover:ring-2 hover:ring-neutral-900 transition-all cursor-pointer relative">
                           {taxi.photoUrl ? (
-                            // eslint-disable-next-line @next/next/no-img-element
-                            <img src={taxi.photoUrl} alt={taxi.firstName} className="w-full h-full object-cover" />
+                            <Image src={taxi.photoUrl} alt={taxi.firstName} fill sizes="40px" className="object-cover" />
                           ) : (
                             <Icon icon="solar:user-linear" className="text-neutral-400" />
                           )}
@@ -536,10 +536,9 @@ export function BookingForm() {
 
           <div className="bg-neutral-50 border border-neutral-200 rounded-xl p-3 mb-4">
             <div className="flex items-center gap-3">
-              <div className="w-8 h-8 bg-neutral-200 rounded-full flex items-center justify-center overflow-hidden">
+              <div className="w-8 h-8 bg-neutral-200 rounded-full flex items-center justify-center overflow-hidden relative">
                 {selectedTaxi.photoUrl ? (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img src={selectedTaxi.photoUrl} alt={selectedTaxi.firstName} className="w-full h-full object-cover" />
+                  <Image src={selectedTaxi.photoUrl} alt={selectedTaxi.firstName} fill sizes="32px" className="object-cover" />
                 ) : (
                   <Icon icon="solar:user-linear" className="text-neutral-500 text-sm" />
                 )}
