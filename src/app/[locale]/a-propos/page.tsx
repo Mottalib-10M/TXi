@@ -17,12 +17,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       : "A propos de TaxiNeo — Plateforme de reservation taxi prix fixe en France";
   const description =
     locale === "en"
-      ? "TaxiNeo connects passengers with licensed taxi drivers across 50+ French cities. Fixed prices, professional drivers, 24/7 availability."
-      : "TaxiNeo connecte les passagers avec des chauffeurs de taxi agrees dans plus de 50 villes francaises. Prix fixes, chauffeurs professionnels, disponible 24h/24.";
+      ? "TaxiNeo connects passengers with licensed taxi drivers across 50+ French cities. Fixed prices, professional drivers, 24/7 availability. Founded by Mottalib Radif, MBA INSEAD."
+      : "TaxiNeo connecte les passagers avec des chauffeurs de taxi agrees dans plus de 50 villes francaises. Prix fixes, chauffeurs professionnels, disponible 24h/24. Fonde par Mottalib Radif, MBA INSEAD.";
   return {
     title,
     description,
-    openGraph: { title, description },
+    openGraph: {
+      title,
+      description,
+      url: `https://www.taxineo.fr/${locale}/a-propos`,
+      siteName: "TaxiNeo",
+      type: "website",
+      images: [{ url: "https://www.taxineo.fr/opengraph-image", width: 1200, height: 630, alt: title }],
+    },
     alternates: {
       canonical: `https://www.taxineo.fr/${locale}/a-propos`,
       languages: {
