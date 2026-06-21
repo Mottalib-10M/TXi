@@ -8,6 +8,7 @@ import { Footer } from "@/components/layout/Footer";
 import { ScrollAnimation } from "@/components/ui/ScrollAnimation";
 import { getArticleBySlug, getArticleSlugs, blogArticles } from "@/data/blog";
 import { BlogRelatedContent } from "@/components/blog/BlogRelatedContent";
+import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 
 interface PageProps {
   params: Promise<{ locale: string; slug: string }>;
@@ -34,8 +35,17 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       title: article.metaTitle[lang],
       description: article.metaDescription[lang],
       url: canonical,
+      siteName: "TaxiNeo",
       type: "article",
       publishedTime: article.date,
+      images: [
+        {
+          url: "https://www.taxineo.fr/opengraph-image",
+          width: 1200,
+          height: 630,
+          alt: article.metaTitle[lang],
+        },
+      ],
     },
     alternates: {
       canonical,
@@ -272,13 +282,22 @@ export default async function BlogArticlePage({ params }: PageProps) {
 
       <main className="flex-grow pt-24 pb-12 md:pt-32 md:pb-24">
         <div className="max-w-3xl mx-auto px-6">
-          <Link
-            href="/blog"
-            className="inline-flex items-center gap-1.5 text-sm text-neutral-500 hover:text-neutral-900 transition-colors mb-8"
-          >
-            <Icon icon="solar:arrow-left-linear" className="text-sm" />
-            {t("backToList")}
-          </Link>
+          <BreadcrumbJsonLd
+            crumbs={[
+              { name: lang === "en" ? "Home" : "Accueil", item: `https://www.taxineo.fr/${locale}` },
+              { name: "Blog", item: `https://www.taxineo.fr/${locale}/blog` },
+              { name: article.title[lang] },
+            ]}
+          />
+          <nav className="text-sm text-neutral-500 font-light mb-6" aria-label={lang === "en" ? "Breadcrumb" : "Fil d'Ariane"}>
+            <ol className="flex items-center gap-1.5 flex-wrap">
+              <li><Link href="/" className="hover:text-neutral-900 transition-colors">{lang === "en" ? "Home" : "Accueil"}</Link></li>
+              <li aria-hidden="true">/</li>
+              <li><Link href="/blog" className="hover:text-neutral-900 transition-colors">Blog</Link></li>
+              <li aria-hidden="true">/</li>
+              <li className="text-neutral-900 font-medium truncate max-w-[200px]">{article.title[lang]}</li>
+            </ol>
+          </nav>
 
           <div>
             <div className="flex items-center gap-3 text-xs text-neutral-400 font-light mb-4">

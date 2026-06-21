@@ -63,6 +63,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { ...localizedUrls("/taxi-vs-vtc"), lastModified: LAST_MODIFIED, changeFrequency: "monthly", priority: 0.6 },
     { ...localizedUrls("/chauffeur-prive"), lastModified: LAST_MODIFIED, changeFrequency: "monthly", priority: 0.6 },
     { ...localizedUrls("/alternative-vtc-prix-fixe"), lastModified: LAST_MODIFIED, changeFrequency: "monthly", priority: 0.6 },
+    // Reference
+    { ...localizedUrls("/glossaire"), lastModified: LAST_MODIFIED, changeFrequency: "monthly", priority: 0.5 },
     // Auth pages
     { ...localizedUrls("/inscription"), lastModified: LAST_MODIFIED, changeFrequency: "monthly", priority: 0.5 },
     { ...localizedUrls("/connexion"), lastModified: LAST_MODIFIED, changeFrequency: "monthly", priority: 0.4 },

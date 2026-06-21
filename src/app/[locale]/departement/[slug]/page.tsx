@@ -42,6 +42,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       url: canonical,
       siteName: "TaxiNeo",
       type: "website",
+      images: [
+        {
+          url: "https://www.taxineo.fr/opengraph-image",
+          width: 1200,
+          height: 630,
+          alt: dept.i18n[loc].metaTitle,
+        },
+      ],
     },
     alternates: {
       canonical,

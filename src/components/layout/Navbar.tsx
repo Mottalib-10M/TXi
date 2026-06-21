@@ -65,7 +65,7 @@ export function Navbar({ minimal = false }: { minimal?: boolean }) {
             <Logo />
           </Link>
           {!minimal && (
-            <nav className="hidden md:flex items-center gap-4">
+            <nav className="hidden md:flex items-center gap-4" aria-label={t("servicesMenu")}>
               <Link href="/#reserver" className="whitespace-nowrap text-sm font-medium text-neutral-900 hover:text-neutral-600 transition-colors">
                 {t("taxiFixedTitle")}
               </Link>
@@ -270,6 +270,7 @@ export function Navbar({ minimal = false }: { minimal?: boolean }) {
             onClick={() => setMobileOpen(!mobileOpen)}
             className="md:hidden p-2 hover:bg-neutral-100 rounded-lg transition-colors"
             aria-label={t("menu")}
+            aria-expanded={mobileOpen}
           >
             <Icon
               icon={mobileOpen ? "solar:close-circle-linear" : "solar:hamburger-menu-linear"}
@@ -280,10 +281,11 @@ export function Navbar({ minimal = false }: { minimal?: boolean }) {
       </div>
 
       {/* Mobile menu */}
-      <div
+      <nav
         className={`mobile-menu md:hidden bg-white border-t border-neutral-100 ${
           mobileOpen ? "open" : ""
         }`}
+        aria-label={t("menu")}
       >
         <div className="max-w-7xl mx-auto px-6 py-4 space-y-1">
           {!minimal && (
@@ -427,7 +429,7 @@ export function Navbar({ minimal = false }: { minimal?: boolean }) {
             </div>
           )}
         </div>
-      </div>
+      </nav>
     </header>
   );
 }

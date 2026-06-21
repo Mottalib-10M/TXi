@@ -128,6 +128,7 @@
     "villes": "Villes",
     "aeroports2": "Aéroports",
     "gares": "Gares",
+    "glossaire": "Glossaire",
     "sitemap": "Plan du site",
     "about": "A propos",
     "legal": "Mentions legales"
@@ -458,7 +459,17 @@
     "description": "La page que vous recherchez n'existe pas ou a été déplacée.",
     "driverNotFound": "Chauffeur introuvable",
     "driverNotFoundDesc": "Ce profil de chauffeur n'existe pas ou n'est plus disponible.",
-    "backToHome": "Retour à l'accueil"
+    "backToHome": "Retour à l'accueil",
+    "popularPages": "Pages populaires",
+    "linkHome": "Accueil",
+    "linkVilles": "Nos villes",
+    "linkAeroports": "Aéroports",
+    "linkGares": "Gares",
+    "linkTarifs": "Tarifs",
+    "linkGuides": "Guides pratiques",
+    "linkContact": "Contact",
+    "linkBlog": "Blog",
+    "reportIssue": "Un lien cassé ? Signalez-le à"
   },
   "error": {
     "title": "Une erreur est survenue",

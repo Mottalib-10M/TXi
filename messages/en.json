@@ -128,6 +128,7 @@
     "villes": "Cities",
     "aeroports2": "Airports",
     "gares": "Stations",
+    "glossaire": "Glossary",
     "sitemap": "Sitemap",
     "about": "About",
     "legal": "Legal"
@@ -458,7 +459,17 @@
     "description": "The page you are looking for does not exist or has been moved.",
     "driverNotFound": "Driver not found",
     "driverNotFoundDesc": "This driver profile does not exist or is no longer available.",
-    "backToHome": "Back to home"
+    "backToHome": "Back to home",
+    "popularPages": "Popular pages",
+    "linkHome": "Home",
+    "linkVilles": "Our cities",
+    "linkAeroports": "Airports",
+    "linkGares": "Train stations",
+    "linkTarifs": "Fares",
+    "linkGuides": "Practical guides",
+    "linkContact": "Contact",
+    "linkBlog": "Blog",
+    "reportIssue": "Broken link? Report it to"
   },
   "error": {
     "title": "An error occurred",

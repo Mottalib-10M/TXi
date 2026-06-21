@@ -130,13 +130,33 @@ export default async function LocaleLayout({
           src="https://t.contentsquare.net/uxa/57182d25bfaa1.js"
           strategy="afterInteractive"
         />
+        <Script id="microsoft-clarity" strategy="afterInteractive">
+          {`
+            (function(c,l,a,r,i,t,y){
+              c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+              t=l.createElement(r);t.async=1;
+              t.src="https://www.clarity.ms/tag/"+i;
+              y=l.getElementsByTagName(r)[0];
+              y.parentNode.insertBefore(t,y);
+            })(window,document,"clarity","script","CLARITY_PROJECT_ID");
+            clarity("set","language","${locale}");
+            clarity("set","page_path",window.location.pathname);
+          `}
+        </Script>
       </head>
       <body
         className={`${inter.className} bg-white text-neutral-900 antialiased selection:bg-neutral-200 selection:text-black overflow-x-hidden`}
       >
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[9999] focus:rounded-lg focus:bg-neutral-950 focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white focus:shadow-lg"
+        >
+          {locale === "en" ? "Skip to content" : "Aller au contenu"}
+        </a>
         <NextIntlClientProvider messages={messages}>
           <Providers>
             <ImpersonationBanner />
+            <div id="main-content" />
             {children}
             <Toaster position="top-right" richColors />
             <SpeedInsights />

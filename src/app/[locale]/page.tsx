@@ -35,7 +35,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: "website",
       images: [
         {
-          url: "https://www.taxineo.fr/og-image.png",
+          url: "https://www.taxineo.fr/opengraph-image",
           width: 1200,
           height: 630,
           alt: "TaxiNeo",
@@ -46,7 +46,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       card: "summary_large_image",
       title: t("metaTitle"),
       description: t("metaDescription"),
-      images: ["https://www.taxineo.fr/og-image.png"],
+      images: ["https://www.taxineo.fr/opengraph-image"],
     },
     alternates: {
       canonical: `https://www.taxineo.fr/${locale}`,

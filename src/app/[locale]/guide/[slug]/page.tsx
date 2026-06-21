@@ -42,6 +42,14 @@ export async function generateMetadata({
       url: canonical,
       siteName: "TaxiNeo",
       type: "article",
+      images: [
+        {
+          url: "https://www.taxineo.fr/opengraph-image",
+          width: 1200,
+          height: 630,
+          alt: guide.i18n[loc].metaTitle,
+        },
+      ],
     },
     alternates: {
       canonical,

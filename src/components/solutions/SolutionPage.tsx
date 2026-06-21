@@ -1,34 +1,66 @@
 import { Icon } from "@iconify/react";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, getLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { ScrollAnimation } from "@/components/ui/ScrollAnimation";
 import { ContactFormSection } from "@/components/solutions/ContactFormSection";
+import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 
 interface SolutionPageProps {
   namespace: string;
   signupType: string;
   icon: string;
   advantageIcons: string[];
+  slug: string;
 }
+
+const SOLUTION_LINKS: Record<string, { fr: string; en: string }> = {
+  hotel: { fr: "Hôtels", en: "Hotels" },
+  particulier: { fr: "Particuliers", en: "Individuals" },
+  entreprise: { fr: "Entreprises", en: "Businesses" },
+  assistance: { fr: "Assistance", en: "Assistance" },
+  hopital: { fr: "Hôpitaux", en: "Hospitals" },
+  "taxi-medical": { fr: "Taxi médical", en: "Medical taxi" },
+  "mise-a-disposition": { fr: "Mise à disposition", en: "Chauffeur hire" },
+  "assistance-depannage": { fr: "Dépannage", en: "Breakdown" },
+};
 
 export async function SolutionPage({
   namespace,
   signupType,
   icon,
   advantageIcons,
+  slug,
 }: SolutionPageProps) {
   const t = await getTranslations(namespace);
+  const locale = await getLocale();
+  const lang = locale === "en" ? "en" : "fr";
 
   return (
     <div className="flex flex-col min-h-screen overflow-x-hidden">
       <Navbar />
       <ScrollAnimation />
+      <BreadcrumbJsonLd
+        crumbs={[
+          { name: lang === "en" ? "Home" : "Accueil", item: `https://www.taxineo.fr/${locale}` },
+          { name: "Solutions", item: `https://www.taxineo.fr/${locale}/services` },
+          { name: t("heroTitle") },
+        ]}
+      />
 
       {/* Hero Section */}
       <main className="flex-grow pt-24 pb-12 md:pt-32 md:pb-24">
         <div className="max-w-7xl mx-auto px-6">
+          <nav className="text-sm text-neutral-500 font-light mb-6" aria-label={lang === "en" ? "Breadcrumb" : "Fil d'Ariane"}>
+            <ol className="flex items-center gap-1.5 flex-wrap">
+              <li><Link href="/" className="hover:text-neutral-900 transition-colors">{lang === "en" ? "Home" : "Accueil"}</Link></li>
+              <li aria-hidden="true">/</li>
+              <li><Link href="/services" className="hover:text-neutral-900 transition-colors">Solutions</Link></li>
+              <li aria-hidden="true">/</li>
+              <li className="text-neutral-900 font-medium">{t("heroTitle")}</li>
+            </ol>
+          </nav>
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="md:max-w-xl fade-up">
               <div className="inline-flex items-center gap-2 bg-neutral-100 rounded-full px-4 py-1.5 mb-6">
@@ -375,6 +407,49 @@ export async function SolutionPage({
 
       {/* Contact Form Section */}
       <ContactFormSection />
+
+      {/* Cross-links SEO */}
+      <section className="py-16 md:py-20">
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="text-lg font-semibold tracking-tight mb-6 fade-up">
+            {lang === "en" ? "Explore our solutions" : "Découvrez nos autres solutions"}
+          </h2>
+          <div className="flex flex-wrap gap-3 fade-up">
+            {Object.entries(SOLUTION_LINKS)
+              .filter(([key]) => key !== slug)
+              .map(([key, labels]) => (
+                <Link
+                  key={key}
+                  href={`/solutions/${key}` as never}
+                  className="inline-flex items-center gap-2 px-4 py-2.5 bg-white border border-neutral-200 rounded-xl text-sm font-medium hover:border-neutral-400 transition-colors"
+                >
+                  {labels[lang]}
+                </Link>
+              ))}
+            <Link
+              href="/villes"
+              className="inline-flex items-center gap-2 px-4 py-2.5 bg-white border border-neutral-200 rounded-xl text-sm font-medium hover:border-neutral-400 transition-colors"
+            >
+              <Icon icon="solar:map-point-linear" className="text-neutral-400" />
+              {lang === "en" ? "Cities" : "Villes desservies"}
+            </Link>
+            <Link
+              href="/guides"
+              className="inline-flex items-center gap-2 px-4 py-2.5 bg-white border border-neutral-200 rounded-xl text-sm font-medium hover:border-neutral-400 transition-colors"
+            >
+              <Icon icon="solar:book-linear" className="text-neutral-400" />
+              {lang === "en" ? "Practical guides" : "Guides pratiques"}
+            </Link>
+            <Link
+              href="/blog"
+              className="inline-flex items-center gap-2 px-4 py-2.5 bg-white border border-neutral-200 rounded-xl text-sm font-medium hover:border-neutral-400 transition-colors"
+            >
+              <Icon icon="solar:document-text-linear" className="text-neutral-400" />
+              Blog
+            </Link>
+          </div>
+        </div>
+      </section>
 
       {/* Final CTA Section */}
       <section className="bg-neutral-950 py-20 md:py-28">

@@ -9,6 +9,7 @@ import { getCityBySlug } from "@/data/cities";
 import { getAdCitySlugs } from "@/data/assistance-cities";
 import { autoroutes } from "@/data/autoroutes";
 import { HubFAQ } from "@/components/assistance/HubFAQ";
+import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 
 interface PageProps {
   params: Promise<{ locale: string }>;
@@ -29,7 +30,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title,
     description,
-    openGraph: { title, description, url: canonical, siteName: "TaxiNeo", type: "website" },
+    openGraph: {
+      title, description, url: canonical, siteName: "TaxiNeo", type: "website",
+      images: [{ url: "https://www.taxineo.fr/opengraph-image", width: 1200, height: 630, alt: title }],
+    },
     alternates: {
       canonical,
       languages: {
@@ -50,7 +54,8 @@ const whyIcons = [
 ];
 
 export default async function AssistanceDepannageHub({ params }: PageProps) {
-  await params;
+  const { locale } = await params;
+  const lang = locale === "en" ? "en" : "fr";
   const t = await getTranslations("assistanceDepannage");
   const adSlugs = getAdCitySlugs();
 
@@ -67,10 +72,30 @@ export default async function AssistanceDepannageHub({ params }: PageProps) {
     <div className="flex flex-col min-h-screen">
       <Navbar />
       <ScrollAnimation />
+      <BreadcrumbJsonLd
+        crumbs={[
+          { name: lang === "en" ? "Home" : "Accueil", item: `https://www.taxineo.fr/${locale}` },
+          { name: "Solutions", item: `https://www.taxineo.fr/${locale}/services` },
+          { name: t("heroTitle") },
+        ]}
+      />
 
       <main className="flex-grow">
+        {/* Breadcrumb UI */}
+        <div className="max-w-4xl mx-auto px-6 pt-24">
+          <nav className="text-sm text-neutral-500 font-light mb-4" aria-label={lang === "en" ? "Breadcrumb" : "Fil d'Ariane"}>
+            <ol className="flex items-center gap-1.5 flex-wrap">
+              <li><Link href="/" className="hover:text-neutral-900 transition-colors">{lang === "en" ? "Home" : "Accueil"}</Link></li>
+              <li aria-hidden="true">/</li>
+              <li><Link href="/services" className="hover:text-neutral-900 transition-colors">Solutions</Link></li>
+              <li aria-hidden="true">/</li>
+              <li className="text-neutral-900 font-medium">{t("heroTitle")}</li>
+            </ol>
+          </nav>
+        </div>
+
         {/* Hero */}
-        <section className="pt-28 pb-16 md:pt-36 md:pb-24">
+        <section className="pt-4 pb-16 md:pt-8 md:pb-24">
           <div className="max-w-4xl mx-auto px-6 text-center fade-up">
             <div className="inline-flex items-center gap-2 bg-orange-50 border border-orange-200 rounded-full px-4 py-1.5 mb-6">
               <span className="w-2 h-2 bg-orange-500 rounded-full animate-pulse" />
@@ -229,6 +254,36 @@ export default async function AssistanceDepannageHub({ params }: PageProps) {
               <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">{t("faqHubTitle")}</h2>
             </div>
             <HubFAQ items={faqItems} />
+          </div>
+        </section>
+
+        {/* Cross-links SEO */}
+        <section className="py-16 md:py-20">
+          <div className="max-w-7xl mx-auto px-6">
+            <h2 className="text-lg font-semibold tracking-tight mb-6 fade-up">
+              {lang === "en" ? "Explore our solutions" : "Découvrez nos autres solutions"}
+            </h2>
+            <div className="flex flex-wrap gap-3 fade-up">
+              <Link href="/solutions/hotel" className="inline-flex items-center gap-2 px-4 py-2.5 bg-white border border-neutral-200 rounded-xl text-sm font-medium hover:border-neutral-400 transition-colors">
+                {lang === "en" ? "Hotels" : "Hôtels"}
+              </Link>
+              <Link href="/solutions/particulier" className="inline-flex items-center gap-2 px-4 py-2.5 bg-white border border-neutral-200 rounded-xl text-sm font-medium hover:border-neutral-400 transition-colors">
+                {lang === "en" ? "Individuals" : "Particuliers"}
+              </Link>
+              <Link href="/solutions/entreprise" className="inline-flex items-center gap-2 px-4 py-2.5 bg-white border border-neutral-200 rounded-xl text-sm font-medium hover:border-neutral-400 transition-colors">
+                {lang === "en" ? "Businesses" : "Entreprises"}
+              </Link>
+              <Link href="/solutions/taxi-medical" className="inline-flex items-center gap-2 px-4 py-2.5 bg-white border border-neutral-200 rounded-xl text-sm font-medium hover:border-neutral-400 transition-colors">
+                {lang === "en" ? "Medical taxi" : "Taxi médical"}
+              </Link>
+              <Link href="/solutions/mise-a-disposition" className="inline-flex items-center gap-2 px-4 py-2.5 bg-white border border-neutral-200 rounded-xl text-sm font-medium hover:border-neutral-400 transition-colors">
+                {lang === "en" ? "Chauffeur hire" : "Mise à disposition"}
+              </Link>
+              <Link href="/guides" className="inline-flex items-center gap-2 px-4 py-2.5 bg-white border border-neutral-200 rounded-xl text-sm font-medium hover:border-neutral-400 transition-colors">
+                <Icon icon="solar:book-linear" className="text-neutral-400" />
+                {lang === "en" ? "Practical guides" : "Guides pratiques"}
+              </Link>
+            </div>
           </div>
         </section>
 

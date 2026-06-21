@@ -204,6 +204,11 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/glossaire" className="hover:text-neutral-900 transition-colors">
+                  {t("glossaire")}
+                </Link>
+              </li>
+              <li>
                 <Link href="/plan-du-site" className="hover:text-neutral-900 transition-colors">
                   {t("sitemap")}
                 </Link>
