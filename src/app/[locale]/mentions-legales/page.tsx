@@ -10,23 +10,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const title =
     locale === "en"
-      ? "Legal Notice, Terms of Use and Privacy | TaxiNeo"
-      : "Mentions legales, CGU et politique de confidentialite | TaxiNeo";
+      ? "Legal Notice — TaxiNeo"
+      : "Mentions legales — TaxiNeo";
   const description =
     locale === "en"
-      ? "Read TaxiNeo's legal notice, terms of use, privacy policy and GDPR commitments. Find our publisher details, hosting info and data protection measures."
-      : "Consultez les mentions legales, conditions d'utilisation, politique de confidentialite et engagements RGPD de TaxiNeo. Editeur, hebergement et protection des donnees.";
+      ? "Legal information, terms of use, and privacy policy for TaxiNeo fixed-price taxi booking platform."
+      : "Informations legales, conditions d'utilisation et politique de confidentialite de la plateforme TaxiNeo.";
   return {
     title,
     description,
-    openGraph: {
-      title,
-      description,
-      url: `https://www.taxineo.fr/${locale}/mentions-legales`,
-      siteName: "TaxiNeo",
-      type: "website",
-      images: [{ url: "https://www.taxineo.fr/opengraph-image", width: 1200, height: 630, alt: title }],
-    },
+    openGraph: { title, description },
     alternates: {
       canonical: `https://www.taxineo.fr/${locale}/mentions-legales`,
       languages: {
