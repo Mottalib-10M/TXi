@@ -25,6 +25,8 @@ interface PageProps {
   params: Promise<{ locale: string; slug: string }>;
 }
 
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
   return ["fr", "en"].flatMap((locale) =>
     cities.map((city) => ({ locale, slug: city.slug }))
@@ -47,6 +49,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       url: canonical,
       siteName: "TaxiNeo",
       type: "website",
+      images: [{ url: "https://www.taxineo.fr/opengraph-image", width: 1200, height: 630, alt: city.i18n[loc].metaTitle }],
     },
     alternates: {
       canonical,
