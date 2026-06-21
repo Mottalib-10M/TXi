@@ -14,6 +14,7 @@ import { tarifs, getTarifBySlug } from "@/data/tarifs";
 import { Link } from "@/i18n/navigation";
 import { getTranslations } from "next-intl/server";
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
+import { canonicalUrl, alternateUrls } from "@/lib/seo";
 
 interface PageProps {
   params: Promise<{ locale: string; slug: string }>;
@@ -31,7 +32,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!tarif) notFound();
   const loc = locale === "en" ? "en" : "fr";
 
-  const canonical = `https://www.taxineo.fr/${locale}/tarif/${tarif.slug}`;
+  const canonical = canonicalUrl(locale, `/tarif/${tarif.slug}`);
   return {
     title: tarif.i18n[loc].metaTitle,
     description: tarif.i18n[loc].metaDescription,
@@ -52,10 +53,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     },
     alternates: {
       canonical,
-      languages: {
-        fr: `https://www.taxineo.fr/fr/tarif/${tarif.slug}`,
-        en: `https://www.taxineo.fr/en/tarif/${tarif.slug}`,
-      },
+      languages: alternateUrls(`/tarif/${tarif.slug}`),
     },
   };
 }

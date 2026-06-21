@@ -7,6 +7,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { ScrollAnimation } from "@/components/ui/ScrollAnimation";
 import { getArticleBySlug, getArticleSlugs, blogArticles } from "@/data/blog";
+import { canonicalUrl, alternateUrls } from "@/lib/seo";
 import { BlogRelatedContent } from "@/components/blog/BlogRelatedContent";
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 
@@ -26,7 +27,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!article) notFound();
 
   const lang = locale as "fr" | "en";
-  const canonical = `https://www.taxineo.fr/${locale}/blog/${slug}`;
+  const canonical = canonicalUrl(locale, `/blog/${slug}`);
 
   return {
     title: article.metaTitle[lang],
@@ -49,10 +50,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     },
     alternates: {
       canonical,
-      languages: {
-        fr: `https://www.taxineo.fr/fr/blog/${slug}`,
-        en: `https://www.taxineo.fr/en/blog/${slug}`,
-      },
+      languages: alternateUrls(`/blog/${slug}`),
     },
   };
 }

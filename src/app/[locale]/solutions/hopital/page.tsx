@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
+import { canonicalUrl, alternateUrls } from "@/lib/seo";
 import { SolutionPage } from "@/components/solutions/SolutionPage";
 
 interface Props {
@@ -22,11 +23,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       images: [{ url: "https://www.taxineo.fr/opengraph-image", width: 1200, height: 630, alt: t("metaTitle") }],
     },
     alternates: {
-      canonical: `https://www.taxineo.fr/${locale}/solutions/hopital`,
-      languages: {
-        fr: "https://www.taxineo.fr/fr/solutions/hopital",
-        en: "https://www.taxineo.fr/en/solutions/hopital",
-      },
+      canonical: canonicalUrl(locale, "/solutions/hopital"),
+      languages: alternateUrls("/solutions/hopital"),
     },
   };
 }

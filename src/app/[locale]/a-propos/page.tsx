@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { Icon } from "@iconify/react";
+import { canonicalUrl, alternateUrls } from "@/lib/seo";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Link } from "@/i18n/navigation";
@@ -24,11 +25,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description,
     openGraph: { title, description },
     alternates: {
-      canonical: `https://www.taxineo.fr/${locale}/a-propos`,
-      languages: {
-        fr: "https://www.taxineo.fr/fr/a-propos",
-        en: "https://www.taxineo.fr/en/a-propos",
-      },
+      canonical: canonicalUrl(locale, "/a-propos"),
+      languages: alternateUrls("/a-propos"),
     },
   };
 }

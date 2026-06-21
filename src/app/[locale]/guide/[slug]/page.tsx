@@ -13,6 +13,7 @@ import { guides, getGuideBySlug } from "@/data/guides";
 import { Link } from "@/i18n/navigation";
 import { getTranslations } from "next-intl/server";
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
+import { canonicalUrl, alternateUrls } from "@/lib/seo";
 
 interface PageProps {
   params: Promise<{ locale: string; slug: string }>;
@@ -32,7 +33,7 @@ export async function generateMetadata({
   if (!guide) notFound();
   const loc = locale === "en" ? "en" : "fr";
 
-  const canonical = `https://www.taxineo.fr/${locale}/guide/${guide.slug}`;
+  const canonical = canonicalUrl(locale, `/guide/${guide.slug}`);
   return {
     title: guide.i18n[loc].metaTitle,
     description: guide.i18n[loc].metaDescription,
@@ -53,10 +54,7 @@ export async function generateMetadata({
     },
     alternates: {
       canonical,
-      languages: {
-        fr: `https://www.taxineo.fr/fr/guide/${guide.slug}`,
-        en: `https://www.taxineo.fr/en/guide/${guide.slug}`,
-      },
+      languages: alternateUrls(`/guide/${guide.slug}`),
     },
   };
 }

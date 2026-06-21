@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Icon } from "@iconify/react";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
+import { canonicalUrl, alternateUrls } from "@/lib/seo";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { ScrollAnimation } from "@/components/ui/ScrollAnimation";
@@ -27,11 +28,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       images: [{ url: "https://www.taxineo.fr/opengraph-image", width: 1200, height: 630, alt: t("metaTitle") }],
     },
     alternates: {
-      canonical: `https://www.taxineo.fr/${locale}/devenir-chauffeur`,
-      languages: {
-        fr: "https://www.taxineo.fr/fr/devenir-chauffeur",
-        en: "https://www.taxineo.fr/en/devenir-chauffeur",
-      },
+      canonical: canonicalUrl(locale, "/devenir-chauffeur"),
+      languages: alternateUrls("/devenir-chauffeur"),
     },
   };
 }

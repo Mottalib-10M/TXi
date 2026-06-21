@@ -6,6 +6,7 @@ import { Footer } from "@/components/layout/Footer";
 import { ScrollAnimation } from "@/components/ui/ScrollAnimation";
 import { guides } from "@/data/guides";
 import { getTranslations } from "next-intl/server";
+import { canonicalUrl, alternateUrls } from "@/lib/seo";
 
 interface PageProps {
   params: Promise<{ locale: string }>;
@@ -16,7 +17,7 @@ export async function generateMetadata({
 }: PageProps): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "guides" });
-  const canonical = `https://www.taxineo.fr/${locale}/guides`;
+  const canonical = canonicalUrl(locale, "/guides");
   return {
     title: t("metaTitle"),
     description: t("metaDescription"),
@@ -30,10 +31,7 @@ export async function generateMetadata({
     },
     alternates: {
       canonical,
-      languages: {
-        fr: "https://www.taxineo.fr/fr/guides",
-        en: "https://www.taxineo.fr/en/guides",
-      },
+      languages: alternateUrls("/guides"),
     },
   };
 }

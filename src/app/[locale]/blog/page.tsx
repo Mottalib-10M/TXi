@@ -6,6 +6,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { ScrollAnimation } from "@/components/ui/ScrollAnimation";
 import { blogArticles } from "@/data/blog";
+import { canonicalUrl, alternateUrls } from "@/lib/seo";
 
 interface PageProps {
   params: Promise<{ locale: string }>;
@@ -15,7 +16,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "blog" });
 
-  const canonical = `https://www.taxineo.fr/${locale}/blog`;
+  const canonical = canonicalUrl(locale, "/blog");
   return {
     title: t("metaTitle"),
     description: t("metaDescription"),
@@ -29,10 +30,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     },
     alternates: {
       canonical,
-      languages: {
-        fr: "https://www.taxineo.fr/fr/blog",
-        en: "https://www.taxineo.fr/en/blog",
-      },
+      languages: alternateUrls("/blog"),
     },
   };
 }

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Icon } from "@iconify/react";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
+import { canonicalUrl, alternateUrls } from "@/lib/seo";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { BookingForm } from "@/components/booking/BookingForm";
@@ -49,11 +50,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       images: ["https://www.taxineo.fr/opengraph-image"],
     },
     alternates: {
-      canonical: `https://www.taxineo.fr/${locale}`,
-      languages: {
-        fr: "https://www.taxineo.fr/fr",
-        en: "https://www.taxineo.fr/en",
-      },
+      canonical: canonicalUrl(locale),
+      languages: alternateUrls(),
     },
   };
 }

@@ -20,6 +20,7 @@ import { AirportInternalLinks } from "@/components/airport/AirportInternalLinks"
 import { ForfaitAeroportTable } from "@/components/airport/ForfaitAeroportTable";
 import { airports, getAirportBySlug } from "@/data/airports";
 import { ILE_DE_FRANCE_SLUGS } from "@/data/regions";
+import { canonicalUrl, alternateUrls } from "@/lib/seo";
 
 const PARIS_AIRPORT_SLUGS = new Set(["paris-charles-de-gaulle", "paris-orly"]);
 
@@ -39,7 +40,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!ap) notFound();
   const loc = locale === "en" ? "en" : "fr";
 
-  const canonical = `https://www.taxineo.fr/${locale}/taxi-aeroport-${ap.slug}`;
+  const canonical = canonicalUrl(locale, `/taxi-aeroport-${ap.slug}`);
   return {
     title: ap.i18n[loc].metaTitle,
     description: ap.i18n[loc].metaDescription,
@@ -60,10 +61,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     },
     alternates: {
       canonical,
-      languages: {
-        fr: `https://www.taxineo.fr/fr/taxi-aeroport-${ap.slug}`,
-        en: `https://www.taxineo.fr/en/taxi-aeroport-${ap.slug}`,
-      },
+      languages: alternateUrls(`/taxi-aeroport-${ap.slug}`),
     },
   };
 }

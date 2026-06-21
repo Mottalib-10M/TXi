@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { canonicalUrl, alternateUrls } from "@/lib/seo";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 
@@ -21,11 +22,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description,
     openGraph: { title, description },
     alternates: {
-      canonical: `https://www.taxineo.fr/${locale}/mentions-legales`,
-      languages: {
-        fr: "https://www.taxineo.fr/fr/mentions-legales",
-        en: "https://www.taxineo.fr/en/mentions-legales",
-      },
+      canonical: canonicalUrl(locale, "/mentions-legales"),
+      languages: alternateUrls("/mentions-legales"),
     },
   };
 }

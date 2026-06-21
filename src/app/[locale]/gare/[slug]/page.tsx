@@ -19,6 +19,7 @@ import { CityCTA } from "@/components/city/CityCTA";
 import { StationInternalLinks } from "@/components/station/StationInternalLinks";
 import { stations, getStationBySlug } from "@/data/stations";
 import { ILE_DE_FRANCE_SLUGS } from "@/data/regions";
+import { canonicalUrl, alternateUrls } from "@/lib/seo";
 
 interface PageProps {
   params: Promise<{ locale: string; slug: string }>;
@@ -36,7 +37,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!st) notFound();
   const loc = locale === "en" ? "en" : "fr";
 
-  const canonical = `https://www.taxineo.fr/${locale}/taxi-gare-${st.slug}`;
+  const canonical = canonicalUrl(locale, `/taxi-gare-${st.slug}`);
   return {
     title: st.i18n[loc].metaTitle,
     description: st.i18n[loc].metaDescription,
@@ -57,10 +58,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     },
     alternates: {
       canonical,
-      languages: {
-        fr: `https://www.taxineo.fr/fr/taxi-gare-${st.slug}`,
-        en: `https://www.taxineo.fr/en/taxi-gare-${st.slug}`,
-      },
+      languages: alternateUrls(`/taxi-gare-${st.slug}`),
     },
   };
 }

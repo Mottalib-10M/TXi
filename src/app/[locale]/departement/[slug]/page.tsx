@@ -15,6 +15,7 @@ import { departements, getDepartementBySlug } from "@/data/departements";
 import { Link } from "@/i18n/navigation";
 import { getTranslations } from "next-intl/server";
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
+import { canonicalUrl, alternateUrls } from "@/lib/seo";
 
 interface PageProps {
   params: Promise<{ locale: string; slug: string }>;
@@ -32,7 +33,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!dept) notFound();
   const loc = locale === "en" ? "en" : "fr";
 
-  const canonical = `https://www.taxineo.fr/${locale}/departement/${dept.slug}`;
+  const canonical = canonicalUrl(locale, `/departement/${dept.slug}`);
   return {
     title: dept.i18n[loc].metaTitle,
     description: dept.i18n[loc].metaDescription,
@@ -53,10 +54,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     },
     alternates: {
       canonical,
-      languages: {
-        fr: `https://www.taxineo.fr/fr/departement/${dept.slug}`,
-        en: `https://www.taxineo.fr/en/departement/${dept.slug}`,
-      },
+      languages: alternateUrls(`/departement/${dept.slug}`),
     },
   };
 }

@@ -21,6 +21,7 @@ import { ArHowItWorks } from "@/components/autoroute/ArHowItWorks";
 import { ArInternalLinks } from "@/components/autoroute/ArInternalLinks";
 import { getAutorouteBySlug, getAutorouteSlugs } from "@/data/autoroutes";
 import { generateArContent } from "@/data/autoroute-content-templates";
+import { canonicalUrl, alternateUrls } from "@/lib/seo";
 
 interface PageProps {
   params: Promise<{ locale: string; slug: string }>;
@@ -40,7 +41,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const loc = locale === "en" ? "en" : "fr";
   const content = generateArContent(autoroute, loc);
 
-  const canonical = `https://www.taxineo.fr/${locale}/autoroute/${slug}`;
+  const canonical = canonicalUrl(locale, `/autoroute/${slug}`);
   return {
     title: content.metaTitle,
     description: content.metaDescription,
@@ -61,10 +62,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     },
     alternates: {
       canonical,
-      languages: {
-        fr: `https://www.taxineo.fr/fr/autoroute/${slug}`,
-        en: `https://www.taxineo.fr/en/autoroute/${slug}`,
-      },
+      languages: alternateUrls(`/autoroute/${slug}`),
     },
   };
 }

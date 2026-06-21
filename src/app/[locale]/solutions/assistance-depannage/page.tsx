@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { canonicalUrl, alternateUrls } from "@/lib/seo";
 import { Link } from "@/i18n/navigation";
 import { Icon } from "@iconify/react";
 import { Navbar } from "@/components/layout/Navbar";
@@ -26,7 +27,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     ? "Voiture en panne ? Un taxi dépannage arrive en 20 min dans 138 villes et sur 30 autoroutes. Transport vers garage, domicile ou gare. Tarif fixe, 24h/24."
     : "Car broke down in France? A breakdown taxi arrives in 20 min. 138 cities and 30 motorways covered. Transport to garage, home or station. Fixed fare, 24/7.";
 
-  const canonical = `https://www.taxineo.fr/${locale}/solutions/assistance-depannage`;
+  const canonical = canonicalUrl(locale, "/solutions/assistance-depannage");
   return {
     title,
     description,
@@ -36,10 +37,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     },
     alternates: {
       canonical,
-      languages: {
-        fr: "https://www.taxineo.fr/fr/solutions/assistance-depannage",
-        en: "https://www.taxineo.fr/en/solutions/assistance-depannage",
-      },
+      languages: alternateUrls("/solutions/assistance-depannage"),
     },
   };
 }

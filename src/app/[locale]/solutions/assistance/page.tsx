@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { SolutionPage } from "@/components/solutions/SolutionPage";
+import { canonicalUrl, alternateUrls } from "@/lib/seo";
 
 interface Props {
   params: Promise<{ locale: string }>;
@@ -22,11 +23,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       images: [{ url: "https://www.taxineo.fr/opengraph-image", width: 1200, height: 630, alt: t("metaTitle") }],
     },
     alternates: {
-      canonical: `https://www.taxineo.fr/${locale}/solutions/assistance`,
-      languages: {
-        fr: "https://www.taxineo.fr/fr/solutions/assistance",
-        en: "https://www.taxineo.fr/en/solutions/assistance",
-      },
+      canonical: canonicalUrl(locale, "/solutions/assistance"),
+      languages: alternateUrls("/solutions/assistance"),
     },
   };
 }

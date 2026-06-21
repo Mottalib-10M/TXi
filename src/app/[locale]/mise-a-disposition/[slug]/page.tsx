@@ -25,6 +25,7 @@ import { MadInternalLinks } from "@/components/mise-a-disposition/MadInternalLin
 import { getCityBySlug } from "@/data/cities";
 import { getMadCityBySlug, getMadCitySlugs } from "@/data/mad-cities";
 import { generateMadContent } from "@/data/mad-content-templates";
+import { canonicalUrl, alternateUrls } from "@/lib/seo";
 
 interface PageProps {
   params: Promise<{ locale: string; slug: string }>;
@@ -45,7 +46,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const loc = locale === "en" ? "en" : "fr";
   const content = generateMadContent(city, loc);
 
-  const canonical = `https://www.taxineo.fr/${locale}/mise-a-disposition/${slug}`;
+  const canonical = canonicalUrl(locale, `/mise-a-disposition/${slug}`);
   return {
     title: content.metaTitle,
     description: content.metaDescription,
@@ -66,10 +67,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     },
     alternates: {
       canonical,
-      languages: {
-        fr: `https://www.taxineo.fr/fr/mise-a-disposition/${slug}`,
-        en: `https://www.taxineo.fr/en/mise-a-disposition/${slug}`,
-      },
+      languages: alternateUrls(`/mise-a-disposition/${slug}`),
     },
   };
 }

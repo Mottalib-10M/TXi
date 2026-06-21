@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
+import { canonicalUrl, alternateUrls } from "@/lib/seo";
 
 interface Props {
   params: Promise<{ locale: string }>;
@@ -21,11 +22,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       images: [{ url: "https://www.taxineo.fr/opengraph-image", width: 1200, height: 630, alt: t("metaTitle") }],
     },
     alternates: {
-      canonical: `https://www.taxineo.fr/${locale}/taxi-partage`,
-      languages: {
-        fr: "https://www.taxineo.fr/fr/taxi-partage",
-        en: "https://www.taxineo.fr/en/taxi-partage",
-      },
+      canonical: canonicalUrl(locale, "/taxi-partage"),
+      languages: alternateUrls("/taxi-partage"),
     },
   };
 }

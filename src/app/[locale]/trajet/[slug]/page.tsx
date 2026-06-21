@@ -16,6 +16,7 @@ import { CityFAQ } from "@/components/city/CityFAQ";
 import { CityContactForm } from "@/components/city/CityContactForm";
 import { CityCTA } from "@/components/city/CityCTA";
 import { trajets, getTrajetBySlug } from "@/data/trajets";
+import { canonicalUrl, alternateUrls } from "@/lib/seo";
 
 interface PageProps {
   params: Promise<{ locale: string; slug: string }>;
@@ -33,7 +34,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!trajet) notFound();
   const loc = locale === "en" ? "en" : "fr";
 
-  const canonical = `https://www.taxineo.fr/${locale}/trajet/${trajet.slug}`;
+  const canonical = canonicalUrl(locale, `/trajet/${trajet.slug}`);
   return {
     title: trajet.i18n[loc].metaTitle,
     description: trajet.i18n[loc].metaDescription,
@@ -54,10 +55,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     },
     alternates: {
       canonical,
-      languages: {
-        fr: `https://www.taxineo.fr/fr/trajet/${trajet.slug}`,
-        en: `https://www.taxineo.fr/en/trajet/${trajet.slug}`,
-      },
+      languages: alternateUrls(`/trajet/${trajet.slug}`),
     },
   };
 }

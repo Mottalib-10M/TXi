@@ -2,6 +2,7 @@ import { Link } from "@/i18n/navigation";
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { Icon } from "@iconify/react";
+import { canonicalUrl, alternateUrls } from "@/lib/seo";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { ScrollAnimation } from "@/components/ui/ScrollAnimation";
@@ -16,7 +17,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "cities" });
 
-  const canonical = `https://www.taxineo.fr/${locale}/villes`;
+  const canonical = canonicalUrl(locale, "/villes");
   return {
     title: t("metaTitle"),
     description: t("metaDescription"),
@@ -30,10 +31,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     },
     alternates: {
       canonical,
-      languages: {
-        fr: "https://www.taxineo.fr/fr/villes",
-        en: "https://www.taxineo.fr/en/villes",
-      },
+      languages: alternateUrls("/villes"),
     },
   };
 }

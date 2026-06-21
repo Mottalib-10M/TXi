@@ -6,6 +6,7 @@ import { Footer } from "@/components/layout/Footer";
 import { ScrollAnimation } from "@/components/ui/ScrollAnimation";
 import { departements, getDepartementsByRegion } from "@/data/departements";
 import { getTranslations } from "next-intl/server";
+import { canonicalUrl, alternateUrls } from "@/lib/seo";
 
 interface PageProps {
   params: Promise<{ locale: string }>;
@@ -14,7 +15,7 @@ interface PageProps {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "departements" });
-  const canonical = `https://www.taxineo.fr/${locale}/departements`;
+  const canonical = canonicalUrl(locale, "/departements");
   return {
     title: t("metaTitle"),
     description: t("metaDescription"),
@@ -28,10 +29,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     },
     alternates: {
       canonical,
-      languages: {
-        fr: "https://www.taxineo.fr/fr/departements",
-        en: "https://www.taxineo.fr/en/departements",
-      },
+      languages: alternateUrls("/departements"),
     },
   };
 }

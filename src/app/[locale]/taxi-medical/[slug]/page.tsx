@@ -23,6 +23,7 @@ import { TmInternalLinks } from "@/components/taxi-medical/TmInternalLinks";
 import { getCityBySlug } from "@/data/cities";
 import { getTmCityBySlug, getTmCitySlugs } from "@/data/taxi-medical-cities";
 import { generateTmContent } from "@/data/taxi-medical-content-templates";
+import { canonicalUrl, alternateUrls } from "@/lib/seo";
 
 interface PageProps {
   params: Promise<{ locale: string; slug: string }>;
@@ -43,7 +44,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const loc = locale === "en" ? "en" : "fr";
   const content = generateTmContent(city, tmCity, loc);
 
-  const canonical = `https://www.taxineo.fr/${locale}/taxi-medical/${slug}`;
+  const canonical = canonicalUrl(locale, `/taxi-medical/${slug}`);
   return {
     title: content.metaTitle,
     description: content.metaDescription,
@@ -64,10 +65,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     },
     alternates: {
       canonical,
-      languages: {
-        fr: `https://www.taxineo.fr/fr/taxi-medical/${slug}`,
-        en: `https://www.taxineo.fr/en/taxi-medical/${slug}`,
-      },
+      languages: alternateUrls(`/taxi-medical/${slug}`),
     },
   };
 }

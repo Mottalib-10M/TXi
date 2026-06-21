@@ -6,6 +6,7 @@ import { ScrollAnimation } from "@/components/ui/ScrollAnimation";
 import { Link } from "@/i18n/navigation";
 import { glossaryTerms } from "@/data/glossary";
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
+import { canonicalUrl, alternateUrls } from "@/lib/seo";
 
 interface PageProps {
   params: Promise<{ locale: string }>;
@@ -22,7 +23,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     ? "Découvrez les définitions des termes clés du taxi et du transport de personnes en France : ADS, forfait, VTC, taximètre, prise en charge et 30+ termes essentiels."
     : "Discover key taxi and passenger transport terms in France: ADS, fixed fare, VTC, taximeter, pickup fee, and 30+ essential definitions.";
 
-  const canonical = `https://www.taxineo.fr/${locale}/glossaire`;
+  const canonical = canonicalUrl(locale, "/glossaire");
 
   return {
     title,
@@ -44,10 +45,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     },
     alternates: {
       canonical,
-      languages: {
-        fr: "https://www.taxineo.fr/fr/glossaire",
-        en: "https://www.taxineo.fr/en/glossaire",
-      },
+      languages: alternateUrls("/glossaire"),
     },
   };
 }

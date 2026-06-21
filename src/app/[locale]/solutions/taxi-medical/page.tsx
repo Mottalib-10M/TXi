@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { Icon } from "@iconify/react";
 import { Link } from "@/i18n/navigation";
+import { canonicalUrl, alternateUrls } from "@/lib/seo";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { ScrollAnimation } from "@/components/ui/ScrollAnimation";
@@ -29,11 +30,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       images: [{ url: "https://www.taxineo.fr/opengraph-image", width: 1200, height: 630, alt: t("metaTitle") }],
     },
     alternates: {
-      canonical: `https://www.taxineo.fr/${locale}/solutions/taxi-medical`,
-      languages: {
-        fr: "https://www.taxineo.fr/fr/solutions/taxi-medical",
-        en: "https://www.taxineo.fr/en/solutions/taxi-medical",
-      },
+      canonical: canonicalUrl(locale, "/solutions/taxi-medical"),
+      languages: alternateUrls("/solutions/taxi-medical"),
     },
   };
 }

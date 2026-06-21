@@ -7,6 +7,7 @@ import { ScrollAnimation } from "@/components/ui/ScrollAnimation";
 import { services, getServicesByCategory } from "@/data/services-seo";
 import type { ServiceSeo } from "@/data/services-seo";
 import { getTranslations } from "next-intl/server";
+import { canonicalUrl, alternateUrls } from "@/lib/seo";
 
 interface PageProps {
   params: Promise<{ locale: string }>;
@@ -15,7 +16,7 @@ interface PageProps {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "services" });
-  const canonical = `https://www.taxineo.fr/${locale}/services`;
+  const canonical = canonicalUrl(locale, "/services");
   return {
     title: t("metaTitle"),
     description: t("metaDescription"),
@@ -29,10 +30,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     },
     alternates: {
       canonical,
-      languages: {
-        fr: "https://www.taxineo.fr/fr/services",
-        en: "https://www.taxineo.fr/en/services",
-      },
+      languages: alternateUrls("/services"),
     },
   };
 }

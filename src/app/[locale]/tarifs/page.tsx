@@ -7,6 +7,7 @@ import { ScrollAnimation } from "@/components/ui/ScrollAnimation";
 import { tarifs, getTarifsByType } from "@/data/tarifs";
 import type { Tarif } from "@/data/tarifs";
 import { getTranslations } from "next-intl/server";
+import { canonicalUrl, alternateUrls } from "@/lib/seo";
 
 interface PageProps {
   params: Promise<{ locale: string }>;
@@ -15,7 +16,7 @@ interface PageProps {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "tarifs" });
-  const canonical = `https://www.taxineo.fr/${locale}/tarifs`;
+  const canonical = canonicalUrl(locale, "/tarifs");
   return {
     title: t("metaTitle"),
     description: t("metaDescription"),
@@ -29,10 +30,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     },
     alternates: {
       canonical,
-      languages: {
-        fr: "https://www.taxineo.fr/fr/tarifs",
-        en: "https://www.taxineo.fr/en/tarifs",
-      },
+      languages: alternateUrls("/tarifs"),
     },
   };
 }

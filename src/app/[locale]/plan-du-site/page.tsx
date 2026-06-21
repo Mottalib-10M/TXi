@@ -13,6 +13,7 @@ import { blogArticles } from "@/data/blog";
 import { cities } from "@/data/cities";
 import { airports } from "@/data/airports";
 import { stations } from "@/data/stations";
+import { canonicalUrl, alternateUrls } from "@/lib/seo";
 
 interface PageProps {
   params: Promise<{ locale: string }>;
@@ -22,7 +23,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "planDuSite" });
 
-  const canonical = `https://www.taxineo.fr/${locale}/plan-du-site`;
+  const canonical = canonicalUrl(locale, "/plan-du-site");
   return {
     title: t("metaTitle"),
     description: t("metaDescription"),
@@ -36,10 +37,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     },
     alternates: {
       canonical,
-      languages: {
-        fr: "https://www.taxineo.fr/fr/plan-du-site",
-        en: "https://www.taxineo.fr/en/plan-du-site",
-      },
+      languages: alternateUrls("/plan-du-site"),
     },
   };
 }
