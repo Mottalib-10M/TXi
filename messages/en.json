@@ -83,7 +83,8 @@
     "discoverAeroportsDesc": "Fixed-price airport transfers",
     "discoverBlogDesc": "Tips, news and taxi insights",
     "discoverGares": "Stations",
-    "discoverGaresDesc": "Hassle-free station shuttles"
+    "discoverGaresDesc": "Hassle-free station shuttles",
+    "callUs": "Call 07 59 59 29 34"
   },
   "footer": {
     "tagline": "The app that puts road professionals back at the center of urban mobility.",
@@ -310,7 +311,9 @@
     "contactRequestError": "An error occurred, please try again.",
     "sending": "Sending...",
     "contactRequestSent": "Request sent!",
-    "driverWillContact": "Our driver will contact you as soon as possible"
+    "driverWillContact": "Our driver will contact you as soon as possible",
+    "removePassenger": "Remove a passenger",
+    "addPassenger": "Add a passenger"
   },
   "confirmation": {
     "title": "Booking request registered!",
@@ -541,10 +544,10 @@
     "noRecentBookings": "No recent bookings",
     "seeAll": "See all",
     "transmittedTitle": "Transferred rides",
-    "transmittedWaiting": "pending",
-    "transmittedDone": "accepted",
-    "transmittedCommission": "commission",
-    "transmittedEmpty": "You haven't transferred any rides yet. Transfer a ride to a colleague and earn a commission.",
+    "transmittedWaiting": "Waiting",
+    "transmittedDone": "Accepted",
+    "transmittedCommission": "Commission",
+    "transmittedEmpty": "You haven't transferred any rides yet. Transfer a ride to a colleague when you're unavailable.",
     "transmittedCta": "Transfer a ride",
     "transmittedBadge": "Via colleague",
     "upcomingRides": "Upcoming rides",
@@ -681,13 +684,6 @@
     "accepting": "Accepting...",
     "routeAccepted": "Ride accepted! The traveller has been notified.",
     "routeAlreadyTaken": "This ride has already been accepted by another driver.",
-    "transmittedTitle": "Transferred rides",
-    "transmittedWaiting": "Waiting",
-    "transmittedDone": "Accepted",
-    "transmittedCommission": "Commission",
-    "transmittedEmpty": "You haven't transferred any rides yet. Transfer a ride to a colleague when you're unavailable.",
-    "transmittedCta": "Transfer a ride",
-    "transmittedBadge": "Via colleague",
     "invitedRide": "Available ride",
     "alreadyTaken": "This ride has already been accepted",
     "p2p": {

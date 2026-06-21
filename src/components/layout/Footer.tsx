@@ -22,7 +22,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-sm font-medium mb-4 tracking-tight">{t("services")}</h4>
+            <h3 className="text-sm font-medium mb-4 tracking-tight">{t("services")}</h3>
             <ul className="space-y-3 text-sm text-neutral-500 font-light">
               <li>
                 <Link href="/#reserver" className="hover:text-neutral-900 transition-colors font-medium text-neutral-700">
@@ -103,7 +103,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-sm font-medium mb-4 tracking-tight">{t("driversSection")}</h4>
+            <h3 className="text-sm font-medium mb-4 tracking-tight">{t("driversSection")}</h3>
             <ul className="space-y-3 text-sm text-neutral-500 font-light">
               <li>
                 <Link href="/inscription" className="hover:text-neutral-900 transition-colors">
@@ -129,7 +129,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-sm font-medium mb-4 tracking-tight">{t("contactSection")}</h4>
+            <h3 className="text-sm font-medium mb-4 tracking-tight">{t("contactSection")}</h3>
             <ul className="space-y-3 text-sm text-neutral-500 font-light">
               <li>
                 <a href="tel:0759592934" className="flex items-center gap-2 hover:text-neutral-900 transition-colors">
@@ -161,7 +161,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-sm font-medium mb-4 tracking-tight">{t("discover")}</h4>
+            <h3 className="text-sm font-medium mb-4 tracking-tight">{t("discover")}</h3>
             <ul className="space-y-3 text-sm text-neutral-500 font-light">
               <li>
                 <Link href="/trajets" className="hover:text-neutral-900 transition-colors">
@@ -219,10 +219,10 @@ export function Footer() {
 
         <div className="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-neutral-100 gap-4">
           <div className="flex flex-col md:flex-row items-center gap-4">
-            <p className="text-xs text-neutral-400 font-light">
+            <p className="text-xs text-neutral-500 font-light">
               {t("copyright")}
             </p>
-            <div className="flex items-center gap-3 text-xs text-neutral-400 font-light">
+            <div className="flex items-center gap-3 text-xs text-neutral-500 font-light">
               <Link href="/a-propos" className="hover:text-neutral-600 transition-colors">
                 {t("about")}
               </Link>
@@ -233,8 +233,8 @@ export function Footer() {
             </div>
           </div>
           <div className="flex items-center gap-3">
-            <span className="text-xs text-neutral-400 font-light">{t("paymentMethods")}</span>
-            <div className="flex items-center gap-2 text-neutral-400">
+            <span className="text-xs text-neutral-500 font-light">{t("paymentMethods")}</span>
+            <div className="flex items-center gap-2 text-neutral-500">
               <Icon icon="logos:visa" className="text-2xl" />
               <Icon icon="logos:mastercard" className="text-2xl" />
               <Icon icon="logos:apple-pay" className="text-2xl" />

@@ -163,7 +163,8 @@ export function DirectBookingForm({
             <button
               type="button"
               onClick={() => setPassengers(Math.max(1, passengers - 1))}
-              className="text-neutral-400 hover:text-neutral-900"
+              className="text-neutral-500 hover:text-neutral-900"
+              aria-label={t("removePassenger")}
             >
               <Icon icon="solar:minus-circle-linear" />
             </button>
@@ -171,7 +172,8 @@ export function DirectBookingForm({
             <button
               type="button"
               onClick={() => setPassengers(Math.min(8, passengers + 1))}
-              className="text-neutral-400 hover:text-neutral-900"
+              className="text-neutral-500 hover:text-neutral-900"
+              aria-label={t("addPassenger")}
             >
               <Icon icon="solar:add-circle-linear" />
             </button>

@@ -116,9 +116,9 @@ export default async function LocaleLayout({
         />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-2Z22GS67QY"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
-        <Script id="google-analytics" strategy="afterInteractive">
+        <Script id="google-analytics" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
@@ -128,9 +128,9 @@ export default async function LocaleLayout({
         </Script>
         <Script
           src="https://t.contentsquare.net/uxa/57182d25bfaa1.js"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
-        <Script id="microsoft-clarity" strategy="afterInteractive">
+        <Script id="microsoft-clarity" strategy="lazyOnload">
           {`
             (function(c,l,a,r,i,t,y){
               c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};

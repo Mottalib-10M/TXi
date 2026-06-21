@@ -83,7 +83,8 @@
     "discoverAeroportsDesc": "Transferts aéroport à prix fixe",
     "discoverBlogDesc": "Conseils, actus et bons plans taxi",
     "discoverGares": "Gares",
-    "discoverGaresDesc": "Navettes gare sans attente"
+    "discoverGaresDesc": "Navettes gare sans attente",
+    "callUs": "Appeler le 07 59 59 29 34"
   },
   "footer": {
     "tagline": "L'application qui remet les professionnels de la route au centre de la mobilité urbaine.",
@@ -310,7 +311,9 @@
     "contactRequestError": "Une erreur est survenue, veuillez réessayer.",
     "sending": "Envoi en cours...",
     "contactRequestSent": "Demande envoyée !",
-    "driverWillContact": "Notre chauffeur vous contactera au plus vite"
+    "driverWillContact": "Notre chauffeur vous contactera au plus vite",
+    "removePassenger": "Retirer un passager",
+    "addPassenger": "Ajouter un passager"
   },
   "confirmation": {
     "title": "Demande de réservation enregistrée !",
@@ -541,10 +544,10 @@
     "noRecentBookings": "Aucune réservation récente",
     "seeAll": "Voir tout",
     "transmittedTitle": "Courses transmises",
-    "transmittedWaiting": "en attente",
-    "transmittedDone": "acceptées",
-    "transmittedCommission": "commission",
-    "transmittedEmpty": "Vous n'avez pas encore transmis de courses. Transmettez une course à un collègue et gagnez une commission.",
+    "transmittedWaiting": "En attente",
+    "transmittedDone": "Acceptées",
+    "transmittedCommission": "Commission",
+    "transmittedEmpty": "Vous n'avez pas encore transmis de course. Transmettez une course à un collègue quand vous n'êtes pas disponible.",
     "transmittedCta": "Transmettre une course",
     "transmittedBadge": "Via collègue",
     "upcomingRides": "Courses à venir",
@@ -681,13 +684,6 @@
     "accepting": "Acceptation...",
     "routeAccepted": "Trajet accepté ! Le voyageur a été notifié.",
     "routeAlreadyTaken": "Ce trajet a déjà été accepté par un autre chauffeur.",
-    "transmittedTitle": "Courses transmises",
-    "transmittedWaiting": "En attente",
-    "transmittedDone": "Acceptées",
-    "transmittedCommission": "Commission",
-    "transmittedEmpty": "Vous n'avez pas encore transmis de course. Transmettez une course à un collègue quand vous n'êtes pas disponible.",
-    "transmittedCta": "Transmettre une course",
-    "transmittedBadge": "Via collègue",
     "invitedRide": "Course disponible",
     "alreadyTaken": "Cette course a déjà été acceptée",
     "p2p": {

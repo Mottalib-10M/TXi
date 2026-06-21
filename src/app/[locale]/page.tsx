@@ -636,7 +636,7 @@ export default async function HomePage() {
                 <p className="text-xs text-neutral-500 font-light line-clamp-2 mb-2">
                   {guide.i18n.fr.heroSubtitle}
                 </p>
-                <span className="text-xs text-neutral-400 font-light">
+                <span className="text-xs text-neutral-500 font-light">
                   {t("guideReadingTime", { min: guide.readingTime })}
                 </span>
               </Link>
@@ -725,7 +725,7 @@ export default async function HomePage() {
                   {item.q}
                   <Icon
                     icon="solar:alt-arrow-down-linear"
-                    className="text-neutral-400 text-base shrink-0 ml-4 transition-transform group-open:rotate-180"
+                    className="text-neutral-500 text-base shrink-0 ml-4 transition-transform group-open:rotate-180"
                   />
                 </summary>
                 <div className="px-6 pb-4 text-sm text-neutral-500 font-light leading-relaxed">

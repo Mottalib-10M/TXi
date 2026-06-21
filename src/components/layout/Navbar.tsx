@@ -119,10 +119,10 @@ export function Navbar({ minimal = false }: { minimal?: boolean }) {
                         onClick={() => setSolutionsOpen(false)}
                         className="flex items-start gap-3 px-4 py-2.5 hover:bg-neutral-50 transition-colors"
                       >
-                        <Icon icon={item.icon} className="text-neutral-400 text-lg mt-0.5 shrink-0" />
+                        <Icon icon={item.icon} className="text-neutral-500 text-lg mt-0.5 shrink-0" />
                         <div>
                           <p className="text-sm font-medium text-neutral-800">{item.label}</p>
-                          <p className="text-xs text-neutral-400 font-light">{item.desc}</p>
+                          <p className="text-xs text-neutral-500 font-light">{item.desc}</p>
                         </div>
                       </Link>
                     ))}
@@ -168,10 +168,10 @@ export function Navbar({ minimal = false }: { minimal?: boolean }) {
                         onClick={() => setDiscoverOpen(false)}
                         className="flex items-start gap-3 px-4 py-2.5 hover:bg-neutral-50 transition-colors"
                       >
-                        <Icon icon={item.icon} className="text-neutral-400 text-lg mt-0.5 shrink-0" />
+                        <Icon icon={item.icon} className="text-neutral-500 text-lg mt-0.5 shrink-0" />
                         <div>
                           <p className="text-sm font-medium text-neutral-800">{item.label}</p>
-                          <p className="text-xs text-neutral-400 font-light">{item.desc}</p>
+                          <p className="text-xs text-neutral-500 font-light">{item.desc}</p>
                         </div>
                       </Link>
                     ))}
@@ -186,8 +186,9 @@ export function Navbar({ minimal = false }: { minimal?: boolean }) {
           <a
             href="tel:0759592934"
             className="flex items-center gap-1.5 text-sm font-medium text-neutral-500 hover:text-neutral-900 transition-colors"
+            aria-label={t("callUs")}
           >
-            <Icon icon="solar:phone-linear" className="text-base" />
+            <Icon icon="solar:phone-linear" className="text-base" aria-hidden="true" />
             <span className="hidden md:inline">07 59 59 29 34</span>
           </a>
           <LanguageSwitcher />
@@ -218,7 +219,7 @@ export function Navbar({ minimal = false }: { minimal?: boolean }) {
                       onClick={() => setMenuOpen(false)}
                       className="flex items-center gap-2.5 px-4 py-2.5 text-sm text-neutral-700 hover:bg-neutral-50 transition-colors"
                     >
-                      <Icon icon="solar:chart-square-linear" className="text-lg text-neutral-400" />
+                      <Icon icon="solar:chart-square-linear" className="text-lg text-neutral-500" />
                       {t("dashboard")}
                     </Link>
                     <Link
@@ -226,7 +227,7 @@ export function Navbar({ minimal = false }: { minimal?: boolean }) {
                       onClick={() => setMenuOpen(false)}
                       className="flex items-center gap-2.5 px-4 py-2.5 text-sm text-neutral-700 hover:bg-neutral-50 transition-colors"
                     >
-                      <Icon icon="solar:user-linear" className="text-lg text-neutral-400" />
+                      <Icon icon="solar:user-linear" className="text-lg text-neutral-500" />
                       {t("myProfile")}
                     </Link>
                     <Link
@@ -234,7 +235,7 @@ export function Navbar({ minimal = false }: { minimal?: boolean }) {
                       onClick={() => setMenuOpen(false)}
                       className="flex items-center gap-2.5 px-4 py-2.5 text-sm text-neutral-700 hover:bg-neutral-50 transition-colors"
                     >
-                      <Icon icon="solar:calendar-linear" className="text-lg text-neutral-400" />
+                      <Icon icon="solar:calendar-linear" className="text-lg text-neutral-500" />
                       {t("reservations")}
                     </Link>
                     <div className="border-t border-neutral-100 mt-1.5 pt-1.5">
