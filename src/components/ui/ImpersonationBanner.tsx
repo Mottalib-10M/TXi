@@ -8,7 +8,7 @@ import { useRouter } from "@/i18n/navigation";
 
 export function ImpersonationBanner() {
   const t = useTranslations("impersonation");
-  const { data: session } = useSession();
+  const { data: session, update } = useSession();
   const router = useRouter();
   const [loading, setLoading] = useState(false);
 
@@ -18,8 +18,8 @@ export function ImpersonationBanner() {
     setLoading(true);
     try {
       await fetch("/api/admin/stop-impersonation", { method: "POST" });
-      router.push("/admin/chauffeurs");
-      router.refresh();
+      await update();
+      window.location.href = "/admin/chauffeurs";
     } catch {
       setLoading(false);
     }
