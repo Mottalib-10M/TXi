@@ -8,9 +8,11 @@ const COOKIE_NAME = IS_PROD ? "__Secure-authjs.session-token" : "authjs.session-
 
 export async function GET(request: NextRequest) {
   const token = request.nextUrl.searchParams.get("token");
+  const locale = request.nextUrl.searchParams.get("locale") || "fr";
+  const prefix = locale === "fr" ? "" : `/${locale}`;
 
   if (!token) {
-    return NextResponse.redirect(new URL("/fr/connexion?error=invalid_token", request.url));
+    return NextResponse.redirect(new URL(`${prefix}/connexion?error=invalid_token`, request.url));
   }
 
   const record = await prisma.emailVerificationToken.findUnique({
@@ -22,7 +24,7 @@ export async function GET(request: NextRequest) {
     if (record) {
       await prisma.emailVerificationToken.delete({ where: { id: record.id } });
     }
-    return NextResponse.redirect(new URL("/fr/connexion?error=expired_token", request.url));
+    return NextResponse.redirect(new URL(`${prefix}/connexion?error=expired_token`, request.url));
   }
 
   // Mark email as verified on Driver or Organization and auto-login
@@ -64,7 +66,7 @@ export async function GET(request: NextRequest) {
       maxAge: 30 * 24 * 60 * 60,
     });
 
-    return NextResponse.redirect(new URL("/fr/dashboard", request.url));
+    return NextResponse.redirect(new URL(`${prefix}/dashboard`, request.url));
   }
 
   const org = await prisma.organization.findUnique({ where: { email: record.email } });
@@ -103,11 +105,11 @@ export async function GET(request: NextRequest) {
     });
 
     // Redirect based on org type: INDIVIDUAL goes to /dashboard, others to /org
-    const redirectPath = org.type === "INDIVIDUAL" ? "/fr/dashboard" : "/fr/org";
+    const redirectPath = org.type === "INDIVIDUAL" ? `${prefix}/dashboard` : `${prefix}/org`;
     return NextResponse.redirect(new URL(redirectPath, request.url));
   }
 
   // No account found — fallback
   await prisma.emailVerificationToken.delete({ where: { id: record.id } });
-  return NextResponse.redirect(new URL("/fr/connexion?verified=true", request.url));
+  return NextResponse.redirect(new URL(`${prefix}/connexion?verified=true`, request.url));
 }

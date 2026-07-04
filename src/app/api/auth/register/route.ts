@@ -74,7 +74,7 @@ async function sendVerificationEmail(email: string, name: string, locale: "fr" |
     });
 
     const baseUrl = process.env.NEXTAUTH_URL || "http://localhost:3000";
-    const verifyUrl = `${baseUrl}/api/auth/verify-email?token=${token}`;
+    const verifyUrl = `${baseUrl}/api/auth/verify-email?token=${token}&locale=${locale}`;
     const { subject, html } = buildVerificationEmail(name, verifyUrl, locale);
     await sendEmail({ to: email, subject, html });
   } catch (error) {

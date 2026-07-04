@@ -95,7 +95,12 @@ export async function middleware(req: NextRequest) {
   if (isAuthPage && token) {
     const locale = getLocale(pathname);
     const redirectParam = req.nextUrl.searchParams.get("redirect");
-    if (redirectParam && redirectParam.startsWith("/")) {
+    const blockedRedirects = ["/connexion", "/inscription"];
+    if (
+      redirectParam &&
+      redirectParam.startsWith("/") &&
+      !blockedRedirects.some((p) => redirectParam === p || redirectParam.startsWith(p + "/"))
+    ) {
       return NextResponse.redirect(new URL(`/${locale}${redirectParam}`, req.nextUrl.origin));
     }
     const dest = (token as { role?: string }).role === "organization" ? "/org" : "/dashboard";
