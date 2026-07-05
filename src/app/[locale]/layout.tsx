@@ -115,7 +115,7 @@ export default async function LocaleLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(siteJsonLd) }}
         />
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-2Z22GS67QY"
+          src="https://www.googletagmanager.com/gtag/js?id=G-YBY8MPEQJ5"
           strategy="lazyOnload"
         />
         <Script id="google-analytics" strategy="lazyOnload">
@@ -123,7 +123,7 @@ export default async function LocaleLayout({
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-2Z22GS67QY');
+            gtag('config', 'G-YBY8MPEQJ5');
           `}
         </Script>
         <Script
