@@ -268,7 +268,7 @@ export default function OrgDashboard() {
           >
             <div>
               <p className="text-xs text-blue-200">{t("yourCagnotte")}</p>
-              <p className="text-2xl font-bold mt-1">{stats.cagnotte.toFixed(2)} €</p>
+              <p className="text-2xl font-bold mt-1">{stats.cagnotte.toFixed(2).replace(".", ",")} €</p>
               <p className="text-xs text-blue-200 mt-1">{t("viewHistory")} →</p>
             </div>
             <Icon icon="solar:wallet-bold" className="text-4xl text-blue-300/50" />
@@ -349,7 +349,7 @@ export default function OrgDashboard() {
                 <p className="text-xs text-neutral-500">{t("amountCol")}</p>
               </div>
               <div className="bg-blue-50 rounded-xl p-3 text-center">
-                <p className="text-2xl font-bold text-blue-600">{monthlyTotals.cagnotte > 0 ? `${monthlyTotals.cagnotte.toFixed(2)} €` : "0 €"}</p>
+                <p className="text-2xl font-bold text-blue-600">{monthlyTotals.cagnotte > 0 ? `${monthlyTotals.cagnotte.toFixed(2).replace(".", ",")} €` : "0 €"}</p>
                 <p className="text-xs text-neutral-500">{t("cagnotteCol")}</p>
               </div>
             </div>

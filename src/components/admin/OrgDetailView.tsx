@@ -168,7 +168,7 @@ export function OrgDetailView({ org }: { org: OrgData }) {
             </div>
             <span className="text-xs text-neutral-500">{t("kpiWallet")}</span>
           </div>
-          <p className="text-2xl font-bold">{org.cagnotteBalance.toFixed(2)}<span className="text-sm ml-1">&euro;</span></p>
+          <p className="text-2xl font-bold">{org.cagnotteBalance.toFixed(2).replace(".", ",")}<span className="text-sm ml-1">&euro;</span></p>
         </div>
 
         <div className="bg-white border border-neutral-200 rounded-2xl p-5">
@@ -271,7 +271,7 @@ export function OrgDetailView({ org }: { org: OrgData }) {
               {org.cagnotteHistory.map((tx) => (
                 <div key={tx.id} className="flex items-center justify-between px-5 py-3">
                   <div>
-                    <p className="text-sm font-medium text-emerald-600">+{tx.amount.toFixed(2)}&euro;</p>
+                    <p className="text-sm font-medium text-emerald-600">+{tx.amount.toFixed(2).replace(".", ",")}&euro;</p>
                     <p className="text-xs text-neutral-400 font-mono">#{tx.bookingRef}</p>
                   </div>
                   <span className="text-xs text-neutral-400">
@@ -361,7 +361,7 @@ export function OrgDetailView({ org }: { org: OrgData }) {
                     </p>
                   )}
                   {booking.lockedPrice != null && (
-                    <p className="text-sm font-semibold">{booking.lockedPrice.toFixed(2)}&euro;</p>
+                    <p className="text-sm font-semibold">{booking.lockedPrice.toFixed(2).replace(".", ",")}&euro;</p>
                   )}
                   <p className="text-xs text-neutral-400">
                     {format(new Date(booking.createdAt), "dd MMM yyyy", { locale: dateFnsLocale })}

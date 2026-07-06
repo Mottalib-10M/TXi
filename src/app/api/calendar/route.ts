@@ -70,7 +70,7 @@ export async function GET(request: NextRequest) {
   ];
 
   if (booking.lockedPrice || booking.estimatedPrice) {
-    descriptionLines.push(`Prix: ${(booking.lockedPrice || booking.estimatedPrice)!.toFixed(2)}€`);
+    descriptionLines.push(`Prix: ${(booking.lockedPrice || booking.estimatedPrice)!.toFixed(2).replace(".", ",")} €`);
   }
 
   if (booking.clientComments) {

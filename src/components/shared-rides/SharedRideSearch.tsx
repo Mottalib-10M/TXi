@@ -729,7 +729,7 @@ export function SharedRideSearch({ departureId: controlledDepartureId }: { depar
                           </span>
                         )}
                         <span className="text-lg font-semibold text-neutral-900">
-                          {route.pricePerPassenger.toFixed(2)} €
+                          {route.pricePerPassenger.toFixed(2).replace(".", ",")} €
                           <span className="text-xs font-normal text-neutral-400 ml-0.5">{t("pricePerPerson")}</span>
                         </span>
                       </div>

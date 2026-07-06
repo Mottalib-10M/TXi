@@ -64,7 +64,7 @@ export default function CagnottePage() {
       {/* Balance card */}
       <div className="bg-gradient-to-br from-neutral-900 to-neutral-700 text-white rounded-2xl p-8 mb-8">
         <p className="text-sm text-neutral-300 mb-1">{t("availableBalance")}</p>
-        <p className="text-4xl font-bold">{balance.toFixed(2)} €</p>
+        <p className="text-4xl font-bold">{balance.toFixed(2).replace(".", ",")} €</p>
         <p className="text-xs text-neutral-400 mt-2">
           {t("accumulatedOn", { count: transactions.length })}
         </p>
@@ -93,7 +93,7 @@ export default function CagnottePage() {
                   </p>
                 </div>
                 <div className="text-right">
-                  <p className="text-sm font-semibold text-green-600">+{tx.amount.toFixed(2)} €</p>
+                  <p className="text-sm font-semibold text-green-600">+{tx.amount.toFixed(2).replace(".", ",")} €</p>
                   {tx.booking.lockedPrice && (
                     <p className="text-xs text-neutral-400">
                       {t("creditPercent", { price: tx.booking.lockedPrice.toFixed(0) })}

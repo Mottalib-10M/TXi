@@ -224,7 +224,7 @@ export function FareEstimator({
                 </span>
               )}
             </div>
-            <span className="text-lg font-semibold">{estimate.price.toFixed(2)} &euro;</span>
+            <span className="text-lg font-semibold">{estimate.price.toFixed(2).replace(".", ",")} &euro;</span>
           </div>
           <p className="text-[10px] text-neutral-400 font-light">
             {t("fareDisclaimer")}

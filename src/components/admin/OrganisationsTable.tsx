@@ -191,7 +191,7 @@ export function OrganisationsTable({ organisations }: { organisations: Organisat
                 <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-neutral-400">
                   <span className="flex items-center gap-1">
                     <Icon icon="solar:wallet-money-linear" />
-                    {t("wallet", { amount: org.cagnotteBalance.toFixed(2) })}
+                    {t("wallet", { amount: org.cagnotteBalance.toFixed(2).replace(".", ",") })}
                   </span>
                   <span className="flex items-center gap-1">
                     <Icon icon="solar:calendar-linear" />

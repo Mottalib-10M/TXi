@@ -302,9 +302,9 @@ export function DriverDetailView({ driver }: { driver: DriverData }) {
             <Icon icon="solar:tag-price-linear" className="text-neutral-400 shrink-0" />
             <span className="text-neutral-500">
               {t("pricingInfo", {
-                base: driver.baseFare.toFixed(2),
-                km: driver.pricePerKm.toFixed(2),
-                min: driver.minimumFare.toFixed(2),
+                base: driver.baseFare.toFixed(2).replace(".", ","),
+                km: driver.pricePerKm.toFixed(2).replace(".", ","),
+                min: driver.minimumFare.toFixed(2).replace(".", ","),
               })}
             </span>
           </div>
@@ -359,7 +359,7 @@ export function DriverDetailView({ driver }: { driver: DriverData }) {
                 </div>
                 <div className="text-right shrink-0 hidden sm:block">
                   {booking.lockedPrice != null && (
-                    <p className="text-sm font-semibold">{booking.lockedPrice.toFixed(2)}&euro;</p>
+                    <p className="text-sm font-semibold">{booking.lockedPrice.toFixed(2).replace(".", ",")}&euro;</p>
                   )}
                   <p className="text-xs text-neutral-400">
                     {format(new Date(booking.createdAt), "dd MMM yyyy", { locale: dateFnsLocale })}

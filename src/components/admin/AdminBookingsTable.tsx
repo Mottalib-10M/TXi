@@ -674,7 +674,7 @@ export function AdminBookingsTable({ bookings }: { bookings: Booking[] }) {
                               <div>
                                 <span className="text-neutral-400">{locale === "en" ? "Price" : "Prix"} : </span>
                                 <span className="text-neutral-700 font-medium">
-                                  {price != null ? `${price.toFixed(2)} €` : "—"}
+                                  {price != null ? `${price.toFixed(2).replace(".", ",")} €` : "—"}
                                 </span>
                               </div>
                             </div>
