@@ -138,7 +138,7 @@ export default async function LocaleLayout({
               t.src="https://www.clarity.ms/tag/"+i;
               y=l.getElementsByTagName(r)[0];
               y.parentNode.insertBefore(t,y);
-            })(window,document,"clarity","script","CLARITY_PROJECT_ID");
+            })(window,document,"clarity","script","xm1mwyb2kd");
             clarity("set","language","${locale}");
             clarity("set","page_path",window.location.pathname);
           `}
