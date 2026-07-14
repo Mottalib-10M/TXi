@@ -14,6 +14,19 @@ function extractCityFromAddress(address: string): string | null {
   return null;
 }
 
+function extractCityWithDept(address: string | null): string | null {
+  if (!address) return null;
+  const deptCode = getDepartmentCode(address);
+  // Try postal-code pattern first
+  const city = extractCityFromAddress(address);
+  // Fallback: first part before comma or dash (for driver zoneAddress like "Perpignan, France")
+  const fallbackCity = !city ? address.split(/\s*[-,]\s*/)[0].trim() : null;
+  const cityName = city || fallbackCity || null;
+  if (!cityName) return null;
+  if (deptCode) return `${cityName} (${deptCode})`;
+  return cityName;
+}
+
 export const dynamic = "force-dynamic";
 
 export default async function AdminOverviewPage() {
@@ -38,11 +51,11 @@ export default async function AdminOverviewPage() {
       recentlyActiveOrgs,
     ] = await Promise.all([
       prisma.driver.findMany({
-        select: { id: true, firstName: true, lastName: true, email: true, isActive: true, lastLoginAt: true, createdAt: true },
+        select: { id: true, firstName: true, lastName: true, email: true, isActive: true, lastLoginAt: true, createdAt: true, zoneAddress: true },
         orderBy: { createdAt: "desc" },
       }),
       prisma.organization.findMany({
-        select: { id: true, name: true, email: true, type: true, lastLoginAt: true, createdAt: true },
+        select: { id: true, name: true, email: true, type: true, lastLoginAt: true, createdAt: true, bookings: { orderBy: { createdAt: "desc" }, take: 1, select: { departureName: true } } },
         orderBy: { createdAt: "desc" },
       }),
       prisma.booking.findMany({
@@ -81,13 +94,13 @@ export default async function AdminOverviewPage() {
         where: { lastLoginAt: { not: null } },
         orderBy: { lastLoginAt: "desc" },
         take: 8,
-        select: { id: true, firstName: true, lastName: true, lastLoginAt: true },
+        select: { id: true, firstName: true, lastName: true, lastLoginAt: true, zoneAddress: true },
       }),
       prisma.organization.findMany({
         where: { lastLoginAt: { not: null } },
         orderBy: { lastLoginAt: "desc" },
         take: 8,
-        select: { id: true, name: true, lastLoginAt: true },
+        select: { id: true, name: true, lastLoginAt: true, bookings: { orderBy: { createdAt: "desc" }, take: 1, select: { departureName: true } } },
       }),
     ]);
 
@@ -113,6 +126,7 @@ export default async function AdminOverviewPage() {
         email: d.email,
         isActive: d.isActive,
         createdAt: d.createdAt.toISOString(),
+        city: extractCityWithDept(d.zoneAddress),
       })),
       recentOrgs: organizations.slice(0, 5).map((o: typeof organizations[number]) => ({
         id: o.id,
@@ -120,6 +134,7 @@ export default async function AdminOverviewPage() {
         email: o.email,
         type: o.type,
         createdAt: o.createdAt.toISOString(),
+        city: o.bookings?.[0]?.departureName ? extractCityWithDept(o.bookings[0].departureName) : null,
       })),
       chartBookings: bookings.map((b: typeof bookings[number]) => {
         const regionCode = getDepartmentCode(b.departureName) || getDepartmentFromCoords(b.departureLat, b.departureLng);
@@ -166,12 +181,14 @@ export default async function AdminOverviewPage() {
           id: d.id,
           name: `${d.firstName} ${d.lastName}`,
           at: d.lastLoginAt!.toISOString(),
+          city: extractCityWithDept(d.zoneAddress),
         })),
         ...recentlyActiveOrgs.map((o: typeof recentlyActiveOrgs[number]) => ({
           type: "org" as const,
           id: o.id,
           name: o.name,
           at: o.lastLoginAt!.toISOString(),
+          city: o.bookings?.[0]?.departureName ? extractCityWithDept(o.bookings[0].departureName) : null,
         })),
       ].sort((a, b) => new Date(b.at).getTime() - new Date(a.at).getTime()),
     };

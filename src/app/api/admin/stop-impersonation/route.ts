@@ -6,7 +6,13 @@ export async function POST() {
   const cookieName = isSecure ? "__Secure-authjs.session-token" : "authjs.session-token";
 
   const cookieStore = await cookies();
-  cookieStore.delete(cookieName);
+  cookieStore.set(cookieName, "", {
+    httpOnly: true,
+    secure: isSecure,
+    sameSite: "lax",
+    path: "/",
+    maxAge: 0,
+  });
 
   return NextResponse.json({ message: "Impersonation terminée" });
 }

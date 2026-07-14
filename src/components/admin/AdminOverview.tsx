@@ -15,8 +15,8 @@ interface OverviewData {
   totalBookings: number;
   bookingsByStatus: Record<string, number>;
   totalRevenue: number;
-  recentDrivers: { id: string; firstName: string; lastName: string; email: string; isActive: boolean; createdAt: string }[];
-  recentOrgs: { id: string; name: string; email: string; type: string; createdAt: string }[];
+  recentDrivers: { id: string; firstName: string; lastName: string; email: string; isActive: boolean; createdAt: string; city: string | null }[];
+  recentOrgs: { id: string; name: string; email: string; type: string; createdAt: string; city: string | null }[];
   chartBookings: {
     hasDriver: boolean;
     status: string;
@@ -58,6 +58,7 @@ interface OverviewData {
     id: string;
     name: string;
     at: string;
+    city: string | null;
   }[];
 }
 
@@ -379,7 +380,10 @@ export function AdminOverview({ data }: { data: OverviewData }) {
                   </div>
                   <div className="min-w-0 flex-1">
                     <p className="text-sm font-medium truncate">{item.name}</p>
-                    <p className="text-xs text-neutral-400">{t("loggedIn")}</p>
+                    <p className="text-xs text-neutral-400">
+                      {t("loggedIn")}
+                      {item.city && <span className="ml-1 text-blue-500">· {item.city}</span>}
+                    </p>
                   </div>
                   <span className="text-xs text-neutral-400 shrink-0">
                     {formatDistanceToNow(new Date(item.at), { addSuffix: true, locale: locale === "en" ? enUS : fr })}
@@ -416,7 +420,10 @@ export function AdminOverview({ data }: { data: OverviewData }) {
                   </div>
                   <div className="min-w-0 flex-1">
                     <p className="text-sm font-medium truncate">{item.name}</p>
-                    <p className="text-xs text-neutral-400">{t("loggedIn")}</p>
+                    <p className="text-xs text-neutral-400">
+                      {t("loggedIn")}
+                      {item.city && <span className="ml-1 text-violet-500">· {item.city}</span>}
+                    </p>
                   </div>
                   <span className="text-xs text-neutral-400 shrink-0">
                     {formatDistanceToNow(new Date(item.at), { addSuffix: true, locale: locale === "en" ? enUS : fr })}
@@ -455,7 +462,10 @@ export function AdminOverview({ data }: { data: OverviewData }) {
                     {driver.firstName[0]}{driver.lastName[0]}
                   </div>
                   <div className="min-w-0 flex-1">
-                    <p className="text-sm font-medium truncate">{driver.firstName} {driver.lastName}</p>
+                    <div className="flex items-center gap-2">
+                      <p className="text-sm font-medium truncate">{driver.firstName} {driver.lastName}</p>
+                      {driver.city && <span className="text-[10px] text-blue-500 shrink-0">{driver.city}</span>}
+                    </div>
                     <p className="text-xs text-neutral-400 truncate">{driver.email}</p>
                   </div>
                   <div className="flex items-center gap-2 shrink-0">
@@ -500,6 +510,7 @@ export function AdminOverview({ data }: { data: OverviewData }) {
                       <span className={`text-[10px] px-1.5 py-0.5 rounded-full font-medium ${orgTypeConfig[org.type]?.color || ""}`}>
                         {orgTypeConfig[org.type]?.label || org.type}
                       </span>
+                      {org.city && <span className="text-[10px] text-violet-500">{org.city}</span>}
                     </div>
                     <p className="text-xs text-neutral-400 truncate">{org.email}</p>
                   </div>
