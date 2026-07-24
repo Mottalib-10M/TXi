@@ -114,6 +114,25 @@ export default async function LocaleLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(siteJsonLd) }}
         />
+      </head>
+      <body
+        className={`${inter.className} bg-white text-neutral-900 antialiased selection:bg-neutral-200 selection:text-black overflow-x-hidden`}
+      >
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[9999] focus:rounded-lg focus:bg-neutral-950 focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white focus:shadow-lg"
+        >
+          {locale === "en" ? "Skip to content" : "Aller au contenu"}
+        </a>
+        <NextIntlClientProvider messages={messages}>
+          <Providers>
+            <ImpersonationBanner />
+            <div id="main-content" />
+            {children}
+            <Toaster position="top-right" richColors />
+            <SpeedInsights />
+          </Providers>
+        </NextIntlClientProvider>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-YBY8MPEQJ5"
           strategy="lazyOnload"
@@ -143,25 +162,6 @@ export default async function LocaleLayout({
             clarity("set","page_path",window.location.pathname);
           `}
         </Script>
-      </head>
-      <body
-        className={`${inter.className} bg-white text-neutral-900 antialiased selection:bg-neutral-200 selection:text-black overflow-x-hidden`}
-      >
-        <a
-          href="#main-content"
-          className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[9999] focus:rounded-lg focus:bg-neutral-950 focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white focus:shadow-lg"
-        >
-          {locale === "en" ? "Skip to content" : "Aller au contenu"}
-        </a>
-        <NextIntlClientProvider messages={messages}>
-          <Providers>
-            <ImpersonationBanner />
-            <div id="main-content" />
-            {children}
-            <Toaster position="top-right" richColors />
-            <SpeedInsights />
-          </Providers>
-        </NextIntlClientProvider>
       </body>
     </html>
   );
