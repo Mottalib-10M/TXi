@@ -130,7 +130,7 @@ export default async function LocaleLayout({
           src="https://t.contentsquare.net/uxa/57182d25bfaa1.js"
           strategy="lazyOnload"
         />
-        <Script id="microsoft-clarity" strategy="lazyOnload">
+        <Script id="microsoft-clarity" strategy="afterInteractive">
           {`
             (function(c,l,a,r,i,t,y){
               c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
