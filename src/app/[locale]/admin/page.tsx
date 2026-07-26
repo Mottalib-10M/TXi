@@ -47,8 +47,6 @@ export default async function AdminOverviewPage() {
       orgsActive24h,
       orgsActive7d,
       orgsActive30d,
-      recentlyActiveDrivers,
-      recentlyActiveOrgs,
     ] = await Promise.all([
       prisma.driver.findMany({
         select: { id: true, firstName: true, lastName: true, email: true, isActive: true, lastLoginAt: true, createdAt: true, zoneAddress: true, zoneLat: true, zoneLng: true },
@@ -90,18 +88,6 @@ export default async function AdminOverviewPage() {
       prisma.organization.count({ where: { lastLoginAt: { gte: ago24h } } }),
       prisma.organization.count({ where: { lastLoginAt: { gte: ago7d } } }),
       prisma.organization.count({ where: { lastLoginAt: { gte: ago30d } } }),
-      prisma.driver.findMany({
-        where: { lastLoginAt: { not: null } },
-        orderBy: { lastLoginAt: "desc" },
-        take: 8,
-        select: { id: true, firstName: true, lastName: true, lastLoginAt: true, zoneAddress: true, zoneLat: true, zoneLng: true },
-      }),
-      prisma.organization.findMany({
-        where: { lastLoginAt: { not: null } },
-        orderBy: { lastLoginAt: "desc" },
-        take: 8,
-        select: { id: true, name: true, lastLoginAt: true, address: true, bookings: { orderBy: { createdAt: "desc" }, take: 1, select: { departureName: true } } },
-      }),
     ]);
 
     const activeDrivers = drivers.filter((d: typeof drivers[number]) => d.isActive).length;
@@ -119,23 +105,6 @@ export default async function AdminOverviewPage() {
       totalBookings: bookings.length,
       bookingsByStatus,
       totalRevenue: Number(revenue._sum.lockedPrice) || 0,
-      recentDrivers: drivers.slice(0, 5).map((d: typeof drivers[number]) => ({
-        id: d.id,
-        firstName: d.firstName,
-        lastName: d.lastName,
-        email: d.email,
-        isActive: d.isActive,
-        createdAt: d.createdAt.toISOString(),
-        city: extractCityWithDept(d.zoneAddress) || (d.zoneLat && d.zoneLng ? (() => { const code = getDepartmentFromCoords(d.zoneLat!, d.zoneLng!); return code ? (DEPARTMENT_NAMES[code] || null) : null; })() : null),
-      })),
-      recentOrgs: organizations.slice(0, 5).map((o: typeof organizations[number]) => ({
-        id: o.id,
-        name: o.name,
-        email: o.email,
-        type: o.type,
-        createdAt: o.createdAt.toISOString(),
-        city: extractCityWithDept(o.bookings?.[0]?.departureName ?? null) || extractCityWithDept(o.address ?? null),
-      })),
       chartBookings: bookings.map((b: typeof bookings[number]) => {
         const regionCode = getDepartmentCode(b.departureName) || getDepartmentFromCoords(b.departureLat, b.departureLng);
         return {
@@ -148,7 +117,7 @@ export default async function AdminOverviewPage() {
           price: b.lockedPrice ? Number(b.lockedPrice) : (b.estimatedPrice ? Number(b.estimatedPrice) : 0),
         };
       }),
-      recentBookings: bookings.slice(0, 5).map((b: typeof bookings[number]) => ({
+      recentBookings: bookings.slice(0, 30).map((b: typeof bookings[number]) => ({
         id: b.id,
         reference: b.reference,
         clientName: b.clientName,
@@ -176,21 +145,35 @@ export default async function AdminOverviewPage() {
         orgs30d: orgsActive30d,
       },
       recentActivity: [
-        ...recentlyActiveDrivers.map((d: typeof recentlyActiveDrivers[number]) => ({
-          type: "driver" as const,
-          id: d.id,
-          name: `${d.firstName} ${d.lastName}`,
-          at: d.lastLoginAt!.toISOString(),
-          city: extractCityWithDept(d.zoneAddress) || (d.zoneLat && d.zoneLng ? (() => { const code = getDepartmentFromCoords(d.zoneLat!, d.zoneLng!); return code ? (DEPARTMENT_NAMES[code] || null) : null; })() : null),
-        })),
-        ...recentlyActiveOrgs.map((o: typeof recentlyActiveOrgs[number]) => ({
-          type: "org" as const,
-          id: o.id,
-          name: o.name,
-          at: o.lastLoginAt!.toISOString(),
-          city: extractCityWithDept(o.bookings?.[0]?.departureName ?? null) || extractCityWithDept(o.address ?? null),
-        })),
-      ].sort((a, b) => new Date(b.at).getTime() - new Date(a.at).getTime()),
+        ...[...drivers]
+          .sort((a, b) => (b.lastLoginAt || b.createdAt).getTime() - (a.lastLoginAt || a.createdAt).getTime())
+          .slice(0, 10)
+          .map((d: typeof drivers[number]) => ({
+            type: "driver" as const,
+            id: d.id,
+            name: `${d.firstName} ${d.lastName}`,
+            email: d.email,
+            at: (d.lastLoginAt || d.createdAt).toISOString(),
+            hasLoggedIn: !!d.lastLoginAt,
+            isNew: d.createdAt.getTime() >= ago30d.getTime(),
+            isActive: d.isActive,
+            city: extractCityWithDept(d.zoneAddress) || (d.zoneLat && d.zoneLng ? (() => { const code = getDepartmentFromCoords(d.zoneLat!, d.zoneLng!); return code ? (DEPARTMENT_NAMES[code] || null) : null; })() : null),
+          })),
+        ...[...organizations]
+          .sort((a, b) => (b.lastLoginAt || b.createdAt).getTime() - (a.lastLoginAt || a.createdAt).getTime())
+          .slice(0, 10)
+          .map((o: typeof organizations[number]) => ({
+            type: "org" as const,
+            id: o.id,
+            name: o.name,
+            email: o.email,
+            at: (o.lastLoginAt || o.createdAt).toISOString(),
+            hasLoggedIn: !!o.lastLoginAt,
+            isNew: o.createdAt.getTime() >= ago30d.getTime(),
+            orgType: o.type,
+            city: extractCityWithDept(o.bookings?.[0]?.departureName ?? null) || extractCityWithDept(o.address ?? null),
+          })),
+      ],
     };
 
     return <AdminOverview data={data} />;

@@ -15,8 +15,6 @@ interface OverviewData {
   totalBookings: number;
   bookingsByStatus: Record<string, number>;
   totalRevenue: number;
-  recentDrivers: { id: string; firstName: string; lastName: string; email: string; isActive: boolean; createdAt: string; city: string | null }[];
-  recentOrgs: { id: string; name: string; email: string; type: string; createdAt: string; city: string | null }[];
   chartBookings: {
     hasDriver: boolean;
     status: string;
@@ -57,7 +55,12 @@ interface OverviewData {
     type: "driver" | "org";
     id: string;
     name: string;
+    email: string;
     at: string;
+    hasLoggedIn: boolean;
+    isNew: boolean;
+    isActive?: boolean;
+    orgType?: string;
     city: string | null;
   }[];
 }
@@ -77,6 +80,9 @@ export function AdminOverview({ data }: { data: OverviewData }) {
 
   const [chartPeriod, setChartPeriod] = useState<"24h" | "7d" | "30d">("24h");
   const [chartGroupBy, setChartGroupBy] = useState<"city" | "department">("city");
+  const [bookingsVisible, setBookingsVisible] = useState(5);
+  const [driversVisible, setDriversVisible] = useState(5);
+  const [clientsVisible, setClientsVisible] = useState(5);
 
   const chartData = useMemo(() => {
     const now = new Date();
@@ -352,184 +358,15 @@ export function AdminOverview({ data }: { data: OverviewData }) {
         </div>
       </div>
 
-      {/* Recent activity — 2 columns: Chauffeurs + Clients */}
-      <div className="grid lg:grid-cols-2 gap-6 mb-8">
-        {/* Recent drivers activity */}
-        <div className="bg-white border border-neutral-200 rounded-2xl overflow-hidden">
-          <div className="px-5 py-4 border-b border-neutral-100">
-            <div className="flex items-center gap-2">
-              <Icon icon="solar:user-hands-linear" className="text-blue-500" />
-              <h3 className="font-semibold text-sm">{locale === "en" ? "Drivers" : "Chauffeurs"}</h3>
-            </div>
-          </div>
-          {data.recentActivity.filter((i) => i.type === "driver").length === 0 ? (
-            <div className="px-5 py-8 text-center">
-              <Icon icon="solar:user-hands-linear" className="text-3xl text-neutral-200 mx-auto mb-2" />
-              <p className="text-sm text-neutral-400 font-light">{t("noActivity")}</p>
-            </div>
-          ) : (
-            <div className="divide-y divide-neutral-100">
-              {data.recentActivity.filter((i) => i.type === "driver").map((item) => (
-                <Link
-                  key={`driver-${item.id}`}
-                  href={`/admin/chauffeurs/${item.id}`}
-                  className="flex items-center gap-3 px-5 py-3 hover:bg-neutral-50 transition-colors"
-                >
-                  <div className="w-8 h-8 rounded-full flex items-center justify-center text-xs font-semibold shrink-0 bg-blue-50 text-blue-600">
-                    <Icon icon="solar:user-hands-linear" className="text-sm" />
-                  </div>
-                  <div className="min-w-0 flex-1">
-                    <p className="text-sm font-medium truncate">{item.name}</p>
-                    <p className="text-xs text-neutral-400">
-                      {t("loggedIn")}
-                      {item.city && <span className="ml-1 text-blue-500">· {item.city}</span>}
-                    </p>
-                  </div>
-                  <span className="text-xs text-neutral-400 shrink-0">
-                    {formatDistanceToNow(new Date(item.at), { addSuffix: true, locale: locale === "en" ? enUS : fr })}
-                  </span>
-                </Link>
-              ))}
-            </div>
-          )}
-        </div>
-
-        {/* Recent clients activity */}
-        <div className="bg-white border border-neutral-200 rounded-2xl overflow-hidden">
-          <div className="px-5 py-4 border-b border-neutral-100">
-            <div className="flex items-center gap-2">
-              <Icon icon="solar:buildings-2-linear" className="text-violet-500" />
-              <h3 className="font-semibold text-sm">{locale === "en" ? "Recently active clients" : "Clients actifs récemment"}</h3>
-            </div>
-          </div>
-          {data.recentActivity.filter((i) => i.type === "org").length === 0 ? (
-            <div className="px-5 py-8 text-center">
-              <Icon icon="solar:buildings-2-linear" className="text-3xl text-neutral-200 mx-auto mb-2" />
-              <p className="text-sm text-neutral-400 font-light">{t("noActivity")}</p>
-            </div>
-          ) : (
-            <div className="divide-y divide-neutral-100">
-              {data.recentActivity.filter((i) => i.type === "org").map((item) => (
-                <Link
-                  key={`org-${item.id}`}
-                  href={`/admin/organisations/${item.id}`}
-                  className="flex items-center gap-3 px-5 py-3 hover:bg-neutral-50 transition-colors"
-                >
-                  <div className="w-8 h-8 rounded-full flex items-center justify-center text-xs font-semibold shrink-0 bg-violet-50 text-violet-600">
-                    <Icon icon="solar:buildings-2-linear" className="text-sm" />
-                  </div>
-                  <div className="min-w-0 flex-1">
-                    <p className="text-sm font-medium truncate">{item.name}</p>
-                    <p className="text-xs text-neutral-400">
-                      {t("loggedIn")}
-                      {item.city && <span className="ml-1 text-violet-500">· {item.city}</span>}
-                    </p>
-                  </div>
-                  <span className="text-xs text-neutral-400 shrink-0">
-                    {formatDistanceToNow(new Date(item.at), { addSuffix: true, locale: locale === "en" ? enUS : fr })}
-                  </span>
-                </Link>
-              ))}
-            </div>
-          )}
-        </div>
-      </div>
-
-      {/* Recent registrations */}
-      <div className="grid lg:grid-cols-2 gap-6 mb-8">
-        {/* Recent drivers */}
-        <div className="bg-white border border-neutral-200 rounded-2xl overflow-hidden">
-          <div className="flex items-center justify-between px-5 py-4 border-b border-neutral-100">
-            <div className="flex items-center gap-2">
-              <Icon icon="solar:user-hands-linear" className="text-blue-500" />
-              <h2 className="font-semibold text-sm">{t("recentDrivers")}</h2>
-            </div>
-            <Link href="/admin/chauffeurs" className="text-xs text-neutral-500 hover:text-neutral-900 transition-colors flex items-center gap-1">
-              {tc("seeAll")}
-              <Icon icon="solar:arrow-right-linear" className="text-xs" />
-            </Link>
-          </div>
-          <div className="divide-y divide-neutral-100">
-            {data.recentDrivers.length === 0 ? (
-              <div className="px-5 py-8 text-center">
-                <Icon icon="solar:user-cross-linear" className="text-3xl text-neutral-200 mx-auto mb-2" />
-                <p className="text-sm text-neutral-400 font-light">{t("noDrivers")}</p>
-              </div>
-            ) : (
-              data.recentDrivers.map((driver) => (
-                <div key={driver.id} className="flex items-center gap-3 px-5 py-3 hover:bg-neutral-50 transition-colors">
-                  <div className="w-8 h-8 bg-blue-50 rounded-full flex items-center justify-center text-xs font-semibold text-blue-600 shrink-0">
-                    {driver.firstName[0]}{driver.lastName[0]}
-                  </div>
-                  <div className="min-w-0 flex-1">
-                    <div className="flex items-center gap-2">
-                      <p className="text-sm font-medium truncate">{driver.firstName} {driver.lastName}</p>
-                      {driver.city && <span className="text-[10px] text-blue-500 shrink-0">{driver.city}</span>}
-                    </div>
-                    <p className="text-xs text-neutral-400 truncate">{driver.email}</p>
-                  </div>
-                  <div className="flex items-center gap-2 shrink-0">
-                    <span className={`w-2 h-2 rounded-full ${driver.isActive ? "bg-green-500" : "bg-neutral-300"}`} />
-                    <span className="text-xs text-neutral-400 hidden sm:inline">
-                      {format(new Date(driver.createdAt), "dd MMM", { locale: locale === "en" ? enUS : fr })}
-                    </span>
-                  </div>
-                </div>
-              ))
-            )}
-          </div>
-        </div>
-
-        {/* Recent orgs */}
-        <div className="bg-white border border-neutral-200 rounded-2xl overflow-hidden">
-          <div className="flex items-center justify-between px-5 py-4 border-b border-neutral-100">
-            <div className="flex items-center gap-2">
-              <Icon icon="solar:buildings-2-linear" className="text-violet-500" />
-              <h2 className="font-semibold text-sm">{t("recentOrgs")}</h2>
-            </div>
-            <Link href="/admin/organisations" className="text-xs text-neutral-500 hover:text-neutral-900 transition-colors flex items-center gap-1">
-              {tc("seeAll")}
-              <Icon icon="solar:arrow-right-linear" className="text-xs" />
-            </Link>
-          </div>
-          <div className="divide-y divide-neutral-100">
-            {data.recentOrgs.length === 0 ? (
-              <div className="px-5 py-8 text-center">
-                <Icon icon="solar:buildings-2-linear" className="text-3xl text-neutral-200 mx-auto mb-2" />
-                <p className="text-sm text-neutral-400 font-light">{t("noOrgs")}</p>
-              </div>
-            ) : (
-              data.recentOrgs.map((org) => (
-                <div key={org.id} className="flex items-center gap-3 px-5 py-3 hover:bg-neutral-50 transition-colors">
-                  <div className="w-8 h-8 bg-violet-50 rounded-full flex items-center justify-center text-xs font-semibold text-violet-600 shrink-0">
-                    {org.name.slice(0, 2).toUpperCase()}
-                  </div>
-                  <div className="min-w-0 flex-1">
-                    <div className="flex items-center gap-2">
-                      <p className="text-sm font-medium truncate">{org.name}</p>
-                      <span className={`text-[10px] px-1.5 py-0.5 rounded-full font-medium ${orgTypeConfig[org.type]?.color || ""}`}>
-                        {orgTypeConfig[org.type]?.label || org.type}
-                      </span>
-                      {org.city && <span className="text-[10px] text-violet-500">{org.city}</span>}
-                    </div>
-                    <p className="text-xs text-neutral-400 truncate">{org.email}</p>
-                  </div>
-                  <span className="text-xs text-neutral-400 shrink-0 hidden sm:inline">
-                    {format(new Date(org.createdAt), "dd MMM", { locale: locale === "en" ? enUS : fr })}
-                  </span>
-                </div>
-              ))
-            )}
-          </div>
-        </div>
-      </div>
-
-      {/* Recent bookings - detailed */}
-      <div className="bg-white border border-neutral-200 rounded-2xl overflow-hidden">
+      {/* Recent bookings - paginated */}
+      <div className="bg-white border border-neutral-200 rounded-2xl overflow-hidden mb-8">
         <div className="flex items-center justify-between px-5 py-4 border-b border-neutral-100">
           <div className="flex items-center gap-2">
             <Icon icon="solar:calendar-linear" className="text-amber-500" />
-            <h2 className="font-semibold text-sm">{locale === "en" ? "Last 5 bookings" : "5 dernières réservations"}</h2>
+            <h2 className="font-semibold text-sm">
+              {locale === "en" ? "Recent bookings" : "Dernières réservations"}
+              <span className="ml-1.5 text-neutral-400 font-normal">({data.recentBookings.length})</span>
+            </h2>
           </div>
           <Link href="/admin/reservations" className="text-xs text-neutral-500 hover:text-neutral-900 transition-colors flex items-center gap-1">
             {tc("seeAll")}
@@ -559,7 +396,7 @@ export function AdminOverview({ data }: { data: OverviewData }) {
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-neutral-100">
-                  {data.recentBookings.map((booking) => {
+                  {data.recentBookings.slice(0, bookingsVisible).map((booking) => {
                     const price = booking.lockedPrice ?? booking.estimatedPrice;
                     const dateFnsLoc = locale === "en" ? enUS : fr;
                     return (
@@ -617,7 +454,7 @@ export function AdminOverview({ data }: { data: OverviewData }) {
             </div>
             {/* Mobile cards */}
             <div className="lg:hidden divide-y divide-neutral-100">
-              {data.recentBookings.map((booking) => {
+              {data.recentBookings.slice(0, bookingsVisible).map((booking) => {
                 const price = booking.lockedPrice ?? booking.estimatedPrice;
                 const dateFnsLoc = locale === "en" ? enUS : fr;
                 return (
@@ -657,9 +494,170 @@ export function AdminOverview({ data }: { data: OverviewData }) {
                 );
               })}
             </div>
+            {/* Load more button */}
+            {bookingsVisible < data.recentBookings.length && (
+              <div className="px-5 py-3 border-t border-neutral-100">
+                <button
+                  onClick={() => setBookingsVisible((prev) => prev + 5)}
+                  className="w-full text-xs text-neutral-500 hover:text-neutral-900 font-medium py-2 rounded-lg hover:bg-neutral-50 transition-colors flex items-center justify-center gap-1.5"
+                >
+                  <Icon icon="solar:alt-arrow-down-linear" className="text-sm" />
+                  {locale === "en"
+                    ? `Show more (${Math.min(5, data.recentBookings.length - bookingsVisible)} more)`
+                    : `Voir plus (${Math.min(5, data.recentBookings.length - bookingsVisible)} suivantes)`}
+                </button>
+              </div>
+            )}
           </>
         )}
       </div>
+
+      {/* Unified activity — 2 columns: Chauffeurs + Clients */}
+      <div className="grid lg:grid-cols-2 gap-6 mb-8">
+        {/* Drivers */}
+        {(() => {
+          const driverItems = data.recentActivity.filter((i) => i.type === "driver");
+          return (
+            <div className="bg-white border border-neutral-200 rounded-2xl overflow-hidden">
+              <div className="flex items-center justify-between px-5 py-4 border-b border-neutral-100">
+                <div className="flex items-center gap-2">
+                  <Icon icon="solar:user-hands-linear" className="text-blue-500" />
+                  <h3 className="font-semibold text-sm">{locale === "en" ? "Drivers" : "Chauffeurs"}</h3>
+                </div>
+                <Link href="/admin/chauffeurs" className="text-xs text-neutral-500 hover:text-neutral-900 transition-colors flex items-center gap-1">
+                  {tc("seeAll")}
+                  <Icon icon="solar:arrow-right-linear" className="text-xs" />
+                </Link>
+              </div>
+              {driverItems.length === 0 ? (
+                <div className="px-5 py-8 text-center">
+                  <Icon icon="solar:user-hands-linear" className="text-3xl text-neutral-200 mx-auto mb-2" />
+                  <p className="text-sm text-neutral-400 font-light">{t("noActivity")}</p>
+                </div>
+              ) : (
+                <>
+                  <div className="divide-y divide-neutral-100">
+                    {driverItems.slice(0, driversVisible).map((item) => (
+                      <Link
+                        key={`driver-${item.id}`}
+                        href={`/admin/chauffeurs/${item.id}`}
+                        className="flex items-center gap-3 px-5 py-3 hover:bg-neutral-50 transition-colors"
+                      >
+                        <div className="w-8 h-8 rounded-full flex items-center justify-center text-xs font-semibold shrink-0 bg-blue-50 text-blue-600">
+                          <Icon icon="solar:user-hands-linear" className="text-sm" />
+                        </div>
+                        <div className="min-w-0 flex-1">
+                          <div className="flex items-center gap-1.5">
+                            <p className="text-sm font-medium truncate">{item.name}</p>
+                            {item.isNew && (
+                              <span className="text-[9px] px-1.5 py-0.5 rounded-full bg-green-50 text-green-600 font-semibold shrink-0">Nouveau</span>
+                            )}
+                          </div>
+                          <p className="text-xs text-neutral-400">
+                            {item.hasLoggedIn ? t("loggedIn") : (locale === "en" ? "Registered" : "Inscrit")}
+                            {item.city && <span className="ml-1 text-blue-500">· {item.city}</span>}
+                          </p>
+                        </div>
+                        <span className="text-xs text-neutral-400 shrink-0">
+                          {formatDistanceToNow(new Date(item.at), { addSuffix: true, locale: locale === "en" ? enUS : fr })}
+                        </span>
+                      </Link>
+                    ))}
+                  </div>
+                  {driversVisible < driverItems.length && (
+                    <div className="px-5 py-3 border-t border-neutral-100">
+                      <button
+                        onClick={() => setDriversVisible((prev) => prev + 5)}
+                        className="w-full text-xs text-neutral-500 hover:text-neutral-900 font-medium py-2 rounded-lg hover:bg-neutral-50 transition-colors flex items-center justify-center gap-1.5"
+                      >
+                        <Icon icon="solar:alt-arrow-down-linear" className="text-sm" />
+                        {locale === "en"
+                          ? `Show more (${Math.min(5, driverItems.length - driversVisible)} more)`
+                          : `Voir plus (${Math.min(5, driverItems.length - driversVisible)} suivants)`}
+                      </button>
+                    </div>
+                  )}
+                </>
+              )}
+            </div>
+          );
+        })()}
+
+        {/* Clients */}
+        {(() => {
+          const orgItems = data.recentActivity.filter((i) => i.type === "org");
+          return (
+            <div className="bg-white border border-neutral-200 rounded-2xl overflow-hidden">
+              <div className="flex items-center justify-between px-5 py-4 border-b border-neutral-100">
+                <div className="flex items-center gap-2">
+                  <Icon icon="solar:buildings-2-linear" className="text-violet-500" />
+                  <h3 className="font-semibold text-sm">{locale === "en" ? "Clients" : "Clients"}</h3>
+                </div>
+                <Link href="/admin/organisations" className="text-xs text-neutral-500 hover:text-neutral-900 transition-colors flex items-center gap-1">
+                  {tc("seeAll")}
+                  <Icon icon="solar:arrow-right-linear" className="text-xs" />
+                </Link>
+              </div>
+              {orgItems.length === 0 ? (
+                <div className="px-5 py-8 text-center">
+                  <Icon icon="solar:buildings-2-linear" className="text-3xl text-neutral-200 mx-auto mb-2" />
+                  <p className="text-sm text-neutral-400 font-light">{t("noActivity")}</p>
+                </div>
+              ) : (
+                <>
+                  <div className="divide-y divide-neutral-100">
+                    {orgItems.slice(0, clientsVisible).map((item) => (
+                      <Link
+                        key={`org-${item.id}`}
+                        href={`/admin/organisations/${item.id}`}
+                        className="flex items-center gap-3 px-5 py-3 hover:bg-neutral-50 transition-colors"
+                      >
+                        <div className="w-8 h-8 rounded-full flex items-center justify-center text-xs font-semibold shrink-0 bg-violet-50 text-violet-600">
+                          {item.name.slice(0, 2).toUpperCase()}
+                        </div>
+                        <div className="min-w-0 flex-1">
+                          <div className="flex items-center gap-1.5">
+                            <p className="text-sm font-medium truncate">{item.name}</p>
+                            {item.orgType && (
+                              <span className={`text-[9px] px-1.5 py-0.5 rounded-full font-medium shrink-0 ${orgTypeConfig[item.orgType]?.color || "bg-neutral-100 text-neutral-500"}`}>
+                                {orgTypeConfig[item.orgType]?.label || item.orgType}
+                              </span>
+                            )}
+                            {item.isNew && (
+                              <span className="text-[9px] px-1.5 py-0.5 rounded-full bg-green-50 text-green-600 font-semibold shrink-0">Nouveau</span>
+                            )}
+                          </div>
+                          <p className="text-xs text-neutral-400">
+                            {item.hasLoggedIn ? t("loggedIn") : (locale === "en" ? "Registered" : "Inscrit")}
+                            {item.city && <span className="ml-1 text-violet-500">· {item.city}</span>}
+                          </p>
+                        </div>
+                        <span className="text-xs text-neutral-400 shrink-0">
+                          {formatDistanceToNow(new Date(item.at), { addSuffix: true, locale: locale === "en" ? enUS : fr })}
+                        </span>
+                      </Link>
+                    ))}
+                  </div>
+                  {clientsVisible < orgItems.length && (
+                    <div className="px-5 py-3 border-t border-neutral-100">
+                      <button
+                        onClick={() => setClientsVisible((prev) => prev + 5)}
+                        className="w-full text-xs text-neutral-500 hover:text-neutral-900 font-medium py-2 rounded-lg hover:bg-neutral-50 transition-colors flex items-center justify-center gap-1.5"
+                      >
+                        <Icon icon="solar:alt-arrow-down-linear" className="text-sm" />
+                        {locale === "en"
+                          ? `Show more (${Math.min(5, orgItems.length - clientsVisible)} more)`
+                          : `Voir plus (${Math.min(5, orgItems.length - clientsVisible)} suivants)`}
+                      </button>
+                    </div>
+                  )}
+                </>
+              )}
+            </div>
+          );
+        })()}
+      </div>
+
     </div>
   );
 }
