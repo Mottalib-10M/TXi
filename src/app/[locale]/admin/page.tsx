@@ -51,11 +51,11 @@ export default async function AdminOverviewPage() {
       recentlyActiveOrgs,
     ] = await Promise.all([
       prisma.driver.findMany({
-        select: { id: true, firstName: true, lastName: true, email: true, isActive: true, lastLoginAt: true, createdAt: true, zoneAddress: true },
+        select: { id: true, firstName: true, lastName: true, email: true, isActive: true, lastLoginAt: true, createdAt: true, zoneAddress: true, zoneLat: true, zoneLng: true },
         orderBy: { createdAt: "desc" },
       }),
       prisma.organization.findMany({
-        select: { id: true, name: true, email: true, type: true, lastLoginAt: true, createdAt: true, bookings: { orderBy: { createdAt: "desc" }, take: 1, select: { departureName: true } } },
+        select: { id: true, name: true, email: true, type: true, lastLoginAt: true, createdAt: true, address: true, bookings: { orderBy: { createdAt: "desc" }, take: 1, select: { departureName: true } } },
         orderBy: { createdAt: "desc" },
       }),
       prisma.booking.findMany({
@@ -94,13 +94,13 @@ export default async function AdminOverviewPage() {
         where: { lastLoginAt: { not: null } },
         orderBy: { lastLoginAt: "desc" },
         take: 8,
-        select: { id: true, firstName: true, lastName: true, lastLoginAt: true, zoneAddress: true },
+        select: { id: true, firstName: true, lastName: true, lastLoginAt: true, zoneAddress: true, zoneLat: true, zoneLng: true },
       }),
       prisma.organization.findMany({
         where: { lastLoginAt: { not: null } },
         orderBy: { lastLoginAt: "desc" },
         take: 8,
-        select: { id: true, name: true, lastLoginAt: true, bookings: { orderBy: { createdAt: "desc" }, take: 1, select: { departureName: true } } },
+        select: { id: true, name: true, lastLoginAt: true, address: true, bookings: { orderBy: { createdAt: "desc" }, take: 1, select: { departureName: true } } },
       }),
     ]);
 
@@ -126,7 +126,7 @@ export default async function AdminOverviewPage() {
         email: d.email,
         isActive: d.isActive,
         createdAt: d.createdAt.toISOString(),
-        city: extractCityWithDept(d.zoneAddress),
+        city: extractCityWithDept(d.zoneAddress) || (d.zoneLat && d.zoneLng ? (() => { const code = getDepartmentFromCoords(d.zoneLat!, d.zoneLng!); return code ? (DEPARTMENT_NAMES[code] || null) : null; })() : null),
       })),
       recentOrgs: organizations.slice(0, 5).map((o: typeof organizations[number]) => ({
         id: o.id,
@@ -134,7 +134,7 @@ export default async function AdminOverviewPage() {
         email: o.email,
         type: o.type,
         createdAt: o.createdAt.toISOString(),
-        city: o.bookings?.[0]?.departureName ? extractCityWithDept(o.bookings[0].departureName) : null,
+        city: extractCityWithDept(o.bookings?.[0]?.departureName ?? null) || extractCityWithDept(o.address ?? null),
       })),
       chartBookings: bookings.map((b: typeof bookings[number]) => {
         const regionCode = getDepartmentCode(b.departureName) || getDepartmentFromCoords(b.departureLat, b.departureLng);
@@ -181,14 +181,14 @@ export default async function AdminOverviewPage() {
           id: d.id,
           name: `${d.firstName} ${d.lastName}`,
           at: d.lastLoginAt!.toISOString(),
-          city: extractCityWithDept(d.zoneAddress),
+          city: extractCityWithDept(d.zoneAddress) || (d.zoneLat && d.zoneLng ? (() => { const code = getDepartmentFromCoords(d.zoneLat!, d.zoneLng!); return code ? (DEPARTMENT_NAMES[code] || null) : null; })() : null),
         })),
         ...recentlyActiveOrgs.map((o: typeof recentlyActiveOrgs[number]) => ({
           type: "org" as const,
           id: o.id,
           name: o.name,
           at: o.lastLoginAt!.toISOString(),
-          city: o.bookings?.[0]?.departureName ? extractCityWithDept(o.bookings[0].departureName) : null,
+          city: extractCityWithDept(o.bookings?.[0]?.departureName ?? null) || extractCityWithDept(o.address ?? null),
         })),
       ].sort((a, b) => new Date(b.at).getTime() - new Date(a.at).getTime()),
     };
