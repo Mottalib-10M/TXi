@@ -83,12 +83,12 @@ model Driver {
   zoneRadius  Float    @default(15)
   zoneAddress String?
 
-  // Pricing (defaults = plafonds réglementaires 2026, service-public.gouv.fr)
-  baseFare           Float @default(4.48)
-  pricePerKm         Float @default(1.30)
-  pricePerKmNight    Float @default(1.30)
-  pricePerMinute     Float @default(0.70)
-  minimumFare        Float @default(8.0)
+  // Pricing (defaults = tarifs plateforme TaxiNeo)
+  baseFare           Float @default(2.70)
+  pricePerKm         Float @default(2.24)
+  pricePerKmNight    Float @default(3.36)
+  pricePerMinute     Float @default(0.60)
+  minimumFare        Float @default(15.0)
   airportSupplement  Float @default(4.0)
   nightSupplement    Float @default(0.0)
   customPrices       Json?

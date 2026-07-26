@@ -14,6 +14,18 @@ export const NATIONAL_TARIFFS = {
 } as const;
 
 /**
+ * Tarifs par défaut de la plateforme TaxiNeo — appliqués à toute la France
+ * quand aucun chauffeur n'est assigné et pour les nouveaux chauffeurs.
+ */
+export const DEFAULT_PLATFORM_TARIFFS = {
+  priseEnCharge: 2.70,      // €
+  tarifKmJour: 2.24,        // €/km — jour (7h-19h)
+  tarifKmNuit: 3.36,        // €/km — nuit (19h-7h)
+  tarifMinute: 0.60,        // €/min — attente / embouteillage
+  minimumCourse: 15.00,     // €
+} as const;
+
+/**
  * Noms des 101 départements français (métropole + DOM-TOM).
  * Clé = code département ("01", "2A", "75", "971", etc.)
  */

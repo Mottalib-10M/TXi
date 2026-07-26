@@ -64,7 +64,7 @@ export async function PATCH(
       booking.requestedDate,
     );
   } else {
-    estimatedPrice = estimateDefaultPrice(estimatedDistance);
+    estimatedPrice = estimateDefaultPrice(estimatedDistance, booking.requestedDate);
   }
 
   const updated = await prisma.booking.update({

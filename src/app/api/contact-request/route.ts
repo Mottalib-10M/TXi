@@ -78,7 +78,7 @@ export async function POST(req: Request) {
     }
 
     if (estimatedDistance) {
-      estimatedPrice = estimateDefaultPrice(estimatedDistance);
+      estimatedPrice = estimateDefaultPrice(estimatedDistance, requestedDate);
     }
 
     await prisma.booking.create({

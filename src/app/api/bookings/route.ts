@@ -173,7 +173,7 @@ export async function POST(request: Request) {
 
     // Fallback: if we have distance but no price (no driver), use national regulated tariffs
     if (estimatedDistance && !estimatedPrice) {
-      estimatedPrice = estimateDefaultPrice(estimatedDistance);
+      estimatedPrice = estimateDefaultPrice(estimatedDistance, requestedDate);
     }
 
     // Create booking (lock the price at creation time)

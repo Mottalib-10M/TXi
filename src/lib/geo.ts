@@ -164,14 +164,27 @@ export function estimatePrice(
 }
 
 /**
- * Estimate price using national regulated tariffs (plafonds 2026).
+ * Estimate price using platform default tariffs with day/night blending.
  * Used as fallback when no driver is assigned.
- * Formula: prise en charge + distance × tarif/km, minimum 8 €.
+ * Day (7h-19h): 2.24 €/km — Night (19h-7h): 3.36 €/km.
  */
-export function estimateDefaultPrice(distanceKm: number): number {
-  const PRISE_EN_CHARGE = 4.48;
-  const TARIF_KM = 1.30;
-  const MINIMUM = 8.00;
-  const calculated = PRISE_EN_CHARGE + distanceKm * TARIF_KM;
+export function estimateDefaultPrice(distanceKm: number, bookingTime?: Date): number {
+  const PRISE_EN_CHARGE = 2.70;
+  const TARIF_KM_JOUR = 2.24;
+  const TARIF_KM_NUIT = 3.36;
+  const MINIMUM = 15.00;
+
+  if (bookingTime) {
+    const avgSpeed = distanceKm < 10 ? 25 : distanceKm < 30 ? 40 : distanceKm < 80 ? 60 : 80;
+    const durationMinutes = (distanceKm / avgSpeed) * 60;
+    const nightFraction = calculateNightFraction(bookingTime, durationMinutes);
+    const dayFraction = 1 - nightFraction;
+    const blendedRate = dayFraction * TARIF_KM_JOUR + nightFraction * TARIF_KM_NUIT;
+    const calculated = PRISE_EN_CHARGE + distanceKm * blendedRate;
+    return Math.max(calculated, MINIMUM);
+  }
+
+  // Sans heure connue, on applique le tarif jour par défaut
+  const calculated = PRISE_EN_CHARGE + distanceKm * TARIF_KM_JOUR;
   return Math.max(calculated, MINIMUM);
 }
