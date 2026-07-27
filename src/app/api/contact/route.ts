@@ -59,7 +59,7 @@ export async function POST(req: Request) {
       type: "CONTACT_FORM",
       title: `Message de contact`,
       body: `${data.name}${data.city ? ` (${data.city})` : ""} — ${data.message.slice(0, 100)}`,
-      metadata: { name: data.name, email: data.email, phone: data.phone, city: data.city },
+      metadata: { name: data.name, email: data.email, phone: data.phone, city: data.city, message: data.message },
     });
 
     return NextResponse.json({ success: true });

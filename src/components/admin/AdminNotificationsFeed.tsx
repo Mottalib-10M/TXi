@@ -93,6 +93,7 @@ export function AdminNotificationsFeed({
   const t = useTranslations("admin");
   const [items, setItems] = useState<Notification[]>(initialItems);
   const [filter, setFilter] = useState<FilterCategory>("all");
+  const [expandedId, setExpandedId] = useState<string | null>(null);
   const [nextCursor, setNextCursor] = useState<string | null>(
     initialItems.length >= 50 ? initialItems[initialItems.length - 1]?.id ?? null : null
   );
@@ -165,10 +166,14 @@ export function AdminNotificationsFeed({
         <div className="space-y-1">
           {filteredItems.map((n) => {
             const config = TYPE_CONFIG[n.type];
+            const isExpandable = n.type === "CONTACT_FORM" || n.type === "CONTACT_REQUEST";
+            const isExpanded = expandedId === n.id;
+            const meta = n.metadata as Record<string, string> | null;
             return (
               <div
                 key={n.id}
-                className="flex items-start gap-3 p-3 rounded-xl hover:bg-neutral-50 transition-colors"
+                onClick={isExpandable ? () => setExpandedId(isExpanded ? null : n.id) : undefined}
+                className={`flex items-start gap-3 p-3 rounded-xl hover:bg-neutral-50 transition-colors ${isExpandable ? "cursor-pointer" : ""}`}
               >
                 <div
                   className={`flex-shrink-0 w-9 h-9 rounded-lg flex items-center justify-center ${config.color}`}
@@ -185,6 +190,36 @@ export function AdminNotificationsFeed({
                     </span>
                   </div>
                   <p className="text-sm text-neutral-500 mt-0.5">{n.body}</p>
+                  {isExpanded && meta && (
+                    <div className="mt-2 p-3 bg-neutral-50 rounded-lg border border-neutral-100 space-y-1.5">
+                      {meta.message && (
+                        <p className="text-sm text-neutral-700 whitespace-pre-wrap">{meta.message}</p>
+                      )}
+                      <div className="flex flex-wrap gap-3 text-xs text-neutral-500 pt-1">
+                        {meta.email && (
+                          <span className="flex items-center gap-1">
+                            <Icon icon="solar:letter-linear" className="text-sm" />
+                            {meta.email}
+                          </span>
+                        )}
+                        {meta.phone && (
+                          <span className="flex items-center gap-1">
+                            <Icon icon="solar:phone-linear" className="text-sm" />
+                            {meta.phone}
+                          </span>
+                        )}
+                        {meta.city && (
+                          <span className="flex items-center gap-1">
+                            <Icon icon="solar:map-point-linear" className="text-sm" />
+                            {meta.city}
+                          </span>
+                        )}
+                      </div>
+                    </div>
+                  )}
+                  {isExpandable && !isExpanded && (
+                    <p className="text-xs text-neutral-400 mt-1">Cliquer pour voir le détail</p>
+                  )}
                 </div>
               </div>
             );

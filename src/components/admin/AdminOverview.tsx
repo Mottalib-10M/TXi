@@ -100,7 +100,7 @@ export function AdminOverview({ data }: { data: OverviewData }) {
       if (!groupMap.has(key)) {
         groupMap.set(key, {
           label: chartGroupBy === "city"
-            ? key
+            ? (b.regionCode ? `${key} (${b.regionCode})` : key)
             : (b.regionCode ? `${b.regionName} (${b.regionCode})` : key),
           withDriver: 0, noDriver: 0,
           pending: 0, accepted: 0, rejected: 0, cancelled: 0, completed: 0,
