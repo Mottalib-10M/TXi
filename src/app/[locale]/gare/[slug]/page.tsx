@@ -37,7 +37,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!st) notFound();
   const loc = locale === "en" ? "en" : "fr";
 
-  const canonical = canonicalUrl(locale, `/taxi-gare-${st.slug}`);
+  const canonical = canonicalUrl(locale, `/gare/${st.slug}`);
   return {
     title: st.i18n[loc].metaTitle,
     description: st.i18n[loc].metaDescription,
@@ -58,7 +58,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     },
     alternates: {
       canonical,
-      languages: alternateUrls(`/taxi-gare-${st.slug}`),
+      languages: alternateUrls(`/gare/${st.slug}`),
     },
   };
 }

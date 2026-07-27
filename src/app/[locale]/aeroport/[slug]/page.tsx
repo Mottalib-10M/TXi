@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!ap) notFound();
   const loc = locale === "en" ? "en" : "fr";
 
-  const canonical = canonicalUrl(locale, `/taxi-aeroport-${ap.slug}`);
+  const canonical = canonicalUrl(locale, `/aeroport/${ap.slug}`);
   return {
     title: ap.i18n[loc].metaTitle,
     description: ap.i18n[loc].metaDescription,
@@ -61,7 +61,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     },
     alternates: {
       canonical,
-      languages: alternateUrls(`/taxi-aeroport-${ap.slug}`),
+      languages: alternateUrls(`/aeroport/${ap.slug}`),
     },
   };
 }

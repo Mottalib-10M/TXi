@@ -30,13 +30,17 @@ export const dynamicParams = false;
 
 export async function generateStaticParams() {
   return ["fr", "en"].flatMap((locale) =>
-    cities.map((city) => ({ locale, slug: city.slug }))
+    cities.map((city) => ({ locale, slug: `taxi-${city.slug}` }))
   );
+}
+
+function citySlugFromParam(slug: string): string {
+  return slug.startsWith("taxi-") ? slug.slice(5) : slug;
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { locale, slug } = await params;
-  const city = getCityBySlug(slug);
+  const city = getCityBySlug(citySlugFromParam(slug));
   if (!city) notFound();
   const loc = locale === "en" ? "en" : "fr";
 
@@ -61,7 +65,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function CityPage({ params }: PageProps) {
   const { locale, slug } = await params;
-  const city = getCityBySlug(slug);
+  const city = getCityBySlug(citySlugFromParam(slug));
   if (!city) notFound();
   const loc = locale === "en" ? "en" : "fr";
 

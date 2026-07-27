@@ -78,14 +78,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   const airportPages: MetadataRoute.Sitemap = airports.map((ap) => ({
-    ...localizedUrls(`/taxi-aeroport-${ap.slug}`),
+    ...localizedUrls(`/aeroport/${ap.slug}`),
     lastModified: LAST_MODIFIED,
     changeFrequency: "monthly",
     priority: 0.8,
   }));
 
   const stationPages: MetadataRoute.Sitemap = stations.map((st) => ({
-    ...localizedUrls(`/taxi-gare-${st.slug}`),
+    ...localizedUrls(`/gare/${st.slug}`),
     lastModified: LAST_MODIFIED,
     changeFrequency: "monthly",
     priority: 0.8,
