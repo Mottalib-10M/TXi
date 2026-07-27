@@ -126,7 +126,7 @@ export function AdminAirports({ bookings }: { bookings: AirportBooking[] }) {
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center">
-            <Icon icon="solar:airplane-bold" className="text-blue-600 text-xl" />
+            <Icon icon="mdi:airplane" className="text-blue-600 text-xl" />
           </div>
           <div>
             <h1 className="text-2xl font-semibold tracking-tight">
@@ -160,7 +160,7 @@ export function AdminAirports({ bookings }: { bookings: AirportBooking[] }) {
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-6">
         <div className="flex items-center gap-3 bg-white border border-neutral-200 rounded-xl px-4 py-3">
           <div className="w-9 h-9 bg-blue-50 rounded-lg flex items-center justify-center shrink-0">
-            <Icon icon="solar:airplane-bold" className="text-blue-500 text-lg" />
+            <Icon icon="mdi:airplane" className="text-blue-500 text-lg" />
           </div>
           <div>
             <p className="text-xl font-bold text-neutral-900">
@@ -400,7 +400,7 @@ export function AdminAirports({ bookings }: { bookings: AirportBooking[] }) {
               onClick={() => setSelectedAirport(null)}
               className="flex items-center gap-1.5 text-xs font-medium px-2.5 py-1 rounded-lg bg-blue-50 text-blue-700 hover:bg-blue-100 transition-colors"
             >
-              <Icon icon="solar:airplane-linear" className="text-sm" />
+              <Icon icon="mdi:airplane" className="text-sm" />
               {selectedAirport}
               <Icon icon="solar:close-circle-linear" className="text-sm" />
             </button>
@@ -409,7 +409,7 @@ export function AdminAirports({ bookings }: { bookings: AirportBooking[] }) {
 
         {displayedBookings.length === 0 ? (
           <div className="px-5 py-8 text-center">
-            <Icon icon="solar:airplane-linear" className="text-3xl text-neutral-200 mx-auto mb-2" />
+            <Icon icon="mdi:airplane" className="text-3xl text-neutral-200 mx-auto mb-2" />
             <p className="text-sm text-neutral-400 font-light">
               {locale === "en" ? "No airport bookings" : "Aucune réservation aéroport"}
             </p>
@@ -465,11 +465,25 @@ export function AdminAirports({ bookings }: { bookings: AirportBooking[] }) {
                           <span className="font-medium text-neutral-700">{b.detectedAirport}</span>
                         </td>
                         <td className="px-3 py-2">
-                          <div className="text-neutral-700 break-words leading-snug">
-                            {b.departureName}
-                          </div>
-                          <div className="text-neutral-400 break-words leading-snug mt-0.5">
-                            &rarr; {b.arrivalName}
+                          <div className="flex items-start gap-1.5">
+                            <div className="flex-1 min-w-0">
+                              <div className="text-neutral-700 break-words leading-snug">
+                                {b.departureName}
+                              </div>
+                              <div className="text-neutral-400 break-words leading-snug mt-0.5">
+                                &rarr; {b.arrivalName}
+                              </div>
+                            </div>
+                            <a
+                              href={`https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(b.departureName)}&destination=${encodeURIComponent(b.arrivalName)}`}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="shrink-0 mt-1 w-6 h-6 flex items-center justify-center rounded-md text-neutral-400 hover:text-blue-600 hover:bg-blue-50 transition-colors"
+                              title={locale === "en" ? "Open in Google Maps" : "Ouvrir dans Google Maps"}
+                              onClick={(e) => e.stopPropagation()}
+                            >
+                              <Icon icon="solar:map-point-wave-linear" className="text-sm" />
+                            </a>
                           </div>
                         </td>
                         <td className="px-3 py-2">
@@ -544,9 +558,21 @@ export function AdminAirports({ bookings }: { bookings: AirportBooking[] }) {
                         {sc[b.status]?.label || b.status}
                       </span>
                     </div>
-                    <div className="text-xs">
-                      <div className="text-neutral-700 font-medium">{b.departureName}</div>
-                      <div className="text-neutral-400">&rarr; {b.arrivalName}</div>
+                    <div className="text-xs flex items-start gap-1.5">
+                      <div className="flex-1 min-w-0">
+                        <div className="text-neutral-700 font-medium">{b.departureName}</div>
+                        <div className="text-neutral-400">&rarr; {b.arrivalName}</div>
+                      </div>
+                      <a
+                        href={`https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(b.departureName)}&destination=${encodeURIComponent(b.arrivalName)}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="shrink-0 w-6 h-6 flex items-center justify-center rounded-md text-neutral-400 hover:text-blue-600 hover:bg-blue-50 transition-colors"
+                        title={locale === "en" ? "Open in Google Maps" : "Ouvrir dans Google Maps"}
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        <Icon icon="solar:map-point-wave-linear" className="text-sm" />
+                      </a>
                     </div>
                     <div className="grid grid-cols-3 gap-x-4 gap-y-1.5 text-xs">
                       <div>

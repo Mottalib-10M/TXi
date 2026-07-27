@@ -33,6 +33,14 @@ export const metadata: Metadata = {
       "Réservez un taxi agréé en quelques secondes. Prix fixe garanti, chauffeurs professionnels, disponible 24h/24 dans 50+ villes françaises.",
     images: ["https://www.taxineo.fr/opengraph-image"],
   },
+  icons: {
+    icon: [
+      { url: "/icon", type: "image/png", sizes: "48x48" },
+    ],
+    apple: [
+      { url: "/apple-icon", sizes: "180x180", type: "image/png" },
+    ],
+  },
   manifest: "/manifest.webmanifest",
   other: {
     "msvalidate.01": "BING_VERIFY_CODE",

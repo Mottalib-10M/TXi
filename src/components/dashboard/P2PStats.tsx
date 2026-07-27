@@ -152,7 +152,18 @@ export function P2PStats() {
                     {driver.bookings.map((b) => (
                       <div key={b.id} className="flex items-center gap-2 py-2 border-b border-neutral-50 last:border-b-0 text-xs">
                         <div className="flex-1 min-w-0">
-                          <p className="text-neutral-700 truncate">{b.departureName} → {b.arrivalName}</p>
+                          <p className="text-neutral-700 truncate flex items-center gap-1">
+                            <span className="truncate">{b.departureName} → {b.arrivalName}</span>
+                            <a
+                              href={`https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(b.departureName)}&destination=${encodeURIComponent(b.arrivalName)}`}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="shrink-0 text-neutral-400 hover:text-blue-600 transition-colors"
+                              title="Google Maps"
+                            >
+                              <Icon icon="solar:map-point-wave-linear" className="text-xs" />
+                            </a>
+                          </p>
                           <p className="text-neutral-400">{formatDate(b.requestedDate)} — {b.clientName}</p>
                         </div>
                         <div className="text-right shrink-0">

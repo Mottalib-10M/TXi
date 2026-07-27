@@ -2,6 +2,7 @@
 
 import { useState, useCallback } from "react";
 import { Icon } from "@iconify/react";
+import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 
 type NotificationType =
@@ -31,6 +32,13 @@ export interface ActivityEvent {
   createdAt: string;
   badge?: string;
   city?: string;
+  bookingId?: string;
+  bookingRef?: string;
+  distance?: number | null;
+  price?: number | null;
+  requestedDate?: string;
+  departureName?: string;
+  arrivalName?: string;
 }
 
 type FilterCategory = "all" | "bookings" | "logins" | "registrations" | "contact" | "escalations" | "shared";
@@ -229,6 +237,46 @@ export function AdminActivityFeed({
                     </span>
                   </div>
                   <p className="text-sm text-neutral-500 mt-0.5">{e.body}</p>
+                  {e.bookingRef && (
+                    <div className="flex items-center gap-3 mt-1.5 text-[11px] text-neutral-400">
+                      {e.requestedDate && (
+                        <span className="flex items-center gap-1">
+                          <Icon icon="solar:calendar-linear" className="text-xs" />
+                          {new Date(e.requestedDate).toLocaleDateString("fr-FR", { day: "numeric", month: "short", year: "2-digit", hour: "2-digit", minute: "2-digit" })}
+                        </span>
+                      )}
+                      {e.distance != null && (
+                        <span className="flex items-center gap-1">
+                          <Icon icon="solar:route-linear" className="text-xs" />
+                          {e.distance.toFixed(1)} km
+                        </span>
+                      )}
+                      {e.price != null && (
+                        <span className="flex items-center gap-1">
+                          <Icon icon="solar:tag-price-linear" className="text-xs" />
+                          {e.price.toFixed(0)} €
+                        </span>
+                      )}
+                      {e.departureName && e.arrivalName && (
+                        <a
+                          href={`https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(e.departureName)}&destination=${encodeURIComponent(e.arrivalName)}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-neutral-400 hover:text-blue-600 transition-colors"
+                          title="Google Maps"
+                        >
+                          <Icon icon="solar:map-point-wave-linear" className="text-sm" />
+                        </a>
+                      )}
+                      <Link
+                        href={`/admin/reservations?search=${e.bookingRef}`}
+                        className="text-neutral-400 hover:text-blue-600 transition-colors"
+                        title="Voir la réservation"
+                      >
+                        <Icon icon="solar:arrow-right-linear" className="text-sm" />
+                      </Link>
+                    </div>
+                  )}
                 </div>
               </div>
             );

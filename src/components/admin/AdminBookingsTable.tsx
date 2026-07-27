@@ -6,7 +6,7 @@ import { format } from "date-fns";
 import { enUS, fr } from "date-fns/locale";
 import { Link } from "@/i18n/navigation";
 import { useLocale, useTranslations } from "next-intl";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { toast } from "sonner";
 
 interface Booking {
@@ -48,6 +48,8 @@ export function AdminBookingsTable({ bookings }: { bookings: Booking[] }) {
   const t = useTranslations("admin");
   const locale = useLocale();
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const initialSearch = searchParams.get("search") || "";
 
   const statusConfig: Record<string, { label: string; color: string }> = {
     PENDING: { label: t("statusPending"), color: "bg-amber-50 text-amber-700" },
@@ -57,8 +59,8 @@ export function AdminBookingsTable({ bookings }: { bookings: Booking[] }) {
     COMPLETED: { label: t("statusCompleted"), color: "bg-blue-50 text-blue-700" },
   };
 
-  const [filter, setFilter] = useState<string>("PENDING");
-  const [search, setSearch] = useState("");
+  const [filter, setFilter] = useState<string>(initialSearch ? "ALL" : "PENDING");
+  const [search, setSearch] = useState(initialSearch);
   const [collapsedRegions, setCollapsedRegions] = useState<Set<string>>(new Set());
   const [visibleCounts, setVisibleCounts] = useState<Record<string, number>>({});
   const [chartPeriod, setChartPeriod] = useState<"24h" | "7d" | "30d">("24h");

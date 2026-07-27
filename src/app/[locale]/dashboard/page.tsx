@@ -299,11 +299,23 @@ export default async function DashboardPage() {
                         → {booking.arrivalName}
                       </span>
                     </span>
-                    {booking.lockedPrice != null && (
-                      <span className="text-lg font-bold text-amber-700 shrink-0">
-                        {booking.lockedPrice.toFixed(0)}&nbsp;€
-                      </span>
-                    )}
+                    <span className="flex items-center gap-2 shrink-0">
+                      <a
+                        href={`https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(booking.departureName)}&destination=${encodeURIComponent(booking.arrivalName)}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-7 h-7 flex items-center justify-center rounded-lg text-neutral-400 hover:text-blue-600 hover:bg-blue-50 transition-colors"
+                        title="Google Maps"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        <Icon icon="solar:map-point-wave-linear" className="text-base" />
+                      </a>
+                      {booking.lockedPrice != null && (
+                        <span className="text-lg font-bold text-amber-700">
+                          {booking.lockedPrice.toFixed(0)}&nbsp;€
+                        </span>
+                      )}
+                    </span>
                   </span>
                   <span className="flex items-center gap-2 flex-wrap">
                     <span className="inline-flex items-center gap-1 text-sm text-neutral-600">
@@ -380,11 +392,23 @@ export default async function DashboardPage() {
                         → {booking.arrivalName}
                       </span>
                     </span>
-                    {booking.lockedPrice != null && (
-                      <span className="text-lg font-bold text-green-700 shrink-0">
-                        {booking.lockedPrice.toFixed(0)}&nbsp;€
-                      </span>
-                    )}
+                    <span className="flex items-center gap-2 shrink-0">
+                      <a
+                        href={`https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(booking.departureName)}&destination=${encodeURIComponent(booking.arrivalName)}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-7 h-7 flex items-center justify-center rounded-lg text-neutral-400 hover:text-blue-600 hover:bg-blue-50 transition-colors"
+                        title="Google Maps"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        <Icon icon="solar:map-point-wave-linear" className="text-base" />
+                      </a>
+                      {booking.lockedPrice != null && (
+                        <span className="text-lg font-bold text-green-700">
+                          {booking.lockedPrice.toFixed(0)}&nbsp;€
+                        </span>
+                      )}
+                    </span>
                   </span>
                   <span className="flex items-center gap-2 flex-wrap">
                     <span className="inline-flex items-center gap-1 text-sm text-neutral-600">

@@ -285,6 +285,15 @@ export function SharedRoutesManager({
                         {route.departureName}
                         <Icon icon="solar:arrow-right-linear" className="text-neutral-300" />
                         {route.destinationName}
+                        <a
+                          href={`https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(route.departureName)}&destination=${encodeURIComponent(route.destinationName)}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="shrink-0 w-6 h-6 flex items-center justify-center rounded-md text-neutral-400 hover:text-blue-600 hover:bg-blue-50 transition-colors"
+                          title="Google Maps"
+                        >
+                          <Icon icon="solar:map-point-wave-linear" className="text-sm" />
+                        </a>
                       </div>
                       <p className="text-xs text-neutral-400 mt-1">
                         {new Date(route.departureTime).toLocaleDateString("fr-FR", {

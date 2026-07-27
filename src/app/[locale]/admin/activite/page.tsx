@@ -77,10 +77,12 @@ export default async function AdminActivityPage() {
   // Build driver map (id -> info) for driverId references in notifications
   const allDriverIds = new Set<string>();
   const allOrgIds = new Set<string>();
+  const allBookingIds = new Set<string>();
   for (const n of notifications) {
     const meta = n.metadata as Record<string, unknown> | null;
     if (meta?.driverId && typeof meta.driverId === "string") allDriverIds.add(meta.driverId);
     if (meta?.organizationId && typeof meta.organizationId === "string") allOrgIds.add(meta.organizationId);
+    if (meta?.bookingId && typeof meta.bookingId === "string") allBookingIds.add(meta.bookingId);
   }
 
   const driverMap = new Map<string, { firstName: string; lastName: string; zoneAddress: string | null }>();
@@ -99,6 +101,23 @@ export default async function AdminActivityPage() {
       select: { id: true, name: true, type: true, address: true },
     });
     for (const o of orgs) orgMap.set(o.id, o);
+  }
+
+  const bookingMap = new Map<string, {
+    id: string; reference: string;
+    estimatedDistance: number | null; estimatedPrice: number | null; lockedPrice: number | null;
+    requestedDate: Date; departureName: string; arrivalName: string;
+  }>();
+  if (allBookingIds.size > 0) {
+    const bookings = await prisma.booking.findMany({
+      where: { id: { in: Array.from(allBookingIds) } },
+      select: {
+        id: true, reference: true,
+        estimatedDistance: true, estimatedPrice: true, lockedPrice: true,
+        requestedDate: true, departureName: true, arrivalName: true,
+      },
+    });
+    for (const b of bookings) bookingMap.set(b.id, b);
   }
 
   // Build unified timeline
@@ -158,6 +177,10 @@ export default async function AdminActivityPage() {
       badge = "Chauffeur";
     }
 
+    // Enrich booking events with data from the Booking table
+    const bookingId = meta?.bookingId as string | undefined;
+    const booking = bookingId ? bookingMap.get(bookingId) : undefined;
+
     events.push({
       id: `notif-${n.id}`,
       eventType: n.type,
@@ -166,6 +189,15 @@ export default async function AdminActivityPage() {
       createdAt: n.createdAt.toISOString(),
       badge,
       city,
+      ...(booking && {
+        bookingId: booking.id,
+        bookingRef: booking.reference,
+        distance: booking.estimatedDistance,
+        price: booking.lockedPrice ?? booking.estimatedPrice,
+        requestedDate: booking.requestedDate.toISOString(),
+        departureName: booking.departureName,
+        arrivalName: booking.arrivalName,
+      }),
     });
   }
 

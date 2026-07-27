@@ -4682,6 +4682,7 @@ import { trajetsHdsComplement } from "./trajets-hub-hds-complement";
 import { trajetsMarnelaVallee2 } from "./trajets-hub-marne-la-vallee-2";
 import { trajetsSenart } from "./trajets-hub-senart";
 import { trajetsMelunSenart2 } from "./trajets-hub-melun-senart-2";
+import { trajetsClermontTourisme } from "./trajets-hub-clermont-tourisme";
 
 // Merge hub trajets into the main array
 trajets.push(
@@ -4889,6 +4890,7 @@ trajets.push(
   ...trajetsMarnelaVallee2,
   ...trajetsSenart,
   ...trajetsMelunSenart2,
+  ...trajetsClermontTourisme,
 );
 
 export function getTrajetBySlug(slug: string): Trajet | undefined {

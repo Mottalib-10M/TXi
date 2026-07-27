@@ -261,7 +261,16 @@ export function P2PShareForm({ driverFirstName }: P2PShareFormProps) {
         <div className="space-y-3 mb-6">
           <div className="flex items-center gap-2 text-sm">
             <Icon icon="solar:map-point-linear" className="text-neutral-400" />
-            <span>{result.departureName} → {result.arrivalName}</span>
+            <span className="flex-1">{result.departureName} → {result.arrivalName}</span>
+            <a
+              href={`https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(result.departureName)}&destination=${encodeURIComponent(result.arrivalName)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="shrink-0 w-6 h-6 flex items-center justify-center rounded-md text-neutral-400 hover:text-blue-600 hover:bg-blue-50 transition-colors"
+              title="Google Maps"
+            >
+              <Icon icon="solar:map-point-wave-linear" className="text-sm" />
+            </a>
           </div>
           <div className="flex items-center gap-2 text-sm">
             <Icon icon="solar:calendar-linear" className="text-neutral-400" />

@@ -232,6 +232,42 @@ const PRICING_METROPOLE: MadPricingTier[] = [
   },
 ];
 
+/** Petites villes touristiques Auvergne – zone rurale, tarifs légèrement supérieurs */
+const PRICING_TOURISME_AUVERGNE: MadPricingTier[] = [
+  {
+    duration: "1h",
+    labelFr: "1 heure",
+    labelEn: "1 hour",
+    berline: "55-65 €",
+    suv: "65-75 €",
+    van: "75-90 €",
+  },
+  {
+    duration: "demi-journee",
+    labelFr: "Demi-journée (4 h)",
+    labelEn: "Half day (4 h)",
+    berline: "200-240 €",
+    suv: "240-290 €",
+    van: "290-330 €",
+  },
+  {
+    duration: "journee",
+    labelFr: "Journée (8 h)",
+    labelEn: "Full day (8 h)",
+    berline: "390-460 €",
+    suv: "460-550 €",
+    van: "550-640 €",
+  },
+  {
+    duration: "soiree",
+    labelFr: "Soirée (5 h)",
+    labelEn: "Evening (5 h)",
+    berline: "220-270 €",
+    suv: "270-330 €",
+    van: "330-385 €",
+  },
+];
+
 // ─── Helper ─────────────────────────────────────────────────
 
 function madCity(citySlug: string, pricing: MadPricingTier[]): MadCityData {
@@ -426,6 +462,14 @@ export const madCities: MadCityData[] = [
 
   // Bourgogne-Franche-Comté
   madCity("dijon", PRICING_METROPOLE),
+
+  // ── Tourisme Auvergne ───────────────────────────────────────
+  madCity("la-bourboule", PRICING_TOURISME_AUVERGNE),
+  madCity("le-mont-dore", PRICING_TOURISME_AUVERGNE),
+  madCity("murol", PRICING_TOURISME_AUVERGNE),
+  madCity("chambon-sur-lac", PRICING_TOURISME_AUVERGNE),
+  madCity("aydat", PRICING_TOURISME_AUVERGNE),
+  madCity("orcival", PRICING_TOURISME_AUVERGNE),
 ];
 
 // ─── Helpers ────────────────────────────────────────────────

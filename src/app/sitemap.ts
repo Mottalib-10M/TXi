@@ -14,7 +14,7 @@ import { assistanceCities } from "@/data/assistance-cities";
 import { autoroutes } from "@/data/autoroutes";
 
 /** Last significant deployment date — update when publishing major content changes */
-const LAST_MODIFIED = new Date("2025-06-01");
+const LAST_MODIFIED = new Date("2025-07-28");
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.taxineo.fr";

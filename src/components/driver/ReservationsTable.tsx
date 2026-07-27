@@ -263,9 +263,18 @@ export function ReservationsTable({ bookings, driverName }: { bookings: Booking[
               {/* Route */}
               <div className="flex items-start gap-2 text-xs text-neutral-500 mb-1.5">
                 <Icon icon="solar:map-point-linear" className="text-neutral-400 shrink-0 mt-0.5" />
-                <span className="break-words min-w-0">
+                <span className="break-words min-w-0 flex-1">
                   {booking.departureName} → {booking.arrivalName}
                 </span>
+                <a
+                  href={`https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(booking.departureName)}&destination=${encodeURIComponent(booking.arrivalName)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="shrink-0 w-6 h-6 flex items-center justify-center rounded-md text-neutral-400 hover:text-blue-600 hover:bg-blue-50 transition-colors"
+                  title="Google Maps"
+                >
+                  <Icon icon="solar:map-point-wave-linear" className="text-sm" />
+                </a>
               </div>
 
               {/* Metadata */}

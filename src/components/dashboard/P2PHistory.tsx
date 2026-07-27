@@ -75,11 +75,22 @@ export function P2PHistory({ bookings }: { bookings: P2PBooking[] }) {
                   → {booking.arrivalName}
                 </p>
               </div>
-              {booking.lockedPrice != null && (
-                <span className="text-sm font-bold text-neutral-900 shrink-0">
-                  {booking.lockedPrice}&nbsp;€
-                </span>
-              )}
+              <div className="flex items-center gap-2 shrink-0">
+                <a
+                  href={`https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(booking.departureName)}&destination=${encodeURIComponent(booking.arrivalName)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-6 h-6 flex items-center justify-center rounded-md text-neutral-400 hover:text-blue-600 hover:bg-blue-50 transition-colors"
+                  title="Google Maps"
+                >
+                  <Icon icon="solar:map-point-wave-linear" className="text-sm" />
+                </a>
+                {booking.lockedPrice != null && (
+                  <span className="text-sm font-bold text-neutral-900">
+                    {booking.lockedPrice}&nbsp;€
+                  </span>
+                )}
+              </div>
             </div>
             <div className="flex items-center gap-3 flex-wrap text-xs text-neutral-500">
               <span className="flex items-center gap-1">
