@@ -911,6 +911,7 @@
       "reservations": "Bookings",
       "notifications": "Notifications",
       "activity": "Activity",
+      "airports": "Airports",
       "logout": "Log out"
     },
     "title": "Administration",

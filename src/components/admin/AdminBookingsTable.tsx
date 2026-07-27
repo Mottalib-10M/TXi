@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo, useCallback } from "react";
+import { useState, useMemo, useCallback, useRef } from "react";
 import { Icon } from "@iconify/react";
 import { format } from "date-fns";
 import { enUS, fr } from "date-fns/locale";
@@ -62,6 +62,8 @@ export function AdminBookingsTable({ bookings }: { bookings: Booking[] }) {
   const [collapsedRegions, setCollapsedRegions] = useState<Set<string>>(new Set());
   const [visibleCounts, setVisibleCounts] = useState<Record<string, number>>({});
   const [chartPeriod, setChartPeriod] = useState<"24h" | "7d" | "30d">("24h");
+  const [selectedDept, setSelectedDept] = useState<string | null>(null);
+  const listRef = useRef<HTMLDivElement>(null);
   const [loadingAction, setLoadingAction] = useState<string | null>(null);
   const [confirmModal, setConfirmModal] = useState<{
     title: string;
@@ -130,11 +132,12 @@ export function AdminBookingsTable({ bookings }: { bookings: Booking[] }) {
         : now.getTime() - 30 * 24 * 60 * 60 * 1000
     );
     const periodBookings = bookings.filter((b) => new Date(b.createdAt) >= cutoff);
-    const deptMap = new Map<string, { label: string; withDriver: number; noDriver: number; pending: number; accepted: number; rejected: number; cancelled: number; completed: number }>();
+    const deptMap = new Map<string, { key: string; label: string; withDriver: number; noDriver: number; pending: number; accepted: number; rejected: number; cancelled: number; completed: number }>();
     for (const b of periodBookings) {
       const key = b.regionName || "Non localisé";
       if (!deptMap.has(key)) {
         deptMap.set(key, {
+          key,
           label: b.regionCode ? `${b.regionName} (${b.regionCode})` : key,
           withDriver: 0, noDriver: 0,
           pending: 0, accepted: 0, rejected: 0, cancelled: 0, completed: 0,
@@ -284,7 +287,7 @@ export function AdminBookingsTable({ bookings }: { bookings: Booking[] }) {
             {([["24h", "24h"], ["7d", "7j"], ["30d", "30j"]] as const).map(([key, label]) => (
               <button
                 key={key}
-                onClick={() => setChartPeriod(key)}
+                onClick={() => { setChartPeriod(key); setSelectedDept(null); }}
                 className={`px-2.5 py-1 rounded-lg text-[11px] font-medium transition-colors ${
                   chartPeriod === key
                     ? "bg-neutral-900 text-white"
@@ -306,8 +309,23 @@ export function AdminBookingsTable({ bookings }: { bookings: Booking[] }) {
               const total = entry.withDriver + entry.noDriver;
               const widthPercent = (total / chartData.maxTotal) * 100;
               const driverPercent = total > 0 ? (entry.withDriver / total) * 100 : 0;
+              const isSelected = selectedDept === entry.key;
               return (
-                <div key={entry.label} className="flex items-center gap-3">
+                <div
+                  key={entry.label}
+                  className={`flex items-center gap-3 cursor-pointer rounded-lg px-1 -mx-1 transition-colors ${
+                    isSelected
+                      ? "bg-blue-50 ring-1 ring-blue-200"
+                      : selectedDept
+                        ? "opacity-40 hover:opacity-70"
+                        : "hover:bg-neutral-50"
+                  }`}
+                  onClick={() => {
+                    setSelectedDept(isSelected ? null : entry.key);
+                    setVisibleCounts({});
+                    if (!isSelected) setTimeout(() => listRef.current?.scrollIntoView({ behavior: "smooth", block: "start" }), 50);
+                  }}
+                >
                   <div className="w-[140px] sm:w-[180px] text-[11px] text-neutral-600 truncate shrink-0 text-right">
                     {entry.label}
                   </div>
@@ -357,8 +375,22 @@ export function AdminBookingsTable({ bookings }: { bookings: Booking[] }) {
         </div>
       </div>
 
+      {/* Department filter badge */}
+      {selectedDept && (
+        <div className="mb-4">
+          <button
+            onClick={() => setSelectedDept(null)}
+            className="flex items-center gap-1.5 text-xs font-medium px-2.5 py-1 rounded-lg bg-blue-50 text-blue-700 hover:bg-blue-100 transition-colors"
+          >
+            <Icon icon="solar:map-point-wave-linear" className="text-sm" />
+            {selectedDept}
+            <Icon icon="solar:close-circle-linear" className="text-sm" />
+          </button>
+        </div>
+      )}
+
       {/* Filters */}
-      <div className="flex gap-2 mb-4 overflow-x-auto pb-2">
+      <div ref={listRef} className="flex gap-2 mb-4 overflow-x-auto pb-2 scroll-mt-4">
         {[
           { key: "PENDING", label: t("filterPending") },
           { key: "ACCEPTED", label: t("filterAccepted") },
@@ -370,7 +402,7 @@ export function AdminBookingsTable({ bookings }: { bookings: Booking[] }) {
         ].map((f) => (
           <button
             key={f.key}
-            onClick={() => { setFilter(f.key); setVisibleCounts({}); }}
+            onClick={() => { setFilter(f.key); setVisibleCounts({}); setSelectedDept(null); }}
             className={`px-4 py-2 rounded-full text-xs font-medium transition-colors whitespace-nowrap ${
               filter === f.key
                 ? "bg-neutral-900 text-white"
@@ -400,14 +432,18 @@ export function AdminBookingsTable({ bookings }: { bookings: Booking[] }) {
         />
       </div>
 
-      {filtered.length === 0 ? (
+      {(() => {
+        const displayedGroups = selectedDept
+          ? regionGroups.filter((g) => g.regionKey === selectedDept)
+          : regionGroups;
+        return displayedGroups.length === 0 ? (
         <div className="bg-white border border-neutral-200 rounded-2xl p-12 text-center">
           <Icon icon="solar:calendar-linear" className="text-4xl text-neutral-300 mx-auto mb-3" />
           <p className="text-sm text-neutral-500 font-light">{t("noBookingsFound")}</p>
         </div>
       ) : (
         <div className="space-y-4">
-          {regionGroups.map((group) => {
+          {displayedGroups.map((group) => {
             const collapsed = isCollapsed(group.regionKey, group.hasPending);
             const maxVisible = visibleCounts[group.regionKey] || 3;
             const visibleBookings = group.bookings.slice(0, maxVisible);
@@ -765,7 +801,8 @@ export function AdminBookingsTable({ bookings }: { bookings: Booking[] }) {
             );
           })}
         </div>
-      )}
+      );
+      })()}
       {/* Confirmation modal */}
       {confirmModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center">

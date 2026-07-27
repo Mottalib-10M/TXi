@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useRef } from "react";
 import { Link } from "@/i18n/navigation";
 import { Icon } from "@iconify/react";
 import { format, formatDistanceToNow } from "date-fns";
@@ -42,6 +42,8 @@ interface OverviewData {
     driverPhone: string | null;
     driverSlug: string | null;
     orgName: string | null;
+    cityName: string | null;
+    regionName: string | null;
   }[];
   activeUsers: {
     drivers24h: number;
@@ -80,6 +82,8 @@ export function AdminOverview({ data }: { data: OverviewData }) {
 
   const [chartPeriod, setChartPeriod] = useState<"24h" | "7d" | "30d">("24h");
   const [chartGroupBy, setChartGroupBy] = useState<"city" | "department">("city");
+  const [selectedLocation, setSelectedLocation] = useState<string | null>(null);
+  const bookingsRef = useRef<HTMLDivElement>(null);
   const [bookingsVisible, setBookingsVisible] = useState(5);
   const [driversVisible, setDriversVisible] = useState(5);
   const [clientsVisible, setClientsVisible] = useState(5);
@@ -92,13 +96,14 @@ export function AdminOverview({ data }: { data: OverviewData }) {
         : now.getTime() - 30 * 24 * 60 * 60 * 1000
     );
     const periodBookings = data.chartBookings.filter((b) => new Date(b.createdAt) >= cutoff);
-    const groupMap = new Map<string, { label: string; withDriver: number; noDriver: number; pending: number; accepted: number; rejected: number; cancelled: number; completed: number }>();
+    const groupMap = new Map<string, { key: string; label: string; withDriver: number; noDriver: number; pending: number; accepted: number; rejected: number; cancelled: number; completed: number }>();
     for (const b of periodBookings) {
       const key = chartGroupBy === "city"
         ? (b.cityName || "Non localisé")
         : (b.regionName || "Non localisé");
       if (!groupMap.has(key)) {
         groupMap.set(key, {
+          key,
           label: chartGroupBy === "city"
             ? (b.regionCode ? `${key} (${b.regionCode})` : key)
             : (b.regionCode ? `${b.regionName} (${b.regionCode})` : key),
@@ -160,7 +165,7 @@ export function AdminOverview({ data }: { data: OverviewData }) {
           {([["24h", "24h"], ["7d", "7j"], ["30d", "30j"]] as const).map(([key, label]) => (
             <button
               key={key}
-              onClick={() => setChartPeriod(key)}
+              onClick={() => { setChartPeriod(key); setSelectedLocation(null); }}
               className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors ${
                 chartPeriod === key
                   ? "bg-neutral-900 text-white shadow-sm"
@@ -227,7 +232,7 @@ export function AdminOverview({ data }: { data: OverviewData }) {
           </h3>
           <div className="flex gap-1 bg-neutral-100 p-0.5 rounded-lg">
             <button
-              onClick={() => setChartGroupBy("city")}
+              onClick={() => { setChartGroupBy("city"); setSelectedLocation(null); }}
               className={`px-2.5 py-1 rounded-md text-[11px] font-medium transition-colors ${
                 chartGroupBy === "city"
                   ? "bg-white text-neutral-900 shadow-sm"
@@ -237,7 +242,7 @@ export function AdminOverview({ data }: { data: OverviewData }) {
               {locale === "en" ? "City" : "Ville"}
             </button>
             <button
-              onClick={() => setChartGroupBy("department")}
+              onClick={() => { setChartGroupBy("department"); setSelectedLocation(null); }}
               className={`px-2.5 py-1 rounded-md text-[11px] font-medium transition-colors ${
                 chartGroupBy === "department"
                   ? "bg-white text-neutral-900 shadow-sm"
@@ -258,8 +263,23 @@ export function AdminOverview({ data }: { data: OverviewData }) {
               const total = entry.withDriver + entry.noDriver;
               const widthPercent = (total / chartData.maxTotal) * 100;
               const driverPercent = total > 0 ? (entry.withDriver / total) * 100 : 0;
+              const isSelected = selectedLocation === entry.key;
               return (
-                <div key={entry.label} className="flex items-center gap-3">
+                <div
+                  key={entry.label}
+                  className={`flex items-center gap-3 cursor-pointer rounded-lg px-1 -mx-1 transition-colors ${
+                    isSelected
+                      ? "bg-blue-50 ring-1 ring-blue-200"
+                      : selectedLocation
+                        ? "opacity-40 hover:opacity-70"
+                        : "hover:bg-neutral-50"
+                  }`}
+                  onClick={() => {
+                    setSelectedLocation(isSelected ? null : entry.key);
+                    setBookingsVisible(5);
+                    if (!isSelected) setTimeout(() => bookingsRef.current?.scrollIntoView({ behavior: "smooth", block: "start" }), 50);
+                  }}
+                >
                   <div className="w-[140px] sm:w-[180px] text-[11px] text-neutral-600 truncate shrink-0 text-right">
                     {entry.label}
                   </div>
@@ -359,21 +379,42 @@ export function AdminOverview({ data }: { data: OverviewData }) {
       </div>
 
       {/* Recent bookings - paginated */}
-      <div className="bg-white border border-neutral-200 rounded-2xl overflow-hidden mb-8">
+      {(() => {
+        const displayedBookings = selectedLocation
+          ? data.recentBookings.filter((b) => {
+              const bookingCity = b.cityName || "Non localisé";
+              const bookingRegion = b.regionName || "Non localisé";
+              return chartGroupBy === "city" ? bookingCity === selectedLocation : bookingRegion === selectedLocation;
+            })
+          : data.recentBookings;
+        return (
+      <div ref={bookingsRef} className="bg-white border border-neutral-200 rounded-2xl overflow-hidden mb-8 scroll-mt-4">
         <div className="flex items-center justify-between px-5 py-4 border-b border-neutral-100">
           <div className="flex items-center gap-2">
             <Icon icon="solar:calendar-linear" className="text-amber-500" />
             <h2 className="font-semibold text-sm">
               {locale === "en" ? "Recent bookings" : "Dernières réservations"}
-              <span className="ml-1.5 text-neutral-400 font-normal">({data.recentBookings.length})</span>
+              <span className="ml-1.5 text-neutral-400 font-normal">({displayedBookings.length})</span>
             </h2>
           </div>
-          <Link href="/admin/reservations" className="text-xs text-neutral-500 hover:text-neutral-900 transition-colors flex items-center gap-1">
-            {tc("seeAll")}
-            <Icon icon="solar:arrow-right-linear" className="text-xs" />
-          </Link>
+          <div className="flex items-center gap-2">
+            {selectedLocation && (
+              <button
+                onClick={() => setSelectedLocation(null)}
+                className="flex items-center gap-1.5 text-xs font-medium px-2.5 py-1 rounded-lg bg-blue-50 text-blue-700 hover:bg-blue-100 transition-colors"
+              >
+                <Icon icon="solar:map-point-wave-linear" className="text-sm" />
+                {selectedLocation}
+                <Icon icon="solar:close-circle-linear" className="text-sm" />
+              </button>
+            )}
+            <Link href="/admin/reservations" className="text-xs text-neutral-500 hover:text-neutral-900 transition-colors flex items-center gap-1">
+              {tc("seeAll")}
+              <Icon icon="solar:arrow-right-linear" className="text-xs" />
+            </Link>
+          </div>
         </div>
-        {data.recentBookings.length === 0 ? (
+        {displayedBookings.length === 0 ? (
           <div className="px-5 py-8 text-center">
             <Icon icon="solar:calendar-linear" className="text-3xl text-neutral-200 mx-auto mb-2" />
             <p className="text-sm text-neutral-400 font-light">{t("noBookings")}</p>
@@ -396,7 +437,7 @@ export function AdminOverview({ data }: { data: OverviewData }) {
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-neutral-100">
-                  {data.recentBookings.slice(0, bookingsVisible).map((booking) => {
+                  {displayedBookings.slice(0, bookingsVisible).map((booking) => {
                     const price = booking.lockedPrice ?? booking.estimatedPrice;
                     const dateFnsLoc = locale === "en" ? enUS : fr;
                     return (
@@ -454,7 +495,7 @@ export function AdminOverview({ data }: { data: OverviewData }) {
             </div>
             {/* Mobile cards */}
             <div className="lg:hidden divide-y divide-neutral-100">
-              {data.recentBookings.slice(0, bookingsVisible).map((booking) => {
+              {displayedBookings.slice(0, bookingsVisible).map((booking) => {
                 const price = booking.lockedPrice ?? booking.estimatedPrice;
                 const dateFnsLoc = locale === "en" ? enUS : fr;
                 return (
@@ -495,7 +536,7 @@ export function AdminOverview({ data }: { data: OverviewData }) {
               })}
             </div>
             {/* Load more button */}
-            {bookingsVisible < data.recentBookings.length && (
+            {bookingsVisible < displayedBookings.length && (
               <div className="px-5 py-3 border-t border-neutral-100">
                 <button
                   onClick={() => setBookingsVisible((prev) => prev + 5)}
@@ -503,14 +544,16 @@ export function AdminOverview({ data }: { data: OverviewData }) {
                 >
                   <Icon icon="solar:alt-arrow-down-linear" className="text-sm" />
                   {locale === "en"
-                    ? `Show more (${Math.min(5, data.recentBookings.length - bookingsVisible)} more)`
-                    : `Voir plus (${Math.min(5, data.recentBookings.length - bookingsVisible)} suivantes)`}
+                    ? `Show more (${Math.min(5, displayedBookings.length - bookingsVisible)} more)`
+                    : `Voir plus (${Math.min(5, displayedBookings.length - bookingsVisible)} suivantes)`}
                 </button>
               </div>
             )}
           </>
         )}
       </div>
+        );
+      })()}
 
       {/* Unified activity — 2 columns: Chauffeurs + Clients */}
       <div className="grid lg:grid-cols-2 gap-6 mb-8">
