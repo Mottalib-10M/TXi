@@ -35,7 +35,8 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/icon", type: "image/png", sizes: "48x48" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/icon", type: "image/png", sizes: "96x96" },
     ],
     apple: [
       { url: "/apple-icon", sizes: "180x180", type: "image/png" },

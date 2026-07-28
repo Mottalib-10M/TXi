@@ -76,7 +76,7 @@ export default async function HomePage() {
         "@type": "Organization",
         name: "TaxiNeo",
         url: "https://www.taxineo.fr",
-        logo: "https://www.taxineo.fr/logo.png",
+        logo: "https://www.taxineo.fr/apple-icon",
         contactPoint: {
           "@type": "ContactPoint",
           telephone: "+33759592934",

@@ -260,7 +260,7 @@ export default async function BlogArticlePage({ params }: PageProps) {
       name: "TaxiNeo",
       logo: {
         "@type": "ImageObject",
-        url: "https://www.taxineo.fr/logo.png",
+        url: "https://www.taxineo.fr/apple-icon",
       },
     },
     mainEntityOfPage: {

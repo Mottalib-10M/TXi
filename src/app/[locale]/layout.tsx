@@ -49,9 +49,9 @@ export default async function LocaleLayout({
         url: "https://www.taxineo.fr",
         logo: {
           "@type": "ImageObject",
-          url: "https://www.taxineo.fr/logo.svg",
+          url: "https://www.taxineo.fr/apple-icon",
           width: 180,
-          height: 40,
+          height: 180,
         },
         founder: {
           "@type": "Person",

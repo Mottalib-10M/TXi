@@ -25,7 +25,7 @@ export async function GuideJsonLd({ guide }: { guide: Guide }) {
       url: "https://www.taxineo.fr",
       logo: {
         "@type": "ImageObject",
-        url: "https://www.taxineo.fr/logo.svg",
+        url: "https://www.taxineo.fr/apple-icon",
       },
     },
   };
