@@ -47,6 +47,11 @@ const nextConfig = {
   },
   async rewrites() {
     return [
+      // Logo fallback — serve /apple-icon for legacy /logo.png references
+      {
+        source: "/logo.png",
+        destination: "/apple-icon",
+      },
       // French locale
       {
         source: "/fr/taxi-aeroport-:slug",
