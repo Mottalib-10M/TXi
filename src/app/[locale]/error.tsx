@@ -5,12 +5,16 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 
 export default function Error({
+  error,
   reset,
 }: {
   error: Error & { digest?: string };
   reset: () => void;
 }) {
   const t = useTranslations("error");
+
+  // Log error for debugging
+  console.error("[ErrorBoundary]", error.message, error.digest, error.stack);
 
   return (
     <div className="min-h-screen bg-white flex items-center justify-center px-6">
@@ -24,6 +28,12 @@ export default function Error({
         <p className="text-sm text-neutral-500 font-light mb-8">
           {t("description")}
         </p>
+        {(error.message || error.digest) && (
+          <p className="text-xs text-neutral-400 font-mono mb-4 max-w-md mx-auto break-all">
+            {error.message && error.message !== "An error occurred in the Server Components render." ? error.message : null}
+            {error.digest && <span className="block mt-1">Digest: {error.digest}</span>}
+          </p>
+        )}
         <div className="flex gap-3 justify-center">
           <button
             onClick={reset}
