@@ -19,6 +19,7 @@ export default async function AdminDriversPage() {
       vehicleModel: true,
       vehicles: true,
       zoneAddress: true,
+      carteProUrl: true,
       isActive: true,
       isVerified: true,
       emailVerified: true,
@@ -53,6 +54,7 @@ export default async function AdminDriversPage() {
       emailVerified: d.emailVerified,
       lastLoginAt: d.lastLoginAt?.toISOString() || null,
       loginCount: d.loginCount,
+      hasCartePro: Boolean(d.carteProUrl),
       bookingsCount: d._count.bookings,
       createdAt: d.createdAt.toISOString(),
     };

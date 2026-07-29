@@ -10,7 +10,7 @@ export default async function AdminReservationsPage() {
   const bookings = await prisma.booking.findMany({
     orderBy: { createdAt: "desc" },
     include: {
-      driver: { select: { firstName: true, lastName: true, slug: true, phone: true, email: true } },
+      driver: { select: { id: true, firstName: true, lastName: true, slug: true, phone: true, email: true } },
       organization: { select: { name: true, type: true } },
     },
   });
@@ -36,6 +36,7 @@ export default async function AdminReservationsPage() {
       source: b.source,
       driver: b.driver
         ? {
+            id: b.driver.id,
             name: `${b.driver.firstName} ${b.driver.lastName}`,
             slug: b.driver.slug,
             phone: b.driver.phone,

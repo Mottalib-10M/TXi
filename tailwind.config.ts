@@ -39,12 +39,17 @@ const config: Config = {
           "0%": { transform: "translateX(0)" },
           "100%": { transform: "translateX(-50%)" },
         },
+        shimmer: {
+          "0%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(400%)" },
+        },
       },
       animation: {
         "ping-slow": "ping-slow 2s cubic-bezier(0, 0, 0.2, 1) infinite",
         float: "float 4s ease-in-out infinite",
         "float-delayed": "float 4s ease-in-out 1s infinite",
         "scroll-left": "scroll-left 20s linear infinite",
+        shimmer: "shimmer 2s ease-in-out infinite",
       },
     },
   },

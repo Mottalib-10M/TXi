@@ -3,6 +3,7 @@ import { prisma } from "@/lib/prisma";
 import { Icon } from "@iconify/react";
 import { Link } from "@/i18n/navigation";
 import { QRCodeButton } from "@/components/dashboard/QRCodeButton";
+
 import { BookingQuickActions } from "@/components/dashboard/BookingQuickActions";
 import { PhoneLink } from "@/components/ui/PhoneLink";
 import { WhatsAppLink } from "@/components/ui/WhatsAppLink";

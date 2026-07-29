@@ -27,7 +27,7 @@ interface Booking {
   status: string;
   source: string;
   cancelledBy: string | null;
-  driver: { name: string; slug: string; phone: string; email: string } | null;
+  driver: { id: string; name: string; slug: string; phone: string; email: string } | null;
   organization: { name: string; type: string } | null;
   regionCode: string | null;
   regionName: string | null;
@@ -72,6 +72,14 @@ export function AdminBookingsTable({ bookings }: { bookings: Booking[] }) {
     message: string;
     onConfirm: () => void;
   } | null>(null);
+  const [reassignModal, setReassignModal] = useState<{
+    bookingId: string;
+    currentDriverName: string | null;
+    currentDriverId: string | null;
+    drivers: { id: string; firstName: string; lastName: string; companyName: string | null; zoneAddress: string | null }[];
+  } | null>(null);
+  const [reassignSearch, setReassignSearch] = useState("");
+  const [selectedNewDriver, setSelectedNewDriver] = useState<string | null>(null);
 
   const noDriverCount = bookings.filter((b) => b.driver === null).length;
 
@@ -217,13 +225,13 @@ export function AdminBookingsTable({ bookings }: { bookings: Booking[] }) {
     }
   };
 
-  const executeAction = useCallback(async (bookingId: string, action: "remind-driver" | "apologize-refuse" | "cancel-booking") => {
+  const executeAction = useCallback(async (bookingId: string, action: string, extra?: Record<string, string>) => {
     setLoadingAction(`${bookingId}-${action}`);
     try {
       const res = await fetch(`/api/admin/bookings/${bookingId}/actions`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ action }),
+        body: JSON.stringify({ action, ...extra }),
       });
       const data = await res.json();
       if (!res.ok) {
@@ -238,15 +246,45 @@ export function AdminBookingsTable({ bookings }: { bookings: Booking[] }) {
       } else if (action === "cancel-booking") {
         toast.success(locale === "en" ? "Booking cancelled" : "Course annulée");
         router.refresh();
+      } else if (action === "accept-booking") {
+        toast.success(t("bookingConfirmed"));
+        router.refresh();
+      } else if (action === "complete-booking") {
+        toast.success(t("bookingCompleted"));
+        router.refresh();
+      } else if (action === "reassign-driver") {
+        toast.success(t("driverReassigned"));
+        router.refresh();
       }
     } catch {
       toast.error("Erreur réseau");
     } finally {
       setLoadingAction(null);
     }
-  }, [locale, router]);
+  }, [locale, router, t]);
 
-  const handleAction = (bookingId: string, action: "remind-driver" | "apologize-refuse" | "cancel-booking") => {
+  const openReassignModal = useCallback(async (bookingId: string, currentDriverName: string | null, currentDriverId: string | null) => {
+    try {
+      const res = await fetch("/api/admin/drivers");
+      const d = await res.json();
+      if (!res.ok) {
+        toast.error("Erreur lors du chargement des chauffeurs");
+        return;
+      }
+      setReassignSearch("");
+      setSelectedNewDriver(null);
+      setReassignModal({
+        bookingId,
+        currentDriverName,
+        currentDriverId,
+        drivers: d.drivers,
+      });
+    } catch {
+      toast.error("Erreur réseau");
+    }
+  }, []);
+
+  const handleAction = (bookingId: string, action: string) => {
     if (action === "apologize-refuse") {
       setConfirmModal({
         title: locale === "en" ? "Refuse this booking?" : "Refuser cette réservation ?",
@@ -266,6 +304,19 @@ export function AdminBookingsTable({ bookings }: { bookings: Booking[] }) {
         message: locale === "en"
           ? "The booking will be cancelled and the client (and driver if applicable) will be notified by email."
           : "La course sera annulée et le client (et le chauffeur si applicable) seront notifiés par email.",
+        onConfirm: () => {
+          setConfirmModal(null);
+          executeAction(bookingId, action);
+        },
+      });
+      return;
+    }
+    if (action === "accept-booking") {
+      setConfirmModal({
+        title: locale === "en" ? "Confirm this booking?" : "Confirmer cette course ?",
+        message: locale === "en"
+          ? "The booking will be accepted and both the client and driver will be notified by email."
+          : "La course sera acceptée et le client et le chauffeur seront notifiés par email.",
         onConfirm: () => {
           setConfirmModal(null);
           executeAction(bookingId, action);
@@ -608,7 +659,14 @@ export function AdminBookingsTable({ bookings }: { bookings: Booking[] }) {
                                 {filter !== "NO_DRIVER" && (
                                   <td className="px-2 py-2">
                                     {booking.status === "PENDING" && booking.driver && (
-                                      <div className="flex gap-1">
+                                      <div className="flex flex-wrap gap-1">
+                                        <button
+                                          onClick={() => handleAction(booking.id, "accept-booking")}
+                                          disabled={loadingAction === `${booking.id}-accept-booking`}
+                                          className="px-2 py-1 rounded-lg bg-green-50 text-green-700 hover:bg-green-100 transition-colors text-[10px] font-medium whitespace-nowrap disabled:opacity-50"
+                                        >
+                                          {loadingAction === `${booking.id}-accept-booking` ? "..." : t("confirmBooking")}
+                                        </button>
                                         <button
                                           onClick={() => handleAction(booking.id, "remind-driver")}
                                           disabled={loadingAction === `${booking.id}-remind-driver`}
@@ -625,14 +683,31 @@ export function AdminBookingsTable({ bookings }: { bookings: Booking[] }) {
                                         </button>
                                       </div>
                                     )}
-                                    {(booking.status === "PENDING" || booking.status === "ACCEPTED") && (
+                                    {booking.status === "ACCEPTED" && (
                                       <button
-                                        onClick={() => handleAction(booking.id, "cancel-booking")}
-                                        disabled={loadingAction === `${booking.id}-cancel-booking`}
-                                        className="px-2 py-1 rounded-lg bg-neutral-100 text-neutral-600 hover:bg-neutral-200 transition-colors text-[10px] font-medium whitespace-nowrap disabled:opacity-50 mt-1"
+                                        onClick={() => handleAction(booking.id, "complete-booking")}
+                                        disabled={loadingAction === `${booking.id}-complete-booking`}
+                                        className="px-2 py-1 rounded-lg bg-blue-50 text-blue-700 hover:bg-blue-100 transition-colors text-[10px] font-medium whitespace-nowrap disabled:opacity-50"
                                       >
-                                        {loadingAction === `${booking.id}-cancel-booking` ? "..." : (locale === "en" ? "Cancel" : "Annuler")}
+                                        {loadingAction === `${booking.id}-complete-booking` ? "..." : t("completeBooking")}
                                       </button>
+                                    )}
+                                    {(booking.status === "PENDING" || booking.status === "ACCEPTED") && (
+                                      <div className="flex flex-wrap gap-1 mt-1">
+                                        <button
+                                          onClick={() => handleAction(booking.id, "cancel-booking")}
+                                          disabled={loadingAction === `${booking.id}-cancel-booking`}
+                                          className="px-2 py-1 rounded-lg bg-neutral-100 text-neutral-600 hover:bg-neutral-200 transition-colors text-[10px] font-medium whitespace-nowrap disabled:opacity-50"
+                                        >
+                                          {loadingAction === `${booking.id}-cancel-booking` ? "..." : (locale === "en" ? "Cancel" : "Annuler")}
+                                        </button>
+                                        <button
+                                          onClick={() => openReassignModal(booking.id, booking.driver?.name || null, booking.driver?.id || null)}
+                                          className="px-2 py-1 rounded-lg bg-violet-50 text-violet-700 hover:bg-violet-100 transition-colors text-[10px] font-medium whitespace-nowrap"
+                                        >
+                                          {t("reassignDriver")}
+                                        </button>
+                                      </div>
                                     )}
                                   </td>
                                 )}
@@ -753,7 +828,14 @@ export function AdminBookingsTable({ bookings }: { bookings: Booking[] }) {
 
                             {/* Actions */}
                             {filter !== "NO_DRIVER" && booking.status === "PENDING" && booking.driver && (
-                              <div className="flex gap-2 pt-1">
+                              <div className="flex flex-wrap gap-2 pt-1">
+                                <button
+                                  onClick={() => handleAction(booking.id, "accept-booking")}
+                                  disabled={loadingAction === `${booking.id}-accept-booking`}
+                                  className="px-3 py-1.5 rounded-lg bg-green-50 text-green-700 hover:bg-green-100 transition-colors text-xs font-medium disabled:opacity-50"
+                                >
+                                  {loadingAction === `${booking.id}-accept-booking` ? "..." : t("confirmBooking")}
+                                </button>
                                 <button
                                   onClick={() => handleAction(booking.id, "remind-driver")}
                                   disabled={loadingAction === `${booking.id}-remind-driver`}
@@ -770,14 +852,31 @@ export function AdminBookingsTable({ bookings }: { bookings: Booking[] }) {
                                 </button>
                               </div>
                             )}
-                            {filter !== "NO_DRIVER" && (booking.status === "PENDING" || booking.status === "ACCEPTED") && (
+                            {filter !== "NO_DRIVER" && booking.status === "ACCEPTED" && (
                               <div className="pt-1">
+                                <button
+                                  onClick={() => handleAction(booking.id, "complete-booking")}
+                                  disabled={loadingAction === `${booking.id}-complete-booking`}
+                                  className="px-3 py-1.5 rounded-lg bg-blue-50 text-blue-700 hover:bg-blue-100 transition-colors text-xs font-medium disabled:opacity-50"
+                                >
+                                  {loadingAction === `${booking.id}-complete-booking` ? "..." : t("completeBooking")}
+                                </button>
+                              </div>
+                            )}
+                            {filter !== "NO_DRIVER" && (booking.status === "PENDING" || booking.status === "ACCEPTED") && (
+                              <div className="flex flex-wrap gap-2 pt-1">
                                 <button
                                   onClick={() => handleAction(booking.id, "cancel-booking")}
                                   disabled={loadingAction === `${booking.id}-cancel-booking`}
                                   className="px-3 py-1.5 rounded-lg bg-neutral-100 text-neutral-600 hover:bg-neutral-200 transition-colors text-xs font-medium disabled:opacity-50"
                                 >
                                   {loadingAction === `${booking.id}-cancel-booking` ? "..." : (locale === "en" ? "Cancel" : "Annuler")}
+                                </button>
+                                <button
+                                  onClick={() => openReassignModal(booking.id, booking.driver?.name || null, booking.driver?.id || null)}
+                                  className="px-3 py-1.5 rounded-lg bg-violet-50 text-violet-700 hover:bg-violet-100 transition-colors text-xs font-medium"
+                                >
+                                  {t("reassignDriver")}
                                 </button>
                               </div>
                             )}
@@ -832,6 +931,109 @@ export function AdminBookingsTable({ bookings }: { bookings: Booking[] }) {
                 className="px-4 py-2 rounded-xl text-sm font-medium text-white bg-red-600 hover:bg-red-700 transition-colors"
               >
                 {locale === "en" ? "Confirm" : "Confirmer"}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Reassign modal */}
+      {reassignModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center">
+          <div
+            className="absolute inset-0 bg-black/40 backdrop-blur-sm"
+            onClick={() => setReassignModal(null)}
+          />
+          <div className="relative bg-white rounded-2xl shadow-xl max-w-lg w-full mx-4 p-6 animate-in fade-in zoom-in-95 duration-200 max-h-[80vh] flex flex-col">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-10 h-10 rounded-full bg-violet-50 flex items-center justify-center shrink-0">
+                <Icon icon="solar:user-hands-bold" className="text-violet-500 text-xl" />
+              </div>
+              <div>
+                <h3 className="text-base font-semibold text-neutral-900">{t("reassignTitle")}</h3>
+                <p className="text-xs text-neutral-500">{t("reassignMessage")}</p>
+              </div>
+            </div>
+
+            {reassignModal.currentDriverName && (
+              <div className="flex items-center gap-2 mb-3 px-3 py-2 bg-neutral-50 rounded-lg">
+                <span className="text-xs text-neutral-500">{t("currentDriver")} :</span>
+                <span className="text-xs font-medium text-neutral-700">{reassignModal.currentDriverName}</span>
+              </div>
+            )}
+            {!reassignModal.currentDriverName && (
+              <div className="flex items-center gap-2 mb-3 px-3 py-2 bg-orange-50 rounded-lg">
+                <span className="text-xs text-orange-600">{t("noDriverAssigned")}</span>
+              </div>
+            )}
+
+            <div className="relative mb-3">
+              <Icon icon="solar:magnifer-linear" className="absolute left-3 top-1/2 -translate-y-1/2 text-neutral-400 text-sm" />
+              <input
+                type="text"
+                value={reassignSearch}
+                onChange={(e) => setReassignSearch(e.target.value)}
+                placeholder={t("searchDriver")}
+                className="w-full pl-9 pr-4 py-2 bg-white border border-neutral-200 rounded-xl text-sm focus:outline-none focus:border-neutral-400 transition-colors"
+              />
+            </div>
+
+            <div className="overflow-y-auto flex-1 -mx-1 px-1 space-y-1">
+              {reassignModal.drivers
+                .filter((d) => {
+                  if (!reassignSearch) return true;
+                  const q = reassignSearch.toLowerCase();
+                  return (
+                    `${d.firstName} ${d.lastName}`.toLowerCase().includes(q) ||
+                    (d.companyName?.toLowerCase().includes(q) ?? false) ||
+                    (d.zoneAddress?.toLowerCase().includes(q) ?? false)
+                  );
+                })
+                .filter((d) => d.id !== reassignModal.currentDriverId)
+                .map((d) => (
+                  <button
+                    key={d.id}
+                    onClick={() => setSelectedNewDriver(d.id)}
+                    className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-left transition-colors ${
+                      selectedNewDriver === d.id
+                        ? "bg-violet-50 ring-1 ring-violet-300"
+                        : "hover:bg-neutral-50"
+                    }`}
+                  >
+                    <div className="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center shrink-0">
+                      <Icon icon="solar:user-hands-linear" className="text-blue-500 text-sm" />
+                    </div>
+                    <div className="min-w-0 flex-1">
+                      <p className="text-sm font-medium text-neutral-900 truncate">{d.firstName} {d.lastName}</p>
+                      <p className="text-xs text-neutral-400 truncate">
+                        {d.companyName && <span>{d.companyName} · </span>}
+                        {d.zoneAddress || "—"}
+                      </p>
+                    </div>
+                    {selectedNewDriver === d.id && (
+                      <Icon icon="solar:check-circle-bold" className="text-violet-500 text-lg shrink-0" />
+                    )}
+                  </button>
+                ))}
+            </div>
+
+            <div className="flex justify-end gap-3 mt-4 pt-4 border-t border-neutral-100">
+              <button
+                onClick={() => setReassignModal(null)}
+                className="px-4 py-2 rounded-xl text-sm font-medium text-neutral-600 bg-neutral-100 hover:bg-neutral-200 transition-colors"
+              >
+                {locale === "en" ? "Cancel" : "Annuler"}
+              </button>
+              <button
+                onClick={() => {
+                  if (!selectedNewDriver) return;
+                  setReassignModal(null);
+                  executeAction(reassignModal.bookingId, "reassign-driver", { newDriverId: selectedNewDriver });
+                }}
+                disabled={!selectedNewDriver}
+                className="px-4 py-2 rounded-xl text-sm font-medium text-white bg-violet-600 hover:bg-violet-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {t("reassignConfirm")}
               </button>
             </div>
           </div>

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import { Icon } from "@iconify/react";
 import { useTranslations, useLocale } from "next-intl";
@@ -21,6 +21,7 @@ export default function InscriptionPage() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const initialType = searchParams.get("type") as ProfileType | null;
+  const referralCode = searchParams.get("ref");
   const redirect = searchParams.get("redirect");
   const prefillName = searchParams.get("name") || "";
   const prefillPhone = searchParams.get("phone") || "";
@@ -28,7 +29,9 @@ export default function InscriptionPage() {
   const isFromBooking = initialType === "particulier" && (prefillName || prefillPhone || prefillEmail);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
-  const [profileType, setProfileType] = useState<ProfileType | null>(initialType);
+  const [profileType, setProfileType] = useState<ProfileType | null>(referralCode ? "driver" : initialType);
+  const [referrerName, setReferrerName] = useState("");
+  const [showReferralLanding, setShowReferralLanding] = useState(!!referralCode);
   const [orgAddress, setOrgAddress] = useState("");
   const [formEmail, setFormEmail] = useState(prefillEmail);
   const [formPhone, setFormPhone] = useState(prefillPhone);
@@ -44,6 +47,20 @@ export default function InscriptionPage() {
   const [vehiclePlate, setVehiclePlate] = useState("");
   const [vehiclePhotoBase64, setVehiclePhotoBase64] = useState("");
   const [vehiclePhotoPreview, setVehiclePhotoPreview] = useState("");
+  const [carteProBase64, setCarteProBase64] = useState("");
+  const [carteProPreview, setCarteProPreview] = useState("");
+  const [carteProFileName, setCarteProFileName] = useState("");
+  const [carteProIsPdf, setCarteProIsPdf] = useState(false);
+
+  useEffect(() => {
+    if (!referralCode) return;
+    fetch(`/api/auth/referrer?code=${encodeURIComponent(referralCode)}`)
+      .then((res) => (res.ok ? res.json() : null))
+      .then((data) => {
+        if (data) setReferrerName(data.firstName || data.companyName || "");
+      })
+      .catch(() => {});
+  }, [referralCode]);
 
   const bookingOptions: { type: ProfileType; label: string; icon: string; description: string }[] = [
     { type: "particulier", label: t("particulier"), icon: "solar:user-linear", description: t("particulierDesc") },
@@ -137,6 +154,28 @@ export default function InscriptionPage() {
     setVehiclePhotoPreview(compressed);
   }
 
+  async function handleCarteProUpload(e: React.ChangeEvent<HTMLInputElement>) {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    const isPdf = file.type === "application/pdf" || /\.pdf$/i.test(file.name);
+    setCarteProIsPdf(isPdf);
+    setCarteProFileName(file.name);
+
+    if (isPdf) {
+      const reader = new FileReader();
+      reader.onload = (ev) => {
+        const result = ev.target?.result as string;
+        setCarteProBase64(result);
+        setCarteProPreview("");
+      };
+      reader.readAsDataURL(file);
+    } else {
+      const compressed = await compressImage(file);
+      setCarteProBase64(compressed);
+      setCarteProPreview(compressed);
+    }
+  }
+
   async function handleDriverSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setError("");
@@ -156,6 +195,7 @@ export default function InscriptionPage() {
       vehicleModel: vehicleModel || undefined,
       vehiclePlate: vehiclePlate || undefined,
       vehiclePhotoBase64: vehiclePhotoBase64 || undefined,
+      carteProBase64: carteProBase64 || undefined,
       locale,
       turnstileToken,
       _hp: hp,
@@ -272,6 +312,85 @@ export default function InscriptionPage() {
   const inputClass =
     "w-full bg-neutral-100 rounded-xl px-4 py-2.5 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all";
 
+  // Referral landing screen — full page, shown before the form
+  if (showReferralLanding && referrerName) {
+    return (
+      <div className="min-h-screen bg-gradient-to-b from-violet-100/80 via-white to-blue-50/50 flex items-center justify-center px-6 py-12">
+        <div className="w-full max-w-sm">
+          {/* Logo */}
+          <div className="text-center mb-10">
+            <Link href="/" className="text-2xl inline-block">
+              <span className="font-normal text-neutral-600">Taxi</span>
+              <span className="font-bold text-neutral-950">Neo</span>
+            </Link>
+          </div>
+
+          {/* Invitation card */}
+          <div className="bg-white rounded-3xl shadow-xl shadow-neutral-200/50 border border-neutral-100 p-7 mb-6">
+            {/* Referrer highlight */}
+            <div className="flex flex-col items-center mb-6">
+              <div className="w-[72px] h-[72px] bg-gradient-to-br from-violet-500 to-indigo-600 rounded-full flex items-center justify-center shadow-lg shadow-violet-300/50 mb-4">
+                <span className="text-2xl font-bold text-white">{referrerName.charAt(0).toUpperCase()}</span>
+              </div>
+              <p className="text-lg font-bold text-neutral-900 mb-0.5">
+                {referrerName}
+              </p>
+              <p className="text-sm text-neutral-500">
+                {t("referralInviteSubheading")}
+              </p>
+            </div>
+
+            {/* Divider */}
+            <div className="h-px bg-neutral-100 mb-5" />
+
+            {/* Subtitle */}
+            <p className="text-sm text-neutral-600 leading-relaxed mb-1 text-center font-medium">
+              {t("referralInviteSubtitle1")}
+            </p>
+            <p className="text-sm text-neutral-500 leading-relaxed mb-5 text-center">
+              {t("referralInviteSubtitle2")}
+            </p>
+
+            {/* Benefits */}
+            <div className="space-y-3.5">
+              {[
+                { icon: "solar:qr-code-bold", color: "text-violet-600", bg: "bg-violet-50", text: t("referralBenefit1") },
+                { icon: "solar:card-2-bold", color: "text-blue-600", bg: "bg-blue-50", text: t("referralBenefit2") },
+                { icon: "solar:wallet-money-bold", color: "text-emerald-600", bg: "bg-emerald-50", text: t("referralBenefit3") },
+              ].map((item) => (
+                <div key={item.text} className="flex items-center gap-3">
+                  <div className={`w-9 h-9 ${item.bg} rounded-xl flex items-center justify-center shrink-0`}>
+                    <Icon icon={item.icon} className={`text-lg ${item.color}`} />
+                  </div>
+                  <span className="text-[13px] font-medium text-neutral-700">{item.text}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* CTA */}
+          <button
+            onClick={() => setShowReferralLanding(false)}
+            className="w-full bg-neutral-950 text-white rounded-2xl py-4 text-[15px] font-semibold hover:bg-neutral-800 active:scale-[0.98] transition-all shadow-lg shadow-neutral-400/30 btn-lift"
+          >
+            {t("referralCta")}
+          </button>
+          <p className="text-center text-xs text-neutral-400 mt-3">
+            {t("referralTrust")}
+          </p>
+
+          {/* Login link */}
+          <p className="text-center text-sm text-neutral-500 mt-6">
+            {t("alreadyHaveAccount")}{" "}
+            <Link href="/connexion" className="text-neutral-900 font-medium hover:underline">
+              {t("loginLink")}
+            </Link>
+          </p>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-white flex items-center justify-center px-6 py-6">
       <div className="w-full max-w-md">
@@ -342,7 +461,7 @@ export default function InscriptionPage() {
         {/* Driver form - Step 1 */}
         {profileType === "driver" && driverStep === 1 && (
           <>
-            {!initialType && (
+            {!initialType && !referralCode && (
               <button
                 onClick={() => { setProfileType(null); setError(""); setFormEmail(""); setFormPhone(""); setCityAddress(""); setCityLat(undefined); setCityLng(undefined); setDriverStep(1); }}
                 className="flex items-center gap-1 text-sm text-neutral-500 hover:text-neutral-900 mb-2"
@@ -515,6 +634,30 @@ export default function InscriptionPage() {
                 {vehiclePhotoPreview && (
                   // eslint-disable-next-line @next/next/no-img-element
                   <img src={vehiclePhotoPreview} alt={t("preview")} className="mt-2 w-full h-32 object-cover rounded-xl border border-neutral-200" loading="lazy" decoding="async" />
+                )}
+              </div>
+
+              {/* Carte professionnelle */}
+              <div className="bg-blue-50 border border-blue-200 rounded-xl p-4">
+                <label className="block text-sm font-medium mb-0.5">
+                  {t("cartePro")}
+                </label>
+                <p className="text-xs text-blue-600 mb-2">{t("carteProHint")}</p>
+                <input
+                  type="file"
+                  accept="image/*,.heic,.heif,.pdf,application/pdf"
+                  onChange={handleCarteProUpload}
+                  className="w-full text-sm text-neutral-500 file:mr-4 file:py-2.5 file:px-4 file:rounded-lg file:border-0 file:text-xs file:font-medium file:bg-blue-100 file:text-blue-700 hover:file:bg-blue-200 cursor-pointer"
+                />
+                {carteProPreview && !carteProIsPdf && (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img src={carteProPreview} alt={t("preview")} className="mt-2 w-full h-32 object-cover rounded-xl border border-blue-200" loading="lazy" decoding="async" />
+                )}
+                {carteProIsPdf && carteProFileName && (
+                  <div className="mt-2 flex items-center gap-2 text-sm text-blue-700">
+                    <Icon icon="solar:check-circle-bold" className="text-green-500" />
+                    <span className="truncate">{carteProFileName}</span>
+                  </div>
                 )}
               </div>
 

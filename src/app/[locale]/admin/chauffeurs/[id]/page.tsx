@@ -82,6 +82,7 @@ export default async function AdminDriverDetailPage({
     photoUrl: driver.photoUrl,
     bio: driver.bio,
     companyName: driver.companyName,
+    carteProUrl: driver.carteProUrl || null,
     vehicle: vehicleDisplay,
     vehicleColor: v0?.color || driver.vehicleColor || null,
     vehiclePlate: v0?.plate || driver.vehiclePlate || null,

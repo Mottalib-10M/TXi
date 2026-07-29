@@ -26,6 +26,7 @@ interface Driver {
   emailVerified: boolean;
   lastLoginAt: string | null;
   loginCount: number;
+  hasCartePro: boolean;
   bookingsCount: number;
   createdAt: string;
 }
@@ -308,6 +309,11 @@ export function DriversTable({ drivers }: { drivers: Driver[] }) {
                       {driver.isVerified && (
                         <span className="text-xs px-2.5 py-0.5 rounded-full font-medium bg-violet-50 text-violet-700 ring-1 ring-violet-200">
                           {t("verified")}
+                        </span>
+                      )}
+                      {!driver.isVerified && driver.hasCartePro && (
+                        <span className="text-xs px-2.5 py-0.5 rounded-full font-medium bg-orange-50 text-orange-700 ring-1 ring-orange-200 animate-pulse">
+                          {t("pendingReview")}
                         </span>
                       )}
                     </div>

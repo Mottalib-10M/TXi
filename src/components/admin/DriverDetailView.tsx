@@ -27,6 +27,7 @@ interface DriverData {
   baseFare: number;
   pricePerKm: number;
   minimumFare: number;
+  carteProUrl: string | null;
   isActive: boolean;
   isVerified: boolean;
   emailVerified: boolean;
@@ -315,6 +316,67 @@ export function DriverDetailView({ driver }: { driver: DriverData }) {
             </span>
           </div>
         </div>
+      </div>
+
+      {/* Carte professionnelle */}
+      <div className="bg-white border border-neutral-200 rounded-2xl p-5 mb-8">
+        <h2 className="text-sm font-semibold mb-4 flex items-center gap-2">
+          <Icon icon="solar:document-medicine-linear" className="text-neutral-400" />
+          {t("carteProTitle")}
+        </h2>
+        {driver.carteProUrl ? (
+          <div>
+            {driver.carteProUrl.includes("application/pdf") || driver.carteProUrl.endsWith(".pdf") ? (
+              <div className="flex items-center gap-3 mb-3">
+                <div className="w-10 h-10 bg-red-50 rounded-lg flex items-center justify-center">
+                  <Icon icon="solar:file-text-bold" className="text-red-500 text-lg" />
+                </div>
+                <div>
+                  <p className="text-sm font-medium">{t("carteProPdf")}</p>
+                  <a
+                    href={driver.carteProUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs text-blue-600 hover:underline"
+                  >
+                    {t("downloadFullSize")}
+                  </a>
+                </div>
+              </div>
+            ) : (
+              <div className="space-y-2 mb-3">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={driver.carteProUrl}
+                  alt={t("carteProTitle")}
+                  className="w-full max-w-sm rounded-xl border border-neutral-200"
+                />
+                <a
+                  href={driver.carteProUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs text-blue-600 hover:underline inline-flex items-center gap-1"
+                >
+                  <Icon icon="solar:magnifer-linear" className="text-xs" />
+                  {t("downloadFullSize")}
+                </a>
+              </div>
+            )}
+            <p className="text-xs text-neutral-400 mb-3">{t("carteProReviewHint")}</p>
+            {!driver.isVerified && (
+              <button
+                onClick={() => toggleField("isVerified", true)}
+                disabled={updating}
+                className="px-4 py-2 rounded-lg text-sm font-medium bg-green-600 text-white hover:bg-green-700 transition-colors disabled:opacity-50 flex items-center gap-2"
+              >
+                <Icon icon="solar:shield-check-bold" />
+                {t("approveDriver")}
+              </button>
+            )}
+          </div>
+        ) : (
+          <p className="text-sm text-neutral-400 font-light">{t("noCartePro")}</p>
+        )}
       </div>
 
       {/* Recent bookings */}

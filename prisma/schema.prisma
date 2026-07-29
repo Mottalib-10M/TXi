@@ -62,6 +62,7 @@ model Driver {
   slug         String   @unique
   phone        String   @default("")
   photoUrl     String?
+  carteProUrl  String?   // Carte professionnelle de taxi (PDF ou image Cloudinary)
   bio          String?
   companyName  String?
 
@@ -109,6 +110,10 @@ model Driver {
   lastLoginAt DateTime?
   loginCount  Int       @default(0)
 
+  // Referral / waitlist
+  referralCode  String?  @unique
+  referralCount Int      @default(0)
+
   bookings         Booking[]       @relation("DriverBookings")
   referredBookings Booking[]       @relation("ReferredBookings")
   favoritedBy      FavoriteDriver[]
@@ -118,6 +123,16 @@ model Driver {
   updatedAt DateTime @updatedAt
 
   @@map("drivers")
+}
+
+model ReferralClick {
+  id           String   @id @default(cuid())
+  referralCode String
+  visitorIp    String
+  createdAt    DateTime @default(now())
+
+  @@unique([referralCode, visitorIp])
+  @@map("referral_clicks")
 }
 
 model Booking {
