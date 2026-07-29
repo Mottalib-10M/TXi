@@ -48,8 +48,8 @@ export default async function ReferralTrackingPage({ params }: Props) {
     referralCount: uniqueClicks,
   };
 
-  // Auto-verify if 10+ unique referrals and not yet verified
-  if (uniqueClicks >= 10 && !driver.isVerified) {
+  // Auto-verify if 2+ unique referrals and not yet verified
+  if (uniqueClicks >= 2 && !driver.isVerified) {
     updateData.isVerified = true;
   }
 

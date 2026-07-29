@@ -26,7 +26,7 @@ export function WaitlistScreen({
   const [copied, setCopied] = useState(false);
 
   const referralLink = `https://taxineo.fr/r/${referralCode}`;
-  const clampedCount = Math.min(referralCount, 10);
+  const clampedCount = Math.min(referralCount, 2);
 
   const whatsAppMessage = t("referralWhatsAppMsg", { link: referralLink });
   const whatsAppUrl = `https://wa.me/?text=${encodeURIComponent(whatsAppMessage)}`;
@@ -124,14 +124,14 @@ export function WaitlistScreen({
             <span className="text-sm font-medium text-neutral-700">
               {t("referralProgress", { count: clampedCount })}
             </span>
-            {clampedCount >= 10 && (
+            {clampedCount >= 2 && (
               <Icon icon="solar:check-circle-bold" className="text-green-500 text-lg" />
             )}
           </div>
           <div className="w-full h-2.5 bg-neutral-100 rounded-full overflow-hidden">
             <div
               className="h-full bg-gradient-to-r from-violet-500 to-purple-500 rounded-full transition-all duration-500"
-              style={{ width: `${(clampedCount / 10) * 100}%` }}
+              style={{ width: `${(clampedCount / 2) * 100}%` }}
             />
           </div>
         </div>
