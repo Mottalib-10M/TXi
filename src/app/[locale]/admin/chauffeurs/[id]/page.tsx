@@ -35,6 +35,20 @@ export default async function AdminDriverDetailPage({
 
   if (!driver) notFound();
 
+  const referrals = driver.referralCode
+    ? await prisma.driver.findMany({
+        where: { referredByCode: driver.referralCode },
+        select: {
+          id: true,
+          firstName: true,
+          companyName: true,
+          createdAt: true,
+          isVerified: true,
+          lastLoginAt: true,
+        },
+      })
+    : [];
+
   const [statusCounts, revenueAgg] = await Promise.all([
     prisma.booking.groupBy({
       by: ["status"],
@@ -98,6 +112,8 @@ export default async function AdminDriverDetailPage({
     lastLoginAt: driver.lastLoginAt?.toISOString() || null,
     loginCount: driver.loginCount,
     createdAt: driver.createdAt.toISOString(),
+    referralCount: driver.referralCount,
+    referralCode: driver.referralCode || null,
     totalBookings,
     completedBookings: completed,
     totalRevenue: Number(revenueAgg._sum.lockedPrice) || 0,
@@ -115,6 +131,14 @@ export default async function AdminDriverDetailPage({
       requestedDate: b.requestedDate.toISOString(),
       createdAt: b.createdAt.toISOString(),
       orgName: b.organization?.name || null,
+    })),
+    referrals: referrals.map((r) => ({
+      id: r.id,
+      firstName: r.firstName,
+      companyName: r.companyName,
+      createdAt: r.createdAt.toISOString(),
+      isVerified: r.isVerified,
+      lastLoginAt: r.lastLoginAt?.toISOString() || null,
     })),
   };
 

@@ -111,8 +111,9 @@ model Driver {
   loginCount  Int       @default(0)
 
   // Referral / waitlist
-  referralCode  String?  @unique
-  referralCount Int      @default(0)
+  referralCode    String?  @unique
+  referralCount   Int      @default(0)
+  referredByCode  String?
 
   bookings         Booking[]       @relation("DriverBookings")
   referredBookings Booking[]       @relation("ReferredBookings")

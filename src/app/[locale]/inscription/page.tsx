@@ -196,6 +196,7 @@ export default function InscriptionPage() {
       vehiclePlate: vehiclePlate || undefined,
       vehiclePhotoBase64: vehiclePhotoBase64 || undefined,
       carteProBase64: carteProBase64 || undefined,
+      referredByCode: referralCode || undefined,
       locale,
       turnstileToken,
       _hp: hp,
@@ -326,9 +327,9 @@ export default function InscriptionPage() {
           </div>
 
           {/* Invitation card */}
-          <div className="bg-white rounded-3xl shadow-xl shadow-neutral-200/50 border border-neutral-100 p-7 mb-6">
+          <div className="bg-white rounded-3xl shadow-xl shadow-neutral-200/50 border border-neutral-100 overflow-hidden mb-6">
             {/* Referrer highlight */}
-            <div className="flex flex-col items-center mb-6">
+            <div className="flex flex-col items-center p-7 pb-5">
               <div className="w-[72px] h-[72px] bg-gradient-to-br from-violet-500 to-indigo-600 rounded-full flex items-center justify-center shadow-lg shadow-violet-300/50 mb-4">
                 <span className="text-2xl font-bold text-white">{referrerName.charAt(0).toUpperCase()}</span>
               </div>
@@ -340,31 +341,36 @@ export default function InscriptionPage() {
               </p>
             </div>
 
-            {/* Divider */}
-            <div className="h-px bg-neutral-100 mb-5" />
-
-            {/* Subtitle */}
-            <p className="text-sm text-neutral-600 leading-relaxed mb-1 text-center font-medium">
-              {t("referralInviteSubtitle1")}
-            </p>
-            <p className="text-sm text-neutral-500 leading-relaxed mb-5 text-center">
-              {t("referralInviteSubtitle2")}
-            </p>
-
-            {/* Benefits */}
-            <div className="space-y-3.5">
-              {[
-                { icon: "solar:qr-code-bold", color: "text-violet-600", bg: "bg-violet-50", text: t("referralBenefit1") },
-                { icon: "solar:card-2-bold", color: "text-blue-600", bg: "bg-blue-50", text: t("referralBenefit2") },
-                { icon: "solar:wallet-money-bold", color: "text-emerald-600", bg: "bg-emerald-50", text: t("referralBenefit3") },
-              ].map((item) => (
-                <div key={item.text} className="flex items-center gap-3">
-                  <div className={`w-9 h-9 ${item.bg} rounded-xl flex items-center justify-center shrink-0`}>
-                    <Icon icon={item.icon} className={`text-lg ${item.color}`} />
+            {/* Premium perks grid */}
+            <div className="px-5 pb-5">
+              <div className="rounded-2xl overflow-hidden border border-neutral-200">
+                <div className="bg-gradient-to-r from-neutral-900 to-neutral-800 px-4 py-3">
+                  <div className="flex items-center gap-2">
+                    <Icon icon="solar:star-shine-bold" className="text-amber-400 text-base" />
+                    <p className="text-xs font-semibold text-white">
+                      {t("referralInviteSubtitle1")}
+                    </p>
                   </div>
-                  <span className="text-[13px] font-medium text-neutral-700">{item.text}</span>
+                  <p className="text-[11px] text-neutral-400 mt-0.5">
+                    {t("referralInviteSubtitle2")}
+                  </p>
                 </div>
-              ))}
+                <div className="grid grid-cols-2 gap-px bg-neutral-200">
+                  {[
+                    { icon: "solar:smartphone-2-bold", color: "text-blue-600", bg: "bg-blue-50", iconBg: "bg-blue-100", text: t("referralBenefit1") },
+                    { icon: "solar:hand-money-bold", color: "text-green-600", bg: "bg-green-50", iconBg: "bg-green-100", text: t("referralBenefit2") },
+                    { icon: "solar:eye-bold", color: "text-violet-600", bg: "bg-violet-50", iconBg: "bg-violet-100", text: t("referralBenefit3") },
+                    { icon: "solar:qr-code-bold", color: "text-amber-600", bg: "bg-amber-50", iconBg: "bg-amber-100", text: t("referralBenefit4") },
+                  ].map((item) => (
+                    <div key={item.text} className={`${item.bg} p-3.5 flex flex-col items-center text-center`}>
+                      <div className={`w-10 h-10 ${item.iconBg} rounded-xl flex items-center justify-center mb-2`}>
+                        <Icon icon={item.icon} className={`${item.color} text-lg`} />
+                      </div>
+                      <span className="text-[11px] font-semibold text-neutral-900 leading-snug">{item.text}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
 

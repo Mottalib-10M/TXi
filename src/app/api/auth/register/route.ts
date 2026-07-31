@@ -22,6 +22,7 @@ const driverSchema = z.object({
   vehiclePlate: z.string().optional(),
   vehiclePhotoBase64: z.string().optional(),
   carteProBase64: z.string().optional(),
+  referredByCode: z.string().optional(),
 });
 
 const orgSchema = z.object({
@@ -251,6 +252,7 @@ export async function POST(request: Request) {
               vehicleBrand: data.vehicleBrand || undefined,
               vehicleModel: data.vehicleModel || undefined,
               vehiclePlate: data.vehiclePlate || undefined,
+              referredByCode: data.referredByCode || undefined,
               photoUrl,
               carteProUrl,
               vehicles: JSON.parse(JSON.stringify([vehicle])),

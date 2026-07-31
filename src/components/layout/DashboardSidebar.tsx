@@ -22,6 +22,7 @@ export function DashboardSidebar({ userName }: { userName: string }) {
     { href: "/dashboard/carte", label: t("freeCard"), icon: "solar:card-linear" },
     { href: "/dashboard/profil-public", label: t("publicProfile"), icon: "solar:eye-linear" },
     { href: "/dashboard/profil", label: t("profile"), icon: "solar:user-linear" },
+    { href: "/dashboard/parrainage", label: t("referral"), icon: "solar:share-bold" },
   ];
 
   const isOnProfil = pathname.startsWith("/dashboard/profil") && !pathname.startsWith("/dashboard/profil-public");
