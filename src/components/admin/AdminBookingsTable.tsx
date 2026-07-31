@@ -18,7 +18,11 @@ interface Booking {
   clientComments: string | null;
   beneficiaryName: string | null;
   departureName: string;
+  departureLat: number;
+  departureLng: number;
   arrivalName: string;
+  arrivalLat: number;
+  arrivalLng: number;
   requestedDate: string;
   passengerCount: number;
   estimatedPrice: number | null;
@@ -553,12 +557,19 @@ export function AdminBookingsTable({ bookings }: { bookings: Booking[] }) {
                               <tr key={booking.id} className="hover:bg-neutral-50/50">
                                 {/* Route */}
                                 <td className="px-2 py-2">
-                                  <div className="font-medium text-neutral-700 break-words leading-snug">
-                                    {booking.departureName}
-                                  </div>
-                                  <div className="text-neutral-400 break-words leading-snug mt-0.5">
-                                    → {booking.arrivalName}
-                                  </div>
+                                  <a
+                                    href={`https://www.google.com/maps/dir/?api=1&origin=${booking.departureLat},${booking.departureLng}&destination=${booking.arrivalLat},${booking.arrivalLng}&travelmode=driving`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="block hover:text-blue-600 transition-colors"
+                                  >
+                                    <div className="font-medium text-neutral-700 break-words leading-snug">
+                                      {booking.departureName}
+                                    </div>
+                                    <div className="text-neutral-400 break-words leading-snug mt-0.5">
+                                      → {booking.arrivalName}
+                                    </div>
+                                  </a>
                                 </td>
                                 {/* Booked date */}
                                 <td className="px-2 py-2 text-neutral-400">

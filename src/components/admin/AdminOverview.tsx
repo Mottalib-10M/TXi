@@ -33,7 +33,11 @@ interface OverviewData {
     clientEmail: string;
     clientPhone: string;
     departureName: string;
+    departureLat: number;
+    departureLng: number;
     arrivalName: string;
+    arrivalLat: number;
+    arrivalLng: number;
     requestedDate: string;
     estimatedDistance: number | null;
     status: string;
@@ -552,8 +556,15 @@ export function AdminOverview({ data }: { data: OverviewData }) {
                     return (
                       <tr key={booking.id} className="hover:bg-neutral-50/50">
                         <td className="px-3 py-2">
-                          <div className="font-medium text-neutral-700 break-words leading-snug">{booking.departureName}</div>
-                          <div className="text-neutral-400 break-words leading-snug mt-0.5">→ {booking.arrivalName}</div>
+                          <a
+                            href={`https://www.google.com/maps/dir/?api=1&origin=${booking.departureLat},${booking.departureLng}&destination=${booking.arrivalLat},${booking.arrivalLng}&travelmode=driving`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="block hover:text-blue-600 transition-colors"
+                          >
+                            <div className="font-medium text-neutral-700 break-words leading-snug group-hover:text-blue-600">{booking.departureName}</div>
+                            <div className="text-neutral-400 break-words leading-snug mt-0.5">→ {booking.arrivalName}</div>
+                          </a>
                         </td>
                         <td className="px-3 py-2 text-neutral-400">
                           {format(new Date(booking.createdAt), "dd MMM yy, HH:mm", { locale: dateFnsLoc })}
