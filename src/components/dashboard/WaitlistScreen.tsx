@@ -1,7 +1,6 @@
 "use client";
 
 import { Icon } from "@iconify/react";
-import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
 
@@ -49,27 +48,38 @@ export function WaitlistScreen({
     }
   }
 
-  const freeServices = [
+  const perks = [
     {
-      label: t("freeServiceCard"),
-      href: "/dashboard/carte" as const,
-      icon: "solar:card-2-bold",
-      bg: "bg-green-50",
-      iconColor: "text-green-600",
-    },
-    {
-      label: t("freeServiceProfile"),
-      href: "/dashboard/profil-public" as const,
-      icon: "solar:eye-bold",
+      icon: "solar:smartphone-2-bold",
+      color: "text-blue-600",
       bg: "bg-blue-50",
-      iconColor: "text-blue-600",
+      iconBg: "bg-blue-100",
+      title: t("perkBookingsTitle"),
+      desc: t("perkBookingsDesc"),
     },
     {
-      label: t("freeServiceQR"),
-      href: `/taxi/${slug}` as "/dashboard",
-      icon: "solar:qr-code-bold",
+      icon: "solar:hand-money-bold",
+      color: "text-green-600",
+      bg: "bg-green-50",
+      iconBg: "bg-green-100",
+      title: t("perkCommissionsTitle"),
+      desc: t("perkCommissionsDesc"),
+    },
+    {
+      icon: "solar:eye-bold",
+      color: "text-violet-600",
       bg: "bg-violet-50",
-      iconColor: "text-violet-600",
+      iconBg: "bg-violet-100",
+      title: t("perkVisibilityTitle"),
+      desc: t("perkVisibilityDesc"),
+    },
+    {
+      icon: "solar:qr-code-bold",
+      color: "text-amber-600",
+      bg: "bg-amber-50",
+      iconBg: "bg-amber-100",
+      title: t("perkToolsTitle"),
+      desc: t("perkToolsDesc"),
     },
   ];
 
@@ -104,7 +114,7 @@ export function WaitlistScreen({
 
       {/* 3. Referral section */}
       <div className="bg-gradient-to-br from-violet-50 to-purple-50 border border-violet-200 rounded-2xl p-5">
-        <div className="flex items-center gap-3 mb-3">
+        <div className="flex items-center gap-3 mb-4">
           <div className="w-10 h-10 bg-violet-100 rounded-xl flex items-center justify-center shrink-0">
             <Icon icon="solar:rocket-2-bold" className="text-violet-600 text-xl" />
           </div>
@@ -118,17 +128,64 @@ export function WaitlistScreen({
           </div>
         </div>
 
-        {/* Referral progress */}
+        {/* Visual person slots — clickable to share */}
+        <div className="flex items-center justify-center gap-4 mb-4">
+          {[0, 1].map((i) => {
+            const filled = i < clampedCount;
+            return (
+              <button
+                key={i}
+                type="button"
+                disabled={filled}
+                onClick={async () => {
+                  if (filled) return;
+                  if (navigator.share) {
+                    try {
+                      await navigator.share({
+                        title: t("referralShareTitle"),
+                        text: whatsAppMessage,
+                        url: referralLink,
+                      });
+                    } catch {
+                      // user cancelled share
+                    }
+                  } else {
+                    await handleCopy();
+                  }
+                }}
+                className="flex flex-col items-center gap-1.5 group"
+              >
+                <div
+                  className={`w-14 h-14 rounded-full flex items-center justify-center transition-all duration-500 ${
+                    filled
+                      ? "bg-green-100 border-2 border-green-400 scale-105"
+                      : "bg-white border-2 border-dashed border-violet-300 group-hover:border-violet-500 group-hover:bg-violet-50 group-active:scale-95 cursor-pointer"
+                  }`}
+                >
+                  <Icon
+                    icon={filled ? "solar:user-check-bold" : "solar:user-plus-linear"}
+                    className={`text-2xl ${filled ? "text-green-600" : "text-violet-400 group-hover:text-violet-600"}`}
+                  />
+                </div>
+                <span className={`text-xs font-medium ${filled ? "text-green-600" : "text-violet-400 group-hover:text-violet-600"}`}>
+                  {filled ? t("referralSlotFilled") : t("referralSlotEmpty")}
+                </span>
+              </button>
+            );
+          })}
+        </div>
+
+        {/* Progress bar */}
         <div className="mb-4">
-          <div className="flex items-center justify-between mb-2">
-            <span className="text-sm font-medium text-neutral-700">
+          <div className="flex items-center justify-between mb-1.5">
+            <span className="text-sm font-semibold text-violet-700">
               {t("referralProgress", { count: clampedCount })}
             </span>
             {clampedCount >= 2 && (
               <Icon icon="solar:check-circle-bold" className="text-green-500 text-lg" />
             )}
           </div>
-          <div className="w-full h-2.5 bg-neutral-100 rounded-full overflow-hidden">
+          <div className="w-full h-2.5 bg-white/60 rounded-full overflow-hidden">
             <div
               className="h-full bg-gradient-to-r from-violet-500 to-purple-500 rounded-full transition-all duration-500"
               style={{ width: `${(clampedCount / 2) * 100}%` }}
@@ -162,29 +219,28 @@ export function WaitlistScreen({
         </p>
       </div>
 
-      {/* 4. Free services */}
-      <div className="bg-white border border-neutral-200 rounded-2xl p-5">
-        <h3 className="text-sm font-semibold text-neutral-900 mb-1">
-          {t("waitlistFreeTitle")}
-        </h3>
-        <p className="text-xs text-neutral-500 font-light mb-3">
-          {t("freeServicesDesc")}
-        </p>
-        <div className="grid grid-cols-3 gap-3">
-          {freeServices.map((service) => (
-            <Link
-              key={service.label}
-              href={service.href}
-              className={`${service.bg} rounded-xl p-3 text-center hover:opacity-80 transition-opacity`}
-            >
-              <Icon
-                icon={service.icon}
-                className={`${service.iconColor} text-xl mx-auto mb-1`}
-              />
-              <span className="text-xs font-medium text-neutral-700 leading-tight block">
-                {service.label}
-              </span>
-            </Link>
+      {/* 4. What awaits you — premium preview grid */}
+      <div className="rounded-2xl overflow-hidden border border-neutral-200">
+        <div className="bg-gradient-to-r from-neutral-900 to-neutral-800 px-5 py-4">
+          <div className="flex items-center gap-2">
+            <Icon icon="solar:star-shine-bold" className="text-amber-400 text-lg" />
+            <h3 className="text-sm font-semibold text-white">
+              {t("perksTitle")}
+            </h3>
+          </div>
+          <p className="text-xs text-neutral-400 mt-1">
+            {t("perksSubtitle")}
+          </p>
+        </div>
+        <div className="grid grid-cols-2 gap-px bg-neutral-200">
+          {perks.map((perk) => (
+            <div key={perk.title} className={`${perk.bg} p-4 flex flex-col items-center text-center`}>
+              <div className={`w-11 h-11 ${perk.iconBg} rounded-2xl flex items-center justify-center mb-2.5`}>
+                <Icon icon={perk.icon} className={`${perk.color} text-xl`} />
+              </div>
+              <p className="text-[13px] font-semibold text-neutral-900 mb-0.5">{perk.title}</p>
+              <p className="text-[11px] text-neutral-500 font-light leading-relaxed">{perk.desc}</p>
+            </div>
           ))}
         </div>
       </div>

@@ -69,6 +69,8 @@ export function AdminBookingsTable({ bookings }: { bookings: Booking[] }) {
   const [visibleCounts, setVisibleCounts] = useState<Record<string, number>>({});
   const [chartPeriod, setChartPeriod] = useState<"24h" | "7d" | "30d">("24h");
   const [selectedDept, setSelectedDept] = useState<string | null>(null);
+  const [viewMode, setViewMode] = useState<"recent" | "city" | "department">("recent");
+  const [selectedCity, setSelectedCity] = useState<string | null>(null);
   const listRef = useRef<HTMLDivElement>(null);
   const [loadingAction, setLoadingAction] = useState<string | null>(null);
   const [confirmModal, setConfirmModal] = useState<{
@@ -137,6 +139,57 @@ export function AdminBookingsTable({ bookings }: { bookings: Booking[] }) {
 
     return groups;
   }, [filtered]);
+
+  function extractCity(departureName: string): string {
+    const parts = departureName.split(",").map((p) => p.trim());
+    if (parts.length < 2) return parts[0] || "—";
+    const last = parts[parts.length - 1];
+    if (last.toLowerCase() === "france") {
+      return parts[parts.length - 2] || last;
+    }
+    return last;
+  }
+
+  const deptFiltered = useMemo(() => {
+    if (!selectedDept) return filtered;
+    return filtered.filter((b) => (b.regionName || "Non localisé") === selectedDept);
+  }, [filtered, selectedDept]);
+
+  const sortedByRecent = useMemo(() => {
+    return [...deptFiltered].sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
+  }, [deptFiltered]);
+
+  const cityGroups = useMemo(() => {
+    const groupMap = new Map<string, Booking[]>();
+    for (const b of deptFiltered) {
+      const city = extractCity(b.departureName);
+      if (!groupMap.has(city)) groupMap.set(city, []);
+      groupMap.get(city)!.push(b);
+    }
+
+    const groups: { cityKey: string; bookings: Booking[]; hasPending: boolean; pendingCount: number; latestCreatedAt: string }[] = [];
+    Array.from(groupMap.entries()).forEach(([cityKey, cityBookings]) => {
+      const pendingCount = cityBookings.filter((b: Booking) => b.status === "PENDING").length;
+      const sorted = cityBookings.sort((a: Booking, b: Booking) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
+      groups.push({
+        cityKey,
+        bookings: sorted,
+        hasPending: pendingCount > 0,
+        pendingCount,
+        latestCreatedAt: sorted[0].createdAt,
+      });
+    });
+
+    groups.sort((a, b) => {
+      if (a.hasPending && !b.hasPending) return -1;
+      if (!a.hasPending && b.hasPending) return 1;
+      return new Date(b.latestCreatedAt).getTime() - new Date(a.latestCreatedAt).getTime();
+    });
+
+    return groups;
+  }, [deptFiltered]);
+
+  const cities = useMemo(() => cityGroups.map((g) => g.cityKey), [cityGroups]);
 
   const chartData = useMemo(() => {
     const now = new Date();
@@ -432,6 +485,43 @@ export function AdminBookingsTable({ bookings }: { bookings: Booking[] }) {
         </div>
       </div>
 
+      {/* View mode toggle */}
+      <div className="flex rounded-xl border border-neutral-200 bg-white overflow-hidden shrink-0 mb-4">
+        <button
+          onClick={() => { setViewMode("recent"); setSelectedCity(null); }}
+          className={`px-4 py-2.5 text-xs font-medium transition-colors flex items-center gap-1.5 ${
+            viewMode === "recent"
+              ? "bg-neutral-900 text-white"
+              : "text-neutral-600 hover:bg-neutral-50"
+          }`}
+        >
+          <Icon icon="solar:clock-circle-linear" className="text-sm" />
+          {t("sortByDate")}
+        </button>
+        <button
+          onClick={() => { setViewMode("city"); }}
+          className={`px-4 py-2.5 text-xs font-medium transition-colors flex items-center gap-1.5 ${
+            viewMode === "city"
+              ? "bg-neutral-900 text-white"
+              : "text-neutral-600 hover:bg-neutral-50"
+          }`}
+        >
+          <Icon icon="solar:map-point-linear" className="text-sm" />
+          {t("sortByCity")}
+        </button>
+        <button
+          onClick={() => { setViewMode("department"); setSelectedCity(null); }}
+          className={`px-4 py-2.5 text-xs font-medium transition-colors flex items-center gap-1.5 ${
+            viewMode === "department"
+              ? "bg-neutral-900 text-white"
+              : "text-neutral-600 hover:bg-neutral-50"
+          }`}
+        >
+          <Icon icon="solar:map-linear" className="text-sm" />
+          {t("sortByDepartment")}
+        </button>
+      </div>
+
       {/* Department filter badge */}
       {selectedDept && (
         <div className="mb-4">
@@ -489,431 +579,535 @@ export function AdminBookingsTable({ bookings }: { bookings: Booking[] }) {
         />
       </div>
 
+      {/* City filter pills (only in city view) */}
+      {viewMode === "city" && cities.length > 1 && (
+        <div className="flex gap-2 mb-4 overflow-x-auto pb-2">
+          <button
+            onClick={() => setSelectedCity(null)}
+            className={`px-3 py-1.5 rounded-full text-xs font-medium transition-colors whitespace-nowrap ${
+              !selectedCity
+                ? "bg-neutral-900 text-white"
+                : "bg-white border border-neutral-200 text-neutral-600 hover:border-neutral-300"
+            }`}
+          >
+            {t("allDepartments")}
+          </button>
+          {cities.map((city) => (
+            <button
+              key={city}
+              onClick={() => setSelectedCity(selectedCity === city ? null : city)}
+              className={`px-3 py-1.5 rounded-full text-xs font-medium transition-colors whitespace-nowrap ${
+                selectedCity === city
+                  ? "bg-neutral-900 text-white"
+                  : "bg-white border border-neutral-200 text-neutral-600 hover:border-neutral-300"
+              }`}
+            >
+              {city}
+            </button>
+          ))}
+        </div>
+      )}
+
       {(() => {
+        // Helper: render desktop table rows for a list of bookings
+        const renderDesktopTable = (bookingsList: Booking[], showHeader: boolean) => (
+          <div className="hidden lg:block">
+            <table className="w-full text-xs table-fixed">
+              {showHeader && (
+                <thead>
+                  <tr className="bg-neutral-50 text-neutral-400 text-left">
+                    <th className="px-2 py-2 font-medium w-[24%]">{locale === "en" ? "Route" : "Trajet"}</th>
+                    <th className="px-2 py-2 font-medium w-[8%]">{locale === "en" ? "Booked" : "Réservé"}</th>
+                    <th className="px-2 py-2 font-medium w-[8%]">{locale === "en" ? "Ride" : "Prestation"}</th>
+                    <th className="px-2 py-2 font-medium w-[5%]">Dist.</th>
+                    <th className="px-2 py-2 font-medium w-[5%]">{locale === "en" ? "Price" : "Prix"}</th>
+                    {filter !== "NO_DRIVER" && <th className="px-2 py-2 font-medium w-[12%]">{t("driver")}</th>}
+                    <th className="px-2 py-2 font-medium w-[12%]">{t("client")}</th>
+                    <th className="px-2 py-2 font-medium w-[10%]">{locale === "en" ? "Status" : "Statut"}</th>
+                    {filter !== "NO_DRIVER" && <th className="px-2 py-2 font-medium w-[16%]">Actions</th>}
+                  </tr>
+                </thead>
+              )}
+              <tbody className="divide-y divide-neutral-100">
+                {bookingsList.map((booking) => {
+                  const price = booking.lockedPrice ?? booking.estimatedPrice;
+                  return (
+                    <tr key={booking.id} className="hover:bg-neutral-50/50">
+                      <td className="px-2 py-2">
+                        <div className="flex items-start gap-1.5">
+                          <div className="flex-1 min-w-0">
+                            <div className="font-medium text-neutral-700 break-words leading-snug">
+                              {booking.departureName}
+                            </div>
+                            <div className="text-neutral-400 break-words leading-snug mt-0.5">
+                              → {booking.arrivalName}
+                            </div>
+                          </div>
+                          <a
+                            href={`https://www.google.com/maps/dir/?api=1&origin=${booking.departureLat},${booking.departureLng}&destination=${booking.arrivalLat},${booking.arrivalLng}&travelmode=driving`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="shrink-0 mt-0.5 p-1 rounded-lg text-neutral-400 hover:text-blue-600 hover:bg-blue-50 transition-colors"
+                            title="Google Maps"
+                          >
+                            <Icon icon="solar:map-arrow-right-linear" className="text-sm" />
+                          </a>
+                        </div>
+                      </td>
+                      <td className="px-2 py-2 text-neutral-400">
+                        {formatShortDate(booking.createdAt)}
+                      </td>
+                      <td className="px-2 py-2 text-neutral-700 font-medium">
+                        {formatShortDate(booking.requestedDate)}
+                      </td>
+                      <td className="px-2 py-2 text-neutral-500">
+                        {booking.estimatedDistance
+                          ? `${booking.estimatedDistance.toFixed(1)} km`
+                          : (
+                            <button
+                              onClick={() => handleRecalculate(booking.id)}
+                              disabled={loadingAction === `${booking.id}-recalc`}
+                              className="text-blue-600 hover:text-blue-800 hover:underline disabled:opacity-50"
+                            >
+                              {loadingAction === `${booking.id}-recalc` ? "..." : "Recalc."}
+                            </button>
+                          )}
+                      </td>
+                      <td className="px-2 py-2 text-neutral-700 font-medium">
+                        {price != null ? `${price.toFixed(0)} €` : "—"}
+                      </td>
+                      {filter !== "NO_DRIVER" && (
+                        <td className="px-2 py-2">
+                          {booking.driver ? (
+                            <div>
+                              <Link
+                                href={`/taxi/${booking.driver.slug}`}
+                                target="_blank"
+                                className="text-blue-600 hover:underline font-medium truncate block"
+                              >
+                                {booking.driver.name}
+                              </Link>
+                              {booking.driver.phone && (
+                                <div className="text-neutral-400 truncate">
+                                  <a href={`tel:${booking.driver.phone}`} className="hover:text-neutral-600">
+                                    {booking.driver.phone}
+                                  </a>
+                                </div>
+                              )}
+                            </div>
+                          ) : (
+                            <span className="text-neutral-300">—</span>
+                          )}
+                        </td>
+                      )}
+                      <td className="px-2 py-2">
+                        <div className="font-medium text-neutral-700 truncate">{booking.clientName}</div>
+                        {booking.clientPhone && (
+                          <div className="text-neutral-400 truncate">
+                            <a href={`tel:${booking.clientPhone}`} className="hover:text-neutral-600">
+                              {booking.clientPhone}
+                            </a>
+                          </div>
+                        )}
+                      </td>
+                      <td className="px-2 py-2">
+                        {filter === "NO_DRIVER" && !booking.driver ? (
+                          <span className="inline-block text-[10px] px-1.5 py-0.5 rounded-full font-medium bg-orange-50 text-orange-700">
+                            Mail d&apos;excuse envoyé
+                          </span>
+                        ) : (
+                          <>
+                            <span
+                              className={`inline-block text-[10px] px-1.5 py-0.5 rounded-full font-medium ${
+                                statusConfig[booking.status]?.color || ""
+                              }`}
+                            >
+                              {statusConfig[booking.status]?.label || booking.status}
+                            </span>
+                            {(booking.status === "REJECTED" || booking.status === "CANCELLED") && (
+                              <div className="text-[10px] text-neutral-400 mt-0.5">
+                                {cancelledByLabel(booking.cancelledBy)}
+                              </div>
+                            )}
+                          </>
+                        )}
+                        <div className="text-[10px] text-neutral-400 font-mono mt-0.5">
+                          #{booking.reference}
+                        </div>
+                        {booking.organization && (
+                          <div className="mt-0.5">
+                            <span className="text-[10px] px-1 py-0.5 rounded-full bg-violet-50 text-violet-700">
+                              {booking.organization.name}
+                            </span>
+                          </div>
+                        )}
+                      </td>
+                      {filter !== "NO_DRIVER" && (
+                        <td className="px-2 py-2">
+                          {booking.status === "PENDING" && booking.driver && (
+                            <div className="flex flex-wrap gap-1">
+                              <button
+                                onClick={() => handleAction(booking.id, "accept-booking")}
+                                disabled={loadingAction === `${booking.id}-accept-booking`}
+                                className="px-2 py-1 rounded-lg bg-green-50 text-green-700 hover:bg-green-100 transition-colors text-[10px] font-medium whitespace-nowrap disabled:opacity-50"
+                              >
+                                {loadingAction === `${booking.id}-accept-booking` ? "..." : t("confirmBooking")}
+                              </button>
+                              <button
+                                onClick={() => handleAction(booking.id, "remind-driver")}
+                                disabled={loadingAction === `${booking.id}-remind-driver`}
+                                className="px-2 py-1 rounded-lg bg-amber-50 text-amber-700 hover:bg-amber-100 transition-colors text-[10px] font-medium whitespace-nowrap disabled:opacity-50"
+                              >
+                                {loadingAction === `${booking.id}-remind-driver` ? "..." : "Relancer"}
+                              </button>
+                              <button
+                                onClick={() => handleAction(booking.id, "apologize-refuse")}
+                                disabled={loadingAction === `${booking.id}-apologize-refuse`}
+                                className="px-2 py-1 rounded-lg bg-red-50 text-red-700 hover:bg-red-100 transition-colors text-[10px] font-medium whitespace-nowrap disabled:opacity-50"
+                              >
+                                {loadingAction === `${booking.id}-apologize-refuse` ? "..." : "Refuser"}
+                              </button>
+                            </div>
+                          )}
+                          {booking.status === "ACCEPTED" && (
+                            <button
+                              onClick={() => handleAction(booking.id, "complete-booking")}
+                              disabled={loadingAction === `${booking.id}-complete-booking`}
+                              className="px-2 py-1 rounded-lg bg-blue-50 text-blue-700 hover:bg-blue-100 transition-colors text-[10px] font-medium whitespace-nowrap disabled:opacity-50"
+                            >
+                              {loadingAction === `${booking.id}-complete-booking` ? "..." : t("completeBooking")}
+                            </button>
+                          )}
+                          {(booking.status === "PENDING" || booking.status === "ACCEPTED") && (
+                            <div className="flex flex-wrap gap-1 mt-1">
+                              <button
+                                onClick={() => handleAction(booking.id, "cancel-booking")}
+                                disabled={loadingAction === `${booking.id}-cancel-booking`}
+                                className="px-2 py-1 rounded-lg bg-neutral-100 text-neutral-600 hover:bg-neutral-200 transition-colors text-[10px] font-medium whitespace-nowrap disabled:opacity-50"
+                              >
+                                {loadingAction === `${booking.id}-cancel-booking` ? "..." : (locale === "en" ? "Cancel" : "Annuler")}
+                              </button>
+                              <button
+                                onClick={() => openReassignModal(booking.id, booking.driver?.name || null, booking.driver?.id || null)}
+                                className="px-2 py-1 rounded-lg bg-violet-50 text-violet-700 hover:bg-violet-100 transition-colors text-[10px] font-medium whitespace-nowrap"
+                              >
+                                {t("reassignDriver")}
+                              </button>
+                            </div>
+                          )}
+                        </td>
+                      )}
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        );
+
+        // Helper: render mobile cards for a list of bookings
+        const renderMobileCards = (bookingsList: Booking[]) => (
+          <div className="lg:hidden divide-y divide-neutral-100">
+            {bookingsList.map((booking) => {
+              const price = booking.lockedPrice ?? booking.estimatedPrice;
+              return (
+                <div key={booking.id} className="p-4 space-y-2">
+                  <div className="flex flex-wrap items-center gap-2">
+                    {filter === "NO_DRIVER" && !booking.driver ? (
+                      <span className="text-xs px-2 py-0.5 rounded-full font-medium bg-orange-50 text-orange-700">
+                        Mail d&apos;excuse envoyé
+                      </span>
+                    ) : (
+                      <>
+                        <span
+                          className={`text-xs px-2 py-0.5 rounded-full font-medium ${
+                            statusConfig[booking.status]?.color || ""
+                          }`}
+                        >
+                          {statusConfig[booking.status]?.label || booking.status}
+                        </span>
+                        {(booking.status === "REJECTED" || booking.status === "CANCELLED") && (
+                          <span className="text-[10px] text-neutral-400">
+                            {cancelledByLabel(booking.cancelledBy)}
+                          </span>
+                        )}
+                      </>
+                    )}
+                    <span className="text-xs text-neutral-400 font-mono">#{booking.reference}</span>
+                    {booking.organization && (
+                      <span className="text-xs px-1.5 py-0.5 rounded-full bg-violet-50 text-violet-700">
+                        {booking.organization.name}
+                      </span>
+                    )}
+                  </div>
+
+                  <div className="flex items-start gap-1.5 text-xs">
+                    <div className="flex-1 min-w-0">
+                      <div className="text-neutral-700 font-medium">{booking.departureName}</div>
+                      <div className="text-neutral-400">→ {booking.arrivalName}</div>
+                    </div>
+                    <a
+                      href={`https://www.google.com/maps/dir/?api=1&origin=${booking.departureLat},${booking.departureLng}&destination=${booking.arrivalLat},${booking.arrivalLng}&travelmode=driving`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="shrink-0 p-1 rounded-lg text-neutral-400 hover:text-blue-600 hover:bg-blue-50 transition-colors"
+                      title="Google Maps"
+                    >
+                      <Icon icon="solar:map-arrow-right-linear" className="text-sm" />
+                    </a>
+                  </div>
+
+                  <div className="grid grid-cols-2 gap-x-4 gap-y-1.5 text-xs">
+                    <div>
+                      <span className="text-neutral-400">{locale === "en" ? "Booked" : "Réservé le"} : </span>
+                      <span className="text-neutral-600">{formatShortDate(booking.createdAt)}</span>
+                    </div>
+                    <div>
+                      <span className="text-neutral-400">{locale === "en" ? "Ride" : "Prestation"} : </span>
+                      <span className="text-neutral-700 font-medium">{formatShortDate(booking.requestedDate)}</span>
+                    </div>
+                    <div>
+                      <span className="text-neutral-400">Distance : </span>
+                      {booking.estimatedDistance ? (
+                        <span className="text-neutral-600">{booking.estimatedDistance.toFixed(1)} km</span>
+                      ) : (
+                        <button
+                          onClick={() => handleRecalculate(booking.id)}
+                          disabled={loadingAction === `${booking.id}-recalc`}
+                          className="text-blue-600 hover:text-blue-800 hover:underline disabled:opacity-50"
+                        >
+                          {loadingAction === `${booking.id}-recalc` ? "..." : "Recalculer"}
+                        </button>
+                      )}
+                    </div>
+                    <div>
+                      <span className="text-neutral-400">{locale === "en" ? "Price" : "Prix"} : </span>
+                      <span className="text-neutral-700 font-medium">
+                        {price != null ? `${price.toFixed(2).replace(".", ",")} €` : "—"}
+                      </span>
+                    </div>
+                  </div>
+
+                  {booking.driver && (
+                    <div className="text-xs">
+                      <span className="text-neutral-400">{t("driver")} : </span>
+                      <Link
+                        href={`/taxi/${booking.driver.slug}`}
+                        target="_blank"
+                        className="text-blue-600 hover:underline font-medium"
+                      >
+                        {booking.driver.name}
+                      </Link>
+                      {booking.driver.phone && (
+                        <span className="text-neutral-400 ml-2">
+                          <a href={`tel:${booking.driver.phone}`} className="hover:text-neutral-600">
+                            {booking.driver.phone}
+                          </a>
+                        </span>
+                      )}
+                    </div>
+                  )}
+
+                  <div className="text-xs">
+                    <span className="text-neutral-400">{t("client")} : </span>
+                    <span className="text-neutral-700 font-medium">{booking.clientName}</span>
+                    {booking.clientPhone && (
+                      <span className="text-neutral-400 ml-2">
+                        <a href={`tel:${booking.clientPhone}`} className="hover:text-neutral-600">
+                          {booking.clientPhone}
+                        </a>
+                      </span>
+                    )}
+                  </div>
+
+                  {filter !== "NO_DRIVER" && booking.status === "PENDING" && booking.driver && (
+                    <div className="flex flex-wrap gap-2 pt-1">
+                      <button
+                        onClick={() => handleAction(booking.id, "accept-booking")}
+                        disabled={loadingAction === `${booking.id}-accept-booking`}
+                        className="px-3 py-1.5 rounded-lg bg-green-50 text-green-700 hover:bg-green-100 transition-colors text-xs font-medium disabled:opacity-50"
+                      >
+                        {loadingAction === `${booking.id}-accept-booking` ? "..." : t("confirmBooking")}
+                      </button>
+                      <button
+                        onClick={() => handleAction(booking.id, "remind-driver")}
+                        disabled={loadingAction === `${booking.id}-remind-driver`}
+                        className="px-3 py-1.5 rounded-lg bg-amber-50 text-amber-700 hover:bg-amber-100 transition-colors text-xs font-medium disabled:opacity-50"
+                      >
+                        {loadingAction === `${booking.id}-remind-driver` ? "..." : "Relancer"}
+                      </button>
+                      <button
+                        onClick={() => handleAction(booking.id, "apologize-refuse")}
+                        disabled={loadingAction === `${booking.id}-apologize-refuse`}
+                        className="px-3 py-1.5 rounded-lg bg-red-50 text-red-700 hover:bg-red-100 transition-colors text-xs font-medium disabled:opacity-50"
+                      >
+                        {loadingAction === `${booking.id}-apologize-refuse` ? "..." : "Refuser"}
+                      </button>
+                    </div>
+                  )}
+                  {filter !== "NO_DRIVER" && booking.status === "ACCEPTED" && (
+                    <div className="pt-1">
+                      <button
+                        onClick={() => handleAction(booking.id, "complete-booking")}
+                        disabled={loadingAction === `${booking.id}-complete-booking`}
+                        className="px-3 py-1.5 rounded-lg bg-blue-50 text-blue-700 hover:bg-blue-100 transition-colors text-xs font-medium disabled:opacity-50"
+                      >
+                        {loadingAction === `${booking.id}-complete-booking` ? "..." : t("completeBooking")}
+                      </button>
+                    </div>
+                  )}
+                  {filter !== "NO_DRIVER" && (booking.status === "PENDING" || booking.status === "ACCEPTED") && (
+                    <div className="flex flex-wrap gap-2 pt-1">
+                      <button
+                        onClick={() => handleAction(booking.id, "cancel-booking")}
+                        disabled={loadingAction === `${booking.id}-cancel-booking`}
+                        className="px-3 py-1.5 rounded-lg bg-neutral-100 text-neutral-600 hover:bg-neutral-200 transition-colors text-xs font-medium disabled:opacity-50"
+                      >
+                        {loadingAction === `${booking.id}-cancel-booking` ? "..." : (locale === "en" ? "Cancel" : "Annuler")}
+                      </button>
+                      <button
+                        onClick={() => openReassignModal(booking.id, booking.driver?.name || null, booking.driver?.id || null)}
+                        className="px-3 py-1.5 rounded-lg bg-violet-50 text-violet-700 hover:bg-violet-100 transition-colors text-xs font-medium"
+                      >
+                        {t("reassignDriver")}
+                      </button>
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        );
+
+        // Helper: render a grouped view (used by both department and city modes)
+        const renderGroupedView = (groups: { key: string; label: string; bookings: Booking[]; hasPending: boolean; pendingCount: number }[]) => {
+          if (groups.length === 0) {
+            return (
+              <div className="bg-white border border-neutral-200 rounded-2xl p-12 text-center">
+                <Icon icon="solar:calendar-linear" className="text-4xl text-neutral-300 mx-auto mb-3" />
+                <p className="text-sm text-neutral-500 font-light">{t("noBookingsFound")}</p>
+              </div>
+            );
+          }
+          return (
+            <div className="space-y-4">
+              {groups.map((group) => {
+                const collapsed = isCollapsed(group.key, group.hasPending);
+                const maxVisible = visibleCounts[group.key] || 3;
+                const visibleBookings = group.bookings.slice(0, maxVisible);
+                const hasMore = group.bookings.length > maxVisible;
+                return (
+                  <div
+                    key={group.key}
+                    className="bg-white border border-neutral-200 rounded-2xl overflow-hidden"
+                  >
+                    <button
+                      onClick={() => toggleRegion(group.key, group.hasPending)}
+                      className="w-full flex items-center gap-3 px-4 py-3 sm:px-5 sm:py-4 hover:bg-neutral-50 transition-colors text-left"
+                    >
+                      <Icon icon="solar:map-point-bold" className="text-neutral-400 text-lg shrink-0" />
+                      <span className="font-semibold text-sm">{group.label}</span>
+                      <span className="text-xs text-neutral-400">
+                        {group.bookings.length} course{group.bookings.length > 1 ? "s" : ""}
+                      </span>
+                      {group.pendingCount > 0 && (
+                        <span className="text-xs px-2 py-0.5 rounded-full bg-amber-50 text-amber-700 font-medium">
+                          {group.pendingCount} en attente
+                        </span>
+                      )}
+                      <Icon
+                        icon={collapsed ? "solar:alt-arrow-down-linear" : "solar:alt-arrow-up-linear"}
+                        className="text-neutral-400 ml-auto"
+                      />
+                    </button>
+
+                    {!collapsed && (
+                      <div className="border-t border-neutral-100">
+                        {renderDesktopTable(visibleBookings, true)}
+                        {renderMobileCards(visibleBookings)}
+                        {hasMore && (
+                          <button
+                            onClick={() => setVisibleCounts((prev) => ({
+                              ...prev,
+                              [group.key]: maxVisible + 10,
+                            }))}
+                            className="w-full py-2.5 text-xs font-medium text-neutral-500 hover:text-neutral-700 hover:bg-neutral-50 transition-colors border-t border-neutral-100"
+                          >
+                            {locale === "en" ? "Show more" : "Afficher plus"} ({group.bookings.length - maxVisible} {locale === "en" ? "remaining" : "restantes"})
+                          </button>
+                        )}
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          );
+        };
+
+        // === VIEW: recent (flat chronological) ===
+        if (viewMode === "recent") {
+          const recentMaxVisible = visibleCounts["__recent__"] || 20;
+          const visibleRecent = sortedByRecent.slice(0, recentMaxVisible);
+          const hasMoreRecent = sortedByRecent.length > recentMaxVisible;
+
+          if (sortedByRecent.length === 0) {
+            return (
+              <div className="bg-white border border-neutral-200 rounded-2xl p-12 text-center">
+                <Icon icon="solar:calendar-linear" className="text-4xl text-neutral-300 mx-auto mb-3" />
+                <p className="text-sm text-neutral-500 font-light">{t("noBookingsFound")}</p>
+              </div>
+            );
+          }
+
+          return (
+            <div className="bg-white border border-neutral-200 rounded-2xl overflow-hidden">
+              {renderDesktopTable(visibleRecent, true)}
+              {renderMobileCards(visibleRecent)}
+              {hasMoreRecent && (
+                <button
+                  onClick={() => setVisibleCounts((prev) => ({
+                    ...prev,
+                    __recent__: recentMaxVisible + 20,
+                  }))}
+                  className="w-full py-2.5 text-xs font-medium text-neutral-500 hover:text-neutral-700 hover:bg-neutral-50 transition-colors border-t border-neutral-100"
+                >
+                  {locale === "en" ? "Show more" : "Afficher plus"} ({sortedByRecent.length - recentMaxVisible} {locale === "en" ? "remaining" : "restantes"})
+                </button>
+              )}
+            </div>
+          );
+        }
+
+        // === VIEW: city (grouped by departure city) ===
+        if (viewMode === "city") {
+          const displayedCityGroups = selectedCity
+            ? cityGroups.filter((g) => g.cityKey === selectedCity)
+            : cityGroups;
+          return renderGroupedView(
+            displayedCityGroups.map((g) => ({
+              key: g.cityKey,
+              label: g.cityKey,
+              bookings: g.bookings,
+              hasPending: g.hasPending,
+              pendingCount: g.pendingCount,
+            }))
+          );
+        }
+
+        // === VIEW: department (original grouped view) ===
         const displayedGroups = selectedDept
           ? regionGroups.filter((g) => g.regionKey === selectedDept)
           : regionGroups;
-        return displayedGroups.length === 0 ? (
-        <div className="bg-white border border-neutral-200 rounded-2xl p-12 text-center">
-          <Icon icon="solar:calendar-linear" className="text-4xl text-neutral-300 mx-auto mb-3" />
-          <p className="text-sm text-neutral-500 font-light">{t("noBookingsFound")}</p>
-        </div>
-      ) : (
-        <div className="space-y-4">
-          {displayedGroups.map((group) => {
-            const collapsed = isCollapsed(group.regionKey, group.hasPending);
-            const maxVisible = visibleCounts[group.regionKey] || 3;
-            const visibleBookings = group.bookings.slice(0, maxVisible);
-            const hasMore = group.bookings.length > maxVisible;
-            return (
-              <div
-                key={group.regionKey}
-                className="bg-white border border-neutral-200 rounded-2xl overflow-hidden"
-              >
-                {/* Region header */}
-                <button
-                  onClick={() => toggleRegion(group.regionKey, group.hasPending)}
-                  className="w-full flex items-center gap-3 px-4 py-3 sm:px-5 sm:py-4 hover:bg-neutral-50 transition-colors text-left"
-                >
-                  <Icon icon="solar:map-point-bold" className="text-neutral-400 text-lg shrink-0" />
-                  <span className="font-semibold text-sm">{group.regionLabel}</span>
-                  <span className="text-xs text-neutral-400">
-                    {group.bookings.length} course{group.bookings.length > 1 ? "s" : ""}
-                  </span>
-                  {group.pendingCount > 0 && (
-                    <span className="text-xs px-2 py-0.5 rounded-full bg-amber-50 text-amber-700 font-medium">
-                      {group.pendingCount} en attente
-                    </span>
-                  )}
-                  <Icon
-                    icon={collapsed ? "solar:alt-arrow-down-linear" : "solar:alt-arrow-up-linear"}
-                    className="text-neutral-400 ml-auto"
-                  />
-                </button>
-
-                {/* Region content */}
-                {!collapsed && (
-                  <div className="border-t border-neutral-100">
-                    {/* Desktop table */}
-                    <div className="hidden lg:block">
-                      <table className="w-full text-xs table-fixed">
-                        <thead>
-                          <tr className="bg-neutral-50 text-neutral-400 text-left">
-                            <th className="px-2 py-2 font-medium w-[24%]">{locale === "en" ? "Route" : "Trajet"}</th>
-                            <th className="px-2 py-2 font-medium w-[8%]">{locale === "en" ? "Booked" : "Réservé"}</th>
-                            <th className="px-2 py-2 font-medium w-[8%]">{locale === "en" ? "Ride" : "Prestation"}</th>
-                            <th className="px-2 py-2 font-medium w-[5%]">Dist.</th>
-                            <th className="px-2 py-2 font-medium w-[5%]">{locale === "en" ? "Price" : "Prix"}</th>
-                            {filter !== "NO_DRIVER" && <th className="px-2 py-2 font-medium w-[12%]">{t("driver")}</th>}
-                            <th className="px-2 py-2 font-medium w-[12%]">{t("client")}</th>
-                            <th className="px-2 py-2 font-medium w-[10%]">{locale === "en" ? "Status" : "Statut"}</th>
-                            {filter !== "NO_DRIVER" && <th className="px-2 py-2 font-medium w-[16%]">Actions</th>}
-                          </tr>
-                        </thead>
-                        <tbody className="divide-y divide-neutral-100">
-                          {visibleBookings.map((booking) => {
-                            const price = booking.lockedPrice ?? booking.estimatedPrice;
-                            return (
-                              <tr key={booking.id} className="hover:bg-neutral-50/50">
-                                {/* Route */}
-                                <td className="px-2 py-2">
-                                  <a
-                                    href={`https://www.google.com/maps/dir/?api=1&origin=${booking.departureLat},${booking.departureLng}&destination=${booking.arrivalLat},${booking.arrivalLng}&travelmode=driving`}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="block hover:text-blue-600 transition-colors"
-                                  >
-                                    <div className="font-medium text-neutral-700 break-words leading-snug">
-                                      {booking.departureName}
-                                    </div>
-                                    <div className="text-neutral-400 break-words leading-snug mt-0.5">
-                                      → {booking.arrivalName}
-                                    </div>
-                                  </a>
-                                </td>
-                                {/* Booked date */}
-                                <td className="px-2 py-2 text-neutral-400">
-                                  {formatShortDate(booking.createdAt)}
-                                </td>
-                                {/* Ride date */}
-                                <td className="px-2 py-2 text-neutral-700 font-medium">
-                                  {formatShortDate(booking.requestedDate)}
-                                </td>
-                                {/* Distance */}
-                                <td className="px-2 py-2 text-neutral-500">
-                                  {booking.estimatedDistance
-                                    ? `${booking.estimatedDistance.toFixed(1)} km`
-                                    : (
-                                      <button
-                                        onClick={() => handleRecalculate(booking.id)}
-                                        disabled={loadingAction === `${booking.id}-recalc`}
-                                        className="text-blue-600 hover:text-blue-800 hover:underline disabled:opacity-50"
-                                      >
-                                        {loadingAction === `${booking.id}-recalc` ? "..." : "Recalc."}
-                                      </button>
-                                    )}
-                                </td>
-                                {/* Price */}
-                                <td className="px-2 py-2 text-neutral-700 font-medium">
-                                  {price != null ? `${price.toFixed(0)} €` : "—"}
-                                </td>
-                                {/* Driver */}
-                                {filter !== "NO_DRIVER" && (
-                                  <td className="px-2 py-2">
-                                    {booking.driver ? (
-                                      <div>
-                                        <Link
-                                          href={`/taxi/${booking.driver.slug}`}
-                                          target="_blank"
-                                          className="text-blue-600 hover:underline font-medium truncate block"
-                                        >
-                                          {booking.driver.name}
-                                        </Link>
-                                        {booking.driver.phone && (
-                                          <div className="text-neutral-400 truncate">
-                                            <a href={`tel:${booking.driver.phone}`} className="hover:text-neutral-600">
-                                              {booking.driver.phone}
-                                            </a>
-                                          </div>
-                                        )}
-                                      </div>
-                                    ) : (
-                                      <span className="text-neutral-300">—</span>
-                                    )}
-                                  </td>
-                                )}
-                                {/* Client */}
-                                <td className="px-2 py-2">
-                                  <div className="font-medium text-neutral-700 truncate">{booking.clientName}</div>
-                                  {booking.clientPhone && (
-                                    <div className="text-neutral-400 truncate">
-                                      <a href={`tel:${booking.clientPhone}`} className="hover:text-neutral-600">
-                                        {booking.clientPhone}
-                                      </a>
-                                    </div>
-                                  )}
-                                </td>
-                                {/* Status + Ref */}
-                                <td className="px-2 py-2">
-                                  {filter === "NO_DRIVER" && !booking.driver ? (
-                                    <span className="inline-block text-[10px] px-1.5 py-0.5 rounded-full font-medium bg-orange-50 text-orange-700">
-                                      Mail d&apos;excuse envoyé
-                                    </span>
-                                  ) : (
-                                    <>
-                                      <span
-                                        className={`inline-block text-[10px] px-1.5 py-0.5 rounded-full font-medium ${
-                                          statusConfig[booking.status]?.color || ""
-                                        }`}
-                                      >
-                                        {statusConfig[booking.status]?.label || booking.status}
-                                      </span>
-                                      {(booking.status === "REJECTED" || booking.status === "CANCELLED") && (
-                                        <div className="text-[10px] text-neutral-400 mt-0.5">
-                                          {cancelledByLabel(booking.cancelledBy)}
-                                        </div>
-                                      )}
-                                    </>
-                                  )}
-                                  <div className="text-[10px] text-neutral-400 font-mono mt-0.5">
-                                    #{booking.reference}
-                                  </div>
-                                  {booking.organization && (
-                                    <div className="mt-0.5">
-                                      <span className="text-[10px] px-1 py-0.5 rounded-full bg-violet-50 text-violet-700">
-                                        {booking.organization.name}
-                                      </span>
-                                    </div>
-                                  )}
-                                </td>
-                                {/* Actions */}
-                                {filter !== "NO_DRIVER" && (
-                                  <td className="px-2 py-2">
-                                    {booking.status === "PENDING" && booking.driver && (
-                                      <div className="flex flex-wrap gap-1">
-                                        <button
-                                          onClick={() => handleAction(booking.id, "accept-booking")}
-                                          disabled={loadingAction === `${booking.id}-accept-booking`}
-                                          className="px-2 py-1 rounded-lg bg-green-50 text-green-700 hover:bg-green-100 transition-colors text-[10px] font-medium whitespace-nowrap disabled:opacity-50"
-                                        >
-                                          {loadingAction === `${booking.id}-accept-booking` ? "..." : t("confirmBooking")}
-                                        </button>
-                                        <button
-                                          onClick={() => handleAction(booking.id, "remind-driver")}
-                                          disabled={loadingAction === `${booking.id}-remind-driver`}
-                                          className="px-2 py-1 rounded-lg bg-amber-50 text-amber-700 hover:bg-amber-100 transition-colors text-[10px] font-medium whitespace-nowrap disabled:opacity-50"
-                                        >
-                                          {loadingAction === `${booking.id}-remind-driver` ? "..." : "Relancer"}
-                                        </button>
-                                        <button
-                                          onClick={() => handleAction(booking.id, "apologize-refuse")}
-                                          disabled={loadingAction === `${booking.id}-apologize-refuse`}
-                                          className="px-2 py-1 rounded-lg bg-red-50 text-red-700 hover:bg-red-100 transition-colors text-[10px] font-medium whitespace-nowrap disabled:opacity-50"
-                                        >
-                                          {loadingAction === `${booking.id}-apologize-refuse` ? "..." : "Refuser"}
-                                        </button>
-                                      </div>
-                                    )}
-                                    {booking.status === "ACCEPTED" && (
-                                      <button
-                                        onClick={() => handleAction(booking.id, "complete-booking")}
-                                        disabled={loadingAction === `${booking.id}-complete-booking`}
-                                        className="px-2 py-1 rounded-lg bg-blue-50 text-blue-700 hover:bg-blue-100 transition-colors text-[10px] font-medium whitespace-nowrap disabled:opacity-50"
-                                      >
-                                        {loadingAction === `${booking.id}-complete-booking` ? "..." : t("completeBooking")}
-                                      </button>
-                                    )}
-                                    {(booking.status === "PENDING" || booking.status === "ACCEPTED") && (
-                                      <div className="flex flex-wrap gap-1 mt-1">
-                                        <button
-                                          onClick={() => handleAction(booking.id, "cancel-booking")}
-                                          disabled={loadingAction === `${booking.id}-cancel-booking`}
-                                          className="px-2 py-1 rounded-lg bg-neutral-100 text-neutral-600 hover:bg-neutral-200 transition-colors text-[10px] font-medium whitespace-nowrap disabled:opacity-50"
-                                        >
-                                          {loadingAction === `${booking.id}-cancel-booking` ? "..." : (locale === "en" ? "Cancel" : "Annuler")}
-                                        </button>
-                                        <button
-                                          onClick={() => openReassignModal(booking.id, booking.driver?.name || null, booking.driver?.id || null)}
-                                          className="px-2 py-1 rounded-lg bg-violet-50 text-violet-700 hover:bg-violet-100 transition-colors text-[10px] font-medium whitespace-nowrap"
-                                        >
-                                          {t("reassignDriver")}
-                                        </button>
-                                      </div>
-                                    )}
-                                  </td>
-                                )}
-                              </tr>
-                            );
-                          })}
-                        </tbody>
-                      </table>
-                    </div>
-
-                    {/* Mobile cards */}
-                    <div className="lg:hidden divide-y divide-neutral-100">
-                      {visibleBookings.map((booking) => {
-                        const price = booking.lockedPrice ?? booking.estimatedPrice;
-                        return (
-                          <div key={booking.id} className="p-4 space-y-2">
-                            {/* Header */}
-                            <div className="flex flex-wrap items-center gap-2">
-                              {filter === "NO_DRIVER" && !booking.driver ? (
-                                <span className="text-xs px-2 py-0.5 rounded-full font-medium bg-orange-50 text-orange-700">
-                                  Mail d&apos;excuse envoyé
-                                </span>
-                              ) : (
-                                <>
-                                  <span
-                                    className={`text-xs px-2 py-0.5 rounded-full font-medium ${
-                                      statusConfig[booking.status]?.color || ""
-                                    }`}
-                                  >
-                                    {statusConfig[booking.status]?.label || booking.status}
-                                  </span>
-                                  {(booking.status === "REJECTED" || booking.status === "CANCELLED") && (
-                                    <span className="text-[10px] text-neutral-400">
-                                      {cancelledByLabel(booking.cancelledBy)}
-                                    </span>
-                                  )}
-                                </>
-                              )}
-                              <span className="text-xs text-neutral-400 font-mono">#{booking.reference}</span>
-                              {booking.organization && (
-                                <span className="text-xs px-1.5 py-0.5 rounded-full bg-violet-50 text-violet-700">
-                                  {booking.organization.name}
-                                </span>
-                              )}
-                            </div>
-
-                            {/* Route */}
-                            <div className="text-xs">
-                              <div className="text-neutral-700 font-medium">{booking.departureName}</div>
-                              <div className="text-neutral-400">→ {booking.arrivalName}</div>
-                            </div>
-
-                            {/* Meta grid */}
-                            <div className="grid grid-cols-2 gap-x-4 gap-y-1.5 text-xs">
-                              <div>
-                                <span className="text-neutral-400">{locale === "en" ? "Booked" : "Réservé le"} : </span>
-                                <span className="text-neutral-600">{formatShortDate(booking.createdAt)}</span>
-                              </div>
-                              <div>
-                                <span className="text-neutral-400">{locale === "en" ? "Ride" : "Prestation"} : </span>
-                                <span className="text-neutral-700 font-medium">{formatShortDate(booking.requestedDate)}</span>
-                              </div>
-                              <div>
-                                <span className="text-neutral-400">Distance : </span>
-                                {booking.estimatedDistance ? (
-                                  <span className="text-neutral-600">{booking.estimatedDistance.toFixed(1)} km</span>
-                                ) : (
-                                  <button
-                                    onClick={() => handleRecalculate(booking.id)}
-                                    disabled={loadingAction === `${booking.id}-recalc`}
-                                    className="text-blue-600 hover:text-blue-800 hover:underline disabled:opacity-50"
-                                  >
-                                    {loadingAction === `${booking.id}-recalc` ? "..." : "Recalculer"}
-                                  </button>
-                                )}
-                              </div>
-                              <div>
-                                <span className="text-neutral-400">{locale === "en" ? "Price" : "Prix"} : </span>
-                                <span className="text-neutral-700 font-medium">
-                                  {price != null ? `${price.toFixed(2).replace(".", ",")} €` : "—"}
-                                </span>
-                              </div>
-                            </div>
-
-                            {/* Driver */}
-                            {booking.driver && (
-                              <div className="text-xs">
-                                <span className="text-neutral-400">{t("driver")} : </span>
-                                <Link
-                                  href={`/taxi/${booking.driver.slug}`}
-                                  target="_blank"
-                                  className="text-blue-600 hover:underline font-medium"
-                                >
-                                  {booking.driver.name}
-                                </Link>
-                                {booking.driver.phone && (
-                                  <span className="text-neutral-400 ml-2">
-                                    <a href={`tel:${booking.driver.phone}`} className="hover:text-neutral-600">
-                                      {booking.driver.phone}
-                                    </a>
-                                  </span>
-                                )}
-                              </div>
-                            )}
-
-                            {/* Client */}
-                            <div className="text-xs">
-                              <span className="text-neutral-400">{t("client")} : </span>
-                              <span className="text-neutral-700 font-medium">{booking.clientName}</span>
-                              {booking.clientPhone && (
-                                <span className="text-neutral-400 ml-2">
-                                  <a href={`tel:${booking.clientPhone}`} className="hover:text-neutral-600">
-                                    {booking.clientPhone}
-                                  </a>
-                                </span>
-                              )}
-                            </div>
-
-                            {/* Actions */}
-                            {filter !== "NO_DRIVER" && booking.status === "PENDING" && booking.driver && (
-                              <div className="flex flex-wrap gap-2 pt-1">
-                                <button
-                                  onClick={() => handleAction(booking.id, "accept-booking")}
-                                  disabled={loadingAction === `${booking.id}-accept-booking`}
-                                  className="px-3 py-1.5 rounded-lg bg-green-50 text-green-700 hover:bg-green-100 transition-colors text-xs font-medium disabled:opacity-50"
-                                >
-                                  {loadingAction === `${booking.id}-accept-booking` ? "..." : t("confirmBooking")}
-                                </button>
-                                <button
-                                  onClick={() => handleAction(booking.id, "remind-driver")}
-                                  disabled={loadingAction === `${booking.id}-remind-driver`}
-                                  className="px-3 py-1.5 rounded-lg bg-amber-50 text-amber-700 hover:bg-amber-100 transition-colors text-xs font-medium disabled:opacity-50"
-                                >
-                                  {loadingAction === `${booking.id}-remind-driver` ? "..." : "Relancer"}
-                                </button>
-                                <button
-                                  onClick={() => handleAction(booking.id, "apologize-refuse")}
-                                  disabled={loadingAction === `${booking.id}-apologize-refuse`}
-                                  className="px-3 py-1.5 rounded-lg bg-red-50 text-red-700 hover:bg-red-100 transition-colors text-xs font-medium disabled:opacity-50"
-                                >
-                                  {loadingAction === `${booking.id}-apologize-refuse` ? "..." : "Refuser"}
-                                </button>
-                              </div>
-                            )}
-                            {filter !== "NO_DRIVER" && booking.status === "ACCEPTED" && (
-                              <div className="pt-1">
-                                <button
-                                  onClick={() => handleAction(booking.id, "complete-booking")}
-                                  disabled={loadingAction === `${booking.id}-complete-booking`}
-                                  className="px-3 py-1.5 rounded-lg bg-blue-50 text-blue-700 hover:bg-blue-100 transition-colors text-xs font-medium disabled:opacity-50"
-                                >
-                                  {loadingAction === `${booking.id}-complete-booking` ? "..." : t("completeBooking")}
-                                </button>
-                              </div>
-                            )}
-                            {filter !== "NO_DRIVER" && (booking.status === "PENDING" || booking.status === "ACCEPTED") && (
-                              <div className="flex flex-wrap gap-2 pt-1">
-                                <button
-                                  onClick={() => handleAction(booking.id, "cancel-booking")}
-                                  disabled={loadingAction === `${booking.id}-cancel-booking`}
-                                  className="px-3 py-1.5 rounded-lg bg-neutral-100 text-neutral-600 hover:bg-neutral-200 transition-colors text-xs font-medium disabled:opacity-50"
-                                >
-                                  {loadingAction === `${booking.id}-cancel-booking` ? "..." : (locale === "en" ? "Cancel" : "Annuler")}
-                                </button>
-                                <button
-                                  onClick={() => openReassignModal(booking.id, booking.driver?.name || null, booking.driver?.id || null)}
-                                  className="px-3 py-1.5 rounded-lg bg-violet-50 text-violet-700 hover:bg-violet-100 transition-colors text-xs font-medium"
-                                >
-                                  {t("reassignDriver")}
-                                </button>
-                              </div>
-                            )}
-                          </div>
-                        );
-                      })}
-                    </div>
-                    {/* Show more button */}
-                    {hasMore && (
-                      <button
-                        onClick={() => setVisibleCounts((prev) => ({
-                          ...prev,
-                          [group.regionKey]: maxVisible + 10,
-                        }))}
-                        className="w-full py-2.5 text-xs font-medium text-neutral-500 hover:text-neutral-700 hover:bg-neutral-50 transition-colors border-t border-neutral-100"
-                      >
-                        {locale === "en" ? "Show more" : "Afficher plus"} ({group.bookings.length - maxVisible} {locale === "en" ? "remaining" : "restantes"})
-                      </button>
-                    )}
-                  </div>
-                )}
-              </div>
-            );
-          })}
-        </div>
-      );
+        return renderGroupedView(
+          displayedGroups.map((g) => ({
+            key: g.regionKey,
+            label: g.regionLabel,
+            bookings: g.bookings,
+            hasPending: g.hasPending,
+            pendingCount: g.pendingCount,
+          }))
+        );
       })()}
       {/* Confirmation modal */}
       {confirmModal && (

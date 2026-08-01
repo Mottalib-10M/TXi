@@ -1049,6 +1049,9 @@
     "sortByConnection": "Last connection",
     "sortByCity": "By city",
     "sortByType": "By type",
+    "sortByDate": "Latest booking",
+    "sortByDepartment": "By department",
+    "allDepartments": "All departments",
     "connectionsCount": "{count} login(s)",
     "lastSeen": "Seen {time}",
     "neverConnected": "Never connected",
@@ -1130,7 +1133,15 @@
     "reassignConfirm": "Reassign",
     "bookingConfirmed": "Booking confirmed",
     "bookingCompleted": "Booking completed",
-    "driverReassigned": "Driver reassigned"
+    "driverReassigned": "Driver reassigned",
+    "deleteDriver": "Delete",
+    "deleteDriverLong": "Delete this driver",
+    "deleteOrg": "Delete",
+    "deleteOrgLong": "Delete this organization",
+    "confirmDeleteDriver": "Are you sure you want to delete driver {name}? This action is irreversible. Existing bookings will be preserved.",
+    "confirmDeleteOrg": "Are you sure you want to delete organization {name}? This action is irreversible. Existing bookings will be preserved.",
+    "deleteSuccess": "Successfully deleted",
+    "deleteError": "Error during deletion"
   },
   "seo": {
     "citiesTitle": "Taxi in every city in France",

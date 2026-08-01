@@ -58,6 +58,7 @@ export function OrgDetailView({ org }: { org: OrgData }) {
   const router = useRouter();
   const dateFnsLocale = locale === "en" ? enUS : fr;
   const [impersonating, setImpersonating] = useState(false);
+  const [deleting, setDeleting] = useState(false);
 
   const statusConfig: Record<string, { label: string; color: string; dot: string }> = {
     PENDING: { label: t("statusPending"), color: "bg-amber-50 text-amber-700 ring-1 ring-amber-200", dot: "bg-amber-400" },
@@ -93,161 +94,159 @@ export function OrgDetailView({ org }: { org: OrgData }) {
     }
   }
 
+  async function deleteOrg() {
+    if (!window.confirm(t("confirmDeleteOrg", { name: org.name }))) return;
+    setDeleting(true);
+    try {
+      const res = await fetch(`/api/admin/organisations/${org.id}`, { method: "DELETE" });
+      if (res.ok) {
+        router.push("/admin/organisations");
+        router.refresh();
+      } else {
+        alert(t("deleteError"));
+      }
+    } catch (e) {
+      console.error(e);
+      alert(t("deleteError"));
+    } finally {
+      setDeleting(false);
+    }
+  }
+
   return (
     <div>
-      {/* Header */}
-      <div className="mb-8">
-        <Link
-          href="/admin/organisations"
-          className="inline-flex items-center gap-1.5 text-sm text-neutral-500 hover:text-neutral-900 transition-colors mb-4"
-        >
-          <Icon icon="solar:arrow-left-linear" />
-          {t("backToOrgs")}
-        </Link>
+      {/* Back link */}
+      <Link
+        href="/admin/organisations"
+        className="inline-flex items-center gap-1.5 text-sm text-neutral-500 hover:text-neutral-900 transition-colors mb-4"
+      >
+        <Icon icon="solar:arrow-left-linear" />
+        {t("backToOrgs")}
+      </Link>
 
-        <div className="flex flex-wrap items-start justify-between gap-4">
-          <div className="flex items-center gap-4">
-            <div className="w-14 h-14 bg-violet-50 rounded-2xl flex items-center justify-center text-lg font-bold text-violet-600 shrink-0">
-              {org.name.slice(0, 2).toUpperCase()}
-            </div>
-            <div>
-              <div className="flex flex-wrap items-center gap-2">
-                <h1 className="text-xl font-semibold">{org.name}</h1>
-                <span className={`text-xs px-2.5 py-0.5 rounded-full font-medium ${typeConfig[org.type]?.color || ""}`}>
-                  {typeConfig[org.type]?.label || org.type}
-                </span>
-                <span
-                  className={`text-xs px-2.5 py-0.5 rounded-full font-medium ${
-                    org.emailVerified
-                      ? "bg-blue-50 text-blue-700 ring-1 ring-blue-200"
-                      : "bg-amber-50 text-amber-700 ring-1 ring-amber-200"
-                  }`}
-                >
-                  {org.emailVerified ? t("emailVerified") : t("emailNotVerified")}
-                </span>
+      {/* Unified profile card */}
+      <div className="bg-white border border-neutral-200 rounded-2xl overflow-hidden mb-8">
+        {/* Identity + Actions */}
+        <div className="px-5 py-5 sm:px-6">
+          <div className="flex flex-wrap items-start justify-between gap-4">
+            <div className="flex items-center gap-4">
+              <div className="w-14 h-14 bg-violet-50 rounded-2xl flex items-center justify-center text-lg font-bold text-violet-600 shrink-0">
+                {org.name.slice(0, 2).toUpperCase()}
               </div>
-              <p className="text-sm text-neutral-500 mt-0.5">{org.contactName}</p>
+              <div>
+                <div className="flex flex-wrap items-center gap-2">
+                  <h1 className="text-xl font-semibold">{org.name}</h1>
+                  <span className={`text-xs px-2.5 py-0.5 rounded-full font-medium ${typeConfig[org.type]?.color || ""}`}>
+                    {typeConfig[org.type]?.label || org.type}
+                  </span>
+                  <span
+                    className={`text-xs px-2.5 py-0.5 rounded-full font-medium ${
+                      org.emailVerified
+                        ? "bg-blue-50 text-blue-700 ring-1 ring-blue-200"
+                        : "bg-amber-50 text-amber-700 ring-1 ring-amber-200"
+                    }`}
+                  >
+                    {org.emailVerified ? t("emailVerified") : t("emailNotVerified")}
+                  </span>
+                </div>
+                <p className="text-sm text-neutral-500 mt-0.5">{org.contactName}</p>
+              </div>
+            </div>
+
+            <div className="flex gap-2">
+              <button
+                onClick={impersonate}
+                disabled={impersonating}
+                className="px-3 py-1.5 rounded-lg text-xs font-medium bg-amber-50 text-amber-700 hover:bg-amber-100 transition-colors flex items-center gap-1 disabled:opacity-50"
+              >
+                <Icon icon="solar:square-arrow-right-linear" />
+                {impersonating ? "..." : t("loginAs")}
+              </button>
+              <button
+                onClick={deleteOrg}
+                disabled={deleting}
+                className="px-3 py-1.5 rounded-lg text-xs font-medium bg-red-50 text-red-700 hover:bg-red-100 transition-colors flex items-center gap-1 disabled:opacity-50"
+              >
+                <Icon icon="solar:trash-bin-minimalistic-linear" />
+                {deleting ? "..." : t("deleteOrgLong")}
+              </button>
             </div>
           </div>
-
-          <button
-            onClick={impersonate}
-            disabled={impersonating}
-            className="px-3 py-1.5 rounded-lg text-xs font-medium bg-amber-50 text-amber-700 hover:bg-amber-100 transition-colors flex items-center gap-1 disabled:opacity-50"
-          >
-            <Icon icon="solar:square-arrow-right-linear" />
-            {impersonating ? "..." : t("loginAs")}
-          </button>
         </div>
-      </div>
 
-      {/* KPI Cards */}
-      <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
-        <div className="bg-white border border-neutral-200 rounded-2xl p-5">
-          <div className="flex items-center gap-2 mb-3">
-            <div className="w-8 h-8 bg-blue-50 rounded-lg flex items-center justify-center">
-              <Icon icon="solar:calendar-bold" className="text-blue-500 text-sm" />
+        {/* KPI Stats */}
+        <div className="border-t border-neutral-100 px-5 py-4 sm:px-6 bg-neutral-50/50">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-x-6 gap-y-3">
+            <div className="text-center">
+              <p className="text-lg font-bold leading-none">{org.totalBookings}</p>
+              <p className="text-[11px] text-neutral-400 mt-1">{t("kpiTotalBookings")}</p>
+              {Object.keys(org.bookingsByStatus).length > 0 && (
+                <div className="flex flex-wrap justify-center gap-1.5 mt-1.5">
+                  {Object.entries(org.bookingsByStatus).map(([status, count]) => (
+                    <span key={status} className="text-[10px] text-neutral-400 flex items-center gap-0.5">
+                      <span className={`w-1.5 h-1.5 rounded-full ${statusConfig[status]?.dot || "bg-neutral-300"}`} />
+                      {count}
+                    </span>
+                  ))}
+                </div>
+              )}
             </div>
-            <span className="text-xs text-neutral-500">{t("kpiTotalBookings")}</span>
+            <div className="text-center">
+              <p className="text-lg font-bold leading-none">{org.cagnotteBalance.toFixed(2).replace(".", ",")}<span className="text-xs ml-0.5">&euro;</span></p>
+              <p className="text-[11px] text-neutral-400 mt-1">{t("kpiWallet")}</p>
+            </div>
+            <div className="text-center">
+              <p className="text-lg font-bold leading-none">{org.loginCount}</p>
+              <p className="text-[11px] text-neutral-400 mt-1">{t("kpiConnections")}</p>
+            </div>
+            <div className="text-center">
+              <p className="text-sm font-semibold leading-none">
+                {org.lastLoginAt
+                  ? formatDistanceToNow(new Date(org.lastLoginAt), { addSuffix: true, locale: dateFnsLocale })
+                  : t("neverConnected")}
+              </p>
+              <p className="text-[11px] text-neutral-400 mt-1">{t("kpiLastLogin")}</p>
+            </div>
+            <div className="text-center">
+              <p className="text-lg font-bold leading-none">{org.favoriteDrivers.length}</p>
+              <p className="text-[11px] text-neutral-400 mt-1">{t("kpiFavoriteDrivers")}</p>
+            </div>
+            <div className="text-center">
+              <p className="text-lg font-bold leading-none">{org.bookingsByStatus["PENDING"] || 0}</p>
+              <p className="text-[11px] text-neutral-400 mt-1">{t("kpiPending")}</p>
+            </div>
           </div>
-          <p className="text-2xl font-bold">{org.totalBookings}</p>
-          <div className="flex flex-wrap gap-2 mt-2">
-            {Object.entries(org.bookingsByStatus).map(([status, count]) => (
-              <span key={status} className="text-[10px] text-neutral-400 flex items-center gap-1">
-                <span className={`w-1.5 h-1.5 rounded-full ${statusConfig[status]?.dot || "bg-neutral-300"}`} />
-                {count} {statusConfig[status]?.label?.toLowerCase() || status.toLowerCase()}
+        </div>
+
+        {/* Contact info */}
+        <div className="border-t border-neutral-100 px-5 py-4 sm:px-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-2.5 text-sm">
+            <div className="flex items-center gap-2">
+              <Icon icon="solar:letter-linear" className="text-neutral-400 shrink-0 text-base" />
+              <span className="text-neutral-600 truncate">{org.email}</span>
+            </div>
+            {org.phone && (
+              <div className="flex items-center gap-2">
+                <Icon icon="solar:phone-linear" className="text-neutral-400 shrink-0 text-base" />
+                <a href={`tel:${org.phone}`} className="text-neutral-600 hover:text-neutral-900">{org.phone}</a>
+              </div>
+            )}
+            <div className="flex items-center gap-2">
+              <Icon icon="solar:user-linear" className="text-neutral-400 shrink-0 text-base" />
+              <span className="text-neutral-600">{org.contactName}</span>
+            </div>
+            {org.address && (
+              <div className="flex items-center gap-2">
+                <Icon icon="solar:map-point-linear" className="text-neutral-400 shrink-0 text-base" />
+                <span className="text-neutral-600 truncate">{org.address}</span>
+              </div>
+            )}
+            <div className="flex items-center gap-2">
+              <Icon icon="solar:calendar-add-linear" className="text-neutral-400 shrink-0 text-base" />
+              <span className="text-neutral-600">
+                {t("registeredOnFem", { date: format(new Date(org.createdAt), "dd MMM yyyy", { locale: dateFnsLocale }) })}
               </span>
-            ))}
-          </div>
-        </div>
-
-        <div className="bg-white border border-neutral-200 rounded-2xl p-5">
-          <div className="flex items-center gap-2 mb-3">
-            <div className="w-8 h-8 bg-emerald-50 rounded-lg flex items-center justify-center">
-              <Icon icon="solar:wallet-money-bold" className="text-emerald-500 text-sm" />
             </div>
-            <span className="text-xs text-neutral-500">{t("kpiWallet")}</span>
-          </div>
-          <p className="text-2xl font-bold">{org.cagnotteBalance.toFixed(2).replace(".", ",")}<span className="text-sm ml-1">&euro;</span></p>
-        </div>
-
-        <div className="bg-white border border-neutral-200 rounded-2xl p-5">
-          <div className="flex items-center gap-2 mb-3">
-            <div className="w-8 h-8 bg-violet-50 rounded-lg flex items-center justify-center">
-              <Icon icon="solar:login-3-bold" className="text-violet-500 text-sm" />
-            </div>
-            <span className="text-xs text-neutral-500">{t("kpiConnections")}</span>
-          </div>
-          <p className="text-2xl font-bold">{org.loginCount}</p>
-        </div>
-
-        <div className="bg-white border border-neutral-200 rounded-2xl p-5">
-          <div className="flex items-center gap-2 mb-3">
-            <div className="w-8 h-8 bg-amber-50 rounded-lg flex items-center justify-center">
-              <Icon icon="solar:clock-circle-bold" className="text-amber-500 text-sm" />
-            </div>
-            <span className="text-xs text-neutral-500">{t("kpiLastLogin")}</span>
-          </div>
-          <p className="text-lg font-semibold">
-            {org.lastLoginAt
-              ? formatDistanceToNow(new Date(org.lastLoginAt), { addSuffix: true, locale: dateFnsLocale })
-              : t("neverConnected")}
-          </p>
-        </div>
-
-        <div className="bg-white border border-neutral-200 rounded-2xl p-5">
-          <div className="flex items-center gap-2 mb-3">
-            <div className="w-8 h-8 bg-pink-50 rounded-lg flex items-center justify-center">
-              <Icon icon="solar:heart-bold" className="text-pink-500 text-sm" />
-            </div>
-            <span className="text-xs text-neutral-500">{t("kpiFavoriteDrivers")}</span>
-          </div>
-          <p className="text-2xl font-bold">{org.favoriteDrivers.length}</p>
-        </div>
-
-        <div className="bg-white border border-neutral-200 rounded-2xl p-5">
-          <div className="flex items-center gap-2 mb-3">
-            <div className="w-8 h-8 bg-orange-50 rounded-lg flex items-center justify-center">
-              <Icon icon="solar:hourglass-bold" className="text-orange-500 text-sm" />
-            </div>
-            <span className="text-xs text-neutral-500">{t("kpiPending")}</span>
-          </div>
-          <p className="text-2xl font-bold">{org.bookingsByStatus["PENDING"] || 0}</p>
-        </div>
-      </div>
-
-      {/* Organisation info */}
-      <div className="bg-white border border-neutral-200 rounded-2xl p-5 mb-8">
-        <h2 className="text-sm font-semibold mb-4 flex items-center gap-2">
-          <Icon icon="solar:buildings-2-linear" className="text-neutral-400" />
-          {t("orgInfo")}
-        </h2>
-        <div className="grid sm:grid-cols-2 gap-x-8 gap-y-3 text-sm">
-          <div className="flex items-center gap-2">
-            <Icon icon="solar:letter-linear" className="text-neutral-400 shrink-0" />
-            <span className="text-neutral-500">{org.email}</span>
-          </div>
-          {org.phone && (
-            <div className="flex items-center gap-2">
-              <Icon icon="solar:phone-linear" className="text-neutral-400 shrink-0" />
-              <span className="text-neutral-500">{org.phone}</span>
-            </div>
-          )}
-          <div className="flex items-center gap-2">
-            <Icon icon="solar:user-linear" className="text-neutral-400 shrink-0" />
-            <span className="text-neutral-500">{org.contactName}</span>
-          </div>
-          {org.address && (
-            <div className="flex items-center gap-2">
-              <Icon icon="solar:map-point-linear" className="text-neutral-400 shrink-0" />
-              <span className="text-neutral-500">{org.address}</span>
-            </div>
-          )}
-          <div className="flex items-center gap-2">
-            <Icon icon="solar:calendar-add-linear" className="text-neutral-400 shrink-0" />
-            <span className="text-neutral-500">
-              {t("registeredOnFem", { date: format(new Date(org.createdAt), "dd MMM yyyy", { locale: dateFnsLocale }) })}
-            </span>
           </div>
         </div>
       </div>

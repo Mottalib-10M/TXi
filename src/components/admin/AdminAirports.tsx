@@ -4,6 +4,7 @@ import { useState, useMemo, useRef } from "react";
 import { Icon } from "@iconify/react";
 import { format } from "date-fns";
 import { enUS, fr } from "date-fns/locale";
+import { Link } from "@/i18n/navigation";
 import { useLocale, useTranslations } from "next-intl";
 
 interface AirportBooking {
@@ -20,6 +21,7 @@ interface AirportBooking {
   status: string;
   createdAt: string;
   driverName: string | null;
+  driverId: string | null;
   driverPhone: string | null;
   driverSlug: string | null;
   orgName: string | null;
@@ -487,7 +489,12 @@ export function AdminAirports({ bookings }: { bookings: AirportBooking[] }) {
                           </div>
                         </td>
                         <td className="px-3 py-2">
-                          <div className="font-medium text-neutral-700">{b.clientName}</div>
+                          <Link
+                            href={`/admin/reservations?search=${encodeURIComponent(b.clientName)}`}
+                            className="font-medium text-blue-600 hover:underline"
+                          >
+                            {b.clientName}
+                          </Link>
                           {b.clientPhone && (
                             <div className="text-neutral-400">{b.clientPhone}</div>
                           )}
@@ -507,7 +514,14 @@ export function AdminAirports({ bookings }: { bookings: AirportBooking[] }) {
                           </span>
                         </td>
                         <td className="px-3 py-2">
-                          {b.driverName ? (
+                          {b.driverName && b.driverId ? (
+                            <Link
+                              href={`/admin/chauffeurs/${b.driverId}`}
+                              className="text-blue-600 hover:underline font-medium"
+                            >
+                              {b.driverName}
+                            </Link>
+                          ) : b.driverName ? (
                             <span className="text-neutral-700 font-medium">{b.driverName}</span>
                           ) : (
                             <span className="text-orange-500 text-[10px] font-medium">
@@ -602,14 +616,26 @@ export function AdminAirports({ bookings }: { bookings: AirportBooking[] }) {
                     </div>
                     <div className="text-xs">
                       <span className="text-neutral-400">{t("client")} : </span>
-                      <span className="text-neutral-700 font-medium">{b.clientName}</span>
+                      <Link
+                        href={`/admin/reservations?search=${encodeURIComponent(b.clientName)}`}
+                        className="text-blue-600 hover:underline font-medium"
+                      >
+                        {b.clientName}
+                      </Link>
                       {b.clientPhone && (
                         <span className="text-neutral-400 ml-2">{b.clientPhone}</span>
                       )}
                     </div>
                     <div className="text-xs">
                       <span className="text-neutral-400">{t("driver")} : </span>
-                      {b.driverName ? (
+                      {b.driverName && b.driverId ? (
+                        <Link
+                          href={`/admin/chauffeurs/${b.driverId}`}
+                          className="text-blue-600 hover:underline font-medium"
+                        >
+                          {b.driverName}
+                        </Link>
+                      ) : b.driverName ? (
                         <span className="text-neutral-700 font-medium">{b.driverName}</span>
                       ) : (
                         <span className="text-orange-500 font-medium">

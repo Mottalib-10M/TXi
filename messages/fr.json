@@ -1049,6 +1049,9 @@
     "sortByConnection": "Dernière connexion",
     "sortByCity": "Par ville",
     "sortByType": "Par type",
+    "sortByDate": "Dernière réservation",
+    "sortByDepartment": "Par département",
+    "allDepartments": "Tous les départements",
     "connectionsCount": "{count} connexion(s)",
     "lastSeen": "Vu {time}",
     "neverConnected": "Jamais connecté",
@@ -1130,7 +1133,15 @@
     "reassignConfirm": "Réassigner",
     "bookingConfirmed": "Course confirmée",
     "bookingCompleted": "Course terminée",
-    "driverReassigned": "Chauffeur réassigné"
+    "driverReassigned": "Chauffeur réassigné",
+    "deleteDriver": "Supprimer",
+    "deleteDriverLong": "Supprimer ce chauffeur",
+    "deleteOrg": "Supprimer",
+    "deleteOrgLong": "Supprimer cette organisation",
+    "confirmDeleteDriver": "Êtes-vous sûr de vouloir supprimer le chauffeur {name} ? Cette action est irréversible. Les réservations existantes seront conservées.",
+    "confirmDeleteOrg": "Êtes-vous sûr de vouloir supprimer l'organisation {name} ? Cette action est irréversible. Les réservations existantes seront conservées.",
+    "deleteSuccess": "Suppression effectuée",
+    "deleteError": "Erreur lors de la suppression"
   },
   "seo": {
     "citiesTitle": "Taxi dans toutes les villes de France",

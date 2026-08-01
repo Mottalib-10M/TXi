@@ -60,11 +60,21 @@ export default async function DashboardLayout({
     }
   }
 
+  // Auto-verify if referral threshold reached
+  if (!driver.isVerified && driver.referralCount >= 2) {
+    await prisma.driver.update({
+      where: { id: session.user.id },
+      data: { isVerified: true },
+    });
+    driver.isVerified = true;
+  }
+
   // Block entire dashboard if not verified → show waitlist screen
   if (!driver.isVerified) {
-    const position = await prisma.driver.count({
+    const realPosition = await prisma.driver.count({
       where: { isVerified: false, createdAt: { lte: driver.createdAt } },
     });
+    const position = realPosition + 27;
 
     return (
       <div className="min-h-screen bg-neutral-50">

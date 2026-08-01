@@ -29,6 +29,8 @@ export function OrganisationsTable({ organisations }: { organisations: Organisat
   const [search, setSearch] = useState("");
   const [selectedType, setSelectedType] = useState<string | null>(null);
   const [impersonating, setImpersonating] = useState<string | null>(null);
+  const [deleting, setDeleting] = useState<string | null>(null);
+  const [viewMode, setViewMode] = useState<"recent" | "type">("recent");
 
   const typeConfig: Record<string, { label: string; color: string }> = {
     HOTEL: { label: t("typeHotel"), color: "bg-blue-50 text-blue-700" },
@@ -47,7 +49,7 @@ export function OrganisationsTable({ organisations }: { organisations: Organisat
 
   const filtered = useMemo(() => {
     return organisations.filter((o) => {
-      if (selectedType && o.type !== selectedType) return false;
+      if (viewMode === "type" && selectedType && o.type !== selectedType) return false;
       const q = search.toLowerCase();
       return (
         o.name.toLowerCase().includes(q) ||
@@ -55,7 +57,16 @@ export function OrganisationsTable({ organisations }: { organisations: Organisat
         o.contactName.toLowerCase().includes(q)
       );
     });
-  }, [organisations, search, selectedType]);
+  }, [organisations, search, selectedType, viewMode]);
+
+  const sortedByRecent = useMemo(() => {
+    return [...filtered].sort((a, b) => {
+      if (!a.lastLoginAt && !b.lastLoginAt) return 0;
+      if (!a.lastLoginAt) return 1;
+      if (!b.lastLoginAt) return -1;
+      return new Date(b.lastLoginAt).getTime() - new Date(a.lastLoginAt).getTime();
+    });
+  }, [filtered]);
 
   const typeCounts = useMemo(() => {
     const counts: Record<string, number> = {};
@@ -95,42 +106,88 @@ export function OrganisationsTable({ organisations }: { organisations: Organisat
     }
   }
 
+  async function deleteOrg(org: Organisation) {
+    if (!window.confirm(t("confirmDeleteOrg", { name: org.name }))) return;
+    setDeleting(org.id);
+    try {
+      const res = await fetch(`/api/admin/organisations/${org.id}`, { method: "DELETE" });
+      if (res.ok) {
+        router.refresh();
+      } else {
+        alert(t("deleteError"));
+      }
+    } catch (e) {
+      console.error(e);
+      alert(t("deleteError"));
+    } finally {
+      setDeleting(null);
+    }
+  }
+
   return (
     <div>
-      {/* Search */}
-      <div className="relative mb-4">
-        <Icon icon="solar:magnifer-linear" className="absolute left-3 top-1/2 -translate-y-1/2 text-neutral-400" />
-        <input
-          type="text"
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-          placeholder={t("searchOrgs")}
-          className="w-full pl-10 pr-4 py-2.5 bg-white border border-neutral-200 rounded-xl text-sm focus:outline-none focus:border-neutral-400 transition-colors"
-        />
+      {/* View toggle + Search */}
+      <div className="flex flex-col sm:flex-row gap-3 mb-4">
+        <div className="flex rounded-xl border border-neutral-200 bg-white overflow-hidden shrink-0">
+          <button
+            onClick={() => setViewMode("recent")}
+            className={`px-4 py-2.5 text-xs font-medium transition-colors flex items-center gap-1.5 ${
+              viewMode === "recent"
+                ? "bg-neutral-900 text-white"
+                : "text-neutral-600 hover:bg-neutral-50"
+            }`}
+          >
+            <Icon icon="solar:clock-circle-linear" className="text-sm" />
+            {t("sortByConnection")}
+          </button>
+          <button
+            onClick={() => setViewMode("type")}
+            className={`px-4 py-2.5 text-xs font-medium transition-colors flex items-center gap-1.5 ${
+              viewMode === "type"
+                ? "bg-neutral-900 text-white"
+                : "text-neutral-600 hover:bg-neutral-50"
+            }`}
+          >
+            <Icon icon="solar:tag-linear" className="text-sm" />
+            {t("sortByType")}
+          </button>
+        </div>
+        <div className="relative flex-1">
+          <Icon icon="solar:magnifer-linear" className="absolute left-3 top-1/2 -translate-y-1/2 text-neutral-400" />
+          <input
+            type="text"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            placeholder={t("searchOrgs")}
+            className="w-full pl-10 pr-4 py-2.5 bg-white border border-neutral-200 rounded-xl text-sm focus:outline-none focus:border-neutral-400 transition-colors"
+          />
+        </div>
       </div>
 
-      {/* Type filter pills */}
-      <div className="flex gap-2 mb-6 overflow-x-auto pb-2">
-        {typeFilters.map((filter) => {
-          const count = filter.key === null
-            ? organisations.length
-            : typeCounts[filter.key] || 0;
-          return (
-            <button
-              key={filter.label}
-              onClick={() => setSelectedType(selectedType === filter.key ? null : filter.key)}
-              className={`px-4 py-2 rounded-full text-xs font-medium transition-colors whitespace-nowrap ${
-                selectedType === filter.key
-                  ? "bg-neutral-900 text-white"
-                  : "bg-white border border-neutral-200 text-neutral-600 hover:border-neutral-300"
-              }`}
-            >
-              {filter.label}
-              <span className="ml-1.5 opacity-60">({count})</span>
-            </button>
-          );
-        })}
-      </div>
+      {/* Type filter pills (only in type view) */}
+      {viewMode === "type" && (
+        <div className="flex gap-2 mb-6 overflow-x-auto pb-2">
+          {typeFilters.map((filter) => {
+            const count = filter.key === null
+              ? organisations.length
+              : typeCounts[filter.key] || 0;
+            return (
+              <button
+                key={filter.label}
+                onClick={() => setSelectedType(selectedType === filter.key ? null : filter.key)}
+                className={`px-4 py-2 rounded-full text-xs font-medium transition-colors whitespace-nowrap ${
+                  selectedType === filter.key
+                    ? "bg-neutral-900 text-white"
+                    : "bg-white border border-neutral-200 text-neutral-600 hover:border-neutral-300"
+                }`}
+              >
+                {filter.label}
+                <span className="ml-1.5 opacity-60">({count})</span>
+              </button>
+            );
+          })}
+        </div>
+      )}
 
       {filtered.length === 0 ? (
         <div className="bg-white border border-neutral-200 rounded-2xl p-12 text-center">
@@ -139,7 +196,7 @@ export function OrganisationsTable({ organisations }: { organisations: Organisat
         </div>
       ) : (
         <div className="space-y-3">
-          {filtered.map((org) => (
+          {(viewMode === "recent" ? sortedByRecent : filtered).map((org) => (
             <div
               key={org.id}
               className="bg-white border border-neutral-200 rounded-2xl p-4 sm:p-5"
@@ -211,14 +268,24 @@ export function OrganisationsTable({ organisations }: { organisations: Organisat
                     {t("registeredOnFem", { date: format(new Date(org.createdAt), "dd MMM yyyy", { locale: dateFnsLocale }) })}
                   </span>
                 </div>
-                <button
-                  onClick={() => impersonate(org.id)}
-                  disabled={impersonating === org.id}
-                  className="px-3 py-1.5 rounded-lg text-xs font-medium bg-amber-50 text-amber-700 hover:bg-amber-100 transition-colors flex items-center gap-1 disabled:opacity-50"
-                >
-                  <Icon icon="solar:square-arrow-right-linear" />
-                  {impersonating === org.id ? "..." : t("loginAs")}
-                </button>
+                <div className="flex gap-2">
+                  <button
+                    onClick={() => impersonate(org.id)}
+                    disabled={impersonating === org.id}
+                    className="px-3 py-1.5 rounded-lg text-xs font-medium bg-amber-50 text-amber-700 hover:bg-amber-100 transition-colors flex items-center gap-1 disabled:opacity-50"
+                  >
+                    <Icon icon="solar:square-arrow-right-linear" />
+                    {impersonating === org.id ? "..." : t("loginAs")}
+                  </button>
+                  <button
+                    onClick={() => deleteOrg(org)}
+                    disabled={deleting === org.id}
+                    className="px-3 py-1.5 rounded-lg text-xs font-medium bg-red-50 text-red-700 hover:bg-red-100 transition-colors flex items-center gap-1 disabled:opacity-50"
+                  >
+                    <Icon icon="solar:trash-bin-minimalistic-linear" />
+                    {deleting === org.id ? "..." : t("deleteOrg")}
+                  </button>
+                </div>
               </div>
             </div>
           ))}

@@ -71,6 +71,7 @@ export function DriverDetailView({ driver }: { driver: DriverData }) {
   const dateFnsLocale = locale === "en" ? enUS : fr;
   const [impersonating, setImpersonating] = useState(false);
   const [updating, setUpdating] = useState(false);
+  const [deleting, setDeleting] = useState(false);
 
   function openCarteProUrl(url: string) {
     if (url.startsWith("data:")) {
@@ -132,229 +133,215 @@ export function DriverDetailView({ driver }: { driver: DriverData }) {
     }
   }
 
+  async function deleteDriver() {
+    if (!window.confirm(t("confirmDeleteDriver", { name: `${driver.firstName} ${driver.lastName}` }))) return;
+    setDeleting(true);
+    try {
+      const res = await fetch(`/api/admin/drivers/${driver.id}`, { method: "DELETE" });
+      if (res.ok) {
+        router.push("/admin/chauffeurs");
+        router.refresh();
+      } else {
+        alert(t("deleteError"));
+      }
+    } catch (e) {
+      console.error(e);
+      alert(t("deleteError"));
+    } finally {
+      setDeleting(false);
+    }
+  }
+
   return (
     <div>
-      {/* Header */}
-      <div className="mb-8">
-        <Link
-          href="/admin/chauffeurs"
-          className="inline-flex items-center gap-1.5 text-sm text-neutral-500 hover:text-neutral-900 transition-colors mb-4"
-        >
-          <Icon icon="solar:arrow-left-linear" />
-          {t("backToDrivers")}
-        </Link>
+      {/* Back link */}
+      <Link
+        href="/admin/chauffeurs"
+        className="inline-flex items-center gap-1.5 text-sm text-neutral-500 hover:text-neutral-900 transition-colors mb-4"
+      >
+        <Icon icon="solar:arrow-left-linear" />
+        {t("backToDrivers")}
+      </Link>
 
-        <div className="flex flex-wrap items-start justify-between gap-4">
-          <div className="flex items-center gap-4">
-            <div className="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center text-lg font-bold text-blue-600 shrink-0">
-              {driver.firstName[0]}{driver.lastName[0]}
-            </div>
-            <div>
-              <div className="flex flex-wrap items-center gap-2">
-                <h1 className="text-xl font-semibold">{driver.firstName} {driver.lastName}</h1>
-                <span
-                  className={`text-xs px-2.5 py-0.5 rounded-full font-medium ${
-                    driver.isActive
-                      ? "bg-green-50 text-green-700 ring-1 ring-green-200"
-                      : "bg-neutral-100 text-neutral-500 ring-1 ring-neutral-200"
-                  }`}
-                >
-                  {driver.isActive ? t("active") : t("inactive")}
-                </span>
-                {driver.isVerified && (
-                  <span className="text-xs px-2.5 py-0.5 rounded-full font-medium bg-violet-50 text-violet-700 ring-1 ring-violet-200">
-                    {t("verified")}
-                  </span>
-                )}
-                <span
-                  className={`text-xs px-2.5 py-0.5 rounded-full font-medium ${
-                    driver.emailVerified
-                      ? "bg-blue-50 text-blue-700 ring-1 ring-blue-200"
-                      : "bg-amber-50 text-amber-700 ring-1 ring-amber-200"
-                  }`}
-                >
-                  {driver.emailVerified ? t("emailVerified") : t("emailNotVerified")}
-                </span>
+      {/* Unified profile card */}
+      <div className="bg-white border border-neutral-200 rounded-2xl overflow-hidden mb-8">
+        {/* Identity + Actions */}
+        <div className="px-5 py-5 sm:px-6">
+          <div className="flex flex-wrap items-start justify-between gap-4">
+            <div className="flex items-center gap-4">
+              <div className="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center text-lg font-bold text-blue-600 shrink-0">
+                {driver.firstName[0]}{driver.lastName[0]}
               </div>
-              {driver.companyName && (
-                <p className="text-sm text-neutral-500 mt-0.5">{driver.companyName}</p>
-              )}
+              <div>
+                <div className="flex flex-wrap items-center gap-2">
+                  <h1 className="text-xl font-semibold">{driver.firstName} {driver.lastName}</h1>
+                  <span
+                    className={`text-xs px-2.5 py-0.5 rounded-full font-medium ${
+                      driver.isActive
+                        ? "bg-green-50 text-green-700 ring-1 ring-green-200"
+                        : "bg-neutral-100 text-neutral-500 ring-1 ring-neutral-200"
+                    }`}
+                  >
+                    {driver.isActive ? t("active") : t("inactive")}
+                  </span>
+                  {driver.isVerified && (
+                    <span className="text-xs px-2.5 py-0.5 rounded-full font-medium bg-violet-50 text-violet-700 ring-1 ring-violet-200">
+                      {t("verified")}
+                    </span>
+                  )}
+                  <span
+                    className={`text-xs px-2.5 py-0.5 rounded-full font-medium ${
+                      driver.emailVerified
+                        ? "bg-blue-50 text-blue-700 ring-1 ring-blue-200"
+                        : "bg-amber-50 text-amber-700 ring-1 ring-amber-200"
+                    }`}
+                  >
+                    {driver.emailVerified ? t("emailVerified") : t("emailNotVerified")}
+                  </span>
+                </div>
+                {driver.companyName && (
+                  <p className="text-sm text-neutral-500 mt-0.5">{driver.companyName}</p>
+                )}
+              </div>
             </div>
-          </div>
 
-          <div className="flex flex-wrap gap-2">
-            <button
-              onClick={() => toggleField("isActive", !driver.isActive)}
-              disabled={updating}
-              className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors disabled:opacity-50 ${
-                driver.isActive
-                  ? "bg-neutral-100 text-neutral-600 hover:bg-neutral-200"
-                  : "bg-green-50 text-green-700 hover:bg-green-100"
-              }`}
-            >
-              {driver.isActive ? t("deactivate") : t("activate")}
-            </button>
-            <button
-              onClick={() => toggleField("isVerified", !driver.isVerified)}
-              disabled={updating}
-              className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors disabled:opacity-50 ${
-                driver.isVerified
-                  ? "bg-neutral-100 text-neutral-600 hover:bg-neutral-200"
-                  : "bg-violet-50 text-violet-700 hover:bg-violet-100"
-              }`}
-            >
-              {driver.isVerified ? t("removeVerification") : t("verify")}
-            </button>
-            <Link
-              href={`/taxi/${driver.slug}`}
-              target="_blank"
-              className="px-3 py-1.5 rounded-lg text-xs font-medium bg-blue-50 text-blue-700 hover:bg-blue-100 transition-colors flex items-center gap-1"
-            >
-              <Icon icon="solar:eye-linear" />
-              {t("publicPage")}
-            </Link>
-            <button
-              onClick={impersonate}
-              disabled={impersonating}
-              className="px-3 py-1.5 rounded-lg text-xs font-medium bg-amber-50 text-amber-700 hover:bg-amber-100 transition-colors flex items-center gap-1 disabled:opacity-50"
-            >
-              <Icon icon="solar:square-arrow-right-linear" />
-              {impersonating ? "..." : t("loginAs")}
-            </button>
+            <div className="flex flex-wrap gap-2">
+              <button
+                onClick={() => toggleField("isActive", !driver.isActive)}
+                disabled={updating}
+                className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors disabled:opacity-50 ${
+                  driver.isActive
+                    ? "bg-neutral-100 text-neutral-600 hover:bg-neutral-200"
+                    : "bg-green-50 text-green-700 hover:bg-green-100"
+                }`}
+              >
+                {driver.isActive ? t("deactivate") : t("activate")}
+              </button>
+              <button
+                onClick={() => toggleField("isVerified", !driver.isVerified)}
+                disabled={updating}
+                className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors disabled:opacity-50 ${
+                  driver.isVerified
+                    ? "bg-neutral-100 text-neutral-600 hover:bg-neutral-200"
+                    : "bg-violet-50 text-violet-700 hover:bg-violet-100"
+                }`}
+              >
+                {driver.isVerified ? t("removeVerification") : t("verify")}
+              </button>
+              <Link
+                href={`/taxi/${driver.slug}`}
+                target="_blank"
+                className="px-3 py-1.5 rounded-lg text-xs font-medium bg-blue-50 text-blue-700 hover:bg-blue-100 transition-colors flex items-center gap-1"
+              >
+                <Icon icon="solar:eye-linear" />
+                {t("publicPage")}
+              </Link>
+              <button
+                onClick={impersonate}
+                disabled={impersonating}
+                className="px-3 py-1.5 rounded-lg text-xs font-medium bg-amber-50 text-amber-700 hover:bg-amber-100 transition-colors flex items-center gap-1 disabled:opacity-50"
+              >
+                <Icon icon="solar:square-arrow-right-linear" />
+                {impersonating ? "..." : t("loginAs")}
+              </button>
+              <button
+                onClick={deleteDriver}
+                disabled={deleting}
+                className="px-3 py-1.5 rounded-lg text-xs font-medium bg-red-50 text-red-700 hover:bg-red-100 transition-colors flex items-center gap-1 disabled:opacity-50"
+              >
+                <Icon icon="solar:trash-bin-minimalistic-linear" />
+                {deleting ? "..." : t("deleteDriverLong")}
+              </button>
+            </div>
           </div>
         </div>
-      </div>
 
-      {/* KPI Stats */}
-      <div className="bg-white border border-neutral-200 rounded-2xl p-5 mb-8">
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-x-6 gap-y-4">
-          <div className="flex items-center gap-3">
-            <div className="w-9 h-9 bg-blue-50 rounded-xl flex items-center justify-center shrink-0">
-              <Icon icon="solar:calendar-bold" className="text-blue-500 text-base" />
-            </div>
-            <div>
+        {/* KPI Stats */}
+        <div className="border-t border-neutral-100 px-5 py-4 sm:px-6 bg-neutral-50/50">
+          <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-x-6 gap-y-3">
+            <div className="text-center">
               <p className="text-lg font-bold leading-none">{driver.totalBookings}</p>
-              <p className="text-[11px] text-neutral-400 mt-0.5">{t("kpiTotalBookings")}</p>
+              <p className="text-[11px] text-neutral-400 mt-1">{t("kpiTotalBookings")}</p>
             </div>
-          </div>
-
-          <div className="flex items-center gap-3">
-            <div className="w-9 h-9 bg-emerald-50 rounded-xl flex items-center justify-center shrink-0">
-              <Icon icon="solar:wallet-money-bold" className="text-emerald-500 text-base" />
-            </div>
-            <div>
+            <div className="text-center">
               <p className="text-lg font-bold leading-none">{driver.totalRevenue.toFixed(0)}<span className="text-xs ml-0.5">&euro;</span></p>
-              <p className="text-[11px] text-neutral-400 mt-0.5">{t("kpiRevenue")}</p>
+              <p className="text-[11px] text-neutral-400 mt-1">{t("kpiRevenue")}</p>
             </div>
-          </div>
-
-          <div className="flex items-center gap-3">
-            <div className="w-9 h-9 bg-green-50 rounded-xl flex items-center justify-center shrink-0">
-              <Icon icon="solar:check-circle-bold" className="text-green-500 text-base" />
-            </div>
-            <div>
+            <div className="text-center">
               <p className="text-lg font-bold leading-none">{driver.acceptanceRate}<span className="text-xs ml-0.5">%</span></p>
-              <p className="text-[11px] text-neutral-400 mt-0.5">{t("kpiAcceptanceRate")}</p>
+              <p className="text-[11px] text-neutral-400 mt-1">{t("kpiAcceptanceRate")}</p>
             </div>
-          </div>
-
-          <div className="flex items-center gap-3">
-            <div className="w-9 h-9 bg-violet-50 rounded-xl flex items-center justify-center shrink-0">
-              <Icon icon="solar:login-3-bold" className="text-violet-500 text-base" />
+            <div className="text-center">
+              <p className="text-lg font-bold leading-none">{driver.pendingBookings}</p>
+              <p className="text-[11px] text-neutral-400 mt-1">{t("kpiPending")}</p>
             </div>
-            <div>
+            <div className="text-center">
               <p className="text-lg font-bold leading-none">{driver.loginCount}</p>
-              <p className="text-[11px] text-neutral-400 mt-0.5">{t("kpiConnections")}</p>
+              <p className="text-[11px] text-neutral-400 mt-1">{t("kpiConnections")}</p>
             </div>
-          </div>
-
-          <div className="flex items-center gap-3">
-            <div className="w-9 h-9 bg-amber-50 rounded-xl flex items-center justify-center shrink-0">
-              <Icon icon="solar:clock-circle-bold" className="text-amber-500 text-base" />
-            </div>
-            <div>
+            <div className="text-center">
               <p className="text-sm font-semibold leading-none">
                 {driver.lastLoginAt
                   ? formatDistanceToNow(new Date(driver.lastLoginAt), { addSuffix: true, locale: dateFnsLocale })
                   : t("neverConnected")}
               </p>
-              <p className="text-[11px] text-neutral-400 mt-0.5">{t("kpiLastLogin")}</p>
+              <p className="text-[11px] text-neutral-400 mt-1">{t("kpiLastLogin")}</p>
             </div>
-          </div>
-
-          <div className="flex items-center gap-3">
-            <div className="w-9 h-9 bg-orange-50 rounded-xl flex items-center justify-center shrink-0">
-              <Icon icon="solar:hourglass-bold" className="text-orange-500 text-base" />
-            </div>
-            <div>
-              <p className="text-lg font-bold leading-none">{driver.pendingBookings}</p>
-              <p className="text-[11px] text-neutral-400 mt-0.5">{t("kpiPending")}</p>
-            </div>
-          </div>
-
-          <div className="flex items-center gap-3">
-            <div className="w-9 h-9 bg-pink-50 rounded-xl flex items-center justify-center shrink-0">
-              <Icon icon="solar:share-bold" className="text-pink-500 text-base" />
-            </div>
-            <div>
+            <div className="text-center">
               <p className="text-lg font-bold leading-none">{driver.referralCount}</p>
-              <p className="text-[11px] text-neutral-400 mt-0.5">
+              <p className="text-[11px] text-neutral-400 mt-1">
                 {t("kpiReferrals")}
                 {driver.referralCode && <span className="font-mono ml-1 text-neutral-300">{driver.referralCode}</span>}
               </p>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Profile info */}
-      <div className="bg-white border border-neutral-200 rounded-2xl p-5 mb-8">
-        <h2 className="text-sm font-semibold mb-4 flex items-center gap-2">
-          <Icon icon="solar:user-id-linear" className="text-neutral-400" />
-          {t("profileInfo")}
-        </h2>
-        <div className="grid sm:grid-cols-2 gap-x-8 gap-y-3 text-sm">
-          <div className="flex items-center gap-2">
-            <Icon icon="solar:letter-linear" className="text-neutral-400 shrink-0" />
-            <span className="text-neutral-500">{driver.email}</span>
-          </div>
-          {driver.phone && (
+        {/* Profile info */}
+        <div className="border-t border-neutral-100 px-5 py-4 sm:px-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-2.5 text-sm">
             <div className="flex items-center gap-2">
-              <Icon icon="solar:phone-linear" className="text-neutral-400 shrink-0" />
-              <span className="text-neutral-500">{driver.phone}</span>
+              <Icon icon="solar:letter-linear" className="text-neutral-400 shrink-0 text-base" />
+              <span className="text-neutral-600 truncate">{driver.email}</span>
             </div>
-          )}
-          {driver.vehicle && (
+            {driver.phone && (
+              <div className="flex items-center gap-2">
+                <Icon icon="solar:phone-linear" className="text-neutral-400 shrink-0 text-base" />
+                <a href={`tel:${driver.phone}`} className="text-neutral-600 hover:text-neutral-900">{driver.phone}</a>
+              </div>
+            )}
+            {driver.vehicle && (
+              <div className="flex items-center gap-2">
+                <Icon icon="mdi:car-outline" className="text-neutral-400 shrink-0 text-base" />
+                <span className="text-neutral-600 truncate">
+                  {driver.vehicle}
+                  {driver.vehicleColor ? ` (${driver.vehicleColor})` : ""}
+                  {driver.vehiclePlate ? ` - ${driver.vehiclePlate}` : ""}
+                </span>
+              </div>
+            )}
+            {driver.zoneAddress && (
+              <div className="flex items-center gap-2">
+                <Icon icon="solar:map-point-linear" className="text-neutral-400 shrink-0 text-base" />
+                <span className="text-neutral-600 truncate">{driver.zoneAddress} ({driver.zoneRadius} km)</span>
+              </div>
+            )}
             <div className="flex items-center gap-2">
-              <Icon icon="mdi:car-outline" className="text-neutral-400 shrink-0" />
-              <span className="text-neutral-500">
-                {driver.vehicle}
-                {driver.vehicleColor ? ` (${driver.vehicleColor})` : ""}
-                {driver.vehiclePlate ? ` - ${driver.vehiclePlate}` : ""}
+              <Icon icon="solar:tag-price-linear" className="text-neutral-400 shrink-0 text-base" />
+              <span className="text-neutral-600">
+                {t("pricingInfo", {
+                  base: driver.baseFare.toFixed(2).replace(".", ","),
+                  km: driver.pricePerKm.toFixed(2).replace(".", ","),
+                  min: driver.minimumFare.toFixed(2).replace(".", ","),
+                })}
               </span>
             </div>
-          )}
-          {driver.zoneAddress && (
             <div className="flex items-center gap-2">
-              <Icon icon="solar:map-point-linear" className="text-neutral-400 shrink-0" />
-              <span className="text-neutral-500">{driver.zoneAddress} ({driver.zoneRadius} km)</span>
+              <Icon icon="solar:calendar-add-linear" className="text-neutral-400 shrink-0 text-base" />
+              <span className="text-neutral-600">
+                {t("registeredOn", { date: format(new Date(driver.createdAt), "dd MMM yyyy", { locale: dateFnsLocale }) })}
+              </span>
             </div>
-          )}
-          <div className="flex items-center gap-2">
-            <Icon icon="solar:tag-price-linear" className="text-neutral-400 shrink-0" />
-            <span className="text-neutral-500">
-              {t("pricingInfo", {
-                base: driver.baseFare.toFixed(2).replace(".", ","),
-                km: driver.pricePerKm.toFixed(2).replace(".", ","),
-                min: driver.minimumFare.toFixed(2).replace(".", ","),
-              })}
-            </span>
-          </div>
-          <div className="flex items-center gap-2">
-            <Icon icon="solar:calendar-add-linear" className="text-neutral-400 shrink-0" />
-            <span className="text-neutral-500">
-              {t("registeredOn", { date: format(new Date(driver.createdAt), "dd MMM yyyy", { locale: dateFnsLocale }) })}
-            </span>
           </div>
         </div>
       </div>

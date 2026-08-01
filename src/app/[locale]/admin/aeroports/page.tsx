@@ -28,6 +28,7 @@ export default async function AdminAeroportsPage() {
       include: {
         driver: {
           select: {
+            id: true,
             firstName: true,
             lastName: true,
             slug: true,
@@ -68,6 +69,7 @@ export default async function AdminAeroportsPage() {
         driverName: b.driver
           ? `${b.driver.firstName} ${b.driver.lastName}`
           : null,
+        driverId: b.driver?.id ?? null,
         driverPhone: b.driver?.phone ?? null,
         driverSlug: b.driver?.slug ?? null,
         orgName: b.organization?.name ?? null,
