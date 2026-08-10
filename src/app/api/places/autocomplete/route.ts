@@ -17,9 +17,18 @@ export async function GET(request: NextRequest) {
     });
   }
 
+  const sessiontoken = request.nextUrl.searchParams.get("sessiontoken") || "";
+
   try {
+    const params = new URLSearchParams({
+      input,
+      components: "country:fr",
+      language: "fr",
+      key: apiKey,
+      ...(sessiontoken && { sessiontoken }),
+    });
     const res = await fetch(
-      `https://maps.googleapis.com/maps/api/place/autocomplete/json?input=${encodeURIComponent(input)}&components=country:fr&language=fr&key=${apiKey}`
+      `https://maps.googleapis.com/maps/api/place/autocomplete/json?${params}`
     );
     const data = await res.json();
     return NextResponse.json(data);

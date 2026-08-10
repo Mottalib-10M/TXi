@@ -8,9 +8,17 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({ lat: 0, lng: 0 });
   }
 
+  const sessiontoken = request.nextUrl.searchParams.get("sessiontoken") || "";
+
   try {
+    const params = new URLSearchParams({
+      place_id: placeId,
+      fields: "geometry",
+      key: apiKey,
+      ...(sessiontoken && { sessiontoken }),
+    });
     const res = await fetch(
-      `https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeId}&fields=geometry&key=${apiKey}`
+      `https://maps.googleapis.com/maps/api/place/details/json?${params}`
     );
     const data = await res.json();
 

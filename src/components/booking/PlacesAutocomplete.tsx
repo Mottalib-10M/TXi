@@ -30,6 +30,7 @@ export function PlacesAutocomplete({
   const [geoLoading, setGeoLoading] = useState(false);
   const wrapperRef = useRef<HTMLDivElement>(null);
   const debounceRef = useRef<NodeJS.Timeout>();
+  const sessionTokenRef = useRef(crypto.randomUUID());
 
   const fetchSuggestions = useCallback(async (input: string) => {
     if (input.length < 3) {
@@ -48,7 +49,7 @@ export function PlacesAutocomplete({
 
     try {
       const res = await fetch(
-        `/api/places/autocomplete?input=${encodeURIComponent(input)}`
+        `/api/places/autocomplete?input=${encodeURIComponent(input)}&sessiontoken=${sessionTokenRef.current}`
       );
       const data = await res.json();
       setSuggestions(data.predictions || []);
@@ -73,7 +74,7 @@ export function PlacesAutocomplete({
     if (apiKey && prediction.place_id !== "manual") {
       try {
         const res = await fetch(
-          `/api/places/details?place_id=${prediction.place_id}`
+          `/api/places/details?place_id=${prediction.place_id}&sessiontoken=${sessionTokenRef.current}`
         );
         const data = await res.json();
         if (data.lat && data.lng) {
@@ -82,6 +83,8 @@ export function PlacesAutocomplete({
       } catch {
         // Ignore geocoding errors
       }
+      // Session ends after Place Details — start a new one for the next search
+      sessionTokenRef.current = crypto.randomUUID();
     }
   }
 
