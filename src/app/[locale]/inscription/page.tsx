@@ -20,7 +20,10 @@ export default function InscriptionPage() {
   const locale = useLocale();
   const router = useRouter();
   const searchParams = useSearchParams();
-  const initialType = searchParams.get("type") as ProfileType | null;
+  const rawType = searchParams.get("type");
+  const initialType = rawType && ["driver", "particulier", "hotel", "hospital", "enterprise"].includes(rawType)
+    ? (rawType as ProfileType)
+    : null;
   const referralCode = searchParams.get("ref");
   const redirect = searchParams.get("redirect");
   const prefillName = searchParams.get("name") || "";
@@ -768,11 +771,11 @@ export default function InscriptionPage() {
 
             <div className="flex items-center gap-2 mb-4 px-1">
               <Icon
-                icon={bookingOptions.find((o) => o.type === profileType)!.icon}
+                icon={bookingOptions.find((o) => o.type === profileType)?.icon || "solar:buildings-2-linear"}
                 className="text-lg text-neutral-600"
               />
               <span className="text-sm font-medium text-neutral-600">
-                {bookingOptions.find((o) => o.type === profileType)!.label}
+                {bookingOptions.find((o) => o.type === profileType)?.label}
               </span>
             </div>
 

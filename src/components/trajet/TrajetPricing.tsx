@@ -5,8 +5,9 @@ import type { Trajet } from "@/data/trajets";
 export async function TrajetPricing({ trajet }: { trajet: Trajet }) {
   const t = await getTranslations("trajet");
 
-  const baseMin = parseInt(trajet.priceEstimate.split("—")[0].trim());
-  const baseMax = parseInt(trajet.priceEstimate.split("—")[1].trim());
+  const parts = trajet.priceEstimate.split(/\s*[—–-]{1,3}\s*/);
+  const baseMin = parseInt(parts[0]) || 0;
+  const baseMax = parseInt(parts[1] || parts[0]) || 0;
   const nightMin = Math.round(baseMin * 1.15);
   const nightMax = Math.round(baseMax * 1.15);
   const sundayMin = Math.round(baseMin * 1.1);

@@ -3,7 +3,7 @@ import { prisma } from "@/lib/prisma";
 import { Icon } from "@iconify/react";
 import { Link } from "@/i18n/navigation";
 import { QRCodeButton } from "@/components/dashboard/QRCodeButton";
-
+import { MapsLink } from "@/components/ui/MapsLink";
 import { BookingQuickActions } from "@/components/dashboard/BookingQuickActions";
 import { PhoneLink } from "@/components/ui/PhoneLink";
 import { WhatsAppLink } from "@/components/ui/WhatsAppLink";
@@ -301,16 +301,7 @@ export default async function DashboardPage() {
                       </span>
                     </span>
                     <span className="flex items-center gap-2 shrink-0">
-                      <a
-                        href={`https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(booking.departureName)}&destination=${encodeURIComponent(booking.arrivalName)}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-7 h-7 flex items-center justify-center rounded-lg text-neutral-400 hover:text-blue-600 hover:bg-blue-50 transition-colors"
-                        title="Google Maps"
-                        onClick={(e) => e.stopPropagation()}
-                      >
-                        <Icon icon="solar:map-point-wave-linear" className="text-base" />
-                      </a>
+                      <MapsLink origin={booking.departureName} destination={booking.arrivalName} />
                       {booking.lockedPrice != null && (
                         <span className="text-lg font-bold text-amber-700">
                           {booking.lockedPrice.toFixed(0)}&nbsp;€
@@ -394,16 +385,7 @@ export default async function DashboardPage() {
                       </span>
                     </span>
                     <span className="flex items-center gap-2 shrink-0">
-                      <a
-                        href={`https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(booking.departureName)}&destination=${encodeURIComponent(booking.arrivalName)}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-7 h-7 flex items-center justify-center rounded-lg text-neutral-400 hover:text-blue-600 hover:bg-blue-50 transition-colors"
-                        title="Google Maps"
-                        onClick={(e) => e.stopPropagation()}
-                      >
-                        <Icon icon="solar:map-point-wave-linear" className="text-base" />
-                      </a>
+                      <MapsLink origin={booking.departureName} destination={booking.arrivalName} />
                       {booking.lockedPrice != null && (
                         <span className="text-lg font-bold text-green-700">
                           {booking.lockedPrice.toFixed(0)}&nbsp;€
