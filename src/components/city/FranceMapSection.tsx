@@ -5,6 +5,7 @@ import { useRouter } from "@/i18n/navigation";
 import { Link } from "@/i18n/navigation";
 import { useTranslations, useLocale } from "next-intl";
 import { cities } from "@/data/cities";
+import { activeCitySlugs } from "@/data/page-whitelists";
 
 const regions = [
   { name: "Hauts-de-France", slugs: ["lille", "amiens", "dunkerque", "calais"] },
@@ -37,6 +38,8 @@ export function FranceMapSection() {
   const router = useRouter();
   const [activeRegion, setActiveRegion] = useState<string | null>(null);
 
+  const activeCities = cities.filter((c) => activeCitySlugs.has(c.slug));
+
   const cityRegionMap = new Map<string, string>();
   regions.forEach((r) => r.slugs.forEach((s) => cityRegionMap.set(s, r.name)));
 
@@ -60,7 +63,7 @@ export function FranceMapSection() {
               strokeLinejoin="round"
             />
 
-            {cities.map((city) => {
+            {activeCities.map((city) => {
               const [cx, cy] = latLngToSvg(city.lat, city.lng);
               const region = cityRegionMap.get(city.slug);
               const isHighlighted = activeRegion === null || activeRegion === region;
@@ -109,9 +112,11 @@ export function FranceMapSection() {
       {/* Regions list */}
       <div className="space-y-3">
         {regions.map((region) => {
+          const activeSlugs = region.slugs.filter((s) => activeCitySlugs.has(s));
+          if (activeSlugs.length === 0) return null;
           const isActive = activeRegion === region.name;
-          const totalDrivers = region.slugs.reduce((sum, slug) => {
-            const city = cities.find((c) => c.slug === slug);
+          const totalDrivers = activeSlugs.reduce((sum, slug) => {
+            const city = activeCities.find((c) => c.slug === slug);
             return sum + (city?.driverCount || 0);
           }, 0);
 
@@ -140,12 +145,12 @@ export function FranceMapSection() {
                     isActive ? "text-neutral-500" : "text-neutral-400"
                   }`}
                 >
-                  {region.slugs.length} {region.slugs.length > 1 ? t("cities") : t("city")} · {totalDrivers.toLocaleString(locale)}+ {t("drivers")}
+                  {activeSlugs.length} {activeSlugs.length > 1 ? t("cities") : t("city")} · {totalDrivers.toLocaleString(locale)}+ {t("drivers")}
                 </span>
               </div>
               <div className="flex flex-wrap gap-1.5">
-                {region.slugs.map((slug) => {
-                  const city = cities.find((c) => c.slug === slug);
+                {activeSlugs.map((slug) => {
+                  const city = activeCities.find((c) => c.slug === slug);
                   if (!city) return null;
                   return (
                     <Link

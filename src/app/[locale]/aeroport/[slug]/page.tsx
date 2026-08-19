@@ -19,8 +19,11 @@ import { CityCTA } from "@/components/city/CityCTA";
 import { AirportInternalLinks } from "@/components/airport/AirportInternalLinks";
 import { ForfaitAeroportTable } from "@/components/airport/ForfaitAeroportTable";
 import { airports, getAirportBySlug } from "@/data/airports";
+import { activeAeroportSlugs } from "@/data/page-whitelists";
 import { ILE_DE_FRANCE_SLUGS } from "@/data/regions";
 import { canonicalUrl, alternateUrls } from "@/lib/seo";
+
+export const dynamicParams = false;
 
 const PARIS_AIRPORT_SLUGS = new Set(["paris-charles-de-gaulle", "paris-orly"]);
 
@@ -30,7 +33,9 @@ interface PageProps {
 
 export async function generateStaticParams() {
   return ["fr", "en"].flatMap((locale) =>
-    airports.map((a) => ({ locale, slug: a.slug }))
+    airports
+      .filter((a) => activeAeroportSlugs.has(a.slug))
+      .map((a) => ({ locale, slug: a.slug }))
   );
 }
 

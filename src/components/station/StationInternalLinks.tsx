@@ -2,15 +2,15 @@ import { Link } from "@/i18n/navigation";
 import { Icon } from "@iconify/react";
 import type { Station } from "@/data/stations";
 import { getNearbyStations } from "@/data/stations";
-import { findDepartementForCoords } from "@/data/departements";
 import { getTrajetsNearPoint } from "@/data/trajets";
+import { activeGareSlugs, activeCitySlugs } from "@/data/page-whitelists";
+import { activeTrajetSlugs } from "@/data/trajet-whitelist";
 import { getTranslations } from "next-intl/server";
 
 export async function StationInternalLinks({ station }: { station: Station }) {
   const t = await getTranslations("station");
-  const nearby = getNearbyStations(station);
-  const dept = findDepartementForCoords(station.lat, station.lng);
-  const relatedTrajets = getTrajetsNearPoint(station.lat, station.lng, 4);
+  const nearby = getNearbyStations(station).filter((s) => activeGareSlugs.has(s.slug));
+  const relatedTrajets = getTrajetsNearPoint(station.lat, station.lng, 4).filter((t) => activeTrajetSlugs.has(t.slug));
 
   return (
     <section className="border-t border-neutral-100 py-16">
@@ -32,7 +32,7 @@ export async function StationInternalLinks({ station }: { station: Station }) {
                 <span className="text-sm font-medium">Taxi {t("stationPrefix")}{s.name}</span>
               </Link>
             ))}
-            {station.citySlug && (
+            {station.citySlug && activeCitySlugs.has(station.citySlug) && (
               <Link
                 href={`/taxi-${station.citySlug}`}
                 className="flex items-center gap-2 bg-neutral-50 border border-neutral-200 rounded-xl px-4 py-3 hover:border-neutral-400 transition-colors card-hover"
@@ -43,24 +43,6 @@ export async function StationInternalLinks({ station }: { station: Station }) {
             )}
           </div>
         </div>
-
-        {/* Département */}
-        {dept && (
-          <div className="fade-up">
-            <h3 className="text-lg font-semibold tracking-tight text-center mb-6">
-              {t("departementLink")}
-            </h3>
-            <div className="flex justify-center">
-              <Link
-                href={`/departement/${dept.slug}`}
-                className="flex items-center gap-2 bg-white border border-neutral-200 rounded-xl px-4 py-3 hover:border-neutral-400 transition-colors card-hover"
-              >
-                <Icon icon="solar:map-linear" className="text-neutral-400" />
-                <span className="text-sm font-medium">{dept.name} ({dept.code})</span>
-              </Link>
-            </div>
-          </div>
-        )}
 
         {/* Trajets liés */}
         {relatedTrajets.length > 0 && (

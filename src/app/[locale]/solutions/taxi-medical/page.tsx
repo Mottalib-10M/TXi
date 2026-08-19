@@ -8,6 +8,7 @@ import { Footer } from "@/components/layout/Footer";
 import { ScrollAnimation } from "@/components/ui/ScrollAnimation";
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 import { taxiMedicalCities } from "@/data/taxi-medical-cities";
+import { activeTmSlugs } from "@/data/page-whitelists";
 import { getCityBySlug } from "@/data/cities";
 
 interface Props {
@@ -105,7 +106,7 @@ export default async function TaxiMedicalPage() {
       <BreadcrumbJsonLd
         crumbs={[
           { name: "TaxiNeo", item: "https://www.taxineo.fr" },
-          { name: t("breadcrumbServices"), item: "https://www.taxineo.fr/solutions/entreprise" },
+          { name: t("breadcrumbServices"), item: "https://www.taxineo.fr/services" },
           { name: t("breadcrumbCurrent") },
         ]}
       />
@@ -124,7 +125,7 @@ export default async function TaxiMedicalPage() {
           <nav className="flex items-center gap-2 text-sm text-neutral-400 font-light">
             <Link href="/" className="hover:text-neutral-900 transition-colors">TaxiNeo</Link>
             <Icon icon="solar:alt-arrow-right-linear" className="text-xs" />
-            <Link href="/solutions/entreprise" className="hover:text-neutral-900 transition-colors">
+            <Link href="/services" className="hover:text-neutral-900 transition-colors">
               {t("breadcrumbServices")}
             </Link>
             <Icon icon="solar:alt-arrow-right-linear" className="text-xs" />
@@ -300,7 +301,7 @@ export default async function TaxiMedicalPage() {
             </h2>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
-            {taxiMedicalCities.map((m) => {
+            {taxiMedicalCities.filter((m) => activeTmSlugs.has(m.citySlug)).map((m) => {
               const city = getCityBySlug(m.citySlug);
               if (!city) return null;
               return (

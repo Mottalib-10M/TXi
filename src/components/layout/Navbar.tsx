@@ -106,11 +106,6 @@ export function Navbar({ minimal = false }: { minimal?: boolean }) {
                     {[
                       { href: "/solutions/particulier", icon: "solar:user-linear", label: t("solutionParticulier"), desc: t("solutionParticulierDesc") },
                       { href: "/solutions/taxi-medical", icon: "solar:heart-pulse-linear", label: t("solutionTaxiMedical"), desc: t("solutionTaxiMedicalDesc") },
-                      { href: "/solutions/assistance-depannage", icon: "solar:shield-warning-linear", label: t("solutionDepannage"), desc: t("solutionDepannageDesc") },
-                      { href: "/solutions/mise-a-disposition", icon: "solar:clock-circle-linear", label: t("solutionMiseADispo"), desc: t("solutionMiseADispoDesc") },
-                      { href: "/solutions/hotel", icon: "solar:buildings-2-linear", label: t("solutionHotel"), desc: t("solutionHotelDesc") },
-                      { href: "/solutions/hopital", icon: "solar:health-linear", label: t("solutionHospital"), desc: t("solutionHospitalDesc") },
-                      { href: "/solutions/entreprise", icon: "solar:case-linear", label: t("solutionEnterprise"), desc: t("solutionEnterpriseDesc") },
                       { href: "/devenir-chauffeur", icon: "solar:steering-wheel-linear", label: t("becomeDriver"), desc: t("becomeDriverDesc") },
                     ].map((item) => (
                       <Link
@@ -156,7 +151,6 @@ export function Navbar({ minimal = false }: { minimal?: boolean }) {
                       { href: "/trajets", icon: "solar:routing-linear", label: t("discoverTrajets"), desc: t("discoverTrajetsDesc") },
                       { href: "/tarifs", icon: "solar:tag-price-linear", label: t("discoverTarifs"), desc: t("discoverTarifsDesc") },
                       { href: "/guides", icon: "solar:book-linear", label: t("discoverGuides"), desc: t("discoverGuidesDesc") },
-                      { href: "/departements", icon: "solar:map-linear", label: t("discoverDepartements"), desc: t("discoverDepartementsDesc") },
                       { href: "/services", icon: "solar:settings-linear", label: t("discoverServices"), desc: t("discoverServicesDesc") },
                       { href: "/villes", icon: "solar:city-linear", label: t("discoverVilles"), desc: t("discoverVillesDesc") },
                       { href: "/aeroports", icon: "mdi:airplane", label: t("discoverAeroports"), desc: t("discoverAeroportsDesc") },
@@ -327,11 +321,6 @@ export function Navbar({ minimal = false }: { minimal?: boolean }) {
                   {[
                     { href: "/solutions/particulier", label: t("solutionParticulier") },
                     { href: "/solutions/taxi-medical", label: t("solutionTaxiMedical") },
-                    { href: "/solutions/assistance-depannage", label: t("solutionDepannage") },
-                    { href: "/solutions/mise-a-disposition", label: t("solutionMiseADispo") },
-                    { href: "/solutions/hotel", label: t("solutionHotel") },
-                    { href: "/solutions/hopital", label: t("solutionHospital") },
-                    { href: "/solutions/entreprise", label: t("solutionEnterprise") },
                     { href: "/devenir-chauffeur", label: t("becomeDriver") },
                   ].map((item) => (
                     <Link
@@ -362,7 +351,6 @@ export function Navbar({ minimal = false }: { minimal?: boolean }) {
                     { href: "/trajets", label: t("discoverTrajets") },
                     { href: "/tarifs", label: t("discoverTarifs") },
                     { href: "/guides", label: t("discoverGuides") },
-                    { href: "/departements", label: t("discoverDepartements") },
                     { href: "/services", label: t("discoverServices") },
                     { href: "/villes", label: t("discoverVilles") },
                     { href: "/aeroports", label: t("discoverAeroports") },

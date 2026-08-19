@@ -3,14 +3,14 @@ import { Icon } from "@iconify/react";
 import type { City } from "@/data/cities";
 import { getCityBySlug } from "@/data/cities";
 import { getTmCitySlugs } from "@/data/taxi-medical-cities";
+import { activeTmSlugs, activeCitySlugs } from "@/data/page-whitelists";
 import { getTranslations } from "next-intl/server";
 
 export async function TmInternalLinks({ city, nearbyTmCities }: { city: City; nearbyTmCities: string[] }) {
   const t = await getTranslations("tm");
-  const tmSlugs = new Set(getTmCitySlugs());
 
   const nearbyWithTm = nearbyTmCities
-    .filter((slug) => tmSlugs.has(slug))
+    .filter((slug) => activeTmSlugs.has(slug))
     .map((slug) => getCityBySlug(slug))
     .filter(Boolean)
     .slice(0, 5);
@@ -19,6 +19,7 @@ export async function TmInternalLinks({ city, nearbyTmCities }: { city: City; ne
     <section className="border-t border-neutral-100 py-16">
       <div className="max-w-7xl mx-auto px-6 space-y-10">
         {/* Link to regular taxi page for this city */}
+        {activeCitySlugs.has(city.slug) && (
         <div className="fade-up">
           <h3 className="text-lg font-semibold tracking-tight text-center mb-6">
             {t("internalTaxiCity")}
@@ -33,6 +34,7 @@ export async function TmInternalLinks({ city, nearbyTmCities }: { city: City; ne
             </Link>
           </div>
         </div>
+        )}
 
         {/* Nearby TM cities */}
         {nearbyWithTm.length > 0 && (

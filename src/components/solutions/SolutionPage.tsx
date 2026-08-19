@@ -16,14 +16,8 @@ interface SolutionPageProps {
 }
 
 const SOLUTION_LINKS: Record<string, { fr: string; en: string }> = {
-  hotel: { fr: "Hôtels", en: "Hotels" },
   particulier: { fr: "Particuliers", en: "Individuals" },
-  entreprise: { fr: "Entreprises", en: "Businesses" },
-  assistance: { fr: "Assistance", en: "Assistance" },
-  hopital: { fr: "Hôpitaux", en: "Hospitals" },
   "taxi-medical": { fr: "Taxi médical", en: "Medical taxi" },
-  "mise-a-disposition": { fr: "Mise à disposition", en: "Chauffeur hire" },
-  "assistance-depannage": { fr: "Dépannage", en: "Breakdown" },
 };
 
 export async function SolutionPage({

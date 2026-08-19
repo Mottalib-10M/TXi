@@ -2,6 +2,7 @@ import { Icon } from "@iconify/react";
 import { Link } from "@/i18n/navigation";
 import type { City } from "@/data/cities";
 import { findTrajetSlugForRoute } from "@/data/trajets";
+import { activeTrajetSlugs } from "@/data/trajet-whitelist";
 import { getTranslations } from "next-intl/server";
 
 export async function CityPopularRoutes({ city }: { city: City }) {
@@ -22,7 +23,8 @@ export async function CityPopularRoutes({ city }: { city: City }) {
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
           {city.popularRoutes.map((route, i) => {
-            const trajetSlug = findTrajetSlugForRoute(route.from, route.to);
+            const rawSlug = findTrajetSlugForRoute(route.from, route.to);
+            const trajetSlug = rawSlug && activeTrajetSlugs.has(rawSlug) ? rawSlug : null;
             const cardClass = `bg-white border border-neutral-200 rounded-2xl p-5 card-hover fade-up fade-up-delay-${(i % 3) + 1}`;
 
             const content = (

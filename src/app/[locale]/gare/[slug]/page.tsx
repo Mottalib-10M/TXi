@@ -18,8 +18,11 @@ import { CityContactForm } from "@/components/city/CityContactForm";
 import { CityCTA } from "@/components/city/CityCTA";
 import { StationInternalLinks } from "@/components/station/StationInternalLinks";
 import { stations, getStationBySlug } from "@/data/stations";
+import { activeGareSlugs } from "@/data/page-whitelists";
 import { ILE_DE_FRANCE_SLUGS } from "@/data/regions";
 import { canonicalUrl, alternateUrls } from "@/lib/seo";
+
+export const dynamicParams = false;
 
 interface PageProps {
   params: Promise<{ locale: string; slug: string }>;
@@ -27,7 +30,9 @@ interface PageProps {
 
 export async function generateStaticParams() {
   return ["fr", "en"].flatMap((locale) =>
-    stations.map((s) => ({ locale, slug: s.slug }))
+    stations
+      .filter((s) => activeGareSlugs.has(s.slug))
+      .map((s) => ({ locale, slug: s.slug }))
   );
 }
 

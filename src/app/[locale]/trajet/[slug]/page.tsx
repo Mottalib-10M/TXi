@@ -16,7 +16,10 @@ import { CityFAQ } from "@/components/city/CityFAQ";
 import { CityContactForm } from "@/components/city/CityContactForm";
 import { CityCTA } from "@/components/city/CityCTA";
 import { trajets, getTrajetBySlug } from "@/data/trajets";
+import { activeTrajetSlugs } from "@/data/trajet-whitelist";
 import { canonicalUrl, alternateUrls } from "@/lib/seo";
+
+export const dynamicParams = false;
 
 interface PageProps {
   params: Promise<{ locale: string; slug: string }>;
@@ -24,7 +27,9 @@ interface PageProps {
 
 export async function generateStaticParams() {
   return ["fr", "en"].flatMap((locale) =>
-    trajets.map((t) => ({ locale, slug: t.slug }))
+    trajets
+      .filter((t) => activeTrajetSlugs.has(t.slug))
+      .map((t) => ({ locale, slug: t.slug }))
   );
 }
 

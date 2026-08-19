@@ -2,18 +2,18 @@ import { Link } from "@/i18n/navigation";
 import { Icon } from "@iconify/react";
 import type { City } from "@/data/cities";
 import { getNearbyCities } from "@/data/cities";
-import { findDepartementForCoords } from "@/data/departements";
 import { stations } from "@/data/stations";
 import { airports } from "@/data/airports";
 import { haversineDistance } from "@/lib/geo";
+import { activeCitySlugs, activeGareSlugs, activeAeroportSlugs } from "@/data/page-whitelists";
 import { getTranslations } from "next-intl/server";
 
 export async function CityInternalLinks({ city }: { city: City }) {
   const t = await getTranslations("city");
-  const nearby = getNearbyCities(city);
-  const dept = findDepartementForCoords(city.lat, city.lng);
+  const nearby = getNearbyCities(city).filter((c) => activeCitySlugs.has(c.slug));
 
   const nearbyStations = stations
+    .filter((s) => activeGareSlugs.has(s.slug))
     .map((s) => ({ s, dist: haversineDistance(city.lat, city.lng, s.lat, s.lng) }))
     .filter((x) => x.dist < 15)
     .sort((a, b) => a.dist - b.dist)
@@ -21,13 +21,14 @@ export async function CityInternalLinks({ city }: { city: City }) {
     .map((x) => x.s);
 
   const nearbyAirports = airports
+    .filter((a) => activeAeroportSlugs.has(a.slug))
     .map((a) => ({ a, dist: haversineDistance(city.lat, city.lng, a.lat, a.lng) }))
     .filter((x) => x.dist < 50)
     .sort((a, b) => a.dist - b.dist)
     .slice(0, 2)
     .map((x) => x.a);
 
-  const hasContent = nearby.length > 0 || dept || nearbyStations.length > 0 || nearbyAirports.length > 0;
+  const hasContent = nearby.length > 0 || nearbyStations.length > 0 || nearbyAirports.length > 0;
   if (!hasContent) return null;
 
   return (
@@ -52,24 +53,6 @@ export async function CityInternalLinks({ city }: { city: City }) {
                   <span className="text-sm font-medium">{t("taxiPrefix")}{c.name}</span>
                 </Link>
               ))}
-            </div>
-          </div>
-        )}
-
-        {/* Département */}
-        {dept && (
-          <div className="fade-up">
-            <h3 className="text-lg font-semibold tracking-tight text-center mb-6">
-              {t("departementLink")}
-            </h3>
-            <div className="flex justify-center">
-              <Link
-                href={`/departement/${dept.slug}`}
-                className="flex items-center gap-2 bg-white border border-neutral-200 rounded-xl px-4 py-3 hover:border-neutral-400 transition-colors card-hover"
-              >
-                <Icon icon="solar:map-linear" className="text-neutral-400" />
-                <span className="text-sm font-medium">{dept.name} ({dept.code})</span>
-              </Link>
             </div>
           </div>
         )}

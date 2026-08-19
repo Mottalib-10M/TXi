@@ -40,21 +40,6 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/solutions/hotel" className="hover:text-neutral-900 transition-colors">
-                  {t("solutionHotel")}
-                </Link>
-              </li>
-              <li>
-                <Link href="/solutions/hopital" className="hover:text-neutral-900 transition-colors">
-                  {t("solutionHospital")}
-                </Link>
-              </li>
-              <li>
-                <Link href="/solutions/entreprise" className="hover:text-neutral-900 transition-colors">
-                  {t("solutionEnterprise")}
-                </Link>
-              </li>
-              <li>
                 <Link href="/solutions/particulier" className="hover:text-neutral-900 transition-colors">
                   {t("solutionParticulier")}
                 </Link>
@@ -62,21 +47,6 @@ export function Footer() {
               <li>
                 <Link href="/solutions/taxi-medical" className="hover:text-neutral-900 transition-colors">
                   {t("solutionTaxiMedical")}
-                </Link>
-              </li>
-              <li>
-                <Link href="/solutions/assistance-depannage" className="hover:text-neutral-900 transition-colors">
-                  {t("solutionDepannage")}
-                </Link>
-              </li>
-              <li>
-                <Link href="/solutions/mise-a-disposition" className="hover:text-neutral-900 transition-colors">
-                  {t("solutionMiseADispo")}
-                </Link>
-              </li>
-              <li>
-                <Link href="/solutions/assistance" className="hover:text-neutral-900 transition-colors">
-                  {t("solutionAssistance")}
                 </Link>
               </li>
               <li className="border-t border-neutral-100 pt-3">
@@ -176,11 +146,6 @@ export function Footer() {
               <li>
                 <Link href="/guides" className="hover:text-neutral-900 transition-colors">
                   {t("guides")}
-                </Link>
-              </li>
-              <li>
-                <Link href="/departements" className="hover:text-neutral-900 transition-colors">
-                  {t("departements")}
                 </Link>
               </li>
               <li>

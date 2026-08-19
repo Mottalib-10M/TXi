@@ -20,6 +20,7 @@ import { CityCTA } from "@/components/city/CityCTA";
 import { CityInternalLinks } from "@/components/city/CityInternalLinks";
 import { ILE_DE_FRANCE_SLUGS } from "@/data/regions";
 import { cities, getCityBySlug } from "@/data/cities";
+import { activeCitySlugs } from "@/data/page-whitelists";
 import { canonicalUrl, alternateUrls } from "@/lib/seo";
 
 interface PageProps {
@@ -30,7 +31,9 @@ export const dynamicParams = false;
 
 export async function generateStaticParams() {
   return ["fr", "en"].flatMap((locale) =>
-    cities.map((city) => ({ locale, slug: `taxi-${city.slug}` }))
+    cities
+      .filter((city) => activeCitySlugs.has(city.slug))
+      .map((city) => ({ locale, slug: `taxi-${city.slug}` }))
   );
 }
 

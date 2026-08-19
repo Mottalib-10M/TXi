@@ -3,12 +3,14 @@ import { Icon } from "@iconify/react";
 import { getTranslations } from "next-intl/server";
 import type { Trajet } from "@/data/trajets";
 import { getRelatedTrajets } from "@/data/trajets";
+import { activeTrajetSlugs } from "@/data/trajet-whitelist";
+import { activeCitySlugs } from "@/data/page-whitelists";
 
 export async function TrajetAlternatives({ trajet }: { trajet: Trajet }) {
   const t = await getTranslations("trajet");
-  const related = getRelatedTrajets(trajet);
+  const related = getRelatedTrajets(trajet).filter((r) => activeTrajetSlugs.has(r.slug));
 
-  const hasVilleLinks = trajet.departSlug || trajet.arriveeSlug;
+  const hasVilleLinks = (trajet.departSlug && activeCitySlugs.has(trajet.departSlug)) || (trajet.arriveeSlug && activeCitySlugs.has(trajet.arriveeSlug));
 
   if (related.length === 0 && !hasVilleLinks) return null;
 
@@ -21,7 +23,7 @@ export async function TrajetAlternatives({ trajet }: { trajet: Trajet }) {
               Villes desservies
             </p>
             <div className="flex flex-wrap justify-center gap-3">
-              {trajet.departSlug && (
+              {trajet.departSlug && activeCitySlugs.has(trajet.departSlug) && (
                 <Link
                   href={`/taxi-${trajet.departSlug}` as never}
                   className="inline-flex items-center gap-2 px-4 py-2.5 bg-white border border-neutral-200 rounded-xl text-sm font-medium hover:border-neutral-400 transition-colors"
@@ -30,7 +32,7 @@ export async function TrajetAlternatives({ trajet }: { trajet: Trajet }) {
                   Taxi {trajet.from}
                 </Link>
               )}
-              {trajet.arriveeSlug && (
+              {trajet.arriveeSlug && activeCitySlugs.has(trajet.arriveeSlug) && (
                 <Link
                   href={`/taxi-${trajet.arriveeSlug}` as never}
                   className="inline-flex items-center gap-2 px-4 py-2.5 bg-white border border-neutral-200 rounded-xl text-sm font-medium hover:border-neutral-400 transition-colors"

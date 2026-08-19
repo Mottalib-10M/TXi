@@ -6,6 +6,7 @@ import { Footer } from "@/components/layout/Footer";
 import { ScrollAnimation } from "@/components/ui/ScrollAnimation";
 import { services, getServicesByCategory } from "@/data/services-seo";
 import type { ServiceSeo } from "@/data/services-seo";
+import { activeServiceSlugs } from "@/data/page-whitelists";
 import { getTranslations } from "next-intl/server";
 import { canonicalUrl, alternateUrls } from "@/lib/seo";
 
@@ -86,7 +87,7 @@ export default async function ServicesPage({ params }: PageProps) {
             <div className="inline-flex items-center gap-2 bg-neutral-100 rounded-full px-4 py-1.5 mb-6">
               <span className="w-2 h-2 bg-green-500 rounded-full" />
               <span className="text-xs font-medium text-neutral-600">
-                {t("badge", { count: services.length })}
+                {t("badge", { count: services.filter((s) => activeServiceSlugs.has(s.slug)).length })}
               </span>
             </div>
             <h1 className="text-4xl md:text-5xl font-semibold tracking-tight leading-[1.1] mb-4">
@@ -99,7 +100,7 @@ export default async function ServicesPage({ params }: PageProps) {
         </div>
 
         {categories.map((cat) => {
-          const items = getServicesByCategory(cat);
+          const items = getServicesByCategory(cat).filter((s) => activeServiceSlugs.has(s.slug));
           if (items.length === 0) return null;
           return (
             <section key={cat} className="py-12 md:py-16">

@@ -58,6 +58,5 @@ export default async function ReferralTrackingPage({ params }: Props) {
     data: updateData,
   });
 
-  // Always redirect to French inscription page (referral links target French market)
-  redirect(`/fr/inscription?type=driver&ref=${referralCode}`);
+  redirect(`/${locale}/inscription?type=driver&ref=${referralCode}`);
 }

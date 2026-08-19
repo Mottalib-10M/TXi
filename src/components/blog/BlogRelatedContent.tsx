@@ -2,6 +2,7 @@ import { Link } from "@/i18n/navigation";
 import { Icon } from "@iconify/react";
 import { trajets } from "@/data/trajets";
 import { guides } from "@/data/guides";
+import { activeTrajetSlugs } from "@/data/trajet-whitelist";
 import { getTranslations } from "next-intl/server";
 
 // Keyword → content mapping for internal linking
@@ -48,7 +49,7 @@ export async function BlogRelatedContent({ slug }: { slug: string }) {
   }
 
   const relatedTrajets = trajets
-    .filter((tr) => matchedTrajetSlugs.has(tr.slug))
+    .filter((tr) => matchedTrajetSlugs.has(tr.slug) && activeTrajetSlugs.has(tr.slug))
     .slice(0, 3);
   const relatedGuides = guides
     .filter((g) => matchedGuideSlugs.has(g.slug))

@@ -7,6 +7,7 @@ import { Footer } from "@/components/layout/Footer";
 import { ScrollAnimation } from "@/components/ui/ScrollAnimation";
 import { trajets, getTrajetsByCategory, categoryLabels } from "@/data/trajets";
 import type { Trajet } from "@/data/trajets";
+import { activeTrajetSlugs } from "@/data/trajet-whitelist";
 import { getTranslations } from "next-intl/server";
 
 interface PageProps {
@@ -50,14 +51,15 @@ export default async function TrajetsPage({ params }: PageProps) {
   const loc = locale === "en" ? "en" : "fr";
 
   const categories: Trajet["category"][] = ["aeroport", "gare", "touristique", "ville-a-ville", "longue-distance"];
+  const activeTrajets = trajets.filter((t) => activeTrajetSlugs.has(t.slug));
 
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "ItemList",
     name: t("metaTitle"),
     description: t("metaDescription"),
-    numberOfItems: trajets.length,
-    itemListElement: trajets.map((trajet, i) => ({
+    numberOfItems: activeTrajets.length,
+    itemListElement: activeTrajets.map((trajet, i) => ({
       "@type": "ListItem",
       position: i + 1,
       name: `Taxi ${trajet.from} → ${trajet.to}`,
@@ -108,7 +110,7 @@ export default async function TrajetsPage({ params }: PageProps) {
             <div className="inline-flex items-center gap-2 bg-neutral-100 rounded-full px-4 py-1.5 mb-6">
               <span className="w-2 h-2 bg-green-500 rounded-full" />
               <span className="text-xs font-medium text-neutral-600">
-                {t("badge", { count: trajets.length })}
+                {t("badge", { count: activeTrajets.length })}
               </span>
             </div>
             <h1 className="text-4xl md:text-5xl font-semibold tracking-tight leading-[1.1] mb-4">
@@ -121,7 +123,7 @@ export default async function TrajetsPage({ params }: PageProps) {
         </div>
 
         {categories.map((cat) => {
-          const items = getTrajetsByCategory(cat);
+          const items = getTrajetsByCategory(cat).filter((t) => activeTrajetSlugs.has(t.slug));
           if (items.length === 0) return null;
           return (
             <section key={cat} className="py-12 md:py-16">

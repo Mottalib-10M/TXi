@@ -6,6 +6,7 @@ import { Link } from "@/i18n/navigation";
 import { Icon } from "@iconify/react";
 import { useTranslations } from "next-intl";
 import { airports } from "@/data/airports";
+import { activeAeroportSlugs } from "@/data/page-whitelists";
 
 const regions = [
   { name: "Île-de-France", slugs: ["paris-charles-de-gaulle", "paris-orly", "paris-beauvais"] },
@@ -48,6 +49,8 @@ export function FranceMapAirports() {
   const router = useRouter();
   const [activeRegion, setActiveRegion] = useState<string | null>(null);
 
+  const activeAirports = airports.filter((a) => activeAeroportSlugs.has(a.slug));
+
   const airportRegionMap = new Map<string, string>();
   regions.forEach((r) => r.slugs.forEach((s) => airportRegionMap.set(s, r.name)));
 
@@ -82,7 +85,7 @@ export function FranceMapAirports() {
               strokeLinejoin="round"
             />
 
-            {airports.map((ap) => {
+            {activeAirports.map((ap) => {
               const isCors = isCorse(ap.slug);
               const [cx, cy] = isCors
                 ? latLngToSvgCorse(ap.lat, ap.lng)
@@ -135,6 +138,8 @@ export function FranceMapAirports() {
       {/* Regions list */}
       <div className="space-y-3">
         {regions.map((region) => {
+          const activeSlugs = region.slugs.filter((s) => activeAeroportSlugs.has(s));
+          if (activeSlugs.length === 0) return null;
           const isActive = activeRegion === region.name;
 
           return (
@@ -163,12 +168,12 @@ export function FranceMapAirports() {
                     isActive ? "text-neutral-500" : "text-neutral-400"
                   }`}
                 >
-                  {region.slugs.length} {region.slugs.length > 1 ? t("airports") : t("airport")}
+                  {activeSlugs.length} {activeSlugs.length > 1 ? t("airports") : t("airport")}
                 </span>
               </div>
               <div className="flex flex-wrap gap-1.5">
-                {region.slugs.map((slug) => {
-                  const ap = airports.find((a) => a.slug === slug);
+                {activeSlugs.map((slug) => {
+                  const ap = activeAirports.find((a) => a.slug === slug);
                   if (!ap) return null;
                   return (
                     <Link

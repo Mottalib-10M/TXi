@@ -7,6 +7,7 @@ import { Footer } from "@/components/layout/Footer";
 import { ScrollAnimation } from "@/components/ui/ScrollAnimation";
 import { FranceMapStations } from "@/components/station/FranceMapStations";
 import { stations } from "@/data/stations";
+import { activeGareSlugs } from "@/data/page-whitelists";
 import { getTranslations } from "next-intl/server";
 
 interface PageProps {
@@ -39,14 +40,15 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 export default async function GaresPage({ params }: PageProps) {
   const { locale } = await params;
   const t = await getTranslations("stations");
+  const activeStations = stations.filter((s) => activeGareSlugs.has(s.slug));
 
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "ItemList",
     name: t("metaTitle"),
     description: t("metaDescription"),
-    numberOfItems: stations.length,
-    itemListElement: stations.map((station, i) => ({
+    numberOfItems: activeStations.length,
+    itemListElement: activeStations.map((station, i) => ({
       "@type": "ListItem",
       position: i + 1,
       name: `Taxi ${station.name}`,
@@ -101,7 +103,7 @@ export default async function GaresPage({ params }: PageProps) {
             <div className="inline-flex items-center gap-2 bg-neutral-100 rounded-full px-4 py-1.5 mb-6">
               <span className="w-2 h-2 bg-green-500 rounded-full" />
               <span className="text-xs font-medium text-neutral-600">
-                {t("badge", { count: stations.length, regions: 12 })}
+                {t("badge", { count: activeStations.length, regions: 12 })}
               </span>
             </div>
             <h1 className="text-4xl md:text-5xl font-semibold tracking-tight leading-[1.1] mb-4">

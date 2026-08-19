@@ -7,6 +7,7 @@ import { Footer } from "@/components/layout/Footer";
 import { ScrollAnimation } from "@/components/ui/ScrollAnimation";
 import { FranceMapAirports } from "@/components/airport/FranceMapAirports";
 import { airports } from "@/data/airports";
+import { activeAeroportSlugs } from "@/data/page-whitelists";
 import { getTranslations } from "next-intl/server";
 
 interface PageProps {
@@ -40,13 +41,15 @@ export default async function AeroportsPage({ params }: PageProps) {
   const { locale } = await params;
   const t = await getTranslations("airports");
 
+  const activeAirports = airports.filter((a) => activeAeroportSlugs.has(a.slug));
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "ItemList",
     name: t("metaTitle"),
     description: t("metaDescription"),
-    numberOfItems: airports.length,
-    itemListElement: airports.map((airport, i) => ({
+    numberOfItems: activeAirports.length,
+    itemListElement: activeAirports.map((airport, i) => ({
       "@type": "ListItem",
       position: i + 1,
       name: `Taxi ${airport.name}`,
@@ -101,7 +104,7 @@ export default async function AeroportsPage({ params }: PageProps) {
             <div className="inline-flex items-center gap-2 bg-neutral-100 rounded-full px-4 py-1.5 mb-6">
               <span className="w-2 h-2 bg-green-500 rounded-full" />
               <span className="text-xs font-medium text-neutral-600">
-                {t("badge", { count: airports.length, regions: 13 })}
+                {t("badge", { count: activeAirports.length, regions: 13 })}
               </span>
             </div>
             <h1 className="text-4xl md:text-5xl font-semibold tracking-tight leading-[1.1] mb-4">

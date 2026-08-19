@@ -134,10 +134,6 @@ export default async function TarifsPage({ params }: PageProps) {
               {t("seoParagraph2")}
             </p>
             <div className="flex flex-wrap gap-3">
-              <Link href="/departements" className="inline-flex items-center gap-1.5 text-sm font-medium text-neutral-900 hover:text-neutral-600 transition-colors">
-                {t("seoLinkDepartements")}
-                <Icon icon="solar:arrow-right-linear" className="text-xs" />
-              </Link>
               <Link href="/trajets" className="inline-flex items-center gap-1.5 text-sm font-medium text-neutral-900 hover:text-neutral-600 transition-colors">
                 {t("seoLinkTrajets")}
                 <Icon icon="solar:arrow-right-linear" className="text-xs" />

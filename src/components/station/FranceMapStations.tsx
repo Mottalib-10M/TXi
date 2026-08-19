@@ -6,6 +6,7 @@ import { Link } from "@/i18n/navigation";
 import { Icon } from "@iconify/react";
 import { useTranslations } from "next-intl";
 import { stations } from "@/data/stations";
+import { activeGareSlugs } from "@/data/page-whitelists";
 
 const regions = [
   { name: "Île-de-France", slugs: ["paris-gare-du-nord", "paris-gare-de-lyon", "paris-saint-lazare", "paris-montparnasse", "paris-gare-de-l-est", "paris-gare-d-austerlitz", "paris-gare-de-bercy", "marne-la-vallee-chessy", "versailles-chantiers"] },
@@ -37,6 +38,8 @@ export function FranceMapStations() {
   const router = useRouter();
   const [activeRegion, setActiveRegion] = useState<string | null>(null);
 
+  const activeStations = stations.filter((s) => activeGareSlugs.has(s.slug));
+
   const stationRegionMap = new Map<string, string>();
   regions.forEach((r) => r.slugs.forEach((s) => stationRegionMap.set(s, r.name)));
 
@@ -63,7 +66,7 @@ export function FranceMapStations() {
               strokeLinejoin="round"
             />
 
-            {stations.map((st) => {
+            {activeStations.map((st) => {
               const [cx, cy] = latLngToSvg(st.lat, st.lng);
               const region = stationRegionMap.get(st.slug);
               const isHighlighted = activeRegion === null || activeRegion === region;
@@ -119,6 +122,8 @@ export function FranceMapStations() {
       {/* Regions list */}
       <div className="space-y-3">
         {regions.map((region) => {
+          const activeSlugs = region.slugs.filter((s) => activeGareSlugs.has(s));
+          if (activeSlugs.length === 0) return null;
           const isActive = activeRegion === region.name;
 
           return (
@@ -147,12 +152,12 @@ export function FranceMapStations() {
                     isActive ? "text-neutral-500" : "text-neutral-400"
                   }`}
                 >
-                  {region.slugs.length} {region.slugs.length > 1 ? t("stations") : t("station")}
+                  {activeSlugs.length} {activeSlugs.length > 1 ? t("stations") : t("station")}
                 </span>
               </div>
               <div className="flex flex-wrap gap-1.5">
-                {region.slugs.map((slug) => {
-                  const st = stations.find((s) => s.slug === slug);
+                {activeSlugs.map((slug) => {
+                  const st = activeStations.find((s) => s.slug === slug);
                   if (!st) return null;
                   return (
                     <Link

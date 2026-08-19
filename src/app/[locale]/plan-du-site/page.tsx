@@ -7,12 +7,13 @@ import { getTranslations } from "next-intl/server";
 import { trajets, categoryLabels } from "@/data/trajets";
 import { tarifs } from "@/data/tarifs";
 import { guides } from "@/data/guides";
-import { departements } from "@/data/departements";
 import { services as servicesSeo } from "@/data/services-seo";
 import { blogArticles } from "@/data/blog";
 import { cities } from "@/data/cities";
 import { airports } from "@/data/airports";
 import { stations } from "@/data/stations";
+import { activeTrajetSlugs } from "@/data/trajet-whitelist";
+import { activeCitySlugs, activeGareSlugs, activeAeroportSlugs, activeServiceSlugs } from "@/data/page-whitelists";
 import { canonicalUrl, alternateUrls } from "@/lib/seo";
 
 interface PageProps {
@@ -47,12 +48,8 @@ export default async function PlanDuSitePage({ params }: PageProps) {
   const t = await getTranslations({ locale, namespace: "planDuSite" });
 
   const solutions = [
-    { href: "/solutions/hotel", label: "Taxi pour hôtels" },
-    { href: "/solutions/hopital", label: "Taxi pour hôpitaux" },
-    { href: "/solutions/entreprise", label: "Taxi pour entreprises" },
     { href: "/solutions/particulier", label: "Taxi pour particuliers" },
-    { href: "/solutions/mise-a-disposition", label: "Mise à disposition" },
-    { href: "/solutions/assistance", label: "Assistance & Dépannage" },
+    { href: "/solutions/taxi-medical", label: "Taxi médical" },
   ];
 
   const pages = [
@@ -64,14 +61,19 @@ export default async function PlanDuSitePage({ params }: PageProps) {
     { href: "/taxi-vs-vtc", label: "Taxi vs VTC" },
     { href: "/chauffeur-prive", label: "Chauffeur privé" },
     { href: "/alternative-vtc-prix-fixe", label: "Alternative VTC prix fixe" },
-    { href: "/solutions/mise-a-disposition", label: "Taxi à disposition" },
   ];
 
-  // Group trajets by category
+  const activeCities = cities.filter((c) => activeCitySlugs.has(c.slug));
+  const activeAirports = airports.filter((a) => activeAeroportSlugs.has(a.slug));
+  const activeStations = stations.filter((s) => activeGareSlugs.has(s.slug));
+  const activeServices = servicesSeo.filter((s) => activeServiceSlugs.has(s.slug));
+  const activeTrajets = trajets.filter((t) => activeTrajetSlugs.has(t.slug));
+
+  // Group trajets by category (only active)
   const trajetsByCategory = Object.entries(categoryLabels).map(([cat, labels]) => ({
     category: cat,
     label: locale === "fr" ? labels.fr : labels.en,
-    items: trajets.filter((t) => t.category === cat),
+    items: activeTrajets.filter((t) => t.category === cat),
   }));
 
   return (
@@ -153,33 +155,15 @@ export default async function PlanDuSitePage({ params }: PageProps) {
               </ul>
             </div>
 
-            {/* Départements */}
-            <div className="fade-up">
-              <h2 className="text-lg font-semibold mb-4 tracking-tight">
-                <Link href="/departements" className="hover:text-neutral-600 transition-colors">
-                  {t("sectionDepartements")} ({departements.length})
-                </Link>
-              </h2>
-              <ul className="space-y-2 text-sm text-neutral-600 font-light">
-                {departements.map((dept) => (
-                  <li key={dept.slug}>
-                    <Link href={`/departement/${dept.slug}` as never} className="hover:text-neutral-900 transition-colors">
-                      {dept.name} ({dept.code})
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
             {/* Services */}
             <div className="fade-up">
               <h2 className="text-lg font-semibold mb-4 tracking-tight">
                 <Link href="/services" className="hover:text-neutral-600 transition-colors">
-                  {t("sectionServices")} ({servicesSeo.length})
+                  {t("sectionServices")} ({activeServices.length})
                 </Link>
               </h2>
               <ul className="space-y-2 text-sm text-neutral-600 font-light">
-                {servicesSeo.map((svc) => (
+                {activeServices.map((svc) => (
                   <li key={svc.slug}>
                     <Link href={`/service/${svc.slug}` as never} className="hover:text-neutral-900 transition-colors">
                       {svc.title}
@@ -193,11 +177,11 @@ export default async function PlanDuSitePage({ params }: PageProps) {
             <div className="fade-up">
               <h2 className="text-lg font-semibold mb-4 tracking-tight">
                 <Link href="/villes" className="hover:text-neutral-600 transition-colors">
-                  {t("sectionVilles")} ({cities.length})
+                  {t("sectionVilles")} ({activeCities.length})
                 </Link>
               </h2>
               <ul className="space-y-2 text-sm text-neutral-600 font-light columns-2">
-                {cities.map((city) => (
+                {activeCities.map((city) => (
                   <li key={city.slug}>
                     <Link href={`/taxi-${city.slug}` as never} className="hover:text-neutral-900 transition-colors">
                       {city.name}
@@ -211,11 +195,11 @@ export default async function PlanDuSitePage({ params }: PageProps) {
             <div className="fade-up">
               <h2 className="text-lg font-semibold mb-4 tracking-tight">
                 <Link href="/aeroports" className="hover:text-neutral-600 transition-colors">
-                  {t("sectionAeroports")} ({airports.length})
+                  {t("sectionAeroports")} ({activeAirports.length})
                 </Link>
               </h2>
               <ul className="space-y-2 text-sm text-neutral-600 font-light">
-                {airports.map((ap) => (
+                {activeAirports.map((ap) => (
                   <li key={ap.slug}>
                     <Link href={`/taxi-aeroport-${ap.slug}` as never} className="hover:text-neutral-900 transition-colors">
                       {ap.name}
@@ -229,11 +213,11 @@ export default async function PlanDuSitePage({ params }: PageProps) {
             <div className="fade-up">
               <h2 className="text-lg font-semibold mb-4 tracking-tight">
                 <Link href="/gares" className="hover:text-neutral-600 transition-colors">
-                  {t("sectionGares")} ({stations.length})
+                  {t("sectionGares")} ({activeStations.length})
                 </Link>
               </h2>
               <ul className="space-y-2 text-sm text-neutral-600 font-light">
-                {stations.map((st) => (
+                {activeStations.map((st) => (
                   <li key={st.slug}>
                     <Link href={`/taxi-gare-${st.slug}` as never} className="hover:text-neutral-900 transition-colors">
                       {st.name}
@@ -266,7 +250,7 @@ export default async function PlanDuSitePage({ params }: PageProps) {
           <div className="mt-16 fade-up">
             <h2 className="text-2xl font-semibold mb-8 tracking-tight">
               <Link href="/trajets" className="hover:text-neutral-600 transition-colors">
-                {t("sectionTrajets")} ({trajets.length})
+                {t("sectionTrajets")} ({activeTrajets.length})
               </Link>
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">

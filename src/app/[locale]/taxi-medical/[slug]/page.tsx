@@ -22,15 +22,18 @@ import { TmCTA } from "@/components/taxi-medical/TmCTA";
 import { TmInternalLinks } from "@/components/taxi-medical/TmInternalLinks";
 import { getCityBySlug } from "@/data/cities";
 import { getTmCityBySlug, getTmCitySlugs } from "@/data/taxi-medical-cities";
+import { activeTmSlugs } from "@/data/page-whitelists";
 import { generateTmContent } from "@/data/taxi-medical-content-templates";
 import { canonicalUrl, alternateUrls } from "@/lib/seo";
+
+export const dynamicParams = false;
 
 interface PageProps {
   params: Promise<{ locale: string; slug: string }>;
 }
 
 export async function generateStaticParams() {
-  const slugs = getTmCitySlugs();
+  const slugs = getTmCitySlugs().filter((slug) => activeTmSlugs.has(slug));
   return ["fr", "en"].flatMap((locale) =>
     slugs.map((slug) => ({ locale, slug }))
   );

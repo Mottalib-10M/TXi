@@ -8,6 +8,7 @@ import { Footer } from "@/components/layout/Footer";
 import { ScrollAnimation } from "@/components/ui/ScrollAnimation";
 import { FranceMapSection } from "@/components/city/FranceMapSection";
 import { cities } from "@/data/cities";
+import { activeCitySlugs } from "@/data/page-whitelists";
 
 interface PageProps {
   params: Promise<{ locale: string }>;
@@ -39,14 +40,15 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 export default async function VillesPage({ params }: PageProps) {
   const { locale } = await params;
   const t = await getTranslations("cities");
+  const activeCities = cities.filter((c) => activeCitySlugs.has(c.slug));
 
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "ItemList",
     name: t("metaTitle"),
     description: t("metaDescription"),
-    numberOfItems: cities.length,
-    itemListElement: cities.map((city, i) => ({
+    numberOfItems: activeCities.length,
+    itemListElement: activeCities.map((city, i) => ({
       "@type": "ListItem",
       position: i + 1,
       name: `Taxi ${city.name}`,
@@ -101,14 +103,14 @@ export default async function VillesPage({ params }: PageProps) {
             <div className="inline-flex items-center gap-2 bg-neutral-100 rounded-full px-4 py-1.5 mb-6">
               <span className="w-2 h-2 bg-green-500 rounded-full" />
               <span className="text-xs font-medium text-neutral-600">
-                {t("badge", { count: cities.length })}
+                {t("badge", { count: activeCities.length })}
               </span>
             </div>
             <h1 className="text-4xl md:text-5xl font-semibold tracking-tight leading-[1.1] mb-4">
               {t("title")}
             </h1>
             <p className="text-base md:text-lg text-neutral-500 font-light leading-relaxed max-w-2xl mx-auto">
-              {t("subtitle", { count: cities.length })}
+              {t("subtitle", { count: activeCities.length })}
             </p>
           </div>
 

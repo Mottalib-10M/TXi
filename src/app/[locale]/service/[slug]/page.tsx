@@ -10,10 +10,13 @@ import { CityFAQ } from "@/components/city/CityFAQ";
 import { CityContactForm } from "@/components/city/CityContactForm";
 import { CityCTA } from "@/components/city/CityCTA";
 import { services, getServiceBySlug, getServicesByCategory } from "@/data/services-seo";
+import { activeServiceSlugs } from "@/data/page-whitelists";
 import { Link } from "@/i18n/navigation";
 import { getTranslations } from "next-intl/server";
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 import { canonicalUrl, alternateUrls } from "@/lib/seo";
+
+export const dynamicParams = false;
 
 interface PageProps {
   params: Promise<{ locale: string; slug: string }>;
@@ -21,7 +24,9 @@ interface PageProps {
 
 export async function generateStaticParams() {
   return ["fr", "en"].flatMap((locale) =>
-    services.map((s) => ({ locale, slug: s.slug }))
+    services
+      .filter((s) => activeServiceSlugs.has(s.slug))
+      .map((s) => ({ locale, slug: s.slug }))
   );
 }
 
@@ -135,14 +140,14 @@ export default async function ServicePage({ params }: PageProps) {
         {/* Voir aussi — Cross-links SEO */}
         {(() => {
           const sameCategory = getServicesByCategory(service.category)
-            .filter((s) => s.slug !== service.slug)
+            .filter((s) => s.slug !== service.slug && activeServiceSlugs.has(s.slug))
             .slice(0, 3);
           const others = sameCategory.length >= 3
             ? sameCategory
             : [
                 ...sameCategory,
                 ...services
-                  .filter((s) => s.slug !== service.slug && !sameCategory.some((sc) => sc.slug === s.slug))
+                  .filter((s) => s.slug !== service.slug && activeServiceSlugs.has(s.slug) && !sameCategory.some((sc) => sc.slug === s.slug))
                   .slice(0, 3 - sameCategory.length),
               ];
           return (

@@ -161,12 +161,6 @@ export default async function TarifPage({ params }: PageProps) {
                   >
                     {loc === "en" ? "Popular routes" : "Trajets populaires"}
                   </Link>
-                  <Link
-                    href="/departements"
-                    className="inline-flex items-center gap-2 px-4 py-2.5 bg-white border border-neutral-200 rounded-xl text-sm font-medium hover:border-neutral-400 transition-colors"
-                  >
-                    {loc === "en" ? "Departments" : "Départements"}
-                  </Link>
                 </div>
               </div>
             </section>
