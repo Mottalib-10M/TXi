@@ -20,7 +20,7 @@ const drivers = [
     lastName: "Moreau",
     email: "lucas.moreau@test.fontainebleau.com",
     phone: "06 10 00 01 01",
-    bio: "Chauffeur de taxi à Fontainebleau depuis 10 ans. Spécialiste des transferts gare et INSEAD.",
+    bio: "Chauffeur de taxi à Fontainebleau depuis 10 ans. Spécialiste des transferts gare et Éditeur de calculateurs et de guides pratiques.",
     vehicleBrand: "Peugeot",
     vehicleModel: "508",
     vehicleYear: 2023,

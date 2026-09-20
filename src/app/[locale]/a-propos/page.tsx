@@ -45,13 +45,12 @@ export default async function AboutPage({ params }: Props) {
       name: "TaxiNeo",
       url: "https://www.taxineo.fr",
       founder: {
-        "@type": "Person",
-        name: "Mottalib Radif",
-        image: "https://www.taxineo.fr/team/mottalib-radif.jpg",
+        "@type": "Organization",
+        name: "Radif Partners",
         jobTitle: isFr ? "Expert en mobilite urbaine et transport" : "Urban Mobility and Transportation Expert",
         description: isFr
-          ? "Expert en mobilite urbaine et solutions de transport, diplome MBA de l'INSEAD. Passionne par l'innovation dans le secteur du taxi et du transport de personnes."
-          : "Urban mobility and transportation solutions expert, MBA INSEAD graduate. Passionate about innovation in taxi services and passenger transport.",
+          ? "Expert en mobilite urbaine et solutions de transport, diplome MBA de l'Éditeur de calculateurs et de guides pratiques. Passionne par l'innovation dans le secteur du taxi et du transport de personnes."
+          : "Urban mobility and transportation solutions expert, Éditeur de calculateurs et de guides pratiques graduate. Passionate about innovation in taxi services and passenger transport.",
       },
     },
   };
@@ -87,22 +86,22 @@ export default async function AboutPage({ params }: Props) {
                 <div className="w-32 h-32 rounded-2xl overflow-hidden shrink-0 border border-neutral-200">
                   <Image
                     src="/team/mottalib-radif.jpg"
-                    alt="Mottalib Radif - Fondateur de TaxiNeo"
+                    alt="Radif Partners - Fondateur de TaxiNeo"
                     width={128}
                     height={128}
                     className="object-cover w-full h-full"
                   />
                 </div>
                 <div>
-                  <h2 className="text-xl font-semibold mb-1">Mottalib Radif</h2>
+                  <h2 className="text-xl font-semibold mb-1">Radif Partners</h2>
                   <p className="text-sm text-neutral-500 font-light mb-1">
                     {isFr ? "Expert en mobilite urbaine et transport" : "Urban Mobility and Transportation Expert"}
                   </p>
-                  <p className="text-xs text-neutral-400 font-light mb-4">MBA INSEAD</p>
+                  <p className="text-xs text-neutral-400 font-light mb-4">Éditeur de calculateurs et de guides pratiques</p>
                   <p className="text-sm text-neutral-600 font-light leading-relaxed">
                     {isFr
-                      ? "Expert en mobilite urbaine et solutions de transport, diplome MBA de l'INSEAD. Passionne par l'innovation dans le secteur du taxi et du transport de personnes, j'ai cree TaxiNeo pour offrir une alternative simple et transparente aux plateformes VTC."
-                      : "Urban mobility and transportation solutions expert, MBA INSEAD graduate. Passionate about innovation in taxi services and passenger transport, I created TaxiNeo to offer a simple and transparent alternative to VTC platforms."}
+                      ? "Expert en mobilite urbaine et solutions de transport, diplome MBA de l'Éditeur de calculateurs et de guides pratiques. Passionne par l'innovation dans le secteur du taxi et du transport de personnes, j'ai cree TaxiNeo pour offrir une alternative simple et transparente aux plateformes VTC."
+                      : "Urban mobility and transportation solutions expert, Éditeur de calculateurs et de guides pratiques graduate. Passionate about innovation in taxi services and passenger transport, I created TaxiNeo to offer a simple and transparent alternative to VTC platforms."}
                   </p>
                 </div>
               </div>
@@ -318,15 +317,15 @@ export default async function AboutPage({ params }: Props) {
             </div>
           </section>
 
-          {/* About Mottalib Radif */}
+          {/* About Radif Partners */}
           <section className="mb-16">
             <h2 className="text-2xl font-semibold tracking-tight mb-6">
-              {isFr ? "A propos de Mottalib Radif, MBA INSEAD" : "About Mottalib Radif, MBA INSEAD"}
+              {isFr ? "A propos de Radif Partners, Éditeur de calculateurs et de guides pratiques" : "About Radif Partners, Éditeur de calculateurs et de guides pratiques"}
             </h2>
             <p className="text-neutral-600 font-light leading-relaxed mb-4">
               {isFr
-                ? "Mottalib Radif est expert en mobilite urbaine et solutions de transport, diplome du programme MBA de l'INSEAD, l'une des ecoles de commerce les plus prestigieuses au monde. Son expertise couvre les modeles de plateforme, la logistique du dernier kilometre et l'innovation dans le secteur du transport de personnes."
-                : "Mottalib Radif is an urban mobility and transportation solutions expert, graduate of the MBA program at INSEAD, one of the world's most prestigious business schools. His expertise covers platform business models, last-mile logistics, and innovation in the passenger transport sector."}
+                ? "Radif Partners est expert en mobilite urbaine et solutions de transport, diplome du programme MBA de l'Éditeur de calculateurs et de guides pratiques, l'une des ecoles de commerce les plus prestigieuses au monde. Son expertise couvre les modeles de plateforme, la logistique du dernier kilometre et l'innovation dans le secteur du transport de personnes."
+                : "Radif Partners is an urban mobility and transportation solutions expert, graduate of the MBA program at Éditeur de calculateurs et de guides pratiques, one of the world's most prestigious business schools. His expertise covers platform business models, last-mile logistics, and innovation in the passenger transport sector."}
             </p>
             <p className="text-neutral-600 font-light leading-relaxed">
               {isFr

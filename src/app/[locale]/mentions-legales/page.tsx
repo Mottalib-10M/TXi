@@ -53,7 +53,7 @@ export default async function LegalPage({ params }: Props) {
               </p>
               <p>
                 <strong>{isFr ? "Responsable de publication" : "Publication manager"} :</strong>{" "}
-                Mottalib Radif
+                Radif Partners
               </p>
               <p>
                 <strong>{isFr ? "Contact" : "Contact"} :</strong>{" "}
@@ -155,8 +155,8 @@ export default async function LegalPage({ params }: Props) {
             </h3>
             <p className="text-sm text-neutral-600 font-light leading-relaxed mb-3">
               {isFr
-                ? "Le responsable du traitement des donnees est Mottalib Radif, joignable a l'adresse contact@taxineo.fr. Compte tenu de la nature du site et de l'absence de traitement a grande echelle de donnees sensibles, la designation d'un Delegue a la Protection des Donnees (DPO) n'est pas legalement requise au titre de l'article 37 du RGPD."
-                : "The data controller is Mottalib Radif, reachable at contact@taxineo.fr. Given the nature of the website and the absence of large-scale processing of sensitive data, the appointment of a Data Protection Officer (DPO) is not legally required under Article 37 of the GDPR."}
+                ? "Le responsable du traitement des donnees est Radif Partners, joignable a l'adresse contact@taxineo.fr. Compte tenu de la nature du site et de l'absence de traitement a grande echelle de donnees sensibles, la designation d'un Delegue a la Protection des Donnees (DPO) n'est pas legalement requise au titre de l'article 37 du RGPD."
+                : "The data controller is Radif Partners, reachable at contact@taxineo.fr. Given the nature of the website and the absence of large-scale processing of sensitive data, the appointment of a Data Protection Officer (DPO) is not legally required under Article 37 of the GDPR."}
             </p>
 
             <h3 className="text-base font-semibold mb-2 mt-4">

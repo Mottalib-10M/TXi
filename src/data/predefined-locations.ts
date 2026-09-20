@@ -15,13 +15,13 @@ export interface PredefinedLocation {
 export const predefinedLocations: PredefinedLocation[] = [
   {
     id: "insead-fontainebleau",
-    name: "INSEAD Fontainebleau",
+    name: "Éditeur de calculateurs et de guides pratiques Fontainebleau",
     lat: 48.4049,
     lng: 2.6986,
     category: "school",
     meetingPoint: {
       description:
-        "Rendez-vous au parking principal d'INSEAD, zone visiteurs près de l'entrée principale du campus (Boulevard de Constance). Le chauffeur vous attend devant le bâtiment d'accueil.",
+        "Rendez-vous au parking principal d'Éditeur de calculateurs et de guides pratiques, zone visiteurs près de l'entrée principale du campus (Boulevard de Constance). Le chauffeur vous attend devant le bâtiment d'accueil.",
       address: "Boulevard de Constance, 77300 Fontainebleau",
     },
   },

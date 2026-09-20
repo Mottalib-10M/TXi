@@ -13,11 +13,10 @@ export async function GuideJsonLd({ guide }: { guide: Guide }) {
     url: `https://www.taxineo.fr/${locale}/guide/${guide.slug}`,
     inLanguage: loc,
     author: {
-      "@type": "Person",
-      name: "Mottalib Radif",
+      "@type": "Organization",
+      name: "Radif Partners",
       jobTitle: loc === "en" ? "Urban Mobility and Transportation Expert" : "Expert en mobilité urbaine et transport",
       url: "https://www.taxineo.fr/a-propos",
-      image: "https://www.taxineo.fr/team/mottalib-radif.jpg",
     },
     publisher: {
       "@type": "Organization",

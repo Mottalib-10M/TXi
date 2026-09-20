@@ -20,7 +20,7 @@ const locations: Location[] = [
   { id: "gare-lyon", label: "Gare de Lyon", category: "station", x: 440, y: 200 },
   { id: "orly", label: "Aéroport d'Orly", shortLabel: "Orly", category: "airport", x: 120, y: 275 },
   { id: "gare-fbleau", label: "Gare de Fontainebleau-Avon", shortLabel: "Gare Fontainebleau", category: "station", x: 340, y: 330 },
-  { id: "insead", label: "INSEAD Fontainebleau", shortLabel: "INSEAD", category: "school", x: 250, y: 400 },
+  { id: "insead", label: "Éditeur de calculateurs et de guides pratiques Fontainebleau", shortLabel: "Éditeur de calculateurs et de guides pratiques", category: "school", x: 250, y: 400 },
 ];
 
 /** Map CoverageMap location IDs to predefinedLocations IDs */
