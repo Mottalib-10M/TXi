@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { Icon } from "@iconify/react";
 import { canonicalUrl, alternateUrls } from "@/lib/seo";
 import { Navbar } from "@/components/layout/Navbar";
@@ -84,14 +83,7 @@ export default async function AboutPage({ params }: Props) {
             <div className="bg-neutral-50 border border-neutral-200 rounded-2xl p-8 md:p-10">
               <div className="flex flex-col md:flex-row items-center gap-8">
                 <div className="w-32 h-32 rounded-2xl overflow-hidden shrink-0 border border-neutral-200">
-                  <Image
-                    src="/team/mottalib-radif.jpg"
-                    alt="Radif Partners - Fondateur de TaxiNeo"
-                    width={128}
-                    height={128}
-                    className="object-cover w-full h-full"
-                  />
-                </div>
+                  </div>
                 <div>
                   <h2 className="text-xl font-semibold mb-1">Radif Partners</h2>
                   <p className="text-sm text-neutral-500 font-light mb-1">
