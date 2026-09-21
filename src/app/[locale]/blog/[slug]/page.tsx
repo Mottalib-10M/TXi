@@ -250,8 +250,8 @@ export default async function BlogArticlePage({ params }: PageProps) {
       name: "Radif Partners",
       jobTitle: lang === "en" ? "Urban Mobility and Transportation Expert" : "Expert en mobilité urbaine et transport",
       description: lang === "en"
-        ? "Urban mobility and transportation solutions expert, Éditeur de calculateurs et de guides pratiques graduate. Passionate about innovation in taxi services and passenger transport."
-        : "Expert en mobilité urbaine et solutions de transport, diplômé MBA de l'Éditeur de calculateurs et de guides pratiques. Passionné par l'innovation dans le secteur du taxi et du transport de personnes.",
+        ? "Radif Partners publishes TaxiNeo, a booking service for licensed taxis. The company specialises in urban mobility and passenger transport."
+        : "Radif Partners édite TaxiNeo, service de réservation de taxis agréés. La société est spécialisée dans la mobilité urbaine et le transport de personnes.",
       url: "https://www.taxineo.fr/a-propos",
     },
     publisher: {
