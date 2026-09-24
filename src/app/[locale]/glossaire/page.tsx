@@ -27,8 +27,18 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const canonical = canonicalUrl(locale, "/glossaire");
 
   return {
-    title: ajusterTitre(title, [locale === "en" ? "— TaxiNeo, fixed-price taxis" : "— TaxiNeo, taxis à prix fixe"]),
-    description: ajusterDescription(description, [locale === "en" ? "Fixed price confirmed before booking, luggage included, 24/7." : "Prix fixe confirmé avant la réservation, bagages compris, 24h/24."]),
+    title: ajusterTitre(title, [
+      locale === "en" ? "| TaxiNeo" : "| TaxiNeo",
+      locale === "en" ? "— fixed price, 24/7" : "— prix fixe, 24h/24",
+      locale === "en" ? "— book online" : "— réservation en ligne",
+    ]),
+    description: ajusterDescription(description, [
+      locale === "en"
+        ? "Fixed price confirmed before booking, luggage and tolls included."
+        : "Prix fixe confirmé avant la réservation, bagages et péages compris.",
+      locale === "en" ? "Licensed drivers, available 24/7." : "Chauffeurs agréés, disponibles 24h/24.",
+      locale === "en" ? "Free cancellation." : "Annulation sans frais.",
+    ]),
     openGraph: {
       title,
       description,

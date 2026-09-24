@@ -16,6 +16,7 @@
   "/aeroports/": "2026-09-24",
   "/blog/": "2026-09-24",
   "/comment-ca-marche/": "2026-09-24",
+  "/confidentialite/": "2026-09-24",
   "/confirmation/": "2026-05-28",
   "/connexion/": "2026-09-24",
   "/contact/": "2026-09-24",
@@ -36,6 +37,7 @@
   "/inscription/": "2026-09-24",
   "/mentions-legales/": "2026-09-24",
   "/mes-reservations/": "2026-03-04",
+  "/methodologie/": "2026-09-24",
   "/mot-de-passe-oublie/": "2026-03-05",
   "/org/cagnotte/": "2026-07-06",
   "/org/courses/": "2026-06-01",
@@ -58,5 +60,6 @@
   "/taxi-partage/": "2026-09-24",
   "/trajet/": "2026-09-24",
   "/trajets/": "2026-09-24",
-  "/villes/": "2026-09-24"
+  "/villes/": "2026-09-24",
+  "/widget/": "2026-09-24"
 }

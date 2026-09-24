@@ -14,16 +14,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const title =
     locale === "en"
-      ? "About TaxiNeo — Fixed-price taxi booking platform in France"
-      : "A propos de TaxiNeo — Plateforme de reservation taxi prix fixe en France";
+      ? "About TaxiNeo: who publishes the site and how it works"
+      : "A propos de TaxiNeo : qui édite le site, et comment";
   const description =
     locale === "en"
-      ? "TaxiNeo connects passengers with licensed taxi drivers across 50+ French cities. Fixed prices, professional drivers, 24/7 availability."
-      : "TaxiNeo connecte les passagers avec des chauffeurs de taxi agrees dans plus de 50 villes francaises. Prix fixes, chauffeurs professionnels, disponible 24h/24.";
+      ? "TaxiNeo is published by Radif Partners. Who we are, how drivers are selected, how prices are calculated and who is answerable for what we publish here."
+      : "TaxiNeo est édité par Radif Partners. Qui nous sommes, comment les chauffeurs sont sélectionnés, comment les prix sont calculés et qui répond de nos contenus.";
   return {
-    title: ajusterTitre(title, [locale === "en" ? "— TaxiNeo, fixed-price taxis" : "— TaxiNeo, taxis à prix fixe"]),
-    description: ajusterDescription(description, [locale === "en" ? "Fixed price confirmed before booking, luggage included, 24/7." : "Prix fixe confirmé avant la réservation, bagages compris, 24h/24."]),
-    openGraph: { title: ajusterTitre(title, [locale === "en" ? "— TaxiNeo, fixed-price taxis" : "— TaxiNeo, taxis à prix fixe"]), description: ajusterDescription(description, [locale === "en" ? "Fixed price confirmed before booking, luggage included, 24/7." : "Prix fixe confirmé avant la réservation, bagages compris, 24h/24."]) },
+    title: title,
+    description: description,
+    openGraph: { title: title, description: description },
     alternates: {
       canonical: canonicalUrl(locale, "/a-propos"),
       languages: alternateUrls("/a-propos"),

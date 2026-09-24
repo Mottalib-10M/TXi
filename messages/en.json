@@ -2817,7 +2817,7 @@
   },
   "trajets": {
     "metaTitle": "All taxi routes in France | Fixed prices | TaxiNeo",
-    "metaDescription": "Discover all available taxi routes with TaxiNeo: airports, train stations, cities, tourist sites. Fixed prices, professional drivers, online booking 24/7.",
+    "metaDescription": "Every taxi route covered by TaxiNeo: airports, stations, cities and tourist sites, at a fixed price quoted before you book, with luggage included too.",
     "breadcrumbHome": "Home",
     "breadcrumbTrajets": "Routes",
     "badge": "{count} routes available",
@@ -2924,7 +2924,7 @@
     "benefitsTitle": "Why choose this service?"
   },
   "services": {
-    "metaTitle": "All our taxi services in France | TaxiNeo",
+    "metaTitle": "All our taxi services across France: the catalogue",
     "metaDescription": "Discover all TaxiNeo taxi services: 7-seater taxi, wheelchair accessible taxi, wedding taxi, airport shuttle, luxury taxi and more. Online booking 24/7.",
     "breadcrumbHome": "Home",
     "breadcrumbServices": "Services",
@@ -3157,7 +3157,7 @@
   },
   "taxiMedical": {
     "metaTitle": "CPAM-approved medical taxi — Healthcare transport | TaxiNeo",
-    "metaDescription": "CPAM-approved medical taxi in 138 French cities. Professional seated transport (TAP) to hospitals, dialysis, chemotherapy, rehabilitation. Third-party billing, wheelchair-accessible, free quote.",
+    "metaDescription": "CPAM-approved taxi in 138 cities: dialysis, chemotherapy, rehabilitation, consultations. Direct billing on prescription, PMR vehicles, free quote today.",
     "badge": "CPAM approved — No upfront payment",
     "heroTitle": "CPAM-approved medical taxi in France",
     "heroSubtitle": "Professional seated healthcare transport (TAP) to hospitals, dialysis centres, chemotherapy units and rehabilitation facilities. Drivers trained in patient care, wheelchair-accessible vehicles, direct CPAM billing with no upfront cost.",

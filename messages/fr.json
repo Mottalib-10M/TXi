@@ -2817,7 +2817,7 @@
   },
   "trajets": {
     "metaTitle": "Tous nos trajets taxi en France | Prix fixes | TaxiNeo",
-    "metaDescription": "Découvrez tous les trajets taxi disponibles avec TaxiNeo : aéroports, gares, villes, sites touristiques. Prix fixes, chauffeurs professionnels, réservation en ligne 24h/24.",
+    "metaDescription": "Tous les trajets taxi couverts par TaxiNeo : aéroports, gares, villes et sites touristiques, à prix fixe annoncé avant la réservation, bagages compris.",
     "breadcrumbHome": "Accueil",
     "breadcrumbTrajets": "Trajets",
     "badge": "{count} trajets disponibles",
@@ -2924,7 +2924,7 @@
     "benefitsTitle": "Pourquoi choisir ce service ?"
   },
   "services": {
-    "metaTitle": "Tous nos services taxi en France | TaxiNeo",
+    "metaTitle": "Tous nos services de taxi en France : le catalogue",
     "metaDescription": "Découvrez tous les services taxi TaxiNeo : taxi 7 places, taxi PMR, taxi mariage, navette aéroport, taxi de luxe et bien plus. Réservation en ligne 24h/24.",
     "breadcrumbHome": "Accueil",
     "breadcrumbServices": "Services",
@@ -3157,7 +3157,7 @@
   },
   "taxiMedical": {
     "metaTitle": "Taxi médical conventionné CPAM — Transport sanitaire | TaxiNeo",
-    "metaDescription": "Taxi médical conventionné CPAM dans 138 villes. Transport assis professionnalisé (TAP) vers hôpitaux, dialyse, chimiothérapie, rééducation. Tiers payant, véhicule PMR, devis gratuit.",
+    "metaDescription": "Taxi conventionné CPAM dans 138 villes : dialyse, chimiothérapie, rééducation, consultations. Tiers payant sur prescription, véhicules PMR, devis gratuit.",
     "badge": "Conventionné CPAM — Tiers payant",
     "heroTitle": "Taxi médical conventionné CPAM",
     "heroSubtitle": "Transport sanitaire assis professionnalisé (TAP) vers hôpitaux, centres de dialyse, chimiothérapie et rééducation. Chauffeurs formés au transport de patients, véhicules adaptés PMR, prise en charge CPAM en tiers payant.",

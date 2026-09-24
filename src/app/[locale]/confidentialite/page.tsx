@@ -14,16 +14,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const title =
     locale === "en"
-      ? "Privacy Policy — TaxiNeo"
-      : "Politique de confidentialité — TaxiNeo";
+      ? "TaxiNeo privacy policy: what we do with your data here"
+      : "Politique de confidentialité de TaxiNeo : vos données";
   const description =
     locale === "en"
-      ? "Privacy policy of TaxiNeo: what personal data we collect when you book a taxi, why, how long we keep it and how to exercise your GDPR rights."
-      : "Politique de confidentialité de TaxiNeo : données personnelles collectées lors d'une réservation de taxi, finalités, durées de conservation et exercice de vos droits RGPD.";
+      ? "What personal data TaxiNeo collects when you book a taxi, for what purposes, how long it is kept, who receives it and how to exercise your rights in full."
+      : "Quelles données personnelles TaxiNeo collecte lors d'une réservation, pour quelles finalités, combien de temps elles sont conservées et vos droits RGPD.";
   return {
-    title: ajusterTitre(title, [locale === "en" ? "— TaxiNeo, fixed-price taxis" : "— TaxiNeo, taxis à prix fixe"]),
-    description: ajusterDescription(description, [locale === "en" ? "Fixed price confirmed before booking, luggage included, 24/7." : "Prix fixe confirmé avant la réservation, bagages compris, 24h/24."]),
-    openGraph: { title: ajusterTitre(title, [locale === "en" ? "— TaxiNeo, fixed-price taxis" : "— TaxiNeo, taxis à prix fixe"]), description: ajusterDescription(description, [locale === "en" ? "Fixed price confirmed before booking, luggage included, 24/7." : "Prix fixe confirmé avant la réservation, bagages compris, 24h/24."]) },
+    title: title,
+    description: description,
+    openGraph: { title: title, description: description },
     alternates: {
       canonical: canonicalUrl(locale, "/confidentialite"),
       languages: alternateUrls("/confidentialite"),

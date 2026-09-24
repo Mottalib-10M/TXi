@@ -21,15 +21,39 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   const canonical = canonicalUrl(locale, "/gares");
   return {
-    title: ajusterTitre(t("metaTitle"), [locale === "en" ? "— TaxiNeo, fixed-price taxis" : "— TaxiNeo, taxis à prix fixe"]),
-    description: ajusterDescription(t("metaDescription"), [locale === "en" ? "Fixed price confirmed before booking, luggage included, 24/7." : "Prix fixe confirmé avant la réservation, bagages compris, 24h/24."]),
+    title: ajusterTitre(t("metaTitle"), [
+      locale === "en" ? "| TaxiNeo" : "| TaxiNeo",
+      locale === "en" ? "— fixed price, 24/7" : "— prix fixe, 24h/24",
+      locale === "en" ? "— book online" : "— réservation en ligne",
+    ]),
+    description: ajusterDescription(t("metaDescription"), [
+      locale === "en"
+        ? "Fixed price confirmed before booking, luggage and tolls included."
+        : "Prix fixe confirmé avant la réservation, bagages et péages compris.",
+      locale === "en" ? "Licensed drivers, available 24/7." : "Chauffeurs agréés, disponibles 24h/24.",
+      locale === "en" ? "Free cancellation." : "Annulation sans frais.",
+    ]),
     openGraph: {
-      title: ajusterTitre(t("metaTitle"), [locale === "en" ? "— TaxiNeo, fixed-price taxis" : "— TaxiNeo, taxis à prix fixe"]),
-      description: ajusterDescription(t("metaDescription"), [locale === "en" ? "Fixed price confirmed before booking, luggage included, 24/7." : "Prix fixe confirmé avant la réservation, bagages compris, 24h/24."]),
+      title: ajusterTitre(t("metaTitle"), [
+      locale === "en" ? "| TaxiNeo" : "| TaxiNeo",
+      locale === "en" ? "— fixed price, 24/7" : "— prix fixe, 24h/24",
+      locale === "en" ? "— book online" : "— réservation en ligne",
+    ]),
+      description: ajusterDescription(t("metaDescription"), [
+      locale === "en"
+        ? "Fixed price confirmed before booking, luggage and tolls included."
+        : "Prix fixe confirmé avant la réservation, bagages et péages compris.",
+      locale === "en" ? "Licensed drivers, available 24/7." : "Chauffeurs agréés, disponibles 24h/24.",
+      locale === "en" ? "Free cancellation." : "Annulation sans frais.",
+    ]),
       url: canonical,
       siteName: "TaxiNeo",
       type: "website",
-      images: [{ url: "https://www.taxineo.fr/opengraph-image", width: 1200, height: 630, alt: ajusterTitre(t("metaTitle"), [locale === "en" ? "— TaxiNeo, fixed-price taxis" : "— TaxiNeo, taxis à prix fixe"]) }],
+      images: [{ url: "https://www.taxineo.fr/opengraph-image", width: 1200, height: 630, alt: ajusterTitre(t("metaTitle"), [
+      locale === "en" ? "| TaxiNeo" : "| TaxiNeo",
+      locale === "en" ? "— fixed price, 24/7" : "— prix fixe, 24h/24",
+      locale === "en" ? "— book online" : "— réservation en ligne",
+    ]) }],
     },
     alternates: {
       canonical,

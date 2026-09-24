@@ -12,16 +12,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const title =
     locale === "en"
-      ? "Legal Notice — TaxiNeo"
-      : "Mentions legales — TaxiNeo";
+      ? "Legal notice for TaxiNeo: publisher, host and contact"
+      : "Mentions légales de TaxiNeo : éditeur, hébergeur, contact";
   const description =
     locale === "en"
-      ? "Legal information, terms of use, and privacy policy for TaxiNeo fixed-price taxi booking platform."
-      : "Informations legales, conditions d'utilisation et politique de confidentialite de la plateforme TaxiNeo.";
+      ? "Identity of the publisher of the TaxiNeo website, person responsible for publication, contact details, hosting provider and terms of use, under French law."
+      : "Identité de l'éditeur du site TaxiNeo, responsable de publication, coordonnées de contact, hébergeur et conditions d'utilisation, au titre de la LCEN.";
   return {
-    title: ajusterTitre(title, [locale === "en" ? "— TaxiNeo, fixed-price taxis" : "— TaxiNeo, taxis à prix fixe"]),
-    description: ajusterDescription(description, [locale === "en" ? "Fixed price confirmed before booking, luggage included, 24/7." : "Prix fixe confirmé avant la réservation, bagages compris, 24h/24."]),
-    openGraph: { title: ajusterTitre(title, [locale === "en" ? "— TaxiNeo, fixed-price taxis" : "— TaxiNeo, taxis à prix fixe"]), description: ajusterDescription(description, [locale === "en" ? "Fixed price confirmed before booking, luggage included, 24/7." : "Prix fixe confirmé avant la réservation, bagages compris, 24h/24."]) },
+    title: title,
+    description: description,
+    openGraph: { title: title, description: description },
     alternates: {
       canonical: canonicalUrl(locale, "/mentions-legales"),
       languages: alternateUrls("/mentions-legales"),

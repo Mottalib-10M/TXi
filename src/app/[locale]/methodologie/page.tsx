@@ -14,16 +14,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const title =
     locale === "en"
-      ? "Methodology — how TaxiNeo estimates fares"
-      : "Méthodologie — comment TaxiNeo estime les prix";
+      ? "Methodology: how TaxiNeo calculates its fare estimates"
+      : "Méthodologie : comment TaxiNeo calcule ses estimations";
   const description =
     locale === "en"
-      ? "How TaxiNeo builds its taxi fare estimates: official tariff sources, calculation rules, update frequency and the limits of every estimate shown on the site."
-      : "Comment TaxiNeo construit ses estimations de prix de taxi : sources tarifaires officielles, règles de calcul, fréquence de mise à jour et limites de chaque estimation affichée.";
+      ? "Where our fares come from, how an estimate is calculated, what it does not guarantee, how often it is updated and how to report a mistake to us today."
+      : "D'où viennent nos tarifs, comment une estimation est calculée, ce qu'elle ne garantit pas, à quelle fréquence elle est revue et comment signaler une erreur.";
   return {
-    title: ajusterTitre(title, [locale === "en" ? "— TaxiNeo, fixed-price taxis" : "— TaxiNeo, taxis à prix fixe"]),
-    description: ajusterDescription(description, [locale === "en" ? "Fixed price confirmed before booking, luggage included, 24/7." : "Prix fixe confirmé avant la réservation, bagages compris, 24h/24."]),
-    openGraph: { title: ajusterTitre(title, [locale === "en" ? "— TaxiNeo, fixed-price taxis" : "— TaxiNeo, taxis à prix fixe"]), description: ajusterDescription(description, [locale === "en" ? "Fixed price confirmed before booking, luggage included, 24/7." : "Prix fixe confirmé avant la réservation, bagages compris, 24h/24."]) },
+    title: title,
+    description: description,
+    openGraph: { title: title, description: description },
     alternates: {
       canonical: canonicalUrl(locale, "/methodologie"),
       languages: alternateUrls("/methodologie"),

@@ -18,16 +18,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const title =
     locale === "en"
-      ? "Taxi fare widget to embed on your site"
-      : "Widget tarifs taxi à intégrer sur votre site";
+      ? "Free taxi fare widget to embed on your own website now"
+      : "Widget tarifs taxi gratuit à intégrer sur votre site";
   const description =
     locale === "en"
-      ? "Embed the taxi fare scale on your own website with one line of HTML: the four rate bands explained, kept up to date with the official orders, free of charge."
-      : "Intégrez le barème des tarifs taxi sur votre site avec une ligne de HTML : les quatre tarifs expliqués, mis à jour avec les arrêtés officiels, gratuitement.";
+      ? "Show the official taxi fare scale on your site with one line of HTML: the four rate bands explained, updated with the orders, with no script and no cookie."
+      : "Affichez le barème officiel des tarifs taxi sur votre site avec une ligne de HTML : les quatre tarifs expliqués, mis à jour, sans script ni cookie déposé.";
   return {
-    title: ajusterTitre(title, [locale === "en" ? "— TaxiNeo, fixed-price taxis" : "— TaxiNeo, taxis à prix fixe"]),
-    description: ajusterDescription(description, [locale === "en" ? "Fixed price confirmed before booking, luggage included, 24/7." : "Prix fixe confirmé avant la réservation, bagages compris, 24h/24."]),
-    openGraph: { title: ajusterTitre(title, [locale === "en" ? "— TaxiNeo, fixed-price taxis" : "— TaxiNeo, taxis à prix fixe"]), description: ajusterDescription(description, [locale === "en" ? "Fixed price confirmed before booking, luggage included, 24/7." : "Prix fixe confirmé avant la réservation, bagages compris, 24h/24."]) },
+    title: title,
+    description: description,
+    openGraph: { title: title, description: description },
     alternates: {
       canonical: canonicalUrl(locale, "/widget"),
       languages: alternateUrls("/widget"),
