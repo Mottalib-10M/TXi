@@ -14,7 +14,7 @@
  * Écrit `src/lib/page-dates.json` : { "/prefixe/": "AAAA-MM-JJ" }.
  */
 import { execFileSync } from "node:child_process";
-import { readdirSync, statSync, writeFileSync } from "node:fs";
+import { existsSync, readFileSync, readdirSync, statSync, writeFileSync } from "node:fs";
 import { join, relative, sep } from "node:path";
 
 const root = process.cwd();
@@ -30,8 +30,19 @@ try {
     else if (ligne && !dernier.has(ligne)) dernier.set(ligne, courante);
   }
 } catch {
-  writeFileSync(join(root, "src", "lib", "page-dates.json"), "{}\n");
-  console.log("page-dates : pas d'historique git, aucune date écrite");
+  // Sans historique git — construction depuis une archive, clone superficiel,
+  // envoi par le CLI qui n'inclut pas `.git` — on GARDE le fichier déjà
+  // commité. L'écraser avec {} effacerait toutes les dates du site alors
+  // qu'elles sont justes : une construction dégradée ne doit pas défaire le
+  // travail d'une construction complète.
+  const cible = join(root, "src", "lib", "page-dates.json");
+  if (existsSync(cible)) {
+    const n = Object.keys(JSON.parse(readFileSync(cible, "utf8"))).length;
+    console.log(`page-dates : pas d'historique git, on garde les ${n} date(s) commitée(s)`);
+  } else {
+    writeFileSync(cible, "{}\n");
+    console.log("page-dates : pas d'historique git et aucun fichier commité, aucune date");
+  }
   process.exit(0);
 }
 
