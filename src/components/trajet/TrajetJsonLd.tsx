@@ -1,5 +1,8 @@
 import type { Trajet } from "@/data/trajets";
 import { getLocale } from "next-intl/server";
+import { dateDePage } from "@/lib/page-date";
+import { etofferFaq } from "@/lib/faq-etoffer";
+import { faitsTrajet } from "@/lib/faits-trajet";
 
 export async function TrajetJsonLd({ trajet }: { trajet: Trajet }) {
   const locale = await getLocale();
@@ -7,6 +10,9 @@ export async function TrajetJsonLd({ trajet }: { trajet: Trajet }) {
 
   const taxiService = {
     "@context": "https://schema.org",
+    // §8.4 : la date de dernière modification vient de l'historique git,
+    // via la même table que la ligne visible sous le titre.
+    dateModified: dateDePage("/trajet/") ?? undefined,
     "@type": "TaxiService",
     name: `TaxiNeo - Taxi ${trajet.from} → ${trajet.to}`,
     description: trajet.i18n[loc].metaDescription,
@@ -48,7 +54,7 @@ export async function TrajetJsonLd({ trajet }: { trajet: Trajet }) {
   const faqPage = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: trajet.i18n[loc].faq.map((item) => ({
+    mainEntity: etofferFaq(trajet.i18n[loc].faq, faitsTrajet(trajet, loc), loc === "en" ? `On the ${trajet.from} — ${trajet.to} route` : `Sur le trajet ${trajet.from} — ${trajet.to}`, trajet.to).map((item) => ({
       "@type": "Question",
       name: item.question,
       acceptedAnswer: {

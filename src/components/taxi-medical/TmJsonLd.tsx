@@ -1,6 +1,7 @@
 import type { City } from "@/data/cities";
 import type { TmFAQ } from "@/data/taxi-medical-content-templates";
 import { getLocale } from "next-intl/server";
+import { dateDePage } from "@/lib/page-date";
 
 export async function TmJsonLd({ city, faq }: { city: City; faq: TmFAQ[] }) {
   const locale = await getLocale();
@@ -8,6 +9,9 @@ export async function TmJsonLd({ city, faq }: { city: City; faq: TmFAQ[] }) {
 
   const medicalBusiness = {
     "@context": "https://schema.org",
+    // §8.4 : la date de dernière modification vient de l'historique git,
+    // via la même table que la ligne visible sous le titre.
+    dateModified: dateDePage("/taxi-medical/") ?? undefined,
     "@type": ["MedicalBusiness", "TaxiService"],
     name: loc === "fr"
       ? `Taxi médical conventionné ${city.name} — TaxiNeo`

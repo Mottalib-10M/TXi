@@ -1,5 +1,6 @@
 import type { ServiceSeo } from "@/data/services-seo";
 import { getLocale } from "next-intl/server";
+import { dateDePage } from "@/lib/page-date";
 
 export async function ServiceJsonLd({ service }: { service: ServiceSeo }) {
   const locale = await getLocale();
@@ -7,6 +8,9 @@ export async function ServiceJsonLd({ service }: { service: ServiceSeo }) {
 
   const taxiService = {
     "@context": "https://schema.org",
+    // §8.4 : la date de dernière modification vient de l'historique git,
+    // via la même table que la ligne visible sous le titre.
+    dateModified: dateDePage("/service/") ?? undefined,
     "@type": "TaxiService",
     name: `TaxiNeo - ${service.title}`,
     description: service.i18n[loc].metaDescription,

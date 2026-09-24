@@ -6,7 +6,8 @@ import { ScrollAnimation } from "@/components/ui/ScrollAnimation";
 import { Link } from "@/i18n/navigation";
 import { glossaryTerms } from "@/data/glossary";
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
-import { canonicalUrl, alternateUrls } from "@/lib/seo";
+import { canonicalUrl, alternateUrls, ajusterTitre, ajusterDescription } from "@/lib/seo";
+import { LigneMaj } from "@/components/shared/LigneMaj";
 
 interface PageProps {
   params: Promise<{ locale: string }>;
@@ -26,8 +27,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const canonical = canonicalUrl(locale, "/glossaire");
 
   return {
-    title,
-    description,
+    title: ajusterTitre(title, [locale === "en" ? "— TaxiNeo, fixed-price taxis" : "— TaxiNeo, taxis à prix fixe"]),
+    description: ajusterDescription(description, [locale === "en" ? "Fixed price confirmed before booking, luggage included, 24/7." : "Prix fixe confirmé avant la réservation, bagages compris, 24h/24."]),
     openGraph: {
       title,
       description,
@@ -123,6 +124,8 @@ export default async function GlossairePage({ params }: PageProps) {
           <h1 className="text-3xl md:text-4xl font-semibold tracking-tight mb-3 fade-up">
             {title}
           </h1>
+          {/* §8.4 : la date de mise à jour se lit juste sous le titre. */}
+          <LigneMaj />
           <p className="text-base text-neutral-500 font-light mb-10 fade-up fade-up-delay-1">
             {subtitle}
           </p>

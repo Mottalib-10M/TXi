@@ -1,5 +1,8 @@
 import type { City } from "@/data/cities";
 import { getLocale } from "next-intl/server";
+import { dateDePage } from "@/lib/page-date";
+import { etofferFaq, completerFaq } from "@/lib/faq-etoffer";
+import { faitsVille, reserveVille } from "@/lib/faits-hub";
 
 export async function CityJsonLd({ city }: { city: City }) {
   const locale = await getLocale();
@@ -7,6 +10,9 @@ export async function CityJsonLd({ city }: { city: City }) {
 
   const localBusiness = {
     "@context": "https://schema.org",
+    // §8.4 : la date de dernière modification vient de l'historique git,
+    // via la même table que la ligne visible sous le titre.
+    dateModified: dateDePage("/taxi/") ?? undefined,
     "@type": "TaxiService",
     name: `TaxiNeo ${city.name}`,
     description: city.i18n[loc].metaDescription,
@@ -37,7 +43,7 @@ export async function CityJsonLd({ city }: { city: City }) {
   const faqPage = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: city.i18n[loc].faq.map((item) => ({
+    mainEntity: etofferFaq(completerFaq(city.i18n[loc].faq, reserveVille(city.name, loc), 6, 8), faitsVille(city, loc), loc === "en" ? `In ${city.name}` : `À ${city.name}`, city.name).map((item) => ({
       "@type": "Question",
       name: item.question,
       acceptedAnswer: {

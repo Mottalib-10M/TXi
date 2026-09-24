@@ -1,6 +1,9 @@
 import type { Airport } from "@/data/airports";
 import { getLocale } from "next-intl/server";
 import { AIRPORT_FARES, AIRPORT_SUPPLEMENTS } from "@/data/departmental-tariffs";
+import { dateDePage } from "@/lib/page-date";
+import { etofferFaq } from "@/lib/faq-etoffer";
+import { faitsAeroport } from "@/lib/faits-hub";
 
 const PARIS_AIRPORT_SLUGS = new Set(["paris-charles-de-gaulle", "paris-orly"]);
 
@@ -14,6 +17,9 @@ export async function AirportJsonLd({ airport }: { airport: Airport }) {
 
   const localBusiness = {
     "@context": "https://schema.org",
+    // §8.4 : la date de dernière modification vient de l'historique git,
+    // via la même table que la ligne visible sous le titre.
+    dateModified: dateDePage("/aeroport/") ?? undefined,
     "@type": "TaxiService",
     name: `TaxiNeo - Transfert Aéroport ${airport.name}`,
     description: airport.i18n[loc].metaDescription,
@@ -55,7 +61,7 @@ export async function AirportJsonLd({ airport }: { airport: Airport }) {
   const faqPage = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: airport.i18n[loc].faq.map((item) => ({
+    mainEntity: etofferFaq(airport.i18n[loc].faq.slice(0, 8), faitsAeroport(airport, loc), loc === "en" ? `At ${airport.name}` : `À ${airport.name}`, airport.name).map((item) => ({
       "@type": "Question",
       name: item.question,
       acceptedAnswer: {

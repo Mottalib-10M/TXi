@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import { canonicalUrl, alternateUrls } from "@/lib/seo";
+import { canonicalUrl, alternateUrls, ajusterTitre, ajusterDescription } from "@/lib/seo";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { LigneMaj } from "@/components/shared/LigneMaj";
 
 interface Props {
   params: Promise<{ locale: string }>;
@@ -18,9 +19,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       ? "Legal information, terms of use, and privacy policy for TaxiNeo fixed-price taxi booking platform."
       : "Informations legales, conditions d'utilisation et politique de confidentialite de la plateforme TaxiNeo.";
   return {
-    title,
-    description,
-    openGraph: { title, description },
+    title: ajusterTitre(title, [locale === "en" ? "— TaxiNeo, fixed-price taxis" : "— TaxiNeo, taxis à prix fixe"]),
+    description: ajusterDescription(description, [locale === "en" ? "Fixed price confirmed before booking, luggage included, 24/7." : "Prix fixe confirmé avant la réservation, bagages compris, 24h/24."]),
+    openGraph: { title: ajusterTitre(title, [locale === "en" ? "— TaxiNeo, fixed-price taxis" : "— TaxiNeo, taxis à prix fixe"]), description: ajusterDescription(description, [locale === "en" ? "Fixed price confirmed before booking, luggage included, 24/7." : "Prix fixe confirmé avant la réservation, bagages compris, 24h/24."]) },
     alternates: {
       canonical: canonicalUrl(locale, "/mentions-legales"),
       languages: alternateUrls("/mentions-legales"),
@@ -40,6 +41,8 @@ export default async function LegalPage({ params }: Props) {
           <h1 className="text-3xl md:text-4xl font-semibold tracking-tight mb-8">
             {isFr ? "Mentions legales" : "Legal Notice"}
           </h1>
+          {/* §8.4 : la date de mise à jour se lit juste sous le titre. */}
+          <LigneMaj />
 
           {/* Editeur */}
           <section className="mb-10">

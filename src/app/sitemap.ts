@@ -53,9 +53,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { ...localizedUrls("/taxi-vs-vtc"), lastModified: LAST_MODIFIED, changeFrequency: "monthly", priority: 0.6 },
     { ...localizedUrls("/chauffeur-prive"), lastModified: LAST_MODIFIED, changeFrequency: "monthly", priority: 0.6 },
     { ...localizedUrls("/alternative-vtc-prix-fixe"), lastModified: LAST_MODIFIED, changeFrequency: "monthly", priority: 0.6 },
-    // Auth pages
-    { ...localizedUrls("/inscription"), lastModified: LAST_MODIFIED, changeFrequency: "monthly", priority: 0.5 },
-    { ...localizedUrls("/connexion"), lastModified: LAST_MODIFIED, changeFrequency: "monthly", priority: 0.4 },
+    // Pages de confiance
+    { ...localizedUrls("/a-propos"), lastModified: LAST_MODIFIED, changeFrequency: "monthly", priority: 0.5 },
+    { ...localizedUrls("/mentions-legales"), lastModified: LAST_MODIFIED, changeFrequency: "yearly", priority: 0.3 },
+    { ...localizedUrls("/confidentialite"), lastModified: LAST_MODIFIED, changeFrequency: "yearly", priority: 0.3 },
+    { ...localizedUrls("/widget"), lastModified: LAST_MODIFIED, changeFrequency: "monthly", priority: 0.4 },
+    { ...localizedUrls("/methodologie"), lastModified: LAST_MODIFIED, changeFrequency: "monthly", priority: 0.5 },
+    // Les pages de connexion et d'inscription sont en noindex (§11) :
+    // elles n'ont pas à figurer dans le plan du site.
   ];
 
   const cityPages: MetadataRoute.Sitemap = cities

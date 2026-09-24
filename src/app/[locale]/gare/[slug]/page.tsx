@@ -21,6 +21,8 @@ import { stations, getStationBySlug } from "@/data/stations";
 import { activeGareSlugs } from "@/data/page-whitelists";
 import { ILE_DE_FRANCE_SLUGS } from "@/data/regions";
 import { canonicalUrl, alternateUrls } from "@/lib/seo";
+import { etofferFaq } from "@/lib/faq-etoffer";
+import { faitsGare } from "@/lib/faits-hub";
 
 export const dynamicParams = false;
 
@@ -93,7 +95,7 @@ export default async function StationPage({ params }: PageProps) {
         <StationPractical station={st} />
         <StationWhyUs station={st} />
         {ILE_DE_FRANCE_SLUGS.has(st.citySlug) && <StationTestimonials station={st} />}
-        <CityFAQ cityName={`la gare ${st.name}`} faq={st.i18n[loc].faq} />
+        <CityFAQ cityName={`la gare ${st.name}`} faq={etofferFaq(st.i18n[loc].faq.slice(0, 8), faitsGare(st, loc), loc === "en" ? `At ${st.name}` : `À la ${st.name}`, st.name)} />
         <CityContactForm cityName={`la gare ${st.name}`} />
         <CityCTA cityName={`la gare ${st.name}`} />
         <StationInternalLinks station={st} />

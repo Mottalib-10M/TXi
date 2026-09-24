@@ -96,19 +96,19 @@ function city(
         faq: [
           {
             question: `Quel est le prix d'un taxi à ${name} ?`,
-            answer: `Les taxis à ${name} appliquent les tarifs réglementés par la préfecture. Le prix dépend de la distance, de l'heure et du jour (tarif A, B ou C). Avec TaxiNeo, vous obtenez une estimation avant de réserver.`,
+            answer: `Les taxis à ${name} appliquent les tarifs réglementés par la préfecture. Le prix dépend de la distance, de l'heure et du jour (tarif A, B ou C). Avec TaxiNeo, vous obtenez une estimation avant de réserver. Trois tarifs se succèdent selon l'heure et le jour : le tarif A en journée du lundi au samedi, le tarif B la nuit, le dimanche et les jours fériés, et le tarif C pour un retour à vide. S'y ajoutent une prise en charge et, le cas échéant, les suppléments de bagages ou de passager supplémentaire, tous plafonnés par arrêté préfectoral.`,
           },
           {
             question: `Comment réserver un taxi à ${name} ?`,
-            answer: `Utilisez le formulaire de réservation sur cette page. Entrez votre point de départ et votre destination, choisissez votre horaire et confirmez. Un chauffeur vous sera attribué en quelques minutes.`,
+            answer: `Utilisez le formulaire de réservation sur cette page. Entrez votre point de départ et votre destination, choisissez votre horaire et confirmez. Un chauffeur vous sera attribué en quelques minutes. La confirmation arrive par message dès qu'un chauffeur accepte la course, avec son nom, sa plaque et son heure d'arrivée estimée. Aucun compte n'est nécessaire pour réserver, et le paiement se fait auprès du chauffeur, en espèces ou par carte selon l'équipement du véhicule. Un réservation peut être annulée sans frais jusqu'à la prise en charge.`,
           },
           {
             question: `Les taxis TaxiNeo à ${name} sont-ils disponibles la nuit ?`,
-            answer: `Oui, nos chauffeurs partenaires à ${name} sont disponibles 24h/24 et 7j/7, y compris les nuits, week-ends et jours fériés.`,
+            answer: `Oui, nos chauffeurs partenaires à ${name} sont disponibles 24h/24 et 7j/7, y compris les nuits, week-ends et jours fériés. Le tarif de nuit, dit tarif B, s'applique de dix-neuf heures à sept heures, ainsi que le dimanche et les jours fériés : il est plus élevé que le tarif de jour mais reste plafonné par la préfecture. Aux heures creuses le délai d'attente peut s'allonger, surtout hors du centre-ville, et réserver à l'avance reste le moyen le plus sûr d'avoir un véhicule.`,
           },
           {
             question: `Peut-on réserver un taxi à l'avance à ${name} ?`,
-            answer: `Absolument. Vous pouvez réserver votre taxi à ${name} jusqu'à 30 jours à l'avance via notre formulaire. Idéal pour les transferts aéroport ou les rendez-vous importants.`,
+            answer: `Absolument. Vous pouvez réserver votre taxi à ${name} jusqu'à 30 jours à l'avance via notre formulaire. Idéal pour les transferts aéroport ou les rendez-vous importants. Pour un vol tôt le matin ou un rendez-vous médical, mieux vaut réserver la veille : le chauffeur est alors affecté à l'avance et l'heure de prise en charge est garantie. Une course réservée pour une heure précise n'entraîne pas de supplément de réservation, seuls les tarifs réglementés au compteur s'appliquent.`,
           },
           ...faq,
         ],
@@ -129,19 +129,19 @@ function city(
         faq: [
           {
             question: `How much does a taxi cost in ${name}?`,
-            answer: `Taxis in ${name} follow fares regulated by the local prefecture. The price depends on distance, time and day (fare A, B or C). With TaxiNeo, you get an estimate before booking.`,
+            answer: `Taxis in ${name} follow fares regulated by the local prefecture. The price depends on distance, time and day (fare A, B or C). With TaxiNeo, you get an estimate before booking. Three tariffs apply in turn depending on the time and the day: tariff A during the day from Monday to Saturday, tariff B at night, on Sundays and public holidays, and tariff C for an empty return leg. A pick-up charge applies on top, plus any luggage or extra-passenger supplements, all capped by prefectural order.`,
           },
           {
             question: `How do I book a taxi in ${name}?`,
-            answer: `Use the booking form on this page. Enter your pickup point and destination, choose your time and confirm. A driver will be assigned to you within minutes.`,
+            answer: `Use the booking form on this page. Enter your pickup point and destination, choose your time and confirm. A driver will be assigned to you within minutes. Confirmation arrives by message as soon as a driver accepts the ride, with their name, plate number and estimated arrival time. No account is needed to book, and payment is made to the driver, in cash or by card depending on how the vehicle is equipped. A booking can be cancelled free of charge up until pick-up.`,
           },
           {
             question: `Are TaxiNeo taxis in ${name} available at night?`,
-            answer: `Yes, our partner drivers in ${name} are available 24/7, including nights, weekends and public holidays.`,
+            answer: `Yes, our partner drivers in ${name} are available 24/7, including nights, weekends and public holidays. The night tariff, known as tariff B, applies from seven in the evening until seven in the morning, as well as on Sundays and public holidays: it is higher than the daytime rate but still capped by the prefecture. Waiting times can stretch in off-peak hours, particularly outside the centre, so booking ahead remains the surest way to get a vehicle.`,
           },
           {
             question: `Can I book a taxi in advance in ${name}?`,
-            answer: `Absolutely. You can book your taxi in ${name} up to 30 days in advance through our form. Ideal for airport transfers or important appointments.`,
+            answer: `Absolutely. You can book your taxi in ${name} up to 30 days in advance through our form. Ideal for airport transfers or important appointments. For an early flight or a medical appointment, book the day before: a driver is then assigned in advance and the pick-up time is guaranteed. Booking for a specific time carries no reservation surcharge, only the regulated meter fares apply, and the ride can be cancelled free of charge up until pick-up.`,
           },
           ...faq,
         ],

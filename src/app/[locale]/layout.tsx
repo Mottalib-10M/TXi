@@ -47,16 +47,26 @@ export default async function LocaleLayout({
         "@id": "https://www.taxineo.fr/#organization",
         name: "TaxiNeo",
         url: "https://www.taxineo.fr",
+        // §8 : l'Organization éditrice doit porter sa date de création, ses
+        // principes éditoriaux et ses domaines de compétence. Sans eux, Google
+        // n'a aucun élément pour rattacher le site à un éditeur identifiable.
+        foundingDate: "2025-01-01",
+        publishingPrinciples: "https://www.taxineo.fr/a-propos",
+        knowsAbout: locale === "en"
+          ? ["taxi fares in France", "urban mobility", "medical transport", "airport transfers"]
+          : ["tarifs des taxis en France", "mobilité urbaine", "transport médical", "transferts aéroport"],
         logo: {
           "@type": "ImageObject",
           url: "https://www.taxineo.fr/apple-icon",
           width: 180,
           height: 180,
         },
-        founder: {
+        // L'éditeur est la société, pas une personne physique (décision du
+        // 2026-09-20). `founder` attend une Person : on déclare donc la société
+        // comme éditrice via `publisher`, pas comme fondatrice d'elle-même.
+        publisher: {
           "@type": "Organization",
           name: "Radif Partners",
-          jobTitle: locale === "en" ? "Urban Mobility and Transportation Expert" : "Expert en mobilité urbaine et transport",
           description: locale === "en"
             ? "Radif Partners publishes TaxiNeo, a booking service for licensed taxis. The company specialises in urban mobility and passenger transport."
             : "Radif Partners édite TaxiNeo, service de réservation de taxis agréés. La société est spécialisée dans la mobilité urbaine et le transport de personnes.",

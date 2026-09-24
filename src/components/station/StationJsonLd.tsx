@@ -1,5 +1,8 @@
 import type { Station } from "@/data/stations";
 import { getLocale } from "next-intl/server";
+import { dateDePage } from "@/lib/page-date";
+import { etofferFaq } from "@/lib/faq-etoffer";
+import { faitsGare } from "@/lib/faits-hub";
 
 export async function StationJsonLd({ station }: { station: Station }) {
   const locale = await getLocale();
@@ -7,6 +10,9 @@ export async function StationJsonLd({ station }: { station: Station }) {
 
   const localBusiness = {
     "@context": "https://schema.org",
+    // §8.4 : la date de dernière modification vient de l'historique git,
+    // via la même table que la ligne visible sous le titre.
+    dateModified: dateDePage("/gare/") ?? undefined,
     "@type": "TaxiService",
     name: `TaxiNeo - Transfert Gare ${station.name}`,
     description: station.i18n[loc].metaDescription,
@@ -37,7 +43,7 @@ export async function StationJsonLd({ station }: { station: Station }) {
   const faqPage = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: station.i18n[loc].faq.map((item) => ({
+    mainEntity: etofferFaq(station.i18n[loc].faq.slice(0, 8), faitsGare(station, loc), loc === "en" ? `At ${station.name}` : `À la ${station.name}`, station.name).map((item) => ({
       "@type": "Question",
       name: item.question,
       acceptedAnswer: {

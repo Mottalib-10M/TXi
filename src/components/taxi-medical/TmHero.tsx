@@ -2,6 +2,7 @@ import type { City } from "@/data/cities";
 import type { TmGeneratedContent } from "@/data/taxi-medical-content-templates";
 import { TmDevisForm } from "./TmDevisForm";
 import { getTranslations } from "next-intl/server";
+import { LigneMaj } from "@/components/shared/LigneMaj";
 
 export async function TmHero({ city, content }: { city: City; content: TmGeneratedContent }) {
   const t = await getTranslations("tm");
@@ -19,6 +20,8 @@ export async function TmHero({ city, content }: { city: City; content: TmGenerat
             <h1 className="text-4xl md:text-5xl font-semibold tracking-tight leading-[1.1] mb-4">
               {content.heroTitle}
             </h1>
+            {/* §8.4 : la date de mise à jour se lit juste sous le titre. */}
+            <LigneMaj />
             <p className="text-base md:text-lg text-neutral-500 mb-8 max-w-md font-light leading-relaxed">
               {content.heroSubtitle}
             </p>

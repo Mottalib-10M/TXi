@@ -1,6 +1,7 @@
 import type { ServiceSeo } from "@/data/services-seo";
 import { BookingForm } from "@/components/booking/BookingForm";
 import { getTranslations, getLocale } from "next-intl/server";
+import { LigneMaj } from "@/components/shared/LigneMaj";
 
 export async function ServiceHero({ service }: { service: ServiceSeo }) {
   const t = await getTranslations("service");
@@ -21,6 +22,8 @@ export async function ServiceHero({ service }: { service: ServiceSeo }) {
             <h1 className="text-4xl md:text-5xl font-semibold tracking-tight leading-[1.1] mb-4">
               {service.i18n[loc].heroTitle}
             </h1>
+            {/* §8.4 : la date de mise à jour se lit juste sous le titre. */}
+            <LigneMaj />
             <p className="text-base md:text-lg text-neutral-500 mb-6 max-w-md font-light leading-relaxed">
               {service.i18n[loc].heroSubtitle}
             </p>

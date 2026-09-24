@@ -2549,7 +2549,7 @@ export const trajetsMarseille: Trajet[] = [
         faq: [
           { question: "Combien de temps dure le taxi Marseille — Valence ?", answer: "Le trajet dure environ 2h35 par l'A7. Comptez jusqu'à 3h15 les samedis d'été. Une pause est possible à Montélimar." },
           { question: "Le taxi peut-il s'arrêter à Montélimar pour acheter du nougat ?", answer: "Oui, un arrêt de 15-20 minutes à Montélimar est possible sans supplément. Votre chauffeur connaît les meilleures nougateries (Arnaud Soubeyran, Diane de Poytiers)." },
-          { question: "La gare TGV de Valence est-elle loin du centre ?", answer: "Oui, la gare Valence TGV est à 10 km à l'est du centre-ville, près de la zone commerciale. Notre taxi vous dépose directement en centre-ville, pas à la gare excentrée." },
+          { question: "Le taxi dépose-t-il en centre-ville de Valence ou à la gare TGV ?", answer: "Oui, la gare Valence TGV est à 10 km à l'est du centre-ville, près de la zone commerciale. Notre taxi vous dépose directement en centre-ville, pas à la gare excentrée." },
           { question: "Peut-on continuer vers la Drôme provençale depuis Valence ?", answer: "Oui, Grignan (65 km), Nyons (80 km) et Die (70 km) sont accessibles depuis Valence. Demandez un devis personnalisé pour un transfert étendu." },
           { question: "Les péages sont-ils inclus ?", answer: "Oui, les ~22 € de péages A7 sont inclus dans le tarif fixe TaxiNeo. Aucun supplément." }
         ],

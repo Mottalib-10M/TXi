@@ -1,6 +1,7 @@
 import type { Tarif } from "@/data/tarifs";
 import { BookingForm } from "@/components/booking/BookingForm";
 import { getTranslations, getLocale } from "next-intl/server";
+import { LigneMaj } from "@/components/shared/LigneMaj";
 
 export async function TarifHero({ tarif }: { tarif: Tarif }) {
   const t = await getTranslations("tarif");
@@ -21,6 +22,8 @@ export async function TarifHero({ tarif }: { tarif: Tarif }) {
             <h1 className="text-4xl md:text-5xl font-semibold tracking-tight leading-[1.1] mb-4">
               {tarif.i18n[loc].heroTitle}
             </h1>
+            {/* §8.4 : la date de mise à jour se lit juste sous le titre. */}
+            <LigneMaj />
             <p className="text-base md:text-lg text-neutral-500 mb-6 max-w-md font-light leading-relaxed">
               {tarif.i18n[loc].heroSubtitle}
             </p>

@@ -12,6 +12,7 @@ import { SharedRideSearch } from "@/components/shared-rides/SharedRideSearch";
 import { ScrollAnimation } from "@/components/ui/ScrollAnimation";
 import { CoverageMap } from "@/components/shared-rides/CoverageMap";
 import { predefinedLocations } from "@/data/predefined-locations";
+import { LigneMaj } from "@/components/shared/LigneMaj";
 
 export default function SharedTaxiPage() {
   const t = useTranslations("sharedRides");
@@ -73,6 +74,8 @@ export default function SharedTaxiPage() {
                 <br />
                 <span className="text-neutral-400">{t("heroTitle2")}</span>
               </h1>
+          {/* §8.4 : la date de mise à jour se lit juste sous le titre. */}
+          <LigneMaj />
               <p className="mt-4 text-neutral-500 text-lg font-light max-w-xl">
                 {t("heroSubtitle")}
               </p>

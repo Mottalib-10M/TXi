@@ -7,6 +7,9 @@ import { useTranslations, useLocale } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { emailError, isValidEmail } from "@/lib/validation";
 import { trackLogin } from "@/lib/analytics";
+import { Navbar } from "@/components/layout/Navbar";
+import { Footer } from "@/components/layout/Footer";
+import { FaqAuth } from "@/components/seo/FaqAuth";
 
 function ConnexionForm() {
   const t = useTranslations("auth");
@@ -213,9 +216,19 @@ function ConnexionForm() {
 }
 
 export default function ConnexionPage() {
+  // §10.1 : même une page de connexion porte l'en-tête et le pied du site ;
+  // sans eux, le visiteur ne peut pas revenir au contenu ni joindre les pages
+  // légales, et la page sort de la trame.
   return (
-    <Suspense>
-      <ConnexionForm />
-    </Suspense>
+    <div className="flex flex-col min-h-screen">
+      <Navbar />
+      <main className="flex-grow">
+        <Suspense>
+          <ConnexionForm />
+        </Suspense>
+        <FaqAuth />
+      </main>
+      <Footer />
+    </div>
   );
 }

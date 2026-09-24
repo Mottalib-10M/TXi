@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { Icon } from "@iconify/react";
 import { Link } from "@/i18n/navigation";
-import { canonicalUrl, alternateUrls } from "@/lib/seo";
+import { canonicalUrl, alternateUrls, ajusterTitre, ajusterDescription } from "@/lib/seo";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { ScrollAnimation } from "@/components/ui/ScrollAnimation";
@@ -10,6 +10,8 @@ import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 import { taxiMedicalCities } from "@/data/taxi-medical-cities";
 import { activeTmSlugs } from "@/data/page-whitelists";
 import { getCityBySlug } from "@/data/cities";
+import { LigneMaj } from "@/components/shared/LigneMaj";
+import { dateDePage } from "@/lib/page-date";
 
 interface Props {
   params: Promise<{ locale: string }>;
@@ -20,15 +22,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: "taxiMedical" });
 
   return {
-    title: t("metaTitle"),
-    description: t("metaDescription"),
+    title: ajusterTitre(t("metaTitle"), [locale === "en" ? "— TaxiNeo, fixed-price taxis" : "— TaxiNeo, taxis à prix fixe"]),
+    description: ajusterDescription(t("metaDescription"), [locale === "en" ? "Fixed price confirmed before booking, luggage included, 24/7." : "Prix fixe confirmé avant la réservation, bagages compris, 24h/24."]),
     openGraph: {
-      title: t("metaTitle"),
-      description: t("metaDescription"),
+      title: ajusterTitre(t("metaTitle"), [locale === "en" ? "— TaxiNeo, fixed-price taxis" : "— TaxiNeo, taxis à prix fixe"]),
+      description: ajusterDescription(t("metaDescription"), [locale === "en" ? "Fixed price confirmed before booking, luggage included, 24/7." : "Prix fixe confirmé avant la réservation, bagages compris, 24h/24."]),
       url: `https://www.taxineo.fr/${locale}/solutions/taxi-medical`,
       siteName: "TaxiNeo",
       type: "website",
-      images: [{ url: "https://www.taxineo.fr/opengraph-image", width: 1200, height: 630, alt: t("metaTitle") }],
+      images: [{ url: "https://www.taxineo.fr/opengraph-image", width: 1200, height: 630, alt: ajusterTitre(t("metaTitle"), [locale === "en" ? "— TaxiNeo, fixed-price taxis" : "— TaxiNeo, taxis à prix fixe"]) }],
     },
     alternates: {
       canonical: canonicalUrl(locale, "/solutions/taxi-medical"),
@@ -61,7 +63,10 @@ export default async function TaxiMedicalPage() {
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: Array.from({ length: 6 }, (_, i) => ({
+    // §8.4 : la FAQPage est une WebPage, elle porte donc la date de la page.
+    dateModified: dateDePage("/solutions/taxi-medical/") ?? undefined,
+    // §7 : cinq questions au plus sur une page secondaire.
+    mainEntity: Array.from({ length: 5 }, (_, i) => ({
       "@type": "Question",
       name: t(`faq${i + 1}Q`),
       acceptedAnswer: { "@type": "Answer", text: t(`faq${i + 1}A`) },
@@ -94,7 +99,7 @@ export default async function TaxiMedicalPage() {
     desc: t(`useCase${i + 1}Desc`),
   }));
 
-  const faqs = Array.from({ length: 6 }, (_, i) => ({
+  const faqs = Array.from({ length: 5 }, (_, i) => ({
     q: t(`faq${i + 1}Q`),
     a: t(`faq${i + 1}A`),
   }));
@@ -145,6 +150,8 @@ export default async function TaxiMedicalPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.1] mb-4">
               {t("heroTitle")}
             </h1>
+          {/* §8.4 : la date de mise à jour se lit juste sous le titre. */}
+          <LigneMaj />
             <p className="text-base md:text-lg text-neutral-500 mb-8 max-w-2xl font-light leading-relaxed">
               {t("heroSubtitle")}
             </p>

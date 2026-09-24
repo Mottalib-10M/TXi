@@ -10,6 +10,10 @@ import { getArticleBySlug, getArticleSlugs, blogArticles } from "@/data/blog";
 import { canonicalUrl, alternateUrls } from "@/lib/seo";
 import { BlogRelatedContent } from "@/components/blog/BlogRelatedContent";
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
+import { LigneMaj } from "@/components/shared/LigneMaj";
+import { blogFaq } from "@/data/blog-faq";
+import { blogFaqSuite } from "@/data/blog-faq-suite";
+import { dateDePage } from "@/lib/page-date";
 
 interface PageProps {
   params: Promise<{ locale: string; slug: string }>;
@@ -245,10 +249,16 @@ export default async function BlogArticlePage({ params }: PageProps) {
     headline: article.title[lang],
     description: article.metaDescription[lang],
     datePublished: article.date,
+    // §8.4 : la date de dernière modification vient de l'historique git.
+    dateModified: dateDePage("/blog/") ?? article.date,
     author: {
       "@type": "Organization",
       name: "Radif Partners",
-      jobTitle: lang === "en" ? "Urban Mobility and Transportation Expert" : "Expert en mobilité urbaine et transport",
+      knowsAbout: lang === "en"
+        ? ["taxi fares in France", "urban mobility", "medical transport", "airport transfers"]
+        : ["tarifs des taxis en France", "mobilité urbaine", "transport médical", "transferts aéroport"],
+      foundingDate: "2025-01-01",
+      publishingPrinciples: "https://www.taxineo.fr/a-propos",
       description: lang === "en"
         ? "Radif Partners publishes TaxiNeo, a booking service for licensed taxis. The company specialises in urban mobility and passenger transport."
         : "Radif Partners édite TaxiNeo, service de réservation de taxis agréés. La société est spécialisée dans la mobilité urbaine et le transport de personnes.",
@@ -268,12 +278,31 @@ export default async function BlogArticlePage({ params }: PageProps) {
     },
   };
 
+  // §7 : chaque article répond à une question qui lui est propre, visible sur
+  // la page et déclarée à l'identique dans le JSON-LD.
+  const faq = [blogFaq[slug], ...(blogFaqSuite[slug] ?? [])].filter(Boolean);
+  const faqJsonLd = faq.length > 0 && {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faq.map((item) => ({
+      "@type": "Question",
+      name: item.question[lang],
+      acceptedAnswer: { "@type": "Answer", text: item.answer[lang] },
+    })),
+  };
+
   return (
     <div className="flex flex-col min-h-screen overflow-x-hidden">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
       />
+      {faqJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
+      )}
       <Navbar />
       <ScrollAnimation />
 
@@ -313,11 +342,37 @@ export default async function BlogArticlePage({ params }: PageProps) {
             <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight mb-8 leading-tight">
               {article.title[lang]}
             </h1>
+          {/* §8.4 : la date de mise à jour se lit juste sous le titre. */}
+          <LigneMaj />
 
             <article className="prose-custom">
               {renderContent(content)}
             </article>
           </div>
+
+          {faq.length > 0 && (
+            <div className="mt-16 pt-12 border-t border-neutral-200">
+              <h2 className="text-xl font-semibold tracking-tight mb-6">
+                {lang === "en" ? "Frequently asked questions" : "Questions fréquentes"}
+              </h2>
+              <div className="space-y-3">
+                {faq.map((item, i) => (
+                  <details
+                    key={i}
+                    open={i === 0}
+                    className="border border-neutral-200 rounded-xl px-5 py-4"
+                  >
+                    <summary className="cursor-pointer list-none">
+                      <h3 className="inline text-base font-medium">{item.question[lang]}</h3>
+                    </summary>
+                    <p className="mt-3 text-sm text-neutral-600 font-light leading-relaxed">
+                      {item.answer[lang]}
+                    </p>
+                  </details>
+                ))}
+              </div>
+            </div>
+          )}
 
           {/* Related articles */}
           {related.length > 0 && (

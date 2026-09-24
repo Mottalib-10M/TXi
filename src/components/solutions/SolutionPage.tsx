@@ -6,6 +6,8 @@ import { Footer } from "@/components/layout/Footer";
 import { ScrollAnimation } from "@/components/ui/ScrollAnimation";
 import { ContactFormSection } from "@/components/solutions/ContactFormSection";
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
+import { LigneMaj } from "@/components/shared/LigneMaj";
+import { FaqJsonLd } from "@/components/seo/FaqJsonLd";
 
 interface SolutionPageProps {
   namespace: string;
@@ -31,8 +33,19 @@ export async function SolutionPage({
   const locale = await getLocale();
   const lang = locale === "en" ? "en" : "fr";
 
+  // §7 : une seule liste sert au rendu visible et au JSON-LD, pour qu'ils
+  // ne puissent pas diverger.
+  const faq = [
+    { q: t("faq1Q"), a: t("faq1A") },
+    { q: t("faq2Q"), a: t("faq2A") },
+    { q: t("faq3Q"), a: t("faq3A") },
+    { q: t("faq4Q"), a: t("faq4A") },
+    { q: t("faq5Q"), a: t("faq5A") },
+  ];
+
   return (
     <div className="flex flex-col min-h-screen overflow-x-hidden">
+      <FaqJsonLd faq={faq} route={`/solutions/${namespace === "solutionTaxiMedical" ? "taxi-medical" : "particulier"}/`} />
       <Navbar />
       <ScrollAnimation />
       <BreadcrumbJsonLd
@@ -66,6 +79,8 @@ export async function SolutionPage({
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.1] mb-4">
                 {t("heroTitle")}
               </h1>
+            {/* §8.4 : la date de mise à jour se lit juste sous le titre. */}
+            <LigneMaj />
               <p className="text-base md:text-lg text-neutral-500 mb-8 max-w-md font-light leading-relaxed">
                 {t("heroSubtitle")}
               </p>
@@ -375,13 +390,7 @@ export async function SolutionPage({
           </div>
 
           <div className="max-w-3xl mx-auto space-y-4">
-            {[
-              { q: t("faq1Q"), a: t("faq1A") },
-              { q: t("faq2Q"), a: t("faq2A") },
-              { q: t("faq3Q"), a: t("faq3A") },
-              { q: t("faq4Q"), a: t("faq4A") },
-              { q: t("faq5Q"), a: t("faq5A") },
-            ].map((faq, i) => (
+            {faq.map((faq, i) => (
               <div
                 key={i}
                 className={`bg-white border border-neutral-200 rounded-2xl p-6 fade-up fade-up-delay-${(i % 3) + 1}`}

@@ -21,7 +21,9 @@ import { CityInternalLinks } from "@/components/city/CityInternalLinks";
 import { ILE_DE_FRANCE_SLUGS } from "@/data/regions";
 import { cities, getCityBySlug } from "@/data/cities";
 import { activeCitySlugs } from "@/data/page-whitelists";
-import { canonicalUrl, alternateUrls } from "@/lib/seo";
+import { canonicalUrl, alternateUrls, ajusterTitre, ajusterDescription } from "@/lib/seo";
+import { etofferFaq, completerFaq } from "@/lib/faq-etoffer";
+import { faitsVille, reserveVille } from "@/lib/faits-hub";
 
 interface PageProps {
   params: Promise<{ locale: string; slug: string }>;
@@ -49,15 +51,15 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   const canonical = canonicalUrl(locale, `/taxi-${city.slug}`);
   return {
-    title: city.i18n[loc].metaTitle,
-    description: city.i18n[loc].metaDescription,
+    title: ajusterTitre(city.i18n[loc].metaTitle, [loc === "en" ? "— TaxiNeo" : "— TaxiNeo", loc === "en" ? "fixed price" : "prix fixe"]),
+    description: ajusterDescription(city.i18n[loc].metaDescription, [loc === "en" ? "Fixed price confirmed before booking, luggage included." : "Prix fixe confirmé avant la réservation, bagages compris."]),
     openGraph: {
-      title: city.i18n[loc].metaTitle,
-      description: city.i18n[loc].metaDescription,
+      title: ajusterTitre(city.i18n[loc].metaTitle, [loc === "en" ? "— TaxiNeo" : "— TaxiNeo", loc === "en" ? "fixed price" : "prix fixe"]),
+      description: ajusterDescription(city.i18n[loc].metaDescription, [loc === "en" ? "Fixed price confirmed before booking, luggage included." : "Prix fixe confirmé avant la réservation, bagages compris."]),
       url: canonical,
       siteName: "TaxiNeo",
       type: "website",
-      images: [{ url: "https://www.taxineo.fr/opengraph-image", width: 1200, height: 630, alt: city.i18n[loc].metaTitle }],
+      images: [{ url: "https://www.taxineo.fr/opengraph-image", width: 1200, height: 630, alt: ajusterTitre(city.i18n[loc].metaTitle, [loc === "en" ? "— TaxiNeo" : "— TaxiNeo", loc === "en" ? "fixed price" : "prix fixe"]) }],
     },
     alternates: {
       canonical,
@@ -92,7 +94,7 @@ export default async function CityPage({ params }: PageProps) {
         <CityQuartiers city={city} />
         <CityWhyUs city={city} />
         {ILE_DE_FRANCE_SLUGS.has(city.slug) && <CityTestimonials city={city} />}
-        <CityFAQ cityName={city.name} faq={city.i18n[loc].faq} />
+        <CityFAQ cityName={city.name} faq={etofferFaq(completerFaq(city.i18n[loc].faq, reserveVille(city.name, loc), 6, 8), faitsVille(city, loc), loc === "en" ? `In ${city.name}` : `À ${city.name}`, city.name)} />
         <CityContactForm cityName={city.name} />
         <CityCTA cityName={city.name} />
         <CityInternalLinks city={city} />

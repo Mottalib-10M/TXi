@@ -2,11 +2,13 @@ import type { Metadata } from "next";
 import { Icon } from "@iconify/react";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
-import { canonicalUrl, alternateUrls } from "@/lib/seo";
+import { canonicalUrl, alternateUrls, ajusterTitre, ajusterDescription } from "@/lib/seo";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { ScrollAnimation } from "@/components/ui/ScrollAnimation";
 import { QRCodeAnimation } from "@/components/driver/QRCodeAnimation";
+import { LigneMaj } from "@/components/shared/LigneMaj";
+import { FaqJsonLd } from "@/components/seo/FaqJsonLd";
 
 interface Props {
   params: Promise<{ locale: string }>;
@@ -17,15 +19,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: "whyJoin" });
 
   return {
-    title: t("metaTitle"),
-    description: t("metaDescription"),
+    title: ajusterTitre(t("metaTitle"), [locale === "en" ? "— TaxiNeo, fixed-price taxis" : "— TaxiNeo, taxis à prix fixe"]),
+    description: ajusterDescription(t("metaDescription"), [locale === "en" ? "Fixed price confirmed before booking, luggage included, 24/7." : "Prix fixe confirmé avant la réservation, bagages compris, 24h/24."]),
     openGraph: {
-      title: t("metaTitle"),
-      description: t("metaDescription"),
+      title: ajusterTitre(t("metaTitle"), [locale === "en" ? "— TaxiNeo, fixed-price taxis" : "— TaxiNeo, taxis à prix fixe"]),
+      description: ajusterDescription(t("metaDescription"), [locale === "en" ? "Fixed price confirmed before booking, luggage included, 24/7." : "Prix fixe confirmé avant la réservation, bagages compris, 24h/24."]),
       url: `https://www.taxineo.fr/${locale}/devenir-chauffeur`,
       siteName: "TaxiNeo",
       type: "website",
-      images: [{ url: "https://www.taxineo.fr/opengraph-image", width: 1200, height: 630, alt: t("metaTitle") }],
+      images: [{ url: "https://www.taxineo.fr/opengraph-image", width: 1200, height: 630, alt: ajusterTitre(t("metaTitle"), [locale === "en" ? "— TaxiNeo, fixed-price taxis" : "— TaxiNeo, taxis à prix fixe"]) }],
     },
     alternates: {
       canonical: canonicalUrl(locale, "/devenir-chauffeur"),
@@ -37,8 +39,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function WhyJoinPage() {
   const t = await getTranslations("whyJoin");
 
+  // §7 : une seule liste sert au rendu visible et au JSON-LD, pour qu'ils
+  // ne puissent pas diverger.
+  const faq = [
+    { q: t("faq1Q"), a: t("faq1A") },
+    { q: t("faq2Q"), a: t("faq2A") },
+    { q: t("faq3Q"), a: t("faq3A") },
+    { q: t("faq4Q"), a: t("faq4A") },
+    { q: t("faq5Q"), a: t("faq5A") },
+    { q: t("faq6Q"), a: t("faq6A") },
+  ];
+
   return (
     <div className="flex flex-col min-h-screen overflow-x-hidden">
+      <FaqJsonLd faq={faq} route={"/devenir-chauffeur/"} />
       <Navbar />
       <ScrollAnimation />
 
@@ -56,6 +70,8 @@ export default async function WhyJoinPage() {
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.1] mb-4">
                 {t("heroTitle")}
               </h1>
+          {/* §8.4 : la date de mise à jour se lit juste sous le titre. */}
+          <LigneMaj />
               <p className="text-base md:text-lg text-neutral-500 mb-8 max-w-md font-light leading-relaxed">
                 {t("heroSubtitle")}
               </p>
@@ -405,13 +421,7 @@ export default async function WhyJoinPage() {
           </div>
 
           <div className="max-w-3xl mx-auto space-y-4">
-            {[
-              { q: t("faq1Q"), a: t("faq1A") },
-              { q: t("faq2Q"), a: t("faq2A") },
-              { q: t("faq3Q"), a: t("faq3A") },
-              { q: t("faq4Q"), a: t("faq4A") },
-              { q: t("faq5Q"), a: t("faq5A") },
-            ].map((faq, i) => (
+            {faq.map((faq, i) => (
               <div
                 key={i}
                 className={`bg-white border border-neutral-200 rounded-2xl p-6 fade-up fade-up-delay-${(i % 3) + 1}`}

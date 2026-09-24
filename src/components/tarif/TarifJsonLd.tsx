@@ -1,5 +1,6 @@
 import type { Tarif } from "@/data/tarifs";
 import { getLocale } from "next-intl/server";
+import { dateDePage } from "@/lib/page-date";
 
 export async function TarifJsonLd({ tarif }: { tarif: Tarif }) {
   const locale = await getLocale();
@@ -7,6 +8,9 @@ export async function TarifJsonLd({ tarif }: { tarif: Tarif }) {
 
   const taxiService = {
     "@context": "https://schema.org",
+    // §8.4 : la date de dernière modification vient de l'historique git,
+    // via la même table que la ligne visible sous le titre.
+    dateModified: dateDePage("/tarif/") ?? undefined,
     "@type": "TaxiService",
     name: `TaxiNeo - ${tarif.title}`,
     description: tarif.i18n[loc].metaDescription,

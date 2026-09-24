@@ -6,6 +6,7 @@ import { Link } from "@/i18n/navigation";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { ScrollAnimation } from "@/components/ui/ScrollAnimation";
+import { LigneMaj } from "@/components/shared/LigneMaj";
 
 interface Props {
   params: Promise<{ locale: string }>;
@@ -66,7 +67,7 @@ export default async function AlternativeVtcPage() {
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: Array.from({ length: 5 }, (_, i) => ({
+    mainEntity: Array.from({ length: 6 }, (_, i) => ({
       "@type": "Question",
       name: t(`faq${i + 1}Q`),
       acceptedAnswer: { "@type": "Answer", text: t(`faq${i + 1}A`) },
@@ -85,7 +86,7 @@ export default async function AlternativeVtcPage() {
     desc: t(`service${i + 1}Desc`),
   }));
 
-  const faqs = Array.from({ length: 5 }, (_, i) => ({
+  const faqs = Array.from({ length: 6 }, (_, i) => ({
     q: t(`faq${i + 1}Q`),
     a: t(`faq${i + 1}A`),
   }));
@@ -125,6 +126,8 @@ export default async function AlternativeVtcPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.1] mb-4">
               {t("heroTitle")}
             </h1>
+          {/* §8.4 : la date de mise à jour se lit juste sous le titre. */}
+          <LigneMaj />
             <p className="text-base md:text-lg text-neutral-500 mb-8 max-w-2xl font-light leading-relaxed">
               {t("heroSubtitle")}
             </p>

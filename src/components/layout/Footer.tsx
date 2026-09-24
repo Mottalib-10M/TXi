@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 import { Icon } from "@iconify/react";
 import { Link } from "@/i18n/navigation";
 import { Logo } from "@/components/ui/Logo";
+import { LigneMaj } from "@/components/shared/LigneMaj";
 
 export function Footer() {
   const t = useTranslations("footer");
@@ -182,11 +183,38 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-neutral-100 gap-4">
+        {/* §8.4 : l'avertissement doit être lisible sur chaque page, car chaque
+            page affiche des prix qui sont des estimations, pas des devis. */}
+        <p className="pt-8 border-t border-neutral-100 text-xs text-neutral-500 font-light leading-relaxed">
+          {t("disclaimer")}
+        </p>
+        {/* §7 : les montants affichés viennent de textes publics ; les nommer sur
+            chaque page permet au lecteur de les vérifier à la source. */}
+        <p className="mt-2 text-xs text-neutral-500 font-light leading-relaxed">
+          {t("sources")}{" "}
+          <a className="underline" href="https://www.legifrance.gouv.fr/" rel="noopener">
+            Légifrance
+          </a>
+          {" · "}
+          <a className="underline" href="https://www.economie.gouv.fr/dgccrf" rel="noopener">
+            DGCCRF
+          </a>
+          {" · "}
+          <a
+            className="underline"
+            href="https://www.service-public.fr/particuliers/vosdroits/F2287"
+            rel="noopener"
+          >
+            Service-Public.fr
+          </a>
+        </p>
+
+        <div className="flex flex-col md:flex-row items-center justify-between pt-6 gap-4">
           <div className="flex flex-col md:flex-row items-center gap-4">
             <p className="text-xs text-neutral-500 font-light">
               {t("copyright")}
             </p>
+            <LigneMaj position="bas" />
             <div className="flex items-center gap-3 text-xs text-neutral-500 font-light">
               <Link href="/a-propos" className="hover:text-neutral-600 transition-colors">
                 {t("about")}
@@ -194,6 +222,16 @@ export function Footer() {
               <span className="text-neutral-300">|</span>
               <Link href="/mentions-legales" className="hover:text-neutral-600 transition-colors">
                 {t("legal")}
+              </Link>
+              <span className="text-neutral-300">|</span>
+              {/* §8 : confidentialité et méthodologie doivent être joignables
+                  depuis n'importe quelle page, pas seulement depuis l'accueil. */}
+              <Link href="/confidentialite" className="hover:text-neutral-600 transition-colors">
+                {t("privacy")}
+              </Link>
+              <span className="text-neutral-300">|</span>
+              <Link href="/methodologie" className="hover:text-neutral-600 transition-colors">
+                {t("methodology")}
               </Link>
             </div>
           </div>

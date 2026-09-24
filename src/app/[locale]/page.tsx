@@ -15,6 +15,7 @@ import { popularAirports, airports } from "@/data/airports";
 import { popularStations, stations } from "@/data/stations";
 import { trajets } from "@/data/trajets";
 import { guides } from "@/data/guides";
+import { LigneMaj } from "@/components/shared/LigneMaj";
 
 
 interface Props {
@@ -144,6 +145,8 @@ export default async function HomePage() {
                 <br />
                 <span className="gradient-text">{t("heroTitle2")}</span>
               </h1>
+          {/* §8.4 : la date de mise à jour se lit juste sous le titre. */}
+          <LigneMaj />
               <p className="text-base md:text-lg text-neutral-500 mb-8 max-w-md font-light leading-relaxed">
                 {t("heroSubtitle")}
               </p>

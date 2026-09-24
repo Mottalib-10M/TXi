@@ -11,6 +11,9 @@ import { trackSignUp } from "@/lib/analytics";
 import TurnstileWidget from "@/components/TurnstileWidget";
 import { ComboBox } from "@/components/ui/ComboBox";
 import { VEHICLE_BRANDS, BRAND_NAMES } from "@/data/vehicle-models";
+import { Navbar } from "@/components/layout/Navbar";
+import { Footer } from "@/components/layout/Footer";
+import { FaqAuth } from "@/components/seo/FaqAuth";
 
 type ProfileType = "driver" | "particulier" | "hotel" | "hospital" | "enterprise";
 
@@ -400,8 +403,12 @@ export default function InscriptionPage() {
     );
   }
 
+  // §10.1 : l'en-tête et le pied doivent être présents sur toutes les pages,
+  // y compris l'inscription, pour la navigation et l'accès aux pages légales.
   return (
-    <div className="min-h-screen bg-white flex items-center justify-center px-6 py-6">
+    <div className="flex flex-col min-h-screen">
+      <Navbar />
+      <main className="flex-grow bg-white flex items-center justify-center px-6 py-6">
       <div className="w-full max-w-md">
         <div className="text-center mb-5">
           <Link href="/" className="text-2xl">
@@ -841,6 +848,9 @@ export default function InscriptionPage() {
           </Link>
         </p>
       </div>
+        <FaqAuth />
+      </main>
+      <Footer />
     </div>
   );
 }

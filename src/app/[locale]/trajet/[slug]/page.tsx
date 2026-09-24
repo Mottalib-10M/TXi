@@ -17,7 +17,9 @@ import { CityContactForm } from "@/components/city/CityContactForm";
 import { CityCTA } from "@/components/city/CityCTA";
 import { trajets, getTrajetBySlug } from "@/data/trajets";
 import { activeTrajetSlugs } from "@/data/trajet-whitelist";
-import { canonicalUrl, alternateUrls } from "@/lib/seo";
+import { canonicalUrl, alternateUrls, ajusterTitre, ajusterDescription } from "@/lib/seo";
+import { etofferFaq } from "@/lib/faq-etoffer";
+import { faitsTrajet } from "@/lib/faits-trajet";
 
 export const dynamicParams = false;
 
@@ -41,11 +43,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   const canonical = canonicalUrl(locale, `/trajet/${trajet.slug}`);
   return {
-    title: trajet.i18n[loc].metaTitle,
-    description: trajet.i18n[loc].metaDescription,
+    title: ajusterTitre(trajet.i18n[loc].metaTitle, [loc === "en" ? "— TaxiNeo" : "— TaxiNeo"]),
+    description: ajusterDescription(trajet.i18n[loc].metaDescription, [loc === "en" ? "Fixed price, luggage and tolls included." : "Prix fixe, bagages et péages compris."]),
     openGraph: {
-      title: trajet.i18n[loc].metaTitle,
-      description: trajet.i18n[loc].metaDescription,
+      title: ajusterTitre(trajet.i18n[loc].metaTitle, [loc === "en" ? "— TaxiNeo" : "— TaxiNeo"]),
+      description: ajusterDescription(trajet.i18n[loc].metaDescription, [loc === "en" ? "Fixed price, luggage and tolls included." : "Prix fixe, bagages et péages compris."]),
       url: canonical,
       siteName: "TaxiNeo",
       type: "website",
@@ -54,7 +56,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
           url: "https://www.taxineo.fr/opengraph-image",
           width: 1200,
           height: 630,
-          alt: trajet.i18n[loc].metaTitle,
+          alt: ajusterTitre(trajet.i18n[loc].metaTitle, [loc === "en" ? "— TaxiNeo" : "— TaxiNeo"]),
         },
       ],
     },
@@ -89,7 +91,7 @@ export default async function TrajetPage({ params }: PageProps) {
         <TrajetPricing trajet={trajet} />
         <TrajetComparaison trajet={trajet} />
         <TrajetAlternatives trajet={trajet} />
-        <CityFAQ cityName={`${trajet.from} → ${trajet.to}`} faq={trajet.i18n[loc].faq} />
+        <CityFAQ cityName={`${trajet.from} → ${trajet.to}`} faq={etofferFaq(trajet.i18n[loc].faq, faitsTrajet(trajet, loc), loc === "en" ? `On the ${trajet.from} — ${trajet.to} route` : `Sur le trajet ${trajet.from} — ${trajet.to}`, trajet.to)} />
         <CityContactForm cityName={`${trajet.from} → ${trajet.to}`} />
         <CityCTA cityName={`${trajet.from} → ${trajet.to}`} />
       </main>

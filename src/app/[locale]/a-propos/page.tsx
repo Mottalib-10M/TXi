@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import { Icon } from "@iconify/react";
-import { canonicalUrl, alternateUrls } from "@/lib/seo";
+import { canonicalUrl, alternateUrls, ajusterTitre, ajusterDescription } from "@/lib/seo";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Link } from "@/i18n/navigation";
+import { LigneMaj } from "@/components/shared/LigneMaj";
 
 interface Props {
   params: Promise<{ locale: string }>;
@@ -20,9 +21,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       ? "TaxiNeo connects passengers with licensed taxi drivers across 50+ French cities. Fixed prices, professional drivers, 24/7 availability."
       : "TaxiNeo connecte les passagers avec des chauffeurs de taxi agrees dans plus de 50 villes francaises. Prix fixes, chauffeurs professionnels, disponible 24h/24.";
   return {
-    title,
-    description,
-    openGraph: { title, description },
+    title: ajusterTitre(title, [locale === "en" ? "— TaxiNeo, fixed-price taxis" : "— TaxiNeo, taxis à prix fixe"]),
+    description: ajusterDescription(description, [locale === "en" ? "Fixed price confirmed before booking, luggage included, 24/7." : "Prix fixe confirmé avant la réservation, bagages compris, 24h/24."]),
+    openGraph: { title: ajusterTitre(title, [locale === "en" ? "— TaxiNeo, fixed-price taxis" : "— TaxiNeo, taxis à prix fixe"]), description: ajusterDescription(description, [locale === "en" ? "Fixed price confirmed before booking, luggage included, 24/7." : "Prix fixe confirmé avant la réservation, bagages compris, 24h/24."]) },
     alternates: {
       canonical: canonicalUrl(locale, "/a-propos"),
       languages: alternateUrls("/a-propos"),
@@ -43,10 +44,14 @@ export default async function AboutPage({ params }: Props) {
       "@type": "Organization",
       name: "TaxiNeo",
       url: "https://www.taxineo.fr",
-      founder: {
+      publisher: {
         "@type": "Organization",
         name: "Radif Partners",
-        jobTitle: isFr ? "Expert en mobilite urbaine et transport" : "Urban Mobility and Transportation Expert",
+        knowsAbout: isFr
+          ? ["tarifs des taxis en France", "mobilité urbaine", "transport médical", "transferts aéroport"]
+          : ["taxi fares in France", "urban mobility", "medical transport", "airport transfers"],
+        foundingDate: "2025-01-01",
+        publishingPrinciples: "https://www.taxineo.fr/a-propos",
         description: isFr
           ? "Radif Partners edite TaxiNeo, service de reservation de taxis agrees. La societe est specialisee dans la mobilite urbaine et le transport de personnes."
           : "Radif Partners publishes TaxiNeo, a booking service for licensed taxis. The company specialises in urban mobility and passenger transport.",
@@ -71,6 +76,8 @@ export default async function AboutPage({ params }: Props) {
             <h1 className="text-4xl md:text-5xl font-semibold tracking-tight mb-4">
               {isFr ? "A propos de TaxiNeo" : "About TaxiNeo"}
             </h1>
+          {/* §8.4 : la date de mise à jour se lit juste sous le titre. */}
+          <LigneMaj />
             <p className="text-lg text-neutral-500 font-light max-w-2xl mx-auto leading-relaxed">
               {isFr
                 ? "TaxiNeo est la plateforme francaise qui simplifie la reservation de taxis agrees a prix fixe. Notre mission : rendre chaque trajet transparent, fiable et accessible."

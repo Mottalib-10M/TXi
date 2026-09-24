@@ -1,6 +1,8 @@
 import type { Station } from "@/data/stations";
 import { BookingForm } from "@/components/booking/BookingForm";
 import { getTranslations, getLocale } from "next-intl/server";
+import { LigneMaj } from "@/components/shared/LigneMaj";
+import { resumeGare } from "@/lib/resume-citable";
 
 export async function StationHero({ station }: { station: Station }) {
   const t = await getTranslations("station");
@@ -21,6 +23,13 @@ export async function StationHero({ station }: { station: Station }) {
             <h1 className="text-4xl md:text-5xl font-semibold tracking-tight leading-[1.1] mb-4">
               {station.i18n[loc].heroTitle}
             </h1>
+            {/* §8.4 : la date de mise à jour se lit juste sous le titre. */}
+            <LigneMaj />
+            {/* §21 : un paragraphe citable d'au moins 120 mots, dans le haut
+                de la page, construit à partir des données de la page. */}
+            <p className="text-sm text-neutral-600 font-light leading-relaxed mb-6 max-w-2xl">
+              {resumeGare(station, loc)}
+            </p>
             <p className="text-base md:text-lg text-neutral-500 mb-6 max-w-md font-light leading-relaxed">
               {station.i18n[loc].heroSubtitle}
             </p>

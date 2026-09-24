@@ -22,6 +22,8 @@ import { airports, getAirportBySlug } from "@/data/airports";
 import { activeAeroportSlugs } from "@/data/page-whitelists";
 import { ILE_DE_FRANCE_SLUGS } from "@/data/regions";
 import { canonicalUrl, alternateUrls } from "@/lib/seo";
+import { etofferFaq } from "@/lib/faq-etoffer";
+import { faitsAeroport } from "@/lib/faits-hub";
 
 export const dynamicParams = false;
 
@@ -97,7 +99,7 @@ export default async function AirportPage({ params }: PageProps) {
         <AirportPractical airport={ap} />
         <AirportWhyUs airport={ap} />
         {ILE_DE_FRANCE_SLUGS.has(ap.citySlug) && <AirportTestimonials airport={ap} />}
-        <CityFAQ cityName={ap.name} faq={ap.i18n[loc].faq} />
+        <CityFAQ cityName={ap.name} faq={etofferFaq(ap.i18n[loc].faq.slice(0, 8), faitsAeroport(ap, loc), loc === "en" ? `At ${ap.name}` : `À ${ap.name}`, ap.name)} />
         <CityContactForm cityName={`l'aéroport ${ap.name}`} />
         <CityCTA cityName={`l'aéroport ${ap.name}`} />
         <AirportInternalLinks airport={ap} />

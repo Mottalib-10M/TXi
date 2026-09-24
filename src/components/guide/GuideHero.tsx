@@ -1,6 +1,7 @@
 import { Icon } from "@iconify/react";
 import { getTranslations, getLocale } from "next-intl/server";
 import type { Guide } from "@/data/guides";
+import { LigneMaj } from "@/components/shared/LigneMaj";
 
 export async function GuideHero({ guide }: { guide: Guide }) {
   const t = await getTranslations("guide");
@@ -19,6 +20,8 @@ export async function GuideHero({ guide }: { guide: Guide }) {
         <h1 className="text-4xl md:text-5xl font-semibold tracking-tight leading-[1.1] mb-4">
           {guide.i18n[loc].heroTitle}
         </h1>
+            {/* §8.4 : la date de mise à jour se lit juste sous le titre. */}
+            <LigneMaj />
         <p className="text-base md:text-lg text-neutral-500 font-light leading-relaxed max-w-2xl mx-auto">
           {guide.i18n[loc].heroSubtitle}
         </p>

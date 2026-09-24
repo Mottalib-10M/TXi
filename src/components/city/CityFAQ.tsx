@@ -1,12 +1,16 @@
-"use client";
-
-import { useState } from "react";
-import { Icon } from "@iconify/react";
 import { useTranslations } from "next-intl";
 import type { CityFAQ as CityFAQType } from "@/data/cities";
 
+/**
+ * FAQ en <details> natifs (RECETTE-SITE.md §7).
+ *
+ * L'accordéon précédent ne montait que le panneau ouvert : les réponses
+ * n'existaient pas dans le HTML servi, alors que le JSON-LD les déclarait
+ * toutes à Google — 874 réponses promises et absentes, relevées le 2026-09-24.
+ * Un <details> porte sa réponse dans la page, fonctionne sans JavaScript et
+ * reste accessible au clavier ; le composant n'a plus besoin d'être client.
+ */
 export function CityFAQ({ cityName, faq }: { cityName: string; faq: CityFAQType[] }) {
-  const [open, setOpen] = useState<number | null>(0);
   const t = useTranslations("city");
 
   return (
@@ -22,30 +26,26 @@ export function CityFAQ({ cityName, faq }: { cityName: string; faq: CityFAQType[
         </div>
         <div className="space-y-3 fade-up">
           {faq.map((item, i) => (
-            <div
+            <details
               key={i}
-              className="bg-white border border-neutral-200 rounded-xl overflow-hidden"
+              open={i === 0}
+              className="group bg-white border border-neutral-200 rounded-xl overflow-hidden"
             >
-              <button
-                onClick={() => setOpen(open === i ? null : i)}
-                className="w-full flex items-center justify-between p-5 text-left"
-              >
-                <span className="text-sm font-medium pr-4">{item.question}</span>
-                <Icon
-                  icon="solar:alt-arrow-down-linear"
-                  className={`text-neutral-400 shrink-0 transition-transform duration-200 ${
-                    open === i ? "rotate-180" : ""
-                  }`}
-                />
-              </button>
-              {open === i && (
-                <div className="px-5 pb-5 -mt-1">
-                  <p className="text-sm text-neutral-500 font-light leading-relaxed">
-                    {item.answer}
-                  </p>
-                </div>
-              )}
-            </div>
+              <summary className="w-full flex items-center justify-between p-5 text-left cursor-pointer list-none">
+                <h3 className="text-sm font-medium pr-4">{item.question}</h3>
+                <span
+                  aria-hidden="true"
+                  className="text-neutral-400 shrink-0 transition-transform duration-200 group-open:rotate-180"
+                >
+                  ▾
+                </span>
+              </summary>
+              <div className="px-5 pb-5 -mt-1">
+                <p className="text-sm text-neutral-500 font-light leading-relaxed">
+                  {item.answer}
+                </p>
+              </div>
+            </details>
           ))}
         </div>
       </div>

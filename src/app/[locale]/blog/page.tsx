@@ -6,7 +6,9 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { ScrollAnimation } from "@/components/ui/ScrollAnimation";
 import { blogArticles } from "@/data/blog";
-import { canonicalUrl, alternateUrls } from "@/lib/seo";
+import { canonicalUrl, alternateUrls, ajusterTitre, ajusterDescription } from "@/lib/seo";
+import { LigneMaj } from "@/components/shared/LigneMaj";
+import { FaqSection } from "@/components/seo/FaqSection";
 
 interface PageProps {
   params: Promise<{ locale: string }>;
@@ -18,15 +20,15 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   const canonical = canonicalUrl(locale, "/blog");
   return {
-    title: t("metaTitle"),
-    description: t("metaDescription"),
+    title: ajusterTitre(t("metaTitle"), [locale === "en" ? "— TaxiNeo, fixed-price taxis" : "— TaxiNeo, taxis à prix fixe"]),
+    description: ajusterDescription(t("metaDescription"), [locale === "en" ? "Fixed price confirmed before booking, luggage included, 24/7." : "Prix fixe confirmé avant la réservation, bagages compris, 24h/24."]),
     openGraph: {
-      title: t("metaTitle"),
-      description: t("metaDescription"),
+      title: ajusterTitre(t("metaTitle"), [locale === "en" ? "— TaxiNeo, fixed-price taxis" : "— TaxiNeo, taxis à prix fixe"]),
+      description: ajusterDescription(t("metaDescription"), [locale === "en" ? "Fixed price confirmed before booking, luggage included, 24/7." : "Prix fixe confirmé avant la réservation, bagages compris, 24h/24."]),
       url: canonical,
       siteName: "TaxiNeo",
       type: "website",
-      images: [{ url: "https://www.taxineo.fr/opengraph-image", width: 1200, height: 630, alt: t("metaTitle") }],
+      images: [{ url: "https://www.taxineo.fr/opengraph-image", width: 1200, height: 630, alt: ajusterTitre(t("metaTitle"), [locale === "en" ? "— TaxiNeo, fixed-price taxis" : "— TaxiNeo, taxis à prix fixe"]) }],
     },
     alternates: {
       canonical,
@@ -51,6 +53,8 @@ export default async function BlogPage({ params }: PageProps) {
             <h1 className="text-3xl md:text-4xl font-semibold tracking-tight mb-3">
               {t("title")}
             </h1>
+          {/* §8.4 : la date de mise à jour se lit juste sous le titre. */}
+          <LigneMaj />
             <p className="text-neutral-500 font-light">
               {t("subtitle")}
             </p>
@@ -125,6 +129,11 @@ export default async function BlogPage({ params }: PageProps) {
             </div>
           </div>
         </div>
+        <FaqSection
+          titre={t("faqTitle")}
+          faq={[1, 2, 3, 4, 5, 6].map((i) => ({ q: t(`faq${i}Q`), a: t(`faq${i}A`) }))}
+          route={"/blog/"}
+        />
       </main>
 
       <Footer />

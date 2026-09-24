@@ -9,6 +9,7 @@ import { Footer } from "@/components/layout/Footer";
 import { emailError, phoneError, isValidEmail } from "@/lib/validation";
 import { trackContact } from "@/lib/analytics";
 import TurnstileWidget from "@/components/TurnstileWidget";
+import { LigneMaj } from "@/components/shared/LigneMaj";
 
 export default function ContactPage() {
   const t = useTranslations("contact");
@@ -120,6 +121,8 @@ export default function ContactPage() {
             <h1 className="text-3xl md:text-5xl font-semibold tracking-tight mb-4">
               {t("title")}
             </h1>
+          {/* §8.4 : la date de mise à jour se lit juste sous le titre. */}
+          <LigneMaj />
             <p className="text-neutral-500 font-light max-w-lg mx-auto">
               {t("intro")}
             </p>

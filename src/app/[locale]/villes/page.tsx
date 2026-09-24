@@ -2,13 +2,14 @@ import { Link } from "@/i18n/navigation";
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { Icon } from "@iconify/react";
-import { canonicalUrl, alternateUrls } from "@/lib/seo";
+import { canonicalUrl, alternateUrls, ajusterTitre, ajusterDescription } from "@/lib/seo";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { ScrollAnimation } from "@/components/ui/ScrollAnimation";
 import { FranceMapSection } from "@/components/city/FranceMapSection";
 import { cities } from "@/data/cities";
 import { activeCitySlugs } from "@/data/page-whitelists";
+import { LigneMaj } from "@/components/shared/LigneMaj";
 
 interface PageProps {
   params: Promise<{ locale: string }>;
@@ -20,15 +21,15 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   const canonical = canonicalUrl(locale, "/villes");
   return {
-    title: t("metaTitle"),
-    description: t("metaDescription"),
+    title: ajusterTitre(t("metaTitle"), [locale === "en" ? "— TaxiNeo, fixed-price taxis" : "— TaxiNeo, taxis à prix fixe"]),
+    description: ajusterDescription(t("metaDescription"), [locale === "en" ? "Fixed price confirmed before booking, luggage included, 24/7." : "Prix fixe confirmé avant la réservation, bagages compris, 24h/24."]),
     openGraph: {
-      title: t("metaTitle"),
-      description: t("metaDescription"),
+      title: ajusterTitre(t("metaTitle"), [locale === "en" ? "— TaxiNeo, fixed-price taxis" : "— TaxiNeo, taxis à prix fixe"]),
+      description: ajusterDescription(t("metaDescription"), [locale === "en" ? "Fixed price confirmed before booking, luggage included, 24/7." : "Prix fixe confirmé avant la réservation, bagages compris, 24h/24."]),
       url: canonical,
       siteName: "TaxiNeo",
       type: "website",
-      images: [{ url: "https://www.taxineo.fr/opengraph-image", width: 1200, height: 630, alt: t("metaTitle") }],
+      images: [{ url: "https://www.taxineo.fr/opengraph-image", width: 1200, height: 630, alt: ajusterTitre(t("metaTitle"), [locale === "en" ? "— TaxiNeo, fixed-price taxis" : "— TaxiNeo, taxis à prix fixe"]) }],
     },
     alternates: {
       canonical,
@@ -109,6 +110,8 @@ export default async function VillesPage({ params }: PageProps) {
             <h1 className="text-4xl md:text-5xl font-semibold tracking-tight leading-[1.1] mb-4">
               {t("title")}
             </h1>
+          {/* §8.4 : la date de mise à jour se lit juste sous le titre. */}
+          <LigneMaj />
             <p className="text-base md:text-lg text-neutral-500 font-light leading-relaxed max-w-2xl mx-auto">
               {t("subtitle", { count: activeCities.length })}
             </p>
