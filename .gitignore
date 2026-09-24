@@ -45,3 +45,5 @@ next-env.d.ts
 /blob-report/
 /playwright/.cache/
 /e2e/.auth/
+.env*
+!.env.example
