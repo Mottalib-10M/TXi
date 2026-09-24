@@ -112,5 +112,9 @@ export async function middleware(req: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/((?!api|_next|_vercel|icon|apple-icon|opengraph-image|manifest\\.webmanifest|.*\\..*).*)" ],
+  // `/embed/...` est servi tel quel : c'est une page destinée à l'iframe d'un
+  // site tiers, sans préfixe de langue. Sans cette exclusion, le middleware
+  // next-intl la réécrit vers /fr/embed/... qui n'existe pas, et elle répond 404
+  // (constaté en production le 2026-09-24).
+  matcher: ["/((?!api|embed|_next|_vercel|icon|apple-icon|opengraph-image|manifest\\.webmanifest|.*\\..*).*)" ],
 };
