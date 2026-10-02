@@ -109,7 +109,7 @@ export default async function LocaleLayout({
             "@type": "ListItem",
             position: 1,
             name: "Accueil",
-            item: `https://www.taxineo.fr/${locale}`,
+            item: `https://www.taxineo.fr${locale === "fr" ? "" : `/${locale}`}`,
           },
         ],
       },

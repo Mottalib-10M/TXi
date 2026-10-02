@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: t("metaTitle"),
       description: t("metaDescription"),
-      url: `https://www.taxineo.fr/${locale}/contact`,
+      url: `https://www.taxineo.fr${locale === "fr" ? "" : `/${locale}`}/contact`,
       siteName: "TaxiNeo",
       type: "website",
       images: [{ url: "https://www.taxineo.fr/opengraph-image", width: 1200, height: 630, alt: t("metaTitle") }],

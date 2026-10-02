@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: t("metaTitle"),
       description: t("metaDescription"),
-      url: `https://www.taxineo.fr/${locale}`,
+      url: `https://www.taxineo.fr${locale === "fr" ? "" : `/${locale}`}`,
       siteName: "TaxiNeo",
       type: "website",
       images: [

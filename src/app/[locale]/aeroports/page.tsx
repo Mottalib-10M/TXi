@@ -78,7 +78,7 @@ export default async function AeroportsPage({ params }: PageProps) {
       "@type": "ListItem",
       position: i + 1,
       name: `Taxi ${airport.name}`,
-      url: `https://www.taxineo.fr/${locale}/taxi-aeroport-${airport.slug}`,
+      url: `https://www.taxineo.fr${locale === "fr" ? "" : `/${locale}`}/taxi-aeroport-${airport.slug}`,
     })),
   };
 
@@ -86,8 +86,8 @@ export default async function AeroportsPage({ params }: PageProps) {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: t("breadcrumbHome"), item: `https://www.taxineo.fr/${locale}` },
-      { "@type": "ListItem", position: 2, name: t("breadcrumbAirport"), item: `https://www.taxineo.fr/${locale}/aeroports` },
+      { "@type": "ListItem", position: 1, name: t("breadcrumbHome"), item: `https://www.taxineo.fr${locale === "fr" ? "" : `/${locale}`}` },
+      { "@type": "ListItem", position: 2, name: t("breadcrumbAirport"), item: `https://www.taxineo.fr${locale === "fr" ? "" : `/${locale}`}/aeroports` },
     ],
   };
 

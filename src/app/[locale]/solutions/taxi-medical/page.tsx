@@ -47,7 +47,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       locale === "en" ? "Licensed drivers, available 24/7." : "Chauffeurs agréés, disponibles 24h/24.",
       locale === "en" ? "Free cancellation." : "Annulation sans frais.",
     ]),
-      url: `https://www.taxineo.fr/${locale}/solutions/taxi-medical`,
+      url: `https://www.taxineo.fr${locale === "fr" ? "" : `/${locale}`}/solutions/taxi-medical`,
       siteName: "TaxiNeo",
       type: "website",
       images: [{ url: "https://www.taxineo.fr/opengraph-image", width: 1200, height: 630, alt: ajusterTitre(t("metaTitle"), [

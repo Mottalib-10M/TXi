@@ -90,7 +90,7 @@ export default async function GlossairePage({ params }: PageProps) {
     "@type": "DefinedTermSet",
     name: title,
     description: subtitle,
-    url: `https://www.taxineo.fr/${locale}/glossaire`,
+    url: `https://www.taxineo.fr${locale === "fr" ? "" : `/${locale}`}/glossaire`,
     inLanguage: loc,
     hasDefinedTerm: sorted.map((term) => ({
       "@type": "DefinedTerm",

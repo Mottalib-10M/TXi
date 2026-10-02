@@ -138,5 +138,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     }));
 
-  return [...staticPages, ...cityPages, ...airportPages, ...stationPages, ...blogPages, ...trajetPages, ...tarifPages, ...servicePages, ...guidePages, ...tmPages];
+  // Une entree par langue : les pages anglaises sont indexables, elles doivent
+  // figurer en <loc> et pas seulement en variante. Doublons retires (certains
+  // trajets sont listes deux fois dans les donnees).
+  const vues = new Set<string>();
+  return [...staticPages, ...cityPages, ...airportPages, ...stationPages, ...blogPages, ...trajetPages, ...tarifPages, ...servicePages, ...guidePages, ...tmPages]
+    .flatMap((entry) => {
+      const en = entry.alternates?.languages?.en;
+      return en ? [entry, { ...entry, url: en }] : [entry];
+    })
+    .filter((entry) => (vues.has(entry.url) ? false : (vues.add(entry.url), true)));
 }

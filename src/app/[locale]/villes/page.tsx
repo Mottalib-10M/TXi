@@ -77,7 +77,7 @@ export default async function VillesPage({ params }: PageProps) {
       "@type": "ListItem",
       position: i + 1,
       name: `Taxi ${city.name}`,
-      url: `https://www.taxineo.fr/${locale}/taxi-${city.slug}`,
+      url: `https://www.taxineo.fr${locale === "fr" ? "" : `/${locale}`}/taxi-${city.slug}`,
     })),
   };
 
@@ -85,8 +85,8 @@ export default async function VillesPage({ params }: PageProps) {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: t("breadcrumbHome"), item: `https://www.taxineo.fr/${locale}` },
-      { "@type": "ListItem", position: 2, name: t("breadcrumbCities"), item: `https://www.taxineo.fr/${locale}/villes` },
+      { "@type": "ListItem", position: 1, name: t("breadcrumbHome"), item: `https://www.taxineo.fr${locale === "fr" ? "" : `/${locale}`}` },
+      { "@type": "ListItem", position: 2, name: t("breadcrumbCities"), item: `https://www.taxineo.fr${locale === "fr" ? "" : `/${locale}`}/villes` },
     ],
   };
 

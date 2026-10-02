@@ -14,7 +14,7 @@ export async function ServiceJsonLd({ service }: { service: ServiceSeo }) {
     "@type": "TaxiService",
     name: `TaxiNeo - ${service.title}`,
     description: service.i18n[loc].metaDescription,
-    url: `https://www.taxineo.fr/${locale}/service/${service.slug}`,
+    url: `https://www.taxineo.fr${locale === "fr" ? "" : `/${locale}`}/service/${service.slug}`,
     provider: {
       "@type": "Organization",
       name: "TaxiNeo",

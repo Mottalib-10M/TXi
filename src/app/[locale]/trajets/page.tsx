@@ -88,7 +88,7 @@ export default async function TrajetsPage({ params }: PageProps) {
       "@type": "ListItem",
       position: i + 1,
       name: `Taxi ${trajet.from} → ${trajet.to}`,
-      url: `https://www.taxineo.fr/${locale}/trajet/${trajet.slug}`,
+      url: `https://www.taxineo.fr${locale === "fr" ? "" : `/${locale}`}/trajet/${trajet.slug}`,
     })),
   };
 
@@ -96,8 +96,8 @@ export default async function TrajetsPage({ params }: PageProps) {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: t("breadcrumbHome"), item: `https://www.taxineo.fr/${locale}` },
-      { "@type": "ListItem", position: 2, name: t("breadcrumbTrajets"), item: `https://www.taxineo.fr/${locale}/trajets` },
+      { "@type": "ListItem", position: 1, name: t("breadcrumbHome"), item: `https://www.taxineo.fr${locale === "fr" ? "" : `/${locale}`}` },
+      { "@type": "ListItem", position: 2, name: t("breadcrumbTrajets"), item: `https://www.taxineo.fr${locale === "fr" ? "" : `/${locale}`}/trajets` },
     ],
   };
 

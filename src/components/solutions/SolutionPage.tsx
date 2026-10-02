@@ -50,8 +50,8 @@ export async function SolutionPage({
       <ScrollAnimation />
       <BreadcrumbJsonLd
         crumbs={[
-          { name: lang === "en" ? "Home" : "Accueil", item: `https://www.taxineo.fr/${locale}` },
-          { name: "Solutions", item: `https://www.taxineo.fr/${locale}/services` },
+          { name: lang === "en" ? "Home" : "Accueil", item: `https://www.taxineo.fr${locale === "fr" ? "" : `/${locale}`}` },
+          { name: "Solutions", item: `https://www.taxineo.fr${locale === "fr" ? "" : `/${locale}`}/services` },
           { name: t("heroTitle") },
         ]}
       />

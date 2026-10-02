@@ -39,7 +39,7 @@ export default async function AboutPage({ params }: Props) {
     "@context": "https://schema.org",
     "@type": "AboutPage",
     name: isFr ? "A propos de TaxiNeo" : "About TaxiNeo",
-    url: `https://www.taxineo.fr/${locale}/a-propos`,
+    url: `https://www.taxineo.fr${locale === "fr" ? "" : `/${locale}`}/a-propos`,
     mainEntity: {
       "@type": "Organization",
       name: "TaxiNeo",

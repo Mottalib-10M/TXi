@@ -14,7 +14,7 @@ export async function GuideJsonLd({ guide }: { guide: Guide }) {
     "@type": "Article",
     headline: guide.i18n[loc].heroTitle,
     description: guide.i18n[loc].metaDescription,
-    url: `https://www.taxineo.fr/${locale}/guide/${guide.slug}`,
+    url: `https://www.taxineo.fr${locale === "fr" ? "" : `/${locale}`}/guide/${guide.slug}`,
     inLanguage: loc,
     author: {
       "@type": "Organization",

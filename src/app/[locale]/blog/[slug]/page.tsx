@@ -274,7 +274,7 @@ export default async function BlogArticlePage({ params }: PageProps) {
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://www.taxineo.fr/${locale}/blog/${slug}`,
+      "@id": `https://www.taxineo.fr${locale === "fr" ? "" : `/${locale}`}/blog/${slug}`,
     },
   };
 
@@ -310,8 +310,8 @@ export default async function BlogArticlePage({ params }: PageProps) {
         <div className="max-w-3xl mx-auto px-6">
           <BreadcrumbJsonLd
             crumbs={[
-              { name: lang === "en" ? "Home" : "Accueil", item: `https://www.taxineo.fr/${locale}` },
-              { name: "Blog", item: `https://www.taxineo.fr/${locale}/blog` },
+              { name: lang === "en" ? "Home" : "Accueil", item: `https://www.taxineo.fr${locale === "fr" ? "" : `/${locale}`}` },
+              { name: "Blog", item: `https://www.taxineo.fr${locale === "fr" ? "" : `/${locale}`}/blog` },
               { name: article.title[lang] },
             ]}
           />

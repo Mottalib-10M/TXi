@@ -19,7 +19,7 @@ export async function TmJsonLd({ city, faq }: { city: City; faq: TmFAQ[] }) {
     description: loc === "fr"
       ? `Taxi médical conventionné CPAM à ${city.name}. Transport assis professionnalisé (TAP) vers hôpitaux, centres de dialyse, chimiothérapie, rééducation. Tiers payant, véhicule PMR.`
       : `CPAM-approved medical taxi in ${city.name}. Professional seated transport (TAP) to hospitals, dialysis centres, chemotherapy, rehabilitation. Third-party billing, wheelchair-accessible vehicles.`,
-    url: `https://www.taxineo.fr/${locale}/taxi-medical/${city.slug}`,
+    url: `https://www.taxineo.fr${locale === "fr" ? "" : `/${locale}`}/taxi-medical/${city.slug}`,
     telephone: "+33759592934",
     areaServed: {
       "@type": "City",

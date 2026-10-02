@@ -14,7 +14,7 @@ export async function TarifJsonLd({ tarif }: { tarif: Tarif }) {
     "@type": "TaxiService",
     name: `TaxiNeo - ${tarif.title}`,
     description: tarif.i18n[loc].metaDescription,
-    url: `https://www.taxineo.fr/${locale}/tarif/${tarif.slug}`,
+    url: `https://www.taxineo.fr${locale === "fr" ? "" : `/${locale}`}/tarif/${tarif.slug}`,
     provider: {
       "@type": "Organization",
       name: "TaxiNeo",
