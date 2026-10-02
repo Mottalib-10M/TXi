@@ -167,8 +167,8 @@ export default async function LegalPage({ params }: Props) {
             </h3>
             <p className="text-sm text-neutral-600 font-light leading-relaxed mb-3">
               {isFr
-                ? "Le traitement des donnees repose sur les bases legales suivantes au titre de l'article 6 du RGPD : la necessite contractuelle (Art. 6(1)(b)) pour le traitement des reservations, le consentement (Art. 6(1)(a)) pour les cookies d'analyse, et l'interet legitime (Art. 6(1)(f)) pour la securite du site et les fichiers journaux."
-                : "Data processing is based on the following legal bases under Article 6 of the GDPR: contractual necessity (Art. 6(1)(b)) for processing bookings, consent (Art. 6(1)(a)) for analytics cookies, and legitimate interest (Art. 6(1)(f)) for site security and server log files."}
+                ? "Le traitement des donnees repose sur les bases legales suivantes au titre de l'article 6 du RGPD : la necessite contractuelle (Art. 6(1)(b)) pour le traitement des reservations, et l'interet legitime (Art. 6(1)(f)) pour la mesure d'audience, la securite du site et les fichiers journaux."
+                : "Data processing is based on the following legal bases under Article 6 of the GDPR: contractual necessity (Art. 6(1)(b)) for processing bookings, and legitimate interest (Art. 6(1)(f)) for audience measurement, site security and server log files."}
             </p>
 
             <h3 className="text-base font-semibold mb-2 mt-4">
@@ -207,13 +207,13 @@ export default async function LegalPage({ params }: Props) {
             </p>
             <p className="text-sm text-neutral-600 font-light leading-relaxed mb-3">
               {isFr
-                ? "Des cookies d'analyse (Google Analytics) peuvent etre utilises pour mesurer le trafic et ameliorer votre experience utilisateur. Ces cookies ne sont charges qu'apres votre consentement explicite via la banniere de cookies. Les adresses IP sont anonymisees."
-                : "Analytics cookies (Google Analytics) may be used to measure traffic and improve your user experience. These cookies are only loaded after your explicit consent via the cookie banner. IP addresses are anonymized."}
+                ? "Des cookies d'analyse sont deposes par Google Analytics, Microsoft Clarity et Contentsquare pour mesurer le trafic et ameliorer votre experience utilisateur. Ils sont charges a l'ouverture de la page, sans banniere de cookies prealable. Le detail figure dans la politique de confidentialite."
+                : "Analytics cookies are set by Google Analytics, Microsoft Clarity and Contentsquare to measure traffic and improve your user experience. They load when a page opens, with no prior cookie banner. Details are given in the privacy policy."}
             </p>
             <p className="text-sm text-neutral-600 font-light leading-relaxed mb-3">
               {isFr
-                ? "Les preferences utilisateur (theme clair/sombre, choix de consentement) sont stockees dans le localStorage du navigateur, qui n'est pas un cookie et n'est jamais transmis a nos serveurs. Vous pouvez effacer les donnees localStorage a tout moment via les parametres de votre navigateur."
-                : "User preferences (light/dark theme, consent choices) are stored in the browser's localStorage, which is not a cookie and is never transmitted to our servers. You can clear localStorage data at any time through your browser settings."}
+                ? "Les preferences utilisateur (theme clair/sombre) sont stockees dans le localStorage du navigateur, qui n'est pas un cookie et n'est jamais transmis a nos serveurs. Vous pouvez effacer les donnees localStorage a tout moment via les parametres de votre navigateur."
+                : "User preferences (light/dark theme) are stored in the browser's localStorage, which is not a cookie and is never transmitted to our servers. You can clear localStorage data at any time through your browser settings."}
             </p>
             <p className="text-sm text-neutral-600 font-light leading-relaxed">
               {isFr
@@ -238,6 +238,12 @@ export default async function LegalPage({ params }: Props) {
               </li>
               <li>
                 <strong>Google LLC</strong> &mdash; {isFr ? "Analytics (Etats-Unis, clauses contractuelles types UE)" : "Analytics (United States, EU standard contractual clauses)"}
+              </li>
+              <li>
+                <strong>Microsoft Corporation</strong> &mdash; {isFr ? "Microsoft Clarity, mesure d'audience (Etats-Unis, clauses contractuelles types UE)" : "Microsoft Clarity, audience measurement (United States, EU standard contractual clauses)"}
+              </li>
+              <li>
+                <strong>Contentsquare SAS</strong> &mdash; {isFr ? "Contentsquare, mesure d'audience (France)" : "Contentsquare, audience measurement (France)"}
               </li>
             </ul>
           </section>
@@ -330,7 +336,7 @@ export default async function LegalPage({ params }: Props) {
           <p className="text-xs text-neutral-400 font-light mt-12">
             {isFr
               ? "Derniere mise a jour : juin 2026"
-              : "Last updated: June 2026"}
+              : "Last updated: October 2026"}
           </p>
         </div>
       </main>

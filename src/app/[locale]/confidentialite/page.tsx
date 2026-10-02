@@ -54,7 +54,7 @@ export default async function PrivacyPage({ params }: Props) {
             "Réservation : nom, numéro de téléphone, adresse de départ et de destination, date et heure de la course. Ces données sont nécessaires à l'exécution du contrat de transport et sont transmises au chauffeur retenu pour la course.",
             "Compte utilisateur : adresse e-mail et mot de passe chiffré, afin de vous permettre de retrouver l'historique de vos réservations.",
             "Contact : les informations que vous saisissez dans le formulaire de contact, utilisées uniquement pour vous répondre.",
-            "Mesure d'audience : pages consultées et données techniques agrégées, afin de comprendre quelles pages du site sont utiles et de les améliorer.",
+            "Mesure d'audience : pages consultées, clics, défilement et données techniques, afin de comprendre quelles pages du site sont utiles et de les améliorer. Trois outils sont chargés à l'ouverture de chaque page, sans bandeau préalable : Google Analytics 4 (Google Ireland Limited), Microsoft Clarity (Microsoft Corporation) et Contentsquare (Contentsquare SAS). Clarity et Contentsquare enregistrent le déroulement des visites sous forme de sessions et de cartes de chaleur ; le contenu des champs de saisie est masqué dans votre navigateur avant tout envoi. Vercel Speed Insights mesure en outre les temps de chargement, sans cookie.",
           ],
         },
         {
@@ -72,7 +72,7 @@ export default async function PrivacyPage({ params }: Props) {
         {
           titre: "5. Destinataires",
           corps: [
-            "Les données ne sont ni vendues ni louées. Elles sont transmises au seul chauffeur chargé de la course, ainsi qu'aux prestataires techniques strictement nécessaires au fonctionnement du service (hébergement, envoi d'e-mails transactionnels, mesure d'audience), qui agissent sur instruction de l'éditeur.",
+            "Les données ne sont ni vendues ni louées. Elles sont transmises au seul chauffeur chargé de la course, ainsi qu'aux prestataires techniques strictement nécessaires au fonctionnement du service (hébergement, envoi d'e-mails transactionnels, mesure d'audience par Google Analytics, Microsoft Clarity et Contentsquare), dont certains traitent les données aux États-Unis.",
           ],
         },
         {
@@ -84,7 +84,7 @@ export default async function PrivacyPage({ params }: Props) {
         {
           titre: "7. Cookies",
           corps: [
-            "Le site dépose les cookies techniques nécessaires à la session et au maintien de la connexion, qui ne requièrent pas de consentement. Les cookies de mesure d'audience sont configurés de manière à ne pas permettre le suivi d'une personne d'un site à l'autre. Vous pouvez à tout moment supprimer les cookies depuis les réglages de votre navigateur.",
+            "Le site dépose les cookies techniques nécessaires à la session et au maintien de la connexion, qui ne requièrent pas de consentement. Les outils de mesure d'audience déposent en outre des cookies dès l'ouverture de la page, sans bandeau préalable : _ga et _ga_YBY8MPEQJ5 (deux ans) pour Google Analytics, _clck (un an) et _clsk (un jour) pour Microsoft Clarity, _cs_id (treize mois) et _cs_s (trente minutes) pour Contentsquare. Aucun cookie publicitaire n'est déposé. Vous pouvez à tout moment supprimer ou bloquer ces cookies depuis les réglages de votre navigateur.",
           ],
         },
       ]
@@ -101,7 +101,7 @@ export default async function PrivacyPage({ params }: Props) {
             "Booking: name, phone number, pick-up and drop-off address, date and time of the ride. This data is required to perform the transport contract and is passed to the driver assigned to the ride.",
             "User account: email address and hashed password, so that you can find your booking history again.",
             "Contact: the information you type into the contact form, used only to answer you.",
-            "Audience measurement: pages viewed and aggregated technical data, so we can understand which pages are useful and improve them.",
+            "Audience measurement: pages viewed, clicks, scrolling and technical data, so we can understand which pages are useful and improve them. Three tools load when each page opens, with no prior banner: Google Analytics 4 (Google Ireland Limited), Microsoft Clarity (Microsoft Corporation) and Contentsquare (Contentsquare SAS). Clarity and Contentsquare record how visits unfold, as sessions and heatmaps; the content of input fields is masked in your browser before anything is sent. Vercel Speed Insights also measures loading times, without cookies.",
           ],
         },
         {
@@ -119,7 +119,7 @@ export default async function PrivacyPage({ params }: Props) {
         {
           titre: "5. Recipients",
           corps: [
-            "Data is neither sold nor rented. It is passed only to the driver handling the ride, and to the technical providers strictly required to run the service (hosting, transactional email, audience measurement), which act on the publisher's instructions.",
+            "Data is neither sold nor rented. It is passed only to the driver handling the ride, and to the technical providers strictly required to run the service (hosting, transactional email, audience measurement by Google Analytics, Microsoft Clarity and Contentsquare), some of which process data in the United States.",
           ],
         },
         {
@@ -131,7 +131,7 @@ export default async function PrivacyPage({ params }: Props) {
         {
           titre: "7. Cookies",
           corps: [
-            "The site sets the technical cookies required for the session and to keep you signed in, which need no consent. Audience measurement cookies are configured so that they cannot track a person from one site to another. You can delete cookies at any time from your browser settings.",
+            "The site sets the technical cookies required for the session and to keep you signed in, which need no consent. The audience measurement tools also set cookies as soon as a page opens, with no prior banner: _ga and _ga_YBY8MPEQJ5 (two years) for Google Analytics, _clck (one year) and _clsk (one day) for Microsoft Clarity, _cs_id (thirteen months) and _cs_s (thirty minutes) for Contentsquare. No advertising cookies are set. You can delete or block these cookies at any time from your browser settings.",
           ],
         },
       ];
