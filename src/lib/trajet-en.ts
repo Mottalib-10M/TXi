@@ -1199,6 +1199,8 @@ const ITEMS_EN: Record<string, string> = {
 
 /** Itinéraires écrits en français dans le texte anglais. */
 const ITINERAIRES: Array<[RegExp, string]> = [
+  [/^Route directe route,/, "Direct route,"],
+  [/^Basse Corniche route,/, "Via the lower corniche road,"],
   [/\bvia Ponte Leccia et la Balagne\b/g, "via Ponte Leccia and the Balagne"],
   [/\bvia Corte et col de Vizzavona\b/g, "via Corte and the Col de Vizzavona"],
   [/\bvia Propriano et\b/g, "via Propriano and"],
