@@ -157,11 +157,11 @@ export const trajetsParisVilles: Trajet[] = [
     toLng: 3.087,
     distanceKm: 420,
     durationMin: 240,
-    priceEstimate: "430 — 560 €",
+    priceEstimate: "800 — 970 €",
     category: "longue-distance",
-    prixMin: 430,
-    prixMax: 560,
-    prixVan: 660,
+    prixMin: 800,
+    prixMax: 970,
+    prixVan: 1275,
     dureeMax: 300,
     autoroute: "A71",
     peages: "~30 € (inclus)",
@@ -173,11 +173,11 @@ export const trajetsParisVilles: Trajet[] = [
     highlights: ["A71 Autoroute d'Auvergne", "Viaduc de Veauce", "Volcans d'Auvergne", "Chaîne des Puys"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Clermont-Ferrand | 420 km, dès 430 € | TaxiNeo",
+        metaTitle: "Taxi Paris → Clermont-Ferrand | 420 km, dès 800 € | TaxiNeo",
         metaDescription:"Via A71 en 4h. A71 Autoroute d'Auvergne, Viaduc de Veauce, Volcans d'Auvergne et Chaîne des Puys en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Paris → Clermont-Ferrand",
         heroSubtitle:
-          "Transfert privé Paris → Clermont-Ferrand au forfait de 430 — 560 €. Prise en charge à domicile, véhicule haut de gamme, chauffeur professionnel.",
+          "Transfert privé Paris → Clermont-Ferrand au forfait de 800 — 970 €. Prise en charge à domicile, véhicule haut de gamme, chauffeur professionnel.",
         description:
           "Le trajet Paris — Clermont-Ferrand relie la capitale à la métropole auvergnate, capitale européenne du volcanisme et siège mondial de Michelin. Notre service de taxi longue distance vous offre un transfert porte-à-porte confortable en environ 4 heures, sans les contraintes du train Intercités qui ne dessert Clermont qu'en 3h30 depuis Bercy avec des horaires limités.",
         routeDescription:
@@ -189,12 +189,12 @@ export const trajetsParisVilles: Trajet[] = [
         conseils:
           "Pour un trajet Paris — Clermont-Ferrand optimal, privilégiez un départ entre 8h et 10h ou après 14h afin d'éviter les bouchons de sortie de Paris. Le vendredi après-midi est à éviter en raison des départs en week-end vers l'Auvergne, surtout pendant la saison de ski (décembre à mars) quand les vacanciers affluent vers Super-Besse et Le Mont-Dore. En hiver, le tronçon Montluçon — Clermont-Ferrand peut être touché par des chutes de neige et du verglas, notamment sur le plateau de Combrailles : votre chauffeur est équipé de pneus hiver et adapte sa conduite. La pause recommandée se situe à l'aire de Montmarault (km 340), qui dispose de sanitaires propres et d'un restaurant. Si vous voyagez avec des enfants, Vulcania — le parc européen du volcanisme situé à Saint-Ours-les-Roches, à 20 minutes de Clermont — peut constituer une extension intéressante à votre trajet (supplément de 30-40 €). En été, les festivals de musique de La Bourboule et du Mont-Dore génèrent un trafic accru le week-end : réservez votre taxi au moins 48h à l'avance pour garantir la disponibilité.",
         comparaisonTransport:
-          "Le train Intercités Paris-Bercy → Clermont-Ferrand met environ 3h30 et coûte entre 25 € (tarif Prem's réservé tôt) et 75 € (tarif flexible) par personne. Pour une famille de quatre, le train revient entre 100 € et 300 €, auxquels il faut ajouter le taxi local à l'arrivée (12-18 €) et le trajet jusqu'à la gare de Bercy au départ. En voiture individuelle, comptez 30 € de péages A71 et environ 45 € d'essence, soit 75 € mais avec 4h de conduite fatigante sur une autoroute très rectiligne. Notre taxi forfaitaire à partir de 430 € devient compétitif dès deux passagers avec bagages volumineux : le confort porte-à-porte, le Wi-Fi à bord et la possibilité de travailler pendant le trajet font la différence. Notez que la ligne Paris — Clermont n'est pas desservie par le TGV, ce qui réduit l'avantage vitesse du train.",
+          "Le train Intercités Paris-Bercy → Clermont-Ferrand met environ 3h30 et coûte entre 25 € (tarif Prem's réservé tôt) et 75 € (tarif flexible) par personne. Pour une famille de quatre, le train revient entre 100 € et 300 €, auxquels il faut ajouter le taxi local à l'arrivée (12-18 €) et le trajet jusqu'à la gare de Bercy au départ. En voiture individuelle, comptez 30 € de péages A71 et environ 45 € d'essence, soit 75 € mais avec 4h de conduite fatigante sur une autoroute très rectiligne. Notre taxi forfaitaire à partir de 800 € se justifie surtout à plusieurs ou avec des bagages volumineux : le confort porte-à-porte, le Wi-Fi à bord et la possibilité de travailler pendant le trajet font la différence. Notez que la ligne Paris — Clermont n'est pas desservie par le TGV, ce qui réduit l'avantage vitesse du train.",
         faq: [
           {
             question: "Quel est le prix d'un taxi Paris — Clermont-Ferrand ?",
             answer:
-              "Le forfait taxi Paris — Clermont-Ferrand est de 430 à 560 € selon le type de véhicule (berline ou van) et les adresses exactes de prise en charge et de dépose. Ce prix est tout compris : péages A71, carburant et attente inclus.",
+              "Le forfait taxi Paris — Clermont-Ferrand est de 800 à 970 € selon le type de véhicule (berline ou van) et les adresses exactes de prise en charge et de dépose. Ce prix est tout compris : péages A71, carburant et attente inclus.",
           },
           {
             question: "Combien de temps dure le trajet Paris — Clermont-Ferrand en taxi ?",
@@ -219,11 +219,11 @@ export const trajetsParisVilles: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Clermont-Ferrand | 420 km, from €430 | TaxiNeo",
+        metaTitle: "Taxi Paris → Clermont-Ferrand | 420 km, from €800 | TaxiNeo",
         metaDescription:"Via A71, 4 hours ride. A71 Autoroute d'Auvergne, Viaduc de Veauce, Volcans d'Auvergne and Chaîne des Puys en route. Faster and more direct than train or bus.",
         heroTitle: "Taxi Paris → Clermont-Ferrand",
         heroSubtitle:
-          "Private transfer Paris → Clermont-Ferrand from €430–€560. Home pick-up, premium vehicle, professional driver 24/7.",
+          "Private transfer Paris → Clermont-Ferrand from €800–€970. Home pick-up, premium vehicle, professional driver 24/7.",
         description:
           "The Paris — Clermont-Ferrand route connects the capital to the Auvergne metropolis, European capital of volcanism and Michelin's global headquarters. Our long-distance taxi offers a comfortable door-to-door transfer in about 4 hours, without the constraints of the Intercités train.",
         routeDescription:
@@ -235,11 +235,11 @@ export const trajetsParisVilles: Trajet[] = [
         conseils:
           "Depart between 8am-10am or after 2pm to avoid Paris traffic. Avoid Friday afternoons during ski season (December-March) when traffic to Super-Besse and Le Mont-Dore is heavy. In winter, the Montluçon — Clermont section may see snow and ice. The recommended stop is Montmarault rest area (km 340). Vulcania theme park near Clermont makes a great family extension for €30-40 extra.",
         comparaisonTransport:
-          "The Intercités train from Paris-Bercy to Clermont-Ferrand takes about 3h30 and costs €25-75 per person. For a family of four, that's €100-300 plus local taxis. Our fixed-rate taxi from €430 is competitive from 2 passengers, especially with bulky luggage. Note there is no TGV service to Clermont, narrowing the speed advantage of rail.",
+          "The Intercités train from Paris-Bercy to Clermont-Ferrand takes about 3h30 and costs €25-75 per person. For a family of four, that's €100-300 plus local taxis. Our fixed-rate taxi from €800 makes most sense for groups or with bulky luggage. Note there is no TGV service to Clermont, narrowing the speed advantage of rail.",
         faq: [
           {
             question: "What is the price of a taxi from Paris to Clermont-Ferrand?",
-            answer: "€430-560 for a sedan, from €660 for a van. All-inclusive: tolls, fuel and waiting time included.",
+            answer: "€800-970 for a sedan, from €1275 for a van. All-inclusive: tolls, fuel and waiting time included.",
           },
           {
             question: "How long does the Paris to Clermont-Ferrand taxi journey take?",
@@ -273,11 +273,11 @@ export const trajetsParisVilles: Trajet[] = [
     toLng: 5.0415,
     distanceKm: 315,
     durationMin: 180,
-    priceEstimate: "320 — 420 €",
+    priceEstimate: "600 — 730 €",
     category: "longue-distance",
-    prixMin: 320,
-    prixMax: 420,
-    prixVan: 520,
+    prixMin: 600,
+    prixMax: 730,
+    prixVan: 955,
     dureeMax: 240,
     autoroute: "A6",
     peages: "~22 € (inclus)",
@@ -289,11 +289,11 @@ export const trajetsParisVilles: Trajet[] = [
     highlights: ["A6 Autoroute du Soleil", "Vignobles de Bourgogne", "Hospices de Beaune", "Cité de la Gastronomie"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Dijon | 315 km, dès 320 €, 3h | TaxiNeo",
+        metaTitle: "Taxi Paris → Dijon | 315 km, dès 600 €, 3h | TaxiNeo",
         metaDescription:"Via A6 en 3h. A6 Autoroute du Soleil, Vignobles de Bourgogne, Hospices de Beaune et Cité de la Gastronomie en chemin. Dépose porte-à-porte, bagages inclus.",
         heroTitle: "Taxi Paris → Dijon",
         heroSubtitle:
-          "Transfert privé Paris → Dijon au forfait de 320 — 420 €. Prise en charge à domicile, véhicule haut de gamme, chauffeur professionnel.",
+          "Transfert privé Paris → Dijon au forfait de 600 — 730 €. Prise en charge à domicile, véhicule haut de gamme, chauffeur professionnel.",
         description:
           "Le trajet Paris — Dijon relie la capitale à la capitale des Ducs de Bourgogne, ville d'art et de gastronomie mondialement réputée. Notre service de taxi longue distance vous offre un transfert porte-à-porte en environ 3 heures via l'autoroute A6, avec la possibilité de faire un arrêt aux Hospices de Beaune en chemin.",
         routeDescription:
@@ -305,12 +305,12 @@ export const trajetsParisVilles: Trajet[] = [
         conseils:
           "Pour un trajet Paris — Dijon optimal, privilégiez un départ entre 9h et 11h afin d'éviter le trafic matinal sur le périphérique parisien et l'A6. Évitez le vendredi soir et le dimanche soir, surtout pendant les périodes de vendanges (septembre-octobre) où le trafic vers la Bourgogne augmente sensiblement. Si vous souhaitez visiter les Hospices de Beaune en chemin, prévoyez un supplément de temps de 45 minutes à 1h — le chauffeur quitte brièvement l'A6 à Beaune pour un détour de 10 km. En hiver, le tronçon Avallon — Pouilly-en-Auxois peut être sujet au verglas et au brouillard, notamment dans le Morvan entre novembre et février. L'aire de Venoy-Soleil Levant (km 170) est recommandée pour une pause café avec ses installations modernes. Si vous voyagez pour acheter du vin dans les domaines de Gevrey-Chambertin, Nuits-Saint-Georges ou Meursault, notre van dispose d'un espace de coffre suffisant pour transporter 6 à 12 cartons en toute sécurité. Enfin, le stationnement en centre-ville de Dijon est très réglementé : l'avantage du taxi est de vous déposer directement devant votre hôtel ou restaurant.",
         comparaisonTransport:
-          "Le TGV Paris Gare de Lyon → Dijon Ville met environ 1h40 et coûte entre 25 € (Ouigo, réservé tôt) et 95 € (tarif flexible) par personne. Pour une famille de quatre, le train revient entre 100 € et 380 €, auxquels il faut ajouter un taxi local à l'arrivée (10-15 €). En voiture individuelle, comptez 22 € de péages et environ 35 € d'essence, soit 57 € mais avec 3h de conduite. Notre taxi forfaitaire à partir de 320 € devient compétitif dès deux passagers, surtout si vous souhaitez faire un arrêt en route (Hospices de Beaune, domaine viticole). Le confort porte-à-porte et la possibilité de ramener des cartons de vin sans les porter dans le TGV sont des avantages décisifs pour les amateurs d'oenotourisme.",
+          "Le TGV Paris Gare de Lyon → Dijon Ville met environ 1h40 et coûte entre 25 € (Ouigo, réservé tôt) et 95 € (tarif flexible) par personne. Pour une famille de quatre, le train revient entre 100 € et 380 €, auxquels il faut ajouter un taxi local à l'arrivée (10-15 €). En voiture individuelle, comptez 22 € de péages et environ 35 € d'essence, soit 57 € mais avec 3h de conduite. Notre taxi forfaitaire à partir de 600 € se justifie surtout à plusieurs, en particulier si vous souhaitez faire un arrêt en route (Hospices de Beaune, domaine viticole). Le confort porte-à-porte et la possibilité de ramener des cartons de vin sans les porter dans le TGV sont des avantages décisifs pour les amateurs d'oenotourisme.",
         faq: [
           {
             question: "Quel est le prix d'un taxi Paris — Dijon ?",
             answer:
-              "Le forfait taxi Paris — Dijon est de 320 à 420 € selon le type de véhicule (berline ou van) et les adresses exactes. Ce prix est tout compris : péages A6/A38, carburant et attente inclus.",
+              "Le forfait taxi Paris — Dijon est de 600 à 730 € selon le type de véhicule (berline ou van) et les adresses exactes. Ce prix est tout compris : péages A6/A38, carburant et attente inclus.",
           },
           {
             question: "Combien de temps dure le trajet Paris — Dijon en taxi ?",
@@ -335,11 +335,11 @@ export const trajetsParisVilles: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Dijon | Fixed rate from €320 | TaxiNeo",
+        metaTitle: "Taxi Paris → Dijon | Fixed rate from €600 | TaxiNeo",
         metaDescription:"Via A6, 3 hours ride. A6 Autoroute du Soleil, Vignobles de Bourgogne, Hospices de Beaune and Cité de la Gastronomie en route. Drop-off at your exact address.",
         heroTitle: "Taxi Paris → Dijon",
         heroSubtitle:
-          "Private transfer Paris → Dijon from €320–€420. Home pick-up, premium vehicle, professional driver 24/7.",
+          "Private transfer Paris → Dijon from €600–€730. Home pick-up, premium vehicle, professional driver 24/7.",
         description:
           "The Paris — Dijon route connects the capital to the historic capital of the Dukes of Burgundy, a city renowned worldwide for its gastronomy and wine. Our long-distance taxi offers a comfortable door-to-door transfer in about 3 hours via the A6 motorway, with the option to stop at the Hospices de Beaune en route.",
         routeDescription:
@@ -351,11 +351,11 @@ export const trajetsParisVilles: Trajet[] = [
         conseils:
           "Depart between 9am-11am to avoid Paris traffic. Avoid Friday and Sunday evenings, especially during harvest season (September-October). For a Hospices de Beaune visit en route, add 45 minutes. In winter, watch for ice on the Avallon — Pouilly section. Our van can transport 6-12 wine cases safely if you plan vineyard purchases.",
         comparaisonTransport:
-          "The TGV from Paris Gare de Lyon to Dijon takes about 1h40 and costs €25-95 per person. For a family of four, that's €100-380 plus local taxi. Our fixed-rate taxi from €320 is competitive from 2 passengers, especially with vineyard stops. The ability to transport wine cases without lugging them through TGV carriages is a decisive advantage for wine tourism.",
+          "The TGV from Paris Gare de Lyon to Dijon takes about 1h40 and costs €25-95 per person. For a family of four, that's €100-380 plus local taxi. Our fixed-rate taxi from €600 makes most sense for groups, especially with vineyard stops. The ability to transport wine cases without lugging them through TGV carriages is a decisive advantage for wine tourism.",
         faq: [
           {
             question: "What is the price of a taxi from Paris to Dijon?",
-            answer: "€320-420 for a sedan, from €520 for a van. All-inclusive: A6/A38 tolls, fuel and waiting time.",
+            answer: "€600-730 for a sedan, from €955 for a van. All-inclusive: A6/A38 tolls, fuel and waiting time.",
           },
           {
             question: "How long does the Paris to Dijon taxi journey take?",
@@ -621,11 +621,11 @@ export const trajetsParisVilles: Trajet[] = [
     toLng: 0.1996,
     distanceKm: 210,
     durationMin: 135,
-    priceEstimate: "250 — 330 €",
+    priceEstimate: "400 — 485 €",
     category: "ville-a-ville",
-    prixMin: 250,
-    prixMax: 330,
-    prixVan: 420,
+    prixMin: 400,
+    prixMax: 485,
+    prixVan: 640,
     dureeMax: 175,
     autoroute: "A11",
     peages: "~15 € (inclus)",
@@ -637,11 +637,11 @@ export const trajetsParisVilles: Trajet[] = [
     highlights: ["A11 L'Océane", "Chartres", "Circuit des 24 Heures", "Vieux-Mans", "Cathédrale Saint-Julien"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Le Mans | 210 km, dès 250 € | TaxiNeo",
+        metaTitle: "Taxi Paris → Le Mans | 210 km, dès 400 € | TaxiNeo",
         metaDescription:"Itinéraire A11, environ 2h15. Passage par A11 L'Océane, Chartres, Circuit des 24 Heures et Vieux-Mans. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Paris → Le Mans",
         heroSubtitle:
-          "Transfert privé Paris → Le Mans au forfait de 250 — 330 €. Prise en charge à domicile, véhicule confortable.",
+          "Transfert privé Paris → Le Mans au forfait de 400 — 485 €. Prise en charge à domicile, véhicule confortable.",
         description:
           "Le trajet Paris — Le Mans relie la capitale à la cité des 24 Heures du Mans. Ville historique avec son Vieux-Mans médiéval parfaitement conservé, Le Mans est aussi un pôle industriel majeur (assurance, automobile). Le taxi privé est idéal pendant les 24 Heures et le Grand Prix moto.",
         routeDescription:
@@ -653,12 +653,12 @@ export const trajetsParisVilles: Trajet[] = [
         conseils:
           "Pour le trajet Paris — Le Mans, un départ en milieu de matinée garantit une route dégagée sur l'A11 après Ablis. Pendant les 24 Heures du Mans (mi-juin), réservez votre taxi au moins deux semaines à l'avance : la ville est prise d'assaut par 250 000 spectateurs et les transports sont saturés. L'accès au circuit est facilité par notre connaissance locale des itinéraires bis. De même, le Grand Prix moto (mi-mai) génère une affluence importante. Le Vieux-Mans est particulièrement beau lors de la Nuit des Chimères (projections lumineuses estivales sur les façades médiévales). En hiver, la portion Chartres — Le Mans peut être verglacée : votre chauffeur adapte sa conduite. Si vous prolongez vers la côte atlantique, La Baule est à 2h et Saint-Malo à 2h30 du Mans. Les rillettes du Mans sont un incontournable à rapporter — la maison Prunier est une référence.",
         comparaisonTransport:
-          "Le TGV Paris Montparnasse → Le Mans met environ 1h pour 15 à 55 € par personne. C'est rapide et économique pour un voyageur seul. Mais dès 3 passagers, notre taxi à partir de 250 € (soit 83 € par personne) rivalise avec le TGV en tarif flexible, tout en offrant la prise en charge à domicile et la dépose directement au circuit, en zone industrielle ou à l'hôtel — sans taxi supplémentaire à l'arrivée. Pendant les 24 Heures, les transports locaux sont bondés et un transfert privé fait gagner un temps précieux. En voiture personnelle, comptez 15 € de péages et 25 € d'essence.",
+          "Le TGV Paris Montparnasse → Le Mans met environ 1h pour 15 à 55 € par personne. C'est rapide et économique pour un voyageur seul. Mais dès 3 passagers, notre taxi à partir de 400 € (soit 133 € par personne) reste plus cher que le TGV, mais offre la prise en charge à domicile et la dépose directement au circuit, en zone industrielle ou à l'hôtel — sans taxi supplémentaire à l'arrivée. Pendant les 24 Heures, les transports locaux sont bondés et un transfert privé fait gagner un temps précieux. En voiture personnelle, comptez 15 € de péages et 25 € d'essence.",
         faq: [
           {
             question: "Quel est le prix d'un taxi Paris — Le Mans ?",
             answer:
-              "Le forfait est de 250 à 330 € en berline, à partir de 420 € en van. Tout compris : péages, carburant et attente.",
+              "Le forfait est de 400 à 485 € en berline, à partir de 640 € en van. Tout compris : péages, carburant et attente.",
           },
           {
             question: "Combien de temps dure le trajet Paris — Le Mans ?",
@@ -683,11 +683,11 @@ export const trajetsParisVilles: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Le Mans | 210 km, from €250 | TaxiNeo",
+        metaTitle: "Taxi Paris → Le Mans | 210 km, from €400 | TaxiNeo",
         metaDescription:"A11 route, approximately 2h15. A11 L'Océane, Chartres, Circuit des 24 Heures and Vieux-Mans en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Paris → Le Mans",
         heroSubtitle:
-          "Private transfer Paris → Le Mans from €250–€330. Door-to-door service, comfortable vehicle.",
+          "Private transfer Paris → Le Mans from €400–€485. Door-to-door service, comfortable vehicle.",
         description:
           "Le Mans is world-famous for its 24 Hours endurance race and boasts a stunning medieval old town. A private taxi is perfect for race weekends when public transport is overwhelmed.",
         routeDescription:
@@ -699,11 +699,11 @@ export const trajetsParisVilles: Trajet[] = [
         conseils:
           "Book two weeks ahead for the 24 Hours (mid-June) and MotoGP (mid-May). Mid-morning departures avoid traffic. Don't miss the medieval Nuit des Chimères light show in summer.",
         comparaisonTransport:
-          "TGV takes just 1 hour for €15-55. Our taxi from €250 suits groups of 3+ and offers direct circuit access during race weekends when local transport is overwhelmed.",
+          "TGV takes just 1 hour for €15-55. Our taxi from €400 suits groups of 3+ and offers direct circuit access during race weekends when local transport is overwhelmed.",
         faq: [
           {
             question: "What is the price of a taxi Paris — Le Mans?",
-            answer: "€250-330 for a sedan, from €420 for a van. All-inclusive.",
+            answer: "€400-485 for a sedan, from €640 for a van. All-inclusive.",
           },
           {
             question: "How long does the journey take?",
@@ -737,11 +737,11 @@ export const trajetsParisVilles: Trajet[] = [
     toLng: -0.3707,
     distanceKm: 238,
     durationMin: 150,
-    priceEstimate: "280 — 370 €",
+    priceEstimate: "455 — 550 €",
     category: "ville-a-ville",
-    prixMin: 280,
-    prixMax: 370,
-    prixVan: 460,
+    prixMin: 455,
+    prixMax: 550,
+    prixVan: 725,
     dureeMax: 195,
     autoroute: "A13",
     peages: "~18 € (inclus)",
@@ -753,11 +753,11 @@ export const trajetsParisVilles: Trajet[] = [
     highlights: ["A13 Autoroute de Normandie", "Rouen", "Pays d'Auge", "Mémorial de Caen", "Plages du Débarquement"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Caen | 238 km, dès 280 €, 2h30 | TaxiNeo",
+        metaTitle: "Taxi Paris → Caen | 238 km, dès 455 €, 2h30 | TaxiNeo",
         metaDescription:"Par A13, 2h30 de trajet. A13 Autoroute de Normandie, Rouen, Pays d'Auge et Mémorial de Caen en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Paris → Caen",
         heroSubtitle:
-          "Transfert privé Paris → Caen au forfait de 280 — 370 €. La Normandie historique à portée de main.",
+          "Transfert privé Paris → Caen au forfait de 455 — 550 €. La Normandie historique à portée de main.",
         description:
           "Le trajet Paris — Caen est la porte d'entrée de la Normandie occidentale. Caen, ville de Guillaume le Conquérant, abrite le Mémorial pour la Paix et donne accès aux plages du Débarquement. Un taxi privé est parfait pour les circuits mémoriels et les séjours sur la Côte de Nacre.",
         routeDescription:
@@ -769,12 +769,12 @@ export const trajetsParisVilles: Trajet[] = [
         conseils:
           "Pour un trajet Paris — Caen optimal, évitez les vendredis soirs d'été et les week-ends de pont, quand l'A13 est saturée par les Parisiens en route vers la Normandie. Un départ en semaine avant 9h ou entre 10h et 14h garantit un trajet fluide de 2h30. Pour les commémorations du D-Day (6 juin et semaine environnante), réservez très tôt : l'affluence est considérable, notamment lors des anniversaires décennaux. Si vous souhaitez visiter les plages du Débarquement, prévoyez une journée complète : votre chauffeur peut vous accompagner sur un circuit Omaha — Pointe du Hoc — cimetière américain de Colleville — Sainte-Mère-Église. En dehors des plages, ne manquez pas Honfleur (30 min de Caen), son Vieux Bassin peint par les impressionnistes, et Deauville (45 min) pour ses planches. Le fromage de Normandie s'achète directement dans les fermes du Pays d'Auge.",
         comparaisonTransport:
-          "Le train Paris Saint-Lazare → Caen met environ 2h en Intercités pour 20 à 50 € par personne. Les horaires sont espacés (un train toutes les 1-2 heures) et la gare de Caen est éloignée des plages du Débarquement. Notre taxi à partir de 280 € est compétitif pour 2-3 passagers et offre surtout la possibilité de combiner transfert et visite des plages dans la même journée. Pour les touristes internationaux qui ne conduisent pas en France, le taxi privé est la solution la plus pratique pour explorer la Normandie en liberté. En voiture personnelle, comptez 18 € de péages et 28 € d'essence.",
+          "Le train Paris Saint-Lazare → Caen met environ 2h en Intercités pour 20 à 50 € par personne. Les horaires sont espacés (un train toutes les 1-2 heures) et la gare de Caen est éloignée des plages du Débarquement. Notre taxi à partir de 455 € se justifie à plusieurs et offre surtout la possibilité de combiner transfert et visite des plages dans la même journée. Pour les touristes internationaux qui ne conduisent pas en France, le taxi privé est la solution la plus pratique pour explorer la Normandie en liberté. En voiture personnelle, comptez 18 € de péages et 28 € d'essence.",
         faq: [
           {
             question: "Quel est le prix d'un taxi Paris — Caen ?",
             answer:
-              "Le forfait est de 280 à 370 € en berline, à partir de 460 € en van. Prix tout compris : péages, carburant, attente.",
+              "Le forfait est de 455 à 550 € en berline, à partir de 725 € en van. Prix tout compris : péages, carburant, attente.",
           },
           {
             question: "Combien de temps dure le trajet Paris — Caen ?",
@@ -799,11 +799,11 @@ export const trajetsParisVilles: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Caen | Fixed rate from €280 | TaxiNeo",
+        metaTitle: "Taxi Paris → Caen | Fixed rate from €455 | TaxiNeo",
         metaDescription:"Direct route via A13, 2h30. A13 Autoroute de Normandie, Rouen, Pays d'Auge and Mémorial de Caen en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Paris → Caen",
         heroSubtitle:
-          "Private transfer Paris → Caen from €280–€370. Your gateway to Normandy's history.",
+          "Private transfer Paris → Caen from €455–€550. Your gateway to Normandy's history.",
         description:
           "Caen is the gateway to the D-Day beaches and Normandy's rich history. Home to the Caen Memorial, William the Conqueror's abbeys, and within easy reach of Omaha Beach, Honfleur and Deauville.",
         routeDescription:
@@ -819,7 +819,7 @@ export const trajetsParisVilles: Trajet[] = [
         faq: [
           {
             question: "What is the price of a taxi Paris — Caen?",
-            answer: "€280-370 for a sedan, from €460 for a van. All-inclusive.",
+            answer: "€455-550 for a sedan, from €725 for a van. All-inclusive.",
           },
           {
             question: "How long does the journey take?",
@@ -853,11 +853,11 @@ export const trajetsParisVilles: Trajet[] = [
     toLng: 1.2611,
     distanceKm: 392,
     durationMin: 225,
-    priceEstimate: "410 — 540 €",
+    priceEstimate: "750 — 905 €",
     category: "longue-distance",
-    prixMin: 410,
-    prixMax: 540,
-    prixVan: 640,
+    prixMin: 750,
+    prixMax: 905,
+    prixVan: 1190,
     dureeMax: 285,
     autoroute: "A20",
     peages: "~22 € (inclus)",
@@ -869,11 +869,11 @@ export const trajetsParisVilles: Trajet[] = [
     highlights: ["A20 L'Occitane", "Châteauroux", "Plateau de Millevaches", "Porcelaine de Limoges", "Cathédrale Saint-Étienne"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Limoges | 392 km, dès 410 € | TaxiNeo",
+        metaTitle: "Taxi Paris → Limoges | 392 km, dès 750 € | TaxiNeo",
         metaDescription:"Via A20 en 3h45. A20 L'Occitane, Châteauroux, Plateau de Millevaches et Porcelaine de Limoges en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Paris → Limoges",
         heroSubtitle:
-          "Transfert privé Paris → Limoges au forfait de 410 — 540 €. La capitale de la porcelaine et du Limousin.",
+          "Transfert privé Paris → Limoges au forfait de 750 — 905 €. La capitale de la porcelaine et du Limousin.",
         description:
           "Le trajet Paris — Limoges traverse le Berry et rejoint la capitale du Limousin, célèbre pour sa porcelaine, ses émaux et ses vitraux. Limoges, ville d'art et d'histoire, est aussi un pôle de recherche en céramique et une étape vers le Périgord et le plateau de Millevaches.",
         routeDescription:
@@ -885,12 +885,12 @@ export const trajetsParisVilles: Trajet[] = [
         conseils:
           "Le trajet Paris — Limoges de 3h45 nécessite une pause à mi-parcours. L'aire de Châteauroux-Déols ou l'aire d'Arnac-Pompadour sont recommandées. L'A20 est l'une des rares autoroutes gratuites de France sur une grande partie de son tracé (section Vierzon — Brive), ce qui réduit le coût total. En hiver, le nord du Limousin peut être enneigé, surtout au-dessus de 500 m d'altitude : votre chauffeur est équipé de pneus hiver. Si vous visitez Limoges, ne manquez pas la gare des Bénédictins, considérée comme la plus belle gare de France avec son campanile et ses vitraux Art Déco. Les amateurs de porcelaine visiteront le musée national Adrien-Dubouché et les boutiques de la rue des Boucheries. Pour un détour gastronomique, la route vers Limoges passe non loin de Brantôme et Périgueux (1h au sud), capitales du Périgord et de la truffe.",
         comparaisonTransport:
-          "Le train Paris Austerlitz → Limoges met environ 3h en Intercités pour 25 à 65 € par personne. Les horaires sont limités (4-5 trains par jour) et la ligne est souvent en retard. Le POLT (Paris-Orléans-Limoges-Toulouse) est une ligne classique, sans TGV, ce qui explique la durée comparable au taxi. Notre forfait à partir de 410 € est compétitif dès 2-3 passagers et offre le confort porte-à-porte, la flexibilité et la possibilité de combiner le transfert avec un détour par le Périgord. En voiture personnelle, comptez 22 € de péages (partiellement gratuits sur l'A20) et 45 € d'essence.",
+          "Le train Paris Austerlitz → Limoges met environ 3h en Intercités pour 25 à 65 € par personne. Les horaires sont limités (4-5 trains par jour) et la ligne est souvent en retard. Le POLT (Paris-Orléans-Limoges-Toulouse) est une ligne classique, sans TGV, ce qui explique la durée comparable au taxi. Notre forfait à partir de 750 € se justifie à plusieurs et offre le confort porte-à-porte, la flexibilité et la possibilité de combiner le transfert avec un détour par le Périgord. En voiture personnelle, comptez 22 € de péages (partiellement gratuits sur l'A20) et 45 € d'essence.",
         faq: [
           {
             question: "Quel est le prix d'un taxi Paris — Limoges ?",
             answer:
-              "Le forfait est de 410 à 540 € en berline, à partir de 640 € en van. Péages, carburant et attente inclus.",
+              "Le forfait est de 750 à 905 € en berline, à partir de 1190 € en van. Péages, carburant et attente inclus.",
           },
           {
             question: "Combien de temps dure le trajet Paris — Limoges ?",
@@ -915,11 +915,11 @@ export const trajetsParisVilles: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Limoges | 392 km, from €410 | TaxiNeo",
+        metaTitle: "Taxi Paris → Limoges | 392 km, from €750 | TaxiNeo",
         metaDescription:"Via A20, 3h45 ride. A20 L'Occitane, Châteauroux, Plateau de Millevaches and Porcelaine de Limoges en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Paris → Limoges",
         heroSubtitle:
-          "Private transfer Paris → Limoges from €410–€540. Discover the porcelain capital.",
+          "Private transfer Paris → Limoges from €750–€905. Discover the porcelain capital.",
         description:
           "Limoges is the world capital of porcelain, renowned for Haviland, Bernardaud and Royal Limoges. The city also boasts medieval enamel heritage, the Gothic Saint-Étienne Cathedral and France's most beautiful Art Deco train station.",
         routeDescription:
@@ -931,11 +931,11 @@ export const trajetsParisVilles: Trajet[] = [
         conseils:
           "Plan a break at Châteauroux or Arnac-Pompadour. The A20 is partly toll-free. Visit the Bénédictins station, considered France's most beautiful. Porcelain lovers should see the Adrien-Dubouché museum.",
         comparaisonTransport:
-          "The Intercités train takes 3 hours for €25-65 but runs infrequently (4-5 daily). Our taxi from €410 offers door-to-door service with no delays and suits groups of 2+. The A20's toll-free section keeps costs down.",
+          "The Intercités train takes 3 hours for €25-65 but runs infrequently (4-5 daily). Our taxi from €750 offers door-to-door service with no delays and suits groups of 2+. The A20's toll-free section keeps costs down.",
         faq: [
           {
             question: "What is the price of a taxi Paris — Limoges?",
-            answer: "€410-540 for a sedan, from €640 for a van. All-inclusive.",
+            answer: "€750-905 for a sedan, from €1190 for a van. All-inclusive.",
           },
           {
             question: "How long does the journey take?",
@@ -969,11 +969,11 @@ export const trajetsParisVilles: Trajet[] = [
     toLng: 0.3404,
     distanceKm: 338,
     durationMin: 195,
-    priceEstimate: "360 — 470 €",
+    priceEstimate: "645 — 785 €",
     category: "longue-distance",
-    prixMin: 360,
-    prixMax: 470,
-    prixVan: 570,
+    prixMin: 645,
+    prixMax: 785,
+    prixVan: 1025,
     dureeMax: 250,
     autoroute: "A10",
     peages: "~25 € (inclus)",
@@ -985,11 +985,11 @@ export const trajetsParisVilles: Trajet[] = [
     highlights: ["A10 L'Aquitaine", "Loire Valley", "Futuroscope", "Église Notre-Dame-la-Grande", "Bataille de Poitiers"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Poitiers | 338 km, dès 360 € | TaxiNeo",
+        metaTitle: "Taxi Paris → Poitiers | 338 km, dès 645 € | TaxiNeo",
         metaDescription:"Via A10 en 3h15. Passage par A10 L'Aquitaine, Loire Valley, Futuroscope et Église Notre-Dame-la-Grande. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Paris → Poitiers",
         heroSubtitle:
-          "Transfert privé Paris → Poitiers au forfait de 360 — 470 €. Futuroscope, patrimoine roman et art de vivre poitevin.",
+          "Transfert privé Paris → Poitiers au forfait de 645 — 785 €. Futuroscope, patrimoine roman et art de vivre poitevin.",
         description:
           "Le trajet Paris — Poitiers relie la capitale à l'une des plus anciennes villes de France. Poitiers, ville aux cent clochers célèbre pour son patrimoine roman exceptionnel et le Futuroscope, est un pôle universitaire et technologique majeur du centre-ouest.",
         routeDescription:
@@ -1006,7 +1006,7 @@ export const trajetsParisVilles: Trajet[] = [
           {
             question: "Quel est le prix d'un taxi Paris — Poitiers ?",
             answer:
-              "Le forfait est de 360 à 470 € en berline, à partir de 570 € en van. Tout compris : péages, carburant et attente.",
+              "Le forfait est de 645 à 785 € en berline, à partir de 1025 € en van. Tout compris : péages, carburant et attente.",
           },
           {
             question: "Combien de temps dure le trajet Paris — Poitiers ?",
@@ -1031,11 +1031,11 @@ export const trajetsParisVilles: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Poitiers | 338 km, from €360 | TaxiNeo",
+        metaTitle: "Taxi Paris → Poitiers | 338 km, from €645 | TaxiNeo",
         metaDescription:"Via A10, 3h15 ride. A10 L'Aquitaine, Loire Valley, Futuroscope and Église Notre-Dame-la-Grande en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Paris → Poitiers",
         heroSubtitle:
-          "Private transfer Paris → Poitiers from €360–€470. Futuroscope, Romanesque heritage and Poitou charm.",
+          "Private transfer Paris → Poitiers from €645–€785. Futuroscope, Romanesque heritage and Poitou charm.",
         description:
           "Poitiers, one of France's oldest cities, blends exceptional Romanesque heritage with the futuristic Futuroscope theme park. A private taxi provides direct door-to-door service, ideal for families visiting the park.",
         routeDescription:
@@ -1047,11 +1047,11 @@ export const trajetsParisVilles: Trajet[] = [
         conseils:
           "Avoid holiday departure weekends on the busy A10. Book ahead for school holidays at Futuroscope. Combine transfer with a Loire château stop. Saturday morning market for Poitou specialties.",
         comparaisonTransport:
-          "TGV takes 1h40 for €25-75 per person but drops you in Poitiers centre, not at Futuroscope. Our taxi from €360 suits families of 3-4 with direct Futuroscope access and possible Loire Valley stops en route.",
+          "TGV takes 1h40 for €25-75 per person but drops you in Poitiers centre, not at Futuroscope. Our taxi from €645 suits families of 3-4 with direct Futuroscope access and possible Loire Valley stops en route.",
         faq: [
           {
             question: "What is the price of a taxi Paris — Poitiers?",
-            answer: "€360-470 for a sedan, from €570 for a van. All-inclusive.",
+            answer: "€645-785 for a sedan, from €1025 for a van. All-inclusive.",
           },
           {
             question: "How long does the journey take?",
@@ -1085,11 +1085,11 @@ export const trajetsParisVilles: Trajet[] = [
     toLng: -0.5518,
     distanceKm: 296,
     durationMin: 180,
-    priceEstimate: "320 — 420 €",
+    priceEstimate: "565 — 685 €",
     category: "longue-distance",
-    prixMin: 320,
-    prixMax: 420,
-    prixVan: 520,
+    prixMin: 565,
+    prixMax: 685,
+    prixVan: 900,
     dureeMax: 235,
     autoroute: "A11",
     peages: "~22 € (inclus)",
@@ -1101,11 +1101,11 @@ export const trajetsParisVilles: Trajet[] = [
     highlights: ["A11 L'Océane", "Le Mans", "Château d'Angers", "Tapisserie de l'Apocalypse", "Vignoble de l'Anjou"],
     i18n: {
       fr: {
-        metaTitle: "Taxi Paris → Angers | 296 km, dès 320 €, 3h | TaxiNeo",
+        metaTitle: "Taxi Paris → Angers | 296 km, dès 565 €, 3h | TaxiNeo",
         metaDescription:"Par A11, 3h de trajet. A11 L'Océane, Le Mans, Château d'Angers et Tapisserie de l'Apocalypse en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Paris → Angers",
         heroSubtitle:
-          "Transfert privé Paris → Angers au forfait de 320 — 420 €. La douceur angevine et le patrimoine de la Loire.",
+          "Transfert privé Paris → Angers au forfait de 565 — 685 €. La douceur angevine et le patrimoine de la Loire.",
         description:
           "Le trajet Paris — Angers relie la capitale à la douceur angevine. Angers, ville d'art et d'histoire dominée par son château médiéval aux 17 tours et abritant la plus grande tapisserie médiévale au monde, est aussi la première ville verte de France et un pôle d'innovation en végétal.",
         routeDescription:
@@ -1117,12 +1117,12 @@ export const trajetsParisVilles: Trajet[] = [
         conseils:
           "Pour un trajet Paris — Angers optimal, privilégiez un départ en semaine entre 9h et 11h. L'A11 est fluide après Le Mans, mais la traversée du Maine peut être ralentie par des travaux récurrents. Une pause au Mans (aire de service, km 210) permet de couper le trajet de 3h en deux parties égales. Si vous visitez Angers, consacrez une demi-journée au château et à la Tapisserie de l'Apocalypse — l'audioguide est excellent. Les amateurs de vin prévoiront un détour par les vignobles du Layon (30 min au sud) pour déguster les Quarts de Chaume et les Coteaux du Layon, vins liquoreux d'exception. En été, le festival d'Anjou (théâtre en plein air dans les châteaux) et le festival Tempo Rives (musique sur les bords de Maine) animent la ville. La cuisine angevine est généreuse : rillauds, fouées garnies et sandre au beurre blanc sont des incontournables. Le marché Bio de la Place La Rochefoucauld le samedi matin est un des meilleurs de l'Ouest.",
         comparaisonTransport:
-          "Le TGV Paris Montparnasse → Angers met environ 1h35 pour 20 à 65 € par personne. C'est rapide et pratique pour un voyageur seul. Mais dès 3 passagers, notre taxi à partir de 320 € (soit 107 € par personne) rivalise avec le TGV en tarif flexible, tout en offrant le porte-à-porte et la flexibilité. Le taxi est particulièrement avantageux quand la destination finale est un domaine viticole, une entreprise dans la zone industrielle ou une adresse en campagne angevine, inaccessibles en train. En voiture personnelle, comptez 22 € de péages et 35 € d'essence, mais 3h de conduite fatiguante sur autoroute monotone.",
+          "Le TGV Paris Montparnasse → Angers met environ 1h35 pour 20 à 65 € par personne. C'est rapide et pratique pour un voyageur seul. Mais dès 3 passagers, notre taxi à partir de 565 € (soit 189 € par personne) reste plus cher que le TGV, mais offre le porte-à-porte et la flexibilité. Le taxi est particulièrement avantageux quand la destination finale est un domaine viticole, une entreprise dans la zone industrielle ou une adresse en campagne angevine, inaccessibles en train. En voiture personnelle, comptez 22 € de péages et 35 € d'essence, mais 3h de conduite fatiguante sur autoroute monotone.",
         faq: [
           {
             question: "Quel est le prix d'un taxi Paris — Angers ?",
             answer:
-              "Le forfait est de 320 à 420 € en berline, à partir de 520 € en van. Tout compris : péages, carburant et attente.",
+              "Le forfait est de 565 à 685 € en berline, à partir de 900 € en van. Tout compris : péages, carburant et attente.",
           },
           {
             question: "Combien de temps dure le trajet Paris — Angers ?",
@@ -1147,11 +1147,11 @@ export const trajetsParisVilles: Trajet[] = [
         ],
       },
       en: {
-        metaTitle: "Taxi Paris → Angers | Fixed rate from €320 | TaxiNeo",
+        metaTitle: "Taxi Paris → Angers | Fixed rate from €565 | TaxiNeo",
         metaDescription:"Via A11, 3 hours ride. A11 L'Océane, Le Mans, Château d'Angers and Tapisserie de l'Apocalypse en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Paris → Angers",
         heroSubtitle:
-          "Private transfer Paris → Angers from €320–€420. Discover the gentle Anjou lifestyle.",
+          "Private transfer Paris → Angers from €565–€685. Discover the gentle Anjou lifestyle.",
         description:
           "Angers, regularly ranked among France's best cities to live in, boasts a stunning medieval castle with the world's largest medieval tapestry and is the European capital of plant innovation. The surrounding Anjou vineyards produce exceptional Loire whites.",
         routeDescription:
@@ -1167,7 +1167,7 @@ export const trajetsParisVilles: Trajet[] = [
         faq: [
           {
             question: "What is the price of a taxi Paris — Angers?",
-            answer: "€320-420 for a sedan, from €520 for a van. All-inclusive.",
+            answer: "€565-685 for a sedan, from €900 for a van. All-inclusive.",
           },
           {
             question: "How long does the journey take?",

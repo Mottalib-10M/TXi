@@ -73,7 +73,7 @@ export const trajetsTroyesAuxerre: Trajet[] = [
     fromLat: 48.2973,
     fromLng: 4.0744,
     toLat: 49.2583,
-    toLng: 3.5170,
+    toLng: 4.0317,
     distanceKm: 130,
     durationMin: 80,
     priceEstimate: "250 — 305 €",

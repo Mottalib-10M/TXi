@@ -268,7 +268,7 @@ export const trajetsBeauvaisCompiegne: Trajet[] = [
     fromLat: 49.4178,
     fromLng: 2.8263,
     toLat: 49.2583,
-    toLng: 3.5170,
+    toLng: 4.0317,
     distanceKm: 105,
     durationMin: 65,
     priceEstimate: "200 — 245 €",

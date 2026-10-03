@@ -233,7 +233,7 @@ export const trajetsParisRetours: Trajet[] = [
     slug: "taxi-reims-paris",
     from: "Reims",
     to: "Paris",
-    fromLat: 49.2583, fromLng: 3.0444,
+    fromLat: 49.2583, fromLng: 4.0317,
     toLat: 48.8566, toLng: 2.3522,
     distanceKm: 145, durationMin: 90,
     priceEstimate: "280 — 335 €",
