@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import { gareLocalisee } from "@/lib/localiser";
 import type { Metadata } from "next";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -72,9 +73,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function StationPage({ params }: PageProps) {
   const { locale, slug } = await params;
-  const st = getStationBySlug(slug);
-  if (!st) notFound();
+  const brute = getStationBySlug(slug);
+  if (!brute) notFound();
   const loc = locale === "en" ? "en" : "fr";
+  // Version anglaise des champs propres à la gare (FAQ, infos pratiques, témoignages).
+  const st = gareLocalisee(brute, loc);
 
   return (
     <div className="flex flex-col min-h-screen">

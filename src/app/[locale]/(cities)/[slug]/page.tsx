@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import { villeLocalisee } from "@/lib/localiser";
 import type { Metadata } from "next";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -92,9 +93,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function CityPage({ params }: PageProps) {
   const { locale, slug } = await params;
-  const city = getCityBySlug(citySlugFromParam(slug));
-  if (!city) notFound();
+  const brute = getCityBySlug(citySlugFromParam(slug));
+  if (!brute) notFound();
   const loc = locale === "en" ? "en" : "fr";
+  // Version anglaise de la FAQ propre à la ville, des témoignages et des repères.
+  const city = villeLocalisee(brute, loc);
 
   return (
     <div className="flex flex-col min-h-screen">

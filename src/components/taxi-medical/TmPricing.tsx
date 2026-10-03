@@ -1,5 +1,6 @@
 import type { TaxiMedicalPricingTier } from "@/data/taxi-medical-cities";
 import { getTranslations, getLocale } from "next-intl/server";
+import { prixEn } from "@/lib/localiser";
 
 export async function TmPricing({ pricing, cityName }: { pricing: TaxiMedicalPricingTier[]; cityName: string }) {
   const t = await getTranslations("tm");
@@ -26,8 +27,8 @@ export async function TmPricing({ pricing, cityName }: { pricing: TaxiMedicalPri
                 {pricing.map((tier, i) => (
                   <tr key={tier.type} className={i < pricing.length - 1 ? "border-b border-neutral-100" : ""}>
                     <td className="px-6 py-4 font-medium">{loc === "fr" ? tier.labelFr : tier.labelEn}</td>
-                    <td className="text-center px-4 py-4 text-neutral-600 font-light">{tier.berline}</td>
-                    <td className="text-center px-4 py-4 text-neutral-600 font-light">{tier.van_pmr}</td>
+                    <td className="text-center px-4 py-4 text-neutral-600 font-light">{loc === "en" ? prixEn(tier.berline) : tier.berline}</td>
+                    <td className="text-center px-4 py-4 text-neutral-600 font-light">{loc === "en" ? prixEn(tier.van_pmr) : tier.van_pmr}</td>
                   </tr>
                 ))}
               </tbody>

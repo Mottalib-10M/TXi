@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import { aeroportLocalise } from "@/lib/localiser";
 import type { Metadata } from "next";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -75,9 +76,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function AirportPage({ params }: PageProps) {
   const { locale, slug } = await params;
-  const ap = getAirportBySlug(slug);
-  if (!ap) notFound();
+  const brut = getAirportBySlug(slug);
+  if (!brut) notFound();
   const loc = locale === "en" ? "en" : "fr";
+  // Version anglaise des champs propres à l'aéroport (FAQ, infos pratiques, témoignages).
+  const ap = aeroportLocalise(brut, loc);
 
   return (
     <div className="flex flex-col min-h-screen">
