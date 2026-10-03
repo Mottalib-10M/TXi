@@ -4319,9 +4319,9 @@ if (lognesCity) {
 // Bussy-Saint-Georges: custom metaTitle & heroTitle
 const bussySaintGeorges = cities.find((c) => c.slug === "bussy-saint-georges");
 if (bussySaintGeorges) {
-  bussySaintGeorges.i18n.fr.metaTitle = "Taxi Bussy-Saint-Georges | Esplanade des Religions, Golf, Val d'Europe | Prix fixe 24h/24 | TaxiNeo";
+  bussySaintGeorges.i18n.fr.metaTitle = "Taxi Bussy-Saint-Georges | Golf, Val d'Europe | Prix fixe";
   bussySaintGeorges.i18n.fr.heroTitle = "Taxi à Bussy-Saint-Georges";
-  bussySaintGeorges.i18n.en.metaTitle = "Taxi Bussy-Saint-Georges | Esplanade des Religions, Golf, Val d'Europe | Fixed Price 24/7 | TaxiNeo";
+  bussySaintGeorges.i18n.en.metaTitle = "Taxi Bussy-Saint-Georges | Golf, Val d'Europe | Fixed Price";
   bussySaintGeorges.i18n.en.heroTitle = "Taxi in Bussy-Saint-Georges";
 }
 
@@ -4557,9 +4557,9 @@ if (gennevilliersCity) {
 }
 const villeneuveCity = cities.find((c) => c.slug === "villeneuve-la-garenne");
 if (villeneuveCity) {
-  villeneuveCity.i18n.fr.metaTitle = "Taxi Villeneuve-la-Garenne | Qwartz, Seine, T1 | Prix fixe 24h/24 | TaxiNeo";
+  villeneuveCity.i18n.fr.metaTitle = "Taxi Villeneuve-la-Garenne | Qwartz, T1 | Prix fixe 24h/24";
   villeneuveCity.i18n.fr.heroTitle = "Taxi à Villeneuve-la-Garenne";
-  villeneuveCity.i18n.en.metaTitle = "Taxi Villeneuve-la-Garenne | Qwartz, Seine, T1 | Fixed Price 24/7 | TaxiNeo";
+  villeneuveCity.i18n.en.metaTitle = "Taxi Villeneuve-la-Garenne | Qwartz, T1 | Fixed Price 24/7";
   villeneuveCity.i18n.en.heroTitle = "Taxi in Villeneuve-la-Garenne";
 }
 const puteauxCity = cities.find((c) => c.slug === "puteaux");

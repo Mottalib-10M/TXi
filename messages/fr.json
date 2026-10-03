@@ -139,7 +139,7 @@
     "sources": "Sources des tarifs :"
   },
   "home": {
-    "metaTitle": "TaxiNeo — Taxi prix fixe 24h/24 | Chauffeurs agréés | France",
+    "metaTitle": "Taxi prix fixe 24h/24 en France, chauffeurs agréés | TaxiNeo",
     "metaDescription": "Réservez un taxi agréé en quelques secondes. Prix fixe garanti, chauffeurs professionnels, disponible 24h/24 dans 50+ villes françaises. Essayez TaxiNeo.",
     "badge": "Disponible 24h/24 dans toute la France",
     "heroTitle1": "Réservez un taxi.",
@@ -257,7 +257,7 @@
     "faq6A": "L'annulation est gratuite si elle est effectuée avant l'attribution du chauffeur. Une fois le chauffeur en route, des frais d'annulation peuvent s'appliquer. Consultez nos conditions pour plus de détails. Une annulation faite plus de six heures avant le départ n'entraîne aucun frais. Passé ce délai, prévenez le chauffeur directement : son numéro figure sur la confirmation reçue à la réservation."
   },
   "planDuSite": {
-    "metaTitle": "Plan du site — TaxiNeo",
+    "metaTitle": "Plan du site | TaxiNeo",
     "metaDescription": "Parcourez toutes les pages de TaxiNeo : trajets, tarifs, guides, départements, services, villes, aéroports, gares et blog.",
     "title": "Plan du site",
     "subtitle": "Retrouvez toutes les pages de TaxiNeo organisées par catégorie.",
@@ -1773,7 +1773,7 @@
     "relatedTrajets": "Trajets depuis cette gare"
   },
   "whyJoin": {
-    "metaTitle": "Devenir chauffeur partenaire TaxiNeo — 100% gratuit",
+    "metaTitle": "Devenir chauffeur partenaire TaxiNeo | 100% gratuit",
     "metaDescription": "Rejoignez le réseau TaxiNeo gratuitement. Profil en ligne, carte de visite digitale, gestion des réservations et calendrier synchronisé. Boostez votre activité.",
     "badge": "100% gratuit — sans engagement",
     "heroTitle": "Développez votre activité taxi avec TaxiNeo",
@@ -1881,7 +1881,7 @@
     "faq6A": "Non, aucune exclusivité n'est demandée : vous continuez à travailler avec vos clients habituels, vos centrales et vos autres applications, et vous acceptez les courses qui vous conviennent. Les zones et les plages horaires que vous déclarez sont modifiables à tout moment, et aucune course ne vous est imposée en dehors de ce que vous avez accepté de couvrir."
   },
   "solutionHotel": {
-    "metaTitle": "TaxiNeo pour les Hôtels — Transport de vos clients simplifié",
+    "metaTitle": "TaxiNeo pour les Hôtels | Transport de vos clients simplifié",
     "metaDescription": "Offrez un service de taxi à tarif garanti à vos clients. Tableau de bord centralisé, réservation en 2 clics, 5% de commission reversée. Solution 100% gratuite.",
     "badge": "Solution hôtelière gratuite",
     "heroTitle": "Taxi à tarif garanti pour vos clients",
@@ -1965,7 +1965,7 @@
     "ctaButton": "Créer mon compte hôtel"
   },
   "solutionHospital": {
-    "metaTitle": "TaxiNeo pour les Hôpitaux — Transport patient simplifié",
+    "metaTitle": "TaxiNeo pour les Hôpitaux | Transport patient simplifié",
     "metaDescription": "Simplifiez le transport de vos patients. Réservation rapide, accessibilité PMR, facturation centralisée, chauffeurs formés. Solution gratuite pour hôpitaux.",
     "badge": "Solution santé gratuite",
     "heroTitle": "Le transport patient simplifié",
@@ -2049,7 +2049,7 @@
     "ctaButton": "Créer mon compte établissement"
   },
   "solutionEnterprise": {
-    "metaTitle": "TaxiNeo pour les Entreprises — Optimisez vos déplacements",
+    "metaTitle": "TaxiNeo pour les Entreprises | Optimisez vos déplacements",
     "metaDescription": "Maîtrisez le budget transport de votre entreprise. Facturation centralisée, multi-collaborateurs, politique de déplacement et cagnotte fidélité 5%. Gratuit.",
     "badge": "Solution entreprise gratuite",
     "heroTitle": "Maîtrisez vos déplacements professionnels",
@@ -2133,7 +2133,7 @@
     "ctaButton": "Créer mon compte entreprise"
   },
   "solutionParticulier": {
-    "metaTitle": "TaxiNeo pour les Particuliers — Votre taxi en quelques clics",
+    "metaTitle": "Taxi pour particuliers : réservation en quelques clics",
     "metaDescription": "Réservez votre taxi en 2 minutes. Tarifs transparents, sauvegardez vos chauffeurs favoris, cagnotte fidélité 5% et planification à l'avance. Inscrivez-vous.",
     "badge": "Inscription gratuite",
     "heroTitle": "Votre taxi en quelques clics",
@@ -2217,7 +2217,7 @@
     "ctaButton": "Créer mon compte"
   },
   "solutionMiseADispo": {
-    "metaTitle": "Véhicule avec Chauffeur — Service Premium B2B | TaxiNeo",
+    "metaTitle": "Véhicule avec Chauffeur | Service Premium B2B | TaxiNeo",
     "metaDescription": "Louez un véhicule haut de gamme avec chauffeur professionnel dédié. Berlines, SUV, vans VIP disponibles 24h/24 pour vos déplacements d'affaires et événements.",
     "badge": "Service premium B2B",
     "heroTitle": "Véhicule avec chauffeur à votre disposition",
@@ -2343,7 +2343,7 @@
     "ctaButton": "Demander un devis"
   },
   "solutionAssistance": {
-    "metaTitle": "TaxiNeo Assistance & Dépannage — Transport assuré 24h/24",
+    "metaTitle": "TaxiNeo Assistance & Dépannage | Transport assuré 24h/24",
     "metaDescription": "Transportez vos assurés en panne ou accidentés avec un taxi à tarif garanti. Disponible 24h/24, couverture nationale, facturation par dossier sinistre.",
     "badge": "Solution assistance & dépannage",
     "heroTitle": "Taxi d'assistance pour vos assurés",
@@ -2427,7 +2427,7 @@
     "ctaButton": "Demander un accès partenaire"
   },
   "howItWorksPage": {
-    "metaTitle": "Comment ça marche — Réservez un taxi prix fixe | TaxiNeo",
+    "metaTitle": "Taxi prix fixe : comment ça marche, réservation en 2 min",
     "metaDescription": "Découvrez comment réserver un taxi à prix fixe garanti avec TaxiNeo. Choisissez votre trajet, obtenez un tarif immédiat, payez le prix annoncé. Transparent.",
     "heroTitle": "Comment ça marche",
     "heroSubtitle": "Réservez un taxi à prix fixe en quelques secondes. Simple et transparent.",
@@ -2494,7 +2494,7 @@
     "learnMore": "En savoir plus"
   },
   "taxiVsVtc": {
-    "metaTitle": "Taxi vs VTC — Comparatif tarifs et services 2026 | TaxiNeo",
+    "metaTitle": "Taxi vs VTC | Comparatif tarifs et services 2026 | TaxiNeo",
     "metaDescription": "Taxi ou VTC ? Comparez tarifs, réglementation, disponibilité et qualité de service. Découvrez pourquoi le taxi reste le choix le plus fiable en France.",
     "badge": "Comparatif complet",
     "heroTitle": "Taxi vs VTC : le comparatif complet",
@@ -2563,7 +2563,7 @@
     "faq6A": "Oui, si la plateforme applique une tarification dynamique : le montant s'ajuste au rapport entre les demandes en cours et les véhicules disponibles, et une averse ou une sortie de concert suffit à le faire monter. Le taxi échappe à ce mécanisme, puisque son prix suit un barème réglementé qui ne varie ni avec la météo ni avec l'affluence."
   },
   "chauffeurPrive": {
-    "metaTitle": "Chauffeur privé TaxiNeo — Service premium au tarif taxi",
+    "metaTitle": "Chauffeur privé TaxiNeo | Service premium au tarif taxi",
     "metaDescription": "Profitez d'un service de chauffeur privé avec les avantages du taxi : tarifs réglementés, voies de bus, forfaits aéroport. Réservez votre chauffeur en 2 clics.",
     "badge": "Service chauffeur privé",
     "heroTitle": "Votre chauffeur privé, au tarif taxi",
@@ -2624,7 +2624,7 @@
     "faq6A": "Non : seules les voitures de place, c'est-à-dire les taxis, sont autorisées à circuler sur les voies réservées aux bus et aux taxis, et à stationner aux emplacements marqués. Cette autorisation change nettement les temps de trajet aux heures de pointe, notamment sur les axes qui mènent aux gares et aux aéroports. Un chauffeur privé emprunte la circulation générale comme tout autre véhicule."
   },
   "alternativeVtc": {
-    "metaTitle": "Alternative VTC prix fixe — Taxi nouvelle génération",
+    "metaTitle": "Alternative VTC prix fixe | Taxi nouvelle génération",
     "metaDescription": "Marre des prix variables des VTC ? TaxiNeo propose une alternative fiable avec prix fixe garanti. Tarifs réglementés, chauffeurs licenciés et voies de bus.",
     "badge": "Alternative VTC prix fixe",
     "heroTitle": "L'alternative VTC au prix fixe",
@@ -2685,7 +2685,7 @@
     "faq6A": "Trois éléments se contrôlent en quelques secondes : le lumineux sur le toit, le compteur horokilométrique dans l'habitacle et la plaque d'autorisation de stationnement fixée sur l'aile avant, avec son numéro et sa commune. La carte professionnelle du chauffeur doit en outre être affichée. Un rabatteur qui aborde les voyageurs dans un hall de gare ou d'aéroport n'exerce jamais légalement."
   },
   "blog": {
-    "metaTitle": "Blog TaxiNeo — Conseils, tarifs et actualités taxi en France",
+    "metaTitle": "Blog taxi : conseils, tarifs, actualités en France | TaxiNeo",
     "metaDescription": "Retrouvez nos articles sur les tarifs taxi, les différences taxi/VTC, les transferts aéroport et tous nos conseils pratiques pour vos déplacements en France.",
     "title": "Blog",
     "subtitle": "Conseils, tarifs et actualités taxi",
@@ -2710,7 +2710,7 @@
     "faq6A": "Ils valent à la date de mise à jour indiquée en haut de chaque page. Les plafonds nationaux étant révisés chaque année, en général en février, un montant cité dans un article ancien peut avoir changé. C'est la raison pour laquelle nous affichons la date réelle de dernière modification plutôt que la date du jour, qui donnerait une fausse impression de fraîcheur."
   },
   "miseADisposition": {
-    "metaTitle": "Taxi à disposition — Chauffeur à la journée | TaxiNeo",
+    "metaTitle": "Taxi à disposition | Chauffeur à la journée | TaxiNeo",
     "metaDescription": "Réservez un taxi agréé à la journée ou demi-journée avec TaxiNeo. Idéal pour séminaires, événements et déplacements professionnels. Prix fixe garanti.",
     "breadcrumbServices": "Services",
     "breadcrumbCurrent": "Taxi à disposition",
@@ -3156,7 +3156,7 @@
     "formSentDesc": "Nous vous répondrons sous 2 heures avec un devis détaillé et personnalisé."
   },
   "taxiMedical": {
-    "metaTitle": "Taxi médical conventionné CPAM — Transport sanitaire | TaxiNeo",
+    "metaTitle": "Taxi médical conventionné CPAM | Transport sanitaire | TaxiNeo",
     "metaDescription": "Taxi conventionné CPAM dans 138 villes : dialyse, chimiothérapie, rééducation, consultations. Tiers payant sur prescription, véhicules PMR, devis gratuit.",
     "badge": "Conventionné CPAM — Tiers payant",
     "heroTitle": "Taxi médical conventionné CPAM",

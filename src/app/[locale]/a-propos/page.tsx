@@ -14,8 +14,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const title =
     locale === "en"
-      ? "About TaxiNeo: who publishes the site and how it works"
-      : "A propos de TaxiNeo : qui édite le site, et comment";
+      ? "TaxiNeo: Who Publishes the Site and How It Works (About)"
+      : "TaxiNeo : qui édite le site et comment il fonctionne";
   const description =
     locale === "en"
       ? "TaxiNeo is published by Radif Partners. Who we are, how drivers are selected, how prices are calculated and who is answerable for what we publish here."

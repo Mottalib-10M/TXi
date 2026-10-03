@@ -17,7 +17,8 @@ import { CityContactForm } from "@/components/city/CityContactForm";
 import { CityCTA } from "@/components/city/CityCTA";
 import { trajets, getTrajetBySlug } from "@/data/trajets";
 import { activeTrajetSlugs } from "@/data/trajet-whitelist";
-import { canonicalUrl, alternateUrls, ajusterTitre, ajusterDescription } from "@/lib/seo";
+import { canonicalUrl, alternateUrls } from "@/lib/seo";
+import { titreTrajet, descriptionTrajet } from "@/lib/seo-trajet";
 import { etofferFaq } from "@/lib/faq-etoffer";
 import { faitsTrajet } from "@/lib/faits-trajet";
 
@@ -42,32 +43,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const loc = locale === "en" ? "en" : "fr";
 
   const canonical = canonicalUrl(locale, `/trajet/${trajet.slug}`);
+  const titre = titreTrajet(trajet, loc);
+  const description = descriptionTrajet(trajet, loc);
   return {
-    title: ajusterTitre(trajet.i18n[loc].metaTitle, [
-      loc === "en" ? "| TaxiNeo" : "| TaxiNeo",
-      loc === "en" ? "— fixed price, 24/7" : "— prix fixe, 24h/24",
-      loc === "en" ? "— book online" : "— réservation en ligne",
-    ]),
-    description: ajusterDescription(trajet.i18n[loc].metaDescription, [
-      loc === "en"
-        ? "Fixed price confirmed before booking, luggage and tolls included."
-        : "Prix fixe confirmé avant la réservation, bagages et péages compris.",
-      loc === "en" ? "Licensed drivers, available 24/7." : "Chauffeurs agréés, disponibles 24h/24.",
-      loc === "en" ? "Free cancellation." : "Annulation sans frais.",
-    ]),
+    title: titre,
+    description,
     openGraph: {
-      title: ajusterTitre(trajet.i18n[loc].metaTitle, [
-      loc === "en" ? "| TaxiNeo" : "| TaxiNeo",
-      loc === "en" ? "— fixed price, 24/7" : "— prix fixe, 24h/24",
-      loc === "en" ? "— book online" : "— réservation en ligne",
-    ]),
-      description: ajusterDescription(trajet.i18n[loc].metaDescription, [
-      loc === "en"
-        ? "Fixed price confirmed before booking, luggage and tolls included."
-        : "Prix fixe confirmé avant la réservation, bagages et péages compris.",
-      loc === "en" ? "Licensed drivers, available 24/7." : "Chauffeurs agréés, disponibles 24h/24.",
-      loc === "en" ? "Free cancellation." : "Annulation sans frais.",
-    ]),
+      title: titre,
+      description,
       url: canonical,
       siteName: "TaxiNeo",
       type: "website",
@@ -76,11 +59,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
           url: "https://www.taxineo.fr/opengraph-image",
           width: 1200,
           height: 630,
-          alt: ajusterTitre(trajet.i18n[loc].metaTitle, [
-      loc === "en" ? "| TaxiNeo" : "| TaxiNeo",
-      loc === "en" ? "— fixed price, 24/7" : "— prix fixe, 24h/24",
-      loc === "en" ? "— book online" : "— réservation en ligne",
-    ]),
+          alt: titre,
         },
       ],
     },

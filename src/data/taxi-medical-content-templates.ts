@@ -1,6 +1,7 @@
 import type { City } from "@/data/cities";
 import type { TaxiMedicalCityData } from "@/data/taxi-medical-cities";
 import { ILE_DE_FRANCE_SLUGS } from "@/data/regions";
+import { ajusterDescription, choisirTitre } from "@/lib/seo";
 
 // ─── Types ─────────────────────────────────────────────
 
@@ -81,16 +82,51 @@ function isIDF(city: City): boolean {
 
 // ─── Meta ─────────────────────────────────────────────
 
-export function generateTmMeta(city: City, loc: Loc): { metaTitle: string; metaDescription: string } {
+export function generateTmMeta(city: City, tmCity: TaxiMedicalCityData, loc: Loc): { metaTitle: string; metaDescription: string } {
+  // Titre 50-60 et description 150-160 quelle que soit la longueur du nom
+  // (de « Nice » à « Montereau-Fault-Yonne ») : on prend la première variante
+  // qui tient. L'ancienne formule montait à 77 et 207 signes.
+  const n = city.name;
+  const prix = (tmCity.pricing[0]?.berline.match(/\d+/) ?? [])[0];
   if (loc === "fr") {
     return {
-      metaTitle: `Taxi médical ${city.name} — Conventionné CPAM | Prise en charge Sécu`,
-      metaDescription: `Taxi médical conventionné CPAM à ${city.name}. Transport assis professionnalisé (TAP) vers hôpitaux, dialyse, chimiothérapie, rééducation. Tiers payant, véhicule PMR, devis gratuit.`,
+      metaTitle: choisirTitre([
+        `Taxi médical ${n} : conventionné CPAM, tiers payant | TaxiNeo`,
+        `Taxi médical ${n} : conventionné CPAM, tiers payant`,
+        `Taxi médical ${n} : conventionné CPAM | TaxiNeo`,
+        `Taxi médical ${n} : conventionné CPAM`,
+      ]),
+      metaDescription: ajusterDescription(
+        `Taxi médical conventionné CPAM à ${n} : hôpitaux, dialyse, chimiothérapie, rééducation.`,
+        [
+          "Tiers payant, véhicule PMR.",
+          prix ? `Aller simple dès ${prix} €.` : "",
+          "Devis gratuit.",
+          "Chauffeurs formés au transport de patients.",
+          "Prise en charge à 100 % en ALD.",
+          "Bon de transport accepté.",
+        ],
+      ),
     };
   }
   return {
-    metaTitle: `Medical taxi ${city.name} — CPAM approved | Health insurance covered`,
-    metaDescription: `CPAM-approved medical taxi in ${city.name}. Professional seated transport (TAP) to hospitals, dialysis, chemotherapy, rehabilitation. Third-party billing, wheelchair-accessible vehicles, free quote.`,
+    metaTitle: choisirTitre([
+      `Medical Taxi ${n}: CPAM Approved, Direct Billing | TaxiNeo`,
+      `Medical Taxi ${n}: CPAM Approved, Direct Billing`,
+      `Medical Taxi ${n}: CPAM Approved | TaxiNeo`,
+      `Medical Taxi ${n}: CPAM Approved`,
+    ]),
+    metaDescription: ajusterDescription(
+      `CPAM-approved medical taxi in ${n}: hospitals, dialysis, chemotherapy, rehabilitation.`,
+      [
+        "Direct billing, wheelchair-accessible vehicles.",
+        prix ? `One way from €${prix}.` : "",
+        "Free quote.",
+        "Drivers trained in patient care.",
+        "100% covered for ALD patients.",
+        "Transport voucher accepted.",
+      ],
+    ),
   };
 }
 
@@ -636,7 +672,7 @@ export function generateTmHowItWorks(city: City, loc: Loc): TmHowItWorksStep[] {
 // ─── Main generator ─────────────────────────
 
 export function generateTmContent(city: City, tmCity: TaxiMedicalCityData, loc: Loc): TmGeneratedContent {
-  const meta = generateTmMeta(city, loc);
+  const meta = generateTmMeta(city, tmCity, loc);
   const hero = generateTmHero(city, loc);
   const intro = generateTmIntro(city, tmCity, loc);
 

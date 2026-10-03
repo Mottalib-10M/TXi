@@ -430,6 +430,77 @@ const simpleTarifs: Array<{
     ] },
 ];
 
+// Snippets des pages tarif générées (règle §11 : titre 50-60, description
+// 150-160, terme-clé d'abord). Relevé du 2026-10-03 : la formule commune
+// « … 2026 : prix, barème taxi | TaxiNeo » montait à 71 signes et les
+// descriptions tombaient à 65-118 signes.
+const snippetsTarifs: Record<string, { fr: [string, string]; en: [string, string] }> = {
+  "tarif-taxi-lyon": {
+    fr: ["Tarif taxi Lyon 2026 : prix, aéroport Saint-Exupéry dès 50 €", "Tarifs taxi à Lyon en 2026 : course courte de 10 à 15 €, aéroport Saint-Exupéry de 50 à 65 €, Grenoble dès 130 €. Tarif de nuit et prix fixes TaxiNeo."],
+    en: ["Taxi Fares in Lyon 2026: Prices, Saint-Exupéry Airport €50+", "Lyon taxi fares in 2026: short ride €10 to €15, Saint-Exupéry airport €50 to €65, Grenoble from €130. Night rates, luggage rules and TaxiNeo fixed prices."],
+  },
+  "tarif-taxi-nice": {
+    fr: ["Tarif taxi Nice 2026 : prix, aéroport dès 25 €, Monaco", "Tarifs taxi à Nice en 2026 : centre-ville de 10 à 15 €, aéroport Nice Côte d'Azur de 25 à 35 €, Monaco de 50 à 70 €, Cannes dès 50 €. Prix fixes TaxiNeo."],
+    en: ["Taxi Fares in Nice 2026: Prices, Airport from €25, Monaco", "Nice taxi fares in 2026: city-centre ride €10 to €15, Nice Côte d'Azur airport €25 to €35, Monaco €50 to €70, Cannes from €50. TaxiNeo fixed fares 24/7."],
+  },
+  "tarif-taxi-marseille": {
+    fr: ["Tarif taxi Marseille 2026 : prix, aéroport Provence dès 50 €", "Tarifs taxi à Marseille en 2026 : centre-ville de 10 à 15 €, aéroport Marseille-Provence de 50 à 65 €, Aix dès 45 €, Cassis dès 35 €. Prix fixes TaxiNeo."],
+    en: ["Taxi Fares in Marseille 2026: Prices, Provence Airport €50+", "Marseille taxi fares in 2026: city-centre ride €10 to €15, Marseille-Provence airport €50 to €65, Aix from €45, Cassis from €35. TaxiNeo fixed prices."],
+  },
+  "tarif-taxi-toulouse": {
+    fr: ["Tarif taxi Toulouse 2026 : prix, aéroport Blagnac dès 30 €", "Tarifs taxi à Toulouse en 2026 : centre-ville de 10 à 14 €, aéroport Toulouse-Blagnac de 30 à 40 €, Carcassonne dès 110 €. Tarif de nuit et prix fixes TaxiNeo."],
+    en: ["Taxi Fares in Toulouse 2026: Prices, Blagnac Airport €30+", "Toulouse taxi fares in 2026: city-centre ride €10 to €14, Toulouse-Blagnac airport €30 to €40, Carcassonne from €110. Night rates and TaxiNeo fixed prices."],
+  },
+  "tarif-taxi-bordeaux": {
+    fr: ["Tarif taxi Bordeaux 2026 : prix, aéroport Mérignac dès 35 €", "Tarifs taxi à Bordeaux en 2026 : centre-ville de 10 à 14 €, aéroport de Mérignac de 35 à 45 €, Saint-Émilion dès 55 €, Arcachon dès 75 €. Prix fixes TaxiNeo."],
+    en: ["Taxi Fares in Bordeaux 2026: Prices, Mérignac Airport €35+", "Bordeaux taxi fares in 2026: city-centre ride €10 to €14, Mérignac airport €35 to €45, Saint-Émilion from €55, Arcachon from €75. TaxiNeo fixed prices."],
+  },
+  "tarif-taxi-77": {
+    fr: ["Tarif taxi Seine-et-Marne (77) 2026 : CDG, Orly, Paris", "Tarifs taxi en Seine-et-Marne (77) en 2026 : Meaux → CDG de 50 à 70 €, Melun → Paris de 60 à 80 €, Fontainebleau → Paris dès 80 €. Prix fixes TaxiNeo."],
+    en: ["Taxi Fares Seine-et-Marne (77) 2026: CDG, Orly, Paris", "Seine-et-Marne (77) taxi fares in 2026: Meaux to CDG €50 to €70, Melun to Paris €60 to €80, Fontainebleau to Paris from €80. Night rates, fixed prices."],
+  },
+  "tarif-taxi-91": {
+    fr: ["Tarif taxi Essonne (91) 2026 : prix vers Paris, Orly et CDG", "Tarifs taxi en Essonne (91) en 2026 : Évry → Paris de 40 à 55 €, Évry → Orly de 25 à 35 €, Massy → Paris de 30 à 40 €. Tarif de nuit et prix fixes TaxiNeo."],
+    en: ["Taxi Fares Essonne (91) 2026: Prices to Paris, Orly and CDG", "Essonne (91) taxi fares in 2026: Évry to Paris €40 to €55, Évry to Orly €25 to €35, Massy to Paris €30 to €40. Night rates and TaxiNeo fixed fares 24/7."],
+  },
+  "tarif-taxi-92": {
+    fr: ["Tarif taxi Hauts-de-Seine (92) 2026 : Paris, CDG, Orly", "Tarifs taxi dans les Hauts-de-Seine (92) en 2026 : La Défense → Paris de 25 à 35 €, La Défense → CDG de 55 à 70 €, Boulogne → Orly dès 35 €. Prix fixes."],
+    en: ["Taxi Fares Hauts-de-Seine (92) 2026: Paris, CDG, Orly", "Hauts-de-Seine (92) taxi fares in 2026: La Défense to Paris €25 to €35, La Défense to CDG €55 to €70, Boulogne to Orly from €35. TaxiNeo fixed prices."],
+  },
+  "tarif-taxi-93": {
+    fr: ["Tarif taxi Seine-Saint-Denis (93) 2026 : CDG, Paris, Orly", "Tarifs taxi en Seine-Saint-Denis (93) en 2026 : Saint-Denis → CDG de 25 à 35 €, Bobigny → Paris de 20 à 30 €, Montreuil → Orly dès 30 €. Prix fixes TaxiNeo."],
+    en: ["Taxi Fares Seine-Saint-Denis (93) 2026: CDG, Paris, Orly", "Seine-Saint-Denis (93) taxi fares in 2026: Saint-Denis to CDG €25 to €35, Bobigny to Paris €20 to €30, Montreuil to Orly from €30. TaxiNeo fixed prices."],
+  },
+  "tarif-taxi-94": {
+    fr: ["Tarif taxi Val-de-Marne (94) 2026 : prix Paris, Orly, CDG", "Tarifs taxi dans le Val-de-Marne (94) en 2026 : Créteil → Paris de 25 à 35 €, Créteil → Orly de 20 à 30 €, Vincennes → CDG dès 45 €. Prix fixes TaxiNeo."],
+    en: ["Taxi Fares Val-de-Marne (94) 2026: Paris, Orly, CDG", "Val-de-Marne (94) taxi fares in 2026: Créteil to Paris €25 to €35, Créteil to Orly €20 to €30, Vincennes to CDG from €45. Night rates, TaxiNeo fixed prices."],
+  },
+  "tarif-taxi-95": {
+    fr: ["Tarif taxi Val-d'Oise (95) 2026 : prix vers Paris, CDG, Orly", "Tarifs taxi dans le Val-d'Oise (95) en 2026 : Cergy → Paris de 45 à 60 €, Cergy → CDG de 40 à 55 €, Enghien → Paris de 25 à 35 €. Prix fixes TaxiNeo, 24h/24."],
+    en: ["Taxi Fares Val-d'Oise (95) 2026: Prices to Paris, CDG, Orly", "Val-d'Oise (95) taxi fares in 2026: Cergy to Paris €45 to €60, Cergy to CDG €40 to €55, Enghien to Paris €25 to €35. Night rates, TaxiNeo fixed prices."],
+  },
+  "tarif-taxi-78": {
+    fr: ["Tarif taxi Yvelines (78) 2026 : Versailles, Paris, CDG, Orly", "Tarifs taxi dans les Yvelines (78) en 2026 : Versailles → Paris de 40 à 55 €, Versailles → CDG de 70 à 90 €, Saint-Germain → Paris dès 30 €. Prix fixes."],
+    en: ["Taxi Fares Yvelines (78) 2026: Versailles, Paris, CDG, Orly", "Yvelines (78) taxi fares in 2026: Versailles to Paris €40 to €55, Versailles to CDG €70 to €90, Saint-Germain to Paris from €30. TaxiNeo fixed prices."],
+  },
+  "tarif-taxi-nuit": {
+    fr: ["Tarif taxi de nuit 2026 : majoration, horaires 19h-7h", "Tarif taxi de nuit en 2026 : de 19h à 7h, majoration de 28 à 41 % à Paris, de 15 à 30 % en province. Avec TaxiNeo, le prix fixe est le même jour et nuit."],
+    en: ["Night Taxi Fares France 2026: Surcharge, Hours 7pm to 7am", "Night taxi fares in France in 2026: from 7pm to 7am, a 28 to 41% surcharge in Paris and 15 to 30% elsewhere. TaxiNeo fixed prices stay the same at night."],
+  },
+  "tarif-taxi-dimanche": {
+    fr: ["Tarif taxi dimanche, jours fériés 2026 : tarif D, majoration", "Tarif taxi le dimanche et les jours fériés en 2026 : tarif D toute la journée à Paris, majoration de 15 à 50 % les jours fériés. Prix fixe TaxiNeo identique."],
+    en: ["Sunday Taxi Fares France 2026: Holiday Surcharge, Tariff D", "Sunday and holiday taxi fares in France in 2026: tariff D all day in Paris, a 15 to 50% surcharge on public holidays. TaxiNeo fixed prices stay the same."],
+  },
+  "tarif-taxi-bagages": {
+    fr: ["Supplément bagages taxi 2026 : ce que dit la loi, tarifs", "Supplément bagages en taxi en 2026 : bagage standard gratuit, bagage volumineux de 0 à 3 € selon le barème local. La loi expliquée, zéro supplément TaxiNeo."],
+    en: ["Taxi Luggage Surcharge France 2026: Rules, What the Law Says", "Taxi luggage surcharges in France in 2026: standard luggage free, bulky items €0 to €3 depending on local rates. The law explained, no surcharge with TaxiNeo."],
+  },
+  "tarif-taxi-animaux": {
+    fr: ["Taxi avec animaux 2026 : supplément, règles, chien guide", "Prendre un taxi avec un animal en 2026 : petit animal en cage gratuit, chien moyen ou grand de 0 à 5 €, chien guide accepté sans frais. Règles et droits."],
+    en: ["Taxi with Pets France 2026: Surcharge, Rules, Guide Dogs", "Taking a taxi with a pet in France in 2026: small caged pet free, medium or large dog €0 to €5, guide dogs carried free by law. Rules and passenger rights."],
+  },
+};
+
 // Build full tarif objects from simplified data
 for (const t of simpleTarifs) {
   tarifs.push({
@@ -440,8 +511,8 @@ for (const t of simpleTarifs) {
     lng: t.lng,
     i18n: {
       fr: {
-        metaTitle: `${t.frTitle} 2026 : prix, barème taxi | TaxiNeo`,
-        metaDescription: t.frDesc,
+        metaTitle: snippetsTarifs[t.slug]?.fr[0] ?? `${t.frTitle} 2026 : prix et barème | TaxiNeo`,
+        metaDescription: snippetsTarifs[t.slug]?.fr[1] ?? t.frDesc,
         heroTitle: t.frTitle,
         heroSubtitle: `Tous les tarifs taxi en 2026 : barème officiel, forfaits et prix fixes TaxiNeo.`,
         description: t.frDesc,
@@ -457,8 +528,8 @@ for (const t of simpleTarifs) {
         ...(t.frBonASavoir && { bonASavoir: t.frBonASavoir }),
       },
       en: {
-        metaTitle: `${t.enTitle} 2026: all rates & prices | TaxiNeo`,
-        metaDescription: t.enDesc,
+        metaTitle: snippetsTarifs[t.slug]?.en[0] ?? `${t.enTitle} 2026: rates and prices | TaxiNeo`,
+        metaDescription: snippetsTarifs[t.slug]?.en[1] ?? t.enDesc,
         heroTitle: t.enTitle,
         heroSubtitle: `All taxi fares in 2026: official rates, flat rates and TaxiNeo fixed prices.`,
         description: t.enDesc,

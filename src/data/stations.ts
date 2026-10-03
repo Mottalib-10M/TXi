@@ -89,10 +89,10 @@ function station(
     i18n: {
       fr: {
         metaTitle: name.length <= 10
-          ? `Taxi Gare ${name} — Forfait garanti, réservation en ligne`
+          ? `Taxi Gare ${name} | Forfait garanti, réservation en ligne`
           : name.length <= 20
-            ? `Taxi ${name} — Transfert gare forfaitaire 24/7`
-            : `Taxi ${name} — Transfert gare au forfait`,
+            ? `Taxi ${name} | Transfert gare forfaitaire 24/7`
+            : `Taxi ${name} | Transfert gare au forfait`,
         metaDescription: name.length <= 13
           ? `Réservez votre taxi pour la gare de ${name}. Transfert ponctuel au forfait garanti, suivi des trains en temps réel et aide aux bagages. Disponible 24h/24.`
           : name.length <= 19
@@ -122,10 +122,10 @@ function station(
       },
       en: {
         metaTitle: name.length <= 10
-          ? `Taxi ${name} Station — Book your fixed-fare transfer 24/7`
+          ? `Taxi ${name} Station | Book your fixed-fare transfer 24/7`
           : name.length <= 20
-            ? `Taxi ${name} — Fixed-fare station transfer 24/7`
-            : `Taxi ${name} — Fixed-fare transfer 24/7`,
+            ? `Taxi ${name} | Fixed-fare station transfer 24/7`
+            : `Taxi ${name} | Fixed-fare transfer 24/7`,
         metaDescription: name.length <= 5
           ? `Book your taxi to ${name} station. Fixed-fare transfer guaranteed, real-time train tracking, luggage assistance and your driver waiting at the station exit. 24/7.`
           : name.length <= 9

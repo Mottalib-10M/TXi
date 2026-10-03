@@ -94,10 +94,10 @@ function airport(
     i18n: {
       fr: {
         metaTitle: name.length <= 14
-          ? `Taxi Aéroport ${name} — Transfert forfaitaire 24/7`
+          ? `Taxi Aéroport ${name} | Transfert forfaitaire 24/7`
           : name.length <= 21
-            ? `Taxi ${name} — Transfert forfaitaire 24h/24`
-            : `Taxi ${name} — Transfert forfaitaire`,
+            ? `Taxi ${name} | Transfert forfaitaire 24h/24`
+            : `Taxi ${name} | Transfert forfaitaire`,
         metaDescription: name.length <= 18
           ? `Réservez votre taxi pour l'aéroport ${name}. Transfert ponctuel, tarifs forfaitaires garantis, suivi des vols et aide aux bagages. Disponible 24h/24.`
           : name.length <= 27
@@ -128,10 +128,10 @@ function airport(
       },
       en: {
         metaTitle: name.length <= 14
-          ? `Taxi ${name} Airport — 24/7 fixed-fare transfers`
+          ? `Taxi ${name} Airport | 24/7 fixed-fare transfers`
           : name.length <= 21
-            ? `Taxi ${name} — Fixed-fare airport transfers`
-            : `Taxi ${name} — Fixed-fare transfers`,
+            ? `Taxi ${name} | Fixed-fare airport transfers`
+            : `Taxi ${name} | Fixed-fare transfers`,
         metaDescription: name.length <= 18
           ? `Book your taxi to ${name} Airport. Reliable transfer, guaranteed fixed fares, real-time flight tracking, luggage assistance and meet and greet. 24/7.`
           : name.length <= 27
@@ -2368,7 +2368,7 @@ const AIRPORT_CONTENT: Record<string, { fr: { intro: string; description: string
     en: {
       intro: "Chambéry-Savoie Mont Blanc Airport (CMF) is the go-to airport for the prestigious 3 Valleys resorts — Courchevel, Méribel, Val Thorens — with 250,000 passengers a year, mainly in winter. Located 10 km from Chambéry, it hosts charter and scheduled flights from easyJet, Jet2 and TUI from the UK and Scandinavia. TaxiNeo offers fixed-fare transfers with 4x4 and SUV vehicles mountain-equipped, driven by Savoyard drivers experienced on Alpine roads.",
       description: "At Chambéry-Savoie Mont Blanc, your taxi waits in the arrivals area with a driver ready for the mountains. Our vehicles are equipped with snow tyres, chains and roof bars for skis. Transfer to Courchevel in 1h15-1h30, Méribel in 1h10-1h25 and Val Thorens in 1h30-1h45. Available 24/7, crucial for Saturday morning charter flights. Faster and more comfortable than shared shuttles. Transfer to Aix-les-Bains (15-20 min) also available. Book at least a week ahead in ski season.",
-      metaDescription: "Chambéry-Savoie taxi: gateway to the 3 Valleys — Courchevel, Méribel, Val Thorens. Snow-equipped 4x4 vehicles, Savoyard drivers, fixed fare. Book 24/7.",
+      metaDescription: "Chambéry-Savoie taxi, gateway to the 3 Valleys: Courchevel, Méribel, Val Thorens. Snow-equipped 4x4 vehicles, Savoyard drivers, fixed fare. Book 24/7.",
       heroSubtitle: "The go-to airport for the 3 Valleys — Courchevel, Meribel, Val Thorens — Chambery-Savoie Mont Blanc serves 250,000 winter passengers. Your TaxiNeo driver waits with a snow-tyre 4x4 fitted with chains and ski roof bars — faster than shared shuttles, fixed fare, book a week ahead.",
       whyUs: [
         { title: "Snow-equipped 4x4s with chains", desc: "Our SUVs and 4x4s come with certified snow tyres, chains and ski roof bars, essential on the N90 and D915 to the 3 Valleys in winter." },

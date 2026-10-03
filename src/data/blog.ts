@@ -5909,8 +5909,8 @@ TaxiNeo displays the **estimated CO2 emissions** for each journey. Passengers ca
       en: "How to choose your taxi: the complete guide",
     },
     metaTitle: {
-      fr: "Comment choisir son taxi : guide complet 2026 | TaxiNeo",
-      en: "How to choose your taxi: complete guide 2026 | TaxiNeo",
+      fr: "Choisir son taxi : application ou rue, avis, guide 2026",
+      en: "Choosing a Taxi in France: App vs Street, 2026 Guide",
     },
     metaDescription: {
       fr: "Découvrez comment bien choisir votre taxi en France : application vs rue, avis clients, type de véhicule, tarifs et conseils pratiques pour une course réussie.",
@@ -6852,7 +6852,7 @@ TaxiNeo lets you enjoy the **reliability and comfort of a taxi** with the **conv
       en: "Complete guide to CPAM-approved taxis",
     },
     metaTitle: {
-      fr: "Taxi conventionné CPAM : guide complet 2026 | TaxiNeo",
+      fr: "Taxi conventionné CPAM : conditions, droits, où le trouver",
       en: "CPAM-approved medical taxi: full guide 2026 | TaxiNeo",
     },
     metaDescription: {
@@ -7528,8 +7528,8 @@ Accessible transport is evolving rapidly in France:
       en: "How to request an invoice from a taxi?",
     },
     metaTitle: {
-      fr: "Comment réclamer une facture taxi : guide complet | TaxiNeo",
-      en: "How to request a taxi invoice: complete guide | TaxiNeo",
+      fr: "Facture taxi : comment l'obtenir, mentions obligatoires",
+      en: "Taxi Invoice in France: How to Get One, Mandatory Details",
     },
     metaDescription: {
       fr: "Découvrez comment obtenir une facture de taxi : obligations légales du chauffeur, mentions obligatoires, note de frais et solutions efficaces en cas de refus.",

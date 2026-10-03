@@ -162,7 +162,7 @@ export const guides: Guide[] = [
         metaTitle:
           "Prendre un taxi en France : guide pratique | TaxiNeo",
         metaDescription:
-          "Prendre un taxi en France : héler, stations, applications, paiement CB ou espèces et droits du passager. Guide pratique pour résidents et touristes.",
+          "Prendre un taxi en France : héler, stations, applications, paiement CB ou espèces et droits du passager. Guide pratique 2026 pour résidents et touristes.",
         heroTitle: "Comment prendre un taxi en France",
         heroSubtitle:
           "Tout ce que vous devez savoir pour prendre un taxi en toute sérénité : trouver un taxi, monter à bord, payer et connaître vos droits.",
@@ -221,7 +221,7 @@ export const guides: Guide[] = [
       },
       en: {
         metaTitle:
-          "How to take a taxi in France: practical guide 2026 | TaxiNeo",
+          "Taking a Taxi in France: Practical Guide 2026 | TaxiNeo",
         metaDescription:
           "Learn how to take a taxi in France: hailing, taxi ranks, online booking, payment methods and passenger rights. Your complete practical guide for travellers.",
         heroTitle: "How to take a taxi in France",
@@ -287,7 +287,7 @@ export const guides: Guide[] = [
     i18n: {
       fr: {
         metaTitle:
-          "Taxi conventionné CPAM : guide complet 2026 | TaxiNeo",
+          "Taxi conventionné : remboursement CPAM, prescription, 100 %",
         metaDescription:
           "Tout savoir sur le taxi conventionné : conditions de remboursement par la CPAM, démarches, prescription médicale et prise en charge à 100 %. Guide détaillé.",
         heroTitle: "Taxi conventionné : le guide complet",

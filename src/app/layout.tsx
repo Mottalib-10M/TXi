@@ -3,14 +3,14 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.taxineo.fr"),
-  title: "TaxiNeo — Taxi prix fixe 24h/24 | Chauffeurs agréés | France",
+  title: "Taxi prix fixe 24h/24 en France, chauffeurs agréés | TaxiNeo",
   description:
     "Réservez un taxi agréé en quelques secondes. Prix fixe garanti, chauffeurs professionnels, disponible 24h/24 dans 50+ villes françaises.",
   authors: [{ name: "Radif Partners", url: "https://www.taxineo.fr" }],
   creator: "Radif Partners",
   publisher: "TaxiNeo",
   openGraph: {
-    title: "TaxiNeo — Taxi prix fixe 24h/24 | Chauffeurs agréés | France",
+    title: "Taxi prix fixe 24h/24 en France, chauffeurs agréés | TaxiNeo",
     description:
       "Réservez un taxi agréé en quelques secondes. Prix fixe garanti, chauffeurs professionnels, disponible 24h/24 dans 50+ villes françaises.",
     url: "https://www.taxineo.fr",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "TaxiNeo — Taxi prix fixe 24h/24 | Chauffeurs agréés | France",
+    title: "Taxi prix fixe 24h/24 en France, chauffeurs agréés | TaxiNeo",
     description:
       "Réservez un taxi agréé en quelques secondes. Prix fixe garanti, chauffeurs professionnels, disponible 24h/24 dans 50+ villes françaises.",
     images: ["https://www.taxineo.fr/opengraph-image"],

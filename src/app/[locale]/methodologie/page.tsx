@@ -14,8 +14,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const title =
     locale === "en"
-      ? "Methodology: how TaxiNeo calculates its fare estimates"
-      : "Méthodologie : comment TaxiNeo calcule ses estimations";
+      ? "Fare Estimates: How TaxiNeo Calculates Them (Method)"
+      : "Estimations de prix : comment TaxiNeo les calcule (méthode)";
   const description =
     locale === "en"
       ? "Where our fares come from, how an estimate is calculated, what it does not guarantee, how often it is updated and how to report a mistake to us today."

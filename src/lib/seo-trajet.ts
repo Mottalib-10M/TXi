@@ -1,0 +1,119 @@
+import type { Trajet } from "@/data/trajets";
+import { ajusterDescription, choisirTitre } from "@/lib/seo";
+
+/**
+ * Titre et description des pages /trajet/<slug>, construits à partir des
+ * champs du trajet plutôt que recopiés des fichiers de données.
+ *
+ * Relevé du 2026-10-03 : 68 pages anglaises servaient le titre français à
+ * l'identique (« Taxi Aéroport Bordeaux-Mérignac → Arcachon | 65 km »), des
+ * titres tombaient à 46-48 signes, et 262 descriptions affichaient
+ * « en undefined min » faute de durée dans le texte saisi.
+ */
+
+type Loc = "fr" | "en";
+
+/** Noms de lieux traduits pour les titres anglais. */
+const LIEUX_EN: Record<string, string> = {
+  "Gand (Belgique)": "Ghent (Belgium)",
+  "Vintimille (Italie)": "Ventimiglia (Italy)",
+  "Sarrebruck (Allemagne)": "Saarbrücken (Germany)",
+  "San Sebastián (Espagne)": "San Sebastián (Spain)",
+  "Aéroport d'Orly": "Orly Airport",
+  "Gare Bordeaux Saint-Jean": "Bordeaux Saint-Jean Station",
+  "Gare Nantes": "Nantes Station",
+  "Gare Nice-Ville": "Nice-Ville Station",
+  "Gare Strasbourg": "Strasbourg Station",
+  "Île de Ré": "Île de Ré",
+};
+
+export function lieuEn(nom: string): string {
+  if (LIEUX_EN[nom]) return LIEUX_EN[nom];
+  const aeroport = nom.match(/^Aéroport (?:de |d')?(.+)$/);
+  if (aeroport) return `${aeroport[1]} Airport`;
+  return nom
+    .replace(/\(Espagne\)/, "(Spain)")
+    .replace(/\(Italie\)/, "(Italy)")
+    .replace(/\(Belgique\)/, "(Belgium)")
+    .replace(/\(Allemagne\)/, "(Germany)")
+    .replace(/\(Suisse\)/, "(Switzerland)");
+}
+
+function duree(min: number): string {
+  if (min < 60) return `${min} min`;
+  const h = Math.floor(min / 60);
+  const m = min % 60;
+  return m ? `${h}h${String(m).padStart(2, "0")}` : `${h}h`;
+}
+
+function prixDepart(t: Trajet): number | undefined {
+  if (t.prixMin) return t.prixMin;
+  const m = t.priceEstimate.match(/\d+/);
+  return m ? Number(m[0]) : undefined;
+}
+
+export function titreTrajet(t: Trajet, loc: Loc): string {
+  const a = loc === "en" ? lieuEn(t.from) : t.from;
+  const b = loc === "en" ? lieuEn(t.to) : t.to;
+  const tete = `Taxi ${a} → ${b}`;
+  const km = `${t.distanceKm} km`;
+  const d = duree(t.durationMin);
+  const p = prixDepart(t);
+  const prix = p === undefined ? "" : loc === "en" ? `from €${p}` : `dès ${p} €`;
+  const fixe = loc === "en" ? "Fixed Price" : "Prix fixe";
+
+  const candidats = prix
+    ? [
+        `${tete} | ${km}, ${prix} | TaxiNeo`,
+        `${tete} | ${km}, ${prix}, ${d} | TaxiNeo`,
+        `${tete} | ${fixe} ${prix}, ${km}, ${d} | TaxiNeo`,
+        `${tete} | ${km}, ${prix}, ${d}`,
+        `${tete} | ${km}, ${prix}`,
+        `${tete} | ${prix} | TaxiNeo`,
+        `${tete} | ${prix}`,
+        `${tete} | ${km}`,
+        tete,
+      ]
+    : [
+        `${tete} | ${km}, ${d} | TaxiNeo`,
+        `${tete} | ${fixe}, ${km}, ${d} | TaxiNeo`,
+        `${tete} | ${km}, ${d}`,
+        `${tete} | ${km}`,
+        tete,
+      ];
+  return choisirTitre(candidats);
+}
+
+export function descriptionTrajet(t: Trajet, loc: Loc): string {
+  const d = duree(t.durationMin);
+  // « en undefined min » / « undefined min ride » : la durée manquait au
+  // moment de la saisie ; on la reprend du champ durationMin.
+  const brut = t.i18n[loc].metaDescription
+    .replace(/\bundefined min\b/g, d)
+    .replace(/\bundefined\b/g, d);
+  const p = prixDepart(t);
+  const aeroport = t.category === "aeroport";
+  const complements =
+    loc === "en"
+      ? [
+          p !== undefined ? `Fixed price from €${p}.` : "",
+          t.prixVan ? `Van from €${t.prixVan}.` : "",
+          `${t.distanceKm} km trip.`,
+          aeroport ? "Flight tracking included." : "",
+          "Luggage included.",
+          "Licensed drivers, 24/7.",
+          "Free cancellation.",
+          "Price confirmed before booking, tolls included.",
+        ]
+      : [
+          p !== undefined ? `Prix fixe dès ${p} €.` : "",
+          t.prixVan ? `Van dès ${t.prixVan} €.` : "",
+          `Trajet de ${t.distanceKm} km.`,
+          aeroport ? "Suivi de vol inclus." : "",
+          "Bagages compris.",
+          "Chauffeurs agréés 24h/24.",
+          "Annulation sans frais.",
+          "Prix confirmé avant la réservation, péages compris.",
+        ];
+  return ajusterDescription(brut, complements);
+}
