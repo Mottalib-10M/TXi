@@ -2,63 +2,6 @@ import type { Trajet } from "./trajets";
 
 export const trajetsDijonReims: Trajet[] = [
   {
-    slug: "taxi-dijon-dole",
-    from: "Dijon",
-    to: "Dole",
-    fromLat: 47.3220, fromLng: 5.0415,
-    toLat: 47.0951, toLng: 5.4903,
-    distanceKm: 55, durationMin: 40,
-    priceEstimate: "105 — 130 €",
-    category: "ville-a-ville",
-    highlights: ["A39", "Jura", "Pasteur", "Canal du Rhône au Rhin"],
-    prixMin: 105, prixMax: 130, prixVan: 170, dureeMax: 55,
-    autoroute: "A39", peages: "~4 € (inclus)",
-    departSlug: "dijon", arriveeSlug: "dole",
-    liensInternes: ["taxi-dijon-besancon", "taxi-dijon-beaune", "taxi-dijon-chalon-sur-saone"],
-    tags: ["ville-a-ville", "jura", "bourgogne-franche-comte"],
-    hub: "dijon",
-    i18n: {
-      fr: {
-        metaTitle: "Taxi Dijon → Dole | 55 km via A39, dès 105 € | TaxiNeo",
-        metaDescription: "Via A39 en undefined min. Jura, Pasteur et Canal du Rhône au Rhin en chemin. Dépose à votre adresse exacte, retour possible.",
-        heroTitle: "Taxi Dijon → Dole",
-        heroSubtitle: "Transfert Dijon → Dole au prix fixe de 105 — 130 €. 55 km, 40 min.",
-        description: "Dole, ville natale de Louis Pasteur, est à 40 min de Dijon par l'A39.",
-        routeDescription: "L'A39 relie directement Dijon à Dole en traversant la plaine de la Saône.",
-        introduction: "Dole est la porte d'entrée du Jura et la ville natale de Louis Pasteur, dont la maison-musée attire historiens et scientifiques du monde entier. Cette sous-préfecture de 25 000 habitants abrite une collégiale Notre-Dame imposante, des rues médiévales le long du canal des Tanneurs et le canal du Rhône au Rhin prisé des plaisanciers. Le trajet depuis Dijon est court et permet de combiner la visite de la capitale bourguignonne avec celle de la porte jurassienne. Les professionnels de Solvay (usine historique à Tavaux près de Dole) font régulièrement la navette. La gare TGV de Dole dessert aussi Paris, et nos transferts connectent gare-centre-ville.",
-        itineraire: "Départ de Dijon par l'A39 direction Bourg-en-Bresse. Sortie Dole-centre (km 50). La route traverse la plaine de la Saône, paysage de grandes cultures et de bocage. Arrivée dans Dole par le nord, avec vue sur la collégiale Notre-Dame dominant la vieille ville. Péages d'environ 4 € (inclus).",
-        conseils: "Dole est une ville compacte : demandez un dépôt au pied de la collégiale ou près de la maison Pasteur. Le marché de Dole (mardi et samedi matin) est réputé pour les fromages du Jura (Comté, Morbier). Pour continuer vers le vignoble jurassien (Arbois, Château-Chalon), notre chauffeur peut prolonger le trajet.",
-        comparaisonTransport: "Le TER Dijon-Dole met 25 min pour 8-12 €. Le taxi à 105-130 € est porte-à-porte, idéal avec bagages ou en famille. À 3-4 passagers (27-44 €/pers.), prix comparable au TER.",
-        faq: [
-          { question: "Prix Dijon → Dole ?", answer: "105 à 130 € en berline, 170 € en van." },
-          { question: "Maison Pasteur ?", answer: "Dépôt possible devant le musée." },
-          { question: "Gare TGV Dole ?", answer: "Transfert gare-centre en 5 min inclus." },
-          { question: "Vignoble jurassien ?", answer: "Extension vers Arbois possible avec supplément." },
-          { question: "Durée ?", answer: "40 min environ." }
-        ],
-      },
-      en: {
-        metaTitle: "Taxi Dijon → Dole | Fixed price from €105 | TaxiNeo",
-        metaDescription: "Via A39, undefined min ride. Jura, Pasteur and Canal du Rhône au Rhin along the way. Drop-off at your exact address. Faster and more direct than train or bus.",
-        heroTitle: "Taxi Dijon → Dole",
-        heroSubtitle: "Dijon → Dole transfer at €105 — €130. 55 km, 40 min.",
-        description: "Dole, birthplace of Louis Pasteur, is 40 min from Dijon via A39.",
-        routeDescription: "Direct A39 across the Saône plain to Dole.",
-        introduction: "Dole is the gateway to the Jura and Pasteur's birthplace. Medieval canal town with impressive Notre-Dame collegiate church. Quick 40-min transfer from Dijon.",
-        itineraire: "A39 direct to Dole. Tolls about €4 (included). Compact town, drop-off near Pasteur museum or collegiate church.",
-        conseils: "Tuesday/Saturday market for Jura cheeses. Extension to Arbois wine region possible.",
-        comparaisonTransport: "TER takes 25 min at €8-12. Taxi at €105-130 is door-to-door. For 3-4 passengers (€18-30/pp), comparable to train.",
-        faq: [
-          { question: "How much?", answer: "€105-130 sedan, €170 van." },
-          { question: "Pasteur museum?", answer: "Drop-off at museum entrance." },
-          { question: "Jura wines?", answer: "Arbois extension available." },
-          { question: "TGV station?", answer: "Station-to-center transfer in 5 min." },
-          { question: "How long?", answer: "About 40 min." }
-        ],
-      },
-    },
-  },
-  {
     slug: "taxi-dijon-nevers",
     from: "Dijon",
     to: "Nevers",

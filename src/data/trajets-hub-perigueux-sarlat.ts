@@ -141,6 +141,7 @@ export const trajetsPérigord: Trajet[] = [
     durationMin: 100,
     priceEstimate: "325 — 395 €",
     category: "ville-a-ville",
+    arriveeSlug: "bordeaux",
     highlights: ["A89", "Périgord noir", "Lascaux", "Saint-Émilion", "Bastides"],
     prixMin: 325,
     prixMax: 395,

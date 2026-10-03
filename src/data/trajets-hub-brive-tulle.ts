@@ -269,6 +269,7 @@ export const trajetsBriveTulle: Trajet[] = [
     durationMin: 60,
     priceEstimate: "175 — 210 €",
     category: "ville-a-ville",
+    arriveeSlug: "limoges",
     highlights: ["A20", "Corrèze", "Dentelle", "Accordéon", "Limousin"],
     prixMin: 175,
     prixMax: 210,

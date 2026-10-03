@@ -269,6 +269,7 @@ export const trajetsClermontHub: Trajet[] = [
     durationMin: 90,
     priceEstimate: "280 — 335 €",
     category: "ville-a-ville",
+    arriveeSlug: "saint-etienne",
     highlights: ["A89", "A72", "Design", "Musée de la Mine", "Chaudron vert"],
     prixMin: 280,
     prixMax: 335,

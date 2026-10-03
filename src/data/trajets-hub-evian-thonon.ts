@@ -141,6 +141,7 @@ export const trajetsEvianThonon: Trajet[] = [
     durationMin: 30,
     priceEstimate: "70 — 85 €",
     category: "ville-a-ville",
+    arriveeSlug: "geneve",
     highlights: ["D1005", "Lac Léman", "Frontière suisse", "Chablais", "Aéroport GVA"],
     prixMin: 70,
     prixMax: 85,
