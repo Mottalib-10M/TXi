@@ -93,7 +93,7 @@ export const trajetsAptCavaillon: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Apt → Aix-en-Provence | 55 km, dès 105 € | TaxiNeo",
-        metaDescription: "Via D900 / A51 en 40 min. Luberon, Cézanne et Cours Mirabeau en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via D900 / A51 en 40 min. Luberon, Cézanne et Cours Mirabeau en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Apt → Aix-en-Provence",
         heroSubtitle: "Transfert Apt → Aix-en-Provence au prix fixe de 105 — 130 €. 55 km, du Luberon à la ville de Cézanne.",
         description: "Aix-en-Provence, ville d'art et de Cézanne, est à 40 min d'Apt par la D900 puis l'A51.",
@@ -158,7 +158,7 @@ export const trajetsAptCavaillon: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Cavaillon → Avignon | 25 km, dès 50 € | TaxiNeo",
-        metaDescription: "Via D2 / N7 en 20 min. Luberon, Melon de Cavaillon, Palais des Papes et TGV en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via D2 / N7 en 20 min. Luberon, Melon de Cavaillon, Palais des Papes et TGV en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Cavaillon → Avignon",
         heroSubtitle: "Transfert Cavaillon → Avignon au prix fixe de 50 — 60 €. 25 km, route directe sans péage.",
         description: "Avignon, cité des Papes, est à seulement 20 min de Cavaillon par la D2 et la N7.",

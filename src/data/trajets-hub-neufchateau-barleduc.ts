@@ -96,7 +96,7 @@ export const trajetsNeufchateauBarLeDuc: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Bar-le-Duc → Metz | 95 km, dès 185 € | TaxiNeo",
-        metaDescription: "Via A4 en 1h. N135, Meuse, Verdun et Cathédrale Saint-Étienne Metz en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A4 en 1h. N135, Meuse, Verdun et Cathédrale Saint-Étienne Metz en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Bar-le-Duc → Metz",
         heroSubtitle: "Transfert Bar-le-Duc → Metz au prix fixe de 185 — 220 €. 95 km par l'A4 entre la Meuse et la Moselle.",
         description: "Metz, ville d'art et d'histoire avec son Centre Pompidou-Metz et sa cathédrale aux plus grands vitraux du monde, est à 1h de Bar-le-Duc par l'A4.",
@@ -161,7 +161,7 @@ export const trajetsNeufchateauBarLeDuc: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Bar-le-Duc → Reims | 130 km, dès 250 € | TaxiNeo",
-        metaDescription: "Via A4 en 1h20. N4, Champagne, Cathédrale de Reims et Voie sacrée en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A4 en 1h20. N4, Champagne, Cathédrale de Reims et Voie sacrée en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Bar-le-Duc → Reims",
         heroSubtitle: "Transfert Bar-le-Duc → Reims au prix fixe de 250 — 305 €. 130 km par l'A4 de la Meuse à la Champagne.",
         description: "Reims, cité des sacres royaux avec sa cathédrale gothique chef-d'œuvre et ses caves de champagne, est à 1h20 de Bar-le-Duc par l'A4.",

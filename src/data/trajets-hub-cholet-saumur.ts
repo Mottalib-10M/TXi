@@ -93,7 +93,7 @@ export const trajetsCholetSaumur: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Cholet → Angers | forfait dès 115 €, 40 min | TaxiNeo",
-        metaDescription: "Via A87 / D960 en 40 min. Mauges, Anjou, Château d'Angers et Maine-et-Loire en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A87 / D960 en 40 min. Mauges, Anjou, Château d'Angers et Maine-et-Loire en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Cholet → Angers",
         heroSubtitle: "Transfert Cholet → Angers au prix fixe de 115 — 140 €. 60 km, liaison directe entre les deux grandes villes du Maine-et-Loire.",
         description: "Angers, capitale de l'Anjou et préfecture du Maine-et-Loire, est à 40 minutes de Cholet par la D960 ou l'A87.",
@@ -288,7 +288,7 @@ export const trajetsCholetSaumur: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Cholet → La Roche-sur-Yon | 70 km, dès 135 € | TaxiNeo",
-        metaDescription: "Via D960bis / N249 en 50 min. Vendée, Bocage vendéen, Puy du Fou et Mauges en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via D960bis / N249 en 50 min. Vendée, Bocage vendéen, Puy du Fou et Mauges en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Cholet → La Roche-sur-Yon",
         heroSubtitle: "Transfert Cholet → La Roche-sur-Yon au prix fixe de 135 — 165 €. 70 km, liaison directe entre Maine-et-Loire et Vendée.",
         description: "La Roche-sur-Yon, préfecture de la Vendée, est à 50 minutes de Cholet par les routes départementales à travers le bocage vendéen.",
@@ -307,7 +307,7 @@ export const trajetsCholetSaumur: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Cholet → La Roche-sur-Yon | 70 km, from €135 | TaxiNeo",
-        metaDescription: "Via D960bis / N249, 50 min ride. Vendée, Bocage vendéen, Puy du Fou and Mauges en route. Drop-off at your exact address. Door-to-door, luggage included.",
+        metaDescription: "Via D960bis / N249, 50 min ride. Vendée, Bocage vendéen, Puy du Fou and Mauges en route. Drop-off at your exact address, luggage included.",
         heroTitle: "Taxi Cholet → La Roche-sur-Yon",
         heroSubtitle: "Your Cholet → La Roche-sur-Yon transfer at €135 — €165. 70 km, direct link between Maine-et-Loire and Vendée.",
         description: "La Roche-sur-Yon, Vendée prefecture, is 50 minutes from Cholet through the Vendée bocage countryside.",

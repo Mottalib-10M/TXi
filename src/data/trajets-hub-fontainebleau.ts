@@ -93,7 +93,7 @@ export const trajetsFontainebleau: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Fontainebleau → Aéroport d'Orly | 55 km, 70 € | TaxiNeo",
-        metaDescription: "Via A6 en 45 min. Aéroport Orly, Navette vol, Château UNESCO et Forêt en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A6 en 45 min. Aéroport Orly, Navette vol, Château UNESCO et Forêt en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Fontainebleau → Aéroport d'Orly",
         heroSubtitle: "Transfert Fontainebleau → Orly au prix fixe de 105 — 130 €. 55 km, direct par l'A6.",
         description: "L'aéroport d'Orly est à 45 min de Fontainebleau par l'autoroute A6, transfert idéal pour vos vols.",
@@ -158,7 +158,7 @@ export const trajetsFontainebleau: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Fontainebleau → Melun | 18 km, dès 35 € | TaxiNeo",
-        metaDescription: "Via D606 en 20 min. Seine-et-Marne, Préfecture 77, Gare Transilien et Brie en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via D606 en 20 min. Seine-et-Marne, Préfecture 77, Gare Transilien et Brie en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Fontainebleau → Melun",
         heroSubtitle: "Transfert Fontainebleau → Melun au prix fixe de 35 — 45 €. 18 km, sans péage.",
         description: "Melun, préfecture de Seine-et-Marne, est à 20 min de Fontainebleau par la D606.",
@@ -177,7 +177,7 @@ export const trajetsFontainebleau: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Fontainebleau → Melun | 18 km, from €35 | TaxiNeo",
-        metaDescription: "Via D606, 20 min ride. Seine-et-Marne, Préfecture 77, Gare Transilien and Brie en route. Drop-off at your exact address. Door-to-door, luggage included.",
+        metaDescription: "Via D606, 20 min ride. Seine-et-Marne, Préfecture 77, Gare Transilien and Brie en route. Drop-off at your exact address, luggage included.",
         heroTitle: "Taxi Fontainebleau → Melun",
         heroSubtitle: "Your Fontainebleau → Melun transfer at €35 — €45. 18 km, no tolls.",
         description: "Melun, prefecture of Seine-et-Marne, is 20 min from Fontainebleau via the D606.",

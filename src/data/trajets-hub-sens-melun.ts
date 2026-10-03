@@ -28,7 +28,7 @@ export const trajetsSensMelun: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Sens → Paris | 120 km, dès 230 €, 1h15 | TaxiNeo",
-        metaDescription: "Via A5 en 1h15. Cathédrale Saint-Étienne, Yonne, Porte-à-porte et Nuit en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A5 en 1h15. Cathédrale Saint-Étienne, Yonne, Porte-à-porte et Nuit en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Sens → Paris",
         heroSubtitle: "Transfert Sens → Paris au prix fixe de 230 — 280 €. 120 km, direct par l'A5.",
         description: "Paris est à 1h15 de Sens par l'autoroute A5, porte d'entrée de la Bourgogne.",
@@ -93,7 +93,7 @@ export const trajetsSensMelun: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Sens → Auxerre | forfait dès 115 €, 40 min | TaxiNeo",
-        metaDescription: "Via A6 en 40 min. Bourgogne, Yonne, Cathédrale Saint-Étienne et Vignobles en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A6 en 40 min. Bourgogne, Yonne, Cathédrale Saint-Étienne et Vignobles en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Sens → Auxerre",
         heroSubtitle: "Transfert Sens → Auxerre au prix fixe de 115 — 140 €. 60 km, cœur de la Bourgogne par l'A6.",
         description: "Auxerre, préfecture de l'Yonne et joyau bourguignon, est à 40 min de Sens par l'A6.",
@@ -112,7 +112,7 @@ export const trajetsSensMelun: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Sens → Auxerre | Fixed price from €115 | TaxiNeo",
-        metaDescription: "Via A6, 40 min ride. Bourgogne, Yonne, Cathédrale Saint-Étienne and Vignobles en route. Drop-off at your exact address. Door-to-door, luggage included.",
+        metaDescription: "Via A6, 40 min ride. Bourgogne, Yonne, Cathédrale Saint-Étienne and Vignobles en route. Drop-off at your exact address, luggage included.",
         heroTitle: "Taxi Sens → Auxerre",
         heroSubtitle: "Your Sens → Auxerre transfer at €115 — €140. 60 km, heart of Burgundy.",
         description: "Auxerre, capital of the Yonne department and Burgundy gem, is 40 min from Sens.",
@@ -158,7 +158,7 @@ export const trajetsSensMelun: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Melun → Paris | forfait dès 95 €, 35 min | TaxiNeo",
-        metaDescription: "Via A5 en 35 min. Seine-et-Marne, Préfecture 77, Porte-à-porte et Nuit en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A5 en 35 min. Seine-et-Marne, Préfecture 77, Porte-à-porte et Nuit en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Melun → Paris",
         heroSubtitle: "Transfert Melun → Paris au prix fixe de 95 — 120 €. 50 km, direct par l'A5.",
         description: "Paris est à 35 min de Melun par l'A5, préfecture de Seine-et-Marne.",
@@ -223,7 +223,7 @@ export const trajetsSensMelun: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Fontainebleau → Paris | 65 km, dès 125 € | TaxiNeo",
-        metaDescription: "Via A6 en 45 min. Château de Fontainebleau, Forêt, UNESCO et Nuit en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A6 en 45 min. Château de Fontainebleau, Forêt, UNESCO et Nuit en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Fontainebleau → Paris",
         heroSubtitle: "Transfert Fontainebleau → Paris au prix fixe de 125 — 155 €. 65 km, direct par l'A6.",
         description: "Paris est à 45 min de Fontainebleau par l'A6, cité impériale et forestière.",

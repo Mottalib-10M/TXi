@@ -93,7 +93,7 @@ export const trajetsStrasbourgHub2: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Strasbourg → Nancy | 155 km, dès 295 € | TaxiNeo",
-        metaDescription: "Via A4 en 1h40. Lorraine, Place Stanislas, Art nouveau et Bergamote en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A4 en 1h40. Lorraine, Place Stanislas, Art nouveau et Bergamote en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Strasbourg → Nancy",
         heroSubtitle: "Transfert Strasbourg → Nancy au prix fixe de 295 — 360 €. 155 km, la perle lorraine.",
         description: "Nancy, ville d'Art nouveau et place Stanislas UNESCO, est à 1h40 de Strasbourg.",
@@ -158,7 +158,7 @@ export const trajetsStrasbourgHub2: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Strasbourg → Metz | 163 km, dès 315 € | TaxiNeo",
-        metaDescription: "Via A4 en 1h45. Lorraine, Centre Pompidou-Metz, Cathédrale et Mirabelle en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A4 en 1h45. Lorraine, Centre Pompidou-Metz, Cathédrale et Mirabelle en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Strasbourg → Metz",
         heroSubtitle: "Transfert Strasbourg → Metz au prix fixe de 315 — 380 €. 163 km, capitale de la Lorraine.",
         description: "Metz, ville d'art et d'histoire avec le Centre Pompidou-Metz, est à 1h45 de Strasbourg.",
@@ -223,7 +223,7 @@ export const trajetsStrasbourgHub2: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Strasbourg → Luxembourg-Ville | 220 km, 270 € | TaxiNeo",
-        metaDescription: "Via A4 puis A31 en 2h15. A4/A31, Luxembourg, Grand-Duché et Transfrontalier en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A4 puis A31 en 2h15. A4/A31, Luxembourg, Grand-Duché et Transfrontalier en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Strasbourg → Luxembourg",
         heroSubtitle: "Transfert Strasbourg → Luxembourg au prix fixe de 420 — 510 €. 220 km, vers le Grand-Duché.",
         description: "Luxembourg-Ville, capitale du Grand-Duché, est à 2h15 de Strasbourg.",
@@ -353,7 +353,7 @@ export const trajetsStrasbourgHub2: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Strasbourg → Molsheim | 25 km, dès 50 € | TaxiNeo",
-        metaDescription: "Via A352 en 25 min. Bugatti, Vignoble, Chartreuse et Route des vins en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A352 en 25 min. Bugatti, Vignoble, Chartreuse et Route des vins en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Strasbourg → Molsheim",
         heroSubtitle: "Transfert Strasbourg → Molsheim au prix fixe de 50 — 60 €. 25 km, cité Bugatti.",
         description: "Molsheim, berceau de Bugatti sur la route des vins d'Alsace, est à 25 min de Strasbourg.",

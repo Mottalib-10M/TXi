@@ -158,7 +158,7 @@ export const trajetsLibourneBergerac: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Bergerac → Bordeaux | 95 km, dès 185 € | TaxiNeo",
-        metaDescription: "Via A89 en 1h. Vignoble bordelais, Saint-Émilion, Dordogne et Cité du Vin en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A89 en 1h. Vignoble bordelais, Saint-Émilion, Dordogne et Cité du Vin en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Bergerac → Bordeaux",
         heroSubtitle: "Transfert Bergerac → Bordeaux au prix fixe de 185 — 220 €. 95 km, direct par l'A89.",
         description: "Bordeaux, métropole inscrite au patrimoine mondial de l'UNESCO, est à 1h de Bergerac par l'A89.",
@@ -288,7 +288,7 @@ export const trajetsLibourneBergerac: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Bergerac → Périgueux | 50 km, dès 95 € | TaxiNeo",
-        metaDescription: "Via N21 en 35 min. Périgord blanc, Cathédrale Saint-Front, Isle et Vésone en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via N21 en 35 min. Périgord blanc, Cathédrale Saint-Front, Isle et Vésone en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Bergerac → Périgueux",
         heroSubtitle: "Transfert Bergerac → Périgueux au prix fixe de 95 — 120 €. 50 km, direct par la N21.",
         description: "Périgueux, préfecture de la Dordogne et capitale du Périgord blanc, est à 35 min de Bergerac.",
@@ -307,7 +307,7 @@ export const trajetsLibourneBergerac: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Bergerac → Périgueux | 50 km, from €95 | TaxiNeo",
-        metaDescription: "Via N21, 35 min ride. Périgord blanc, Cathédrale Saint-Front, Isle and Vésone en route. Drop-off at your exact address. Door-to-door, luggage included.",
+        metaDescription: "Via N21, 35 min ride. Périgord blanc, Cathédrale Saint-Front, Isle and Vésone en route. Drop-off at your exact address, luggage included.",
         heroTitle: "Taxi Bergerac → Périgueux",
         heroSubtitle: "Your Bergerac → Périgueux transfer at €95 — €120. 50 km, via the N21.",
         description: "Périgueux, Dordogne's capital and White Périgord hub, is 35 min from Bergerac.",

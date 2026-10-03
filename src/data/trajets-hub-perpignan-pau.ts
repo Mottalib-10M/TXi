@@ -93,7 +93,7 @@ export const trajetsPerpignanPau: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Perpignan → Barcelone | 190 km, dès 365 € | TaxiNeo",
-        metaDescription: "Via A9/AP-7 en 2h. AP-7, Frontière Le Perthus, Costa Brava et Catalogne en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A9/AP-7 en 2h. AP-7, Frontière Le Perthus, Costa Brava et Catalogne en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Perpignan → Barcelone",
         heroSubtitle: "Votre transfert Perpignan → Barcelone au prix fixe de 365 — 440 €. 190 km via A9/AP-7.",
         description: "Barcelone, capitale de la Catalogne et deuxième ville d'Espagne, est à 2h de Perpignan par l'autoroute.",
@@ -221,7 +221,7 @@ export const trajetsPerpignanPau: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Perpignan → Carcassonne | 120 km, dès 230 € | TaxiNeo",
-        metaDescription: "Via A9/A61 en 1h15. Cité médiévale UNESCO, Canal du Midi et Pays cathare en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A9/A61 en 1h15. Cité médiévale UNESCO, Canal du Midi et Pays cathare en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Perpignan → Carcassonne",
         heroSubtitle: "Votre transfert Perpignan → Carcassonne au prix fixe de 230 — 280 €.",
         description: "Carcassonne et sa Cité médiévale classée UNESCO sont à 1h15 de Perpignan par l'autoroute A9/A61.",
@@ -286,7 +286,7 @@ export const trajetsPerpignanPau: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Perpignan → Narbonne | 65 km, dès 125 € | TaxiNeo",
-        metaDescription: "Via A9 en 40 min. Via Domitia, Cathédrale Saint-Just et Halles en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A9 en 40 min. Via Domitia, Cathédrale Saint-Just et Halles en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Perpignan → Narbonne",
         heroSubtitle: "Votre transfert Perpignan → Narbonne au prix fixe de 125 — 155 €.",
         description: "Narbonne, première colonie romaine de Gaule et carrefour autoroutier du Languedoc, est à 40 min de Perpignan.",
@@ -354,7 +354,7 @@ export const trajetsPerpignanPau: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Pau → Lourdes | forfait dès 90 €, 35 min | TaxiNeo",
-        metaDescription: "Via A64/N21 en 35 min. Sanctuaire marial, Pèlerinage et Pyrénées en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A64/N21 en 35 min. Sanctuaire marial, Pèlerinage et Pyrénées en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Pau → Lourdes",
         heroSubtitle: "Votre transfert Pau → Lourdes au prix fixe de 90 — 105 €. 45 km via A64/N21.",
         description: "Lourdes, haut lieu de pèlerinage mondial avec 6 millions de visiteurs par an, est à 35 min de Pau.",
@@ -482,7 +482,7 @@ export const trajetsPerpignanPau: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Pau → Toulouse | 195 km, dès 375 €, 2h | TaxiNeo",
-        metaDescription: "Via A64 en 2h. La Pyrénéenne, Gave de Pau et Piémont pyrénéen en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A64 en 2h. La Pyrénéenne, Gave de Pau et Piémont pyrénéen en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Pau → Toulouse",
         heroSubtitle: "Votre transfert Pau → Toulouse au prix fixe de 375 — 455 €. 195 km via l'A64.",
         description: "Toulouse, capitale de l'aéronautique et quatrième ville de France, est à 2h de Pau par l'A64.",
@@ -566,7 +566,7 @@ export const trajetsPerpignanPau: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Pau → Bordeaux | Fixed price from €410 | TaxiNeo",
-        metaDescription: "Via A65, 2h15 ride. Autoroute de Gascogne, Forêt des Landes and Vignobles along the way. Drop-off at your exact address. Door-to-door, luggage included.",
+        metaDescription: "Via A65, 2h15 ride. Autoroute de Gascogne, Forêt des Landes and Vignobles along the way. Drop-off at your exact address, luggage included.",
         heroTitle: "Taxi Pau → Bordeaux",
         heroSubtitle: "Your Pau → Bordeaux transfer at €410 — €500. 215 km via the A65.",
         description: "Bordeaux, world wine capital and dynamic metropolis, is 2h15 from Pau via the A65.",

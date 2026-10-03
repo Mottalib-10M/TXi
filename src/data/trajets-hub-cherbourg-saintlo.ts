@@ -93,7 +93,7 @@ export const trajetsCherbourg: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Cherbourg → Paris | 360 km, dès 690 € | TaxiNeo",
-        metaDescription: "Via A13 en 3h30. Cotentin, Normandie, Navette ferry et Porte-à-porte en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A13 en 3h30. Cotentin, Normandie, Navette ferry et Porte-à-porte en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Cherbourg → Paris",
         heroSubtitle: "Transfert Cherbourg → Paris au prix fixe de 690 — 835 €. 360 km, direct par la N13 et l'A13.",
         description: "Paris est à 3h30 de Cherbourg par la N13 puis l'A13, l'autoroute de Normandie.",
@@ -288,7 +288,7 @@ export const trajetsCherbourg: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Saint-Lô → Caen | 65 km, dès 125 €, 45 min | TaxiNeo",
-        metaDescription: "Via A84 en 45 min. Manche, Normandie, Bocage normand et Mémorial de Caen en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A84 en 45 min. Manche, Normandie, Bocage normand et Mémorial de Caen en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Saint-Lô → Caen",
         heroSubtitle: "Transfert Saint-Lô → Caen au prix fixe de 125 — 155 €. 65 km, direct par l'A84.",
         description: "Caen est à 45 min de Saint-Lô par l'A84, au coeur de la Normandie.",
@@ -307,7 +307,7 @@ export const trajetsCherbourg: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Saint-Lô → Caen | Fixed price from €125 | TaxiNeo",
-        metaDescription: "Via A84, 45 min ride. Manche, Normandie, Bocage normand and Mémorial de Caen en route. Drop-off at your exact address. Door-to-door, luggage included.",
+        metaDescription: "Via A84, 45 min ride. Manche, Normandie, Bocage normand and Mémorial de Caen en route. Drop-off at your exact address, luggage included.",
         heroTitle: "Taxi Saint-Lô → Caen",
         heroSubtitle: "Your Saint-Lô → Caen transfer at €125 — €155. 65 km, via the toll-free A84.",
         description: "Caen is 45 min from Saint-Lô via the toll-free A84 motorway.",

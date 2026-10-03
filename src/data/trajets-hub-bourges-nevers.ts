@@ -47,7 +47,7 @@ export const trajetsBourgesNevers: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Bourges → Paris | 245 km, from €470 | TaxiNeo",
-        metaDescription: "Via A71, 2h30 ride. Beauce, Île-de-France, Berry and Cathédrale en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via A71, 2h30 ride. Beauce, Île-de-France, Berry and Cathédrale en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Bourges → Paris",
         heroSubtitle: "Your Bourges → Paris transfer at €470 — €570. 245 km, direct via the A71.",
         description: "Paris is 2h30 from Bourges via the A71 through Beauce and Sologne.",
@@ -177,7 +177,7 @@ export const trajetsBourgesNevers: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Bourges → Clermont-Ferrand | 195 km, €215 | TaxiNeo",
-        metaDescription: "Via A71, 2 hours ride. Berry, Bourbonnais, Volcans and Michelin en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via A71, 2 hours ride. Berry, Bourbonnais, Volcans and Michelin en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Bourges → Clermont-Ferrand",
         heroSubtitle: "Your Bourges → Clermont-Ferrand transfer at €375 — €455. 195 km, direct via the A71.",
         description: "Clermont-Ferrand, Auvergne capital at the foot of the volcanoes, is 2h from Bourges.",
@@ -223,7 +223,7 @@ export const trajetsBourgesNevers: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Nevers → Paris | 240 km, dès 460 €, 2h25 | TaxiNeo",
-        metaDescription: "Via A77 en 2h25. Nièvre, Loire, Gâtinais et Circuit Magny-Cours en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A77 en 2h25. Nièvre, Loire, Gâtinais et Circuit Magny-Cours en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Nevers → Paris",
         heroSubtitle: "Transfert Nevers → Paris au prix fixe de 460 — 555 €. 240 km, direct par l'A77.",
         description: "Paris est à 2h25 de Nevers par l'A77, à travers le Gâtinais et la forêt de Fontainebleau.",
@@ -307,7 +307,7 @@ export const trajetsBourgesNevers: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Nevers → Clermont-Ferrand | 160 km, from €305 | TaxiNeo",
-        metaDescription: "Via N7/A71, 1h35 ride. Allier, Bourbonnais, Volcans and Moulins en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via N7/A71, 1h35 ride. Allier, Bourbonnais, Volcans and Moulins en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Nevers → Clermont-Ferrand",
         heroSubtitle: "Your Nevers → Clermont-Ferrand transfer at €305 — €370. 160 km, from Nivernais to Auvergne.",
         description: "Clermont-Ferrand, at the foot of the Chaîne des Puys, is 1h35 from Nevers.",

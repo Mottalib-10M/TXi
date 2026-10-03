@@ -47,7 +47,7 @@ export const trajetsIssoudunVierzon: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Vierzon → Paris | 200 km, from €385 | TaxiNeo",
-        metaDescription: "Via A71, 2h10 ride. Sologne, Beauce, Berry and Canal de Berry en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via A71, 2h10 ride. Sologne, Beauce, Berry and Canal de Berry en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Vierzon → Paris",
         heroSubtitle: "Your Vierzon → Paris transfer at €385 — €465. 200 km, direct via the A71.",
         description: "Paris is 2h10 from Vierzon via the A71 through Sologne and Beauce.",
@@ -112,7 +112,7 @@ export const trajetsIssoudunVierzon: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Vierzon → Bourges | 35 km, from €70 | TaxiNeo",
-        metaDescription: "Via N76, 25 min ride. Cher, Berry, Jacques Cœur and Cathédrale en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via N76, 25 min ride. Cher, Berry, Jacques Cœur and Cathédrale en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Vierzon → Bourges",
         heroSubtitle: "Your Vierzon → Bourges transfer at €70 — €85. 35 km, 25 min via the N76.",
         description: "Bourges, Berry's capital and home to Jacques Coeur's palace, is 25 min from Vierzon.",
@@ -242,7 +242,7 @@ export const trajetsIssoudunVierzon: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Issoudun → Châteauroux | 30 km, from €60 | TaxiNeo",
-        metaDescription: "Via A20, 25 min ride. Berry, Indre, Balzac and George Sand en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via A20, 25 min ride. Berry, Indre, Balzac and George Sand en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Issoudun → Châteauroux",
         heroSubtitle: "Your Issoudun → Châteauroux transfer at €60 — €70. 30 km, 25 min via the A20.",
         description: "Châteauroux, Indre's capital, is 25 min from Issoudun via the toll-free A20.",

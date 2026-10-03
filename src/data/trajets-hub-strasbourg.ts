@@ -93,7 +93,7 @@ export const trajetsStrasbourgHub: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Strasbourg → Mulhouse | 120 km, dès 230 € | TaxiNeo",
-        metaDescription: "Via A35 en 1h10. Cité de l'Automobile, Cité du Train et Plaine d'Alsace en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A35 en 1h10. Cité de l'Automobile, Cité du Train et Plaine d'Alsace en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Strasbourg → Mulhouse",
         heroSubtitle: "Transfert Strasbourg → Mulhouse au prix fixe de 230 — 280 €. 120 km par l'A35 gratuite.",
         description: "Mulhouse, capitale industrielle du Haut-Rhin avec ses musées techniques de renommée mondiale, est à 1h10 de Strasbourg par l'A35.",
@@ -157,7 +157,7 @@ export const trajetsStrasbourgHub: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Strasbourg → Bâle | 145 km, dès 280 € | TaxiNeo",
-        metaDescription: "Via A35 puis A36 en 1h25. EuroAirport, Suisse, Art Basel et Rhin en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A35 puis A36 en 1h25. EuroAirport, Suisse, Art Basel et Rhin en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Strasbourg → Bâle",
         heroSubtitle: "Transfert Strasbourg → Bâle au prix fixe de 280 — 335 €. 145 km, traversée internationale France-Suisse.",
         description: "Bâle, ville trinationale au carrefour de la France, l'Allemagne et la Suisse, est à 1h25 de Strasbourg.",

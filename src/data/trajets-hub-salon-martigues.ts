@@ -28,7 +28,7 @@ export const trajetsSalonMartigues: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Salon-de-Provence → Marseille | 50 km, 60 € | TaxiNeo",
-        metaDescription: "Via A7 en 35 min. Provence, Nostradamus, Vieux-Port et Plaine de la Crau en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A7 en 35 min. Provence, Nostradamus, Vieux-Port et Plaine de la Crau en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Salon-de-Provence → Marseille",
         heroSubtitle: "Transfert Salon-de-Provence → Marseille au prix fixe de 95 — 120 €. 50 km, direct par l'A7.",
         description: "Marseille, cité phocéenne et capitale de la Provence, est à 35 min de Salon-de-Provence par l'A7.",
@@ -47,7 +47,7 @@ export const trajetsSalonMartigues: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Salon-de-Provence → Marseille | 50 km, €60 | TaxiNeo",
-        metaDescription: "Via A7, 35 min ride. Provence, Nostradamus, Vieux-Port and Plaine de la Crau en route. Drop-off at your exact address. Door-to-door, luggage included.",
+        metaDescription: "Via A7, 35 min ride. Provence, Nostradamus, Vieux-Port and Plaine de la Crau en route. Drop-off at your exact address, luggage included.",
         heroTitle: "Taxi Salon-de-Provence → Marseille",
         heroSubtitle: "Your Salon-de-Provence → Marseille transfer at €95 — €120. 50 km, via the A7.",
         description: "Marseille, France's second city, is 35 min from Salon-de-Provence via the A7.",
@@ -93,7 +93,7 @@ export const trajetsSalonMartigues: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Salon-de-Provence → Aix-en-Provence | 35 km | TaxiNeo",
-        metaDescription: "Via A7 en 25 min. Cézanne, Cours Mirabeau, Base Aérienne 701 et Provence en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A7 en 25 min. Cézanne, Cours Mirabeau, Base Aérienne 701 et Provence en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Salon-de-Provence → Aix-en-Provence",
         heroSubtitle: "Transfert Salon-de-Provence → Aix-en-Provence au prix fixe de 70 — 85 €. 35 km, direct par l'A7.",
         description: "Aix-en-Provence, ville d'art et d'eau, est à seulement 25 min de Salon-de-Provence.",
@@ -112,7 +112,7 @@ export const trajetsSalonMartigues: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Salon-de-Provence → Aix-en-Provence | 35 km | TaxiNeo",
-        metaDescription: "Via A7, 25 min ride. Cézanne, Cours Mirabeau, Base Aérienne 701 and Provence en route. Drop-off at your exact address. Door-to-door, luggage included.",
+        metaDescription: "Via A7, 25 min ride. Cézanne, Cours Mirabeau, Base Aérienne 701 and Provence en route. Drop-off at your exact address, luggage included.",
         heroTitle: "Taxi Salon-de-Provence → Aix-en-Provence",
         heroSubtitle: "Your Salon-de-Provence → Aix-en-Provence transfer at €70 — €85. 35 km, via the A7.",
         description: "Aix-en-Provence, city of art and fountains, is just 25 min from Salon-de-Provence.",
@@ -223,7 +223,7 @@ export const trajetsSalonMartigues: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Salon-de-Provence → Avignon | 50 km, dès 95 € | TaxiNeo",
-        metaDescription: "Via A7 en 35 min. Alpilles, Palais des Papes, Nostradamus et TGV en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A7 en 35 min. Alpilles, Palais des Papes, Nostradamus et TGV en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Salon-de-Provence → Avignon",
         heroSubtitle: "Transfert Salon-de-Provence → Avignon au prix fixe de 95 — 120 €. 50 km, direct par l'A7.",
         description: "Avignon, cité des Papes et capitale du théâtre, est à 35 min de Salon-de-Provence.",

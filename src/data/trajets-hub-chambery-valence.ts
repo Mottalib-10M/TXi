@@ -77,7 +77,7 @@ export const trajetsChamberyValence: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Chambéry → Lyon | 105 km, dès 200 € | TaxiNeo",
-        metaDescription: "Via A43 en undefined min. Isère, Avant-Pays Savoyard et Direct en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A43 en undefined min. Isère, Avant-Pays Savoyard et Direct en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Chambéry → Lyon",
         heroSubtitle: "Transfert Chambéry → Lyon au prix fixe de 200 — 245 €. 105 km, 1h10.",
         description: "Chambéry — Lyon emprunte l'A43, reliant la Savoie à la métropole lyonnaise.",
@@ -248,7 +248,7 @@ export const trajetsChamberyValence: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Valence → Grenoble | 95 km, dès 185 € | TaxiNeo",
-        metaDescription: "Via A49 en undefined min. Vercors, Isère et Romans-sur-Isère en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A49 en undefined min. Vercors, Isère et Romans-sur-Isère en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Valence → Grenoble",
         heroSubtitle: "Transfert Valence → Grenoble au prix fixe de 185 — 220 €. 95 km, 1h05.",
         description: "Valence — Grenoble emprunte l'A49, avec le Vercors en toile de fond.",
@@ -324,7 +324,7 @@ export const trajetsChamberyValence: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Valence → Montélimar | 50 km, from €95 | TaxiNeo",
-        metaDescription: "Via A7, undefined min ride. Nougat, Drôme and Provence along the way. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via A7, undefined min ride. Nougat, Drôme and Provence along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Valence → Montélimar",
         heroSubtitle: "Valence → Montélimar transfer at €95 — €120. 50 km, 35 min.",
         description: "Montélimar, world nougat capital, is 35 min south of Valence via A7.",

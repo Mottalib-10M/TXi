@@ -158,7 +158,7 @@ export const trajetsAmiensTolon: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Amiens → Saint-Quentin | 75 km, dès 145 € | TaxiNeo",
-        metaDescription: "Via A29 puis A26 en 55 min. A29/A26, Aisne, Art Déco et Basilique en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A29 puis A26 en 55 min. A29/A26, Aisne, Art Déco et Basilique en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Amiens → Saint-Quentin",
         heroSubtitle: "Transfert Amiens → Saint-Quentin au prix fixe de 145 — 175 €. 75 km, capitale de l'Art Déco.",
         description: "Saint-Quentin, ville d'Art Déco et de pastels de Quentin de La Tour, est à 55 min d'Amiens.",
@@ -223,7 +223,7 @@ export const trajetsAmiensTolon: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Amiens → Abbeville | 45 km, dès 90 € | TaxiNeo",
-        metaDescription: "Via A16 en 40 min. Baie de Somme, Collégiale, Beffroi et Picardie maritime en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A16 en 40 min. Baie de Somme, Collégiale, Beffroi et Picardie maritime en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Amiens → Abbeville",
         heroSubtitle: "Transfert Amiens → Abbeville au prix fixe de 90 — 105 €. 45 km, porte de la Baie de Somme.",
         description: "Abbeville, porte de la Baie de Somme, est à 40 min d'Amiens.",
@@ -242,7 +242,7 @@ export const trajetsAmiensTolon: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Amiens → Abbeville | 45 km, from €90 | TaxiNeo",
-        metaDescription: "Via A16, 40 min ride. Baie de Somme, Collégiale, Beffroi and Picardie maritime en route. Drop-off at your exact address. Door-to-door, luggage included.",
+        metaDescription: "Via A16, 40 min ride. Baie de Somme, Collégiale, Beffroi and Picardie maritime en route. Drop-off at your exact address, luggage included.",
         heroTitle: "Taxi Amiens → Abbeville",
         heroSubtitle: "Your Amiens → Abbeville transfer at €90 — €105. 45 km, Baie de Somme gateway.",
         description: "Abbeville, gateway to the Baie de Somme, is 40 min from Amiens.",
@@ -353,7 +353,7 @@ export const trajetsAmiensTolon: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Toulon → Marseille | 65 km, dès 125 € | TaxiNeo",
-        metaDescription: "Via A50 en 55 min. Provence, Vieux-Port, Calanques et Méditerranée en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A50 en 55 min. Provence, Vieux-Port, Calanques et Méditerranée en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Toulon → Marseille",
         heroSubtitle: "Transfert Toulon → Marseille au prix fixe de 125 — 155 €. 65 km, la cité phocéenne.",
         description: "Marseille, deuxième ville de France, est à 55 min de Toulon par l'A50.",
@@ -418,7 +418,7 @@ export const trajetsAmiensTolon: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Toulon → Hyères | forfait dès 35 €, 20 min | TaxiNeo",
-        metaDescription: "Via A57 en 20 min. Îles d'Or, Porquerolles, Palmiers et Presqu'île de Giens en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A57 en 20 min. Îles d'Or, Porquerolles, Palmiers et Presqu'île de Giens en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Toulon → Hyères",
         heroSubtitle: "Transfert Toulon → Hyères au prix fixe de 35 — 45 €. 18 km, porte des îles d'Or.",
         description: "Hyères, cité des palmiers et porte de Porquerolles, est à 20 min de Toulon.",
@@ -548,7 +548,7 @@ export const trajetsAmiensTolon: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Toulon → Bandol | forfait dès 35 €, 20 min | TaxiNeo",
-        metaDescription: "Via A50 en 20 min. Vin de Bandol, Plage, Port et Île de Bendor en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A50 en 20 min. Vin de Bandol, Plage, Port et Île de Bendor en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Toulon → Bandol",
         heroSubtitle: "Transfert Toulon → Bandol au prix fixe de 35 — 45 €. 18 km, terroir viticole d'exception.",
         description: "Bandol, station balnéaire et vignoble AOC renommé, est à 20 min de Toulon.",

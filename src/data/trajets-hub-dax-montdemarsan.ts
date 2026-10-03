@@ -20,7 +20,7 @@ export const trajetsDaxMontDeMarsan: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Dax → Bordeaux | Prix fixe dès 290 € | TaxiNeo",
-        metaDescription: "Via A63 en undefined min. Landes, Thermalisme, Bordeaux et Vignoble en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A63 en undefined min. Landes, Thermalisme, Bordeaux et Vignoble en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Dax → Bordeaux",
         heroSubtitle: "Transfert Dax → Bordeaux au prix fixe de 290 — 350 €. 150 km, 1h30.",
         description: "Dax — Bordeaux relie la capitale thermale des Landes à la métropole girondine en 1h30.",
@@ -77,7 +77,7 @@ export const trajetsDaxMontDeMarsan: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Dax → Biarritz | Prix fixe dès 95 € | TaxiNeo",
-        metaDescription: "Via A63 en undefined min. Landes, Pays Basque, Côte Basque et Océan en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A63 en undefined min. Landes, Pays Basque, Côte Basque et Océan en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Dax → Biarritz",
         heroSubtitle: "Transfert Dax → Biarritz au prix fixe de 95 — 120 €. 50 km, 35 min.",
         description: "Dax — Biarritz relie la capitale thermale des Landes à la perle de la côte basque en 35 min.",
@@ -134,7 +134,7 @@ export const trajetsDaxMontDeMarsan: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Dax → Pau | 60 km D947/A64, dès 115 € | TaxiNeo",
-        metaDescription: "Via D947/A64 en undefined min. Landes, Béarn, Pyrénées et Adour en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via D947/A64 en undefined min. Landes, Béarn, Pyrénées et Adour en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Dax → Pau",
         heroSubtitle: "Transfert Dax → Pau au prix fixe de 115 — 140 €. 60 km, 40 min.",
         description: "Dax — Pau relie la capitale thermale des Landes à la capitale du Béarn en 40 min.",
@@ -191,7 +191,7 @@ export const trajetsDaxMontDeMarsan: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Mont-de-Marsan → Bordeaux | 130 km, dès 250 € | TaxiNeo",
-        metaDescription: "Via A65 en undefined min. Landes, Forêt Landaise et Bordeaux en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A65 en undefined min. Landes, Forêt Landaise et Bordeaux en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Mont-de-Marsan → Bordeaux",
         heroSubtitle: "Transfert Mont-de-Marsan → Bordeaux au prix fixe de 250 — 305 €. 130 km, 1h20.",
         description: "Mont-de-Marsan — Bordeaux relie la préfecture des Landes à la métropole bordelaise en 1h20.",
@@ -248,7 +248,7 @@ export const trajetsDaxMontDeMarsan: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Mont-de-Marsan → Pau | 80 km, dès 155 € | TaxiNeo",
-        metaDescription: "Via D933 en undefined min. Landes, Béarn, Tursan et Pyrénées en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via D933 en undefined min. Landes, Béarn, Tursan et Pyrénées en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Mont-de-Marsan → Pau",
         heroSubtitle: "Transfert Mont-de-Marsan → Pau au prix fixe de 155 — 185 €. 80 km, 50 min.",
         description: "Mont-de-Marsan — Pau relie la préfecture des Landes à la capitale du Béarn en 50 min.",
@@ -267,7 +267,7 @@ export const trajetsDaxMontDeMarsan: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Mont-de-Marsan → Pau | 80 km, from €155 | TaxiNeo",
-        metaDescription: "Via D933, undefined min ride. Landes, Béarn, Tursan and Pyrénées en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via D933, undefined min ride. Landes, Béarn, Tursan and Pyrénées en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Mont-de-Marsan → Pau",
         heroSubtitle: "Mont-de-Marsan → Pau transfer at €155 — €185. 80 km, 50 min.",
         description: "Mont-de-Marsan to Pau, from the Landes capital to the Béarn capital in 50 min.",

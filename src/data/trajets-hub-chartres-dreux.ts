@@ -28,7 +28,7 @@ export const trajetsChartresDreux: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Chartres → Paris | forfait dès 175 € | TaxiNeo",
-        metaDescription: "Via A11 en 1h. Beauce, Île-de-France, Cathédrale et Porte de Paris en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A11 en 1h. Beauce, Île-de-France, Cathédrale et Porte de Paris en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Chartres → Paris",
         heroSubtitle: "Transfert Chartres → Paris au prix fixe de 175 — 210 €. 90 km, direct par l'A11.",
         description: "Paris est à 1h de Chartres par l'A11, traversant la plaine de Beauce puis l'Île-de-France.",
@@ -93,7 +93,7 @@ export const trajetsChartresDreux: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Chartres → Orléans | 80 km, dès 155 € | TaxiNeo",
-        metaDescription: "Via A10 en 55 min. Beauce, Loire, Cathédrale et Jeanne d'Arc en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A10 en 55 min. Beauce, Loire, Cathédrale et Jeanne d'Arc en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Chartres → Orléans",
         heroSubtitle: "Transfert Chartres → Orléans au prix fixe de 155 — 185 €. 80 km, de cathédrale en cathédrale.",
         description: "Orléans, cité de Jeanne d'Arc sur la Loire, est à 55 min de Chartres par l'A10.",
@@ -112,7 +112,7 @@ export const trajetsChartresDreux: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Chartres → Orléans | 80 km, from €155 | TaxiNeo",
-        metaDescription: "Via A10, 55 min ride. Beauce, Loire, Cathédrale and Jeanne d'Arc en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via A10, 55 min ride. Beauce, Loire, Cathédrale and Jeanne d'Arc en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Chartres → Orléans",
         heroSubtitle: "Your Chartres → Orléans transfer at €155 — €185. 80 km, cathedral to cathedral.",
         description: "Orléans, Joan of Arc's city on the Loire, is 55 min from Chartres via the A10.",

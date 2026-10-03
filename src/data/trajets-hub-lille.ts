@@ -31,7 +31,7 @@ export const trajetsLille: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Lille → Calais | 110 km, dès 210 €, 1h10 | TaxiNeo",
-        metaDescription: "Via A26 en 1h10. Cap Blanc-Nez, Eurotunnel, Ferry et Côte d'Opale en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A26 en 1h10. Cap Blanc-Nez, Eurotunnel, Ferry et Côte d'Opale en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Lille → Calais",
         heroSubtitle: "Transfert Lille → Calais au prix fixe de 210 — 255 €. 110 km par l'A26.",
         description: "Calais, porte de l'Angleterre via le tunnel sous la Manche et les ferries, est à 1h10 de Lille par l'A26.",
@@ -96,7 +96,7 @@ export const trajetsLille: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Lille → Arras | forfait dès 95 €, 40 min | TaxiNeo",
-        metaDescription: "Via A1 en 40 min. Grand'Place, Beffroi UNESCO, Boves et Artois en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A1 en 40 min. Grand'Place, Beffroi UNESCO, Boves et Artois en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Lille → Arras",
         heroSubtitle: "Transfert Lille → Arras au prix fixe de 95 — 120 €. 50 km par l'A1.",
         description: "Arras, ville aux deux places baroques classées et au beffroi UNESCO, est à 40 minutes de Lille.",
@@ -616,7 +616,7 @@ export const trajetsLille: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Lille → Le Touquet-Paris-Plage | 150 km | TaxiNeo",
-        metaDescription: "Via A25 en 1h35. Paris-Plage, Golf, Casino et Digue promenade en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A25 en 1h35. Paris-Plage, Golf, Casino et Digue promenade en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Lille → Le Touquet-Paris-Plage",
         heroSubtitle: "Transfert Lille → Le Touquet au prix fixe de 290 — 350 €. 150 km par l'A25 et l'A26.",
         description: "Le Touquet-Paris-Plage, station balnéaire la plus élégante du nord de la France, est à 1h35 de Lille en taxi.",
@@ -635,7 +635,7 @@ export const trajetsLille: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Lille → Le Touquet-Paris-Plage | 150 km, €185 | TaxiNeo",
-        metaDescription: "Via A25, 1h35 ride. Paris-Plage, Golf, Casino and Digue promenade en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via A25, 1h35 ride. Paris-Plage, Golf, Casino and Digue promenade en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Lille → Le Touquet-Paris-Plage",
         heroSubtitle: "Your Lille → Le Touquet transfer at €290 — €350. 150 km via the A25 and A26.",
         description: "Le Touquet-Paris-Plage, northern France's most elegant seaside resort, is 1h35 from Lille by taxi.",
@@ -941,7 +941,7 @@ export const trajetsLille: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Lille → Bruxelles | 115 km, dès 220 € | TaxiNeo",
-        metaDescription: "Via A27 puis E42 en 1h20. E42, Grand-Place, Manneken Pis et Atomium en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A27 puis E42 en 1h20. E42, Grand-Place, Manneken Pis et Atomium en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Lille → Bruxelles",
         heroSubtitle: "Transfert Lille → Bruxelles au prix fixe de 220 — 270 €. 115 km via l'A27 et E42.",
         description: "Bruxelles, capitale de la Belgique et de l'Europe, est à 1h20 de Lille par l'A27 et l'E42.",
@@ -1025,7 +1025,7 @@ export const trajetsLille: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Lille → Dunkerque | 80 km, from €155 | TaxiNeo",
-        metaDescription: "Via A25, 55 min ride. Port, Carnaval, Plage and Musée portuaire en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via A25, 55 min ride. Port, Carnaval, Plage and Musée portuaire en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Lille → Dunkirk",
         heroSubtitle: "Your Lille → Dunkirk transfer at €155 — €185. 80 km via the toll-free A25.",
         description: "Dunkirk, France's third-largest port and carnival city, is 55 minutes from Lille via the toll-free A25.",
@@ -1201,7 +1201,7 @@ export const trajetsLille: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Lille → Béthune | forfait dès 80 €, 35 min | TaxiNeo",
-        metaDescription: "Via A26 en 35 min. Grand-Place, Beffroi, Bassin minier UNESCO et Artois en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A26 en 35 min. Grand-Place, Beffroi, Bassin minier UNESCO et Artois en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Lille → Béthune",
         heroSubtitle: "Transfert Lille → Béthune au prix fixe de 80 — 95 €. 40 km par l'A26.",
         description: "Béthune, ville au beffroi classé et au cœur du bassin minier UNESCO, est à 35 minutes de Lille.",
@@ -1334,7 +1334,7 @@ export const trajetsLille: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Lille → Saint-Quentin | 120 km, dès 230 € | TaxiNeo",
-        metaDescription: "Via A26 en 1h20. Art Déco, Basilique, Pastels Quentin de La Tour et Aisne en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A26 en 1h20. Art Déco, Basilique, Pastels Quentin de La Tour et Aisne en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Lille → Saint-Quentin",
         heroSubtitle: "Transfert Lille → Saint-Quentin au prix fixe de 230 — 280 €. 120 km par l'A26.",
         description: "Saint-Quentin, joyau Art Déco de l'Aisne abritant les pastels de Quentin de La Tour, est à 1h20 de Lille par l'A26.",
@@ -1353,7 +1353,7 @@ export const trajetsLille: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Lille → Saint-Quentin | 120 km, from €230 | TaxiNeo",
-        metaDescription: "Via A26, 1h20 ride. Art Déco, Basilique, Pastels Quentin de La Tour and Aisne en route. Drop-off at your exact address. Door-to-door, luggage included.",
+        metaDescription: "Via A26, 1h20 ride. Art Déco, Basilique, Pastels Quentin de La Tour and Aisne en route. Drop-off at your exact address, luggage included.",
         heroTitle: "Taxi Lille → Saint-Quentin",
         heroSubtitle: "Your Lille → Saint-Quentin transfer at €230 — €280. 120 km via the A26.",
         description: "Saint-Quentin, Art Deco gem of the Aisne with the world's finest La Tour pastel collection, is 1h20 from Lille via the A26.",
@@ -1529,7 +1529,7 @@ export const trajetsLille: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Lille → Charleville-Mézières | 200 km, 240 € | TaxiNeo",
-        metaDescription: "Via A2 puis A34 en 2h05. Rimbaud, Marionnettes et Place Ducale en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A2 puis A34 en 2h05. Rimbaud, Marionnettes et Place Ducale en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Lille → Charleville-Mézières",
         heroSubtitle: "Transfert Lille → Charleville-Mézières au prix fixe de 385 — 465 €. 200 km par l'A2 et l'A34.",
         description: "Charleville-Mézières, ville natale de Rimbaud et capitale mondiale de la marionnette, est à 2h05 de Lille.",
@@ -1817,7 +1817,7 @@ export const trajetsLille: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Lille → Saint-Pol-sur-Ternoise | 80 km, €110 | TaxiNeo",
-        metaDescription: "Via A26/D941, 1 hour ride. 7 Vallées, Hesdin and Azincourt along the way. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via A26/D941, 1 hour ride. 7 Vallées, Hesdin and Azincourt along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Lille → Saint-Pol-sur-Ternoise",
         heroSubtitle: "Your Lille → Saint-Pol-sur-Ternoise transfer at €155 — €185. 80 km via the A26 and D941.",
         description: "Saint-Pol-sur-Ternoise, gateway to the 7 Valleys and Azincourt battlefield, is 1h from Lille via the A26.",

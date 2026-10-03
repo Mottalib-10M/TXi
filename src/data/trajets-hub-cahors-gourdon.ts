@@ -288,7 +288,7 @@ export const trajetsCahorsGourdon: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Cahors → Agen | forfait dès 175 €, 1h | TaxiNeo",
-        metaDescription: "Via D656/D811 en 1h. D656/N21, Vallée du Lot, Quercy et Pruneaux d'Agen en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via D656/D811 en 1h. D656/N21, Vallée du Lot, Quercy et Pruneaux d'Agen en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Cahors → Agen",
         heroSubtitle: "Transfert Cahors → Agen au prix fixe de 175 — 210 €. 90 km, route pittoresque par la vallée du Lot.",
         description: "Agen, préfecture du Lot-et-Garonne et capitale du pruneau, est à 1h de Cahors par la vallée du Lot.",

@@ -20,7 +20,7 @@ export const trajetsLille2: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Lille → Courtrai | forfait dès 70 € | TaxiNeo",
-        metaDescription: "Via A22 / E17 en undefined min. Belgique, Flandre et Textile en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A22 / E17 en undefined min. Belgique, Flandre et Textile en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Lille → Courtrai",
         heroSubtitle: "Transfert Lille → Courtrai au prix fixe de 70 — 85 €. 35 km, 30 min.",
         description: "Courtrai (Kortrijk), ville flamande historique, est à 30 min de Lille.",
@@ -134,7 +134,7 @@ export const trajetsLille2: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Lille → Namur | Prix fixe dès 325 € | TaxiNeo",
-        metaDescription: "Via A27 / E42 en undefined min. E42, Belgique, Wallonie et Meuse en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A27 / E42 en undefined min. E42, Belgique, Wallonie et Meuse en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Lille → Namur",
         heroSubtitle: "Transfert Lille → Namur au prix fixe de 325 — 395 €. 170 km, 1h50.",
         description: "Namur, capitale de la Wallonie, est à 1h50 de Lille.",
@@ -191,7 +191,7 @@ export const trajetsLille2: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Lille → Rouen | Prix fixe dès 495 € | TaxiNeo",
-        metaDescription: "Via A26 / A29 en undefined min. Picardie, Normandie et Somme en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A26 / A29 en undefined min. Picardie, Normandie et Somme en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Lille → Rouen",
         heroSubtitle: "Transfert Lille → Rouen au prix fixe de 495 — 605 €. 260 km, 2h50.",
         description: "Lille — Rouen relie les Hauts-de-France à la Normandie en 2h50.",

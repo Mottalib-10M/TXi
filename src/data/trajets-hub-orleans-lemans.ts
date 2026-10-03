@@ -158,7 +158,7 @@ export const trajetsOrleansLeMans: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Orléans → Blois | forfait dès 115 €, 45 min | TaxiNeo",
-        metaDescription: "Via A10 en 45 min. Loire, Château royal, Chambord et Maison de la Magie en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A10 en 45 min. Loire, Château royal, Chambord et Maison de la Magie en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Orléans → Blois",
         heroSubtitle: "Transfert Orléans → Blois au prix fixe de 115 — 140 €. 60 km, château royal de la Loire.",
         description: "Blois, ville du château royal aux quatre ailes architecturales, est à 45 min d'Orléans.",
@@ -242,7 +242,7 @@ export const trajetsOrleansLeMans: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Orléans → Chartres | 80 km, from €155 | TaxiNeo",
-        metaDescription: "Via A10 then A19, 1 hour ride. A10/A19, Cathédrale UNESCO, Beauce and Vitraux en route. Drop-off at your exact address. Door-to-door, luggage included.",
+        metaDescription: "Via A10 then A19, 1 hour ride. A10/A19, Cathédrale UNESCO, Beauce and Vitraux en route. Drop-off at your exact address, luggage included.",
         heroTitle: "Taxi Orléans → Chartres",
         heroSubtitle: "Your Orléans → Chartres transfer at €155 — €185. 80 km, France's finest cathedral.",
         description: "Chartres, home of the most famous Gothic cathedral, is 1h from Orléans.",
@@ -372,7 +372,7 @@ export const trajetsOrleansLeMans: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Le Mans → Paris | 200 km, from €385 | TaxiNeo",
-        metaDescription: "Via A11, 2 hours ride. 24 Heures, TGV, Île-de-France and Sarthe en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via A11, 2 hours ride. 24 Heures, TGV, Île-de-France and Sarthe en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Le Mans → Paris",
         heroSubtitle: "Your Le Mans → Paris transfer at €385 — €465. 200 km, direct via the A11.",
         description: "Paris is 2h from Le Mans via the A11.",
@@ -483,7 +483,7 @@ export const trajetsOrleansLeMans: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Le Mans → Angers | 95 km, dès 185 € | TaxiNeo",
-        metaDescription: "Via A11 en 1h. Anjou, Château d'Angers, Tapisserie et Cointreau en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A11 en 1h. Anjou, Château d'Angers, Tapisserie et Cointreau en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Le Mans → Angers",
         heroSubtitle: "Transfert Le Mans → Angers au prix fixe de 185 — 220 €. 95 km, capitale de l'Anjou.",
         description: "Angers, avec son château et la Tapisserie de l'Apocalypse, est à 1h du Mans.",
@@ -548,7 +548,7 @@ export const trajetsOrleansLeMans: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Le Mans → Laval | forfait dès 165 € | TaxiNeo",
-        metaDescription: "Via A81 en 55 min. Mayenne, Château, Art naïf et Douanier Rousseau en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A81 en 55 min. Mayenne, Château, Art naïf et Douanier Rousseau en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Le Mans → Laval",
         heroSubtitle: "Transfert Le Mans → Laval au prix fixe de 165 — 200 €. 85 km, cité du Douanier Rousseau.",
         description: "Laval, préfecture de la Mayenne et patrie du Douanier Rousseau, est à 55 min du Mans.",
@@ -632,7 +632,7 @@ export const trajetsOrleansLeMans: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Le Mans → Alençon | 50 km, from €95 | TaxiNeo",
-        metaDescription: "Via N138, 45 min ride. Orne, Dentelle, Perche and Normandie en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via N138, 45 min ride. Orne, Dentelle, Perche and Normandie en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Le Mans → Alençon",
         heroSubtitle: "Your Le Mans → Alençon transfer at €95 — €120. 50 km, lace city.",
         description: "Alençon, Orne prefecture and UNESCO lace city, is 45 min from Le Mans.",

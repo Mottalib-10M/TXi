@@ -28,7 +28,7 @@ export const trajetsArlesCamargue: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Arles → Marseille | 90 km, dès 175 € | TaxiNeo",
-        metaDescription: "Via A54 en 55 min. Provence, Camargue, Vieux-Port et Aéroport Marignane en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A54 en 55 min. Provence, Camargue, Vieux-Port et Aéroport Marignane en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Arles → Marseille",
         heroSubtitle: "Transfert Arles → Marseille au prix fixe de 175 — 210 €. 90 km, direct par l'A54.",
         description: "Marseille, cité phocéenne et deuxième ville de France, est à 55 min d'Arles par l'A54.",
@@ -158,7 +158,7 @@ export const trajetsArlesCamargue: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Arles → Nîmes | forfait dès 65 €, 25 min | TaxiNeo",
-        metaDescription: "Via A54 en 25 min. Gard, Arènes de Nîmes, Maison Carrée et Pont du Gard en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A54 en 25 min. Gard, Arènes de Nîmes, Maison Carrée et Pont du Gard en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Arles → Nîmes",
         heroSubtitle: "Transfert Arles → Nîmes au prix fixe de 65 — 75 €. 32 km, direct par l'A54.",
         description: "Nîmes, la Rome française, est à seulement 25 min d'Arles par l'A54.",
@@ -223,7 +223,7 @@ export const trajetsArlesCamargue: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Arles → Montpellier | 75 km, dès 145 € | TaxiNeo",
-        metaDescription: "Via A9 en 50 min. Languedoc, Écusson, Tramway et Méditerranée en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A9 en 50 min. Languedoc, Écusson, Tramway et Méditerranée en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Arles → Montpellier",
         heroSubtitle: "Transfert Arles → Montpellier au prix fixe de 145 — 175 €. 75 km, direct par l'A9.",
         description: "Montpellier, métropole méditerranéenne dynamique, est à 50 min d'Arles par l'A9.",
@@ -242,7 +242,7 @@ export const trajetsArlesCamargue: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Arles → Montpellier | 75 km, from €145 | TaxiNeo",
-        metaDescription: "Via A9, 50 min ride. Languedoc, Écusson, Tramway and Méditerranée en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via A9, 50 min ride. Languedoc, Écusson, Tramway and Méditerranée en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Arles → Montpellier",
         heroSubtitle: "Your Arles → Montpellier transfer at €145 — €175. 75 km, via the A9.",
         description: "Montpellier, dynamic Mediterranean city, is 50 min from Arles via the A9.",

@@ -93,7 +93,7 @@ export const trajetsMontpellierHub2: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Montpellier → Narbonne | 95 km, dès 185 € | TaxiNeo",
-        metaDescription: "Via A9 en 1h. Cathédrale, Canal de la Robine, Vin et Romains en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A9 en 1h. Cathédrale, Canal de la Robine, Vin et Romains en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Montpellier → Narbonne",
         heroSubtitle: "Transfert Montpellier → Narbonne au prix fixe de 185 — 220 €. 95 km, première colonie romaine en Gaule.",
         description: "Narbonne, première colonie romaine en Gaule, est à 1h de Montpellier.",
@@ -158,7 +158,7 @@ export const trajetsMontpellierHub2: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Montpellier → Arles | 75 km, dès 145 € | TaxiNeo",
-        metaDescription: "Via A9 puis A54 en 55 min. A9/A54, Camargue, Arènes et Van Gogh en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A9 puis A54 en 55 min. A9/A54, Camargue, Arènes et Van Gogh en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Montpellier → Arles",
         heroSubtitle: "Transfert Montpellier → Arles au prix fixe de 145 — 175 €. 75 km, la Rome des Gaules.",
         description: "Arles, 'la Rome des Gaules' aux monuments UNESCO, est à 55 min de Montpellier.",

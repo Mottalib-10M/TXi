@@ -47,7 +47,7 @@ export const trajetsSaintJeanDeLuz: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Saint-Jean-de-Luz → Biarritz | 18 km, €25 | TaxiNeo",
-        metaDescription: "Via A63, 18 min ride. Côte Basque, Surf, Grande Plage and Phare en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via A63, 18 min ride. Côte Basque, Surf, Grande Plage and Phare en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Saint-Jean-de-Luz → Biarritz",
         heroSubtitle: "Your Saint-Jean-de-Luz → Biarritz transfer at €35 — €45. 18 km, queen of the Basque Coast.",
         description: "Biarritz, the iconic Basque Coast resort and European surfing capital, is just 18 min from Saint-Jean-de-Luz via the A63.",
@@ -93,7 +93,7 @@ export const trajetsSaintJeanDeLuz: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Saint-Jean-de-Luz → Bayonne | 25 km, dès 50 € | TaxiNeo",
-        metaDescription: "Via A63 en 20 min. Cathédrale Sainte-Marie, Chocolat, Nive et Pays Basque en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A63 en 20 min. Cathédrale Sainte-Marie, Chocolat, Nive et Pays Basque en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Saint-Jean-de-Luz → Bayonne",
         heroSubtitle: "Transfert Saint-Jean-de-Luz → Bayonne au prix fixe de 50 — 60 €. 25 km, capitale du Pays Basque français.",
         description: "Bayonne, capitale historique du Pays Basque français et ville d'art et d'histoire, est à 20 min de Saint-Jean-de-Luz par l'A63.",
@@ -112,7 +112,7 @@ export const trajetsSaintJeanDeLuz: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Saint-Jean-de-Luz → Bayonne | 25 km, from €50 | TaxiNeo",
-        metaDescription: "Via A63, 20 min ride. Cathédrale Sainte-Marie, Chocolat, Nive and Pays Basque en route. Drop-off at your exact address. Door-to-door, luggage included.",
+        metaDescription: "Via A63, 20 min ride. Cathédrale Sainte-Marie, Chocolat, Nive and Pays Basque en route. Drop-off at your exact address, luggage included.",
         heroTitle: "Taxi Saint-Jean-de-Luz → Bayonne",
         heroSubtitle: "Your Saint-Jean-de-Luz → Bayonne transfer at €50 — €60. 25 km, capital of the French Basque Country.",
         description: "Bayonne, historic capital of the French Basque Country and city of art and history, is 20 min from Saint-Jean-de-Luz via the A63.",
@@ -158,7 +158,7 @@ export const trajetsSaintJeanDeLuz: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Saint-Jean-de-Luz → San Sebastián | 35 km | TaxiNeo",
-        metaDescription: "Via A63 / AP-8 en 30 min. AP-8, Frontière espagnole, La Concha et Pintxos en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A63 / AP-8 en 30 min. AP-8, Frontière espagnole, La Concha et Pintxos en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Saint-Jean-de-Luz → San Sebastián",
         heroSubtitle: "Transfert transfrontalier Saint-Jean-de-Luz → San Sebastián au prix fixe de 70 — 85 €. 35 km, perle du Pays Basque espagnol.",
         description: "San Sebastián (Donostia), capitale gastronomique mondiale et joyau de la côte cantabrique, est à seulement 30 min de Saint-Jean-de-Luz par l'A63 et l'AP-8.",
@@ -177,7 +177,7 @@ export const trajetsSaintJeanDeLuz: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Saint-Jean-de-Luz → San Sebastián | 35 km | TaxiNeo",
-        metaDescription: "Via A63 / AP-8, 30 min ride. AP-8, Frontière espagnole, La Concha and Pintxos en route. Drop-off at your exact address. Door-to-door, luggage included.",
+        metaDescription: "Via A63 / AP-8, 30 min ride. AP-8, Frontière espagnole, La Concha and Pintxos en route. Drop-off at your exact address, luggage included.",
         heroTitle: "Taxi Saint-Jean-de-Luz → San Sebastián",
         heroSubtitle: "Your cross-border Saint-Jean-de-Luz → San Sebastián transfer at €70 — €85. 35 km, pearl of the Spanish Basque Country.",
         description: "San Sebastián (Donostia), the world's gastronomic capital and gem of the Cantabrian coast, is just 30 min from Saint-Jean-de-Luz via the A63 and AP-8.",
@@ -288,7 +288,7 @@ export const trajetsSaintJeanDeLuz: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Saint-Jean-de-Luz → Pau | 130 km, dès 250 € | TaxiNeo",
-        metaDescription: "Via A63 / A64 en 1h25. Pyrénées, Béarn et Boulevard des Pyrénées en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A63 / A64 en 1h25. Pyrénées, Béarn et Boulevard des Pyrénées en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Saint-Jean-de-Luz → Pau",
         heroSubtitle: "Transfert Saint-Jean-de-Luz → Pau au prix fixe de 250 — 305 €. 130 km, du Pays Basque au Béarn.",
         description: "Pau, ville royale du Béarn avec son célèbre panorama sur les Pyrénées, est à 1h25 de Saint-Jean-de-Luz par l'A63 et l'A64.",

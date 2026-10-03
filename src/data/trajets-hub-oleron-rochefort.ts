@@ -223,7 +223,7 @@ export const trajetsOleronRochefort: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Rochefort → Niort | 55 km, dès 105 € | TaxiNeo",
-        metaDescription: "Via N11 / A10 en 40 min. N11, Charente-Maritime, Marais poitevin et Arsenal en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via N11 / A10 en 40 min. N11, Charente-Maritime, Marais poitevin et Arsenal en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Rochefort → Niort",
         heroSubtitle: "Transfert Rochefort → Niort au prix fixe de 105 — 130 €. 55 km, de la Corderie Royale à la porte du Marais poitevin.",
         description: "Niort, capitale des mutuelles et porte du Marais poitevin, est à 40 min de Rochefort par la N11.",

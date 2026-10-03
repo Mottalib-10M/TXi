@@ -28,7 +28,7 @@ export const trajetsCergyPontoise: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Cergy-Pontoise → Paris | 35 km, dès 70 € | TaxiNeo",
-        metaDescription: "Via A15 en 40 min. Axe Majeur, Val-d'Oise, Porte-à-porte et Nuit en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A15 en 40 min. Axe Majeur, Val-d'Oise, Porte-à-porte et Nuit en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Cergy-Pontoise → Paris",
         heroSubtitle: "Transfert Cergy-Pontoise → Paris au prix fixe de 70 — 85 €. 35 km, direct par l'A15.",
         description: "Paris est à 40 min de Cergy-Pontoise par l'A15, l'autoroute qui relie le Val-d'Oise à la capitale.",
@@ -288,7 +288,7 @@ export const trajetsCergyPontoise: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Cergy-Pontoise → Beauvais | 70 km, dès 135 € | TaxiNeo",
-        metaDescription: "Via D927 / A16 en 55 min. Cathédrale de Beauvais, Val-d'Oise, Oise et Vexin en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via D927 / A16 en 55 min. Cathédrale de Beauvais, Val-d'Oise, Oise et Vexin en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Cergy-Pontoise → Beauvais",
         heroSubtitle: "Transfert Cergy-Pontoise → Beauvais au prix fixe de 135 — 165 €. 70 km, à travers le Vexin français.",
         description: "Beauvais, préfecture de l'Oise et sa cathédrale au chœur gothique le plus haut du monde, est à 55 min de Cergy.",

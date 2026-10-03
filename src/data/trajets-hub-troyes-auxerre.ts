@@ -28,7 +28,7 @@ export const trajetsTroyesAuxerre: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Troyes → Paris | 170 km, dès 325 €, 1h40 | TaxiNeo",
-        metaDescription: "Via A5 en 1h40. Champagne, Magasins d'usine, Cathédrale et Vitraux en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A5 en 1h40. Champagne, Magasins d'usine, Cathédrale et Vitraux en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Troyes → Paris",
         heroSubtitle: "Transfert Troyes → Paris au prix fixe de 325 — 395 €. 170 km, direct par l'A5.",
         description: "Paris est à 1h40 de Troyes par l'autoroute A5.",
@@ -242,7 +242,7 @@ export const trajetsTroyesAuxerre: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Auxerre → Paris | 165 km, from €315 | TaxiNeo",
-        metaDescription: "Via A6, 1h40 ride. Bourgogne, Yonne, Cathédrale and Chablis en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via A6, 1h40 ride. Bourgogne, Yonne, Cathédrale and Chablis en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Auxerre → Paris",
         heroSubtitle: "Your Auxerre → Paris transfer at €315 — €385. 165 km, via the A6.",
         description: "Paris is 1h40 from Auxerre via the A6 motorway.",
@@ -288,7 +288,7 @@ export const trajetsTroyesAuxerre: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Auxerre → Dijon | 150 km, dès 290 € | TaxiNeo",
-        metaDescription: "Via A6 en 1h30. Bourgogne, Morvan, Chablis et Climats UNESCO en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A6 en 1h30. Bourgogne, Morvan, Chablis et Climats UNESCO en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Auxerre → Dijon",
         heroSubtitle: "Transfert Auxerre → Dijon au prix fixe de 290 — 350 €. 150 km, traversée de la Bourgogne.",
         description: "Dijon, capitale de la Bourgogne, est à 1h30 d'Auxerre par l'A6.",
@@ -307,7 +307,7 @@ export const trajetsTroyesAuxerre: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Auxerre → Dijon | 150 km, from €290 | TaxiNeo",
-        metaDescription: "Via A6, 1h30 ride. Bourgogne, Morvan, Chablis and Climats UNESCO en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via A6, 1h30 ride. Bourgogne, Morvan, Chablis and Climats UNESCO en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Auxerre → Dijon",
         heroSubtitle: "Your Auxerre → Dijon transfer at €290 — €350. 150 km, across Burgundy.",
         description: "Dijon, Burgundy capital, is 1h30 from Auxerre via the A6.",

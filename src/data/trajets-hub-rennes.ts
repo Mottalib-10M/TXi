@@ -356,7 +356,7 @@ export const trajetsRennes: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Rennes → Quimper | 215 km, dès 410 € | TaxiNeo",
-        metaDescription: "Via N24 puis N165 en 2h20. N24, N165, Cornouaille et Faïencerie en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via N24 puis N165 en 2h20. N24, N165, Cornouaille et Faïencerie en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Rennes → Quimper",
         heroSubtitle: "Transfert Rennes → Quimper au prix fixe de 410 — 500 €. 215 km par la N24 et N165.",
         description: "Quimper, capitale de la Cornouaille bretonne avec sa cathédrale gothique et ses faïenceries, est à 2h20 de Rennes.",
@@ -421,7 +421,7 @@ export const trajetsRennes: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Rennes → Brest | 245 km, dès 470 €, 2h35 | TaxiNeo",
-        metaDescription: "Via N12 en 2h35. Pointe de Bretagne, Rade de Brest et Océanopolis en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via N12 en 2h35. Pointe de Bretagne, Rade de Brest et Océanopolis en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Rennes → Brest",
         heroSubtitle: "Transfert Rennes → Brest au prix fixe de 470 — 570 €. 245 km par la N12.",
         description: "Brest, ville-arsenal à la pointe de la Bretagne avec sa rade mythique et Océanopolis, est à 2h35 de Rennes.",
@@ -486,7 +486,7 @@ export const trajetsRennes: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Rennes → Saint-Brieuc | 100 km, dès 195 € | TaxiNeo",
-        metaDescription: "Via N12 en 1h05. Côtes-d'Armor, Baie de Saint-Brieuc et Légué en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via N12 en 1h05. Côtes-d'Armor, Baie de Saint-Brieuc et Légué en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Rennes → Saint-Brieuc",
         heroSubtitle: "Transfert Rennes → Saint-Brieuc au prix fixe de 195 — 235 €. 100 km par la N12.",
         description: "Saint-Brieuc, préfecture des Côtes-d'Armor au bord de sa baie spectaculaire, est à 1h05 de Rennes.",
@@ -616,7 +616,7 @@ export const trajetsRennes: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Rennes → Concarneau | 210 km, dès 400 € | TaxiNeo",
-        metaDescription: "Via N24 puis N165 en 2h15. N24, N165, Ville Close et Port de pêche en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via N24 puis N165 en 2h15. N24, N165, Ville Close et Port de pêche en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Rennes → Concarneau",
         heroSubtitle: "Transfert Rennes → Concarneau au prix fixe de 400 — 485 €. 210 km par la N24 et N165.",
         description: "Concarneau, cité fortifiée sur son île et 3e port de pêche français, est à 2h15 de Rennes.",

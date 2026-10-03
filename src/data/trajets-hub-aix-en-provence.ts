@@ -31,7 +31,7 @@ export const trajetsAixEnProvence: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Aix-en-Provence → Marseille | 35 km, dès 70 € | TaxiNeo",
-        metaDescription: "Via A51 en 30 min. Provence, Métropole, Gare TGV et Aéroport en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A51 en 30 min. Provence, Métropole, Gare TGV et Aéroport en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Aix-en-Provence → Marseille",
         heroSubtitle: "Transfert Aix-en-Provence → Marseille au prix fixe de 70 — 85 €. 35 km, 30 min.",
         description: "Rejoignez Marseille depuis Aix-en-Provence en 30 minutes par l'A51.",
@@ -50,7 +50,7 @@ export const trajetsAixEnProvence: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Aix-en-Provence → Marseille | 35 km, from €70 | TaxiNeo",
-        metaDescription: "Via A51, 30 min ride. Provence, Métropole, Gare TGV and Aéroport en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via A51, 30 min ride. Provence, Métropole, Gare TGV and Aéroport en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Aix-en-Provence → Marseille",
         heroSubtitle: "Your Aix-en-Provence → Marseille transfer at a fixed price of €70 — €85. 35 km, 30 min.",
         description: "Reach Marseille from Aix-en-Provence in 30 minutes via the A51 motorway.",
@@ -96,7 +96,7 @@ export const trajetsAixEnProvence: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Aix-en-Provence → Avignon | 82 km, dès 160 € | TaxiNeo",
-        metaDescription: "Via A7 en 55 min. Provence, Palais des Papes, Festival et Luberon en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A7 en 55 min. Provence, Palais des Papes, Festival et Luberon en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Aix-en-Provence → Avignon",
         heroSubtitle: "Transfert Aix-en-Provence → Avignon au prix fixe de 160 — 190 €. 82 km, 55 min par l'A7.",
         description: "Rejoignez Avignon depuis Aix-en-Provence en 55 minutes par l'autoroute du Soleil.",

@@ -291,7 +291,7 @@ export const trajetsGrenobleAnnecy: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Grenoble → Voiron | 28 km, dès 55 € | TaxiNeo",
-        metaDescription: "Via A48 en 30 min. Chartreuse, Caves de la Chartreuse et Lac de Paladru en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A48 en 30 min. Chartreuse, Caves de la Chartreuse et Lac de Paladru en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Grenoble → Voiron",
         heroSubtitle: "Transfert Grenoble → Voiron au prix fixe de 55 — 65 €. 28 km par l'A48.",
         description: "Voiron, porte d'entrée du massif de la Chartreuse et ville abritant les célèbres caves de la Chartreuse où est élaborée la mythique liqueur des moines chartreux, est à 30 minutes de Grenoble par l'A48.",

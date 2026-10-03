@@ -248,7 +248,7 @@ export const trajetsMaconTournus: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Mâcon → Chalon-sur-Saône | 60 km, dès 115 € | TaxiNeo",
-        metaDescription: "Via A6 / N6 en undefined min. Tournus, Abbaye Saint-Philibert, N6 et Saône en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A6 / N6 en undefined min. Tournus, Abbaye Saint-Philibert, N6 et Saône en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Mâcon → Chalon-sur-Saône",
         heroSubtitle: "Transfert Mâcon → Chalon-sur-Saône au prix fixe de 115 — 140 €. 60 km, 40 min.",
         description: "Mâcon — Chalon-sur-Saône longe la Saône par l'A6 ou la N6, en passant par Tournus.",
@@ -267,7 +267,7 @@ export const trajetsMaconTournus: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Mâcon → Chalon-sur-Saône | 60 km, from €115 | TaxiNeo",
-        metaDescription: "Via A6 / N6, undefined min ride. Tournus, Abbaye Saint-Philibert, N6 and Saône en route. Drop-off at your exact address. Door-to-door, luggage included.",
+        metaDescription: "Via A6 / N6, undefined min ride. Tournus, Abbaye Saint-Philibert, N6 and Saône en route. Drop-off at your exact address, luggage included.",
         heroTitle: "Taxi Mâcon → Chalon-sur-Saône",
         heroSubtitle: "Mâcon → Chalon-sur-Saône transfer at €115 — €140. 60 km, 40 min.",
         description: "Mâcon to Chalon-sur-Saône along the Saône valley, past the Romanesque abbey of Tournus.",

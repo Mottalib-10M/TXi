@@ -313,7 +313,7 @@ export const trajetsEpinalVerdun: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Verdun → Paris | Fixed price from €505 | TaxiNeo",
-        metaDescription: "Via A4, 2h40 ride. Meuse, Champagne, Mémorial 14-18 and Reims en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via A4, 2h40 ride. Meuse, Champagne, Mémorial 14-18 and Reims en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Verdun → Paris",
         heroSubtitle: "Your Verdun → Paris transfer at €505 — €615. 265 km via the A4 through the Meuse and Champagne.",
         description: "Paris, the capital of France, is 2h40 from Verdun via the A4 motorway, a direct journey crossing the Champagne plains.",

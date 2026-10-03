@@ -31,7 +31,7 @@ export const trajetsSaintBrieucDinan: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Saint-Brieuc → Rennes | 100 km, dès 105 € | TaxiNeo",
-        metaDescription: "Via N12 en 1h05. Côtes-d'Armor, Lamballe et Capitale bretonne en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via N12 en 1h05. Côtes-d'Armor, Lamballe et Capitale bretonne en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Saint-Brieuc → Rennes",
         heroSubtitle: "Transfert Saint-Brieuc → Rennes au prix fixe de 105 — 135 €. 100 km par la N12.",
         description: "Rennes, capitale de la Bretagne et métropole dynamique de 450 000 habitants, est à 1h05 de Saint-Brieuc par la voie express N12.",
@@ -115,7 +115,7 @@ export const trajetsSaintBrieucDinan: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Saint-Brieuc → Brest | 145 km, from €155 | TaxiNeo",
-        metaDescription: "Via N12, 1h25 ride. Guingamp, Morlaix and Rade de Brest along the way. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via N12, 1h25 ride. Guingamp, Morlaix and Rade de Brest along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Saint-Brieuc → Brest",
         heroSubtitle: "Your Saint-Brieuc → Brest transfer at €155 — €195. 145 km via the N12.",
         description: "Brest, a major naval and university city at the tip of Brittany, is 85 minutes from Saint-Brieuc via the toll-free N12 expressway.",
@@ -291,7 +291,7 @@ export const trajetsSaintBrieucDinan: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Dinan → Saint-Malo | 30 km, dès 35 € | TaxiNeo",
-        metaDescription: "Via D168 en 25 min. Vallée de la Rance, Cité corsaire et Port médiéval en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via D168 en 25 min. Vallée de la Rance, Cité corsaire et Port médiéval en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Dinan → Saint-Malo",
         heroSubtitle: "Transfert Dinan → Saint-Malo au prix fixe de 35 — 45 €. 30 km par la D168.",
         description: "Saint-Malo, la célèbre cité corsaire fortifiée de la Côte d'Émeraude, est à seulement 25 minutes de Dinan.",

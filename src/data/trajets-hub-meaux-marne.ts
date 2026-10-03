@@ -93,7 +93,7 @@ export const trajetsMeauxMarne: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Meaux → Aéroport CDG | 35 km, dès 70 € | TaxiNeo",
-        metaDescription: "Via A104 en 30 min. Roissy CDG, Navette aéroport, Pays de Brie et Île-de-France. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A104 en 30 min. Roissy CDG, Navette aéroport, Pays de Brie et Île-de-France. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Meaux → Aéroport CDG",
         heroSubtitle: "Transfert Meaux → Aéroport Charles de Gaulle au prix fixe de 70 — 85 €. 35 km, direct par l'A104.",
         description: "L'aéroport CDG est à seulement 30 min de Meaux par la Francilienne A104, un trajet rapide et direct.",
@@ -112,7 +112,7 @@ export const trajetsMeauxMarne: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Meaux → Aéroport CDG | 35 km, from €70 | TaxiNeo",
-        metaDescription: "Via A104, 30 min ride. Roissy CDG, Navette aéroport, Pays de Brie and Île-de-France. Drop-off at your exact address. Door-to-door, luggage included.",
+        metaDescription: "Via A104, 30 min ride. Roissy CDG, Navette aéroport, Pays de Brie and Île-de-France. Drop-off at your exact address, luggage included.",
         heroTitle: "Taxi Meaux → CDG Airport",
         heroSubtitle: "Your Meaux → CDG transfer at €70 — €85. 35 km, direct via the A104 Francilienne.",
         description: "CDG Airport is only 30 min from Meaux via the A104 Francilienne, a quick and direct route.",
@@ -223,7 +223,7 @@ export const trajetsMeauxMarne: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Marne-la-Vallée → Paris | 35 km, dès 70 € | TaxiNeo",
-        metaDescription: "Via A4 en 35 min. Cité Descartes, Val d'Europe, Marne et RER A en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A4 en 35 min. Cité Descartes, Val d'Europe, Marne et RER A en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Marne-la-Vallée → Paris",
         heroSubtitle: "Transfert Marne-la-Vallée → Paris au prix fixe de 70 — 85 €. 35 km, direct par l'A4.",
         description: "Paris est à 35 min de Marne-la-Vallée par l'autoroute A4, la ville nouvelle de l'est francilien.",

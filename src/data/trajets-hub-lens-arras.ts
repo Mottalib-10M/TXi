@@ -28,7 +28,7 @@ export const trajetsLensArras: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Lens → Paris | 200 km, dès 385 €, 2h05 | TaxiNeo",
-        metaDescription: "Via A1 en 2h05. Bassin minier UNESCO, Louvre-Lens, Stade Bollaert et Vimy en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A1 en 2h05. Bassin minier UNESCO, Louvre-Lens, Stade Bollaert et Vimy en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Lens → Paris",
         heroSubtitle: "Transfert Lens → Paris au prix fixe de 385 — 465 €. 200 km, direct par l'A1.",
         description: "Paris est à 2h05 de Lens par l'A1, l'autoroute du Nord.",
@@ -47,7 +47,7 @@ export const trajetsLensArras: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Lens → Paris | Fixed price from €385 | TaxiNeo",
-        metaDescription: "Via A1, 2h05 ride. Bassin minier UNESCO, Louvre-Lens, Stade Bollaert and Vimy en route. Drop-off at your exact address. Door-to-door, luggage included.",
+        metaDescription: "Via A1, 2h05 ride. Bassin minier UNESCO, Louvre-Lens, Stade Bollaert and Vimy en route. Drop-off at your exact address, luggage included.",
         heroTitle: "Taxi Lens → Paris",
         heroSubtitle: "Your Lens → Paris transfer at €385 — €465. 200 km, via the A1.",
         description: "Paris is 2h05 from Lens via the A1 motorway.",
@@ -158,7 +158,7 @@ export const trajetsLensArras: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Arras → Paris | 185 km, dès 355 €, 1h55 | TaxiNeo",
-        metaDescription: "Via A1 en 1h55. Grand-Place flamande, Beffroi UNESCO, Artois et Wellington en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A1 en 1h55. Grand-Place flamande, Beffroi UNESCO, Artois et Wellington en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Arras → Paris",
         heroSubtitle: "Transfert Arras → Paris au prix fixe de 355 — 430 €. 185 km, direct par l'A1.",
         description: "Paris est à 1h55 d'Arras par l'A1, l'autoroute du Nord.",
@@ -177,7 +177,7 @@ export const trajetsLensArras: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Arras → Paris | Fixed price from €355 | TaxiNeo",
-        metaDescription: "Via A1, 1h55 ride. Grand-Place flamande, Beffroi UNESCO, Artois and Wellington en route. Drop-off at your exact address. Door-to-door, luggage included.",
+        metaDescription: "Via A1, 1h55 ride. Grand-Place flamande, Beffroi UNESCO, Artois and Wellington en route. Drop-off at your exact address, luggage included.",
         heroTitle: "Taxi Arras → Paris",
         heroSubtitle: "Your Arras → Paris transfer at €355 — €430. 185 km, via the A1.",
         description: "Paris is 1h55 from Arras via the A1 motorway.",
@@ -223,7 +223,7 @@ export const trajetsLensArras: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Arras → Lille | forfait dès 95 €, 35 min | TaxiNeo",
-        metaDescription: "Via A26 en 35 min. Artois, Beffroi UNESCO, Vieux-Lille et Eurostar en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A26 en 35 min. Artois, Beffroi UNESCO, Vieux-Lille et Eurostar en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Arras → Lille",
         heroSubtitle: "Transfert Arras → Lille au prix fixe de 95 — 120 €. 50 km, rapide par l'A26.",
         description: "Lille est à 35 min d'Arras par l'A26, liaison rapide entre deux villes d'art et d'histoire.",

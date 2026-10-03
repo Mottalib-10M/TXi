@@ -77,7 +77,7 @@ export const trajetsBayonnePau2: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Bayonne → San Sebastián | 55 km, dès 105 € | TaxiNeo",
-        metaDescription: "Via A63 / AP-8 en undefined min. AP-8, Pays Basque, Espagne et Gastronomie en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A63 / AP-8 en undefined min. AP-8, Pays Basque, Espagne et Gastronomie en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Bayonne → San Sebastián",
         heroSubtitle: "Transfert Bayonne → San Sebastián au prix fixe de 105 — 130 €. 55 km, 40 min.",
         description: "Bayonne — San Sebastián relie le Pays Basque français au Pays Basque espagnol.",
@@ -96,7 +96,7 @@ export const trajetsBayonnePau2: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Bayonne → San Sebastián | 55 km, from €105 | TaxiNeo",
-        metaDescription: "Via A63 / AP-8, undefined min ride. AP-8, Pays Basque, Espagne and Gastronomie en route. Drop-off at your exact address. Door-to-door, luggage included.",
+        metaDescription: "Via A63 / AP-8, undefined min ride. AP-8, Pays Basque, Espagne and Gastronomie en route. Drop-off at your exact address, luggage included.",
         heroTitle: "Taxi Bayonne → San Sebastián",
         heroSubtitle: "Bayonne → San Sebastián transfer at €105 — €130. 55 km, 40 min.",
         description: "French to Spanish Basque Country in 40 minutes.",
@@ -134,7 +134,7 @@ export const trajetsBayonnePau2: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Pau → Oloron-Sainte-Marie | 35 km, dès 70 € | TaxiNeo",
-        metaDescription: "Via A64 / N134 en undefined min. Béarn, Pyrénées et Gave d'Oloron en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A64 / N134 en undefined min. Béarn, Pyrénées et Gave d'Oloron en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Pau → Oloron-Sainte-Marie",
         heroSubtitle: "Transfert Pau → Oloron au prix fixe de 70 — 85 €. 35 km, 30 min.",
         description: "Oloron-Sainte-Marie, porte de la vallée d'Aspe, à 30 min de Pau.",
@@ -191,7 +191,7 @@ export const trajetsBayonnePau2: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Pau → Tarbes | 45 km via A64, dès 90 € | TaxiNeo",
-        metaDescription: "Via A64 en undefined min. Pyrénées, Béarn, Bigorre et Direct en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A64 en undefined min. Pyrénées, Béarn, Bigorre et Direct en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Pau → Tarbes",
         heroSubtitle: "Transfert Pau → Tarbes au prix fixe de 90 — 105 €. 45 km, 35 min.",
         description: "Pau — Tarbes relie le Béarn à la Bigorre en 35 min par l'A64.",
@@ -210,7 +210,7 @@ export const trajetsBayonnePau2: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Pau → Tarbes | Fixed price from €90 | TaxiNeo",
-        metaDescription: "Via A64, undefined min ride. Pyrénées, Béarn, Bigorre and Direct en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via A64, undefined min ride. Pyrénées, Béarn, Bigorre and Direct en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Pau → Tarbes",
         heroSubtitle: "Pau → Tarbes transfer at €90 — €105. 45 km, 35 min.",
         description: "Pau to Tarbes, from Béarn to Bigorre in 35 min via A64.",
@@ -267,7 +267,7 @@ export const trajetsBayonnePau2: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Bayonne → Dax | Fixed price from €105 | TaxiNeo",
-        metaDescription: "Via A64, undefined min ride. Landes, Thermalisme and Adour along the way. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via A64, undefined min ride. Landes, Thermalisme and Adour along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Bayonne → Dax",
         heroSubtitle: "Bayonne → Dax transfer at €105 — €130. 55 km, 40 min.",
         description: "Dax, France's top thermal spa town, 40 min from Bayonne.",

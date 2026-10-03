@@ -31,7 +31,7 @@ export const trajetsSarregueminesForbach: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Sarreguemines → Metz | 80 km, dès 155 € | TaxiNeo",
-        metaDescription: "Via A4 en 55 min. Moselle-Est, Faïenceries et Cathédrale Saint-Étienne en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A4 en 55 min. Moselle-Est, Faïenceries et Cathédrale Saint-Étienne en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Sarreguemines → Metz",
         heroSubtitle: "Transfert Sarreguemines → Metz au prix fixe de 155 — 185 €. 80 km par l'A4 à travers la Moselle-Est.",
         description: "Metz, ville d'art et d'histoire avec son Centre Pompidou-Metz et sa cathédrale aux vitraux de Chagall, est à 55 min de Sarreguemines par l'A4.",
@@ -96,7 +96,7 @@ export const trajetsSarregueminesForbach: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Sarreguemines → Strasbourg | 110 km, 130 € | TaxiNeo",
-        metaDescription: "Via A4/A320 en 1h10. Moselle-Est et Cathédrale de Strasbourg en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A4/A320 en 1h10. Moselle-Est et Cathédrale de Strasbourg en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Sarreguemines → Strasbourg",
         heroSubtitle: "Transfert Sarreguemines → Strasbourg au prix fixe de 210 — 255 €. 110 km par l'A4 et l'A320, de la frontière sarroise à la capitale alsacienne.",
         description: "Strasbourg, capitale européenne avec sa cathédrale en grès rose et son quartier de la Petite France classé UNESCO, est à 1h10 de Sarreguemines.",
@@ -161,7 +161,7 @@ export const trajetsSarregueminesForbach: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Sarreguemines → Nancy | 110 km, dès 210 € | TaxiNeo",
-        metaDescription: "Via A4 en 1h10. Moselle-Est, Place Stanislas UNESCO et Bassin houiller en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A4 en 1h10. Moselle-Est, Place Stanislas UNESCO et Bassin houiller en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Sarreguemines → Nancy",
         heroSubtitle: "Transfert Sarreguemines → Nancy au prix fixe de 210 — 255 €. 110 km par l'A4 et l'A31, de la frontière sarroise à la capitale des ducs de Lorraine.",
         description: "Nancy, capitale des ducs de Lorraine et joyau de l'Art nouveau avec sa Place Stanislas classée UNESCO, est à 1h10 de Sarreguemines.",

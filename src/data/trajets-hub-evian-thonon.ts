@@ -27,7 +27,7 @@ export const trajetsEvianThonon: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Évian-les-Bains → Genève | 45 km, dès 90 € | TaxiNeo",
-        metaDescription: "Via D1005 en 35 min. Lac Léman, Rive sud, Frontière suisse et Aéroport GVA en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via D1005 en 35 min. Lac Léman, Rive sud, Frontière suisse et Aéroport GVA en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Évian-les-Bains → Genève",
         heroSubtitle: "Transfert Évian-les-Bains → Genève au prix fixe de 90 — 105 €. 45 km le long du Lac Léman.",
         description: "Genève, capitale internationale au bord du Léman avec l'ONU et le CERN, est à 35 min d'Évian-les-Bains.",
@@ -46,7 +46,7 @@ export const trajetsEvianThonon: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Évian-les-Bains → Genève | 45 km, from €90 | TaxiNeo",
-        metaDescription: "Via D1005, 35 min ride. Lac Léman, Rive sud, Frontière suisse and Aéroport GVA en route. Drop-off at your exact address. Door-to-door, luggage included.",
+        metaDescription: "Via D1005, 35 min ride. Lac Léman, Rive sud, Frontière suisse and Aéroport GVA en route. Drop-off at your exact address, luggage included.",
         heroTitle: "Taxi Évian-les-Bains → Geneva",
         heroSubtitle: "Your Évian-les-Bains → Geneva transfer at €90 — €105. 45 km along Lake Geneva.",
         description: "Geneva, an international capital on Lake Geneva home to the UN and CERN, is 35 min from Évian-les-Bains.",
@@ -91,7 +91,7 @@ export const trajetsEvianThonon: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Évian-les-Bains → Annecy | 90 km, dès 175 € | TaxiNeo",
-        metaDescription: "Via A41 en 1h. Lac d'Annecy, Chablais, Préalpes et Vieille ville en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A41 en 1h. Lac d'Annecy, Chablais, Préalpes et Vieille ville en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Évian-les-Bains → Annecy",
         heroSubtitle: "Transfert Évian-les-Bains → Annecy au prix fixe de 175 — 210 €. 90 km entre deux lacs alpins.",
         description: "Annecy, la Venise des Alpes au bord de son lac turquoise, est à 1h d'Évian-les-Bains.",
@@ -155,7 +155,7 @@ export const trajetsEvianThonon: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Thonon-les-Bains → Genève | 35 km, dès 70 € | TaxiNeo",
-        metaDescription: "Via D1005 en 30 min. Lac Léman, Frontière suisse, Chablais et Aéroport GVA en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via D1005 en 30 min. Lac Léman, Frontière suisse, Chablais et Aéroport GVA en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Thonon-les-Bains → Genève",
         heroSubtitle: "Transfert Thonon-les-Bains → Genève au prix fixe de 70 — 85 €. 35 km le long du Léman.",
         description: "Genève, capitale internationale sur le Léman avec ONU et CERN, est à 30 min de Thonon-les-Bains.",
@@ -174,7 +174,7 @@ export const trajetsEvianThonon: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Thonon-les-Bains → Genève | 35 km, from €70 | TaxiNeo",
-        metaDescription: "Via D1005, 30 min ride. Lac Léman, Frontière suisse, Chablais and Aéroport GVA en route. Drop-off at your exact address. Door-to-door, luggage included.",
+        metaDescription: "Via D1005, 30 min ride. Lac Léman, Frontière suisse, Chablais and Aéroport GVA en route. Drop-off at your exact address, luggage included.",
         heroTitle: "Taxi Thonon-les-Bains → Geneva",
         heroSubtitle: "Your Thonon-les-Bains → Geneva transfer at €70 — €85. 35 km along Lake Geneva.",
         description: "Geneva, an international capital on Lake Geneva with the UN and CERN, is 30 min from Thonon-les-Bains.",
@@ -283,7 +283,7 @@ export const trajetsEvianThonon: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Évian-les-Bains → Lyon | 180 km, dès 345 € | TaxiNeo",
-        metaDescription: "Via A41 puis A43 en 1h50. Lac Léman, Chambéry et Gastronomie lyonnaise en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A41 puis A43 en 1h50. Lac Léman, Chambéry et Gastronomie lyonnaise en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Évian-les-Bains → Lyon",
         heroSubtitle: "Transfert Évian-les-Bains → Lyon au prix fixe de 345 — 420 €. 180 km du Léman à la capitale gastronomique.",
         description: "Lyon, capitale de la gastronomie française classée à l'UNESCO, est à 1h50 d'Évian-les-Bains.",

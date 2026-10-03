@@ -31,7 +31,7 @@ export const trajetsLyon: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Lyon → Saint-Étienne | 62 km, dès 120 € | TaxiNeo",
-        metaDescription: "Via A47 en 50 min. Vallée du Gier, Rive-de-Gier et Saint-Chamond en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A47 en 50 min. Vallée du Gier, Rive-de-Gier et Saint-Chamond en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Lyon → Saint-Étienne",
         heroSubtitle: "Votre transfert Lyon → Saint-Étienne au prix fixe de 120 — 145 €. Trajet direct par l'A47, sans péage. Réservation en ligne.",
         description: "Le trajet Lyon — Saint-Étienne est l'un des plus fréquentés de la région Auvergne-Rhône-Alpes. Les deux métropoles, distantes de seulement 62 km, sont reliées par l'autoroute A47 qui traverse la vallée du Gier. Votre chauffeur TaxiNeo vous prend en charge à Lyon (Part-Dieu, Perrache, domicile ou hôtel) et vous dépose à l'adresse de votre choix à Saint-Étienne.",
@@ -115,7 +115,7 @@ export const trajetsLyon: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Lyon → Grenoble | 115 km, from €220 | TaxiNeo",
-        metaDescription: "Via A43 then A48, 1h15 ride. Voiron, Voreppe and Massif de la Chartreuse along the way. Drop-off at your exact address. Door-to-door, luggage included.",
+        metaDescription: "Via A43 then A48, 1h15 ride. Voiron, Voreppe and Massif de la Chartreuse along the way. Drop-off at your exact address, luggage included.",
         heroTitle: "Taxi Lyon → Grenoble",
         heroSubtitle: "Your Lyon → Grenoble transfer at a fixed price of €220 — €270. Direct route via A43/A48, 1h15 drive. Online booking.",
         description: "The Lyon — Grenoble route connects the Capital of the Gauls to the Capital of the French Alps. 115 km apart, the two cities are linked by the A43 then A48 motorways, offering a fast route through the northern Chartreuse massif. Your TaxiNeo driver ensures a comfortable transfer, ideal for business travellers or tourists heading to Alpine ski resorts.",
@@ -161,7 +161,7 @@ export const trajetsLyon: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Lyon → Annecy | 145 km, dès 280 €, 1h35 | TaxiNeo",
-        metaDescription: "Via A43 puis A41 en 1h35. Lac du Bourget, Chambéry et Lac d'Annecy en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A43 puis A41 en 1h35. Lac du Bourget, Chambéry et Lac d'Annecy en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Lyon → Annecy",
         heroSubtitle: "Votre transfert Lyon → Annecy au prix fixe de 280 — 335 €. Trajet direct A43/A41, 1h35. Réservation en ligne.",
         description: "Le trajet Lyon — Annecy relie la métropole lyonnaise à la perle des Alpes françaises. Annecy, avec son lac émeraude et sa vieille ville pittoresque, attire chaque année des millions de visiteurs. Votre chauffeur TaxiNeo vous conduit confortablement de Lyon à Annecy par les autoroutes A43 et A41.",
@@ -229,7 +229,7 @@ export const trajetsLyon: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Lyon → Chambéry | 107 km, dès 205 € | TaxiNeo",
-        metaDescription: "Via A43 en 1h10. Lac d'Aiguebelette, Les Abrets et Col de l'Épine en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A43 en 1h10. Lac d'Aiguebelette, Les Abrets et Col de l'Épine en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Lyon → Chambéry",
         heroSubtitle: "Votre transfert Lyon → Chambéry au prix fixe de 205 — 250 €. Trajet direct par A43, 1h10. Réservation en ligne.",
         description: "Le trajet Lyon — Chambéry emprunte l'autoroute A43, l'un des axes majeurs reliant le bassin lyonnais aux Alpes savoyardes. Chambéry, ancienne capitale des États de Savoie, est une ville chargée d'histoire qui constitue aussi la porte d'entrée vers les grands domaines skiables de Savoie et Haute-Savoie.",
@@ -359,7 +359,7 @@ export const trajetsLyon: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Lyon → Bourg-en-Bresse | 72 km, dès 140 € | TaxiNeo",
-        metaDescription: "Via A42 en 55 min. Dombes, Pérouges et Monastère royal de Brou en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A42 en 55 min. Dombes, Pérouges et Monastère royal de Brou en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Lyon → Bourg-en-Bresse",
         heroSubtitle: "Votre transfert Lyon → Bourg-en-Bresse au prix fixe de 140 — 170 €. Trajet direct par A42, 55 min. Réservation en ligne.",
         description: "Le trajet Lyon — Bourg-en-Bresse relie la métropole lyonnaise à la préfecture de l'Ain, ville réputée pour son patrimoine historique (monastère royal de Brou) et sa gastronomie (poulet de Bresse, AOP). L'autoroute A42 traverse le plateau de la Dombes, terre de mille étangs.",
@@ -424,7 +424,7 @@ export const trajetsLyon: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Lyon → Mâcon | forfait dès 140 €, 50 min | TaxiNeo",
-        metaDescription: "Via A6 en 50 min. Beaujolais, Villefranche-sur-Saône et Vignobles en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A6 en 50 min. Beaujolais, Villefranche-sur-Saône et Vignobles en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Lyon → Mâcon",
         heroSubtitle: "Votre transfert Lyon → Mâcon au prix fixe de 140 — 170 €. Trajet direct par l'A6, 50 min. Réservation en ligne.",
         description: "Le trajet Lyon — Mâcon emprunte l'autoroute A6 vers le nord, traversant le vignoble du Beaujolais. Mâcon, sous-préfecture de Saône-et-Loire, est une ville bourguignonne au riche patrimoine viticole, porte d'entrée du Mâconnais et du sud de la Bourgogne.",
@@ -489,7 +489,7 @@ export const trajetsLyon: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Lyon → Roanne | forfait dès 170 €, 1h05 | TaxiNeo",
-        metaDescription: "Via A89 en 1h05. Monts du Lyonnais, Tarare et Col des Sauvages en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A89 en 1h05. Monts du Lyonnais, Tarare et Col des Sauvages en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Lyon → Roanne",
         heroSubtitle: "Votre transfert Lyon → Roanne au prix fixe de 170 — 205 €. Trajet direct par A89, 1h05. Réservation en ligne.",
         description: "Le trajet Lyon — Roanne traverse les monts du Lyonnais par l'autoroute A89. Roanne, sous-préfecture de la Loire, est une ville gourmande célèbre pour la Maison Troisgros (triple étoilée Michelin) et un pôle textile historique.",
@@ -554,7 +554,7 @@ export const trajetsLyon: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Lyon → Clermont-Ferrand | 170 km, dès 325 € | TaxiNeo",
-        metaDescription: "Via A89/A72 en 1h45. Monts du Forez, Thiers et Chaîne des Puys en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A89/A72 en 1h45. Monts du Forez, Thiers et Chaîne des Puys en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Lyon → Clermont-Ferrand",
         heroSubtitle: "Votre transfert Lyon → Clermont-Ferrand au prix fixe de 325 — 395 €. Trajet direct par A89/A72, 1h45. Réservation en ligne.",
         description: "Le trajet Lyon — Clermont-Ferrand relie les deux capitales régionales d'Auvergne-Rhône-Alpes. Clermont-Ferrand, ville de Michelin et des volcans d'Auvergne, est accessible en 1h45 par les autoroutes A89 et A72 qui traversent les monts du Forez.",
@@ -684,7 +684,7 @@ export const trajetsLyon: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Lyon → Dijon | 195 km, dès 375 €, 1h55 | TaxiNeo",
-        metaDescription: "Via A6 en 1h55. Beaujolais, Mâcon, Tournus et Côte de Beaune en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A6 en 1h55. Beaujolais, Mâcon, Tournus et Côte de Beaune en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Lyon → Dijon",
         heroSubtitle: "Votre transfert Lyon → Dijon au prix fixe de 375 — 455 €. Trajet direct par l'A6, 1h55. Réservation en ligne.",
         description: "Le trajet Lyon — Dijon remonte l'A6 à travers les vignobles de Bourgogne, de Mâcon à Beaune. Dijon, capitale de la Bourgogne et ville de la moutarde, du cassis et du pain d'épices, est une métropole culturelle et gastronomique de premier plan.",
@@ -703,7 +703,7 @@ export const trajetsLyon: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Lyon → Dijon | Fixed price from €375 | TaxiNeo",
-        metaDescription: "Via A6, 1h55 ride. Beaujolais, Mâcon, Tournus and Côte de Beaune en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via A6, 1h55 ride. Beaujolais, Mâcon, Tournus and Côte de Beaune en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Lyon → Dijon",
         heroSubtitle: "Your Lyon → Dijon transfer at a fixed price of €375 — €455. Direct route via A6, 1h55. Online booking.",
         description: "The Lyon — Dijon route follows the A6 north through Burgundy vineyards, from Mâcon to Beaune. Dijon, capital of Burgundy and city of mustard, blackcurrant and gingerbread, is a leading cultural and gastronomic metropolis.",
@@ -983,7 +983,7 @@ export const trajetsLyon: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Lyon → Vienne | forfait dès 65 €, 30 min | TaxiNeo",
-        metaDescription: "Via A7 en 30 min. Vallée du Rhône, Théâtre antique et Jazz à Vienne en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A7 en 30 min. Vallée du Rhône, Théâtre antique et Jazz à Vienne en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Lyon → Vienne",
         heroSubtitle: "Votre transfert Lyon → Vienne au prix fixe de 65 — 75 €. Trajet direct par l'A7, 30 min. Réservation en ligne.",
         description: "Le trajet Lyon — Vienne est un transfert rapide de 32 km par l'autoroute A7, reliant la métropole lyonnaise à l'une des plus anciennes cités de France. Vienne, en Isère, est une ville au patrimoine gallo-romain exceptionnel, mondialement connue pour son festival Jazz à Vienne et ses vignobles prestigieux de Côte-Rôtie.",
@@ -1002,7 +1002,7 @@ export const trajetsLyon: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Lyon → Vienne | Fixed price from €65 | TaxiNeo",
-        metaDescription: "Via A7, 30 min ride. Vallée du Rhône, Théâtre antique and Jazz à Vienne along the way. Drop-off at your exact address. Door-to-door, luggage included.",
+        metaDescription: "Via A7, 30 min ride. Vallée du Rhône, Théâtre antique and Jazz à Vienne along the way. Drop-off at your exact address, luggage included.",
         heroTitle: "Taxi Lyon → Vienne",
         heroSubtitle: "Your Lyon → Vienne transfer at a fixed price of €65 — €75. Direct route via A7, 30 min. Online booking.",
         description: "The Lyon — Vienne route is a quick 32 km transfer via the A7 motorway, connecting the Lyon metropolis to one of France's oldest cities. Vienne, in the Isère department, is a city with exceptional Gallo-Roman heritage, world-famous for its Jazz à Vienne festival and the prestigious Côte-Rôtie vineyards.",
@@ -1117,7 +1117,7 @@ export const trajetsLyon: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Lyon → Montélimar | 150 km, dès 290 € | TaxiNeo",
-        metaDescription: "Via A7 en 1h35. Vallée du Rhône, Valence et Nougat de Montélimar en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A7 en 1h35. Vallée du Rhône, Valence et Nougat de Montélimar en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Lyon → Montélimar",
         heroSubtitle: "Votre transfert Lyon → Montélimar au prix fixe de 290 — 350 €. Trajet direct par A7, 1h35. Réservation en ligne.",
         description: "Le trajet Lyon — Montélimar suit l'autoroute A7, la célèbre Autoroute du Soleil, en traversant la Vallée du Rhône. Montélimar, sous-préfecture de la Drôme, est mondialement connue pour son nougat et constitue la porte d'entrée de la Provence.",

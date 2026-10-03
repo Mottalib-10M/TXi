@@ -28,7 +28,7 @@ export const trajetsSaintQuentinLaon: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Saint-Quentin → Paris | 155 km, dès 295 € | TaxiNeo",
-        metaDescription: "Via A26 puis A1 en 1h35. A26/A1, Aisne, Basilique Saint-Quentin et Art Déco en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A26 puis A1 en 1h35. A26/A1, Aisne, Basilique Saint-Quentin et Art Déco en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Saint-Quentin → Paris",
         heroSubtitle: "Transfert Saint-Quentin → Paris au prix fixe de 295 — 360 €. 155 km, direct par l'A26 et l'A1.",
         description: "Paris est à 1h35 de Saint-Quentin par l'autoroute A26 puis l'A1.",

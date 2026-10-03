@@ -223,7 +223,7 @@ export const trajetsBéziersNarbonne: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Narbonne → Carcassonne | 60 km, dès 115 € | TaxiNeo",
-        metaDescription: "Via A61 en 40 min. Cité médiévale, Canal du Midi, Minervois et Pays Cathare en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A61 en 40 min. Cité médiévale, Canal du Midi, Minervois et Pays Cathare en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Narbonne → Carcassonne",
         heroSubtitle: "Transfert Narbonne → Carcassonne au prix fixe de 115 — 140 €. 60 km, direct par l'A61.",
         description: "Carcassonne et sa Cité médiévale classée UNESCO sont à 40 min de Narbonne par l'A61.",

@@ -28,7 +28,7 @@ export const trajetsEvryCorbeil: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Évry-Courcouronnes → Paris | 35 km, dès 70 € | TaxiNeo",
-        metaDescription: "Via A6 en 35 min. Genopole, Essonne, Cathédrale d'Évry et Porte-à-porte en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A6 en 35 min. Genopole, Essonne, Cathédrale d'Évry et Porte-à-porte en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Évry-Courcouronnes → Paris",
         heroSubtitle: "Transfert Évry-Courcouronnes → Paris au prix fixe de 70 — 85 €. 35 km, direct par l'A6.",
         description: "Paris est à 35 min d'Évry-Courcouronnes par l'A6, préfecture de l'Essonne.",
@@ -93,7 +93,7 @@ export const trajetsEvryCorbeil: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Évry-Courcouronnes → Aéroport Orly | 18 km | TaxiNeo",
-        metaDescription: "Via N7 / A6 en 18 min. N7, Orly, Essonne et Navette rapide en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via N7 / A6 en 18 min. N7, Orly, Essonne et Navette rapide en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Évry-Courcouronnes → Aéroport Orly",
         heroSubtitle: "Transfert Évry-Courcouronnes → Aéroport Orly au prix fixe de 35 — 45 €. 18 km, direct par la N7.",
         description: "L'aéroport d'Orly est à seulement 18 min d'Évry-Courcouronnes, le transfert aéroport le plus proche de l'Essonne.",
@@ -112,7 +112,7 @@ export const trajetsEvryCorbeil: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Évry-Courcouronnes → Aéroport Orly | 18 km | TaxiNeo",
-        metaDescription: "Via N7 / A6, 18 min ride. N7, Orly, Essonne and Navette rapide en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via N7 / A6, 18 min ride. N7, Orly, Essonne and Navette rapide en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Évry-Courcouronnes → Orly Airport",
         heroSubtitle: "Your Évry-Courcouronnes → Orly Airport transfer at €35 — €45. 18 km, via the N7.",
         description: "Orly Airport is just 18 min from Évry-Courcouronnes, the closest airport transfer in Essonne.",
@@ -177,7 +177,7 @@ export const trajetsEvryCorbeil: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Corbeil-Essonnes → Paris | 40 km, from €80 | TaxiNeo",
-        metaDescription: "Via A6 / N7, 40 min ride. Seine, Essonne, N7 and Porte-à-porte en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via A6 / N7, 40 min ride. Seine, Essonne, N7 and Porte-à-porte en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Corbeil-Essonnes → Paris",
         heroSubtitle: "Your Corbeil-Essonnes → Paris transfer at €80 — €95. 40 km, via the A6.",
         description: "Paris is 40 min from Corbeil-Essonnes via the A6, at the confluence of the Seine and Essonne rivers.",
@@ -223,7 +223,7 @@ export const trajetsEvryCorbeil: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Évry-Courcouronnes → Fontainebleau | 40 km | TaxiNeo",
-        metaDescription: "Via N104 / D448 en 35 min. N104, Francilienne, Forêt et Château UNESCO en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via N104 / D448 en 35 min. N104, Francilienne, Forêt et Château UNESCO en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Évry-Courcouronnes → Fontainebleau",
         heroSubtitle: "Transfert Évry-Courcouronnes → Fontainebleau au prix fixe de 80 — 95 €. 40 km, direct par la Francilienne.",
         description: "Fontainebleau est à 35 min d'Évry-Courcouronnes par la Francilienne, cité impériale et forestière.",

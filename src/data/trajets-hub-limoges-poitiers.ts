@@ -27,7 +27,7 @@ export const trajetsLimogesPoitiers: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Limoges → Brive-la-Gaillarde | 92 km, 115 € | TaxiNeo",
-        metaDescription: "Via A20 en 1h10. Pompadour, Corrèze, Gastronomie et Périgord en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A20 en 1h10. Pompadour, Corrèze, Gastronomie et Périgord en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Limoges → Brive-la-Gaillarde",
         heroSubtitle: "Transfert Limoges → Brive au prix fixe de 175 — 215 €. 92 km, porte de la Corrèze et du Périgord.",
         description: "Brive-la-Gaillarde, sous-préfecture de la Corrèze, est à 1h10 de Limoges par l'A20.",
@@ -46,7 +46,7 @@ export const trajetsLimogesPoitiers: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Limoges → Brive-la-Gaillarde | 92 km, €115 | TaxiNeo",
-        metaDescription: "Via A20, 1h10 ride. Pompadour, Corrèze, Gastronomie and Périgord en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via A20, 1h10 ride. Pompadour, Corrèze, Gastronomie and Périgord en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Limoges → Brive-la-Gaillarde",
         heroSubtitle: "Your Limoges → Brive transfer at €175 — €215. 92 km, gateway to Corrèze and Périgord.",
         description: "Brive-la-Gaillarde, main city of southern Corrèze, is 1h10 from Limoges via the A20.",
@@ -219,7 +219,7 @@ export const trajetsLimogesPoitiers: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Limoges → Tulle | forfait dès 175 € | TaxiNeo",
-        metaDescription: "Via A20 puis N120 en 1h15. A20/N120, Corrèze, Dentelle et Accordéon en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A20 puis N120 en 1h15. A20/N120, Corrèze, Dentelle et Accordéon en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Limoges → Tulle",
         heroSubtitle: "Transfert Limoges → Tulle au prix fixe de 175 — 210 €. 90 km, préfecture de la Corrèze.",
         description: "Tulle, préfecture de la Corrèze, est à 1h15 de Limoges via l'A20 et la N120.",
@@ -603,7 +603,7 @@ export const trajetsLimogesPoitiers: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Poitiers → La Rochelle | 145 km, dès 280 € | TaxiNeo",
-        metaDescription: "Via A10 puis N11 en 1h30. A10/N11, Atlantique, Vieux-Port et Île de Ré en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A10 puis N11 en 1h30. A10/N11, Atlantique, Vieux-Port et Île de Ré en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Poitiers → La Rochelle",
         heroSubtitle: "Transfert Poitiers → La Rochelle au prix fixe de 280 — 335 €. 145 km, perle de l'Atlantique.",
         description: "La Rochelle, perle de la côte atlantique, est à 1h30 de Poitiers.",

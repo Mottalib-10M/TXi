@@ -93,7 +93,7 @@ export const trajetsChâlonsVitry: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Châlons-en-Champagne → Paris | 190 km, 225 € | TaxiNeo",
-        metaDescription: "Via A4 en 1h55. Champagne, Marne, Liaison directe et Cathédrale de Châlons en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A4 en 1h55. Champagne, Marne, Liaison directe et Cathédrale de Châlons en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Châlons-en-Champagne → Paris",
         heroSubtitle: "Transfert Châlons-en-Champagne → Paris au prix fixe de 365 — 440 €. 190 km, direct par l'A4.",
         description: "Paris est à 1h55 de Châlons-en-Champagne par l'autoroute A4.",
@@ -177,7 +177,7 @@ export const trajetsChâlonsVitry: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Vitry-le-François → Reims | 95 km, from €185 | TaxiNeo",
-        metaDescription: "Via N44 / A26, 1 hour ride. N44, Lac du Der, Champagne and Marne en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via N44 / A26, 1 hour ride. N44, Lac du Der, Champagne and Marne en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Vitry-le-François → Reims",
         heroSubtitle: "Your Vitry-le-François → Reims transfer at €185 — €220. 95 km, across Champagne.",
         description: "Reims, Champagne capital and coronation city, is 1 hour from Vitry-le-François.",

@@ -158,7 +158,7 @@ export const trajetsGueretAubusson: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Guéret → Montluçon | 70 km, dès 135 € | TaxiNeo",
-        metaDescription: "Via D942 en 50 min. Creuse, Combrailles, Château des Ducs et Bourbonnais en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via D942 en 50 min. Creuse, Combrailles, Château des Ducs et Bourbonnais en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Guéret → Montluçon",
         heroSubtitle: "Transfert Guéret → Montluçon au prix fixe de 135 — 165 €. 70 km, de la Creuse aux portes du Bourbonnais.",
         description: "Montluçon, cité médiévale et industrielle aux confins du Berry et de l'Auvergne, est à 50 min de Guéret.",
@@ -177,7 +177,7 @@ export const trajetsGueretAubusson: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Guéret → Montluçon | 70 km, from €135 | TaxiNeo",
-        metaDescription: "Via D942, 50 min ride. Creuse, Combrailles, Château des Ducs and Bourbonnais en route. Drop-off at your exact address. Door-to-door, luggage included.",
+        metaDescription: "Via D942, 50 min ride. Creuse, Combrailles, Château des Ducs and Bourbonnais en route. Drop-off at your exact address, luggage included.",
         heroTitle: "Taxi Guéret → Montluçon",
         heroSubtitle: "Your Guéret → Montluçon transfer at €135 — €165. 70 km, from Creuse to the medieval Bourbon city.",
         description: "Montluçon, medieval Bourbon city at the crossroads of Berry and Auvergne, is 50 min from Guéret.",

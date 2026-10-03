@@ -47,7 +47,7 @@ export const trajetsLavalMayenne: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Laval → Rennes | Fixed price from €145 | TaxiNeo",
-        metaDescription: "Via A81, 50 min ride. Mayenne, Bretagne, Parlement and Vitré en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via A81, 50 min ride. Mayenne, Bretagne, Parlement and Vitré en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Laval → Rennes",
         heroSubtitle: "Your Laval → Rennes transfer at €145 — €175. 75 km, via the A81.",
         description: "Rennes, capital of Brittany, is 50 min from Laval via the A81.",
@@ -93,7 +93,7 @@ export const trajetsLavalMayenne: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Laval → Le Mans | forfait dès 175 €, 55 min | TaxiNeo",
-        metaDescription: "Via A81 en 55 min. Sarthe, 24 Heures, Cité Plantagenêt et Circuit en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A81 en 55 min. Sarthe, 24 Heures, Cité Plantagenêt et Circuit en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Laval → Le Mans",
         heroSubtitle: "Transfert Laval → Le Mans au prix fixe de 175 — 210 €. 90 km, direct par l'A81.",
         description: "Le Mans, capitale de la Sarthe et des 24 Heures, est à 55 min de Laval par l'A81.",
@@ -242,7 +242,7 @@ export const trajetsLavalMayenne: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Laval → Paris | Fixed price from €575 | TaxiNeo",
-        metaDescription: "Via A81/A11, 3 hours ride. Île-de-France, TGV, CDG and Orly en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via A81/A11, 3 hours ride. Île-de-France, TGV, CDG and Orly en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Laval → Paris",
         heroSubtitle: "Your Laval → Paris transfer at €575 — €695. 300 km, via the A81 and A11.",
         description: "Paris is 3h from Laval via the A81 and A11 motorways.",

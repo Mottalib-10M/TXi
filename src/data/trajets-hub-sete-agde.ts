@@ -47,7 +47,7 @@ export const trajetsSeteAgde: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Sète → Montpellier | 32 km, from €65 | TaxiNeo",
-        metaDescription: "Via A9, 25 min ride. Bassin de Thau, Brassens, Huîtres and Port en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via A9, 25 min ride. Bassin de Thau, Brassens, Huîtres and Port en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Sète → Montpellier",
         heroSubtitle: "Your Sète → Montpellier transfer at €65 — €75. 32 km, via the A9.",
         description: "Montpellier is 25 min from Sète via the A9 motorway.",
@@ -158,7 +158,7 @@ export const trajetsSeteAgde: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Agde → Montpellier | 57 km, dès 110 € | TaxiNeo",
-        metaDescription: "Via A9 en 35 min. Cap d'Agde, Canal du Midi, Volcan et Plages en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A9 en 35 min. Cap d'Agde, Canal du Midi, Volcan et Plages en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Agde → Montpellier",
         heroSubtitle: "Transfert Agde → Montpellier au prix fixe de 110 — 135 €. 57 km, direct par l'A9.",
         description: "Montpellier est à 35 min d'Agde par l'A9.",
@@ -177,7 +177,7 @@ export const trajetsSeteAgde: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Agde → Montpellier | 57 km, from €110 | TaxiNeo",
-        metaDescription: "Via A9, 35 min ride. Cap d'Agde, Canal du Midi, Volcan and Plages en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via A9, 35 min ride. Cap d'Agde, Canal du Midi, Volcan and Plages en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Agde → Montpellier",
         heroSubtitle: "Your Agde → Montpellier transfer at €110 — €135. 57 km, via the A9.",
         description: "Montpellier is 35 min from Agde via the A9 motorway.",
@@ -223,7 +223,7 @@ export const trajetsSeteAgde: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Agde → Béziers | forfait dès 50 €, 18 min | TaxiNeo",
-        metaDescription: "Via N112 en 18 min. Canal du Midi, Écluse ronde, Fonseranes et Vignobles en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via N112 en 18 min. Canal du Midi, Écluse ronde, Fonseranes et Vignobles en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Agde → Béziers",
         heroSubtitle: "Transfert Agde → Béziers au prix fixe de 50 — 60 €. 25 km, route gratuite par la N112.",
         description: "Béziers est à 18 min d'Agde par la N112, sans péage.",
@@ -242,7 +242,7 @@ export const trajetsSeteAgde: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Agde → Béziers | Fixed price from €50 | TaxiNeo",
-        metaDescription: "Via N112, 18 min ride. Canal du Midi, Écluse ronde, Fonseranes and Vignobles en route. Drop-off at your exact address. Door-to-door, luggage included.",
+        metaDescription: "Via N112, 18 min ride. Canal du Midi, Écluse ronde, Fonseranes and Vignobles en route. Drop-off at your exact address, luggage included.",
         heroTitle: "Taxi Agde → Béziers",
         heroSubtitle: "Your Agde → Béziers transfer at €50 — €60. 25 km, toll-free via the N112.",
         description: "Béziers is 18 min from Agde via the toll-free N112.",

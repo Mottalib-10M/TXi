@@ -291,7 +291,7 @@ export const trajetsChamonix: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Chamonix → Megève | 35 km, dès 70 € | TaxiNeo",
-        metaDescription: "Via D1205 en 30 min. Mont-Blanc, Station de ski et Village alpin en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via D1205 en 30 min. Mont-Blanc, Station de ski et Village alpin en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Chamonix — Megève",
         heroSubtitle: "Entre la capitale de l'alpinisme et le joyau du ski chic alpin",
         description: "Transfert en taxi de Chamonix-Mont-Blanc à Megève, station de ski prestigieuse au cœur du pays du Mont-Blanc, par la route D1205.",

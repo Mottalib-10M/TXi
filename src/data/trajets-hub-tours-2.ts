@@ -20,7 +20,7 @@ export const trajetsToursHub2: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Tours → Paris | Prix fixe dès 450 € | TaxiNeo",
-        metaDescription: "Via A10 en undefined min. Loire, Beauce, TGV alternative et Nuit en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A10 en undefined min. Loire, Beauce, TGV alternative et Nuit en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Tours → Paris",
         heroSubtitle: "Transfert Tours → Paris au prix fixe de 450 — 545 €. 235 km via l'A10.",
         description: "Le retour Tours → Paris par l'A10, L'Aquitaine, est un trajet fluide de 2h30.",
@@ -305,7 +305,7 @@ export const trajetsToursHub2: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Tours → Le Mans | Prix fixe dès 160 € | TaxiNeo",
-        metaDescription: "Via A28 en undefined min. 24h, Sarthe, Cathédrale et Vieille ville en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A28 en undefined min. 24h, Sarthe, Cathédrale et Vieille ville en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Tours → Le Mans",
         heroSubtitle: "Transfert Tours → Le Mans au prix fixe de 160 — 190 €. 82 km via l'A28.",
         description: "Le Mans, célèbre pour ses 24 Heures et sa cité Plantagenêt, est à 55 min de Tours.",
@@ -362,7 +362,7 @@ export const trajetsToursHub2: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Tours → Angers | Prix fixe dès 210 € | TaxiNeo",
-        metaDescription: "Via A85 en undefined min. Anjou, Château, Tapisserie et Loire en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A85 en undefined min. Anjou, Château, Tapisserie et Loire en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Tours → Angers",
         heroSubtitle: "Transfert Tours → Angers au prix fixe de 210 — 255 €. 110 km via l'A85, de la Touraine à l'Anjou.",
         description: "Angers, capitale de l'Anjou, est célèbre pour sa forteresse aux 17 tours et la tapisserie de l'Apocalypse.",
@@ -381,7 +381,7 @@ export const trajetsToursHub2: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Tours → Angers | Fixed price from €210 | TaxiNeo",
-        metaDescription: "Via A85, undefined min ride. Anjou, Château, Tapisserie and Loire en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via A85, undefined min ride. Anjou, Château, Tapisserie and Loire en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Tours → Angers",
         heroSubtitle: "Tours → Angers transfer at €210 — €255. 110 km via A85, Touraine to Anjou.",
         description: "Angers, capital of Anjou, famous for its 17-tower fortress and the Apocalypse Tapestry.",
@@ -419,7 +419,7 @@ export const trajetsToursHub2: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Tours → Poitiers | 100 km, dès 195 € | TaxiNeo",
-        metaDescription: "Via A10 en undefined min. Futuroscope, Roman, Notre-Dame et Université en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A10 en undefined min. Futuroscope, Roman, Notre-Dame et Université en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Tours → Poitiers",
         heroSubtitle: "Transfert Tours → Poitiers au prix fixe de 195 — 235 €. 100 km via l'A10.",
         description: "Poitiers, cité romane par excellence et porte du Futuroscope, est à 1h05 de Tours.",

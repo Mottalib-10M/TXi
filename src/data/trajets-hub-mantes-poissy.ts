@@ -28,7 +28,7 @@ export const trajetsMantesPoissy: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Mantes-la-Jolie → Paris | 55 km, dès 105 € | TaxiNeo",
-        metaDescription: "Via A13 en 50 min. Seine, Yvelines, Collégiale et La Défense en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A13 en 50 min. Seine, Yvelines, Collégiale et La Défense en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Mantes-la-Jolie → Paris",
         heroSubtitle: "Transfert Mantes-la-Jolie → Paris au prix fixe de 105 — 130 €. 55 km, direct par l'A13.",
         description: "Paris est à 50 min de Mantes-la-Jolie par l'A13, le long de la vallée de la Seine.",
@@ -47,7 +47,7 @@ export const trajetsMantesPoissy: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Mantes-la-Jolie → Paris | 55 km, from €105 | TaxiNeo",
-        metaDescription: "Via A13, 50 min ride. Seine, Yvelines, Collégiale and La Défense en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via A13, 50 min ride. Seine, Yvelines, Collégiale and La Défense en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Mantes-la-Jolie → Paris",
         heroSubtitle: "Your Mantes-la-Jolie → Paris transfer at €105 — €130. 55 km, direct via the A13.",
         description: "Paris is 50 min from Mantes-la-Jolie via the A13 along the Seine valley.",
@@ -93,7 +93,7 @@ export const trajetsMantesPoissy: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Mantes-la-Jolie → Rouen | 100 km, dès 195 € | TaxiNeo",
-        metaDescription: "Via A13 en 1h05. Seine, Normandie, Vexin et Cathédrale de Rouen en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A13 en 1h05. Seine, Normandie, Vexin et Cathédrale de Rouen en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Mantes-la-Jolie → Rouen",
         heroSubtitle: "Transfert Mantes-la-Jolie → Rouen au prix fixe de 195 — 235 €. 100 km, direct par l'A13.",
         description: "Rouen, capitale de la Normandie, est à 1h05 de Mantes-la-Jolie par l'A13 via la vallée de la Seine.",
@@ -158,7 +158,7 @@ export const trajetsMantesPoissy: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Poissy → Paris | forfait dès 60 €, 30 min | TaxiNeo",
-        metaDescription: "Via A13/A14 en 30 min. Villa Savoye, Stellantis et La Défense en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A13/A14 en 30 min. Villa Savoye, Stellantis et La Défense en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Poissy → Paris",
         heroSubtitle: "Transfert Poissy → Paris au prix fixe de 60 — 70 €. 30 km, direct par l'A13 ou l'A14.",
         description: "Paris est à 30 min de Poissy par l'A13 ou l'A14, via La Défense.",

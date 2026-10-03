@@ -93,7 +93,7 @@ export const trajetsEpernayChateauThierry: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Épernay → Paris | 140 km, dès 270 € | TaxiNeo",
-        metaDescription: "Via A4 en 1h30. Champagne, Avenue de Champagne, Moët & Chandon et Marne en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A4 en 1h30. Champagne, Avenue de Champagne, Moët & Chandon et Marne en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Épernay → Paris",
         heroSubtitle: "Transfert Épernay → Paris au prix fixe de 270 — 325 €. 140 km, direct par l'A4.",
         description: "Paris est à 1h30 d'Épernay par l'A4, l'autoroute de l'Est.",
@@ -158,7 +158,7 @@ export const trajetsEpernayChateauThierry: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Château-Thierry → Paris | 95 km, dès 185 € | TaxiNeo",
-        metaDescription: "Via A4 en 1h05. La Fontaine, Marne, Champagne sud et Disneyland en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A4 en 1h05. La Fontaine, Marne, Champagne sud et Disneyland en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Château-Thierry → Paris",
         heroSubtitle: "Transfert Château-Thierry → Paris au prix fixe de 185 — 220 €. 95 km, direct par l'A4.",
         description: "Paris est à 1h05 de Château-Thierry par l'A4, au cœur de la vallée de la Marne.",

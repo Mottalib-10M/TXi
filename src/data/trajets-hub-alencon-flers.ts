@@ -28,7 +28,7 @@ export const trajetsAlençonFlers: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Alençon → Le Mans | 55 km, dès 105 € | TaxiNeo",
-        metaDescription: "Via A28 en 40 min. Alpes Mancelles, Orne, Sarthe et 24 Heures en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A28 en 40 min. Alpes Mancelles, Orne, Sarthe et 24 Heures en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Alençon → Le Mans",
         heroSubtitle: "Transfert Alençon → Le Mans au prix fixe de 105 — 130 €. 55 km, direct par l'A28.",
         description: "Le Mans, capitale de la Sarthe et des 24 Heures, est à 40 min d'Alençon par l'A28.",
@@ -47,7 +47,7 @@ export const trajetsAlençonFlers: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Alençon → Le Mans | 55 km, from €105 | TaxiNeo",
-        metaDescription: "Via A28, 40 min ride. Alpes Mancelles, Orne, Sarthe and 24 Heures en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via A28, 40 min ride. Alpes Mancelles, Orne, Sarthe and 24 Heures en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Alençon → Le Mans",
         heroSubtitle: "Your Alençon → Le Mans transfer at €105 — €130. 55 km, via the A28.",
         description: "Le Mans, home of the 24 Hours race and the Plantagenet City, is 40 min from Alençon.",
@@ -93,7 +93,7 @@ export const trajetsAlençonFlers: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Alençon → Caen | 110 km, dès 210 €, 1h10 | TaxiNeo",
-        metaDescription: "Via N12 / D438 en 1h10. N12, Normandie-Maine, Mémorial et Bocage en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via N12 / D438 en 1h10. N12, Normandie-Maine, Mémorial et Bocage en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Alençon → Caen",
         heroSubtitle: "Transfert Alençon → Caen au prix fixe de 210 — 255 €. 110 km à travers le bocage normand.",
         description: "Caen, capitale du Calvados et cité de Guillaume le Conquérant, est à 1h10 d'Alençon.",
@@ -158,7 +158,7 @@ export const trajetsAlençonFlers: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Alençon → Paris | 195 km, dès 375 € | TaxiNeo",
-        metaDescription: "Via A28 / A11 en 2h05. Chartres, Normandie-Maine et Porte Maillot en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A28 / A11 en 2h05. Chartres, Normandie-Maine et Porte Maillot en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Alençon → Paris",
         heroSubtitle: "Transfert Alençon → Paris au prix fixe de 375 — 455 €. 195 km, direct par l'A28 et l'A11.",
         description: "Paris est à 2h05 d'Alençon par l'A28 et l'A11, traversant le Perche et la Beauce.",
@@ -288,7 +288,7 @@ export const trajetsAlençonFlers: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Alençon → Rouen | 155 km, dès 295 € | TaxiNeo",
-        metaDescription: "Via A28 en 1h40. Pays d'Ouche, Seine, Cathédrale et Normandie-Maine en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A28 en 1h40. Pays d'Ouche, Seine, Cathédrale et Normandie-Maine en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Alençon → Rouen",
         heroSubtitle: "Transfert Alençon → Rouen au prix fixe de 295 — 360 €. 155 km, direct par l'A28.",
         description: "Rouen, capitale de la Normandie, est à 1h40 d'Alençon par l'A28.",

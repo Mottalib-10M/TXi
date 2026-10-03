@@ -20,7 +20,7 @@ export const trajetsGrenobleHub2: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Grenoble → Lyon | 115 km, dès 220 € | TaxiNeo",
-        metaDescription: "Via A48 en undefined min. Isère, Chartreuse, Direct et Retour en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A48 en undefined min. Isère, Chartreuse, Direct et Retour en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Grenoble → Lyon",
         heroSubtitle: "Transfert Grenoble → Lyon au prix fixe de 220 — 270 €. 115 km via l'A48.",
         description: "Le retour Grenoble → Lyon par l'A48 est l'un des trajets les plus fréquents de la région Auvergne-Rhône-Alpes.",
@@ -39,7 +39,7 @@ export const trajetsGrenobleHub2: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Grenoble → Lyon | 115 km, from €220 | TaxiNeo",
-        metaDescription: "Via A48, undefined min ride. Isère, Chartreuse, Direct and Retour en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via A48, undefined min ride. Isère, Chartreuse, Direct and Retour en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Grenoble → Lyon",
         heroSubtitle: "Grenoble → Lyon transfer at €220 — €270. 115 km via A48.",
         description: "Grenoble to Lyon via A48 is one of the most frequent routes in the Auvergne-Rhône-Alpes region.",
@@ -134,7 +134,7 @@ export const trajetsGrenobleHub2: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Grenoble → Chambéry | 60 km, dès 115 € | TaxiNeo",
-        metaDescription: "Via A41 en undefined min. Chartreuse, Savoie, Lac du Bourget et Direct en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A41 en undefined min. Chartreuse, Savoie, Lac du Bourget et Direct en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Grenoble → Chambéry",
         heroSubtitle: "Transfert Grenoble → Chambéry au prix fixe de 115 — 140 €. 60 km entre Isère et Savoie.",
         description: "Chambéry, ancienne capitale des États de Savoie, est à 45 min de Grenoble au pied du massif de la Chartreuse.",
@@ -267,7 +267,7 @@ export const trajetsGrenobleHub2: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Grenoble → Valence | 95 km, from €185 | TaxiNeo",
-        metaDescription: "Via A49, undefined min ride. Drôme, Vercors and Gare TGV along the way. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via A49, undefined min ride. Drôme, Vercors and Gare TGV along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Grenoble → Valence",
         heroSubtitle: "Grenoble → Valence transfer at €185 — €220. 95 km via A49.",
         description: "Valence, gateway to the Midi on the Rhône, is 1h05 from Grenoble via A49.",
@@ -324,7 +324,7 @@ export const trajetsGrenobleHub2: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Grenoble → Genève | 155 km, from €295 | TaxiNeo",
-        metaDescription: "Via A41, undefined min ride. Suisse, ONU, Lac Léman and CERN en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via A41, undefined min ride. Suisse, ONU, Lac Léman and CERN en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Grenoble → Geneva",
         heroSubtitle: "Grenoble → Geneva transfer at €295 — €360. 155 km, from Isère to Lake Geneva.",
         description: "Geneva, home of the UN and CERN, is 1h45 from Grenoble via Annecy.",

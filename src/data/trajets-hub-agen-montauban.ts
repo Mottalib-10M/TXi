@@ -93,7 +93,7 @@ export const trajetsAgenMontauban: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Agen → Toulouse | 115 km, dès 220 € | TaxiNeo",
-        metaDescription: "Via A62 en 1h10. Garonne, Ville Rose, Airbus et Canal du Midi en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A62 en 1h10. Garonne, Ville Rose, Airbus et Canal du Midi en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Agen → Toulouse",
         heroSubtitle: "Transfert Agen → Toulouse au prix fixe de 220 — 270 €. 115 km, direct par l'A62.",
         description: "Toulouse, la Ville Rose, est à 1h10 d'Agen par l'A62.",
@@ -112,7 +112,7 @@ export const trajetsAgenMontauban: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Agen → Toulouse | 115 km, from €220 | TaxiNeo",
-        metaDescription: "Via A62, 1h10 ride. Garonne, Ville Rose, Airbus and Canal du Midi en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via A62, 1h10 ride. Garonne, Ville Rose, Airbus and Canal du Midi en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Agen → Toulouse",
         heroSubtitle: "Your Agen → Toulouse transfer at €220 — €270. 115 km, via the A62.",
         description: "Toulouse, the Pink City, is 1h10 from Agen via the A62.",
@@ -158,7 +158,7 @@ export const trajetsAgenMontauban: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Montauban → Toulouse | 55 km, dès 105 € | TaxiNeo",
-        metaDescription: "Via A62 en 35 min. Tarn-et-Garonne, Ingres, Ville Rose et Capitole en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A62 en 35 min. Tarn-et-Garonne, Ingres, Ville Rose et Capitole en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Montauban → Toulouse",
         heroSubtitle: "Transfert Montauban → Toulouse au prix fixe de 105 — 130 €. 55 km, direct par l'A62.",
         description: "Toulouse est à 35 min de Montauban par l'A62.",
@@ -242,7 +242,7 @@ export const trajetsAgenMontauban: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Montauban → Bordeaux | 200 km, from €385 | TaxiNeo",
-        metaDescription: "Via A62, 2 hours ride. Garonne, Ingres, Vignobles and Cité du Vin en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via A62, 2 hours ride. Garonne, Ingres, Vignobles and Cité du Vin en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Montauban → Bordeaux",
         heroSubtitle: "Your Montauban → Bordeaux transfer at €385 — €465. 200 km, via the A62.",
         description: "Bordeaux is 2h from Montauban via the A62 through the Garonne valley.",
@@ -288,7 +288,7 @@ export const trajetsAgenMontauban: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Agen → Montauban | forfait dès 125 € | TaxiNeo",
-        metaDescription: "Via A62 en 40 min. Garonne, Pruneau d'Agen, Musée Ingres et Moissac en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A62 en 40 min. Garonne, Pruneau d'Agen, Musée Ingres et Moissac en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Agen → Montauban",
         heroSubtitle: "Transfert Agen → Montauban au prix fixe de 125 — 155 €. 65 km, direct par l'A62.",
         description: "Montauban est à 40 min d'Agen par l'A62, deux préfectures voisines de la Garonne.",

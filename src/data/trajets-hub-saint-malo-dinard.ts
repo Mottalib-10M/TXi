@@ -31,7 +31,7 @@ export const trajetsSaintMaloDinard: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Saint-Malo → Rennes | 75 km, dès 80 € | TaxiNeo",
-        metaDescription: "Via D137 en 50 min. Côte d'Émeraude, Cité corsaire et Capitale bretonne en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via D137 en 50 min. Côte d'Émeraude, Cité corsaire et Capitale bretonne en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Saint-Malo → Rennes",
         heroSubtitle: "Transfert Saint-Malo → Rennes au prix fixe de 80 — 100 €. 75 km par la D137.",
         description: "Rennes, capitale de la Bretagne et ville universitaire dynamique, est à 50 minutes de Saint-Malo par la voie express D137.",
@@ -96,7 +96,7 @@ export const trajetsSaintMaloDinard: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Saint-Malo → Paris | 400 km, dès 430 € | TaxiNeo",
-        metaDescription: "Via A11/A81 en 4h. Traversée Bretagne-Paris, Cité corsaire et Capitale en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A11/A81 en 4h. Traversée Bretagne-Paris, Cité corsaire et Capitale en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Saint-Malo → Paris",
         heroSubtitle: "Transfert Saint-Malo → Paris au prix fixe de 430 — 530 €. 400 km par l'A81/A11.",
         description: "Paris est à 4 heures de route de Saint-Malo par les autoroutes A81 et A11, un trajet direct et confortable en taxi.",

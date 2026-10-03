@@ -28,7 +28,7 @@ export const trajetsMendeMillau: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Millau → Montpellier | 115 km, dès 220 € | TaxiNeo",
-        metaDescription: "Via A75 en 1h20. Viaduc de Millau, Grands Causses, Hérault et Languedoc en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A75 en 1h20. Viaduc de Millau, Grands Causses, Hérault et Languedoc en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Millau → Montpellier",
         heroSubtitle: "Transfert Millau → Montpellier au prix fixe de 220 — 270 €. 115 km, traversée spectaculaire par l'A75.",
         description: "Montpellier est à 1h20 de Millau par l'A75, autoroute gratuite du Massif Central (sauf viaduc).",
@@ -223,7 +223,7 @@ export const trajetsMendeMillau: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Mende → Clermont-Ferrand | 175 km, dès 335 € | TaxiNeo",
-        metaDescription: "Via A75 en 2h. Lozère, Margeride, Aubrac et Volcans d'Auvergne en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A75 en 2h. Lozère, Margeride, Aubrac et Volcans d'Auvergne en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Mende → Clermont-Ferrand",
         heroSubtitle: "Transfert Mende → Clermont-Ferrand au prix fixe de 335 — 405 €. 175 km, traversée du Massif Central par l'A75.",
         description: "Clermont-Ferrand est à 2h de Mende par l'A75, autoroute gratuite du Massif Central.",
@@ -288,7 +288,7 @@ export const trajetsMendeMillau: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Mende → Montpellier | 165 km, dès 315 € | TaxiNeo",
-        metaDescription: "Via A75 en 1h55. Gorges du Tarn, Causse Méjean, Lozère et Languedoc en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A75 en 1h55. Gorges du Tarn, Causse Méjean, Lozère et Languedoc en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Mende → Montpellier",
         heroSubtitle: "Transfert Mende → Montpellier au prix fixe de 315 — 385 €. 165 km, de la Lozère à la Méditerranée.",
         description: "Montpellier est à 1h55 de Mende par l'A75, en passant par Millau et le Larzac.",

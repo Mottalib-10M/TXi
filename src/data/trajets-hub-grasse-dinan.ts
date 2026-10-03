@@ -20,7 +20,7 @@ export const trajetsGrasseDinan: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Grasse → Cannes | Prix fixe dès 35 € | TaxiNeo",
-        metaDescription: "Via D6085 en undefined min. Parfums, Croisette, Arrière-pays et Festivals en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via D6085 en undefined min. Parfums, Croisette, Arrière-pays et Festivals en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Grasse → Cannes",
         heroSubtitle: "Transfert Grasse → Cannes au prix fixe de 35 — 40 €. 17 km, 20 min.",
         description: "De la capitale mondiale du parfum à la Croisette en 20 minutes.",
@@ -39,7 +39,7 @@ export const trajetsGrasseDinan: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Grasse → Cannes | Fixed price transfer | TaxiNeo",
-        metaDescription: "Via D6085, undefined min ride. Parfums, Croisette, Arrière-pays and Festivals en route. Drop-off at your exact address. Door-to-door, luggage included.",
+        metaDescription: "Via D6085, undefined min ride. Parfums, Croisette, Arrière-pays and Festivals en route. Drop-off at your exact address, luggage included.",
         heroTitle: "Taxi Grasse → Cannes",
         heroSubtitle: "Grasse → Cannes transfer at €35 — €40. 17 km, 20 min.",
         description: "From the world perfume capital to the Croisette in 20 minutes.",
@@ -77,7 +77,7 @@ export const trajetsGrasseDinan: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Saint-Brieuc → Rennes | 100 km, dès 195 € | TaxiNeo",
-        metaDescription: "Via N12 en undefined min. N12, Bretagne, Côtes-d'Armor et Voie express en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via N12 en undefined min. N12, Bretagne, Côtes-d'Armor et Voie express en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Saint-Brieuc → Rennes",
         heroSubtitle: "Transfert Saint-Brieuc → Rennes au prix fixe de 195 — 235 €. 100 km, 1h05.",
         description: "Rejoignez la capitale bretonne depuis Saint-Brieuc en 1h05.",

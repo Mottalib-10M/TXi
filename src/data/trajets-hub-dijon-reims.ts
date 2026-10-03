@@ -20,7 +20,7 @@ export const trajetsDijonReims: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Dijon → Dole | 55 km via A39, dès 105 € | TaxiNeo",
-        metaDescription: "Via A39 en undefined min. Jura, Pasteur et Canal du Rhône au Rhin en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A39 en undefined min. Jura, Pasteur et Canal du Rhône au Rhin en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Dijon → Dole",
         heroSubtitle: "Transfert Dijon → Dole au prix fixe de 105 — 130 €. 55 km, 40 min.",
         description: "Dole, ville natale de Louis Pasteur, est à 40 min de Dijon par l'A39.",
@@ -134,7 +134,7 @@ export const trajetsDijonReims: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Dijon → Genève | Prix fixe dès 365 € | TaxiNeo",
-        metaDescription: "Via A39 / A40 en undefined min. Jura, Bourg-en-Bresse et International en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A39 / A40 en undefined min. Jura, Bourg-en-Bresse et International en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Dijon → Genève",
         heroSubtitle: "Transfert Dijon → Genève au prix fixe de 365 — 440 €. 190 km, 2 heures.",
         description: "Dijon — Genève traverse le Jura pour rejoindre la Suisse en 2 heures.",
@@ -191,7 +191,7 @@ export const trajetsDijonReims: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Reims → Soissons | forfait dès 115 € | TaxiNeo",
-        metaDescription: "Via D1044 en undefined min. Champagne, Aisne et Vallée de la Vesle en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via D1044 en undefined min. Champagne, Aisne et Vallée de la Vesle en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Reims → Soissons",
         heroSubtitle: "Transfert Reims → Soissons au prix fixe de 115 — 140 €. 60 km, 45 min.",
         description: "Soissons, ancienne capitale mérovingienne, est à 45 min de Reims.",
@@ -248,7 +248,7 @@ export const trajetsDijonReims: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Reims → Troyes | Prix fixe dès 240 € | TaxiNeo",
-        metaDescription: "Via A26 / A5 en undefined min. Champagne, Aube et Magasins d'usine en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A26 / A5 en undefined min. Champagne, Aube et Magasins d'usine en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Reims → Troyes",
         heroSubtitle: "Transfert Reims → Troyes au prix fixe de 240 — 290 €. 125 km, 1h20.",
         description: "Troyes, capitale du pan de bois et des magasins d'usine, est à 1h20 de Reims.",

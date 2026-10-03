@@ -134,7 +134,7 @@ export const trajetsMontelimarPierrelatte: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Montélimar → Valence | 50 km, dès 95 € | TaxiNeo",
-        metaDescription: "Via A7 en undefined min. Drôme, Nougat, Vallée du Rhône et Provence en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A7 en undefined min. Drôme, Nougat, Vallée du Rhône et Provence en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Montélimar → Valence",
         heroSubtitle: "Transfert Montélimar → Valence au prix fixe de 95 — 120 €. 50 km, 35 min par l'A7.",
         description: "Montélimar — Valence relie les deux principales villes de la Drôme par l'A7, de la capitale du nougat à la préfecture drômoise.",
@@ -248,7 +248,7 @@ export const trajetsMontelimarPierrelatte: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Montélimar → Grenoble | 140 km, dès 270 € | TaxiNeo",
-        metaDescription: "Via A7 / A49 en undefined min. Vallée du Rhône, Vercors et Drôme en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A7 / A49 en undefined min. Vallée du Rhône, Vercors et Drôme en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Montélimar → Grenoble",
         heroSubtitle: "Transfert Montélimar → Grenoble au prix fixe de 270 — 325 €. 140 km, 1h30 par l'A7 et l'A49.",
         description: "Montélimar — Grenoble relie la Drôme provençale à la capitale des Alpes en traversant la vallée du Rhône puis le piémont du Vercors.",

@@ -28,7 +28,7 @@ export const trajetsEvreuxLisieux: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Évreux → Paris | 100 km, dès 195 €, 1h05 | TaxiNeo",
-        metaDescription: "Via A13 en 1h05. Eure, Cathédrale, Desserte gare/aéroport et Normandie en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A13 en 1h05. Eure, Cathédrale, Desserte gare/aéroport et Normandie en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Évreux → Paris",
         heroSubtitle: "Transfert Évreux → Paris au prix fixe de 195 — 235 €. 100 km, direct par l'A13.",
         description: "Paris est à 1h05 d'Évreux par l'autoroute de Normandie A13.",
@@ -288,7 +288,7 @@ export const trajetsEvreuxLisieux: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Lisieux → Deauville | 30 km, dès 60 € | TaxiNeo",
-        metaDescription: "Via D579 en 20 min. Pays d'Auge, Planches, Casino et Festival du cinéma en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via D579 en 20 min. Pays d'Auge, Planches, Casino et Festival du cinéma en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Lisieux → Deauville",
         heroSubtitle: "Transfert Lisieux → Deauville au prix fixe de 60 — 70 €. 30 km, route gratuite.",
         description: "Deauville, station balnéaire de prestige, est à 20 min de Lisieux par la D579.",

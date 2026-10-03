@@ -96,7 +96,7 @@ export const trajetsBordeaux: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Bordeaux → La Rochelle | 190 km, dès 365 € | TaxiNeo",
-        metaDescription: "Via A10 en 2h. Saintes, Rochefort, Île de Ré et Charente-Maritime en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A10 en 2h. Saintes, Rochefort, Île de Ré et Charente-Maritime en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Bordeaux → La Rochelle",
         heroSubtitle: "Transfert Bordeaux → La Rochelle au prix fixe de 365 — 440 €. 190 km par l'A10.",
         description: "La Rochelle, joyau de la côte atlantique, est à 2h de Bordeaux par l'A10 via Saintes.",
@@ -486,7 +486,7 @@ export const trajetsBordeaux: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Bordeaux → Sarlat-la-Canéda | 170 km, 220 € | TaxiNeo",
-        metaDescription: "Via A89 puis D710/D47 en 2h. Périgord Noir, Cité médiévale et Foie gras en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A89 puis D710/D47 en 2h. Périgord Noir, Cité médiévale et Foie gras en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Bordeaux — Sarlat-la-Canéda",
         heroSubtitle: "La perle du Périgord Noir",
         description: "Transfert longue distance en taxi de Bordeaux à Sarlat-la-Canéda, joyau médiéval du Périgord Noir et capitale du foie gras.",
@@ -876,7 +876,7 @@ export const trajetsBordeaux: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Bordeaux → Mont-de-Marsan | 130 km, dès 250 € | TaxiNeo",
-        metaDescription: "Via A65 en 1h25. Landes, Férias, Arènes et Confluent Douze-Midou en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A65 en 1h25. Landes, Férias, Arènes et Confluent Douze-Midou en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Bordeaux — Mont-de-Marsan",
         heroSubtitle: "Transfert Bordeaux → Mont-de-Marsan au prix fixe de 250 — 305 €. Capitale des Landes.",
         description: "Mont-de-Marsan, préfecture des Landes, est à 1h25 de Bordeaux par l'A65. Ville de la sculpture et des férias de la Madeleine.",
@@ -1619,7 +1619,7 @@ export const trajetsBordeaux: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Bordeaux → Toulouse | 245 km, from €470 | TaxiNeo",
-        metaDescription: "Via A62, 2h25 ride. Canal du Midi, Place du Capitole and Cité de l'Espace along the way. Drop-off at your exact address. Door-to-door, luggage included.",
+        metaDescription: "Via A62, 2h25 ride. Canal du Midi, Place du Capitole and Cité de l'Espace along the way. Drop-off at your exact address, luggage included.",
         heroTitle: "Taxi Bordeaux → Toulouse",
         heroSubtitle: "Your Bordeaux → Toulouse transfer at €470 — €570. Linking the two great south-western metropolises.",
         description: "Toulouse, the Pink City, is 2h25 from Bordeaux via the A62. Place du Capitole, aerospace, Canal du Midi and south-western gastronomy.",
@@ -1798,7 +1798,7 @@ export const trajetsBordeaux: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Bordeaux → Orthez | 195 km, dès 375 € | TaxiNeo",
-        metaDescription: "Via A65 en 2h05. Pont Vieux, Gaston Fébus, Tour Moncade et Béarn en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A65 en 2h05. Pont Vieux, Gaston Fébus, Tour Moncade et Béarn en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Bordeaux → Orthez",
         heroSubtitle: "Transfert Bordeaux → Orthez au prix fixe de 375 — 455 €. Cité médiévale de Gaston Fébus en Béarn.",
         description: "Orthez, ancienne capitale du Béarn, est à 2h05 de Bordeaux par l'A65. Pont Vieux fortifié, Tour Moncade et héritage de Gaston Fébus.",
@@ -2046,7 +2046,7 @@ export const trajetsBordeaux: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Bordeaux → Cahors | 230 km, dès 440 € | TaxiNeo",
-        metaDescription: "Via A62 puis A20 en 2h25. Pont Valentré, Lot, Malbec et Quercy en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A62 puis A20 en 2h25. Pont Valentré, Lot, Malbec et Quercy en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Bordeaux → Cahors",
         heroSubtitle: "Transfert Bordeaux → Cahors au prix fixe de 440 — 535 €. Capitale du Malbec et du Quercy.",
         description: "Cahors, préfecture du Lot, est à 2h25 de Bordeaux. Pont Valentré classé UNESCO, vignoble de Malbec et vieille ville médiévale dans un méandre du Lot.",

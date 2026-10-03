@@ -20,7 +20,7 @@ export const trajetsBourgEnBresse: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Bourg-en-Bresse → Lyon | 60 km, dès 115 € | TaxiNeo",
-        metaDescription: "Via A42 en undefined min. Dombes, Ain, Rhône-Alpes et Gastronomie en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A42 en undefined min. Dombes, Ain, Rhône-Alpes et Gastronomie en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Bourg-en-Bresse → Lyon",
         heroSubtitle: "Transfert Bourg-en-Bresse → Lyon au prix fixe de 115 — 140 €. 60 km, 45 min.",
         description: "Bourg-en-Bresse — Lyon emprunte l'A42, traversant le plateau de la Dombes en 45 min.",
@@ -134,7 +134,7 @@ export const trajetsBourgEnBresse: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Bourg-en-Bresse → Mâcon | 35 km, dès 70 € | TaxiNeo",
-        metaDescription: "Via N83 / D1079 en undefined min. N83, Bresse, Saône et Bourgogne en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via N83 / D1079 en undefined min. N83, Bresse, Saône et Bourgogne en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Bourg-en-Bresse → Mâcon",
         heroSubtitle: "Transfert Bourg-en-Bresse → Mâcon au prix fixe de 70 — 85 €. 35 km, 30 min.",
         description: "Bourg-en-Bresse — Mâcon, un court trajet de 30 min par la N83, reliant l'Ain à la Saône-et-Loire.",
@@ -191,7 +191,7 @@ export const trajetsBourgEnBresse: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Bourg-en-Bresse → Annecy | 115 km, dès 220 € | TaxiNeo",
-        metaDescription: "Via A42 / A40 / A41 en undefined min. Alpes, Lac d'Annecy et Ain en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A42 / A40 / A41 en undefined min. Alpes, Lac d'Annecy et Ain en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Bourg-en-Bresse → Annecy",
         heroSubtitle: "Transfert Bourg-en-Bresse → Annecy au prix fixe de 220 — 270 €. 115 km, 1h15.",
         description: "Bourg-en-Bresse — Annecy relie la plaine de l'Ain aux Alpes et au lac d'Annecy en 1h15.",
@@ -248,7 +248,7 @@ export const trajetsBourgEnBresse: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Bourg-en-Bresse → Dijon | 150 km, dès 290 € | TaxiNeo",
-        metaDescription: "Via A39 en undefined min. Jura, Bourgogne, Vignobles et Revermont en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A39 en undefined min. Jura, Bourgogne, Vignobles et Revermont en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Bourg-en-Bresse → Dijon",
         heroSubtitle: "Transfert Bourg-en-Bresse → Dijon au prix fixe de 290 — 350 €. 150 km, 1h35.",
         description: "Bourg-en-Bresse — Dijon emprunte l'A39, reliant l'Ain à la capitale bourguignonne en 1h35.",

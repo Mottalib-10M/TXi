@@ -27,7 +27,7 @@ export const trajetsNiortBressuire: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Niort → Paris | 400 km, dès 765 €, 4h | TaxiNeo",
-        metaDescription: "Via A10 en 4h. TGV alternative, Porte-à-porte, Deux-Sèvres et Île-de-France en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A10 en 4h. TGV alternative, Porte-à-porte, Deux-Sèvres et Île-de-France en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Niort → Paris",
         heroSubtitle: "Transfert Niort → Paris au prix fixe de 765 — 925 €. 400 km, trajet direct porte-à-porte depuis les Deux-Sèvres.",
         description: "Paris, capitale de la France, est à 4h de Niort par l'autoroute A10.",
@@ -155,7 +155,7 @@ export const trajetsNiortBressuire: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Niort → La Rochelle | 65 km, dès 125 € | TaxiNeo",
-        metaDescription: "Via A10 en 45 min. Marais Poitevin, Atlantique, Île de Ré et Vieux-Port en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A10 en 45 min. Marais Poitevin, Atlantique, Île de Ré et Vieux-Port en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Niort → La Rochelle",
         heroSubtitle: "Transfert Niort → La Rochelle au prix fixe de 125 — 155 €. 65 km, du Marais Poitevin à la perle de l'Atlantique.",
         description: "La Rochelle, joyau de la côte atlantique et porte de l'île de Ré, est à 45 min de Niort.",
@@ -219,7 +219,7 @@ export const trajetsNiortBressuire: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Niort → Poitiers | forfait dès 155 € | TaxiNeo",
-        metaDescription: "Via A10 en 50 min. Deux-Sèvres, Vienne, Futuroscope et Roman en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A10 en 50 min. Deux-Sèvres, Vienne, Futuroscope et Roman en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Niort → Poitiers",
         heroSubtitle: "Transfert Niort → Poitiers au prix fixe de 155 — 185 €. 80 km, du Marais Poitevin à la cité des Plantagenêts.",
         description: "Poitiers, capitale historique du Poitou et ville universitaire majeure, est à 50 min de Niort par l'A10.",
@@ -238,7 +238,7 @@ export const trajetsNiortBressuire: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Niort → Poitiers | Fixed price from €155 | TaxiNeo",
-        metaDescription: "Via A10, 50 min ride. Deux-Sèvres, Vienne, Futuroscope and Roman en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via A10, 50 min ride. Deux-Sèvres, Vienne, Futuroscope and Roman en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Niort → Poitiers",
         heroSubtitle: "Your Niort → Poitiers transfer at €155 — €185. 80 km, from the Marais Poitevin to the Plantagenet city.",
         description: "Poitiers, historic Poitou capital and major university city, is 50 min from Niort via the A10.",
@@ -283,7 +283,7 @@ export const trajetsNiortBressuire: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Niort → Nantes | 150 km, dès 290 €, 1h30 | TaxiNeo",
-        metaDescription: "Via A83 en 1h30. Deux-Sèvres, Vendée, Loire-Atlantique et Machines de l'île en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A83 en 1h30. Deux-Sèvres, Vendée, Loire-Atlantique et Machines de l'île en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Niort → Nantes",
         heroSubtitle: "Transfert Niort → Nantes au prix fixe de 290 — 350 €. 150 km, du Marais Poitevin à la cité des Ducs de Bretagne.",
         description: "Nantes, métropole créative et dynamique de l'ouest français, est à 1h30 de Niort par l'A83.",

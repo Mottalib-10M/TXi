@@ -30,7 +30,7 @@ export const trajetsPerpignan2: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Perpignan → Toulouse | 200 km, dès 385 € | TaxiNeo",
-        metaDescription: "Via A61 en 2h. Carcassonne, Canal du Midi et Capitale occitane en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A61 en 2h. Carcassonne, Canal du Midi et Capitale occitane en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Perpignan → Toulouse",
         heroSubtitle: "Votre transfert Perpignan → Toulouse au prix fixe de 385 — 465 €. 200 km via l'A61.",
         description: "Toulouse, capitale de l'Occitanie et ville rose de l'aéronautique, est à 2h de Perpignan par l'autoroute A61.",
@@ -49,7 +49,7 @@ export const trajetsPerpignan2: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Perpignan → Toulouse | 200 km, from €385 | TaxiNeo",
-        metaDescription: "Via A61, 2 hours ride. Carcassonne, Canal du Midi and Capitale occitane along the way. Drop-off at your exact address. Door-to-door, luggage included.",
+        metaDescription: "Via A61, 2 hours ride. Carcassonne, Canal du Midi and Capitale occitane along the way. Drop-off at your exact address, luggage included.",
         heroTitle: "Taxi Perpignan → Toulouse",
         heroSubtitle: "Your Perpignan → Toulouse transfer at €385 — €465. 200 km via the A61.",
         description: "Toulouse, capital of Occitanie and pink city of aerospace, is 2 hours from Perpignan via the A61 motorway.",
@@ -176,7 +176,7 @@ export const trajetsPerpignan2: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Perpignan → Andorre-la-Vieille | 170 km, €200 | TaxiNeo",
-        metaDescription: "Via N20, 2h10 ride. Pyrénées, Duty-free and Principauté along the way. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via N20, 2h10 ride. Pyrénées, Duty-free and Principauté along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Perpignan → Andorra la Vella",
         heroSubtitle: "Your Perpignan → Andorra la Vella transfer at €325 — €395. 170 km via the N20.",
         description: "Andorra la Vella, capital of the Principality of Andorra nestled in the Pyrenees, is 2h10 from Perpignan via the N20.",
@@ -221,7 +221,7 @@ export const trajetsPerpignan2: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Perpignan → Gérone | 90 km, dès 175 € | TaxiNeo",
-        metaDescription: "Via AP-7 en 1h. Costa Brava, Barri Vell et Catalogne espagnole en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via AP-7 en 1h. Costa Brava, Barri Vell et Catalogne espagnole en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Perpignan → Gérone",
         heroSubtitle: "Votre transfert Perpignan → Gérone au prix fixe de 175 — 210 €. 90 km via l'AP-7.",
         description: "Gérone (Girona), joyau médiéval de la Catalogne espagnole et porte de la Costa Brava, est à 1h de Perpignan.",

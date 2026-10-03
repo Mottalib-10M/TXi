@@ -177,7 +177,7 @@ export const trajetsVichyClermont: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Vichy → Paris | Fixed price from €670 | TaxiNeo",
-        metaDescription: "Via A71, 3h30 ride. Allier, Berry, Sologne and Pastilles Vichy en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via A71, 3h30 ride. Allier, Berry, Sologne and Pastilles Vichy en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Vichy → Paris",
         heroSubtitle: "Your Vichy → Paris transfer at a fixed price of €670 — €810. 350 km, 3h30 via the A71.",
         description: "Vichy to Paris via the A71 in 3h30, from the UNESCO-listed spa town to the French capital.",

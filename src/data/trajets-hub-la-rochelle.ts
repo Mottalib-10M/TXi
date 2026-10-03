@@ -93,7 +93,7 @@ export const trajetsLaRochelle: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi La Rochelle → Nantes | 145 km, dès 280 € | TaxiNeo",
-        metaDescription: "Via A83/A87 en 1h35. Marais poitevin, Vendée, Loire et Machines de l'île en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A83/A87 en 1h35. Marais poitevin, Vendée, Loire et Machines de l'île en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi La Rochelle → Nantes",
         heroSubtitle: "Transfert La Rochelle → Nantes au prix fixe de 280 — 335 €. 145 km, via l'A83/A87.",
         description: "Nantes, métropole de l'estuaire de la Loire, est à 1h35 de La Rochelle.",
@@ -112,7 +112,7 @@ export const trajetsLaRochelle: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi La Rochelle → Nantes | 145 km, from €280 | TaxiNeo",
-        metaDescription: "Via A83/A87, 1h35 ride. Marais poitevin, Vendée, Loire and Machines de l'île en route. Drop-off at your exact address. Door-to-door, luggage included.",
+        metaDescription: "Via A83/A87, 1h35 ride. Marais poitevin, Vendée, Loire and Machines de l'île en route. Drop-off at your exact address, luggage included.",
         heroTitle: "Taxi La Rochelle → Nantes",
         heroSubtitle: "Your La Rochelle → Nantes transfer at €280 — €335. 145 km, via A83/A87.",
         description: "Nantes, Loire estuary metropolis, is 1h35 from La Rochelle.",
@@ -158,7 +158,7 @@ export const trajetsLaRochelle: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi La Rochelle → Niort | 65 km, dès 125 € | TaxiNeo",
-        metaDescription: "Via A10 en 45 min. Marais poitevin, Mutuelles, Donjon et Sèvre niortaise en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A10 en 45 min. Marais poitevin, Mutuelles, Donjon et Sèvre niortaise en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi La Rochelle → Niort",
         heroSubtitle: "Transfert La Rochelle → Niort au prix fixe de 125 — 155 €. 65 km, porte du Marais poitevin.",
         description: "Niort, capitale des mutuelles et porte du Marais poitevin, est à 45 min de La Rochelle.",
@@ -177,7 +177,7 @@ export const trajetsLaRochelle: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi La Rochelle → Niort | 65 km, from €125 | TaxiNeo",
-        metaDescription: "Via A10, 45 min ride. Marais poitevin, Mutuelles, Donjon and Sèvre niortaise en route. Drop-off at your exact address. Door-to-door, luggage included.",
+        metaDescription: "Via A10, 45 min ride. Marais poitevin, Mutuelles, Donjon and Sèvre niortaise en route. Drop-off at your exact address, luggage included.",
         heroTitle: "Taxi La Rochelle → Niort",
         heroSubtitle: "Your La Rochelle → Niort transfer at €125 — €155. 65 km, Marais Poitevin gateway.",
         description: "Niort, insurance capital and Marais Poitevin gateway, is 45 min from La Rochelle.",
@@ -223,7 +223,7 @@ export const trajetsLaRochelle: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi La Rochelle → Poitiers | 150 km, dès 290 € | TaxiNeo",
-        metaDescription: "Via A10 en 1h35. Futuroscope, Art roman, Poitou et Aliénor d'Aquitaine en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A10 en 1h35. Futuroscope, Art roman, Poitou et Aliénor d'Aquitaine en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi La Rochelle → Poitiers",
         heroSubtitle: "Transfert La Rochelle → Poitiers au prix fixe de 290 — 350 €. 150 km, capital de l'art roman.",
         description: "Poitiers, capitale de l'art roman et ville du Futuroscope, est à 1h35 de La Rochelle.",

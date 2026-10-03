@@ -39,7 +39,7 @@ export const trajetsRoanneVichy: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Roanne → Lyon | Fixed price from €165 | TaxiNeo",
-        metaDescription: "Via A89, undefined min ride. Loire, Beaujolais and Direct along the way. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via A89, undefined min ride. Loire, Beaujolais and Direct along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Roanne → Lyon",
         heroSubtitle: "Roanne → Lyon transfer at €165 — €200. 85 km, 55 min.",
         description: "Roanne to Lyon via A89 through the Beaujolais wine region in 55 min.",
@@ -77,7 +77,7 @@ export const trajetsRoanneVichy: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Roanne → Clermont-Ferrand | 115 km, dès 220 € | TaxiNeo",
-        metaDescription: "Via A89 en undefined min. Monts du Forez, Thiers et Auvergne en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A89 en undefined min. Monts du Forez, Thiers et Auvergne en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Roanne → Clermont-Ferrand",
         heroSubtitle: "Transfert Roanne → Clermont-Ferrand au prix fixe de 220 — 270 €. 115 km, 1h10.",
         description: "Roanne — Clermont-Ferrand traverse les monts du Forez par l'A89 en 1h10.",
@@ -153,7 +153,7 @@ export const trajetsRoanneVichy: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Vichy → Clermont-Ferrand | 55 km, from €105 | TaxiNeo",
-        metaDescription: "Via A719, undefined min ride. Allier, Limagne and Thermal along the way. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via A719, undefined min ride. Allier, Limagne and Thermal along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Vichy → Clermont-Ferrand",
         heroSubtitle: "Vichy → Clermont-Ferrand transfer at €105 — €130. 55 km, 35 min.",
         description: "Vichy to Clermont-Ferrand via A719 across the fertile Limagne plain in 35 min.",
@@ -191,7 +191,7 @@ export const trajetsRoanneVichy: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Vichy → Lyon | 170 km A89, dès 325 € | TaxiNeo",
-        metaDescription: "Via A89 en undefined min. Allier, Loire, Beaujolais et Longue distance en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A89 en undefined min. Allier, Loire, Beaujolais et Longue distance en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Vichy → Lyon",
         heroSubtitle: "Transfert Vichy → Lyon au prix fixe de 325 — 395 €. 170 km, 1h40.",
         description: "Vichy — Lyon par l'A89 en 1h40, via Roanne et les monts du Beaujolais.",
@@ -248,7 +248,7 @@ export const trajetsRoanneVichy: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Vichy → Moulins | Prix fixe dès 105 € | TaxiNeo",
-        metaDescription: "Via N7/A719 en undefined min. Allier, Bourbonnais et Préfecture en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via N7/A719 en undefined min. Allier, Bourbonnais et Préfecture en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Vichy → Moulins",
         heroSubtitle: "Transfert Vichy → Moulins au prix fixe de 105 — 130 €. 55 km, 35 min.",
         description: "Vichy — Moulins en 35 min par la N7 et l'A719, le long de la rivière Allier.",

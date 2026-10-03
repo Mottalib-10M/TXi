@@ -223,7 +223,7 @@ export const trajetsDouaiBethune: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Douai → Paris | 195 km, dès 375 €, 2h05 | TaxiNeo",
-        metaDescription: "Via A1 en 2h05. Beffroi UNESCO, Bassin minier, Scarpe et Chantilly en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A1 en 2h05. Beffroi UNESCO, Bassin minier, Scarpe et Chantilly en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Douai → Paris",
         heroSubtitle: "Transfert Douai → Paris au prix fixe de 375 — 455 €. 195 km, direct par l'A1.",
         description: "Paris est à 2h05 de Douai par l'A1, l'autoroute du Nord.",

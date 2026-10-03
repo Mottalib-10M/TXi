@@ -1556,7 +1556,7 @@ export const trajets: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Gare de Lyon → Versailles | 25 km, from €50 | TaxiNeo",
-        metaDescription: "Via A13, 35 min ride. Périphérique and Château de Versailles along the way. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via A13, 35 min ride. Périphérique and Château de Versailles along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Gare de Lyon → Versailles",
         heroSubtitle: "Your Gare de Lyon → Versailles transfer at a fixed price of 50 — 60 €. Online booking, professional driver 24/7.",
         description: "Gare de Lyon — Versailles transfer. Reach the Palace in 35 minutes.",
@@ -1688,7 +1688,7 @@ export const trajets: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Gare de Lyon → La Défense | 18 km, from €35 | TaxiNeo",
-        metaDescription: "Direct 30 min ride. Quais de Seine and Arc de Triomphe along the way. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Direct 30 min ride. Quais de Seine and Arc de Triomphe along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Gare de Lyon → La Défense",
         heroSubtitle: "Your Gare de Lyon → La Défense transfer at a fixed price of 35 — 45 €. Online booking, professional driver 24/7.",
         description: "Gare de Lyon — La Défense transfer for business meetings.",
@@ -1718,7 +1718,7 @@ export const trajets: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Gare du Nord → La Défense | 15 km, dès 30 € | TaxiNeo",
-        metaDescription: "Trajet direct en 25 min. Boulevard Haussmann et Arc de Triomphe en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Trajet direct en 25 min. Boulevard Haussmann et Arc de Triomphe en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Gare du Nord → La Défense",
         heroSubtitle: "Votre transfert Gare du Nord → La Défense au prix fixe de 30 — 35 €. Réservation en ligne, chauffeur professionnel 24h/24.",
         description: "Transfert rapide Gare du Nord — La Défense en 25 minutes.",
@@ -1732,7 +1732,7 @@ export const trajets: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Gare du Nord → La Défense | 15 km, from €30 | TaxiNeo",
-        metaDescription: "Direct 25 min ride. Boulevard Haussmann and Arc de Triomphe along the way. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Direct 25 min ride. Boulevard Haussmann and Arc de Triomphe along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Gare du Nord → La Défense",
         heroSubtitle: "Your Gare du Nord → La Défense transfer at a fixed price of 30 — 35 €. Online booking, professional driver 24/7.",
         description: "Quick Gare du Nord — La Défense transfer in 25 minutes.",
@@ -3228,7 +3228,7 @@ export const trajets: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Paris → Chartres | 90 km, from €175 | TaxiNeo",
-        metaDescription: "Via A11, 1h10 ride. Cathédrale de Chartres and Beauce along the way. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via A11, 1h10 ride. Cathédrale de Chartres and Beauce along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Paris → Chartres",
         heroSubtitle: "Your Paris → Chartres transfer at a fixed price of 175 — 210 €. Online booking, professional driver 24/7.",
         description: "Paris — Chartres transfer for its UNESCO-listed cathedral.",
@@ -3316,7 +3316,7 @@ export const trajets: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Paris → Honfleur | 195 km, from €375 | TaxiNeo",
-        metaDescription: "Via A13, 2h10 ride. Pont de Normandie and Vieux Bassin along the way. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via A13, 2h10 ride. Pont de Normandie and Vieux Bassin along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Paris → Honfleur",
         heroSubtitle: "Your Paris → Honfleur transfer at a fixed price of 375 — 455 €. Online booking, professional driver 24/7.",
         description: "Paris — Honfleur transfer, jewel of the Normandy coast and its Impressionist painters.",
@@ -3360,7 +3360,7 @@ export const trajets: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Nice → Cannes | Fixed price from €65 | TaxiNeo",
-        metaDescription: "Via A8, 30 min ride. La Croisette and Festival de Cannes along the way. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via A8, 30 min ride. La Croisette and Festival de Cannes along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Nice → Cannes",
         heroSubtitle: "Your Nice → Cannes transfer at a fixed price of 65 — 80 €. Online booking, professional driver 24/7.",
         description: "Nice — Cannes transfer along the French Riviera.",
@@ -3390,7 +3390,7 @@ export const trajets: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Nice → Grasse | forfait dès 80 €, 40 min | TaxiNeo",
-        metaDescription: "Trajet direct en 40 min. Pénétrante Grasse et Capitale du parfum en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Trajet direct en 40 min. Pénétrante Grasse et Capitale du parfum en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Nice → Grasse",
         heroSubtitle: "Votre transfert Nice → Grasse au prix fixe de 80 — 95 €. Réservation en ligne, chauffeur professionnel 24h/24.",
         description: "Transfert Nice — Grasse, capitale mondiale du parfum.",
@@ -3404,7 +3404,7 @@ export const trajets: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Nice → Grasse | Fixed price from €80 | TaxiNeo",
-        metaDescription: "Direct 40 min ride. Pénétrante Grasse and Capitale du parfum along the way. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Direct 40 min ride. Pénétrante Grasse and Capitale du parfum along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Nice → Grasse",
         heroSubtitle: "Your Nice → Grasse transfer at a fixed price of 80 — 95 €. Online booking, professional driver 24/7.",
         description: "Nice — Grasse transfer, the world capital of perfume.",
@@ -3448,7 +3448,7 @@ export const trajets: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Lyon → Grenoble | 110 km, from €210 | TaxiNeo",
-        metaDescription: "Via A48, 1h15 ride. Massif de la Chartreuse and Alpes along the way. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via A48, 1h15 ride. Massif de la Chartreuse and Alpes along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Lyon → Grenoble",
         heroSubtitle: "Your Lyon → Grenoble transfer at a fixed price of 210 — 255 €. Online booking, professional driver 24/7.",
         description: "Lyon — Grenoble transfer, gateway to the French Alps.",
@@ -3580,7 +3580,7 @@ export const trajets: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Marseille → Avignon | 100 km, from €195 | TaxiNeo",
-        metaDescription: "Via A7, 1h10 ride. Pont d'Avignon and Palais des Papes along the way. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via A7, 1h10 ride. Pont d'Avignon and Palais des Papes along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Marseille → Avignon",
         heroSubtitle: "Your Marseille → Avignon transfer at a fixed price of 195 — 235 €. Online booking, professional driver 24/7.",
         description: "Marseille — Avignon transfer, city of the Popes and the theatre festival.",
@@ -3624,7 +3624,7 @@ export const trajets: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Toulouse → Carcassonne | 95 km, from €185 | TaxiNeo",
-        metaDescription: "Via A61, 1h05 ride. Cité de Carcassonne and Canal du Midi along the way. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via A61, 1h05 ride. Cité de Carcassonne and Canal du Midi along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Toulouse → Carcassonne",
         heroSubtitle: "Your Toulouse → Carcassonne transfer at a fixed price of 185 — 220 €. Online booking, professional driver 24/7.",
         description: "Toulouse — Carcassonne transfer to visit the UNESCO-listed medieval city.",
@@ -3712,7 +3712,7 @@ export const trajets: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Nantes → La Baule | 80 km, from €155 | TaxiNeo",
-        metaDescription: "Via N171, 1 hour ride. N171, Saint-Nazaire and Côte d'Amour along the way. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via N171, 1 hour ride. N171, Saint-Nazaire and Côte d'Amour along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Nantes → La Baule",
         heroSubtitle: "Your Nantes → La Baule transfer at a fixed price of 155 — 185 €. Online booking, professional driver 24/7.",
         description: "Nantes — La Baule transfer to Europe's most beautiful bay.",
@@ -3800,7 +3800,7 @@ export const trajets: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Strasbourg → Colmar | 75 km, from €145 | TaxiNeo",
-        metaDescription: "Via A35, 55 min ride. Route des Vins and Petite Venise along the way. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via A35, 55 min ride. Route des Vins and Petite Venise along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Strasbourg → Colmar",
         heroSubtitle: "Your Strasbourg → Colmar transfer at a fixed price of 145 — 175 €. Online booking, professional driver 24/7.",
         description: "Strasbourg — Colmar transfer on the Alsace Wine Route.",
@@ -3932,7 +3932,7 @@ export const trajets: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Paris → Londres | 450 km, from €860 | TaxiNeo",
-        metaDescription: "Via A26, 5 hours ride. Eurotunnel Calais and M20 Angleterre along the way. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via A26, 5 hours ride. Eurotunnel Calais and M20 Angleterre along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Paris → Londres",
         heroSubtitle: "Your Paris → Londres transfer at a fixed price of 860 — 1040 €. Online booking, professional driver 24/7.",
         description: "Paris — London transfer via the Calais Eurotunnel. Ideal with lots of luggage.",
@@ -4108,7 +4108,7 @@ export const trajets: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Paris → Marseille | 775 km, from €1480 | TaxiNeo",
-        metaDescription: "Via A6, 7 hours ride. Lyon, Vallée du Rhône and Provence along the way. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via A6, 7 hours ride. Lyon, Vallée du Rhône and Provence along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Paris → Marseille",
         heroSubtitle: "Your Paris → Marseille transfer at a fixed price of 1480 — 1790 €. Online booking, professional driver 24/7.",
         description: "Paris — Marseille transfer through the Rhône Valley and Provence.",
@@ -4328,7 +4328,7 @@ export const trajets: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Lyon → Marseille | 315 km, from €600 | TaxiNeo",
-        metaDescription: "Via A7, 3 hours ride. Vallée du Rhône, Orange and Avignon along the way. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via A7, 3 hours ride. Vallée du Rhône, Orange and Avignon along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Lyon → Marseille",
         heroSubtitle: "Your Lyon → Marseille transfer at a fixed price of 600 — 730 €. Online booking, professional driver 24/7.",
         description: "Lyon — Marseille transfer through the Rhône Valley.",

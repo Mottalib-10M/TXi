@@ -96,7 +96,7 @@ export const trajetsPerpignanCollioure: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Perpignan → Font-Romeu | 95 km, dès 185 € | TaxiNeo",
-        metaDescription: "Via N116 en 1h10. Cerdagne, Train Jaune, Canigou et Four solaire en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via N116 en 1h10. Cerdagne, Train Jaune, Canigou et Four solaire en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Perpignan → Font-Romeu",
         heroSubtitle: "Votre transfert Perpignan → Font-Romeu au prix fixe de 185 — 220 €. 95 km via la N116.",
         description: "Font-Romeu, station de ski et de cure solaire sur le haut plateau de Cerdagne, est à 1h10 de Perpignan par la N116.",
@@ -161,7 +161,7 @@ export const trajetsPerpignanCollioure: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Perpignan → Barcelone | 190 km, dès 365 € | TaxiNeo",
-        metaDescription: "Via AP-7 en 2h. Frontière espagnole, Costa Brava, Le Perthus et Catalogne en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via AP-7 en 2h. Frontière espagnole, Costa Brava, Le Perthus et Catalogne en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Perpignan → Barcelone",
         heroSubtitle: "Votre transfert Perpignan → Barcelone au prix fixe de 365 — 440 €. 190 km via l'AP-7.",
         description: "Barcelone, capitale de la Catalogne et métropole méditerranéenne de renommée mondiale, est à 2h de Perpignan par l'AP-7.",
@@ -226,7 +226,7 @@ export const trajetsPerpignanCollioure: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Perpignan → Narbonne | 65 km, dès 125 € | TaxiNeo",
-        metaDescription: "Via A9 en 45 min. Corbières, Étangs littoraux, Pays cathare et Via Domitia en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A9 en 45 min. Corbières, Étangs littoraux, Pays cathare et Via Domitia en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Perpignan → Narbonne",
         heroSubtitle: "Votre transfert Perpignan → Narbonne au prix fixe de 125 — 155 €. 65 km via l'A9.",
         description: "Narbonne, ancienne capitale romaine de la Gaule narbonnaise et carrefour autoroutier du sud, est à 45 minutes de Perpignan par l'A9.",
@@ -245,7 +245,7 @@ export const trajetsPerpignanCollioure: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Perpignan → Narbonne | 65 km, from €125 | TaxiNeo",
-        metaDescription: "Via A9, 45 min ride. Corbières, Étangs littoraux, Pays cathare and Via Domitia en route. Drop-off at your exact address. Door-to-door, luggage included.",
+        metaDescription: "Via A9, 45 min ride. Corbières, Étangs littoraux, Pays cathare and Via Domitia en route. Drop-off at your exact address, luggage included.",
         heroTitle: "Taxi Perpignan → Narbonne",
         heroSubtitle: "Your Perpignan → Narbonne transfer at €125 — €155. 65 km via the A9.",
         description: "Narbonne, ancient Roman capital of Gallia Narbonensis and southern France's motorway hub, is 45 minutes from Perpignan via the A9.",

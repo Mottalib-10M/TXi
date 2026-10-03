@@ -161,7 +161,7 @@ export const trajetsMonaco: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Monaco → Menton | forfait dès 25 €, 12 min | TaxiNeo",
-        metaDescription: "Via Basse Corniche en 12 min. Frontière italienne et Jardins de Menton en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via Basse Corniche en 12 min. Frontière italienne et Jardins de Menton en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Monaco — Menton",
         heroSubtitle: "De la Principauté à la Perle de la France, aux portes de l'Italie",
         description: "Transfert en taxi de Monaco à Menton, dernière ville française avant la frontière italienne, le long de la Basse Corniche méditerranéenne.",
@@ -245,7 +245,7 @@ export const trajetsMonaco: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Monaco → Cannes | Croisette Transfer | TaxiNeo",
-        metaDescription: "Via A8, 45 min ride. Festival de Cannes and La Croisette along the way. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via A8, 45 min ride. Festival de Cannes and La Croisette along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Monaco — Cannes",
         heroSubtitle: "From Monte Carlo to the Croisette, two Riviera jewels",
         description: "Taxi transfer from Monaco to Cannes, home of the famous Film Festival, via the A8 motorway along the French Riviera.",

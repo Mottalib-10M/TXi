@@ -352,7 +352,7 @@ export const trajetsMontpellierHub: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Montpellier → Carcassonne | 155 km, dès 295 € | TaxiNeo",
-        metaDescription: "Via A9 puis A61 en 1h35. Cité médiévale, Canal du Midi et UNESCO en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A9 puis A61 en 1h35. Cité médiévale, Canal du Midi et UNESCO en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Montpellier → Carcassonne",
         heroSubtitle: "Transfert Montpellier → Carcassonne au prix fixe de 295 — 360 €. 155 km, la cité médiévale UNESCO.",
         description: "Carcassonne, avec sa cité médiévale aux 52 tours classée à l'UNESCO, est à 1h35 de Montpellier.",

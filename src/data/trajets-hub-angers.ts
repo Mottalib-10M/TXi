@@ -28,7 +28,7 @@ export const trajetsAngers: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Angers → Nantes | forfait dès 175 €, 55 min | TaxiNeo",
-        metaDescription: "Via A11 en 55 min. Loire, Anjou, Muscadet et Nantes métropole en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A11 en 55 min. Loire, Anjou, Muscadet et Nantes métropole en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Angers → Nantes",
         heroSubtitle: "Transfert Angers → Nantes au prix fixe de 175 — 210 €. 90 km, direct par l'A11.",
         description: "Nantes, métropole de l'Ouest, est à 55 min d'Angers par l'A11.",
@@ -47,7 +47,7 @@ export const trajetsAngers: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Angers → Nantes | Fixed price from €175 | TaxiNeo",
-        metaDescription: "Via A11, 55 min ride. Loire, Anjou, Muscadet and Nantes métropole en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via A11, 55 min ride. Loire, Anjou, Muscadet and Nantes métropole en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Angers → Nantes",
         heroSubtitle: "Your Angers → Nantes transfer at €175 — €210. 90 km, direct via the A11.",
         description: "Nantes, western France's major city, is 55 min from Angers via the A11.",
@@ -288,7 +288,7 @@ export const trajetsAngers: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Angers → Saumur | forfait dès 95 €, 35 min | TaxiNeo",
-        metaDescription: "Via D952 en 35 min. Loire, Château de Saumur, Cadre Noir et Troglodytes en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via D952 en 35 min. Loire, Château de Saumur, Cadre Noir et Troglodytes en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Angers → Saumur",
         heroSubtitle: "Transfert Angers → Saumur au prix fixe de 95 — 120 €. 50 km, joyau de la Loire.",
         description: "Saumur, avec son château dominant la Loire et le célèbre Cadre Noir, est à 35 min d'Angers.",

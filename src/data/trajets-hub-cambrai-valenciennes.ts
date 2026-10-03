@@ -28,7 +28,7 @@ export const trajetsCambraiValenciennes: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Valenciennes → Lille | 55 km, dès 105 € | TaxiNeo",
-        metaDescription: "Via A2 en 40 min. Hainaut, Musée des beaux-arts, Vieux-Lille et Eurostar en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A2 en 40 min. Hainaut, Musée des beaux-arts, Vieux-Lille et Eurostar en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Valenciennes → Lille",
         heroSubtitle: "Transfert Valenciennes → Lille au prix fixe de 105 — 130 €. 55 km, rapide par l'A2.",
         description: "Lille est à 40 min de Valenciennes par l'A2, liaison directe entre le Hainaut et la métropole lilloise.",
@@ -47,7 +47,7 @@ export const trajetsCambraiValenciennes: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Valenciennes → Lille | 55 km, from €105 | TaxiNeo",
-        metaDescription: "Via A2, 40 min ride. Hainaut, Musée des beaux-arts, Vieux-Lille and Eurostar en route. Drop-off at your exact address. Door-to-door, luggage included.",
+        metaDescription: "Via A2, 40 min ride. Hainaut, Musée des beaux-arts, Vieux-Lille and Eurostar en route. Drop-off at your exact address, luggage included.",
         heroTitle: "Taxi Valenciennes → Lille",
         heroSubtitle: "Your Valenciennes → Lille transfer at €105 — €130. 55 km, via the A2.",
         description: "Lille is 40 min from Valenciennes via the A2 motorway.",
@@ -93,7 +93,7 @@ export const trajetsCambraiValenciennes: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Valenciennes → Paris | 210 km, dès 400 € | TaxiNeo",
-        metaDescription: "Via A2 puis A1 en 2h10. A2/A1, Hainaut, Bassin minier UNESCO et CDG en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A2 puis A1 en 2h10. A2/A1, Hainaut, Bassin minier UNESCO et CDG en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Valenciennes → Paris",
         heroSubtitle: "Transfert Valenciennes → Paris au prix fixe de 400 — 485 €. 210 km, direct par l'A2 et l'A1.",
         description: "Paris est à 2h10 de Valenciennes par l'A2 puis l'A1, l'autoroute du Nord.",
@@ -158,7 +158,7 @@ export const trajetsCambraiValenciennes: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Cambrai → Lille | forfait dès 135 €, 50 min | TaxiNeo",
-        metaDescription: "Via A26 en 50 min. Bêtises de Cambrai, Cathédrale, Vieux-Lille et Euralille en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A26 en 50 min. Bêtises de Cambrai, Cathédrale, Vieux-Lille et Euralille en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Cambrai → Lille",
         heroSubtitle: "Transfert Cambrai → Lille au prix fixe de 135 — 165 €. 70 km, rapide par l'A26.",
         description: "Lille est à 50 min de Cambrai par l'A26, reliant le Cambrésis à la métropole lilloise.",

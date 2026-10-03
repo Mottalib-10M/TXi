@@ -191,7 +191,7 @@ export const trajetsGapBriancon: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Briançon → Grenoble | 115 km, dès 220 € | TaxiNeo",
-        metaDescription: "Via N91 / A480 en undefined min. N91, Col du Lautaret, Oisans et Écrins en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via N91 / A480 en undefined min. N91, Col du Lautaret, Oisans et Écrins en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Briançon → Grenoble",
         heroSubtitle: "Transfert Briançon → Grenoble au prix fixe de 220 — 270 €. 115 km, 1h30.",
         description: "Briançon — Grenoble traverse le col du Lautaret et la vallée de la Romanche par la N91.",

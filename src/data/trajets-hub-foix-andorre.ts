@@ -28,7 +28,7 @@ export const trajetsFoixAndorre: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Foix → Toulouse | forfait dès 165 €, 55 min | TaxiNeo",
-        metaDescription: "Via N20 en 55 min. Ariège, Pyrénées, Château de Foix et Ville rose en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via N20 en 55 min. Ariège, Pyrénées, Château de Foix et Ville rose en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Foix → Toulouse",
         heroSubtitle: "Transfert Foix → Toulouse au prix fixe de 165 — 200 €. 85 km, direct par la N20.",
         description: "Toulouse, la Ville rose, est à 55 min de Foix par la N20.",
@@ -158,7 +158,7 @@ export const trajetsFoixAndorre: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Andorre-la-Vieille → Toulouse | 185 km, 200 € | TaxiNeo",
-        metaDescription: "Via N20 en 2h20. Pyrénées, Principauté, Aéroport Blagnac et Ville rose en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via N20 en 2h20. Pyrénées, Principauté, Aéroport Blagnac et Ville rose en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Andorre → Toulouse",
         heroSubtitle: "Transfert Andorre-la-Vieille → Toulouse au prix fixe de 355 — 430 €. 185 km, traversée pyrénéenne.",
         description: "Toulouse est à 2h20 d'Andorre-la-Vieille par la N20 à travers les Pyrénées.",
@@ -223,7 +223,7 @@ export const trajetsFoixAndorre: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Andorre-la-Vieille → Barcelone | 200 km | TaxiNeo",
-        metaDescription: "Via C16 en 2h40. Pyrénées, Catalogne, Shopping et Aéroport El Prat en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via C16 en 2h40. Pyrénées, Catalogne, Shopping et Aéroport El Prat en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Andorre → Barcelone",
         heroSubtitle: "Transfert Andorre-la-Vieille → Barcelone au prix fixe de 385 — 465 €. 200 km, direction la Catalogne.",
         description: "Barcelone, capitale de la Catalogne, est à 2h40 d'Andorre-la-Vieille par la C16.",

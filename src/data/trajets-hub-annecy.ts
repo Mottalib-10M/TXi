@@ -347,7 +347,7 @@ export const trajetsAnnecyHub: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Annecy → Albertville | 45 km, dès 90 € | TaxiNeo",
-        metaDescription: "Via A41 puis D1508 en 35 min. JO 1992, Porte des stations et Tarentaise en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A41 puis D1508 en 35 min. JO 1992, Porte des stations et Tarentaise en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Annecy → Albertville",
         heroSubtitle: "Transfert Annecy → Albertville au prix fixe de 90 — 105 €. 45 km, porte des grandes stations.",
         description: "Albertville, ville des JO 1992 et porte d'entrée de la Tarentaise vers les stations de ski, est à 35 min d'Annecy.",

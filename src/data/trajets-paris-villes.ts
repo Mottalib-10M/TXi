@@ -396,7 +396,7 @@ export const trajetsParisVilles: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Paris → Toulouse | 680 km, dès 680 € | TaxiNeo",
-        metaDescription:"Via A10 puis A20 en 6h30. A10/A20, Vierzon, Limoges et Cahors en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription:"Via A10 puis A20 en 6h30. A10/A20, Vierzon, Limoges et Cahors en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Paris → Toulouse",
         heroSubtitle:
           "Transfert privé Paris → Toulouse au forfait de 680 — 860 €. Prise en charge à domicile, véhicule haut de gamme.",
@@ -442,7 +442,7 @@ export const trajetsParisVilles: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Paris → Toulouse | 680 km, from €680 | TaxiNeo",
-        metaDescription:"Via A10 then A20, 6h30 ride. A10/A20, Vierzon, Limoges and Cahors en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription:"Via A10 then A20, 6h30 ride. A10/A20, Vierzon, Limoges and Cahors en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Paris → Toulouse",
         heroSubtitle:
           "Private transfer Paris → Toulouse from €680 — €860. Home pick-up, premium vehicle.",
@@ -512,7 +512,7 @@ export const trajetsParisVilles: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Paris → Bordeaux | 585 km, dès 580 € | TaxiNeo",
-        metaDescription:"Via A10 en 6h. A10 L'Aquitaine, Tours, Poitiers et Vignobles bordelais en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription:"Via A10 en 6h. A10 L'Aquitaine, Tours, Poitiers et Vignobles bordelais en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Paris → Bordeaux",
         heroSubtitle:
           "Transfert privé Paris → Bordeaux au forfait de 580 — 740 €. Voyage en toute sérénité avec prise en charge à domicile.",
@@ -744,7 +744,7 @@ export const trajetsParisVilles: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Paris → Nantes | 385 km, dès 400 €, 4h | TaxiNeo",
-        metaDescription:"Via A11 en 4h. A11 L'Océane, Le Mans, Angers et Machines de l'Île en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription:"Via A11 en 4h. A11 L'Océane, Le Mans, Angers et Machines de l'Île en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Paris → Nantes",
         heroSubtitle:
           "Transfert privé Paris → Nantes au forfait de 400 — 520 €. Voyage direct porte-à-porte.",
@@ -858,7 +858,7 @@ export const trajetsParisVilles: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Paris → Strasbourg | 490 km, dès 500 € | TaxiNeo",
-        metaDescription:"Via A4 en 4h40. A4 L'Est, Reims, Metz et Cathédrale de Strasbourg en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription:"Via A4 en 4h40. A4 L'Est, Reims, Metz et Cathédrale de Strasbourg en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Paris → Strasbourg",
         heroSubtitle:
           "Transfert privé Paris → Strasbourg au forfait de 500 — 650 €. Capitale européenne, porte-à-porte.",
@@ -1081,7 +1081,7 @@ export const trajetsParisVilles: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Paris → Rennes | 350 km, dès 370 €, 3h40 | TaxiNeo",
-        metaDescription:"Via A11 puis A81 en 3h40. A11/A81, Le Mans, Laval et Parlement de Bretagne en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription:"Via A11 puis A81 en 3h40. A11/A81, Le Mans, Laval et Parlement de Bretagne en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Paris → Rennes",
         heroSubtitle:
           "Transfert privé Paris → Rennes au forfait de 370 — 480 €. Cap sur la Bretagne en tout confort.",
@@ -1122,7 +1122,7 @@ export const trajetsParisVilles: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Paris → Rennes | Fixed rate from €370 | TaxiNeo",
-        metaDescription:"Via A11 then A81, 3h40 ride. A11/A81, Le Mans, Laval and Parlement de Bretagne en route. Drop-off at your exact address. Door-to-door, luggage included.",
+        metaDescription:"Via A11 then A81, 3h40 ride. A11/A81, Le Mans, Laval and Parlement de Bretagne en route. Drop-off at your exact address, luggage included.",
         heroTitle: "Taxi Paris → Rennes",
         heroSubtitle: "Private transfer Paris → Rennes from €370 — €480. Head to Brittany in comfort.",
         description:

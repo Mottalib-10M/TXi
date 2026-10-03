@@ -134,7 +134,7 @@ export const trajetsDignéManosque: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Manosque → Aix-en-Provence | 55 km, dès 105 € | TaxiNeo",
-        metaDescription: "Via A51 en undefined min. Luberon, Durance, L'Occitane et Provence en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A51 en undefined min. Luberon, Durance, L'Occitane et Provence en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Manosque → Aix-en-Provence",
         heroSubtitle: "Transfert Manosque → Aix-en-Provence au prix fixe de 105 — 130 €. 55 km, 40 min.",
         description: "Manosque — Aix-en-Provence relie la porte du Luberon à la capitale historique de la Provence par l'A51.",

@@ -50,7 +50,7 @@ export const trajetsBrest: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Brest → Quimper | Fixed price from €140 | TaxiNeo",
-        metaDescription: "Via N165, 50 min ride. Finistère Sud, Cathédrale Saint-Corentin and Odet along the way. Drop-off at your exact address. Door-to-door, luggage included.",
+        metaDescription: "Via N165, 50 min ride. Finistère Sud, Cathédrale Saint-Corentin and Odet along the way. Drop-off at your exact address, luggage included.",
         heroTitle: "Taxi Brest → Quimper",
         heroSubtitle: "Your Brest → Quimper transfer at €140 — €170. 72 km via the N165.",
         description: "Quimper, capital of Cornouaille and Finistere's prefecture, is 50 minutes from Brest via the N165 expressway.",
@@ -161,7 +161,7 @@ export const trajetsBrest: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Brest → Saint-Brieuc | 145 km, dès 280 € | TaxiNeo",
-        metaDescription: "Via N12 en 1h30. Côtes-d'Armor, Baie de Saint-Brieuc et Plateau du Léon en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via N12 en 1h30. Côtes-d'Armor, Baie de Saint-Brieuc et Plateau du Léon en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Brest → Saint-Brieuc",
         heroSubtitle: "Transfert Brest → Saint-Brieuc au prix fixe de 280 — 335 €. 145 km par la N12.",
         description: "Saint-Brieuc, préfecture des Côtes-d'Armor, est à 1h30 de Brest par la voie express N12.",
@@ -291,7 +291,7 @@ export const trajetsBrest: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Brest → Lorient | 135 km, dès 260 € | TaxiNeo",
-        metaDescription: "Via N165 en 1h25. Rade de Lorient, Base sous-marine et Cité de la Voile en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via N165 en 1h25. Rade de Lorient, Base sous-marine et Cité de la Voile en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Brest → Lorient",
         heroSubtitle: "Transfert Brest → Lorient au prix fixe de 260 — 315 €. 135 km par la N165.",
         description: "Lorient, cité maritime du Morbihan et port de la Compagnie des Indes, est à 1h25 de Brest par la voie express N165.",

@@ -28,7 +28,7 @@ export const trajetsBeauvaisCompiegne: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Beauvais → Paris | forfait dès 155 € | TaxiNeo",
-        metaDescription: "Via A16 en 55 min. Oise, Cathédrale Saint-Pierre, Porte-à-porte et Nuit en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A16 en 55 min. Oise, Cathédrale Saint-Pierre, Porte-à-porte et Nuit en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Beauvais → Paris",
         heroSubtitle: "Transfert Beauvais → Paris au prix fixe de 155 — 185 €. 80 km, direct par l'A16.",
         description: "Paris est à 55 min de Beauvais par l'A16, l'autoroute qui relie la Picardie à la capitale.",
@@ -242,7 +242,7 @@ export const trajetsBeauvaisCompiegne: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Compiègne → Paris | 80 km, from €155 | TaxiNeo",
-        metaDescription: "Via A1, 50 min ride. Palais impérial, Forêt, Armistice and CDG en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via A1, 50 min ride. Palais impérial, Forêt, Armistice and CDG en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Compiègne → Paris",
         heroSubtitle: "Your Compiègne → Paris transfer at €155 — €185. 80 km, via the A1.",
         description: "Paris is 50 min from Compiègne via the A1 motorway.",
@@ -288,7 +288,7 @@ export const trajetsBeauvaisCompiegne: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Compiègne → Reims | 105 km, dès 200 € | TaxiNeo",
-        metaDescription: "Via A26 en 1h05. Champagne, Cathédrale de Reims, Sacre des Rois et Caves en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A26 en 1h05. Champagne, Cathédrale de Reims, Sacre des Rois et Caves en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Compiègne → Reims",
         heroSubtitle: "Transfert Compiègne → Reims au prix fixe de 200 — 245 €. 105 km, capitale du Champagne.",
         description: "Reims, capitale du Champagne et cathédrale des sacres royaux, est à 1h05 de Compiègne.",
@@ -307,7 +307,7 @@ export const trajetsBeauvaisCompiegne: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Compiègne → Reims | 105 km, from €200 | TaxiNeo",
-        metaDescription: "Via A26, 1h05 ride. Champagne, Cathédrale de Reims, Sacre des Rois and Caves en route. Drop-off at your exact address. Door-to-door, luggage included.",
+        metaDescription: "Via A26, 1h05 ride. Champagne, Cathédrale de Reims, Sacre des Rois and Caves en route. Drop-off at your exact address, luggage included.",
         heroTitle: "Taxi Compiègne → Reims",
         heroSubtitle: "Your Compiègne → Reims transfer at €200 — €245. 105 km, Champagne capital.",
         description: "Reims, Champagne capital and coronation cathedral, is 1h05 from Compiègne.",

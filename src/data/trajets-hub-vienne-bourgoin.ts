@@ -77,7 +77,7 @@ export const trajetsVienneBourgoin: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Vienne → Grenoble | 95 km, dès 185 € | TaxiNeo",
-        metaDescription: "Via A48 en undefined min. N7, Isère, Voiron et Massif de la Chartreuse en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A48 en undefined min. N7, Isère, Voiron et Massif de la Chartreuse en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Vienne → Grenoble",
         heroSubtitle: "Transfert Vienne → Grenoble au prix fixe de 185 — 220 €. 95 km, 1h.",
         description: "Vienne — Grenoble traverse l'Isère nord en longeant le massif de la Chartreuse.",

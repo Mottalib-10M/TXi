@@ -93,7 +93,7 @@ export const trajetsPoitiers: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Poitiers → Limoges | 120 km, dès 230 € | TaxiNeo",
-        metaDescription: "Via RN147 en 1h20. Limousin, Porcelaine, Vienne et Confolens en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via RN147 en 1h20. Limousin, Porcelaine, Vienne et Confolens en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Poitiers → Limoges",
         heroSubtitle: "Transfert Poitiers → Limoges au prix fixe de 230 — 280 €. 120 km, route nationale gratuite à travers le Poitou et le Limousin.",
         description: "Limoges, préfecture de la Haute-Vienne et capitale mondiale de la porcelaine, est à 1h20 de Poitiers par la RN147.",
@@ -112,7 +112,7 @@ export const trajetsPoitiers: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Poitiers → Limoges | 120 km, from €230 | TaxiNeo",
-        metaDescription: "Via RN147, 1h20 ride. Limousin, Porcelaine, Vienne and Confolens en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via RN147, 1h20 ride. Limousin, Porcelaine, Vienne and Confolens en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Poitiers → Limoges",
         heroSubtitle: "Your Poitiers → Limoges transfer at €230 — €280. 120 km, toll-free national road through Poitou and Limousin.",
         description: "Limoges, prefecture of Haute-Vienne and world capital of porcelain, is 1h20 from Poitiers via the RN147.",
@@ -158,7 +158,7 @@ export const trajetsPoitiers: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Poitiers → La Rochelle | 140 km, dès 270 € | TaxiNeo",
-        metaDescription: "Via A10 puis N11 en 1h30. A10/N11, Atlantique, Vieux-Port et Île de Ré en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A10 puis N11 en 1h30. A10/N11, Atlantique, Vieux-Port et Île de Ré en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Poitiers → La Rochelle",
         heroSubtitle: "Transfert Poitiers → La Rochelle au prix fixe de 270 — 325 €. 140 km, du cœur du Poitou à l'Atlantique.",
         description: "La Rochelle, joyau de la côte atlantique avec son Vieux-Port historique et l'Île de Ré, est à 1h30 de Poitiers.",
@@ -288,7 +288,7 @@ export const trajetsPoitiers: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Poitiers → Angoulême | 115 km, dès 220 € | TaxiNeo",
-        metaDescription: "Via N10 en 1h15. Charente, Bande dessinée, Cognac et Remparts en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via N10 en 1h15. Charente, Bande dessinée, Cognac et Remparts en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Poitiers → Angoulême",
         heroSubtitle: "Transfert Poitiers → Angoulême au prix fixe de 220 — 270 €. 115 km par la N10, capitale mondiale de la bande dessinée.",
         description: "Angoulême, capitale mondiale de la bande dessinée et préfecture de la Charente, est à 1h15 de Poitiers par la N10.",
@@ -307,7 +307,7 @@ export const trajetsPoitiers: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Poitiers → Angoulême | 115 km, from €220 | TaxiNeo",
-        metaDescription: "Via N10, 1h15 ride. Charente, Bande dessinée, Cognac and Remparts en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via N10, 1h15 ride. Charente, Bande dessinée, Cognac and Remparts en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Poitiers → Angoulême",
         heroSubtitle: "Your Poitiers → Angoulême transfer at €220 — €270. 115 km via the toll-free N10, world capital of comic strips.",
         description: "Angoulême, world capital of comic strips and Charente prefecture, is 1h15 from Poitiers via the N10.",

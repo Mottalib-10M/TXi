@@ -20,7 +20,7 @@ export const trajetsVillefrancheTarare: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Villefranche-sur-Saône → Lyon | 35 km, 40 € | TaxiNeo",
-        metaDescription: "Via A6 en undefined min. Beaujolais, Saône, Calade et Direct en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A6 en undefined min. Beaujolais, Saône, Calade et Direct en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Villefranche-sur-Saône → Lyon",
         heroSubtitle: "Transfert Villefranche-sur-Saône → Lyon au prix fixe de 70 — 85 €. 35 km, 30 min.",
         description: "Villefranche-sur-Saône — Lyon par l'A6 en 30 min, le long de la vallée de la Saône.",
@@ -39,7 +39,7 @@ export const trajetsVillefrancheTarare: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Villefranche-sur-Saône → Lyon | 35 km, €40 | TaxiNeo",
-        metaDescription: "Via A6, undefined min ride. Beaujolais, Saône, Calade and Direct en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via A6, undefined min ride. Beaujolais, Saône, Calade and Direct en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Villefranche-sur-Saône → Lyon",
         heroSubtitle: "Villefranche-sur-Saône → Lyon transfer at €70 — €85. 35 km, 30 min.",
         description: "Villefranche-sur-Saône to Lyon via A6 along the Saône valley in 30 min.",
@@ -77,7 +77,7 @@ export const trajetsVillefrancheTarare: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Villefranche-sur-Saône → Mâcon | 40 km, 50 € | TaxiNeo",
-        metaDescription: "Via A6 en undefined min. Beaujolais, Saône, Vignobles et Belleville en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A6 en undefined min. Beaujolais, Saône, Vignobles et Belleville en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Villefranche-sur-Saône → Mâcon",
         heroSubtitle: "Transfert Villefranche-sur-Saône → Mâcon au prix fixe de 80 — 95 €. 40 km, 30 min.",
         description: "Villefranche-sur-Saône — Mâcon par l'A6 en 30 min, traversée intégrale du vignoble beaujolais.",
@@ -134,7 +134,7 @@ export const trajetsVillefrancheTarare: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Villefranche-sur-Saône → Bourg-en-Bresse | TaxiNeo",
-        metaDescription: "Via A6/D1079 en undefined min. Dombes, Beaujolais, Bresse et Ain en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A6/D1079 en undefined min. Dombes, Beaujolais, Bresse et Ain en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Villefranche-sur-Saône → Bourg-en-Bresse",
         heroSubtitle: "Transfert Villefranche-sur-Saône → Bourg-en-Bresse au prix fixe de 115 — 140 €. 60 km, 45 min.",
         description: "Villefranche-sur-Saône — Bourg-en-Bresse en 45 min, du Beaujolais à la Bresse à travers la Dombes.",
@@ -191,7 +191,7 @@ export const trajetsVillefrancheTarare: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Tarare → Lyon | 45 km A89, dès 90 € | TaxiNeo",
-        metaDescription: "Via A89 en undefined min. Monts du Lyonnais, L'Arbresle, Textile et Direct en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A89 en undefined min. Monts du Lyonnais, L'Arbresle, Textile et Direct en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Tarare → Lyon",
         heroSubtitle: "Transfert Tarare → Lyon au prix fixe de 90 — 105 €. 45 km, 35 min.",
         description: "Tarare — Lyon par l'A89 en 35 min, traversée des monts du Lyonnais et de la vallée de la Brévenne.",
@@ -210,7 +210,7 @@ export const trajetsVillefrancheTarare: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Tarare → Lyon | Fixed price from €90 | TaxiNeo",
-        metaDescription: "Via A89, undefined min ride. Monts du Lyonnais, L'Arbresle, Textile and Direct en route. Drop-off at your exact address. Door-to-door, luggage included.",
+        metaDescription: "Via A89, undefined min ride. Monts du Lyonnais, L'Arbresle, Textile and Direct en route. Drop-off at your exact address, luggage included.",
         heroTitle: "Taxi Tarare → Lyon",
         heroSubtitle: "Tarare → Lyon transfer at €90 — €105. 45 km, 35 min.",
         description: "Tarare to Lyon via A89 through the Monts du Lyonnais in 35 min.",

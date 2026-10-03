@@ -28,7 +28,7 @@ export const trajetsDunkerqueCalais: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Dunkerque → Lille | 80 km, dès 155 € | TaxiNeo",
-        metaDescription: "Via A25 en 55 min. Flandre, Beffroi UNESCO, Carnaval et Jean Bart en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A25 en 55 min. Flandre, Beffroi UNESCO, Carnaval et Jean Bart en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Dunkerque → Lille",
         heroSubtitle: "Transfert Dunkerque → Lille au prix fixe de 155 — 185 €. 80 km, direct par l'A25 gratuite.",
         description: "Lille, capitale des Flandres, est à 55 min de Dunkerque par l'A25.",
@@ -112,7 +112,7 @@ export const trajetsDunkerqueCalais: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Dunkerque → Calais | 45 km, from €90 | TaxiNeo",
-        metaDescription: "Via A16, 35 min ride. Côte d'Opale, Eurotunnel, Ferry and Plage en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via A16, 35 min ride. Côte d'Opale, Eurotunnel, Ferry and Plage en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Dunkirk → Calais",
         heroSubtitle: "Your Dunkirk → Calais transfer at €90 — €105. 45 km, gateway to England.",
         description: "Calais, the Channel crossing hub, is 35 min from Dunkirk via the A16.",
@@ -288,7 +288,7 @@ export const trajetsDunkerqueCalais: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Calais → Paris | 290 km, dès 555 €, 3h | TaxiNeo",
-        metaDescription: "Via A26/A1 en 3h. Transmanche, Navette, CDG et Porte-à-porte en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A26/A1 en 3h. Transmanche, Navette, CDG et Porte-à-porte en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Calais → Paris",
         heroSubtitle: "Transfert Calais → Paris au prix fixe de 555 — 670 €. 290 km, direct par l'A26 puis l'A1.",
         description: "Paris est à 3h de Calais par l'A26 et l'A1, la route historique du transmanche.",

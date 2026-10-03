@@ -134,7 +134,7 @@ export const trajetsParisRetours3: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Grenoble → Paris | 570 km, dès 1090 € | TaxiNeo",
-        metaDescription: "Via A48 / A7 / A6 en undefined min. Alpes, Lyon et Bourgogne en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A48 / A7 / A6 en undefined min. Alpes, Lyon et Bourgogne en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Grenoble → Paris",
         heroSubtitle: "Transfert Grenoble → Paris au prix fixe de 1090 — 1320 €. 570 km depuis les Alpes.",
         description: "Grenoble — Paris traverse les Alpes puis la Bourgogne en 5h40.",
@@ -191,7 +191,7 @@ export const trajetsParisRetours3: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Dijon → Paris | Prix fixe dès 595 € | TaxiNeo",
-        metaDescription: "Via A38 / A6 en undefined min. Bourgogne, Vignobles et Beaune en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A38 / A6 en undefined min. Bourgogne, Vignobles et Beaune en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Dijon → Paris",
         heroSubtitle: "Transfert Dijon → Paris au prix fixe de 595 — 720 €. 310 km à travers les vignobles bourguignons.",
         description: "Dijon — Paris traverse le cœur de la Bourgogne viticole en 3h10.",
@@ -267,7 +267,7 @@ export const trajetsParisRetours3: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Annecy → Paris | Fixed price from €1040 | TaxiNeo",
-        metaDescription: "Via A41 / A43 / A6, undefined min ride. Lac d'Annecy, Lyon and Bourgogne along the way. Drop-off at your exact address. Door-to-door, luggage included.",
+        metaDescription: "Via A41 / A43 / A6, undefined min ride. Lac d'Annecy, Lyon and Bourgogne along the way. Drop-off at your exact address, luggage included.",
         heroTitle: "Taxi Annecy → Paris",
         heroSubtitle: "Annecy → Paris transfer at €1040 — €1260. 545 km from Haute-Savoie.",
         description: "Annecy to Paris via the Alps, Lyon and Burgundy in 5h30.",
@@ -324,7 +324,7 @@ export const trajetsParisRetours3: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Biarritz → Paris | 770 km, from €920 | TaxiNeo",
-        metaDescription: "Via A63 / A10, undefined min ride. Pays Basque, Bordeaux and Val de Loire along the way. Drop-off at your exact address. Door-to-door, luggage included.",
+        metaDescription: "Via A63 / A10, undefined min ride. Pays Basque, Bordeaux and Val de Loire along the way. Drop-off at your exact address, luggage included.",
         heroTitle: "Taxi Biarritz → Paris",
         heroSubtitle: "Biarritz → Paris transfer at €920 — €1,150. 770 km from the Basque Country.",
         description: "Biarritz to Paris via the Basque Country, Landes forests and Loire Valley.",

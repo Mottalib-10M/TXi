@@ -96,7 +96,7 @@ export const trajetsDeauvilleHonfleur: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Deauville → Caen | forfait dès 95 € | TaxiNeo",
-        metaDescription: "Via A13 en 35 min. A13/D677, Côte Fleurie, Cabourg et Pays d'Auge en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A13 en 35 min. A13/D677, Côte Fleurie, Cabourg et Pays d'Auge en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Deauville → Caen",
         heroSubtitle: "Transfert Deauville → Caen au prix fixe de 95 — 120 €. 50 km entre la Côte Fleurie et la capitale du Calvados.",
         description: "Caen, préfecture du Calvados et cité de Guillaume le Conquérant, est à 35 minutes de Deauville par l'A13.",

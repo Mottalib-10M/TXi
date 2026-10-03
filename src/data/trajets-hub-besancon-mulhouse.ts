@@ -20,7 +20,7 @@ export const trajetsBesanconMulhouse: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Besançon → Dijon | 95 km, dès 185 € | TaxiNeo",
-        metaDescription: "Via A36 / A31 en undefined min. Jura, Franche-Comté et Bourgogne en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A36 / A31 en undefined min. Jura, Franche-Comté et Bourgogne en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Besançon → Dijon",
         heroSubtitle: "Transfert Besançon → Dijon au prix fixe de 185 — 220 €. 95 km, 1h.",
         description: "Besançon et Dijon, capitales de la Franche-Comté et de la Bourgogne, sont à 1h l'une de l'autre.",
@@ -134,7 +134,7 @@ export const trajetsBesanconMulhouse: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Mulhouse → Bâle | Prix fixe dès 70 € | TaxiNeo",
-        metaDescription: "Via A35 / A36 en undefined min. Trois frontières, Suisse et EuroAirport en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A35 / A36 en undefined min. Trois frontières, Suisse et EuroAirport en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Mulhouse → Bâle",
         heroSubtitle: "Transfert Mulhouse → Bâle au prix fixe de 70 — 85 €. 35 km, 30 min.",
         description: "Mulhouse et Bâle sont à 30 min, au cœur de la région des trois frontières.",
@@ -248,7 +248,7 @@ export const trajetsBesanconMulhouse: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Mulhouse → Strasbourg | 120 km, dès 230 € | TaxiNeo",
-        metaDescription: "Via A35 en undefined min. Alsace, Vignoble, Colmar et Sélestat en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A35 en undefined min. Alsace, Vignoble, Colmar et Sélestat en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Mulhouse → Strasbourg",
         heroSubtitle: "Transfert Mulhouse → Strasbourg au prix fixe de 230 — 280 €. 120 km, 1h15.",
         description: "Mulhouse — Strasbourg traverse toute l'Alsace par l'A35 gratuite.",
@@ -324,7 +324,7 @@ export const trajetsBesanconMulhouse: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Besançon → Lyon | 240 km, from €460 | TaxiNeo",
-        metaDescription: "Via A36 / A39 / A42, undefined min ride. Jura and Bresse along the way. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via A36 / A39 / A42, undefined min ride. Jura and Bresse along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Besançon → Lyon",
         heroSubtitle: "Besançon → Lyon transfer at €460 — €555. 240 km, 2h30.",
         description: "Besançon to Lyon connects Franche-Comté to France's second city.",

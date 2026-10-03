@@ -93,7 +93,7 @@ export const trajetsMontaubanCastres: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Montauban → Cahors | 60 km, dès 115 € | TaxiNeo",
-        metaDescription: "Via A20 en 40 min. Quercy, Pont Valentré, Vignoble de Cahors et Lot en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A20 en 40 min. Quercy, Pont Valentré, Vignoble de Cahors et Lot en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Montauban → Cahors",
         heroSubtitle: "Transfert Montauban → Cahors au prix fixe de 115 — 140 €. 60 km, par l'A20.",
         description: "Cahors, capitale du Quercy et cité du Malbec, est à 40 min de Montauban par l'A20.",
@@ -177,7 +177,7 @@ export const trajetsMontaubanCastres: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Castres → Toulouse | 80 km, from €155 | TaxiNeo",
-        metaDescription: "Via N126, 55 min ride. Tarn, Musée Goya, Sidobre and Ville rose en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via N126, 55 min ride. Tarn, Musée Goya, Sidobre and Ville rose en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Castres → Toulouse",
         heroSubtitle: "Your Castres → Toulouse transfer at €155 — €185. 80 km, via the N126.",
         description: "Toulouse, Occitanie capital, is 55 min from Castres via the N126.",
@@ -223,7 +223,7 @@ export const trajetsMontaubanCastres: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Castres → Albi | forfait dès 90 €, 30 min | TaxiNeo",
-        metaDescription: "Via D112 en 30 min. Tarn, Sidobre, Cathédrale Sainte-Cécile et Musée Goya en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via D112 en 30 min. Tarn, Sidobre, Cathédrale Sainte-Cécile et Musée Goya en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Castres → Albi",
         heroSubtitle: "Transfert Castres → Albi au prix fixe de 90 — 105 €. 45 km, route gratuite par la D112.",
         description: "Albi, cité épiscopale UNESCO et patrie de Toulouse-Lautrec, est à 30 min de Castres.",
@@ -242,7 +242,7 @@ export const trajetsMontaubanCastres: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Castres → Albi | Fixed price from €90 | TaxiNeo",
-        metaDescription: "Via D112, 30 min ride. Tarn, Sidobre, Cathédrale Sainte-Cécile and Musée Goya en route. Drop-off at your exact address. Door-to-door, luggage included.",
+        metaDescription: "Via D112, 30 min ride. Tarn, Sidobre, Cathédrale Sainte-Cécile and Musée Goya en route. Drop-off at your exact address, luggage included.",
         heroTitle: "Taxi Castres → Albi",
         heroSubtitle: "Your Castres → Albi transfer at €90 — €105. 45 km, toll-free via D112.",
         description: "Albi, UNESCO episcopal city and Toulouse-Lautrec's birthplace, is 30 min from Castres.",
@@ -288,7 +288,7 @@ export const trajetsMontaubanCastres: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Montauban → Agen | forfait dès 125 € | TaxiNeo",
-        metaDescription: "Via A62 en 45 min. Garonne, Pruneau d'Agen, Musée Ingres-Bourdelle et Rugby en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A62 en 45 min. Garonne, Pruneau d'Agen, Musée Ingres-Bourdelle et Rugby en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Montauban → Agen",
         heroSubtitle: "Transfert Montauban → Agen au prix fixe de 125 — 155 €. 65 km, par l'A62.",
         description: "Agen, capitale du pruneau et préfecture du Lot-et-Garonne, est à 45 min de Montauban.",

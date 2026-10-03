@@ -31,7 +31,7 @@ export const trajetsNice: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Nice → Menton | forfait dès 45 €, 35 min | TaxiNeo",
-        metaDescription: "Via A8 en 35 min. Bord de mer, Côte d'Azur et Frontière italienne en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A8 en 35 min. Bord de mer, Côte d'Azur et Frontière italienne en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Nice — Menton",
         heroSubtitle: "La Riviera française jusqu'à la frontière italienne",
         description: "Transfert en taxi de Nice à Menton, dernière ville française avant l'Italie, le long de la magnifique Côte d'Azur.",
@@ -96,7 +96,7 @@ export const trajetsNice: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Nice → Fréjus | forfait dès 110 €, 1h | TaxiNeo",
-        metaDescription: "Via A8 en 1h. Ruines romaines, Plages et Massif de l'Estérel en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A8 en 1h. Ruines romaines, Plages et Massif de l'Estérel en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Nice — Fréjus",
         heroSubtitle: "À travers le massif de l'Estérel jusqu'aux plages varoises",
         description: "Transfert en taxi de Nice à Fréjus, cité romaine au cœur du Var, via l'autoroute A8 et le spectaculaire massif de l'Estérel.",
@@ -161,7 +161,7 @@ export const trajetsNice: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Nice → Toulon | 150 km, dès 195 €, 1h40 | TaxiNeo",
-        metaDescription: "Via A8 puis A57 en 1h40. Port militaire, Rade de Toulon et Côte varoise en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A8 puis A57 en 1h40. Port militaire, Rade de Toulon et Côte varoise en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Nice — Toulon",
         heroSubtitle: "De la Riviera au plus grand port militaire d'Europe",
         description: "Transfert longue distance en taxi de Nice à Toulon, préfecture du Var et premier port militaire français.",
@@ -1396,7 +1396,7 @@ export const trajetsNice: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Nice → Antibes | forfait dès 35 €, 25 min | TaxiNeo",
-        metaDescription: "Via A8 en 25 min. Vieille ville, Musée Picasso et Cap d'Antibes en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A8 en 25 min. Vieille ville, Musée Picasso et Cap d'Antibes en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Nice — Antibes",
         heroSubtitle: "Du cœur de Nice au charme provençal d'Antibes",
         description: "Transfert en taxi de Nice à Antibes, joyau de la Côte d'Azur avec sa vieille ville fortifiée, le musée Picasso et le prestigieux Cap d'Antibes.",
@@ -1461,7 +1461,7 @@ export const trajetsNice: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Nice → Cannes | forfait dès 50 €, 30 min | TaxiNeo",
-        metaDescription: "Via A8 en 30 min. Croisette, Festival de Cannes et Palais des Festivals en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A8 en 30 min. Croisette, Festival de Cannes et Palais des Festivals en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Nice — Cannes",
         heroSubtitle: "De Nice à la capitale mondiale du cinéma",
         description: "Transfert en taxi de Nice à Cannes, ville du Festival international du film, de la Croisette et du glamour méditerranéen.",

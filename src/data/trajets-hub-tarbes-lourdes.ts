@@ -20,7 +20,7 @@ export const trajetsTarbesLourdes: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Lourdes → Tarbes | forfait dès 40 € | TaxiNeo",
-        metaDescription: "Via D921 en undefined min. Pyrénées, Bigorre, Pèlerinage et Direct en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via D921 en undefined min. Pyrénées, Bigorre, Pèlerinage et Direct en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Lourdes → Tarbes",
         heroSubtitle: "Transfert Lourdes → Tarbes au prix fixe de 40 — 50 €. 20 km, 18 min.",
         description: "Lourdes — Tarbes relie la cité mariale à la préfecture des Hautes-Pyrénées en 18 min.",

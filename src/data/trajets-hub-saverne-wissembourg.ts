@@ -288,7 +288,7 @@ export const trajetsSaverneWissembourg: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Wissembourg → Haguenau | 35 km, dès 70 € | TaxiNeo",
-        metaDescription: "Via D263 en 25 min. Outre-Forêt, Ligne Maginot, Houblon et Alsace du Nord en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via D263 en 25 min. Outre-Forêt, Ligne Maginot, Houblon et Alsace du Nord en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Wissembourg → Haguenau",
         heroSubtitle: "Transfert Wissembourg → Haguenau au prix fixe de 70 — 85 €. 35 km, coeur de l'Outre-Forêt.",
         description: "Haguenau, sous-préfecture du Bas-Rhin, est à 25 min de Wissembourg par la D263.",
@@ -307,7 +307,7 @@ export const trajetsSaverneWissembourg: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Wissembourg → Haguenau | 35 km, from €70 | TaxiNeo",
-        metaDescription: "Via D263, 25 min ride. Outre-Forêt, Ligne Maginot, Houblon and Alsace du Nord en route. Drop-off at your exact address. Door-to-door, luggage included.",
+        metaDescription: "Via D263, 25 min ride. Outre-Forêt, Ligne Maginot, Houblon and Alsace du Nord en route. Drop-off at your exact address, luggage included.",
         heroTitle: "Taxi Wissembourg → Haguenau",
         heroSubtitle: "Your Wissembourg → Haguenau transfer at €70 — €85. 35 km, through the Outre-Foret.",
         description: "Haguenau is 25 min from Wissembourg through the authentic Outre-Foret region.",

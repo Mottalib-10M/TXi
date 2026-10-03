@@ -28,7 +28,7 @@ export const trajetsSaintEtienne: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Saint-Étienne → Lyon | 62 km, dès 120 € | TaxiNeo",
-        metaDescription: "Via A47 en 45 min. Vallée du Gier, Pilat, Part-Dieu et Perrache en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A47 en 45 min. Vallée du Gier, Pilat, Part-Dieu et Perrache en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Saint-Étienne → Lyon",
         heroSubtitle: "Transfert Saint-Étienne → Lyon au prix fixe de 120 — 145 €. 62 km, direct par l'A47.",
         description: "Lyon est à 45 minutes de Saint-Étienne par l'A47, l'autoroute de la vallée du Gier.",
@@ -93,7 +93,7 @@ export const trajetsSaintEtienne: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Saint-Étienne → Clermont-Ferrand | 145 km | TaxiNeo",
-        metaDescription: "Via A89 en 1h30. Livradois-Forez, Thiers, Puy de Dôme et Michelin en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A89 en 1h30. Livradois-Forez, Thiers, Puy de Dôme et Michelin en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Saint-Étienne → Clermont-Ferrand",
         heroSubtitle: "Transfert Saint-Étienne → Clermont-Ferrand au prix fixe de 280 — 335 €. 145 km, direct par l'A89.",
         description: "Clermont-Ferrand est à 1h30 de Saint-Étienne par l'A89 à travers le Livradois-Forez.",
@@ -158,7 +158,7 @@ export const trajetsSaintEtienne: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Saint-Étienne → Grenoble | 150 km, dès 290 € | TaxiNeo",
-        metaDescription: "Via A48 en 1h35. Vercors, Chartreuse, Alpes et Grenoble-Bastille en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A48 en 1h35. Vercors, Chartreuse, Alpes et Grenoble-Bastille en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Saint-Étienne → Grenoble",
         heroSubtitle: "Transfert Saint-Étienne → Grenoble au prix fixe de 290 — 350 €. 150 km, porte des Alpes.",
         description: "Grenoble est à 1h35 de Saint-Étienne, en traversant Lyon puis l'A48 vers les Alpes.",
@@ -223,7 +223,7 @@ export const trajetsSaintEtienne: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Saint-Étienne → Valence | 120 km, dès 230 € | TaxiNeo",
-        metaDescription: "Via A7 en 1h15. Vallée du Rhône, Drôme, TGV Valence et Provençal en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A7 en 1h15. Vallée du Rhône, Drôme, TGV Valence et Provençal en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Saint-Étienne → Valence",
         heroSubtitle: "Transfert Saint-Étienne → Valence au prix fixe de 230 — 280 €. 120 km, porte de la Provence.",
         description: "Valence est à 1h15 de Saint-Étienne en descendant la vallée du Rhône par l'A7.",

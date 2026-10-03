@@ -96,7 +96,7 @@ export const trajetsThionvilleLongwy: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Thionville → Luxembourg-Ville | 35 km, 45 € | TaxiNeo",
-        metaDescription: "Via A31/E25 en 30 min. E25, Grand-Duché, Frontaliers et Kirchberg en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A31/E25 en 30 min. E25, Grand-Duché, Frontaliers et Kirchberg en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Thionville → Luxembourg-Ville",
         heroSubtitle: "Transfert Thionville → Luxembourg au prix fixe de 70 — 85 €. 35 km vers le Grand-Duché par l'A31/E25.",
         description: "Luxembourg-Ville, capitale européenne et place financière mondiale avec ses casemates UNESCO, est à 30 min de Thionville.",
@@ -226,7 +226,7 @@ export const trajetsThionvilleLongwy: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Thionville → Nancy | 80 km, dès 155 € | TaxiNeo",
-        metaDescription: "Via A31 en 55 min. Place Stanislas UNESCO, Lorraine, Moselle et Art Nouveau en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A31 en 55 min. Place Stanislas UNESCO, Lorraine, Moselle et Art Nouveau en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Thionville → Nancy",
         heroSubtitle: "Transfert Thionville → Nancy au prix fixe de 155 — 185 €. 80 km par l'A31 à travers le cœur de la Lorraine.",
         description: "Nancy, ancienne capitale du duché de Lorraine avec sa Place Stanislas UNESCO et son patrimoine Art Nouveau, est à 55 min de Thionville.",

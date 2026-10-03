@@ -31,7 +31,7 @@ export const trajetsCannes: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Cannes → Nice | forfait dès 45 €, 30 min | TaxiNeo",
-        metaDescription: "Via A8 en 30 min. Côte d'Azur, Festival, Promenade des Anglais et Croisette en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A8 en 30 min. Côte d'Azur, Festival, Promenade des Anglais et Croisette en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Cannes → Nice",
         heroSubtitle: "Transfert Cannes → Nice au prix fixe de 45 — 60 €. 33 km, 30 min.",
         description: "Cannes — Nice, la Croisette à la Promenade des Anglais en 30 min.",
@@ -96,7 +96,7 @@ export const trajetsCannes: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Cannes → Monaco | forfait dès 70 €, 45 min | TaxiNeo",
-        metaDescription: "Via A8 en 45 min. Principauté, Grand Prix, Casino Monte-Carlo et Riviera en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A8 en 45 min. Principauté, Grand Prix, Casino Monte-Carlo et Riviera en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Cannes → Monaco",
         heroSubtitle: "Transfert Cannes → Monaco au prix fixe de 70 — 90 €. 56 km, 45 min.",
         description: "De la Croisette au Rocher de Monaco en 45 min par l'A8.",
@@ -115,7 +115,7 @@ export const trajetsCannes: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Cannes → Monaco | Fixed price transfer | TaxiNeo",
-        metaDescription: "Via A8, 45 min ride. Principauté, Grand Prix, Casino Monte-Carlo and Riviera en route. Drop-off at your exact address. Door-to-door, luggage included.",
+        metaDescription: "Via A8, 45 min ride. Principauté, Grand Prix, Casino Monte-Carlo and Riviera en route. Drop-off at your exact address, luggage included.",
         heroTitle: "Taxi Cannes → Monaco",
         heroSubtitle: "Cannes → Monaco transfer at €70 — €90. 56 km, 45 min.",
         description: "From the Croisette to the Rock of Monaco in 45 min via A8.",
@@ -226,7 +226,7 @@ export const trajetsCannes: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Cannes → Grasse | forfait dès 30 €, 20 min | TaxiNeo",
-        metaDescription: "Via D6085 en 20 min. Parfumerie, Provence, Vieille ville et Arrière-pays en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via D6085 en 20 min. Parfumerie, Provence, Vieille ville et Arrière-pays en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Cannes → Grasse",
         heroSubtitle: "Transfert Cannes → Grasse au prix fixe de 30 — 40 €. 17 km, 20 min.",
         description: "De la Croisette à la capitale mondiale du parfum en 20 min.",
@@ -245,7 +245,7 @@ export const trajetsCannes: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Cannes → Grasse | Fixed price transfer | TaxiNeo",
-        metaDescription: "Via D6085, 20 min ride. Parfumerie, Provence, Vieille ville and Arrière-pays en route. Drop-off at your exact address. Door-to-door, luggage included.",
+        metaDescription: "Via D6085, 20 min ride. Parfumerie, Provence, Vieille ville and Arrière-pays en route. Drop-off at your exact address, luggage included.",
         heroTitle: "Taxi Cannes → Grasse",
         heroSubtitle: "Cannes → Grasse transfer at €30 — €40. 17 km, 20 min.",
         description: "From the Croisette to the world capital of perfume in 20 min.",

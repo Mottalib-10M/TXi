@@ -47,7 +47,7 @@ export const trajetsBloisVendome: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Blois → Paris | Fixed price from €355 | TaxiNeo",
-        metaDescription: "Via A10, 1h50 ride. Loire, Beauce, Île-de-France and Chambord en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via A10, 1h50 ride. Loire, Beauce, Île-de-France and Chambord en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Blois → Paris",
         heroSubtitle: "Your Blois → Paris transfer at €355 — €430. 185 km, direct via the A10.",
         description: "Paris is 1h50 from Blois via the A10 through the Beauce plain.",
@@ -112,7 +112,7 @@ export const trajetsBloisVendome: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Blois → Tours | Fixed price from €120 | TaxiNeo",
-        metaDescription: "Via A10, 40 min ride. Loire, Châteaux, Amboise and Chenonceau en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via A10, 40 min ride. Loire, Châteaux, Amboise and Chenonceau en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Blois → Tours",
         heroSubtitle: "Your Blois → Tours transfer at €120 — €145. 62 km, heart of the Loire châteaux.",
         description: "Tours, Touraine capital and Loire châteaux gateway, is 40 min from Blois.",
@@ -177,7 +177,7 @@ export const trajetsBloisVendome: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Blois → Orléans | Fixed price from €115 | TaxiNeo",
-        metaDescription: "Via A10, 40 min ride. Loire, Chambord, Sologne and Jeanne d'Arc en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via A10, 40 min ride. Loire, Chambord, Sologne and Jeanne d'Arc en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Blois → Orléans",
         heroSubtitle: "Your Blois → Orléans transfer at €115 — €140. 60 km, between Loire and Sologne.",
         description: "Orléans, Joan of Arc's city on the Loire, is 40 min from Blois via the A10.",

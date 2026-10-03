@@ -28,7 +28,7 @@ export const trajetsAlbiCastres: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Albi → Toulouse | forfait dès 155 €, 50 min | TaxiNeo",
-        metaDescription: "Via A68 en 50 min. Tarn, Cathédrale Sainte-Cécile, Ville rose et Capitole en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A68 en 50 min. Tarn, Cathédrale Sainte-Cécile, Ville rose et Capitole en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Albi → Toulouse",
         heroSubtitle: "Transfert Albi → Toulouse au prix fixe de 155 — 185 €. 80 km, direct par l'A68.",
         description: "Toulouse, la Ville rose, est à 50 min d'Albi par l'autoroute A68.",
@@ -47,7 +47,7 @@ export const trajetsAlbiCastres: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Albi → Toulouse | Fixed price from €155 | TaxiNeo",
-        metaDescription: "Via A68, 50 min ride. Tarn, Cathédrale Sainte-Cécile, Ville rose and Capitole en route. Drop-off at your exact address. Door-to-door, luggage included.",
+        metaDescription: "Via A68, 50 min ride. Tarn, Cathédrale Sainte-Cécile, Ville rose and Capitole en route. Drop-off at your exact address, luggage included.",
         heroTitle: "Taxi Albi → Toulouse",
         heroSubtitle: "Your Albi → Toulouse transfer at €155 — €185. 80 km, via the A68.",
         description: "Toulouse, the Pink City, is 50 min from Albi via the A68 motorway.",
@@ -93,7 +93,7 @@ export const trajetsAlbiCastres: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Albi → Rodez | forfait dès 155 €, 55 min | TaxiNeo",
-        metaDescription: "Via D988 en 55 min. Aveyron, Cathédrale, Musée Soulages et Aubrac en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via D988 en 55 min. Aveyron, Cathédrale, Musée Soulages et Aubrac en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Albi → Rodez",
         heroSubtitle: "Transfert Albi → Rodez au prix fixe de 155 — 185 €. 80 km, route gratuite par la D988.",
         description: "Rodez, capitale de l'Aveyron et cité de Soulages, est à 55 min d'Albi.",
@@ -288,7 +288,7 @@ export const trajetsAlbiCastres: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Albi → Montauban | forfait dès 115 € | TaxiNeo",
-        metaDescription: "Via D999 en 40 min. Tarn-et-Garonne, Ingres, Place Nationale et Pont Vieux en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via D999 en 40 min. Tarn-et-Garonne, Ingres, Place Nationale et Pont Vieux en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Albi → Montauban",
         heroSubtitle: "Transfert Albi → Montauban au prix fixe de 115 — 140 €. 60 km, route gratuite par la D999.",
         description: "Montauban, cité d'Ingres et préfecture du Tarn-et-Garonne, est à 40 min d'Albi.",
@@ -307,7 +307,7 @@ export const trajetsAlbiCastres: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Albi → Montauban | Fixed price from €115 | TaxiNeo",
-        metaDescription: "Via D999, 40 min ride. Tarn-et-Garonne, Ingres, Place Nationale and Pont Vieux en route. Drop-off at your exact address. Door-to-door, luggage included.",
+        metaDescription: "Via D999, 40 min ride. Tarn-et-Garonne, Ingres, Place Nationale and Pont Vieux en route. Drop-off at your exact address, luggage included.",
         heroTitle: "Taxi Albi → Montauban",
         heroSubtitle: "Your Albi → Montauban transfer at €115 — €140. 60 km, toll-free via D999.",
         description: "Montauban, Ingres' birthplace and Tarn-et-Garonne capital, is 40 min from Albi.",

@@ -31,7 +31,7 @@ export const trajetsToulouse: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Toulouse → Albi | forfait dès 155 € | TaxiNeo",
-        metaDescription: "Via A68 en 1h. Cathédrale Sainte-Cécile, Toulouse-Lautrec et Tarn en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A68 en 1h. Cathédrale Sainte-Cécile, Toulouse-Lautrec et Tarn en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Toulouse → Albi",
         heroSubtitle: "Transfert Toulouse → Albi au prix fixe de 155 — 185 €. 80 km par l'A68.",
         description: "Albi, cité épiscopale classée UNESCO, est à 1h de Toulouse par l'autoroute A68 à travers les coteaux du Tarn.",
@@ -50,7 +50,7 @@ export const trajetsToulouse: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Toulouse → Albi | Fixed price from €155 | TaxiNeo",
-        metaDescription: "Via A68, 1 hour ride. Cathédrale Sainte-Cécile, Toulouse-Lautrec and Tarn along the way. Drop-off at your exact address. Door-to-door, luggage included.",
+        metaDescription: "Via A68, 1 hour ride. Cathédrale Sainte-Cécile, Toulouse-Lautrec and Tarn along the way. Drop-off at your exact address, luggage included.",
         heroTitle: "Taxi Toulouse → Albi",
         heroSubtitle: "Your Toulouse → Albi transfer at €155 — €185. 80 km via the A68.",
         description: "Albi, a UNESCO-listed episcopal city, is 1h from Toulouse via the A68 through the Tarn hills.",
@@ -96,7 +96,7 @@ export const trajetsToulouse: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Toulouse → Montauban | 55 km, dès 105 € | TaxiNeo",
-        metaDescription: "Via A62 en 45 min. Tarn-et-Garonne, Place Nationale et Ingres en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A62 en 45 min. Tarn-et-Garonne, Place Nationale et Ingres en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Toulouse → Montauban",
         heroSubtitle: "Transfert Toulouse → Montauban au prix fixe de 105 — 130 €. 55 km par l'A62.",
         description: "Montauban, préfecture du Tarn-et-Garonne et ville d'Ingres, est à 45 minutes de Toulouse par l'A62.",
@@ -291,7 +291,7 @@ export const trajetsToulouse: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Toulouse → Andorre-la-Vieille | 185 km, 280 € | TaxiNeo",
-        metaDescription: "Via A66 puis N20 puis N22 en 2h30. N20, Ariège, Pas de la Case et Duty-free en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A66 puis N20 puis N22 en 2h30. N20, Ariège, Pas de la Case et Duty-free en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Toulouse → Andorre",
         heroSubtitle: "Transfert Toulouse → Andorre-la-Vieille au prix fixe de 355 — 430 €. 185 km via l'A66 et la N20.",
         description: "Andorre, principauté pyrénéenne entre la France et l'Espagne, est à 2h30 de Toulouse via l'Ariège et le col d'Envalira.",
@@ -505,7 +505,7 @@ export const trajetsToulouse: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Toulouse → Castres | 75 km, from €145 | TaxiNeo",
-        metaDescription: "Via A68 then N126, 55 min ride. Musée Goya, Tarn and Maisons sur l'Agout along the way. Drop-off at your exact address. Door-to-door, luggage included.",
+        metaDescription: "Via A68 then N126, 55 min ride. Musée Goya, Tarn and Maisons sur l'Agout along the way. Drop-off at your exact address, luggage included.",
         heroTitle: "Taxi Toulouse — Castres",
         heroSubtitle: "City of pastel and the Goya Museum",
         description: "Taxi transfer from Toulouse to Castres, a Tarn sub-prefecture housing France's most important Hispanic art museum.",
@@ -1137,7 +1137,7 @@ export const trajetsToulouse: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Toulouse → Perpignan | 200 km, dès 385 € | TaxiNeo",
-        metaDescription: "Via A61 puis A9 en 2h. Capitale catalane, Le Castillet et Canigou en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A61 puis A9 en 2h. Capitale catalane, Le Castillet et Canigou en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Toulouse → Perpignan",
         heroSubtitle: "Transfert Toulouse → Perpignan au prix fixe de 385 — 465 €. 200 km par l'A61 et l'A9.",
         description: "Perpignan, capitale catalane du Roussillon, est à 2h de Toulouse via l'autoroute des Deux Mers puis l'A9 La Languedocienne.",
@@ -1269,7 +1269,7 @@ export const trajetsToulouse: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Toulouse → Castelnaudary | 60 km, dès 115 € | TaxiNeo",
-        metaDescription: "Via A61 en 45 min. Cassoulet, Canal du Midi, Grand Bassin et Lauragais en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A61 en 45 min. Cassoulet, Canal du Midi, Grand Bassin et Lauragais en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Toulouse → Castelnaudary",
         heroSubtitle: "Transfert Toulouse → Castelnaudary au prix fixe de 115 — 140 €. 60 km par l'A61.",
         description: "Castelnaudary, capitale mondiale du cassoulet, est à 45 min de Toulouse par l'A61 au cœur du Lauragais.",
@@ -1335,7 +1335,7 @@ export const trajetsToulouse: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Toulouse → Mazamet | 95 km, dès 185 € | TaxiNeo",
-        metaDescription: "Via A68 puis D612 en 1h10. Montagne Noire, Hautpoul et Délainage en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A68 puis D612 en 1h10. Montagne Noire, Hautpoul et Délainage en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Toulouse → Mazamet",
         heroSubtitle: "Transfert Toulouse → Mazamet au prix fixe de 185 — 220 €. 95 km via l'A68 et la D612.",
         description: "Mazamet, cité du délainage au pied de la Montagne Noire, est à 1h10 de Toulouse par l'A68 puis la D612 via Castres.",
@@ -1599,7 +1599,7 @@ export const trajetsToulouse: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Toulouse → Saint-Gaudens | 95 km, dès 185 € | TaxiNeo",
-        metaDescription: "Via A64 en 1h05. Comminges, Pré-Pyrénées, Collégiale et Valentin Abeille en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A64 en 1h05. Comminges, Pré-Pyrénées, Collégiale et Valentin Abeille en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Toulouse → Saint-Gaudens",
         heroSubtitle: "Transfert Toulouse → Saint-Gaudens au prix fixe de 185 — 220 €. 95 km par l'A64.",
         description: "Saint-Gaudens, sous-préfecture du Comminges au pied des Pyrénées, est à 1h05 de Toulouse par l'autoroute A64.",
@@ -1618,7 +1618,7 @@ export const trajetsToulouse: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Toulouse → Saint-Gaudens | 95 km, from €185 | TaxiNeo",
-        metaDescription: "Via A64, 1h05 ride. Comminges, Pré-Pyrénées, Collégiale and Valentin Abeille en route. Drop-off at your exact address. Door-to-door, luggage included.",
+        metaDescription: "Via A64, 1h05 ride. Comminges, Pré-Pyrénées, Collégiale and Valentin Abeille en route. Drop-off at your exact address, luggage included.",
         heroTitle: "Taxi Toulouse → Saint-Gaudens",
         heroSubtitle: "Your Toulouse → Saint-Gaudens transfer at €185 — €220. 95 km via the A64.",
         description: "Saint-Gaudens, the Comminges sub-prefecture at the foot of the Pyrenees, is 1h05 from Toulouse via the A64 motorway.",
@@ -1665,7 +1665,7 @@ export const trajetsToulouse: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Toulouse → Muret | forfait dès 45 € | TaxiNeo",
-        metaDescription: "Via A64 en 25 min. Garonne, Bataille de Muret 1213, Clément Ader et Marché en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A64 en 25 min. Garonne, Bataille de Muret 1213, Clément Ader et Marché en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Toulouse → Muret",
         heroSubtitle: "Transfert Toulouse → Muret au prix fixe de 45 — 55 €. 22 km par l'A64.",
         description: "Muret, troisième ville de Haute-Garonne sur les bords de la Garonne, est à 25 min de Toulouse par l'A64.",
@@ -1684,7 +1684,7 @@ export const trajetsToulouse: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Toulouse → Muret | Fixed price from €45 | TaxiNeo",
-        metaDescription: "Via A64, 25 min ride. Garonne, Bataille de Muret 1213, Clément Ader and Marché en route. Drop-off at your exact address. Door-to-door, luggage included.",
+        metaDescription: "Via A64, 25 min ride. Garonne, Bataille de Muret 1213, Clément Ader and Marché en route. Drop-off at your exact address, luggage included.",
         heroTitle: "Taxi Toulouse → Muret",
         heroSubtitle: "Your Toulouse → Muret transfer at €45 — €55. 22 km via the A64.",
         description: "Muret, the third-largest town in Haute-Garonne on the banks of the Garonne, is 25 min from Toulouse via the A64.",
@@ -1731,7 +1731,7 @@ export const trajetsToulouse: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Toulouse → Cahors | 115 km, dès 220 € | TaxiNeo",
-        metaDescription: "Via A62 en 1h15. Pont Valentré, Vin de Cahors Malbec, Lot et Saint-Jacques en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A62 en 1h15. Pont Valentré, Vin de Cahors Malbec, Lot et Saint-Jacques en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Toulouse → Cahors",
         heroSubtitle: "Transfert Toulouse → Cahors au prix fixe de 220 — 270 €. 115 km par l'A62.",
         description: "Cahors, cité du pont Valentré et du Malbec noir, est à 1h15 de Toulouse par l'A62 à travers le Quercy.",
@@ -1750,7 +1750,7 @@ export const trajetsToulouse: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Toulouse → Cahors | 115 km, from €220 | TaxiNeo",
-        metaDescription: "Via A62, 1h15 ride. Pont Valentré, Vin de Cahors Malbec, Lot and Saint-Jacques en route. Drop-off at your exact address. Door-to-door, luggage included.",
+        metaDescription: "Via A62, 1h15 ride. Pont Valentré, Vin de Cahors Malbec, Lot and Saint-Jacques en route. Drop-off at your exact address, luggage included.",
         heroTitle: "Taxi Toulouse → Cahors",
         heroSubtitle: "Your Toulouse → Cahors transfer at €220 — €270. 115 km via the A62.",
         description: "Cahors, city of the Pont Valentre and black Malbec wine, is 1h15 from Toulouse via the A62 through the Quercy.",
@@ -1797,7 +1797,7 @@ export const trajetsToulouse: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Toulouse → Agen | 115 km, dès 220 € | TaxiNeo",
-        metaDescription: "Via A62 en 1h15. Pruneaux d'Agen, Canal de Garonne, Pont-canal et Rugby en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A62 en 1h15. Pruneaux d'Agen, Canal de Garonne, Pont-canal et Rugby en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Toulouse → Agen",
         heroSubtitle: "Transfert Toulouse → Agen au prix fixe de 220 — 270 €. 115 km par l'A62.",
         description: "Agen, capitale du pruneau et du rugby lot-et-garonnais, est à 1h15 de Toulouse par l'autoroute A62.",
@@ -1929,7 +1929,7 @@ export const trajetsToulouse: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Toulouse → Millau | 180 km, dès 345 € | TaxiNeo",
-        metaDescription: "Via A68 puis A75 en 1h55. Viaduc de Millau, Gorges du Tarn et Roquefort en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A68 puis A75 en 1h55. Viaduc de Millau, Gorges du Tarn et Roquefort en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Toulouse → Millau",
         heroSubtitle: "Transfert Toulouse → Millau au prix fixe de 345 — 420 €. 180 km par l'A68 et l'A75.",
         description: "Millau, cité du viaduc et porte des gorges du Tarn, est à 1h55 de Toulouse par l'A68 puis l'A75.",
@@ -2057,7 +2057,7 @@ export const trajetsToulouse: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Toulouse → Villefranche-de-Rouergue | 145 km | TaxiNeo",
-        metaDescription: "Via A68 puis D922 en 1h45. Bastide royale, Chartreuse et Aveyron en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A68 puis D922 en 1h45. Bastide royale, Chartreuse et Aveyron en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Toulouse → Villefranche-de-Rouergue",
         heroSubtitle: "Transfert Toulouse → Villefranche-de-Rouergue au prix fixe de 280 — 335 €. 145 km par l'A68.",
         description: "Villefranche-de-Rouergue, bastide royale de l'Aveyron avec sa chartreuse Saint-Sauveur, est à 1h45 de Toulouse.",
@@ -2307,7 +2307,7 @@ export const trajetsToulouse: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Toulouse → Lectoure | 115 km, dès 220 € | TaxiNeo",
-        metaDescription: "Via A62 puis D7 en 1h20. Cité médiévale, Thermalisme et Gers en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A62 puis D7 en 1h20. Cité médiévale, Thermalisme et Gers en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Toulouse → Lectoure",
         heroSubtitle: "Transfert Toulouse → Lectoure au prix fixe de 220 — 270 €. 115 km par l'A62 et la D7.",
         description: "Lectoure, cité médiévale perchée sur un éperon rocheux dominant la vallée du Gers, est à 1h20 de Toulouse.",
@@ -2375,7 +2375,7 @@ export const trajetsToulouse: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Toulouse → Lavaur | 50 km, dès 95 € | TaxiNeo",
-        metaDescription: "Via A68 en 40 min. Cathédrale Saint-Alain, Pays de Cocagne et Tarn en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A68 en 40 min. Cathédrale Saint-Alain, Pays de Cocagne et Tarn en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Toulouse → Lavaur",
         heroSubtitle: "Transfert Toulouse → Lavaur au prix fixe de 95 — 120 €. 50 km par l'A68.",
         description: "Lavaur, cité cathare au cœur du Pays de Cocagne dans le Tarn, est à seulement 40 minutes de Toulouse.",
@@ -2511,7 +2511,7 @@ export const trajetsToulouse: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Toulouse → Souillac | 170 km, dès 325 € | TaxiNeo",
-        metaDescription: "Via A62 puis A20 en 1h50. Abbaye Sainte-Marie, Dordogne et Périgord noir en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A62 puis A20 en 1h50. Abbaye Sainte-Marie, Dordogne et Périgord noir en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Toulouse → Souillac",
         heroSubtitle: "Transfert Toulouse → Souillac au prix fixe de 325 — 395 €. 170 km par l'A62 et l'A20.",
         description: "Souillac, porte du Périgord noir au confluent de la Dordogne et de la Borrèze, est à 1h50 de Toulouse.",

@@ -20,7 +20,7 @@ export const trajetsLyonPart4: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Lyon → Avignon | Prix fixe dès 440 € | TaxiNeo",
-        metaDescription: "Via A7 en undefined min. Vallée du Rhône, Provence, Festival et TGV en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A7 en undefined min. Vallée du Rhône, Provence, Festival et TGV en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Lyon → Avignon",
         heroSubtitle: "Transfert Lyon → Avignon au prix fixe de 440 — 535 €. 230 km via l'A7, la vallée du Rhône.",
         description: "Lyon et Avignon sont reliées par l'A7 qui descend la vallée du Rhône, l'un des plus beaux corridors routiers de France.",
@@ -77,7 +77,7 @@ export const trajetsLyonPart4: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Lyon → Montpellier | 305 km, dès 585 € | TaxiNeo",
-        metaDescription: "Via A7/A9 en undefined min. Méditerranée, Languedoc, Université et Plages en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A7/A9 en undefined min. Méditerranée, Languedoc, Université et Plages en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Lyon → Montpellier",
         heroSubtitle: "Transfert Lyon → Montpellier au prix fixe de 585 — 705 €. 305 km via l'A7 et l'A9.",
         description: "Montpellier, ville méditerranéenne dynamique, est accessible en 3h depuis Lyon par l'A7 puis l'A9.",
@@ -96,7 +96,7 @@ export const trajetsLyonPart4: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Lyon → Montpellier | 305 km, from €585 | TaxiNeo",
-        metaDescription: "Via A7/A9, undefined min ride. Méditerranée, Languedoc, Université and Plages en route. Drop-off at your exact address. Door-to-door, luggage included.",
+        metaDescription: "Via A7/A9, undefined min ride. Méditerranée, Languedoc, Université and Plages en route. Drop-off at your exact address, luggage included.",
         heroTitle: "Taxi Lyon → Montpellier",
         heroSubtitle: "Lyon → Montpellier transfer at €585 — €705. 305 km via A7 and A9.",
         description: "Montpellier, France's fastest-growing Mediterranean city, is 3h from Lyon via A7/A9.",
@@ -134,7 +134,7 @@ export const trajetsLyonPart4: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Lyon → Nice | 470 km A7/A8, dès 895 € | TaxiNeo",
-        metaDescription: "Via A7/A8 en undefined min. Côte d'Azur, Provence, Riviera et Aéroport Nice en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A7/A8 en undefined min. Côte d'Azur, Provence, Riviera et Aéroport Nice en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Lyon → Nice",
         heroSubtitle: "Transfert Lyon → Nice au prix fixe de 895 — 1085 €. 470 km via l'A7/A8, direction la Côte d'Azur.",
         description: "De Lyon à Nice, le trajet traverse toute la Provence avant d'atteindre la Côte d'Azur et la Promenade des Anglais.",
@@ -248,7 +248,7 @@ export const trajetsLyonPart4: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Lyon → Bordeaux | 555 km, dès 1060 € | TaxiNeo",
-        metaDescription: "Via A89 en undefined min. Massif central, Périgord, Vignobles et Direct en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A89 en undefined min. Massif central, Périgord, Vignobles et Direct en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Lyon → Bordeaux",
         heroSubtitle: "Transfert Lyon → Bordeaux au prix fixe de 1060 — 1285 €. 555 km via l'A89, traversée du Massif central.",
         description: "L'A89 (La Transversale) relie directement Lyon à Bordeaux en traversant le Massif central, sans passer par Paris.",

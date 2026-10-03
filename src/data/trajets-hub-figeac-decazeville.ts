@@ -223,7 +223,7 @@ export const trajetsFigeacDecazeville: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Figeac → Aurillac | 70 km, dès 135 € | TaxiNeo",
-        metaDescription: "Via D922/N122 en 55 min. N122, Vallée du Lot, Cantal et Volcans d'Auvergne en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via D922/N122 en 55 min. N122, Vallée du Lot, Cantal et Volcans d'Auvergne en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Figeac → Aurillac",
         heroSubtitle: "Transfert Figeac → Aurillac au prix fixe de 135 — 165 €. 70 km entre Quercy et Cantal, route gratuite.",
         description: "Aurillac, préfecture du Cantal et porte des volcans d'Auvergne, est à 55 minutes de Figeac.",
@@ -242,7 +242,7 @@ export const trajetsFigeacDecazeville: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Figeac → Aurillac | 70 km, from €135 | TaxiNeo",
-        metaDescription: "Via D922/N122, 55 min ride. N122, Vallée du Lot, Cantal and Volcans d'Auvergne en route. Drop-off at your exact address. Door-to-door, luggage included.",
+        metaDescription: "Via D922/N122, 55 min ride. N122, Vallée du Lot, Cantal and Volcans d'Auvergne en route. Drop-off at your exact address, luggage included.",
         heroTitle: "Taxi Figeac → Aurillac",
         heroSubtitle: "Your Figeac → Aurillac transfer at €135 — €165. 70 km between Quercy and Cantal, toll-free.",
         description: "Aurillac, gateway to the Auvergne volcanoes, is 55 minutes from Figeac.",
@@ -288,7 +288,7 @@ export const trajetsFigeacDecazeville: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Decazeville → Rodez | 35 km, dès 70 € | TaxiNeo",
-        metaDescription: "Via D840 en 30 min. Bassin houiller, Aveyron, Musée Soulages et Conques en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via D840 en 30 min. Bassin houiller, Aveyron, Musée Soulages et Conques en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Decazeville → Rodez",
         heroSubtitle: "Transfert Decazeville → Rodez au prix fixe de 70 — 85 €. 35 km, direct par la D840, route gratuite.",
         description: "Rodez, préfecture de l'Aveyron et cité du musée Soulages, est à seulement 30 minutes de Decazeville.",

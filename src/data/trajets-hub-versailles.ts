@@ -288,7 +288,7 @@ export const trajetsVersailles: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Versailles → Chartres | 80 km, dès 155 € | TaxiNeo",
-        metaDescription: "Via A12 / N10 en 1h. Cathédrale de Chartres, N10, Rambouillet et Beauce en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A12 / N10 en 1h. Cathédrale de Chartres, N10, Rambouillet et Beauce en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Versailles → Chartres",
         heroSubtitle: "Transfert Versailles → Chartres au prix fixe de 155 — 185 €. 80 km, 1h.",
         description: "De Versailles à Chartres et sa cathédrale gothique en 1 heure.",

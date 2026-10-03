@@ -161,7 +161,7 @@ export const trajetsDijonClermont: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Dijon → Chalon-sur-Saône | 70 km, dès 135 € | TaxiNeo",
-        metaDescription: "Via A31 puis A6 en 50 min. Saône, Nicéphore Niépce et Côte chalonnaise en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A31 puis A6 en 50 min. Saône, Nicéphore Niépce et Côte chalonnaise en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Dijon → Chalon-sur-Saône",
         heroSubtitle: "Transfert Dijon → Chalon-sur-Saône au prix fixe de 135 — 165 €. 70 km par l'A31 et l'A6.",
         description: "Chalon-sur-Saône, deuxième ville de Bourgogne, est un important carrefour fluvial sur la Saône, connue pour le musée Nicéphore Niépce dédié à l'invention de la photographie et pour les vignobles de la Côte chalonnaise.",
@@ -291,7 +291,7 @@ export const trajetsDijonClermont: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Dijon → Besançon | 95 km, dès 185 € | TaxiNeo",
-        metaDescription: "Via A39 puis A36 en 1h05. Citadelle Vauban, UNESCO, Doubs et Horlogerie en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A39 puis A36 en 1h05. Citadelle Vauban, UNESCO, Doubs et Horlogerie en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Dijon → Besançon",
         heroSubtitle: "Transfert Dijon → Besançon au prix fixe de 185 — 220 €. 95 km par l'A39 et l'A36.",
         description: "Besançon, capitale de la Franche-Comté, est une ville d'art et d'histoire inscrite au patrimoine mondial de l'UNESCO pour sa citadelle Vauban, lovée dans un méandre spectaculaire du Doubs.",
@@ -356,7 +356,7 @@ export const trajetsDijonClermont: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Dijon → Mâcon | 125 km, dès 240 €, 1h20 | TaxiNeo",
-        metaDescription: "Via A31 puis A6 en 1h20. Saône, Roche de Solutré et Beaujolais en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A31 puis A6 en 1h20. Saône, Roche de Solutré et Beaujolais en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Dijon → Mâcon",
         heroSubtitle: "Transfert Dijon → Mâcon au prix fixe de 240 — 290 €. 125 km par l'A31 et l'A6.",
         description: "Mâcon, préfecture de Saône-et-Loire, est une ville baignée par la Saône, porte d'entrée du Beaujolais et du Mâconnais viticole, dominée par la célèbre Roche de Solutré.",

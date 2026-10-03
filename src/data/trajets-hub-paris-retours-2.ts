@@ -20,7 +20,7 @@ export const trajetsParisRetours2: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Nice → Paris | 930 km, 9h, dès 1 100 € | TaxiNeo",
-        metaDescription: "Via A8 / A7 / A6 en undefined min. Côte d'Azur et Vallée du Rhône en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A8 / A7 / A6 en undefined min. Côte d'Azur et Vallée du Rhône en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Nice → Paris",
         heroSubtitle: "Transfert Nice → Paris au prix fixe de 1 100 — 1 400 €. 930 km en véhicule privé.",
         description: "Le transfert Nice — Paris relie la Côte d'Azur à la capitale en toute sérénité.",
@@ -77,7 +77,7 @@ export const trajetsParisRetours2: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Bordeaux → Paris | 585 km, dès 1115 € | TaxiNeo",
-        metaDescription: "Via A10 en undefined min. Vignobles, Val de Loire et Autoroute directe en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A10 en undefined min. Vignobles, Val de Loire et Autoroute directe en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Bordeaux → Paris",
         heroSubtitle: "Transfert Bordeaux → Paris au prix fixe de 1115 — 1350 €. 585 km via l'A10.",
         description: "Le trajet Bordeaux — Paris emprunte l'A10, l'autoroute l'Aquitaine, en 6 heures.",
@@ -134,7 +134,7 @@ export const trajetsParisRetours2: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Toulouse → Paris | 680 km, dès 800 € | TaxiNeo",
-        metaDescription: "Via A20 / A71 en undefined min. Massif Central, Cahors et Limoges en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A20 / A71 en undefined min. Massif Central, Cahors et Limoges en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Toulouse → Paris",
         heroSubtitle: "Transfert Toulouse → Paris au prix fixe de 800 — 1 000 €. 680 km via l'A20.",
         description: "Toulouse — Paris traverse le Massif Central par l'A20, une route panoramique.",
@@ -191,7 +191,7 @@ export const trajetsParisRetours2: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Strasbourg → Paris | 490 km, dès 935 € | TaxiNeo",
-        metaDescription: "Via A4 en undefined min. Champagne, Reims, Metz et Grand Est en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A4 en undefined min. Champagne, Reims, Metz et Grand Est en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Strasbourg → Paris",
         heroSubtitle: "Transfert Strasbourg → Paris au prix fixe de 935 — 1135 €. 490 km via l'A4.",
         description: "Strasbourg — Paris emprunte l'A4, l'autoroute de l'Est, en 4h40.",
@@ -210,7 +210,7 @@ export const trajetsParisRetours2: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Strasbourg → Paris | 490 km, from €935 | TaxiNeo",
-        metaDescription: "Via A4, undefined min ride. Champagne, Reims, Metz and Grand Est en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via A4, undefined min ride. Champagne, Reims, Metz and Grand Est en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Strasbourg → Paris",
         heroSubtitle: "Strasbourg → Paris transfer at €935 — €1135. 490 km via A4.",
         description: "Strasbourg to Paris via A4 through Lorraine and Champagne.",
@@ -248,7 +248,7 @@ export const trajetsParisRetours2: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Nantes → Paris | Prix fixe dès 735 € | TaxiNeo",
-        metaDescription: "Via A11 en undefined min. Val de Loire, Angers, Le Mans et Direct en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A11 en undefined min. Val de Loire, Angers, Le Mans et Direct en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Nantes → Paris",
         heroSubtitle: "Transfert Nantes → Paris au prix fixe de 735 — 890 €. 385 km via l'A11.",
         description: "Nantes — Paris emprunte l'A11, l'autoroute de l'Océane, en 4 heures.",

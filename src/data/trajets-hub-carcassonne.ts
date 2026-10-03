@@ -28,7 +28,7 @@ export const trajetsCarcassonne: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Carcassonne → Toulouse | 95 km, dès 185 € | TaxiNeo",
-        metaDescription: "Via A61 en 55 min. Cité médiévale, Ville rose, Canal du Midi et Cathares en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A61 en 55 min. Cité médiévale, Ville rose, Canal du Midi et Cathares en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Carcassonne → Toulouse",
         heroSubtitle: "Transfert Carcassonne → Toulouse au prix fixe de 185 — 220 €. 95 km, direct par l'A61.",
         description: "Toulouse, la Ville rose, est à 55 min de Carcassonne par l'A61.",
@@ -47,7 +47,7 @@ export const trajetsCarcassonne: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Carcassonne → Toulouse | 95 km, from €185 | TaxiNeo",
-        metaDescription: "Via A61, 55 min ride. Cité médiévale, Ville rose, Canal du Midi and Cathares en route. Drop-off at your exact address. Door-to-door, luggage included.",
+        metaDescription: "Via A61, 55 min ride. Cité médiévale, Ville rose, Canal du Midi and Cathares en route. Drop-off at your exact address, luggage included.",
         heroTitle: "Taxi Carcassonne → Toulouse",
         heroSubtitle: "Your Carcassonne → Toulouse transfer at €185 — €220. 95 km, via the A61.",
         description: "Toulouse, the Pink City, is 55 min from Carcassonne via the A61.",
@@ -93,7 +93,7 @@ export const trajetsCarcassonne: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Carcassonne → Montpellier | 155 km, dès 295 € | TaxiNeo",
-        metaDescription: "Via A61/A9 en 1h35. Languedoc, UNESCO, Méditerranée et Faculté de médecine en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A61/A9 en 1h35. Languedoc, UNESCO, Méditerranée et Faculté de médecine en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Carcassonne → Montpellier",
         heroSubtitle: "Transfert Carcassonne → Montpellier au prix fixe de 295 — 360 €. 155 km, traversée du Languedoc.",
         description: "Montpellier, capitale du Languedoc, est à 1h35 de Carcassonne par l'A61 et l'A9.",
@@ -112,7 +112,7 @@ export const trajetsCarcassonne: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Carcassonne → Montpellier | 155 km, from €295 | TaxiNeo",
-        metaDescription: "Via A61/A9, 1h35 ride. Languedoc, UNESCO, Méditerranée and Faculté de médecine en route. Drop-off at your exact address. Door-to-door, luggage included.",
+        metaDescription: "Via A61/A9, 1h35 ride. Languedoc, UNESCO, Méditerranée and Faculté de médecine en route. Drop-off at your exact address, luggage included.",
         heroTitle: "Taxi Carcassonne → Montpellier",
         heroSubtitle: "Your Carcassonne → Montpellier transfer at €295 — €360. 155 km, across the Languedoc.",
         description: "Montpellier, Languedoc capital, is 1h35 from Carcassonne via the A61 and A9.",
@@ -158,7 +158,7 @@ export const trajetsCarcassonne: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Carcassonne → Perpignan | 110 km, dès 210 € | TaxiNeo",
-        metaDescription: "Via A61 en 1h05. Catalogne, Pays cathare, Canigou et Castillet en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A61 en 1h05. Catalogne, Pays cathare, Canigou et Castillet en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Carcassonne → Perpignan",
         heroSubtitle: "Transfert Carcassonne → Perpignan au prix fixe de 210 — 255 €. 110 km, du pays cathare à la Catalogne.",
         description: "Perpignan, capitale de la Catalogne nord, est à 1h05 de Carcassonne par l'A61.",

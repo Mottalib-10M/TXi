@@ -226,7 +226,7 @@ export const trajetsCaenRouen2: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Caen → Mont-Saint-Michel | 130 km, dès 250 € | TaxiNeo",
-        metaDescription: "Via A84 en 1h30. Merveille de l'Occident, Abbaye, Baie et UNESCO en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A84 en 1h30. Merveille de l'Occident, Abbaye, Baie et UNESCO en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Caen → Mont-Saint-Michel",
         heroSubtitle: "Transfert Caen → Mont-Saint-Michel au prix fixe de 250 — 305 €. 130 km par l'A84 gratuite.",
         description: "Le Mont-Saint-Michel, Merveille de l'Occident et site UNESCO parmi les plus visités de France, est à 1h30 de Caen par l'autoroute A84 gratuite.",
@@ -295,7 +295,7 @@ export const trajetsCaenRouen2: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Rouen → Paris | 135 km, dès 260 €, 1h30 | TaxiNeo",
-        metaDescription: "Via A13 en 1h30. Vallée de la Seine, La Défense et Porte de Saint-Cloud en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A13 en 1h30. Vallée de la Seine, La Défense et Porte de Saint-Cloud en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Rouen → Paris",
         heroSubtitle: "Transfert Rouen → Paris au prix fixe de 260 — 315 €. 135 km par l'A13.",
         description: "Paris, la capitale, est à 1h30 de Rouen par l'autoroute A13 qui longe la vallée de la Seine.",
@@ -490,7 +490,7 @@ export const trajetsCaenRouen2: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Rouen → Vernon | forfait dès 115 €, 45 min | TaxiNeo",
-        metaDescription: "Via A13 en 45 min. Giverny, Monet, Impressionnisme et Vallée de la Seine en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A13 en 45 min. Giverny, Monet, Impressionnisme et Vallée de la Seine en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Rouen → Vernon",
         heroSubtitle: "Transfert Rouen → Vernon au prix fixe de 115 — 140 €. 60 km par l'A13, porte d'entrée de Giverny.",
         description: "Vernon, porte d'entrée de Giverny et des jardins de Claude Monet, est à 45 minutes de Rouen par l'A13.",
@@ -509,7 +509,7 @@ export const trajetsCaenRouen2: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Rouen → Vernon-Giverny | Fixed price from €115 | TaxiNeo",
-        metaDescription: "Via A13, 45 min ride. Giverny, Monet, Impressionnisme and Vallée de la Seine en route. Drop-off at your exact address. Door-to-door, luggage included.",
+        metaDescription: "Via A13, 45 min ride. Giverny, Monet, Impressionnisme and Vallée de la Seine en route. Drop-off at your exact address, luggage included.",
         heroTitle: "Taxi Rouen → Vernon",
         heroSubtitle: "Your Rouen → Vernon transfer at €115 — €140. 60 km via the A13, gateway to Giverny.",
         description: "Vernon, gateway to Giverny and Claude Monet's gardens, is 45 minutes from Rouen via the A13.",

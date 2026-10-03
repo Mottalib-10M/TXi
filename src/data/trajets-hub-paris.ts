@@ -167,7 +167,7 @@ export const trajetsParis: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Paris → Saclay | forfait dès 55 €, 40 min | TaxiNeo",
-        metaDescription: "Via A6 puis N118 en 40 min. Plateau de Saclay, Polytechnique et CEA en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A6 puis N118 en 40 min. Plateau de Saclay, Polytechnique et CEA en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Paris → Saclay",
         heroSubtitle: "Votre trajet Paris → Saclay au prix fixe de 55 — 65 €. Chauffeur professionnel, réservation en ligne 24h/24.",
         description: "Le plateau de Saclay est devenu le pôle scientifique et technologique majeur de la France, regroupant l'École Polytechnique, CentraleSupélec, le CEA et de nombreuses entreprises innovantes. Le taxi est souvent la solution la plus pratique pour rejoindre ce campus mal desservi par les transports en commun.",
@@ -186,7 +186,7 @@ export const trajetsParis: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Paris → Saclay | Fixed price from €55 | TaxiNeo",
-        metaDescription: "Via A6 then N118, 40 min ride. Plateau de Saclay, Polytechnique and CEA along the way. Drop-off at your exact address. Door-to-door, luggage included.",
+        metaDescription: "Via A6 then N118, 40 min ride. Plateau de Saclay, Polytechnique and CEA along the way. Drop-off at your exact address, luggage included.",
         heroTitle: "Taxi Paris → Saclay",
         heroSubtitle: "Your Paris → Saclay ride at a fixed price of €55 — €65. Professional driver, online booking 24/7.",
         description: "The Saclay plateau has become France's major scientific and technological hub, home to École Polytechnique, CentraleSupélec, CEA and many innovative companies. A taxi is often the most practical solution to reach this campus, poorly served by public transport.",
@@ -904,7 +904,7 @@ export const trajetsParis: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Paris → Pontoise | forfait dès 58 € | TaxiNeo",
-        metaDescription: "Via A15 en 42 min. Vallée de l'Oise et Cathédrale Saint-Maclou en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A15 en 42 min. Vallée de l'Oise et Cathédrale Saint-Maclou en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Paris → Pontoise",
         heroSubtitle: "Votre trajet Paris → Pontoise au prix fixe de 58 — 78 €. Chauffeur professionnel, réservation en ligne 24h/24.",
         description: "Pontoise, sous-préfecture du Val-d'Oise et capitale historique du Vexin français, est une ville d'art et d'histoire perchée sur les hauteurs de l'Oise. Lieu de séjour de Camille Pissarro, elle offre un patrimoine exceptionnel à seulement 42 minutes de Paris.",

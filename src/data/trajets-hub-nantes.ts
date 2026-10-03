@@ -291,7 +291,7 @@ export const trajetsNantes: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Nantes → Ancenis | forfait dès 80 € | TaxiNeo",
-        metaDescription: "Via N23/A11 en 35 min. Loire, Vignoble, Pont suspendu et Château d'Ancenis en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via N23/A11 en 35 min. Loire, Vignoble, Pont suspendu et Château d'Ancenis en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Nantes → Ancenis",
         heroSubtitle: "Transfert Nantes → Ancenis au prix fixe de 80 — 95 €. 40 km le long de la Loire, sans péage.",
         description: "Ancenis, cité ligérienne historique aux portes de l'Anjou, est à 35 minutes de Nantes le long de la Loire.",
@@ -310,7 +310,7 @@ export const trajetsNantes: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Nantes → Ancenis | Fixed price from €80 | TaxiNeo",
-        metaDescription: "Via N23/A11, 35 min ride. Loire, Vignoble, Pont suspendu and Château d'Ancenis en route. Drop-off at your exact address. Door-to-door, luggage included.",
+        metaDescription: "Via N23/A11, 35 min ride. Loire, Vignoble, Pont suspendu and Château d'Ancenis en route. Drop-off at your exact address, luggage included.",
         heroTitle: "Taxi Nantes → Ancenis",
         heroSubtitle: "Your Nantes → Ancenis transfer at €80 — €95. 40 km along the Loire, toll-free.",
         description: "Ancenis, a historic Loire town on the Anjou border, is 35 minutes from Nantes along the Loire.",
@@ -505,7 +505,7 @@ export const trajetsNantes: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Nantes → Paris | Fixed price from €735 | TaxiNeo",
-        metaDescription: "Via A11, 4 hours ride. Le Mans, Chartres and Porte d'Orléans along the way. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via A11, 4 hours ride. Le Mans, Chartres and Porte d'Orléans along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Nantes → Paris",
         heroSubtitle: "Your Nantes → Paris transfer at €735 — €890. 385 km via the A11, tolls included.",
         description: "Paris is 4 hours from Nantes via the A11 (L'Océane), a smooth motorway through Le Mans and Chartres.",

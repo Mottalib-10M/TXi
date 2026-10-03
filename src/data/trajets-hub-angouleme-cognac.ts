@@ -46,7 +46,7 @@ export const trajetsAngoulemeCognac: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Angoulême → Bordeaux | 120 km, from €230 | TaxiNeo",
-        metaDescription: "Via A10, 1h15 ride. Charente, Vignobles, Gironde and Garonne en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via A10, 1h15 ride. Charente, Vignobles, Gironde and Garonne en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Angoulême → Bordeaux",
         heroSubtitle: "Your Angoulême → Bordeaux transfer at €230 — €280. 120 km, from comic strip capital to world wine capital.",
         description: "Bordeaux, world wine capital and dynamic Nouvelle-Aquitaine metropolis, is 1h15 from Angoulême via the A10.",
@@ -91,7 +91,7 @@ export const trajetsAngoulemeCognac: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Angoulême → Paris | 445 km, dès 850 € | TaxiNeo",
-        metaDescription: "Via A10 en 4h20. TGV alternative, Porte-à-porte, Charente et Île-de-France en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A10 en 4h20. TGV alternative, Porte-à-porte, Charente et Île-de-France en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Angoulême → Paris",
         heroSubtitle: "Transfert Angoulême → Paris au prix fixe de 850 — 1030 €. 445 km, trajet direct porte-à-porte.",
         description: "Paris, capitale de la France, est à 4h20 d'Angoulême par l'autoroute A10.",
@@ -110,7 +110,7 @@ export const trajetsAngoulemeCognac: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Angoulême → Paris | 445 km, from €850 | TaxiNeo",
-        metaDescription: "Via A10, 4h20 ride. TGV alternative, Porte-à-porte, Charente and Île-de-France en route. Drop-off at your exact address. Door-to-door, luggage included.",
+        metaDescription: "Via A10, 4h20 ride. TGV alternative, Porte-à-porte, Charente and Île-de-France en route. Drop-off at your exact address, luggage included.",
         heroTitle: "Taxi Angoulême → Paris",
         heroSubtitle: "Your Angoulême → Paris transfer at €850 — €1030. 445 km, direct door-to-door service.",
         description: "Paris, capital of France, is 4h20 from Angoulême via the A10 motorway.",
@@ -155,7 +155,7 @@ export const trajetsAngoulemeCognac: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Angoulême → Cognac | 45 km, dès 90 € | TaxiNeo",
-        metaDescription: "Via N141 en 30 min. Cognac, Charente, Distilleries et Vignobles en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via N141 en 30 min. Cognac, Charente, Distilleries et Vignobles en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Angoulême → Cognac",
         heroSubtitle: "Transfert Angoulême → Cognac au prix fixe de 90 — 105 €. 45 km, capitale mondiale de l'eau-de-vie.",
         description: "Cognac, capitale mondiale de l'eau-de-vie éponyme, est à 30 min d'Angoulême par la N141.",
@@ -238,7 +238,7 @@ export const trajetsAngoulemeCognac: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Cognac → Bordeaux | 120 km, from €230 | TaxiNeo",
-        metaDescription: "Via A10, 1h15 ride. Vignobles, Charente, Gironde and Estuaire en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via A10, 1h15 ride. Vignobles, Charente, Gironde and Estuaire en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Cognac → Bordeaux",
         heroSubtitle: "Your Cognac → Bordeaux transfer at €230 — €280. 120 km, two capitals of wine and spirits.",
         description: "Bordeaux, south-west France's great wine metropolis, is 1h15 from Cognac via the A10.",
@@ -283,7 +283,7 @@ export const trajetsAngoulemeCognac: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Cognac → La Rochelle | 100 km, dès 195 € | TaxiNeo",
-        metaDescription: "Via N137 en 1h05. Atlantique, Charente-Maritime, Île de Ré et Vieux-Port en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via N137 en 1h05. Atlantique, Charente-Maritime, Île de Ré et Vieux-Port en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Cognac → La Rochelle",
         heroSubtitle: "Transfert Cognac → La Rochelle au prix fixe de 195 — 235 €. 100 km, du pays du cognac à la perle de l'Atlantique.",
         description: "La Rochelle, joyau de la côte atlantique et porte de l'île de Ré, est à 1h05 de Cognac.",
@@ -302,7 +302,7 @@ export const trajetsAngoulemeCognac: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Cognac → La Rochelle | 100 km, from €195 | TaxiNeo",
-        metaDescription: "Via N137, 1h05 ride. Atlantique, Charente-Maritime, Île de Ré and Vieux-Port en route. Drop-off at your exact address. Door-to-door, luggage included.",
+        metaDescription: "Via N137, 1h05 ride. Atlantique, Charente-Maritime, Île de Ré and Vieux-Port en route. Drop-off at your exact address, luggage included.",
         heroTitle: "Taxi Cognac → La Rochelle",
         heroSubtitle: "Your Cognac → La Rochelle transfer at €195 — €235. 100 km, from brandy country to the Atlantic pearl.",
         description: "La Rochelle, jewel of the Atlantic coast and gateway to Île de Ré, is 1h05 from Cognac.",

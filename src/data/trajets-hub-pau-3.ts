@@ -20,7 +20,7 @@ export const trajetsPau3: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Pau → Biarritz | Prix fixe dès 230 € | TaxiNeo",
-        metaDescription: "Via A64 en undefined min. Pays Basque, Atlantique, Surf et Thalasso en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A64 en undefined min. Pays Basque, Atlantique, Surf et Thalasso en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Pau → Biarritz",
         heroSubtitle: "Transfert Pau → Biarritz au prix fixe de 230 — 280 €. 120 km, 1h10.",
         description: "Biarritz, joyau de la Côte Basque et capitale européenne du surf, à 1h10 de Pau.",
@@ -77,7 +77,7 @@ export const trajetsPau3: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Pau → Auch | 80 km via D943, dès 155 € | TaxiNeo",
-        metaDescription: "Via D943 en undefined min. Gers, Armagnac, Gascogne et D'Artagnan en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via D943 en undefined min. Gers, Armagnac, Gascogne et D'Artagnan en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Pau → Auch",
         heroSubtitle: "Transfert Pau → Auch au prix fixe de 155 — 185 €. 80 km, 55 min.",
         description: "Auch, capitale historique de la Gascogne et patrie de d'Artagnan, à 55 min de Pau.",
@@ -134,7 +134,7 @@ export const trajetsPau3: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Pau → Saragosse | 260 km, dès 495 € | TaxiNeo",
-        metaDescription: "Via N134 / E7 en undefined min. N134, E7, Pyrénées et Espagne en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via N134 / E7 en undefined min. N134, E7, Pyrénées et Espagne en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Pau → Saragosse",
         heroSubtitle: "Transfert Pau → Saragosse au prix fixe de 495 — 605 €. 260 km, 2h50.",
         description: "Saragosse, cinquième ville d'Espagne et cité du Pilar, à 2h50 de Pau via les Pyrénées.",
@@ -153,7 +153,7 @@ export const trajetsPau3: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Pau → Saragosse | 260 km, from €495 | TaxiNeo",
-        metaDescription: "Via N134 / E7, undefined min ride. N134, E7, Pyrénées and Espagne en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via N134 / E7, undefined min ride. N134, E7, Pyrénées and Espagne en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Pau → Saragosse (Zaragoza)",
         heroSubtitle: "Pau → Zaragoza transfer at €495 — €605. 260 km, 2h50.",
         description: "Zaragoza, Spain's fifth city and Pilar basilica, 2h50 from Pau across the Pyrenees.",

@@ -20,7 +20,7 @@ export const trajetsAvignonHub: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Avignon → Marseille | 100 km, dès 195 € | TaxiNeo",
-        metaDescription: "Via A7 en undefined min. Provence, Vieux-Port, Calanques et Direct en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A7 en undefined min. Provence, Vieux-Port, Calanques et Direct en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Avignon → Marseille",
         heroSubtitle: "Transfert Avignon → Marseille au prix fixe de 195 — 235 €. 100 km, 1h10 via l'A7.",
         description: "Avignon et Marseille, les deux grandes villes de Provence, sont reliées en 1h10 par l'A7.",
@@ -77,7 +77,7 @@ export const trajetsAvignonHub: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Avignon → Aix-en-Provence | 82 km, dès 160 € | TaxiNeo",
-        metaDescription: "Via A7 en undefined min. Provence, Cézanne, Cours Mirabeau et Université en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A7 en undefined min. Provence, Cézanne, Cours Mirabeau et Université en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Avignon → Aix-en-Provence",
         heroSubtitle: "Transfert Avignon → Aix-en-Provence au prix fixe de 160 — 190 €. 82 km, la Provence de Cézanne.",
         description: "Aix-en-Provence, cité thermale et universitaire, est à 55 min d'Avignon par l'A7.",
@@ -96,7 +96,7 @@ export const trajetsAvignonHub: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Avignon → Aix-en-Provence | 82 km, from €160 | TaxiNeo",
-        metaDescription: "Via A7, undefined min ride. Provence, Cézanne, Cours Mirabeau and Université en route. Drop-off at your exact address. Door-to-door, luggage included.",
+        metaDescription: "Via A7, undefined min ride. Provence, Cézanne, Cours Mirabeau and Université en route. Drop-off at your exact address, luggage included.",
         heroTitle: "Taxi Avignon → Aix-en-Provence",
         heroSubtitle: "Avignon → Aix-en-Provence transfer at €160 — €190. 82 km, Cézanne's Provence.",
         description: "Aix-en-Provence, the spa and university city, is 55 min from Avignon via A7.",
@@ -134,7 +134,7 @@ export const trajetsAvignonHub: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Avignon → Nîmes | Prix fixe dès 90 € | TaxiNeo",
-        metaDescription: "Via A9 en undefined min. Arènes, Maison Carrée, Romaine et Corrida en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A9 en undefined min. Arènes, Maison Carrée, Romaine et Corrida en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Avignon → Nîmes",
         heroSubtitle: "Transfert Avignon → Nîmes au prix fixe de 90 — 105 €. 45 km, la Rome française.",
         description: "Nîmes, la « Rome française », est à seulement 35 min d'Avignon.",
@@ -191,7 +191,7 @@ export const trajetsAvignonHub: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Avignon → Arles | Prix fixe dès 75 € | TaxiNeo",
-        metaDescription: "Via N570/A54 en undefined min. Van Gogh, Camargue, Arènes et UNESCO en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via N570/A54 en undefined min. Van Gogh, Camargue, Arènes et UNESCO en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Avignon → Arles",
         heroSubtitle: "Transfert Avignon → Arles au prix fixe de 75 — 90 €. 37 km, la ville de Van Gogh.",
         description: "Arles, cité antique classée UNESCO et ville de Van Gogh, est la porte d'entrée de la Camargue.",
@@ -248,7 +248,7 @@ export const trajetsAvignonHub: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Avignon → Orange | forfait dès 60 € | TaxiNeo",
-        metaDescription: "Via A7 en undefined min. Théâtre antique, Arc de Triomphe, Chorégies et Vin en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A7 en undefined min. Théâtre antique, Arc de Triomphe, Chorégies et Vin en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Avignon → Orange",
         heroSubtitle: "Transfert Avignon → Orange au prix fixe de 60 — 70 €. 30 km, cité romaine et capitale des Côtes du Rhône.",
         description: "Orange, célèbre pour son théâtre antique (UNESCO) et ses Chorégies, le plus ancien festival lyrique au monde.",
@@ -305,7 +305,7 @@ export const trajetsAvignonHub: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Avignon → Lyon | Prix fixe dès 440 € | TaxiNeo",
-        metaDescription: "Via A7 en undefined min. Vallée du Rhône, Retour festival, Business et Nuit en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A7 en undefined min. Vallée du Rhône, Retour festival, Business et Nuit en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Avignon → Lyon",
         heroSubtitle: "Transfert Avignon → Lyon au prix fixe de 440 — 535 €. 230 km, remontée de la vallée du Rhône.",
         description: "Le retour Avignon → Lyon remonte la vallée du Rhône par l'A7, l'Autoroute du Soleil.",
@@ -362,7 +362,7 @@ export const trajetsAvignonHub: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Avignon → Montpellier | 95 km, dès 185 € | TaxiNeo",
-        metaDescription: "Via A9 en undefined min. Languedoc, Méditerranée, Université et Direct en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A9 en undefined min. Languedoc, Méditerranée, Université et Direct en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Avignon → Montpellier",
         heroSubtitle: "Transfert Avignon → Montpellier au prix fixe de 185 — 220 €. 95 km, 1h via l'A9.",
         description: "Montpellier, la dynamique cité méditerranéenne, est à 1h d'Avignon par l'A9.",
@@ -590,7 +590,7 @@ export const trajetsAvignonHub: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Avignon → Carpentras | 30 km, dès 60 € | TaxiNeo",
-        metaDescription: "Via D942 en undefined min. Mont Ventoux, Truffes, Berlingots et Marché en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via D942 en undefined min. Mont Ventoux, Truffes, Berlingots et Marché en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Avignon → Carpentras",
         heroSubtitle: "Transfert Avignon → Carpentras au prix fixe de 60 — 70 €. 30 km, la porte du Mont Ventoux.",
         description: "Carpentras, capitale du Comtat Venaissin, est la porte d'entrée du Mont Ventoux et du pays de la truffe.",

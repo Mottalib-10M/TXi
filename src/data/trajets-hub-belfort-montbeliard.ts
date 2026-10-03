@@ -191,7 +191,7 @@ export const trajetsBelfortMontbeliard: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Montbéliard → Besançon | 80 km | TaxiNeo",
-        metaDescription: "Via A36 en undefined min. Peugeot Stellantis, Doubs, Sochaux et Vauban en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A36 en undefined min. Peugeot Stellantis, Doubs, Sochaux et Vauban en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Montbéliard → Besançon",
         heroSubtitle: "Transfert Montbéliard → Besançon au prix fixe de 95 —125 €. 80 km, 55 min.",
         description: "Montbéliard, fief historique de Peugeot, et Besançon, capitale comtoise, en 55 min.",

@@ -93,7 +93,7 @@ export const trajetsChaumontLangres: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Chaumont → Troyes | 100 km, dès 195 € | TaxiNeo",
-        metaDescription: "Via N19 / A5 en 1h05. N19, Champagne-Sud, Bassigny et Magasins d'usine en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via N19 / A5 en 1h05. N19, Champagne-Sud, Bassigny et Magasins d'usine en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Chaumont → Troyes",
         heroSubtitle: "Transfert Chaumont → Troyes au prix fixe de 195 — 235 €. 100 km, traversée de la Champagne méridionale.",
         description: "Troyes, capitale historique de la Champagne et paradis du shopping, est à 1h05 de Chaumont.",

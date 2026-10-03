@@ -39,7 +39,7 @@ export const trajetsMaconChalon: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Mâcon → Lyon | Fixed price from €140 | TaxiNeo",
-        metaDescription: "Via A6, undefined min ride. Beaujolais, Saône and Villefranche-sur-Saône along the way. Drop-off at your exact address. Door-to-door, luggage included.",
+        metaDescription: "Via A6, undefined min ride. Beaujolais, Saône and Villefranche-sur-Saône along the way. Drop-off at your exact address, luggage included.",
         heroTitle: "Taxi Mâcon → Lyon",
         heroSubtitle: "Mâcon → Lyon transfer at €140 — €170. 72 km, 45 min.",
         description: "Mâcon to Lyon via A6 through Beaujolais vineyards in 45 min.",
@@ -191,7 +191,7 @@ export const trajetsMaconChalon: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Chalon-sur-Saône → Dijon | 70 km, dès 135 € | TaxiNeo",
-        metaDescription: "Via A31 en undefined min. Côte de Beaune, Beaune et Côte-d'Or en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A31 en undefined min. Côte de Beaune, Beaune et Côte-d'Or en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Chalon-sur-Saône → Dijon",
         heroSubtitle: "Transfert Chalon-sur-Saône → Dijon au prix fixe de 135 — 165 €. 70 km, 45 min.",
         description: "Chalon — Dijon remonte la Côte d'Or viticole par l'A31 en 45 min.",
@@ -248,7 +248,7 @@ export const trajetsMaconChalon: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Chalon-sur-Saône → Lyon | 130 km, dès 250 € | TaxiNeo",
-        metaDescription: "Via A6 en undefined min. Saône, Tournus, Mâcon et Beaujolais en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A6 en undefined min. Saône, Tournus, Mâcon et Beaujolais en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Chalon-sur-Saône → Lyon",
         heroSubtitle: "Transfert Chalon-sur-Saône → Lyon au prix fixe de 250 — 305 €. 130 km, 1h15.",
         description: "Chalon — Lyon descend l'A6 le long de la Saône à travers la Bourgogne du Sud et le Beaujolais.",
@@ -267,7 +267,7 @@ export const trajetsMaconChalon: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Chalon-sur-Saône → Lyon | 130 km, from €250 | TaxiNeo",
-        metaDescription: "Via A6, undefined min ride. Saône, Tournus, Mâcon and Beaujolais en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via A6, undefined min ride. Saône, Tournus, Mâcon and Beaujolais en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Chalon-sur-Saône → Lyon",
         heroSubtitle: "Chalon-sur-Saône → Lyon transfer at €250 — €305. 130 km, 1h15.",
         description: "Chalon to Lyon via A6 along the Saône valley through southern Burgundy and Beaujolais.",

@@ -115,7 +115,7 @@ export const trajetsVannesLorient: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Vannes → Rennes | 115 km, from €220 | TaxiNeo",
-        metaDescription: "Via N166, 1h10 ride. Forêt de Brocéliande, Ploërmel and Capitale bretonne along the way. Drop-off at your exact address. Door-to-door, luggage included.",
+        metaDescription: "Via N166, 1h10 ride. Forêt de Brocéliande, Ploërmel and Capitale bretonne along the way. Drop-off at your exact address, luggage included.",
         heroTitle: "Taxi Vannes → Rennes",
         heroSubtitle: "Your Vannes → Rennes transfer at €220 — €270. 115 km via the N166.",
         description: "Rennes, capital of Brittany and a thriving metropolis of 450,000, is 70 minutes from Vannes via the toll-free N166 expressway.",
@@ -180,7 +180,7 @@ export const trajetsVannesLorient: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Vannes → Nantes | 115 km, from €220 | TaxiNeo",
-        metaDescription: "Via N165, 1h10 ride. Muzillac, La Roche-Bernard and Pont de Saint-Nazaire along the way. Drop-off at your exact address. Door-to-door, luggage included.",
+        metaDescription: "Via N165, 1h10 ride. Muzillac, La Roche-Bernard and Pont de Saint-Nazaire along the way. Drop-off at your exact address, luggage included.",
         heroTitle: "Taxi Vannes → Nantes",
         heroSubtitle: "Your Vannes → Nantes transfer at €220 — €270. 115 km via the N165.",
         description: "Nantes, western France's metropolis and former capital of the Dukes of Brittany, is 70 minutes from Vannes via the N165.",
@@ -226,7 +226,7 @@ export const trajetsVannesLorient: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Vannes → Quimper | 120 km, dès 230 € | TaxiNeo",
-        metaDescription: "Via N165 en 1h15. Lorient, Pont-Aven et Cathédrale Saint-Corentin en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via N165 en 1h15. Lorient, Pont-Aven et Cathédrale Saint-Corentin en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Vannes → Quimper",
         heroSubtitle: "Transfert Vannes → Quimper au prix fixe de 230 — 280 €. 120 km par la N165.",
         description: "Quimper, capitale historique de la Cornouaille et berceau de la faïence bretonne, est à 1h15 de Vannes par la voie express N165.",
@@ -291,7 +291,7 @@ export const trajetsVannesLorient: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Lorient → Quimper | 67 km, dès 130 € | TaxiNeo",
-        metaDescription: "Via N165 en 45 min. Quimperlé, Vallée de l'Aven et Cornouaille en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via N165 en 45 min. Quimperlé, Vallée de l'Aven et Cornouaille en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Lorient → Quimper",
         heroSubtitle: "Transfert Lorient → Quimper au prix fixe de 130 — 155 €. 67 km par la N165.",
         description: "Quimper, préfecture du Finistère et capitale de la Cornouaille, est à 45 minutes de Lorient par la voie express N165 gratuite.",

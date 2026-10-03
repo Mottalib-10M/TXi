@@ -191,7 +191,7 @@ export const trajetsOrangeCarpentras: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Orange → Montélimar | 50 km, dès 95 € | TaxiNeo",
-        metaDescription: "Via A7 en undefined min. Nougat, Drôme provençale, Lavande et Châteaux en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A7 en undefined min. Nougat, Drôme provençale, Lavande et Châteaux en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Orange → Montélimar",
         heroSubtitle: "Transfert Orange → Montélimar au prix fixe de 95 — 120 €. 50 km, du Théâtre Antique à la capitale du nougat.",
         description: "Montélimar, la capitale du nougat et porte de la Drôme provençale, est à 35 min d'Orange par l'A7.",
@@ -248,7 +248,7 @@ export const trajetsOrangeCarpentras: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Carpentras → Mont Ventoux | 25 km, dès 50 € | TaxiNeo",
-        metaDescription: "Via D974 en undefined min. Ventoux, Cyclisme, Tour de France et Panorama en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via D974 en undefined min. Ventoux, Cyclisme, Tour de France et Panorama en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Carpentras → Mont Ventoux",
         heroSubtitle: "Transfert Carpentras → Mont Ventoux au prix fixe de 50 — 60 €. 25 km, l'ascension du Géant de Provence.",
         description: "Le Mont Ventoux (1 912 m), le « Géant de Provence », est à 30 min de Carpentras par la D974 via Bédoin.",
@@ -267,7 +267,7 @@ export const trajetsOrangeCarpentras: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Carpentras → Mont Ventoux | 25 km, from €50 | TaxiNeo",
-        metaDescription: "Via D974, undefined min ride. Ventoux, Cyclisme, Tour de France and Panorama en route. Drop-off at your exact address. Door-to-door, luggage included.",
+        metaDescription: "Via D974, undefined min ride. Ventoux, Cyclisme, Tour de France and Panorama en route. Drop-off at your exact address, luggage included.",
         heroTitle: "Taxi Carpentras → Mont Ventoux",
         heroSubtitle: "Carpentras → Mont Ventoux transfer at €50 — €60. 25 km, ascent of the Giant of Provence.",
         description: "Mont Ventoux (1,912m), the 'Giant of Provence', is 30 min from Carpentras via the D974 through Bédoin.",

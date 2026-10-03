@@ -248,7 +248,7 @@ export const trajetsLonsLeSaunier: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Lons-le-Saunier → Dijon | 110 km, dès 210 € | TaxiNeo",
-        metaDescription: "Via A39 en undefined min. Vignoble jurassien, Poligny, Dole et Côte-d'Or en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A39 en undefined min. Vignoble jurassien, Poligny, Dole et Côte-d'Or en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Lons-le-Saunier → Dijon",
         heroSubtitle: "Transfert Lons-le-Saunier → Dijon au prix fixe de 210 — 255 €. 110 km, 1h10.",
         description: "Lons-le-Saunier — Dijon relie le Jura à la capitale bourguignonne par l'A39 via Poligny et Dole.",
@@ -267,7 +267,7 @@ export const trajetsLonsLeSaunier: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Lons-le-Saunier → Dijon | 110 km, from €210 | TaxiNeo",
-        metaDescription: "Via A39, undefined min ride. Vignoble jurassien, Poligny, Dole and Côte-d'Or en route. Drop-off at your exact address. Door-to-door, luggage included.",
+        metaDescription: "Via A39, undefined min ride. Vignoble jurassien, Poligny, Dole and Côte-d'Or en route. Drop-off at your exact address, luggage included.",
         heroTitle: "Taxi Lons-le-Saunier → Dijon",
         heroSubtitle: "Lons-le-Saunier → Dijon transfer at €210 — €255. 110 km, 1h10.",
         description: "Lons-le-Saunier to Dijon connects the Jura heartland to the Burgundy capital via A39.",

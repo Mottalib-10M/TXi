@@ -96,7 +96,7 @@ export const trajetsReimsMetz: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Reims → Charleville-Mézières | 85 km, 110 € | TaxiNeo",
-        metaDescription: "Via A34 en 1h10. Ardennes, Place Ducale, Arthur Rimbaud et Meuse en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A34 en 1h10. Ardennes, Place Ducale, Arthur Rimbaud et Meuse en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Reims → Charleville-Mézières",
         heroSubtitle: "Transfert Reims → Charleville-Mézières au prix fixe de 165 — 200 €. 85 km par l'A34 vers les Ardennes.",
         description: "Charleville-Mézières, cité d'Arthur Rimbaud et capitale des Ardennes avec sa magnifique Place Ducale, est à 1h10 de Reims.",
@@ -161,7 +161,7 @@ export const trajetsReimsMetz: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Reims → Châlons-en-Champagne | 48 km, 65 € | TaxiNeo",
-        metaDescription: "Via A26/A4 en 40 min. Préfecture Marne, Patrimoine religieux et Canaux en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A26/A4 en 40 min. Préfecture Marne, Patrimoine religieux et Canaux en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Reims → Châlons-en-Champagne",
         heroSubtitle: "Transfert Reims → Châlons-en-Champagne au prix fixe de 95 — 115 €. 48 km par A26/A4.",
         description: "Châlons-en-Champagne, préfecture de la Marne et ville d'art avec ses églises classées UNESCO, est à 40 min de Reims.",
@@ -295,7 +295,7 @@ export const trajetsReimsMetz: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Metz → Nancy | forfait dès 105 €, 45 min | TaxiNeo",
-        metaDescription: "Via A31 en 45 min. Place Stanislas UNESCO, Art Nouveau, Lorraine et Meurthe en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A31 en 45 min. Place Stanislas UNESCO, Art Nouveau, Lorraine et Meurthe en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Metz → Nancy",
         heroSubtitle: "Transfert Metz → Nancy au prix fixe de 105 — 130 €. 55 km par l'A31 entre les deux capitales lorraines.",
         description: "Nancy, ville Art Nouveau avec sa Place Stanislas classée UNESCO, l'une des plus belles places du monde, est à 45 min de Metz.",
@@ -490,7 +490,7 @@ export const trajetsReimsMetz: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Metz → Sarrebruck (Allemagne) | 70 km, 95 € | TaxiNeo",
-        metaDescription: "Via A320/A4 en 55 min. Franco-allemand, Sarre, Ludwigskirche et Shopping en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A320/A4 en 55 min. Franco-allemand, Sarre, Ludwigskirche et Shopping en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Metz → Sarrebruck",
         heroSubtitle: "Transfert Metz → Sarrebruck au prix fixe de 135 — 165 €. 70 km vers la capitale de la Sarre.",
         description: "Sarrebruck, capitale du Land de Sarre et ville franco-allemande par excellence, est à 55 min de Metz.",
@@ -509,7 +509,7 @@ export const trajetsReimsMetz: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Metz → Sarrebruck (Allemagne) | 70 km, €95 | TaxiNeo",
-        metaDescription: "Via A320/A4, 55 min ride. Franco-allemand, Sarre, Ludwigskirche and Shopping en route. Drop-off at your exact address. Door-to-door, luggage included.",
+        metaDescription: "Via A320/A4, 55 min ride. Franco-allemand, Sarre, Ludwigskirche and Shopping en route. Drop-off at your exact address, luggage included.",
         heroTitle: "Taxi Metz → Saarbrücken",
         heroSubtitle: "Your Metz → Saarbrücken transfer at €135 — €165. 70 km to the Saarland capital.",
         description: "Saarbrücken, capital of the Saarland and quintessentially Franco-German city, is 55 min from Metz.",

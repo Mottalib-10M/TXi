@@ -46,7 +46,7 @@ export const trajetsAuchCondom: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Auch → Toulouse | Fixed price from €155 | TaxiNeo",
-        metaDescription: "Via N124, 50 min ride. Gers, Gascogne, Armagnac and Toulouse en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via N124, 50 min ride. Gers, Gascogne, Armagnac and Toulouse en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Auch → Toulouse",
         heroSubtitle: "Your Auch → Toulouse transfer at €155 — €185. 80 km, from the capital of Gascony to the Pink City.",
         description: "Toulouse, south-west France's metropolis and European aerospace capital, is 50 min from Auch via the N124.",
@@ -110,7 +110,7 @@ export const trajetsAuchCondom: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Auch → Bordeaux | 200 km, from €385 | TaxiNeo",
-        metaDescription: "Via A62, 2 hours ride. Gers, Gascogne, Vignobles and Bordeaux en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via A62, 2 hours ride. Gers, Gascogne, Vignobles and Bordeaux en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Auch → Bordeaux",
         heroSubtitle: "Your Auch → Bordeaux transfer at €385 — €465. 200 km, from deepest Gascony to the wine capital.",
         description: "Bordeaux, world wine capital and Nouvelle-Aquitaine's architectural gem, is 2h from Auch via the A62.",
@@ -219,7 +219,7 @@ export const trajetsAuchCondom: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Auch → Agen | forfait dès 135 €, 45 min | TaxiNeo",
-        metaDescription: "Via N21 en 45 min. Gers, Lot-et-Garonne, Gascogne et Garonne en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via N21 en 45 min. Gers, Lot-et-Garonne, Gascogne et Garonne en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Auch → Agen",
         heroSubtitle: "Transfert Auch → Agen au prix fixe de 135 — 165 €. 70 km, de la Gascogne à la capitale du pruneau.",
         description: "Agen, préfecture du Lot-et-Garonne et capitale du pruneau, est à 45 min d'Auch par la N21.",
@@ -238,7 +238,7 @@ export const trajetsAuchCondom: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Auch → Agen | Guaranteed fixed price | TaxiNeo",
-        metaDescription: "Via N21, 45 min ride. Gers, Lot-et-Garonne, Gascogne and Garonne en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via N21, 45 min ride. Gers, Lot-et-Garonne, Gascogne and Garonne en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Auch → Agen",
         heroSubtitle: "Your Auch → Agen transfer at €135 — €165. 70 km, from Gascony to the prune capital.",
         description: "Agen, Lot-et-Garonne prefecture and prune capital, is 45 min from Auch via the N21.",

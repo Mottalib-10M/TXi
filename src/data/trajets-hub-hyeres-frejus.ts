@@ -28,7 +28,7 @@ export const trajetsHyeresFrejus: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Hyères → Toulon | forfait dès 40 €, 18 min | TaxiNeo",
-        metaDescription: "Via A570 en 18 min. Îles d'Or, Porquerolles, Port de Toulon et Arsenal en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A570 en 18 min. Îles d'Or, Porquerolles, Port de Toulon et Arsenal en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Hyères → Toulon",
         heroSubtitle: "Transfert Hyères → Toulon au prix fixe de 40 — 50 €. 20 km, direct par l'A570.",
         description: "Toulon, préfecture du Var et premier port militaire français, est à seulement 18 min d'Hyères.",

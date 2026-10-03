@@ -28,7 +28,7 @@ export const trajetsNimes: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Nîmes → Avignon | forfait dès 85 €, 35 min | TaxiNeo",
-        metaDescription: "Via A9 en 35 min. Pont du Gard, Palais des Papes, Provence et Camargue en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A9 en 35 min. Pont du Gard, Palais des Papes, Provence et Camargue en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Nîmes → Avignon",
         heroSubtitle: "Transfert Nîmes → Avignon au prix fixe de 85 — 105 €. 44 km, direct par l'A9.",
         description: "Avignon, cité des Papes et du festival, est à 35 min de Nîmes par l'A9.",
@@ -177,7 +177,7 @@ export const trajetsNimes: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Nîmes → Arles | Fixed price from €65 | TaxiNeo",
-        metaDescription: "Via A54, 25 min ride. Camargue, Arènes, Van Gogh and Provence en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via A54, 25 min ride. Camargue, Arènes, Van Gogh and Provence en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Nîmes → Arles",
         heroSubtitle: "Your Nîmes → Arles transfer at €65 — €75. 32 km, via the A54.",
         description: "Arles, Roman city and Van Gogh's home, is 25 min from Nîmes via the A54.",
@@ -223,7 +223,7 @@ export const trajetsNimes: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Nîmes → Alès | forfait dès 90 €, 35 min | TaxiNeo",
-        metaDescription: "Via D6110/A54 en 35 min. Cévennes, Mine témoin, Bambouseraie et Gardon en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via D6110/A54 en 35 min. Cévennes, Mine témoin, Bambouseraie et Gardon en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Nîmes → Alès",
         heroSubtitle: "Transfert Nîmes → Alès au prix fixe de 90 — 105 €. 45 km, porte des Cévennes.",
         description: "Alès, porte des Cévennes et ancienne capitale minière, est à 35 min de Nîmes.",
@@ -288,7 +288,7 @@ export const trajetsNimes: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Nîmes → Uzès | forfait dès 50 €, 25 min | TaxiNeo",
-        metaDescription: "Via D979 en 25 min. Premier duché, Pont du Gard, Marché et Haribo en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via D979 en 25 min. Premier duché, Pont du Gard, Marché et Haribo en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Nîmes → Uzès",
         heroSubtitle: "Transfert Nîmes → Uzès au prix fixe de 50 — 60 €. 25 km, premier duché de France.",
         description: "Uzès, premier duché de France et ville d'art, est à 25 min de Nîmes.",

@@ -28,7 +28,7 @@ export const trajetsMontargisPithiviers: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Montargis → Paris | 110 km, dès 210 € | TaxiNeo",
-        metaDescription: "Via A77 en 1h15. Gâtinais, Loiret, Venise du Gâtinais et Fontainebleau en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A77 en 1h15. Gâtinais, Loiret, Venise du Gâtinais et Fontainebleau en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Montargis → Paris",
         heroSubtitle: "Transfert Montargis → Paris au prix fixe de 210 — 255 €. 110 km, direct par l'A77.",
         description: "Paris est à 1h15 de Montargis par l'A77, à travers le Gâtinais et la forêt de Fontainebleau.",
@@ -158,7 +158,7 @@ export const trajetsMontargisPithiviers: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Montargis → Sens | forfait dès 105 € | TaxiNeo",
-        metaDescription: "Via D2007/N60 en 40 min. Gâtinais, Yonne, Cathédrale de Sens et Loiret en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via D2007/N60 en 40 min. Gâtinais, Yonne, Cathédrale de Sens et Loiret en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Montargis → Sens",
         heroSubtitle: "Transfert Montargis → Sens au prix fixe de 105 — 130 €. 55 km, du Gâtinais à la Bourgogne.",
         description: "Sens, première cathédrale gothique de France, est à 40 min de Montargis par la D2007.",
@@ -242,7 +242,7 @@ export const trajetsMontargisPithiviers: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Pithiviers → Paris | 85 km, from €165 | TaxiNeo",
-        metaDescription: "Via A19/N20, 1 hour ride. Beauce, Loiret, Pithiviers and Gâtinais en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via A19/N20, 1 hour ride. Beauce, Loiret, Pithiviers and Gâtinais en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Pithiviers → Paris",
         heroSubtitle: "Your Pithiviers → Paris transfer at €165 — €200. 85 km, direct from the Beauce.",
         description: "Paris is 1h from Pithiviers via the N20 and A10 through the Beauce plain.",
@@ -307,7 +307,7 @@ export const trajetsMontargisPithiviers: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Montargis → Auxerre | 90 km, from €175 | TaxiNeo",
-        metaDescription: "Via D965/N7, 1 hour ride. Puisaye, Yonne, Bourgogne and Colette en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via D965/N7, 1 hour ride. Puisaye, Yonne, Bourgogne and Colette en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Montargis → Auxerre",
         heroSubtitle: "Your Montargis → Auxerre transfer at €175 — €210. 90 km, from the Loiret to the Yonne.",
         description: "Auxerre, a Burgundy gem on the Yonne river, is 1h from Montargis via the D965.",

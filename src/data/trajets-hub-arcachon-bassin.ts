@@ -93,7 +93,7 @@ export const trajetsArcachonBassin: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Arcachon → Aéroport Bordeaux-Mérignac | 55 km | TaxiNeo",
-        metaDescription: "Via A660 / A63 en 40 min. Aéroport BOD, Pinède landaise et Mérignac en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A660 / A63 en 40 min. Aéroport BOD, Pinède landaise et Mérignac en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Arcachon → Aéroport Bordeaux-Mérignac",
         heroSubtitle: "Transfert Arcachon → Aéroport Bordeaux-Mérignac au prix fixe de 105 — 130 €. 55 km, liaison directe vers votre terminal.",
         description: "L'aéroport de Bordeaux-Mérignac (BOD), principal aéroport de Nouvelle-Aquitaine, est accessible en 40 min depuis Arcachon via l'A660 et l'A63.",
@@ -112,7 +112,7 @@ export const trajetsArcachonBassin: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Arcachon → Aéroport Bordeaux-Mérignac | 55 km | TaxiNeo",
-        metaDescription: "Via A660 / A63, 40 min ride. Aéroport BOD, Pinède landaise and Mérignac along the way. Drop-off at your exact address. Door-to-door, luggage included.",
+        metaDescription: "Via A660 / A63, 40 min ride. Aéroport BOD, Pinède landaise and Mérignac along the way. Drop-off at your exact address, luggage included.",
         heroTitle: "Taxi Arcachon → Bordeaux Airport",
         heroSubtitle: "Your Arcachon → Bordeaux-Mérignac Airport transfer at €105 — €130. 55 km, direct to your terminal.",
         description: "Bordeaux-Mérignac Airport (BOD), the main airport in Nouvelle-Aquitaine, is accessible in 40 min from Arcachon via the A660 and A63 motorways.",
@@ -307,7 +307,7 @@ export const trajetsArcachonBassin: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi La Teste-de-Buch → Bordeaux | 60 km, from €115 | TaxiNeo",
-        metaDescription: "Via A660 / A63, 40 min ride. Forêt des Landes, Pessac-Léognan and Garonne along the way. Drop-off at your exact address. Door-to-door, luggage included.",
+        metaDescription: "Via A660 / A63, 40 min ride. Forêt des Landes, Pessac-Léognan and Garonne along the way. Drop-off at your exact address, luggage included.",
         heroTitle: "Taxi La Teste-de-Buch → Bordeaux",
         heroSubtitle: "Your La Teste-de-Buch → Bordeaux transfer at €115 — €140. 60 km, through the Landes pine forest to the heart of Bordeaux.",
         description: "La Teste-de-Buch, the historic municipality of the Arcachon Bay encompassing the Dune du Pilat and Pyla-sur-Mer, is connected to Bordeaux in 40 min via the A660 and A63.",

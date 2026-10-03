@@ -223,7 +223,7 @@ export const trajetsThononAnnemasse: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Thonon-les-Bains → Genève | 35 km, dès 70 € | TaxiNeo",
-        metaDescription: "Via D1005 en 30 min. Lac Léman, Yvoire, Frontière suisse et Thermalisme en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via D1005 en 30 min. Lac Léman, Yvoire, Frontière suisse et Thermalisme en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Thonon-les-Bains → Genève",
         heroSubtitle: "Transfert Thonon-les-Bains → Genève au prix fixe de 70 — 85 €. 35 km le long de la rive sud du Léman.",
         description: "Genève, capitale internationale au bord du Lac Léman avec l'ONU et le CERN, est à 30 min de Thonon-les-Bains.",

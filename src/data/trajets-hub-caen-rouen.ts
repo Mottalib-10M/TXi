@@ -31,7 +31,7 @@ export const trajetsCaenRouen: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Caen → Deauville | forfait dès 95 € | TaxiNeo",
-        metaDescription: "Via A13 en 40 min. Côte Fleurie, Casino, Planches et Hippodrome en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A13 en 40 min. Côte Fleurie, Casino, Planches et Hippodrome en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Caen → Deauville",
         heroSubtitle: "Transfert Caen → Deauville au prix fixe de 95 — 120 €. 50 km par l'A13.",
         description: "Deauville, station balnéaire emblématique de la Côte Fleurie, est à 40 minutes de Caen par l'A13.",
@@ -245,7 +245,7 @@ export const trajetsCaenRouen: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Caen → Cherbourg | 120 km, from €230 | TaxiNeo",
-        metaDescription: "Via N13, 1h20 ride. Cotentin, Cité de la Mer, Rade and Arsenal en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via N13, 1h20 ride. Cotentin, Cité de la Mer, Rade and Arsenal en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Caen → Cherbourg",
         heroSubtitle: "Your Caen → Cherbourg transfer at €230 — €280. 120 km via the N13.",
         description: "Cherbourg-en-Cotentin, naval port and ferry terminal at the tip of the Cotentin peninsula, is 1h20 from Caen.",
@@ -421,7 +421,7 @@ export const trajetsCaenRouen: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Caen → Rouen | 130 km, dès 250 €, 1h30 | TaxiNeo",
-        metaDescription: "Via A13 en 1h30. Pays d'Auge, Vallée de la Seine et Pont-l'Évêque en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A13 en 1h30. Pays d'Auge, Vallée de la Seine et Pont-l'Évêque en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Caen → Rouen",
         heroSubtitle: "Transfert Caen → Rouen au prix fixe de 250 — 305 €. 130 km par l'A13.",
         description: "Rouen, capitale de la Haute-Normandie et ville aux cent clochers, est à 1h30 de Caen par l'A13.",
@@ -486,7 +486,7 @@ export const trajetsCaenRouen: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Caen → Lisieux | forfait dès 95 €, 35 min | TaxiNeo",
-        metaDescription: "Via A13 en 35 min. Basilique Sainte-Thérèse, Pays d'Auge et Pèlerinage en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A13 en 35 min. Basilique Sainte-Thérèse, Pays d'Auge et Pèlerinage en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Caen → Lisieux",
         heroSubtitle: "Transfert Caen → Lisieux au prix fixe de 95 — 120 €. 50 km par l'A13.",
         description: "Lisieux, deuxième lieu de pèlerinage de France après Lourdes et capitale du Pays d'Auge, est à 35 minutes de Caen.",

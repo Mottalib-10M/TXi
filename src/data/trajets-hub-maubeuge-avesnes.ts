@@ -28,7 +28,7 @@ export const trajetsMaubeugeAvesnes: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Maubeuge → Lille | 90 km, dès 110 € | TaxiNeo",
-        metaDescription: "Via N2 / D649 / A23 en 1h. N2, Sambre, Avesnois et Vieux-Lille en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via N2 / D649 / A23 en 1h. N2, Sambre, Avesnois et Vieux-Lille en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Maubeuge → Lille",
         heroSubtitle: "Transfert Maubeuge → Lille au prix fixe de 110 —140 €. 90 km, liaison directe via la N2 et l’A23.",
         description: "Lille est à 1h de Maubeuge par la N2 et l’A23, reliant la frontière belge à la métropole lilloise.",
@@ -242,7 +242,7 @@ export const trajetsMaubeugeAvesnes: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Maubeuge → Paris | 240 km, from €285 | TaxiNeo",
-        metaDescription: "Via A2 / A1, 2h30 ride. Sambre, Avesnois and Compiègne along the way. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via A2 / A1, 2h30 ride. Sambre, Avesnois and Compiègne along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Maubeuge → Paris",
         heroSubtitle: "Your Maubeuge → Paris transfer at €285 —€355. 240 km, via the A2 and A1.",
         description: "Paris is 2h30 from Maubeuge via the A2 and A1 motorways.",
@@ -288,7 +288,7 @@ export const trajetsMaubeugeAvesnes: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Avesnes-sur-Helpe → Lille | 100 km, dès 120 € | TaxiNeo",
-        metaDescription: "Via D649 / A2 / A23 en 1h05. Avesnois, Bocage, Vieux-Lille et Eurostar en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via D649 / A2 / A23 en 1h05. Avesnois, Bocage, Vieux-Lille et Eurostar en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Avesnes-sur-Helpe → Lille",
         heroSubtitle: "Transfert Avesnes-sur-Helpe → Lille au prix fixe de 120 —155 €. 100 km, du coeur de l’Avesnois à la métropole lilloise.",
         description: "Lille est à 1h05 d’Avesnes-sur-Helpe par la D649 et l’A23, reliant le bocage avesnois à la métropole.",

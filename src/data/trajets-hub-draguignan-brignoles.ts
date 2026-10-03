@@ -93,7 +93,7 @@ export const trajetsDraguignanBrignoles: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Draguignan → Toulon | 65 km, dès 125 € | TaxiNeo",
-        metaDescription: "Via A57 en 50 min. Haut-Var, Provence Verte, Port militaire et Mont Faron en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A57 en 50 min. Haut-Var, Provence Verte, Port militaire et Mont Faron en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Draguignan → Toulon",
         heroSubtitle: "Transfert Draguignan → Toulon au prix fixe de 125 — 155 €. 65 km, via l'A57.",
         description: "Toulon, préfecture du Var et premier port militaire de Méditerranée, est à 50 min de Draguignan par l'A57.",
@@ -112,7 +112,7 @@ export const trajetsDraguignanBrignoles: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Draguignan → Toulon | 65 km, from €125 | TaxiNeo",
-        metaDescription: "Via A57, 50 min ride. Haut-Var, Provence Verte, Port militaire and Mont Faron en route. Drop-off at your exact address. Door-to-door, luggage included.",
+        metaDescription: "Via A57, 50 min ride. Haut-Var, Provence Verte, Port militaire and Mont Faron en route. Drop-off at your exact address, luggage included.",
         heroTitle: "Taxi Draguignan → Toulon",
         heroSubtitle: "Your Draguignan → Toulon transfer at €125 — €155. 65 km, via the A57.",
         description: "Toulon, France's main Mediterranean naval base, is 50 min from Draguignan via the A57.",
@@ -288,7 +288,7 @@ export const trajetsDraguignanBrignoles: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Brignoles → Toulon | 55 km, dès 105 € | TaxiNeo",
-        metaDescription: "Via A57 en 40 min. Provence Verte, Abbaye du Thoronet et Rade de Toulon en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A57 en 40 min. Provence Verte, Abbaye du Thoronet et Rade de Toulon en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Brignoles → Toulon",
         heroSubtitle: "Transfert Brignoles → Toulon au prix fixe de 105 — 130 €. 55 km, via l'A57.",
         description: "Toulon, préfecture du Var et premier port militaire de France, est à 40 min de Brignoles par l'A57.",

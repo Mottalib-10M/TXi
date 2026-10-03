@@ -31,7 +31,7 @@ export const trajetsLyonPart2: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Lyon → Aix-les-Bains | 110 km, dès 150 € | TaxiNeo",
-        metaDescription: "Via A43 en 1h15. Lac du Bourget, Thermes, Chambéry et Savoie en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A43 en 1h15. Lac du Bourget, Thermes, Chambéry et Savoie en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Lyon → Aix-les-Bains",
         heroSubtitle: "Votre transfert Lyon → Aix-les-Bains au prix fixe de 150 — 190 €. Trajet direct par l'A43, 1h15 de route. Réservation en ligne.",
         description: "Le trajet Lyon — Aix-les-Bains relie la métropole lyonnaise à la célèbre station thermale savoyarde, nichée au bord du lac du Bourget. Distantes de 110 km, les deux villes sont reliées par l'autoroute A43, qui traverse les paysages de l'Avant-Pays savoyard. Votre chauffeur TaxiNeo vous prend en charge à Lyon et vous conduit directement à votre hôtel ou établissement thermal.",
@@ -50,7 +50,7 @@ export const trajetsLyonPart2: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Lyon → Aix-les-Bains | 110 km, from €150 | TaxiNeo",
-        metaDescription: "Via A43, 1h15 ride. Lac du Bourget, Thermes, Chambéry and Savoie en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via A43, 1h15 ride. Lac du Bourget, Thermes, Chambéry and Savoie en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Lyon → Aix-les-Bains",
         heroSubtitle: "Your Lyon → Aix-les-Bains transfer at a fixed price of €150 — €190. Direct route via A43, 1h15 drive. Online booking.",
         description: "The Lyon — Aix-les-Bains route connects the Lyon metropolitan area to the famous Savoyard thermal spa town, nestled on the shores of Lac du Bourget. 110 km apart, the two cities are linked by the A43 motorway through the Avant-Pays Savoyard landscapes. Your TaxiNeo driver picks you up in Lyon and takes you directly to your hotel or spa establishment.",
@@ -167,7 +167,7 @@ export const trajetsLyonPart2: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Lyon → Montélimar | 160 km, dès 210 € | TaxiNeo",
-        metaDescription: "Via A7 en 1h40. Vallée du Rhône, Valence, Nougat de Montélimar et Provence en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A7 en 1h40. Vallée du Rhône, Valence, Nougat de Montélimar et Provence en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Lyon → Montélimar",
         heroSubtitle: "Votre transfert Lyon → Montélimar au prix fixe de 210 — 260 €. Trajet par l'A7, vallée du Rhône, 1h40 de route. Réservation en ligne.",
         description: "Le trajet Lyon — Montélimar emprunte l'autoroute du Soleil (A7) à travers la vallée du Rhône. Distantes de 160 km, les deux villes sont reliées par l'un des axes autoroutiers les plus fréquentés de France. Votre chauffeur TaxiNeo vous conduit directement de Lyon à la capitale du nougat, porte d'entrée de la Provence.",
@@ -186,7 +186,7 @@ export const trajetsLyonPart2: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Lyon → Montélimar | 160 km, from €210 | TaxiNeo",
-        metaDescription: "Via A7, 1h40 ride. Vallée du Rhône, Valence, Nougat de Montélimar and Provence en route. Drop-off at your exact address. Door-to-door, luggage included.",
+        metaDescription: "Via A7, 1h40 ride. Vallée du Rhône, Valence, Nougat de Montélimar and Provence en route. Drop-off at your exact address, luggage included.",
         heroTitle: "Taxi Lyon → Montélimar",
         heroSubtitle: "Your Lyon → Montélimar transfer at a fixed price of €210 — €260. Route via A7, Rhône Valley, 1h40 drive. Online booking.",
         description: "The Lyon — Montélimar route takes the Autoroute du Soleil (A7) through the Rhône Valley. 160 km apart, the two cities are linked by one of France's busiest motorway corridors. Your TaxiNeo driver takes you directly from Lyon to the nougat capital, gateway to Provence.",
@@ -303,7 +303,7 @@ export const trajetsLyonPart2: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Lyon → Dijon | 193 km, dès 250 €, 1h55 | TaxiNeo",
-        metaDescription: "Via A6 en 1h55. Beaune, Côte-d'Or, Vignobles de Bourgogne et Mâcon en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A6 en 1h55. Beaune, Côte-d'Or, Vignobles de Bourgogne et Mâcon en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Lyon → Dijon",
         heroSubtitle: "Votre transfert Lyon → Dijon au prix fixe de 250 — 310 €. Trajet par l'A6, 1h55 de route à travers la Bourgogne. Réservation en ligne.",
         description: "Le trajet Lyon — Dijon emprunte l'autoroute A6 à travers les vignobles de Bourgogne, l'un des terroirs viticoles les plus prestigieux au monde. Distantes de 193 km, les deux villes sont reliées par un axe autoroutier rapide traversant Mâcon, Tournus et Beaune. Votre chauffeur TaxiNeo vous conduit de la capitale gastronomique lyonnaise à la capitale bourguignonne.",
@@ -371,7 +371,7 @@ export const trajetsLyonPart2: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Lyon → Marseille | 315 km, dès 390 € | TaxiNeo",
-        metaDescription: "Via A7 en 3h05. Vallée du Rhône, Avignon, Aix-en-Provence et Vieux-Port en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A7 en 3h05. Vallée du Rhône, Avignon, Aix-en-Provence et Vieux-Port en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Lyon → Marseille",
         heroSubtitle: "Votre transfert Lyon → Marseille au prix fixe de 390 — 480 €. Trajet par l'A7, autoroute du Soleil, 3h05 de route. Réservation en ligne.",
         description: "Le trajet Lyon — Marseille est l'un des grands classiques de la route française, reliant la capitale gastronomique à la cité phocéenne par l'autoroute du Soleil (A7). 315 km séparent les deux métropoles, traversant toute la vallée du Rhône, Montélimar, Orange, Avignon et Aix-en-Provence. Votre chauffeur TaxiNeo vous offre un transfert confortable et sans stress.",

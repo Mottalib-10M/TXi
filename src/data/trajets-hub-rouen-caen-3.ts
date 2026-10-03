@@ -39,7 +39,7 @@ export const trajetsRouenCaen3: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Rouen → Dieppe | Fixed price from €115 | TaxiNeo",
-        metaDescription: "Via D915, undefined min ride. Côte d'Albâtre, Falaises and Port de pêche along the way. Drop-off at your exact address. Door-to-door, luggage included.",
+        metaDescription: "Via D915, undefined min ride. Côte d'Albâtre, Falaises and Port de pêche along the way. Drop-off at your exact address, luggage included.",
         heroTitle: "Taxi Rouen → Dieppe",
         heroSubtitle: "Rouen → Dieppe transfer at €115 — €140. 60 km, 50 min.",
         description: "Dieppe, France's oldest seaside resort, 50 min from Rouen.",
@@ -134,7 +134,7 @@ export const trajetsRouenCaen3: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Caen → Saint-Lô | Prix fixe dès 125 € | TaxiNeo",
-        metaDescription: "Via A84 en undefined min. Bocage normand, Manche et Reconstruction en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A84 en undefined min. Bocage normand, Manche et Reconstruction en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Caen → Saint-Lô",
         heroSubtitle: "Transfert Caen → Saint-Lô au prix fixe de 125 — 155 €. 65 km, 50 min.",
         description: "Saint-Lô, « capitale des ruines », est à 50 min de Caen par l'A84 gratuite.",
@@ -267,7 +267,7 @@ export const trajetsRouenCaen3: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Rouen → Évreux | Fixed price from €105 | TaxiNeo",
-        metaDescription: "Via A13 / N154, undefined min ride. Eure, Vallée de l'Eure and Cathédrale along the way. Drop-off at your exact address. Door-to-door, luggage included.",
+        metaDescription: "Via A13 / N154, undefined min ride. Eure, Vallée de l'Eure and Cathédrale along the way. Drop-off at your exact address, luggage included.",
         heroTitle: "Taxi Rouen → Évreux",
         heroSubtitle: "Rouen → Évreux transfer at €105 — €130. 55 km, 45 min.",
         description: "Évreux, Eure prefecture, 45 min from Rouen.",

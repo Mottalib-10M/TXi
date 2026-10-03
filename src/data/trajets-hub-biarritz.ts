@@ -158,7 +158,7 @@ export const trajetsBiarritzHub: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Biarritz → San Sebastián (Espagne) | 50 km | TaxiNeo",
-        metaDescription: "Via A63 / AP-8 en 45 min. AP-8, Frontière, La Concha et Pintxos en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A63 / AP-8 en 45 min. AP-8, Frontière, La Concha et Pintxos en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Biarritz → San Sebastián",
         heroSubtitle: "Transfert transfrontalier Biarritz → San Sebastián au prix fixe de 95 — 120 €. 50 km, capitale gastronomique du Pays Basque espagnol.",
         description: "San Sebastián (Donostia), capitale gastronomique du Pays Basque espagnol et perle de la côte cantabrique, est à 45 min de Biarritz par l'A63 et l'AP-8.",

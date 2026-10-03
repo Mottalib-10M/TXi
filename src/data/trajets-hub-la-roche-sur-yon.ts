@@ -28,7 +28,7 @@ export const trajetsLaRocheSurYon: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi La Roche-sur-Yon → Nantes | 65 km, dès 125 € | TaxiNeo",
-        metaDescription: "Via A87 en 45 min. Vendée, Nantes métropole, Loire-Atlantique et Napoléon en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A87 en 45 min. Vendée, Nantes métropole, Loire-Atlantique et Napoléon en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi La Roche-sur-Yon → Nantes",
         heroSubtitle: "Transfert La Roche-sur-Yon → Nantes au prix fixe de 125 — 155 €. 65 km, direct par l'A87.",
         description: "Nantes, métropole de l'Ouest, est à 45 min de La Roche-sur-Yon par l'A87.",
@@ -47,7 +47,7 @@ export const trajetsLaRocheSurYon: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi La Roche-sur-Yon → Nantes | 65 km, from €125 | TaxiNeo",
-        metaDescription: "Via A87, 45 min ride. Vendée, Nantes métropole, Loire-Atlantique and Napoléon en route. Drop-off at your exact address. Door-to-door, luggage included.",
+        metaDescription: "Via A87, 45 min ride. Vendée, Nantes métropole, Loire-Atlantique and Napoléon en route. Drop-off at your exact address, luggage included.",
         heroTitle: "Taxi La Roche-sur-Yon → Nantes",
         heroSubtitle: "Your La Roche-sur-Yon → Nantes transfer at €125 — €155. 65 km, direct via the A87.",
         description: "Nantes, western France's major city, is 45 min from La Roche-sur-Yon via the A87.",

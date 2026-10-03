@@ -248,7 +248,7 @@ export const trajetsParisRetours: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Reims → Paris | Prix fixe dès 280 € | TaxiNeo",
-        metaDescription: "Via A4 en undefined min. Champagne, Retour degustation, Caves et Cathédrale en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A4 en undefined min. Champagne, Retour degustation, Caves et Cathédrale en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Reims → Paris",
         heroSubtitle: "Retour Reims → Paris au prix fixe de 280 — 335 €. 145 km par l'A4.",
         description: "Le retour Reims — Paris est parfait après une journée de dégustation dans les grandes maisons de Champagne ou une visite de la cathédrale des sacres.",
@@ -305,7 +305,7 @@ export const trajetsParisRetours: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Deauville → Paris | 200 km, dès 385 € | TaxiNeo",
-        metaDescription: "Via A13 en undefined min. Normandie, Retour weekend, Plage et Dimanche soir en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A13 en undefined min. Normandie, Retour weekend, Plage et Dimanche soir en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Deauville → Paris",
         heroSubtitle: "Retour Deauville → Paris au prix fixe de 385 — 465 €. 200 km par l'A13.",
         description: "Le retour de Deauville le dimanche soir est un classique parisien. Le taxi évite les embouteillages de l'A13 et la fatigue de la conduite après un weekend à la mer.",
@@ -362,7 +362,7 @@ export const trajetsParisRetours: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Rouen → Paris | Prix fixe dès 260 € | TaxiNeo",
-        metaDescription: "Via A13 en undefined min. Normandie, Seine, Cathédrale Monet et Retour en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A13 en undefined min. Normandie, Seine, Cathédrale Monet et Retour en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Rouen → Paris",
         heroSubtitle: "Retour Rouen → Paris au prix fixe de 260 — 315 €. 135 km par l'A13.",
         description: "Le retour Rouen — Paris par l'A13 longe la Seine à travers les méandres normands, les falaises crayeuses et la forêt de Bord.",

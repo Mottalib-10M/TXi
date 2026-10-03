@@ -3,7 +3,7 @@ import { getLocale } from "next-intl/server";
 import { dateDePage } from "@/lib/page-date";
 import { etofferFaq } from "@/lib/faq-etoffer";
 import { faitsTrajet } from "@/lib/faits-trajet";
-import { nomsTrajet } from "@/lib/seo-trajet";
+import { nomsTrajet, descriptionTrajet } from "@/lib/seo-trajet";
 
 export async function TrajetJsonLd({ trajet }: { trajet: Trajet }) {
   const locale = await getLocale();
@@ -18,14 +18,18 @@ export async function TrajetJsonLd({ trajet }: { trajet: Trajet }) {
     // via la même table que la ligne visible sous le titre.
     dateModified: dateDePage("/trajet/") ?? undefined,
     "@type": "TaxiService",
-    name: `TaxiNeo - Taxi ${trajet.from} → ${trajet.to}`,
-    description: trajet.i18n[loc].metaDescription,
+    name: `TaxiNeo - Taxi ${noms.from} → ${noms.to}`,
+    // Même description que la balise meta : le texte saisi passe par le
+    // nettoyage (phrase redite « Dépose à votre adresse exacte. Dépose à votre
+    // adresse exacte, retour possible. ») et, en anglais, par la traduction des
+    // points forts saisis en français. Le texte brut y échappait.
+    description: descriptionTrajet(trajet, loc),
     url: `https://www.taxineo.fr${locale === "fr" ? "" : `/${locale}`}/trajet/${trajet.slug}`,
     telephone: "+33759592934",
     areaServed: [
       {
         "@type": "Place",
-        name: trajet.from,
+        name: noms.from,
         geo: {
           "@type": "GeoCoordinates",
           latitude: trajet.fromLat,
@@ -34,7 +38,7 @@ export async function TrajetJsonLd({ trajet }: { trajet: Trajet }) {
       },
       {
         "@type": "Place",
-        name: trajet.to,
+        name: noms.to,
         geo: {
           "@type": "GeoCoordinates",
           latitude: trajet.toLat,

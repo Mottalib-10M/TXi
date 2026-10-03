@@ -27,7 +27,7 @@ export const trajetsPérigord: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Périgueux → Bordeaux | 130 km, dès 250 € | TaxiNeo",
-        metaDescription: "Via A89 en 1h15. Périgord, Vignobles, Saint-Émilion et Dordogne en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A89 en 1h15. Périgord, Vignobles, Saint-Émilion et Dordogne en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Périgueux → Bordeaux",
         heroSubtitle: "Transfert Périgueux → Bordeaux au prix fixe de 250 — 305 €. 130 km via l'A89, du Périgord blanc aux vignobles de Saint-Émilion.",
         description: "Bordeaux, capitale mondiale du vin et métropole dynamique de Nouvelle-Aquitaine, est à 1h15 de Périgueux par l'A89.",
@@ -91,7 +91,7 @@ export const trajetsPérigord: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Périgueux → Limoges | 100 km, dès 195 € | TaxiNeo",
-        metaDescription: "Via N21 en 1h05. Limousin, Porcelaine, Châtaigniers et Thiviers en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via N21 en 1h05. Limousin, Porcelaine, Châtaigniers et Thiviers en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Périgueux → Limoges",
         heroSubtitle: "Transfert Périgueux → Limoges au prix fixe de 195 — 235 €. 100 km par la N21, traversée du Périgord vert.",
         description: "Limoges, capitale de la porcelaine et préfecture de la Haute-Vienne, est à 1h05 de Périgueux par la N21.",
@@ -155,7 +155,7 @@ export const trajetsPérigord: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Sarlat → Bordeaux | 170 km, dès 325 € | TaxiNeo",
-        metaDescription: "Via A89 en 1h40. Périgord noir, Lascaux, Saint-Émilion et Bastides en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A89 en 1h40. Périgord noir, Lascaux, Saint-Émilion et Bastides en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Sarlat → Bordeaux",
         heroSubtitle: "Transfert Sarlat → Bordeaux au prix fixe de 325 — 395 €. 170 km, du Périgord noir à la métropole du vin.",
         description: "Bordeaux, inscrite au patrimoine mondial de l'UNESCO, est à 1h40 de Sarlat-la-Canéda par l'A89.",
@@ -283,7 +283,7 @@ export const trajetsPérigord: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Périgueux → Sarlat | 65 km, dès 125 € | TaxiNeo",
-        metaDescription: "Via D47 en 45 min. Périgord noir, Lascaux, Vézère et Préhistoire en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via D47 en 45 min. Périgord noir, Lascaux, Vézère et Préhistoire en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Périgueux → Sarlat",
         heroSubtitle: "Transfert Périgueux → Sarlat au prix fixe de 125 — 155 €. 65 km à travers la vallée de la Vézère, berceau de la préhistoire.",
         description: "Sarlat-la-Canéda, joyau du Périgord noir et capitale de la gastronomie périgourdine, est à 45 minutes de Périgueux.",

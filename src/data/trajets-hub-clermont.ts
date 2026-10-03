@@ -46,7 +46,7 @@ export const trajetsClermontHub: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Clermont-Ferrand → Vichy | 55 km, from €105 | TaxiNeo",
-        metaDescription: "Via A719, 40 min ride. Thermes, Napoléon III, Opéra and Allier en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via A719, 40 min ride. Thermes, Napoléon III, Opéra and Allier en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Clermont-Ferrand → Vichy",
         heroSubtitle: "Your Clermont-Ferrand → Vichy transfer at €105 — €130. 55 km, queen of spa towns.",
         description: "Vichy, queen of spa towns and UNESCO World Heritage Site, is 40 min from Clermont-Ferrand.",
@@ -238,7 +238,7 @@ export const trajetsClermontHub: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Clermont-Ferrand → Aurillac | 160 km, €190 | TaxiNeo",
-        metaDescription: "Via A75 then D922, 1h40 ride. Cantal, Volcans and Fromage along the way. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via A75 then D922, 1h40 ride. Cantal, Volcans and Fromage along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Clermont-Ferrand → Aurillac",
         heroSubtitle: "Your Clermont-Ferrand → Aurillac transfer at €305 — €370. 160 km, capital of Cantal.",
         description: "Aurillac, capital of Cantal in the heart of the Auvergne volcanoes and cantal cheese country, is 1h40 from Clermont-Ferrand.",
@@ -283,7 +283,7 @@ export const trajetsClermontHub: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Clermont-Ferrand → Saint-Étienne | 145 km | TaxiNeo",
-        metaDescription: "Via A89 puis A72 en 1h30. Design, Musée de la Mine et Chaudron vert en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A89 puis A72 en 1h30. Design, Musée de la Mine et Chaudron vert en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Clermont-Ferrand → Saint-Étienne",
         heroSubtitle: "Transfert Clermont-Ferrand → Saint-Étienne au prix fixe de 280 — 335 €. 145 km, ville UNESCO du design.",
         description: "Saint-Étienne, ville créative UNESCO du design et ancien bassin minier reconverti, est à 1h30 de Clermont-Ferrand.",
@@ -302,7 +302,7 @@ export const trajetsClermontHub: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Clermont-Ferrand → Saint-Étienne | 145 km | TaxiNeo",
-        metaDescription: "Via A89 then A72, 1h30 ride. Design, Musée de la Mine and Chaudron vert along the way. Drop-off at your exact address. Door-to-door, luggage included.",
+        metaDescription: "Via A89 then A72, 1h30 ride. Design, Musée de la Mine and Chaudron vert along the way. Drop-off at your exact address, luggage included.",
         heroTitle: "Taxi Clermont-Ferrand → Saint-Étienne",
         heroSubtitle: "Your Clermont-Ferrand → Saint-Étienne transfer at €280 — €335. 145 km, UNESCO City of Design.",
         description: "Saint-Étienne, UNESCO Creative City of Design and former mining basin reinvented, is 1h30 from Clermont-Ferrand.",

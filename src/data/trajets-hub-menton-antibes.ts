@@ -310,7 +310,7 @@ export const trajetsMentonAntibes: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Grasse → Nice | Fixed price from €45 | TaxiNeo",
-        metaDescription: "Via A8, 30 min ride. Parfums, Fragonard, Molinard and Galimard en route. Drop-off at your exact address. Drop-off at your exact address, return available.",
+        metaDescription: "Via A8, 30 min ride. Parfums, Fragonard, Molinard and Galimard en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Grasse — Nice",
         heroSubtitle: "From the world capital of perfume to the French Riviera, from €45",
         description: "Taxi transfer from Grasse to Nice via the A8 motorway, 40 km in 30 minutes from the world's perfume capital.",

@@ -28,7 +28,7 @@ export const trajetsRodezCahors: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Rodez → Toulouse | 155 km, dès 295 € | TaxiNeo",
-        metaDescription: "Via A68 en 1h40. Aveyron, Cathédrale de Rodez, Musée Soulages et Ville rose en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A68 en 1h40. Aveyron, Cathédrale de Rodez, Musée Soulages et Ville rose en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Rodez → Toulouse",
         heroSubtitle: "Transfert Rodez → Toulouse au prix fixe de 295 — 360 €. 155 km, direct par l'A68.",
         description: "Toulouse, la Ville rose, est à 1h40 de Rodez par l'A68.",
@@ -93,7 +93,7 @@ export const trajetsRodezCahors: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Rodez → Montpellier | 190 km, dès 365 € | TaxiNeo",
-        metaDescription: "Via A75 en 2h10. Viaduc de Millau, Causses, Larzac et Méditerranée en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via A75 en 2h10. Viaduc de Millau, Causses, Larzac et Méditerranée en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Rodez → Montpellier",
         heroSubtitle: "Transfert Rodez → Montpellier au prix fixe de 365 — 440 €. 190 km, via l'A75 et le viaduc de Millau.",
         description: "Montpellier est à 2h10 de Rodez par l'A75 et le spectaculaire viaduc de Millau.",
@@ -223,7 +223,7 @@ export const trajetsRodezCahors: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Cahors → Bordeaux | 215 km, dès 410 € | TaxiNeo",
-        metaDescription: "Via A20/A62 en 2h10. Lot-et-Garonne, Vignobles, Garonne et Saint-Émilion en chemin. Dépose à votre adresse exacte. Dépose porte-à-porte, bagages inclus.",
+        metaDescription: "Via A20/A62 en 2h10. Lot-et-Garonne, Vignobles, Garonne et Saint-Émilion en chemin. Dépose à votre adresse exacte, bagages inclus.",
         heroTitle: "Taxi Cahors → Bordeaux",
         heroSubtitle: "Transfert Cahors → Bordeaux au prix fixe de 410 — 500 €. 215 km, via l'A20 et l'A62.",
         description: "Bordeaux, capitale mondiale du vin, est à 2h10 de Cahors par l'A20 et l'A62.",
@@ -242,7 +242,7 @@ export const trajetsRodezCahors: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Cahors → Bordeaux | 215 km, from €410 | TaxiNeo",
-        metaDescription: "Via A20/A62, 2h10 ride. Lot-et-Garonne, Vignobles, Garonne and Saint-Émilion en route. Drop-off at your exact address. Door-to-door, luggage included.",
+        metaDescription: "Via A20/A62, 2h10 ride. Lot-et-Garonne, Vignobles, Garonne and Saint-Émilion en route. Drop-off at your exact address, luggage included.",
         heroTitle: "Taxi Cahors → Bordeaux",
         heroSubtitle: "Your Cahors → Bordeaux transfer at €410 — €500. 215 km, via the A20 and A62.",
         description: "Bordeaux, world wine capital, is 2h10 from Cahors via the A20 and A62.",
@@ -288,7 +288,7 @@ export const trajetsRodezCahors: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Rodez → Aurillac | 100 km, dès 195 € | TaxiNeo",
-        metaDescription: "Via N122 en 1h15. Cantal, Volcans d'Auvergne, Conques et Fromages en chemin. Dépose à votre adresse exacte. Dépose à votre adresse exacte, retour possible.",
+        metaDescription: "Via N122 en 1h15. Cantal, Volcans d'Auvergne, Conques et Fromages en chemin. Dépose à votre adresse exacte, retour possible.",
         heroTitle: "Taxi Rodez → Aurillac",
         heroSubtitle: "Transfert Rodez → Aurillac au prix fixe de 195 — 235 €. 100 km, entre Rouergue et Cantal.",
         description: "Aurillac, capitale du Cantal et porte des volcans d'Auvergne, est à 1h15 de Rodez.",
