@@ -3,7 +3,9 @@ import { Icon } from "@iconify/react";
 import { trajets } from "@/data/trajets";
 import { guides } from "@/data/guides";
 import { activeTrajetSlugs } from "@/data/trajet-whitelist";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, getLocale } from "next-intl/server";
+import { nomsTrajet } from "@/lib/seo-trajet";
+import { prixAffiche } from "@/lib/trajet-en";
 
 // Keyword → content mapping for internal linking
 const keywordMap: Record<string, { trajets?: string[]; guides?: string[] }> = {
@@ -36,6 +38,7 @@ const keywordMap: Record<string, { trajets?: string[]; guides?: string[] }> = {
 
 export async function BlogRelatedContent({ slug }: { slug: string }) {
   const t = await getTranslations("blog");
+  const loc = (await getLocale()) === "en" ? "en" : "fr";
 
   // Match slug keywords against the map
   const matchedTrajetSlugs = new Set<string>();
@@ -72,10 +75,10 @@ export async function BlogRelatedContent({ slug }: { slug: string }) {
             <Icon icon="solar:route-linear" className="text-neutral-400 shrink-0" />
             <div>
               <span className="text-sm font-medium group-hover:text-neutral-600 transition-colors">
-                {tr.from} → {tr.to}
+                {nomsTrajet(tr, loc).from} → {nomsTrajet(tr, loc).to}
               </span>
               <span className="text-xs text-neutral-400 ml-2">
-                {tr.distanceKm} km · {tr.priceEstimate}
+                {tr.distanceKm} km · {prixAffiche(tr.priceEstimate, loc)}
               </span>
             </div>
           </Link>

@@ -5,10 +5,13 @@ import { getNearbyStations } from "@/data/stations";
 import { getTrajetsNearPoint } from "@/data/trajets";
 import { activeGareSlugs, activeCitySlugs } from "@/data/page-whitelists";
 import { activeTrajetSlugs } from "@/data/trajet-whitelist";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, getLocale } from "next-intl/server";
+import { nomsTrajet } from "@/lib/seo-trajet";
+import { prixAffiche } from "@/lib/trajet-en";
 
 export async function StationInternalLinks({ station }: { station: Station }) {
   const t = await getTranslations("station");
+  const loc = (await getLocale()) === "en" ? "en" : "fr";
   const nearby = getNearbyStations(station).filter((s) => activeGareSlugs.has(s.slug));
   const relatedTrajets = getTrajetsNearPoint(station.lat, station.lng, 4).filter((t) => activeTrajetSlugs.has(t.slug));
 
@@ -57,9 +60,9 @@ export async function StationInternalLinks({ station }: { station: Station }) {
                   href={`/trajet/${tr.slug}`}
                   className="flex flex-col gap-1 bg-white border border-neutral-200 rounded-xl p-4 hover:border-neutral-400 transition-colors card-hover"
                 >
-                  <span className="text-sm font-medium">{tr.from} → {tr.to}</span>
+                  <span className="text-sm font-medium">{nomsTrajet(tr, loc).from} → {nomsTrajet(tr, loc).to}</span>
                   <span className="text-xs text-neutral-400">
-                    {tr.distanceKm} km · {tr.durationMin} min · {tr.priceEstimate}
+                    {tr.distanceKm} km · {tr.durationMin} min · {prixAffiche(tr.priceEstimate, loc)}
                   </span>
                 </Link>
               ))}
