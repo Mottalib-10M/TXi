@@ -3,6 +3,7 @@ import { BookingForm } from "@/components/booking/BookingForm";
 import { getTranslations, getLocale } from "next-intl/server";
 import { LigneMaj } from "@/components/shared/LigneMaj";
 import { resumeTrajet } from "@/lib/resume-citable";
+import { prixAffiche } from "@/lib/trajet-en";
 
 export async function TrajetHero({ trajet }: { trajet: Trajet }) {
   const t = await getTranslations("trajet");
@@ -41,7 +42,7 @@ export async function TrajetHero({ trajet }: { trajet: Trajet }) {
                 {t("heroDuration", { min: trajet.durationMin })}
               </span>
               <span className="bg-neutral-50 border border-neutral-200 rounded-full px-3 py-1">
-                {t("heroPrice", { price: trajet.priceEstimate })}
+                {t("heroPrice", { price: prixAffiche(trajet.priceEstimate, loc) })}
               </span>
             </div>
           </div>

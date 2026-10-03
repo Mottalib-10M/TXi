@@ -1390,3 +1390,18 @@ export function prixEstimeEn(prix: string): string {
   const u = prix.match(/^(\d+)\s*€$/);
   return u ? `€${u[1]}` : prix;
 }
+
+/**
+ * Prix affiché dans les blocs de la page (badge, tableau, cartes) : la saisie
+ * française « 50 — 62 € » s'affichait telle quelle sur les pages anglaises,
+ * 7 613 fois sur les 867 pages /en/trajet (relevé du 2026-10-03).
+ */
+export function prixAffiche(prix: string | number, loc: "fr" | "en"): string {
+  if (loc === "fr") return typeof prix === "number" ? `${prix} €` : prix;
+  const n = (s: string) => Number(s.replace(/[\s  ]/g, "")).toLocaleString("en-GB");
+  const s = String(prix).normalize("NFC").trim();
+  const m = s.match(/^(\d[\d\s  ]*?)\s*[—–-]{1,3}\s*(\d[\d\s  ]*?)\s*€$/);
+  if (m) return `€${n(m[1])}–€${n(m[2])}`;
+  const u = s.match(/^(\d[\d\s  ]*?)\s*€?$/);
+  return u ? `€${n(u[1])}` : s;
+}

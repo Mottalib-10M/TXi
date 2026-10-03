@@ -3314,7 +3314,7 @@ export const trajetsNice: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Nice → Castellane | 96 km, from €130 | TaxiNeo",
-        metaDescription: "Via N202 then D6085, 1h30 ride. Gorges du Verdon, Sous-préfecture des Alpes-de-Haute-Provence and Roc surplombant le village along the way. Luggage included.",
+        metaDescription: "Via N202 then D6085, 1h30 ride. Verdon Gorge, Sous-préfecture des Alpes-de-Haute-Provence and Roc surplombant le village along the way. Luggage included.",
         heroTitle: "Taxi Nice — Castellane",
         heroSubtitle: "The gateway to the Verdon Gorges from the Côte d'Azur",
         description: "Taxi transfer from Nice to Castellane, sub-prefecture of Alpes-de-Haute-Provence and the prime starting point for exploring the Verdon Gorges.",

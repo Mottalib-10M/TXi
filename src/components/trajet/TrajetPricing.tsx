@@ -2,12 +2,14 @@ import { Icon } from "@iconify/react";
 import { getTranslations, getLocale } from "next-intl/server";
 import type { Trajet } from "@/data/trajets";
 import { nomsTrajet } from "@/lib/seo-trajet";
+import { prixAffiche } from "@/lib/trajet-en";
 
 export async function TrajetPricing({ trajet }: { trajet: Trajet }) {
   const t = await getTranslations("trajet");
-  const noms = nomsTrajet(trajet, (await getLocale()) === "en" ? "en" : "fr");
+  const loc = (await getLocale()) === "en" ? "en" : "fr";
+  const noms = nomsTrajet(trajet, loc);
 
-  const parts = trajet.priceEstimate.split(/\s*[—–-]{1,3}\s*/);
+  const parts = trajet.priceEstimate.replace(/(\d)[\s\u202f\u00a0](?=\d{3}\b)/g, "$1").split(/\s*[—–-]{1,3}\s*/);
   const baseMin = parseInt(parts[0]) || 0;
   const baseMax = parseInt(parts[1] || parts[0]) || 0;
   const nightMin = Math.round(baseMin * 1.15);
@@ -20,19 +22,19 @@ export async function TrajetPricing({ trajet }: { trajet: Trajet }) {
       icon: "solar:sun-2-linear",
       label: t("pricingDay"),
       time: t("pricingDayTime"),
-      price: trajet.priceEstimate,
+      price: prixAffiche(trajet.priceEstimate, loc),
     },
     {
       icon: "solar:moon-sleep-linear",
       label: t("pricingNight"),
       time: t("pricingNightTime"),
-      price: `${nightMin} — ${nightMax} €`,
+      price: prixAffiche(`${nightMin} — ${nightMax} €`, loc),
     },
     {
       icon: "solar:calendar-linear",
       label: t("pricingSunday"),
       time: t("pricingSundayTime"),
-      price: `${sundayMin} — ${sundayMax} €`,
+      price: prixAffiche(`${sundayMin} — ${sundayMax} €`, loc),
     },
   ];
 

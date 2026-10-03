@@ -50,7 +50,7 @@ export const trajetsLyonSaintExupery: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Lyon-Saint Exupéry → Lyon Centre | 25 km, €55 | TaxiNeo",
-        metaDescription: "Via A43, 25 min ride. Aéroport Lyon-Saint Exupéry, Gare TGV intégrée, Presqu'île de Lyon and Confluence Rhône-Saône en route. Up to 40 min during rush hour.",
+        metaDescription: "Via A43, 25 min ride. Lyon-Saint Exupéry Airport, Gare TGV intégrée, Presqu'île de Lyon and Confluence Rhône-Saône en route. Up to 40 min during rush hour.",
         heroTitle: "Taxi Lyon-Saint Exupéry Airport — Lyon Centre",
         heroSubtitle: "Direct transfer from the terminal to the heart of Lyon, France's gastronomic capital",
         description: "Taxi transfer from Lyon-Saint Exupéry International Airport (LYS) to Lyon city centre via the A43 motorway. Door-to-door service with terminal pickup.",

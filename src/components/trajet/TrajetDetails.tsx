@@ -1,9 +1,11 @@
 import { Icon } from "@iconify/react";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, getLocale } from "next-intl/server";
+import { prixAffiche } from "@/lib/trajet-en";
 import type { Trajet } from "@/data/trajets";
 
 export async function TrajetDetails({ trajet }: { trajet: Trajet }) {
   const t = await getTranslations("trajet");
+  const loc = (await getLocale()) === "en" ? "en" : "fr";
 
   const details = [
     {
@@ -21,7 +23,7 @@ export async function TrajetDetails({ trajet }: { trajet: Trajet }) {
     {
       icon: "solar:tag-price-linear",
       label: t("detailsPrice"),
-      value: trajet.priceEstimate,
+      value: prixAffiche(trajet.priceEstimate, loc),
     },
     {
       icon: "solar:clock-square-linear",

@@ -92,7 +92,7 @@ export const trajetsParisVilles: Trajet[] = [
         metaTitle: "Taxi Paris → Montpellier | 750 km, from €720 | TaxiNeo",
         metaDescription:"Direct route via A6 then A9, 7h10. A6/A7/A9, Vallée du Rhône, Nîmes and Place de la Comédie en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Paris → Montpellier",
-        heroSubtitle: "Private transfer Paris → Montpellier from €720 — €920. Head to Languedoc in premium comfort.",
+        heroSubtitle: "Private transfer Paris → Montpellier from €720–€920. Head to Languedoc in premium comfort.",
         description:
           "The Paris — Montpellier journey reaches the dynamic Languedoc capital, known for its Place de la Comédie and Mediterranean beaches.",
         routeDescription: "The route takes the A6 to Lyon, A7 along the Rhône valley, then A9 to Montpellier.",
@@ -223,7 +223,7 @@ export const trajetsParisVilles: Trajet[] = [
         metaDescription:"Via A71, 4 hours ride. A71 Autoroute d'Auvergne, Viaduc de Veauce, Volcans d'Auvergne and Chaîne des Puys en route. Faster and more direct than train or bus.",
         heroTitle: "Taxi Paris → Clermont-Ferrand",
         heroSubtitle:
-          "Private transfer Paris → Clermont-Ferrand from €430 — €560. Home pick-up, premium vehicle, professional driver 24/7.",
+          "Private transfer Paris → Clermont-Ferrand from €430–€560. Home pick-up, premium vehicle, professional driver 24/7.",
         description:
           "The Paris — Clermont-Ferrand route connects the capital to the Auvergne metropolis, European capital of volcanism and Michelin's global headquarters. Our long-distance taxi offers a comfortable door-to-door transfer in about 4 hours, without the constraints of the Intercités train.",
         routeDescription:
@@ -339,7 +339,7 @@ export const trajetsParisVilles: Trajet[] = [
         metaDescription:"Via A6, 3 hours ride. A6 Autoroute du Soleil, Vignobles de Bourgogne, Hospices de Beaune and Cité de la Gastronomie en route. Drop-off at your exact address.",
         heroTitle: "Taxi Paris → Dijon",
         heroSubtitle:
-          "Private transfer Paris → Dijon from €320 — €420. Home pick-up, premium vehicle, professional driver 24/7.",
+          "Private transfer Paris → Dijon from €320–€420. Home pick-up, premium vehicle, professional driver 24/7.",
         description:
           "The Paris — Dijon route connects the capital to the historic capital of the Dukes of Burgundy, a city renowned worldwide for its gastronomy and wine. Our long-distance taxi offers a comfortable door-to-door transfer in about 3 hours via the A6 motorway, with the option to stop at the Hospices de Beaune en route.",
         routeDescription:
@@ -455,7 +455,7 @@ export const trajetsParisVilles: Trajet[] = [
         metaDescription:"Via A4, 3h15 ride. A4 Autoroute de l'Est, Centre Pompidou-Metz, Cathédrale Saint-Étienne and Place Saint-Louis en route. Drop-off at your exact address.",
         heroTitle: "Taxi Paris → Metz",
         heroSubtitle:
-          "Private transfer Paris → Metz from €340 — €440. Home pick-up, premium vehicle, professional driver 24/7.",
+          "Private transfer Paris → Metz from €340–€440. Home pick-up, premium vehicle, professional driver 24/7.",
         description:
           "The Paris — Metz route connects the capital to the Lorraine metropolis, renowned for its Gothic cathedral with Chagall stained glass and the Centre Pompidou-Metz. Our long-distance taxi offers a comfortable door-to-door transfer in about 3h15 via the A4 motorway.",
         routeDescription:
@@ -571,7 +571,7 @@ export const trajetsParisVilles: Trajet[] = [
         metaDescription:"Via A4, 3h30 ride. A4 Autoroute de l'Est, Champagne, Parc naturel de Lorraine and Place Stanislas en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Paris → Nancy",
         heroSubtitle:
-          "Private transfer Paris → Nancy from €400 — €520. Home pick-up, premium vehicle, professional driver.",
+          "Private transfer Paris → Nancy from €400–€520. Home pick-up, premium vehicle, professional driver.",
         description:
           "The Paris — Nancy route connects the capital to Lorraine's jewel. Nancy is famous for its UNESCO-listed Place Stanislas, Art Nouveau heritage and vibrant university scene. A private taxi offers comfortable door-to-door service in about 3h30.",
         routeDescription:
@@ -687,7 +687,7 @@ export const trajetsParisVilles: Trajet[] = [
         metaDescription:"A11 route, approximately 2h15. A11 L'Océane, Chartres, Circuit des 24 Heures and Vieux-Mans en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Paris → Le Mans",
         heroSubtitle:
-          "Private transfer Paris → Le Mans from €250 — €330. Door-to-door service, comfortable vehicle.",
+          "Private transfer Paris → Le Mans from €250–€330. Door-to-door service, comfortable vehicle.",
         description:
           "Le Mans is world-famous for its 24 Hours endurance race and boasts a stunning medieval old town. A private taxi is perfect for race weekends when public transport is overwhelmed.",
         routeDescription:
@@ -803,7 +803,7 @@ export const trajetsParisVilles: Trajet[] = [
         metaDescription:"Direct route via A13, 2h30. A13 Autoroute de Normandie, Rouen, Pays d'Auge and Mémorial de Caen en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Paris → Caen",
         heroSubtitle:
-          "Private transfer Paris → Caen from €280 — €370. Your gateway to Normandy's history.",
+          "Private transfer Paris → Caen from €280–€370. Your gateway to Normandy's history.",
         description:
           "Caen is the gateway to the D-Day beaches and Normandy's rich history. Home to the Caen Memorial, William the Conqueror's abbeys, and within easy reach of Omaha Beach, Honfleur and Deauville.",
         routeDescription:
@@ -919,7 +919,7 @@ export const trajetsParisVilles: Trajet[] = [
         metaDescription:"Via A20, 3h45 ride. A20 L'Occitane, Châteauroux, Plateau de Millevaches and Porcelaine de Limoges en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Paris → Limoges",
         heroSubtitle:
-          "Private transfer Paris → Limoges from €410 — €540. Discover the porcelain capital.",
+          "Private transfer Paris → Limoges from €410–€540. Discover the porcelain capital.",
         description:
           "Limoges is the world capital of porcelain, renowned for Haviland, Bernardaud and Royal Limoges. The city also boasts medieval enamel heritage, the Gothic Saint-Étienne Cathedral and France's most beautiful Art Deco train station.",
         routeDescription:
@@ -1035,7 +1035,7 @@ export const trajetsParisVilles: Trajet[] = [
         metaDescription:"Via A10, 3h15 ride. A10 L'Aquitaine, Loire Valley, Futuroscope and Église Notre-Dame-la-Grande en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Paris → Poitiers",
         heroSubtitle:
-          "Private transfer Paris → Poitiers from €360 — €470. Futuroscope, Romanesque heritage and Poitou charm.",
+          "Private transfer Paris → Poitiers from €360–€470. Futuroscope, Romanesque heritage and Poitou charm.",
         description:
           "Poitiers, one of France's oldest cities, blends exceptional Romanesque heritage with the futuristic Futuroscope theme park. A private taxi provides direct door-to-door service, ideal for families visiting the park.",
         routeDescription:
@@ -1151,7 +1151,7 @@ export const trajetsParisVilles: Trajet[] = [
         metaDescription:"Via A11, 3 hours ride. A11 L'Océane, Le Mans, Château d'Angers and Tapisserie de l'Apocalypse en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Paris → Angers",
         heroSubtitle:
-          "Private transfer Paris → Angers from €320 — €420. Discover the gentle Anjou lifestyle.",
+          "Private transfer Paris → Angers from €320–€420. Discover the gentle Anjou lifestyle.",
         description:
           "Angers, regularly ranked among France's best cities to live in, boasts a stunning medieval castle with the world's largest medieval tapestry and is the European capital of plant innovation. The surrounding Anjou vineyards produce exceptional Loire whites.",
         routeDescription:
@@ -1267,7 +1267,7 @@ export const trajetsParisVilles: Trajet[] = [
         metaDescription:"Via A5, 1h45 ride. A5 Autoroute du Soleil, Forêt de Fontainebleau, Maisons à pans de bois and Magasins d'usine en route. Drop-off at your exact address.",
         heroTitle: "Taxi Paris → Troyes",
         heroSubtitle:
-          "Private transfer Paris → Troyes from €200 — €270. Outlet shopping, half-timbered houses and stunning stained glass.",
+          "Private transfer Paris → Troyes from €200–€270. Outlet shopping, half-timbered houses and stunning stained glass.",
         description:
           "Troyes combines a beautifully preserved medieval old town with France's biggest factory outlet centre. Its champagne-cork-shaped centre has the country's finest half-timbered houses and more stained glass than anywhere except Chartres.",
         routeDescription:

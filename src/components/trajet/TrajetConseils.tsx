@@ -2,6 +2,7 @@ import { Icon } from "@iconify/react";
 import { getTranslations, getLocale } from "next-intl/server";
 import type { Trajet } from "@/data/trajets";
 import { nomsTrajet } from "@/lib/seo-trajet";
+import { peagesEn } from "@/lib/trajet-en";
 
 export async function TrajetConseils({ trajet }: { trajet: Trajet }) {
   const t = await getTranslations("trajet");
@@ -44,7 +45,7 @@ export async function TrajetConseils({ trajet }: { trajet: Trajet }) {
           <div className="mt-4 bg-neutral-50 border border-neutral-200 rounded-xl p-5 flex items-center gap-3 fade-up">
             <Icon icon="solar:card-linear" className="text-neutral-500 text-lg shrink-0" />
             <p className="text-sm text-neutral-600 font-light">
-              <span className="font-medium">{t("conseilsPeages")}</span> {trajet.peages}
+              <span className="font-medium">{t("conseilsPeages")}</span> {loc === "en" ? peagesEn(trajet.peages) : trajet.peages}
             </p>
           </div>
         )}

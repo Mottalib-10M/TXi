@@ -25,6 +25,7 @@ const LIEUX_EN: Record<string, string> = {
   "Gare Nantes": "Nantes Station",
   "Gare Nice-Ville": "Nice-Ville Station",
   "Gare Strasbourg": "Strasbourg Station",
+  "Gare Part-Dieu Lyon": "Lyon Part-Dieu Station",
   "Île de Ré": "Île de Ré",
   "Gare Saint-Charles": "Marseille Saint-Charles Station",
   "Château de Versailles": "Palace of Versailles",
@@ -37,12 +38,26 @@ const LIEUX_EN: Record<string, string> = {
   "Bâle": "Basel",
   "Andorre-la-Vieille": "Andorra la Vella",
   "Aéroport Paris-CDG": "Paris-CDG Airport",
+  // Villes étrangères : forme anglaise usuelle (« Paris → Londres » servait
+  // tel quel sur la page anglaise).
+  "Londres": "London",
+  "Bruxelles": "Brussels",
+  "Barcelone": "Barcelona",
+  "Sarrebruck": "Saarbrücken",
+  "Fribourg-en-Brisgau": "Freiburg im Breisgau",
 };
 
 export function lieuEn(nom: string): string {
   if (LIEUX_EN[nom]) return LIEUX_EN[nom];
   const aeroport = nom.match(/^Aéroport (?:de |d')?(.+)$/);
   if (aeroport) return `${aeroport[1]} Airport`;
+  // « Paris 11e » → « Paris 11th », « Paris 3e » → « Paris 3rd »
+  const arr = nom.match(/^Paris (\d+)e$/);
+  if (arr) {
+    const n = Number(arr[1]);
+    const suf = n % 10 === 1 && n !== 11 ? "st" : n % 10 === 2 && n !== 12 ? "nd" : n % 10 === 3 && n !== 13 ? "rd" : "th";
+    return `Paris ${n}${suf}`;
+  }
   return nom
     .replace(/\(Espagne\)/, "(Spain)")
     .replace(/\(Italie\)/, "(Italy)")

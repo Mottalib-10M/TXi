@@ -2,6 +2,7 @@ import { Icon } from "@iconify/react";
 import { getTranslations, getLocale } from "next-intl/server";
 import type { Trajet } from "@/data/trajets";
 import { nomsTrajet } from "@/lib/seo-trajet";
+import { prixAffiche } from "@/lib/trajet-en";
 
 export async function TrajetComparaison({ trajet }: { trajet: Trajet }) {
   const t = await getTranslations("trajet");
@@ -48,7 +49,7 @@ export async function TrajetComparaison({ trajet }: { trajet: Trajet }) {
                   <Icon icon="mdi:car-side" className="text-neutral-500" />
                   <p className="text-sm font-medium">{t("comparaisonBerline")}</p>
                 </div>
-                <p className="text-2xl font-semibold">{trajet.prixMin} — {trajet.prixMax} €</p>
+                <p className="text-2xl font-semibold">{prixAffiche(`${trajet.prixMin} — ${trajet.prixMax} €`, loc)}</p>
                 <p className="text-xs text-neutral-500 font-light mt-1">{t("comparaisonFixedPrice")}</p>
               </div>
             )}
@@ -58,7 +59,7 @@ export async function TrajetComparaison({ trajet }: { trajet: Trajet }) {
                   <Icon icon="solar:bus-linear" className="text-neutral-500" />
                   <p className="text-sm font-medium">{t("comparaisonVan")}</p>
                 </div>
-                <p className="text-2xl font-semibold">{trajet.prixVan} €</p>
+                <p className="text-2xl font-semibold">{prixAffiche(trajet.prixVan, loc)}</p>
                 <p className="text-xs text-neutral-500 font-light mt-1">{t("comparaisonVanDesc")}</p>
               </div>
             )}

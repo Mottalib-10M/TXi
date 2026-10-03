@@ -177,7 +177,7 @@ export const trajetsMaubeugeAvesnes: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Maubeuge → Bruxelles | 100 km, from €120 | TaxiNeo",
-        metaDescription: "Direct route via N2 / E19-E42, 1h05. N2, Frontière belge, Mons and Grand-Place Bruxelles en route. Drop-off at your exact address, return available.",
+        metaDescription: "Direct route via N2 / E19-E42, 1h05. N2, Frontière belge, Mons and Grand-Place Brussels en route. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Maubeuge → Brussels",
         heroSubtitle: "Your Maubeuge → Brussels transfer at €120 —€155. 100 km, cross-border via E19-E42.",
         description: "Brussels is 1h05 from Maubeuge, a natural cross-border route via Belgian motorways.",

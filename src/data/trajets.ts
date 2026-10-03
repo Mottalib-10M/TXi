@@ -106,7 +106,7 @@ export const trajets: Trajet[] = [
         metaTitle: "Taxi Paris → Aéroport CDG | 25 km, from €50 | TaxiNeo",
         metaDescription: "Via Autoroute A1, 35 min ride. Autoroute A1, Stade de France and Parc des Expositions de Villepinte along the way. Terminal drop-off, flight tracking.",
         heroTitle: "Taxi Paris → CDG Airport",
-        heroSubtitle: "Your Paris → Charles de Gaulle Airport transfer at a fixed price of €50 — €62. Online booking, professional driver 24/7.",
+        heroSubtitle: "Your Paris → Charles de Gaulle Airport transfer at a fixed price of €50–€62. Online booking, professional driver 24/7.",
         description: "The Paris — CDG Airport route is the most requested airport transfer in the Paris region. CDG, France's largest airport with over 67 million passengers per year, is located just 25 km north of Paris. Your TaxiNeo driver picks you up at your chosen address and drops you off directly at your flight terminal.",
         routeDescription: "The route takes the A1 motorway towards Lille, passing through Porte de la Chapelle and the Stade de France in Saint-Denis. Depending on traffic, your driver may also take the A3 via Bagnolet to avoid congestion on the northern ring road.",
         faq: [
@@ -150,7 +150,7 @@ export const trajets: Trajet[] = [
         metaTitle: "Taxi Aéroport CDG → Paris | 25 km, from €50 | TaxiNeo",
         metaDescription: "Via Autoroute A1, 35 min ride. Autoroute A1, Stade de France and Porte de la Chapelle along the way. Terminal drop-off, real-time flight tracking included.",
         heroTitle: "Taxi CDG Airport → Paris",
-        heroSubtitle: "Your CDG Airport → Paris transfer at a fixed price of €50 — €62. Personalised welcome with name board, real-time flight tracking.",
+        heroSubtitle: "Your CDG Airport → Paris transfer at a fixed price of €50–€62. Personalised welcome with name board, real-time flight tracking.",
         description: "On your arrival at CDG, your TaxiNeo driver awaits you in the arrivals area with a name board. Thanks to real-time flight tracking, they automatically adjust for any delays. Free waiting up to 45 minutes after landing.",
         routeDescription: "From CDG, the route joins Paris via the A1 motorway towards Porte de la Chapelle. Your driver drops you off at your exact chosen address in Paris, whether it's a hotel, your home or a meeting point.",
         faq: [
@@ -194,7 +194,7 @@ export const trajets: Trajet[] = [
         metaTitle: "Taxi Paris → Aéroport d'Orly | 18 km, from €36 | TaxiNeo",
         metaDescription: "Via A6 Autoroute du Soleil, 30 min ride. Périphérique Sud, A6 Autoroute du Soleil and Rungis along the way. Meet at terminal, free wait if flight delayed.",
         heroTitle: "Taxi Paris → Orly Airport",
-        heroSubtitle: "Your Paris → Orly transfer at a fixed price of €36 — €45. Online booking, professional driver 24/7.",
+        heroSubtitle: "Your Paris → Orly transfer at a fixed price of €36–€45. Online booking, professional driver 24/7.",
         description: "The Paris — Orly transfer is quick and direct. Orly, Paris's second airport, mainly handles domestic and European flights. Located just 18 km south of Paris, the journey is generally smooth outside rush hours.",
         routeDescription: "The route takes the southern ring road then the A6 motorway towards Lyon. The Orly exit provides direct access to terminals Orly 1, 2, 3 and 4.",
         faq: [
@@ -238,7 +238,7 @@ export const trajets: Trajet[] = [
         metaTitle: "Taxi Aéroport d'Orly → Paris | 18 km, from €36 | TaxiNeo",
         metaDescription: "Via A6 Autoroute du Soleil, 30 min ride. A6 Autoroute du Soleil, Porte d'Italie and Paris Rive Gauche along the way. Terminal drop-off, flight tracking.",
         heroTitle: "Taxi Orly Airport → Paris",
-        heroSubtitle: "Your Orly → Paris transfer at a fixed price of €35 — €45. Personalised welcome, real-time flight tracking.",
+        heroSubtitle: "Your Orly → Paris transfer at a fixed price of €35–€45. Personalised welcome, real-time flight tracking.",
         description: "Your driver awaits you at Orly exit and drives you directly to your destination in Paris. Personalised meet & greet service with name board.",
         routeDescription: "The route from Orly takes the A6 towards Paris, then joins the ring road or the southern gates of Paris depending on your final destination.",
         faq: [
@@ -282,7 +282,7 @@ export const trajets: Trajet[] = [
         metaTitle: "Taxi Aéroport CDG → Disneyland Paris | 42 km, €60 | TaxiNeo",
         metaDescription: "Via A104 Francilienne, 40 min ride. A104 Francilienne, Val d'Europe and Marne-la-Vallée along the way. Terminal drop-off, real-time flight tracking included.",
         heroTitle: "Taxi CDG → Disneyland Paris",
-        heroSubtitle: "Your CDG → Disneyland transfer at a fixed price of €60 — €80. Perfect for families with children.",
+        heroSubtitle: "Your CDG → Disneyland transfer at a fixed price of €60–€80. Perfect for families with children.",
         description: "The CDG — Disneyland transfer is the ideal journey for families arriving in France. In 40 minutes, reach your Disney hotel or the park entrance directly without stops or connections.",
         routeDescription: "The route takes the Francilienne (A104) then the A4 towards Metz. The Marne-la-Vallée / Val d'Europe exit leads directly to the Disneyland Paris complex.",
         faq: [
@@ -326,7 +326,7 @@ export const trajets: Trajet[] = [
         metaTitle: "Taxi Aéroport d'Orly → Disneyland Paris | 55 km | TaxiNeo",
         metaDescription: "Via A86, 50 min ride. A4 Autoroute de l'Est and Val d'Europe along the way. Terminal drop-off, flight tracking. Meet at terminal, free wait if flight delayed.",
         heroTitle: "Taxi Orly → Disneyland Paris",
-        heroSubtitle: "Your Orly → Disneyland transfer at a fixed price of €70 — €90. Guaranteed comfort for the whole family.",
+        heroSubtitle: "Your Orly → Disneyland transfer at a fixed price of €70–€90. Guaranteed comfort for the whole family.",
         description: "Reach Disneyland Paris from Orly in 50 minutes. Direct and comfortable transfer, ideal after a flight with tired children.",
         routeDescription: "The route takes the A86 then the A4 towards Marne-la-Vallée. The journey bypasses Paris via the south-east.",
         faq: [
@@ -370,7 +370,7 @@ export const trajets: Trajet[] = [
         metaTitle: "Taxi Aéroport CDG → Aéroport d'Orly | 40 km, €65 | TaxiNeo",
         metaDescription: "Via A1, 45 min ride. Périphérique Est along the way. Terminal drop-off, real-time flight tracking included. Meet at terminal, free wait if flight delayed.",
         heroTitle: "Taxi CDG → Orly",
-        heroSubtitle: "Inter-airport transfer CDG → Orly at a fixed price of €65 — €85. Fast and comfortable connection.",
+        heroSubtitle: "Inter-airport transfer CDG → Orly at a fixed price of €65–€85. Fast and comfortable connection.",
         description: "The CDG — Orly transfer is essential for travellers connecting between Paris's two airports. Faster and more comfortable than public transport, it's the ideal solution to avoid missing your flight.",
         routeDescription: "The journey connects the two airports by bypassing Paris via the eastern ring road. The route takes the A1, the ring road then the A6 towards Orly.",
         faq: [
@@ -412,9 +412,9 @@ export const trajets: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Aéroport d'Orly → Versailles | 25 km, €40 | TaxiNeo",
-        metaDescription: "Via A86, 30 min ride. Vélizy-Villacoublay and Château de Versailles along the way. Terminal drop-off, real-time flight tracking included. Card payment accepted.",
+        metaDescription: "Via A86, 30 min ride. Vélizy-Villacoublay and Palace of Versailles along the way. Terminal drop-off, real-time flight tracking included. Card payment accepted.",
         heroTitle: "Taxi Orly → Versailles",
-        heroSubtitle: "Transfer Orly → Versailles at a fixed price of €40 — €55. Direct to the Palace or your accommodation.",
+        heroSubtitle: "Transfer Orly → Versailles at a fixed price of €40–€55. Direct to the Palace or your accommodation.",
         description: "Reach Versailles and its famous palace directly from Orly Airport. A short, direct journey to start your visit without wasting time.",
         routeDescription: "The route takes the A86 towards Vélizy-Villacoublay, then joins Versailles via the N12.",
         faq: [
@@ -458,7 +458,7 @@ export const trajets: Trajet[] = [
         metaTitle: "Taxi Aéroport CDG → La Défense | 30 km, from €55 | TaxiNeo",
         metaDescription: "Via A1, 40 min ride. Past Grande Arche de La Défense. Terminal drop-off, real-time flight tracking included. Meet at terminal, free wait if flight delayed.",
         heroTitle: "Taxi CDG → La Défense",
-        heroSubtitle: "Transfer CDG → La Défense at a fixed price of €55 — €70. Fast and reliable business solution.",
+        heroSubtitle: "Transfer CDG → La Défense at a fixed price of €55–€70. Fast and reliable business solution.",
         description: "The CDG — La Défense transfer is popular with business travellers. Reach Europe's largest business district directly from the airport, with no detour through Paris.",
         routeDescription: "The route takes the A1 then the western A86 to reach La Défense directly, avoiding central Paris.",
         faq: [
@@ -502,7 +502,7 @@ export const trajets: Trajet[] = [
         metaTitle: "Taxi Aéroport de Beauvais → Paris | 85 km, €120 | TaxiNeo",
         metaDescription: "Via A16, 1h15 ride. Chantilly and A1 Autoroute du Nord along the way. Terminal drop-off, flight tracking. Terminal drop-off, real-time flight tracking included.",
         heroTitle: "Taxi Beauvais → Paris",
-        heroSubtitle: "Transfer Beauvais → Paris at a fixed price of €120 — €150. Faster and more comfortable than the shuttle.",
+        heroSubtitle: "Transfer Beauvais → Paris at a fixed price of €120–€150. Faster and more comfortable than the shuttle.",
         description: "Beauvais-Tillé Airport, used by low-cost airlines like Ryanair and Wizz Air, is located 85 km from Paris. The taxi is the most comfortable alternative to the shuttle bus (1h15 to 2h).",
         routeDescription: "The route takes the A16 then the A1 to reach Paris from the north. The landscape crosses the Picardy countryside and the south of the Oise.",
         faq: [
@@ -546,7 +546,7 @@ export const trajets: Trajet[] = [
         metaTitle: "Taxi Aéroport Nice → Nice Centre | 7 km, from €25 | TaxiNeo",
         metaDescription: "Direct 15 min ride. Promenade des Anglais and Baie des Anges along the way. Terminal drop-off, flight tracking. Meet at terminal, free wait if flight delayed.",
         heroTitle: "Taxi Nice Airport → Nice Centre",
-        heroSubtitle: "Nice Airport → Nice Centre transfer at a fixed price of €25 — €35.",
+        heroSubtitle: "Nice Airport → Nice Centre transfer at a fixed price of €25–€35.",
         description: "Nice Airport is just 7 km from the city centre. Enjoy a quick transfer along the Promenade des Anglais.",
         routeDescription: "The route follows the Promenade des Anglais with views of the Baie des Anges before reaching the city centre.",
         faq: [
@@ -590,7 +590,7 @@ export const trajets: Trajet[] = [
         metaTitle: "Taxi Aéroport Nice → Cannes | 30 km, from €55 | TaxiNeo",
         metaDescription: "A8 Autoroute route, approximately 35 min. A8 Autoroute, Antibes and La Croisette along the way. Terminal drop-off, real-time flight tracking included.",
         heroTitle: "Taxi Nice Airport → Cannes",
-        heroSubtitle: "Nice Airport → Cannes transfer at a fixed price of €55 — €70.",
+        heroSubtitle: "Nice Airport → Cannes transfer at a fixed price of €55–€70.",
         description: "Reach Cannes and La Croisette directly from Nice Airport in 35 minutes via the A8 motorway.",
         routeDescription: "The route takes the A8 along the coast, passing through Antibes before arriving in Cannes.",
         faq: [
@@ -634,7 +634,7 @@ export const trajets: Trajet[] = [
         metaTitle: "Taxi Lyon St-Exupéry → Lyon Centre | 25 km, €50 | TaxiNeo",
         metaDescription: "Via A43, 30 min ride. Vieux Lyon and Part-Dieu along the way. Terminal drop-off, flight tracking. Terminal drop-off, real-time flight tracking included.",
         heroTitle: "Taxi Lyon Airport → Lyon Centre",
-        heroSubtitle: "Lyon Saint-Exupéry Airport → Lyon Centre transfer at a fixed price of €50 — €65.",
+        heroSubtitle: "Lyon Saint-Exupéry Airport → Lyon Centre transfer at a fixed price of €50–€65.",
         description: "Lyon Saint-Exupéry Airport is 25 km from Lyon city centre. Your driver takes you directly to your destination.",
         routeDescription: "The route takes the A43 into Lyon, passing near Part-Dieu station and Vieux Lyon.",
         faq: [
@@ -678,7 +678,7 @@ export const trajets: Trajet[] = [
         metaTitle: "Taxi Marseille-Provence → Marseille Centre | 27 km | TaxiNeo",
         metaDescription: "Via A7 Autoroute du Soleil, 30 min ride. A7 Autoroute du Soleil, L'Estaque and Vieux-Port along the way. Terminal drop-off, real-time flight tracking included.",
         heroTitle: "Taxi Marseille Airport → Marseille Centre",
-        heroSubtitle: "Marseille-Provence Airport → Marseille Centre transfer at a fixed price of €50 — €65.",
+        heroSubtitle: "Marseille-Provence Airport → Marseille Centre transfer at a fixed price of €50–€65.",
         description: "Marseille-Provence Airport is 27 km from the city centre. Reach the Vieux-Port quickly by taxi.",
         routeDescription: "The route takes the A7 Autoroute du Soleil, passing through L'Estaque before reaching central Marseille.",
         faq: [
@@ -722,7 +722,7 @@ export const trajets: Trajet[] = [
         metaTitle: "Taxi Toulouse-Blagnac → Toulouse Centre | 12 km | TaxiNeo",
         metaDescription: "Direct 20 min ride. Rocade and Capitole along the way. Terminal drop-off, real-time flight tracking included. Meet at terminal, free wait if flight delayed.",
         heroTitle: "Taxi Toulouse Airport → Toulouse Centre",
-        heroSubtitle: "Toulouse-Blagnac Airport → Toulouse Centre transfer at a fixed price of €30 — €40.",
+        heroSubtitle: "Toulouse-Blagnac Airport → Toulouse Centre transfer at a fixed price of €30–€40.",
         description: "Toulouse-Blagnac Airport is 12 km from the city centre. Reach Place du Capitole in 20 minutes.",
         routeDescription: "The route takes the Toulouse ring road before reaching the city centre and Place du Capitole.",
         faq: [
@@ -765,13 +765,13 @@ export const trajets: Trajet[] = [
       en: {
         metaTitle: "Taxi Bordeaux-Mérignac → Bordeaux Centre | 15 km | TaxiNeo",
         metaDescription: "Direct 25 min ride. Rocade bordelaise and Place de la Bourse along the way. Terminal drop-off, flight tracking. Meet at terminal, free wait if flight delayed.",
-        heroTitle: "Taxi Aéroport Bordeaux-Mérignac → Bordeaux Centre",
-        heroSubtitle: "Your Aéroport Bordeaux-Mérignac → Bordeaux Centre transfer at a fixed price of 35 — 45 €. Online booking, professional driver 24/7.",
+        heroTitle: "Taxi Bordeaux-Mérignac Airport → Bordeaux Centre",
+        heroSubtitle: "Your Bordeaux-Mérignac Airport → Bordeaux Centre transfer at a fixed price of €35–€45. Online booking, professional driver 24/7.",
         description: "Bordeaux-Mérignac Airport is 15 km from the centre. Reach Place de la Bourse in 25 minutes.",
         routeDescription: "The route takes the Bordeaux ring road then joins the city centre via the boulevards.",
         faq: [
-          { question: "What is the price of a taxi Aéroport Bordeaux-Mérignac — Bordeaux Centre?", answer: "The flat rate is 35 — 45 € all inclusive. Price guaranteed at booking." },
-          { question: "How long is the Aéroport Bordeaux-Mérignac — Bordeaux Centre journey?", answer: "About 25 minutes under normal traffic conditions." },
+          { question: "What is the price of a taxi Bordeaux-Mérignac Airport — Bordeaux Centre?", answer: "The flat rate is €35–€45 all inclusive. Price guaranteed at booking." },
+          { question: "How long is the Bordeaux-Mérignac Airport — Bordeaux Centre journey?", answer: "About 25 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
         ],
@@ -809,13 +809,13 @@ export const trajets: Trajet[] = [
       en: {
         metaTitle: "Taxi Nantes-Atlantique → Nantes Centre | 12 km | TaxiNeo",
         metaDescription: "Direct 20 min ride. Périphérique sud and Île de Nantes along the way. Terminal drop-off, flight tracking. Terminal drop-off, real-time flight tracking included.",
-        heroTitle: "Taxi Aéroport Nantes-Atlantique → Nantes Centre",
-        heroSubtitle: "Your Aéroport Nantes-Atlantique → Nantes Centre transfer at a fixed price of 30 — 40 €. Online booking, professional driver 24/7.",
+        heroTitle: "Taxi Nantes-Atlantique Airport → Nantes Centre",
+        heroSubtitle: "Your Nantes-Atlantique Airport → Nantes Centre transfer at a fixed price of €30–€40. Online booking, professional driver 24/7.",
         description: "Nantes-Atlantique Airport is 12 km from the city centre. A short, direct journey to Île de Nantes.",
         routeDescription: "The route takes the southern Nantes ring road to reach the city centre.",
         faq: [
-          { question: "What is the price of a taxi Aéroport Nantes-Atlantique — Nantes Centre?", answer: "The flat rate is 30 — 40 € all inclusive. Price guaranteed at booking." },
-          { question: "How long is the Aéroport Nantes-Atlantique — Nantes Centre journey?", answer: "About 20 minutes under normal traffic conditions." },
+          { question: "What is the price of a taxi Nantes-Atlantique Airport — Nantes Centre?", answer: "The flat rate is €30–€40 all inclusive. Price guaranteed at booking." },
+          { question: "How long is the Nantes-Atlantique Airport — Nantes Centre journey?", answer: "About 20 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
         ],
@@ -853,13 +853,13 @@ export const trajets: Trajet[] = [
       en: {
         metaTitle: "Taxi Strasbourg → Strasbourg Centre | 15 km, €30 | TaxiNeo",
         metaDescription: "Via A35, 20 min ride. Petite France and Cathédrale along the way. Terminal drop-off, flight tracking. Terminal drop-off, real-time flight tracking included.",
-        heroTitle: "Taxi Aéroport Strasbourg → Strasbourg Centre",
-        heroSubtitle: "Your Aéroport Strasbourg → Strasbourg Centre transfer at a fixed price of 30 — 40 €. Online booking, professional driver 24/7.",
+        heroTitle: "Taxi Strasbourg Airport → Strasbourg Centre",
+        heroSubtitle: "Your Strasbourg Airport → Strasbourg Centre transfer at a fixed price of €30–€40. Online booking, professional driver 24/7.",
         description: "Strasbourg-Entzheim Airport is 15 km from the centre. Reach Petite France in 20 minutes.",
         routeDescription: "The route takes the A35 then reaches the historic centre and the cathedral.",
         faq: [
-          { question: "What is the price of a taxi Aéroport Strasbourg — Strasbourg Centre?", answer: "The flat rate is 30 — 40 € all inclusive. Price guaranteed at booking." },
-          { question: "How long is the Aéroport Strasbourg — Strasbourg Centre journey?", answer: "About 20 minutes under normal traffic conditions." },
+          { question: "What is the price of a taxi Strasbourg Airport — Strasbourg Centre?", answer: "The flat rate is €30–€40 all inclusive. Price guaranteed at booking." },
+          { question: "How long is the Strasbourg Airport — Strasbourg Centre journey?", answer: "About 20 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
         ],
@@ -897,13 +897,13 @@ export const trajets: Trajet[] = [
       en: {
         metaTitle: "Taxi Montpellier → Montpellier Centre | 10 km, €25 | TaxiNeo",
         metaDescription: "Via D66, 15 min ride. Place de la Comédie along the way. Terminal drop-off, real-time flight tracking included. Meet at terminal, free wait if flight delayed.",
-        heroTitle: "Taxi Aéroport Montpellier → Montpellier Centre",
-        heroSubtitle: "Your Aéroport Montpellier → Montpellier Centre transfer at a fixed price of 25 — 35 €. Online booking, professional driver 24/7.",
+        heroTitle: "Taxi Montpellier Airport → Montpellier Centre",
+        heroSubtitle: "Your Montpellier Airport → Montpellier Centre transfer at a fixed price of €25–€35. Online booking, professional driver 24/7.",
         description: "Montpellier Airport is only 10 km away. Reach Place de la Comédie in 15 minutes.",
         routeDescription: "The route takes the D66 to reach the city centre directly.",
         faq: [
-          { question: "What is the price of a taxi Aéroport Montpellier — Montpellier Centre?", answer: "The flat rate is 25 — 35 € all inclusive. Price guaranteed at booking." },
-          { question: "How long is the Aéroport Montpellier — Montpellier Centre journey?", answer: "About 15 minutes under normal traffic conditions." },
+          { question: "What is the price of a taxi Montpellier Airport — Montpellier Centre?", answer: "The flat rate is €25–€35 all inclusive. Price guaranteed at booking." },
+          { question: "How long is the Montpellier Airport — Montpellier Centre journey?", answer: "About 15 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
         ],
@@ -941,13 +941,13 @@ export const trajets: Trajet[] = [
       en: {
         metaTitle: "Taxi Aéroport CDG → Gare du Nord | 28 km, from €50 | TaxiNeo",
         metaDescription: "Via A1, 35 min ride. Stade de France and Gare Eurostar along the way. Terminal drop-off, flight tracking. Terminal drop-off, real-time flight tracking included.",
-        heroTitle: "Taxi Aéroport CDG → Gare du Nord",
-        heroSubtitle: "Your Aéroport CDG → Gare du Nord transfer at a fixed price of 50 — 65 €. Online booking, professional driver 24/7.",
+        heroTitle: "Taxi CDG Airport → Gare du Nord",
+        heroSubtitle: "Your CDG Airport → Gare du Nord transfer at a fixed price of €50–€65. Online booking, professional driver 24/7.",
         description: "Direct CDG — Gare du Nord transfer for Eurostar, Thalys and TGV Nord connections.",
         routeDescription: "The route takes the A1 then reaches Gare du Nord via Porte de la Chapelle.",
         faq: [
-          { question: "What is the price of a taxi Aéroport CDG — Gare du Nord?", answer: "The flat rate is 50 — 65 € all inclusive. Price guaranteed at booking." },
-          { question: "How long is the Aéroport CDG — Gare du Nord journey?", answer: "About 35 minutes under normal traffic conditions." },
+          { question: "What is the price of a taxi CDG Airport — Gare du Nord?", answer: "The flat rate is €50–€65 all inclusive. Price guaranteed at booking." },
+          { question: "How long is the CDG Airport — Gare du Nord journey?", answer: "About 35 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
         ],
@@ -985,13 +985,13 @@ export const trajets: Trajet[] = [
       en: {
         metaTitle: "Taxi Aéroport d'Orly → Gare de Lyon | 18 km, €35 | TaxiNeo",
         metaDescription: "Via A6, 25 min ride. Bercy and Paris Rive Gauche along the way. Terminal drop-off, flight tracking. Terminal drop-off, real-time flight tracking included.",
-        heroTitle: "Taxi Aéroport d'Orly → Gare de Lyon",
-        heroSubtitle: "Your Aéroport d'Orly → Gare de Lyon transfer at a fixed price of 35 — 50 €. Online booking, professional driver 24/7.",
+        heroTitle: "Taxi Orly Airport → Gare de Lyon",
+        heroSubtitle: "Your Orly Airport → Gare de Lyon transfer at a fixed price of €35–€50. Online booking, professional driver 24/7.",
         description: "Orly — Gare de Lyon transfer for your TGV South-East connections.",
         routeDescription: "The route takes the A6 then reaches Gare de Lyon via Quai de Bercy.",
         faq: [
-          { question: "What is the price of a taxi Aéroport d'Orly — Gare de Lyon?", answer: "The flat rate is 35 — 50 € all inclusive. Price guaranteed at booking." },
-          { question: "How long is the Aéroport d'Orly — Gare de Lyon journey?", answer: "About 25 minutes under normal traffic conditions." },
+          { question: "What is the price of a taxi Orly Airport — Gare de Lyon?", answer: "The flat rate is €35–€50 all inclusive. Price guaranteed at booking." },
+          { question: "How long is the Orly Airport — Gare de Lyon journey?", answer: "About 25 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
         ],
@@ -1029,13 +1029,13 @@ export const trajets: Trajet[] = [
       en: {
         metaTitle: "Taxi Aéroport CDG → Marne-la-Vallée | 40 km, €60 | TaxiNeo",
         metaDescription: "Via A104, 40 min ride. Val d'Europe and Chessy along the way. Terminal drop-off, flight tracking. Terminal drop-off, real-time flight tracking included.",
-        heroTitle: "Taxi Aéroport CDG → Marne-la-Vallée",
-        heroSubtitle: "Your Aéroport CDG → Marne-la-Vallée transfer at a fixed price of 60 — 75 €. Online booking, professional driver 24/7.",
+        heroTitle: "Taxi CDG Airport → Marne-la-Vallée",
+        heroSubtitle: "Your CDG Airport → Marne-la-Vallée transfer at a fixed price of €60–€75. Online booking, professional driver 24/7.",
         description: "CDG — Marne-la-Vallée transfer, ideal for reaching Val d'Europe or Chessy.",
         routeDescription: "The route takes the Francilienne (A104) to reach Marne-la-Vallée directly.",
         faq: [
-          { question: "What is the price of a taxi Aéroport CDG — Marne-la-Vallée?", answer: "The flat rate is 60 — 75 € all inclusive. Price guaranteed at booking." },
-          { question: "How long is the Aéroport CDG — Marne-la-Vallée journey?", answer: "About 40 minutes under normal traffic conditions." },
+          { question: "What is the price of a taxi CDG Airport — Marne-la-Vallée?", answer: "The flat rate is €60–€75 all inclusive. Price guaranteed at booking." },
+          { question: "How long is the CDG Airport — Marne-la-Vallée journey?", answer: "About 40 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
         ],
@@ -1073,13 +1073,13 @@ export const trajets: Trajet[] = [
       en: {
         metaTitle: "Taxi Aéroport d'Orly → La Défense | 30 km, €50 | TaxiNeo",
         metaDescription: "Via A86, 35 min ride. Pont de Sèvres and Grande Arche along the way. Terminal drop-off, flight tracking. Terminal drop-off, real-time flight tracking included.",
-        heroTitle: "Taxi Aéroport d'Orly → La Défense",
-        heroSubtitle: "Your Aéroport d'Orly → La Défense transfer at a fixed price of 50 — 65 €. Online booking, professional driver 24/7.",
+        heroTitle: "Taxi Orly Airport → La Défense",
+        heroSubtitle: "Your Orly Airport → La Défense transfer at a fixed price of €50–€65. Online booking, professional driver 24/7.",
         description: "Orly — La Défense transfer for business travellers. Direct without going through Paris.",
         routeDescription: "The route bypasses Paris via the western A86, through Pont de Sèvres.",
         faq: [
-          { question: "What is the price of a taxi Aéroport d'Orly — La Défense?", answer: "The flat rate is 50 — 65 € all inclusive. Price guaranteed at booking." },
-          { question: "How long is the Aéroport d'Orly — La Défense journey?", answer: "About 35 minutes under normal traffic conditions." },
+          { question: "What is the price of a taxi Orly Airport — La Défense?", answer: "The flat rate is €50–€65 all inclusive. Price guaranteed at booking." },
+          { question: "How long is the Orly Airport — La Défense journey?", answer: "About 35 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
         ],
@@ -1117,13 +1117,13 @@ export const trajets: Trajet[] = [
       en: {
         metaTitle: "Taxi Aéroport Nice → Monaco | 30 km, from €80 | TaxiNeo",
         metaDescription: "Direct 30 min ride. Bord de mer, Èze and Monte-Carlo along the way. Terminal drop-off, flight tracking. Terminal drop-off, real-time flight tracking included.",
-        heroTitle: "Taxi Aéroport Nice → Monaco",
-        heroSubtitle: "Your Aéroport Nice → Monaco transfer at a fixed price of 80 — 100 €. Online booking, professional driver 24/7.",
+        heroTitle: "Taxi Nice Airport → Monaco",
+        heroSubtitle: "Your Nice Airport → Monaco transfer at a fixed price of €80–€100. Online booking, professional driver 24/7.",
         description: "Premium Nice Airport — Monaco transfer along the French Riviera. Exceptional sea views.",
         routeDescription: "The route follows the coast via the Basse or Moyenne Corniche, passing through Èze and Cap-d'Ail.",
         faq: [
-          { question: "What is the price of a taxi Aéroport Nice — Monaco?", answer: "The flat rate is 80 — 100 € all inclusive. Price guaranteed at booking." },
-          { question: "How long is the Aéroport Nice — Monaco journey?", answer: "About 30 minutes under normal traffic conditions." },
+          { question: "What is the price of a taxi Nice Airport — Monaco?", answer: "The flat rate is €80–€100 all inclusive. Price guaranteed at booking." },
+          { question: "How long is the Nice Airport — Monaco journey?", answer: "About 30 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
         ],
@@ -1161,13 +1161,13 @@ export const trajets: Trajet[] = [
       en: {
         metaTitle: "Taxi Aéroport Lyon → Grenoble | 100 km, from €130 | TaxiNeo",
         metaDescription: "Via A43, 1h10 ride. Past Massif de la Chartreuse. Terminal drop-off, real-time flight tracking included. Meet at terminal, free wait if flight delayed.",
-        heroTitle: "Taxi Aéroport Lyon → Grenoble",
-        heroSubtitle: "Your Aéroport Lyon → Grenoble transfer at a fixed price of 130 — 160 €. Online booking, professional driver 24/7.",
+        heroTitle: "Taxi Lyon Airport → Grenoble",
+        heroSubtitle: "Your Lyon Airport → Grenoble transfer at a fixed price of €130–€160. Online booking, professional driver 24/7.",
         description: "Lyon Airport — Grenoble transfer through the Chartreuse massif. Ideal for ski resorts.",
         routeDescription: "The route takes the A43 then A48 towards Grenoble, crossing the Alpine landscape.",
         faq: [
-          { question: "What is the price of a taxi Aéroport Lyon — Grenoble?", answer: "The flat rate is 130 — 160 € all inclusive. Price guaranteed at booking." },
-          { question: "How long is the Aéroport Lyon — Grenoble journey?", answer: "About 70 minutes under normal traffic conditions." },
+          { question: "What is the price of a taxi Lyon Airport — Grenoble?", answer: "The flat rate is €130–€160 all inclusive. Price guaranteed at booking." },
+          { question: "How long is the Lyon Airport — Grenoble journey?", answer: "About 70 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
         ],
@@ -1205,13 +1205,13 @@ export const trajets: Trajet[] = [
       en: {
         metaTitle: "Taxi Gare de Lyon → Aéroport d'Orly | 18 km, €35 | TaxiNeo",
         metaDescription: "Via A6 in 25 min, drop-off at your exact terminal (Orly 1-4). Faster than metro + OrlyVal with luggage. Pickup at the station entrance. Instant quote online.",
-        heroTitle: "Taxi Gare de Lyon → Aéroport d'Orly",
-        heroSubtitle: "Your Gare de Lyon → Aéroport d'Orly transfer at a fixed price of 35 — 45 €. Online booking, professional driver 24/7.",
+        heroTitle: "Taxi Gare de Lyon → Orly Airport",
+        heroSubtitle: "Your Gare de Lyon → Orly Airport transfer at a fixed price of €35–€45. Online booking, professional driver 24/7.",
         description: "Gare de Lyon — Orly transfer for your train-plane connections.",
         routeDescription: "The route takes the A6 towards Orly, via Rungis.",
         faq: [
-          { question: "What is the price of a taxi Gare de Lyon — Aéroport d'Orly?", answer: "The flat rate is 35 — 45 € all inclusive. Price guaranteed at booking." },
-          { question: "How long is the Gare de Lyon — Aéroport d'Orly journey?", answer: "About 25 minutes under normal traffic conditions." },
+          { question: "What is the price of a taxi Gare de Lyon — Orly Airport?", answer: "The flat rate is €35–€45 all inclusive. Price guaranteed at booking." },
+          { question: "How long is the Gare de Lyon — Orly Airport journey?", answer: "About 25 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
         ],
@@ -1249,13 +1249,13 @@ export const trajets: Trajet[] = [
       en: {
         metaTitle: "Taxi Gare du Nord → Aéroport CDG | 28 km, from €55 | TaxiNeo",
         metaDescription: "Direct route via A1, 35 min. Stade de France along the way. Faster and more direct than train or bus. Drop-off at your exact address, return available.",
-        heroTitle: "Taxi Gare du Nord → Aéroport CDG",
-        heroSubtitle: "Your Gare du Nord → Aéroport CDG transfer at a fixed price of 55 — 65 €. Online booking, professional driver 24/7.",
+        heroTitle: "Taxi Gare du Nord → CDG Airport",
+        heroSubtitle: "Your Gare du Nord → CDG Airport transfer at a fixed price of €55–€65. Online booking, professional driver 24/7.",
         description: "Gare du Nord — CDG transfer. Ideal after a Eurostar or Thalys.",
         routeDescription: "The route takes the A1 northbound to reach CDG.",
         faq: [
-          { question: "What is the price of a taxi Gare du Nord — Aéroport CDG?", answer: "The flat rate is 55 — 65 € all inclusive. Price guaranteed at booking." },
-          { question: "How long is the Gare du Nord — Aéroport CDG journey?", answer: "About 35 minutes under normal traffic conditions." },
+          { question: "What is the price of a taxi Gare du Nord — CDG Airport?", answer: "The flat rate is €55–€65 all inclusive. Price guaranteed at booking." },
+          { question: "How long is the Gare du Nord — CDG Airport journey?", answer: "About 35 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
         ],
@@ -1293,13 +1293,13 @@ export const trajets: Trajet[] = [
       en: {
         metaTitle: "Taxi Gare Montparnasse → Aéroport d'Orly | 20 km | TaxiNeo",
         metaDescription: "A6 route, approximately 30 min. Périphérique along the way. Faster and more direct than train or bus. Drop-off at your exact address, return available.",
-        heroTitle: "Taxi Gare Montparnasse → Aéroport d'Orly",
-        heroSubtitle: "Your Gare Montparnasse → Aéroport d'Orly transfer at a fixed price of 40 — 50 €. Online booking, professional driver 24/7.",
+        heroTitle: "Taxi Gare Montparnasse → Orly Airport",
+        heroSubtitle: "Your Gare Montparnasse → Orly Airport transfer at a fixed price of €40–€50. Online booking, professional driver 24/7.",
         description: "Quick Montparnasse — Orly transfer for your TGV-plane connections.",
         routeDescription: "The route takes the southern ring road then the A6 towards Orly.",
         faq: [
-          { question: "What is the price of a taxi Gare Montparnasse — Aéroport d'Orly?", answer: "The flat rate is 40 — 50 € all inclusive. Price guaranteed at booking." },
-          { question: "How long is the Gare Montparnasse — Aéroport d'Orly journey?", answer: "About 30 minutes under normal traffic conditions." },
+          { question: "What is the price of a taxi Gare Montparnasse — Orly Airport?", answer: "The flat rate is €40–€50 all inclusive. Price guaranteed at booking." },
+          { question: "How long is the Gare Montparnasse — Orly Airport journey?", answer: "About 30 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
         ],
@@ -1337,13 +1337,13 @@ export const trajets: Trajet[] = [
       en: {
         metaTitle: "Taxi Gare de Lyon → Aéroport CDG | 30 km, from €60 | TaxiNeo",
         metaDescription: "Via ring road and A1, 40 min ride. Drop-off at your exact terminal (1, 2E, 2F, 2G). Skip the crowded RER B with luggage. Flight tracking included for any delay.",
-        heroTitle: "Taxi Gare de Lyon → Aéroport CDG",
-        heroSubtitle: "Your Gare de Lyon → Aéroport CDG transfer at a fixed price of 60 — 70 €. Online booking, professional driver 24/7.",
+        heroTitle: "Taxi Gare de Lyon → CDG Airport",
+        heroSubtitle: "Your Gare de Lyon → CDG Airport transfer at a fixed price of €60–€70. Online booking, professional driver 24/7.",
         description: "Gare de Lyon — CDG transfer for your TGV-plane connections.",
         routeDescription: "The route takes the A4 then the Francilienne to reach CDG.",
         faq: [
-          { question: "What is the price of a taxi Gare de Lyon — Aéroport CDG?", answer: "The flat rate is 60 — 70 € all inclusive. Price guaranteed at booking." },
-          { question: "How long is the Gare de Lyon — Aéroport CDG journey?", answer: "About 40 minutes under normal traffic conditions." },
+          { question: "What is the price of a taxi Gare de Lyon — CDG Airport?", answer: "The flat rate is €60–€70 all inclusive. Price guaranteed at booking." },
+          { question: "How long is the Gare de Lyon — CDG Airport journey?", answer: "About 40 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
         ],
@@ -1381,13 +1381,13 @@ export const trajets: Trajet[] = [
       en: {
         metaTitle: "Taxi Gare du Nord → Aéroport d'Orly | 22 km, €40 | TaxiNeo",
         metaDescription: "A6 route, approximately 30 min. Périphérique along the way. Faster and more direct than train or bus. Drop-off at your exact address, return available.",
-        heroTitle: "Taxi Gare du Nord → Aéroport d'Orly",
-        heroSubtitle: "Your Gare du Nord → Aéroport d'Orly transfer at a fixed price of 45 — 55 €. Online booking, professional driver 24/7.",
+        heroTitle: "Taxi Gare du Nord → Orly Airport",
+        heroSubtitle: "Your Gare du Nord → Orly Airport transfer at a fixed price of €45–€55. Online booking, professional driver 24/7.",
         description: "Gare du Nord — Orly transfer in 30 minutes.",
         routeDescription: "The route goes via the ring road then the A6 towards Orly.",
         faq: [
-          { question: "What is the price of a taxi Gare du Nord — Aéroport d'Orly?", answer: "The flat rate is 45 — 55 € all inclusive. Price guaranteed at booking." },
-          { question: "How long is the Gare du Nord — Aéroport d'Orly journey?", answer: "About 30 minutes under normal traffic conditions." },
+          { question: "What is the price of a taxi Gare du Nord — Orly Airport?", answer: "The flat rate is €45–€55 all inclusive. Price guaranteed at booking." },
+          { question: "How long is the Gare du Nord — Orly Airport journey?", answer: "About 30 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
         ],
@@ -1425,13 +1425,13 @@ export const trajets: Trajet[] = [
       en: {
         metaTitle: "Taxi Gare Saint-Lazare → Aéroport CDG | 32 km, €55 | TaxiNeo",
         metaDescription: "Direct route via A1, 45 min. Porte de la Chapelle along the way. Faster and more direct than train or bus. Drop-off at your exact address, return available.",
-        heroTitle: "Taxi Gare Saint-Lazare → Aéroport CDG",
-        heroSubtitle: "Your Gare Saint-Lazare → Aéroport CDG transfer at a fixed price of 65 — 75 €. Online booking, professional driver 24/7.",
+        heroTitle: "Taxi Gare Saint-Lazare → CDG Airport",
+        heroSubtitle: "Your Gare Saint-Lazare → CDG Airport transfer at a fixed price of €65–€75. Online booking, professional driver 24/7.",
         description: "Saint-Lazare — CDG transfer for your Normandy-plane connections.",
         routeDescription: "The route heads to Porte de la Chapelle then takes the A1.",
         faq: [
-          { question: "What is the price of a taxi Gare Saint-Lazare — Aéroport CDG?", answer: "The flat rate is 65 — 75 € all inclusive. Price guaranteed at booking." },
-          { question: "How long is the Gare Saint-Lazare — Aéroport CDG journey?", answer: "About 45 minutes under normal traffic conditions." },
+          { question: "What is the price of a taxi Gare Saint-Lazare — CDG Airport?", answer: "The flat rate is €65–€75 all inclusive. Price guaranteed at booking." },
+          { question: "How long is the Gare Saint-Lazare — CDG Airport journey?", answer: "About 45 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
         ],
@@ -1470,11 +1470,11 @@ export const trajets: Trajet[] = [
         metaTitle: "Taxi Gare de Lyon → Disneyland Paris | 45 km, €65 | TaxiNeo",
         metaDescription: "Direct route via A4, 45 min. Marne-la-Vallée along the way. Faster and more direct than train or bus. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Gare de Lyon → Disneyland Paris",
-        heroSubtitle: "Your Gare de Lyon → Disneyland Paris transfer at a fixed price of 90 — 105 €. Online booking, professional driver 24/7.",
+        heroSubtitle: "Your Gare de Lyon → Disneyland Paris transfer at a fixed price of €90–€105. Online booking, professional driver 24/7.",
         description: "Gare de Lyon — Disneyland Paris transfer in 45 minutes via the A4.",
         routeDescription: "The route takes the A4 eastbound towards Marne-la-Vallée.",
         faq: [
-          { question: "What is the price of a taxi Gare de Lyon — Disneyland Paris?", answer: "The flat rate is 90 — 105 € all inclusive. Price guaranteed at booking." },
+          { question: "What is the price of a taxi Gare de Lyon — Disneyland Paris?", answer: "The flat rate is €90–€105 all inclusive. Price guaranteed at booking." },
           { question: "How long is the Gare de Lyon — Disneyland Paris journey?", answer: "About 45 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
@@ -1514,11 +1514,11 @@ export const trajets: Trajet[] = [
         metaTitle: "Taxi Gare du Nord → Disneyland Paris | 42 km, €60 | TaxiNeo",
         metaDescription: "Direct route via A104, 45 min. Val d'Europe along the way. Faster and more direct than train or bus. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Gare du Nord → Disneyland Paris",
-        heroSubtitle: "Your Gare du Nord → Disneyland Paris transfer at a fixed price of 80 — 100 €. Online booking, professional driver 24/7.",
+        heroSubtitle: "Your Gare du Nord → Disneyland Paris transfer at a fixed price of €80–€100. Online booking, professional driver 24/7.",
         description: "Gare du Nord — Disneyland transfer, ideal after a Eurostar from London.",
         routeDescription: "The route bypasses Paris via the north-east through the Francilienne.",
         faq: [
-          { question: "What is the price of a taxi Gare du Nord — Disneyland Paris?", answer: "The flat rate is 80 — 100 € all inclusive. Price guaranteed at booking." },
+          { question: "What is the price of a taxi Gare du Nord — Disneyland Paris?", answer: "The flat rate is €80–€100 all inclusive. Price guaranteed at booking." },
           { question: "How long is the Gare du Nord — Disneyland Paris journey?", answer: "About 45 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
@@ -1556,13 +1556,13 @@ export const trajets: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Gare de Lyon → Versailles | 25 km, from €50 | TaxiNeo",
-        metaDescription: "Via A13, 35 min ride. Périphérique and Château de Versailles along the way. Drop-off at your exact address, return available.",
+        metaDescription: "Via A13, 35 min ride. Périphérique and Palace of Versailles along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Gare de Lyon → Versailles",
-        heroSubtitle: "Your Gare de Lyon → Versailles transfer at a fixed price of 50 — 60 €. Online booking, professional driver 24/7.",
+        heroSubtitle: "Your Gare de Lyon → Versailles transfer at a fixed price of €50–€60. Online booking, professional driver 24/7.",
         description: "Gare de Lyon — Versailles transfer. Reach the Palace in 35 minutes.",
         routeDescription: "The route takes the ring road then the A13 towards Versailles.",
         faq: [
-          { question: "What is the price of a taxi Gare de Lyon — Versailles?", answer: "The flat rate is 50 — 60 € all inclusive. Price guaranteed at booking." },
+          { question: "What is the price of a taxi Gare de Lyon — Versailles?", answer: "The flat rate is €50–€60 all inclusive. Price guaranteed at booking." },
           { question: "How long is the Gare de Lyon — Versailles journey?", answer: "About 35 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
@@ -1602,11 +1602,11 @@ export const trajets: Trajet[] = [
         metaTitle: "Taxi Gare Montparnasse → Versailles | 18 km, €35 | TaxiNeo",
         metaDescription: "Direct route via A13, 25 min. Porte de Versailles along the way. Faster and more direct than train or bus. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Gare Montparnasse → Versailles",
-        heroSubtitle: "Your Gare Montparnasse → Versailles transfer at a fixed price of 35 — 45 €. Online booking, professional driver 24/7.",
+        heroSubtitle: "Your Gare Montparnasse → Versailles transfer at a fixed price of €35–€45. Online booking, professional driver 24/7.",
         description: "The shortest journey from a Parisian station to Versailles.",
         routeDescription: "The route goes through Porte de Versailles then reaches the Palace.",
         faq: [
-          { question: "What is the price of a taxi Gare Montparnasse — Versailles?", answer: "The flat rate is 35 — 45 € all inclusive. Price guaranteed at booking." },
+          { question: "What is the price of a taxi Gare Montparnasse — Versailles?", answer: "The flat rate is €35–€45 all inclusive. Price guaranteed at booking." },
           { question: "How long is the Gare Montparnasse — Versailles journey?", answer: "About 25 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
@@ -1645,13 +1645,13 @@ export const trajets: Trajet[] = [
       en: {
         metaTitle: "Taxi Gare Montparnasse → Aéroport CDG | 35 km, €55 | TaxiNeo",
         metaDescription: "A1 route, approximately 45 min. Périphérique along the way. Faster and more direct than train or bus. Drop-off at your exact address, return available.",
-        heroTitle: "Taxi Gare Montparnasse → Aéroport CDG",
-        heroSubtitle: "Your Gare Montparnasse → Aéroport CDG transfer at a fixed price of 70 — 85 €. Online booking, professional driver 24/7.",
+        heroTitle: "Taxi Gare Montparnasse → CDG Airport",
+        heroSubtitle: "Your Gare Montparnasse → CDG Airport transfer at a fixed price of €70–€85. Online booking, professional driver 24/7.",
         description: "TGV West — CDG plane connection. Faster than the RER.",
         routeDescription: "The route crosses Paris via the ring road then takes the A1.",
         faq: [
-          { question: "What is the price of a taxi Gare Montparnasse — Aéroport CDG?", answer: "The flat rate is 70 — 85 € all inclusive. Price guaranteed at booking." },
-          { question: "How long is the Gare Montparnasse — Aéroport CDG journey?", answer: "About 45 minutes under normal traffic conditions." },
+          { question: "What is the price of a taxi Gare Montparnasse — CDG Airport?", answer: "The flat rate is €70–€85 all inclusive. Price guaranteed at booking." },
+          { question: "How long is the Gare Montparnasse — CDG Airport journey?", answer: "About 45 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
         ],
@@ -1690,11 +1690,11 @@ export const trajets: Trajet[] = [
         metaTitle: "Taxi Gare de Lyon → La Défense | 18 km, from €35 | TaxiNeo",
         metaDescription: "Direct 30 min ride. Quais de Seine and Arc de Triomphe along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Gare de Lyon → La Défense",
-        heroSubtitle: "Your Gare de Lyon → La Défense transfer at a fixed price of 35 — 45 €. Online booking, professional driver 24/7.",
+        heroSubtitle: "Your Gare de Lyon → La Défense transfer at a fixed price of €35–€45. Online booking, professional driver 24/7.",
         description: "Gare de Lyon — La Défense transfer for business meetings.",
         routeDescription: "The route follows the Seine quays then reaches La Défense via western Paris.",
         faq: [
-          { question: "What is the price of a taxi Gare de Lyon — La Défense?", answer: "The flat rate is 35 — 45 € all inclusive. Price guaranteed at booking." },
+          { question: "What is the price of a taxi Gare de Lyon — La Défense?", answer: "The flat rate is €35–€45 all inclusive. Price guaranteed at booking." },
           { question: "How long is the Gare de Lyon — La Défense journey?", answer: "About 30 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
@@ -1734,11 +1734,11 @@ export const trajets: Trajet[] = [
         metaTitle: "Taxi Gare du Nord → La Défense | 15 km, from €30 | TaxiNeo",
         metaDescription: "Direct 25 min ride. Boulevard Haussmann and Arc de Triomphe along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Gare du Nord → La Défense",
-        heroSubtitle: "Your Gare du Nord → La Défense transfer at a fixed price of 30 — 35 €. Online booking, professional driver 24/7.",
+        heroSubtitle: "Your Gare du Nord → La Défense transfer at a fixed price of €30–€35. Online booking, professional driver 24/7.",
         description: "Quick Gare du Nord — La Défense transfer in 25 minutes.",
         routeDescription: "The route crosses Paris via the main boulevards to La Défense.",
         faq: [
-          { question: "What is the price of a taxi Gare du Nord — La Défense?", answer: "The flat rate is 30 — 35 € all inclusive. Price guaranteed at booking." },
+          { question: "What is the price of a taxi Gare du Nord — La Défense?", answer: "The flat rate is €30–€35 all inclusive. Price guaranteed at booking." },
           { question: "How long is the Gare du Nord — La Défense journey?", answer: "About 25 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
@@ -1777,13 +1777,13 @@ export const trajets: Trajet[] = [
       en: {
         metaTitle: "Taxi Gare Part-Dieu Lyon → Aéroport Lyon | 25 km | TaxiNeo",
         metaDescription: "A43 route, approximately 30 min. Rocade Est along the way. Faster and more direct than train or bus. Drop-off at your exact address, return available.",
-        heroTitle: "Taxi Gare Part-Dieu Lyon → Aéroport Lyon",
-        heroSubtitle: "Your Gare Part-Dieu Lyon → Aéroport Lyon transfer at a fixed price of 50 — 60 €. Online booking, professional driver 24/7.",
+        heroTitle: "Taxi Lyon Part-Dieu Station → Lyon Airport",
+        heroSubtitle: "Your Lyon Part-Dieu Station → Lyon Airport transfer at a fixed price of €50–€60. Online booking, professional driver 24/7.",
         description: "Part-Dieu — Lyon Airport transfer in 30 minutes.",
         routeDescription: "The route takes the eastern bypass then the A43 to the airport.",
         faq: [
-          { question: "What is the price of a taxi Gare Part-Dieu Lyon — Aéroport Lyon?", answer: "The flat rate is 50 — 60 € all inclusive. Price guaranteed at booking." },
-          { question: "How long is the Gare Part-Dieu Lyon — Aéroport Lyon journey?", answer: "About 30 minutes under normal traffic conditions." },
+          { question: "What is the price of a taxi Lyon Part-Dieu Station — Lyon Airport?", answer: "The flat rate is €50–€60 all inclusive. Price guaranteed at booking." },
+          { question: "How long is the Lyon Part-Dieu Station — Lyon Airport journey?", answer: "About 30 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
         ],
@@ -1821,13 +1821,13 @@ export const trajets: Trajet[] = [
       en: {
         metaTitle: "Taxi St-Charles → Marseille | 27 km, from €55 | TaxiNeo",
         metaDescription: "Via motorway in 30 min, drop-off at your terminal (MP1 or MP2). Faster than shuttle bus (45 min + wait time). Pickup in front of Saint-Charles station.",
-        heroTitle: "Taxi Gare Saint-Charles → Aéroport Marseille",
-        heroSubtitle: "Your Gare Saint-Charles → Aéroport Marseille transfer at a fixed price of 55 — 65 €. Online booking, professional driver 24/7.",
+        heroTitle: "Taxi Marseille Saint-Charles Station → Marseille Airport",
+        heroSubtitle: "Your Marseille Saint-Charles Station → Marseille Airport transfer at a fixed price of €55–€65. Online booking, professional driver 24/7.",
         description: "Saint-Charles — Marseille-Provence Airport transfer.",
         routeDescription: "The route takes the A7 towards Marseille-Provence Airport.",
         faq: [
-          { question: "What is the price of a taxi Gare Saint-Charles — Aéroport Marseille?", answer: "The flat rate is 55 — 65 € all inclusive. Price guaranteed at booking." },
-          { question: "How long is the Gare Saint-Charles — Aéroport Marseille journey?", answer: "About 30 minutes under normal traffic conditions." },
+          { question: "What is the price of a taxi Marseille Saint-Charles Station — Marseille Airport?", answer: "The flat rate is €55–€65 all inclusive. Price guaranteed at booking." },
+          { question: "How long is the Marseille Saint-Charles Station — Marseille Airport journey?", answer: "About 30 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
         ],
@@ -1865,13 +1865,13 @@ export const trajets: Trajet[] = [
       en: {
         metaTitle: "Taxi Gare Nice-Ville → Aéroport Nice | 7 km, €20 | TaxiNeo",
         metaDescription: "Direct route, 12 min journey. Promenade des Anglais along the way. Faster and more direct than train or bus. Drop-off at your exact address, return available.",
-        heroTitle: "Taxi Gare Nice-Ville → Aéroport Nice",
-        heroSubtitle: "Your Gare Nice-Ville → Aéroport Nice transfer at a fixed price of 15 — 20 €. Online booking, professional driver 24/7.",
+        heroTitle: "Taxi Nice-Ville Station → Nice Airport",
+        heroSubtitle: "Your Nice-Ville Station → Nice Airport transfer at a fixed price of €15–€20. Online booking, professional driver 24/7.",
         description: "Express Nice Station — Airport transfer in just 12 minutes.",
         routeDescription: "The route heads down to the Promenade des Anglais to reach the airport.",
         faq: [
-          { question: "What is the price of a taxi Gare Nice-Ville — Aéroport Nice?", answer: "The flat rate is 15 — 20 € all inclusive. Price guaranteed at booking." },
-          { question: "How long is the Gare Nice-Ville — Aéroport Nice journey?", answer: "About 12 minutes under normal traffic conditions." },
+          { question: "What is the price of a taxi Nice-Ville Station — Nice Airport?", answer: "The flat rate is €15–€20 all inclusive. Price guaranteed at booking." },
+          { question: "How long is the Nice-Ville Station — Nice Airport journey?", answer: "About 12 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
         ],
@@ -1909,13 +1909,13 @@ export const trajets: Trajet[] = [
       en: {
         metaTitle: "Taxi Bordeaux St-Jean → Bordeaux | 15 km, from €30 | TaxiNeo",
         metaDescription: "Direct route, 20 min journey. Rocade bordelaise along the way. Faster and more direct than train or bus. Drop-off at your exact address, return available.",
-        heroTitle: "Taxi Gare Bordeaux Saint-Jean → Aéroport Bordeaux",
-        heroSubtitle: "Your Gare Bordeaux Saint-Jean → Aéroport Bordeaux transfer at a fixed price of 30 — 35 €. Online booking, professional driver 24/7.",
+        heroTitle: "Taxi Bordeaux Saint-Jean Station → Bordeaux Airport",
+        heroSubtitle: "Your Bordeaux Saint-Jean Station → Bordeaux Airport transfer at a fixed price of €30–€35. Online booking, professional driver 24/7.",
         description: "Gare Saint-Jean — Bordeaux Airport transfer in 20 minutes.",
         routeDescription: "The route takes the Bordeaux ring road to reach the airport.",
         faq: [
-          { question: "What is the price of a taxi Gare Bordeaux Saint-Jean — Aéroport Bordeaux?", answer: "The flat rate is 30 — 35 € all inclusive. Price guaranteed at booking." },
-          { question: "How long is the Gare Bordeaux Saint-Jean — Aéroport Bordeaux journey?", answer: "About 20 minutes under normal traffic conditions." },
+          { question: "What is the price of a taxi Bordeaux Saint-Jean Station — Bordeaux Airport?", answer: "The flat rate is €30–€35 all inclusive. Price guaranteed at booking." },
+          { question: "How long is the Bordeaux Saint-Jean Station — Bordeaux Airport journey?", answer: "About 20 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
         ],
@@ -1953,13 +1953,13 @@ export const trajets: Trajet[] = [
       en: {
         metaTitle: "Taxi Gare Matabiau → Aéroport Blagnac | 12 km, €25 | TaxiNeo",
         metaDescription: "Direct route, 18 min journey. Rocade and Blagnac along the way. Faster and more direct than train or bus. Drop-off at your exact address, return available.",
-        heroTitle: "Taxi Gare Matabiau → Aéroport Blagnac",
-        heroSubtitle: "Your Gare Matabiau → Aéroport Blagnac transfer at a fixed price of 25 — 30 €. Online booking, professional driver 24/7.",
+        heroTitle: "Taxi Gare Matabiau → Blagnac Airport",
+        heroSubtitle: "Your Gare Matabiau → Blagnac Airport transfer at a fixed price of €25–€30. Online booking, professional driver 24/7.",
         description: "Gare Matabiau — Blagnac Airport transfer in 18 minutes.",
         routeDescription: "The route takes the Toulouse ring road towards Blagnac.",
         faq: [
-          { question: "What is the price of a taxi Gare Matabiau — Aéroport Blagnac?", answer: "The flat rate is 25 — 30 € all inclusive. Price guaranteed at booking." },
-          { question: "How long is the Gare Matabiau — Aéroport Blagnac journey?", answer: "About 18 minutes under normal traffic conditions." },
+          { question: "What is the price of a taxi Gare Matabiau — Blagnac Airport?", answer: "The flat rate is €25–€30 all inclusive. Price guaranteed at booking." },
+          { question: "How long is the Gare Matabiau — Blagnac Airport journey?", answer: "About 18 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
         ],
@@ -1997,13 +1997,13 @@ export const trajets: Trajet[] = [
       en: {
         metaTitle: "Taxi Gare Nantes → Aéroport Nantes | 12 km, €25 | TaxiNeo",
         metaDescription: "Direct route, 18 min journey. Périphérique sud along the way. Faster and more direct than train or bus. Drop-off at your exact address, return available.",
-        heroTitle: "Taxi Gare Nantes → Aéroport Nantes",
-        heroSubtitle: "Your Gare Nantes → Aéroport Nantes transfer at a fixed price of 25 — 30 €. Online booking, professional driver 24/7.",
-        description: "Gare Nantes — Nantes-Atlantique Airport transfer in 18 minutes.",
+        heroTitle: "Taxi Nantes Station → Nantes Airport",
+        heroSubtitle: "Your Nantes Station → Nantes Airport transfer at a fixed price of €25–€30. Online booking, professional driver 24/7.",
+        description: "Nantes Station — Nantes-Atlantique Airport transfer in 18 minutes.",
         routeDescription: "The route takes the southern Nantes ring road.",
         faq: [
-          { question: "What is the price of a taxi Gare Nantes — Aéroport Nantes?", answer: "The flat rate is 25 — 30 € all inclusive. Price guaranteed at booking." },
-          { question: "How long is the Gare Nantes — Aéroport Nantes journey?", answer: "About 18 minutes under normal traffic conditions." },
+          { question: "What is the price of a taxi Nantes Station — Nantes Airport?", answer: "The flat rate is €25–€30 all inclusive. Price guaranteed at booking." },
+          { question: "How long is the Nantes Station — Nantes Airport journey?", answer: "About 18 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
         ],
@@ -2041,13 +2041,13 @@ export const trajets: Trajet[] = [
       en: {
         metaTitle: "Taxi Gare Strasbourg → Aéroport Strasbourg | 15 km | TaxiNeo",
         metaDescription: "Via A35, 18 min door-to-terminal at Entzheim. Skip train shuttle connections. Pickup at Strasbourg central station. Perfect for early or late flights.",
-        heroTitle: "Taxi Gare Strasbourg → Aéroport Strasbourg",
-        heroSubtitle: "Your Gare Strasbourg → Aéroport Strasbourg transfer at a fixed price of 30 — 35 €. Online booking, professional driver 24/7.",
-        description: "Gare Strasbourg — Entzheim Airport transfer in 18 minutes.",
+        heroTitle: "Taxi Strasbourg Station → Strasbourg Airport",
+        heroSubtitle: "Your Strasbourg Station → Strasbourg Airport transfer at a fixed price of €30–€35. Online booking, professional driver 24/7.",
+        description: "Strasbourg Station — Entzheim Airport transfer in 18 minutes.",
         routeDescription: "The route takes the A35 towards Entzheim.",
         faq: [
-          { question: "What is the price of a taxi Gare Strasbourg — Aéroport Strasbourg?", answer: "The flat rate is 30 — 35 € all inclusive. Price guaranteed at booking." },
-          { question: "How long is the Gare Strasbourg — Aéroport Strasbourg journey?", answer: "About 18 minutes under normal traffic conditions." },
+          { question: "What is the price of a taxi Strasbourg Station — Strasbourg Airport?", answer: "The flat rate is €30–€35 all inclusive. Price guaranteed at booking." },
+          { question: "How long is the Strasbourg Station — Strasbourg Airport journey?", answer: "About 18 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
         ],
@@ -2103,9 +2103,9 @@ export const trajets: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Paris → Château de Versailles | 22 km, €40 | TaxiNeo",
-        metaDescription: "Via A13, 35 min ride. Bois de Boulogne and Château de Versailles along the way. Stops for sightseeing possible en route. Perfect for a day trip without driving.",
-        heroTitle: "Taxi Paris → Château de Versailles",
-        heroSubtitle: "Your Paris → Château de Versailles transfer at a fixed price of 45 — 55 €. Online booking, professional driver 24/7.",
+        metaDescription: "Via A13, 35 min ride. Bois de Boulogne and Palace of Versailles along the way. Stops for sightseeing possible en route. Perfect for a day trip without driving.",
+        heroTitle: "Taxi Paris → Palace of Versailles",
+        heroSubtitle: "Your Paris → Palace of Versailles transfer at a fixed price of €45–€55. Online booking, professional driver 24/7.",
         description: "Paris — Versailles excursion, the most visited château in France with its French-style gardens.",
         routeDescription: "The route takes the A13 passing through the Bois de Boulogne and Saint-Cloud.",
         introduction:
@@ -2117,8 +2117,8 @@ export const trajets: Trajet[] = [
         comparaisonTransport:
           "The RER C connects Paris to Versailles Château Rive Gauche in 35-45 minutes for €4.05 per person. However, trains are often crowded with frequent delays. Bus 171 from Pont de Sèvres takes about 35 minutes for €2. With TaxiNeo, the journey costs €45-€60 but offers incomparable door-to-door comfort. For a family of 4, a taxi works out to about €12 per person, barely more than the RER with significant time and comfort gains.",
         faq: [
-          { question: "What is the price of a taxi Paris — Château de Versailles?", answer: "The flat rate is 45 — 55 € all inclusive. Price guaranteed at booking." },
-          { question: "How long is the Paris — Château de Versailles journey?", answer: "About 35 minutes under normal traffic conditions." },
+          { question: "What is the price of a taxi Paris — Palace of Versailles?", answer: "The flat rate is €45–€55 all inclusive. Price guaranteed at booking." },
+          { question: "How long is the Paris — Palace of Versailles journey?", answer: "About 35 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
         ],
@@ -2157,11 +2157,11 @@ export const trajets: Trajet[] = [
         metaTitle: "Taxi Paris → Disneyland Paris | 40 km, from €80 | TaxiNeo",
         metaDescription: "Through A4 in 40 min. Marne-la-Vallée and Val d'Europe along the way. Stops for sightseeing possible en route. Perfect for a day trip without driving.",
         heroTitle: "Taxi Paris → Disneyland Paris",
-        heroSubtitle: "Your Paris → Disneyland Paris transfer at a fixed price of 80 — 95 €. Online booking, professional driver 24/7.",
+        heroSubtitle: "Your Paris → Disneyland Paris transfer at a fixed price of €80–€95. Online booking, professional driver 24/7.",
         description: "Paris — Disneyland transfer for a magical family day out.",
         routeDescription: "The route takes the A4 eastbound towards Marne-la-Vallée.",
         faq: [
-          { question: "What is the price of a taxi Paris — Disneyland Paris?", answer: "The flat rate is 80 — 95 € all inclusive. Price guaranteed at booking." },
+          { question: "What is the price of a taxi Paris — Disneyland Paris?", answer: "The flat rate is €80–€95 all inclusive. Price guaranteed at booking." },
           { question: "How long is the Paris — Disneyland Paris journey?", answer: "About 40 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
@@ -2219,8 +2219,8 @@ export const trajets: Trajet[] = [
       en: {
         metaTitle: "Taxi Paris → Château de Fontainebleau | 65 km, €80 | TaxiNeo",
         metaDescription: "A6 route, approximately 55 min. Forêt de Fontainebleau along the way. Stops for sightseeing possible en route. Perfect for a day trip without driving.",
-        heroTitle: "Taxi Paris → Château de Fontainebleau",
-        heroSubtitle: "Your Paris → Château de Fontainebleau transfer at a fixed price of 130 — 160 €. Online booking, professional driver 24/7.",
+        heroTitle: "Taxi Paris → Palace of Fontainebleau",
+        heroSubtitle: "Your Paris → Palace of Fontainebleau transfer at a fixed price of €130–€160. Online booking, professional driver 24/7.",
         description: "Paris — Fontainebleau excursion through the famous royal forest.",
         routeDescription: "The route takes the A6 Autoroute du Soleil to the Fontainebleau exit.",
         introduction:
@@ -2232,8 +2232,8 @@ export const trajets: Trajet[] = [
         comparaisonTransport:
           "Transilien R from Gare de Lyon serves Fontainebleau-Avon in 40 minutes for €9.60, but the station is 2 km from the palace requiring bus A. By TaxiNeo at €130-160, you're dropped at the palace door in 55 minutes. For a family of 4, the taxi costs €33-40 per person. Climbers with crash pads have no viable alternative to taxi or car.",
         faq: [
-          { question: "What is the price of a taxi Paris — Château de Fontainebleau?", answer: "The flat rate is 130 — 160 € all inclusive. Price guaranteed at booking." },
-          { question: "How long is the Paris — Château de Fontainebleau journey?", answer: "About 55 minutes under normal traffic conditions." },
+          { question: "What is the price of a taxi Paris — Palace of Fontainebleau?", answer: "The flat rate is €130–€160 all inclusive. Price guaranteed at booking." },
+          { question: "How long is the Paris — Palace of Fontainebleau journey?", answer: "About 55 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
         ],
@@ -2291,7 +2291,7 @@ export const trajets: Trajet[] = [
         metaTitle: "Taxi Paris → Giverny | Fixed price from €145 | TaxiNeo",
         metaDescription: "Direct route via A13, 1h10. Jardins de Monet and Vernon along the way. Stops for sightseeing possible en route. Perfect for a day trip without driving.",
         heroTitle: "Taxi Paris → Giverny",
-        heroSubtitle: "Your Paris → Giverny transfer at a fixed price of 145 — 175 €. Online booking, professional driver 24/7.",
+        heroSubtitle: "Your Paris → Giverny transfer at a fixed price of €145–€175. Online booking, professional driver 24/7.",
         description: "Paris — Giverny excursion to discover Claude Monet's gardens and house.",
         routeDescription: "The route takes the A13 towards Rouen, Vernon exit, then road to Giverny.",
         introduction:
@@ -2303,7 +2303,7 @@ export const trajets: Trajet[] = [
         comparaisonTransport:
           "By train, the Paris Saint-Lazare → Vernon journey takes about 45 minutes (SNCF ticket from €15.20), but you then need to take a shuttle or local taxi from Vernon to Giverny (8 km, about €15 one way). Total door-to-door time often exceeds 1h30 with connections. By rental car, expect about €60 for the day plus €8 in tolls and fuel, but you have to manage parking and driving. Tourist buses from Paris cost between €80 and €100 per person with guided tour. By TaxiNeo taxi, a one-way transfer costs €145 to €175 and a round trip with waiting time is quoted on request, making it good value for 2 to 4 people travelling together, with the comfort of a stress-free door-to-door service.",
         faq: [
-          { question: "What is the price of a taxi Paris — Giverny?", answer: "The flat rate is 145 — 175 € all inclusive. Price guaranteed at booking." },
+          { question: "What is the price of a taxi Paris — Giverny?", answer: "The flat rate is €145–€175 all inclusive. Price guaranteed at booking." },
           { question: "How long is the Paris — Giverny journey?", answer: "About 70 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
@@ -2362,7 +2362,7 @@ export const trajets: Trajet[] = [
         metaTitle: "Taxi Paris → Château de Chantilly | 50 km, €65 | TaxiNeo",
         metaDescription: "Via A1, 45 min ride. Hippodrome de Chantilly and Musée Condé along the way. Stops for sightseeing possible en route. Perfect for a day trip without driving.",
         heroTitle: "Taxi Paris → Château de Chantilly",
-        heroSubtitle: "Your Paris → Château de Chantilly transfer at a fixed price of 95 — 115 €. Online booking, professional driver 24/7.",
+        heroSubtitle: "Your Paris → Château de Chantilly transfer at a fixed price of €95–€115. Online booking, professional driver 24/7.",
         description: "Paris — Chantilly excursion to visit the château and its princely stables.",
         routeDescription: "The route takes the A1 towards Lille, Chantilly exit.",
         introduction:
@@ -2374,7 +2374,7 @@ export const trajets: Trajet[] = [
         comparaisonTransport:
           "TER from Gare du Nord serves Chantilly-Gouvieux in 25 minutes for €8.70. The station is 2 km from the castle. By TaxiNeo at €95-115, the journey takes 45 minutes door-to-door with castle drop-off. For a couple, that's €48-58 per person; for a family of four, €24-29 each. On race days, a taxi is essential as trains and shuttles are overwhelmed.",
         faq: [
-          { question: "What is the price of a taxi Paris — Château de Chantilly?", answer: "The flat rate is 95 — 115 € all inclusive. Price guaranteed at booking." },
+          { question: "What is the price of a taxi Paris — Château de Chantilly?", answer: "The flat rate is €95–€115 all inclusive. Price guaranteed at booking." },
           { question: "How long is the Paris — Château de Chantilly journey?", answer: "About 45 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
@@ -2433,7 +2433,7 @@ export const trajets: Trajet[] = [
         metaTitle: "Taxi Paris → Château de Vaux-le-Vicomte | 55 km | TaxiNeo",
         metaDescription: "Via A4 and A5b, 50 min drive. No direct public transport to this baroque château. Candlelit visits in summer, Le Nôtre gardens. Wait-and-return available.",
         heroTitle: "Taxi Paris → Château de Vaux-le-Vicomte",
-        heroSubtitle: "Your Paris → Château de Vaux-le-Vicomte transfer at a fixed price of 105 — 130 €. Online booking, professional driver 24/7.",
+        heroSubtitle: "Your Paris → Château de Vaux-le-Vicomte transfer at a fixed price of €105–€130. Online booking, professional driver 24/7.",
         description: "Paris — Vaux-le-Vicomte excursion, the château that inspired Versailles.",
         routeDescription: "The route takes the A5 then reaches Maincy via Melun.",
         introduction:
@@ -2445,7 +2445,7 @@ export const trajets: Trajet[] = [
         comparaisonTransport:
           "By train, Gare de Lyon → Melun takes 25 minutes on Transilien R (€8.95), but you then need a local taxi from Melun to Vaux-le-Vicomte (7 km, about €15-20) as no bus serves the château. Total time reaches 1 hour with waiting. By rental car, expect €40 per day plus tolls. The Châteaubus shuttle runs Saturdays and Sundays April-October (€7) but with very limited schedules. By TaxiNeo taxi at €105, the direct door-to-door 50-minute transfer is the most comfortable solution, especially for candlelight evenings when public transport no longer operates.",
         faq: [
-          { question: "What is the price of a taxi Paris — Château de Vaux-le-Vicomte?", answer: "The flat rate is 105 — 130 € all inclusive. Price guaranteed at booking." },
+          { question: "What is the price of a taxi Paris — Château de Vaux-le-Vicomte?", answer: "The flat rate is €105–€130 all inclusive. Price guaranteed at booking." },
           { question: "How long is the Paris — Château de Vaux-le-Vicomte journey?", answer: "About 50 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
@@ -2504,7 +2504,7 @@ export const trajets: Trajet[] = [
         metaTitle: "Taxi Paris → Cité médiévale de Provins | 90 km | TaxiNeo",
         metaDescription: "Via A4 in 70 min. UNESCO medieval city with jousting shows and ramparts. No direct public transport. Wait-and-return option for day trips. Quick online quote.",
         heroTitle: "Taxi Paris → Cité médiévale de Provins",
-        heroSubtitle: "Your Paris → Cité médiévale de Provins transfer at a fixed price of 170 — 205 €. Online booking, professional driver 24/7.",
+        heroSubtitle: "Your Paris → Cité médiévale de Provins transfer at a fixed price of €170–€205. Online booking, professional driver 24/7.",
         description: "Paris — Provins excursion to discover this UNESCO-listed medieval city.",
         routeDescription: "The route takes the A4 towards Metz then the Provins exit.",
         introduction:
@@ -2516,7 +2516,7 @@ export const trajets: Trajet[] = [
         comparaisonTransport:
           "Transilien P from Gare de l'Est serves Provins in 1h20-1h30 for €12.10. Trains are infrequent (hourly) and the station is 1 km from the medieval town. By TaxiNeo at €170-205, you're at the ramparts in 70 minutes. For a family of 4, the taxi offers significant comfort gains over the train. No Uber available in Provins — a pre-booked taxi is your only reliable return option.",
         faq: [
-          { question: "What is the price of a taxi Paris — Cité médiévale de Provins?", answer: "The flat rate is 170 — 205 € all inclusive. Price guaranteed at booking." },
+          { question: "What is the price of a taxi Paris — Cité médiévale de Provins?", answer: "The flat rate is €170–€205 all inclusive. Price guaranteed at booking." },
           { question: "How long is the Paris — Cité médiévale de Provins journey?", answer: "About 70 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
@@ -2575,7 +2575,7 @@ export const trajets: Trajet[] = [
         metaTitle: "Taxi Paris → Auvers-sur-Oise | 35 km, from €70 | TaxiNeo",
         metaDescription: "Via A15, 45 min ride. Maison Van Gogh and Église d'Auvers along the way. Stops for sightseeing possible en route. Perfect for a day trip without driving.",
         heroTitle: "Taxi Paris → Auvers-sur-Oise",
-        heroSubtitle: "Your Paris → Auvers-sur-Oise transfer at a fixed price of 70 — 85 €. Online booking, professional driver 24/7.",
+        heroSubtitle: "Your Paris → Auvers-sur-Oise transfer at a fixed price of €70–€85. Online booking, professional driver 24/7.",
         description: "Following Van Gogh's footsteps in Auvers-sur-Oise, an artists' village north of Paris.",
         routeDescription: "The route takes the A15 towards Cergy then reaches Auvers.",
         introduction:
@@ -2587,7 +2587,7 @@ export const trajets: Trajet[] = [
         comparaisonTransport:
           "By train, Gare du Nord → Auvers-sur-Oise takes about 1h15 with a connection at Pontoise or Valmondois (ticket from €6.50 Transilien). Trains are infrequent (roughly hourly). By rental car, expect €40 per day and €8 fuel, no tolls. By TaxiNeo taxi at €70, the direct 45-minute transfer is the most practical solution. Round trip with waiting is offered from €120, ideal for a half-day visit without transport worries.",
         faq: [
-          { question: "What is the price of a taxi Paris — Auvers-sur-Oise?", answer: "The flat rate is 70 — 85 € all inclusive. Price guaranteed at booking." },
+          { question: "What is the price of a taxi Paris — Auvers-sur-Oise?", answer: "The flat rate is €70–€85 all inclusive. Price guaranteed at booking." },
           { question: "How long is the Paris — Auvers-sur-Oise journey?", answer: "About 45 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
@@ -2646,7 +2646,7 @@ export const trajets: Trajet[] = [
         metaTitle: "Taxi Paris → Reims | Fixed price from €280 | TaxiNeo",
         metaDescription: "Via A4, 1h35 ride. Vignobles de Champagne and Cathédrale de Reims along the way. Perfect for a day trip without driving. Scenic stops available along the route.",
         heroTitle: "Taxi Paris → Reims",
-        heroSubtitle: "Your Paris → Reims transfer at a fixed price of 280 — 335 €. Online booking, professional driver 24/7.",
+        heroSubtitle: "Your Paris → Reims transfer at a fixed price of €280–€335. Online booking, professional driver 24/7.",
         description: "Paris — Reims excursion at the heart of Champagne, between Gothic cathedral and prestigious cellars.",
         routeDescription: "The route takes the A4 through the Champagne region.",
         introduction:
@@ -2658,7 +2658,7 @@ export const trajets: Trajet[] = [
         comparaisonTransport:
           "TGV takes 46 minutes for €15-50, but the TGV station is 10km from Reims centre. Our taxi from €280 suits groups of 3+ and wine tourists who need cave-to-cave transport.",
         faq: [
-          { question: "What is the price of a taxi Paris — Reims?", answer: "The flat rate is 280 — 335 € all inclusive. Price guaranteed at booking." },
+          { question: "What is the price of a taxi Paris — Reims?", answer: "The flat rate is €280–€335 all inclusive. Price guaranteed at booking." },
           { question: "How long is the Paris — Reims journey?", answer: "About 95 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
@@ -2717,7 +2717,7 @@ export const trajets: Trajet[] = [
         metaTitle: "Taxi Paris → Mont Saint-Michel | 360 km, from €690 | TaxiNeo",
         metaDescription: "Direct route via A13, 4 hours. Normandie and Baie du Mont along the way. Stops for sightseeing possible en route. Perfect for a day trip without driving.",
         heroTitle: "Taxi Paris → Mont Saint-Michel",
-        heroSubtitle: "Your Paris → Mont Saint-Michel transfer at a fixed price of 690 — 835 €. Online booking, professional driver 24/7.",
+        heroSubtitle: "Your Paris → Mont Saint-Michel transfer at a fixed price of €690–€835. Online booking, professional driver 24/7.",
         description: "Paris — Mont Saint-Michel excursion, UNESCO-listed wonder of the Western world.",
         routeDescription: "The route takes the A13 then the A84 through Normandy.",
         introduction:
@@ -2729,7 +2729,7 @@ export const trajets: Trajet[] = [
         comparaisonTransport:
           "By TGV, Paris Montparnasse → Rennes takes 1h25 (from €29 Ouigo), then take a Flixbus or Keolis coach (1h10, about €15) to the Mont. Total time: about 3h30 with connections. Direct Flixbus Paris → Mont-Saint-Michel takes 4h30 at €20-35. By rental car, expect €90 per day plus €22 tolls and €40 fuel. Organised excursions cost €130-180 per person for the day. By TaxiNeo taxi at €690, for 4 passengers the cost per person is about €173, with unmatched comfort and the option to stop en route at Villedieu-les-Poêles or Avranches.",
         faq: [
-          { question: "What is the price of a taxi Paris — Mont Saint-Michel?", answer: "The flat rate is 690 — 835 € all inclusive. Price guaranteed at booking." },
+          { question: "What is the price of a taxi Paris — Mont Saint-Michel?", answer: "The flat rate is €690–€835 all inclusive. Price guaranteed at booking." },
           { question: "How long is the Paris — Mont Saint-Michel journey?", answer: "About 240 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
@@ -2788,7 +2788,7 @@ export const trajets: Trajet[] = [
         metaTitle: "Taxi Nice → Monaco | Fixed price from €40 | TaxiNeo",
         metaDescription: "Direct 25 min ride. Basse Corniche, Cap-d'Ail and Monte-Carlo along the way. Stops for sightseeing possible en route. Perfect for a day trip without driving.",
         heroTitle: "Taxi Nice → Monaco",
-        heroSubtitle: "Your Nice → Monaco transfer at a fixed price of 40 — 50 €. Online booking, professional driver 24/7.",
+        heroSubtitle: "Your Nice → Monaco transfer at a fixed price of €40–€50. Online booking, professional driver 24/7.",
         description: "Nice — Monaco transfer along the French Riviera. Panoramic Mediterranean views.",
         routeDescription: "The route follows the Basse Corniche along the coastline to Monte-Carlo.",
         introduction:
@@ -2800,7 +2800,7 @@ export const trajets: Trajet[] = [
         comparaisonTransport:
           "Bus 100 (Ligne d'Azur) connects Nice to Monaco in about 45 minutes for €1.50, but it is often packed in summer and does not serve your exact destination. The TER train costs about €4.10 and takes 20 minutes, but Monaco-Monte-Carlo station is far from the Rock and Casino. By taxi, you are picked up directly from your hotel or the airport and dropped at the exact address of your choice in the Principality, with your luggage safely stored, in 25 minutes door-to-door.",
         faq: [
-          { question: "What is the price of a taxi Nice — Monaco?", answer: "The flat rate is 40 — 50 € all inclusive. Price guaranteed at booking." },
+          { question: "What is the price of a taxi Nice — Monaco?", answer: "The flat rate is €40–€50 all inclusive. Price guaranteed at booking." },
           { question: "How long is the Nice — Monaco journey?", answer: "About 25 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
@@ -2859,7 +2859,7 @@ export const trajets: Trajet[] = [
         metaTitle: "Taxi Nice → Saint-Tropez | 110 km, from €210 | TaxiNeo",
         metaDescription: "Direct route via A8, 1h35. Fréjus and Golfe de Saint-Tropez along the way. Stops for sightseeing possible en route. Perfect for a day trip without driving.",
         heroTitle: "Taxi Nice → Saint-Tropez",
-        heroSubtitle: "Your Nice → Saint-Tropez transfer at a fixed price of 230 — 280 €. Online booking, professional driver 24/7.",
+        heroSubtitle: "Your Nice → Saint-Tropez transfer at a fixed price of €230–€280. Online booking, professional driver 24/7.",
         description: "Nice — Saint-Tropez transfer to reach the legendary village of the French Riviera.",
         routeDescription: "The route takes the A8 to Fréjus then the coastal road to Saint-Tropez.",
         introduction:
@@ -2871,7 +2871,7 @@ export const trajets: Trajet[] = [
         comparaisonTransport:
           "There is no railway station in Saint-Tropez. VarLib bus 7601 connects Nice to Saint-Tropez in about 3h for €20 with a connection. With a rental car, summer traffic and parking are nightmarish (up to 2h of jams for 10 km). A taxi offers a direct journey in 1h35 off-peak, with a driver who knows alternative routes and drops you at the port or your hotel with no parking worries.",
         faq: [
-          { question: "What is the price of a taxi Nice — Saint-Tropez?", answer: "The flat rate is 230 — 280 € all inclusive. Price guaranteed at booking." },
+          { question: "What is the price of a taxi Nice — Saint-Tropez?", answer: "The flat rate is €230–€280 all inclusive. Price guaranteed at booking." },
           { question: "How long is the Nice — Saint-Tropez journey?", answer: "About 95 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
@@ -2930,7 +2930,7 @@ export const trajets: Trajet[] = [
         metaTitle: "Taxi Nice → Èze Village | 12 km, from €25 | TaxiNeo",
         metaDescription: "Direct 20 min ride. Moyenne Corniche, Vue panoramique and Jardin exotique along the way. Stops for sightseeing possible en route. Return trip at same rate.",
         heroTitle: "Taxi Nice → Èze Village",
-        heroSubtitle: "Your Nice → Èze Village transfer at a fixed price of 25 — 30 €. Online booking, professional driver 24/7.",
+        heroSubtitle: "Your Nice → Èze Village transfer at a fixed price of €25–€30. Online booking, professional driver 24/7.",
         description: "Nice — Èze excursion, a hilltop village with panoramic views of the Mediterranean.",
         routeDescription: "The route takes the Moyenne Corniche, a spectacular cliffside road.",
         introduction:
@@ -2942,7 +2942,7 @@ export const trajets: Trajet[] = [
         comparaisonTransport:
           "Bus 82 (Ligne d'Azur) connects Nice to Èze Village in 30 minutes for €1.50, but frequency is limited (roughly hourly). There is no station at Èze Village (Èze-bord-de-mer station is at the bottom, from where you must climb the Nietzsche Path for 45 minutes). A taxi is by far the most practical option, especially for families and those with mobility difficulties, as it drops you directly at the village entrance.",
         faq: [
-          { question: "What is the price of a taxi Nice — Èze Village?", answer: "The flat rate is 25 — 30 € all inclusive. Price guaranteed at booking." },
+          { question: "What is the price of a taxi Nice — Èze Village?", answer: "The flat rate is €25–€30 all inclusive. Price guaranteed at booking." },
           { question: "How long is the Nice — Èze Village journey?", answer: "About 20 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
@@ -3001,7 +3001,7 @@ export const trajets: Trajet[] = [
         metaTitle: "Taxi Nice → Antibes | Fixed price from €45 | TaxiNeo",
         metaDescription: "Direct 25 min ride. Bord de mer, Cap d'Antibes and Musée Picasso along the way. Stops for sightseeing possible en route. Perfect for a day trip without driving.",
         heroTitle: "Taxi Nice → Antibes",
-        heroSubtitle: "Your Nice → Antibes transfer at a fixed price of 45 — 55 €. Online booking, professional driver 24/7.",
+        heroSubtitle: "Your Nice → Antibes transfer at a fixed price of €45–€55. Online booking, professional driver 24/7.",
         description: "Nice — Antibes transfer to discover Cap d'Antibes and the old town.",
         routeDescription: "The route follows the coast passing the airport and Cagnes-sur-Mer.",
         introduction:
@@ -3013,7 +3013,7 @@ export const trajets: Trajet[] = [
         comparaisonTransport:
           "The TER train from Nice to Antibes costs about €5.20 and takes 25 minutes, but the station is a 10-minute walk from the old town. The Zou! bus (line 200) takes about 50 minutes for €1.50. With a rental car, factor in tolls (€2), fuel and the very difficult parking in the town centre. A taxi drops you exactly at your destination — old town, Cap d'Antibes or Juan-les-Pins — in 25 minutes, luggage included, with no parking worries.",
         faq: [
-          { question: "What is the price of a taxi Nice — Antibes?", answer: "The flat rate is 45 — 55 € all inclusive. Price guaranteed at booking." },
+          { question: "What is the price of a taxi Nice — Antibes?", answer: "The flat rate is €45–€55 all inclusive. Price guaranteed at booking." },
           { question: "How long is the Nice — Antibes journey?", answer: "About 25 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
@@ -3072,7 +3072,7 @@ export const trajets: Trajet[] = [
         metaTitle: "Taxi Marseille → Cassis | 23 km, from €45 | TaxiNeo",
         metaDescription: "Direct 25 min ride. Route des Calanques and Cap Canaille along the way. Stops for sightseeing possible en route. Perfect for a day trip without driving.",
         heroTitle: "Taxi Marseille → Cassis",
-        heroSubtitle: "Your Marseille → Cassis transfer at a fixed price of 45 — 55 €. Online booking, professional driver 24/7.",
+        heroSubtitle: "Your Marseille → Cassis transfer at a fixed price of €45–€55. Online booking, professional driver 24/7.",
         description: "Marseille — Cassis excursion for the calanques and Cap Canaille.",
         routeDescription: "The route takes the Calanques road with Mediterranean views.",
         introduction:
@@ -3084,7 +3084,7 @@ export const trajets: Trajet[] = [
         comparaisonTransport:
           "The Zou! M08 bus from Castellane (Marseille) costs 2 euros and takes about 45 minutes, but serves Cassis village at the top, 15 minutes' walk from the port. By car, expect 5 euros in fuel, no tolls, but parking is 6 euros per day at Gorguettes and access is banned in summer. The train does not serve Cassis directly (nearest station: La Ciotat, 12 km away). The TaxiNeo taxi at 45 to 55 euros drops you at the port and picks you up whenever you wish. For 3-4 passengers (11 to 18 euros per person), it is unbeatable compared to bus plus walking, and crucially it is the only way to access the village in summer without the shuttle.",
         faq: [
-          { question: "What is the price of a taxi Marseille — Cassis?", answer: "The flat rate is 45 — 55 € all inclusive. Price guaranteed at booking." },
+          { question: "What is the price of a taxi Marseille — Cassis?", answer: "The flat rate is €45–€55 all inclusive. Price guaranteed at booking." },
           { question: "How long is the Marseille — Cassis journey?", answer: "About 25 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
@@ -3124,11 +3124,11 @@ export const trajets: Trajet[] = [
         metaTitle: "Taxi Marseille → Aix-en-Provence | 30 km, from €60 | TaxiNeo",
         metaDescription: "Direct route via A51, 30 min. Pays d'Aix and Cours Mirabeau along the way. Stops for sightseeing possible en route. Perfect for a day trip without driving.",
         heroTitle: "Taxi Marseille → Aix-en-Provence",
-        heroSubtitle: "Your Marseille → Aix-en-Provence transfer at a fixed price of 60 — 70 €. Online booking, professional driver 24/7.",
+        heroSubtitle: "Your Marseille → Aix-en-Provence transfer at a fixed price of €60–€70. Online booking, professional driver 24/7.",
         description: "Marseille — Aix-en-Provence transfer, city of art and home of Cézanne.",
         routeDescription: "The route takes the A51 through the Aix countryside.",
         faq: [
-          { question: "What is the price of a taxi Marseille — Aix-en-Provence?", answer: "The flat rate is 60 — 70 € all inclusive. Price guaranteed at booking." },
+          { question: "What is the price of a taxi Marseille — Aix-en-Provence?", answer: "The flat rate is €60–€70 all inclusive. Price guaranteed at booking." },
           { question: "How long is the Marseille — Aix-en-Provence journey?", answer: "About 30 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
@@ -3168,11 +3168,11 @@ export const trajets: Trajet[] = [
         metaTitle: "Taxi Lyon → Pérouges | Fixed price from €70 | TaxiNeo",
         metaDescription: "Direct route via A42, 35 min. Cité médiévale de Pérouges along the way. Stops for sightseeing possible en route. Perfect for a day trip without driving.",
         heroTitle: "Taxi Lyon → Pérouges",
-        heroSubtitle: "Your Lyon → Pérouges transfer at a fixed price of 70 — 85 €. Online booking, professional driver 24/7.",
+        heroSubtitle: "Your Lyon → Pérouges transfer at a fixed price of €70–€85. Online booking, professional driver 24/7.",
         description: "Lyon — Pérouges excursion, a medieval city among France's most beautiful villages.",
         routeDescription: "The route takes the A42 towards Geneva then the Pérouges exit.",
         faq: [
-          { question: "What is the price of a taxi Lyon — Pérouges?", answer: "The flat rate is 70 — 85 € all inclusive. Price guaranteed at booking." },
+          { question: "What is the price of a taxi Lyon — Pérouges?", answer: "The flat rate is €70–€85 all inclusive. Price guaranteed at booking." },
           { question: "How long is the Lyon — Pérouges journey?", answer: "About 35 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
@@ -3231,7 +3231,7 @@ export const trajets: Trajet[] = [
         metaTitle: "Taxi Bordeaux → Saint-Émilion | 40 km, from €80 | TaxiNeo",
         metaDescription: "Direct route via D936, 40 min. Vignobles de Saint-Émilion along the way. Stops for sightseeing possible en route. Perfect for a day trip without driving.",
         heroTitle: "Taxi Bordeaux → Saint-Émilion",
-        heroSubtitle: "Your Bordeaux → Saint-Émilion transfer at a fixed price of 90 — 105 €. Online booking, professional driver 24/7.",
+        heroSubtitle: "Your Bordeaux → Saint-Émilion transfer at a fixed price of €90–€105. Online booking, professional driver 24/7.",
         description: "Bordeaux — Saint-Émilion excursion at the heart of UNESCO-listed vineyards.",
         routeDescription: "The route takes the D936 through the Bordeaux vineyards.",
         introduction:
@@ -3241,9 +3241,9 @@ export const trajets: Trajet[] = [
         conseils:
           "The monolithic church and underground monuments visit is the absolute must: book the guided tour at the Tourist Office (€12, 45 min, regular departures). The village takes 2-3 hours on foot (cobbled and steep lanes: comfortable shoes essential). The Maison du Vin de Saint-Émilion (Place Pierre Meyrat) offers guided tastings from €8, ideal for discovering the appellation. For classified great growths, visits are by reservation: Château Canon (exceptional panoramic view), Château Troplong Mondot (Michelin-starred restaurant), Château de Pressac (accessible and welcoming). The Saint-Émilion market (Sunday morning, Place du Marché) is charming but small. Saint-Émilion macarons (Nadia Fermigier or Blanchez) are the local speciality: small, soft almond cakes from a 17th-century Ursuline recipe. The hourly hire formula (half day ~€200) is ideal for combining Saint-Émilion with 2-3 surrounding châteaux.",
         comparaisonTransport:
-          "The TER Bordeaux–Saint-Émilion (Saint-Émilion station) costs €8-10 and takes 35 min (direct, 4-5 trains/day). It is a good option but the station is 2 km from the village (20 min uphill walk). The TaxiNeo taxi at €90 — €105 offers door-to-door: drops you directly at the village gates, essential for those with reduced mobility, families and those wanting to continue with château visits. For 3-4 passengers (€16-30 per person), it competes with train + local taxi. The half-day hire (~€200) is the best formula for exploring Saint-Émilion and its châteaux without constraints.",
+          "The TER Bordeaux–Saint-Émilion (Saint-Émilion station) costs €8-10 and takes 35 min (direct, 4-5 trains/day). It is a good option but the station is 2 km from the village (20 min uphill walk). The TaxiNeo taxi at €90–€105 offers door-to-door: drops you directly at the village gates, essential for those with reduced mobility, families and those wanting to continue with château visits. For 3-4 passengers (€16-30 per person), it competes with train + local taxi. The half-day hire (~€200) is the best formula for exploring Saint-Émilion and its châteaux without constraints.",
         faq: [
-          { question: "What is the price of a taxi Bordeaux — Saint-Émilion?", answer: "The flat rate is 90 — 105 € all inclusive. Price guaranteed at booking." },
+          { question: "What is the price of a taxi Bordeaux — Saint-Émilion?", answer: "The flat rate is €90–€105 all inclusive. Price guaranteed at booking." },
           { question: "How long is the Bordeaux — Saint-Émilion journey?", answer: "About 40 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
@@ -3302,7 +3302,7 @@ export const trajets: Trajet[] = [
         metaTitle: "Taxi Bordeaux → Bassin d'Arcachon | 65 km, €75 | TaxiNeo",
         metaDescription: "Via A63, 50 min ride. Dune du Pilat and Île aux Oiseaux along the way. Stops for sightseeing possible en route. Perfect for a day trip without driving.",
         heroTitle: "Taxi Bordeaux → Bassin d'Arcachon",
-        heroSubtitle: "Your Bordeaux → Bassin d'Arcachon transfer at a fixed price of 125 — 155 €. Online booking, professional driver 24/7.",
+        heroSubtitle: "Your Bordeaux → Bassin d'Arcachon transfer at a fixed price of €125–€155. Online booking, professional driver 24/7.",
         description: "Bordeaux — Arcachon excursion for the Dune du Pilat and the Basin's oysters.",
         routeDescription: "The route takes the A63 towards Bayonne then the Arcachon exit.",
         introduction:
@@ -3312,9 +3312,9 @@ export const trajets: Trajet[] = [
         conseils:
           "The Dune du Pilat is unmissable: climb to the summit (20 min, seasonal staircase or sand) for a unique 360° panorama. Ideal at sunset. In summer, arrive early (before 10am) or late (after 5pm) to avoid crowds. Oyster huts are the authentic basin experience: taste fresh oysters with white wine and crépinettes (sausages) facing the basin. Best addresses: Chez Boulan (L'Herbe, Cap-Ferret), the huts at Larros port (Gujan-Mestras). The Winter Town deserves a 1h walk: villa circuit (map from Tourist Office), fanciful 19th-century architecture. The basin tour by taxi (half-day hire ~€250) lets you see Arcachon, the Dune du Pilat, Gujan-Mestras, Cap-Ferret and its oyster villages. The basin crossing by boat (Arcachon–Cap Ferret, 25 min, UBA) is a delightful excursion.",
         comparaisonTransport:
-          "The TER Bordeaux–Arcachon is frequent and fast (50 min, €10-15, 15+ trains/day). It is an excellent connection. The TaxiNeo taxi at €125 — €155 is justified for families (beach gear, pushchairs), groups (3-4 passengers: €20-37 per person), those wanting direct access to the Dune du Pilat (no station nearby) or to combine several basin sites. Door-to-door is invaluable with bulky gear. By car, expect €8 fuel and €4 tolls, but parking in Arcachon is difficult and expensive in summer (€2-3/h).",
+          "The TER Bordeaux–Arcachon is frequent and fast (50 min, €10-15, 15+ trains/day). It is an excellent connection. The TaxiNeo taxi at €125–€155 is justified for families (beach gear, pushchairs), groups (3-4 passengers: €20-37 per person), those wanting direct access to the Dune du Pilat (no station nearby) or to combine several basin sites. Door-to-door is invaluable with bulky gear. By car, expect €8 fuel and €4 tolls, but parking in Arcachon is difficult and expensive in summer (€2-3/h).",
         faq: [
-          { question: "What is the price of a taxi Bordeaux — Bassin d'Arcachon?", answer: "The flat rate is 125 — 155 € all inclusive. Price guaranteed at booking." },
+          { question: "What is the price of a taxi Bordeaux — Bassin d'Arcachon?", answer: "The flat rate is €125–€155 all inclusive. Price guaranteed at booking." },
           { question: "How long is the Bordeaux — Bassin d'Arcachon journey?", answer: "About 50 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
@@ -3354,11 +3354,11 @@ export const trajets: Trajet[] = [
         metaTitle: "Taxi Paris → La Vallée Village | 35 km, from €70 | TaxiNeo",
         metaDescription: "Through A4 in 35 min. Val d'Europe and Outlet shopping along the way. Stops for sightseeing possible en route. Perfect for a day trip without driving.",
         heroTitle: "Taxi Paris → La Vallée Village",
-        heroSubtitle: "Your Paris → La Vallée Village transfer at a fixed price of 70 — 85 €. Online booking, professional driver 24/7.",
+        heroSubtitle: "Your Paris → La Vallée Village transfer at a fixed price of €70–€85. Online booking, professional driver 24/7.",
         description: "Paris — La Vallée Village transfer for luxury outlet shopping.",
         routeDescription: "The route takes the A4 towards Marne-la-Vallée.",
         faq: [
-          { question: "What is the price of a taxi Paris — La Vallée Village?", answer: "The flat rate is 70 — 85 € all inclusive. Price guaranteed at booking." },
+          { question: "What is the price of a taxi Paris — La Vallée Village?", answer: "The flat rate is €70–€85 all inclusive. Price guaranteed at booking." },
           { question: "How long is the Paris — La Vallée Village journey?", answer: "About 35 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
@@ -3417,7 +3417,7 @@ export const trajets: Trajet[] = [
         metaTitle: "Taxi Paris → Lyon | Fixed price from €890 | TaxiNeo",
         metaDescription: "Direct route via A6, 4h30. Beaune and Mâcon along the way. Faster and more direct than train or bus. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Paris → Lyon",
-        heroSubtitle: "Your Paris → Lyon transfer at a fixed price of 890 — 1075 €. Online booking, professional driver 24/7.",
+        heroSubtitle: "Your Paris → Lyon transfer at a fixed price of €890–€1075. Online booking, professional driver 24/7.",
         description: "Long-distance Paris — Lyon transfer via the A6 Autoroute du Soleil.",
         routeDescription: "The route takes the A6 via Auxerre, Beaune and Mâcon.",
         introduction:
@@ -3429,7 +3429,7 @@ export const trajets: Trajet[] = [
         comparaisonTransport:
           "The TGV from Paris Gare de Lyon to Lyon Part-Dieu takes about 2 hours and costs €30-120 per person. For a family of four, that's €120-480 plus taxis at both ends (€15-25 each). Our fixed-rate taxi from €890 makes most sense for groups or travellers with a lot of luggage, with door-to-door comfort, unlimited luggage and flexible schedules.",
         faq: [
-          { question: "What is the price of a taxi Paris — Lyon?", answer: "The flat rate is 890 — 1075 € all inclusive. Price guaranteed at booking." },
+          { question: "What is the price of a taxi Paris — Lyon?", answer: "The flat rate is €890–€1075 all inclusive. Price guaranteed at booking." },
           { question: "How long is the Paris — Lyon journey?", answer: "About 270 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
@@ -3488,7 +3488,7 @@ export const trajets: Trajet[] = [
         metaTitle: "Taxi Paris → Lille | Fixed price from €430 | TaxiNeo",
         metaDescription: "A1 route, approximately 2h30. Arras and Douai along the way. Faster and more direct than train or bus. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Paris → Lille",
-        heroSubtitle: "Your Paris → Lille transfer at a fixed price of 430 — 520 €. Online booking, professional driver 24/7.",
+        heroSubtitle: "Your Paris → Lille transfer at a fixed price of €430–€520. Online booking, professional driver 24/7.",
         description: "Paris — Lille transfer via the A1, the capital of Flanders in 2h30.",
         routeDescription: "The route takes the A1 Autoroute du Nord via Arras.",
         introduction:
@@ -3500,7 +3500,7 @@ export const trajets: Trajet[] = [
         comparaisonTransport:
           "The TGV takes 1h02 and costs €10-85 per person. For two business travellers on a round trip, the TGV costs €40-340. Our taxi from €430 mainly suits groups of 3-4 who want to work during the journey with door-to-door convenience.",
         faq: [
-          { question: "What is the price of a taxi Paris — Lille?", answer: "The flat rate is 430 — 520 € all inclusive. Price guaranteed at booking." },
+          { question: "What is the price of a taxi Paris — Lille?", answer: "The flat rate is €430–€520 all inclusive. Price guaranteed at booking." },
           { question: "How long is the Paris — Lille journey?", answer: "About 150 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
@@ -3559,7 +3559,7 @@ export const trajets: Trajet[] = [
         metaTitle: "Taxi Paris → Rouen | Fixed price from €260 | TaxiNeo",
         metaDescription: "Via A13, 1h30 ride. Giverny and Cathédrale de Rouen along the way. Faster and more direct than train or bus. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Paris → Rouen",
-        heroSubtitle: "Your Paris → Rouen transfer at a fixed price of 260 — 315 €. Online booking, professional driver 24/7.",
+        heroSubtitle: "Your Paris → Rouen transfer at a fixed price of €260–€315. Online booking, professional driver 24/7.",
         description: "Paris — Rouen transfer, historic capital of Normandy.",
         routeDescription: "The route takes the A13 through the Seine loops.",
         introduction:
@@ -3571,7 +3571,7 @@ export const trajets: Trajet[] = [
         comparaisonTransport:
           "Train from Paris Saint-Lazare takes 1h20 for €12-28. Our taxi from €260 suits groups of 3+ and offers door-to-door convenience with luggage.",
         faq: [
-          { question: "What is the price of a taxi Paris — Rouen?", answer: "The flat rate is 260 — 315 € all inclusive. Price guaranteed at booking." },
+          { question: "What is the price of a taxi Paris — Rouen?", answer: "The flat rate is €260–€315 all inclusive. Price guaranteed at booking." },
           { question: "How long is the Paris — Rouen journey?", answer: "About 90 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
@@ -3630,7 +3630,7 @@ export const trajets: Trajet[] = [
         metaTitle: "Taxi Paris → Orléans | 130 km, from €250 | TaxiNeo",
         metaDescription: "Direct route via A10, 1h30. Cathédrale d'Orléans along the way. Faster and more direct than train or bus. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Paris → Orléans",
-        heroSubtitle: "Your Paris → Orléans transfer at a fixed price of 250 — 305 €. Online booking, professional driver 24/7.",
+        heroSubtitle: "Your Paris → Orléans transfer at a fixed price of €250–€305. Online booking, professional driver 24/7.",
         description: "Paris — Orléans transfer, gateway to the Loire Valley châteaux.",
         routeDescription: "The route takes the A10 Autoroute de l'Aquitaine.",
         introduction:
@@ -3642,7 +3642,7 @@ export const trajets: Trajet[] = [
         comparaisonTransport:
           "Train takes 1h10 for €12-30. Our taxi from €250 suits groups and those combining Orléans with Chambord or Loire Valley tours.",
         faq: [
-          { question: "What is the price of a taxi Paris — Orléans?", answer: "The flat rate is 250 — 305 € all inclusive. Price guaranteed at booking." },
+          { question: "What is the price of a taxi Paris — Orléans?", answer: "The flat rate is €250–€305 all inclusive. Price guaranteed at booking." },
           { question: "How long is the Paris — Orléans journey?", answer: "About 90 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
@@ -3701,7 +3701,7 @@ export const trajets: Trajet[] = [
         metaTitle: "Taxi Paris → Tours | Fixed price from €450 | TaxiNeo",
         metaDescription: "Via A10, 2h30 ride. Châteaux de la Loire and Amboise along the way. Faster and more direct than train or bus. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Paris → Tours",
-        heroSubtitle: "Your Paris → Tours transfer at a fixed price of 450 — 545 €. Online booking, professional driver 24/7.",
+        heroSubtitle: "Your Paris → Tours transfer at a fixed price of €450–€545. Online booking, professional driver 24/7.",
         description: "Paris — Tours transfer at the heart of the Loire Valley châteaux.",
         routeDescription: "The route takes the A10 via Orléans and Blois.",
         introduction:
@@ -3713,7 +3713,7 @@ export const trajets: Trajet[] = [
         comparaisonTransport:
           "TGV takes 1h15 for €19-65. Our taxi from €450 is ideal for 3-4 passengers wanting door-to-château service without a rental car.",
         faq: [
-          { question: "What is the price of a taxi Paris — Tours?", answer: "The flat rate is 450 — 545 € all inclusive. Price guaranteed at booking." },
+          { question: "What is the price of a taxi Paris — Tours?", answer: "The flat rate is €450–€545 all inclusive. Price guaranteed at booking." },
           { question: "How long is the Paris — Tours journey?", answer: "About 150 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
@@ -3772,7 +3772,7 @@ export const trajets: Trajet[] = [
         metaTitle: "Taxi Paris → Amiens | Fixed price from €280 | TaxiNeo",
         metaDescription: "Direct route via A1, 1h40. Cathédrale d'Amiens along the way. Faster and more direct than train or bus. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Paris → Amiens",
-        heroSubtitle: "Your Paris → Amiens transfer at a fixed price of 280 — 335 €. Online booking, professional driver 24/7.",
+        heroSubtitle: "Your Paris → Amiens transfer at a fixed price of €280–€335. Online booking, professional driver 24/7.",
         description: "Paris — Amiens transfer, city of Jules Verne and its Gothic cathedral.",
         routeDescription: "The route takes the A1 then the A29 towards Amiens.",
         introduction:
@@ -3784,7 +3784,7 @@ export const trajets: Trajet[] = [
         comparaisonTransport:
           "Intercités train takes 1h10 for €15-35. Our taxi from €280 suits groups of 3+ and those continuing to the Somme Bay or WWI memorials.",
         faq: [
-          { question: "What is the price of a taxi Paris — Amiens?", answer: "The flat rate is 280 — 335 € all inclusive. Price guaranteed at booking." },
+          { question: "What is the price of a taxi Paris — Amiens?", answer: "The flat rate is €280–€335 all inclusive. Price guaranteed at booking." },
           { question: "How long is the Paris — Amiens journey?", answer: "About 100 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
@@ -3843,7 +3843,7 @@ export const trajets: Trajet[] = [
         metaTitle: "Taxi Paris → Chartres | 90 km, from €175 | TaxiNeo",
         metaDescription: "Via A11, 1h15 ride. Cathédrale de Chartres and Beauce along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Paris → Chartres",
-        heroSubtitle: "Your Paris → Chartres transfer at a fixed price of 175 — 210 €. Online booking, professional driver 24/7.",
+        heroSubtitle: "Your Paris → Chartres transfer at a fixed price of €175–€210. Online booking, professional driver 24/7.",
         description: "Paris — Chartres transfer for its UNESCO-listed cathedral.",
         routeDescription: "The route takes the A11 through the Beauce plain.",
         introduction:
@@ -3855,7 +3855,7 @@ export const trajets: Trajet[] = [
         comparaisonTransport:
           "By train, Paris Montparnasse → Chartres takes about 1h10 by TER (ticket from €16, full fare €20). Trains run approximately hourly. Chartres station is 800 metres from the cathedral. By rental car, expect €50 per day plus €7 tolls and €12 fuel. BlaBlaCar offers rides from €7. By TaxiNeo taxi at €175, for 2 people the cost per person is about €88, more than the train but with door-to-door comfort and the option to combine with a visit to nearby Château de Maintenon. Round trip with waiting available from €300.",
         faq: [
-          { question: "What is the price of a taxi Paris — Chartres?", answer: "The flat rate is 175 — 210 € all inclusive. Price guaranteed at booking." },
+          { question: "What is the price of a taxi Paris — Chartres?", answer: "The flat rate is €175–€210 all inclusive. Price guaranteed at booking." },
           { question: "How long is the Paris — Chartres journey?", answer: "About 75 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
@@ -3914,7 +3914,7 @@ export const trajets: Trajet[] = [
         metaTitle: "Taxi Paris → Deauville | 195 km, from €375 | TaxiNeo",
         metaDescription: "Via A13, 2h15 ride. Pont de Normandie and Planches de Deauville along the way. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Paris → Deauville",
-        heroSubtitle: "Your Paris → Deauville transfer at a fixed price of 385 — 465 €. Online booking, professional driver 24/7.",
+        heroSubtitle: "Your Paris → Deauville transfer at a fixed price of €385–€465. Online booking, professional driver 24/7.",
         description: "Paris — Deauville transfer for a chic weekend on the Normandy coast.",
         routeDescription: "The route takes the A13 towards Caen then the Deauville exit.",
         introduction:
@@ -3926,7 +3926,7 @@ export const trajets: Trajet[] = [
         comparaisonTransport:
           "By train, the Paris Saint-Lazare → Trouville-Deauville journey takes about 2 hours (SNCF ticket from €25 Intercités, up to €45 at peak times). You then need to reach your hotel by local taxi or on foot. By rental car, expect about €80 for the weekend plus €18 in tolls and about €25 in fuel. BlaBlaCar carpooling offers rides from €15 per person but with fixed schedules. By TaxiNeo taxi at €385, the cost per person for 4 passengers is about €96, more than the train but with door-to-door service, no luggage to carry through stations and complete schedule flexibility.",
         faq: [
-          { question: "What is the price of a taxi Paris — Deauville?", answer: "The flat rate is 385 — 465 € all inclusive. Price guaranteed at booking." },
+          { question: "What is the price of a taxi Paris — Deauville?", answer: "The flat rate is €385–€465 all inclusive. Price guaranteed at booking." },
           { question: "How long is the Paris — Deauville journey?", answer: "About 135 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
@@ -3985,7 +3985,7 @@ export const trajets: Trajet[] = [
         metaTitle: "Taxi Paris → Honfleur | 195 km, from €375 | TaxiNeo",
         metaDescription: "Via A13, 2h10 ride. Pont de Normandie and Vieux Bassin along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Paris → Honfleur",
-        heroSubtitle: "Your Paris → Honfleur transfer at a fixed price of 375 — 455 €. Online booking, professional driver 24/7.",
+        heroSubtitle: "Your Paris → Honfleur transfer at a fixed price of €375–€455. Online booking, professional driver 24/7.",
         description: "Paris — Honfleur transfer, jewel of the Normandy coast and its Impressionist painters.",
         routeDescription: "The route takes the A13 then the Pont de Normandie.",
         introduction:
@@ -3997,7 +3997,7 @@ export const trajets: Trajet[] = [
         comparaisonTransport:
           "There is no direct Paris — Honfleur rail link. By train, you must go to Deauville-Trouville (2h, from €25) then take a bus (line 20, about 30 min, €2.50) or local taxi (about €35). Total door-to-door time exceeds 3h. By rental car, expect about €70 per day plus €20 in tolls and €25 in fuel, with the stress of parking in Honfleur. Coach excursions from Paris cost €90 to €130 per person. By TaxiNeo taxi at €375, for 3-4 passengers you get a direct door-to-door transfer in 2h10, with no connections or parking worries.",
         faq: [
-          { question: "What is the price of a taxi Paris — Honfleur?", answer: "The flat rate is 375 — 455 € all inclusive. Price guaranteed at booking." },
+          { question: "What is the price of a taxi Paris — Honfleur?", answer: "The flat rate is €375–€455 all inclusive. Price guaranteed at booking." },
           { question: "How long is the Paris — Honfleur journey?", answer: "About 130 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
@@ -4056,7 +4056,7 @@ export const trajets: Trajet[] = [
         metaTitle: "Taxi Nice → Cannes | Fixed price from €65 | TaxiNeo",
         metaDescription: "Via A8, 30 min ride. La Croisette and Festival de Cannes along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Nice → Cannes",
-        heroSubtitle: "Your Nice → Cannes transfer at a fixed price of 65 — 80 €. Online booking, professional driver 24/7.",
+        heroSubtitle: "Your Nice → Cannes transfer at a fixed price of €65–€80. Online booking, professional driver 24/7.",
         description: "Nice — Cannes transfer along the French Riviera.",
         routeDescription: "The route takes the A8 along the Mediterranean coast.",
         introduction:
@@ -4068,7 +4068,7 @@ export const trajets: Trajet[] = [
         comparaisonTransport:
           "The TER train from Nice to Cannes costs about €7.50 and takes 30 to 40 minutes. The Zou! bus (line 200) takes 1h30 for €1.50 with many stops. With a rental car, the toll (€3), fuel and Cannes parking (€3 to €4/hour in town, €30 to €40/day in underground car parks) make a taxi very competitive. A taxi drops you in front of your hotel or right on the Croisette in 30 minutes, stress-free.",
         faq: [
-          { question: "What is the price of a taxi Nice — Cannes?", answer: "The flat rate is 65 — 80 € all inclusive. Price guaranteed at booking." },
+          { question: "What is the price of a taxi Nice — Cannes?", answer: "The flat rate is €65–€80 all inclusive. Price guaranteed at booking." },
           { question: "How long is the Nice — Cannes journey?", answer: "About 30 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
@@ -4127,7 +4127,7 @@ export const trajets: Trajet[] = [
         metaTitle: "Taxi Nice → Grasse | Fixed price from €80 | TaxiNeo",
         metaDescription: "Direct 40 min ride. Pénétrante Grasse and Capitale du parfum along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Nice → Grasse",
-        heroSubtitle: "Your Nice → Grasse transfer at a fixed price of 80 — 95 €. Online booking, professional driver 24/7.",
+        heroSubtitle: "Your Nice → Grasse transfer at a fixed price of €80–€95. Online booking, professional driver 24/7.",
         description: "Nice — Grasse transfer, the world capital of perfume.",
         routeDescription: "The route takes the Grasse expressway through the Nice hinterland.",
         introduction:
@@ -4139,7 +4139,7 @@ export const trajets: Trajet[] = [
         comparaisonTransport:
           "The Zou! 600 bus connects Nice to Grasse in about 1h30 for €1.50, with a stop in Cannes. There is no direct Nice–Grasse train (you must change at Cannes, total journey 1h15, about €10). By car, the A8 toll costs €3, plus fuel and parking (free on the outskirts, paid in the centre). A taxi is the most comfortable solution for a day trip from Nice, with the flexibility to combine several visits.",
         faq: [
-          { question: "What is the price of a taxi Nice — Grasse?", answer: "The flat rate is 80 — 95 € all inclusive. Price guaranteed at booking." },
+          { question: "What is the price of a taxi Nice — Grasse?", answer: "The flat rate is €80–€95 all inclusive. Price guaranteed at booking." },
           { question: "How long is the Nice — Grasse journey?", answer: "About 40 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
@@ -4198,7 +4198,7 @@ export const trajets: Trajet[] = [
         metaTitle: "Taxi Lyon → Grenoble | 110 km, from €210 | TaxiNeo",
         metaDescription: "Via A48, 1h15 ride. Massif de la Chartreuse and Alpes along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Lyon → Grenoble",
-        heroSubtitle: "Your Lyon → Grenoble transfer at a fixed price of 220 — 270 €. Online booking, professional driver 24/7.",
+        heroSubtitle: "Your Lyon → Grenoble transfer at a fixed price of €220–€270. Online booking, professional driver 24/7.",
         description: "Lyon — Grenoble transfer, gateway to the French Alps.",
         routeDescription: "The route takes the A48 through the Chartreuse massif.",
         introduction:
@@ -4208,9 +4208,9 @@ export const trajets: Trajet[] = [
         conseils:
           "For your Lyon — Grenoble journey, favour departures outside rush hours. The A43 leaving Lyon and the Voreppe gorge are two frequent congestion points, especially on Friday evenings and school holiday departures. If you are travelling in winter to reach a ski resort beyond Grenoble (Alpe d'Huez, Les Deux Alpes, Chamrousse), your driver can drop you directly at the resort. Remember to specify your luggage space needs when booking, especially if carrying ski equipment. Our vehicles are fitted with winter tyres from November to March. For business travellers, the 1h15 journey can be productive thanks to onboard Wi-Fi and charging ports. As Grenoble is a low-emission zone (ZFE), all our vehicles have the required Crit'Air sticker to circulate without restriction.",
         comparaisonTransport:
-          "The TER Lyon — Grenoble takes about 1h30 for a ticket from €19, with roughly one train per hour. Ouibus/FlixBus offers fares from €9, but the journey takes 1h45 to 2h. BlaBlaCar lists prices between €8 and €15 per passenger. By personal car, budget around €15 for fuel and €8.50 for tolls, totalling €23.50 excluding parking in Grenoble (often difficult and expensive). The TaxiNeo taxi at €220 — €270 for 1 to 4 passengers offers absolute door-to-door comfort, without worrying about parking or connections. For 3 or 4 passengers, the cost per person (€37 to €63) remains reasonable given the premium service offered.",
+          "The TER Lyon — Grenoble takes about 1h30 for a ticket from €19, with roughly one train per hour. Ouibus/FlixBus offers fares from €9, but the journey takes 1h45 to 2h. BlaBlaCar lists prices between €8 and €15 per passenger. By personal car, budget around €15 for fuel and €8.50 for tolls, totalling €23.50 excluding parking in Grenoble (often difficult and expensive). The TaxiNeo taxi at €220–€270 for 1 to 4 passengers offers absolute door-to-door comfort, without worrying about parking or connections. For 3 or 4 passengers, the cost per person (€37 to €63) remains reasonable given the premium service offered.",
         faq: [
-          { question: "What is the price of a taxi Lyon — Grenoble?", answer: "The flat rate is 220 — 270 € all inclusive. Price guaranteed at booking." },
+          { question: "What is the price of a taxi Lyon — Grenoble?", answer: "The flat rate is €220–€270 all inclusive. Price guaranteed at booking." },
           { question: "How long is the Lyon — Grenoble journey?", answer: "About 75 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
@@ -4269,7 +4269,7 @@ export const trajets: Trajet[] = [
         metaTitle: "Taxi Lyon → Saint-Étienne | 60 km, from €115 | TaxiNeo",
         metaDescription: "Direct route via A47, 50 min. Pilat and Design along the way. Faster and more direct than train or bus. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Lyon → Saint-Étienne",
-        heroSubtitle: "Your Lyon → Saint-Étienne transfer at a fixed price of 120 — 145 €. Online booking, professional driver 24/7.",
+        heroSubtitle: "Your Lyon → Saint-Étienne transfer at a fixed price of €120–€145. Online booking, professional driver 24/7.",
         description: "Lyon — Saint-Étienne transfer, UNESCO City of Design.",
         routeDescription: "The route takes the A47 along the Pilat massif.",
         introduction:
@@ -4279,9 +4279,9 @@ export const trajets: Trajet[] = [
         conseils:
           "To optimise your Lyon — Saint-Étienne journey, we recommend departing before 7:00 AM or after 9:30 AM in the morning, and before 4:30 PM or after 7:00 PM in the evening. The A47 is one of France's most congested motorways during rush hours, with recurring traffic jams between Givors and Rive-de-Gier. If you are travelling for a match at Geoffroy-Guichard stadium, remember to book your return taxi in advance as demand is very high after AS Saint-Étienne games. For business trips, our drivers know Saint-Étienne's business zones perfectly (Technopôle, Châteaucreux, Monthieu) and can drop you directly at your meeting venue. Our vehicles have Wi-Fi and USB ports so you can work during the journey. In winter, be aware that the Gier Valley can be prone to black ice, but our drivers are equipped with winter tyres for your safety.",
         comparaisonTransport:
-          "The TER Lyon — Saint-Étienne costs around €12.40 and takes 45 minutes, but requires getting to the station and waiting for the next departure. BlaBlaCar offers rides between €5 and €8, but with inflexible schedules and no punctuality guarantee. By personal car, the journey costs around €8 in diesel with no tolls. The TaxiNeo taxi at €120 — €145 (shareable among 1 to 4 passengers) offers door-to-door comfort, complete schedule flexibility and the certainty of arriving on time. For 2 to 4 people travelling together, the cost per person (€22 to €45) becomes very competitive against the train, especially when adding the cost of a taxi or VTC to reach the station.",
+          "The TER Lyon — Saint-Étienne costs around €12.40 and takes 45 minutes, but requires getting to the station and waiting for the next departure. BlaBlaCar offers rides between €5 and €8, but with inflexible schedules and no punctuality guarantee. By personal car, the journey costs around €8 in diesel with no tolls. The TaxiNeo taxi at €120–€145 (shareable among 1 to 4 passengers) offers door-to-door comfort, complete schedule flexibility and the certainty of arriving on time. For 2 to 4 people travelling together, the cost per person (€22 to €45) becomes very competitive against the train, especially when adding the cost of a taxi or VTC to reach the station.",
         faq: [
-          { question: "What is the price of a taxi Lyon — Saint-Étienne?", answer: "The flat rate is 120 — 145 € all inclusive. Price guaranteed at booking." },
+          { question: "What is the price of a taxi Lyon — Saint-Étienne?", answer: "The flat rate is €120–€145 all inclusive. Price guaranteed at booking." },
           { question: "How long is the Lyon — Saint-Étienne journey?", answer: "About 50 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
@@ -4340,7 +4340,7 @@ export const trajets: Trajet[] = [
         metaTitle: "Taxi Marseille → Toulon | 65 km, from €125 | TaxiNeo",
         metaDescription: "Direct route via A50, 50 min. Bandol and Sanary along the way. Faster and more direct than train or bus. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Marseille → Toulon",
-        heroSubtitle: "Your Marseille → Toulon transfer at a fixed price of 125 — 155 €. Online booking, professional driver 24/7.",
+        heroSubtitle: "Your Marseille → Toulon transfer at a fixed price of €125–€155. Online booking, professional driver 24/7.",
         description: "Marseille — Toulon transfer along the Provençal coast.",
         routeDescription: "The route takes the A50 passing through Bandol and Sanary.",
         introduction:
@@ -4352,7 +4352,7 @@ export const trajets: Trajet[] = [
         comparaisonTransport:
           "The TER Marseille — Toulon costs around 13 euros and takes 45 minutes to 1 hour depending on the service. There is a train every 30 minutes on weekdays. The Zou! bus costs 3 euros but takes 1h30 with many stops. By car, expect 10 euros in fuel and 4 euros in tolls, totalling 14 euros excluding parking (difficult and chargeable in the centre). The TaxiNeo taxi at 125 to 155 euros offers door-to-door service from your Marseille address to your exact destination in Toulon. For 3-4 passengers (31 to 52 euros per person), the cost remains very reasonable compared to the train, especially if you then need a local taxi in Toulon.",
         faq: [
-          { question: "What is the price of a taxi Marseille — Toulon?", answer: "The flat rate is 125 — 155 € all inclusive. Price guaranteed at booking." },
+          { question: "What is the price of a taxi Marseille — Toulon?", answer: "The flat rate is €125–€155 all inclusive. Price guaranteed at booking." },
           { question: "How long is the Marseille — Toulon journey?", answer: "About 50 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
@@ -4411,7 +4411,7 @@ export const trajets: Trajet[] = [
         metaTitle: "Taxi Marseille → Avignon | 100 km, from €195 | TaxiNeo",
         metaDescription: "Via A7, 1h05 ride. Pont d'Avignon and Palais des Papes along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Marseille → Avignon",
-        heroSubtitle: "Your Marseille → Avignon transfer at a fixed price of 195 — 235 €. Online booking, professional driver 24/7.",
+        heroSubtitle: "Your Marseille → Avignon transfer at a fixed price of €195–€235. Online booking, professional driver 24/7.",
         description: "Marseille — Avignon transfer, city of the Popes and the theatre festival.",
         routeDescription: "The route takes the A7 Autoroute du Soleil through Provence.",
         introduction:
@@ -4423,7 +4423,7 @@ export const trajets: Trajet[] = [
         comparaisonTransport:
           "The TGV from Marseille Saint-Charles to Avignon TGV takes 35 minutes and costs 20 to 40 euros depending on booking, but Avignon TGV station is 5 km from the centre (shuttle 1.60 euros or local taxi 15 euros). The direct TER costs 18 euros for 1h15. The Zou! bus costs 10 euros but takes 1h45 with stops. By car, expect 15 euros in fuel and 9 euros in tolls, totalling 24 euros excluding parking (often difficult intra-muros). The TaxiNeo taxi at 195 to 235 euros offers complete door-to-door service. For 3-4 passengers (49 to 78 euros per person), the cost is higher than TGV plus local taxi, in exchange for the benefits of schedule flexibility and luggage handling.",
         faq: [
-          { question: "What is the price of a taxi Marseille — Avignon?", answer: "The flat rate is 195 — 235 € all inclusive. Price guaranteed at booking." },
+          { question: "What is the price of a taxi Marseille — Avignon?", answer: "The flat rate is €195–€235 all inclusive. Price guaranteed at booking." },
           { question: "How long is the Marseille — Avignon journey?", answer: "About 65 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
@@ -4463,11 +4463,11 @@ export const trajets: Trajet[] = [
         metaTitle: "Taxi Toulouse → Carcassonne | 95 km, from €185 | TaxiNeo",
         metaDescription: "Via A61, 1h05 ride. Cité de Carcassonne and Canal du Midi along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Toulouse → Carcassonne",
-        heroSubtitle: "Your Toulouse → Carcassonne transfer at a fixed price of 185 — 220 €. Online booking, professional driver 24/7.",
+        heroSubtitle: "Your Toulouse → Carcassonne transfer at a fixed price of €185–€220. Online booking, professional driver 24/7.",
         description: "Toulouse — Carcassonne transfer to visit the UNESCO-listed medieval city.",
         routeDescription: "The route takes the A61 along the Canal du Midi.",
         faq: [
-          { question: "What is the price of a taxi Toulouse — Carcassonne?", answer: "The flat rate is 185 — 220 € all inclusive. Price guaranteed at booking." },
+          { question: "What is the price of a taxi Toulouse — Carcassonne?", answer: "The flat rate is €185–€220 all inclusive. Price guaranteed at booking." },
           { question: "How long is the Toulouse — Carcassonne journey?", answer: "About 65 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
@@ -4526,7 +4526,7 @@ export const trajets: Trajet[] = [
         metaTitle: "Taxi Bordeaux → Biarritz | 200 km, from €385 | TaxiNeo",
         metaDescription: "Through A63 in 2h. Landes and Côte basque along the way. Faster and more direct than train or bus. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Bordeaux → Biarritz",
-        heroSubtitle: "Your Bordeaux → Biarritz transfer at a fixed price of 385 — 465 €. Online booking, professional driver 24/7.",
+        heroSubtitle: "Your Bordeaux → Biarritz transfer at a fixed price of €385–€465. Online booking, professional driver 24/7.",
         description: "Bordeaux — Biarritz transfer through the Landes and the Basque coast.",
         routeDescription: "The route takes the A63 through the Landes forest.",
         introduction:
@@ -4536,9 +4536,9 @@ export const trajets: Trajet[] = [
         conseils:
           "The Rocher de la Vierge is Biarritz's number one photo spot: free access, splendid at sunset. The Biarritz lighthouse (€3, 248 steps) offers the best 360° panorama of the Basque coast. Biarritz market hall (covered market, every morning) is a must: pintxos, sheep cheese, Espelette pepper, Bayonne ham. For surfing, the Côte des Basques is the historic spot (surf school, rental); the Grande Plage is more sheltered for swimming. The Biarritz Aquarium is an appreciated family visit (€14, 1h30). The Port-Vieux quarter (tiny fishing port) is charming for an aperitif. Biarritz is also an excellent starting point for Espelette (pepper, 25 km), Saint-Jean-de-Luz (15 km), San Sebastián in Spain (50 km). Our drivers offer full-day Basque Country circuits on request.",
         comparaisonTransport:
-          "The TGV Bordeaux–Biarritz costs €20-50 and takes 1h50 (direct, 5-7 trains/day, Biarritz-La Négresse station). It is a very good connection. The TaxiNeo taxi at €385 — €465 is relevant for groups (3-4 passengers: €65-108 per person), families with surf or beach gear, those wanting stops (Dax, Hossegor) and travellers during peak periods when trains are full. Biarritz-La Négresse station is 3 km from the centre — the taxi offers door-to-door. By car, expect €23 fuel and €17 tolls.",
+          "The TGV Bordeaux–Biarritz costs €20-50 and takes 1h50 (direct, 5-7 trains/day, Biarritz-La Négresse station). It is a very good connection. The TaxiNeo taxi at €385–€465 is relevant for groups (3-4 passengers: €65-108 per person), families with surf or beach gear, those wanting stops (Dax, Hossegor) and travellers during peak periods when trains are full. Biarritz-La Négresse station is 3 km from the centre — the taxi offers door-to-door. By car, expect €23 fuel and €17 tolls.",
         faq: [
-          { question: "What is the price of a taxi Bordeaux — Biarritz?", answer: "The flat rate is 385 — 465 € all inclusive. Price guaranteed at booking." },
+          { question: "What is the price of a taxi Bordeaux — Biarritz?", answer: "The flat rate is €385–€465 all inclusive. Price guaranteed at booking." },
           { question: "How long is the Bordeaux — Biarritz journey?", answer: "About 120 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
@@ -4597,7 +4597,7 @@ export const trajets: Trajet[] = [
         metaTitle: "Taxi Nantes → La Baule | 80 km, from €155 | TaxiNeo",
         metaDescription: "Via N171, 1 hour ride. N171, Saint-Nazaire and Côte d'Amour along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Nantes → La Baule",
-        heroSubtitle: "Your Nantes → La Baule transfer at a fixed price of 155 — 185 €. Online booking, professional driver 24/7.",
+        heroSubtitle: "Your Nantes → La Baule transfer at a fixed price of €155–€185. Online booking, professional driver 24/7.",
         description: "Nantes — La Baule transfer to Europe's most beautiful bay.",
         routeDescription: "The route takes the N171 via Saint-Nazaire.",
         introduction:
@@ -4607,9 +4607,9 @@ export const trajets: Trajet[] = [
         conseils:
           "In summer (July-August), La Baule is very busy. Parking is paid and difficult (€2.50/h on the seafront, €15-20/day in car parks). A taxi is the ideal solution to avoid this headache. If staying at a palace hotel (Hermitage, Royal), your driver drops you directly at the entrance. La Baule covered market (every morning in summer, closed Mondays) is renowned for Guérande oysters and pink shrimp. The wild coast of Le Croisic (10 minutes from La Baule) offers spectacular scenery and is worth the detour. The Barrière casino opens daily from 10am (ID required). For the international show jumping (August), book your taxi a week ahead as demand surges during this 50,000-spectator event.",
         comparaisonTransport:
-          "The TER train Nantes — La Baule-Escoublac costs €12.70 and takes 55-65 minutes (direct service) with 6-8 trains daily. In summer, direct TGV services run Paris — La Baule (3h30, from €39). The LILA bus serves La Baule from Nantes in 1h30 for €2. By car, expect €9 in fuel (no tolls) but parking is a real problem in summer (€15-20/day). The TaxiNeo taxi at €155 — €185 is the comfort choice for families and groups: for 3-4 passengers (€25-42 per person), it compares to the train plus shuttle from La Baule station, with direct drop-off at your accommodation and holiday luggage handling.",
+          "The TER train Nantes — La Baule-Escoublac costs €12.70 and takes 55-65 minutes (direct service) with 6-8 trains daily. In summer, direct TGV services run Paris — La Baule (3h30, from €39). The LILA bus serves La Baule from Nantes in 1h30 for €2. By car, expect €9 in fuel (no tolls) but parking is a real problem in summer (€15-20/day). The TaxiNeo taxi at €155–€185 is the comfort choice for families and groups: for 3-4 passengers (€25-42 per person), it compares to the train plus shuttle from La Baule station, with direct drop-off at your accommodation and holiday luggage handling.",
         faq: [
-          { question: "What is the price of a taxi Nantes — La Baule?", answer: "The flat rate is 155 — 185 € all inclusive. Price guaranteed at booking." },
+          { question: "What is the price of a taxi Nantes — La Baule?", answer: "The flat rate is €155–€185 all inclusive. Price guaranteed at booking." },
           { question: "How long is the Nantes — La Baule journey?", answer: "About 55 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
@@ -4668,7 +4668,7 @@ export const trajets: Trajet[] = [
         metaTitle: "Taxi Lille → Dunkerque | 80 km, from €155 | TaxiNeo",
         metaDescription: "Via A25, 1 hour ride. Flandres and Port de Dunkerque along the way. Faster and more direct than train or bus. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Lille → Dunkerque",
-        heroSubtitle: "Your Lille → Dunkerque transfer at a fixed price of 155 — 185 €. Online booking, professional driver 24/7.",
+        heroSubtitle: "Your Lille → Dunkerque transfer at a fixed price of €155–€185. Online booking, professional driver 24/7.",
         description: "Lille — Dunkerque transfer through the Flemish plains.",
         routeDescription: "The route takes the A25 through Flanders.",
         introduction:
@@ -4678,9 +4678,9 @@ export const trajets: Trajet[] = [
         conseils:
           "During the Dunkirk Carnival (January-March), book your taxi in advance as the city is very busy and traffic disrupted. The three highlights are the Dunkirk, Rosendaël and Malo-les-Bains 'bandes' (parades). Wear old clothes — the throwing of smoked herrings from the town hall balcony is an unmissable and messy tradition! Outside carnival, Malo-les-Bains beach is pleasant in summer (cool water but swimmable), and the seafront with its seafood restaurants (mussels, grey shrimps, waterzooi) is worth a visit. The Dunkirk 1940 Museum (€5) retraces Operation Dynamo movingly. The FRAC Grand Large contemporary art museum in the former AP2 shipyard is architecturally spectacular. Bergues, a charming small fortified town 10 km away (famous from the film Bienvenue chez les Ch'tis), deserves a 20-minute detour.",
         comparaisonTransport:
-          "The TER Lille — Dunkirk costs about €13 and takes 1h10 to 1h30. There is roughly one train per hour, but the journey is not always direct (sometimes a change at Hazebrouck). The regional bus is slower (2h). By car, expect €8 in fuel and no tolls (A25 is free). The TaxiNeo taxi at €155 — €185 provides a direct door-to-door journey in 55 minutes with no connections. For 3-4 passengers, the cost (€25-43 per person) is reasonable against the train, with the advantage of direct drop-off at the beach, port or carnival venue.",
+          "The TER Lille — Dunkirk costs about €13 and takes 1h10 to 1h30. There is roughly one train per hour, but the journey is not always direct (sometimes a change at Hazebrouck). The regional bus is slower (2h). By car, expect €8 in fuel and no tolls (A25 is free). The TaxiNeo taxi at €155–€185 provides a direct door-to-door journey in 55 minutes with no connections. For 3-4 passengers, the cost (€25-43 per person) is reasonable against the train, with the advantage of direct drop-off at the beach, port or carnival venue.",
         faq: [
-          { question: "What is the price of a taxi Lille — Dunkerque?", answer: "The flat rate is 155 — 185 € all inclusive. Price guaranteed at booking." },
+          { question: "What is the price of a taxi Lille — Dunkerque?", answer: "The flat rate is €155–€185 all inclusive. Price guaranteed at booking." },
           { question: "How long is the Lille — Dunkerque journey?", answer: "About 55 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
@@ -4720,11 +4720,11 @@ export const trajets: Trajet[] = [
         metaTitle: "Taxi Strasbourg → Colmar | 75 km, from €145 | TaxiNeo",
         metaDescription: "Via A35, 55 min ride. Route des Vins and Petite Venise along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Strasbourg → Colmar",
-        heroSubtitle: "Your Strasbourg → Colmar transfer at a fixed price of 145 — 175 €. Online booking, professional driver 24/7.",
+        heroSubtitle: "Your Strasbourg → Colmar transfer at a fixed price of €145–€175. Online booking, professional driver 24/7.",
         description: "Strasbourg — Colmar transfer on the Alsace Wine Route.",
         routeDescription: "The route takes the A35 along the Alsace plain.",
         faq: [
-          { question: "What is the price of a taxi Strasbourg — Colmar?", answer: "The flat rate is 145 — 175 € all inclusive. Price guaranteed at booking." },
+          { question: "What is the price of a taxi Strasbourg — Colmar?", answer: "The flat rate is €145–€175 all inclusive. Price guaranteed at booking." },
           { question: "How long is the Strasbourg — Colmar journey?", answer: "About 55 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
@@ -4763,13 +4763,13 @@ export const trajets: Trajet[] = [
       en: {
         metaTitle: "Taxi Paris → Bruxelles | 310 km, from €595 | TaxiNeo",
         metaDescription: "Via A1, 3h10 ride. Cambrai, Mons and Belgique along the way. Faster and more direct than train or bus. Drop-off at your exact address, return available.",
-        heroTitle: "Taxi Paris → Bruxelles",
-        heroSubtitle: "Your Paris → Bruxelles transfer at a fixed price of 595 — 720 €. Online booking, professional driver 24/7.",
+        heroTitle: "Taxi Paris → Brussels",
+        heroSubtitle: "Your Paris → Brussels transfer at a fixed price of €595–€720. Online booking, professional driver 24/7.",
         description: "International Paris — Brussels transfer. More flexible than Thalys for groups.",
         routeDescription: "The route takes the A1 then the E19 via Cambrai and Mons.",
         faq: [
-          { question: "What is the price of a taxi Paris — Bruxelles?", answer: "The flat rate is 595 — 720 € all inclusive. Price guaranteed at booking." },
-          { question: "How long is the Paris — Bruxelles journey?", answer: "About 190 minutes under normal traffic conditions." },
+          { question: "What is the price of a taxi Paris — Brussels?", answer: "The flat rate is €595–€720 all inclusive. Price guaranteed at booking." },
+          { question: "How long is the Paris — Brussels journey?", answer: "About 190 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
         ],
@@ -4806,13 +4806,13 @@ export const trajets: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Paris → Amsterdam | 500 km, from €955 | TaxiNeo",
-        metaDescription: "Via A1, 5 hours ride. Bruxelles, Anvers and Pays-Bas along the way. Faster and more direct than train or bus. Drop-off at your exact address, return available.",
+        metaDescription: "Via A1, 5 hours ride. Brussels, Anvers and Pays-Bas along the way. Faster and more direct than train or bus. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Paris → Amsterdam",
-        heroSubtitle: "Your Paris → Amsterdam transfer at a fixed price of 955 — 1155 €. Online booking, professional driver 24/7.",
+        heroSubtitle: "Your Paris → Amsterdam transfer at a fixed price of €955–€1155. Online booking, professional driver 24/7.",
         description: "Long-distance Paris — Amsterdam transfer through Belgium and the Netherlands.",
         routeDescription: "The route takes the A1, E19 via Brussels and Antwerp, then the Dutch A2.",
         faq: [
-          { question: "What is the price of a taxi Paris — Amsterdam?", answer: "The flat rate is 955 — 1155 € all inclusive. Price guaranteed at booking." },
+          { question: "What is the price of a taxi Paris — Amsterdam?", answer: "The flat rate is €955–€1155 all inclusive. Price guaranteed at booking." },
           { question: "How long is the Paris — Amsterdam journey?", answer: "About 300 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
@@ -4851,13 +4851,13 @@ export const trajets: Trajet[] = [
       en: {
         metaTitle: "Taxi Paris → Londres | 450 km, from €860 | TaxiNeo",
         metaDescription: "Via A26, 5 hours ride. Eurotunnel Calais and M20 Angleterre along the way. Drop-off at your exact address, return available.",
-        heroTitle: "Taxi Paris → Londres",
-        heroSubtitle: "Your Paris → Londres transfer at a fixed price of 860 — 1040 €. Online booking, professional driver 24/7.",
+        heroTitle: "Taxi Paris → London",
+        heroSubtitle: "Your Paris → London transfer at a fixed price of €860–€1040. Online booking, professional driver 24/7.",
         description: "Paris — London transfer via the Calais Eurotunnel. Ideal with lots of luggage.",
         routeDescription: "The route takes the A26 to Calais, the Eurotunnel then the M20 to London.",
         faq: [
-          { question: "What is the price of a taxi Paris — Londres?", answer: "The flat rate is 860 — 1040 € all inclusive. Price guaranteed at booking." },
-          { question: "How long is the Paris — Londres journey?", answer: "About 300 minutes under normal traffic conditions." },
+          { question: "What is the price of a taxi Paris — London?", answer: "The flat rate is €860–€1040 all inclusive. Price guaranteed at booking." },
+          { question: "How long is the Paris — London journey?", answer: "About 300 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
         ],
@@ -4914,8 +4914,8 @@ export const trajets: Trajet[] = [
       en: {
         metaTitle: "Taxi Lyon → Genève | Fixed price from €290 | TaxiNeo",
         metaDescription: "Via A42, 1h40 ride. Nantua, Pays de Gex and Suisse along the way. Faster and more direct than train or bus. Drop-off at your exact address, return available.",
-        heroTitle: "Taxi Lyon → Genève",
-        heroSubtitle: "Your Lyon → Genève transfer at a fixed price of 295 — 360 €. Online booking, professional driver 24/7.",
+        heroTitle: "Taxi Lyon → Geneva",
+        heroSubtitle: "Your Lyon → Geneva transfer at a fixed price of €295–€360. Online booking, professional driver 24/7.",
         description: "Lyon — Geneva transfer through the Jura and Pays de Gex.",
         routeDescription: "The route takes the A42 via Ambérieu then the A40 towards Geneva.",
         introduction:
@@ -4925,10 +4925,10 @@ export const trajets: Trajet[] = [
         conseils:
           "The Lyon — Geneva journey can be significantly extended on Friday evenings (intense cross-border traffic) and during major Geneva exhibitions (Motor Show, etc.). We recommend early morning or midday departures. If crossing the border with goods, check Swiss customs regulations. Our drivers are familiar with Bardonnex checkpoint procedures. For travellers heading to the Palais des Nations, CERN or the international organisations quarter, our drivers know the specific access points and security checks. Payment is in euros at the fixed rate agreed when booking. If you wish to be dropped at Geneva-Cointrin airport for a flight, specify this when booking so the driver can adapt to your flight schedule.",
         comparaisonTransport:
-          "The TGV Lyon Part-Dieu — Geneva Cornavin takes about 1h50 for a ticket from €30 to €80 depending on booking time. FlixBus offers fares from €15 for 2h to 2h30. BlaBlaCar lists prices between €12 and €20. By car, budget €16 for fuel and €18 for French tolls, plus the Swiss vignette (40 CHF/year). The TaxiNeo taxi at €295 — €360 for 1 to 4 passengers offers a stress-free international transfer, without worrying about customs, parking in Geneva (very expensive: 3 to 5 CHF/h) or the motorway vignette. For 3 to 4 passengers, the per-person cost (€55 to €93) remains competitive against late-booking TGV fares.",
+          "The TGV Lyon Part-Dieu — Geneva Cornavin takes about 1h50 for a ticket from €30 to €80 depending on booking time. FlixBus offers fares from €15 for 2h to 2h30. BlaBlaCar lists prices between €12 and €20. By car, budget €16 for fuel and €18 for French tolls, plus the Swiss vignette (40 CHF/year). The TaxiNeo taxi at €295–€360 for 1 to 4 passengers offers a stress-free international transfer, without worrying about customs, parking in Geneva (very expensive: 3 to 5 CHF/h) or the motorway vignette. For 3 to 4 passengers, the per-person cost (€55 to €93) remains competitive against late-booking TGV fares.",
         faq: [
-          { question: "What is the price of a taxi Lyon — Genève?", answer: "The flat rate is 295 — 360 € all inclusive. Price guaranteed at booking." },
-          { question: "How long is the Lyon — Genève journey?", answer: "About 100 minutes under normal traffic conditions." },
+          { question: "What is the price of a taxi Lyon — Geneva?", answer: "The flat rate is €295–€360 all inclusive. Price guaranteed at booking." },
+          { question: "How long is the Lyon — Geneva journey?", answer: "About 100 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
         ],
@@ -4986,7 +4986,7 @@ export const trajets: Trajet[] = [
         metaTitle: "Taxi Paris → Strasbourg | 490 km, from €935 | TaxiNeo",
         metaDescription: "Via A4, 4h40 ride. Metz, Saverne and Alsace along the way. Faster and more direct than train or bus. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Paris → Strasbourg",
-        heroSubtitle: "Your Paris → Strasbourg transfer at a fixed price of 935 — 1135 €. Online booking, professional driver 24/7.",
+        heroSubtitle: "Your Paris → Strasbourg transfer at a fixed price of €935–€1135. Online booking, professional driver 24/7.",
         description: "Long-distance Paris — Strasbourg transfer, European capital.",
         routeDescription: "The route takes the A4 via Reims, Metz and the Saverne pass.",
         introduction:
@@ -4998,7 +4998,7 @@ export const trajets: Trajet[] = [
         comparaisonTransport:
           "The TGV takes 1h46 for €25-110 per person. Our taxi from €935 suits groups of 3-4, travellers with bulky luggage, and those wanting stops at Reims or Metz.",
         faq: [
-          { question: "What is the price of a taxi Paris — Strasbourg?", answer: "The flat rate is 935 — 1135 € all inclusive. Price guaranteed at booking." },
+          { question: "What is the price of a taxi Paris — Strasbourg?", answer: "The flat rate is €935–€1135 all inclusive. Price guaranteed at booking." },
           { question: "How long is the Paris — Strasbourg journey?", answer: "About 280 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
@@ -5057,7 +5057,7 @@ export const trajets: Trajet[] = [
         metaTitle: "Taxi Paris → Bordeaux | 585 km, from €1115 | TaxiNeo",
         metaDescription: "Via A10, 6h ride. Tours, Poitiers and Vignobles along the way. Faster and more direct than train or bus. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Paris → Bordeaux",
-        heroSubtitle: "Your Paris → Bordeaux transfer at a fixed price of 1115 — 1350 €. Online booking, professional driver 24/7.",
+        heroSubtitle: "Your Paris → Bordeaux transfer at a fixed price of €1115–€1350. Online booking, professional driver 24/7.",
         description: "Long-distance Paris — Bordeaux transfer, world wine capital.",
         routeDescription: "The route takes the A10 via Tours and Poitiers.",
         introduction:
@@ -5069,7 +5069,7 @@ export const trajets: Trajet[] = [
         comparaisonTransport:
           "The TGV takes 2h04 for €16-120 per person. For 4 passengers, that's €64-480 plus local taxis. Our taxi from €1115 makes sense for 3-4 passengers and is essential for transporting wine, bikes or bulky equipment.",
         faq: [
-          { question: "What is the price of a taxi Paris — Bordeaux?", answer: "The flat rate is 1115 — 1350 € all inclusive. Price guaranteed at booking." },
+          { question: "What is the price of a taxi Paris — Bordeaux?", answer: "The flat rate is €1115–€1350 all inclusive. Price guaranteed at booking." },
           { question: "How long is the Paris — Bordeaux journey?", answer: "About 360 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
@@ -5128,7 +5128,7 @@ export const trajets: Trajet[] = [
         metaTitle: "Taxi Paris → Marseille | 775 km, from €1480 | TaxiNeo",
         metaDescription: "Via A6, 7 hours ride. Lyon, Vallée du Rhône and Provence along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Paris → Marseille",
-        heroSubtitle: "Your Paris → Marseille transfer at a fixed price of 1480 — 1790 €. Online booking, professional driver 24/7.",
+        heroSubtitle: "Your Paris → Marseille transfer at a fixed price of €1480–€1790. Online booking, professional driver 24/7.",
         description: "Paris — Marseille transfer through the Rhône Valley and Provence.",
         routeDescription: "The route takes the A6 then the A7 via Lyon and the Rhône Valley.",
         introduction:
@@ -5140,7 +5140,7 @@ export const trajets: Trajet[] = [
         comparaisonTransport:
           "The TGV takes 3h20 and costs €39-150 per person. Flying takes 1h20 but 3h door-to-door, costing €60-200 per person. Our taxi from €1480 all-inclusive makes most sense for 3 or 4 passengers, with the advantage of unlimited luggage and door-to-door convenience.",
         faq: [
-          { question: "What is the price of a taxi Paris — Marseille?", answer: "The flat rate is 1480 — 1790 € all inclusive. Price guaranteed at booking." },
+          { question: "What is the price of a taxi Paris — Marseille?", answer: "The flat rate is €1480–€1790 all inclusive. Price guaranteed at booking." },
           { question: "How long is the Paris — Marseille journey?", answer: "About 450 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
@@ -5199,7 +5199,7 @@ export const trajets: Trajet[] = [
         metaTitle: "Taxi Paris → Nice | Fixed price from €1775 | TaxiNeo",
         metaDescription: "Via A6, 9h ride. Côte d'Azur and Provence along the way. Faster and more direct than train or bus. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Paris → Nice",
-        heroSubtitle: "Your Paris → Nice transfer at a fixed price of 1775 — 2150 €. Online booking, professional driver 24/7.",
+        heroSubtitle: "Your Paris → Nice transfer at a fixed price of €1775–€2150. Online booking, professional driver 24/7.",
         description: "Paris — Nice transfer to the French Riviera. Ideal for travelling with lots of luggage.",
         routeDescription: "The route takes the A6, A7 then A8 along the French Riviera.",
         introduction:
@@ -5211,7 +5211,7 @@ export const trajets: Trajet[] = [
         comparaisonTransport:
           "Flights take 1h30 but 3h30 door-to-door for €50-300 per person. TGV takes 5h30 for €30-150. Our taxi from €1775 makes most sense for 4-5 passengers with unlimited luggage.",
         faq: [
-          { question: "What is the price of a taxi Paris — Nice?", answer: "The flat rate is 1775 — 2150 € all inclusive. Price guaranteed at booking." },
+          { question: "What is the price of a taxi Paris — Nice?", answer: "The flat rate is €1775–€2150 all inclusive. Price guaranteed at booking." },
           { question: "How long is the Paris — Nice journey?", answer: "About 540 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
@@ -5270,7 +5270,7 @@ export const trajets: Trajet[] = [
         metaTitle: "Taxi Paris → Toulouse | 680 km, from €1295 | TaxiNeo",
         metaDescription: "Direct route via A10, 6h30. Limoges and Cahors along the way. Faster and more direct than train or bus. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Paris → Toulouse",
-        heroSubtitle: "Your Paris → Toulouse transfer at a fixed price of 1295 — 1570 €. Online booking, professional driver 24/7.",
+        heroSubtitle: "Your Paris → Toulouse transfer at a fixed price of €1295–€1570. Online booking, professional driver 24/7.",
         description: "Paris — Toulouse, the Pink City, via Limousin.",
         routeDescription: "The route takes the A10 then A20 via Limoges and Cahors.",
         introduction:
@@ -5282,7 +5282,7 @@ export const trajets: Trajet[] = [
         comparaisonTransport:
           "Flights take 1h15 but 3h door-to-door for €50-250 per person. The TGV via Bordeaux takes 4h15 for €40-130. Our taxi from €1295 makes most sense for groups, with unlimited luggage and complete flexibility.",
         faq: [
-          { question: "What is the price of a taxi Paris — Toulouse?", answer: "The flat rate is 1295 — 1570 € all inclusive. Price guaranteed at booking." },
+          { question: "What is the price of a taxi Paris — Toulouse?", answer: "The flat rate is €1295–€1570 all inclusive. Price guaranteed at booking." },
           { question: "How long is the Paris — Toulouse journey?", answer: "About 390 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
@@ -5341,7 +5341,7 @@ export const trajets: Trajet[] = [
         metaTitle: "Taxi Paris → Nantes | Fixed price from €735 | TaxiNeo",
         metaDescription: "Direct route via A11, 4h. Le Mans and Angers along the way. Faster and more direct than train or bus. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Paris → Nantes",
-        heroSubtitle: "Your Paris → Nantes transfer at a fixed price of 735 — 890 €. Online booking, professional driver 24/7.",
+        heroSubtitle: "Your Paris → Nantes transfer at a fixed price of €735–€890. Online booking, professional driver 24/7.",
         description: "Paris — Nantes transfer through Maine and Anjou.",
         routeDescription: "The route takes the A11 via Le Mans and Angers.",
         introduction:
@@ -5353,7 +5353,7 @@ export const trajets: Trajet[] = [
         comparaisonTransport:
           "TGV takes 2h15 for €15-90 per person. Our taxi from €735 becomes worthwhile for groups, with door-to-door flexibility and the option to continue to La Baule.",
         faq: [
-          { question: "What is the price of a taxi Paris — Nantes?", answer: "The flat rate is 735 — 890 € all inclusive. Price guaranteed at booking." },
+          { question: "What is the price of a taxi Paris — Nantes?", answer: "The flat rate is €735–€890 all inclusive. Price guaranteed at booking." },
           { question: "How long is the Paris — Nantes journey?", answer: "About 240 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
@@ -5412,7 +5412,7 @@ export const trajets: Trajet[] = [
         metaTitle: "Taxi Paris → Rennes | Fixed price from €670 | TaxiNeo",
         metaDescription: "Direct route via A11, 3h40. Laval and Bretagne along the way. Faster and more direct than train or bus. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Paris → Rennes",
-        heroSubtitle: "Your Paris → Rennes transfer at a fixed price of 670 — 810 €. Online booking, professional driver 24/7.",
+        heroSubtitle: "Your Paris → Rennes transfer at a fixed price of €670–€810. Online booking, professional driver 24/7.",
         description: "Paris — Rennes transfer, gateway to Brittany.",
         routeDescription: "The route takes the A11 then A81 via Laval.",
         introduction:
@@ -5424,7 +5424,7 @@ export const trajets: Trajet[] = [
         comparaisonTransport:
           "TGV takes 1h25 for €16-85. Our taxi from €670 suits families, pet owners and those continuing to the Brittany coast.",
         faq: [
-          { question: "What is the price of a taxi Paris — Rennes?", answer: "The flat rate is 670 — 810 € all inclusive. Price guaranteed at booking." },
+          { question: "What is the price of a taxi Paris — Rennes?", answer: "The flat rate is €670–€810 all inclusive. Price guaranteed at booking." },
           { question: "How long is the Paris — Rennes journey?", answer: "About 220 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
@@ -5480,7 +5480,7 @@ export const trajets: Trajet[] = [
         metaTitle: "Taxi Lyon → Marseille | 315 km, from €600 | TaxiNeo",
         metaDescription: "Via A7, 3 hours ride. Vallée du Rhône, Orange and Avignon along the way. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Lyon → Marseille",
-        heroSubtitle: "Your Lyon → Marseille transfer at a fixed price of 600 — 730 €. Online booking, professional driver 24/7.",
+        heroSubtitle: "Your Lyon → Marseille transfer at a fixed price of €600–€730. Online booking, professional driver 24/7.",
         description: "Lyon — Marseille transfer through the Rhône Valley.",
         routeDescription: "The route takes the A7 through the Rhône Valley via Orange.",
         introduction:
@@ -5492,7 +5492,7 @@ export const trajets: Trajet[] = [
         comparaisonTransport:
           "TGV Lyon Part-Dieu → Marseille Saint-Charles takes 1h40 for €30-80 but drops you at the station, not your final destination. With a local taxi from the station (€15-25), total budget is €45-105. TaxiNeo at €600-730 is premium but unbeatable in comfort: door-to-door, no station, no parking. At 3-4 passengers, it's €95-160/person — comparable to first-class TGV with added service.",
         faq: [
-          { question: "What is the price of a taxi Lyon — Marseille?", answer: "The flat rate is 600 — 730 € all inclusive. Price guaranteed at booking." },
+          { question: "What is the price of a taxi Lyon — Marseille?", answer: "The flat rate is €600–€730 all inclusive. Price guaranteed at booking." },
           { question: "How long is the Lyon — Marseille journey?", answer: "About 180 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
@@ -5532,11 +5532,11 @@ export const trajets: Trajet[] = [
         metaTitle: "Taxi Nice → Milan | Fixed price from €630 | TaxiNeo",
         metaDescription: "Via A10 italienne, 3h30 ride. A10 italienne, Gênes and Ligurie along the way. Drop-off at your exact address. Faster and more direct than train or bus.",
         heroTitle: "Taxi Nice → Milan",
-        heroSubtitle: "Your Nice → Milan transfer at a fixed price of 630 — 765 €. Online booking, professional driver 24/7.",
+        heroSubtitle: "Your Nice → Milan transfer at a fixed price of €630–€765. Online booking, professional driver 24/7.",
         description: "International Nice — Milan transfer via the Italian Riviera.",
         routeDescription: "The route takes the Italian A10 along the Ligurian coast via Genoa.",
         faq: [
-          { question: "What is the price of a taxi Nice — Milan?", answer: "The flat rate is 630 — 765 € all inclusive. Price guaranteed at booking." },
+          { question: "What is the price of a taxi Nice — Milan?", answer: "The flat rate is €630–€765 all inclusive. Price guaranteed at booking." },
           { question: "How long is the Nice — Milan journey?", answer: "About 210 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
@@ -5576,11 +5576,11 @@ export const trajets: Trajet[] = [
         metaTitle: "Taxi Strasbourg → Luxembourg | 230 km, from €440 | TaxiNeo",
         metaDescription: "Direct route via A4, 2h20. Metz and Thionville along the way. Faster and more direct than train or bus. Drop-off at your exact address, return available.",
         heroTitle: "Taxi Strasbourg → Luxembourg",
-        heroSubtitle: "Your Strasbourg → Luxembourg transfer at a fixed price of 440 — 535 €. Online booking, professional driver 24/7.",
+        heroSubtitle: "Your Strasbourg → Luxembourg transfer at a fixed price of €440–€535. Online booking, professional driver 24/7.",
         description: "Strasbourg — Luxembourg transfer via Metz and Lorraine.",
         routeDescription: "The route takes the A4 then A31 via Metz and Thionville.",
         faq: [
-          { question: "What is the price of a taxi Strasbourg — Luxembourg?", answer: "The flat rate is 440 — 535 € all inclusive. Price guaranteed at booking." },
+          { question: "What is the price of a taxi Strasbourg — Luxembourg?", answer: "The flat rate is €440–€535 all inclusive. Price guaranteed at booking." },
           { question: "How long is the Strasbourg — Luxembourg journey?", answer: "About 140 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
@@ -5638,8 +5638,8 @@ export const trajets: Trajet[] = [
       en: {
         metaTitle: "Taxi Lille → Bruxelles | 110 km, from €210 | TaxiNeo",
         metaDescription: "Via A27, 1h20 ride. E19, Tournai and Belgique along the way. Faster and more direct than train or bus. Drop-off at your exact address, return available.",
-        heroTitle: "Taxi Lille → Bruxelles",
-        heroSubtitle: "Your Lille → Bruxelles transfer at a fixed price of 220 — 270 €. Online booking, professional driver 24/7.",
+        heroTitle: "Taxi Lille → Brussels",
+        heroSubtitle: "Your Lille → Brussels transfer at a fixed price of €220–€270. Online booking, professional driver 24/7.",
         description: "Cross-border Lille — Brussels transfer in 1h20.",
         routeDescription: "The route takes the A27 then E19 via Tournai.",
         introduction:
@@ -5649,10 +5649,10 @@ export const trajets: Trajet[] = [
         conseils:
           "The Brussels Ring is one of Europe's most congested routes — avoid arrivals between 8-9:30am or 5-7pm on weekdays. If on a business trip to the European quarter, ask to be dropped at Schuman metro station or directly outside the Berlaymont (European Commission HQ). For tourism, the Grand-Place is the ideal starting point: Manneken Pis 5 min away, Galeries Saint-Hubert (1847 covered arcade) 2 min, Comic Strip Museum (Hergé, Tintin) 10 min. Belgian frites are best at Maison Antoine (Place Jourdan) or Fritland (Rue Henri Maus). Chocolate at Pierre Marcolini (Grand Sablon) is exceptional. Beer is savoured at Delirium Café (2,000 beers on the menu, world record) or Mort Subite (historic brasserie). For museums, the Magritte Museum and Royal Museums of Fine Arts are unmissable. The Atomium and Mini-Europe (scale models of European monuments) are perfect for families.",
         comparaisonTransport:
-          "The Thalys/TGV INOUI Lille — Brussels-Midi costs €20-65 and takes just 35 minutes. It is fast and frequent (about 10 trains/day). However, Brussels-Midi station is off-centre and the Brussels metro is needed to reach the centre or EU quarter. FlixBus offers tickets from €8 for a 2h journey. The TaxiNeo taxi at €220 — €270 provides complete door-to-door service: home pickup in Lille, drop-off at the exact address in Brussels (hotel, office, restaurant). For 3-4 passengers, the cost (€36-62 per person) is comparable to Thalys while offering more comfort and flexibility, especially with luggage.",
+          "The Thalys/TGV INOUI Lille — Brussels-Midi costs €20-65 and takes just 35 minutes. It is fast and frequent (about 10 trains/day). However, Brussels-Midi station is off-centre and the Brussels metro is needed to reach the centre or EU quarter. FlixBus offers tickets from €8 for a 2h journey. The TaxiNeo taxi at €220–€270 provides complete door-to-door service: home pickup in Lille, drop-off at the exact address in Brussels (hotel, office, restaurant). For 3-4 passengers, the cost (€36-62 per person) is comparable to Thalys while offering more comfort and flexibility, especially with luggage.",
         faq: [
-          { question: "What is the price of a taxi Lille — Bruxelles?", answer: "The flat rate is 220 — 270 € all inclusive. Price guaranteed at booking." },
-          { question: "How long is the Lille — Bruxelles journey?", answer: "About 80 minutes under normal traffic conditions." },
+          { question: "What is the price of a taxi Lille — Brussels?", answer: "The flat rate is €220–€270 all inclusive. Price guaranteed at booking." },
+          { question: "How long is the Lille — Brussels journey?", answer: "About 80 minutes under normal traffic conditions." },
           { question: "Can I book in advance?", answer: "Yes, booking available up to 30 days in advance. Free cancellation up to 6 hours before." },
           { question: "Is the service available 24/7?", answer: "Yes, our drivers are available 24/7. 15% night surcharge between 7pm and 7am." },
         ],
