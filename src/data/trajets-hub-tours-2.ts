@@ -242,7 +242,7 @@ export const trajetsToursHub2: Trajet[] = [
     prixMin: 80, prixMax: 100, prixVan: 130, dureeMax: 45,
     autoroute: "D943", peages: "aucun",
     departSlug: "tours", arriveeSlug: "loches",
-    liensInternes: ["taxi-tours-amboise", "taxi-tours-chenonceau", "taxi-tours-chinon"],
+    liensInternes: ["taxi-tours-amboise", "tours-chenonceau", "taxi-tours-chinon"],
     tags: ["touristique", "château", "médiéval", "cité-royale"],
     hub: "tours",
     i18n: {

@@ -45,6 +45,14 @@ const nextConfig = {
       },
     ];
   },
+  // Trajets decrits deux fois sous deux adresses : une seule reste (sitemap), l'autre redirige.
+  async redirects() {
+    const doublons = ["toulouse-perpignan", "rennes-saint-brieuc", "tours-chenonceau", "perpignan-narbonne"];
+    return doublons.flatMap((slug) => [
+      { source: `/trajet/taxi-${slug}`, destination: `/trajet/${slug}`, permanent: true },
+      { source: `/en/trajet/taxi-${slug}`, destination: `/en/trajet/${slug}`, permanent: true },
+    ]);
+  },
   async rewrites() {
     return [
       // Logo fallback — serve /apple-icon for legacy /logo.png references

@@ -87,7 +87,7 @@ export const trajetsRennesHub2: Trajet[] = [
     peages: "gratuit",
     departSlug: "rennes",
     arriveeSlug: "quimper",
-    liensInternes: ["taxi-rennes-lorient", "taxi-rennes-saint-brieuc", "taxi-rennes-nantes"],
+    liensInternes: ["taxi-rennes-lorient", "rennes-saint-brieuc", "taxi-rennes-nantes"],
     tags: ["longue-distance", "finistere", "cornouaille", "faiences", "bretagne"],
     hub: "rennes",
     i18n: {
@@ -152,7 +152,7 @@ export const trajetsRennesHub2: Trajet[] = [
     peages: "gratuit",
     departSlug: "rennes",
     arriveeSlug: "lorient",
-    liensInternes: ["taxi-rennes-quimper", "taxi-rennes-saint-brieuc", "taxi-rennes-cancale"],
+    liensInternes: ["taxi-rennes-quimper", "rennes-saint-brieuc", "taxi-rennes-cancale"],
     tags: ["ville-a-ville", "morbihan", "voile", "festival-interceltique"],
     hub: "rennes",
     i18n: {
@@ -282,7 +282,7 @@ export const trajetsRennesHub2: Trajet[] = [
     peages: "gratuit",
     departSlug: "rennes",
     arriveeSlug: "lannion",
-    liensInternes: ["taxi-rennes-saint-brieuc", "taxi-rennes-quimper", "taxi-rennes-cancale"],
+    liensInternes: ["rennes-saint-brieuc", "taxi-rennes-quimper", "taxi-rennes-cancale"],
     tags: ["ville-a-ville", "cote-de-granit-rose", "trégor", "technopole", "bretagne"],
     hub: "rennes",
     i18n: {
@@ -347,7 +347,7 @@ export const trajetsRennesHub2: Trajet[] = [
     peages: "gratuit",
     departSlug: "rennes",
     arriveeSlug: "cancale",
-    liensInternes: ["taxi-rennes-granville", "taxi-rennes-saint-brieuc", "taxi-rennes-laval"],
+    liensInternes: ["taxi-rennes-granville", "rennes-saint-brieuc", "taxi-rennes-laval"],
     tags: ["touristique", "huitres", "fruits-de-mer", "baie-mont-saint-michel", "gastronomie"],
     hub: "rennes",
     i18n: {
@@ -412,7 +412,7 @@ export const trajetsRennesHub2: Trajet[] = [
     peages: "gratuit",
     departSlug: "rennes",
     arriveeSlug: "nantes",
-    liensInternes: ["taxi-rennes-lorient", "taxi-rennes-saint-brieuc", "taxi-rennes-laval"],
+    liensInternes: ["taxi-rennes-lorient", "rennes-saint-brieuc", "taxi-rennes-laval"],
     tags: ["ville-a-ville", "loire", "culture", "machines-de-l-ile"],
     hub: "rennes",
     i18n: {

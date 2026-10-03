@@ -299,7 +299,7 @@ export const trajetsParisRetours2: Trajet[] = [
     prixMin: 670, prixMax: 810, prixVan: 1060, dureeMax: 270,
     autoroute: "A81 / A11", peages: "~28 € (inclus)",
     departSlug: "rennes", arriveeSlug: "paris",
-    liensInternes: ["taxi-nantes-paris", "taxi-rennes-saint-brieuc", "rennes-saint-malo"],
+    liensInternes: ["taxi-nantes-paris", "rennes-saint-brieuc", "rennes-saint-malo"],
     tags: ["longue-distance", "retour-paris", "rennes", "bretagne"],
     hub: "paris-retours",
     i18n: {

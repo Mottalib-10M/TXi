@@ -25,7 +25,7 @@ export const trajetsPerpignanCollioure: Trajet[] = [
     peages: "Aucun péage",
     departSlug: "perpignan",
     arriveeSlug: "collioure",
-    liensInternes: ["taxi-perpignan-narbonne", "taxi-perpignan-font-romeu", "taxi-perpignan-barcelone"],
+    liensInternes: ["perpignan-narbonne", "taxi-perpignan-font-romeu", "taxi-perpignan-barcelone"],
     tags: ["ville-a-ville", "cote-vermeille", "catalogne-nord", "touristique", "plage"],
     hub: "perpignan-collioure",
     i18n: {
@@ -155,7 +155,7 @@ export const trajetsPerpignanCollioure: Trajet[] = [
     peages: "~20 € (péages A9 + AP-7)",
     departSlug: "perpignan",
     arriveeSlug: "barcelone",
-    liensInternes: ["taxi-perpignan-collioure", "taxi-perpignan-narbonne", "taxi-perpignan-font-romeu"],
+    liensInternes: ["taxi-perpignan-collioure", "perpignan-narbonne", "taxi-perpignan-font-romeu"],
     tags: ["ville-a-ville", "transfrontalier", "espagne", "catalogne", "longue-distance"],
     hub: "perpignan-collioure",
     i18n: {
@@ -285,7 +285,7 @@ export const trajetsPerpignanCollioure: Trajet[] = [
     peages: "Aucun péage",
     departSlug: "perpignan",
     arriveeSlug: "prades",
-    liensInternes: ["taxi-perpignan-font-romeu", "taxi-perpignan-collioure", "taxi-perpignan-narbonne"],
+    liensInternes: ["taxi-perpignan-font-romeu", "taxi-perpignan-collioure", "perpignan-narbonne"],
     tags: ["ville-a-ville", "catalogne-nord", "montagne", "canigou", "culture"],
     hub: "perpignan-collioure",
     i18n: {
