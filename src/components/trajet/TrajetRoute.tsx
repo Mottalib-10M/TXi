@@ -1,12 +1,17 @@
 import { Icon } from "@iconify/react";
 import { getTranslations, getLocale } from "next-intl/server";
 import type { Trajet } from "@/data/trajets";
+import { nomsTrajet } from "@/lib/seo-trajet";
+import { autorouteEn, peagesEn, pointFortEn } from "@/lib/trajet-en";
 
 export async function TrajetRoute({ trajet }: { trajet: Trajet }) {
   const t = await getTranslations("trajet");
   const locale = await getLocale();
   const loc = locale === "en" ? "en" : "fr";
   const i18n = trajet.i18n[loc];
+  const noms = nomsTrajet(trajet, loc);
+  // Points forts, autoroute et péages ne sont saisis qu'en français.
+  const en = loc === "en";
 
   return (
     <section className="py-20 md:py-28">
@@ -27,7 +32,7 @@ export async function TrajetRoute({ trajet }: { trajet: Trajet }) {
             {t("routeSubtitle")}
           </p>
           <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
-            {t("routeTitle", { from: trajet.from, to: trajet.to })}
+            {t("routeTitle", noms)}
           </h2>
         </div>
 
@@ -49,8 +54,8 @@ export async function TrajetRoute({ trajet }: { trajet: Trajet }) {
             <div className="bg-neutral-50 border border-neutral-200 rounded-xl p-4 mb-6 flex items-center gap-3">
               <Icon icon="solar:road-linear" className="text-neutral-500 text-lg shrink-0" />
               <p className="text-sm text-neutral-600 font-light">
-                <span className="font-medium">{t("routeAutoroute")}</span> {trajet.autoroute}
-                {trajet.peages && <> — {trajet.peages}</>}
+                <span className="font-medium">{t("routeAutoroute")}</span> {en ? autorouteEn(trajet.autoroute) : trajet.autoroute}
+                {trajet.peages && <> — {en ? peagesEn(trajet.peages) : trajet.peages}</>}
               </p>
             </div>
           )}
@@ -65,7 +70,7 @@ export async function TrajetRoute({ trajet }: { trajet: Trajet }) {
                 {trajet.highlights.map((h) => (
                   <div key={h} className="flex items-center gap-2 text-sm text-neutral-600 font-light">
                     <Icon icon="solar:check-circle-linear" className="text-green-500 shrink-0" />
-                    {h}
+                    {en ? pointFortEn(h) : h}
                   </div>
                 ))}
               </div>

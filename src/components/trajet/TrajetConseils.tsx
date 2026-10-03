@@ -1,6 +1,7 @@
 import { Icon } from "@iconify/react";
 import { getTranslations, getLocale } from "next-intl/server";
 import type { Trajet } from "@/data/trajets";
+import { nomsTrajet } from "@/lib/seo-trajet";
 
 export async function TrajetConseils({ trajet }: { trajet: Trajet }) {
   const t = await getTranslations("trajet");
@@ -18,7 +19,7 @@ export async function TrajetConseils({ trajet }: { trajet: Trajet }) {
             {t("conseilsSubtitle")}
           </p>
           <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
-            {t("conseilsTitle", { from: trajet.from, to: trajet.to })}
+            {t("conseilsTitle", nomsTrajet(trajet, loc))}
           </h2>
         </div>
 
@@ -29,7 +30,7 @@ export async function TrajetConseils({ trajet }: { trajet: Trajet }) {
             </div>
             <div>
               <h3 className="text-base font-medium mb-1">{t("conseilsCardTitle")}</h3>
-              <p className="text-xs text-neutral-500 font-light">{t("conseilsCardSubtitle", { from: trajet.from, to: trajet.to })}</p>
+              <p className="text-xs text-neutral-500 font-light">{t("conseilsCardSubtitle", nomsTrajet(trajet, loc))}</p>
             </div>
           </div>
           <div className="prose prose-sm prose-neutral max-w-none font-light leading-relaxed text-neutral-600">

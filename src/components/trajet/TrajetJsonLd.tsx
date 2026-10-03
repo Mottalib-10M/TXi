@@ -3,10 +3,14 @@ import { getLocale } from "next-intl/server";
 import { dateDePage } from "@/lib/page-date";
 import { etofferFaq } from "@/lib/faq-etoffer";
 import { faitsTrajet } from "@/lib/faits-trajet";
+import { nomsTrajet } from "@/lib/seo-trajet";
 
 export async function TrajetJsonLd({ trajet }: { trajet: Trajet }) {
   const locale = await getLocale();
   const loc = locale === "en" ? "en" : "fr";
+  // Mêmes noms que la FAQ visible de la page (page.tsx), pour que le balisage
+  // reprenne exactement le texte affiché.
+  const noms = nomsTrajet(trajet, loc);
 
   const taxiService = {
     "@context": "https://schema.org",
@@ -54,7 +58,7 @@ export async function TrajetJsonLd({ trajet }: { trajet: Trajet }) {
   const faqPage = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: etofferFaq(trajet.i18n[loc].faq, faitsTrajet(trajet, loc), loc === "en" ? `On the ${trajet.from} — ${trajet.to} route` : `Sur le trajet ${trajet.from} — ${trajet.to}`, trajet.to).map((item) => ({
+    mainEntity: etofferFaq(trajet.i18n[loc].faq, faitsTrajet(trajet, loc), loc === "en" ? `On the ${noms.from} — ${noms.to} route` : `Sur le trajet ${trajet.from} — ${trajet.to}`, noms.to).map((item) => ({
       "@type": "Question",
       name: item.question,
       acceptedAnswer: {

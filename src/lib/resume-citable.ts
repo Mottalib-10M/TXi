@@ -16,6 +16,8 @@ import type { Trajet } from "@/data/trajets";
 import type { Airport } from "@/data/airports";
 import type { Station } from "@/data/stations";
 import type { City } from "@/data/cities";
+import { lieuEn } from "@/lib/seo-trajet";
+import { autorouteEn, peagesEn, prixEstimeEn } from "@/lib/trajet-en";
 
 const liste = (xs: string[], loc: "fr" | "en", max = 3) => {
   const v = xs.slice(0, max);
@@ -28,14 +30,18 @@ export function resumeTrajet(t: Trajet, loc: "fr" | "en"): string {
   const fr = loc === "fr";
   const prix = t.prixMin && t.prixMax
     ? (fr ? `entre ${t.prixMin} € et ${t.prixMax} €` : `between €${t.prixMin} and €${t.prixMax}`)
-    : t.priceEstimate;
+    : fr ? t.priceEstimate : prixEstimeEn(t.priceEstimate);
+  // Version anglaise : noms de lieux, itinéraire et péages étaient repris tels
+  // que saisis en français (« A6 puis A86, with ~4 € (inclus) »).
+  const depart = fr ? t.from : lieuEn(t.from);
+  const arrivee = fr ? t.to : lieuEn(t.to);
   const duree = t.dureeMax && t.dureeMax > t.durationMin
     ? (fr ? `de ${t.durationMin} à ${t.dureeMax} minutes selon le trafic`
           : `from ${t.durationMin} to ${t.dureeMax} minutes depending on traffic`)
     : (fr ? `environ ${t.durationMin} minutes` : `about ${t.durationMin} minutes`);
   const route = t.autoroute
     ? (fr ? ` L'itinéraire habituel emprunte ${t.autoroute}${t.peages ? `, avec ${t.peages.toLowerCase()}` : ""}.`
-          : ` The usual route takes ${t.autoroute}${t.peages ? `, with ${t.peages.toLowerCase()}` : ""}.`)
+          : ` The usual route takes ${autorouteEn(t.autoroute)}${t.peages ? `, with ${peagesEn(t.peages)}` : ""}.`)
     : "";
   const van = t.prixVan
     ? (fr ? ` Un van jusqu'à sept passagers est proposé à partir de ${t.prixVan} €.`
@@ -44,7 +50,7 @@ export function resumeTrajet(t: Trajet, loc: "fr" | "en"): string {
 
   return fr
     ? `Un taxi entre ${t.from} et ${t.to} coûte ${prix} lorsqu'il est réservé à l'avance à prix fixe, pour une distance d'environ ${t.distanceKm} kilomètres par la route et un temps de parcours ${duree}.${route}${van} Ce prix comprend les bagages, les péages et l'approche du chauffeur, et il ne bouge pas si la circulation se dégrade : c'est la différence avec une course au compteur, où chaque minute d'attente se facture et où le tarif applicable dépend de l'heure. Sur une course non réservée, le montant suit le barème de l'arrêté préfectoral applicable au lieu de prise en charge, plus élevé de dix-neuf heures à dix heures ainsi que le dimanche et les jours fériés. Le chauffeur suit le numéro de vol ou de train indiqué à la réservation et décale la prise en charge sans supplément en cas de retard, et l'annulation reste gratuite jusqu'à six heures avant le départ.`
-    : `A taxi between ${t.from} and ${t.to} costs ${prix} when booked in advance at a fixed price, over a road distance of about ${t.distanceKm} kilometres and a journey time of ${duree}.${route}${van} That price includes luggage, tolls and the driver's approach, and it does not move if traffic builds up: that is the difference with a metered ride, where every minute of waiting is charged and the applicable rate depends on the hour. On an unbooked ride, the amount follows the scale of the prefectoral order applying where the passenger is picked up, higher from seven in the evening to ten in the morning as well as on Sundays and public holidays. The driver tracks the flight or train number given at booking and shifts the pick-up at no extra cost if it is delayed, and cancelling remains free up to six hours before departure.`;
+    : `A taxi between ${depart} and ${arrivee} costs ${prix} when booked in advance at a fixed price, over a road distance of about ${t.distanceKm} kilometres and a journey time of ${duree}.${route}${van} That price includes luggage, tolls and the driver's approach, and it does not move if traffic builds up: that is the difference with a metered ride, where every minute of waiting is charged and the applicable rate depends on the hour. On an unbooked ride, the amount follows the scale of the prefectoral order applying where the passenger is picked up, higher from seven in the evening to ten in the morning as well as on Sundays and public holidays. The driver tracks the flight or train number given at booking and shifts the pick-up at no extra cost if it is delayed, and cancelling remains free up to six hours before departure.`;
 }
 
 export function resumeAeroport(a: Airport, loc: "fr" | "en"): string {

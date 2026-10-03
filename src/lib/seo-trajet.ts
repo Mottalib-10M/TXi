@@ -1,5 +1,6 @@
 import type { Trajet } from "@/data/trajets";
 import { ajusterDescription, choisirTitre } from "@/lib/seo";
+import { anglaiser } from "@/lib/trajet-en";
 
 /**
  * Titre et description des pages /trajet/<slug>, construits à partir des
@@ -25,6 +26,17 @@ const LIEUX_EN: Record<string, string> = {
   "Gare Nice-Ville": "Nice-Ville Station",
   "Gare Strasbourg": "Strasbourg Station",
   "Île de Ré": "Île de Ré",
+  "Gare Saint-Charles": "Marseille Saint-Charles Station",
+  "Château de Versailles": "Palace of Versailles",
+  "Château de Fontainebleau": "Palace of Fontainebleau",
+  "Zoo de Thoiry": "Thoiry Zoo",
+  "Zoo de Vincennes": "Vincennes Zoo",
+  "Domaine de Saint-Cloud": "Saint-Cloud Park",
+  "Gorges du Verdon": "Verdon Gorge",
+  "Genève": "Geneva",
+  "Bâle": "Basel",
+  "Andorre-la-Vieille": "Andorra la Vella",
+  "Aéroport Paris-CDG": "Paris-CDG Airport",
 };
 
 export function lieuEn(nom: string): string {
@@ -37,6 +49,11 @@ export function lieuEn(nom: string): string {
     .replace(/\(Belgique\)/, "(Belgium)")
     .replace(/\(Allemagne\)/, "(Germany)")
     .replace(/\(Suisse\)/, "(Switzerland)");
+}
+
+/** Noms de départ et d'arrivée affichés sur la page, dans la langue de la page. */
+export function nomsTrajet(t: Trajet, loc: Loc): { from: string; to: string } {
+  return loc === "en" ? { from: lieuEn(t.from), to: lieuEn(t.to) } : { from: t.from, to: t.to };
 }
 
 function duree(min: number): string {
@@ -88,9 +105,13 @@ export function descriptionTrajet(t: Trajet, loc: Loc): string {
   const d = duree(t.durationMin);
   // « en undefined min » / « undefined min ride » : la durée manquait au
   // moment de la saisie ; on la reprend du champ durationMin.
-  const brut = t.i18n[loc].metaDescription
+  let brut = t.i18n[loc].metaDescription
     .replace(/\bundefined min\b/g, d)
     .replace(/\bundefined\b/g, d);
+  // Les descriptions anglaises reprennent des points forts et des itinéraires
+  // saisis en français (« Roues à aubes and Brocante en route ») : on les
+  // traduit, et les noms de départ et d'arrivée prennent leur forme anglaise.
+  if (loc === "en") brut = anglaiser(brut, { [t.from]: lieuEn(t.from), [t.to]: lieuEn(t.to) });
   const p = prixDepart(t);
   const aeroport = t.category === "aeroport";
   const complements =

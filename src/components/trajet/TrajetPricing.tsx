@@ -1,9 +1,11 @@
 import { Icon } from "@iconify/react";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, getLocale } from "next-intl/server";
 import type { Trajet } from "@/data/trajets";
+import { nomsTrajet } from "@/lib/seo-trajet";
 
 export async function TrajetPricing({ trajet }: { trajet: Trajet }) {
   const t = await getTranslations("trajet");
+  const noms = nomsTrajet(trajet, (await getLocale()) === "en" ? "en" : "fr");
 
   const parts = trajet.priceEstimate.split(/\s*[—–-]{1,3}\s*/);
   const baseMin = parseInt(parts[0]) || 0;
@@ -42,7 +44,7 @@ export async function TrajetPricing({ trajet }: { trajet: Trajet }) {
             {t("pricingSubtitle")}
           </p>
           <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
-            {t("pricingTitle", { from: trajet.from, to: trajet.to })}
+            {t("pricingTitle", noms)}
           </h2>
           <p className="text-sm text-neutral-500 font-light mt-3 max-w-lg mx-auto">
             {t("pricingDescription")}

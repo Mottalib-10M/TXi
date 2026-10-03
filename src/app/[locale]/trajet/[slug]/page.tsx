@@ -18,7 +18,7 @@ import { CityCTA } from "@/components/city/CityCTA";
 import { trajets, getTrajetBySlug } from "@/data/trajets";
 import { activeTrajetSlugs } from "@/data/trajet-whitelist";
 import { canonicalUrl, alternateUrls } from "@/lib/seo";
-import { titreTrajet, descriptionTrajet } from "@/lib/seo-trajet";
+import { titreTrajet, descriptionTrajet, nomsTrajet } from "@/lib/seo-trajet";
 import { etofferFaq } from "@/lib/faq-etoffer";
 import { faitsTrajet } from "@/lib/faits-trajet";
 
@@ -75,6 +75,7 @@ export default async function TrajetPage({ params }: PageProps) {
   const trajet = getTrajetBySlug(slug);
   if (!trajet) notFound();
   const loc = locale === "en" ? "en" : "fr";
+  const { from, to } = nomsTrajet(trajet, loc);
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -94,9 +95,9 @@ export default async function TrajetPage({ params }: PageProps) {
         <TrajetPricing trajet={trajet} />
         <TrajetComparaison trajet={trajet} />
         <TrajetAlternatives trajet={trajet} />
-        <CityFAQ cityName={`${trajet.from} → ${trajet.to}`} faq={etofferFaq(trajet.i18n[loc].faq, faitsTrajet(trajet, loc), loc === "en" ? `On the ${trajet.from} — ${trajet.to} route` : `Sur le trajet ${trajet.from} — ${trajet.to}`, trajet.to)} />
-        <CityContactForm cityName={`${trajet.from} → ${trajet.to}`} />
-        <CityCTA cityName={`${trajet.from} → ${trajet.to}`} />
+        <CityFAQ cityName={`${from} → ${to}`} faq={etofferFaq(trajet.i18n[loc].faq, faitsTrajet(trajet, loc), loc === "en" ? `On the ${from} — ${to} route` : `Sur le trajet ${trajet.from} — ${trajet.to}`, to)} />
+        <CityContactForm cityName={`${from} → ${to}`} />
+        <CityCTA cityName={`${from} → ${to}`} />
       </main>
 
       <Footer />

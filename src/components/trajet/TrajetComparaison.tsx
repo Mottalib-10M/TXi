@@ -1,6 +1,7 @@
 import { Icon } from "@iconify/react";
 import { getTranslations, getLocale } from "next-intl/server";
 import type { Trajet } from "@/data/trajets";
+import { nomsTrajet } from "@/lib/seo-trajet";
 
 export async function TrajetComparaison({ trajet }: { trajet: Trajet }) {
   const t = await getTranslations("trajet");
@@ -18,7 +19,7 @@ export async function TrajetComparaison({ trajet }: { trajet: Trajet }) {
             {t("comparaisonSubtitle")}
           </p>
           <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
-            {t("comparaisonTitle", { from: trajet.from, to: trajet.to })}
+            {t("comparaisonTitle", nomsTrajet(trajet, loc))}
           </h2>
         </div>
 

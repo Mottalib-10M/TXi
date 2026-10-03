@@ -6,11 +6,17 @@
  * donnée absente ne produit aucune phrase plutôt qu'une phrase vague.
  */
 import type { Trajet } from "@/data/trajets";
+import { lieuEn } from "@/lib/seo-trajet";
+import { autorouteEn, peagesEn } from "@/lib/trajet-en";
 
 export function faitsTrajet(trajet: Trajet, loc: "fr" | "en"): string[] {
   const fr = loc === "fr";
   const phrases: string[] = [];
-  const { from, to, distanceKm, durationMin, dureeMax, prixMin, prixMax, prixVan, autoroute, peages } = trajet;
+  const { distanceKm, durationMin, dureeMax, prixMin, prixMax, prixVan, autoroute, peages } = trajet;
+  // En anglais, noms de lieux, autoroute et péages sont traduits : ces champs
+  // ne sont saisis qu'en français (« A6 puis A86 », « ~4 € (inclus) »).
+  const from = fr ? trajet.from : lieuEn(trajet.from);
+  const to = fr ? trajet.to : lieuEn(trajet.to);
 
   if (distanceKm) {
     phrases.push(
@@ -50,11 +56,11 @@ export function faitsTrajet(trajet: Trajet, loc: "fr" | "en"): string[] {
     phrases.push(
       fr
         ? `L'itinéraire habituel emprunte ${autoroute}.`
-        : `The usual route takes ${autoroute}.`,
+        : `The usual route takes ${autorouteEn(autoroute)}.`,
     );
   }
   if (peages) {
-    phrases.push(fr ? `Péages : ${peages}.` : `Tolls: ${peages}.`);
+    phrases.push(fr ? `Péages : ${peages}.` : `Expect ${peagesEn(peages)} on this route.`);
   }
 
   // Faits communs à tous les trajets, en dernier recours : ils restent exacts
