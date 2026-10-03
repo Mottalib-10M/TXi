@@ -134,7 +134,7 @@ export const trajetsChamberyValence: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Chambéry → Courchevel | 110 km, dès 210 € | TaxiNeo",
-        metaDescription: "Via A43 / N90 en undefined min. Tarentaise, Moûtiers, Ski et Luxe en chemin. Arrêt visite possible en chemin. Arrêt possible pour photos et visites en chemin.",
+        metaDescription: "Via A43 / N90 en undefined min. Tarentaise, Moûtiers, Ski et Luxe en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Chambéry → Courchevel",
         heroSubtitle: "Transfert Chambéry → Courchevel au prix fixe de 210 — 255 €. 110 km vers la station mythique.",
         description: "Chambéry — Courchevel est le transfert ski de référence depuis la gare TGV.",

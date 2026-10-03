@@ -28,7 +28,7 @@ export const trajetsCreteilVitry: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Créteil → Aéroport Orly | 15 km, dès 30 € | TaxiNeo",
-        metaDescription: "Via A86 en 18 min. Orly, Val-de-Marne, Préfecture et Nuit en chemin. Dépose au terminal, suivi de vol. Dépose au terminal exact, suivi de vol en temps réel.",
+        metaDescription: "Via A86 en 18 min. Orly, Val-de-Marne, Préfecture et Nuit en chemin. Dépose au terminal exact, suivi de vol en temps réel.",
         heroTitle: "Taxi Créteil → Aéroport Orly",
         heroSubtitle: "Transfert Créteil → Aéroport Orly au prix fixe de 30 — 35 €. 15 km, direct par l'A86.",
         description: "L'aéroport d'Orly est à seulement 18 minutes de Créteil, préfecture du Val-de-Marne.",
@@ -112,7 +112,7 @@ export const trajetsCreteilVitry: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Créteil → Aéroport CDG | 35 km, from €70 | TaxiNeo",
-        metaDescription: "Via A86 / A4, 35 min ride. CDG, Val-de-Marne and Nuit along the way. Terminal drop-off, flight tracking. Terminal drop-off, real-time flight tracking included.",
+        metaDescription: "Via A86 / A4, 35 min ride. CDG, Val-de-Marne and Nuit along the way. Terminal drop-off, real-time flight tracking included.",
         heroTitle: "Taxi Créteil → CDG Airport",
         heroSubtitle: "Your Créteil → CDG Airport transfer at €70–€85. 35 km, via the A86 and A4.",
         description: "CDG Airport is 35 minutes from Créteil via the A86 and A4, the most direct route.",
@@ -158,7 +158,7 @@ export const trajetsCreteilVitry: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Vitry-sur-Seine → Aéroport Orly | 10 km, 18 € | TaxiNeo",
-        metaDescription: "Via N406 en 12 min. Orly, Val-de-Marne, MAC/VAL et Nuit en chemin. Dépose au terminal, suivi de vol. Dépose au terminal exact, suivi de vol en temps réel.",
+        metaDescription: "Via N406 en 12 min. Orly, Val-de-Marne, MAC/VAL et Nuit en chemin. Dépose au terminal exact, suivi de vol en temps réel.",
         heroTitle: "Taxi Vitry-sur-Seine → Aéroport Orly",
         heroSubtitle: "Transfert Vitry-sur-Seine → Aéroport Orly au prix fixe de 20 — 25 €. 10 km, direct par la N406.",
         description: "L'aéroport d'Orly est à seulement 12 minutes de Vitry-sur-Seine, l'un des transferts les plus courts vers un aéroport parisien.",
@@ -177,7 +177,7 @@ export const trajetsCreteilVitry: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Vitry-sur-Seine → Aéroport Orly | 10 km, €18 | TaxiNeo",
-        metaDescription: "Via N406, 12 min ride. Orly, Val-de-Marne, MAC/VAL and Nuit en route. Terminal drop-off, flight tracking. Terminal drop-off, real-time flight tracking included.",
+        metaDescription: "Via N406, 12 min ride. Orly, Val-de-Marne, MAC/VAL and Nuit en route. Terminal drop-off, real-time flight tracking included.",
         heroTitle: "Taxi Vitry-sur-Seine → Orly Airport",
         heroSubtitle: "Your Vitry-sur-Seine → Orly Airport transfer at €20–€25. 10 km, via the N406.",
         description: "Orly Airport is just 12 minutes from Vitry-sur-Seine, one of the shortest airport transfers in the Paris region.",
@@ -223,7 +223,7 @@ export const trajetsCreteilVitry: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Créteil → Disneyland Paris | 35 km, dès 70 € | TaxiNeo",
-        metaDescription: "Via A4 en 30 min. Disneyland, Val-de-Marne, Marne et Famille en chemin. Dépose au terminal, suivi de vol. Dépose au terminal exact, suivi de vol en temps réel.",
+        metaDescription: "Via A4 en 30 min. Disneyland, Val-de-Marne, Marne et Famille en chemin. Dépose au terminal exact, suivi de vol en temps réel.",
         heroTitle: "Taxi Créteil → Disneyland Paris",
         heroSubtitle: "Transfert Créteil → Disneyland Paris au prix fixe de 70 — 85 €. 35 km, direct par l'A4.",
         description: "Disneyland Paris est à seulement 30 minutes de Créteil par l'autoroute A4, un trajet rapide et direct.",

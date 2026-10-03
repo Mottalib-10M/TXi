@@ -533,7 +533,7 @@ export const trajetsAvignonHub: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Avignon → Aéroport Marseille-Provence | 80 km | TaxiNeo",
-        metaDescription: "Via A7 en undefined min. MRS, Marignane, Vol et Direct en chemin. Dépose au terminal, suivi de vol. Dépose au terminal exact, suivi de vol en temps réel.",
+        metaDescription: "Via A7 en undefined min. MRS, Marignane, Vol et Direct en chemin. Dépose au terminal exact, suivi de vol en temps réel.",
         heroTitle: "Taxi Avignon → Aéroport Marseille",
         heroSubtitle: "Transfert Avignon → Aéroport Marseille-Provence (MRS) au prix fixe de 155 — 185 €. 80 km, direct.",
         description: "L'aéroport Marseille-Provence (MRS) à Marignane est l'aéroport le plus proche d'Avignon pour les vols internationaux.",
@@ -552,7 +552,7 @@ export const trajetsAvignonHub: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Avignon → Aéroport Marseille-Provence | 80 km | TaxiNeo",
-        metaDescription: "Via A7, undefined min ride. MRS, Marignane, Vol and Direct en route. Terminal drop-off, flight tracking. Terminal drop-off, real-time flight tracking included.",
+        metaDescription: "Via A7, undefined min ride. MRS, Marignane, Vol and Direct en route. Terminal drop-off, real-time flight tracking included.",
         heroTitle: "Taxi Avignon → Marseille Airport",
         heroSubtitle: "Avignon → Marseille-Provence Airport (MRS) transfer at €155–€185. 80 km, direct.",
         description: "Marseille-Provence Airport (MRS) in Marignane is Avignon's closest airport for international flights.",

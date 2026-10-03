@@ -31,7 +31,7 @@ export const trajetsGrenobleAnnecy: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Grenoble → Chamrousse | 30 km, dès 60 € | TaxiNeo",
-        metaDescription: "Via D111 en 40 min. Station de ski, Belledonne et JO 1968 en chemin. Arrêt visite possible en chemin. Arrêt possible pour photos et visites en chemin.",
+        metaDescription: "Via D111 en 40 min. Station de ski, Belledonne et JO 1968 en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Grenoble → Chamrousse",
         heroSubtitle: "Transfert Grenoble → Chamrousse au prix fixe de 60 — 70 €. 30 km par la D111.",
         description: "Chamrousse, station de ski mythique de la chaîne de Belledonne ayant accueilli les épreuves de ski alpin des Jeux Olympiques de 1968, est située à seulement 30 km de Grenoble par la route départementale D111. Votre chauffeur TaxiNeo vous conduit directement au pied des pistes, été comme hiver.",
@@ -96,7 +96,7 @@ export const trajetsGrenobleAnnecy: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Grenoble → L'Alpe d'Huez | 63 km, dès 120 € | TaxiNeo",
-        metaDescription: "Via A480 puis D1091 et D211 en 1h05. N85, 21 virages et Oisans en chemin. Arrêt visite possible en chemin. Arrêt possible pour photos et visites en chemin.",
+        metaDescription: "Via A480 puis D1091 et D211 en 1h05. N85, 21 virages et Oisans en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Grenoble → L'Alpe d'Huez",
         heroSubtitle: "Transfert Grenoble → L'Alpe d'Huez au prix fixe de 120 — 150 €. 63 km via la D1091 et les 21 virages.",
         description: "L'Alpe d'Huez, station de ski mythique de l'Oisans et montée légendaire du Tour de France avec ses 21 virages numérotés, est à 1h05 de Grenoble par la vallée de la Romanche et la D211.",

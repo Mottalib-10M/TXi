@@ -96,7 +96,7 @@ export const trajetsMonaco: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Monaco → Aéroport Nice | 25 km, dès 40 € | TaxiNeo",
-        metaDescription: "Via A8 en 25 min. Aéroport Nice Côte d'Azur et Terminal 1 & 2 en chemin. Dépose au terminal, suivi de vol. Dépose au terminal exact, suivi de vol en temps réel.",
+        metaDescription: "Via A8 en 25 min. Aéroport Nice Côte d'Azur et Terminal 1 & 2 en chemin. Dépose au terminal exact, suivi de vol en temps réel.",
         heroTitle: "Taxi Monaco — Aéroport Nice",
         heroSubtitle: "Transfert direct depuis la Principauté vers l'aéroport Nice Côte d'Azur",
         description: "Transfert en taxi de Monaco à l'aéroport Nice Côte d'Azur (NCE), troisième aéroport de France, via l'autoroute A8.",
@@ -115,7 +115,7 @@ export const trajetsMonaco: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Monaco → Aéroport Nice | 25 km, from €40 | TaxiNeo",
-        metaDescription: "Via A8, 25 min ride. Nice Côte d'Azur Airport and Terminal 1 & 2 along the way. Terminal drop-off, flight tracking. Flight tracking, direct terminal drop-off.",
+        metaDescription: "Via A8, 25 min ride. Nice Côte d'Azur Airport and Terminal 1 & 2 along the way. Flight tracking, direct terminal drop-off.",
         heroTitle: "Taxi Monaco — Nice Airport",
         heroSubtitle: "Direct transfer from the Principality to Nice Côte d'Azur Airport",
         description: "Taxi transfer from Monaco to Nice Côte d'Azur Airport (NCE), France's third-busiest airport, via the A8 motorway.",

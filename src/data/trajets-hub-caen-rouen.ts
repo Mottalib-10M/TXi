@@ -291,7 +291,7 @@ export const trajetsCaenRouen: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Caen → Mont-Saint-Michel | 130 km, dès 250 € | TaxiNeo",
-        metaDescription: "Via A84 en 1h30. Merveille UNESCO, Abbaye, Baie et Grandes marées en chemin. Arrêt visite possible en chemin. Arrêt possible pour photos et visites en chemin.",
+        metaDescription: "Via A84 en 1h30. Merveille UNESCO, Abbaye, Baie et Grandes marées en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Caen → Mont-Saint-Michel",
         heroSubtitle: "Transfert Caen → Mont-Saint-Michel au prix fixe de 250 — 305 €. 130 km par l'A84.",
         description: "Le Mont-Saint-Michel, merveille de l'Occident et site UNESCO, est à 1h30 de Caen par l'A84.",
@@ -681,7 +681,7 @@ export const trajetsCaenRouen: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Caen → Aéroport de Caen-Carpiquet | 8 km | TaxiNeo",
-        metaDescription: "Via D9 / N13 en 12 min. Aéroport CFR, Terminal et Parking en chemin. Dépose au terminal, suivi de vol. Dépose au terminal exact, suivi de vol en temps réel.",
+        metaDescription: "Via D9 / N13 en 12 min. Aéroport CFR, Terminal et Parking en chemin. Dépose au terminal exact, suivi de vol en temps réel.",
         heroTitle: "Taxi Caen → Aéroport Caen-Carpiquet",
         heroSubtitle: "Transfert Caen centre → aéroport au prix fixe de 20 — 25 €. 8 km, 12 minutes.",
         description: "L'aéroport de Caen-Carpiquet (CFR) est à seulement 12 minutes du centre-ville de Caen.",

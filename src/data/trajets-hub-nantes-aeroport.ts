@@ -93,7 +93,7 @@ export const trajetsNantesAeroport: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Aéroport Nantes Atlantique → La Baule | 80 km | TaxiNeo",
-        metaDescription: "Via N844 puis N165 en 55 min. N844, N165, Côte atlantique et Plage en chemin. Dépose au terminal, suivi de vol. Suivi de vol, dépose directe au terminal.",
+        metaDescription: "Via N844 puis N165 en 55 min. N844, N165, Côte atlantique et Plage en chemin. Suivi de vol, dépose directe au terminal.",
         heroTitle: "Taxi Aéroport Nantes → La Baule",
         heroSubtitle: "Transfert Aéroport Nantes Atlantique → La Baule au prix fixe de 155 — 185 €. 80 km, direction la côte atlantique.",
         description: "La Baule-Escoublac, station balnéaire de la côte d'Amour, est à 55 min de l'aéroport Nantes Atlantique.",
@@ -112,7 +112,7 @@ export const trajetsNantesAeroport: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Aéroport Nantes Atlantique → La Baule | 80 km | TaxiNeo",
-        metaDescription: "Via N844 then N165, 55 min ride. N844, N165, Côte atlantique and Plage en route. Terminal drop-off, flight tracking. Flight tracking, direct terminal drop-off.",
+        metaDescription: "Via N844 then N165, 55 min ride. N844, N165, Côte atlantique and Plage en route. Flight tracking, direct terminal drop-off.",
         heroTitle: "Taxi Nantes Airport → La Baule",
         heroSubtitle: "Your Nantes Airport → La Baule transfer at €155–€185. 80 km, Atlantic coast destination.",
         description: "La Baule, prestigious resort on the Cote d'Amour, is 55 min from Nantes Atlantique Airport.",

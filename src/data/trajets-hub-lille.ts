@@ -161,7 +161,7 @@ export const trajetsLille: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Lille → Bruges | 100 km, dès 195 €, 1h15 | TaxiNeo",
-        metaDescription: "Via A22 puis E40 en 1h15. E40, Courtrai, Canaux et Belgique en chemin. Arrêt visite possible en chemin. Arrêt possible pour photos et visites en chemin.",
+        metaDescription: "Via A22 puis E40 en 1h15. E40, Courtrai, Canaux et Belgique en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Lille → Bruges",
         heroSubtitle: "Transfert Lille → Bruges au prix fixe de 195 — 235 €. 100 km via la Belgique.",
         description: "Bruges, la Venise du Nord avec ses canaux et son centre médiéval UNESCO, est à 1h15 de Lille en taxi.",

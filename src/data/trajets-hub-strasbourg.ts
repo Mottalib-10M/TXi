@@ -605,7 +605,7 @@ export const trajetsStrasbourgHub: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Strasbourg → Strasbourg-Entzheim | 15 km | TaxiNeo",
-        metaDescription: "Via A35 en 15 min. Entzheim et Aéroport SXB en chemin. Dépose au terminal exact, suivi de vol en temps réel. Suivi de vol, dépose directe au terminal.",
+        metaDescription: "Via A35 en 15 min. Entzheim et Aéroport SXB en chemin. Dépose au terminal exact, suivi de vol en temps réel.",
         heroTitle: "Taxi Strasbourg → Aéroport Entzheim",
         heroSubtitle: "Transfert Strasbourg → Aéroport Entzheim au prix fixe de 30 — 35 €. 15 km, 15 min.",
         description: "L'aéroport de Strasbourg-Entzheim (SXB) est à seulement 15 min et 15 km du centre-ville de Strasbourg.",
@@ -624,7 +624,7 @@ export const trajetsStrasbourgHub: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Strasbourg → Strasbourg-Entzheim | 15 km, €30 | TaxiNeo",
-        metaDescription: "Via A35, 15 min ride. Entzheim and Aéroport SXB along the way. Terminal drop-off, flight tracking. Terminal drop-off, real-time flight tracking included.",
+        metaDescription: "Via A35, 15 min ride. Entzheim and Aéroport SXB along the way. Terminal drop-off, real-time flight tracking included.",
         heroTitle: "Taxi Strasbourg → Entzheim Airport",
         heroSubtitle: "Your Strasbourg → Entzheim Airport transfer at €30–€35. 15 km, 15 min.",
         description: "Strasbourg-Entzheim Airport (SXB) is just 15 min and 15 km from Strasbourg city centre.",

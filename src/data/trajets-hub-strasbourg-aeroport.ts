@@ -223,7 +223,7 @@ export const trajetsStrasbourgAeroport: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Strasbourg-Entzheim → Offenburg | 30 km, 40 € | TaxiNeo",
-        metaDescription: "Via A35 / B28 en 25 min. Pont du Rhin, Kehl, Forêt-Noire et Ortenau en chemin. Dépose au terminal, suivi de vol. Suivi de vol, dépose directe au terminal.",
+        metaDescription: "Via A35 / B28 en 25 min. Pont du Rhin, Kehl, Forêt-Noire et Ortenau en chemin. Suivi de vol, dépose directe au terminal.",
         heroTitle: "Taxi Aéroport Strasbourg → Offenburg",
         heroSubtitle: "Transfert transfrontalier Aéroport Strasbourg-Entzheim → Offenburg au prix fixe de 60 — 70 €. 30 km, 25 minutes via le Rhin.",
         description: "Offenburg, ville de l'Ortenau au pied de la Forêt-Noire en Allemagne, est à seulement 25 minutes de l'aéroport de Strasbourg en traversant le Rhin.",
@@ -242,7 +242,7 @@ export const trajetsStrasbourgAeroport: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Strasbourg-Entzheim → Offenburg | 30 km, €40 | TaxiNeo",
-        metaDescription: "Via A35 / B28, 25 min ride. Pont du Rhin, Kehl, Forêt-Noire and Ortenau en route. Terminal drop-off, flight tracking. Flight tracking, direct terminal drop-off.",
+        metaDescription: "Via A35 / B28, 25 min ride. Pont du Rhin, Kehl, Forêt-Noire and Ortenau en route. Flight tracking, direct terminal drop-off.",
         heroTitle: "Taxi Strasbourg Airport → Offenburg",
         heroSubtitle: "Your cross-border Strasbourg-Entzheim Airport → Offenburg transfer at €60–€70. 30 km, 25 minutes via the Rhine.",
         description: "Offenburg, a town in the Ortenau district at the foot of the Black Forest in Germany, is just 25 minutes from Strasbourg Airport across the Rhine.",

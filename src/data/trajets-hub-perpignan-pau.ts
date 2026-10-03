@@ -156,7 +156,7 @@ export const trajetsPerpignanPau: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Perpignan → Font-Romeu | 90 km, dès 175 € | TaxiNeo",
-        metaDescription: "Via N116 en 1h15. Cerdagne, Four solaire et Altitude 1800m en chemin. Arrêt visite possible en chemin. Arrêt possible pour photos et visites en chemin.",
+        metaDescription: "Via N116 en 1h15. Cerdagne, Four solaire et Altitude 1800m en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Perpignan → Font-Romeu",
         heroSubtitle: "Votre transfert Perpignan → Font-Romeu au prix fixe de 175 — 210 €. 90 km via la N116.",
         description: "Font-Romeu, station de Cerdagne à 1 800 m d'altitude, est la ville la plus ensoleillée de France — idéale pour le ski et l'entraînement en altitude.",
@@ -417,7 +417,7 @@ export const trajetsPerpignanPau: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Pau → Cauterets | forfait dès 115 €, 55 min | TaxiNeo",
-        metaDescription: "Via N21/D920 en 55 min. Pont d'Espagne, Thermes, Ski et Pyrénées en chemin. Arrêt visite possible en chemin. Arrêt possible pour photos et visites en chemin.",
+        metaDescription: "Via N21/D920 en 55 min. Pont d'Espagne, Thermes, Ski et Pyrénées en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Pau → Cauterets",
         heroSubtitle: "Votre transfert Pau → Cauterets au prix fixe de 115 — 140 €. 60 km via N21/D920.",
         description: "Cauterets, station thermale et de ski nichée dans les Hautes-Pyrénées, est à 55 min de Pau.",

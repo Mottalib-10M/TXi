@@ -28,7 +28,7 @@ export const trajetsMarseilleAeroport: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Marseille Provence → Marseille Centre | 28 km | TaxiNeo",
-        metaDescription: "Via A7 en 25 min. Marignane, Vieux-Port, Étang de Berre et Provence en chemin. Dépose au terminal, suivi de vol. Suivi de vol, dépose directe au terminal.",
+        metaDescription: "Via A7 en 25 min. Marignane, Vieux-Port, Étang de Berre et Provence en chemin. Suivi de vol, dépose directe au terminal.",
         heroTitle: "Taxi Aéroport Marseille Provence → Marseille Centre",
         heroSubtitle: "Transfert aéroport vers le centre de Marseille au prix fixe de 55 — 65 €. 28 km, direct par l'A7.",
         description: "Le centre de Marseille est à seulement 25 minutes de l'aéroport Marseille Provence par l'A7.",
@@ -47,7 +47,7 @@ export const trajetsMarseilleAeroport: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Marseille Provence → Marseille Centre | 28 km | TaxiNeo",
-        metaDescription: "Via A7, 25 min ride. Marignane, Vieux-Port, Étang de Berre and Provence en route. Terminal drop-off, flight tracking. Flight tracking, direct terminal drop-off.",
+        metaDescription: "Via A7, 25 min ride. Marignane, Vieux-Port, Étang de Berre and Provence en route. Flight tracking, direct terminal drop-off.",
         heroTitle: "Taxi Marseille Provence Airport → Marseille Centre",
         heroSubtitle: "Airport transfer to Marseille centre at €55–€65. 28 km, direct via the A7.",
         description: "Marseille city centre is just 25 minutes from Marseille Provence Airport via the A7.",
@@ -93,7 +93,7 @@ export const trajetsMarseilleAeroport: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Marseille Provence → Aix-en-Provence | 25 km | TaxiNeo",
-        metaDescription: "Via A51 en 25 min. Marignane, Cours Mirabeau, Cézanne et Provence en chemin. Dépose au terminal, suivi de vol. Suivi de vol, dépose directe au terminal.",
+        metaDescription: "Via A51 en 25 min. Marignane, Cours Mirabeau, Cézanne et Provence en chemin. Suivi de vol, dépose directe au terminal.",
         heroTitle: "Taxi Aéroport Marseille Provence → Aix-en-Provence",
         heroSubtitle: "Transfert aéroport vers Aix-en-Provence au prix fixe de 50 — 60 €. 25 km, direct par l'A51.",
         description: "Aix-en-Provence est à seulement 25 minutes de l'aéroport Marseille Provence par l'A51.",
@@ -112,7 +112,7 @@ export const trajetsMarseilleAeroport: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Marseille Provence → Aix-en-Provence | 25 km | TaxiNeo",
-        metaDescription: "Via A51, 25 min ride. Marignane, Cours Mirabeau, Cézanne and Provence en route. Terminal drop-off, flight tracking. Flight tracking, direct terminal drop-off.",
+        metaDescription: "Via A51, 25 min ride. Marignane, Cours Mirabeau, Cézanne and Provence en route. Flight tracking, direct terminal drop-off.",
         heroTitle: "Taxi Marseille Provence Airport → Aix-en-Provence",
         heroSubtitle: "Airport transfer to Aix-en-Provence at €50–€60. 25 km, direct via the A51.",
         description: "Aix-en-Provence is just 25 minutes from Marseille Provence Airport via the A51.",

@@ -483,7 +483,7 @@ export const trajetsAmiensTolon: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Toulon → Saint-Tropez | 70 km, dès 135 € | TaxiNeo",
-        metaDescription: "Via A57 puis D558 en 1h10. A57/D558, Côte d'Azur, Jet-set et Port en chemin. Arrêt visite possible en chemin. Arrêt possible pour photos et visites en chemin.",
+        metaDescription: "Via A57 puis D558 en 1h10. A57/D558, Côte d'Azur, Jet-set et Port en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Toulon → Saint-Tropez",
         heroSubtitle: "Transfert Toulon → Saint-Tropez au prix fixe de 135 — 165 €. 70 km, mythique Côte d'Azur.",
         description: "Saint-Tropez, joyau de la Côte d'Azur, est à 1h10 de Toulon.",
@@ -613,7 +613,7 @@ export const trajetsAmiensTolon: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Toulon → Aéroport de Toulon-Hyères | 22 km | TaxiNeo",
-        metaDescription: "Via A57 en 25 min. Aéroport, Navette, Vol et Parking en chemin. Dépose au terminal, suivi de vol. Dépose au terminal exact, suivi de vol en temps réel.",
+        metaDescription: "Via A57 en 25 min. Aéroport, Navette, Vol et Parking en chemin. Dépose au terminal exact, suivi de vol en temps réel.",
         heroTitle: "Taxi Toulon → Aéroport Hyères",
         heroSubtitle: "Transfert Toulon → Aéroport de Toulon-Hyères au prix fixe de 45 — 55 €. 22 km, 25 min.",
         description: "L'aéroport de Toulon-Hyères est à 25 min du centre de Toulon.",
@@ -632,7 +632,7 @@ export const trajetsAmiensTolon: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Toulon → Aéroport de Toulon-Hyères | 22 km | TaxiNeo",
-        metaDescription: "Via A57, 25 min ride. Aéroport, Navette, Vol and Parking en route. Terminal drop-off, flight tracking. Terminal drop-off, real-time flight tracking included.",
+        metaDescription: "Via A57, 25 min ride. Aéroport, Navette, Vol and Parking en route. Terminal drop-off, real-time flight tracking included.",
         heroTitle: "Taxi Toulon → Hyères Airport",
         heroSubtitle: "Your Toulon → Toulon-Hyères Airport transfer at €45–€55. 22 km, 25 min.",
         description: "Toulon-Hyères Airport is 25 min from central Toulon.",

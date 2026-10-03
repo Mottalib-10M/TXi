@@ -134,7 +134,7 @@ export const trajetsToursHub2: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Tours → Blois | 62 km A10, dès 120 € | TaxiNeo",
-        metaDescription: "Via A10 en undefined min. Château, Chambord, Loire et Renaissance en chemin. Arrêt visite possible en chemin. Arrêt possible pour photos et visites en chemin.",
+        metaDescription: "Via A10 en undefined min. Château, Chambord, Loire et Renaissance en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Tours → Blois",
         heroSubtitle: "Transfert Tours → Blois au prix fixe de 120 — 145 €. 62 km, la porte de Chambord.",
         description: "Blois, avec son château royal aux quatre ailes de quatre siècles, est la porte d'entrée de Chambord.",

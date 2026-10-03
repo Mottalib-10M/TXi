@@ -161,7 +161,7 @@ export const trajetsToulouse: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Toulouse → Lourdes | 190 km, dès 365 € | TaxiNeo",
-        metaDescription: "Via A64 en 2h. Pyrénées, Sanctuaires, Pèlerinage et Saint-Gaudens en chemin. Arrêt visite possible en chemin. Arrêt possible pour photos et visites en chemin.",
+        metaDescription: "Via A64 en 2h. Pyrénées, Sanctuaires, Pèlerinage et Saint-Gaudens en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Toulouse → Lourdes",
         heroSubtitle: "Transfert Toulouse → Lourdes au prix fixe de 365 — 440 €. 190 km par l'A64 vers les Pyrénées.",
         description: "Lourdes, haut lieu de pèlerinage mondial avec 6 millions de visiteurs par an, est à 2h de Toulouse par l'A64.",

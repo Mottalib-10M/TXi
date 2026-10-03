@@ -288,7 +288,7 @@ export const trajetsNantesHub2: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Nantes → Guérande | 80 km, dès 155 € | TaxiNeo",
-        metaDescription: "Via N171/N165 en 1h. N171, Remparts, Marais salants et Sel en chemin. Arrêt visite possible en chemin. Arrêt possible pour photos et visites en chemin.",
+        metaDescription: "Via N171/N165 en 1h. N171, Remparts, Marais salants et Sel en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Nantes → Guérande",
         heroSubtitle: "Transfert Nantes → Guérande au prix fixe de 155 — 185 €. 80 km, cité du sel.",
         description: "Guérande, cité médiévale fortifiée et capitale du sel, est à 1h de Nantes.",

@@ -77,7 +77,7 @@ export const trajetsLille2: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Lille → Aéroport CDG | 215 km, dès 410 € | TaxiNeo",
-        metaDescription: "Via A1 en undefined min. Direct, Roissy et Vol international en chemin. Dépose au terminal, suivi de vol. Dépose au terminal exact, suivi de vol en temps réel.",
+        metaDescription: "Via A1 en undefined min. Direct, Roissy et Vol international en chemin. Dépose au terminal exact, suivi de vol en temps réel.",
         heroTitle: "Taxi Lille → Aéroport CDG",
         heroSubtitle: "Transfert Lille → CDG au prix fixe de 410 — 500 €. 215 km, 2h20.",
         description: "Lille — CDG est le transfert aéroport de référence pour le Nord.",
@@ -96,7 +96,7 @@ export const trajetsLille2: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Lille → Aéroport CDG | 215 km, from €410 | TaxiNeo",
-        metaDescription: "Via A1, undefined min ride. Direct, Roissy and Vol international along the way. Terminal drop-off, flight tracking. Flight tracking, direct terminal drop-off.",
+        metaDescription: "Via A1, undefined min ride. Direct, Roissy and Vol international along the way. Flight tracking, direct terminal drop-off.",
         heroTitle: "Taxi Lille → CDG Airport",
         heroSubtitle: "Lille → CDG transfer at €410–€500. 215 km, 2h20.",
         description: "Lille to CDG is northern France's main airport transfer.",
@@ -248,7 +248,7 @@ export const trajetsLille2: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Lille → Deauville | 330 km, dès 630 € | TaxiNeo",
-        metaDescription: "Via A26 / A29 / A13 en undefined min. Normandie, Plages et Casino en chemin. Arrêt visite possible en chemin. Arrêt possible pour photos et visites en chemin.",
+        metaDescription: "Via A26 / A29 / A13 en undefined min. Normandie, Plages et Casino en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Lille → Deauville",
         heroSubtitle: "Transfert Lille → Deauville au prix fixe de 630 — 765 €. 330 km, 3h30.",
         description: "Deauville, station balnéaire chic, en 3h30 depuis Lille.",

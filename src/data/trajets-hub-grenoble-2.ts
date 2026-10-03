@@ -77,7 +77,7 @@ export const trajetsGrenobleHub2: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Grenoble → Lyon St-Exupéry | 105 km, 120 € | TaxiNeo",
-        metaDescription: "Via A48 en undefined min. LYS, Saint-Exupéry, Vol et Direct en chemin. Dépose au terminal, suivi de vol. Dépose au terminal exact, suivi de vol en temps réel.",
+        metaDescription: "Via A48 en undefined min. LYS, Saint-Exupéry, Vol et Direct en chemin. Dépose au terminal exact, suivi de vol en temps réel.",
         heroTitle: "Taxi Grenoble → Aéroport Lyon",
         heroSubtitle: "Transfert Grenoble → Aéroport Lyon Saint-Exupéry (LYS) au prix fixe de 200 — 245 €.",
         description: "L'aéroport Lyon Saint-Exupéry est l'aéroport international le plus accessible depuis Grenoble.",
@@ -419,7 +419,7 @@ export const trajetsGrenobleHub2: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Grenoble → Serre Chevalier | 110 km, 125 € | TaxiNeo",
-        metaDescription: "Via N91 en undefined min. Ski, Lautaret, Oisans et 250 km pistes en chemin. Arrêt visite possible en chemin. Arrêt possible pour photos et visites en chemin.",
+        metaDescription: "Via N91 en undefined min. Ski, Lautaret, Oisans et 250 km pistes en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Grenoble → Serre Chevalier",
         heroSubtitle: "Transfert Grenoble → Serre Chevalier au prix fixe de 210 — 255 €. 110 km, 250 km de pistes.",
         description: "Serre Chevalier, le plus grand domaine skiable des Alpes du Sud, offre 250 km de pistes entre 1 200 et 2 800 m.",

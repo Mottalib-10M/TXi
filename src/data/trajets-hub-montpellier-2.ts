@@ -288,7 +288,7 @@ export const trajetsMontpellierHub2: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Montpellier → Palavas-les-Flots | 12 km, 22 € | TaxiNeo",
-        metaDescription: "Via D986 en 20 min. Plage, Phare, Albert Dubout et Canal du Midi en chemin. Arrêt visite possible en chemin. Arrêt possible pour photos et visites en chemin.",
+        metaDescription: "Via D986 en 20 min. Plage, Phare, Albert Dubout et Canal du Midi en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Montpellier → Palavas-les-Flots",
         heroSubtitle: "Transfert Montpellier → Palavas au prix fixe de 25 — 30 €. 12 km, la plage des Montpelliérains.",
         description: "Palavas-les-Flots, station balnéaire des Montpelliérains, est à 20 min du centre-ville.",
@@ -353,7 +353,7 @@ export const trajetsMontpellierHub2: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Montpellier → Pézenas | 55 km, dès 105 € | TaxiNeo",
-        metaDescription: "Via A75 en 45 min. Molière, Patrimoine, Artisanat et Hérault en chemin. Arrêt visite possible en chemin. Arrêt possible pour photos et visites en chemin.",
+        metaDescription: "Via A75 en 45 min. Molière, Patrimoine, Artisanat et Hérault en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Montpellier → Pézenas",
         heroSubtitle: "Transfert Montpellier → Pézenas au prix fixe de 105 — 130 €. 55 km, cité de Molière.",
         description: "Pézenas, cité de Molière et ville d'artisanat d'art, est à 45 min de Montpellier.",

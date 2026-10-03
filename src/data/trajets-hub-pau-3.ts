@@ -191,7 +191,7 @@ export const trajetsPau3: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Pau → Aéroport Pau-Pyrénées | 10 km, dès 20 € | TaxiNeo",
-        metaDescription: "Via D802 en undefined min. Aéroport, Pyrénées, Navette et Direct en chemin. Dépose au terminal, suivi de vol. Suivi de vol, dépose directe au terminal.",
+        metaDescription: "Via D802 en undefined min. Aéroport, Pyrénées, Navette et Direct en chemin. Suivi de vol, dépose directe au terminal.",
         heroTitle: "Taxi Pau → Aéroport Pau-Pyrénées",
         heroSubtitle: "Transfert centre-ville de Pau → Aéroport au prix fixe de 20 — 25 €. 10 km, 10 min.",
         description: "Transfert rapide et économique entre le centre de Pau et l'aéroport Pau-Pyrénées.",
@@ -210,7 +210,7 @@ export const trajetsPau3: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Pau → Aéroport Pau-Pyrénées | 10 km, from €20 | TaxiNeo",
-        metaDescription: "Via D802, undefined min ride. Aéroport, Pyrénées, Navette and Direct en route. Terminal drop-off, flight tracking. Flight tracking, direct terminal drop-off.",
+        metaDescription: "Via D802, undefined min ride. Aéroport, Pyrénées, Navette and Direct en route. Flight tracking, direct terminal drop-off.",
         heroTitle: "Taxi Pau → Pau-Pyrénées Airport",
         heroSubtitle: "Pau city center → Airport at €20–€25. 10 km, 10 min.",
         description: "Quick and affordable transfer between Pau city center and Pau-Pyrénées Airport.",

@@ -310,7 +310,7 @@ export const trajets: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Aéroport d'Orly → Disneyland Paris | 55 km | TaxiNeo",
-        metaDescription: "Via A86 en 50 min. A4 Autoroute de l'Est et Val d'Europe en chemin. Dépose au terminal, suivi de vol. Dépose au terminal exact, suivi de vol en temps réel.",
+        metaDescription: "Via A86 en 50 min. A4 Autoroute de l'Est et Val d'Europe en chemin. Dépose au terminal exact, suivi de vol en temps réel.",
         heroTitle: "Taxi Orly → Disneyland Paris",
         heroSubtitle: "Votre transfert Orly → Disneyland au prix fixe de 70 — 90 €. Confort garanti pour toute la famille.",
         description: "Rejoignez Disneyland Paris depuis Orly en 50 minutes. Transfert direct et confortable, idéal après un vol avec des enfants fatigués.",
@@ -398,7 +398,7 @@ export const trajets: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Aéroport d'Orly → Versailles | 25 km, 40 € | TaxiNeo",
-        metaDescription: "Via A86 en 30 min. Vélizy-Villacoublay et Château de Versailles en chemin. Dépose au terminal, suivi de vol. Suivi de vol, dépose directe au terminal.",
+        metaDescription: "Via A86 en 30 min. Vélizy-Villacoublay et Château de Versailles en chemin. Suivi de vol, dépose directe au terminal.",
         heroTitle: "Taxi Orly → Versailles",
         heroSubtitle: "Transfert Orly → Versailles au prix fixe de 40 — 55 €. Direct vers le Château ou votre hébergement.",
         description: "Rejoignez Versailles et son célèbre château directement depuis l'aéroport d'Orly. Un trajet court et direct pour débuter votre visite sans perdre de temps.",
@@ -442,7 +442,7 @@ export const trajets: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Aéroport CDG → La Défense | 30 km, dès 55 € | TaxiNeo",
-        metaDescription: "Via A1 en 40 min. Passage par Grande Arche de La Défense. Dépose au terminal exact, suivi de vol en temps réel. Suivi de vol, dépose directe au terminal.",
+        metaDescription: "Via A1 en 40 min. Passage par Grande Arche de La Défense. Dépose au terminal exact, suivi de vol en temps réel.",
         heroTitle: "Taxi CDG → La Défense",
         heroSubtitle: "Transfert CDG → La Défense au prix fixe de 55 — 70 €. Solution business rapide et fiable.",
         description: "Le transfert CDG — La Défense est prisé par les voyageurs d'affaires. Rejoignez le premier quartier d'affaires européen directement depuis l'aéroport, sans détour par Paris.",
@@ -500,7 +500,7 @@ export const trajets: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Aéroport de Beauvais → Paris | 85 km, €120 | TaxiNeo",
-        metaDescription: "Via A16, 1h15 ride. Chantilly and A1 Autoroute du Nord along the way. Terminal drop-off, flight tracking. Terminal drop-off, real-time flight tracking included.",
+        metaDescription: "Via A16, 1h15 ride. Chantilly and A1 Autoroute du Nord along the way. Terminal drop-off, real-time flight tracking included.",
         heroTitle: "Taxi Beauvais → Paris",
         heroSubtitle: "Transfer Beauvais → Paris at a fixed price of €120–€150. Faster and more comfortable than the shuttle.",
         description: "Beauvais-Tillé Airport, used by low-cost airlines like Ryanair and Wizz Air, is located 85 km from Paris. The taxi is the most comfortable alternative to the shuttle bus (1h15 to 2h).",
@@ -530,7 +530,7 @@ export const trajets: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Aéroport Nice → Nice Centre | 7 km, dès 25 € | TaxiNeo",
-        metaDescription: "Trajet direct en 15 min. Promenade des Anglais et Baie des Anges en chemin. Dépose au terminal, suivi de vol. Suivi de vol, dépose directe au terminal.",
+        metaDescription: "Trajet direct en 15 min. Promenade des Anglais et Baie des Anges en chemin. Suivi de vol, dépose directe au terminal.",
         heroTitle: "Taxi Aéroport Nice → Nice Centre",
         heroSubtitle: "Transfert Aéroport Nice → Nice Centre au prix fixe de 25 — 35 €.",
         description: "L'aéroport de Nice est à seulement 7 km du centre-ville. Profitez d'un transfert rapide le long de la Promenade des Anglais.",
@@ -632,7 +632,7 @@ export const trajets: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Lyon St-Exupéry → Lyon Centre | 25 km, €50 | TaxiNeo",
-        metaDescription: "Via A43, 30 min ride. Vieux Lyon and Part-Dieu along the way. Terminal drop-off, flight tracking. Terminal drop-off, real-time flight tracking included.",
+        metaDescription: "Via A43, 30 min ride. Vieux Lyon and Part-Dieu along the way. Terminal drop-off, real-time flight tracking included.",
         heroTitle: "Taxi Lyon Airport → Lyon Centre",
         heroSubtitle: "Lyon Saint-Exupéry Airport → Lyon Centre transfer at a fixed price of €50–€65.",
         description: "Lyon Saint-Exupéry Airport is 25 km from Lyon city centre. Your driver takes you directly to your destination.",
@@ -706,7 +706,7 @@ export const trajets: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Toulouse-Blagnac → Toulouse Centre | 12 km | TaxiNeo",
-        metaDescription: "Trajet direct en 20 min. Rocade et Capitole en chemin. Dépose au terminal exact, suivi de vol en temps réel. Suivi de vol, dépose directe au terminal.",
+        metaDescription: "Trajet direct en 20 min. Rocade et Capitole en chemin. Dépose au terminal exact, suivi de vol en temps réel.",
         heroTitle: "Taxi Aéroport Toulouse → Toulouse Centre",
         heroSubtitle: "Transfert Aéroport Toulouse-Blagnac → Toulouse Centre au prix fixe de 30 — 40 €.",
         description: "L'aéroport Toulouse-Blagnac est à 12 km du centre-ville. Rejoignez la place du Capitole en 20 minutes.",
@@ -750,7 +750,7 @@ export const trajets: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Bordeaux-Mérignac → Bordeaux Centre | 15 km | TaxiNeo",
-        metaDescription: "Trajet direct en 25 min. Rocade bordelaise et Place de la Bourse en chemin. Dépose au terminal, suivi de vol. Suivi de vol, dépose directe au terminal.",
+        metaDescription: "Trajet direct en 25 min. Rocade bordelaise et Place de la Bourse en chemin. Suivi de vol, dépose directe au terminal.",
         heroTitle: "Taxi Aéroport Bordeaux-Mérignac → Bordeaux Centre",
         heroSubtitle: "Votre transfert Aéroport Bordeaux-Mérignac → Bordeaux Centre au prix fixe de 35 — 45 €. Réservation en ligne, chauffeur professionnel 24h/24.",
         description: "L'aéroport de Bordeaux-Mérignac est à 15 km du centre. Rejoignez la place de la Bourse en 25 minutes.",
@@ -794,7 +794,7 @@ export const trajets: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Nantes-Atlantique → Nantes Centre | 12 km | TaxiNeo",
-        metaDescription: "Trajet direct en 20 min. Périphérique sud et Île de Nantes en chemin. Dépose au terminal, suivi de vol. Dépose au terminal exact, suivi de vol en temps réel.",
+        metaDescription: "Trajet direct en 20 min. Périphérique sud et Île de Nantes en chemin. Dépose au terminal exact, suivi de vol en temps réel.",
         heroTitle: "Taxi Aéroport Nantes-Atlantique → Nantes Centre",
         heroSubtitle: "Votre transfert Aéroport Nantes-Atlantique → Nantes Centre au prix fixe de 30 — 40 €. Réservation en ligne, chauffeur professionnel 24h/24.",
         description: "L'aéroport Nantes-Atlantique est à 12 km du centre-ville. Un trajet court et direct vers l'Île de Nantes.",
@@ -808,7 +808,7 @@ export const trajets: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Nantes-Atlantique → Nantes Centre | 12 km | TaxiNeo",
-        metaDescription: "Direct 20 min ride. Périphérique sud and Île de Nantes along the way. Terminal drop-off, flight tracking. Terminal drop-off, real-time flight tracking included.",
+        metaDescription: "Direct 20 min ride. Périphérique sud and Île de Nantes along the way. Terminal drop-off, real-time flight tracking included.",
         heroTitle: "Taxi Nantes-Atlantique Airport → Nantes Centre",
         heroSubtitle: "Your Nantes-Atlantique Airport → Nantes Centre transfer at a fixed price of €30–€40. Online booking, professional driver 24/7.",
         description: "Nantes-Atlantique Airport is 12 km from the city centre. A short, direct journey to Île de Nantes.",
@@ -838,7 +838,7 @@ export const trajets: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Strasbourg → Strasbourg Centre | 15 km, 30 € | TaxiNeo",
-        metaDescription: "Via A35 en 20 min. Petite France et Cathédrale en chemin. Dépose au terminal exact, suivi de vol en temps réel. Suivi de vol, dépose directe au terminal.",
+        metaDescription: "Via A35 en 20 min. Petite France et Cathédrale en chemin. Dépose au terminal exact, suivi de vol en temps réel.",
         heroTitle: "Taxi Aéroport Strasbourg → Strasbourg Centre",
         heroSubtitle: "Votre transfert Aéroport Strasbourg → Strasbourg Centre au prix fixe de 30 — 40 €. Réservation en ligne, chauffeur professionnel 24h/24.",
         description: "L'aéroport de Strasbourg-Entzheim est à 15 km du centre. Rejoignez la Petite France en 20 minutes.",
@@ -852,7 +852,7 @@ export const trajets: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Strasbourg → Strasbourg Centre | 15 km, €30 | TaxiNeo",
-        metaDescription: "Via A35, 20 min ride. Petite France and Cathédrale along the way. Terminal drop-off, flight tracking. Terminal drop-off, real-time flight tracking included.",
+        metaDescription: "Via A35, 20 min ride. Petite France and Cathédrale along the way. Terminal drop-off, real-time flight tracking included.",
         heroTitle: "Taxi Strasbourg Airport → Strasbourg Centre",
         heroSubtitle: "Your Strasbourg Airport → Strasbourg Centre transfer at a fixed price of €30–€40. Online booking, professional driver 24/7.",
         description: "Strasbourg-Entzheim Airport is 15 km from the centre. Reach Petite France in 20 minutes.",
@@ -882,7 +882,7 @@ export const trajets: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Montpellier → Montpellier Centre | 10 km | TaxiNeo",
-        metaDescription: "Via D66 en 15 min. Vue sur Place de la Comédie en chemin. Dépose au terminal exact, suivi de vol en temps réel. Suivi de vol, dépose directe au terminal.",
+        metaDescription: "Via D66 en 15 min. Vue sur Place de la Comédie en chemin. Dépose au terminal exact, suivi de vol en temps réel.",
         heroTitle: "Taxi Aéroport Montpellier → Montpellier Centre",
         heroSubtitle: "Votre transfert Aéroport Montpellier → Montpellier Centre au prix fixe de 25 — 35 €. Réservation en ligne, chauffeur professionnel 24h/24.",
         description: "L'aéroport de Montpellier est à seulement 10 km. Rejoignez la place de la Comédie en 15 minutes.",
@@ -940,7 +940,7 @@ export const trajets: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Aéroport CDG → Gare du Nord | 28 km, from €50 | TaxiNeo",
-        metaDescription: "Via A1, 35 min ride. Stade de France and Gare Eurostar along the way. Terminal drop-off, flight tracking. Terminal drop-off, real-time flight tracking included.",
+        metaDescription: "Via A1, 35 min ride. Stade de France and Gare Eurostar along the way. Terminal drop-off, real-time flight tracking included.",
         heroTitle: "Taxi CDG Airport → Gare du Nord",
         heroSubtitle: "Your CDG Airport → Gare du Nord transfer at a fixed price of €50–€65. Online booking, professional driver 24/7.",
         description: "Direct CDG — Gare du Nord transfer for Eurostar, Thalys and TGV Nord connections.",
@@ -970,7 +970,7 @@ export const trajets: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Aéroport d'Orly → Gare de Lyon | 18 km, 36 € | TaxiNeo",
-        metaDescription: "Via A6 en 25 min. Bercy et Paris Rive Gauche en chemin. Dépose au terminal exact, suivi de vol en temps réel. Suivi de vol, dépose directe au terminal.",
+        metaDescription: "Via A6 en 25 min. Bercy et Paris Rive Gauche en chemin. Dépose au terminal exact, suivi de vol en temps réel.",
         heroTitle: "Taxi Aéroport d'Orly → Gare de Lyon",
         heroSubtitle: "Votre transfert Aéroport d'Orly → Gare de Lyon au prix fixe de 35 — 50 €. Réservation en ligne, chauffeur professionnel 24h/24.",
         description: "Transfert Orly — Gare de Lyon pour vos correspondances TGV Sud-Est.",
@@ -984,7 +984,7 @@ export const trajets: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Aéroport d'Orly → Gare de Lyon | 18 km, €35 | TaxiNeo",
-        metaDescription: "Via A6, 25 min ride. Bercy and Paris Rive Gauche along the way. Terminal drop-off, flight tracking. Terminal drop-off, real-time flight tracking included.",
+        metaDescription: "Via A6, 25 min ride. Bercy and Paris Rive Gauche along the way. Terminal drop-off, real-time flight tracking included.",
         heroTitle: "Taxi Orly Airport → Gare de Lyon",
         heroSubtitle: "Your Orly Airport → Gare de Lyon transfer at a fixed price of €35–€50. Online booking, professional driver 24/7.",
         description: "Orly — Gare de Lyon transfer for your TGV South-East connections.",
@@ -1028,7 +1028,7 @@ export const trajets: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Aéroport CDG → Marne-la-Vallée | 40 km, €60 | TaxiNeo",
-        metaDescription: "Via A104, 40 min ride. Val d'Europe and Chessy along the way. Terminal drop-off, flight tracking. Terminal drop-off, real-time flight tracking included.",
+        metaDescription: "Via A104, 40 min ride. Val d'Europe and Chessy along the way. Terminal drop-off, real-time flight tracking included.",
         heroTitle: "Taxi CDG Airport → Marne-la-Vallée",
         heroSubtitle: "Your CDG Airport → Marne-la-Vallée transfer at a fixed price of €60–€75. Online booking, professional driver 24/7.",
         description: "CDG — Marne-la-Vallée transfer, ideal for reaching Val d'Europe or Chessy.",
@@ -1072,7 +1072,7 @@ export const trajets: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Aéroport d'Orly → La Défense | 30 km, €50 | TaxiNeo",
-        metaDescription: "Via A86, 35 min ride. Pont de Sèvres and Grande Arche along the way. Terminal drop-off, flight tracking. Terminal drop-off, real-time flight tracking included.",
+        metaDescription: "Via A86, 35 min ride. Pont de Sèvres and Grande Arche along the way. Terminal drop-off, real-time flight tracking included.",
         heroTitle: "Taxi Orly Airport → La Défense",
         heroSubtitle: "Your Orly Airport → La Défense transfer at a fixed price of €50–€65. Online booking, professional driver 24/7.",
         description: "Orly — La Défense transfer for business travellers. Direct without going through Paris.",
@@ -1102,7 +1102,7 @@ export const trajets: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Aéroport Nice → Monaco | 30 km, dès 80 € | TaxiNeo",
-        metaDescription: "Trajet direct en 30 min. Bord de mer, Èze et Monte-Carlo en chemin. Dépose au terminal, suivi de vol. Dépose au terminal exact, suivi de vol en temps réel.",
+        metaDescription: "Trajet direct en 30 min. Bord de mer, Èze et Monte-Carlo en chemin. Dépose au terminal exact, suivi de vol en temps réel.",
         heroTitle: "Taxi Aéroport Nice → Monaco",
         heroSubtitle: "Votre transfert Aéroport Nice → Monaco au prix fixe de 80 — 100 €. Réservation en ligne, chauffeur professionnel 24h/24.",
         description: "Transfert premium Nice Aéroport — Monaco le long de la Côte d'Azur. Vue mer exceptionnelle.",
@@ -1116,7 +1116,7 @@ export const trajets: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Aéroport Nice → Monaco | 30 km, from €80 | TaxiNeo",
-        metaDescription: "Direct 30 min ride. Bord de mer, Èze and Monte-Carlo along the way. Terminal drop-off, flight tracking. Terminal drop-off, real-time flight tracking included.",
+        metaDescription: "Direct 30 min ride. Bord de mer, Èze and Monte-Carlo along the way. Terminal drop-off, real-time flight tracking included.",
         heroTitle: "Taxi Nice Airport → Monaco",
         heroSubtitle: "Your Nice Airport → Monaco transfer at a fixed price of €80–€100. Online booking, professional driver 24/7.",
         description: "Premium Nice Airport — Monaco transfer along the French Riviera. Exceptional sea views.",
@@ -2081,7 +2081,7 @@ export const trajets: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Paris → Château de Versailles | 22 km, 40 € | TaxiNeo",
-        metaDescription: "Via A13 en 35 min. Bois de Boulogne et Château de Versailles en chemin. Arrêt visite possible en chemin. Arrêt possible pour photos et visites en chemin.",
+        metaDescription: "Via A13 en 35 min. Bois de Boulogne et Château de Versailles en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Paris → Château de Versailles",
         heroSubtitle: "Votre transfert Paris → Château de Versailles au prix fixe de 45 — 55 €. Réservation en ligne, chauffeur professionnel 24h/24.",
         description: "Excursion Paris — Versailles, le château le plus visité de France avec ses jardins à la française.",
@@ -2141,7 +2141,7 @@ export const trajets: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Paris → Disneyland Paris | 40 km, dès 80 € | TaxiNeo",
-        metaDescription: "Via A4 en 40 min. Passage par Marne-la-Vallée et Val d'Europe. Arrêt possible pour visites ou photos. Arrêt possible pour photos et visites en chemin.",
+        metaDescription: "Via A4 en 40 min. Passage par Marne-la-Vallée et Val d'Europe. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Paris → Disneyland Paris",
         heroSubtitle: "Votre transfert Paris → Disneyland Paris au prix fixe de 80 — 95 €. Réservation en ligne, chauffeur professionnel 24h/24.",
         description: "Transfert Paris — Disneyland pour une journée magique en famille.",
@@ -2267,7 +2267,7 @@ export const trajets: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Paris → Giverny | forfait dès 145 €, 1h05 | TaxiNeo",
-        metaDescription: "Par A13, 1h10 de trajet. Jardins de Monet et Vernon en chemin. Arrêt possible pour visites ou photos. Arrêt possible pour photos et visites en chemin.",
+        metaDescription: "Par A13, 1h10 de trajet. Jardins de Monet et Vernon en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Paris → Giverny",
         heroSubtitle: "Votre transfert Paris → Giverny au prix fixe de 145 — 175 €. Réservation en ligne, chauffeur professionnel 24h/24.",
         description: "Excursion Paris — Giverny pour découvrir les jardins et la maison de Claude Monet.",
@@ -2338,7 +2338,7 @@ export const trajets: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Paris → Château de Chantilly | 50 km, 65 € | TaxiNeo",
-        metaDescription: "Via A1 en 45 min. Hippodrome de Chantilly et Musée Condé en chemin. Arrêt possible pour visites ou photos. Arrêt possible pour photos et visites en chemin.",
+        metaDescription: "Via A1 en 45 min. Hippodrome de Chantilly et Musée Condé en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Paris → Château de Chantilly",
         heroSubtitle: "Votre transfert Paris → Château de Chantilly au prix fixe de 95 — 115 €. Réservation en ligne, chauffeur professionnel 24h/24.",
         description: "Excursion Paris — Chantilly pour visiter le château et ses écuries princières.",
@@ -2480,7 +2480,7 @@ export const trajets: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Paris → Cité médiévale de Provins | 90 km | TaxiNeo",
-        metaDescription: "Par A4, 1h10 de trajet. Vue sur Cité médiévale UNESCO en chemin. Arrêt possible pour visites ou photos. Arrêt possible pour photos et visites en chemin.",
+        metaDescription: "Par A4, 1h10 de trajet. Vue sur Cité médiévale UNESCO en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Paris → Cité médiévale de Provins",
         heroSubtitle: "Votre transfert Paris → Cité médiévale de Provins au prix fixe de 170 — 205 €. Réservation en ligne, chauffeur professionnel 24h/24.",
         description: "Excursion Paris — Provins pour découvrir cette cité médiévale classée UNESCO.",
@@ -2551,7 +2551,7 @@ export const trajets: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Paris → Auvers-sur-Oise | 35 km, dès 70 € | TaxiNeo",
-        metaDescription: "Via A15 en 45 min. Maison Van Gogh et Église d'Auvers en chemin. Arrêt possible pour visites ou photos. Arrêt possible pour photos et visites en chemin.",
+        metaDescription: "Via A15 en 45 min. Maison Van Gogh et Église d'Auvers en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Paris → Auvers-sur-Oise",
         heroSubtitle: "Votre transfert Paris → Auvers-sur-Oise au prix fixe de 70 — 85 €. Réservation en ligne, chauffeur professionnel 24h/24.",
         description: "Sur les traces de Van Gogh à Auvers-sur-Oise, village d'artistes au nord de Paris.",
@@ -2622,7 +2622,7 @@ export const trajets: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Paris → Reims | 145 km, dès 280 €, 1h30 | TaxiNeo",
-        metaDescription: "Via A4 en 1h35. Vignobles de Champagne et Cathédrale de Reims en chemin. Arrêt visite possible en chemin. Arrêt possible pour photos et visites en chemin.",
+        metaDescription: "Via A4 en 1h35. Vignobles de Champagne et Cathédrale de Reims en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Paris → Reims",
         heroSubtitle: "Votre transfert Paris → Reims au prix fixe de 280 — 335 €. Réservation en ligne, chauffeur professionnel 24h/24.",
         description: "Excursion Paris — Reims au cœur de la Champagne, entre cathédrale gothique et caves prestigieuses.",
@@ -2764,7 +2764,7 @@ export const trajets: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Nice → Monaco | forfait dès 40 €, 25 min | TaxiNeo",
-        metaDescription: "Trajet direct en 25 min. Basse Corniche, Cap-d'Ail et Monte-Carlo en chemin. Arrêt visite possible en chemin. Arrêt possible pour photos et visites en chemin.",
+        metaDescription: "Trajet direct en 25 min. Basse Corniche, Cap-d'Ail et Monte-Carlo en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Nice → Monaco",
         heroSubtitle: "Votre transfert Nice → Monaco au prix fixe de 40 — 50 €. Réservation en ligne, chauffeur professionnel 24h/24.",
         description: "Transfert Nice — Monaco le long de la Côte d'Azur. Vue panoramique sur la Méditerranée.",
@@ -2835,7 +2835,7 @@ export const trajets: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Nice → Saint-Tropez | 110 km, dès 210 € | TaxiNeo",
-        metaDescription: "Via A8 en 1h35. Fréjus et Golfe de Saint-Tropez sur le parcours. Arrêt possible pour visites ou photos. Arrêt possible pour photos et visites en chemin.",
+        metaDescription: "Via A8 en 1h35. Fréjus et Golfe de Saint-Tropez sur le parcours. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Nice → Saint-Tropez",
         heroSubtitle: "Votre transfert Nice → Saint-Tropez au prix fixe de 230 — 280 €. Réservation en ligne, chauffeur professionnel 24h/24.",
         description: "Transfert Nice — Saint-Tropez pour rejoindre le village mythique de la Côte d'Azur.",
@@ -3048,7 +3048,7 @@ export const trajets: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Marseille → Cassis | 23 km, dès 45 € | TaxiNeo",
-        metaDescription: "Trajet direct en 25 min. Route des Calanques et Cap Canaille en chemin. Arrêt visite possible en chemin. Arrêt possible pour photos et visites en chemin.",
+        metaDescription: "Trajet direct en 25 min. Route des Calanques et Cap Canaille en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Marseille → Cassis",
         heroSubtitle: "Votre transfert Marseille → Cassis au prix fixe de 45 — 55 €. Réservation en ligne, chauffeur professionnel 24h/24.",
         description: "Excursion Marseille — Cassis pour les calanques et le Cap Canaille.",
@@ -3108,7 +3108,7 @@ export const trajets: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Marseille → Aix-en-Provence | 30 km, dès 60 € | TaxiNeo",
-        metaDescription: "Via A51 en 30 min. Pays d'Aix et Cours Mirabeau sur le parcours. Arrêt possible pour visites ou photos. Arrêt possible pour photos et visites en chemin.",
+        metaDescription: "Via A51 en 30 min. Pays d'Aix et Cours Mirabeau sur le parcours. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Marseille → Aix-en-Provence",
         heroSubtitle: "Votre transfert Marseille → Aix-en-Provence au prix fixe de 60 — 70 €. Réservation en ligne, chauffeur professionnel 24h/24.",
         description: "Transfert Marseille — Aix-en-Provence, ville d'art et cité de Cézanne.",
@@ -3152,7 +3152,7 @@ export const trajets: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Lyon → Pérouges | forfait dès 70 €, 35 min | TaxiNeo",
-        metaDescription: "Via A42 en 35 min. Vue sur Cité médiévale de Pérouges en chemin. Arrêt possible pour visites ou photos. Arrêt possible pour photos et visites en chemin.",
+        metaDescription: "Via A42 en 35 min. Vue sur Cité médiévale de Pérouges en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Lyon → Pérouges",
         heroSubtitle: "Votre transfert Lyon → Pérouges au prix fixe de 70 — 85 €. Réservation en ligne, chauffeur professionnel 24h/24.",
         description: "Excursion Lyon — Pérouges, cité médiévale parmi les plus beaux villages de France.",
@@ -3207,7 +3207,7 @@ export const trajets: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Bordeaux → Saint-Émilion | 40 km, dès 80 € | TaxiNeo",
-        metaDescription: "Via D936 en 40 min. Vue sur Vignobles de Saint-Émilion en chemin. Arrêt possible pour visites ou photos. Arrêt possible pour photos et visites en chemin.",
+        metaDescription: "Via D936 en 40 min. Vue sur Vignobles de Saint-Émilion en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Bordeaux → Saint-Émilion",
         heroSubtitle: "Votre transfert Bordeaux → Saint-Émilion au prix fixe de 90 — 105 €. Réservation en ligne, chauffeur professionnel 24h/24.",
         description: "Excursion Bordeaux — Saint-Émilion au cœur des vignobles classés UNESCO.",
@@ -3278,7 +3278,7 @@ export const trajets: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Bordeaux → Bassin d'Arcachon | 65 km, 75 € | TaxiNeo",
-        metaDescription: "Via A63 en 50 min. Dune du Pilat et Île aux Oiseaux en chemin. Arrêt possible pour visites ou photos. Arrêt possible pour photos et visites en chemin.",
+        metaDescription: "Via A63 en 50 min. Dune du Pilat et Île aux Oiseaux en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Bordeaux → Bassin d'Arcachon",
         heroSubtitle: "Votre transfert Bordeaux → Bassin d'Arcachon au prix fixe de 125 — 155 €. Réservation en ligne, chauffeur professionnel 24h/24.",
         description: "Excursion Bordeaux — Arcachon pour la Dune du Pilat et les huîtres du Bassin.",
@@ -3338,7 +3338,7 @@ export const trajets: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Paris → La Vallée Village | 35 km, dès 70 € | TaxiNeo",
-        metaDescription: "Via A4 en 35 min. Passage par Val d'Europe et Outlet shopping. Arrêt possible pour visites ou photos. Arrêt possible pour photos et visites en chemin.",
+        metaDescription: "Via A4 en 35 min. Passage par Val d'Europe et Outlet shopping. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Paris → La Vallée Village",
         heroSubtitle: "Votre transfert Paris → La Vallée Village au prix fixe de 70 — 85 €. Réservation en ligne, chauffeur professionnel 24h/24.",
         description: "Transfert Paris — La Vallée Village pour le shopping outlet de luxe.",

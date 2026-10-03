@@ -116,6 +116,28 @@ export function titreTrajet(t: Trajet, loc: Loc): string {
   return choisirTitre(candidats);
 }
 
+/**
+ * Retire une phrase redite en d'autres mots dans la même description
+ * (« Arrêt visite possible en chemin. Arrêt possible pour photos et visites
+ * en chemin. », « Terminal drop-off, flight tracking. Flight tracking, direct
+ * terminal drop-off. ») : la plus courte des deux part si presque tous ses
+ * mots sont dans l'autre. Les textes saisis en avaient 107 (relevé du
+ * 2026-10-03) ; la formule les écarte désormais d'elle-même.
+ */
+function sansRedite(texte: string): string {
+  const vides = new Set("de du des la le les et a au aux en un une pour par sur avec the an of to and in on for with at by is are votre vos possible".split(" "));
+  const mots = (p: string) => new Set(p.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").split(/[^a-z0-9]+/).filter((m) => m.length > 2 && !vides.has(m)));
+  const phrases = texte.split(/(?<=[.!?])\s+/);
+  const ens = phrases.map(mots);
+  return phrases
+    .filter((p, i) => !ens.some((autre, j) => {
+      if (j === i || ens[i].size < 2 || autre.size < ens[i].size || (autre.size === ens[i].size && j > i)) return false;
+      const communs = Array.from(ens[i]).filter((m) => autre.has(m)).length;
+      return communs / ens[i].size >= 0.8;
+    }))
+    .join(" ");
+}
+
 export function descriptionTrajet(t: Trajet, loc: Loc): string {
   const d = duree(t.durationMin);
   // « en undefined min » / « undefined min ride » : la durée manquait au
@@ -127,6 +149,7 @@ export function descriptionTrajet(t: Trajet, loc: Loc): string {
   // saisis en français (« Roues à aubes and Brocante en route ») : on les
   // traduit, et les noms de départ et d'arrivée prennent leur forme anglaise.
   if (loc === "en") brut = anglaiser(brut, { [t.from]: lieuEn(t.from), [t.to]: lieuEn(t.to) });
+  brut = sansRedite(brut);
   const p = prixDepart(t);
   const aeroport = t.category === "aeroport";
   const complements =

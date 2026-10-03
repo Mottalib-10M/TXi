@@ -416,7 +416,7 @@ export const trajetsMontpellierHub: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Montpellier → Aéroport Montpellier | Dès 25 € | TaxiNeo",
-        metaDescription: "Via D66 en 15 min. Aéroport MPL et Fréjorgues en chemin. Dépose au terminal exact, suivi de vol en temps réel. Suivi de vol, dépose directe au terminal.",
+        metaDescription: "Via D66 en 15 min. Aéroport MPL et Fréjorgues en chemin. Dépose au terminal exact, suivi de vol en temps réel.",
         heroTitle: "Taxi Montpellier → Aéroport",
         heroSubtitle: "Transfert Montpellier → Aéroport Montpellier-Méditerranée au prix fixe de 20 — 25 €. 10 km, 15 min.",
         description: "L'aéroport Montpellier-Méditerranée (MPL) est à seulement 10 km et 15 min du centre-ville.",
@@ -435,7 +435,7 @@ export const trajetsMontpellierHub: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Montpellier → Montpellier Airport | From €25 | TaxiNeo",
-        metaDescription: "Via D66, 15 min ride. Aéroport MPL and Fréjorgues along the way. Terminal drop-off, flight tracking. Terminal drop-off, real-time flight tracking included.",
+        metaDescription: "Via D66, 15 min ride. Aéroport MPL and Fréjorgues along the way. Terminal drop-off, real-time flight tracking included.",
         heroTitle: "Taxi Montpellier → Airport",
         heroSubtitle: "Your Montpellier → Montpellier-Méditerranée Airport transfer at €20–€25. 10 km, 15 min.",
         description: "Montpellier-Méditerranée Airport (MPL) is just 10 km and 15 min from the city centre.",

@@ -93,7 +93,7 @@ export const trajetsBoulogneNanterre: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Boulogne-Billancourt → Aéroport CDG | 35 km | TaxiNeo",
-        metaDescription: "Via A86 / A1 en 40 min. Hauts-de-Seine, Roissy et Business en chemin. Dépose au terminal, suivi de vol. Dépose au terminal exact, suivi de vol en temps réel.",
+        metaDescription: "Via A86 / A1 en 40 min. Hauts-de-Seine, Roissy et Business en chemin. Dépose au terminal exact, suivi de vol en temps réel.",
         heroTitle: "Taxi Boulogne-Billancourt → CDG",
         heroSubtitle: "Transfert Boulogne-Billancourt → Aéroport Charles de Gaulle au prix fixe de 70 — 85 €. 35 km, direct.",
         description: "L'aéroport CDG (Roissy) est à 40 min de Boulogne-Billancourt via l'A86 et l'A1.",
@@ -158,7 +158,7 @@ export const trajetsBoulogneNanterre: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Nanterre → Aéroport CDG | 35 km, dès 70 € | TaxiNeo",
-        metaDescription: "Via A86 / A1 en 40 min. Préfecture 92, Université et RER A en chemin. Dépose au terminal, suivi de vol. Dépose au terminal exact, suivi de vol en temps réel.",
+        metaDescription: "Via A86 / A1 en 40 min. Préfecture 92, Université et RER A en chemin. Dépose au terminal exact, suivi de vol en temps réel.",
         heroTitle: "Taxi Nanterre → CDG",
         heroSubtitle: "Transfert Nanterre → Aéroport Charles de Gaulle au prix fixe de 70 — 85 €. 35 km, direct par l'A86.",
         description: "L'aéroport CDG est à 40 min de Nanterre via l'A86 et l'A1.",
@@ -288,7 +288,7 @@ export const trajetsBoulogneNanterre: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi La Défense → Aéroport CDG | 35 km, dès 70 € | TaxiNeo",
-        metaDescription: "Via A86 / A1 en 40 min. Grande Arche, Roissy et CAC 40 en chemin. Dépose au terminal, suivi de vol. Dépose au terminal exact, suivi de vol en temps réel.",
+        metaDescription: "Via A86 / A1 en 40 min. Grande Arche, Roissy et CAC 40 en chemin. Dépose au terminal exact, suivi de vol en temps réel.",
         heroTitle: "Taxi La Défense → CDG",
         heroSubtitle: "Transfert La Défense → Aéroport Charles de Gaulle au prix fixe de 70 — 85 €. 35 km, le transfert business par excellence.",
         description: "L'aéroport CDG (Roissy) est à 40 min de La Défense via l'A86 et l'A1.",

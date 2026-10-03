@@ -31,7 +31,7 @@ export const trajetsParisArr14to20: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Paris 14e → Aéroport CDG | 30 km, dès 53 € | TaxiNeo",
-        metaDescription: "Via A1 en 45 min. Montparnasse, Denfert-Rochereau et Catacombes en chemin. Dépose au terminal, suivi de vol. Suivi de vol, dépose directe au terminal.",
+        metaDescription: "Via A1 en 45 min. Montparnasse, Denfert-Rochereau et Catacombes en chemin. Suivi de vol, dépose directe au terminal.",
         heroTitle: "Taxi Paris 14ème arrondissement → Aéroport CDG",
         heroSubtitle: "Transfert depuis Montparnasse et Denfert-Rochereau vers Charles de Gaulle au prix fixe de 53 — 65 €. Chauffeur professionnel, prise en charge à domicile.",
         description: "Le 14ème arrondissement, quartier de Montparnasse, des Catacombes et du Parc Montsouris, offre un accès vers CDG via les grands axes nord. Votre chauffeur TaxiNeo vous conduit au terminal en 45 minutes.",
@@ -303,7 +303,7 @@ export const trajetsParisArr14to20: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Paris 16e → Aéroport CDG | 32 km, dès 55 € | TaxiNeo",
-        metaDescription: "Via A1 en 50 min. Trocadéro, Tour Eiffel et Bois de Boulogne en chemin. Dépose au terminal, suivi de vol. Dépose au terminal exact, suivi de vol en temps réel.",
+        metaDescription: "Via A1 en 50 min. Trocadéro, Tour Eiffel et Bois de Boulogne en chemin. Dépose au terminal exact, suivi de vol en temps réel.",
         heroTitle: "Taxi Paris 16ème arrondissement → Aéroport CDG",
         heroSubtitle: "Transfert depuis le Trocadéro et Passy vers Charles de Gaulle au prix fixe de 55 — 68 €. Service premium pour un quartier premium.",
         description: "Le 16ème arrondissement, quartier résidentiel huppé du Trocadéro, de Passy et du Bois de Boulogne, est relié à CDG en 50 minutes via le périphérique et l'A1. Service TaxiNeo premium.",
@@ -322,7 +322,7 @@ export const trajetsParisArr14to20: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Paris 16e → Aéroport CDG | 32 km, from €55 | TaxiNeo",
-        metaDescription: "Via A1, 50 min ride. Trocadéro, Tour Eiffel and Bois de Boulogne along the way. Terminal drop-off, flight tracking. Flight tracking, direct terminal drop-off.",
+        metaDescription: "Via A1, 50 min ride. Trocadéro, Tour Eiffel and Bois de Boulogne along the way. Flight tracking, direct terminal drop-off.",
         heroTitle: "Taxi Paris 16th Arrondissement → CDG Airport",
         heroSubtitle: "Transfer from Trocadéro and Passy to Charles de Gaulle at a fixed price of €55–€68. Premium service for a premium district.",
         description: "The 16th arrondissement, the upscale residential district of Trocadéro, Passy and the Bois de Boulogne, is connected to CDG in 50 minutes via the ring road and A1. Premium TaxiNeo service.",
@@ -371,7 +371,7 @@ export const trajetsParisArr14to20: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Paris 16e → Aéroport d'Orly | 17 km, dès 36 € | TaxiNeo",
-        metaDescription: "Via A6 en 30 min. Trocadéro, Périphérique Sud et Pont de Sèvres en chemin. Dépose au terminal, suivi de vol. Suivi de vol, dépose directe au terminal.",
+        metaDescription: "Via A6 en 30 min. Trocadéro, Périphérique Sud et Pont de Sèvres en chemin. Suivi de vol, dépose directe au terminal.",
         heroTitle: "Taxi Paris 16ème arrondissement → Aéroport d'Orly",
         heroSubtitle: "Transfert depuis le Trocadéro et Passy vers Orly au prix fixe de 36 — 45 €. Service confortable en 30 minutes.",
         description: "Depuis le 16ème arrondissement, rejoignez Orly en 30 minutes par le périphérique sud. Service TaxiNeo premium adapté à la clientèle exigeante du 16ème.",
@@ -575,7 +575,7 @@ export const trajetsParisArr14to20: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Paris 18e → Aéroport CDG | 22 km, dès 50 € | TaxiNeo",
-        metaDescription: "Via A1 en 35 min. Sacré-Cœur, Montmartre et Porte de la Chapelle en chemin. Dépose au terminal, suivi de vol. Suivi de vol, dépose directe au terminal.",
+        metaDescription: "Via A1 en 35 min. Sacré-Cœur, Montmartre et Porte de la Chapelle en chemin. Suivi de vol, dépose directe au terminal.",
         heroTitle: "Taxi Paris 18ème arrondissement → Aéroport CDG",
         heroSubtitle: "Transfert depuis Montmartre et le Sacré-Cœur vers Charles de Gaulle au prix fixe de 50 — 62 €. L'un des trajets les plus rapides vers CDG.",
         description: "Le 18ème arrondissement, quartier mythique de Montmartre et du Sacré-Cœur, est l'un des points de départ les plus proches de CDG grâce à la Porte de la Chapelle et l'A1. Trajet en seulement 35 minutes.",
@@ -643,7 +643,7 @@ export const trajetsParisArr14to20: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Paris 18e → Aéroport d'Orly | 21 km, dès 36 € | TaxiNeo",
-        metaDescription: "Via A6 en 40 min. Montmartre, Périphérique et Porte d'Orléans en chemin. Dépose au terminal, suivi de vol. Dépose au terminal exact, suivi de vol en temps réel.",
+        metaDescription: "Via A6 en 40 min. Montmartre, Périphérique et Porte d'Orléans en chemin. Dépose au terminal exact, suivi de vol en temps réel.",
         heroTitle: "Taxi Paris 18ème arrondissement → Aéroport d'Orly",
         heroSubtitle: "Transfert depuis Montmartre vers Orly au prix fixe de 36 — 45 €. Trajet confortable en 40 minutes.",
         description: "Depuis le 18ème arrondissement, rejoignez Orly en 40 minutes par le périphérique. Le chauffeur TaxiNeo vous prend en charge au bas de Montmartre ou à votre adresse.",
@@ -662,7 +662,7 @@ export const trajetsParisArr14to20: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Paris 18e → Aéroport d'Orly | 21 km, from €36 | TaxiNeo",
-        metaDescription: "Via A6, 40 min ride. Montmartre, Périphérique and Porte d'Orléans along the way. Terminal drop-off, flight tracking. Flight tracking, direct terminal drop-off.",
+        metaDescription: "Via A6, 40 min ride. Montmartre, Périphérique and Porte d'Orléans along the way. Flight tracking, direct terminal drop-off.",
         heroTitle: "Taxi Paris 18th Arrondissement → Orly Airport",
         heroSubtitle: "Transfer from Montmartre to Orly at a fixed price of €36–€45. Comfortable journey in 40 minutes.",
         description: "From the 18th arrondissement, reach Orly in 40 minutes via the ring road. Your TaxiNeo driver picks you up at the foot of Montmartre or at your address.",
@@ -847,7 +847,7 @@ export const trajetsParisArr14to20: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Paris 20e → Aéroport CDG | 24 km, dès 53 € | TaxiNeo",
-        metaDescription: "Via A3 en 35 min. Père-Lachaise, Belleville et Ménilmontant en chemin. Dépose au terminal, suivi de vol. Dépose au terminal exact, suivi de vol en temps réel.",
+        metaDescription: "Via A3 en 35 min. Père-Lachaise, Belleville et Ménilmontant en chemin. Dépose au terminal exact, suivi de vol en temps réel.",
         heroTitle: "Taxi Paris 20ème arrondissement → Aéroport CDG",
         heroSubtitle: "Transfert depuis le Père-Lachaise et Belleville vers Charles de Gaulle au prix fixe de 53 — 65 €. Accès rapide via l'A3.",
         description: "Le 20ème arrondissement, quartier du Père-Lachaise, de Belleville et de Ménilmontant, est bien connecté à CDG via l'autoroute A3 depuis la Porte de Bagnolet. Trajet en 35 minutes.",
@@ -866,7 +866,7 @@ export const trajetsParisArr14to20: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Paris 20e → Aéroport CDG | 24 km, from €53 | TaxiNeo",
-        metaDescription: "Via A3, 35 min ride. Père-Lachaise, Belleville and Ménilmontant along the way. Terminal drop-off, flight tracking. Flight tracking, direct terminal drop-off.",
+        metaDescription: "Via A3, 35 min ride. Père-Lachaise, Belleville and Ménilmontant along the way. Flight tracking, direct terminal drop-off.",
         heroTitle: "Taxi Paris 20th Arrondissement → CDG Airport",
         heroSubtitle: "Transfer from Père-Lachaise and Belleville to Charles de Gaulle at a fixed price of €53–€65. Quick access via the A3.",
         description: "The 20th arrondissement, home to Père-Lachaise, Belleville and Ménilmontant, is well connected to CDG via the A3 motorway from Porte de Bagnolet. Journey in 35 minutes.",

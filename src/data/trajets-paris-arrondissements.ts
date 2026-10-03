@@ -50,7 +50,7 @@ export const trajetsParisArrondissements: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Paris 1er → Aéroport CDG | 28 km, from €53 | TaxiNeo",
-        metaDescription: "Via A1, 40 min ride. Rue de Rivoli, Les Halles and Stade de France along the way. Terminal drop-off, flight tracking. Flight tracking, direct terminal drop-off.",
+        metaDescription: "Via A1, 40 min ride. Rue de Rivoli, Les Halles and Stade de France along the way. Flight tracking, direct terminal drop-off.",
         heroTitle: "Taxi Paris 1st Arrondissement → CDG Airport",
         heroSubtitle: "Transfer from the historic heart of Paris to Charles de Gaulle at a fixed price of €53–€65. Door-to-door pickup.",
         description: "The 1st arrondissement, the beating heart of Paris with the Louvre, Palais Royal and Tuileries Garden, enjoys direct access to CDG via major northern routes. Your TaxiNeo driver picks you up at your exact address in this central district and takes you to your flight terminal in about 40 minutes.",
@@ -815,7 +815,7 @@ export const trajetsParisArrondissements: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Paris 7e → Aéroport CDG | 32 km, dès 53 € | TaxiNeo",
-        metaDescription: "Via A1 en 50 min. Tour Eiffel, Invalides et Quais de Seine en chemin. Dépose au terminal, suivi de vol. Dépose au terminal exact, suivi de vol en temps réel.",
+        metaDescription: "Via A1 en 50 min. Tour Eiffel, Invalides et Quais de Seine en chemin. Dépose au terminal exact, suivi de vol en temps réel.",
         heroTitle: "Taxi Paris 7e arrondissement → Aéroport CDG",
         heroSubtitle: "Transfert depuis le quartier de la Tour Eiffel et des Invalides vers Charles de Gaulle au prix fixe de 53 — 65 €. Prise en charge devant votre adresse.",
         description: "Le 7e arrondissement, quartier prestigieux de Paris avec la Tour Eiffel, les Invalides, le Musée d'Orsay et l'Assemblée nationale, bénéficie d'un accès vers CDG via les quais de Seine et les axes nord. Votre chauffeur TaxiNeo vous prend en charge à votre adresse et vous conduit au terminal en 50 minutes environ.",

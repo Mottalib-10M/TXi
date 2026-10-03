@@ -288,7 +288,7 @@ export const trajetsSensMelun: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Fontainebleau → Aéroport Orly | 55 km, 60 € | TaxiNeo",
-        metaDescription: "Via A6 en 35 min. Orly, Liaison directe, Château et Nuit en chemin. Dépose au terminal, suivi de vol. Dépose au terminal exact, suivi de vol en temps réel.",
+        metaDescription: "Via A6 en 35 min. Orly, Liaison directe, Château et Nuit en chemin. Dépose au terminal exact, suivi de vol en temps réel.",
         heroTitle: "Taxi Fontainebleau → Aéroport Orly",
         heroSubtitle: "Transfert Fontainebleau → Aéroport Orly au prix fixe de 105 — 130 €. 55 km, direct par l'A6.",
         description: "L'aéroport d'Orly est à 35 min de Fontainebleau par l'A6, le transfert le plus direct.",

@@ -191,7 +191,7 @@ export const trajetsRouenCaen3: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Caen → Granville | 110 km, dès 210 € | TaxiNeo",
-        metaDescription: "Via A84 / D924 en undefined min. Bocage, Mer et Îles Chausey en chemin. Arrêt visite possible en chemin. Arrêt possible pour photos et visites en chemin.",
+        metaDescription: "Via A84 / D924 en undefined min. Bocage, Mer et Îles Chausey en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Caen → Granville",
         heroSubtitle: "Transfert Caen → Granville au prix fixe de 210 — 255 €. 110 km, 1h20.",
         description: "Granville, la « Monaco du Nord », port de pêche et station balnéaire.",

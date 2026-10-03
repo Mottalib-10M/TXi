@@ -622,7 +622,7 @@ export const trajetsMarseille: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Marseille → Saint-Tropez | 130 km, dès 200 € | TaxiNeo",
-        metaDescription: "Via A8 puis D558 en 2h. Le Muy, Presqu'île et Pampelonne en chemin. Arrêt possible pour visites ou photos. Arrêt possible pour photos et visites en chemin.",
+        metaDescription: "Via A8 puis D558 en 2h. Le Muy, Presqu'île et Pampelonne en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Marseille → Saint-Tropez",
         heroSubtitle: "Transfert Marseille → Saint-Tropez au prix fixe de 200 — 260 €. Via l'A8 et la D558.",
         description: "Saint-Tropez, mythique village de la Côte d'Azur, est accessible en 2h depuis Marseille par l'A8 puis la route départementale D558 à travers la presqu'île.",
@@ -1077,7 +1077,7 @@ export const trajetsMarseille: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Marseille → Saint-Rémy-de-Provence | 85 km | TaxiNeo",
-        metaDescription: "Par A7, 1h05 de trajet. Van Gogh, Alpilles et Glanum en chemin. Arrêt possible pour visites ou photos. Arrêt possible pour photos et visites en chemin.",
+        metaDescription: "Par A7, 1h05 de trajet. Van Gogh, Alpilles et Glanum en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Marseille — Saint-Rémy-de-Provence",
         heroSubtitle: "Sur les pas de Van Gogh au pied des Alpilles",
         description: "Transfert en taxi de Marseille à Saint-Rémy-de-Provence, village de charme au pied des Alpilles, sur les pas de Van Gogh.",
@@ -1878,7 +1878,7 @@ export const trajetsMarseille: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Marseille → L'Isle-sur-la-Sorgue | 85 km | TaxiNeo",
-        metaDescription: "Via A7 en 1h. Antiquaires, Sorgue, Roues à aubes et Brocante en chemin. Arrêt visite possible en chemin. Arrêt possible pour photos et visites en chemin.",
+        metaDescription: "Via A7 en 1h. Antiquaires, Sorgue, Roues à aubes et Brocante en chemin. Arrêt possible pour photos et visites en chemin.",
         heroTitle: "Taxi Marseille → L'Isle-sur-la-Sorgue",
         heroSubtitle: "Votre transfert Marseille → L'Isle-sur-la-Sorgue au prix fixe de 110 — 140 €. Trajet par l'A7. Réservation en ligne.",
         description: "Le trajet Marseille — L'Isle-sur-la-Sorgue relie la cité phocéenne à la Venise provençale, capitale européenne des antiquaires. 85 km par l'A7 à travers la plaine du Vaucluse.",

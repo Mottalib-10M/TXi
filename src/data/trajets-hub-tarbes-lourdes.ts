@@ -248,7 +248,7 @@ export const trajetsTarbesLourdes: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Lourdes → Aéroport Tarbes-Lourdes | 10 km | TaxiNeo",
-        metaDescription: "Via D921 en undefined min. Aéroport, Pyrénées, Pèlerinage et Rapide en chemin. Dépose au terminal, suivi de vol. Suivi de vol, dépose directe au terminal.",
+        metaDescription: "Via D921 en undefined min. Aéroport, Pyrénées, Pèlerinage et Rapide en chemin. Suivi de vol, dépose directe au terminal.",
         heroTitle: "Taxi Lourdes → Aéroport Tarbes-Lourdes",
         heroSubtitle: "Transfert Lourdes → Aéroport Tarbes-Lourdes au prix fixe de 20 — 25 €. 10 km, 10 min.",
         description: "Transfert rapide entre Lourdes et l'aéroport Tarbes-Lourdes Pyrénées en 10 min.",
@@ -267,7 +267,7 @@ export const trajetsTarbesLourdes: Trajet[] = [
       },
       en: {
         metaTitle: "Taxi Lourdes → Aéroport Tarbes-Lourdes | 10 km | TaxiNeo",
-        metaDescription: "Via D921, undefined min ride. Aéroport, Pyrénées, Pèlerinage and Rapide en route. Terminal drop-off, flight tracking. Flight tracking, direct terminal drop-off.",
+        metaDescription: "Via D921, undefined min ride. Aéroport, Pyrénées, Pèlerinage and Rapide en route. Flight tracking, direct terminal drop-off.",
         heroTitle: "Taxi Lourdes → Tarbes-Lourdes Airport",
         heroSubtitle: "Lourdes → Tarbes-Lourdes Airport transfer at €20–€25. 10 km, 10 min.",
         description: "Quick 10-minute transfer between Lourdes and Tarbes-Lourdes Pyrénées Airport.",

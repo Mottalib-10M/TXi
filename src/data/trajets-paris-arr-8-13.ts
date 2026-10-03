@@ -167,7 +167,7 @@ export const trajetsParisArr8to13: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Paris 9e → Aéroport CDG | 26 km, dès 53 € | TaxiNeo",
-        metaDescription: "Via A1 en 40 min. Opéra Garnier, Grands Magasins et Gare du Nord en chemin. Dépose au terminal, suivi de vol. Suivi de vol, dépose directe au terminal.",
+        metaDescription: "Via A1 en 40 min. Opéra Garnier, Grands Magasins et Gare du Nord en chemin. Suivi de vol, dépose directe au terminal.",
         heroTitle: "Taxi Paris 9ème arrondissement → Aéroport CDG",
         heroSubtitle: "Transfert depuis le quartier de l'Opéra et des grands magasins vers Charles de Gaulle au prix fixe de 53 — 65 €. Réservation en ligne.",
         description: "Le 9ème arrondissement, quartier animé de l'Opéra Garnier, des Galeries Lafayette et des Grands Boulevards, offre un accès rapide vers CDG via les axes nord. Votre chauffeur TaxiNeo vous conduit au terminal en 40 minutes.",
@@ -235,7 +235,7 @@ export const trajetsParisArr8to13: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Paris 9e → Aéroport d'Orly | 19 km, dès 36 € | TaxiNeo",
-        metaDescription: "Via A6 en 35 min. Boulevard Haussmann, Opéra et Périphérique Sud en chemin. Dépose au terminal, suivi de vol. Suivi de vol, dépose directe au terminal.",
+        metaDescription: "Via A6 en 35 min. Boulevard Haussmann, Opéra et Périphérique Sud en chemin. Suivi de vol, dépose directe au terminal.",
         heroTitle: "Taxi Paris 9ème arrondissement → Aéroport d'Orly",
         heroSubtitle: "Transfert depuis l'Opéra et les Grands Boulevards vers Orly au prix fixe de 36 — 45 €. Prise en charge à domicile.",
         description: "Depuis le 9ème arrondissement, rejoignez Orly en 35 minutes par les grands boulevards et le périphérique sud. Prise en charge devant votre hôtel près de l'Opéra, des Galeries Lafayette ou de Pigalle.",
@@ -439,7 +439,7 @@ export const trajetsParisArr8to13: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Paris 11e → Aéroport CDG | 25 km, dès 53 € | TaxiNeo",
-        metaDescription: "Via A3 en 40 min. Place de la Bastille, Oberkampf et République en chemin. Dépose au terminal, suivi de vol. Suivi de vol, dépose directe au terminal.",
+        metaDescription: "Via A3 en 40 min. Place de la Bastille, Oberkampf et République en chemin. Suivi de vol, dépose directe au terminal.",
         heroTitle: "Taxi Paris 11ème arrondissement → Aéroport CDG",
         heroSubtitle: "Transfert depuis la Bastille et Oberkampf vers Charles de Gaulle au prix fixe de 53 — 65 €. Chauffeur professionnel, prise en charge à domicile.",
         description: "Le 11ème arrondissement, quartier vibrant de la Bastille, d'Oberkampf et de la République, est bien desservi vers CDG via l'autoroute A3. Votre chauffeur TaxiNeo vous conduit au terminal en 40 minutes.",
@@ -575,7 +575,7 @@ export const trajetsParisArr8to13: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Paris 12e → Aéroport CDG | 27 km, dès 53 € | TaxiNeo",
-        metaDescription: "Via A3 en 45 min. Gare de Lyon, Bercy et Bois de Vincennes en chemin. Dépose au terminal, suivi de vol. Dépose au terminal exact, suivi de vol en temps réel.",
+        metaDescription: "Via A3 en 45 min. Gare de Lyon, Bercy et Bois de Vincennes en chemin. Dépose au terminal exact, suivi de vol en temps réel.",
         heroTitle: "Taxi Paris 12ème arrondissement → Aéroport CDG",
         heroSubtitle: "Transfert depuis la gare de Lyon et Bercy vers Charles de Gaulle au prix fixe de 53 — 65 €. Idéal pour les correspondances train-avion.",
         description: "Le 12ème arrondissement, quartier de la gare de Lyon, de Bercy et du Bois de Vincennes, offre un accès vers CDG via l'A3. Votre chauffeur TaxiNeo vous conduit au terminal en 45 minutes.",
@@ -711,7 +711,7 @@ export const trajetsParisArr8to13: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Paris 13e → Aéroport CDG | 29 km, dès 53 € | TaxiNeo",
-        metaDescription: "Via A1 en 45 min. BnF, Place d'Italie et Butte-aux-Cailles en chemin. Dépose au terminal, suivi de vol. Dépose au terminal exact, suivi de vol en temps réel.",
+        metaDescription: "Via A1 en 45 min. BnF, Place d'Italie et Butte-aux-Cailles en chemin. Dépose au terminal exact, suivi de vol en temps réel.",
         heroTitle: "Taxi Paris 13ème arrondissement → Aéroport CDG",
         heroSubtitle: "Transfert depuis la Place d'Italie et le quartier asiatique vers Charles de Gaulle au prix fixe de 53 — 65 €. Chauffeur professionnel.",
         description: "Le 13ème arrondissement, quartier de la Bibliothèque nationale de France, de la Place d'Italie et du Chinatown parisien, offre un accès vers CDG via les quais de Seine et l'A1. Trajet en 45 minutes.",
@@ -779,7 +779,7 @@ export const trajetsParisArr8to13: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Paris 13e → Aéroport d'Orly | 13 km, dès 36 € | TaxiNeo",
-        metaDescription: "Via A6 en 20 min. Place d'Italie, Porte d'Italie et Orly direct en chemin. Dépose au terminal, suivi de vol. Suivi de vol, dépose directe au terminal.",
+        metaDescription: "Via A6 en 20 min. Place d'Italie, Porte d'Italie et Orly direct en chemin. Suivi de vol, dépose directe au terminal.",
         heroTitle: "Taxi Paris 13ème arrondissement → Aéroport d'Orly",
         heroSubtitle: "Transfert depuis la Place d'Italie vers Orly en seulement 20 minutes au prix fixe de 36 — 45 €. L'un des trajets les plus courts de Paris.",
         description: "Le 13ème arrondissement est l'un des arrondissements les plus proches d'Orly. Seulement 13 km et 20 minutes vous séparent de votre terminal grâce à l'accès direct par la Porte d'Italie et l'A6.",

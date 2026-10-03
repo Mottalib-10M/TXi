@@ -248,7 +248,7 @@ export const trajetsDijonReims: Trajet[] = [
     i18n: {
       fr: {
         metaTitle: "Taxi Reims → Aéroport CDG | 130 km, dès 250 € | TaxiNeo",
-        metaDescription: "Via A26 / A1 en undefined min. Champagne, Roissy et Direct en chemin. Dépose au terminal, suivi de vol. Dépose au terminal exact, suivi de vol en temps réel.",
+        metaDescription: "Via A26 / A1 en undefined min. Champagne, Roissy et Direct en chemin. Dépose au terminal exact, suivi de vol en temps réel.",
         heroTitle: "Taxi Reims → Aéroport CDG",
         heroSubtitle: "Transfert Reims → CDG au prix fixe de 250 — 305 €. 130 km, 1h20.",
         description: "Reims — CDG est le transfert aéroport de référence pour la Champagne.",
