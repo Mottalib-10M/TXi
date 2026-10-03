@@ -21,7 +21,7 @@ export async function AirportJsonLd({ airport }: { airport: Airport }) {
     // via la même table que la ligne visible sous le titre.
     dateModified: dateDePage("/aeroport/") ?? undefined,
     "@type": "TaxiService",
-    name: `TaxiNeo - Transfert Aéroport ${airport.name}`,
+    name: loc === "en" ? `TaxiNeo - ${airport.name} Airport Transfer` : `TaxiNeo - Transfert Aéroport ${airport.name}`,
     description: airport.i18n[loc].metaDescription,
     url: `https://www.taxineo.fr/taxi-aeroport-${airport.slug}`,
     telephone: "+33759592934",

@@ -1,6 +1,8 @@
 import { Link } from "@/i18n/navigation";
 import { Icon } from "@iconify/react";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, getLocale } from "next-intl/server";
+import { nomsTrajet } from "@/lib/seo-trajet";
+import { prixAffiche } from "@/lib/trajet-en";
 import type { Trajet } from "@/data/trajets";
 import { getRelatedTrajets } from "@/data/trajets";
 import { activeTrajetSlugs } from "@/data/trajet-whitelist";
@@ -8,6 +10,7 @@ import { activeCitySlugs } from "@/data/page-whitelists";
 
 export async function TrajetAlternatives({ trajet }: { trajet: Trajet }) {
   const t = await getTranslations("trajet");
+  const loc = (await getLocale()) === "en" ? "en" : "fr";
   const related = getRelatedTrajets(trajet).filter((r) => activeTrajetSlugs.has(r.slug));
 
   const hasVilleLinks = (trajet.departSlug && activeCitySlugs.has(trajet.departSlug)) || (trajet.arriveeSlug && activeCitySlugs.has(trajet.arriveeSlug));
@@ -68,7 +71,7 @@ export async function TrajetAlternatives({ trajet }: { trajet: Trajet }) {
                         <Icon icon="solar:route-linear" className="text-neutral-600 text-sm" />
                       </div>
                       <div>
-                        <p className="text-sm font-medium">{r.from} → {r.to}</p>
+                        <p className="text-sm font-medium">{nomsTrajet(r, loc).from} → {nomsTrajet(r, loc).to}</p>
                       </div>
                     </div>
                     <Icon
@@ -81,7 +84,7 @@ export async function TrajetAlternatives({ trajet }: { trajet: Trajet }) {
                     <span>·</span>
                     <span>{r.durationMin} min</span>
                     <span>·</span>
-                    <span className="font-medium text-neutral-900">{r.priceEstimate}</span>
+                    <span className="font-medium text-neutral-900">{prixAffiche(r.priceEstimate, loc)}</span>
                   </div>
                 </Link>
               ))}

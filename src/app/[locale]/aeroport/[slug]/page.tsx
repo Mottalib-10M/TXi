@@ -103,8 +103,8 @@ export default async function AirportPage({ params }: PageProps) {
         <AirportWhyUs airport={ap} />
         {ILE_DE_FRANCE_SLUGS.has(ap.citySlug) && <AirportTestimonials airport={ap} />}
         <CityFAQ cityName={ap.name} faq={etofferFaq(ap.i18n[loc].faq.slice(0, 8), faitsAeroport(ap, loc), loc === "en" ? `At ${ap.name}` : `À ${ap.name}`, ap.name)} />
-        <CityContactForm cityName={`l'aéroport ${ap.name}`} />
-        <CityCTA cityName={`l'aéroport ${ap.name}`} />
+        <CityContactForm cityName={(loc === "en" ? `${ap.name} Airport` : `l'aéroport ${ap.name}`)} />
+        <CityCTA cityName={(loc === "en" ? `${ap.name} Airport` : `l'aéroport ${ap.name}`)} />
         <AirportInternalLinks airport={ap} />
       </main>
 

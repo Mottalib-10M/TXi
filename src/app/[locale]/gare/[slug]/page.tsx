@@ -98,9 +98,9 @@ export default async function StationPage({ params }: PageProps) {
         <StationPractical station={st} />
         <StationWhyUs station={st} />
         {ILE_DE_FRANCE_SLUGS.has(st.citySlug) && <StationTestimonials station={st} />}
-        <CityFAQ cityName={`la gare ${st.name}`} faq={etofferFaq(st.i18n[loc].faq.slice(0, 8), faitsGare(st, loc), loc === "en" ? `At ${st.name}` : `À la ${st.name}`, st.name)} />
-        <CityContactForm cityName={`la gare ${st.name}`} />
-        <CityCTA cityName={`la gare ${st.name}`} />
+        <CityFAQ cityName={(loc === "en" ? st.name : `la gare ${st.name}`)} faq={etofferFaq(st.i18n[loc].faq.slice(0, 8), faitsGare(st, loc), loc === "en" ? `At ${st.name}` : `À la ${st.name}`, st.name)} />
+        <CityContactForm cityName={(loc === "en" ? st.name : `la gare ${st.name}`)} />
+        <CityCTA cityName={(loc === "en" ? st.name : `la gare ${st.name}`)} />
         <StationInternalLinks station={st} />
       </main>
 

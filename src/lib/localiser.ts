@@ -40,7 +40,10 @@ export function repereEn(nom: string): string {
     .replace(/^Parc des Expositions (.+)$/, "$1 Exhibition Centre")
     .replace(/^Université (.+)$/, "$1 University")
     .replace(/^Campus de (.+)$/, "$1 campus")
-    .replace(/^Hôpital (.+)$/, "$1 Hospital")
+    .replace(/^CHU (?:de |d')(.+)$/, "$1 University Hospital")
+    .replace(/^CH (?:de |d')(.+)$/, "$1 Hospital")
+    .replace(/^Hôpital (?:de |d')?(.+)$/, "$1 Hospital")
+    .replace(/^Gare (?:de |d')(?!Lyon$|l')(.+)$/, "$1 station")
     .replace(/^Stade (.+)$/, (m, s) => (/^de France$/.test(s) ? m : `${s} stadium`))
     .replace(/^Port de (.+)$/, "Port of $1")
     .replace(/^Plage(?:s)? (?:de |du |des )?(.+)$/, "$1 beach");

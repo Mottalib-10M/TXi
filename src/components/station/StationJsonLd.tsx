@@ -14,7 +14,7 @@ export async function StationJsonLd({ station }: { station: Station }) {
     // via la même table que la ligne visible sous le titre.
     dateModified: dateDePage("/gare/") ?? undefined,
     "@type": "TaxiService",
-    name: `TaxiNeo - Transfert Gare ${station.name}`,
+    name: loc === "en" ? `TaxiNeo - ${station.name} Station Transfer` : `TaxiNeo - Transfert Gare ${station.name}`,
     description: station.i18n[loc].metaDescription,
     url: `https://www.taxineo.fr/taxi-gare-${station.slug}`,
     telephone: "+33759592934",

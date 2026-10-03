@@ -19,6 +19,12 @@ import type { City } from "@/data/cities";
 import { lieuEn } from "@/lib/seo-trajet";
 import { autorouteEn, peagesEn, prixEstimeEn } from "@/lib/trajet-en";
 
+/** « over a distance of 14 km » ; sans chiffre (« Central Paris (10th) »), on dit où se trouve le lieu. */
+const distanceEn = (d: string) => {
+  const km = d.match(/\d+(?:[.,]\d+)?\s*km/);
+  return km ? `over a distance of ${km[0]}` : `the site being in ${d.charAt(0).toLowerCase()}${d.slice(1)}`;
+};
+
 const liste = (xs: string[], loc: "fr" | "en", max = 3) => {
   const v = xs.slice(0, max);
   if (v.length <= 1) return v[0] ?? "";
@@ -61,7 +67,7 @@ export function resumeAeroport(a: Airport, loc: "fr" | "en"): string {
     : "";
   return fr
     ? `Un taxi depuis ${a.name} vers le centre de ${a.city} coûte ${a.transferPrice} et dure environ ${a.transferTime}, pour une distance de ${a.distanceFromCity}.${terminaux} Le prix réservé à l'avance est ferme : il comprend les bagages, l'accès à la zone de dépose et les péages éventuels, et il ne change pas si le vol atterrit en retard. C'est ce qui le distingue d'une course prise au compteur, dont le montant suit le barème de l'arrêté préfectoral et augmente de dix-neuf heures à dix heures, ainsi que le dimanche et les jours fériés. Le chauffeur suit le numéro de vol communiqué à la réservation et décale la prise en charge sans supplément, le temps d'attente offert courant à partir de l'heure réelle d'atterrissage. Le point de rendez-vous exact est envoyé par message avant l'arrivée, avec le nom du chauffeur et la plaque du véhicule.`
-    : `A taxi from ${a.name} to the centre of ${a.city} costs ${a.transferPrice} and takes about ${a.transferTime}, over a distance of ${a.distanceFromCity}.${terminaux} The price booked in advance is firm: it includes luggage, access to the drop-off area and any tolls, and it does not change if the flight lands late. That is what sets it apart from a metered ride, whose amount follows the prefectoral order's scale and rises from seven in the evening to ten in the morning, as well as on Sundays and public holidays. The driver tracks the flight number given at booking and shifts the pick-up at no extra cost, the free waiting time starting from the actual landing time. The exact meeting point is sent by message before arrival, with the driver's name and the vehicle's plate.`;
+    : `A taxi from ${a.name} to the centre of ${a.city} costs ${a.transferPrice} and takes about ${a.transferTime}, ${distanceEn(a.distanceFromCity)}.${terminaux} The price booked in advance is firm: it includes luggage, access to the drop-off area and any tolls, and it does not change if the flight lands late. That is what sets it apart from a metered ride, whose amount follows the prefectoral order's scale and rises from seven in the evening to ten in the morning, as well as on Sundays and public holidays. The driver tracks the flight number given at booking and shifts the pick-up at no extra cost, the free waiting time starting from the actual landing time. The exact meeting point is sent by message before arrival, with the driver's name and the vehicle's plate.`;
 }
 
 export function resumeGare(s: Station, loc: "fr" | "en"): string {
@@ -71,7 +77,7 @@ export function resumeGare(s: Station, loc: "fr" | "en"): string {
     : "";
   return fr
     ? `Un taxi depuis la ${s.name} vers le centre de ${s.city} coûte ${s.transferPrice} et dure environ ${s.transferTime}, pour une distance de ${s.distanceFromCity}.${lignes} Le prix réservé à l'avance est ferme : il comprend les bagages et l'approche du chauffeur, et il ne bouge pas si le train arrive en retard. Sur une course prise à la station, le montant suit le barème de l'arrêté préfectoral applicable au département, plus élevé de dix-neuf heures à dix heures ainsi que le dimanche et les jours fériés, et le compteur affiche la lettre du tarif en cours. Le chauffeur suit le numéro de train indiqué à la réservation et ajuste l'heure de prise en charge sans supplément. Le point de rendez-vous, souvent la sortie principale ou la station de taxis, est confirmé par message avec le nom du chauffeur et la plaque du véhicule.`
-    : `A taxi from ${s.name} to the centre of ${s.city} costs ${s.transferPrice} and takes about ${s.transferTime}, over a distance of ${s.distanceFromCity}.${lignes} The price booked in advance is firm: it includes luggage and the driver's approach, and it does not move if the train arrives late. On a ride taken at the rank, the amount follows the scale of the prefectoral order applying to the department, higher from seven in the evening to ten in the morning as well as on Sundays and public holidays, and the meter shows the letter of the current rate. The driver tracks the train number given at booking and adjusts the pick-up time at no extra cost. The meeting point, usually the main exit or the taxi rank, is confirmed by message with the driver's name and the vehicle's plate.`;
+    : `A taxi from ${s.name} to the centre of ${s.city} costs ${s.transferPrice} and takes about ${s.transferTime}, ${distanceEn(s.distanceFromCity)}.${lignes} The price booked in advance is firm: it includes luggage and the driver's approach, and it does not move if the train arrives late. On a ride taken at the rank, the amount follows the scale of the prefectoral order applying to the department, higher from seven in the evening to ten in the morning as well as on Sundays and public holidays, and the meter shows the letter of the current rate. The driver tracks the train number given at booking and adjusts the pick-up time at no extra cost. The meeting point, usually the main exit or the taxi rank, is confirmed by message with the driver's name and the vehicle's plate.`;
 }
 
 export function resumeVille(c: City, loc: "fr" | "en"): string {

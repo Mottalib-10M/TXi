@@ -15,7 +15,7 @@ export function faitsAeroport(a: Airport, loc: "fr" | "en"): string[] {
   if (a.distanceFromCity) {
     p.push(fr
       ? `${a.name} se trouve à ${a.distanceFromCity} du centre de ${a.city}.`
-      : `${a.name} is ${a.distanceFromCity} from the centre of ${a.city}.`);
+      : `${a.name} ${situationEn(a.distanceFromCity, a.city)}.`);
   }
   if (a.transferTime && a.transferPrice) {
     p.push(fr
@@ -49,7 +49,7 @@ export function faitsGare(s: Station, loc: "fr" | "en"): string[] {
   if (s.distanceFromCity) {
     p.push(fr
       ? `${s.name} est à ${s.distanceFromCity} du centre de ${s.city}.`
-      : `${s.name} is ${s.distanceFromCity} from the centre of ${s.city}.`);
+      : `${s.name} ${situationEn(s.distanceFromCity, s.city)}.`);
   }
   if (s.transferTime && s.transferPrice) {
     p.push(fr
@@ -156,4 +156,15 @@ export function reserveVille(nom: string, loc: "fr" | "en") {
         : "From the confirmation received by email, cancelling is free up to six hours before departure. After that, call the driver: their number is on the confirmation, and a ride cancelled once they are already on site may remain payable. If no driver has been assigned, nothing is charged and another slot is offered.",
     },
   ];
+}
+
+/**
+ * « is 4 km from central La Rochelle » : la distance traduite contient déjà le
+ * repère (« 4 km from central La Rochelle », « Central Paris (10th) ») ; on
+ * n'ajoute « from the centre of » que si elle ne le dit pas.
+ */
+export function situationEn(distance: string, ville: string): string {
+  if (/^central\b/i.test(distance)) return `is in ${distance.charAt(0).toLowerCase()}${distance.slice(1)}`;
+  if (/\b(from|of|in)\b/i.test(distance)) return `is ${distance}`;
+  return `is ${distance} from the centre of ${ville}`;
 }
