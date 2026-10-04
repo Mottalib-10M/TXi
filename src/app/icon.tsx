@@ -1,48 +1,17 @@
 import { ImageResponse } from "next/og";
 
+// Favicon aux couleurs du drapeau français avec le sigle « IR » (RECETTE §19.1).
+// PNG tiré de public/favicon.svg par scripts/gen-flag-icon.py puis sharp (densité 384).
+const PNG = "data:image/png;base64,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";
+
 export const size = { width: 96, height: 96 };
 export const contentType = "image/png";
 
 export default function Icon() {
   return new ImageResponse(
     (
-      <div
-        style={{
-          width: "100%",
-          height: "100%",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          background: "#0a0a0a",
-          borderRadius: "20px",
-        }}
-      >
-        <svg
-          width="60"
-          height="60"
-          viewBox="0 0 36 36"
-          fill="none"
-        >
-          <line
-            x1="8"
-            y1="12"
-            x2="28"
-            y2="12"
-            stroke="white"
-            strokeWidth="3.5"
-            strokeLinecap="round"
-          />
-          <line
-            x1="18"
-            y1="15"
-            x2="18"
-            y2="27"
-            stroke="white"
-            strokeWidth="3.5"
-            strokeLinecap="round"
-          />
-        </svg>
-      </div>
+      // eslint-disable-next-line @next/next/no-img-element
+      <img src={PNG} width={96} height={96} alt="" />
     ),
     { ...size }
   );

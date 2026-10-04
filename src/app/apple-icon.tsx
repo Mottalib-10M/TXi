@@ -1,48 +1,17 @@
 import { ImageResponse } from "next/og";
 
+// Favicon aux couleurs du drapeau français avec le sigle « IR » (RECETTE §19.1).
+// PNG tiré de public/favicon.svg par scripts/gen-flag-icon.py puis sharp (densité 384).
+const PNG = "data:image/png;base64,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";
+
 export const size = { width: 180, height: 180 };
 export const contentType = "image/png";
 
 export default function AppleIcon() {
   return new ImageResponse(
     (
-      <div
-        style={{
-          width: "100%",
-          height: "100%",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          background: "#0a0a0a",
-          borderRadius: "40px",
-        }}
-      >
-        <svg
-          width="120"
-          height="120"
-          viewBox="0 0 36 36"
-          fill="none"
-        >
-          <line
-            x1="8"
-            y1="12"
-            x2="28"
-            y2="12"
-            stroke="white"
-            strokeWidth="3"
-            strokeLinecap="round"
-          />
-          <line
-            x1="18"
-            y1="15"
-            x2="18"
-            y2="27"
-            stroke="white"
-            strokeWidth="3"
-            strokeLinecap="round"
-          />
-        </svg>
-      </div>
+      // eslint-disable-next-line @next/next/no-img-element
+      <img src={PNG} width={180} height={180} alt="" />
     ),
     { ...size }
   );
