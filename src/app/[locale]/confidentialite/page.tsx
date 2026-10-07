@@ -8,18 +8,18 @@ interface Props {
   params: Promise<{ locale: string }>;
 }
 
-const MAJ = "2026-09-24";
+const MAJ = "2026-10-07";
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const title =
     locale === "en"
-      ? "TaxiNeo privacy policy: what we do with your data here"
-      : "Politique de confidentialité de TaxiNeo : vos données";
+      ? "TaxiNeo privacy policy: no cookies while you browse"
+      : "Confidentialité TaxiNeo : aucun cookie à la visite";
   const description =
     locale === "en"
-      ? "What personal data TaxiNeo collects when you book a taxi, for what purposes, how long it is kept, who receives it and how to exercise your rights in full."
-      : "Quelles données personnelles TaxiNeo collecte lors d'une réservation, pour quelles finalités, combien de temps elles sont conservées et vos droits RGPD.";
+      ? "TaxiNeo sets no cookies while you browse; only a cookie-free stability check runs. What a booking or an account requires, how long it is kept and your rights."
+      : "TaxiNeo ne dépose aucun cookie à la visite et ne mesure que la stabilité, sans cookie. Ce que demande une réservation, sa durée de conservation, vos droits.";
   return {
     title: title,
     description: description,
@@ -45,46 +45,47 @@ export default async function PrivacyPage({ params }: Props) {
         {
           titre: "1. Responsable du traitement",
           corps: [
-            "Le site TaxiNeo est édité par Radif Partners, qui détermine les finalités et les moyens des traitements décrits sur cette page. Toute question relative à vos données peut être adressée à contact@taxineo.fr.",
+            "TaxiNeo est édité par Radif Partners, qui décide de l'usage des données décrites ici. Pour toute question : contact@taxineo.fr.",
           ],
         },
         {
-          titre: "2. Données collectées et finalités",
+          titre: "2. Consulter le site : aucun cookie, rien d'enregistré",
           corps: [
-            "Réservation : nom, numéro de téléphone, adresse de départ et de destination, date et heure de la course. Ces données sont nécessaires à l'exécution du contrat de transport et sont transmises au chauffeur retenu pour la course.",
-            "Compte utilisateur : adresse e-mail et mot de passe chiffré, afin de vous permettre de retrouver l'historique de vos réservations.",
-            "Contact : les informations que vous saisissez dans le formulaire de contact, utilisées uniquement pour vous répondre.",
-            "Mesure d'audience : pages consultées, clics, défilement et données techniques, afin de comprendre quelles pages du site sont utiles et de les améliorer. Trois outils sont chargés à l'ouverture de chaque page, sans bandeau préalable : Google Analytics 4 (Google Ireland Limited), Microsoft Clarity (Microsoft Corporation) et Contentsquare (Contentsquare SAS). Clarity et Contentsquare enregistrent le déroulement des visites sous forme de sessions et de cartes de chaleur ; le contenu des champs de saisie est masqué dans votre navigateur avant tout envoi. Vercel Speed Insights mesure en outre les temps de chargement, sans cookie.",
+            "Chercher un trajet, comparer les tarifs réglementés d'un taxi, lire un guide sur une gare ou un aéroport : tant que vous ne réservez pas et ne créez pas de compte, le site ne dépose aucun cookie et l'éditeur n'enregistre aucune donnée personnelle vous concernant. Les estimations de prix sont calculées à la volée et ne sont pas gardées.",
+            "Il n'y a donc pas de bandeau cookies : rien à accepter. Aucun outil publicitaire, aucun Google Analytics, aucun autre traceur.",
           ],
         },
         {
-          titre: "3. Bases légales",
+          titre: "3. Mesure anonyme de la stabilité (Microsoft Clarity sans cookie)",
           corps: [
-            "L'exécution du contrat fonde le traitement des données de réservation. L'intérêt légitime de l'éditeur fonde la mesure d'audience et la prévention des abus. Votre consentement fonde, le cas échéant, l'envoi d'informations commerciales, que vous pouvez retirer à tout moment.",
+            "Pour repérer une page qui plante, un formulaire de réservation qui se bloque ou un bouton qui ne répond pas, le site utilise Microsoft Clarity dans son mode sans cookie : ni _clck, ni _clsk, ni MUID, ni CLID. Clarity ne reçoit que des signaux techniques anonymes : erreurs, temps de chargement, clics sans effet, défilement, type d'appareil. Chaque page vue porte un identifiant à usage unique, de sorte que deux visites ne sont jamais reliées. Le texte des pages et tout ce que vous tapez (adresses, nom, téléphone) sont masqués par le code du site avant l'envoi.",
+            "Responsable du service : Microsoft Ireland Operations Limited, One Microsoft Place, South County Business Park, Leopardstown, Dublin 18, Irlande. Finalité : stabilité et rapidité du site. Base légale : intérêt légitime (article 6-1 f du RGPD). Conservation : 30 jours pour les enregistrements, 13 mois au plus pour les statistiques agrégées. Pour vous y opposer : bloquez le domaine clarity.ms dans votre navigateur ou écrivez à contact@taxineo.fr ; le site fonctionne de la même façon.",
           ],
         },
         {
-          titre: "4. Durées de conservation",
+          titre: "4. Quand vous réservez, écrivez ou créez un compte",
           corps: [
-            "Les données de réservation sont conservées trois ans après la dernière course, délai correspondant à la prescription commerciale usuelle. Les données de compte sont conservées tant que le compte existe, puis supprimées dans les trente jours suivant sa fermeture. Les messages de contact sont conservés un an.",
+            "Réservation : nom, téléphone, adresses de départ et d'arrivée, date et heure de la course. Ces données servent à exécuter la course et sont transmises au seul chauffeur retenu.",
+            "Compte (chauffeur, organisation ou client) : adresse e-mail et mot de passe chiffré. Une fois connecté, un cookie de session strictement nécessaire maintient la connexion ; il disparaît à la déconnexion et n'existe pas pour les simples visiteurs.",
+            "Formulaires de contact et de devis : les informations saisies servent uniquement à vous répondre. Un contrôle anti-robot Cloudflare Turnstile protège ces formulaires.",
           ],
         },
         {
-          titre: "5. Destinataires",
+          titre: "5. Bases légales et durées",
           corps: [
-            "Les données ne sont ni vendues ni louées. Elles sont transmises au seul chauffeur chargé de la course, ainsi qu'aux prestataires techniques strictement nécessaires au fonctionnement du service (hébergement, envoi d'e-mails transactionnels, mesure d'audience par Google Analytics, Microsoft Clarity et Contentsquare), dont certains traitent les données aux États-Unis.",
+            "Exécution du contrat pour les réservations et les comptes ; intérêt légitime pour la mesure de stabilité et la prévention des abus. Les données de réservation sont conservées trois ans après la dernière course (prescription commerciale usuelle), celles d'un compte jusqu'à trente jours après sa fermeture, les messages de contact un an.",
           ],
         },
         {
-          titre: "6. Vos droits",
+          titre: "6. Destinataires",
           corps: [
-            "Vous disposez d'un droit d'accès, de rectification, d'effacement, de limitation, d'opposition et de portabilité sur vos données. Ces droits s'exercent par courriel à contact@taxineo.fr, avec une réponse sous un mois. Si la réponse ne vous satisfait pas, vous pouvez saisir la CNIL, autorité française de contrôle, sur www.cnil.fr.",
+            "Les données ne sont ni vendues ni louées. Elles vont au chauffeur chargé de la course et aux prestataires strictement nécessaires : hébergement (Vercel Inc.), envoi des e-mails de confirmation (Resend), protection anti-robot (Cloudflare) et mesure de stabilité sans cookie (Microsoft Clarity). Certains traitent des données aux États-Unis, sous clauses contractuelles types de la Commission européenne.",
           ],
         },
         {
-          titre: "7. Cookies",
+          titre: "7. Vos droits",
           corps: [
-            "Le site dépose les cookies techniques nécessaires à la session et au maintien de la connexion, qui ne requièrent pas de consentement. Les outils de mesure d'audience déposent en outre des cookies dès l'ouverture de la page, sans bandeau préalable : _ga et _ga_YBY8MPEQJ5 (deux ans) pour Google Analytics, _clck (un an) et _clsk (un jour) pour Microsoft Clarity, _cs_id (treize mois) et _cs_s (trente minutes) pour Contentsquare. Aucun cookie publicitaire n'est déposé. Vous pouvez à tout moment supprimer ou bloquer ces cookies depuis les réglages de votre navigateur.",
+            "Accès, rectification, effacement, limitation, opposition et portabilité : écrivez à contact@taxineo.fr, réponse sous un mois. En cas de désaccord, vous pouvez saisir la CNIL, 3 place de Fontenoy, TSA 80715, 75334 Paris Cedex 07 (www.cnil.fr).",
           ],
         },
       ]
@@ -92,46 +93,47 @@ export default async function PrivacyPage({ params }: Props) {
         {
           titre: "1. Data controller",
           corps: [
-            "TaxiNeo is published by Radif Partners, which determines the purposes and means of the processing described on this page. Any question about your data can be sent to contact@taxineo.fr.",
+            "TaxiNeo is published by Radif Partners, which decides how the data described here is used. Questions: contact@taxineo.fr.",
           ],
         },
         {
-          titre: "2. Data collected and purposes",
+          titre: "2. Browsing the site: no cookies, nothing recorded",
           corps: [
-            "Booking: name, phone number, pick-up and drop-off address, date and time of the ride. This data is required to perform the transport contract and is passed to the driver assigned to the ride.",
-            "User account: email address and hashed password, so that you can find your booking history again.",
-            "Contact: the information you type into the contact form, used only to answer you.",
-            "Audience measurement: pages viewed, clicks, scrolling and technical data, so we can understand which pages are useful and improve them. Three tools load when each page opens, with no prior banner: Google Analytics 4 (Google Ireland Limited), Microsoft Clarity (Microsoft Corporation) and Contentsquare (Contentsquare SAS). Clarity and Contentsquare record how visits unfold, as sessions and heatmaps; the content of input fields is masked in your browser before anything is sent. Vercel Speed Insights also measures loading times, without cookies.",
+            "Looking up a route, checking regulated taxi fares or reading a guide to a station or airport: as long as you do not book or open an account, the site sets no cookies and the publisher records no personal data about you. Fare estimates are computed on the fly and not kept.",
+            "That is why there is no cookie banner: there is nothing to accept. No advertising tools, no Google Analytics, no other tracker.",
           ],
         },
         {
-          titre: "3. Legal bases",
+          titre: "3. Anonymous stability check (cookie-free Microsoft Clarity)",
           corps: [
-            "Performance of the contract is the basis for processing booking data. The publisher's legitimate interest is the basis for audience measurement and abuse prevention. Your consent is the basis for any commercial information, and can be withdrawn at any time.",
+            "To catch a page that crashes, a booking form that stalls or a button that does nothing, the site uses Microsoft Clarity in its cookie-free mode: no _clck, _clsk, MUID or CLID cookie. Clarity only receives anonymous technical signals: errors, load times, dead clicks, scrolling and device type. Each page view carries a single-use identifier, so two visits are never linked. Page text and anything you type (addresses, name, phone number) are masked by the site's code before sending.",
+            "Service provider: Microsoft Ireland Operations Limited, One Microsoft Place, South County Business Park, Leopardstown, Dublin 18, Ireland. Purpose: site stability and speed. Legal basis: legitimate interest (GDPR Art. 6(1)(f)). Retention: 30 days for recordings, at most 13 months for aggregate statistics. To opt out, block the clarity.ms domain in your browser or write to contact@taxineo.fr; the site works just the same.",
           ],
         },
         {
-          titre: "4. Retention periods",
+          titre: "4. When you book, write to us or open an account",
           corps: [
-            "Booking data is kept for three years after the last ride, matching the usual commercial limitation period. Account data is kept while the account exists, then deleted within thirty days of its closure. Contact messages are kept for one year.",
+            "Booking: name, phone number, pick-up and drop-off addresses, date and time of the ride. This data is used to carry out the ride and is passed only to the driver assigned to it.",
+            "Account (driver, organisation or customer): email address and hashed password. Once you sign in, a strictly necessary session cookie keeps you logged in; it goes away when you sign out and is never set for ordinary visitors.",
+            "Contact and quote forms: what you type is used only to answer you. A Cloudflare Turnstile anti-bot check protects these forms.",
           ],
         },
         {
-          titre: "5. Recipients",
+          titre: "5. Legal bases and retention",
           corps: [
-            "Data is neither sold nor rented. It is passed only to the driver handling the ride, and to the technical providers strictly required to run the service (hosting, transactional email, audience measurement by Google Analytics, Microsoft Clarity and Contentsquare), some of which process data in the United States.",
+            "Performance of the contract for bookings and accounts; legitimate interest for the stability check and abuse prevention. Booking data is kept for three years after the last ride (usual commercial limitation period), account data until thirty days after the account is closed, contact messages for one year.",
           ],
         },
         {
-          titre: "6. Your rights",
+          titre: "6. Recipients",
           corps: [
-            "You have the right to access, rectify, erase, restrict, object to and port your data. These rights are exercised by email at contact@taxineo.fr, with an answer within one month. If the answer does not satisfy you, you may refer the matter to the CNIL, the French supervisory authority, at www.cnil.fr.",
+            "Data is neither sold nor rented. It goes to the driver handling the ride and to the providers strictly needed to run the service: hosting (Vercel Inc.), confirmation emails (Resend), anti-bot protection (Cloudflare) and the cookie-free stability check (Microsoft Clarity). Some process data in the United States, under the European Commission's standard contractual clauses.",
           ],
         },
         {
-          titre: "7. Cookies",
+          titre: "7. Your rights",
           corps: [
-            "The site sets the technical cookies required for the session and to keep you signed in, which need no consent. The audience measurement tools also set cookies as soon as a page opens, with no prior banner: _ga and _ga_YBY8MPEQJ5 (two years) for Google Analytics, _clck (one year) and _clsk (one day) for Microsoft Clarity, _cs_id (thirteen months) and _cs_s (thirty minutes) for Contentsquare. No advertising cookies are set. You can delete or block these cookies at any time from your browser settings.",
+            "Access, rectification, erasure, restriction, objection and portability: write to contact@taxineo.fr and you will get an answer within one month. If you disagree with the answer, you can complain to the CNIL, the French data protection authority, 3 place de Fontenoy, TSA 80715, 75334 Paris Cedex 07 (www.cnil.fr).",
           ],
         },
       ];

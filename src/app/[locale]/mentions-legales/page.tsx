@@ -167,8 +167,8 @@ export default async function LegalPage({ params }: Props) {
             </h3>
             <p className="text-sm text-neutral-600 font-light leading-relaxed mb-3">
               {isFr
-                ? "Le traitement des donnees repose sur les bases legales suivantes au titre de l'article 6 du RGPD : la necessite contractuelle (Art. 6(1)(b)) pour le traitement des reservations, et l'interet legitime (Art. 6(1)(f)) pour la mesure d'audience, la securite du site et les fichiers journaux."
-                : "Data processing is based on the following legal bases under Article 6 of the GDPR: contractual necessity (Art. 6(1)(b)) for processing bookings, and legitimate interest (Art. 6(1)(f)) for audience measurement, site security and server log files."}
+                ? "Le traitement des donnees repose sur les bases legales suivantes au titre de l'article 6 du RGPD : la necessite contractuelle (Art. 6(1)(b)) pour le traitement des reservations, et l'interet legitime (Art. 6(1)(f)) pour la mesure anonyme de la stabilite du site, sa securite et les fichiers journaux."
+                : "Data processing is based on the following legal bases under Article 6 of the GDPR: contractual necessity (Art. 6(1)(b)) for processing bookings, and legitimate interest (Art. 6(1)(f)) for the anonymous stability check, site security and server log files."}
             </p>
 
             <h3 className="text-base font-semibold mb-2 mt-4">
@@ -185,8 +185,8 @@ export default async function LegalPage({ params }: Props) {
             </h3>
             <p className="text-sm text-neutral-600 font-light leading-relaxed mb-3">
               {isFr
-                ? "Conformement au RGPD, vous disposez des droits suivants : droit d'acces (Art. 15), droit de rectification (Art. 16), droit a l'effacement (Art. 17), droit a la limitation du traitement (Art. 18), droit a la portabilite (Art. 20), droit d'opposition (Art. 21), droit de retirer votre consentement (Art. 7), et droit d'introduire une reclamation aupres d'une autorite de controle (Art. 77)."
-                : "Under the GDPR, you have the following rights: right of access (Art. 15), right to rectification (Art. 16), right to erasure (Art. 17), right to restriction of processing (Art. 18), right to data portability (Art. 20), right to object (Art. 21), right to withdraw consent (Art. 7), and right to lodge a complaint with a supervisory authority (Art. 77)."}
+                ? "Conformement au RGPD, vous disposez des droits suivants : droit d'acces (Art. 15), droit de rectification (Art. 16), droit a l'effacement (Art. 17), droit a la limitation du traitement (Art. 18), droit a la portabilite (Art. 20), droit d'opposition (Art. 21) et droit d'introduire une reclamation aupres d'une autorite de controle (Art. 77)."
+                : "Under the GDPR, you have the following rights: right of access (Art. 15), right to rectification (Art. 16), right to erasure (Art. 17), right to restriction of processing (Art. 18), right to data portability (Art. 20), right to object (Art. 21), and right to lodge a complaint with a supervisory authority (Art. 77)."}
             </p>
             <p className="text-sm text-neutral-600 font-light leading-relaxed">
               {isFr
@@ -198,27 +198,17 @@ export default async function LegalPage({ params }: Props) {
           {/* Cookies */}
           <section className="mb-10">
             <h2 className="text-xl font-semibold mb-3">
-              {isFr ? "5. Cookies et stockage local" : "5. Cookies and Local Storage"}
+              {isFr ? "5. Cookies" : "5. Cookies"}
             </h2>
             <p className="text-sm text-neutral-600 font-light leading-relaxed mb-3">
               {isFr
-                ? "Ce site utilise des cookies essentiels necessaires au bon fonctionnement de la plateforme (authentification, session). Ces cookies ne collectent aucune donnee personnelle a des fins de profilage."
-                : "This site uses essential cookies necessary for the proper functioning of the platform (authentication, session). These cookies do not collect personal data for profiling purposes."}
-            </p>
-            <p className="text-sm text-neutral-600 font-light leading-relaxed mb-3">
-              {isFr
-                ? "Des cookies d'analyse sont deposes par Google Analytics, Microsoft Clarity et Contentsquare pour mesurer le trafic et ameliorer votre experience utilisateur. Ils sont charges a l'ouverture de la page, sans banniere de cookies prealable. Le detail figure dans la politique de confidentialite."
-                : "Analytics cookies are set by Google Analytics, Microsoft Clarity and Contentsquare to measure traffic and improve your user experience. They load when a page opens, with no prior cookie banner. Details are given in the privacy policy."}
-            </p>
-            <p className="text-sm text-neutral-600 font-light leading-relaxed mb-3">
-              {isFr
-                ? "Les preferences utilisateur (theme clair/sombre) sont stockees dans le localStorage du navigateur, qui n'est pas un cookie et n'est jamais transmis a nos serveurs. Vous pouvez effacer les donnees localStorage a tout moment via les parametres de votre navigateur."
-                : "User preferences (light/dark theme) are stored in the browser's localStorage, which is not a cookie and is never transmitted to our servers. You can clear localStorage data at any time through your browser settings."}
+                ? "La simple consultation du site ne dépose aucun cookie : ni mesure d'audience, ni publicité. Il n'y a donc pas de bandeau cookies. Seuls les utilisateurs qui se connectent à un compte reçoivent un cookie de session strictement nécessaire, supprimé à la déconnexion."
+                : "Simply browsing the site sets no cookies: no audience measurement, no advertising. That is why there is no cookie banner. Only users who sign in to an account receive a strictly necessary session cookie, removed when they sign out."}
             </p>
             <p className="text-sm text-neutral-600 font-light leading-relaxed">
               {isFr
-                ? "Vous pouvez configurer votre navigateur pour refuser les cookies ou etre averti lorsqu'un cookie est envoye. Le refus des cookies essentiels peut affecter le fonctionnement du site."
-                : "You can configure your browser to refuse cookies or be notified when a cookie is sent. Refusing essential cookies may affect site functionality."}
+                ? "La stabilité des pages est suivie de façon anonyme avec Microsoft Clarity en mode sans cookie, contenu des pages et saisies masqués. Le détail figure dans la politique de confidentialité."
+                : "Page stability is monitored anonymously with Microsoft Clarity in its cookie-free mode, with page content and inputs masked. Details are in the privacy policy."}
             </p>
           </section>
 
@@ -237,13 +227,13 @@ export default async function LegalPage({ params }: Props) {
                 <strong>Vercel Inc.</strong> &mdash; {isFr ? "Hebergement du site (Etats-Unis, clauses contractuelles types UE)" : "Website hosting (United States, EU standard contractual clauses)"}
               </li>
               <li>
-                <strong>Google LLC</strong> &mdash; {isFr ? "Analytics (Etats-Unis, clauses contractuelles types UE)" : "Analytics (United States, EU standard contractual clauses)"}
+                <strong>Microsoft Ireland Operations Limited</strong> &mdash; {isFr ? "Microsoft Clarity sans cookie, mesure anonyme de la stabilité (Irlande)" : "Cookie-free Microsoft Clarity, anonymous stability check (Ireland)"}
               </li>
               <li>
-                <strong>Microsoft Corporation</strong> &mdash; {isFr ? "Microsoft Clarity, mesure d'audience (Etats-Unis, clauses contractuelles types UE)" : "Microsoft Clarity, audience measurement (United States, EU standard contractual clauses)"}
+                <strong>Resend</strong> &mdash; {isFr ? "Envoi des e-mails de confirmation (États-Unis, clauses contractuelles types UE)" : "Confirmation emails (United States, EU standard contractual clauses)"}
               </li>
               <li>
-                <strong>Contentsquare SAS</strong> &mdash; {isFr ? "Contentsquare, mesure d'audience (France)" : "Contentsquare, audience measurement (France)"}
+                <strong>Cloudflare, Inc.</strong> &mdash; {isFr ? "Contrôle anti-robot Turnstile sur les formulaires (États-Unis, clauses contractuelles types UE)" : "Turnstile anti-bot check on forms (United States, EU standard contractual clauses)"}
               </li>
             </ul>
           </section>

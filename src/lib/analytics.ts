@@ -1,4 +1,4 @@
-/* ─── Google Analytics 4 – event helpers ─────────────────────────── */
+/* ─── Événements de suivi : désactivés (aucun traceur) ─────────────── */
 
 type GtagEvent = {
   action: string;
@@ -8,10 +8,10 @@ type GtagEvent = {
   [key: string]: string | number | boolean | undefined;
 };
 
+// GA4 retiré (règle « sans cookie » du 2026-10-07, RECETTE §15.6) : les appels de suivi
+// restent en place dans les composants mais n'envoient plus rien nulle part.
 function gtag(...args: unknown[]) {
-  if (typeof window !== "undefined" && typeof window.gtag === "function") {
-    window.gtag(...(args as Parameters<typeof window.gtag>));
-  }
+  void args;
 }
 
 function event({ action, category, label, value, ...rest }: GtagEvent) {

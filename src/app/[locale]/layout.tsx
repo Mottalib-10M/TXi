@@ -1,10 +1,8 @@
-import Script from "next/script";
 import { Inter } from "next/font/google";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { Toaster } from "sonner";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Providers } from "@/components/Providers";
 import { ImpersonationBanner } from "@/components/ui/ImpersonationBanner";
 import { routing } from "@/i18n/routing";
@@ -119,12 +117,19 @@ export default async function LocaleLayout({
   return (
     <html lang={locale}>
       <head>
+        {/* Microsoft Clarity sans cookie : consentement refusé (consentv2) mis en file avant le script (RECETTE §15.6) */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};window.clarity('consentv2',{ad_Storage:'denied',analytics_Storage:'denied'});t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","xm1mwyb2kd");`,
+          }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(siteJsonLd) }}
         />
       </head>
       <body
+        data-clarity-mask="true"
         className={`${inter.className} bg-white text-neutral-900 antialiased selection:bg-neutral-200 selection:text-black overflow-x-hidden`}
       >
         <a
@@ -139,38 +144,8 @@ export default async function LocaleLayout({
             <div id="main-content" />
             {children}
             <Toaster position="top-right" richColors />
-            <SpeedInsights />
           </Providers>
         </NextIntlClientProvider>
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-YBY8MPEQJ5"
-          strategy="lazyOnload"
-        />
-        <Script id="google-analytics" strategy="lazyOnload">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-YBY8MPEQJ5');
-          `}
-        </Script>
-        <Script
-          src="https://t.contentsquare.net/uxa/57182d25bfaa1.js"
-          strategy="lazyOnload"
-        />
-        <Script id="microsoft-clarity" strategy="afterInteractive">
-          {`
-            (function(c,l,a,r,i,t,y){
-              c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-              t=l.createElement(r);t.async=1;
-              t.src="https://www.clarity.ms/tag/"+i;
-              y=l.getElementsByTagName(r)[0];
-              y.parentNode.insertBefore(t,y);
-            })(window,document,"clarity","script","xm1mwyb2kd");
-            clarity("set","language","${locale}");
-            clarity("set","page_path",window.location.pathname);
-          `}
-        </Script>
       </body>
     </html>
   );
