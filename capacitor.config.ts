@@ -31,8 +31,10 @@ const config: CapacitorConfig = {
   },
   plugins: {
     SplashScreen: {
-      launchAutoHide: false,
-      launchShowDuration: 3000,
+      // Le site masque l'écran de démarrage dès qu'il est prêt (NativeBridge) ;
+      // au pire, il se masque seul au bout de 5 secondes.
+      launchAutoHide: true,
+      launchShowDuration: 5000,
       backgroundColor: "#ffffff",
       showSpinner: false,
       androidScaleType: "CENTER_INSIDE",

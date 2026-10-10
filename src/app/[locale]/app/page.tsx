@@ -4,6 +4,7 @@ import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { auth } from "@/lib/auth";
 import { BookingForm } from "@/components/booking/BookingForm";
+import { Logo } from "@/components/ui/Logo";
 
 // L'accueil de l'app iPhone et Android (le site y redirige l'app, voir
 // middleware.ts) : réserver un taxi d'abord, puis ses réservations et l'accès
@@ -20,7 +21,7 @@ export default async function AppHome() {
     <main className="app-home min-h-screen bg-neutral-50 px-5 pb-10">
       <div className="mx-auto flex max-w-md flex-col gap-6">
         <div className="flex items-center justify-between pt-5">
-          <span className="text-2xl font-semibold tracking-tight">Taxineo</span>
+          <Logo className="text-2xl" />
           {space ? (
             <Link href={space} className="rounded-full bg-neutral-950 px-4 py-2 text-sm font-medium text-white">
               {t("mySpace")}
@@ -48,7 +49,7 @@ export default async function AppHome() {
           {space ? null : (
             <Link href="/connexion" className="flex items-center gap-4 rounded-2xl border border-neutral-200 bg-white p-4">
               <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-neutral-100">
-                <Icon icon="solar:steering-wheel-linear" className="text-xl text-neutral-800" />
+                <Icon icon="solar:wheel-linear" className="text-xl text-neutral-800" />
               </span>
               <span className="flex-1">
                 <span className="block text-sm font-semibold">{t("pro")}</span>
