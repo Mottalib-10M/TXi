@@ -6,6 +6,8 @@ import { Toaster } from "sonner";
 import { Providers } from "@/components/Providers";
 import { ImpersonationBanner } from "@/components/ui/ImpersonationBanner";
 import { routing } from "@/i18n/routing";
+import { NativeBridge } from "@/components/NativeBridge";
+import { APP_SCRIPT } from "@/lib/nativeApp";
 
 const inter = Inter({ subsets: ["latin"], display: "swap" });
 
@@ -117,10 +119,12 @@ export default async function LocaleLayout({
   return (
     <html lang={locale}>
       <head>
-        {/* Microsoft Clarity sans cookie : consentement refusé (consentv2) mis en file avant le script (RECETTE §15.6) */}
+        {/* Dans l'app : <html data-app> posé avant l'affichage (styles propres à l'app). */}
+        <script dangerouslySetInnerHTML={{ __html: APP_SCRIPT }} />
+        {/* Microsoft Clarity sans cookie : consentement refusé (consentv2) mis en file avant le script (RECETTE §15.6). Jamais dans l'app. */}
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};window.clarity('consentv2',{ad_Storage:'denied',analytics_Storage:'denied'});t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","xm1mwyb2kd");`,
+            __html: `if(!document.documentElement.hasAttribute("data-app"))(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};window.clarity('consentv2',{ad_Storage:'denied',analytics_Storage:'denied'});t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","xm1mwyb2kd");`,
           }}
         />
         <script
@@ -140,6 +144,7 @@ export default async function LocaleLayout({
         </a>
         <NextIntlClientProvider messages={messages}>
           <Providers>
+            <NativeBridge />
             <ImpersonationBanner />
             <div id="main-content" />
             {children}

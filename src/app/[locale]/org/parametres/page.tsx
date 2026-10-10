@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { Icon } from "@iconify/react";
 import { PlacesAutocomplete } from "@/components/booking/PlacesAutocomplete";
 import { useTranslations } from "next-intl";
+import { DeleteAccount } from "@/components/dashboard/DeleteAccount";
 
 export default function ParametresPage() {
   const t = useTranslations("org");
@@ -164,6 +165,7 @@ export default function ParametresPage() {
           {saving ? t("saving") : t("saveButton")}
         </button>
       </form>
+      <DeleteAccount />
     </div>
   );
 }

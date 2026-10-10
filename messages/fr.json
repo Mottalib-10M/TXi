@@ -3564,5 +3564,22 @@
     "nightRate": "Tarif nuit",
     "pricePerPerson": "/pers.",
     "joinRide": "Rejoindre ce trajet"
+  },
+  "deleteAccount": {
+    "title": "Supprimer mon compte",
+    "body": "Votre compte et vos informations seront définitivement effacés. Les réservations déjà faites par vos clients restent dans leur historique, sans être rattachées à vous. Cette action est sans retour.",
+    "confirm": "Je comprends que mon compte sera supprimé définitivement.",
+    "button": "Supprimer définitivement mon compte"
+  },
+  "appHome": {
+    "title": "Votre taxi à prix fixe",
+    "subtitle": "Chauffeurs de taxi agréés, prix connu avant de partir, partout en France.",
+    "menu": "Menu de l'app",
+    "bookings": "Mes réservations",
+    "bookingsDesc": "Retrouver et suivre vos courses",
+    "pro": "Espace chauffeur ou organisation",
+    "proDesc": "Se connecter pour gérer ses courses",
+    "becomeDriver": "Vous êtes chauffeur de taxi ? Rejoindre Taxineo",
+    "mySpace": "Mon espace"
   }
 }

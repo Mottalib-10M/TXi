@@ -1,0 +1,127 @@
+# Compilation de l'app Taxineo sur les machines de GitHub (aucun Xcode ni Android
+# Studio nécessaire en local).
+# - À chaque changement de la partie native : vérification que l'iPhone et
+#   l'Android compilent.
+# - Lancement manuel (onglet Actions > App > Run workflow) avec « publier » :
+#   envoi sur TestFlight (Apple) et en test interne (Google Play), si les
+#   secrets sont posés (voir mobile/README.md).
+
+name: App
+
+on:
+  push:
+    branches: [main]
+    paths: ["ios/**", "android/**", "capacitor.config.ts", "mobile/**", "package.json", ".github/workflows/app.yml"]
+  workflow_dispatch:
+    inputs:
+      publish:
+        description: "Publier (TestFlight et Google Play test interne)"
+        type: boolean
+        default: false
+
+concurrency:
+  group: app-${{ github.ref }}
+  cancel-in-progress: true
+
+defaults:
+  run:
+    # bash explicite : « pipefail », une erreur de xcodebuild n'est pas masquée par « | tail ».
+    shell: bash
+
+env:
+  APP_VERSION: "1.0"
+  APP_BUILD: ${{ github.run_number }}
+
+jobs:
+  ios:
+    runs-on: macos-26
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - run: npx cap sync ios
+      - name: Version de Xcode
+        run: |
+          sudo xcode-select -s "$(ls -d /Applications/Xcode_*.app | sort -V | tail -1)"
+          xcodebuild -version
+      - name: Compilation (simulateur, sans signature)
+        if: ${{ !inputs.publish }}
+        run: xcodebuild -project ios/App/App.xcodeproj -scheme App -configuration Debug -sdk iphonesimulator -destination "generic/platform=iOS Simulator" CODE_SIGNING_ALLOWED=NO build | tail -40
+      - name: Archive signée et envoi sur TestFlight
+        if: ${{ inputs.publish }}
+        env:
+          # Identifiants publics du compte Apple et de la clé d'API ; seule la clé elle-même (.p8) est secrète.
+          ASC_KEY_ID: 24HMDSU2SP
+          ASC_ISSUER_ID: f42a15c9-0464-45a8-a382-c48cc8608b6d
+          APPLE_TEAM_ID: DMVV2JDSY4
+          ASC_KEY: ${{ secrets.ASC_KEY }}
+        run: |
+          mkdir -p ~/private_keys
+          # Clé collée dans GitHub : retours à la ligne perdus, \r, espaces ou « \n » littéraux sont réparés (PEM reconstruit).
+          python3 - "$HOME/private_keys/AuthKey_${ASC_KEY_ID}.p8" <<'PY'
+          import os, re, sys
+          raw = os.environ["ASC_KEY"].replace("\\n", "\n").replace("\r", "")
+          # En-têtes retirés même si TextEdit a changé les tirets : on ne garde que le base64.
+          body = re.sub(r"[^A-Za-z0-9+/=]", "", raw).replace("BEGINPRIVATEKEY", "").replace("ENDPRIVATEKEY", "")
+          print("longueur de la cle (base64) :", len(body))
+          lines = [body[i:i + 64] for i in range(0, len(body), 64)]
+          open(sys.argv[1], "w").write("-----BEGIN PRIVATE KEY-----\n" + "\n".join(lines) + "\n-----END PRIVATE KEY-----\n")
+          PY
+          AUTH="-allowProvisioningUpdates -authenticationKeyPath $HOME/private_keys/AuthKey_${ASC_KEY_ID}.p8 -authenticationKeyID $ASC_KEY_ID -authenticationKeyIssuerID $ASC_ISSUER_ID"
+          sed "s/TEAM_ID/$APPLE_TEAM_ID/" ios/App/export/ExportOptions.plist > /tmp/ExportOptions.plist
+          xcodebuild -project ios/App/App.xcodeproj -scheme App -configuration Release -destination "generic/platform=iOS" \
+            -archivePath /tmp/Taxineo.xcarchive DEVELOPMENT_TEAM=$APPLE_TEAM_ID CODE_SIGN_STYLE=Automatic \
+            MARKETING_VERSION=$APP_VERSION CURRENT_PROJECT_VERSION=$APP_BUILD $AUTH archive | tail -40
+          xcodebuild -exportArchive -archivePath /tmp/Taxineo.xcarchive -exportOptionsPlist /tmp/ExportOptions.plist -exportPath /tmp/export $AUTH | tail -40
+
+  android:
+    # Publication Android : seulement une fois le compte Play et ses secrets prêts (variable de dépôt ANDROID_READY=true).
+    if: ${{ !inputs.publish || vars.ANDROID_READY == 'true' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+      - uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: 21
+      - run: npm ci --ignore-scripts
+      - run: npx cap sync android
+      - name: Compilation (APK de test)
+        if: ${{ !inputs.publish }}
+        working-directory: android
+        run: ./gradlew assembleDebug --no-daemon
+      - uses: actions/upload-artifact@v5
+        if: ${{ !inputs.publish }}
+        with:
+          name: taxineo-debug-apk
+          path: android/app/build/outputs/apk/debug/app-debug.apk
+          retention-days: 7
+      - name: Bundle signé (AAB)
+        if: ${{ inputs.publish }}
+        working-directory: android
+        env:
+          ANDROID_KEYSTORE_BASE64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
+          ANDROID_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          ANDROID_KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+          ANDROID_KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
+        run: |
+          echo "$ANDROID_KEYSTORE_BASE64" | base64 -d > /tmp/upload.jks
+          ANDROID_KEYSTORE_PATH=/tmp/upload.jks ./gradlew bundleRelease --no-daemon
+      - name: Envoi sur Google Play (test interne)
+        if: ${{ inputs.publish }}
+        uses: r0adkll/upload-google-play@v1
+        with:
+          serviceAccountJsonPlainText: ${{ secrets.PLAY_SERVICE_ACCOUNT }}
+          packageName: com.taxineo.app
+          releaseFiles: android/app/build/outputs/bundle/release/app-release.aab
+          track: internal
+          status: draft

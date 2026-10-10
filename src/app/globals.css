@@ -112,3 +112,13 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
 input[type="datetime-local"]::-webkit-calendar-picker-indicator:hover {
   filter: invert(0.1);
 }
+
+/* App iPhone / Android (<html data-app>, posé par le script de <head>) :
+   le contenu passe sous l'heure et la batterie, on le décale de la hauteur de
+   cette zone ; les barres fixées en haut descendent d'autant, une bande
+   blanche couvre la zone de l'heure ; pas de pied de page de référencement. */
+html[data-app] body { padding-top: env(safe-area-inset-top); padding-bottom: env(safe-area-inset-bottom); -webkit-tap-highlight-color: transparent; overscroll-behavior-y: none; }
+html[data-app] body::before { content: ""; position: fixed; inset: 0 0 auto 0; height: env(safe-area-inset-top); background: #fff; z-index: 9999; }
+html[data-app] .fixed.top-0 { top: env(safe-area-inset-top); }
+html[data-app] footer { display: none; }
+html.kb-open[data-app] .fixed.bottom-0 { display: none; }

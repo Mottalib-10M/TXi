@@ -3564,5 +3564,22 @@
     "nightRate": "Night rate",
     "pricePerPerson": "/pp",
     "joinRide": "Join this ride"
+  },
+  "deleteAccount": {
+    "title": "Delete my account",
+    "body": "Your account and your information will be permanently erased. Bookings already made by your clients stay in their history, no longer linked to you. This cannot be undone.",
+    "confirm": "I understand my account will be permanently deleted.",
+    "button": "Permanently delete my account"
+  },
+  "appHome": {
+    "title": "Your fixed-price taxi",
+    "subtitle": "Licensed taxi drivers, price known before you leave, everywhere in France.",
+    "menu": "App menu",
+    "bookings": "My bookings",
+    "bookingsDesc": "Find and follow your rides",
+    "pro": "Driver or organisation area",
+    "proDesc": "Sign in to manage your rides",
+    "becomeDriver": "Are you a taxi driver? Join Taxineo",
+    "mySpace": "My area"
   }
 }

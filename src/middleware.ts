@@ -39,6 +39,12 @@ export async function middleware(req: NextRequest) {
     pathname
   );
 
+  // --- App iPhone / Android : l'accueil du site devient l'accueil de l'app ---
+  if (pathnameWithoutLocale === "/" && (req.headers.get("user-agent") ?? "").includes("TaxineoApp")) {
+    const locale = getLocale(pathname);
+    return NextResponse.redirect(new URL(`${locale === routing.defaultLocale ? "" : `/${locale}`}/app`, req.nextUrl.origin));
+  }
+
   // --- Admin route protection ---
   const isAdminRoute = pathnameWithoutLocale.startsWith("/admin");
   const isAdminLogin = pathnameWithoutLocale === "/admin/login";

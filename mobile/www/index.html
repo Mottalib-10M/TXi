@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Taxineo</title>
+<style>
+  :root { color-scheme: light; }
+  html, body { margin: 0; height: 100%; background: #fff; color: #15171c; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+  main { min-height: 100%; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; padding: calc(24px + env(safe-area-inset-top)) 28px calc(24px + env(safe-area-inset-bottom)); text-align: center; }
+  img { width: 72px; height: 72px; border-radius: 18px; }
+  h1 { margin: 8px 0 0; font-size: 22px; letter-spacing: -0.02em; }
+  p { margin: 0; max-width: 300px; font-size: 15px; line-height: 1.5; color: #5c6270; }
+  button { margin-top: 10px; border: 0; border-radius: 999px; background: #15171c; color: #fff; font: inherit; font-weight: 600; font-size: 16px; padding: 14px 28px; }
+</style>
+</head>
+<body>
+<main>
+  <img src="icon.png" alt="">
+  <h1 id="t">No connection</h1>
+  <p id="b">Check your internet connection, then try again.</p>
+  <button id="r" type="button">Try again</button>
+</main>
+<script>
+  var T = {
+    fr: ["Pas de connexion", "Vérifiez votre connexion internet, puis réessayez.", "Réessayer"],
+    es: ["Sin conexión", "Compruebe su conexión a internet y vuelva a intentarlo.", "Reintentar"],
+    ru: ["Нет соединения", "Проверьте подключение к интернету и попробуйте снова.", "Повторить"],
+    ar: ["لا يوجد اتصال", "تحقّق من اتصالك بالإنترنت ثم أعد المحاولة.", "إعادة المحاولة"]
+  };
+  var l = (navigator.language || "en").slice(0, 2);
+  if (T[l]) {
+    document.documentElement.lang = l;
+    if (l === "ar") document.documentElement.dir = "rtl";
+    document.getElementById("t").textContent = T[l][0];
+    document.getElementById("b").textContent = T[l][1];
+    document.getElementById("r").textContent = T[l][2];
+  }
+  function retry() { location.href = "https://www.taxineo.fr/"; }
+  document.getElementById("r").addEventListener("click", retry);
+  window.addEventListener("online", retry);
+</script>
+</body>
+</html>

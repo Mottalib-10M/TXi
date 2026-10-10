@@ -7,6 +7,7 @@ import { ProfileForm } from "@/components/driver/ProfileForm";
 import { QRCodeButton } from "@/components/dashboard/QRCodeButton";
 import type { Vehicle } from "@/types/vehicle";
 import { getTranslations } from "next-intl/server";
+import { DeleteAccount } from "@/components/dashboard/DeleteAccount";
 
 export default async function ProfilPage() {
   const session = await auth();
@@ -119,6 +120,7 @@ export default async function ProfilPage() {
           </div>
         </Link>
       </div>
+      <DeleteAccount />
     </div>
   );
 }
