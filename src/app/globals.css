@@ -122,6 +122,8 @@ html[data-app] body::before { content: ""; position: fixed; inset: 0 0 auto 0; h
 html[data-app] .fixed.top-0 { top: env(safe-area-inset-top); }
 html[data-app] .fixed.top-0.h-full { height: calc(100% - env(safe-area-inset-top)); padding-bottom: env(safe-area-inset-bottom); }
 html[data-app] footer { display: none; }
+/* iOS zoome sur tout champ dont le texte fait moins de 16 px, et le pincement étant bloqué on ne peut plus dézoomer : 16 px partout dans l'app. */
+html[data-app] input, html[data-app] select, html[data-app] textarea { font-size: 16px !important; }
 html[data-app] .site-menu-toggle { display: none; }
 html.kb-open[data-app] .fixed.bottom-0 { display: none; }
 /* Une page courte ne se fait plus défiler dans le vide : « plein écran » = l'espace entre l'heure et la barre du bas. */
