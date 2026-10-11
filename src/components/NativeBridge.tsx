@@ -63,10 +63,7 @@ function setupPush(platform: string): Promise<{ push: Push } | null> {
       if (typeof path === "string" && path.startsWith("/")) location.href = path;
     });
     return { push: PushNotifications };
-  })().catch((e: unknown) => {
-    void fetch("/api/push/register", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ trace: `setup error ${e instanceof Error ? e.message : String(e)}` }) }).catch(() => undefined);
-    return null;
-  });
+  })().catch(() => null);
   return pushSetup;
 }
 
@@ -87,26 +84,19 @@ export function NativeBridge() {
   useEffect(() => {
     const cap = (window as CapWindow).Capacitor;
     if (!cap?.isNativePlatform?.()) return;
-    // Diagnostic provisoire : chaque étape est consignée dans les journaux du serveur.
-    const trace = (step: string) => void fetch("/api/push/register", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ trace: `${pathname} ${step}` }) }).catch(() => undefined);
     void (async () => {
-      trace(`start ${cap.getPlatform?.()}`);
       const setup = await setupPush(cap.getPlatform?.() ?? "");
-      trace(`setup ${setup ? "ok" : "null"}`);
       if (!setup) return;
       const { push } = setup;
       const path = pathname.replace(/^\/en(?=\/|$)/, "");
       const confirmation = path.startsWith("/confirmation");
       const asks = confirmation || /^\/(dashboard|org)(\/|$)/.test(path);
       let status = await push.checkPermissions();
-      trace(`check ${status.receive} asks=${asks}`);
       if (asks && (status.receive === "prompt" || status.receive === "prompt-with-rationale")) status = await push.requestPermissions();
-      trace(`after ${status.receive}`);
       if (status.receive !== "granted") return;
       if (confirmation) pendingRef = new URLSearchParams(location.search).get("ref") ?? "";
       await push.register();
-      trace("registered");
-    })().catch((e: unknown) => trace(`error ${e instanceof Error ? e.message : String(e)}`));
+    })().catch(() => undefined);
   }, [pathname]);
 
   useEffect(() => {

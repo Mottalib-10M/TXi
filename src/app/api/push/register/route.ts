@@ -9,12 +9,7 @@ import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
 
 export async function POST(request: Request) {
-  const body = (await request.json().catch(() => null)) as { token?: unknown; platform?: unknown; locale?: unknown; bookingRef?: unknown; trace?: unknown } | null;
-  // Diagnostic provisoire de l'inscription (NativeBridge).
-  if (typeof body?.trace === "string") {
-    console.log("[push-trace]", body.trace.slice(0, 300));
-    return NextResponse.json({ ok: true });
-  }
+  const body = (await request.json().catch(() => null)) as { token?: unknown; platform?: unknown; locale?: unknown; bookingRef?: unknown } | null;
   const token = typeof body?.token === "string" ? body.token.trim().slice(0, 400) : "";
   if (!/^[\w:.-]{20,400}$/.test(token)) return NextResponse.json({ ok: false }, { status: 400 });
   const platform = body?.platform === "android" ? "android" : "ios";
