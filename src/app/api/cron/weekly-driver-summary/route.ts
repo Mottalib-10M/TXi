@@ -16,10 +16,12 @@ export async function GET(request: NextRequest) {
     (request.headers.get("authorization") === `Bearer ${secret}` || request.nextUrl.searchParams.get("secret") === secret);
   if (!authorized) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
 
+  // Essai : ?driver=<id> n'envoie qu'à ce chauffeur, même désactivé.
+  const only = request.nextUrl.searchParams.get("driver");
   const since = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
   const withApp = await prisma.deviceToken.findMany({ where: { driverId: { not: null } }, select: { driverId: true }, distinct: ["driverId"] });
   const drivers = await prisma.driver.findMany({
-    where: { ...driverPool(), isActive: true, id: { in: withApp.map((d) => d.driverId!) } },
+    where: only ? { id: only } : { ...driverPool(), isActive: true, id: { in: withApp.map((d) => d.driverId!) } },
     select: { id: true },
   });
 
