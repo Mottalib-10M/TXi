@@ -57,7 +57,7 @@ export default async function AppHome() {
             </Link>
           )}
           {space ? null : (
-            <Link href="/devenir-chauffeur" className="text-center text-sm font-medium text-neutral-600 underline underline-offset-4">
+            <Link href="/inscription?type=driver" className="text-center text-sm font-medium text-neutral-600 underline underline-offset-4">
               {t("becomeDriver")}
             </Link>
           )}

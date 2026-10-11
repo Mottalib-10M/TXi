@@ -83,7 +83,7 @@ export function AppTabBar() {
     { href: "/tarifs", label: t("prices"), icon: "solar:tag-price-linear" },
     { href: "/comment-ca-marche", label: t("howItWorks"), icon: "solar:question-circle-linear" },
     { href: "/contact", label: t("help"), icon: "solar:chat-round-line-linear" },
-    { href: "/devenir-chauffeur", label: t("becomeDriver"), icon: "solar:wheel-linear" },
+    { href: "/inscription?type=driver", label: t("becomeDriver"), icon: "solar:wheel-linear" },
     { href: "/connexion", label: t("pro"), icon: "solar:user-circle-linear" },
   ];
 
