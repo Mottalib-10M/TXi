@@ -23,7 +23,8 @@ const BUNDLE_ID = process.env.APNS_BUNDLE_ID || "com.taxineo.app";
 type Locale = "fr" | "en";
 type Text = { title: string; body: string };
 
-// {from} → {to} : le trajet ; {date} : le jour et l'heure ; {driver} : le chauffeur.
+// {from} → {to} : le trajet ; {date} : le jour et l'heure ; {driver} : le chauffeur ;
+// {rides} et {amount} : le bilan de la semaine du chauffeur (déjà mis en forme).
 const TEXTS: Record<Locale, Record<string, Text>> = {
   fr: {
     newRide: { title: "Nouvelle demande de course", body: "{from} → {to}, {date}. Ouvrez l'app pour l'accepter." },
@@ -39,6 +40,8 @@ const TEXTS: Record<Locale, Record<string, Text>> = {
     cancelledByDriver: { title: "Course annulée par le chauffeur", body: "{from} → {to}, {date}." },
     cancelled: { title: "Course annulée", body: "{from} → {to}, {date}." },
     noDriver: { title: "Aucun taxi disponible", body: "Personne n'a pu prendre {from} → {to}, {date}. Nous vous recontactons." },
+    weekly: { title: "Votre bilan de la semaine", body: "{rides} pour {amount}. Ouvrez l'app pour voir le détail de vos courses." },
+    weeklyEmpty: { title: "Votre bilan de la semaine", body: "Vos courses, vos demandes et votre profil en un coup d'œil : ouvrez votre tableau de bord." },
   },
   en: {
     newRide: { title: "New ride request", body: "{from} → {to}, {date}. Open the app to accept it." },
@@ -54,11 +57,13 @@ const TEXTS: Record<Locale, Record<string, Text>> = {
     cancelledByDriver: { title: "Ride cancelled by the driver", body: "{from} → {to}, {date}." },
     cancelled: { title: "Ride cancelled", body: "{from} → {to}, {date}." },
     noDriver: { title: "No taxi available", body: "Nobody could take {from} → {to}, {date}. We will get back to you." },
+    weekly: { title: "Your week in review", body: "{rides} for {amount}. Open the app to see all your rides." },
+    weeklyEmpty: { title: "Your week in review", body: "Your rides, requests and profile at a glance: open your dashboard." },
   },
 };
 
 export type PushKind = keyof (typeof TEXTS)["fr"];
-export type PushVars = { from?: string; to?: string; date?: Date | string; driver?: string };
+export type PushVars = { from?: string; to?: string; date?: Date | string; driver?: string; rides?: string; amount?: string };
 type Message = { title: string; body: string; path: string };
 type Device = { id: string; token: string; platform: string; locale: string };
 
@@ -74,7 +79,7 @@ function render(kind: PushKind, locale: string, vars: PushVars): Text {
     vars.date instanceof Date
       ? format(vars.date, l === "en" ? "MMM d 'at' h:mm a" : "d MMM 'à' HH:mm", { locale: l === "en" ? enUS : fr })
       : vars.date ?? "";
-  const values: Record<string, string> = { from: place(vars.from), to: place(vars.to), date, driver: vars.driver ?? "" };
+  const values: Record<string, string> = { from: place(vars.from), to: place(vars.to), date, driver: vars.driver ?? "", rides: vars.rides ?? "", amount: vars.amount ?? "" };
   const fill = (s: string) => s.replace(/\{(\w+)\}/g, (_, k: string) => values[k] ?? "");
   const text = TEXTS[l][kind];
   return { title: fill(text.title), body: fill(text.body) };
@@ -99,6 +104,25 @@ export async function notifyDriver(driverId: string | null | undefined, kind: Pu
   if (!driverId) return;
   try {
     await deliver(await prisma.deviceToken.findMany({ where: { driverId }, select: SELECT }), kind, vars, path);
+  } catch (error) {
+    console.error("[push]", error);
+  }
+}
+
+/**
+ * Bilan de la semaine d'un chauffeur (tâche du dimanche soir) : nombre de
+ * courses et montant, mis en forme dans la langue de chaque téléphone.
+ */
+export async function notifyDriverWeekly(driverId: string, rides: number, amount: number) {
+  try {
+    const devices = await prisma.deviceToken.findMany({ where: { driverId }, select: SELECT });
+    for (const locale of ["fr", "en"] as const) {
+      const group = devices.filter((d) => (d.locale === "en" ? "en" : "fr") === locale);
+      if (!group.length) continue;
+      const euros = new Intl.NumberFormat(locale === "en" ? "en-GB" : "fr-FR", { style: "currency", currency: "EUR", maximumFractionDigits: 0 }).format(amount);
+      const label = locale === "en" ? `${rides} ride${rides > 1 ? "s" : ""}` : `${rides} course${rides > 1 ? "s" : ""}`;
+      await deliver(group, rides > 0 ? "weekly" : "weeklyEmpty", { rides: label, amount: euros }, "/dashboard");
+    }
   } catch (error) {
     console.error("[push]", error);
   }
