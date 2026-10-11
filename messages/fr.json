@@ -28,7 +28,8 @@
     "all": "Toutes",
     "passenger": "passager",
     "passengers": "passagers",
-    "optional": "facultatif"
+    "optional": "facultatif",
+    "directions": "Itinéraire"
   },
   "nav": {
     "order": "Commander",
@@ -3583,10 +3584,23 @@
     "mySpace": "Mon espace"
   },
   "appTabs": {
-    "menu": "Navigation de l'app",
+    "nav": "Navigation de l'app",
+    "menu": "Menu",
     "book": "Réserver",
     "rides": "Courses",
-    "space": "Mon espace",
-    "help": "Aide"
+    "myRides": "Mes réservations",
+    "prices": "Tarifs",
+    "pro": "Espace pro",
+    "dashboard": "Tableau de bord",
+    "received": "Courses",
+    "transmitted": "Transmises",
+    "profile": "Profil",
+    "order": "Commander",
+    "settings": "Réglages",
+    "howItWorks": "Comment ça marche",
+    "help": "Aide et contact",
+    "becomeDriver": "Devenir chauffeur",
+    "logout": "Déconnexion",
+    "close": "Fermer"
   }
 }

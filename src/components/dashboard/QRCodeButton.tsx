@@ -66,7 +66,8 @@ export function QRCodeButton({ slug, driverName, companyName, vehicleModel, vari
             className="fixed inset-0 bg-black/40 z-50"
             onClick={() => setOpen(false)}
           />
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+          {/* Toucher à côté de la carte ferme la fenêtre (ce calque couvre le fond sombre). */}
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4" onClick={(e) => e.target === e.currentTarget && setOpen(false)}>
             <div className="bg-white rounded-2xl shadow-xl max-w-sm w-full p-6 relative">
               <button
                 onClick={() => setOpen(false)}

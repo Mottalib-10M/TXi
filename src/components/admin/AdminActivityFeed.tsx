@@ -259,7 +259,7 @@ export function AdminActivityFeed({
                       )}
                       {e.departureName && e.arrivalName && (
                         <a
-                          href={`https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(e.departureName)}&destination=${encodeURIComponent(e.arrivalName)}`}
+                          href={`https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(e.departureName)}&destination=${encodeURIComponent(e.arrivalName)}&travelmode=driving`}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="text-neutral-400 hover:text-blue-600 transition-colors"

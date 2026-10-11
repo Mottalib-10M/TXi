@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "@/i18n/navigation";
 import { Icon } from "@iconify/react";
+import { MapsLink } from "@/components/ui/MapsLink";
 import { format } from "date-fns";
 import { fr, enUS } from "date-fns/locale";
 import { useTranslations, useLocale } from "next-intl";
@@ -266,15 +267,7 @@ export function ReservationsTable({ bookings, driverName }: { bookings: Booking[
                 <span className="break-words min-w-0 flex-1">
                   {booking.departureName} → {booking.arrivalName}
                 </span>
-                <a
-                  href={`https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(booking.departureName)}&destination=${encodeURIComponent(booking.arrivalName)}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="shrink-0 w-6 h-6 flex items-center justify-center rounded-md text-neutral-400 hover:text-blue-600 hover:bg-blue-50 transition-colors"
-                  title="Google Maps"
-                >
-                  <Icon icon="solar:map-point-wave-linear" className="text-sm" />
-                </a>
+                <MapsLink origin={booking.departureName} destination={booking.arrivalName} />
               </div>
 
               {/* Metadata */}

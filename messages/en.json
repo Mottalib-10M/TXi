@@ -28,7 +28,8 @@
     "all": "All",
     "passenger": "passenger",
     "passengers": "passengers",
-    "optional": "optional"
+    "optional": "optional",
+    "directions": "Directions"
   },
   "nav": {
     "order": "Book now",
@@ -3583,10 +3584,23 @@
     "mySpace": "My area"
   },
   "appTabs": {
-    "menu": "App navigation",
+    "nav": "App navigation",
+    "menu": "Menu",
     "book": "Book",
     "rides": "Rides",
-    "space": "My space",
-    "help": "Help"
+    "myRides": "My bookings",
+    "prices": "Prices",
+    "pro": "Pro area",
+    "dashboard": "Dashboard",
+    "received": "Rides",
+    "transmitted": "Shared",
+    "profile": "Profile",
+    "order": "Order",
+    "settings": "Settings",
+    "howItWorks": "How it works",
+    "help": "Help & contact",
+    "becomeDriver": "Become a driver",
+    "logout": "Log out",
+    "close": "Close"
   }
 }

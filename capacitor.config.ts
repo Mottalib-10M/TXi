@@ -35,7 +35,7 @@ const config: CapacitorConfig = {
       // au pire, il se masque seul au bout de 5 secondes.
       launchAutoHide: true,
       launchShowDuration: 5000,
-      backgroundColor: "#ffffff",
+      backgroundColor: "#0a0a0a",
       showSpinner: false,
       androidScaleType: "CENTER_INSIDE",
     },

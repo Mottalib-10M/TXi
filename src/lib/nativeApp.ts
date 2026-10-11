@@ -9,5 +9,9 @@ export function isAppAgent(userAgent: string | null | undefined): boolean {
   return Boolean(userAgent && userAgent.includes(APP_AGENT));
 }
 
-/** Script de <head> : marque <html data-app> dès le premier rendu dans l'app (window.Capacitor est injecté avant la page). */
-export const APP_SCRIPT = `(function(){try{var c=window.Capacitor;if(c&&c.isNativePlatform&&c.isNativePlatform()){document.documentElement.setAttribute("data-app",c.getPlatform())}}catch(e){}})();`;
+/**
+ * Script de <head> : marque <html data-app> dès le premier rendu dans l'app (window.Capacitor est
+ * injecté avant la page), bloque le zoom automatique sur les champs de saisie (maximum-scale=1)
+ * et ne montre l'écran de chargement (AppSplash) qu'au premier affichage de la séance.
+ */
+export const APP_SCRIPT = `(function(){try{var c=window.Capacitor;if(c&&c.isNativePlatform&&c.isNativePlatform()){var h=document.documentElement;h.setAttribute("data-app",c.getPlatform());try{if(sessionStorage.getItem("txi-splash"))h.setAttribute("data-app-seen","");sessionStorage.setItem("txi-splash","1")}catch(e){}var z=function(){var m=document.querySelector('meta[name="viewport"]');if(m&&m.content.indexOf("maximum-scale")<0)m.content+=", maximum-scale=1, user-scalable=no"};z();document.addEventListener("DOMContentLoaded",z)}}catch(e){}})();`;

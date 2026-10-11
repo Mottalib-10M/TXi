@@ -286,7 +286,7 @@ export function SharedRoutesManager({
                         <Icon icon="solar:arrow-right-linear" className="text-neutral-300" />
                         {route.destinationName}
                         <a
-                          href={`https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(route.departureName)}&destination=${encodeURIComponent(route.destinationName)}`}
+                          href={`https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(route.departureName)}&destination=${encodeURIComponent(route.destinationName)}&travelmode=driving`}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="shrink-0 w-6 h-6 flex items-center justify-center rounded-md text-neutral-400 hover:text-blue-600 hover:bg-blue-50 transition-colors"

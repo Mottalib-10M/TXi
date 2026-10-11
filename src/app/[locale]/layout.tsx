@@ -9,6 +9,8 @@ import { routing } from "@/i18n/routing";
 import type { Viewport } from "next";
 import { NativeBridge } from "@/components/NativeBridge";
 import { AppTabBar } from "@/components/AppTabBar";
+import { AppProgress } from "@/components/AppProgress";
+import { AppSplash } from "@/components/AppSplash";
 import { APP_SCRIPT } from "@/lib/nativeApp";
 
 const inter = Inter({ subsets: ["latin"], display: "swap" });
@@ -150,6 +152,8 @@ export default async function LocaleLayout({
         </a>
         <NextIntlClientProvider messages={messages}>
           <Providers>
+            <AppSplash />
+            <AppProgress />
             <NativeBridge />
             <ImpersonationBanner />
             <div id="main-content" />

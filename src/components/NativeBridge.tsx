@@ -4,7 +4,8 @@
 // rien et ne charge rien : les modules natifs ne sont importés que si la page
 // tourne dans l'app (window.Capacitor, injecté par la coque avant la page).
 // Dans l'app, il :
-// - cache l'écran de démarrage une fois la page affichée ;
+// - cache l'écran de démarrage une fois la page affichée, puis l'écran de
+//   chargement animé (AppSplash) ;
 // - branche la feuille de partage native sous navigator.share (image comprise),
 //   et sous les liens « Enregistrer l'image » (le téléchargement n'existe pas
 //   dans une vue web) ;
@@ -33,6 +34,9 @@ export function NativeBridge() {
     const cap = (window as CapWindow).Capacitor;
     if (!cap?.isNativePlatform?.()) return;
     document.documentElement.setAttribute("data-app", cap.getPlatform?.() ?? "native");
+    // Pas de zoom automatique sur les champs de saisie : l'app reste à l'échelle.
+    const viewport = document.querySelector('meta[name="viewport"]') as HTMLMetaElement | null;
+    if (viewport && !viewport.content.includes("maximum-scale")) viewport.content += ", maximum-scale=1, user-scalable=no";
     const cleanups: (() => void)[] = [];
     let alive = true;
 
@@ -46,6 +50,8 @@ export function NativeBridge() {
       ]);
       if (!alive) return;
       void SplashScreen.hide({ fadeOutDuration: 200 });
+      // L'écran de chargement animé (AppSplash) reste au moins 1,4 s pour que l'animation se voie.
+      window.setTimeout(() => document.documentElement.classList.add("app-ready"), Math.max(0, 1400 - performance.now()));
 
       // Partage natif : les fichiers passent par le cache de l'app.
       const shareFiles = async (data: ShareData) => {

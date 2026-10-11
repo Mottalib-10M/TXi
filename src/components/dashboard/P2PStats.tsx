@@ -155,7 +155,7 @@ export function P2PStats() {
                           <p className="text-neutral-700 truncate flex items-center gap-1">
                             <span className="truncate">{b.departureName} → {b.arrivalName}</span>
                             <a
-                              href={`https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(b.departureName)}&destination=${encodeURIComponent(b.arrivalName)}`}
+                              href={`https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(b.departureName)}&destination=${encodeURIComponent(b.arrivalName)}&travelmode=driving`}
                               target="_blank"
                               rel="noopener noreferrer"
                               className="shrink-0 text-neutral-400 hover:text-blue-600 transition-colors"

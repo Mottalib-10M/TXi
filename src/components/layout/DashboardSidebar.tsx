@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { signOut } from "next-auth/react";
 import { Icon } from "@iconify/react";
 import { useTranslations } from "next-intl";
@@ -14,6 +14,17 @@ export function DashboardSidebar({ userName }: { userName: string }) {
   const tp = useTranslations("dashboard.profileSections");
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
+
+  // Dans l'app, le bouton Menu de la barre du bas (AppTabBar) ouvre ce menu par la gauche.
+  useEffect(() => {
+    const onMenu = (e: Event) => {
+      e.preventDefault();
+      setMobileOpen((open) => !open);
+    };
+    window.addEventListener("app:menu", onMenu);
+    return () => window.removeEventListener("app:menu", onMenu);
+  }, []);
+  useEffect(() => setMobileOpen(false), [pathname]);
 
   const navItems = [
     { href: "/dashboard", label: t("dashboard"), icon: "solar:chart-square-linear" },
@@ -45,7 +56,7 @@ export function DashboardSidebar({ userName }: { userName: string }) {
         </Link>
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="p-2 hover:bg-neutral-100 rounded-lg"
+          className="site-menu-toggle p-2 hover:bg-neutral-100 rounded-lg"
         >
           <Icon icon={mobileOpen ? "solar:close-circle-linear" : "solar:hamburger-menu-linear"} className="text-2xl" />
         </button>
