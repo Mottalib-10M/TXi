@@ -29,11 +29,13 @@ const ANDROID_PUSH = false;
 const DEVICE_KEY = "txi-device";
 
 type Push = typeof import("@capacitor/push-notifications").PushNotifications;
-let pushSetup: Promise<Push | null> | null = null;
+// Le module Capacitor est un Proxy qui répond à tout, même à « then » : renvoyé tel quel par une
+// fonction async, il serait pris pour une promesse jamais tenue. On le range donc dans un objet.
+let pushSetup: Promise<{ push: Push } | null> | null = null;
 let pendingRef = "";
 
 /** Écouteurs posés une seule fois : jeton reçu → serveur ; notification touchée → sa page. */
-function setupPush(platform: string): Promise<Push | null> {
+function setupPush(platform: string): Promise<{ push: Push } | null> {
   if (pushSetup) return pushSetup;
   pushSetup = (async () => {
     if (platform !== "ios" && !(platform === "android" && ANDROID_PUSH)) return null;
@@ -60,7 +62,7 @@ function setupPush(platform: string): Promise<Push | null> {
       const path = (notification.data as { path?: unknown } | undefined)?.path;
       if (typeof path === "string" && path.startsWith("/")) location.href = path;
     });
-    return PushNotifications;
+    return { push: PushNotifications };
   })().catch((e: unknown) => {
     void fetch("/api/push/register", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ trace: `setup error ${e instanceof Error ? e.message : String(e)}` }) }).catch(() => undefined);
     return null;
@@ -89,9 +91,10 @@ export function NativeBridge() {
     const trace = (step: string) => void fetch("/api/push/register", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ trace: `${pathname} ${step}` }) }).catch(() => undefined);
     void (async () => {
       trace(`start ${cap.getPlatform?.()}`);
-      const push = await setupPush(cap.getPlatform?.() ?? "");
-      trace(`setup ${push ? "ok" : "null"}`);
-      if (!push) return;
+      const setup = await setupPush(cap.getPlatform?.() ?? "");
+      trace(`setup ${setup ? "ok" : "null"}`);
+      if (!setup) return;
+      const { push } = setup;
       const path = pathname.replace(/^\/en(?=\/|$)/, "");
       const confirmation = path.startsWith("/confirmation");
       const asks = confirmation || /^\/(dashboard|org)(\/|$)/.test(path);
