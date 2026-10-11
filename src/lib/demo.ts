@@ -1,7 +1,9 @@
 // Comptes de démonstration des stores (vérification Apple et Google) : adresses
 // en @demo.taxineo.fr, créées par scripts/demo-accounts.ts. Un chauffeur de démo
 // ne reçoit jamais de vraie course et n'apparaît sur aucune carte ; une course
-// commandée par une organisation de démo ne va qu'aux chauffeurs de démo.
+// dont l'adresse du client est de démo (organisation de démo, ou passager qui
+// saisit review@demo.taxineo.fr) ne va qu'aux chauffeurs de démo et n'est
+// jamais relancée (src/lib/escalation.ts).
 
 export const DEMO_DOMAIN = "@demo.taxineo.fr";
 

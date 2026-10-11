@@ -16,7 +16,7 @@ import { createNotification } from "@/lib/notifications";
 import { notifyDriver } from "@/lib/push";
 import { format } from "date-fns";
 import { fr, enUS } from "date-fns/locale";
-import { driverPool } from "@/lib/demo";
+import { driverPool, isDemoEmail } from "@/lib/demo";
 
 const bookingSchema = z.object({
   clientName: z.string().min(2),
@@ -102,7 +102,7 @@ export async function POST(request: Request) {
     if (data.source === "LANDING" && !driverId) {
       const drivers = await prisma.driver.findMany({
         where: {
-          ...driverPool(),
+          ...driverPool(isDemoEmail(data.clientEmail)),
           isActive: true,
           zoneLat: { not: null },
           zoneLng: { not: null },

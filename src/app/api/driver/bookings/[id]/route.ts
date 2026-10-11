@@ -15,7 +15,7 @@ import { sendSms } from "@/lib/sms";
 import { createNotification } from "@/lib/notifications";
 import { format } from "date-fns";
 import { fr } from "date-fns/locale";
-import { driverPool } from "@/lib/demo";
+import { driverPool, isDemoEmail } from "@/lib/demo";
 
 export async function PATCH(
   request: Request,
@@ -321,7 +321,7 @@ export async function PATCH(
         // Find up to 3 nearby drivers excluding original
         const allDrivers = await prisma.driver.findMany({
           where: {
-            ...driverPool(),
+            ...driverPool(isDemoEmail(booking.clientEmail)),
             isActive: true,
             zoneLat: { not: null },
             zoneLng: { not: null },
