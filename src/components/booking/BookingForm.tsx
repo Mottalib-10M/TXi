@@ -225,7 +225,14 @@ export function BookingForm() {
   }
 
   return (
-    <div className="bg-white border border-neutral-200 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.06)] p-4 md:p-6 overflow-hidden max-w-full">
+    // RECETTE §5 (2026-10-11) : le simulateur est un <form> ; les tarifs s'affichent
+    // à la place des champs, dans la même carte : c'est le bloc du résultat.
+    <form
+      noValidate
+      onSubmit={(e) => { e.preventDefault(); if (step === "search") searchTaxis(); }}
+      className="bg-white border border-neutral-200 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.06)] p-4 md:p-6 overflow-hidden max-w-full"
+    >
+      <div data-resultat aria-live="polite">
       {step === "search" && (
         <>
           <h2 className="text-lg font-semibold tracking-tight mb-5">
@@ -340,7 +347,7 @@ export function BookingForm() {
           )}
 
           <button
-            onClick={searchTaxis}
+            type="submit"
             disabled={!departure || !arrival || !departureLat || !arrivalLat || loading}
             className="w-full mt-6 bg-neutral-950 text-white rounded-xl py-4 text-sm font-medium hover:bg-neutral-800 transition-colors focus:ring-4 focus:ring-neutral-200 btn-lift disabled:opacity-50 disabled:cursor-not-allowed"
           >
@@ -355,7 +362,7 @@ export function BookingForm() {
             <h2 className="text-lg font-semibold tracking-tight">
               {t("availableTaxis")}
             </h2>
-            <button
+            <button type="button"
               onClick={() => { setStep("search"); setContactSent(false); }}
               className="text-xs text-neutral-500 hover:text-neutral-900 transition-colors"
             >
@@ -432,7 +439,7 @@ export function BookingForm() {
                     )}
                   </div>
                   <TurnstileWidget onToken={setTurnstileToken} />
-                  <button
+                  <button type="button"
                     onClick={handleContactRequest}
                     disabled={!clientName || !clientEmail || !clientPhone || !isValidEmail(clientEmail) || !!phoneError(clientPhone) || contactSubmitting}
                     className="w-full mt-4 bg-neutral-950 text-white rounded-xl py-3.5 text-sm font-medium hover:bg-neutral-800 transition-colors btn-lift disabled:opacity-50 disabled:cursor-not-allowed"
@@ -528,7 +535,7 @@ export function BookingForm() {
             <h2 className="text-lg font-semibold tracking-tight">
               {isLoggedIn ? t("confirmation") : t("yourDetails")}
             </h2>
-            <button
+            <button type="button"
               onClick={() => setStep("results")}
               className="text-xs text-neutral-500 hover:text-neutral-900 transition-colors"
             >
@@ -636,7 +643,7 @@ export function BookingForm() {
           />
           <TurnstileWidget onToken={setTurnstileToken} />
 
-          <button
+          <button type="button"
             onClick={handleBooking}
             disabled={!clientName || !clientEmail || !isValidEmail(clientEmail) || !!phoneError(clientPhone) || submitting}
             className="w-full mt-6 bg-neutral-950 text-white rounded-xl py-4 text-sm font-medium hover:bg-neutral-800 transition-colors btn-lift disabled:opacity-50 disabled:cursor-not-allowed"
@@ -646,5 +653,6 @@ export function BookingForm() {
         </>
       )}
     </div>
+    </form>
   );
 }

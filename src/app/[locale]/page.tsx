@@ -129,29 +129,32 @@ export default async function HomePage() {
       <ScrollAnimation />
 
       {/* Main Hero Section */}
-      <main className="flex-grow pt-24 pb-12 md:pt-32 md:pb-24" id="reserver">
+      <main className="flex-grow pt-24 pb-12 md:pt-28 md:pb-24" id="reserver">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Left: Booking Form */}
             <div className="md:max-w-xl fade-up">
-              <div className="inline-flex items-center gap-2 bg-neutral-100 rounded-full px-4 py-1.5 mb-6">
-                <span className="w-2 h-2 bg-green-500 rounded-full" />
-                <span className="text-xs font-medium text-neutral-600">
-                  {t("badge")}
-                </span>
-              </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.1] mb-4">
+              <h1 className="text-4xl md:text-5xl font-semibold tracking-tight leading-[1.1] mb-4">
                 {t("heroTitle1")}
                 <br />
                 <span className="gradient-text">{t("heroTitle2")}</span>
               </h1>
-          {/* §8.4 : la date de mise à jour se lit juste sous le titre. */}
-          <LigneMaj />
-              <p className="text-base md:text-lg text-neutral-500 mb-8 max-w-md font-light leading-relaxed">
+              <p className="text-base md:text-lg text-neutral-500 mb-6 max-w-md font-light leading-relaxed">
                 {t("heroSubtitle")}
               </p>
 
               <BookingForm />
+              {/* RECETTE §5 (2026-10-11) : le simulateur se voit sans défiler ;
+                  la pastille « disponible » et la date (§8.4) passent juste en dessous. */}
+              <div className="mt-5 flex flex-wrap items-center gap-x-4 gap-y-2">
+                <div className="inline-flex items-center gap-2 bg-neutral-100 rounded-full px-4 py-1.5">
+                  <span className="w-2 h-2 bg-green-500 rounded-full" />
+                  <span className="text-xs font-medium text-neutral-600">
+                    {t("badge")}
+                  </span>
+                </div>
+                <LigneMaj position="bas" />
+              </div>
             </div>
 
             {/* Right: Visual/Map Representation */}

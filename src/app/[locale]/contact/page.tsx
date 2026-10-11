@@ -114,18 +114,112 @@ export default function ContactPage() {
       {/* Header */}
       <main className="flex-grow pt-28 pb-20">
         <div className="max-w-4xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <p className="text-sm font-medium text-neutral-500 mb-2 uppercase tracking-wider">
-              {t("subtitle")}
-            </p>
-            <h1 className="text-3xl md:text-5xl font-semibold tracking-tight mb-4">
-              {t("title")}
-            </h1>
-          {/* §8.4 : la date de mise à jour se lit juste sous le titre. */}
-          <LigneMaj />
-            <p className="text-neutral-500 font-light max-w-lg mx-auto">
-              {t("intro")}
-            </p>
+          {/* RECETTE §5 (2026-10-11) : titre et réponse courte, puis le formulaire,
+              à côté sur ordinateur ; les sujets passent juste en dessous. */}
+          <div className="grid md:grid-cols-2 gap-10 md:gap-12 items-start mb-16">
+          <div className="text-center md:text-left">
+              <p className="text-sm font-medium text-neutral-500 mb-2 uppercase tracking-wider">
+                {t("subtitle")}
+              </p>
+              <h1 className="text-3xl md:text-5xl font-semibold tracking-tight mb-4">
+                {t("title")}
+              </h1>
+            {/* §8.4 : la date de mise à jour se lit juste sous le titre. */}
+            <LigneMaj />
+              <p className="text-neutral-500 font-light max-w-lg mx-auto md:mx-0">
+                {t("intro")}
+              </p>
+            </div>
+
+          {/* Contact Form */}
+            <div id="formulaire" data-resultat aria-live="polite" className="scroll-mt-24">
+              {success ? (
+                <div className="max-w-xl mx-auto text-center py-8">
+                  <div className="w-16 h-16 bg-green-50 border border-green-200 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <Icon icon="solar:check-circle-linear" className="text-green-600 text-3xl" />
+                  </div>
+                  <h3 className="text-2xl font-semibold tracking-tight mb-2">{t("messageSent")}</h3>
+                  <p className="text-sm text-neutral-500 font-light">
+                    {t("messageSentDesc")}
+                  </p>
+                </div>
+              ) : (
+                <div className="max-w-xl mx-auto">
+                  <div className="text-center md:text-left mb-6">
+                    <h2 className="text-2xl font-semibold tracking-tight">{t("formTitle")}</h2>
+                    <p className="text-sm text-neutral-500 font-light mt-2">
+                      {t("formSubtitle")}
+                    </p>
+                  </div>
+                  <form onSubmit={handleSubmit} className="space-y-4">
+                    <select
+                      value={form.sujet}
+                      onChange={(e) => setForm({ ...form, sujet: e.target.value })}
+                      className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all text-neutral-500"
+                    >
+                      <option value="">{t("selectSubject")}</option>
+                      {sujets.map((s) => (
+                        <option key={s.value} value={s.value}>
+                          {s.label}
+                        </option>
+                      ))}
+                    </select>
+                    <input
+                      value={form.name}
+                      onChange={(e) => setForm({ ...form, name: e.target.value })}
+                      placeholder={t("yourName")}
+                      required
+                      className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all"
+                    />
+                    <div className="grid grid-cols-2 gap-4">
+                      <div>
+                        <input
+                          type="email"
+                          value={form.email}
+                          onChange={(e) => setForm({ ...form, email: e.target.value })}
+                          placeholder="Email"
+                          required
+                          className={`w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all ${emailError(form.email) ? "ring-2 ring-red-300 bg-red-50/50" : ""}`}
+                        />
+                        {emailError(form.email) && (
+                          <p className="text-xs text-red-500 mt-1">{emailError(form.email)}</p>
+                        )}
+                      </div>
+                      <div>
+                        <input
+                          type="tel"
+                          value={form.phone}
+                          onChange={(e) => setForm({ ...form, phone: e.target.value })}
+                          placeholder={t("phoneOptional")}
+                          className={`w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all ${phoneError(form.phone) ? "ring-2 ring-red-300 bg-red-50/50" : ""}`}
+                        />
+                        {phoneError(form.phone) && (
+                          <p className="text-xs text-red-500 mt-1">{phoneError(form.phone)}</p>
+                        )}
+                      </div>
+                    </div>
+                    <textarea
+                      value={form.message}
+                      onChange={(e) => setForm({ ...form, message: e.target.value })}
+                      placeholder={t("yourMessage")}
+                      required
+                      rows={4}
+                      className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all resize-none"
+                    />
+                    <input type="text" name="company_url" value={hp} onChange={(e) => setHp(e.target.value)} tabIndex={-1} autoComplete="off" aria-hidden="true" className="absolute opacity-0 h-0 w-0 overflow-hidden pointer-events-none" />
+                    <TurnstileWidget onToken={setTurnstileToken} />
+                    <button
+                      type="submit"
+                      disabled={submitting || !form.name || !form.email || !isValidEmail(form.email) || !!phoneError(form.phone) || !form.message}
+                      className="w-full bg-neutral-950 text-white rounded-xl py-4 text-sm font-medium hover:bg-neutral-800 transition-colors btn-lift disabled:opacity-50 disabled:cursor-not-allowed"
+                    >
+                      {submitting ? t("sending") : t("sendMessage")}
+                    </button>
+                  </form>
+                </div>
+              )}
+            </div>
+
           </div>
 
           {/* Topic Cards */}
@@ -148,95 +242,6 @@ export default function ContactPage() {
                 </p>
               </button>
             ))}
-          </div>
-
-          {/* Contact Form */}
-          <div id="formulaire" className="scroll-mt-24 mb-20">
-            {success ? (
-              <div className="max-w-xl mx-auto text-center py-16">
-                <div className="w-16 h-16 bg-green-50 border border-green-200 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Icon icon="solar:check-circle-linear" className="text-green-600 text-3xl" />
-                </div>
-                <h3 className="text-2xl font-semibold tracking-tight mb-2">{t("messageSent")}</h3>
-                <p className="text-sm text-neutral-500 font-light">
-                  {t("messageSentDesc")}
-                </p>
-              </div>
-            ) : (
-              <div className="max-w-xl mx-auto">
-                <div className="text-center mb-10">
-                  <h2 className="text-2xl font-semibold tracking-tight">{t("formTitle")}</h2>
-                  <p className="text-sm text-neutral-500 font-light mt-2">
-                    {t("formSubtitle")}
-                  </p>
-                </div>
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  <select
-                    value={form.sujet}
-                    onChange={(e) => setForm({ ...form, sujet: e.target.value })}
-                    className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all text-neutral-500"
-                  >
-                    <option value="">{t("selectSubject")}</option>
-                    {sujets.map((s) => (
-                      <option key={s.value} value={s.value}>
-                        {s.label}
-                      </option>
-                    ))}
-                  </select>
-                  <input
-                    value={form.name}
-                    onChange={(e) => setForm({ ...form, name: e.target.value })}
-                    placeholder={t("yourName")}
-                    required
-                    className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all"
-                  />
-                  <div className="grid grid-cols-2 gap-4">
-                    <div>
-                      <input
-                        type="email"
-                        value={form.email}
-                        onChange={(e) => setForm({ ...form, email: e.target.value })}
-                        placeholder="Email"
-                        required
-                        className={`w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all ${emailError(form.email) ? "ring-2 ring-red-300 bg-red-50/50" : ""}`}
-                      />
-                      {emailError(form.email) && (
-                        <p className="text-xs text-red-500 mt-1">{emailError(form.email)}</p>
-                      )}
-                    </div>
-                    <div>
-                      <input
-                        type="tel"
-                        value={form.phone}
-                        onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                        placeholder={t("phoneOptional")}
-                        className={`w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all ${phoneError(form.phone) ? "ring-2 ring-red-300 bg-red-50/50" : ""}`}
-                      />
-                      {phoneError(form.phone) && (
-                        <p className="text-xs text-red-500 mt-1">{phoneError(form.phone)}</p>
-                      )}
-                    </div>
-                  </div>
-                  <textarea
-                    value={form.message}
-                    onChange={(e) => setForm({ ...form, message: e.target.value })}
-                    placeholder={t("yourMessage")}
-                    required
-                    rows={4}
-                    className="w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all resize-none"
-                  />
-                  <input type="text" name="company_url" value={hp} onChange={(e) => setHp(e.target.value)} tabIndex={-1} autoComplete="off" aria-hidden="true" className="absolute opacity-0 h-0 w-0 overflow-hidden pointer-events-none" />
-                  <TurnstileWidget onToken={setTurnstileToken} />
-                  <button
-                    type="submit"
-                    disabled={submitting || !form.name || !form.email || !isValidEmail(form.email) || !!phoneError(form.phone) || !form.message}
-                    className="w-full bg-neutral-950 text-white rounded-xl py-4 text-sm font-medium hover:bg-neutral-800 transition-colors btn-lift disabled:opacity-50 disabled:cursor-not-allowed"
-                  >
-                    {submitting ? t("sending") : t("sendMessage")}
-                  </button>
-                </form>
-              </div>
-            )}
           </div>
 
           {/* FAQ */}

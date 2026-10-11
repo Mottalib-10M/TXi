@@ -64,7 +64,7 @@ export function TmDevisForm({ cityName }: { cityName: string }) {
 
   if (success) {
     return (
-      <div className="bg-white border border-neutral-200 rounded-2xl p-6 shadow-xl shadow-black/5 text-center">
+      <div data-resultat aria-live="polite" className="bg-white border border-neutral-200 rounded-2xl p-6 shadow-xl shadow-black/5 text-center">
         <div className="w-14 h-14 bg-green-50 border border-green-200 rounded-full flex items-center justify-center mx-auto mb-4">
           <Icon icon="solar:check-circle-linear" className="text-green-600 text-2xl" />
         </div>
@@ -75,7 +75,8 @@ export function TmDevisForm({ cityName }: { cityName: string }) {
   }
 
   return (
-    <div className="bg-white border border-neutral-200 rounded-2xl p-6 shadow-xl shadow-black/5">
+    // RECETTE §5 : la confirmation s'affiche à la place du formulaire, dans cette carte.
+    <div data-resultat aria-live="polite" className="bg-white border border-neutral-200 rounded-2xl p-6 shadow-xl shadow-black/5">
       <h3 className="text-lg font-semibold tracking-tight mb-1">{t("formTitle")}</h3>
       <p className="text-xs text-neutral-500 font-light mb-5">{t("formSubtitle")}</p>
       <form onSubmit={handleSubmit} className="space-y-3">

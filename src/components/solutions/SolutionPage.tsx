@@ -5,6 +5,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { ScrollAnimation } from "@/components/ui/ScrollAnimation";
 import { ContactFormSection } from "@/components/solutions/ContactFormSection";
+import { BookingForm } from "@/components/booking/BookingForm";
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 import { LigneMaj } from "@/components/shared/LigneMaj";
 import { FaqJsonLd } from "@/components/seo/FaqJsonLd";
@@ -68,7 +69,7 @@ export async function SolutionPage({
               <li className="text-neutral-900 font-medium">{t("heroTitle")}</li>
             </ol>
           </nav>
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-12 items-start">
             <div className="md:max-w-xl fade-up">
               <div className="inline-flex items-center gap-2 bg-neutral-100 rounded-full px-4 py-1.5 mb-6">
                 <span className="w-2 h-2 bg-green-500 rounded-full" />
@@ -93,8 +94,12 @@ export async function SolutionPage({
               </Link>
             </div>
 
+            {/* RECETTE §5 (2026-10-11) : le simulateur de course se voit sans défiler,
+                à côté du titre ; l'aperçu de course passe juste en dessous. */}
+            <div className="fade-up fade-up-delay-1">
+              <BookingForm />
             {/* Right: Mockup */}
-            <div className="hidden md:block fade-up fade-up-delay-2">
+            <div className="hidden md:block mt-8 fade-up fade-up-delay-2">
               <div className="bg-white border border-neutral-200 rounded-3xl p-6 shadow-xl shadow-black/5 max-w-sm mx-auto">
                 <div className="flex items-center gap-4 mb-5">
                   <div className="w-14 h-14 rounded-full bg-neutral-100 flex items-center justify-center">
@@ -126,6 +131,7 @@ export async function SolutionPage({
                   <span className="text-neutral-600 font-light">{t("mockupDriver")}</span>
                 </div>
               </div>
+            </div>
             </div>
           </div>
         </div>
