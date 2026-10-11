@@ -3581,5 +3581,12 @@
     "proDesc": "Se connecter pour gérer ses courses",
     "becomeDriver": "Vous êtes chauffeur de taxi ? Rejoindre Taxineo",
     "mySpace": "Mon espace"
+  },
+  "appTabs": {
+    "menu": "Navigation de l'app",
+    "book": "Réserver",
+    "rides": "Courses",
+    "space": "Mon espace",
+    "help": "Aide"
   }
 }

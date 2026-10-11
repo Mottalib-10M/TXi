@@ -263,7 +263,7 @@ export function Navbar({ minimal = false }: { minimal?: boolean }) {
           )}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="md:hidden p-2 hover:bg-neutral-100 rounded-lg transition-colors"
+            className="site-menu-toggle md:hidden p-2 hover:bg-neutral-100 rounded-lg transition-colors"
             aria-label={t("menu")}
             aria-expanded={mobileOpen}
           >

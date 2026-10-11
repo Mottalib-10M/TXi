@@ -6,10 +6,16 @@ import { Toaster } from "sonner";
 import { Providers } from "@/components/Providers";
 import { ImpersonationBanner } from "@/components/ui/ImpersonationBanner";
 import { routing } from "@/i18n/routing";
+import type { Viewport } from "next";
 import { NativeBridge } from "@/components/NativeBridge";
+import { AppTabBar } from "@/components/AppTabBar";
 import { APP_SCRIPT } from "@/lib/nativeApp";
 
 const inter = Inter({ subsets: ["latin"], display: "swap" });
+
+// viewport-fit=cover : dans l'app, env(safe-area-inset-*) donne la hauteur de
+// la zone de l'heure et de la barre du bas (sans effet sur le site).
+export const viewport: Viewport = { width: "device-width", initialScale: 1, viewportFit: "cover" };
 
 export default async function LocaleLayout({
   children,
@@ -117,7 +123,7 @@ export default async function LocaleLayout({
   };
 
   return (
-    <html lang={locale}>
+    <html lang={locale} suppressHydrationWarning>
       <head>
         {/* Dans l'app : <html data-app> posé avant l'affichage (styles propres à l'app). */}
         <script dangerouslySetInnerHTML={{ __html: APP_SCRIPT }} />
@@ -148,6 +154,7 @@ export default async function LocaleLayout({
             <ImpersonationBanner />
             <div id="main-content" />
             {children}
+            <AppTabBar />
             <Toaster position="top-right" richColors />
           </Providers>
         </NextIntlClientProvider>

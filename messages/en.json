@@ -3581,5 +3581,12 @@
     "proDesc": "Sign in to manage your rides",
     "becomeDriver": "Are you a taxi driver? Join Taxineo",
     "mySpace": "My area"
+  },
+  "appTabs": {
+    "menu": "App navigation",
+    "book": "Book",
+    "rides": "Rides",
+    "space": "My space",
+    "help": "Help"
   }
 }

@@ -18,7 +18,7 @@ export default async function AppHome() {
   const role = session?.user?.role;
   const space = role === "organization" ? "/org" : role === "driver" ? "/dashboard" : null;
   return (
-    <main className="app-home min-h-screen bg-neutral-50 px-5 pb-10">
+    <main className="app-home min-h-screen bg-neutral-50 px-5 pb-8">
       <div className="mx-auto flex max-w-md flex-col gap-6">
         <div className="flex items-center justify-between pt-5">
           <Logo className="text-2xl" />
@@ -32,9 +32,7 @@ export default async function AppHome() {
           <h1 className="text-3xl font-semibold leading-tight tracking-tight">{t("title")}</h1>
           <p className="mt-2 text-sm leading-relaxed text-neutral-500">{t("subtitle")}</p>
         </div>
-        <section className="rounded-2xl border border-neutral-200 bg-white p-4 shadow-sm">
-          <BookingForm />
-        </section>
+        <BookingForm />
         <nav className="flex flex-col gap-3" aria-label={t("menu")}>
           <Link href="/mes-reservations" className="flex items-center gap-4 rounded-2xl border border-neutral-200 bg-white p-4">
             <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-amber-50">
