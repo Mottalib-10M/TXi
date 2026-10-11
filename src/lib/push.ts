@@ -173,6 +173,7 @@ async function sendApns(deviceToken: string, m: Message): Promise<"ok" | "gone" 
   let res = await apnsRequest("api.push.apple.com", deviceToken, jwt, body);
   // Jeton d'une version de test (lancée depuis Xcode) : serveur de test d'Apple.
   if (res.status === 400 && res.reason === "BadDeviceToken") res = await apnsRequest("api.sandbox.push.apple.com", deviceToken, jwt, body);
+  if (res.status !== 200) console.error("[push] APNs", res.status, res.reason ?? "");
   if (res.status === 410 || (res.status === 400 && (res.reason === "BadDeviceToken" || res.reason === "DeviceTokenNotForTopic"))) return "gone";
   return "ok";
 }
