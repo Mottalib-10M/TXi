@@ -12,13 +12,58 @@
 // - fait vibrer légèrement les onglets, les choix et les envois ;
 // - gère le bouton retour d'Android (ferme la fenêtre ouverte, sinon page
 //   précédente, sinon quitte l'app) ;
-// - ouvre dans l'app les liens universels (espace chauffeur, parrainage, réservations).
+// - ouvre dans l'app les liens universels (espace chauffeur, parrainage, réservations) ;
+// - inscrit le téléphone aux notifications (lib/push.ts) : l'autorisation est
+//   demandée dans l'espace chauffeur ou organisation, ou au client juste après
+//   sa réservation (page de confirmation, qui relie la course au téléphone).
 
 import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 type CapWindow = Window & { Capacitor?: { isNativePlatform?: () => boolean; getPlatform?: () => string } };
 
 const SITE_HOSTS = ["taxineo.fr", "www.taxineo.fr"];
+
+// Android : en attente du projet Firebase (android/app/google-services.json), sans lequel l'inscription planterait.
+const ANDROID_PUSH = false;
+const DEVICE_KEY = "txi-device";
+
+type Push = typeof import("@capacitor/push-notifications").PushNotifications;
+let pushSetup: Promise<Push | null> | null = null;
+let pendingRef = "";
+
+/** Écouteurs posés une seule fois : jeton reçu → serveur ; notification touchée → sa page. */
+function setupPush(platform: string): Promise<Push | null> {
+  if (pushSetup) return pushSetup;
+  pushSetup = (async () => {
+    if (platform !== "ios" && !(platform === "android" && ANDROID_PUSH)) return null;
+    const { PushNotifications } = await import("@capacitor/push-notifications");
+    await PushNotifications.addListener("registration", ({ value }) => {
+      const bookingRef = pendingRef;
+      pendingRef = "";
+      void fetch("/api/push/register", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ token: value, platform, locale: document.documentElement.lang === "en" ? "en" : "fr", bookingRef }),
+      })
+        .then((r) => r.json())
+        .then((d: { id?: string }) => {
+          try {
+            if (d.id) localStorage.setItem(DEVICE_KEY, d.id);
+          } catch {
+            // stockage indisponible : les prochaines réservations ne seront pas suivies
+          }
+        })
+        .catch(() => undefined);
+    });
+    await PushNotifications.addListener("pushNotificationActionPerformed", ({ notification }) => {
+      const path = (notification.data as { path?: unknown } | undefined)?.path;
+      if (typeof path === "string" && path.startsWith("/")) location.href = path;
+    });
+    return PushNotifications;
+  })().catch(() => null);
+  return pushSetup;
+}
 
 function toBase64(blob: Blob): Promise<string> {
   return new Promise((resolve, reject) => {
@@ -30,6 +75,27 @@ function toBase64(blob: Blob): Promise<string> {
 }
 
 export function NativeBridge() {
+  const pathname = usePathname();
+
+  // Notifications, à chaque page : on demande l'autorisation là où elle a un sens,
+  // et on réinscrit le jeton (il suit ainsi la connexion et la déconnexion).
+  useEffect(() => {
+    const cap = (window as CapWindow).Capacitor;
+    if (!cap?.isNativePlatform?.()) return;
+    void (async () => {
+      const push = await setupPush(cap.getPlatform?.() ?? "");
+      if (!push) return;
+      const path = pathname.replace(/^\/en(?=\/|$)/, "");
+      const confirmation = path.startsWith("/confirmation");
+      const asks = confirmation || /^\/(dashboard|org)(\/|$)/.test(path);
+      let status = await push.checkPermissions();
+      if (asks && (status.receive === "prompt" || status.receive === "prompt-with-rationale")) status = await push.requestPermissions();
+      if (status.receive !== "granted") return;
+      if (confirmation) pendingRef = new URLSearchParams(location.search).get("ref") ?? "";
+      await push.register();
+    })().catch(() => undefined);
+  }, [pathname]);
+
   useEffect(() => {
     const cap = (window as CapWindow).Capacitor;
     if (!cap?.isNativePlatform?.()) return;
@@ -64,6 +130,25 @@ export function NativeBridge() {
       };
       Object.defineProperty(navigator, "share", { configurable: true, value: shareFiles });
       Object.defineProperty(navigator, "canShare", { configurable: true, value: () => true });
+
+      // Réservation faite depuis l'app : le téléphone inscrit aux notifications suit la course.
+      const nativeFetch = window.fetch;
+      window.fetch = (input: RequestInfo | URL, init?: RequestInit) => {
+        const url = typeof input === "string" ? input : input instanceof URL ? input.href : input.url;
+        let device: string | null = null;
+        try {
+          device = localStorage.getItem(DEVICE_KEY);
+        } catch {
+          device = null;
+        }
+        if (device && init?.method === "POST" && /^(https:\/\/www\.taxineo\.fr)?\/api\/bookings\/?$/.test(url)) {
+          const headers = new Headers(init.headers);
+          headers.set("x-txi-device", device);
+          return nativeFetch(input, { ...init, headers });
+        }
+        return nativeFetch(input, init);
+      };
+      cleanups.push(() => (window.fetch = nativeFetch));
 
       // Clics : enregistrer une image (partage), vibrations légères.
       const onClick = (e: MouseEvent) => {

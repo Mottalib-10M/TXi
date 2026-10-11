@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { isAdmin } from "@/lib/admin";
 import { prisma } from "@/lib/prisma";
+import { notifyBookingClient, notifyDriver } from "@/lib/push";
 import {
   sendEmail,
   buildDriverReminderEmail,
@@ -62,6 +63,7 @@ export async function POST(
       });
 
       await sendEmail({ to: booking.driver.email, ...email });
+      await notifyDriver(booking.driverId, "reminder", { from: booking.departureName, to: booking.arrivalName, date: booking.requestedDate });
 
       await prisma.adminNotification.create({
         data: {
@@ -96,6 +98,7 @@ export async function POST(
       });
 
       await sendEmail({ to: booking.clientEmail, ...email });
+      await notifyBookingClient(booking, "noDriver", { from: booking.departureName, to: booking.arrivalName, date: booking.requestedDate });
 
       await prisma.adminNotification.create({
         data: {
@@ -135,6 +138,8 @@ export async function POST(
         price: booking.lockedPrice ?? booking.estimatedPrice,
       });
       await sendEmail({ to: clientEmailTo, ...clientMail });
+      await notifyBookingClient(booking, "cancelled", { from: booking.departureName, to: booking.arrivalName, date: booking.requestedDate });
+      if (wasAccepted) await notifyDriver(booking.driverId, "rideCancelledByAdmin", { from: booking.departureName, to: booking.arrivalName, date: booking.requestedDate });
 
       // If was ACCEPTED with a driver, notify the driver too
       if (wasAccepted && booking.driver && booking.driver.notifyEmail) {
@@ -189,6 +194,8 @@ export async function POST(
         price: booking.lockedPrice ?? booking.estimatedPrice,
       });
       await sendEmail({ to: booking.clientEmail, ...clientMail });
+      await notifyBookingClient(booking, "accepted", { from: booking.departureName, to: booking.arrivalName, date: booking.requestedDate, driver: `${booking.driver.firstName} ${booking.driver.lastName}` });
+      await notifyDriver(booking.driverId, "rideConfirmed", { from: booking.departureName, to: booking.arrivalName, date: booking.requestedDate });
 
       if (booking.driver.notifyEmail) {
         const driverMail = buildBookingAcceptedDriverEmail({
@@ -320,6 +327,9 @@ export async function POST(
         });
         await sendEmail({ to: oldDriver.email, ...cancelMail });
       }
+
+      await notifyDriver(booking.driverId, "rideCancelledByAdmin", { from: booking.departureName, to: booking.arrivalName, date: booking.requestedDate });
+      await notifyDriver(newDriver.id, "newRide", { from: booking.departureName, to: booking.arrivalName, date: booking.requestedDate });
 
       // Notify new driver of the booking
       if (newDriver.notifyEmail) {

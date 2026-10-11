@@ -196,6 +196,9 @@ model Booking {
   // Langue du client lors de la réservation
   clientLocale String @default("fr")
 
+  // Téléphone du client dans l'app (DeviceToken.id) : notifications de suivi de sa course
+  clientDeviceId String?
+
   // Nom du bénéficiaire (patient, client hôtel, salarié)
   beneficiaryName String?
 
@@ -349,4 +352,24 @@ model PasswordResetToken {
   createdAt DateTime @default(now())
 
   @@map("password_reset_tokens")
+}
+
+// Téléphones inscrits aux notifications de l'app (lib/push.ts, /api/push/register) :
+// un chauffeur, une organisation, ou un client sans compte (relié à ses réservations
+// par Booking.clientDeviceId).
+model DeviceToken {
+  id             String   @id @default(cuid())
+  token          String   @unique
+  /// ios ou android
+  platform       String
+  /// fr ou en : langue des notifications
+  locale         String   @default("fr")
+  driverId       String?
+  organizationId String?
+  createdAt      DateTime @default(now())
+  lastSeenAt     DateTime @default(now())
+
+  @@index([driverId])
+  @@index([organizationId])
+  @@map("device_tokens")
 }

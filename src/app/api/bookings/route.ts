@@ -13,6 +13,7 @@ import {
 import { sendSms } from "@/lib/sms";
 import { runEscalation } from "@/lib/escalation";
 import { createNotification } from "@/lib/notifications";
+import { notifyDriver } from "@/lib/push";
 import { format } from "date-fns";
 import { fr, enUS } from "date-fns/locale";
 
@@ -177,9 +178,14 @@ export async function POST(request: Request) {
     }
 
     // Create booking (lock the price at creation time)
+    // Réservé depuis l'app : le téléphone (NativeBridge, en-tête x-txi-device) recevra le suivi de la course.
+    const deviceHeader = request.headers.get("x-txi-device")?.slice(0, 40);
+    const clientDevice = deviceHeader ? await prisma.deviceToken.findUnique({ where: { id: deviceHeader }, select: { id: true } }) : null;
+
     const booking = await prisma.booking.create({
       data: {
         reference,
+        clientDeviceId: clientDevice?.id ?? null,
         clientName: data.clientName,
         clientEmail: data.clientEmail,
         clientPhone: data.clientPhone || "",
@@ -232,6 +238,8 @@ export async function POST(request: Request) {
         });
         await sendEmail({ to: booking.driver.email, ...emailData });
       }
+
+      await notifyDriver(booking.driver.id, "newRide", { from: data.departureName, to: data.arrivalName, date: requestedDate });
 
       if (booking.driver.notifySms && booking.driver.phone) {
         const smsText = locale === "en"

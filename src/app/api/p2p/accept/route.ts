@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
+import { notifyDriver } from "@/lib/push";
 import { createNotification } from "@/lib/notifications";
 
 export async function GET(request: Request) {
@@ -150,6 +151,11 @@ export async function POST(request: Request) {
           source: "P2P",
         },
       });
+    }
+
+    // Le chauffeur qui a transmis la course apprend qu'un confrère la prend.
+    if (booking && existing?.referrerDriverId) {
+      await notifyDriver(existing.referrerDriverId, "p2pAccepted", { from: booking.departureName, to: booking.arrivalName, date: booking.requestedDate, driver: `${driver?.firstName ?? ""} ${driver?.lastName ?? ""}`.trim() }, "/dashboard/p2p");
     }
 
     return NextResponse.json({

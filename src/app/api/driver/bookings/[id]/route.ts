@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
+import { notifyBookingClient, notifyDriver } from "@/lib/push";
 import { haversineDistance } from "@/lib/geo";
 import {
   sendEmail,
@@ -105,6 +106,7 @@ export async function PATCH(
           locale,
         });
         await sendEmail({ to: clientEmailTo, ...cancelMail });
+        await notifyBookingClient(booking, "cancelledByDriver", { from: booking.departureName, to: booking.arrivalName, date: booking.requestedDate });
       } catch (error) {
         console.error("Failed to send cancellation email:", error);
       }
@@ -273,6 +275,7 @@ export async function PATCH(
             locale,
           });
           await sendEmail({ to: clientEmailTo, ...clientMail });
+          await notifyBookingClient(booking, "accepted", { from: booking.departureName, to: booking.arrivalName, date: booking.requestedDate, driver: driverFullName });
 
           // Email to driver
           const driverMail = buildBookingAcceptedDriverEmail({
@@ -385,6 +388,7 @@ export async function PATCH(
               });
               await sendEmail({ to: driver.email, ...emailData });
             }
+            await notifyDriver(driver.id, "newRide", { from: booking.departureName, to: booking.arrivalName, date: booking.requestedDate });
 
             if (driver.notifySms && driver.phone) {
               const smsText = `TaxiNeo - Course disponible #${booking.reference}. ${booking.departureName} → ${booking.arrivalName}. Connectez-vous pour accepter.`;
@@ -446,6 +450,7 @@ export async function PATCH(
             locale,
           });
           await sendEmail({ to: clientEmailTo, ...rejectionMail });
+          await notifyBookingClient(booking, "rejected", { from: booking.departureName, to: booking.arrivalName, date: booking.requestedDate });
         } catch (error) {
           console.error("Failed to send rejection email:", error);
         }

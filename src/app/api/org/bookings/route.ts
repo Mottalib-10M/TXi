@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
 import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
+import { notifyDriver } from "@/lib/push";
 import { haversineDistance, getRoutingDistance, estimatePrice, estimateDefaultPrice, isValidCoords, geocodeAddress } from "@/lib/geo";
 import { generateUniqueReference } from "@/lib/reference";
 import { sendEmail, buildDriverNotificationEmail } from "@/lib/email";
@@ -187,6 +188,7 @@ export async function POST(request: Request) {
         });
         await sendEmail({ to: booking.driver.email, ...emailData });
       }
+      await notifyDriver(booking.driver.id, "newRide", { from: data.departureName, to: data.arrivalName, date: requestedDate });
 
       if (booking.driver.notifySms && booking.driver.phone) {
         const smsText = `TaxiNeo - Nouvelle réservation #${reference} de ${data.beneficiaryName}. ${data.departureName} → ${data.arrivalName}. Connectez-vous pour accepter.`;

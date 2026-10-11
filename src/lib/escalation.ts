@@ -1,4 +1,5 @@
 import { prisma } from "@/lib/prisma";
+import { notifyDriver } from "@/lib/push";
 import { haversineDistance } from "@/lib/geo";
 import { sendEmail, buildDriverNotificationEmail, buildEscalationTimeoutEmail } from "@/lib/email";
 import { sendSms } from "@/lib/sms";
@@ -104,6 +105,7 @@ export async function runEscalation(): Promise<{ phase1: number; phase2: number 
         await sendEmail({ to: originalDriver.email, ...timeoutEmail });
         console.log(`[Escalation] Timeout email sent to original driver ${originalDriver.firstName} for #${booking.reference}`);
       }
+      await notifyDriver(booking.driver.id, "timeout", { from: booking.departureName, to: booking.arrivalName, date: booking.requestedDate });
     }
 
     for (const driver of nearbyDrivers) {
@@ -122,6 +124,7 @@ export async function runEscalation(): Promise<{ phase1: number; phase2: number 
         });
         await sendEmail({ to: driver.email, ...emailData });
       }
+      await notifyDriver(driver.id, "newRide", { from: booking.departureName, to: booking.arrivalName, date: booking.requestedDate });
 
       if (driver.notifySms && driver.phone) {
         const smsText = `TaxiNeo - Course disponible #${booking.reference}. ${booking.departureName} → ${booking.arrivalName}. Connectez-vous pour accepter.`;

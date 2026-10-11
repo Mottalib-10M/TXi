@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { prisma } from "@/lib/prisma";
+import { notifyDriver } from "@/lib/push";
 import { auth } from "@/lib/auth";
 import { getLocationById } from "@/data/predefined-locations";
 import { haversineDistance } from "@/lib/geo";
@@ -138,6 +139,8 @@ export async function POST(request: Request) {
         comment: data.comment || undefined,
         locale: data.locale,
       });
+
+      void notifyDriver(driver.id, "sharedProposal", { from: departure.name, to: destination.name, date: new Date(data.departureTime) }, "/dashboard/taxi-partage");
 
       sendEmail({
         to: driver.email,

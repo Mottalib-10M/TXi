@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
+import { notifyDriver } from "@/lib/push";
 import { createNotification } from "@/lib/notifications";
 import { sendEmail, buildCancelledByClientDriverEmail } from "@/lib/email";
 import { format } from "date-fns";
@@ -77,6 +78,9 @@ export async function PATCH(
       } catch (error) {
         console.error("Failed to send cancellation email to driver:", error);
       }
+    }
+    if (wasAccepted && booking.driver) {
+      await notifyDriver(booking.driverId, "rideCancelledByClient", { from: booking.departureName, to: booking.arrivalName, date: booking.requestedDate });
     }
 
     return NextResponse.json({ message: "Course annulée" });
