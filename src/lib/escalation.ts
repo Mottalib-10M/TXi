@@ -6,6 +6,7 @@ import { sendSms } from "@/lib/sms";
 import { createNotification } from "@/lib/notifications";
 import { format } from "date-fns";
 import { fr } from "date-fns/locale";
+import { driverPool } from "@/lib/demo";
 
 const ESCALATION_DELAY_MS = 15 * 60 * 1000; // 15 minutes
 
@@ -37,6 +38,7 @@ export async function runEscalation(): Promise<{ phase1: number; phase2: number 
   for (const booking of phase1Bookings) {
     const allDrivers = await prisma.driver.findMany({
       where: {
+        ...driverPool(),
         isActive: true,
         zoneLat: { not: null },
         zoneLng: { not: null },
