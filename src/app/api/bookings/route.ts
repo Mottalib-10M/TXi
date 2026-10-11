@@ -81,7 +81,9 @@ export async function POST(request: Request) {
       estimatedDistance = routing.distanceKm;
     }
 
-    let driverId = data.driverId;
+    // Adresse de démo (vérification des stores) : jamais un vrai chauffeur, même choisi dans la liste.
+    const demo = isDemoEmail(data.clientEmail);
+    let driverId = demo ? undefined : data.driverId;
 
     // If a specific driver is provided (e.g. from PROFILE), calculate price using their rates
     if (driverId && estimatedDistance && !estimatedPrice) {
@@ -99,10 +101,10 @@ export async function POST(request: Request) {
     }
 
     // If LANDING source without a specific driver, find nearby drivers
-    if (data.source === "LANDING" && !driverId) {
+    if ((data.source === "LANDING" || demo) && !driverId) {
       const drivers = await prisma.driver.findMany({
         where: {
-          ...driverPool(isDemoEmail(data.clientEmail)),
+          ...driverPool(demo),
           isActive: true,
           zoneLat: { not: null },
           zoneLng: { not: null },
