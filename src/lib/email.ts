@@ -1,4 +1,5 @@
 import { checkEmailRateLimit } from "@/lib/rate-limit";
+import { isDemoEmail } from "@/lib/demo";
 
 /** Escape HTML special characters to prevent XSS in email templates */
 function esc(str: string): string {
@@ -19,6 +20,9 @@ interface EmailOptions {
 export async function sendEmail({ to, subject, html }: EmailOptions) {
   const apiKey = process.env.RESEND_API_KEY;
   const from = process.env.EMAIL_FROM || "noreply@taxineo.fr";
+
+  // Comptes de démonstration des stores : adresses sans boîte, rien ne part.
+  if (isDemoEmail(to)) return;
 
   if (!apiKey) {
     console.log(`[Email] Would send to ${to}: ${subject}`);

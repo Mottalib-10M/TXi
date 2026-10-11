@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { haversineDistance, getRoutingDistance, estimatePrice } from "@/lib/geo";
+import { driverPool } from "@/lib/demo";
 
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
@@ -17,6 +18,7 @@ export async function GET(request: NextRequest) {
     if (q) {
       const drivers = await prisma.driver.findMany({
         where: {
+          ...driverPool(),
           isActive: true,
           OR: [
             { firstName: { contains: q, mode: "insensitive" } },
@@ -41,6 +43,7 @@ export async function GET(request: NextRequest) {
 
     const drivers = await prisma.driver.findMany({
       where: {
+        ...driverPool(),
         isActive: true,
         zoneLat: { not: null },
         zoneLng: { not: null },

@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
 import { haversineDistance } from "@/lib/geo";
+import { driverPool } from "@/lib/demo";
 
 export async function GET(
   _request: Request,
@@ -28,6 +29,7 @@ export async function GET(
     // Find nearby drivers excluding the one who rejected
     const drivers = await prisma.driver.findMany({
       where: {
+        ...driverPool(),
         isActive: true,
         zoneLat: { not: null },
         zoneLng: { not: null },

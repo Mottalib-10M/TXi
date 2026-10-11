@@ -7,6 +7,7 @@ import { getLocationById } from "@/data/predefined-locations";
 import { haversineDistance } from "@/lib/geo";
 import { sendEmail, buildSharedTaxiProposalEmail } from "@/lib/email";
 import { createNotification } from "@/lib/notifications";
+import { driverPool } from "@/lib/demo";
 
 const proposeSchema = z.object({
   departureLocationId: z.string().min(1),
@@ -93,6 +94,7 @@ export async function POST(request: Request) {
     // Find eligible drivers (active, with zone coordinates, within 50km of departure)
     const drivers = await prisma.driver.findMany({
       where: {
+        ...driverPool(),
         isActive: true,
         zoneLat: { not: null },
         zoneLng: { not: null },

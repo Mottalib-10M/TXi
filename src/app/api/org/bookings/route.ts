@@ -11,6 +11,7 @@ import { runEscalation } from "@/lib/escalation";
 import { createNotification } from "@/lib/notifications";
 import { format } from "date-fns";
 import { fr } from "date-fns/locale";
+import { driverPool, isDemoEmail } from "@/lib/demo";
 
 const createBookingSchema = z.object({
   beneficiaryName: z.string().optional().default(""),
@@ -68,6 +69,7 @@ export async function POST(request: Request) {
       // Auto-assign: find nearest available driver
       const drivers = await prisma.driver.findMany({
         where: {
+          ...driverPool(isDemoEmail(session.user.email)),
           isActive: true,
           zoneLat: { not: null },
           zoneLng: { not: null },
