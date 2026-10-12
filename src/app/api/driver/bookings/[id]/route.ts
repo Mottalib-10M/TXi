@@ -16,6 +16,7 @@ import { createNotification } from "@/lib/notifications";
 import { format } from "date-fns";
 import { fr } from "date-fns/locale";
 import { driverPool, isDemoEmail } from "@/lib/demo";
+import { contactForDriver } from "@/lib/p2p";
 
 export async function PATCH(
   request: Request,
@@ -38,7 +39,10 @@ export async function PATCH(
     // Verify the booking belongs to this driver OR the driver is invited
     const booking = await prisma.booking.findUnique({
       where: { id: params.id },
-      include: { organization: { select: { email: true, phone: true, contactName: true, name: true } } },
+      include: {
+        organization: { select: { email: true, phone: true, contactName: true, name: true } },
+        referrerDriver: { select: { firstName: true, lastName: true, phone: true, email: true } },
+      },
     });
 
     if (!booking) {
@@ -106,8 +110,12 @@ export async function PATCH(
           price: booking.lockedPrice,
           locale,
         });
-        await sendEmail({ to: clientEmailTo, ...cancelMail });
+        if (clientEmailTo) await sendEmail({ to: clientEmailTo, ...cancelMail });
         await notifyBookingClient(booking, "cancelledByDriver", { from: booking.departureName, to: booking.arrivalName, date: booking.requestedDate });
+        // Course transmise : le chauffeur qui l'a transmise apprend l'annulation.
+        if (booking.source === "P2P" && booking.referrerDriverId) {
+          await notifyDriver(booking.referrerDriverId, "cancelledByDriver", { from: booking.departureName, to: booking.arrivalName, date: booking.requestedDate }, "/dashboard/p2p");
+        }
       } catch (error) {
         console.error("Failed to send cancellation email:", error);
       }
@@ -249,16 +257,18 @@ export async function PATCH(
           const driverFullName = `${driver.firstName} ${driver.lastName}`;
 
           const isOrgBooking = Boolean(booking.organization);
+          // Course transmise ouverte aux chauffeurs proches : le contact est le chauffeur qui l'a transmise.
+          const p2pContact = contactForDriver(booking, session.user.id, booking.referrerDriver);
           const clientEmailTo = isOrgBooking ? booking.organization!.email : booking.clientEmail;
           const clientDisplayName = isOrgBooking
             ? booking.organization!.contactName
             : booking.clientName;
           const contactPhone = isOrgBooking
             ? booking.organization!.phone
-            : booking.clientPhone;
+            : p2pContact.clientPhone;
           const contactEmail = isOrgBooking
             ? booking.organization!.email
-            : booking.clientEmail;
+            : p2pContact.clientEmail;
 
           // Email to client/org
           const clientMail = buildBookingAcceptedClientEmail({
@@ -275,7 +285,8 @@ export async function PATCH(
             price: booking.lockedPrice,
             locale,
           });
-          await sendEmail({ to: clientEmailTo, ...clientMail });
+          // Course transmise : pas d'e-mail client (le chauffeur qui l'a transmise est prévenu ci-dessous).
+          if (clientEmailTo) await sendEmail({ to: clientEmailTo, ...clientMail });
           await notifyBookingClient(booking, "accepted", { from: booking.departureName, to: booking.arrivalName, date: booking.requestedDate, driver: driverFullName });
 
           // Email to driver
@@ -283,7 +294,7 @@ export async function PATCH(
             driverName: driver.firstName,
             clientName: isOrgBooking
               ? `${booking.clientName} (${booking.organization!.name})`
-              : booking.clientName,
+              : p2pContact.clientName,
             clientPhone: contactPhone,
             clientEmail: contactEmail,
             departure: booking.departureName,
@@ -295,6 +306,11 @@ export async function PATCH(
             locale,
           });
           await sendEmail({ to: driver.email, ...driverMail });
+
+          // Course transmise prise par un chauffeur proche : celui qui l'a transmise est prévenu (il garde sa commission).
+          if (booking.source === "P2P" && booking.referrerDriverId && booking.referrerDriverId !== session.user.id) {
+            await notifyDriver(booking.referrerDriverId, "p2pAccepted", { from: booking.departureName, to: booking.arrivalName, date: booking.requestedDate, driver: driverFullName }, "/dashboard/p2p");
+          }
         }
       } catch (error) {
         console.error("Failed to send acceptance emails:", error);

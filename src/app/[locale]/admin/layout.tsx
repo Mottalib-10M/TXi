@@ -1,5 +1,6 @@
 import { isAdmin } from "@/lib/admin";
 import { AdminSidebar } from "@/components/layout/AdminSidebar";
+import { escalateIfDue } from "@/lib/escalation";
 
 export default async function AdminLayout({
   children,
@@ -7,6 +8,8 @@ export default async function AdminLayout({
   children: React.ReactNode;
 }) {
   const authenticated = await isAdmin();
+  // Course sans réponse (transmise : 30 min) : proposée aux chauffeurs proches, au plus une fois par minute.
+  await escalateIfDue();
 
   if (!authenticated) {
     // Middleware handles redirecting non-login admin pages to /admin/login.

@@ -22,6 +22,9 @@ interface Booking {
   requestedDate: string;
   passengerCount: number;
   estimatedPrice: number | null;
+  lockedPrice?: number | null;
+  p2pCommissionAmount?: number | null;
+  contactIsReferrer?: boolean;
   status: string;
   source: string;
   referrerDriverName?: string | null;
@@ -120,10 +123,18 @@ export function ReservationsTable({ bookings, driverName }: { bookings: Booking[
   }
 
   function getWhatsAppMessage(booking: Booking): string {
+    // Course transmise ouverte aux chauffeurs proches : on écrit au chauffeur qui l'a transmise.
+    if (booking.contactIsReferrer) {
+      const d = format(new Date(booking.requestedDate), locale === "en" ? "EEEE dd MMMM 'at' HH:mm" : "EEEE dd MMMM 'à' HH:mm", { locale: locale === "en" ? enUS : fr });
+      return locale === "en"
+        ? `Hello ${booking.clientName}, I'm ${driverName} (Taxineo). I'm taking the ride you shared: ${booking.departureName} → ${booking.arrivalName}, ${d}.`
+        : `Bonjour ${booking.clientName}, c'est ${driverName} (Taxineo). Je prends la course que tu as transmise : ${booking.departureName} → ${booking.arrivalName}, ${d}.`;
+    }
     const clientLang = booking.clientLocale || "fr";
     const dateFnsLoc = clientLang === "en" ? enUS : fr;
     const dateStr = format(new Date(booking.requestedDate), clientLang === "en" ? "EEEE dd MMMM yyyy 'at' HH:mm" : "EEEE dd MMMM yyyy 'à' HH:mm", { locale: dateFnsLoc });
-    const price = booking.estimatedPrice ? `${booking.estimatedPrice.toFixed(0)} €` : "";
+    const p = booking.lockedPrice ?? booking.estimatedPrice;
+    const price = p ? `${p.toFixed(0)} €` : "";
 
     if (clientLang === "en") {
       return [
@@ -229,7 +240,10 @@ export function ReservationsTable({ bookings, driverName }: { bookings: Booking[
             >
               {/* Header: name + phone + status + ref */}
               <div className="flex flex-wrap items-center gap-2 mb-2">
-                <p className="text-sm font-semibold">{booking.clientName}</p>
+                <p className="text-sm font-semibold">
+                  {booking.clientName}
+                  {booking.contactIsReferrer && <span className="text-xs font-normal text-violet-600"> · {t("contactReferrer")}</span>}
+                </p>
                 {booking.clientPhone && (
                   <>
                     <a
@@ -282,10 +296,10 @@ export function ReservationsTable({ bookings, driverName }: { bookings: Booking[
                   <Icon icon="solar:users-group-rounded-linear" />
                   {booking.passengerCount} {booking.passengerCount > 1 ? tc("passengers") : tc("passenger")}
                 </span>
-                {booking.estimatedPrice && (
+                {(booking.lockedPrice ?? booking.estimatedPrice) != null && (
                   <span className="flex items-center gap-1">
                     <Icon icon="solar:tag-price-linear" />
-                    {booking.estimatedPrice.toFixed(2).replace(".", ",")} €
+                    {(booking.lockedPrice ?? booking.estimatedPrice)!.toFixed(2).replace(".", ",")} €
                   </span>
                 )}
                 <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium ${
@@ -318,6 +332,12 @@ export function ReservationsTable({ bookings, driverName }: { bookings: Booking[
                   </span>
                 )}
               </div>
+
+              {booking.source === "P2P" && booking.referrerDriverName && booking.p2pCommissionAmount != null && booking.p2pCommissionAmount > 0 && (
+                <p className="text-xs text-violet-700 mt-2">
+                  {t("p2pCommissionNote", { name: booking.referrerDriverName, amount: booking.p2pCommissionAmount.toFixed(2).replace(".", ",") })}
+                </p>
+              )}
 
               {booking.clientComments && (
                 <p className="text-xs text-neutral-500 mt-2 bg-neutral-50 rounded-lg px-3 py-2">

@@ -770,7 +770,7 @@
       "hour": "Heure",
       "price": "Prix (€)",
       "pricePlaceholder": "Prix de la course",
-      "commissionRate": "Taux de commission",
+      "commissionRate": "Ta commission sur cette course",
       "commissionAmount": "Commission",
       "clientInfo": "Informations client",
       "clientName": "Nom du client",
@@ -804,8 +804,20 @@
       "statsTotalCommission": "Commission",
       "statsUniqueDrivers": "Chauffeurs",
       "statsRides": "courses",
-      "statsNoData": "Aucune donnée pour cette période"
-    }
+      "statsNoData": "Aucune donnée pour cette période",
+      "commissionHelp": "Ce que tu gagnes quand un collègue fait la course",
+      "yourCommission": "Ta commission",
+      "share": "Partager",
+      "when": "Date",
+      "takenBy": "Prise par",
+      "statusWaiting": "En attente d'un collègue",
+      "statusOpened": "Proposée aux chauffeurs proches",
+      "waitingInfo": "Sans réponse d'ici {time}, elle sera proposée aux chauffeurs Taxineo proches du départ. Tu resteras leur contact et garderas ta commission.",
+      "openedInfo": "Aucun collègue ne l'a acceptée en 30 minutes : proposée depuis {time} à {count, plural, =0 {aucun chauffeur proche} one {# chauffeur proche} other {# chauffeurs proches}}. Tu restes leur contact et gardes ta commission.",
+      "shareAgain": "Reproposer ce trajet"
+    },
+    "contactReferrer": "a transmis la course",
+    "p2pCommissionNote": "Course transmise par {name}, qui garde sa commission de {amount} €."
   },
   "p2pAccept": {
     "rideProposal": "Course proposée",
@@ -827,7 +839,9 @@
     "acceptRide": "Accepter la course",
     "acceptingRide": "Acceptation...",
     "acceptError": "Erreur lors de l'acceptation",
-    "selfAcceptError": "Vous ne pouvez pas accepter votre propre course"
+    "selfAcceptError": "Vous ne pouvez pas accepter votre propre course",
+    "commissionFor": "Commission de {name}",
+    "contactReferrer": "Contacter {name}"
   },
   "org": {
     "sidebar": {
@@ -1269,7 +1283,8 @@
     "vehiclePhotos": "Photos du véhicule",
     "addPhoto": "Ajouter une photo",
     "deleteVehicle": "Supprimer ce véhicule",
-    "vehiclePhotoAlt": "Véhicule photo {number}"
+    "vehiclePhotoAlt": "Véhicule photo {number}",
+    "changePhoto": "Changer la photo"
   },
   "availability": {
     "title": "Disponibilités",

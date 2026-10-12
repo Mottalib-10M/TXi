@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
+import { contactForDriver } from "@/lib/p2p";
 import { auth } from "@/lib/auth";
 
 function toICSDate(date: Date): string {
@@ -23,6 +24,7 @@ export async function GET(request: NextRequest) {
     include: {
       driver: { select: { firstName: true, lastName: true, phone: true, email: true } },
       organization: { select: { name: true, phone: true, email: true } },
+      referrerDriver: { select: { firstName: true, lastName: true, phone: true, email: true } },
     },
   });
 
@@ -45,15 +47,17 @@ export async function GET(request: NextRequest) {
   const endDate = new Date(startDate.getTime() + (booking.estimatedDuration || 60) * 60 * 1000);
 
   const isOrgBooking = Boolean(booking.organization);
+  // Course transmise ouverte aux chauffeurs proches : le contact est le chauffeur qui l'a transmise.
+  const contact = contactForDriver(booking, userId, booking.referrerDriver);
   const contactName = isOrgBooking
     ? `${booking.clientName} (${booking.organization!.name})`
-    : booking.clientName;
+    : contact.clientName;
   const contactPhone = isOrgBooking
     ? booking.organization!.phone
-    : booking.clientPhone;
+    : contact.clientPhone;
   const contactEmail = isOrgBooking
     ? booking.organization!.email
-    : booking.clientEmail;
+    : contact.clientEmail;
 
   const descriptionLines = [
     `Référence: #${booking.reference}`,

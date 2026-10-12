@@ -5,9 +5,12 @@ import { P2PHistory } from "@/components/dashboard/P2PHistory";
 import { P2PStats } from "@/components/dashboard/P2PStats";
 import { getTranslations } from "next-intl/server";
 import { Icon } from "@iconify/react";
+import { escalateIfDue } from "@/lib/escalation";
 
 export default async function P2PPage() {
   const session = await auth();
+  // Course sans réponse (transmise : 30 min) : proposée aux chauffeurs proches, au plus une fois par minute.
+  await escalateIfDue();
   if (!session?.user?.id) return null;
 
   const t = await getTranslations("dashboard.p2p");
@@ -25,8 +28,17 @@ export default async function P2PPage() {
     select: {
       id: true,
       reference: true,
+      clientName: true,
+      clientPhone: true,
       departureName: true,
+      departureLat: true,
+      departureLng: true,
       arrivalName: true,
+      arrivalLat: true,
+      arrivalLng: true,
+      p2pToken: true,
+      p2pOpenedAt: true,
+      invitedDriverIds: true,
       requestedDate: true,
       lockedPrice: true,
       status: true,
@@ -41,10 +53,12 @@ export default async function P2PPage() {
     },
   });
 
-  const serialized = bookings.map((b) => ({
+  const serialized = bookings.map(({ invitedDriverIds, ...b }) => ({
     ...b,
     requestedDate: b.requestedDate.toISOString(),
     createdAt: b.createdAt.toISOString(),
+    p2pOpenedAt: b.p2pOpenedAt ? b.p2pOpenedAt.toISOString() : null,
+    invitedCount: invitedDriverIds.length,
   }));
 
   const totalCommission = bookings
@@ -82,7 +96,7 @@ export default async function P2PPage() {
           />
         </div>
         <div className="lg:col-span-2">
-          <P2PHistory bookings={serialized} />
+          <P2PHistory bookings={serialized} driverFirstName={driver.firstName} />
         </div>
       </div>
     </div>

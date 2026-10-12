@@ -770,7 +770,7 @@
       "hour": "Time",
       "price": "Price (€)",
       "pricePlaceholder": "Ride price",
-      "commissionRate": "Commission rate",
+      "commissionRate": "Your commission on this ride",
       "commissionAmount": "Commission",
       "clientInfo": "Client information",
       "clientName": "Client name",
@@ -804,8 +804,20 @@
       "statsTotalCommission": "Commission",
       "statsUniqueDrivers": "Drivers",
       "statsRides": "rides",
-      "statsNoData": "No data for this period"
-    }
+      "statsNoData": "No data for this period",
+      "commissionHelp": "What you earn when a colleague drives it",
+      "yourCommission": "Your commission",
+      "share": "Share",
+      "when": "When",
+      "takenBy": "Taken by",
+      "statusWaiting": "Waiting for a colleague",
+      "statusOpened": "Offered to nearby drivers",
+      "waitingInfo": "If nobody answers by {time}, it will be offered to Taxineo drivers near the pickup. You will remain their contact and keep your commission.",
+      "openedInfo": "No colleague accepted it within 30 minutes: offered since {time} to {count, plural, =0 {no nearby driver} one {# nearby driver} other {# nearby drivers}}. You remain their contact and keep your commission.",
+      "shareAgain": "Offer this trip again"
+    },
+    "contactReferrer": "shared this ride",
+    "p2pCommissionNote": "Ride shared by {name}, who keeps a {amount} € commission."
   },
   "p2pAccept": {
     "rideProposal": "Ride proposal",
@@ -827,7 +839,9 @@
     "acceptRide": "Accept ride",
     "acceptingRide": "Accepting...",
     "acceptError": "Error accepting the ride",
-    "selfAcceptError": "You cannot accept your own ride"
+    "selfAcceptError": "You cannot accept your own ride",
+    "commissionFor": "{name}'s commission",
+    "contactReferrer": "Contact {name}"
   },
   "org": {
     "sidebar": {
@@ -1269,7 +1283,8 @@
     "vehiclePhotos": "Vehicle photos",
     "addPhoto": "Add a photo",
     "deleteVehicle": "Delete this vehicle",
-    "vehiclePhotoAlt": "Vehicle photo {number}"
+    "vehiclePhotoAlt": "Vehicle photo {number}",
+    "changePhoto": "Change photo"
   },
   "availability": {
     "title": "Availability",

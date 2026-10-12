@@ -3,6 +3,7 @@ import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
 import { DashboardSidebar } from "@/components/layout/DashboardSidebar";
 import { WaitlistScreen } from "@/components/dashboard/WaitlistScreen";
+import { escalateIfDue } from "@/lib/escalation";
 
 export default async function DashboardLayout({
   children,
@@ -10,6 +11,8 @@ export default async function DashboardLayout({
   children: React.ReactNode;
 }) {
   const session = await auth();
+  // Course sans réponse (transmise : 30 min) : proposée aux chauffeurs proches, au plus une fois par minute.
+  await escalateIfDue();
 
   if (!session?.user) {
     redirect("/connexion");

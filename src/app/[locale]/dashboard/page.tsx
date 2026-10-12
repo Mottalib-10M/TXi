@@ -8,9 +8,13 @@ import { BookingQuickActions } from "@/components/dashboard/BookingQuickActions"
 import { PhoneLink } from "@/components/ui/PhoneLink";
 import { WhatsAppLink } from "@/components/ui/WhatsAppLink";
 import { getTranslations, getLocale } from "next-intl/server";
+import { contactForDriver } from "@/lib/p2p";
+import { escalateIfDue } from "@/lib/escalation";
 
 export default async function DashboardPage() {
   const session = await auth();
+  // Course sans réponse (transmise : 30 min) : proposée aux chauffeurs proches, au plus une fois par minute.
+  await escalateIfDue();
   if (!session?.user?.id) return null;
 
   // Track dashboard visit as activity
@@ -48,7 +52,7 @@ export default async function DashboardPage() {
   // Show PENDING (future only) + ACCEPTED (up to 24h after ride date)
   const now = new Date();
   const oneDayAgo = new Date(now.getTime() - 24 * 60 * 60 * 1000);
-  const activeBookings = await prisma.booking.findMany({
+  const rawActiveBookings = await prisma.booking.findMany({
     where: {
       AND: [
         {
@@ -66,7 +70,10 @@ export default async function DashboardPage() {
       ],
     },
     orderBy: { requestedDate: "asc" },
+    include: { referrerDriver: { select: { firstName: true, lastName: true, phone: true, email: true } } },
   });
+  // Course transmise ouverte aux chauffeurs proches : le contact affiché est le chauffeur qui l'a transmise.
+  const activeBookings = rawActiveBookings.map((b) => ({ ...b, ...contactForDriver(b, session.user.id!, b.referrerDriver) }));
 
   if (!driver) return null;
 
@@ -152,6 +159,13 @@ export default async function DashboardPage() {
     );
     const price = booking.lockedPrice ? `${booking.lockedPrice.toFixed(0)} €` : "";
     const driverFullName = `${driver!.firstName} ${driver!.lastName}`;
+
+    if (booking.contactIsReferrer) {
+      const msg = locale === "en"
+        ? `Hello ${booking.clientName}, I'm ${driverFullName} (Taxineo). I'm taking the ride you shared: ${booking.departureName} → ${booking.arrivalName}, ${dateStr}.`
+        : `Bonjour ${booking.clientName}, c'est ${driverFullName} (Taxineo). Je prends la course que tu as transmise : ${booking.departureName} → ${booking.arrivalName}, ${dateStr}.`;
+      return `https://wa.me/${normalizePhone(booking.clientPhone)}?text=${encodeURIComponent(msg)}`;
+    }
 
     const message = clientLang === "en"
       ? [
@@ -329,7 +343,10 @@ export default async function DashboardPage() {
                   </span>
                   <span className="flex items-center justify-between mt-2">
                     <span className="flex items-center gap-2 min-w-0">
-                      <span className="text-sm text-neutral-500">{booking.clientName}</span>
+                      <span className="text-sm text-neutral-500">
+                        {booking.clientName}
+                        {booking.contactIsReferrer && <span className="text-xs text-violet-600"> · {td("contactReferrer")}</span>}
+                      </span>
                       {booking.clientPhone && (
                         <>
                           <PhoneLink phone={booking.clientPhone} label={td("callClient")} className="text-amber-600 hover:text-amber-800" />
@@ -413,7 +430,10 @@ export default async function DashboardPage() {
                   </span>
                   <span className="flex items-center justify-between mt-2">
                     <span className="flex items-center gap-2 min-w-0">
-                      <span className="text-sm text-neutral-500">{booking.clientName}</span>
+                      <span className="text-sm text-neutral-500">
+                        {booking.clientName}
+                        {booking.contactIsReferrer && <span className="text-xs text-violet-600"> · {td("contactReferrer")}</span>}
+                      </span>
                       {booking.clientPhone && (
                         <>
                           <PhoneLink phone={booking.clientPhone} label={td("callClient")} className="text-green-600 hover:text-green-800" />

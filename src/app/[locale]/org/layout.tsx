@@ -1,6 +1,7 @@
 import { redirect } from "next/navigation";
 import { auth } from "@/lib/auth";
 import { OrgSidebar } from "@/components/layout/OrgSidebar";
+import { escalateIfDue } from "@/lib/escalation";
 
 export default async function OrgLayout({
   children,
@@ -8,6 +9,8 @@ export default async function OrgLayout({
   children: React.ReactNode;
 }) {
   const session = await auth();
+  // Course sans réponse (transmise : 30 min) : proposée aux chauffeurs proches, au plus une fois par minute.
+  await escalateIfDue();
 
   if (!session?.user) {
     redirect("/connexion");

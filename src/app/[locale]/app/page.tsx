@@ -5,6 +5,7 @@ import { Link } from "@/i18n/navigation";
 import { auth } from "@/lib/auth";
 import { BookingForm } from "@/components/booking/BookingForm";
 import { Logo } from "@/components/ui/Logo";
+import { escalateIfDue } from "@/lib/escalation";
 
 // L'accueil de l'app iPhone et Android (le site y redirige l'app, voir
 // middleware.ts) : réserver un taxi d'abord, puis ses réservations et l'accès
@@ -15,6 +16,8 @@ export const metadata: Metadata = { robots: { index: false, follow: false } };
 export default async function AppHome() {
   const t = await getTranslations("appHome");
   const session = await auth();
+  // Course sans réponse (transmise : 30 min) : proposée aux chauffeurs proches, au plus une fois par minute.
+  await escalateIfDue();
   const role = session?.user?.role;
   const space = role === "organization" ? "/org" : role === "driver" ? "/dashboard" : null;
   return (

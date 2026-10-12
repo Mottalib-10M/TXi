@@ -5,6 +5,7 @@ import { useSearchParams } from "next/navigation";
 import { Icon } from "@iconify/react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
+import { MapsLink } from "@/components/ui/MapsLink";
 
 interface BookingInfo {
   id: string;
@@ -25,6 +26,7 @@ interface AcceptedData {
     reference: string;
     clientName: string;
     clientPhone: string;
+    contactIsReferrer?: boolean;
     departureName: string;
     arrivalName: string;
     requestedDate: string;
@@ -126,6 +128,10 @@ export default function P2PAcceptPage() {
   function buildClientWhatsAppUrl() {
     if (!acceptedData) return "#";
     const { booking: b, driver: d } = acceptedData;
+    if (b.contactIsReferrer) {
+      const msg = `Bonjour ${b.clientName}, c'est ${d.firstName} ${d.lastName} (Taxineo). Je prends la course ${b.reference} que tu as transmise : ${b.departureName} → ${b.arrivalName}, ${formatDate(b.requestedDate)}.`;
+      return `https://wa.me/${normalizePhone(b.clientPhone)}?text=${encodeURIComponent(msg)}`;
+    }
     const message = [
       `Bonjour ${b.clientName},`,
       ``,
@@ -192,7 +198,8 @@ export default function P2PAcceptPage() {
           </div>
           <div className="flex items-center gap-2 text-sm">
             <Icon icon="solar:flag-linear" className="text-neutral-400 shrink-0" />
-            <span className="font-medium">{booking.arrivalName}</span>
+            <span className="font-medium flex-1 min-w-0">{booking.arrivalName}</span>
+            <MapsLink origin={booking.departureName} destination={booking.arrivalName} />
           </div>
           <div className="flex items-center gap-2 text-sm">
             <Icon icon="solar:calendar-linear" className="text-neutral-400 shrink-0" />
@@ -213,7 +220,7 @@ export default function P2PAcceptPage() {
           {booking.p2pCommissionAmount != null && (
             <div className="flex items-center gap-2 text-sm">
               <Icon icon="solar:hand-money-linear" className="text-neutral-400 shrink-0" />
-              <span>{t("commission")} : {booking.p2pCommissionAmount} € ({Math.round((booking.p2pCommissionRate || 0) * 100)}%)</span>
+              <span>{t("commissionFor", { name: booking.referrerDriverName })} : {booking.p2pCommissionAmount} € ({Math.round((booking.p2pCommissionRate || 0) * 100)}%)</span>
             </div>
           )}
         </div>
@@ -239,7 +246,7 @@ export default function P2PAcceptPage() {
                 className="flex items-center justify-center gap-2 w-full bg-green-600 text-white font-semibold py-3 rounded-xl hover:bg-green-700 transition-colors"
               >
                 <Icon icon="mdi:whatsapp" className="text-lg" />
-                {t("contactClient")}
+                {acceptedData.booking.contactIsReferrer ? t("contactReferrer", { name: acceptedData.booking.clientName }) : t("contactClient")}
               </a>
             )}
             <Link

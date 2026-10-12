@@ -1,0 +1,34 @@
+# Relance des courses sans réponse toutes les 10 minutes (src/lib/escalation.ts) :
+# réservation sans réponse du chauffeur en 15 minutes, course transmise (P2P) sans
+# réponse du collègue en 30 minutes → proposée aux chauffeurs proches.
+# Le cron de Vercel (vercel.json) ne passe qu'une fois par jour ; les pages de
+# l'espace chauffeur, organisation et administration déclenchent aussi la relance
+# à la lecture (escalateIfDue). Ce passage couvre les moments où personne n'ouvre l'app.
+# Secret GitHub nécessaire : CRON_SECRET (la même valeur que dans Vercel).
+# Sans lui, le passage s'arrête sans erreur.
+
+name: Escalade
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: escalade
+  cancel-in-progress: false
+
+jobs:
+  escalade:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Relance des courses sans réponse
+        env:
+          CRON_SECRET: ${{ secrets.CRON_SECRET }}
+        run: |
+          if [ -z "$CRON_SECRET" ]; then
+            echo "Secret CRON_SECRET absent : rien à faire."
+            exit 0
+          fi
+          curl -fsS --max-time 120 -H "Authorization: Bearer $CRON_SECRET" https://www.taxineo.fr/api/cron/escalate-bookings

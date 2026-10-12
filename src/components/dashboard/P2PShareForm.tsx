@@ -1,10 +1,13 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import { Icon } from "@iconify/react";
 import { useTranslations } from "next-intl";
 import { PlacesAutocomplete } from "@/components/booking/PlacesAutocomplete";
 import { phoneError } from "@/lib/validation";
+import { MapsLink } from "@/components/ui/MapsLink";
+import { P2PShareButtons } from "@/components/dashboard/P2PShareButtons";
+import { P2P_PREFILL_EVENT, type P2PPrefill } from "@/components/dashboard/P2PHistory";
 
 interface P2PBookingResult {
   id: string;
@@ -32,7 +35,8 @@ export function P2PShareForm({ driverFirstName }: P2PShareFormProps) {
   const [step, setStep] = useState<"form" | "confirmation">("form");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
-  const [copied, setCopied] = useState(false);
+  const formRef = useRef<HTMLFormElement>(null);
+  const keepPriceRef = useRef(false);
 
   // Form fields
   const [departure, setDeparture] = useState("");
@@ -107,7 +111,8 @@ export function P2PShareForm({ driverFirstName }: P2PShareFormProps) {
         const data = await res.json();
         setDistanceKm(data.distanceKm);
         setDurationMinutes(data.durationMinutes);
-        setPrice(data.suggestedPrice);
+        // Trajet repris d'une course transmise : on garde son prix tant que le trajet ne change pas.
+        if (!keepPriceRef.current) setPrice(data.suggestedPrice);
       }
     } catch {
       // Ignore estimate errors
@@ -119,6 +124,32 @@ export function P2PShareForm({ driverFirstName }: P2PShareFormProps) {
   useEffect(() => {
     fetchEstimate();
   }, [fetchEstimate]);
+
+  // « Reproposer ce trajet » depuis la liste des courses transmises : formulaire prérempli (date à choisir).
+  useEffect(() => {
+    function onPrefill(e: Event) {
+      const d = (e as CustomEvent<P2PPrefill>).detail;
+      setStep("form");
+      setResult(null);
+      setError("");
+      keepPriceRef.current = d.price != null;
+      setDeparture(d.departureName);
+      setDepartureLat(d.departureLat);
+      setDepartureLng(d.departureLng);
+      setArrival(d.arrivalName);
+      setArrivalLat(d.arrivalLat);
+      setArrivalLng(d.arrivalLng);
+      setSelectedDate("");
+      setSelectedTime("");
+      setPrice(d.price ?? "");
+      if (d.commissionRate != null) setCommissionRate(d.commissionRate);
+      setClientName(d.clientName);
+      setClientPhone(d.clientPhone);
+      requestAnimationFrame(() => formRef.current?.scrollIntoView({ behavior: "smooth", block: "start" }));
+    }
+    window.addEventListener(P2P_PREFILL_EVENT, onPrefill);
+    return () => window.removeEventListener(P2P_PREFILL_EVENT, onPrefill);
+  }, []);
 
   const commissionAmount = typeof price === "number" ? Math.round(price * commissionRate * 100) / 100 : 0;
 
@@ -184,46 +215,6 @@ export function P2PShareForm({ driverFirstName }: P2PShareFormProps) {
     });
   }
 
-  function getAcceptLink() {
-    if (!result) return "";
-    const baseUrl = window.location.origin;
-    return `${baseUrl}/p2p/accept?token=${result.p2pToken}`;
-  }
-
-  function buildShareWhatsAppUrl() {
-    if (!result) return "#";
-    const acceptLink = getAcceptLink();
-    const message = [
-      `Salut,`,
-      ``,
-      `Je te propose une course via TaxiNeo :`,
-      ``,
-      `📍 ${result.departureName} → ${result.arrivalName}`,
-      `📅 ${formatDate(result.requestedDate)}`,
-      `💰 ${result.lockedPrice} €`,
-      ``,
-      `Pour accepter, clique ici :`,
-      acceptLink,
-      ``,
-      `Inscription en moins de 2 minutes si tu n'as pas encore de compte.`,
-      ``,
-      `${driverFirstName}`,
-    ].join("\n");
-    return `https://wa.me/?text=${encodeURIComponent(message)}`;
-  }
-
-  async function handleCopyLink() {
-    const link = getAcceptLink();
-    if (!link) return;
-    try {
-      await navigator.clipboard.writeText(link);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    } catch {
-      // Fallback: select text
-    }
-  }
-
   function resetForm() {
     setStep("form");
     setResult(null);
@@ -242,7 +233,6 @@ export function P2PShareForm({ driverFirstName }: P2PShareFormProps) {
     setDistanceKm(null);
     setDurationMinutes(null);
     setError("");
-    setCopied(false);
   }
 
   if (step === "confirmation" && result) {
@@ -262,15 +252,7 @@ export function P2PShareForm({ driverFirstName }: P2PShareFormProps) {
           <div className="flex items-center gap-2 text-sm">
             <Icon icon="solar:map-point-linear" className="text-neutral-400" />
             <span className="flex-1">{result.departureName} → {result.arrivalName}</span>
-            <a
-              href={`https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(result.departureName)}&destination=${encodeURIComponent(result.arrivalName)}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="shrink-0 w-6 h-6 flex items-center justify-center rounded-md text-neutral-400 hover:text-blue-600 hover:bg-blue-50 transition-colors"
-              title="Google Maps"
-            >
-              <Icon icon="solar:map-point-wave-linear" className="text-sm" />
-            </a>
+            <MapsLink origin={result.departureName} destination={result.arrivalName} />
           </div>
           <div className="flex items-center gap-2 text-sm">
             <Icon icon="solar:calendar-linear" className="text-neutral-400" />
@@ -286,27 +268,21 @@ export function P2PShareForm({ driverFirstName }: P2PShareFormProps) {
           </div>
           <div className="flex items-center gap-2 text-sm">
             <Icon icon="solar:hand-money-linear" className="text-neutral-400" />
-            <span>{t("commission")} : {result.p2pCommissionAmount} € ({Math.round(result.p2pCommissionRate * 100)}%)</span>
+            <span>{t("yourCommission")} : {result.p2pCommissionAmount} € ({Math.round(result.p2pCommissionRate * 100)}%)</span>
           </div>
         </div>
 
         <div className="space-y-3">
-          <a
-            href={buildShareWhatsAppUrl()}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 w-full bg-green-600 text-white font-semibold py-3 rounded-xl hover:bg-green-700 transition-colors"
-          >
-            <Icon icon="mdi:whatsapp" className="text-lg" />
-            {t("shareWhatsApp")}
-          </a>
-          <button
-            onClick={handleCopyLink}
-            className="flex items-center justify-center gap-2 w-full bg-neutral-900 text-white font-semibold py-3 rounded-xl hover:bg-neutral-800 transition-colors"
-          >
-            <Icon icon={copied ? "solar:check-circle-bold" : "solar:copy-linear"} className="text-lg" />
-            {copied ? t("linkCopied") : t("copyLink")}
-          </button>
+          <P2PShareButtons
+            driverFirstName={driverFirstName}
+            ride={{
+              p2pToken: result.p2pToken,
+              departureName: result.departureName,
+              arrivalName: result.arrivalName,
+              requestedDate: result.requestedDate,
+              lockedPrice: result.lockedPrice,
+            }}
+          />
           <button
             onClick={resetForm}
             className="flex items-center justify-center gap-2 w-full border border-neutral-200 text-neutral-700 font-medium py-3 rounded-xl hover:bg-neutral-50 transition-colors"
@@ -320,7 +296,7 @@ export function P2PShareForm({ driverFirstName }: P2PShareFormProps) {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="bg-white border border-neutral-200 rounded-2xl p-4">
+    <form ref={formRef} onSubmit={handleSubmit} className="bg-white border border-neutral-200 rounded-2xl p-4">
       {error && (
         <div className="bg-red-50 border border-red-200 text-red-700 text-sm rounded-lg px-3 py-2 mb-3">
           {error}
@@ -335,7 +311,7 @@ export function P2PShareForm({ driverFirstName }: P2PShareFormProps) {
             placeholder={t("departurePlaceholder")}
             value={departure}
             onChange={(val, lat, lng) => {
-              setDeparture(val);
+              setDeparture(val); keepPriceRef.current = false;
               if (lat && lng) { setDepartureLat(lat); setDepartureLng(lng); }
             }}
             icon="solar:map-point-linear"
@@ -347,7 +323,7 @@ export function P2PShareForm({ driverFirstName }: P2PShareFormProps) {
             placeholder={t("arrivalPlaceholder")}
             value={arrival}
             onChange={(val, lat, lng) => {
-              setArrival(val);
+              setArrival(val); keepPriceRef.current = false;
               if (lat && lng) { setArrivalLat(lat); setArrivalLng(lng); }
             }}
             icon="solar:flag-linear"
@@ -377,62 +353,67 @@ export function P2PShareForm({ driverFirstName }: P2PShareFormProps) {
         </div>
       )}
 
-      {/* Row 2: Date + Price + Commission */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-3">
-        <div>
-          <label className="block text-xs font-medium text-neutral-500 mb-1">{t("dateTime")}</label>
-          <div className="flex gap-2">
-            <input
-              type="date"
-              value={selectedDate}
-              onChange={(e) => {
-                setSelectedDate(e.target.value);
-                // Reset time if switching to today and current time is now invalid
-                if (e.target.value === getTodayStr() && selectedTime) {
-                  const minTime = new Date(Date.now() + 3600_000);
-                  const [h, m] = selectedTime.split(":").map(Number);
-                  if (h < minTime.getHours() || (h === minTime.getHours() && m <= minTime.getMinutes())) {
-                    setSelectedTime("");
-                  }
+      {/* Row 2: Date + heure (une ligne à elles seules : jamais de chevauchement, même en 16 px dans l'app) */}
+      <div className="mb-3">
+        <label className="block text-xs font-medium text-neutral-500 mb-1">{t("dateTime")}</label>
+        <div className="grid grid-cols-[minmax(0,3fr)_minmax(0,2fr)] gap-2">
+          <input
+            type="date"
+            aria-label={t("dateTime")}
+            value={selectedDate}
+            onChange={(e) => {
+              setSelectedDate(e.target.value);
+              // Reset time if switching to today and current time is now invalid
+              if (e.target.value === getTodayStr() && selectedTime) {
+                const minTime = new Date(Date.now() + 3600_000);
+                const [h, m] = selectedTime.split(":").map(Number);
+                if (h < minTime.getHours() || (h === minTime.getHours() && m <= minTime.getMinutes())) {
+                  setSelectedTime("");
                 }
-              }}
-              min={getTodayStr()}
-              className="flex-1 bg-neutral-100 rounded-lg px-3 py-2.5 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all cursor-pointer"
-              required
-            />
-            <select
-              value={selectedTime}
-              onChange={(e) => setSelectedTime(e.target.value)}
-              disabled={!selectedDate}
-              className="w-24 bg-neutral-100 rounded-lg px-2 py-2.5 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all cursor-pointer disabled:opacity-40"
-              required
-            >
-              <option value="">{t("hour") ?? "—"}</option>
-              {getTimeSlots().map((slot) => (
-                <option key={slot.value} value={slot.value} disabled={slot.disabled}>
-                  {slot.label}
-                </option>
-              ))}
-            </select>
-          </div>
+              }
+            }}
+            min={getTodayStr()}
+            className="block w-full min-w-0 min-h-[42px] bg-neutral-100 rounded-lg px-3 py-2.5 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all cursor-pointer"
+            required
+          />
+          <select
+            aria-label={t("hour")}
+            value={selectedTime}
+            onChange={(e) => setSelectedTime(e.target.value)}
+            disabled={!selectedDate}
+            className="block w-full min-w-0 min-h-[42px] bg-neutral-100 rounded-lg px-3 py-2.5 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all cursor-pointer disabled:opacity-40"
+            required
+          >
+            <option value="">{t("hour")}</option>
+            {getTimeSlots().map((slot) => (
+              <option key={slot.value} value={slot.value} disabled={slot.disabled}>
+                {slot.label}
+              </option>
+            ))}
+          </select>
         </div>
-        <div>
+      </div>
+
+      {/* Row 3: Prix + commission */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-3">
+        <div className="min-w-0">
           <label className="block text-xs font-medium text-neutral-500 mb-1">{t("price")}</label>
           <div className="relative">
             <input
               type="number"
+              inputMode="decimal"
               value={price}
               onChange={(e) => setPrice(e.target.value ? Number(e.target.value) : "")}
               min="1"
               step="1"
               placeholder="0"
-              className="w-full bg-neutral-100 rounded-lg px-3 py-2.5 pr-8 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all"
+              className="w-full min-w-0 bg-neutral-100 rounded-lg px-3 py-2.5 pr-8 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all"
               required
             />
             <span className="absolute right-3 top-1/2 -translate-y-1/2 text-neutral-400 text-xs">€</span>
           </div>
         </div>
-        <div>
+        <div className="min-w-0">
           <label className="block text-xs font-medium text-neutral-500 mb-1">{t("commissionRate")}</label>
           <div className="flex gap-1.5">
             {[0.05, 0.10, 0.15, 0.20].map((rate) => (
@@ -440,7 +421,7 @@ export function P2PShareForm({ driverFirstName }: P2PShareFormProps) {
                 key={rate}
                 type="button"
                 onClick={() => setCommissionRate(rate)}
-                className={`flex-1 py-2.5 rounded-lg text-sm font-medium transition-colors ${
+                className={`flex-1 min-w-0 py-2.5 rounded-lg text-sm font-medium transition-colors ${
                   commissionRate === rate
                     ? "bg-violet-600 text-white"
                     : "bg-neutral-100 text-neutral-600 hover:bg-neutral-200"
@@ -450,14 +431,17 @@ export function P2PShareForm({ driverFirstName }: P2PShareFormProps) {
               </button>
             ))}
           </div>
-          {typeof price === "number" && price > 0 && (
-            <p className="text-xs text-violet-600 font-medium mt-1">= {commissionAmount} €</p>
-          )}
+          <p className="text-xs text-neutral-500 mt-1">
+            {typeof price === "number" && price > 0 && (
+              <span className="text-violet-600 font-semibold">= {commissionAmount} € · </span>
+            )}
+            {t("commissionHelp")}
+          </p>
         </div>
       </div>
 
-      {/* Row 3: Client name + phone */}
-      <div className="grid grid-cols-2 gap-3 mb-4">
+      {/* Row 4: Client name + phone */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
         <div>
           <label className="block text-xs font-medium text-neutral-500 mb-1">{t("clientName")}</label>
           <input

@@ -4,9 +4,13 @@ import { redirect } from "next/navigation";
 import { ReservationsTable } from "@/components/driver/ReservationsTable";
 import { QRCodeButton } from "@/components/dashboard/QRCodeButton";
 import { getTranslations } from "next-intl/server";
+import { contactForDriver } from "@/lib/p2p";
+import { escalateIfDue } from "@/lib/escalation";
 
 export default async function ReservationsPage() {
   const session = await auth();
+  // Course sans réponse (transmise : 30 min) : proposée aux chauffeurs proches, au plus une fois par minute.
+  await escalateIfDue();
   if (!session?.user?.id) redirect("/connexion");
 
   // Track dashboard visit as activity
@@ -33,19 +37,21 @@ export default async function ReservationsPage() {
     },
     orderBy: { createdAt: "desc" },
     include: {
-      referrerDriver: { select: { firstName: true, lastName: true } },
+      referrerDriver: { select: { firstName: true, lastName: true, phone: true, email: true } },
       organization: { select: { name: true } },
     },
   });
 
-  const serialized = bookings.map((b) => ({
+  const serialized = bookings.map(({ referrerDriver, ...b }) => ({
     ...b,
+    // Course transmise ouverte aux chauffeurs proches : le contact est le chauffeur qui l'a transmise.
+    ...contactForDriver(b, session.user!.id!, referrerDriver),
     createdAt: b.createdAt.toISOString(),
     updatedAt: b.updatedAt.toISOString(),
     requestedDate: b.requestedDate.toISOString(),
     cancelledBy: b.cancelledBy || null,
-    referrerDriverName: b.referrerDriver
-      ? `${b.referrerDriver.firstName} ${b.referrerDriver.lastName}`
+    referrerDriverName: referrerDriver
+      ? `${referrerDriver.firstName} ${referrerDriver.lastName}`
       : null,
     organizationName: b.organization?.name || null,
   }));

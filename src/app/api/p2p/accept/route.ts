@@ -3,6 +3,8 @@ import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
 import { notifyDriver } from "@/lib/push";
 import { createNotification } from "@/lib/notifications";
+import { escalateIfDue } from "@/lib/escalation";
+import { contactForDriver } from "@/lib/p2p";
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
@@ -13,6 +15,9 @@ export async function GET(request: Request) {
   }
 
   try {
+    // Déclenchement à la lecture de l'ouverture aux chauffeurs proches (src/lib/escalation.ts).
+    await escalateIfDue();
+
     const booking = await prisma.booking.findUnique({
       where: { p2pToken: token },
       select: {
@@ -125,12 +130,16 @@ export async function POST(request: Request) {
         reference: true,
         clientName: true,
         clientPhone: true,
+        clientEmail: true,
+        source: true,
+        p2pOpenedAt: true,
+        referrerDriverId: true,
         departureName: true,
         arrivalName: true,
         requestedDate: true,
         lockedPrice: true,
         referrerDriver: {
-          select: { firstName: true, lastName: true },
+          select: { firstName: true, lastName: true, phone: true },
         },
       },
     });
@@ -158,12 +167,16 @@ export async function POST(request: Request) {
       await notifyDriver(existing.referrerDriverId, "p2pAccepted", { from: booking.departureName, to: booking.arrivalName, date: booking.requestedDate, driver: `${driver?.firstName ?? ""} ${driver?.lastName ?? ""}`.trim() }, "/dashboard/p2p");
     }
 
+    // Déjà ouverte aux chauffeurs proches : le contact est le chauffeur qui l'a transmise.
+    const contact = booking ? contactForDriver(booking, session.user.id, booking.referrerDriver) : null;
+
     return NextResponse.json({
       message: "Course acceptée",
-      booking: booking ? {
+      booking: booking && contact ? {
         reference: booking.reference,
-        clientName: booking.clientName,
-        clientPhone: booking.clientPhone,
+        clientName: contact.clientName,
+        clientPhone: contact.clientPhone,
+        contactIsReferrer: contact.contactIsReferrer,
         departureName: booking.departureName,
         arrivalName: booking.arrivalName,
         requestedDate: booking.requestedDate,

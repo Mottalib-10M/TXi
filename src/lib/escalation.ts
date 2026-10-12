@@ -7,29 +7,39 @@ import { createNotification } from "@/lib/notifications";
 import { format } from "date-fns";
 import { fr } from "date-fns/locale";
 import { driverPool, isDemoEmail } from "@/lib/demo";
+import { P2P_OPEN_DELAY_MS } from "@/lib/p2p";
 
 const ESCALATION_DELAY_MS = 15 * 60 * 1000; // 15 minutes
 
 /**
  * Run escalation checks for pending bookings.
- * Called inline from API routes — no cron needed.
+ * Called inline from API routes and pages (escalateIfDue), and by the daily cron.
  * Safe to call multiple times (idempotent via escalationPhase).
+ *
+ * Course transmise (P2P) : sans réponse du collègue 30 minutes après sa création,
+ * elle est ouverte aux 3 chauffeurs les plus proches (hors chauffeur qui l'a transmise) ;
+ * ils ont pour contact le chauffeur qui l'a transmise, qui garde sa commission.
  */
 export async function runEscalation(): Promise<{ phase1: number; phase2: number }> {
   const now = new Date();
   const fiveMinAgo = new Date(now.getTime() - ESCALATION_DELAY_MS);
+  const p2pAgo = new Date(now.getTime() - P2P_OPEN_DELAY_MS);
 
   console.log(`[Escalation] Running at ${now.toISOString()}, checking bookings before ${fiveMinAgo.toISOString()}`);
 
-  // --- Phase 1: Bookings pending > 5 min, not yet escalated ---
+  // --- Phase 1: Bookings pending > 15 min (course transmise : > 30 min), not yet escalated ---
   const phase1Bookings = await prisma.booking.findMany({
     where: {
       status: "PENDING",
       escalationPhase: 0,
-      createdAt: { lt: fiveMinAgo },
+      OR: [
+        { source: { not: "P2P" }, createdAt: { lt: fiveMinAgo } },
+        { source: "P2P", createdAt: { lt: p2pAgo }, requestedDate: { gt: now } },
+      ],
     },
     include: {
       driver: { select: { id: true, firstName: true, lastName: true } },
+      referrerDriver: { select: { id: true, firstName: true, lastName: true, phone: true, email: true } },
     },
   });
 
@@ -37,13 +47,17 @@ export async function runEscalation(): Promise<{ phase1: number; phase2: number 
 
   for (const booking of phase1Bookings) {
     if (isDemoEmail(booking.clientEmail)) continue;
+    const isP2P = booking.source === "P2P";
+    // Course transmise par un chauffeur de démo : jamais ouverte aux vrais chauffeurs.
+    if (isP2P && isDemoEmail(booking.referrerDriver?.email)) continue;
+    const excluded = [booking.driverId, isP2P ? booking.referrerDriverId : null].filter((id): id is string => Boolean(id));
     const allDrivers = await prisma.driver.findMany({
       where: {
         ...driverPool(),
         isActive: true,
         zoneLat: { not: null },
         zoneLng: { not: null },
-        id: { not: booking.driverId ?? undefined },
+        id: { notIn: excluded },
       },
     });
 
@@ -66,25 +80,29 @@ export async function runEscalation(): Promise<{ phase1: number; phase2: number 
       .slice(0, 3);
 
     if (nearbyDrivers.length === 0) {
-      console.log(`[Escalation] Booking #${booking.reference}: no nearby drivers found, notifying admin directly`);
-      await notifyAdmin(booking);
-      await prisma.booking.update({
-        where: { id: booking.id },
+      // Réservée d'abord (escalationPhase 0 → 2) : deux passages simultanés n'alertent pas deux fois.
+      const claimed = await prisma.booking.updateMany({
+        where: { id: booking.id, escalationPhase: 0 },
         data: { escalationPhase: 2 },
       });
+      if (claimed.count === 0) continue;
+      console.log(`[Escalation] Booking #${booking.reference}: no nearby drivers found, notifying admin directly`);
+      await notifyAdmin(booking);
       continue;
     }
 
     const invitedIds = nearbyDrivers.map((d) => d.id);
-    console.log(`[Escalation] Booking #${booking.reference}: inviting ${nearbyDrivers.length} drivers → Phase 1`);
-    await prisma.booking.update({
-      where: { id: booking.id },
+    const claimed = await prisma.booking.updateMany({
+      where: { id: booking.id, escalationPhase: 0 },
       data: {
         escalationPhase: 1,
         escalatedAt: now,
         invitedDriverIds: invitedIds,
+        ...(isP2P ? { p2pOpenedAt: now } : {}),
       },
     });
+    if (claimed.count === 0) continue;
+    console.log(`[Escalation] Booking #${booking.reference}: inviting ${nearbyDrivers.length} drivers → Phase 1`);
 
     const dateFormatted = format(new Date(booking.requestedDate), "dd MMMM yyyy 'à' HH:mm", { locale: fr });
 
@@ -111,11 +129,20 @@ export async function runEscalation(): Promise<{ phase1: number; phase2: number 
       await notifyDriver(booking.driver.id, "timeout", { from: booking.departureName, to: booking.arrivalName, date: booking.requestedDate });
     }
 
+    // Course transmise : le chauffeur qui l'a transmise apprend qu'elle est proposée aux chauffeurs proches.
+    if (isP2P && booking.referrerDriverId) {
+      await notifyDriver(booking.referrerDriverId, "p2pOpened", { from: booking.departureName, to: booking.arrivalName, date: booking.requestedDate }, "/dashboard/p2p");
+    }
+
+    // Course transmise : le contact donné aux chauffeurs proches est le chauffeur qui l'a transmise.
+    const referrerName = booking.referrerDriver ? `${booking.referrerDriver.firstName} ${booking.referrerDriver.lastName}`.trim() : "";
+    const contactName = isP2P && referrerName ? `${referrerName} (chauffeur Taxineo, course transmise)` : booking.clientName;
+
     for (const driver of nearbyDrivers) {
       if (driver.notifyEmail) {
         const emailData = buildDriverNotificationEmail({
           driverName: driver.firstName,
-          clientName: booking.clientName,
+          clientName: contactName,
           departure: booking.departureName,
           arrival: booking.arrivalName,
           date: dateFormatted,
@@ -130,7 +157,9 @@ export async function runEscalation(): Promise<{ phase1: number; phase2: number 
       await notifyDriver(driver.id, "newRide", { from: booking.departureName, to: booking.arrivalName, date: booking.requestedDate });
 
       if (driver.notifySms && driver.phone) {
-        const smsText = `TaxiNeo - Course disponible #${booking.reference}. ${booking.departureName} → ${booking.arrivalName}. Connectez-vous pour accepter.`;
+        const smsText = isP2P && referrerName
+          ? `TaxiNeo - Course disponible #${booking.reference}, transmise par ${referrerName}. ${booking.departureName} → ${booking.arrivalName}. Connectez-vous pour accepter.`
+          : `TaxiNeo - Course disponible #${booking.reference}. ${booking.departureName} → ${booking.arrivalName}. Connectez-vous pour accepter.`;
         await sendSms(driver.phone, smsText);
       }
     }
@@ -138,7 +167,7 @@ export async function runEscalation(): Promise<{ phase1: number; phase2: number 
     createNotification({
       type: "ESCALATION_PHASE1",
       title: `Escalade phase 1 — #${booking.reference}`,
-      body: `${booking.clientName} — ${nearbyDrivers.length} chauffeur(s) invité(s)`,
+      body: `${isP2P ? `Course transmise par ${referrerName}` : booking.clientName} — ${nearbyDrivers.length} chauffeur(s) invité(s)`,
       metadata: { bookingId: booking.id, reference: booking.reference, invitedCount: nearbyDrivers.length },
     });
   }
@@ -159,12 +188,13 @@ export async function runEscalation(): Promise<{ phase1: number; phase2: number 
 
   for (const booking of phase2Bookings) {
     if (isDemoEmail(booking.clientEmail)) continue;
-    console.log(`[Escalation] Booking #${booking.reference}: no response after escalation, notifying admin`);
-    await notifyAdmin(booking);
-    await prisma.booking.update({
-      where: { id: booking.id },
+    const claimed = await prisma.booking.updateMany({
+      where: { id: booking.id, escalationPhase: 1 },
       data: { escalationPhase: 2 },
     });
+    if (claimed.count === 0) continue;
+    console.log(`[Escalation] Booking #${booking.reference}: no response after escalation, notifying admin`);
+    await notifyAdmin(booking);
 
     createNotification({
       type: "ESCALATION_PHASE2",
@@ -176,6 +206,25 @@ export async function runEscalation(): Promise<{ phase1: number; phase2: number 
 
   console.log(`[Escalation] Done. Phase1=${phase1Bookings.length}, Phase2=${phase2Bookings.length}`);
   return { phase1: phase1Bookings.length, phase2: phase2Bookings.length };
+}
+
+let lastRun = 0;
+
+/**
+ * Déclenchement à la lecture : les pages et routes très consultées (espace chauffeur,
+ * organisation, administration, accueil de l'app, lien d'une course transmise) appellent
+ * cette fonction ; elle lance runEscalation au plus une fois par minute et par instance.
+ * Le cron de Vercel (une fois par jour) et le passage planifié GitHub
+ * (.github/workflows/escalade.yml, toutes les 10 minutes) complètent.
+ */
+export async function escalateIfDue(): Promise<void> {
+  if (Date.now() - lastRun < 60_000) return;
+  lastRun = Date.now();
+  try {
+    await runEscalation();
+  } catch (e) {
+    console.error("Escalation error:", e);
+  }
 }
 
 async function notifyAdmin(booking: {
