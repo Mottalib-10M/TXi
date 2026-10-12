@@ -4,6 +4,7 @@ import { useState, useCallback } from "react";
 import { Icon } from "@iconify/react";
 import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
+import { MapsLink } from "@/components/ui/MapsLink";
 
 type NotificationType =
   | "BOOKING_CREATED"
@@ -258,15 +259,7 @@ export function AdminActivityFeed({
                         </span>
                       )}
                       {e.departureName && e.arrivalName && (
-                        <a
-                          href={`https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(e.departureName)}&destination=${encodeURIComponent(e.arrivalName)}&travelmode=driving`}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-neutral-400 hover:text-blue-600 transition-colors"
-                          title="Google Maps"
-                        >
-                          <Icon icon="solar:map-point-wave-linear" className="text-sm" />
-                        </a>
+                        <MapsLink origin={e.departureName} destination={e.arrivalName} />
                       )}
                       <Link
                         href={`/admin/reservations?search=${e.bookingRef}`}

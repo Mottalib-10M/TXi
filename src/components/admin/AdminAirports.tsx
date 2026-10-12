@@ -6,6 +6,7 @@ import { format } from "date-fns";
 import { enUS, fr } from "date-fns/locale";
 import { Link } from "@/i18n/navigation";
 import { useLocale, useTranslations } from "next-intl";
+import { MapsLink } from "@/components/ui/MapsLink";
 
 interface AirportBooking {
   id: string;
@@ -476,16 +477,7 @@ export function AdminAirports({ bookings }: { bookings: AirportBooking[] }) {
                                 &rarr; {b.arrivalName}
                               </div>
                             </div>
-                            <a
-                              href={`https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(b.departureName)}&destination=${encodeURIComponent(b.arrivalName)}`}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="shrink-0 mt-1 w-6 h-6 flex items-center justify-center rounded-md text-neutral-400 hover:text-blue-600 hover:bg-blue-50 transition-colors"
-                              title={locale === "en" ? "Open in Google Maps" : "Ouvrir dans Google Maps"}
-                              onClick={(e) => e.stopPropagation()}
-                            >
-                              <Icon icon="solar:map-point-wave-linear" className="text-sm" />
-                            </a>
+                            <MapsLink origin={b.departureName} destination={b.arrivalName} />
                           </div>
                         </td>
                         <td className="px-3 py-2">
@@ -577,16 +569,7 @@ export function AdminAirports({ bookings }: { bookings: AirportBooking[] }) {
                         <div className="text-neutral-700 font-medium">{b.departureName}</div>
                         <div className="text-neutral-400">&rarr; {b.arrivalName}</div>
                       </div>
-                      <a
-                        href={`https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(b.departureName)}&destination=${encodeURIComponent(b.arrivalName)}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="shrink-0 w-6 h-6 flex items-center justify-center rounded-md text-neutral-400 hover:text-blue-600 hover:bg-blue-50 transition-colors"
-                        title={locale === "en" ? "Open in Google Maps" : "Ouvrir dans Google Maps"}
-                        onClick={(e) => e.stopPropagation()}
-                      >
-                        <Icon icon="solar:map-point-wave-linear" className="text-sm" />
-                      </a>
+                      <MapsLink origin={b.departureName} destination={b.arrivalName} />
                     </div>
                     <div className="grid grid-cols-3 gap-x-4 gap-y-1.5 text-xs">
                       <div>

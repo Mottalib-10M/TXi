@@ -8,6 +8,7 @@ import { enUS, fr } from "date-fns/locale";
 import { useLocale, useTranslations } from "next-intl";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
+import { MapsLink } from "@/components/ui/MapsLink";
 
 interface OverviewData {
   totalDrivers: number;
@@ -561,15 +562,7 @@ export function AdminOverview({ data }: { data: OverviewData }) {
                               <div className="font-medium text-neutral-700 break-words leading-snug">{booking.departureName}</div>
                               <div className="text-neutral-400 break-words leading-snug mt-0.5">→ {booking.arrivalName}</div>
                             </div>
-                            <a
-                              href={`https://www.google.com/maps/dir/?api=1&origin=${booking.departureLat},${booking.departureLng}&destination=${booking.arrivalLat},${booking.arrivalLng}&travelmode=driving`}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="shrink-0 mt-0.5 p-1 rounded-lg text-neutral-400 hover:text-blue-600 hover:bg-blue-50 transition-colors"
-                              title="Google Maps"
-                            >
-                              <Icon icon="solar:map-arrow-right-linear" className="text-sm" />
-                            </a>
+                            <MapsLink origin={`${booking.departureLat},${booking.departureLng}`} destination={`${booking.arrivalLat},${booking.arrivalLng}`} />
                           </div>
                         </td>
                         <td className="px-3 py-2 text-neutral-400">
@@ -676,15 +669,7 @@ export function AdminOverview({ data }: { data: OverviewData }) {
                         <div className="text-neutral-700 font-medium">{booking.departureName}</div>
                         <div className="text-neutral-400">→ {booking.arrivalName}</div>
                       </div>
-                      <a
-                        href={`https://www.google.com/maps/dir/?api=1&origin=${booking.departureLat},${booking.departureLng}&destination=${booking.arrivalLat},${booking.arrivalLng}&travelmode=driving`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="shrink-0 p-1 rounded-lg text-neutral-400 hover:text-blue-600 hover:bg-blue-50 transition-colors"
-                        title="Google Maps"
-                      >
-                        <Icon icon="solar:map-arrow-right-linear" className="text-sm" />
-                      </a>
+                      <MapsLink origin={`${booking.departureLat},${booking.departureLng}`} destination={`${booking.arrivalLat},${booking.arrivalLng}`} />
                     </div>
                     <div className="grid grid-cols-2 gap-x-4 gap-y-1.5 text-xs">
                       <div>

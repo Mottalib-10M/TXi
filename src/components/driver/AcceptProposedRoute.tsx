@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Icon } from "@iconify/react";
 import { useTranslations } from "next-intl";
 import { useRouter } from "next/navigation";
+import { MapsLink } from "@/components/ui/MapsLink";
 
 interface ProposedRoute {
   id: string;
@@ -75,15 +76,7 @@ export function AcceptProposedRoute({ route }: { route: ProposedRoute }) {
           {route.departureName}
           <Icon icon="solar:arrow-right-linear" className="text-neutral-300" />
           {route.destinationName}
-          <a
-            href={`https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(route.departureName)}&destination=${encodeURIComponent(route.destinationName)}&travelmode=driving`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="shrink-0 w-6 h-6 flex items-center justify-center rounded-md text-neutral-400 hover:text-blue-600 hover:bg-blue-50 transition-colors"
-            title="Google Maps"
-          >
-            <Icon icon="solar:map-point-wave-linear" className="text-sm" />
-          </a>
+          <MapsLink origin={route.departureName} destination={route.destinationName} />
         </div>
         <p className="text-xs text-neutral-500">
           {new Date(route.departureTime).toLocaleDateString("fr-FR", {

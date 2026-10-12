@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { Icon } from "@iconify/react";
 import { useTranslations } from "next-intl";
+import { MapsLink } from "@/components/ui/MapsLink";
 
 type Period = "week" | "month" | "year";
 
@@ -154,15 +155,7 @@ export function P2PStats() {
                         <div className="flex-1 min-w-0">
                           <p className="text-neutral-700 truncate flex items-center gap-1">
                             <span className="truncate">{b.departureName} → {b.arrivalName}</span>
-                            <a
-                              href={`https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(b.departureName)}&destination=${encodeURIComponent(b.arrivalName)}&travelmode=driving`}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="shrink-0 text-neutral-400 hover:text-blue-600 transition-colors"
-                              title="Google Maps"
-                            >
-                              <Icon icon="solar:map-point-wave-linear" className="text-xs" />
-                            </a>
+                            <MapsLink origin={b.departureName} destination={b.arrivalName} />
                           </p>
                           <p className="text-neutral-400">{formatDate(b.requestedDate)} — {b.clientName}</p>
                         </div>
