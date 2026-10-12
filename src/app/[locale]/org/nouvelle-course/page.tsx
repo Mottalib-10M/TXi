@@ -195,7 +195,7 @@ export default function NouvelleCourse() {
   }
 
   const inputClass =
-    "w-full bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all";
+    "w-full min-w-0 bg-neutral-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all";
 
   return (
     <div className="max-w-2xl">
@@ -293,7 +293,7 @@ export default function NouvelleCourse() {
             <div className="flex-1 h-px bg-neutral-200" />
           </div>
 
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-2 gap-3 [&>div]:min-w-0">
             <div>
               <label className="block text-sm font-medium mb-1.5">{t("date")}</label>
               <input

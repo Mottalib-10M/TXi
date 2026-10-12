@@ -308,30 +308,36 @@ export function ProfileForm({ driver }: { driver: DriverData }) {
                 type="button"
                 onClick={() => photoInputRef.current?.click()}
                 disabled={uploadingPhoto}
-                className="relative w-14 h-14 rounded-full overflow-hidden group shrink-0"
+                aria-label={t("changePhoto")}
+                title={t("changePhoto")}
+                className="relative w-16 h-16 shrink-0 rounded-full group focus:outline-none focus-visible:ring-2 focus-visible:ring-neutral-900 focus-visible:ring-offset-2"
               >
-                {form.photoUrl ? (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img
-                    src={form.photoUrl}
-                    alt="Photo de profil"
-                    className="w-full h-full object-cover"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                ) : (
-                  <div className="w-full h-full bg-neutral-200 flex items-center justify-center text-neutral-500 text-lg font-semibold">
-                    {form.firstName?.[0]?.toUpperCase() || ""}
-                    {form.lastName?.[0]?.toUpperCase() || ""}
-                  </div>
-                )}
-                <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                  {uploadingPhoto ? (
-                    <Icon icon="solar:refresh-linear" className="text-white text-lg animate-spin" />
+                <span className="block w-full h-full rounded-full overflow-hidden">
+                  {form.photoUrl ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                      src={form.photoUrl}
+                      alt=""
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                      decoding="async"
+                    />
                   ) : (
-                    <Icon icon="solar:camera-linear" className="text-white text-lg" />
+                    <span className="w-full h-full bg-neutral-200 flex items-center justify-center text-neutral-500 text-lg font-semibold">
+                      {form.firstName?.[0]?.toUpperCase() || ""}
+                      {form.lastName?.[0]?.toUpperCase() || ""}
+                    </span>
                   )}
-                </div>
+                  {uploadingPhoto && (
+                    <span className="absolute inset-0 rounded-full bg-black/40 flex items-center justify-center">
+                      <Icon icon="solar:refresh-linear" className="text-white text-lg animate-spin" />
+                    </span>
+                  )}
+                </span>
+                {/* Pastille : montre qu'on peut changer la photo */}
+                <span className="absolute -bottom-0.5 -right-0.5 w-7 h-7 rounded-full bg-neutral-900 border-2 border-white flex items-center justify-center shadow-sm group-hover:bg-neutral-700 transition-colors">
+                  <Icon icon="solar:camera-bold" className="text-white text-sm" />
+                </span>
               </button>
               <input
                 ref={photoInputRef}
@@ -362,16 +368,18 @@ export function ProfileForm({ driver }: { driver: DriverData }) {
                 />
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-3">
-              <div>
-                <label className="block text-sm font-medium mb-1">{t("email")}</label>
-                <input
-                  value={form.email}
-                  readOnly
-                  disabled
-                  className="w-full bg-neutral-50 rounded-xl px-4 py-2.5 text-sm text-neutral-400 outline-none cursor-not-allowed border border-neutral-100"
-                />
-              </div>
+            {/* E-mail sur toute la largeur (adresse longue jamais coupée), téléphone dessous */}
+            <div>
+              <label className="block text-sm font-medium mb-1">{t("email")}</label>
+              <input
+                type="email"
+                value={form.email}
+                readOnly
+                disabled
+                className="w-full min-w-0 bg-neutral-50 rounded-xl px-4 py-2.5 text-sm text-neutral-500 outline-none cursor-not-allowed border border-neutral-100"
+              />
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <div>
                 <label className="block text-sm font-medium mb-1">{t("phone")}</label>
                 <input

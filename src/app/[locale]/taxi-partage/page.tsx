@@ -168,7 +168,7 @@ export default function SharedTaxiPage() {
                               ))}
                           </select>
                         </div>
-                        <div className="grid grid-cols-2 gap-3">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 [&>div]:min-w-0">
                           <div>
                             <label className="block text-sm text-neutral-500 mb-1">
                               {t("proposeDepartureTime")}
