@@ -38,10 +38,8 @@ Déclenchement (le cron de Vercel ne passe qu'une fois par jour, à 8 h) :
    tableau de bord, réservations, courses transmises), l'espace organisation,
    l'administration, l'accueil de l'app et le lien d'une course transmise, au plus
    une fois par minute ; la création d'une réservation le lance aussi.
-2. Passage planifié GitHub toutes les 10 minutes (`.github/workflows/escalade.yml`),
-   qui appelle `/api/cron/escalate-bookings` ; il faut le secret GitHub `CRON_SECRET`
-   (même valeur que dans Vercel), sans quoi il ne fait rien.
-3. Le cron quotidien de `vercel.json` reste en filet de sécurité.
+2. Cron Vercel toutes les 10 minutes (`vercel.json`), qui appelle
+   `/api/cron/escalate-bookings` (Vercel envoie lui-même `CRON_SECRET`).
 
 Une course est donc ouverte entre 30 et environ 40 minutes après sa création. Tous
 les passages sont sans double envoi (la course est réservée en base avant d'avertir).

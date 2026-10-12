@@ -2,3 +2,8 @@
 /android
 /assets
 /mobile
+
+# Fichiers locaux jamais envoyes a Vercel : la production a ses propres variables
+.env
+.env.*
+!.env.example
