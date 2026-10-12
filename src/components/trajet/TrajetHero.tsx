@@ -2,6 +2,7 @@ import type { Trajet } from "@/data/trajets";
 import { BookingForm } from "@/components/booking/BookingForm";
 import { getTranslations, getLocale } from "next-intl/server";
 import { LigneMaj } from "@/components/shared/LigneMaj";
+import { TexteReplie } from "@/components/shared/TexteReplie";
 import { resumeTrajet } from "@/lib/resume-citable";
 import { prixAffiche } from "@/lib/trajet-en";
 
@@ -11,7 +12,7 @@ export async function TrajetHero({ trajet }: { trajet: Trajet }) {
   const loc = locale === "en" ? "en" : "fr";
 
   return (
-    <section className="pt-24 pb-12 md:pt-32 md:pb-20">
+    <section className="pt-4 pb-12 md:pt-8 md:pb-20">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-x-12 gap-y-2 md:gap-y-0 items-start">
           <div className="max-w-xl fade-up md:col-start-1 md:row-start-1">
@@ -38,9 +39,7 @@ export async function TrajetHero({ trajet }: { trajet: Trajet }) {
             <LigneMaj />
             {/* §21 : un paragraphe citable d'au moins 120 mots, dans le haut
                 de la page, construit à partir des données de la page. */}
-            <p className="text-sm text-neutral-600 font-light leading-relaxed mb-6 max-w-2xl">
-              {resumeTrajet(trajet, loc)}
-            </p>
+            <TexteReplie texte={resumeTrajet(trajet, loc)} className="mb-6" />
             <div className="flex flex-wrap gap-4 text-xs text-neutral-500 font-light mb-2">
               <span className="bg-neutral-50 border border-neutral-200 rounded-full px-3 py-1">
                 {t("heroDistance", { km: trajet.distanceKm })}

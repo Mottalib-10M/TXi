@@ -7,7 +7,7 @@ import { LigneMaj } from "@/components/shared/LigneMaj";
 export async function TmHero({ city, content }: { city: City; content: TmGeneratedContent }) {
   const t = await getTranslations("tm");
   return (
-    <section className="pt-4 pb-12 md:pt-32 md:pb-20">
+    <section className="pt-4 pb-12 md:pt-8 md:pb-20">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-x-12 gap-y-2 md:gap-y-0 items-start">
           <div className="md:max-w-xl fade-up md:col-start-1 md:row-start-1">

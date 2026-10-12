@@ -2,6 +2,7 @@ import type { City } from "@/data/cities";
 import { BookingForm } from "@/components/booking/BookingForm";
 import { getTranslations, getLocale } from "next-intl/server";
 import { LigneMaj } from "@/components/shared/LigneMaj";
+import { TexteReplie } from "@/components/shared/TexteReplie";
 import { resumeVille } from "@/lib/resume-citable";
 
 export async function CityHero({ city }: { city: City }) {
@@ -10,7 +11,7 @@ export async function CityHero({ city }: { city: City }) {
   const loc = locale === "en" ? "en" : "fr";
 
   return (
-    <section className="pt-24 pb-12 md:pt-32 md:pb-20">
+    <section className="pt-4 pb-12 md:pt-8 md:pb-20">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-x-12 gap-y-2 md:gap-y-0 items-start">
           <div className="md:max-w-xl fade-up md:col-start-1 md:row-start-1">
@@ -37,9 +38,7 @@ export async function CityHero({ city }: { city: City }) {
             <LigneMaj />
             {/* §21 : un paragraphe citable d'au moins 120 mots, dans le haut
                 de la page, construit à partir des données de la page. */}
-            <p className="text-sm text-neutral-600 font-light leading-relaxed mb-6 max-w-2xl">
-              {resumeVille(city, loc)}
-            </p>
+            <TexteReplie texte={resumeVille(city, loc)} className="mb-6" />
           </div>
         </div>
       </div>

@@ -9,7 +9,7 @@ export async function ServiceHero({ service }: { service: ServiceSeo }) {
   const loc = locale === "en" ? "en" : "fr";
 
   return (
-    <section className="pt-24 pb-12 md:pt-32 md:pb-20">
+    <section className="pt-4 pb-12 md:pt-8 md:pb-20">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-12 items-start">
           <div className="max-w-xl fade-up">

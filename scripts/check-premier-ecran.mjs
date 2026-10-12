@@ -68,12 +68,17 @@ async function pagesFrom(base, root) {
 
 function mesure() {
   const vis = (e) => { const r = e.getBoundingClientRect(); const s = getComputedStyle(e); return r.width > 0 && r.height > 0 && s.visibility !== 'hidden' && s.display !== 'none'; };
-  const ctrlSel = 'input:not([type=hidden]):not([type=search]), select, textarea, button[aria-pressed]';
-  const forms = [...document.querySelectorAll('main form')].filter((f) => !f.closest('[data-simulateur-secondaire]') && !f.hasAttribute('data-simulateur-secondaire') && [...f.querySelectorAll(ctrlSel)].some(vis));
+  // Curseurs ARIA compris (globalfinancepro.com, 2026-10-12 : les sliders n'étaient pas vus).
+  const ctrlSel = 'input:not([type=hidden]):not([type=search]), select, textarea, button[aria-pressed], [role=slider], [role=spinbutton]';
+  const inMain = ctrlSel.split(',').map((x) => `main ${x.trim()}`).join(', ');
+  // Un formulaire de contact ou de lettre d'information (e-mail, zone de texte) n'est pas un simulateur :
+  // sans cette exclusion, les pages sans calculateur de netsalaire.com étaient signalées (2026-10-12).
+  const contact = (f) => !!f.querySelector('input[type=email], textarea') || /contact|newsletter|subscribe|mailto:/i.test((f.getAttribute('action') || '') + ' ' + (f.id || '') + ' ' + (f.className || ''));
+  const forms = [...document.querySelectorAll('main form')].filter((f) => !contact(f) && !f.closest('[data-simulateur-secondaire]') && !f.hasAttribute('data-simulateur-secondaire') && [...f.querySelectorAll(ctrlSel)].some(vis));
   // Un simulateur sans <form> (boutons et champs dans un bloc) : premier bloc de main qui a un champ.
   let calc = forms[0];
   if (!calc) {
-    const c = [...document.querySelectorAll(`main ${ctrlSel}`)].find((e) => vis(e) && !e.closest('[data-simulateur-secondaire], nav, header, footer, details'));
+    const c = [...document.querySelectorAll(inMain)].find((e) => vis(e) && !e.closest('[data-simulateur-secondaire], nav, header, footer, details') && !(e.closest('form') && contact(e.closest('form'))) && e.type !== 'email' && e.tagName !== 'TEXTAREA');
     if (!c) return null;
     calc = c.closest('section, [class*=calc], [class*=rechner], [class*=simul], div') || c;
   }
