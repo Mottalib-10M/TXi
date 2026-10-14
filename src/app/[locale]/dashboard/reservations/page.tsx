@@ -37,7 +37,7 @@ export default async function ReservationsPage() {
     },
     orderBy: { createdAt: "desc" },
     include: {
-      referrerDriver: { select: { firstName: true, lastName: true, phone: true, email: true } },
+      referrerDriver: { select: { firstName: true, lastName: true, slug: true, phone: true, email: true } },
       organization: { select: { name: true } },
     },
   });
@@ -50,6 +50,7 @@ export default async function ReservationsPage() {
     updatedAt: b.updatedAt.toISOString(),
     requestedDate: b.requestedDate.toISOString(),
     cancelledBy: b.cancelledBy || null,
+    referrerDriverSlug: referrerDriver?.slug ?? null,
     referrerDriverName: referrerDriver
       ? `${referrerDriver.firstName} ${referrerDriver.lastName}`
       : null,

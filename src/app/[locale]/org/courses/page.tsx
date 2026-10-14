@@ -5,6 +5,7 @@ import { Icon } from "@iconify/react";
 import { format } from "date-fns";
 import { enUS, fr } from "date-fns/locale";
 import { useLocale, useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 
 interface Booking {
   id: string;
@@ -18,6 +19,7 @@ interface Booking {
   driver: {
     firstName: string;
     lastName: string;
+    slug: string;
   } | null;
 }
 
@@ -56,6 +58,7 @@ function isBookingSoon(requestedDate: string): boolean {
 export default function CoursesPage() {
   const t = useTranslations("org");
   const tc = useTranslations("common");
+  const tr = useTranslations("report");
   const locale = useLocale();
   const [bookings, setBookings] = useState<Booking[]>([]);
   const [loading, setLoading] = useState(true);
@@ -217,6 +220,14 @@ export default function CoursesPage() {
                   <p className="text-xs text-neutral-500">
                     {format(new Date(b.requestedDate), locale === "en" ? "dd MMM yyyy 'at' HH:mm" : "dd MMM yyyy 'à' HH:mm", { locale: locale === "en" ? enUS : fr })}
                     {b.driver && ` · ${b.driver.firstName} ${b.driver.lastName}`}
+                    {b.driver && (
+                      <>
+                        {" · "}
+                        <Link href={`/signaler?chauffeur=${b.driver.slug}&course=${b.reference}`} className="underline text-neutral-400">
+                          {tr("link")}
+                        </Link>
+                      </>
+                    )}
                   </p>
                   {(b.status === "PENDING" || b.status === "ACCEPTED") && (
                     <p className="text-xs text-blue-600 font-medium mt-0.5 flex items-center gap-1">

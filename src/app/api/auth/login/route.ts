@@ -30,6 +30,10 @@ export async function POST(request: Request) {
       if (!driver.emailVerified) {
         return NextResponse.json({ error: "EMAIL_NOT_VERIFIED" }, { status: 403 });
       }
+      // Compte suspendu par l'administration (onglet Signalements, src/lib/moderation.ts).
+      if (driver.suspendedAt) {
+        return NextResponse.json({ error: "ACCOUNT_SUSPENDED" }, { status: 403 });
+      }
 
       // Track login activity
       await prisma.driver.update({

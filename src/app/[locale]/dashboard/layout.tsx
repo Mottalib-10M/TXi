@@ -34,11 +34,17 @@ export default async function DashboardLayout({
       slug: true,
       carteProUrl: true,
       createdAt: true,
+      suspendedAt: true,
     },
   });
 
+  // Compte supprimé depuis un autre appareil, ou suspendu par l'administration
+  // (src/lib/moderation.ts) : la session est fermée.
   if (!driver) {
-    redirect("/connexion");
+    redirect("/api/auth/end-session");
+  }
+  if (driver.suspendedAt) {
+    redirect("/api/auth/end-session?reason=suspended");
   }
 
   // Generate referral code for existing drivers who don't have one

@@ -442,7 +442,8 @@
     "faq2Q": "What happens to my phone number after the ride?",
     "faq2A": "It is kept for as long as the booking needs following up, then for three years from the last ride, matching the usual commercial limitation period. It is passed only to the driver handling the ride, never sold or rented. Our privacy policy sets out the retention periods and how to exercise your rights.",
     "faq3Q": "How do you delete an account already created?",
-    "faq3A": "Write to contact@taxineo.fr from the address linked to the account: the deletion is carried out and the account data erased within the following thirty days. Records of rides already made are kept beyond that where the law requires it, in particular for transport covered by health insurance."
+    "faq3A": "Write to contact@taxineo.fr from the address linked to the account: the deletion is carried out and the account data erased within the following thirty days. Records of rides already made are kept beyond that where the law requires it, in particular for transport covered by health insurance.",
+    "accountSuspended": "This account is suspended. To find out more, write to support@taxineo.fr."
   },
   "contact": {
     "metaTitle": "Contact us - Help, Business demo and taxi driver partnership",
@@ -995,7 +996,8 @@
       "notifications": "Notifications",
       "activity": "Activity",
       "airports": "Airports",
-      "logout": "Log out"
+      "logout": "Log out",
+      "reports": "Reports"
     },
     "title": "Administration",
     "totalDrivers": "Total drivers",
@@ -3617,5 +3619,36 @@
     "becomeDriver": "Become a driver",
     "logout": "Log out",
     "close": "Close"
+  },
+  "report": {
+    "title": "Report this driver",
+    "ride": "ride {ref}",
+    "reasonLabel": "What happened?",
+    "reasons": {
+      "behaviour": "Behaviour",
+      "content": "Inappropriate photo or text",
+      "safety": "Safety",
+      "price": "Price or fraud",
+      "other": "Other"
+    },
+    "messageLabel": "Tell us more (optional)",
+    "messagePlaceholder": "What happened, when, where…",
+    "emailLabel": "Your e-mail (optional, so we can reply)",
+    "submit": "Send the report",
+    "deadline": "Our team reviews every report within 2 hours. Unacceptable content or behaviour leads to the suspension of the driver's account.",
+    "doneReport": "Thank you. Your report has been sent: our team reviews it within 2 hours.",
+    "doneBlockOrg": "This driver will no longer be offered to you.",
+    "doneBlockDriver": "You will no longer exchange rides with this driver.",
+    "doneUnblock": "This driver is unblocked.",
+    "needReason": "Choose what happened.",
+    "error": "Something went wrong. Please try again in a moment.",
+    "blockOrgInfo": "You can also block this driver: they will never be offered for your rides again.",
+    "blockDriverInfo": "You can also block this driver: you will no longer pass rides to each other.",
+    "blockedInfo": "You have blocked this driver.",
+    "block": "Block this driver",
+    "unblock": "Unblock",
+    "emergency": "In an emergency, call 17 (police) or 112.",
+    "back": "Back to profile",
+    "link": "Report"
   }
 }

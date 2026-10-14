@@ -29,6 +29,7 @@ export function AdminSidebar({ userName }: { userName: string }) {
     { href: "/admin/reservations", label: t("reservations"), icon: "solar:calendar-linear" },
     { href: "/admin/aeroports", label: t("airports"), icon: "mdi:airplane" },
     { href: "/admin/activite", label: t("activity"), icon: "solar:history-linear" },
+    { href: "/admin/signalements", label: t("reports"), icon: "solar:flag-linear" },
     { href: "/admin/notifications", label: t("notifications"), icon: "solar:bell-linear" },
   ];
 

@@ -1,4 +1,5 @@
 import { redirect } from "next/navigation";
+import { prisma } from "@/lib/prisma";
 import { auth } from "@/lib/auth";
 import { OrgSidebar } from "@/components/layout/OrgSidebar";
 import { escalateIfDue } from "@/lib/escalation";
@@ -18,6 +19,12 @@ export default async function OrgLayout({
 
   if (session.user.role === "driver") {
     redirect("/dashboard");
+  }
+
+  // Compte supprimé depuis un autre appareil : la session est fermée.
+  const exists = await prisma.organization.count({ where: { id: session.user.id } });
+  if (!exists) {
+    redirect("/api/auth/end-session");
   }
 
   return (

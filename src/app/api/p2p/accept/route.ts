@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { isBlockedBetweenDrivers } from "@/lib/moderation";
 import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
 import { notifyDriver } from "@/lib/push";
@@ -100,6 +101,10 @@ export async function POST(request: Request) {
         { error: "Vous ne pouvez pas accepter votre propre course" },
         { status: 403 }
       );
+    }
+    // Chauffeurs bloqués entre eux (src/lib/moderation.ts) : pas de course transmise.
+    if (existing?.referrerDriverId && (await isBlockedBetweenDrivers(existing.referrerDriverId, session.user.id))) {
+      return NextResponse.json({ error: "Cette course n'est plus disponible" }, { status: 403 });
     }
 
     // Race condition protection: only update if still PENDING + P2P

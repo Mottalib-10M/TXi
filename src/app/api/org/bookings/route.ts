@@ -12,6 +12,7 @@ import { createNotification } from "@/lib/notifications";
 import { format } from "date-fns";
 import { fr } from "date-fns/locale";
 import { driverPool, isDemoEmail } from "@/lib/demo";
+import { blockedForOrg } from "@/lib/moderation";
 
 const createBookingSchema = z.object({
   beneficiaryName: z.string().optional().default(""),
@@ -64,6 +65,9 @@ export async function POST(request: Request) {
 
     let driverId = data.driverId;
     let estimatedPrice = data.estimatedPrice;
+    // Chauffeurs bloqués par l'organisation (src/lib/moderation.ts) : jamais proposés.
+    const blocked = await blockedForOrg(session.user.id);
+    if (driverId && blocked.includes(driverId)) driverId = undefined;
 
     if (!driverId) {
       // Auto-assign: find nearest available driver
@@ -73,6 +77,7 @@ export async function POST(request: Request) {
           isActive: true,
           zoneLat: { not: null },
           zoneLng: { not: null },
+          id: { notIn: blocked },
         },
       });
 
@@ -236,6 +241,7 @@ export async function GET(request: NextRequest) {
             select: {
               firstName: true,
               lastName: true,
+              slug: true,
               phone: true,
               zoneLat: true,
               zoneLng: true,

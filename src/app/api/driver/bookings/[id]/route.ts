@@ -16,6 +16,7 @@ import { createNotification } from "@/lib/notifications";
 import { format } from "date-fns";
 import { fr } from "date-fns/locale";
 import { driverPool, isDemoEmail } from "@/lib/demo";
+import { excludedDriversFor } from "@/lib/moderation";
 import { contactForDriver } from "@/lib/p2p";
 
 export async function PATCH(
@@ -341,7 +342,7 @@ export async function PATCH(
             isActive: true,
             zoneLat: { not: null },
             zoneLng: { not: null },
-            id: { not: session.user.id },
+            id: { notIn: [session.user.id, ...(await excludedDriversFor(booking))] },
           },
         });
 

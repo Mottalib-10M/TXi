@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter } from "@/i18n/navigation";
+import { Link, useRouter } from "@/i18n/navigation";
 import { Icon } from "@iconify/react";
 import { MapsLink } from "@/components/ui/MapsLink";
 import { format } from "date-fns";
@@ -28,6 +28,7 @@ interface Booking {
   status: string;
   source: string;
   referrerDriverName?: string | null;
+  referrerDriverSlug?: string | null;
   organizationName?: string | null;
   cancelledBy: string | null;
   clientLocale?: string;
@@ -48,6 +49,7 @@ function buildWhatsAppUrl(phone: string, message: string): string {
 
 export function ReservationsTable({ bookings, driverName }: { bookings: Booking[]; driverName: string }) {
   const t = useTranslations("dashboard");
+  const tr = useTranslations("report");
   const tc = useTranslations("common");
   const locale = useLocale();
   const router = useRouter();
@@ -336,6 +338,14 @@ export function ReservationsTable({ bookings, driverName }: { bookings: Booking[
               {booking.source === "P2P" && booking.referrerDriverName && booking.p2pCommissionAmount != null && booking.p2pCommissionAmount > 0 && (
                 <p className="text-xs text-violet-700 mt-2">
                   {t("p2pCommissionNote", { name: booking.referrerDriverName, amount: booking.p2pCommissionAmount.toFixed(2).replace(".", ",") })}
+                </p>
+              )}
+
+              {booking.source === "P2P" && booking.referrerDriverSlug && (
+                <p className="text-xs mt-1">
+                  <Link href={`/signaler?chauffeur=${booking.referrerDriverSlug}&course=${booking.reference}`} className="underline text-neutral-400">
+                    {tr("link")} {booking.referrerDriverName}
+                  </Link>
                 </p>
               )}
 

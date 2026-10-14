@@ -7,6 +7,7 @@ import { createNotification } from "@/lib/notifications";
 import { format } from "date-fns";
 import { fr } from "date-fns/locale";
 import { driverPool, isDemoEmail } from "@/lib/demo";
+import { excludedDriversFor } from "@/lib/moderation";
 import { P2P_OPEN_DELAY_MS } from "@/lib/p2p";
 
 const ESCALATION_DELAY_MS = 15 * 60 * 1000; // 15 minutes
@@ -51,6 +52,7 @@ export async function runEscalation(): Promise<{ phase1: number; phase2: number 
     // Course transmise par un chauffeur de démo : jamais ouverte aux vrais chauffeurs.
     if (isP2P && isDemoEmail(booking.referrerDriver?.email)) continue;
     const excluded = [booking.driverId, isP2P ? booking.referrerDriverId : null].filter((id): id is string => Boolean(id));
+    excluded.push(...(await excludedDriversFor(booking)));
     const allDrivers = await prisma.driver.findMany({
       where: {
         ...driverPool(),

@@ -9,6 +9,7 @@ import { VehicleInfo } from "@/components/public-profile/VehicleInfo";
 import { PublicProfileClient } from "@/components/public-profile/PublicProfileClient";
 import type { Vehicle } from "@/types/vehicle";
 import { alternateUrls } from "@/lib/seo";
+import { Link } from "@/i18n/navigation";
 
 interface Props {
   params: Promise<{ locale: string; slug: string }>;
@@ -56,6 +57,7 @@ export default async function TaxiProfilePage({ params }: Props) {
   });
 
   if (!driver) notFound();
+  const tr = await getTranslations("report");
 
   // Build vehicles array from JSON field, falling back to flat fields
   // Filter out empty vehicles (no brand and no model = not a real vehicle)
@@ -110,6 +112,12 @@ export default async function TaxiProfilePage({ params }: Props) {
             pricePerMinute={driver.pricePerMinute}
             minimumFare={driver.minimumFare}
           />
+
+          <p className="text-center">
+            <Link href={`/signaler?chauffeur=${driver.slug}`} rel="nofollow" className="text-xs text-neutral-400 underline hover:text-neutral-600">
+              {tr("title")}
+            </Link>
+          </p>
         </div>
       </main>
 

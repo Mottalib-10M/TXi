@@ -3,6 +3,7 @@ import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
 import { haversineDistance } from "@/lib/geo";
 import { driverPool, isDemoEmail } from "@/lib/demo";
+import { excludedDriversFor } from "@/lib/moderation";
 
 export async function GET(
   _request: Request,
@@ -33,7 +34,7 @@ export async function GET(
         isActive: true,
         zoneLat: { not: null },
         zoneLng: { not: null },
-        id: { not: booking.driverId || undefined },
+        id: { notIn: [booking.driverId, ...(await excludedDriversFor(booking))].filter((id): id is string => Boolean(id)) },
       },
       select: {
         id: true,

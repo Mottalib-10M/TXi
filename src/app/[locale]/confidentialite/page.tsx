@@ -79,7 +79,7 @@ export default async function PrivacyPage({ params }: Props) {
         {
           titre: "6. Destinataires",
           corps: [
-            "Les données ne sont ni vendues ni louées. Elles vont au chauffeur chargé de la course et aux prestataires strictement nécessaires : hébergement (Vercel Inc.), envoi des e-mails de confirmation (Resend), protection anti-robot (Cloudflare) et mesure de stabilité sans cookie (Microsoft Clarity). Certains traitent des données aux États-Unis, sous clauses contractuelles types de la Commission européenne.",
+            "Les données ne sont ni vendues ni louées. Elles vont au chauffeur chargé de la course et aux prestataires strictement nécessaires : hébergement (Vercel Inc.), base de données (Supabase, serveurs en Irlande), saisie des adresses et itinéraires (Google Maps), notifications de l'app iPhone (Apple), envoi des e-mails de confirmation (Resend), protection anti-robot (Cloudflare) et mesure de stabilité sans cookie (Microsoft Clarity). Un signalement envoyé à notre équipe (lien « Signaler » d'un chauffeur) est conservé avec son motif, son message et, si vous la donnez, votre adresse e-mail, le temps de le traiter. Certains traitent des données aux États-Unis, sous clauses contractuelles types de la Commission européenne.",
           ],
         },
         {
@@ -127,7 +127,7 @@ export default async function PrivacyPage({ params }: Props) {
         {
           titre: "6. Recipients",
           corps: [
-            "Data is neither sold nor rented. It goes to the driver handling the ride and to the providers strictly needed to run the service: hosting (Vercel Inc.), confirmation emails (Resend), anti-bot protection (Cloudflare) and the cookie-free stability check (Microsoft Clarity). Some process data in the United States, under the European Commission's standard contractual clauses.",
+            "Data is neither sold nor rented. It goes to the driver handling the ride and to the providers strictly needed to run the service: hosting (Vercel Inc.), database (Supabase, servers in Ireland), address suggestions and routes (Google Maps), iPhone app notifications (Apple), confirmation emails (Resend), anti-bot protection (Cloudflare) and the cookie-free stability check (Microsoft Clarity). A report sent to our team (a driver's \"Report\" link) is kept with its reason, its message and, if you give it, your e-mail address, for as long as it takes to handle it. Some process data in the United States, under the European Commission's standard contractual clauses.",
           ],
         },
         {

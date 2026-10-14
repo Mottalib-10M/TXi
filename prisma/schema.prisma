@@ -105,6 +105,9 @@ model Driver {
   isActive      Boolean @default(true)
   isVerified    Boolean @default(false)
   emailVerified Boolean @default(false)
+  // Compte suspendu par l'administration après un signalement (onglet Signalements) :
+  // plus de connexion, plus de course, profil public masqué (isActive passe à false).
+  suspendedAt   DateTime?
 
   // Activity tracking
   lastLoginAt DateTime?
@@ -119,6 +122,9 @@ model Driver {
   referredBookings Booking[]       @relation("ReferredBookings")
   favoritedBy      FavoriteDriver[]
   sharedRoutes     SharedRoute[]
+  reports          DriverReport[]
+  blockedBy        DriverBlock[]    @relation("BlockedDriver")
+  blocking         DriverBlock[]    @relation("BlockerDriver")
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -236,6 +242,7 @@ model Organization {
   bookings        Booking[]
   favoriteDrivers FavoriteDriver[]
   cagnotteHistory CagnotteTransaction[]
+  blocking        DriverBlock[]
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -322,6 +329,7 @@ enum NotificationType {
   SHARED_ROUTE_JOINED
   SHARED_ROUTE_DRIVER_ACCEPTED
   P2P_CREATED
+  DRIVER_REPORTED
 }
 
 model AdminNotification {
@@ -375,4 +383,45 @@ model DeviceToken {
   @@index([driverId])
   @@index([organizationId])
   @@map("device_tokens")
+}
+
+// Signalement d'un chauffeur (profil public, photo, comportement pendant une course),
+// par un passager sans compte, une organisation ou un collègue. Traité par
+// l'administration sous 2 heures (onglet Signalements, src/lib/moderation.ts).
+model DriverReport {
+  id            String    @id @default(cuid())
+  driver        Driver    @relation(fields: [driverId], references: [id], onDelete: Cascade)
+  driverId      String
+  /// client, organization ou driver
+  reporterKind  String
+  reporterId    String?
+  reporterEmail String?
+  bookingRef    String?
+  /// behaviour, content, safety, price, other
+  reason        String
+  message       String?
+  /// OPEN, ACTIONED (chauffeur suspendu ou contenu retiré), DISMISSED
+  status        String    @default("OPEN")
+  createdAt     DateTime  @default(now())
+  resolvedAt    DateTime?
+
+  @@index([status])
+  @@map("driver_reports")
+}
+
+// Chauffeur bloqué par une organisation (ne lui est plus jamais proposé) ou par un
+// collègue (plus de course transmise entre eux, dans un sens comme dans l'autre).
+model DriverBlock {
+  id              String        @id @default(cuid())
+  driver          Driver        @relation("BlockedDriver", fields: [driverId], references: [id], onDelete: Cascade)
+  driverId        String
+  blockerDriver   Driver?       @relation("BlockerDriver", fields: [blockerDriverId], references: [id], onDelete: Cascade)
+  blockerDriverId String?
+  blockerOrg      Organization? @relation(fields: [blockerOrgId], references: [id], onDelete: Cascade)
+  blockerOrgId    String?
+  createdAt       DateTime      @default(now())
+
+  @@unique([driverId, blockerDriverId])
+  @@unique([driverId, blockerOrgId])
+  @@map("driver_blocks")
 }

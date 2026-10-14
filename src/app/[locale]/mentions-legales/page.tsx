@@ -233,6 +233,15 @@ export default async function LegalPage({ params }: Props) {
                 <strong>Resend</strong> &mdash; {isFr ? "Envoi des e-mails de confirmation (États-Unis, clauses contractuelles types UE)" : "Confirmation emails (United States, EU standard contractual clauses)"}
               </li>
               <li>
+                <strong>Supabase, Inc.</strong> &mdash; {isFr ? "Base de données des comptes et des réservations (serveurs en Irlande)" : "Accounts and bookings database (servers in Ireland)"}
+              </li>
+              <li>
+                <strong>Google Ireland Limited</strong> &mdash; {isFr ? "Saisie assistée des adresses et calcul d'itinéraire (Google Maps)" : "Address suggestions and route calculation (Google Maps)"}
+              </li>
+              <li>
+                <strong>Apple Inc.</strong> &mdash; {isFr ? "Notifications de l'app iPhone (Apple Push Notification service)" : "iPhone app notifications (Apple Push Notification service)"}
+              </li>
+              <li>
                 <strong>Cloudflare, Inc.</strong> &mdash; {isFr ? "Contrôle anti-robot Turnstile sur les formulaires (États-Unis, clauses contractuelles types UE)" : "Turnstile anti-bot check on forms (United States, EU standard contractual clauses)"}
               </li>
             </ul>
@@ -259,6 +268,11 @@ export default async function LegalPage({ params }: Props) {
               {isFr
                 ? "L'utilisation du site implique l'acceptation pleine et entiere des presentes conditions. L'utilisateur s'engage a utiliser le site conformement a sa destination et aux reglementations en vigueur."
                 : "Use of the site implies full acceptance of these terms. Users agree to use the site in accordance with its intended purpose and applicable regulations."}
+            </p>
+            <p id="contenus" className="text-sm text-neutral-600 font-light leading-relaxed mt-3">
+              {isFr
+                ? "Contenus et comportements : aucune tolérance n'est accordée aux contenus choquants ou injurieux (photo, présentation, messages) ni aux comportements abusifs, menaçants ou discriminatoires. Chacun peut signaler un chauffeur (lien « Signaler » de son profil et de chaque course) ; une organisation ou un chauffeur connecté peut aussi le bloquer. Notre équipe examine chaque signalement sous 2 heures, retire le contenu en cause et peut suspendre le compte concerné. En cas d'urgence, appelez le 17 ou le 112."
+                : "Content and conduct: there is no tolerance for objectionable or abusive content (photo, profile text, messages) or for abusive, threatening or discriminatory behaviour. Anyone can report a driver (\"Report\" link on their profile and on each ride); a signed-in organisation or driver can also block them. Our team reviews every report within 2 hours, removes the content concerned and can suspend the account. In an emergency, call 17 or 112."}
             </p>
           </section>
 
@@ -325,7 +339,7 @@ export default async function LegalPage({ params }: Props) {
 
           <p className="text-xs text-neutral-400 font-light mt-12">
             {isFr
-              ? "Derniere mise a jour : juin 2026"
+              ? "Dernière mise à jour : octobre 2026"
               : "Last updated: October 2026"}
           </p>
         </div>

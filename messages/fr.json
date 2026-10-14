@@ -442,7 +442,8 @@
     "faq2Q": "Que devient mon numéro de téléphone après la course ?",
     "faq2A": "Il est conservé le temps nécessaire au suivi de la réservation, puis pendant trois ans à compter de la dernière course, délai correspondant à la prescription commerciale usuelle. Il n'est transmis qu'au chauffeur chargé de la course, jamais vendu ni loué. Notre politique de confidentialité détaille les durées de conservation et la manière d'exercer vos droits.",
     "faq3Q": "Comment supprimer un compte déjà créé ?",
-    "faq3A": "Écrivez à contact@taxineo.fr depuis l'adresse associée au compte : la suppression est effectuée et les données de compte sont effacées dans les trente jours qui suivent. Les justificatifs des courses déjà réalisées sont conservés au-delà lorsque la loi l'exige, notamment pour les transports pris en charge par l'Assurance maladie."
+    "faq3A": "Écrivez à contact@taxineo.fr depuis l'adresse associée au compte : la suppression est effectuée et les données de compte sont effacées dans les trente jours qui suivent. Les justificatifs des courses déjà réalisées sont conservés au-delà lorsque la loi l'exige, notamment pour les transports pris en charge par l'Assurance maladie.",
+    "accountSuspended": "Ce compte est suspendu. Pour en savoir plus, écrivez à support@taxineo.fr."
   },
   "contact": {
     "metaTitle": "Contactez-nous - Aide, démo Business et partenariat taxi",
@@ -995,7 +996,8 @@
       "notifications": "Notifications",
       "activity": "Activité",
       "airports": "Aéroports",
-      "logout": "Déconnexion"
+      "logout": "Déconnexion",
+      "reports": "Signalements"
     },
     "title": "Administration",
     "totalDrivers": "Total chauffeurs",
@@ -3617,5 +3619,36 @@
     "becomeDriver": "Devenir chauffeur",
     "logout": "Déconnexion",
     "close": "Fermer"
+  },
+  "report": {
+    "title": "Signaler ce chauffeur",
+    "ride": "course {ref}",
+    "reasonLabel": "Que s'est-il passé ?",
+    "reasons": {
+      "behaviour": "Comportement",
+      "content": "Photo ou texte inapproprié",
+      "safety": "Sécurité",
+      "price": "Prix ou fraude",
+      "other": "Autre"
+    },
+    "messageLabel": "Racontez-nous (facultatif)",
+    "messagePlaceholder": "Ce qui s'est passé, quand, où…",
+    "emailLabel": "Votre e-mail (facultatif, pour vous répondre)",
+    "submit": "Envoyer le signalement",
+    "deadline": "Notre équipe examine chaque signalement sous 2 heures. Un contenu ou un comportement inacceptable entraîne la suspension du compte du chauffeur.",
+    "doneReport": "Merci. Votre signalement a bien été transmis : notre équipe l'examine sous 2 heures.",
+    "doneBlockOrg": "Ce chauffeur ne vous sera plus proposé.",
+    "doneBlockDriver": "Vous n'échangerez plus de course avec ce chauffeur.",
+    "doneUnblock": "Ce chauffeur est débloqué.",
+    "needReason": "Choisissez ce qui s'est passé.",
+    "error": "Une erreur est survenue. Réessayez dans un instant.",
+    "blockOrgInfo": "Vous pouvez aussi bloquer ce chauffeur : il ne vous sera plus jamais proposé pour vos courses.",
+    "blockDriverInfo": "Vous pouvez aussi bloquer ce chauffeur : vous ne vous transmettrez plus de course, dans un sens comme dans l'autre.",
+    "blockedInfo": "Vous avez bloqué ce chauffeur.",
+    "block": "Bloquer ce chauffeur",
+    "unblock": "Débloquer",
+    "emergency": "En cas d'urgence, appelez le 17 (police) ou le 112.",
+    "back": "Retour au profil",
+    "link": "Signaler"
   }
 }

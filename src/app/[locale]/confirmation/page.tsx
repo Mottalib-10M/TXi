@@ -12,6 +12,7 @@ import { auth } from "@/lib/auth";
 async function ConfirmationContent({ reference }: { reference: string }) {
   const t = await getTranslations("confirmation");
   const tc = await getTranslations("common");
+  const tr = await getTranslations("report");
   const locale = await getLocale();
   const session = await auth();
 
@@ -91,6 +92,9 @@ async function ConfirmationContent({ reference }: { reference: string }) {
                   <p className="text-sm font-medium">
                     {booking.driver.firstName} {booking.driver.lastName}
                   </p>
+                  <Link href={`/signaler?chauffeur=${booking.driver.slug}&course=${booking.reference}`} className="text-xs text-neutral-400 underline">
+                    {tr("link")}
+                  </Link>
                 </div>
               </div>
             )}

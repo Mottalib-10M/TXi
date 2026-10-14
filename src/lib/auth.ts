@@ -30,6 +30,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
           if (!driver.emailVerified) {
             throw new Error("EMAIL_NOT_VERIFIED");
           }
+          if (driver.suspendedAt) return null;
           // Track login activity
           await prisma.driver.update({
             where: { id: driver.id },

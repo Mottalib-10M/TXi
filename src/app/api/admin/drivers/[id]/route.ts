@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { isAdmin } from "@/lib/admin";
 import { prisma } from "@/lib/prisma";
+import { deleteDriverAccount } from "@/lib/accountDeletion";
 
 export async function PATCH(
   request: Request,
@@ -59,48 +60,8 @@ export async function DELETE(
       return NextResponse.json({ error: "Chauffeur introuvable" }, { status: 404 });
     }
 
-    await prisma.$transaction(async (tx) => {
-      // 1. Delete favorite driver entries
-      await tx.favoriteDriver.deleteMany({ where: { driverId: driver.id } });
-
-      // 2. Unlink shared routes
-      await tx.sharedRoute.updateMany({
-        where: { driverId: driver.id },
-        data: { driverId: null },
-      });
-
-      // 3. Unlink bookings (driver)
-      await tx.booking.updateMany({
-        where: { driverId: driver.id },
-        data: { driverId: null },
-      });
-
-      // 4. Unlink bookings (referrer)
-      await tx.booking.updateMany({
-        where: { referrerDriverId: driver.id },
-        data: { referrerDriverId: null },
-      });
-
-      // 5. Delete referral clicks
-      if (driver.referralCode) {
-        await tx.referralClick.deleteMany({
-          where: { referralCode: driver.referralCode },
-        });
-
-        // 6. Unlink other drivers referred by this driver
-        await tx.driver.updateMany({
-          where: { referredByCode: driver.referralCode },
-          data: { referredByCode: null },
-        });
-      }
-
-      // 7. Delete verification/reset tokens
-      await tx.emailVerificationToken.deleteMany({ where: { email: driver.email } });
-      await tx.passwordResetToken.deleteMany({ where: { email: driver.email } });
-
-      // 8. Delete the driver
-      await tx.driver.delete({ where: { id: driver.id } });
-    });
+    // Même suppression complète que « Supprimer mon compte » (src/lib/accountDeletion.ts).
+    await deleteDriverAccount(driver.id);
 
     return NextResponse.json({ success: true });
   } catch (error) {

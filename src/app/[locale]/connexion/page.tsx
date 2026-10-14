@@ -75,6 +75,12 @@ function ConnexionForm() {
         return;
       }
 
+      if (data.error === "ACCOUNT_SUSPENDED") {
+        setError(t("accountSuspended"));
+        setLoading(false);
+        return;
+      }
+
       if (data.error) {
         setError(t("wrongCredentials"));
         setLoading(false);
@@ -126,6 +132,12 @@ function ConnexionForm() {
           {resetSuccess && (
             <div className="bg-green-50 border border-green-200 text-green-700 text-sm px-4 py-3 rounded-xl">
               {t("passwordChanged")}
+            </div>
+          )}
+
+          {tokenError === "suspended" && (
+            <div className="bg-red-50 border border-red-200 text-red-700 text-sm px-4 py-3 rounded-xl">
+              {t("accountSuspended")}
             </div>
           )}
 
