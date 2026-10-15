@@ -15,7 +15,6 @@ import { popularAirports, airports } from "@/data/airports";
 import { popularStations, stations } from "@/data/stations";
 import { trajets } from "@/data/trajets";
 import { guides } from "@/data/guides";
-import { LigneMaj } from "@/components/shared/LigneMaj";
 
 
 interface Props {
@@ -145,7 +144,8 @@ export default async function HomePage() {
 
               <BookingForm />
               {/* RECETTE §5 (2026-10-11) : le simulateur se voit sans défiler ;
-                  la pastille « disponible » et la date (§8.4) passent juste en dessous. */}
+                  la pastille « disponible » passe juste en dessous. La date de
+                  mise à jour est en pied de page (§8.4, 2026-10-15). */}
               <div className="mt-5 flex flex-wrap items-center gap-x-4 gap-y-2">
                 <div className="inline-flex items-center gap-2 bg-neutral-100 rounded-full px-4 py-1.5">
                   <span className="w-2 h-2 bg-green-500 rounded-full" />
@@ -153,7 +153,6 @@ export default async function HomePage() {
                     {t("badge")}
                   </span>
                 </div>
-                <LigneMaj position="bas" />
               </div>
             </div>
 

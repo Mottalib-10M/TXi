@@ -7,7 +7,6 @@ import { Link } from "@/i18n/navigation";
 import { glossaryTerms } from "@/data/glossary";
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 import { canonicalUrl, alternateUrls, ajusterTitre, ajusterDescription } from "@/lib/seo";
-import { LigneMaj } from "@/components/shared/LigneMaj";
 
 interface PageProps {
   params: Promise<{ locale: string }>;
@@ -108,7 +107,7 @@ export default async function GlossairePage({ params }: PageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(definedTermSetSchema) }}
       />
 
-      <main className="flex-grow pt-24 pb-16" id="main-content">
+      <main className="flex-grow pt-20 pb-16" id="main-content">
         <div className="max-w-4xl mx-auto px-6">
           <BreadcrumbJsonLd
             crumbs={[
@@ -134,8 +133,6 @@ export default async function GlossairePage({ params }: PageProps) {
           <h1 className="text-3xl md:text-4xl font-semibold tracking-tight mb-3 fade-up">
             {title}
           </h1>
-          {/* §8.4 : la date de mise à jour se lit juste sous le titre. */}
-          <LigneMaj />
           <p className="text-base text-neutral-500 font-light mb-10 fade-up fade-up-delay-1">
             {subtitle}
           </p>

@@ -4,7 +4,6 @@ import { canonicalUrl, alternateUrls, ajusterTitre, ajusterDescription } from "@
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Link } from "@/i18n/navigation";
-import { LigneMaj } from "@/components/shared/LigneMaj";
 
 interface Props {
   params: Promise<{ locale: string }>;
@@ -66,7 +65,7 @@ export default async function AboutPage({ params }: Props) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <Navbar />
-      <main className="flex-grow pt-28 pb-20">
+      <main className="flex-grow pt-24 pb-20">
         <div className="max-w-4xl mx-auto px-6">
           {/* Hero */}
           <div className="text-center mb-16">
@@ -76,8 +75,6 @@ export default async function AboutPage({ params }: Props) {
             <h1 className="text-4xl md:text-5xl font-semibold tracking-tight mb-4">
               {isFr ? "A propos de TaxiNeo" : "About TaxiNeo"}
             </h1>
-          {/* §8.4 : la date de mise à jour se lit juste sous le titre. */}
-          <LigneMaj />
             <p className="text-lg text-neutral-500 font-light max-w-2xl mx-auto leading-relaxed">
               {isFr
                 ? "TaxiNeo est la plateforme francaise qui simplifie la reservation de taxis agrees a prix fixe. Notre mission : rendre chaque trajet transparent, fiable et accessible."

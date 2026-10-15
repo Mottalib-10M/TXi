@@ -103,6 +103,24 @@ body {
   }
 }
 
+/* Listes déroulantes (RECETTE §10.3, 2026-10-15) : la flèche native se collait
+   au bord droit et le libellé long butait dessus. La flèche est dessinée par le
+   site à 12 px du bord, le texte s'arrête par « … » avant elle (pr 40 px).
+   Une liste multiple ou ouverte (size > 1) garde son rendu natif. */
+select:not([multiple]):not([size]),
+select[size="1"]:not([multiple]) {
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none' stroke='%23737373' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5.5 7.75 10 12.25l4.5-4.5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 1rem 1rem;
+  padding-right: 2.5rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
 /* Champs date et heure : sur iPhone, Safari leur donne une largeur propre qui
    déborde de leur colonne (champ voisin recouvert) ; ils restent dans leur case,
    gardent leur hauteur vides et alignent leur texte à gauche. */

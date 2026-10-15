@@ -12,7 +12,6 @@ import { SharedRideSearch } from "@/components/shared-rides/SharedRideSearch";
 import { ScrollAnimation } from "@/components/ui/ScrollAnimation";
 import { CoverageMap } from "@/components/shared-rides/CoverageMap";
 import { predefinedLocations } from "@/data/predefined-locations";
-import { LigneMaj } from "@/components/shared/LigneMaj";
 
 export default function SharedTaxiPage() {
   const t = useTranslations("sharedRides");
@@ -67,20 +66,20 @@ export default function SharedTaxiPage() {
       <main className="min-h-screen">
         {/* Hero */}
         <section className="pt-24 pb-8 px-6">
-          <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-8 items-end fade-up">
-            <div>
+          {/* §10.3 (2026-10-15) : le titre part du haut, près du menu ; la
+              carte de recherche reste alignée sur le bas de la carte des lieux. */}
+          <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-8 items-end lg:items-stretch fade-up">
+            <div className="flex flex-col">
               <h1 className="text-4xl md:text-5xl font-semibold tracking-tight">
                 {t("heroTitle")}
                 <br />
                 <span className="text-neutral-400">{t("heroTitle2")}</span>
               </h1>
-          {/* §8.4 : la date de mise à jour se lit juste sous le titre. */}
-          <LigneMaj />
               <p className="mt-4 text-neutral-500 text-lg font-light max-w-xl">
                 {t("heroSubtitle")}
               </p>
               {/* Search form card */}
-              <div className="mt-8 bg-white border border-neutral-200 rounded-2xl p-6">
+              <div className="mt-8 lg:mt-auto bg-white border border-neutral-200 rounded-2xl p-6">
                 <h3 className="text-lg font-medium mb-4">{t("searchTitle")}</h3>
                 <div>
                   <label className="block text-sm text-neutral-500 mb-1">

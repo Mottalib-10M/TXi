@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { emailError, isValidEmail } from "@/lib/validation";
+import { LigneMaj } from "@/components/shared/LigneMaj";
 
 export default function ForgotPasswordPage() {
   const t = useTranslations("auth");
@@ -107,6 +108,10 @@ export default function ForgotPasswordPage() {
             </p>
           </>
         )}
+        {/* §8.4 : la date de mise à jour, en bas de page comme partout. */}
+        <div className="mt-10 text-center">
+          <LigneMaj position="bas" />
+        </div>
       </div>
     </div>
   );

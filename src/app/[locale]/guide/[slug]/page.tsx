@@ -13,6 +13,7 @@ import { guides, getGuideBySlug } from "@/data/guides";
 import { Link } from "@/i18n/navigation";
 import { getTranslations } from "next-intl/server";
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
+import { LigneMaj } from "@/components/shared/LigneMaj";
 import { canonicalUrl, alternateUrls } from "@/lib/seo";
 
 interface PageProps {
@@ -73,7 +74,7 @@ export default async function GuidePage({ params }: PageProps) {
       <GuideJsonLd guide={guide} />
 
       <main className="flex-grow">
-        <div className="max-w-3xl mx-auto px-6 pt-24">
+        <div className="max-w-3xl mx-auto px-6 pt-20">
           <BreadcrumbJsonLd
             crumbs={[
               {
@@ -87,11 +88,14 @@ export default async function GuidePage({ params }: PageProps) {
               { name: guide.i18n[loc].heroTitle },
             ]}
           />
+          {/* §8.4 et §10.3 (2026-10-15) : page de lecture, la date de mise à
+              jour se lit à droite sur la ligne du fil d'Ariane. */}
+          <div className="flex flex-wrap md:flex-nowrap items-baseline gap-x-4 gap-y-1 mb-6">
           <nav
-            className="text-sm text-neutral-500 font-light mb-6"
+            className="min-w-0 text-sm text-neutral-500 font-light"
             aria-label={t("breadcrumbLabel")}
           >
-            <ol className="flex items-center gap-1.5 flex-wrap">
+            <ol className="flex items-center gap-1.5 flex-wrap md:flex-nowrap">
               <li>
                 <Link
                   href="/"
@@ -110,11 +114,13 @@ export default async function GuidePage({ params }: PageProps) {
                 </Link>
               </li>
               <li aria-hidden="true">/</li>
-              <li className="text-neutral-900 font-medium">
+              <li className="min-w-0 text-neutral-900 font-medium md:truncate">
                 {guide.i18n[loc].heroTitle}
               </li>
             </ol>
           </nav>
+          <LigneMaj position="fil" />
+          </div>
         </div>
 
         <GuideHero guide={guide} />

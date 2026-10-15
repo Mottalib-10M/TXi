@@ -88,7 +88,7 @@ export default async function TaxiMedicalCityPage({ params }: PageProps) {
       <TmJsonLd city={city} faq={content.faq} />
 
       <main className="flex-grow" id="devis">
-        <div className="max-w-7xl mx-auto px-6 pt-24">
+        <div className="max-w-7xl mx-auto px-6 pt-20">
           <TmBreadcrumb cityName={city.name} />
         </div>
 

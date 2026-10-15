@@ -84,7 +84,7 @@ export default async function TrajetPage({ params }: PageProps) {
       <TrajetJsonLd trajet={trajet} />
 
       <main className="flex-grow" id="reserver">
-        <div className="max-w-7xl mx-auto px-6 pt-24">
+        <div className="max-w-7xl mx-auto px-6 pt-20">
           <TrajetBreadcrumb trajet={trajet} />
         </div>
 

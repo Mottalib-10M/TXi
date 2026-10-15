@@ -7,7 +7,6 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { ScrollAnimation } from "@/components/ui/ScrollAnimation";
 import { QRCodeAnimation } from "@/components/driver/QRCodeAnimation";
-import { LigneMaj } from "@/components/shared/LigneMaj";
 import { FaqJsonLd } from "@/components/seo/FaqJsonLd";
 
 interface Props {
@@ -81,24 +80,23 @@ export default async function WhyJoinPage() {
       <ScrollAnimation />
 
       {/* Hero Section */}
-      <main className="flex-grow pt-24 pb-12 md:pt-32 md:pb-24">
+      <main className="flex-grow pt-20 pb-12 md:pt-28 md:pb-24">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-12 items-start">
             <div className="md:max-w-xl fade-up">
-              <div className="inline-flex items-center gap-2 bg-neutral-100 rounded-full px-4 py-1.5 mb-6">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.1] mb-4">
+                {t("heroTitle")}
+              </h1>
+              <p className="text-base md:text-lg text-neutral-500 mb-8 max-w-md font-light leading-relaxed">
+                {t("heroSubtitle")}
+              </p>
+              {/* §10.3 (2026-10-15) : la pastille passe sous le chapeau, le titre remonte près du menu. */}
+              <div className="flex w-fit items-center gap-2 bg-neutral-100 rounded-full px-4 py-1.5 mb-6">
                 <span className="w-2 h-2 bg-green-500 rounded-full" />
                 <span className="text-xs font-medium text-neutral-600">
                   {t("badge")}
                 </span>
               </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.1] mb-4">
-                {t("heroTitle")}
-              </h1>
-          {/* §8.4 : la date de mise à jour se lit juste sous le titre. */}
-          <LigneMaj />
-              <p className="text-base md:text-lg text-neutral-500 mb-8 max-w-md font-light leading-relaxed">
-                {t("heroSubtitle")}
-              </p>
               <Link
                 href="/inscription?type=driver"
                 className="inline-flex items-center gap-2 bg-neutral-950 text-white text-sm font-medium px-6 py-3 rounded-full hover:bg-neutral-800 transition-colors btn-lift"

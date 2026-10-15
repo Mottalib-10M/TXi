@@ -9,7 +9,6 @@ import { Footer } from "@/components/layout/Footer";
 import { emailError, phoneError, isValidEmail } from "@/lib/validation";
 import { trackContact } from "@/lib/analytics";
 import TurnstileWidget from "@/components/TurnstileWidget";
-import { LigneMaj } from "@/components/shared/LigneMaj";
 
 export default function ContactPage() {
   const t = useTranslations("contact");
@@ -112,7 +111,7 @@ export default function ContactPage() {
       <Navbar />
 
       {/* Header */}
-      <main className="flex-grow pt-28 pb-20">
+      <main className="flex-grow pt-24 pb-20">
         <div className="max-w-4xl mx-auto px-6">
           {/* RECETTE §5 (2026-10-11) : titre et réponse courte, puis le formulaire,
               à côté sur ordinateur ; les sujets passent juste en dessous. */}
@@ -124,8 +123,6 @@ export default function ContactPage() {
               <h1 className="text-3xl md:text-5xl font-semibold tracking-tight mb-4">
                 {t("title")}
               </h1>
-            {/* §8.4 : la date de mise à jour se lit juste sous le titre. */}
-            <LigneMaj />
               <p className="text-neutral-500 font-light max-w-lg mx-auto md:mx-0">
                 {t("intro")}
               </p>

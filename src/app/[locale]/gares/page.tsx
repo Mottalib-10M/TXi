@@ -9,7 +9,6 @@ import { FranceMapStations } from "@/components/station/FranceMapStations";
 import { stations } from "@/data/stations";
 import { activeGareSlugs } from "@/data/page-whitelists";
 import { getTranslations } from "next-intl/server";
-import { LigneMaj } from "@/components/shared/LigneMaj";
 
 interface PageProps {
   params: Promise<{ locale: string }>;
@@ -114,7 +113,7 @@ export default async function GaresPage({ params }: PageProps) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
-      <main className="flex-grow pt-24 pb-16">
+      <main className="flex-grow pt-20 pb-16">
         <div className="max-w-7xl mx-auto px-6">
           <nav className="text-sm text-neutral-500 font-light mb-6">
             <ol className="flex items-center gap-1.5">
@@ -125,20 +124,19 @@ export default async function GaresPage({ params }: PageProps) {
           </nav>
 
           <div className="text-center mb-16 fade-up">
-            <div className="inline-flex items-center gap-2 bg-neutral-100 rounded-full px-4 py-1.5 mb-6">
+            <h1 className="text-4xl md:text-5xl font-semibold tracking-tight leading-[1.1] mb-4">
+              {t("title")}
+            </h1>
+            <p className="text-base md:text-lg text-neutral-500 font-light leading-relaxed max-w-2xl mx-auto">
+              {t("subtitle")}
+            </p>
+            {/* §10.3 (2026-10-15) : la pastille passe sous le chapeau, le titre remonte près du menu. */}
+            <div className="inline-flex items-center gap-2 bg-neutral-100 rounded-full px-4 py-1.5 mt-6">
               <span className="w-2 h-2 bg-green-500 rounded-full" />
               <span className="text-xs font-medium text-neutral-600">
                 {t("badge", { count: activeStations.length, regions: 12 })}
               </span>
             </div>
-            <h1 className="text-4xl md:text-5xl font-semibold tracking-tight leading-[1.1] mb-4">
-              {t("title")}
-            </h1>
-          {/* §8.4 : la date de mise à jour se lit juste sous le titre. */}
-          <LigneMaj />
-            <p className="text-base md:text-lg text-neutral-500 font-light leading-relaxed max-w-2xl mx-auto">
-              {t("subtitle")}
-            </p>
           </div>
 
           <FranceMapStations />

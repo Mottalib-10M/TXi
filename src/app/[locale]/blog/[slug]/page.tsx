@@ -13,7 +13,7 @@ import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 import { LigneMaj } from "@/components/shared/LigneMaj";
 import { blogFaq } from "@/data/blog-faq";
 import { blogFaqSuite } from "@/data/blog-faq-suite";
-import { dateDePage } from "@/lib/page-date";
+import { dateDePage, dateLisible } from "@/lib/page-date";
 
 interface PageProps {
   params: Promise<{ locale: string; slug: string }>;
@@ -306,7 +306,7 @@ export default async function BlogArticlePage({ params }: PageProps) {
       <Navbar />
       <ScrollAnimation />
 
-      <main className="flex-grow pt-24 pb-12 md:pt-32 md:pb-24">
+      <main className="flex-grow pt-20 pb-12 md:pb-24">
         <div className="max-w-3xl mx-auto px-6">
           <BreadcrumbJsonLd
             crumbs={[
@@ -315,7 +315,11 @@ export default async function BlogArticlePage({ params }: PageProps) {
               { name: article.title[lang] },
             ]}
           />
-          <nav className="text-sm text-neutral-500 font-light mb-6" aria-label={lang === "en" ? "Breadcrumb" : "Fil d'Ariane"}>
+          {/* §8.4 et §10.3 (2026-10-15) : page de lecture, la date de mise à
+              jour se lit à droite sur la ligne du fil d'Ariane ; la date de
+              publication et le temps de lecture passent sous le titre. */}
+          <div className="flex flex-wrap md:flex-nowrap items-baseline gap-x-4 gap-y-1 mb-6">
+          <nav className="min-w-0 text-sm text-neutral-500 font-light" aria-label={lang === "en" ? "Breadcrumb" : "Fil d'Ariane"}>
             <ol className="flex items-center gap-1.5 flex-wrap">
               <li><Link href="/" className="hover:text-neutral-900 transition-colors">{lang === "en" ? "Home" : "Accueil"}</Link></li>
               <li aria-hidden="true">/</li>
@@ -324,26 +328,21 @@ export default async function BlogArticlePage({ params }: PageProps) {
               <li className="text-neutral-900 font-medium truncate max-w-[200px]">{article.title[lang]}</li>
             </ol>
           </nav>
+          <LigneMaj position="fil" />
+          </div>
 
           <div>
-            <div className="flex items-center gap-3 text-xs text-neutral-400 font-light mb-4">
+            <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight mb-4 leading-tight">
+              {article.title[lang]}
+            </h1>
+            <div className="flex items-center gap-3 text-xs text-neutral-400 font-light mb-8">
               <time dateTime={article.date}>
                 {t("publishedOn")}{" "}
-                {new Date(article.date).toLocaleDateString(locale, {
-                  year: "numeric",
-                  month: "long",
-                  day: "numeric",
-                })}
+                {dateLisible(article.date, locale)}
               </time>
               <span className="text-neutral-200">|</span>
               <span>{t("readingTime", { minutes: article.readingTime })}</span>
             </div>
-
-            <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight mb-8 leading-tight">
-              {article.title[lang]}
-            </h1>
-          {/* §8.4 : la date de mise à jour se lit juste sous le titre. */}
-          <LigneMaj />
 
             <article className="prose-custom">
               {renderContent(content)}

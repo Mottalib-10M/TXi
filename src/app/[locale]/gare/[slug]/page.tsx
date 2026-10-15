@@ -86,7 +86,7 @@ export default async function StationPage({ params }: PageProps) {
       <StationJsonLd station={st} />
 
       <main className="flex-grow" id="reserver">
-        <div className="max-w-7xl mx-auto px-6 pt-24">
+        <div className="max-w-7xl mx-auto px-6 pt-20">
           <StationBreadcrumb stationName={st.name} />
         </div>
 

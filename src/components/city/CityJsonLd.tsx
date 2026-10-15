@@ -12,7 +12,7 @@ export async function CityJsonLd({ city }: { city: City }) {
     "@context": "https://schema.org",
     // §8.4 : la date de dernière modification vient de l'historique git,
     // via la même table que la ligne visible sous le titre.
-    dateModified: dateDePage("/taxi/") ?? undefined,
+    dateModified: dateDePage(`/taxi-${city.slug}/`) ?? undefined,
     "@type": "TaxiService",
     name: `TaxiNeo ${city.name}`,
     description: city.i18n[loc].metaDescription,

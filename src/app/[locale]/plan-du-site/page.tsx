@@ -15,7 +15,6 @@ import { stations } from "@/data/stations";
 import { activeTrajetSlugs } from "@/data/trajet-whitelist";
 import { activeCitySlugs, activeGareSlugs, activeAeroportSlugs, activeServiceSlugs } from "@/data/page-whitelists";
 import { canonicalUrl, alternateUrls, ajusterTitre, ajusterDescription } from "@/lib/seo";
-import { LigneMaj } from "@/components/shared/LigneMaj";
 
 interface PageProps {
   params: Promise<{ locale: string }>;
@@ -106,14 +105,12 @@ export default async function PlanDuSitePage({ params }: PageProps) {
       <Navbar />
       <ScrollAnimation />
 
-      <main className="flex-grow pt-24 pb-12 md:pt-32 md:pb-24">
+      <main className="flex-grow pt-24 pb-12 md:pt-28 md:pb-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="mb-12 fade-up">
             <h1 className="text-3xl md:text-4xl font-semibold tracking-tight mb-3">
               {t("title")}
             </h1>
-          {/* §8.4 : la date de mise à jour se lit juste sous le titre. */}
-          <LigneMaj />
             <p className="text-neutral-500 font-light">{t("subtitle")}</p>
           </div>
 

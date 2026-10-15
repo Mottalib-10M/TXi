@@ -1,7 +1,6 @@
 import type { ServiceSeo } from "@/data/services-seo";
 import { BookingForm } from "@/components/booking/BookingForm";
 import { getTranslations, getLocale } from "next-intl/server";
-import { LigneMaj } from "@/components/shared/LigneMaj";
 
 export async function ServiceHero({ service }: { service: ServiceSeo }) {
   const t = await getTranslations("service");
@@ -9,24 +8,23 @@ export async function ServiceHero({ service }: { service: ServiceSeo }) {
   const loc = locale === "en" ? "en" : "fr";
 
   return (
-    <section className="pt-4 pb-12 md:pt-8 md:pb-20">
+    <section className="pt-4 pb-12 md:pt-0 md:pb-20">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-12 items-start">
           <div className="max-w-xl fade-up">
+            <h1 className="text-4xl md:text-5xl font-semibold tracking-tight leading-[1.1] mb-4">
+              {service.i18n[loc].heroTitle}
+            </h1>
+            <p className="text-base md:text-lg text-neutral-500 mb-6 max-w-md font-light leading-relaxed">
+              {service.i18n[loc].heroSubtitle}
+            </p>
+            {/* §10.3 (2026-10-15) : la pastille passe sous le chapeau, le titre remonte près du menu. */}
             <div className="inline-flex items-center gap-2 bg-neutral-100 rounded-full px-4 py-1.5 mb-6">
               <span className="w-2 h-2 bg-green-500 rounded-full" />
               <span className="text-xs font-medium text-neutral-600">
                 {t("heroBadge")}
               </span>
             </div>
-            <h1 className="text-4xl md:text-5xl font-semibold tracking-tight leading-[1.1] mb-4">
-              {service.i18n[loc].heroTitle}
-            </h1>
-            {/* §8.4 : la date de mise à jour se lit juste sous le titre. */}
-            <LigneMaj />
-            <p className="text-base md:text-lg text-neutral-500 mb-6 max-w-md font-light leading-relaxed">
-              {service.i18n[loc].heroSubtitle}
-            </p>
           </div>
           <div className="fade-up fade-up-delay-1">
             <BookingForm />

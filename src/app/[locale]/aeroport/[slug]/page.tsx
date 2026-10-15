@@ -89,7 +89,7 @@ export default async function AirportPage({ params }: PageProps) {
       <AirportJsonLd airport={ap} />
 
       <main className="flex-grow" id="reserver">
-        <div className="max-w-7xl mx-auto px-6 pt-24">
+        <div className="max-w-7xl mx-auto px-6 pt-20">
           <AirportBreadcrumb airportName={ap.name} />
         </div>
 

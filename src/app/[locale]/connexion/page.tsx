@@ -101,8 +101,10 @@ function ConnexionForm() {
     }
   }
 
+  // §10.3 (2026-10-15) : le formulaire commence près du menu (≤ 80 px avant
+  // le titre) au lieu d'être centré dans un écran entier.
   return (
-    <div className="min-h-screen bg-white flex items-center justify-center px-6 py-12">
+    <div className="bg-white flex justify-center px-6 pt-20 pb-12">
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
           <Link href="/" className="text-2xl">

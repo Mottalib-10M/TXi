@@ -7,8 +7,8 @@ import { Footer } from "@/components/layout/Footer";
 import { ScrollAnimation } from "@/components/ui/ScrollAnimation";
 import { blogArticles } from "@/data/blog";
 import { canonicalUrl, alternateUrls, ajusterTitre, ajusterDescription } from "@/lib/seo";
-import { LigneMaj } from "@/components/shared/LigneMaj";
 import { FaqSection } from "@/components/seo/FaqSection";
+import { dateLisible } from "@/lib/page-date";
 
 interface PageProps {
   params: Promise<{ locale: string }>;
@@ -71,14 +71,12 @@ export default async function BlogPage({ params }: PageProps) {
       <Navbar />
       <ScrollAnimation />
 
-      <main className="flex-grow pt-24 pb-12 md:pt-32 md:pb-24">
+      <main className="flex-grow pt-24 pb-12 md:pt-28 md:pb-24">
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-10 fade-up">
             <h1 className="text-3xl md:text-4xl font-semibold tracking-tight mb-3">
               {t("title")}
             </h1>
-          {/* §8.4 : la date de mise à jour se lit juste sous le titre. */}
-          <LigneMaj />
             <p className="text-neutral-500 font-light">
               {t("subtitle")}
             </p>
@@ -93,11 +91,7 @@ export default async function BlogPage({ params }: PageProps) {
               >
                 <div className="flex items-center gap-3 text-xs text-neutral-400 font-light mb-3">
                   <time dateTime={article.date}>
-                    {new Date(article.date).toLocaleDateString(locale, {
-                      year: "numeric",
-                      month: "long",
-                      day: "numeric",
-                    })}
+                    {dateLisible(article.date, locale)}
                   </time>
                   <span className="text-neutral-200">|</span>
                   <span>{t("readingTime", { minutes: article.readingTime })}</span>

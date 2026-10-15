@@ -70,6 +70,8 @@ const fichiersData = readdirSync(join(root, "src", "data"))
 const dataQui = (motif) => fichiersData.filter((f) => motif.test(f));
 
 const DONNEES = {
+  // Pages ville /taxi-paris/ : gabarit (cities)/[slug], données des villes.
+  "/taxi-": dataQui(/cities|departements/),
   "/trajet/": dataQui(/trajets/),
   "/trajets/": dataQui(/trajets/),
   "/taxi/": dataQui(/cities|departements/),
@@ -98,12 +100,18 @@ const parcourir = (dir) => {
     const brut = "/" + relative(join(root, "src", "app", "[locale]"), dir).split(sep).join("/");
     // On retire les groupes de routes et les segments dynamiques : la date vaut
     // pour toute la famille, puisqu'elle vient du même fichier de données.
-    const propre = (brut === "/" ? "/" : brut.replace(/\/?$/, "/"))
-      .replace(/\/\(.*?\)\//g, "/")
-      .replace(/\[[^\]]*\]\//g, "");
+    // Le groupe (cities)/[slug] sert /taxi-paris/ : sans ce cas, il se
+    // confondait avec l'accueil « / » et les pages ville prenaient sa date
+    // (journal du 2026-10-15).
+    const propre = /\(cities\)\/\[slug\]$/.test(brut)
+      ? "/taxi-"
+      : (brut === "/" ? "/" : brut.replace(/\/?$/, "/"))
+        .replace(/\/\(.*?\)\//g, "/")
+        .replace(/\[[^\]]*\]\//g, "");
     const sources = [rel];
     for (const [prefixe, fichiers] of Object.entries(DONNEES)) {
-      if (propre.startsWith(prefixe)) sources.push(...fichiers);
+      // « /taxi- » ne vaut que pour les pages ville, pas pour /taxi-medical/ ni /taxi-partage/.
+      if (prefixe === "/taxi-" ? propre === "/taxi-" : propre.startsWith(prefixe)) sources.push(...fichiers);
     }
     const d = dateDe(...sources);
     if (d && (!routes[propre] || d > routes[propre])) routes[propre] = d;

@@ -106,7 +106,7 @@ export default async function CityPage({ params }: PageProps) {
       <CityJsonLd city={city} />
 
       <main className="flex-grow" id="reserver">
-        <div className="max-w-7xl mx-auto px-6 pt-24">
+        <div className="max-w-7xl mx-auto px-6 pt-20">
           <CityBreadcrumb cityName={city.name} />
         </div>
 

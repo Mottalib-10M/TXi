@@ -33,11 +33,14 @@ export function dateDePage(pathname: string): string | null {
   return meilleur;
 }
 
-/** Date lisible dans la langue de la page. */
+/** Date lisible dans la langue de la page, en toutes lettres (« 1er octobre 2026 »). */
 export function dateLisible(iso: string, locale: string): string {
-  return new Intl.DateTimeFormat(locale === "en" ? "en-GB" : "fr-FR", {
+  const texte = new Intl.DateTimeFormat(locale === "en" ? "en-GB" : "fr-FR", {
     day: "numeric",
     month: "long",
     year: "numeric",
+    timeZone: "UTC",
   }).format(new Date(`${iso}T12:00:00Z`));
+  // En français, le premier jour du mois s'écrit « 1er » (RECETTE §8.4).
+  return locale !== "en" && texte.startsWith("1 ") ? `1er${texte.slice(1)}` : texte;
 }

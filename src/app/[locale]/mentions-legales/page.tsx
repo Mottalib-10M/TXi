@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { canonicalUrl, alternateUrls, ajusterTitre, ajusterDescription } from "@/lib/seo";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
-import { LigneMaj } from "@/components/shared/LigneMaj";
 
 interface Props {
   params: Promise<{ locale: string }>;
@@ -41,8 +40,6 @@ export default async function LegalPage({ params }: Props) {
           <h1 className="text-3xl md:text-4xl font-semibold tracking-tight mb-8">
             {isFr ? "Mentions legales" : "Legal Notice"}
           </h1>
-          {/* §8.4 : la date de mise à jour se lit juste sous le titre. */}
-          <LigneMaj />
 
           {/* Editeur */}
           <section className="mb-10">

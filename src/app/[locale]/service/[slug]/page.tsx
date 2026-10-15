@@ -76,7 +76,7 @@ export default async function ServicePage({ params }: PageProps) {
       <ServiceJsonLd service={service} />
 
       <main className="flex-grow" id="reserver">
-        <div className="max-w-7xl mx-auto px-6 pt-24">
+        <div className="max-w-7xl mx-auto px-6 pt-20">
           <BreadcrumbJsonLd
             crumbs={[
               { name: t("breadcrumbHome"), item: "https://www.taxineo.fr" },

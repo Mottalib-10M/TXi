@@ -1,7 +1,6 @@
 import { Icon } from "@iconify/react";
 import { getTranslations, getLocale } from "next-intl/server";
 import type { Guide } from "@/data/guides";
-import { LigneMaj } from "@/components/shared/LigneMaj";
 
 export async function GuideHero({ guide }: { guide: Guide }) {
   const t = await getTranslations("guide");
@@ -9,22 +8,21 @@ export async function GuideHero({ guide }: { guide: Guide }) {
   const loc = locale === "en" ? "en" : "fr";
 
   return (
-    <section className="pt-24 pb-12 md:pt-32 md:pb-16">
+    <section className="pt-0 pb-12 md:pb-16">
       <div className="max-w-3xl mx-auto px-6 text-center fade-up">
-        <div className="inline-flex items-center gap-2 bg-neutral-100 rounded-full px-4 py-1.5 mb-6">
+        <h1 className="text-4xl md:text-5xl font-semibold tracking-tight leading-[1.1] mb-4">
+          {guide.i18n[loc].heroTitle}
+        </h1>
+        <p className="text-base md:text-lg text-neutral-500 font-light leading-relaxed max-w-2xl mx-auto">
+          {guide.i18n[loc].heroSubtitle}
+        </p>
+        {/* §10.3 (2026-10-15) : la pastille passe sous le chapeau, le titre remonte près du menu. */}
+        <div className="inline-flex items-center gap-2 bg-neutral-100 rounded-full px-4 py-1.5 mt-6">
           <Icon icon={guide.icon} className="text-neutral-600 text-sm" />
           <span className="text-xs font-medium text-neutral-600">
             {t("readingTime", { min: guide.readingTime })}
           </span>
         </div>
-        <h1 className="text-4xl md:text-5xl font-semibold tracking-tight leading-[1.1] mb-4">
-          {guide.i18n[loc].heroTitle}
-        </h1>
-            {/* §8.4 : la date de mise à jour se lit juste sous le titre. */}
-            <LigneMaj />
-        <p className="text-base md:text-lg text-neutral-500 font-light leading-relaxed max-w-2xl mx-auto">
-          {guide.i18n[loc].heroSubtitle}
-        </p>
       </div>
     </section>
   );

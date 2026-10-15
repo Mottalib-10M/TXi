@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { canonicalUrl, alternateUrls, ajusterTitre, ajusterDescription } from "@/lib/seo";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
-import { LigneMaj } from "@/components/shared/LigneMaj";
 
 interface Props {
   params: Promise<{ locale: string }>;
@@ -47,7 +46,6 @@ export default async function WidgetPage({ params }: Props) {
           <h1 className="text-3xl md:text-4xl font-semibold tracking-tight mb-3">
             {isFr ? "Widget tarifs taxi" : "Taxi fare widget"}
           </h1>
-          <LigneMaj />
           <p className="text-sm text-neutral-600 font-light leading-relaxed mb-8 max-w-2xl">
             {isFr
               ? "Ce widget affiche les quatre tarifs réglementés du compteur — A, B, C et D — et dit dans quel cas chacun s'applique. Il est destiné aux sites d'hôtels, d'offices de tourisme, de cliniques ou d'entreprises qui renseignent leurs visiteurs sur le coût d'une course sans vouloir entretenir eux-mêmes une page de tarifs. Son contenu suit les arrêtés préfectoraux : quand le barème change, le bloc change chez vous sans intervention de votre part. L'intégration se fait avec une ligne de HTML, sans script à charger, sans cookie déposé chez vos visiteurs et sans inscription. L'usage est libre et gratuit, la seule contrepartie étant le lien vers TaxiNeo qui figure sous le tableau."

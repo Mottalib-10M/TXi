@@ -72,7 +72,7 @@ export default async function TarifPage({ params }: PageProps) {
       <TarifJsonLd tarif={tarif} />
 
       <main className="flex-grow" id="reserver">
-        <div className="max-w-7xl mx-auto px-6 pt-24">
+        <div className="max-w-7xl mx-auto px-6 pt-20">
           <BreadcrumbJsonLd
             crumbs={[
               { name: t("breadcrumbHome"), item: "https://www.taxineo.fr" },

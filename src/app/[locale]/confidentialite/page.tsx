@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { canonicalUrl, alternateUrls, ajusterTitre, ajusterDescription } from "@/lib/seo";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
-import { LigneMaj } from "@/components/shared/LigneMaj";
+import { dateLisible } from "@/lib/page-date";
 
 interface Props {
   params: Promise<{ locale: string }>;
@@ -34,11 +34,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function PrivacyPage({ params }: Props) {
   const { locale } = await params;
   const isFr = locale === "fr";
-  const dateLisible = new Intl.DateTimeFormat(isFr ? "fr-FR" : "en-GB", {
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-  }).format(new Date(MAJ));
+  const dateMaj = dateLisible(MAJ, locale);
 
   const sections: { titre: string; corps: string[] }[] = isFr
     ? [
@@ -143,11 +139,9 @@ export default async function PrivacyPage({ params }: Props) {
       <Navbar />
       <main className="flex-grow pt-28 pb-20">
         <div className="max-w-3xl mx-auto px-6">
-          <h1 className="text-3xl md:text-4xl font-semibold tracking-tight mb-3">
+          <h1 className="text-3xl md:text-4xl font-semibold tracking-tight mb-8">
             {isFr ? "Politique de confidentialité" : "Privacy Policy"}
           </h1>
-          {/* §8.4 : la date de mise à jour se lit juste sous le titre. */}
-          <LigneMaj />
 
           {sections.map((s) => (
             <section key={s.titre} className="mb-10">
@@ -167,7 +161,7 @@ export default async function PrivacyPage({ params }: Props) {
           </p>
           <p className="text-xs text-neutral-500 font-light mt-8">
             {isFr ? "Dernière mise à jour : " : "Last updated: "}
-            <time dateTime={MAJ}>{dateLisible}</time>
+            <time dateTime={MAJ}>{dateMaj}</time>
           </p>
         </div>
       </main>

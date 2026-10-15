@@ -11,6 +11,7 @@ import { emailError, phoneError, isValidEmail, formatPrice } from "@/lib/validat
 import { trackSearch, trackViewResults, trackSearchHasResults, trackSearchNoResults, trackSelectTaxi, trackBeginBooking, trackBookingComplete, trackContactRequest, trackError } from "@/lib/analytics";
 
 import TurnstileWidget from "@/components/TurnstileWidget";
+import { NATIONAL_TARIFFS } from "@/data/departmental-tariffs";
 
 interface TaxiResult {
   id: string;
@@ -235,9 +236,16 @@ export function BookingForm() {
       <div data-resultat aria-live="polite">
       {step === "search" && (
         <>
-          <h2 className="text-lg font-semibold tracking-tight mb-5">
-            {t("title")}
-          </h2>
+          {/* §8.4 (2026-10-15) : plus de date en haut de page ; l'année des
+              tarifs réglementés se lit près du simulateur. */}
+          <div className="flex items-baseline justify-between gap-3 mb-5">
+            <h2 className="text-lg font-semibold tracking-tight">
+              {t("title")}
+            </h2>
+            <span className="text-xs text-neutral-500 font-light whitespace-nowrap">
+              {locale === "en" ? `${NATIONAL_TARIFFS.year} fares` : `Tarifs ${NATIONAL_TARIFFS.year}`}
+            </span>
+          </div>
 
           <div className="relative space-y-3">
             <div className="absolute left-[1.15rem] top-6 bottom-6 w-0.5 bg-neutral-200 z-0" />
