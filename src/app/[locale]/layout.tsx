@@ -129,6 +129,22 @@ export default async function LocaleLayout({
       <head>
         {/* Dans l'app : <html data-app> posé avant l'affichage (styles propres à l'app). */}
         <script dangerouslySetInnerHTML={{ __html: APP_SCRIPT }} />
+        {/* GA4, sans bandeau (décision de l'éditeur du 2026-10-17, RECETTE §15.6) : mesure d'audience
+            accordée, publicité refusée ; cookies _ga et _ga_<ID> limités à 390 jours, non prolongés ;
+            signaux Google coupés ; adresse envoyée sans paramètres. gtag/js est ajouté par le script du
+            consentement (Next remonte un <script async src> en tête du <head>) ; jamais dans l'app,
+            comme Clarity. Les événements de src/lib/analytics.ts restent coupés (ils porteraient des
+            adresses et des noms). Contrôle : scripts/check-cookies.py. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}window.gtag=gtag;gtag('consent','default',{analytics_storage:'granted',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',functionality_storage:'granted',security_storage:'granted'});if(!document.documentElement.hasAttribute("data-app")){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-2Z22GS67QY';document.head.appendChild(s);}`,
+          }}
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `gtag('js',new Date());gtag('config','G-2Z22GS67QY',{anonymize_ip:true,page_location:location.origin+location.pathname,cookie_expires:33696000,cookie_update:false,allow_google_signals:false,allow_ad_personalization_signals:false});`,
+          }}
+        />
         {/* Microsoft Clarity sans cookie : consentement refusé (consentv2) mis en file avant le script (RECETTE §15.6). Jamais dans l'app. */}
         <script
           dangerouslySetInnerHTML={{

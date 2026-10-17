@@ -1,4 +1,4 @@
-/* ─── Événements de suivi : désactivés (aucun traceur) ─────────────── */
+/* ─── Événements de suivi : désactivés ──────────────────────────────── */
 
 type GtagEvent = {
   action: string;
@@ -8,8 +8,10 @@ type GtagEvent = {
   [key: string]: string | number | boolean | undefined;
 };
 
-// GA4 retiré (règle « sans cookie » du 2026-10-07, RECETTE §15.6) : les appels de suivi
-// restent en place dans les composants mais n'envoient plus rien nulle part.
+// GA4 est chargé dans src/app/[locale]/layout.tsx pour les seules pages vues (décision de
+// l'éditeur du 2026-10-17). Ces événements restent coupés : ils porteraient des adresses, des
+// noms de chauffeurs, des numéros et des références de réservation. Les appels restent en place
+// dans les composants mais n'envoient rien.
 function gtag(...args: unknown[]) {
   void args;
 }

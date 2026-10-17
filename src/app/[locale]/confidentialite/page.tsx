@@ -8,18 +8,18 @@ interface Props {
   params: Promise<{ locale: string }>;
 }
 
-const MAJ = "2026-10-07";
+const MAJ = "2026-10-17";
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const title =
     locale === "en"
-      ? "TaxiNeo privacy policy: no cookies while you browse"
-      : "Confidentialité TaxiNeo : aucun cookie à la visite";
+      ? "TaxiNeo privacy policy: Google Analytics, bookings, your rights"
+      : "Confidentialité TaxiNeo : mesure d'audience, réservations, droits";
   const description =
     locale === "en"
-      ? "TaxiNeo sets no cookies while you browse; only a cookie-free stability check runs. What a booking or an account requires, how long it is kept and your rights."
-      : "TaxiNeo ne dépose aucun cookie à la visite et ne mesure que la stabilité, sans cookie. Ce que demande une réservation, sa durée de conservation, vos droits.";
+      ? "TaxiNeo counts visits with Google Analytics (two cookies, 13 months at most, no advertising). What a booking or an account requires, how long it is kept and your rights."
+      : "TaxiNeo mesure son audience avec Google Analytics (deux cookies, 13 mois au plus, sans publicité). Ce que demande une réservation, sa durée de conservation, vos droits.";
   return {
     title: title,
     description: description,
@@ -45,10 +45,13 @@ export default async function PrivacyPage({ params }: Props) {
           ],
         },
         {
-          titre: "2. Consulter le site : aucun cookie, rien d'enregistré",
+          titre: "2. Consulter le site : mesure d'audience avec Google Analytics",
           corps: [
-            "Chercher un trajet, comparer les tarifs réglementés d'un taxi, lire un guide sur une gare ou un aéroport : tant que vous ne réservez pas et ne créez pas de compte, le site ne dépose aucun cookie et l'éditeur n'enregistre aucune donnée personnelle vous concernant. Les estimations de prix sont calculées à la volée et ne sont pas gardées.",
-            "Il n'y a donc pas de bandeau cookies : rien à accepter. Aucun outil publicitaire, aucun Google Analytics, aucun autre traceur.",
+            "Chercher un trajet, comparer les tarifs réglementés d'un taxi, lire un guide sur une gare ou un aéroport : tant que vous ne réservez pas et ne créez pas de compte, l'éditeur n'enregistre aucune donnée personnelle vous concernant. Les estimations de prix sont calculées à la volée et ne sont pas gardées.",
+            "Le site utilise Google Analytics 4 pour compter ses visites et savoir quelles pages servent : pages vues, page de provenance, durée de la visite, type d'appareil et de navigateur, pays et ville approximatifs. Google Analytics dépose pour cela deux cookies sur votre terminal : _ga, qui distingue les visiteurs par un identifiant aléatoire, et _ga_2Z22GS67QY, qui garde l'état de la visite. Leur durée de vie est réglée à 13 mois au plus (390 jours) et n'est pas prolongée à chaque visite ; Google prévoit 2 ans par défaut. Google Analytics reste coupé dans l'app iPhone et Android.",
+            "L'adresse IP est anonymisée : Google Analytics 4 ne l'enregistre ni ne la conserve, il s'en sert seulement au moment de la collecte pour déduire un pays et une ville approximatifs. L'adresse de page transmise est privée de ses paramètres, et ni les adresses de course, ni les noms, ni les numéros saisis ne sont envoyés à Google. Le site n'affiche pas de publicité : le stockage publicitaire, les données publicitaires, la personnalisation des annonces et les signaux Google sont désactivés.",
+            "Fournisseur : Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irlande, sous-traitant au sens de l'article 28 du RGPD. Finalité : mesure d'audience. Base légale : intérêt légitime de l'éditeur (article 6-1 f du RGPD). Conservation chez Google : 14 mois pour les données liées aux visites et aux identifiants, puis suppression ; seuls restent des totaux anonymes. Les données peuvent être transférées à Google LLC, aux États-Unis, dans le cadre du EU–U.S. Data Privacy Framework et des clauses contractuelles types de la Commission européenne.",
+            "Pour vous y opposer : bloquez ou supprimez les cookies dans les réglages de votre navigateur, ou installez le module de désactivation de Google Analytics (https://tools.google.com/dlpage/gaoptout). Le site fonctionne alors de la même façon. Il n'y a ni cookie publicitaire, ni cookie de réseau social.",
           ],
         },
         {
@@ -69,19 +72,19 @@ export default async function PrivacyPage({ params }: Props) {
         {
           titre: "5. Bases légales et durées",
           corps: [
-            "Exécution du contrat pour les réservations et les comptes ; intérêt légitime pour la mesure de stabilité et la prévention des abus. Les données de réservation sont conservées trois ans après la dernière course (prescription commerciale usuelle), celles d'un compte jusqu'à trente jours après sa fermeture, les messages de contact un an.",
+            "Exécution du contrat pour les réservations et les comptes ; intérêt légitime pour la mesure d'audience, la mesure de stabilité et la prévention des abus. Les données de réservation sont conservées trois ans après la dernière course (prescription commerciale usuelle), celles d'un compte jusqu'à trente jours après sa fermeture, les messages de contact un an.",
           ],
         },
         {
           titre: "6. Destinataires",
           corps: [
-            "Les données ne sont ni vendues ni louées. Elles vont au chauffeur chargé de la course et aux prestataires strictement nécessaires : hébergement (Vercel Inc.), base de données (Supabase, serveurs en Irlande), saisie des adresses et itinéraires (Google Maps), notifications de l'app iPhone (Apple), envoi des e-mails de confirmation (Resend), protection anti-robot (Cloudflare) et mesure de stabilité sans cookie (Microsoft Clarity). Un signalement envoyé à notre équipe (lien « Signaler » d'un chauffeur) est conservé avec son motif, son message et, si vous la donnez, votre adresse e-mail, le temps de le traiter. Certains traitent des données aux États-Unis, sous clauses contractuelles types de la Commission européenne.",
+            "Les données ne sont ni vendues ni louées. Elles vont au chauffeur chargé de la course et aux prestataires strictement nécessaires : hébergement (Vercel Inc.), base de données (Supabase, serveurs en Irlande), saisie des adresses et itinéraires (Google Maps), notifications de l'app iPhone (Apple), envoi des e-mails de confirmation (Resend), protection anti-robot (Cloudflare), mesure d'audience (Google Ireland Limited pour Google Analytics) et mesure de stabilité sans cookie (Microsoft Clarity). Un signalement envoyé à notre équipe (lien « Signaler » d'un chauffeur) est conservé avec son motif, son message et, si vous la donnez, votre adresse e-mail, le temps de le traiter. Certains traitent des données aux États-Unis, sous le EU–U.S. Data Privacy Framework et les clauses contractuelles types de la Commission européenne.",
           ],
         },
         {
           titre: "7. Vos droits",
           corps: [
-            "Accès, rectification, effacement, limitation, opposition et portabilité : écrivez à contact@taxineo.fr, réponse sous un mois. En cas de désaccord, vous pouvez saisir la CNIL, 3 place de Fontenoy, TSA 80715, 75334 Paris Cedex 07 (www.cnil.fr).",
+            "Accès, rectification, effacement, limitation, opposition et portabilité : écrivez à contact@taxineo.fr, réponse sous un mois. Pour la mesure d'audience, le module de désactivation de Google Analytics décrit plus haut suffit. En cas de désaccord, vous pouvez saisir la CNIL, 3 place de Fontenoy, TSA 80715, 75334 Paris Cedex 07 (www.cnil.fr).",
           ],
         },
       ]
@@ -93,16 +96,19 @@ export default async function PrivacyPage({ params }: Props) {
           ],
         },
         {
-          titre: "2. Browsing the site: no cookies, nothing recorded",
+          titre: "2. Browsing the site: audience measurement with Google Analytics",
           corps: [
-            "Looking up a route, checking regulated taxi fares or reading a guide to a station or airport: as long as you do not book or open an account, the site sets no cookies and the publisher records no personal data about you. Fare estimates are computed on the fly and not kept.",
-            "That is why there is no cookie banner: there is nothing to accept. No advertising tools, no Google Analytics, no other tracker.",
+            "Looking up a route, checking regulated taxi fares or reading a guide to a station or airport: as long as you do not book or open an account, the publisher records no personal data about you. Fare estimates are computed on the fly and not kept.",
+            "The site uses Google Analytics 4 to count visits and see which pages are useful: pages viewed, referring page, visit length, device and browser type, approximate country and city. To do so Google Analytics sets two cookies on your device: _ga, which tells visitors apart with a random identifier, and _ga_2Z22GS67QY, which keeps the state of the visit. Their lifetime is set to 13 months at most (390 days) and is not extended on each visit; Google's default is 2 years. Google Analytics stays off in the iPhone and Android app.",
+            "The IP address is anonymised: Google Analytics 4 neither logs nor stores it, and only uses it at collection time to derive an approximate country and city. The page address sent is stripped of its parameters, and ride addresses, names and phone numbers you type are never sent to Google. The site shows no advertising: ad storage, ad user data, ad personalisation and Google signals are switched off.",
+            "Provider: Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ireland, acting as a processor under Article 28 GDPR. Purpose: audience measurement. Legal basis: the publisher's legitimate interests (GDPR Art. 6(1)(f)). Retention at Google: 14 months for visit-level and identifier-level data, then deletion; only anonymous totals remain. Data may be transferred to Google LLC in the United States under the EU–U.S. Data Privacy Framework and the European Commission's standard contractual clauses.",
+            "To object: block or delete cookies in your browser settings, or install the Google Analytics opt-out browser add-on (https://tools.google.com/dlpage/gaoptout). The site works the same way. There is no advertising cookie and no social media cookie.",
           ],
         },
         {
           titre: "3. Anonymous stability check (cookie-free Microsoft Clarity)",
           corps: [
-            "To catch a page that crashes, a booking form that stalls or a button that does nothing, the site uses Microsoft Clarity in its cookie-free mode: no _clck, _clsk, MUID or CLID cookie. Clarity only receives anonymous technical signals: errors, load times, dead clicks, scrolling and device type. Each page view carries a single-use identifier, so two visits are never linked. Page text and anything you type (addresses, name, phone number) are masked by the site's code before sending.",
+            "To catch a page that crashes, a booking form that stalls or a button that does nothing, the site uses Microsoft Clarity in its cookie-free mode, in which Clarity sets no _clck, _clsk, MUID or CLID cookie. Clarity only receives anonymous technical signals: errors, load times, dead clicks, scrolling and device type. Each page view carries a single-use identifier, so two visits are never linked. Page text and anything you type (addresses, name, phone number) are masked by the site's code before sending.",
             "Service provider: Microsoft Ireland Operations Limited, One Microsoft Place, South County Business Park, Leopardstown, Dublin 18, Ireland. Purpose: site stability and speed. Legal basis: legitimate interest (GDPR Art. 6(1)(f)). Retention: 30 days for recordings, at most 13 months for aggregate statistics. To opt out, block the clarity.ms domain in your browser or write to contact@taxineo.fr; the site works just the same.",
           ],
         },
@@ -117,19 +123,19 @@ export default async function PrivacyPage({ params }: Props) {
         {
           titre: "5. Legal bases and retention",
           corps: [
-            "Performance of the contract for bookings and accounts; legitimate interest for the stability check and abuse prevention. Booking data is kept for three years after the last ride (usual commercial limitation period), account data until thirty days after the account is closed, contact messages for one year.",
+            "Performance of the contract for bookings and accounts; legitimate interest for audience measurement, the stability check and abuse prevention. Booking data is kept for three years after the last ride (usual commercial limitation period), account data until thirty days after the account is closed, contact messages for one year.",
           ],
         },
         {
           titre: "6. Recipients",
           corps: [
-            "Data is neither sold nor rented. It goes to the driver handling the ride and to the providers strictly needed to run the service: hosting (Vercel Inc.), database (Supabase, servers in Ireland), address suggestions and routes (Google Maps), iPhone app notifications (Apple), confirmation emails (Resend), anti-bot protection (Cloudflare) and the cookie-free stability check (Microsoft Clarity). A report sent to our team (a driver's \"Report\" link) is kept with its reason, its message and, if you give it, your e-mail address, for as long as it takes to handle it. Some process data in the United States, under the European Commission's standard contractual clauses.",
+            "Data is neither sold nor rented. It goes to the driver handling the ride and to the providers strictly needed to run the service: hosting (Vercel Inc.), database (Supabase, servers in Ireland), address suggestions and routes (Google Maps), iPhone app notifications (Apple), confirmation emails (Resend), anti-bot protection (Cloudflare), audience measurement (Google Ireland Limited for Google Analytics) and the cookie-free stability check (Microsoft Clarity). A report sent to our team (a driver's \"Report\" link) is kept with its reason, its message and, if you give it, your e-mail address, for as long as it takes to handle it. Some process data in the United States, under the EU–U.S. Data Privacy Framework and the European Commission's standard contractual clauses.",
           ],
         },
         {
           titre: "7. Your rights",
           corps: [
-            "Access, rectification, erasure, restriction, objection and portability: write to contact@taxineo.fr and you will get an answer within one month. If you disagree with the answer, you can complain to the CNIL, the French data protection authority, 3 place de Fontenoy, TSA 80715, 75334 Paris Cedex 07 (www.cnil.fr).",
+            "Access, rectification, erasure, restriction, objection and portability: write to contact@taxineo.fr and you will get an answer within one month. For audience measurement, the Google Analytics opt-out add-on described above is enough. If you disagree with the answer, you can complain to the CNIL, the French data protection authority, 3 place de Fontenoy, TSA 80715, 75334 Paris Cedex 07 (www.cnil.fr).",
           ],
         },
       ];

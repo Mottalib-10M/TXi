@@ -199,8 +199,8 @@ export default async function LegalPage({ params }: Props) {
             </h2>
             <p className="text-sm text-neutral-600 font-light leading-relaxed mb-3">
               {isFr
-                ? "La simple consultation du site ne dépose aucun cookie : ni mesure d'audience, ni publicité. Il n'y a donc pas de bandeau cookies. Seuls les utilisateurs qui se connectent à un compte reçoivent un cookie de session strictement nécessaire, supprimé à la déconnexion."
-                : "Simply browsing the site sets no cookies: no audience measurement, no advertising. That is why there is no cookie banner. Only users who sign in to an account receive a strictly necessary session cookie, removed when they sign out."}
+                ? "La consultation du site dépose deux cookies de mesure d'audience Google Analytics (_ga et _ga_2Z22GS67QY, 13 mois au plus), sans publicité, fournis par Google Ireland Limited ; vous pouvez les bloquer dans votre navigateur ou avec le module tools.google.com/dlpage/gaoptout. Les utilisateurs qui se connectent à un compte reçoivent en plus un cookie de session strictement nécessaire, supprimé à la déconnexion."
+                : "Browsing the site sets two Google Analytics audience measurement cookies (_ga and _ga_2Z22GS67QY, 13 months at most), with no advertising, provided by Google Ireland Limited; you can block them in your browser or with the tools.google.com/dlpage/gaoptout add-on. Users who sign in to an account also receive a strictly necessary session cookie, removed when they sign out."}
             </p>
             <p className="text-sm text-neutral-600 font-light leading-relaxed">
               {isFr
@@ -222,6 +222,9 @@ export default async function LegalPage({ params }: Props) {
             <ul className="text-sm text-neutral-600 font-light leading-relaxed list-disc pl-6 space-y-1">
               <li>
                 <strong>Vercel Inc.</strong> &mdash; {isFr ? "Hebergement du site (Etats-Unis, clauses contractuelles types UE)" : "Website hosting (United States, EU standard contractual clauses)"}
+              </li>
+              <li>
+                <strong>Google Ireland Limited</strong> &mdash; {isFr ? "Google Analytics, mesure d'audience avec cookies, sans publicité (Irlande ; transfert possible à Google LLC sous Data Privacy Framework)" : "Google Analytics, audience measurement with cookies, no advertising (Ireland; possible transfer to Google LLC under the Data Privacy Framework)"}
               </li>
               <li>
                 <strong>Microsoft Ireland Operations Limited</strong> &mdash; {isFr ? "Microsoft Clarity sans cookie, mesure anonyme de la stabilité (Irlande)" : "Cookie-free Microsoft Clarity, anonymous stability check (Ireland)"}
