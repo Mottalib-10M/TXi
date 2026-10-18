@@ -1,3 +1,4 @@
+import { readFileSync } from "node:fs";
 import createNextIntlPlugin from "next-intl/plugin";
 
 const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
@@ -50,9 +51,16 @@ const nextConfig = {
     const doublons = ["toulouse-perpignan", "rennes-saint-brieuc", "tours-chenonceau", "perpignan-narbonne"];
     // Rubriques supprimees lors de l'elagage (9da2169) : Google les explore encore et la
     // redirection /fr/... aboutissait sur une 404. Chaque ancienne adresse va vers la page vivante la plus proche.
+    // Villes conservees (activeCitySlugs) : l'ancienne page va vers la page de la ville, les autres vers /villes.
+    const bloc = readFileSync("./src/data/page-whitelists.ts", "utf8").match(/activeCitySlugs = new Set\(\[([\s\S]*?)\]\)/)[1];
+    const villes = [...bloc.matchAll(/"([^"]+)"/g)].map((m) => m[1]);
     const rubriques = [
-      ["/mise-a-disposition/:slug", "/taxi-:slug"],
-      ["/assistance/:slug", "/taxi-:slug"],
+      ...villes.flatMap((v) => [
+        [`/mise-a-disposition/${v}`, `/taxi-${v}`],
+        [`/assistance/${v}`, `/taxi-${v}`],
+      ]),
+      ["/mise-a-disposition/:slug", "/villes"],
+      ["/assistance/:slug", "/villes"],
       ["/autoroute/:slug", "/trajets"],
       ["/departement/:slug", "/villes"],
       ["/departements", "/villes"],
