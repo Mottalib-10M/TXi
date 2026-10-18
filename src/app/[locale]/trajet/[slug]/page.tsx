@@ -22,6 +22,7 @@ import { titreTrajet, descriptionTrajet, nomsTrajet } from "@/lib/seo-trajet";
 import { etofferFaq } from "@/lib/faq-etoffer";
 import { faitsTrajet } from "@/lib/faits-trajet";
 
+// dynamicParams ne suffit pas (pages elaguees encore servies en 200) : le slug est aussi verifie dans la page.
 export const dynamicParams = false;
 
 interface PageProps {
@@ -39,7 +40,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { locale, slug } = await params;
   const trajet = getTrajetBySlug(slug);
-  if (!trajet) notFound();
+  if (!trajet || !activeTrajetSlugs.has(trajet.slug)) notFound();
   const loc = locale === "en" ? "en" : "fr";
 
   const canonical = canonicalUrl(locale, `/trajet/${trajet.slug}`);
@@ -73,7 +74,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 export default async function TrajetPage({ params }: PageProps) {
   const { locale, slug } = await params;
   const trajet = getTrajetBySlug(slug);
-  if (!trajet) notFound();
+  if (!trajet || !activeTrajetSlugs.has(trajet.slug)) notFound();
   const loc = locale === "en" ? "en" : "fr";
   const { from, to } = nomsTrajet(trajet, loc);
 

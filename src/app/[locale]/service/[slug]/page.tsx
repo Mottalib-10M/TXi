@@ -16,6 +16,7 @@ import { getTranslations } from "next-intl/server";
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 import { canonicalUrl, alternateUrls } from "@/lib/seo";
 
+// dynamicParams ne suffit pas (pages elaguees encore servies en 200) : le slug est aussi verifie dans la page.
 export const dynamicParams = false;
 
 interface PageProps {
@@ -33,7 +34,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { locale, slug } = await params;
   const service = getServiceBySlug(slug);
-  if (!service) notFound();
+  if (!service || !activeServiceSlugs.has(service.slug)) notFound();
   const loc = locale === "en" ? "en" : "fr";
 
   const canonical = canonicalUrl(locale, `/service/${service.slug}`);
@@ -65,7 +66,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 export default async function ServicePage({ params }: PageProps) {
   const { locale, slug } = await params;
   const service = getServiceBySlug(slug);
-  if (!service) notFound();
+  if (!service || !activeServiceSlugs.has(service.slug)) notFound();
   const loc = locale === "en" ? "en" : "fr";
   const t = await getTranslations("service");
 

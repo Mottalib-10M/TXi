@@ -25,6 +25,7 @@ import { canonicalUrl, alternateUrls } from "@/lib/seo";
 import { etofferFaq } from "@/lib/faq-etoffer";
 import { faitsGare } from "@/lib/faits-hub";
 
+// dynamicParams ne suffit pas (pages elaguees encore servies en 200) : le slug est aussi verifie dans la page.
 export const dynamicParams = false;
 
 interface PageProps {
@@ -42,7 +43,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { locale, slug } = await params;
   const st = getStationBySlug(slug);
-  if (!st) notFound();
+  if (!st || !activeGareSlugs.has(st.slug)) notFound();
   const loc = locale === "en" ? "en" : "fr";
 
   const canonical = canonicalUrl(locale, `/gare/${st.slug}`);
@@ -74,7 +75,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 export default async function StationPage({ params }: PageProps) {
   const { locale, slug } = await params;
   const brute = getStationBySlug(slug);
-  if (!brute) notFound();
+  if (!brute || !activeGareSlugs.has(brute.slug)) notFound();
   const loc = locale === "en" ? "en" : "fr";
   // Version anglaise des champs propres à la gare (FAQ, infos pratiques, témoignages).
   const st = gareLocalisee(brute, loc);

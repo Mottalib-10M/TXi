@@ -86,7 +86,7 @@ export async function BlogRelatedContent({ slug }: { slug: string }) {
         {relatedGuides.map((g) => (
           <Link
             key={g.slug}
-            href={`/guides/${g.slug}` as never}
+            href={`/guide/${g.slug}` as never}
             className="group flex items-center gap-3 bg-white border border-neutral-200 rounded-xl p-4 hover:border-neutral-300 transition-colors"
           >
             <Icon icon={g.icon} className="text-neutral-400 shrink-0" />

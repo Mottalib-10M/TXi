@@ -26,6 +26,7 @@ import { canonicalUrl, alternateUrls } from "@/lib/seo";
 import { etofferFaq } from "@/lib/faq-etoffer";
 import { faitsAeroport } from "@/lib/faits-hub";
 
+// dynamicParams ne suffit pas (pages elaguees encore servies en 200) : le slug est aussi verifie dans la page.
 export const dynamicParams = false;
 
 const PARIS_AIRPORT_SLUGS = new Set(["paris-charles-de-gaulle", "paris-orly"]);
@@ -45,7 +46,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { locale, slug } = await params;
   const ap = getAirportBySlug(slug);
-  if (!ap) notFound();
+  if (!ap || !activeAeroportSlugs.has(ap.slug)) notFound();
   const loc = locale === "en" ? "en" : "fr";
 
   const canonical = canonicalUrl(locale, `/aeroport/${ap.slug}`);
@@ -77,7 +78,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 export default async function AirportPage({ params }: PageProps) {
   const { locale, slug } = await params;
   const brut = getAirportBySlug(slug);
-  if (!brut) notFound();
+  if (!brut || !activeAeroportSlugs.has(brut.slug)) notFound();
   const loc = locale === "en" ? "en" : "fr";
   // Version anglaise des champs propres à l'aéroport (FAQ, infos pratiques, témoignages).
   const ap = aeroportLocalise(brut, loc);

@@ -30,6 +30,7 @@ interface PageProps {
   params: Promise<{ locale: string; slug: string }>;
 }
 
+// dynamicParams ne suffit pas (pages elaguees encore servies en 200) : le slug est aussi verifie dans la page.
 export const dynamicParams = false;
 
 export async function generateStaticParams() {
@@ -47,7 +48,7 @@ function citySlugFromParam(slug: string): string {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { locale, slug } = await params;
   const city = getCityBySlug(citySlugFromParam(slug));
-  if (!city) notFound();
+  if (!city || !activeCitySlugs.has(city.slug)) notFound();
   const loc = locale === "en" ? "en" : "fr";
 
   const canonical = canonicalUrl(locale, `/taxi-${city.slug}`);
@@ -94,7 +95,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 export default async function CityPage({ params }: PageProps) {
   const { locale, slug } = await params;
   const brute = getCityBySlug(citySlugFromParam(slug));
-  if (!brute) notFound();
+  if (!brute || !activeCitySlugs.has(brute.slug)) notFound();
   const loc = locale === "en" ? "en" : "fr";
   // Version anglaise de la FAQ propre à la ville, des témoignages et des repères.
   const city = villeLocalisee(brute, loc);

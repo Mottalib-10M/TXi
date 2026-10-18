@@ -26,6 +26,7 @@ import { activeTmSlugs } from "@/data/page-whitelists";
 import { generateTmContent } from "@/data/taxi-medical-content-templates";
 import { canonicalUrl, alternateUrls } from "@/lib/seo";
 
+// dynamicParams ne suffit pas (pages elaguees encore servies en 200) : le slug est aussi verifie dans la page.
 export const dynamicParams = false;
 
 interface PageProps {
@@ -43,7 +44,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { locale, slug } = await params;
   const city = getCityBySlug(slug);
   const tmCity = getTmCityBySlug(slug);
-  if (!city || !tmCity) notFound();
+  if (!city || !tmCity || !activeTmSlugs.has(slug)) notFound();
   const loc = locale === "en" ? "en" : "fr";
   const content = generateTmContent(city, tmCity, loc);
 
@@ -77,7 +78,7 @@ export default async function TaxiMedicalCityPage({ params }: PageProps) {
   const { locale, slug } = await params;
   const city = getCityBySlug(slug);
   const tmCity = getTmCityBySlug(slug);
-  if (!city || !tmCity) notFound();
+  if (!city || !tmCity || !activeTmSlugs.has(slug)) notFound();
   const loc = locale === "en" ? "en" : "fr";
   const content = generateTmContent(city, tmCity, loc);
 

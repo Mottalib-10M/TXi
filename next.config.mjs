@@ -70,6 +70,8 @@ const nextConfig = {
       ["/solutions/hotel", "/services"],
       ["/solutions/hopital", "/solutions/taxi-medical"],
       ["/solutions/entreprise", "/services"],
+      // Liens d'articles du blog qui pointaient vers /guides/<slug> au lieu de /guide/<slug>.
+      ["/guides/:slug", "/guide/:slug"],
     ];
     return [
       ...doublons.flatMap((slug) => [
