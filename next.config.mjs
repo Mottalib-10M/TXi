@@ -48,10 +48,32 @@ const nextConfig = {
   // Trajets decrits deux fois sous deux adresses : une seule reste (sitemap), l'autre redirige.
   async redirects() {
     const doublons = ["toulouse-perpignan", "rennes-saint-brieuc", "tours-chenonceau", "perpignan-narbonne"];
-    return doublons.flatMap((slug) => [
-      { source: `/trajet/taxi-${slug}`, destination: `/trajet/${slug}`, permanent: true },
-      { source: `/en/trajet/taxi-${slug}`, destination: `/en/trajet/${slug}`, permanent: true },
-    ]);
+    // Rubriques supprimees lors de l'elagage (9da2169) : Google les explore encore et la
+    // redirection /fr/... aboutissait sur une 404. Chaque ancienne adresse va vers la page vivante la plus proche.
+    const rubriques = [
+      ["/mise-a-disposition/:slug", "/taxi-:slug"],
+      ["/assistance/:slug", "/taxi-:slug"],
+      ["/autoroute/:slug", "/trajets"],
+      ["/departement/:slug", "/villes"],
+      ["/departements", "/villes"],
+      ["/solutions/assistance-depannage", "/services"],
+      ["/solutions/assistance/:path*", "/services"],
+      ["/solutions/mise-a-disposition/:path*", "/services"],
+      ["/solutions/hotel", "/services"],
+      ["/solutions/hopital", "/solutions/taxi-medical"],
+      ["/solutions/entreprise", "/services"],
+    ];
+    return [
+      ...doublons.flatMap((slug) => [
+        { source: `/trajet/taxi-${slug}`, destination: `/trajet/${slug}`, permanent: true },
+        { source: `/en/trajet/taxi-${slug}`, destination: `/en/trajet/${slug}`, permanent: true },
+      ]),
+      ...rubriques.flatMap(([source, destination]) => [
+        { source, destination, permanent: true },
+        { source: `/fr${source}`, destination, permanent: true },
+        { source: `/en${source}`, destination: `/en${destination}`, permanent: true },
+      ]),
+    ];
   },
   async rewrites() {
     return [
