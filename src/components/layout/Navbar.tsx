@@ -65,7 +65,7 @@ export function Navbar({ minimal = false }: { minimal?: boolean }) {
             <Logo />
           </Link>
           {!minimal && (
-            <nav className="hidden md:flex items-center gap-4" aria-label={t("servicesMenu")}>
+            <nav className="hidden xl:flex items-center gap-4" aria-label={t("servicesMenu")}>
               <Link href="/#reserver" className="whitespace-nowrap text-sm font-medium text-neutral-900 hover:text-neutral-600 transition-colors">
                 {t("taxiFixedTitle")}
               </Link>
@@ -183,7 +183,7 @@ export function Navbar({ minimal = false }: { minimal?: boolean }) {
             aria-label={t("callUs")}
           >
             <Icon icon="solar:phone-linear" className="text-base" aria-hidden="true" />
-            <span className="hidden md:inline">07 59 59 29 34</span>
+            <span className="hidden whitespace-nowrap xl:inline">07 59 59 29 34</span>
           </a>
           <LanguageSwitcher />
           {isLoggedIn ? (
@@ -263,7 +263,7 @@ export function Navbar({ minimal = false }: { minimal?: boolean }) {
           )}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="site-menu-toggle md:hidden p-2 hover:bg-neutral-100 rounded-lg transition-colors"
+            className="site-menu-toggle xl:hidden p-2 hover:bg-neutral-100 rounded-lg transition-colors"
             aria-label={t("menu")}
             aria-expanded={mobileOpen}
           >
@@ -277,7 +277,7 @@ export function Navbar({ minimal = false }: { minimal?: boolean }) {
 
       {/* Mobile menu */}
       <nav
-        className={`mobile-menu md:hidden bg-white border-t border-neutral-100 ${
+        className={`mobile-menu xl:hidden bg-white border-t border-neutral-100 ${
           mobileOpen ? "open" : ""
         }`}
         aria-label={t("menu")}
