@@ -229,7 +229,7 @@ export function ReservationsTable({ bookings, driverName }: { bookings: Booking[
       {filtered.length === 0 ? (
         <div className="bg-white border border-neutral-200 rounded-2xl p-12 text-center">
           <Icon icon="solar:calendar-linear" className="text-4xl text-neutral-300 mx-auto mb-3" />
-          <p className="text-sm text-neutral-500 font-light">{t("noReservations")}</p>
+          <p className="text-sm text-neutral-500 font-light">{filter === "UPCOMING" ? t("noUpcoming") : t("noReservations")}</p>
         </div>
       ) : (
         <div className="space-y-3">

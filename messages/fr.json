@@ -893,7 +893,8 @@
     "answer": "Répondre",
     "nextRide": "Prochaine course",
     "allRides": "Toutes mes courses",
-    "noPendingShort": "Aucune demande pour l'instant. Vous êtes prévenu sur votre téléphone dès qu'une arrive."
+    "noPendingShort": "Aucune demande pour l'instant. Vous êtes prévenu sur votre téléphone dès qu'une arrive.",
+    "noUpcoming": "Aucune course à venir"
   },
   "p2pAccept": {
     "rideProposal": "Course proposée",

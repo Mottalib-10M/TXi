@@ -893,7 +893,8 @@
     "answer": "Answer",
     "nextRide": "Next ride",
     "allRides": "All my rides",
-    "noPendingShort": "No requests right now. You'll be notified on your phone as soon as one arrives."
+    "noPendingShort": "No requests right now. You'll be notified on your phone as soon as one arrives.",
+    "noUpcoming": "No upcoming rides"
   },
   "p2pAccept": {
     "rideProposal": "Ride proposal",
