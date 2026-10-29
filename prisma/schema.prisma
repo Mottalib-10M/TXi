@@ -100,6 +100,8 @@ model Driver {
   // Notification preferences
   notifyEmail Boolean @default(true)
   notifySms   Boolean @default(false)
+  // Notifications de l'app sur le téléphone (src/lib/push.ts) : demandes, confirmations, annulations, rappels
+  notifyPush  Boolean @default(true)
 
   // Status
   isActive      Boolean @default(true)
@@ -201,6 +203,10 @@ model Booking {
   // Ouverte aux chauffeurs proches faute de réponse du collègue en 30 min (src/lib/escalation.ts) :
   // les chauffeurs invités voient alors le chauffeur qui a transmis comme contact, pas le client.
   p2pOpenedAt          DateTime?
+
+  // Rappels de la course acceptée (src/app/api/cron/ride-reminders) : la veille au soir et une heure avant
+  reminderEveSentAt  DateTime?
+  reminderHourSentAt DateTime?
 
   // Langue du client lors de la réservation
   clientLocale String @default("fr")

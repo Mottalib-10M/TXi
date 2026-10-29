@@ -77,6 +77,7 @@ export async function PATCH(request: Request) {
         availability: body.availability ?? null,
         notifyEmail: body.notifyEmail ?? true,
         notifySms: body.notifySms ?? false,
+        notifyPush: body.notifyPush ?? true,
       },
     });
 

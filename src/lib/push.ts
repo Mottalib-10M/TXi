@@ -41,6 +41,11 @@ const TEXTS: Record<Locale, Record<string, Text>> = {
     cancelledByDriver: { title: "Course annulée par le chauffeur", body: "{from} → {to}, {date}." },
     cancelled: { title: "Course annulée", body: "{from} → {to}, {date}." },
     noDriver: { title: "Aucun taxi disponible", body: "Personne n'a pu prendre {from} → {to}, {date}. Nous vous recontactons." },
+    sharedJoined: { title: "Nouveau passager pour votre taxi partagé", body: "{from} → {to}, {date}." },
+    reminderEveDriver: { title: "Rappel : course demain", body: "{from} → {to}, {date}." },
+    reminderHourDriver: { title: "Course dans une heure", body: "{from} → {to}, {date}." },
+    reminderEveClient: { title: "Rappel : votre taxi demain", body: "{driver} · {from} → {to}, {date}." },
+    reminderHourClient: { title: "Votre taxi dans une heure", body: "{driver} · {from} → {to}, {date}." },
     weekly: { title: "Votre bilan de la semaine", body: "{rides} pour {amount}. Ouvrez l'app pour voir le détail de vos courses." },
     weeklyEmpty: { title: "Votre bilan de la semaine", body: "Vos courses, vos demandes et votre profil en un coup d'œil : ouvrez votre tableau de bord." },
   },
@@ -59,6 +64,11 @@ const TEXTS: Record<Locale, Record<string, Text>> = {
     cancelledByDriver: { title: "Ride cancelled by the driver", body: "{from} → {to}, {date}." },
     cancelled: { title: "Ride cancelled", body: "{from} → {to}, {date}." },
     noDriver: { title: "No taxi available", body: "Nobody could take {from} → {to}, {date}. We will get back to you." },
+    sharedJoined: { title: "New passenger for your shared taxi", body: "{from} → {to}, {date}." },
+    reminderEveDriver: { title: "Reminder: ride tomorrow", body: "{from} → {to}, {date}." },
+    reminderHourDriver: { title: "Ride in one hour", body: "{from} → {to}, {date}." },
+    reminderEveClient: { title: "Reminder: your taxi tomorrow", body: "{driver} · {from} → {to}, {date}." },
+    reminderHourClient: { title: "Your taxi in one hour", body: "{driver} · {from} → {to}, {date}." },
     weekly: { title: "Your week in review", body: "{rides} for {amount}. Open the app to see all your rides." },
     weeklyEmpty: { title: "Your week in review", body: "Your rides, requests and profile at a glance: open your dashboard." },
   },
@@ -101,11 +111,18 @@ async function deliver(devices: Device[], kind: PushKind, vars: PushVars, path: 
 
 const SELECT = { id: true, token: true, platform: true, locale: true } as const;
 
+/** Téléphones d'un chauffeur, sauf s'il a coupé les notifications de l'app (Moi › Notifications). */
+async function driverDevices(driverId: string): Promise<Device[]> {
+  const driver = await prisma.driver.findUnique({ where: { id: driverId }, select: { notifyPush: true } });
+  if (!driver?.notifyPush) return [];
+  return prisma.deviceToken.findMany({ where: { driverId }, select: SELECT });
+}
+
 /** Chauffeur : tous ses téléphones. Ne lève jamais d'erreur. */
 export async function notifyDriver(driverId: string | null | undefined, kind: PushKind, vars: PushVars, path = "/dashboard/reservations") {
   if (!driverId) return;
   try {
-    await deliver(await prisma.deviceToken.findMany({ where: { driverId }, select: SELECT }), kind, vars, path);
+    await deliver(await driverDevices(driverId), kind, vars, path);
   } catch (error) {
     console.error("[push]", error);
   }
@@ -117,7 +134,7 @@ export async function notifyDriver(driverId: string | null | undefined, kind: Pu
  */
 export async function notifyDriverWeekly(driverId: string, rides: number, amount: number) {
   try {
-    const devices = await prisma.deviceToken.findMany({ where: { driverId }, select: SELECT });
+    const devices = await driverDevices(driverId);
     for (const locale of ["fr", "en"] as const) {
       const group = devices.filter((d) => (d.locale === "en" ? "en" : "fr") === locale);
       if (!group.length) continue;

@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
+import { notifyDriver } from "@/lib/push";
 import { z } from "zod";
 
 const reassignSchema = z.object({
@@ -45,6 +46,7 @@ export async function POST(
         status: "PENDING",
       },
     });
+    await notifyDriver(driverId, "newRide", { from: booking.departureName, to: booking.arrivalName, date: booking.requestedDate });
 
     return NextResponse.json({ message: "Course réassignée" });
   } catch (error) {

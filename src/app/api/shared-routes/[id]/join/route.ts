@@ -3,6 +3,7 @@ import { z } from "zod";
 import { prisma } from "@/lib/prisma";
 import { auth } from "@/lib/auth";
 import { sendEmail, buildSharedTaxiPassengerConfirmEmail } from "@/lib/email";
+import { notifyDriver } from "@/lib/push";
 import { createNotification } from "@/lib/notifications";
 
 const joinSchema = z.object({
@@ -104,6 +105,8 @@ export async function POST(
       fr: { NONE: "Aucun", SMALL: "Petit (sac à dos)", LARGE: "Grand (valise)" },
       en: { NONE: "None", SMALL: "Small (backpack)", LARGE: "Large (suitcase)" },
     };
+
+    await notifyDriver(result.route.driverId, "sharedJoined", { from: result.route.departureName, to: result.route.destinationName, date: result.route.departureTime }, "/dashboard/taxi-partage");
 
     // Send notification email to driver
     if (result.route.driver?.notifyEmail) {

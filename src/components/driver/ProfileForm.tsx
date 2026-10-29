@@ -17,6 +17,7 @@ import { getDepartmentCode, getAirportFares } from "@/lib/department-lookup";
 import { DEPARTMENT_NAMES } from "@/data/departmental-tariffs";
 import { trackProfileUpdate } from "@/lib/analytics";
 import { PROFILE_SECTIONS } from "@/lib/driver-settings";
+import { PushStatus } from "./PushStatus";
 
 interface DriverData {
   id: string;
@@ -42,6 +43,7 @@ interface DriverData {
   availability: Array<{ day: number; startTime: string; endTime: string }> | null;
   notifyEmail: boolean;
   notifySms: boolean;
+  notifyPush: boolean;
 }
 
 const DEFAULT_AVAILABILITY = Array.from({ length: 7 }, (_, i) => ({
@@ -504,8 +506,33 @@ export function ProfileForm({ driver }: { driver: DriverData }) {
                   <h2 className="text-lg font-semibold tracking-tight mb-2">
                     {t("notificationPrefs")}
                   </h2>
-                  <label className="flex items-center justify-between py-2.5 border-b border-neutral-100">
-                    <div>
+                  <div className="flex items-start justify-between gap-4 py-2.5 border-b border-neutral-100">
+                    <div className="min-w-0">
+                      <p className="text-sm font-medium">{t("pushNotifications")}</p>
+                      <p className="text-xs text-neutral-500 font-light">
+                        {t("pushNotificationsDesc")}
+                      </p>
+                      <PushStatus />
+                    </div>
+                    <button
+                      type="button"
+                      role="switch"
+                      aria-checked={form.notifyPush}
+                      aria-label={t("pushNotifications")}
+                      onClick={() => updateField("notifyPush", !form.notifyPush)}
+                      className={`w-11 h-6 shrink-0 rounded-full transition-colors relative ${
+                        form.notifyPush ? "bg-neutral-900" : "bg-neutral-200"
+                      }`}
+                    >
+                      <div
+                        className={`w-5 h-5 bg-white rounded-full shadow absolute top-0.5 transition-transform ${
+                          form.notifyPush ? "translate-x-5" : "translate-x-0.5"
+                        }`}
+                      />
+                    </button>
+                  </div>
+                  <label className="flex items-center justify-between gap-4 py-2.5 border-b border-neutral-100">
+                    <div className="min-w-0">
                       <p className="text-sm font-medium">{t("emailNotifications")}</p>
                       <p className="text-xs text-neutral-500 font-light">
                         {t("emailNotificationsDesc")}
@@ -514,7 +541,7 @@ export function ProfileForm({ driver }: { driver: DriverData }) {
                     <button
                       type="button"
                       onClick={() => updateField("notifyEmail", !form.notifyEmail)}
-                      className={`w-11 h-6 rounded-full transition-colors relative ${
+                      className={`w-11 h-6 shrink-0 rounded-full transition-colors relative ${
                         form.notifyEmail ? "bg-neutral-900" : "bg-neutral-200"
                       }`}
                     >
@@ -525,8 +552,8 @@ export function ProfileForm({ driver }: { driver: DriverData }) {
                       />
                     </button>
                   </label>
-                  <div className="flex items-center justify-between py-2.5 opacity-50">
-                    <div>
+                  <div className="flex items-center justify-between gap-4 py-2.5 opacity-50">
+                    <div className="min-w-0">
                       <p className="text-sm font-medium flex items-center gap-2">
                         {t("smsNotifications")}
                         <span className="text-[10px] font-medium bg-neutral-100 text-neutral-500 px-1.5 py-0.5 rounded-full">{t("comingSoon")}</span>
@@ -535,7 +562,7 @@ export function ProfileForm({ driver }: { driver: DriverData }) {
                         {t("smsNotificationsDesc")}
                       </p>
                     </div>
-                    <div className="w-11 h-6 rounded-full bg-neutral-200 relative cursor-not-allowed">
+                    <div className="w-11 h-6 shrink-0 rounded-full bg-neutral-200 relative cursor-not-allowed">
                       <div className="w-5 h-5 bg-white rounded-full shadow absolute top-0.5 translate-x-0.5" />
                     </div>
                   </div>

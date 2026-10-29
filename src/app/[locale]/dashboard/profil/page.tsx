@@ -58,6 +58,7 @@ export default async function ProfilPage() {
     availability: driver.availability as Array<{ day: number; startTime: string; endTime: string }> | null,
     notifyEmail: driver.notifyEmail,
     notifySms: driver.notifySms,
+    notifyPush: driver.notifyPush,
   };
 
   // Une section du profil par page (titre et menu des réglages dans SettingsShell).
