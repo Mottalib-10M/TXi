@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Icon } from "@iconify/react";
-import { getTranslations } from "next-intl/server";
-import { Link } from "@/i18n/navigation";
+import { getLocale, getTranslations } from "next-intl/server";
+import { Link, redirect } from "@/i18n/navigation";
 import { auth } from "@/lib/auth";
 import { BookingForm } from "@/components/booking/BookingForm";
 import { Logo } from "@/components/ui/Logo";
@@ -9,7 +9,9 @@ import { escalateIfDue } from "@/lib/escalation";
 
 // L'accueil de l'app iPhone et Android (le site y redirige l'app, voir
 // middleware.ts) : réserver un taxi d'abord, puis ses réservations et l'accès
-// à l'espace chauffeur ou organisation. Jamais indexé.
+// à l'espace chauffeur ou organisation. Un chauffeur ou une organisation
+// connectés vont tout droit dans leur espace : c'est l'écran qu'ils attendent
+// en ouvrant l'app. Jamais indexé.
 
 export const metadata: Metadata = { robots: { index: false, follow: false } };
 
@@ -20,6 +22,7 @@ export default async function AppHome() {
   await escalateIfDue();
   const role = session?.user?.role;
   const space = role === "organization" ? "/org" : role === "driver" ? "/dashboard" : null;
+  if (space) redirect({ href: space, locale: await getLocale() });
   return (
     <main className="app-home min-h-screen bg-neutral-50 px-5 pb-8">
       <div className="mx-auto flex max-w-md flex-col gap-6">
