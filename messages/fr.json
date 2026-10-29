@@ -3759,7 +3759,8 @@
       "source": "source SNCF",
       "legend": "Trains attendus, 2 prochaines heures",
       "calmShort": "Calme",
-      "more": "+ {count} autres gares dans le radar"
+      "more": "+ {count} autres gares dans le radar",
+      "noTrains": "Aucun train attendu dans vos gares dans les 2 prochaines heures."
     },
     "updated": "Mis à jour il y a {min} min",
     "updatedNow": "Mis à jour à l'instant",

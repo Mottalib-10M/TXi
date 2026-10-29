@@ -489,9 +489,20 @@ export async function stationView(station: Station, rt: Realtime | null, now = n
 
 type StationView = Awaited<ReturnType<typeof stationView>>;
 
-/** Gares de la plus intéressante à la plus calme : événement le plus fort, puis demande de la prochaine heure. */
+/** Gares de la plus intéressante à la plus calme : d'abord celles où des trains arrivent
+ *  (les gares sans aucun train à venir passent en fin de liste), puis l'événement le plus
+ *  fort, la demande de la prochaine heure, celle de toute la fenêtre et le trafic du jour. */
 export function rankStations(views: StationView[], now = new Date()) {
-  const nextHour = (v: StationView) =>
-    v.rows.filter((r) => r.status !== "cancelled" && r.expectedAt.getTime() < now.getTime() + 3600_000).reduce((n, r) => n + weight(r), 0);
-  return [...views].sort((a, b) => (b.events[0]?.priority ?? 0) - (a.events[0]?.priority ?? 0) || nextHour(b) - nextHour(a));
+  const demand = (v: StationView, until = Infinity) =>
+    v.rows.filter((r) => r.status !== "cancelled" && r.expectedAt.getTime() < until).reduce((n, r) => n + weight(r), 0);
+  const nextHour = (v: StationView) => demand(v, now.getTime() + 3600_000);
+  const hasTrains = (v: StationView) => (v.rows.length > 0 ? 1 : 0);
+  return [...views].sort(
+    (a, b) =>
+      hasTrains(b) - hasTrains(a) ||
+      (b.events[0]?.priority ?? 0) - (a.events[0]?.priority ?? 0) ||
+      nextHour(b) - nextHour(a) ||
+      demand(b) - demand(a) ||
+      b.dayArrivals - a.dayArrivals,
+  );
 }

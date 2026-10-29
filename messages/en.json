@@ -3759,7 +3759,8 @@
       "source": "SNCF data",
       "legend": "Trains expected, next 2 hours",
       "calmShort": "Quiet",
-      "more": "+ {count} more stations in the radar"
+      "more": "+ {count} more stations in the radar",
+      "noTrains": "No trains expected at your stations in the next 2 hours."
     },
     "updated": "Updated {min} min ago",
     "updatedNow": "Updated just now",

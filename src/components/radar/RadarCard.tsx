@@ -25,9 +25,12 @@ export async function RadarCard({ driver }: { driver: Driver }) {
   const [rt] = await Promise.all([stations.length ? realtime() : null, ensureSchedule(stations.map((s) => s.uic))]);
   const views = rankStations(await Promise.all(stations.map((s) => stationView(s, rt, now, 2))), now);
 
-  const lines = views.map((v) => ({ view: v, buckets: demandBuckets(v.rows, now) }));
+  // Seules les gares où des trains arrivent ont une ligne : une gare vide n'apprend rien
+  // (elle reste dans le radar, comptée dans « + N autres gares »).
+  const lines = views.filter((v) => v.rows.length > 0).map((v) => ({ view: v, buckets: demandBuckets(v.rows, now) }));
+  const shown = lines.slice(0, SHOWN);
   // Même échelle pour toutes les gares : on voit tout de suite laquelle reçoit le plus de monde.
-  const max = Math.max(1, ...lines.flatMap((l) => l.buckets.map((b) => b.weight)));
+  const max = Math.max(1, ...shown.flatMap((l) => l.buckets.map((b) => b.weight)));
   const top = views[0]?.events[0];
   const minutes = rt ? Math.max(0, Math.round((now.getTime() - rt.at.getTime()) / 60_000)) : null;
   const axis = lines[0]?.buckets.filter((_, i) => i % 4 === 0).map((b) => hhmm(b.start)) ?? [];
@@ -48,12 +51,14 @@ export async function RadarCard({ driver }: { driver: Driver }) {
 
       {stations.length === 0 ? (
         <p className="text-sm text-neutral-500 mt-3">{t("card.noStation")}</p>
+      ) : shown.length === 0 ? (
+        <p className="text-sm text-neutral-500 mt-3">{t("card.noTrains")}</p>
       ) : (
         <>
           <p className="text-xs text-neutral-500 mt-1">{t("card.legend")}</p>
 
           <ul className="mt-3 divide-y divide-neutral-100">
-            {lines.slice(0, SHOWN).map(({ view, buckets }) => {
+            {shown.map(({ view, buckets }) => {
               const event = view.events[0];
               return (
                 <li key={view.station.uic} className="flex items-center gap-3 py-2.5">
@@ -94,8 +99,8 @@ export async function RadarCard({ driver }: { driver: Driver }) {
             </div>
           </div>
 
-          {lines.length > SHOWN && (
-            <p className="text-xs text-neutral-500 mt-2">{t("card.more", { count: lines.length - SHOWN })}</p>
+          {views.length > shown.length && (
+            <p className="text-xs text-neutral-500 mt-2">{t("card.more", { count: views.length - shown.length })}</p>
           )}
 
           {top ? (
