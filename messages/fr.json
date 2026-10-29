@@ -3739,5 +3739,61 @@
     "emergency": "En cas d'urgence, appelez le 17 (police) ou le 112.",
     "back": "Retour au profil",
     "link": "Signaler"
+  },
+  "radar": {
+    "card": {
+      "title": "Maintenant autour de vous",
+      "live": "En direct",
+      "planned": "Horaires prévus",
+      "calm": "Pas de forte demande prévue dans les 2 prochaines heures.",
+      "see": "Voir le radar",
+      "noStation": "Aucune gare dans votre zone. Ajoutez-en une dans les réglages du Radar.",
+      "source": "source SNCF"
+    },
+    "updated": "Mis à jour il y a {min} min",
+    "updatedNow": "Mis à jour à l'instant",
+    "noLive": "Le direct de la SNCF ne répond pas : horaires prévus",
+    "title": "Radar",
+    "subtitle": "Les arrivées qui amènent des clients près de vos gares",
+    "arrivals": "Arrivées",
+    "next3h": "3 prochaines heures",
+    "ontime": "à l'heure",
+    "cancelled": "supprimé",
+    "planned": "horaire prévu",
+    "plannedNote": "« horaire prévu » : pas encore de suivi en direct pour ce train, on affiche l'horaire officiel.",
+    "strong": "Forte demande",
+    "lastTrain": "Dernier train",
+    "potential": "Clients potentiels",
+    "noArrivals": "Aucune arrivée dans les 3 prochaines heures.",
+    "noData": "Les horaires de cette gare seront chargés cette nuit.",
+    "settings": "Réglages du Radar",
+    "share": "Prévenir un collègue",
+    "shareInvite": "Le radar des gares pour les taxis, gratuit :",
+    "top": {
+      "badge": "Top chauffeur",
+      "title": "Vous êtes Top chauffeur à {city}",
+      "intro": "Vous recevez les alertes du Radar <b>5 minutes avant</b> les autres chauffeurs.",
+      "you": "Vous",
+      "others": "Les autres",
+      "firstT": "En premier sur place.",
+      "first": "Train supprimé, gros retard, forte demande : vous le savez avant tout le monde.",
+      "keepT": "Pour le rester.",
+      "keep": "Passez à vos collègues les courses que vous ne prenez pas, et invitez-les sur Taxineo.",
+      "ok": "Compris"
+    },
+    "prefs": {
+      "title": "Radar des gares",
+      "desc": "Forte demande probable, trains en retard ou supprimés : quand des clients potentiels arrivent près de vos gares.",
+      "zone": "Gares de votre zone",
+      "zoneDesc": "Ajoutées d'office d'après votre zone de travail. Coupez celles qui ne vous intéressent pas.",
+      "extra": "Gares hors zone",
+      "add": "Ajouter une gare hors zone",
+      "search": "Nom de la gare",
+      "remove": "Retirer",
+      "max": "Alertes par jour, au maximum",
+      "noZone": "Renseignez votre zone de travail pour suivre ses gares.",
+      "km": "{km} km",
+      "error": "Le réglage n'a pas pu être enregistré."
+    }
   }
 }

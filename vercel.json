@@ -11,6 +11,14 @@
     {
       "path": "/api/cron/ride-reminders",
       "schedule": "*/10 * * * *"
+    },
+    {
+      "path": "/api/cron/radar-alerts",
+      "schedule": "*/5 * * * *"
+    },
+    {
+      "path": "/api/cron/radar-schedule",
+      "schedule": "30 1 * * *"
     }
   ]
 }

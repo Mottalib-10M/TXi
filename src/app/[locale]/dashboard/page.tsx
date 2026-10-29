@@ -11,6 +11,9 @@ import { getTranslations, getLocale } from "next-intl/server";
 import { contactForDriver } from "@/lib/p2p";
 import { escalateIfDue } from "@/lib/escalation";
 import { driverProfileChecks } from "@/lib/driver-profile";
+import { Suspense } from "react";
+import { radarAllowed } from "@/lib/radar";
+import { RadarCard } from "@/components/radar/RadarCard";
 
 export default async function DashboardPage() {
   const session = await auth();
@@ -291,6 +294,12 @@ export default async function DashboardPage() {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-start">
         {/* Colonne principale : demandes en attente puis courses à venir */}
         <div className="lg:col-span-2 lg:row-start-1 space-y-6 min-w-0">
+          {/* Radar des gares (en test) : ce qui amène des clients autour de vous */}
+          {radarAllowed(driver.email) && (
+            <Suspense fallback={<div className="h-48 rounded-2xl border border-neutral-200 bg-white animate-pulse" />}>
+              <RadarCard driver={driver} />
+            </Suspense>
+          )}
           <section>
             <div className="flex items-center justify-between mb-3">
               <div className="flex items-center gap-2">

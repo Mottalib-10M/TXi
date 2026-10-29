@@ -18,6 +18,7 @@ import { DEPARTMENT_NAMES } from "@/data/departmental-tariffs";
 import { trackProfileUpdate } from "@/lib/analytics";
 import { PROFILE_SECTIONS } from "@/lib/driver-settings";
 import { PushStatus } from "./PushStatus";
+import { RadarSettings } from "@/components/radar/RadarSettings";
 
 interface DriverData {
   id: string;
@@ -138,7 +139,7 @@ async function compressImageClient(
   });
 }
 
-export function ProfileForm({ driver }: { driver: DriverData }) {
+export function ProfileForm({ driver, radar = false }: { driver: DriverData; radar?: boolean }) {
   const t = useTranslations("profileForm");
   const { update: updateSession } = useSession();
   const searchParams = useSearchParams();
@@ -566,6 +567,7 @@ export function ProfileForm({ driver }: { driver: DriverData }) {
                       <div className="w-5 h-5 bg-white rounded-full shadow absolute top-0.5 translate-x-0.5" />
                     </div>
                   </div>
+                  {radar && <RadarSettings />}
                 </div>
               )}
 

@@ -36,6 +36,7 @@ const TEXTS: Record<Locale, Record<string, Text>> = {
     sharedProposal: { title: "Proposition de taxi partagé", body: "{from} → {to}, {date}." },
     p2pAccepted: { title: "Course transmise acceptée", body: "{driver} prend en charge {from} → {to}, {date}." },
     sharedTaken: { title: "Course reprise par un collègue", body: "{driver} prend {from} → {to}, {date}. Merci pour le coup de main." },
+    radar: { title: "{title}", body: "{body}" },
     p2pOpened: { title: "Course transmise proposée aux chauffeurs proches", body: "Personne ne l'a acceptée en 30 minutes : {from} → {to}, {date}. Vous restez le contact et gardez votre commission." },
     accepted: { title: "Votre taxi est confirmé", body: "{driver} assure votre course {from} → {to}, {date}." },
     rejected: { title: "Course non assurée", body: "Le chauffeur ne peut pas assurer {from} → {to}, {date}." },
@@ -60,6 +61,7 @@ const TEXTS: Record<Locale, Record<string, Text>> = {
     sharedProposal: { title: "Shared taxi proposal", body: "{from} → {to}, {date}." },
     p2pAccepted: { title: "Shared ride accepted", body: "{driver} is taking {from} → {to}, {date}." },
     sharedTaken: { title: "A colleague took the ride", body: "{driver} is taking {from} → {to}, {date}. Thanks for passing it on." },
+    radar: { title: "{title}", body: "{body}" },
     p2pOpened: { title: "Shared ride offered to nearby drivers", body: "Nobody accepted it within 30 minutes: {from} → {to}, {date}. You remain the contact and keep your commission." },
     accepted: { title: "Your taxi is confirmed", body: "{driver} will drive you {from} → {to}, {date}." },
     rejected: { title: "Ride not available", body: "The driver cannot take {from} → {to}, {date}." },
@@ -77,7 +79,7 @@ const TEXTS: Record<Locale, Record<string, Text>> = {
 };
 
 export type PushKind = keyof (typeof TEXTS)["fr"];
-export type PushVars = { from?: string; to?: string; date?: Date | string; driver?: string; rides?: string; amount?: string };
+export type PushVars = { from?: string; to?: string; date?: Date | string; driver?: string; rides?: string; amount?: string; title?: string; body?: string };
 type Message = { title: string; body: string; path: string };
 type Device = { id: string; token: string; platform: string; locale: string };
 
@@ -93,7 +95,7 @@ function render(kind: PushKind, locale: string, vars: PushVars): Text {
     vars.date instanceof Date
       ? format(vars.date, l === "en" ? "MMM d 'at' h:mm a" : "d MMM 'à' HH:mm", { locale: l === "en" ? enUS : fr })
       : vars.date ?? "";
-  const values: Record<string, string> = { from: place(vars.from), to: place(vars.to), date, driver: vars.driver ?? "", rides: vars.rides ?? "", amount: vars.amount ?? "" };
+  const values: Record<string, string> = { from: place(vars.from), to: place(vars.to), date, driver: vars.driver ?? "", rides: vars.rides ?? "", amount: vars.amount ?? "", title: vars.title ?? "", body: vars.body ?? "" };
   const fill = (s: string) => s.replace(/\{(\w+)\}/g, (_, k: string) => values[k] ?? "");
   const text = TEXTS[l][kind];
   return { title: fill(text.title), body: fill(text.body) };

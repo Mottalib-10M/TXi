@@ -1,3 +1,4 @@
+import { radarAllowed } from "@/lib/radar";
 import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
 import { redirect } from "next/navigation";
@@ -65,7 +66,7 @@ export default async function ProfilPage() {
   // QR code, page publique, carte et suppression du compte sont dans « Moi ».
   return (
     <SettingsShell>
-      <ProfileForm driver={driverData} />
+      <ProfileForm driver={driverData} radar={radarAllowed(driver.email)} />
     </SettingsShell>
   );
 }

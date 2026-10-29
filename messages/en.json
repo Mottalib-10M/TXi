@@ -3739,5 +3739,61 @@
     "emergency": "In an emergency, call 17 (police) or 112.",
     "back": "Back to profile",
     "link": "Report"
+  },
+  "radar": {
+    "card": {
+      "title": "Right now around you",
+      "live": "Live",
+      "planned": "Scheduled times",
+      "calm": "No high demand expected in the next 2 hours.",
+      "see": "Open the radar",
+      "noStation": "No station in your area. Add one in the Radar settings.",
+      "source": "SNCF data"
+    },
+    "updated": "Updated {min} min ago",
+    "updatedNow": "Updated just now",
+    "noLive": "SNCF live data is not responding: scheduled times",
+    "title": "Radar",
+    "subtitle": "Arrivals that bring clients near your stations",
+    "arrivals": "Arrivals",
+    "next3h": "Next 3 hours",
+    "ontime": "on time",
+    "cancelled": "cancelled",
+    "planned": "scheduled",
+    "plannedNote": "\"scheduled\": no live tracking for this train yet, the official time is shown.",
+    "strong": "High demand",
+    "lastTrain": "Last train",
+    "potential": "Potential clients",
+    "noArrivals": "No arrivals in the next 3 hours.",
+    "noData": "This station's timetable will be loaded tonight.",
+    "settings": "Radar settings",
+    "share": "Tell a colleague",
+    "shareInvite": "The station radar for taxi drivers, free:",
+    "top": {
+      "badge": "Top driver",
+      "title": "You are a Top driver in {city}",
+      "intro": "You get Radar alerts <b>5 minutes before</b> other drivers.",
+      "you": "You",
+      "others": "Others",
+      "firstT": "First on the spot.",
+      "first": "Cancelled train, long delay, high demand: you know before anyone else.",
+      "keepT": "To keep it.",
+      "keep": "Pass the rides you don't take to colleagues, and invite them to Taxineo.",
+      "ok": "Got it"
+    },
+    "prefs": {
+      "title": "Station radar",
+      "desc": "High demand expected, delayed or cancelled trains: when potential clients arrive near your stations.",
+      "zone": "Stations in your area",
+      "zoneDesc": "Added automatically from your work area. Turn off the ones you don't want.",
+      "extra": "Stations outside your area",
+      "add": "Add a station outside your area",
+      "search": "Station name",
+      "remove": "Remove",
+      "max": "Alerts per day, at most",
+      "noZone": "Set your work area to follow its stations.",
+      "km": "{km} km",
+      "error": "The setting could not be saved."
+    }
   }
 }

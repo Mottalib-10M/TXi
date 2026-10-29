@@ -103,6 +103,15 @@ model Driver {
   // Notifications de l'app sur le téléphone (src/lib/push.ts) : demandes, confirmations, annulations, rappels
   notifyPush  Boolean @default(true)
 
+  // Radar des gares (src/lib/radar.ts) : alertes quand des clients potentiels arrivent.
+  // Gares suivies = celles de la zone, moins radarOffStations, plus radarExtraStations (codes UIC).
+  radarEnabled       Boolean  @default(true)
+  radarOffStations   String[] @default([])
+  radarExtraStations String[] @default([])
+  radarMaxPerDay     Int      @default(3)
+  // Top chauffeur de sa ville : reçoit les alertes du Radar 5 minutes avant les autres.
+  isTopDriver        Boolean  @default(false)
+
   // Status
   isActive      Boolean @default(true)
   isVerified    Boolean @default(false)
@@ -434,4 +443,43 @@ model DriverBlock {
   @@unique([driverId, blockerDriverId])
   @@unique([driverId, blockerOrgId])
   @@map("driver_blocks")
+}
+
+// Arrivées prévues dans les gares suivies par au moins un chauffeur, pour aujourd'hui et
+// demain (heure de Paris). Rechargées chaque nuit depuis les horaires ouverts de la SNCF
+// (src/app/api/cron/radar-schedule) ; le direct (retards, suppressions) est lu à la demande.
+model RadarArrival {
+  id          String   @id @default(cuid())
+  stationUic  String
+  tripId      String
+  serviceDate String // AAAAMMJJ
+  scheduledAt DateTime
+  origin      String
+  trainType   String // TGV INOUI, OUIGO, Intercités, TER…
+  trainNumber String
+  // Dernière arrivée de la journée dans cette gare
+  isLast      Boolean  @default(false)
+
+  @@unique([tripId, stationUic, serviceDate])
+  @@index([stationUic, scheduledAt])
+  @@map("radar_arrivals")
+}
+
+// Alertes du Radar, une par chauffeur et par événement (key). Le Top chauffeur la reçoit
+// tout de suite, les autres 5 minutes plus tard (sendAt). Au-delà du maximum du jour : dropped.
+model RadarAlert {
+  id         String    @id @default(cuid())
+  driverId   String
+  key        String
+  stationUic String
+  title      String
+  body       String
+  sendAt     DateTime
+  sentAt     DateTime?
+  dropped    Boolean   @default(false)
+  createdAt  DateTime  @default(now())
+
+  @@unique([driverId, key])
+  @@index([sendAt, sentAt])
+  @@map("radar_alerts")
 }
