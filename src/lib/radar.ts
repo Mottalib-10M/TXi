@@ -400,6 +400,17 @@ export type RadarEvent = {
 };
 
 const MIN = 60_000;
+
+/** « Gare de Clermont-Ferrand », « Gare des Aubrais », « Gare d'Orléans » : le chauffeur sait tout de suite de quelle gare on parle. */
+export function gareDe(name: string) {
+  if (/^gare\b/i.test(name)) return name;
+  const [, article, rest] = name.match(/^(Les|Le|La|L')\s*(.*)$/) ?? [];
+  if (article === "Les") return `Gare des ${rest}`;
+  if (article === "Le") return `Gare du ${rest}`;
+  // « La Rochelle », « L'Isle-Adam » : l'article fait partie du nom de la ville, il garde sa majuscule.
+  if (article === "La" || article === "L'") return `Gare de ${name}`;
+  return /^[AEIOUYÉÈÊÂÎÔH]/i.test(name) ? `Gare d'${name}` : `Gare de ${name}`;
+}
 const typeList = (rows: BoardRow[]) => Array.from(new Set(rows.map((r) => r.trainType))).join(", ");
 
 /**
@@ -430,7 +441,7 @@ export function stationEvents(station: Station, rows: BoardRow[], now: Date, day
         short: `Train en retard, arrivée ${hhmm(r.expectedAt)}`,
         push: {
           title: `⏱️ Train en retard (+${r.delayMin} min)`,
-          body: `📍 ${station.name} : ${r.trainType} de ${r.origin}, arrivée à ${hhmm(r.expectedAt)}.${r.isLast ? " 🌙 Dernier train du jour." : lateEvening ? " 🌙 Peu de transports le soir : clients probables." : ""}`,
+          body: `📍 ${gareDe(station.name)} : ${r.trainType} de ${r.origin}, arrivée à ${hhmm(r.expectedAt)}.${r.isLast ? " 🌙 Dernier train du jour." : lateEvening ? " 🌙 Peu de transports le soir : clients probables." : ""}`,
         },
         at: r.expectedAt,
         priority: r.isLast ? 4 : 3,
@@ -455,7 +466,7 @@ export function stationEvents(station: Station, rows: BoardRow[], now: Date, day
         short: r.isLast ? "Dernier train supprimé" : `Train de ${hhmm(r.scheduledAt)} supprimé`,
         push: {
           title: r.isLast ? "❌ Dernier train supprimé" : "❌ Train supprimé",
-          body: `📍 ${station.name} : ${r.trainType} de ${r.origin} prévu à ${hhmm(r.scheduledAt)}.${r.isLast ? " 🚕 Ses voyageurs chercheront un taxi." : next ? ` Voyageurs reportés sur le train de ${hhmm(next.expectedAt)}.` : ""}`,
+          body: `📍 ${gareDe(station.name)} : ${r.trainType} de ${r.origin} prévu à ${hhmm(r.scheduledAt)}.${r.isLast ? " 🚕 Ses voyageurs chercheront un taxi." : next ? ` Voyageurs reportés sur le train de ${hhmm(next.expectedAt)}.` : ""}`,
         },
         at: next?.expectedAt ?? r.scheduledAt,
         priority: r.isLast ? 5 : 2,
@@ -480,7 +491,7 @@ export function stationEvents(station: Station, rows: BoardRow[], now: Date, day
         short: `Forte demande dès ${hhmm(a)}`,
         push: {
           title: `🚕 Forte demande dès ${hhmm(a)}`,
-          body: `📍 ${station.name} : ${inside.length} trains entre ${hhmm(a)} et ${hhmm(b)}. Beaucoup de clients à la sortie.`,
+          body: `📍 ${gareDe(station.name)} : ${inside.length} trains entre ${hhmm(a)} et ${hhmm(b)}. Beaucoup de clients à la sortie.`,
         },
         at: a,
         priority: 1,
