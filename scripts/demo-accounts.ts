@@ -1,6 +1,6 @@
 // Comptes de démonstration pour la vérification des stores (Apple, Google) :
-// un chauffeur à Paris et un hôtel, avec quelques courses entre eux. Adresses en
-// @demo.taxineo.fr : ces comptes ne reçoivent ni vraie course ni e-mail (src/lib/demo.ts).
+// un chauffeur à Paris et un hôtel, avec quelques courses entre eux. Adresses de
+// DEMO_EMAILS : ces comptes ne reçoivent ni vraie course ni e-mail (src/lib/demo.ts).
 // Relancer remet les courses de démo à zéro.
 //
 //   DATABASE_URL=... DEMO_PASSWORD=... npx tsx scripts/demo-accounts.ts
@@ -10,8 +10,8 @@ import { PrismaPg } from "@prisma/adapter-pg";
 import { PrismaClient } from "@prisma/client";
 import { hash } from "bcryptjs";
 
-const DRIVER_EMAIL = "chauffeur@demo.taxineo.fr";
-const ORG_EMAIL = "hotel@demo.taxineo.fr";
+const DRIVER_EMAIL = "taxi@taxineo.fr";
+const ORG_EMAIL = "hotel@taxineo.fr";
 
 const password = process.env.DEMO_PASSWORD;
 if (!password || password.length < 8) throw new Error("DEMO_PASSWORD manquant (8 caractères minimum)");
