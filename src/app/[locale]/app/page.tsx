@@ -35,7 +35,7 @@ export default async function AppHome() {
           <h1 className="text-3xl font-semibold leading-tight tracking-tight">{t("title")}</h1>
           <p className="mt-2 text-sm leading-relaxed text-neutral-500">{t("subtitle")}</p>
         </div>
-        <BookingForm />
+        <BookingForm variant="app" />
         <nav className="flex flex-col gap-3" aria-label={t("menu")}>
           <Link href="/mes-reservations" className="flex items-center gap-4 rounded-2xl border border-neutral-200 bg-white p-4">
             <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-amber-50">

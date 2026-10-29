@@ -30,7 +30,11 @@ interface TaxiResult {
   distance?: number;
 }
 
-export function BookingForm() {
+// variant « app » (page /app, celle de l'application) : le prix se calcule dès que
+// les deux adresses sont posées, le meilleur taxi s'affiche en grand avec un seul
+// bouton, les autres restent à un appui. Les pages publiques gardent le défaut.
+export function BookingForm({ variant = "default" }: { variant?: "default" | "app" } = {}) {
+  const isApp = variant === "app";
   const t = useTranslations("booking");
   const tc = useTranslations("common");
   const locale = useLocale();
@@ -49,6 +53,7 @@ export function BookingForm() {
   const [loading, setLoading] = useState(false);
   const [step, setStep] = useState<"search" | "results" | "booking">("search");
   const [selectedTaxi, setSelectedTaxi] = useState<TaxiResult | null>(null);
+  const [showAllTaxis, setShowAllTaxis] = useState(false);
 
   // Client info
   const [clientName, setClientName] = useState("");
@@ -87,6 +92,14 @@ export function BookingForm() {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [session]);
 
+  // App : recherche lancée d'office quand départ et arrivée sont choisis dans la liste.
+  useEffect(() => {
+    if (!isApp || step !== "search" || !departureLat || !arrivalLat) return;
+    const timer = setTimeout(() => searchTaxis(), 300);
+    return () => clearTimeout(timer);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isApp, departureLat, departureLng, arrivalLat, arrivalLng]);
+
   async function searchTaxis() {
     if (!departure || !arrival || !departureLat || !departureLng || !arrivalLat || !arrivalLng) return;
     setLoading(true);
@@ -108,6 +121,7 @@ export function BookingForm() {
       const drivers = data.drivers || [];
       const tripDuration = data.tripDuration || 0;
       setResults(drivers);
+      setShowAllTaxis(false);
       setStep("results");
       trackViewResults({ departure, arrival, resultCount: drivers.length });
       if (drivers.length > 0) {
@@ -136,6 +150,15 @@ export function BookingForm() {
       setLoading(false);
     }
   }
+
+  function chooseTaxi(taxi: TaxiResult) {
+    trackSelectTaxi({ driverName: `${taxi.firstName} ${taxi.lastName}`, price: taxi.estimatedPrice, slug: taxi.slug });
+    trackBeginBooking({ driverName: `${taxi.firstName} ${taxi.lastName}`, departure, arrival, price: taxi.estimatedPrice });
+    setSelectedTaxi(taxi);
+    setStep("booking");
+  }
+
+  const best = results[0];
 
   async function handleBooking() {
     if (!selectedTaxi || !clientName || !clientEmail) return;
@@ -242,9 +265,11 @@ export function BookingForm() {
             <h2 className="text-lg font-semibold tracking-tight">
               {t("title")}
             </h2>
-            <span className="text-xs text-neutral-500 font-light whitespace-nowrap">
-              {locale === "en" ? `${NATIONAL_TARIFFS.year} fares` : `Tarifs ${NATIONAL_TARIFFS.year}`}
-            </span>
+            {!isApp && (
+              <span className="text-xs text-neutral-500 font-light whitespace-nowrap">
+                {locale === "en" ? `${NATIONAL_TARIFFS.year} fares` : `Tarifs ${NATIONAL_TARIFFS.year}`}
+              </span>
+            )}
           </div>
 
           <div className="relative space-y-3">
@@ -464,8 +489,62 @@ export function BookingForm() {
             </div>
           ) : (
             <>
-              <div className="space-y-2 max-h-[400px] overflow-y-auto -mx-1 px-1">
-                {results.map((taxi) => (
+              {isApp && best && (
+                <div className="bg-neutral-950 text-white rounded-2xl p-5 mb-3">
+                  <div className="flex items-baseline justify-between gap-3 text-xs text-neutral-400">
+                    <span>{t("appGuaranteedPrice")}</span>
+                    {best.distance != null && <span>{t("appDistance", { km: Math.max(1, Math.round(best.distance)) })}</span>}
+                  </div>
+                  <p className="text-5xl font-extrabold tracking-tight leading-none mt-3">
+                    {best.estimatedPrice ? formatPrice(best.estimatedPrice) : `${tc("from")} ${formatPrice(best.minimumFare)}`}
+                  </p>
+                  <div className="flex items-center gap-3 mt-4">
+                    <div className="w-10 h-10 bg-neutral-800 rounded-full flex items-center justify-center overflow-hidden relative shrink-0">
+                      {best.photoUrl ? (
+                        <Image src={best.photoUrl} alt={best.firstName} fill sizes="40px" className="object-cover" />
+                      ) : (
+                        <Icon icon="solar:user-linear" className="text-neutral-400" />
+                      )}
+                    </div>
+                    <div className="min-w-0">
+                      <p className="text-sm font-semibold truncate">
+                        {best.companyName || `${best.firstName} ${best.lastName ? best.lastName.charAt(0) + "." : ""}`.trim()}
+                      </p>
+                      <p className="text-xs text-neutral-400 truncate">{best.vehicleBrand} {best.vehicleModel}</p>
+                    </div>
+                  </div>
+                  <ul className="mt-4 space-y-1.5 text-sm text-neutral-200">
+                    {[t("appPoint1"), t("appPoint2"), t("appPoint3")].map((point) => (
+                      <li key={point} className="flex items-center gap-2">
+                        <Icon icon="solar:check-read-linear" className="text-amber-400 shrink-0" />
+                        {point}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+              {isApp && best && (
+                <button
+                  type="button"
+                  onClick={() => chooseTaxi(best)}
+                  className="w-full bg-amber-500 text-neutral-950 rounded-xl py-4 text-base font-bold hover:bg-amber-400 transition-colors"
+                >
+                  {best.estimatedPrice ? t("appBookThis", { price: formatPrice(best.estimatedPrice) }) : t("appBookThisNoPrice")}
+                </button>
+              )}
+              {isApp && results.length > 1 && (
+                <button
+                  type="button"
+                  onClick={() => setShowAllTaxis(!showAllTaxis)}
+                  aria-expanded={showAllTaxis}
+                  className="w-full mt-3 py-2 text-sm font-semibold text-neutral-900 underline underline-offset-4"
+                >
+                  {showAllTaxis ? t("appHideOthers") : t("appChooseOther", { count: results.length - 1 })}
+                </button>
+              )}
+              {(!isApp || showAllTaxis) && (
+              <div className={`space-y-2 max-h-[400px] overflow-y-auto -mx-1 px-1${isApp ? " mt-2" : ""}`}>
+                {(isApp ? results.slice(1) : results).map((taxi) => (
                   <div
                     key={taxi.id}
                     className="w-full text-left p-3 border rounded-xl transition-all border-neutral-200 hover:border-neutral-300"
@@ -514,12 +593,7 @@ export function BookingForm() {
                     {/* Choose button - full width below */}
                     <button
                       type="button"
-                      onClick={() => {
-                        trackSelectTaxi({ driverName: `${taxi.firstName} ${taxi.lastName}`, price: taxi.estimatedPrice, slug: taxi.slug });
-                        trackBeginBooking({ driverName: `${taxi.firstName} ${taxi.lastName}`, departure, arrival, price: taxi.estimatedPrice });
-                        setSelectedTaxi(taxi);
-                        setStep("booking");
-                      }}
+                      onClick={() => chooseTaxi(taxi)}
                       className="w-full mt-2.5 bg-neutral-900 text-white text-xs font-medium py-2.5 rounded-lg hover:bg-neutral-700 transition-colors"
                     >
                       {tc("choose")}
@@ -527,6 +601,7 @@ export function BookingForm() {
                   </div>
                 ))}
               </div>
+              )}
 
               <div className="flex items-center justify-center gap-1.5 mt-4 text-xs text-neutral-400">
                 <Icon icon="solar:shield-check-linear" className="text-green-500" />

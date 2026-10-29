@@ -8,6 +8,7 @@ import { VehicleInfo } from "@/components/public-profile/VehicleInfo";
 import { FareEstimator } from "@/components/public-profile/FareEstimator";
 import type { Vehicle } from "@/types/vehicle";
 import { getTranslations } from "next-intl/server";
+import { SettingsShell } from "@/components/layout/SettingsShell";
 
 export default async function ProfilPublicPage() {
   const session = await auth();
@@ -47,11 +48,11 @@ export default async function ProfilPublicPage() {
   const publicUrl = `/taxi/${driver.slug}`;
 
   return (
-    <div>
+    <SettingsShell active="publicPage" showTitle={false}>
       <div className="mb-8">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>
-            <h1 className="text-2xl font-semibold tracking-tight">
+            <h1 className="text-3xl font-bold tracking-tight">
               {t("publicProfileTitle")}
             </h1>
             <p className="text-sm text-neutral-500 font-light mt-1">
@@ -60,7 +61,7 @@ export default async function ProfilPublicPage() {
           </div>
           <div className="flex items-center gap-2 sm:gap-3">
             <Link
-              href="/dashboard/profil"
+              href="/dashboard/profil?section=personal"
               className="inline-flex items-center gap-2 text-sm text-neutral-600 hover:text-neutral-900 border border-neutral-200 bg-white rounded-xl px-3 sm:px-4 py-2.5 hover:border-neutral-300 transition-colors"
             >
               <Icon icon="solar:pen-linear" className="text-base" />
@@ -187,6 +188,6 @@ export default async function ProfilPublicPage() {
           </p>
         </div>
       </div>
-    </div>
+    </SettingsShell>
   );
 }

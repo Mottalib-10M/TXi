@@ -56,7 +56,7 @@ export function ReferralPageClient({
     <div className="min-w-0">
       {/* Header */}
       <div className="mb-6">
-        <h1 className="text-2xl font-semibold tracking-tight mb-1">
+        <h1 className="text-3xl font-bold tracking-tight mb-1">
           {t("referralPageTitle")}
         </h1>
         <p className="text-sm text-neutral-500 font-light">

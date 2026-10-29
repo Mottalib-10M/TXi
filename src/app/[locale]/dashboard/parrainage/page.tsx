@@ -1,6 +1,7 @@
 import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
 import { getTranslations, getLocale } from "next-intl/server";
+import { SettingsShell } from "@/components/layout/SettingsShell";
 import { ReferralPageClient } from "@/components/dashboard/ReferralPageClient";
 
 export default async function ParrainagePage() {
@@ -35,17 +36,19 @@ export default async function ParrainagePage() {
   const locale = await getLocale();
 
   return (
-    <ReferralPageClient
-      referralCode={driver.referralCode}
-      referralCount={driver.referralCount}
-      referrals={referrals.map((r) => ({
-        id: r.id,
-        firstName: r.firstName,
-        companyName: r.companyName,
-        createdAt: r.createdAt.toISOString(),
-        isVerified: r.isVerified,
-        lastLoginAt: r.lastLoginAt?.toISOString() || null,
-      }))}
-    />
+    <SettingsShell active="referral" showTitle={false}>
+      <ReferralPageClient
+        referralCode={driver.referralCode}
+        referralCount={driver.referralCount}
+        referrals={referrals.map((r) => ({
+          id: r.id,
+          firstName: r.firstName,
+          companyName: r.companyName,
+          createdAt: r.createdAt.toISOString(),
+          isVerified: r.isVerified,
+          lastLoginAt: r.lastLoginAt?.toISOString() || null,
+        }))}
+      />
+    </SettingsShell>
   );
 }

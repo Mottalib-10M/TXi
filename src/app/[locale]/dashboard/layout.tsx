@@ -4,6 +4,8 @@ import { prisma } from "@/lib/prisma";
 import { DashboardSidebar } from "@/components/layout/DashboardSidebar";
 import { WaitlistScreen } from "@/components/dashboard/WaitlistScreen";
 import { escalateIfDue } from "@/lib/escalation";
+import { getTranslations } from "next-intl/server";
+import { SpaceBackLink } from "@/components/layout/SpaceBackLink";
 
 export default async function DashboardLayout({
   children,
@@ -107,12 +109,24 @@ export default async function DashboardLayout({
       ? `${driver.firstName} — ${driver.companyName}`
       : driver.firstName;
 
+  const tm = await getTranslations("dashboard.me");
+  // Pastille de l'onglet Demandes : courses en attente de réponse.
+  const pendingCount = await prisma.booking.count({
+    where: {
+      OR: [{ driverId: session.user.id }, { invitedDriverIds: { has: session.user.id } }],
+      status: "PENDING",
+    },
+  });
+
   return (
     <div className="min-h-screen bg-neutral-50">
-      <DashboardSidebar userName={userName} />
+      <DashboardSidebar userName={userName} pendingCount={pendingCount} />
       <div className="lg:pl-64 min-w-0">
-        <main className="p-4 sm:p-6 lg:p-8">
-          <div className="max-w-5xl">{children}</div>
+        <main className="space-main p-4 sm:p-6 lg:p-8">
+          <div className="max-w-[1600px]">
+            <SpaceBackLink href="/dashboard/moi" label={tm("title")} pages={["/dashboard/profil", "/dashboard/profil-public", "/dashboard/carte", "/dashboard/parrainage"]} />
+            {children}
+          </div>
         </main>
       </div>
     </div>

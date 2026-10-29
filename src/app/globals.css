@@ -221,3 +221,10 @@ html[data-app].app-ready #app-splash { opacity: 0; visibility: hidden; transitio
 @keyframes as-run { from { transform: translateX(-100%); } to { transform: translateX(250%); } }
 @keyframes as-auto-out { to { opacity: 0; visibility: hidden; } }
 @media (prefers-reduced-motion: reduce) { #app-splash .as-mark::after, #app-splash .as-track i { animation: none; } }
+
+/* Espaces chauffeur et organisation (components/layout/SpaceNav.tsx) : leur
+   barre d'onglets remplace celle de l'app, et le contenu ne passe pas dessous. */
+html[data-app][data-space-nav] .app-tabbar { display: none; }
+.space-main { padding-bottom: calc(5rem + env(safe-area-inset-bottom)); }
+html[data-app] .space-main { padding-bottom: 1.5rem; }
+@media (min-width: 1024px) { .space-main, html[data-app] .space-main { padding-bottom: 2rem; } }

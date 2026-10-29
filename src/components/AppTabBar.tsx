@@ -7,8 +7,8 @@
 // - client : ses courses, RÉSERVER, les tarifs, l'espace pro ;
 // - chauffeur : tableau de bord, COURSES REÇUES, courses transmises, profil ;
 // - organisation : tableau de bord, NOUVELLE COURSE, courses, paramètres.
-// Le Menu envoie l'événement « app:menu » : le menu latéral du chauffeur ou de
-// l'organisation s'ouvre ; sans lui (client), c'est le menu de cette barre.
+// Dans les espaces chauffeur et organisation, leur propre barre (SpaceNav) la
+// remplace ; ailleurs, Menu ouvre le menu de cette barre.
 
 import { useEffect, useState } from "react";
 import { Icon } from "@iconify/react";
@@ -45,14 +45,14 @@ export function AppTabBar() {
     side = [
       { href: "/dashboard", label: t("dashboard"), icon: "solar:chart-square-linear", active: is("/dashboard") },
       { href: "/dashboard/p2p", label: t("transmitted"), icon: "solar:transfer-horizontal-linear", active: under("/dashboard/p2p") },
-      { href: "/dashboard/profil", label: t("profile"), icon: "solar:user-circle-linear", active: under("/dashboard/profil") && !under("/dashboard/profil-public") },
+      { href: "/dashboard/moi", label: t("profile"), icon: "solar:user-circle-linear", active: under("/dashboard/moi") },
     ];
     main = { href: "/dashboard/reservations", label: t("received"), icon: "solar:inbox-line-bold", active: under("/dashboard/reservations") };
   } else if (role === "organization") {
     side = [
       { href: "/org", label: t("dashboard"), icon: "solar:chart-square-linear", active: is("/org") },
       { href: "/org/courses", label: t("rides"), icon: "solar:calendar-linear", active: under("/org/courses") },
-      { href: "/org/parametres", label: t("settings"), icon: "solar:settings-linear", active: under("/org/parametres") },
+      { href: "/org/compte", label: t("settings"), icon: "solar:settings-linear", active: under("/org/compte") },
     ];
     main = { href: "/org/nouvelle-course", label: t("order"), icon: "solar:add-circle-bold", active: under("/org/nouvelle-course") };
   } else {

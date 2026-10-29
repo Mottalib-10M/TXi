@@ -318,7 +318,16 @@
     "contactRequestSent": "Demande envoyée !",
     "driverWillContact": "Notre chauffeur vous contactera au plus vite",
     "removePassenger": "Retirer un passager",
-    "addPassenger": "Ajouter un passager"
+    "addPassenger": "Ajouter un passager",
+    "appGuaranteedPrice": "Prix garanti",
+    "appDistance": "Taxi le plus proche · à {km} km",
+    "appPoint1": "Vrai taxi agréé, pas un VTC",
+    "appPoint2": "Ce prix ne bouge pas, même dans les bouchons",
+    "appPoint3": "Vous payez le chauffeur à bord",
+    "appBookThis": "Réserver ce taxi · {price}",
+    "appBookThisNoPrice": "Réserver ce taxi",
+    "appChooseOther": "Choisir un autre taxi ({count})",
+    "appHideOthers": "Masquer les autres taxis"
   },
   "confirmation": {
     "title": "Demande de réservation enregistrée !",
@@ -537,7 +546,11 @@
       "map": "Carte",
       "freeCard": "Carte de visite gratuite",
       "referral": "Parrainage",
-      "logout": "Déconnexion"
+      "logout": "Déconnexion",
+      "nav": "Navigation chauffeur",
+      "requests": "Demandes",
+      "rides": "Courses",
+      "me": "Moi"
     },
     "profileSections": {
       "personal": "Infos personnelles",
@@ -818,7 +831,45 @@
       "shareAgain": "Reproposer ce trajet"
     },
     "contactReferrer": "a transmis la course",
-    "p2pCommissionNote": "Course transmise par {name}, qui garde sa commission de {amount} €."
+    "p2pCommissionNote": "Course transmise par {name}, qui garde sa commission de {amount} €.",
+    "requestsTitle": "Demandes",
+    "noPending": "Aucune demande en attente",
+    "noPendingDesc": "Les nouvelles demandes de course arrivent ici, avec une notification.",
+    "summaryTitle": "Mes courses",
+    "profileFilled": "Profil rempli à {percent} %",
+    "rides": {
+      "title": "Courses",
+      "received": "Reçues",
+      "transmitted": "Transmises",
+      "create": "Créer une course à transmettre"
+    },
+    "me": {
+      "title": "Moi",
+      "publicPage": "Ma page publique",
+      "publicPageDesc": "Aperçu, lien et QR code",
+      "info": "Mes informations",
+      "infoDesc": "Photo de profil, société, téléphone, présentation",
+      "vehicles": "Mes véhicules",
+      "vehiclesDesc": "Photos, plaque, places, options (PMR, siège bébé…)",
+      "pricing": "Mes tarifs",
+      "pricingDesc": "Prise en charge, prix au km jour et nuit, suppléments",
+      "zone": "Zone de travail",
+      "zoneDesc": "Ville et rayon où vous prenez des courses",
+      "availability": "Horaires",
+      "availabilityDesc": "Jours et heures de travail",
+      "referral": "Parrainage",
+      "referralDesc": "Mon lien, mes filleuls",
+      "notifications": "Notifications",
+      "notificationsDesc": "E-mail et SMS",
+      "card": "Carte de visite",
+      "cardDesc": "Carte, A6 ou A5 à imprimer, QR code",
+      "toAdd": "À ajouter :",
+      "account": "Compte",
+      "logout": "Déconnexion"
+    },
+    "recentRides": "Dernières courses",
+    "sharedRidesTitle": "Taxi partagé",
+    "sharedRidesSubtitle": "Les trajets partagés que vous proposez ou rejoignez"
   },
   "p2pAccept": {
     "rideProposal": "Course proposée",
@@ -852,7 +903,10 @@
       "favorites": "Favoris",
       "wallet": "Cagnotte",
       "settings": "Paramètres",
-      "logout": "Déconnexion"
+      "logout": "Déconnexion",
+      "nav": "Navigation",
+      "order": "Commander",
+      "account": "Compte"
     },
     "title": "Tableau de bord",
     "subtitle": "Vue d'ensemble de votre activité",
@@ -985,6 +1039,16 @@
       "selectDriver": "Choisir",
       "backToForm": "Modifier le trajet",
       "confirmWith": "Confirmer avec {driver}"
+    },
+    "account": {
+      "title": "Compte",
+      "favorites": "Chauffeurs favoris",
+      "favoritesDesc": "Les chauffeurs proposés en premier",
+      "wallet": "Cagnotte",
+      "walletDesc": "5 % des courses terminées",
+      "settings": "Paramètres",
+      "settingsDesc": "Nom, contact, téléphone, adresse, mot de passe",
+      "logout": "Déconnexion"
     }
   },
   "admin": {

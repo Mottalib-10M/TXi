@@ -41,19 +41,21 @@ export default async function CartePage() {
 
   return (
     <div>
-      <div className="flex items-center justify-between mb-8">
-        <div>
+      <div className="flex items-start justify-between gap-4 mb-8">
+        <div className="min-w-0">
           <h1 className="text-2xl font-semibold tracking-tight">{t("mapSubtitle")}</h1>
           <p className="text-sm text-neutral-500 font-light mt-1">
             {t("mapCardDesc")}
           </p>
         </div>
+        <div className="shrink-0 whitespace-nowrap">
         <QRCodeButton
           slug={driver.slug}
           driverName={`${driver.firstName} ${driver.lastName}`}
           companyName={driver.companyName || ""}
           vehicleModel={vehicles[0] ? `${vehicles[0].brand} ${vehicles[0].model}`.trim() : `${driver.vehicleBrand || ""} ${driver.vehicleModel || ""}`.trim()}
         />
+        </div>
       </div>
       <BusinessCardPreview
         driver={{

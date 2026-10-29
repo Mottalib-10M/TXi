@@ -383,9 +383,10 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
   const shortUrl = profileUrl.replace("https://", "").replace("http://", "");
 
   return (
-    <div className="max-w-2xl">
+    // Ordinateur : aperçu à gauche ; format, lien et boutons à droite.
+    <div className="max-w-2xl lg:max-w-none lg:grid lg:grid-cols-[minmax(0,1fr)_320px] lg:gap-x-6 lg:items-start">
       {/* Format selector */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 mb-6">
+      <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 gap-2 mb-6 lg:col-start-2 lg:row-start-1">
         {formats.map((f) => (
           <button
             key={f.id}
@@ -407,6 +408,7 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
         ))}
       </div>
 
+      <div className="lg:col-start-1 lg:row-start-1 lg:row-span-3 lg:[&>div]:mb-0">
       {/* ── Business card preview ── */}
       {activeFormat === "business" && (
         <div className="bg-white border border-neutral-200 rounded-2xl p-4 sm:p-8 mb-6">
@@ -569,8 +571,10 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
         </div>
       )}
 
+      </div>
+
       {/* Profile URL */}
-      <div className="bg-neutral-50 border border-neutral-200 rounded-xl p-4 mb-6">
+      <div className="bg-neutral-50 border border-neutral-200 rounded-xl p-4 mb-6 lg:col-start-2">
         <label className="block text-xs text-neutral-500 font-light mb-1.5">{t("profileLink")}</label>
         <div className="flex items-center gap-2">
           <input readOnly value={profileUrl} className="flex-1 bg-white border border-neutral-200 rounded-lg px-3 py-2 text-sm outline-none" />
@@ -581,7 +585,7 @@ export function BusinessCardPreview({ driver }: { driver: DriverInfo }) {
       </div>
 
       {/* Actions */}
-      <div className="flex flex-col sm:flex-row gap-3">
+      <div className="flex flex-col sm:flex-row lg:flex-col gap-3 lg:col-start-2">
         <button
           onClick={handleDownload}
           className="flex-1 bg-neutral-950 text-white rounded-xl py-3 text-sm font-medium hover:bg-neutral-800 transition-colors flex items-center justify-center gap-2 btn-lift"

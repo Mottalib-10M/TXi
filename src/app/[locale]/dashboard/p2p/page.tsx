@@ -3,6 +3,7 @@ import { prisma } from "@/lib/prisma";
 import { P2PShareForm } from "@/components/dashboard/P2PShareForm";
 import { P2PHistory } from "@/components/dashboard/P2PHistory";
 import { P2PStats } from "@/components/dashboard/P2PStats";
+import { RidesSwitch } from "@/components/dashboard/RidesSwitch";
 import { getTranslations } from "next-intl/server";
 import { Icon } from "@iconify/react";
 import { escalateIfDue } from "@/lib/escalation";
@@ -67,6 +68,7 @@ export default async function P2PPage() {
 
   return (
     <div className="min-w-0">
+      <RidesSwitch active="transmitted" />
       {/* Header */}
       <div className="flex items-start gap-4 mb-6">
         <div className="w-12 h-12 bg-violet-100 rounded-2xl flex items-center justify-center shrink-0">
@@ -89,7 +91,7 @@ export default async function P2PPage() {
 
       {/* 2-column layout: form left, history right */}
       <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
-        <div className="lg:col-span-3">
+        <div id="nouvelle-course" className="lg:col-span-3 scroll-mt-20">
           <P2PShareForm
             driverFirstName={driver.firstName}
             driverFullName={`${driver.firstName} ${driver.lastName}`}

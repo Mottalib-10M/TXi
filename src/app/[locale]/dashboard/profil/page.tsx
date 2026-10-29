@@ -1,13 +1,9 @@
 import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
 import { redirect } from "next/navigation";
-import { Link } from "@/i18n/navigation";
-import { Icon } from "@iconify/react";
 import { ProfileForm } from "@/components/driver/ProfileForm";
-import { QRCodeButton } from "@/components/dashboard/QRCodeButton";
+import { SettingsShell } from "@/components/layout/SettingsShell";
 import type { Vehicle } from "@/types/vehicle";
-import { getTranslations } from "next-intl/server";
-import { DeleteAccount } from "@/components/dashboard/DeleteAccount";
 
 export default async function ProfilPage() {
   const session = await auth();
@@ -18,8 +14,6 @@ export default async function ProfilPage() {
   });
 
   if (!driver) redirect("/connexion");
-
-  const t = await getTranslations("dashboard");
 
   // Build vehicles array from JSON field, falling back to flat fields
   let vehicles: Vehicle[] = [];
@@ -66,61 +60,11 @@ export default async function ProfilPage() {
     notifySms: driver.notifySms,
   };
 
+  // Une section du profil par page (titre et menu des réglages dans SettingsShell).
+  // QR code, page publique, carte et suppression du compte sont dans « Moi ».
   return (
-    <div>
-      <div className="flex items-center justify-between mb-8">
-        <div>
-          <h1 className="text-2xl font-semibold tracking-tight">{t("profileTitle")}</h1>
-          <p className="text-sm text-neutral-500 font-light mt-1">
-            {t("profileSubtitle")}
-          </p>
-        </div>
-        <QRCodeButton
-          slug={driver.slug}
-          driverName={`${driver.firstName} ${driver.lastName}`}
-          companyName={driver.companyName || ""}
-          vehicleModel={vehicles[0] ? `${vehicles[0].brand} ${vehicles[0].model}`.trim() : `${driver.vehicleBrand || ""} ${driver.vehicleModel || ""}`.trim()}
-        />
-      </div>
+    <SettingsShell>
       <ProfileForm driver={driverData} />
-
-      {/* Actions rapides */}
-      <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <Link
-          href="/dashboard/profil-public"
-          className="flex items-center gap-4 bg-white border border-neutral-200 rounded-2xl p-5 hover:border-neutral-300 transition-colors group"
-        >
-          <div className="w-11 h-11 bg-blue-50 rounded-xl flex items-center justify-center shrink-0">
-            <Icon icon="solar:eye-linear" className="text-blue-600 text-xl" />
-          </div>
-          <div>
-            <h3 className="text-sm font-medium group-hover:text-neutral-900 transition-colors">
-              {t("viewPublicPage")}
-            </h3>
-            <p className="text-xs text-neutral-500 font-light mt-0.5">
-              {t("publicPageDesc")}
-            </p>
-          </div>
-        </Link>
-
-        <Link
-          href="/dashboard/carte"
-          className="flex items-center gap-4 bg-white border border-neutral-200 rounded-2xl p-5 hover:border-neutral-300 transition-colors group"
-        >
-          <div className="w-11 h-11 bg-amber-50 rounded-xl flex items-center justify-center shrink-0">
-            <Icon icon="solar:qr-code-linear" className="text-amber-600 text-xl" />
-          </div>
-          <div>
-            <h3 className="text-sm font-medium group-hover:text-neutral-900 transition-colors">
-              {t("generateCard")}
-            </h3>
-            <p className="text-xs text-neutral-500 font-light mt-0.5">
-              {t("generateCardDesc")}
-            </p>
-          </div>
-        </Link>
-      </div>
-      <DeleteAccount />
-    </div>
+    </SettingsShell>
   );
 }

@@ -3,6 +3,8 @@ import { prisma } from "@/lib/prisma";
 import { auth } from "@/lib/auth";
 import { OrgSidebar } from "@/components/layout/OrgSidebar";
 import { escalateIfDue } from "@/lib/escalation";
+import { getTranslations } from "next-intl/server";
+import { SpaceBackLink } from "@/components/layout/SpaceBackLink";
 
 export default async function OrgLayout({
   children,
@@ -27,11 +29,16 @@ export default async function OrgLayout({
     redirect("/api/auth/end-session");
   }
 
+  const t = await getTranslations("org.account");
+
   return (
     <div className="min-h-screen bg-neutral-50">
       <OrgSidebar userName={session.user.name || ""} orgType={session.user.orgType} />
       <div className="lg:pl-64">
-        <main className="p-6 lg:p-8">{children}</main>
+        <main className="space-main p-4 sm:p-6 lg:p-8">
+          <SpaceBackLink href="/org/compte" label={t("title")} pages={["/org/favoris", "/org/cagnotte", "/org/parametres"]} />
+          {children}
+        </main>
       </div>
     </div>
   );

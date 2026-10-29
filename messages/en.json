@@ -318,7 +318,16 @@
     "contactRequestSent": "Request sent!",
     "driverWillContact": "Our driver will contact you as soon as possible",
     "removePassenger": "Remove a passenger",
-    "addPassenger": "Add a passenger"
+    "addPassenger": "Add a passenger",
+    "appGuaranteedPrice": "Guaranteed price",
+    "appDistance": "Nearest taxi · {km} km away",
+    "appPoint1": "A real licensed taxi, not a ride-hailing car",
+    "appPoint2": "This price stays the same, even in traffic",
+    "appPoint3": "You pay the driver on board",
+    "appBookThis": "Book this taxi · {price}",
+    "appBookThisNoPrice": "Book this taxi",
+    "appChooseOther": "Choose another taxi ({count})",
+    "appHideOthers": "Hide other taxis"
   },
   "confirmation": {
     "title": "Booking request registered!",
@@ -537,7 +546,11 @@
       "map": "Business card",
       "freeCard": "Free business card",
       "referral": "Referrals",
-      "logout": "Log out"
+      "logout": "Log out",
+      "nav": "Driver navigation",
+      "requests": "Requests",
+      "rides": "Rides",
+      "me": "Me"
     },
     "profileSections": {
       "personal": "Personal info",
@@ -818,7 +831,45 @@
       "shareAgain": "Offer this trip again"
     },
     "contactReferrer": "shared this ride",
-    "p2pCommissionNote": "Ride shared by {name}, who keeps a {amount} € commission."
+    "p2pCommissionNote": "Ride shared by {name}, who keeps a {amount} € commission.",
+    "requestsTitle": "Requests",
+    "noPending": "No pending requests",
+    "noPendingDesc": "New ride requests show up here, with a notification.",
+    "summaryTitle": "My rides",
+    "profileFilled": "Profile {percent}% complete",
+    "rides": {
+      "title": "Rides",
+      "received": "Received",
+      "transmitted": "Shared",
+      "create": "Create a ride to share"
+    },
+    "me": {
+      "title": "Me",
+      "publicPage": "My public page",
+      "publicPageDesc": "Preview, link and QR code",
+      "info": "My details",
+      "infoDesc": "Profile photo, company, phone, bio",
+      "vehicles": "My vehicles",
+      "vehiclesDesc": "Photos, plate, seats, options (wheelchair, child seat…)",
+      "pricing": "My fares",
+      "pricingDesc": "Pick-up fee, day and night price per km, supplements",
+      "zone": "Work area",
+      "zoneDesc": "City and radius where you take rides",
+      "availability": "Hours",
+      "availabilityDesc": "Working days and hours",
+      "referral": "Referral",
+      "referralDesc": "My link, my referrals",
+      "notifications": "Notifications",
+      "notificationsDesc": "Email and SMS",
+      "card": "Business card",
+      "cardDesc": "Card, A6 or A5 to print, QR code",
+      "toAdd": "To add:",
+      "account": "Account",
+      "logout": "Log out"
+    },
+    "recentRides": "Recent rides",
+    "sharedRidesTitle": "Shared taxi",
+    "sharedRidesSubtitle": "Shared rides you offer or join"
   },
   "p2pAccept": {
     "rideProposal": "Ride proposal",
@@ -852,7 +903,10 @@
       "favorites": "Favorites",
       "wallet": "Wallet",
       "settings": "Settings",
-      "logout": "Log out"
+      "logout": "Log out",
+      "nav": "Navigation",
+      "order": "Order",
+      "account": "Account"
     },
     "title": "Dashboard",
     "subtitle": "Overview of your activity",
@@ -985,6 +1039,16 @@
       "selectDriver": "Select",
       "backToForm": "Edit route",
       "confirmWith": "Confirm with {driver}"
+    },
+    "account": {
+      "title": "Account",
+      "favorites": "Favourite drivers",
+      "favoritesDesc": "Drivers offered first",
+      "wallet": "Wallet",
+      "walletDesc": "5% of completed rides",
+      "settings": "Settings",
+      "settingsDesc": "Name, contact, phone, address, password",
+      "logout": "Log out"
     }
   },
   "admin": {

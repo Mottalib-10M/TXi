@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef, useMemo } from "react";
-import { useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { useSession } from "next-auth/react";
 import { Icon } from "@iconify/react";
 import { CoverageZoneEditor } from "./CoverageZoneEditor";
@@ -16,6 +16,7 @@ import { useTranslations } from "next-intl";
 import { getDepartmentCode, getAirportFares } from "@/lib/department-lookup";
 import { DEPARTMENT_NAMES } from "@/data/departmental-tariffs";
 import { trackProfileUpdate } from "@/lib/analytics";
+import { PROFILE_SECTIONS } from "@/lib/driver-settings";
 
 interface DriverData {
   id: string;
@@ -139,17 +140,21 @@ export function ProfileForm({ driver }: { driver: DriverData }) {
   const t = useTranslations("profileForm");
   const { update: updateSession } = useSession();
   const searchParams = useSearchParams();
+  const router = useRouter();
   const [saving, setSaving] = useState(false);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
-  const [activeSection, setActiveSection] = useState("personal");
+  const [activeSection, setActiveSection] = useState(() => {
+    const section = searchParams.get("section");
+    return section && PROFILE_SECTIONS.includes(section) ? section : "personal";
+  });
   const [uploadingPhoto, setUploadingPhoto] = useState(false);
   const photoInputRef = useRef<HTMLInputElement>(null);
 
-  // Open the right section when coming from dashboard missing items
+  // Chaque section est une page de « Moi » : elle suit ?section= (menu latéral, liens du tableau de bord)
   useEffect(() => {
     const section = searchParams.get("section");
-    if (section && ["personal", "vehicle", "zone", "pricing", "availability", "notifications"].includes(section)) {
+    if (section && PROFILE_SECTIONS.includes(section)) {
       setActiveSection(section);
     }
   }, [searchParams]);
@@ -265,35 +270,8 @@ export function ProfileForm({ driver }: { driver: DriverData }) {
     }
   }
 
-  const sections = [
-    { id: "personal", label: t("tabs.personal"), icon: "solar:user-linear" },
-    { id: "vehicle", label: t("tabs.vehicle"), icon: "mdi:car-outline" },
-    { id: "zone", label: t("tabs.coverage"), icon: "solar:map-point-linear" },
-    { id: "pricing", label: t("tabs.pricing"), icon: "solar:tag-price-linear" },
-    { id: "availability", label: t("tabs.availability"), icon: "solar:clock-circle-linear" },
-    { id: "notifications", label: t("tabs.notifications"), icon: "solar:bell-linear" },
-  ];
-
   return (
     <div className="flex flex-col gap-4">
-      {/* Section tabs — visible on mobile only, hidden on desktop (sidebar has them) */}
-      <div className="lg:hidden flex gap-1 overflow-x-auto pb-2">
-        {sections.map((s) => (
-          <button
-            key={s.id}
-            onClick={() => setActiveSection(s.id)}
-            className={`flex items-center gap-2 px-3 py-2 rounded-xl text-sm whitespace-nowrap transition-colors ${
-              activeSection === s.id
-                ? "bg-neutral-900 text-white font-medium"
-                : "text-neutral-600 hover:bg-neutral-100"
-            }`}
-          >
-            <Icon icon={s.icon} className="text-lg shrink-0" />
-            {s.label}
-          </button>
-        ))}
-      </div>
-
       {/* Form content */}
       <div className="flex-1 bg-white border border-neutral-200 rounded-2xl p-5">
         {/* Personal info */}
@@ -505,7 +483,7 @@ export function ProfileForm({ driver }: { driver: DriverData }) {
                   onChange={(pricing) => setForm((prev) => ({ ...prev, ...pricing }))}
                   departmentName={departmentName}
                   zoneAddress={form.zoneAddress}
-                  onGoToZone={() => setActiveSection("zone")}
+                  onGoToZone={() => router.replace(`${window.location.pathname}?section=zone`, { scroll: false })}
                   airportFares={airportFares}
                 >
                   {saveBlock}

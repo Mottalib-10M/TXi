@@ -3,7 +3,7 @@ import { prisma } from "@/lib/prisma";
 import { redirect } from "next/navigation";
 import { ReservationsTable } from "@/components/driver/ReservationsTable";
 import { QRCodeButton } from "@/components/dashboard/QRCodeButton";
-import { getTranslations } from "next-intl/server";
+import { RidesSwitch } from "@/components/dashboard/RidesSwitch";
 import { contactForDriver } from "@/lib/p2p";
 import { escalateIfDue } from "@/lib/escalation";
 
@@ -26,7 +26,6 @@ export default async function ReservationsPage() {
 
   if (!driver) redirect("/connexion");
 
-  const t = await getTranslations("dashboard");
 
   const bookings = await prisma.booking.findMany({
     where: {
@@ -59,13 +58,7 @@ export default async function ReservationsPage() {
 
   return (
     <div>
-      <div className="flex items-center justify-between mb-8">
-        <div>
-          <h1 className="text-2xl font-semibold tracking-tight">{t("reservationsTitle")}</h1>
-          <p className="text-sm text-neutral-500 font-light mt-1">
-            {t("reservationsSubtitle")}
-          </p>
-        </div>
+      <RidesSwitch active="received">
         <QRCodeButton
           slug={driver.slug}
           driverName={`${driver.firstName} ${driver.lastName}`}
@@ -75,7 +68,7 @@ export default async function ReservationsPage() {
             return v ? `${v.brand || ""} ${v.model || ""}`.trim() : `${driver.vehicleBrand || ""} ${driver.vehicleModel || ""}`.trim();
           })()}
         />
-      </div>
+      </RidesSwitch>
       <ReservationsTable bookings={serialized} driverName={`${driver.firstName} ${driver.lastName}`} />
     </div>
   );
