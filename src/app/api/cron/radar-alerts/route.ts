@@ -7,7 +7,6 @@ import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { notifyDriver } from "@/lib/push";
 import {
-  RADAR_TESTERS,
   TOP_DRIVER_HEAD_START_MS,
   ensureSchedule,
   followedStations,
@@ -38,7 +37,7 @@ export async function GET(request: NextRequest) {
       suspendedAt: null,
       zoneLat: { not: null },
       zoneLng: { not: null },
-      email: { in: RADAR_TESTERS },
+      isVerified: true,
     },
     select: { id: true, zoneLat: true, zoneLng: true, zoneRadius: true, radarOffStations: true, radarExtraStations: true, radarMaxPerDay: true, isTopDriver: true },
   });

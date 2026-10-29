@@ -16,10 +16,9 @@ import { prisma } from "@/lib/prisma";
 import { haversineDistance } from "@/lib/geo";
 import STATIONS from "@/data/sncf-stations.json";
 
-/** En test : le Radar n'est visible que pour ces comptes. */
-export const RADAR_TESTERS = ["amradif@gmail.com"];
+/** Le Radar est ouvert à tous les chauffeurs depuis le 2026-10-29 (il était d'abord réservé à un compte de test). */
 export function radarAllowed(email?: string | null) {
-  return Boolean(email && RADAR_TESTERS.includes(email.toLowerCase()));
+  return Boolean(email);
 }
 
 const GTFS_URL = "https://eu.ftp.opendatasoft.com/sncf/plandata/Export_OpenData_SNCF_GTFS_NewTripId.zip";
@@ -174,7 +173,7 @@ const seconds = (hms: string) => {
 /** Gares suivies par au moins un chauffeur qui a le Radar. */
 export async function radarStationsInUse() {
   const drivers = await prisma.driver.findMany({
-    where: { radarEnabled: true, zoneLat: { not: null }, zoneLng: { not: null }, email: { in: RADAR_TESTERS } },
+    where: { radarEnabled: true, isVerified: true, suspendedAt: null, zoneLat: { not: null }, zoneLng: { not: null } },
     select: { zoneLat: true, zoneLng: true, zoneRadius: true, radarOffStations: true, radarExtraStations: true },
   });
   return Array.from(new Set(drivers.flatMap((d) => followedStations(d).map((s) => s.uic))));

@@ -1,6 +1,6 @@
 // Page Radar : pour une gare suivie, ce qui amène des clients (forte demande probable,
 // trains en retard ou supprimés) et les arrivées des 3 prochaines heures, avec le direct
-// de la SNCF quand il répond. En test : réservée à RADAR_TESTERS (src/lib/radar.ts).
+// de la SNCF quand il répond.
 
 import { redirect } from "next/navigation";
 import { Icon } from "@iconify/react";
