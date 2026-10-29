@@ -392,6 +392,9 @@ export type RadarEvent = {
   body: string;
   /** Quelques mots pour la liste des gares : « Forte demande dès 19 h 29 ». */
   short: string;
+  /** La notification : titre court (il ne doit pas être coupé sur l'écran verrouillé),
+   *  un emoji pour la reconnaître d'un coup d'œil, la gare en tête du texte. */
+  push: { title: string; body: string };
   at: Date;
   priority: number;
 };
@@ -425,6 +428,10 @@ export function stationEvents(station: Station, rows: BoardRow[], now: Date, day
         title: `Train en retard : clients potentiels à ${station.name}`,
         body: `${r.trainType} de ${r.origin} : +${r.delayMin} min, arrivée prévue à ${hhmm(r.expectedAt)}.${extra}`,
         short: `Train en retard, arrivée ${hhmm(r.expectedAt)}`,
+        push: {
+          title: `⏱️ Train en retard (+${r.delayMin} min)`,
+          body: `📍 ${station.name} : ${r.trainType} de ${r.origin}, arrivée à ${hhmm(r.expectedAt)}.${r.isLast ? " 🌙 Dernier train du jour." : lateEvening ? " 🌙 Peu de transports le soir : clients probables." : ""}`,
+        },
         at: r.expectedAt,
         priority: r.isLast ? 4 : 3,
       });
@@ -446,6 +453,10 @@ export function stationEvents(station: Station, rows: BoardRow[], now: Date, day
         title: `Train supprimé : clients potentiels à ${station.name}`,
         body: `Le ${r.trainType} de ${r.origin} prévu à ${hhmm(r.scheduledAt)} est supprimé.${extra}`,
         short: r.isLast ? "Dernier train supprimé" : `Train de ${hhmm(r.scheduledAt)} supprimé`,
+        push: {
+          title: r.isLast ? "❌ Dernier train supprimé" : "❌ Train supprimé",
+          body: `📍 ${station.name} : ${r.trainType} de ${r.origin} prévu à ${hhmm(r.scheduledAt)}.${r.isLast ? " 🚕 Ses voyageurs chercheront un taxi." : next ? ` Voyageurs reportés sur le train de ${hhmm(next.expectedAt)}.` : ""}`,
+        },
         at: next?.expectedAt ?? r.scheduledAt,
         priority: r.isLast ? 5 : 2,
       });
@@ -467,6 +478,10 @@ export function stationEvents(station: Station, rows: BoardRow[], now: Date, day
         title: `Forte demande de taxi probable · ${station.name}`,
         body: `${inside.length} trains arrivent entre ${hhmm(a)} et ${hhmm(b)} (${typeList(inside)}). Beaucoup de clients potentiels à la sortie.`,
         short: `Forte demande dès ${hhmm(a)}`,
+        push: {
+          title: `🚕 Forte demande dès ${hhmm(a)}`,
+          body: `📍 ${station.name} : ${inside.length} trains entre ${hhmm(a)} et ${hhmm(b)}. Beaucoup de clients à la sortie.`,
+        },
         at: a,
         priority: 1,
       });
