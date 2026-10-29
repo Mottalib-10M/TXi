@@ -79,6 +79,17 @@ export default async function ProfilPublicPage() {
         </div>
       </div>
 
+      {/* Profil désactivé (administration) : la page publique renvoie « Chauffeur introuvable » */}
+      {!driver.isActive && (
+        <div className="flex items-start gap-3 bg-amber-50 border border-amber-200 rounded-2xl p-4 mb-4">
+          <Icon icon="solar:eye-closed-linear" className="text-amber-600 text-xl shrink-0 mt-0.5" />
+          <div className="min-w-0">
+            <p className="text-sm font-semibold text-amber-900">{t("publicHidden")}</p>
+            <p className="text-xs text-amber-800 mt-0.5">{t("publicHiddenDesc")}</p>
+          </div>
+        </div>
+      )}
+
       {/* URL banner */}
       <div className="bg-neutral-950 rounded-2xl p-4 sm:p-5 mb-8 flex items-center justify-between gap-3 sm:gap-4">
         <div className="flex items-center gap-3 min-w-0">

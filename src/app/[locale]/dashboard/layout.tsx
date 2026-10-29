@@ -37,6 +37,9 @@ export default async function DashboardLayout({
       carteProUrl: true,
       createdAt: true,
       suspendedAt: true,
+      vehicles: true,
+      vehicleBrand: true,
+      vehicleModel: true,
     },
   });
 
@@ -109,6 +112,14 @@ export default async function DashboardLayout({
       ? `${driver.firstName} — ${driver.companyName}`
       : driver.firstName;
 
+  const v0 = Array.isArray(driver.vehicles) ? (driver.vehicles as Array<{ brand?: string; model?: string }>)[0] : null;
+  const qr = {
+    slug: driver.slug,
+    driverName: `${driver.firstName} ${driver.lastName}`.trim(),
+    companyName: driver.companyName || "",
+    vehicleModel: v0?.brand ? `${v0.brand} ${v0.model || ""}`.trim() : `${driver.vehicleBrand || ""} ${driver.vehicleModel || ""}`.trim(),
+  };
+
   const tm = await getTranslations("dashboard.me");
   // Pastille de l'onglet Demandes : courses en attente de réponse.
   const pendingCount = await prisma.booking.count({
@@ -120,7 +131,7 @@ export default async function DashboardLayout({
 
   return (
     <div className="min-h-screen bg-neutral-50">
-      <DashboardSidebar userName={userName} pendingCount={pendingCount} />
+      <DashboardSidebar userName={userName} pendingCount={pendingCount} qr={qr} />
       <div className="lg:pl-64 min-w-0">
         <main className="space-main p-4 sm:p-6 lg:p-8">
           <div className="max-w-[1600px]">

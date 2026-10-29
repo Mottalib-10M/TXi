@@ -2,7 +2,6 @@ import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
 import { redirect } from "next/navigation";
 import { BusinessCardPreview } from "@/components/driver/BusinessCardPreview";
-import { QRCodeButton } from "@/components/dashboard/QRCodeButton";
 import type { Vehicle } from "@/types/vehicle";
 import { getTranslations } from "next-intl/server";
 
@@ -47,15 +46,6 @@ export default async function CartePage() {
           <p className="text-sm text-neutral-500 mt-1">
             {t("mapCardDesc")}
           </p>
-        </div>
-        <div className="shrink-0">
-          <QRCodeButton
-            variant="compact"
-            slug={driver.slug}
-            driverName={`${driver.firstName} ${driver.lastName}`}
-            companyName={driver.companyName || ""}
-            vehicleModel={vehicles[0] ? `${vehicles[0].brand} ${vehicles[0].model}`.trim() : `${driver.vehicleBrand || ""} ${driver.vehicleModel || ""}`.trim()}
-          />
         </div>
       </div>
       <BusinessCardPreview

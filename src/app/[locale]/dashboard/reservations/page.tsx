@@ -2,7 +2,6 @@ import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
 import { redirect } from "next/navigation";
 import { ReservationsTable } from "@/components/driver/ReservationsTable";
-import { QRCodeButton } from "@/components/dashboard/QRCodeButton";
 import { RidesSwitch } from "@/components/dashboard/RidesSwitch";
 import { contactForDriver } from "@/lib/p2p";
 import { escalateIfDue } from "@/lib/escalation";
@@ -58,18 +57,7 @@ export default async function ReservationsPage() {
 
   return (
     <div>
-      <RidesSwitch active="received">
-        <QRCodeButton
-          variant="compact"
-          slug={driver.slug}
-          driverName={`${driver.firstName} ${driver.lastName}`}
-          companyName={driver.companyName || ""}
-          vehicleModel={(() => {
-            const v = Array.isArray(driver.vehicles) ? (driver.vehicles as Array<{ brand?: string; model?: string }>)[0] : null;
-            return v ? `${v.brand || ""} ${v.model || ""}`.trim() : `${driver.vehicleBrand || ""} ${driver.vehicleModel || ""}`.trim();
-          })()}
-        />
-      </RidesSwitch>
+      <RidesSwitch active="received" />
       <ReservationsTable bookings={serialized} driverName={`${driver.firstName} ${driver.lastName}`} />
     </div>
   );

@@ -5,7 +5,6 @@ import { getTranslations } from "next-intl/server";
 import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
 import { Link } from "@/i18n/navigation";
-import { QRCodeButton } from "@/components/dashboard/QRCodeButton";
 import { DeleteAccount } from "@/components/dashboard/DeleteAccount";
 import { LanguageSwitcher } from "@/components/ui/LanguageSwitcher";
 import { LogoutButton } from "@/components/layout/LogoutButton";
@@ -85,22 +84,19 @@ export default async function MoiPage() {
           )}
 
           {/* Carte de visite */}
-          <div className="flex items-center gap-4 bg-white border border-neutral-200 rounded-2xl p-4">
+          <Link
+            href="/dashboard/carte"
+            className="flex items-center gap-4 bg-white border border-neutral-200 rounded-2xl p-4 hover:border-neutral-300 transition-colors"
+          >
             <span className="w-12 h-12 rounded-xl bg-amber-50 flex items-center justify-center shrink-0">
               <Icon icon="solar:card-2-linear" className="text-2xl text-amber-600" />
             </span>
-            <Link href="/dashboard/carte" className="flex-1 min-w-0 group">
-              <span className="block text-sm font-semibold group-hover:underline">{t("card")}</span>
+            <span className="flex-1 min-w-0">
+              <span className="block text-sm font-semibold">{t("card")}</span>
               <span className="block text-xs text-neutral-500">{t("cardDesc")}</span>
-            </Link>
-            <QRCodeButton
-              variant="compact"
-              slug={driver.slug}
-              driverName={fullName}
-              companyName={driver.companyName || ""}
-              vehicleModel={vehicleName}
-            />
-          </div>
+            </span>
+            <Icon icon="solar:alt-arrow-right-linear" className="text-neutral-400 shrink-0" />
+          </Link>
         </div>
 
         <div className="min-w-0 lg:col-start-2 lg:row-start-1 lg:row-span-2">

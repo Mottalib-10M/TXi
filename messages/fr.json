@@ -869,7 +869,9 @@
     },
     "recentRides": "Dernières courses",
     "sharedRidesTitle": "Taxi partagé",
-    "sharedRidesSubtitle": "Les trajets partagés que vous proposez ou rejoignez"
+    "sharedRidesSubtitle": "Les trajets partagés que vous proposez ou rejoignez",
+    "publicHidden": "Votre profil est masqué",
+    "publicHiddenDesc": "Votre page publique n'est pas visible : les clients voient « Chauffeur introuvable » et vous ne recevez pas de nouvelles courses. Contactez TaxiNeo pour la réactiver."
   },
   "p2pAccept": {
     "rideProposal": "Course proposée",

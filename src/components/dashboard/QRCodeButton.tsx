@@ -13,7 +13,8 @@ interface QRCodeButtonProps {
   companyName?: string;
   vehicleModel?: string;
   // compact : simple carré avec l'icône sur mobile, bouton avec texte à partir de sm
-  variant?: "default" | "quickLink" | "compact";
+  // header : pastille « QR code » de l'en-tête de l'espace chauffeur
+  variant?: "default" | "quickLink" | "compact" | "header";
   label?: string;
 }
 
@@ -56,7 +57,7 @@ export function QRCodeButton({ slug, driverName, companyName, vehicleModel, vari
           onClick={() => setOpen(true)}
           aria-label={t("qrCode")}
           className={`flex items-center justify-center gap-2 bg-neutral-900 text-white rounded-xl text-sm font-medium hover:bg-neutral-800 transition-colors whitespace-nowrap ${
-            variant === "compact" ? "h-11 w-11 sm:w-auto sm:px-4" : "px-4 py-2"
+            variant === "compact" ? "h-11 w-11 sm:w-auto sm:px-4" : variant === "header" ? "h-9 px-3 lg:h-11 lg:px-4" : "px-4 py-2"
           }`}
         >
           <Icon icon="solar:qr-code-linear" className="text-lg shrink-0" />

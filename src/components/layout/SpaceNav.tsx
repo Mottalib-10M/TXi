@@ -30,6 +30,7 @@ export function SpaceNav({
   tag,
   navLabel,
   logoutLabel,
+  headerAction,
 }: {
   tabs: SpaceTab[];
   accountHref: string;
@@ -37,6 +38,8 @@ export function SpaceNav({
   tag: React.ReactNode;
   navLabel: string;
   logoutLabel: string;
+  // Bouton mis en évidence en haut (mobile : à côté de la pastille, ordinateur : sous le logo)
+  headerAction?: React.ReactNode;
 }) {
   useEffect(() => {
     document.documentElement.setAttribute("data-space-nav", "");
@@ -60,13 +63,16 @@ export function SpaceNav({
           </Link>
           {tag}
         </span>
-        <Link
-          href={accountHref as "/dashboard"}
-          aria-label={userName}
-          className="w-9 h-9 rounded-full bg-neutral-900 text-white flex items-center justify-center text-xs font-semibold"
-        >
-          {initials(userName) || <Icon icon="solar:user-linear" />}
-        </Link>
+        <span className="flex items-center gap-2">
+          {headerAction}
+          <Link
+            href={accountHref as "/dashboard"}
+            aria-label={userName}
+            className="w-9 h-9 rounded-full bg-neutral-900 text-white flex items-center justify-center text-xs font-semibold"
+          >
+            {initials(userName) || <Icon icon="solar:user-linear" />}
+          </Link>
+        </span>
       </div>
       <div className="lg:hidden h-16" />
 
@@ -78,6 +84,7 @@ export function SpaceNav({
           </Link>
           <span className="ml-2">{tag}</span>
         </div>
+        {headerAction && <div className="px-3 pt-4 [&>button]:w-full">{headerAction}</div>}
         <nav className="flex-1 py-4 px-3" aria-label={navLabel}>
           {tabs.map((tab) => (
             <Link
