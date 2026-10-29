@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useSearchParams } from "next/navigation";
 import { Link, useRouter } from "@/i18n/navigation";
 import { Icon } from "@iconify/react";
 import { MapsLink } from "@/components/ui/MapsLink";
@@ -54,7 +55,12 @@ export function ReservationsTable({ bookings, driverName }: { bookings: Booking[
   const tc = useTranslations("common");
   const locale = useLocale();
   const router = useRouter();
-  const [filter, setFilter] = useState<string>("ACTIVE");
+  // Agenda : les courses confirmées d'abord. Les demandes à traiter sont dans l'onglet Demandes ;
+  // un lien vers une demande précise (?id=) ouvre directement le filtre « En attente ».
+  const searchParams = useSearchParams();
+  const linked = bookings.find((b) => b.id === searchParams.get("id"));
+  const [filter, setFilter] = useState<string>(linked?.status === "PENDING" ? "PENDING" : "UPCOMING");
+  const pendingCount = bookings.filter((b) => b.status === "PENDING").length;
   const [updating, setUpdating] = useState<string | null>(null);
   const [refusing, setRefusing] = useState<string | null>(null);
   const [confirmModal, setConfirmModal] = useState<{
@@ -91,7 +97,7 @@ export function ReservationsTable({ bookings, driverName }: { bookings: Booking[
 
   const statusPriority: Record<string, number> = { PENDING: 0, ACCEPTED: 1, COMPLETED: 2, REJECTED: 3, CANCELLED: 4 };
 
-  const filtered = (filter === "ALL" ? bookings : filter === "ACTIVE" ? bookings.filter((b) => b.status === "PENDING" || b.status === "ACCEPTED") : bookings.filter((b) => b.status === filter))
+  const filtered = (filter === "ALL" ? bookings : filter === "UPCOMING" ? bookings.filter((b) => b.status === "ACCEPTED") : bookings.filter((b) => b.status === filter))
     .slice()
     .sort((a, b) => {
       const pa = statusPriority[a.status] ?? 9;
@@ -175,16 +181,34 @@ export function ReservationsTable({ bookings, driverName }: { bookings: Booking[
 
   return (
     <div>
+      {/* Demandes en attente : on y répond depuis l'onglet Demandes */}
+      {pendingCount > 0 && filter !== "PENDING" && (
+        <Link
+          href="/dashboard"
+          className="flex items-center justify-between gap-3 mb-4 rounded-2xl border border-amber-300 bg-amber-50 px-4 py-3 hover:bg-amber-100 transition-colors"
+        >
+          <span className="flex items-center gap-2 min-w-0 text-sm font-medium text-amber-900">
+            <span className="w-2 h-2 rounded-full bg-amber-500 shrink-0" />
+            {t("pendingBanner", { count: pendingCount })}
+          </span>
+          <span className="shrink-0 inline-flex items-center gap-1 text-sm font-semibold text-amber-900">
+            {t("answer")}
+            <Icon icon="solar:arrow-right-linear" />
+          </span>
+        </Link>
+      )}
+
       {/* Filters */}
       <div className="flex gap-2 mb-6 overflow-x-auto pb-2 -mx-4 px-4 sm:mx-0 sm:px-0 [scrollbar-width:none]">
         {[
-          { key: "ACTIVE", label: t("pending"), activeClass: "bg-amber-500 text-white", inactiveClass: "bg-amber-50 border border-amber-200 text-amber-700 hover:bg-amber-100" },
+          { key: "UPCOMING", label: t("filterUpcoming"), activeClass: "bg-green-600 text-white", inactiveClass: "bg-green-50 border border-green-200 text-green-700 hover:bg-green-100" },
+          ...(pendingCount > 0 ? [{ key: "PENDING", label: t("filterPending"), activeClass: "bg-amber-500 text-white", inactiveClass: "bg-amber-50 border border-amber-200 text-amber-700 hover:bg-amber-100" }] : []),
           { key: "COMPLETED", label: t("completed"), activeClass: "bg-neutral-600 text-white", inactiveClass: "bg-neutral-100 border border-neutral-200 text-neutral-600 hover:bg-neutral-200" },
           { key: "REJECTED", label: t("rejected"), activeClass: "bg-orange-500 text-white", inactiveClass: "bg-orange-50 border border-orange-200 text-orange-700 hover:bg-orange-100" },
           { key: "CANCELLED", label: t("cancelled"), activeClass: "bg-neutral-400 text-white", inactiveClass: "bg-neutral-50 border border-neutral-200 text-neutral-500 hover:bg-neutral-100" },
           { key: "ALL", label: tc("all"), activeClass: "bg-neutral-900 text-white", inactiveClass: "bg-white border border-neutral-200 text-neutral-600 hover:border-neutral-300" },
         ].map((f) => {
-          const count = f.key === "ALL" ? bookings.length : f.key === "ACTIVE" ? bookings.filter((b) => b.status === "PENDING" || b.status === "ACCEPTED").length : bookings.filter((b) => b.status === f.key).length;
+          const count = f.key === "ALL" ? bookings.length : f.key === "UPCOMING" ? bookings.filter((b) => b.status === "ACCEPTED").length : bookings.filter((b) => b.status === f.key).length;
           return (
           <button
             key={f.key}

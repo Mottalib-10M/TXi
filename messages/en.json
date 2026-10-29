@@ -886,7 +886,14 @@
       "privacy": "The client's name, number and exact address are not in the message.",
       "referent": "Every ride you pass on counts towards becoming your town's lead driver.",
       "done": "Done"
-    }
+    },
+    "filterUpcoming": "Upcoming",
+    "filterPending": "Waiting",
+    "pendingBanner": "{count, plural, one {# request is waiting for your answer} other {# requests are waiting for your answer}}",
+    "answer": "Answer",
+    "nextRide": "Next ride",
+    "allRides": "All my rides",
+    "noPendingShort": "No requests right now. You'll be notified on your phone as soon as one arrives."
   },
   "p2pAccept": {
     "rideProposal": "Ride proposal",

@@ -886,7 +886,14 @@
       "privacy": "Ni le nom, ni le numéro, ni l'adresse exacte du client ne figurent dans le message.",
       "referent": "Chaque course passée à un collègue compte pour devenir chauffeur référent de votre ville.",
       "done": "Terminé"
-    }
+    },
+    "filterUpcoming": "À venir",
+    "filterPending": "En attente",
+    "pendingBanner": "{count, plural, one {# demande attend votre réponse} other {# demandes attendent votre réponse}}",
+    "answer": "Répondre",
+    "nextRide": "Prochaine course",
+    "allRides": "Toutes mes courses",
+    "noPendingShort": "Aucune demande pour l'instant. Vous êtes prévenu sur votre téléphone dès qu'une arrive."
   },
   "p2pAccept": {
     "rideProposal": "Course proposée",

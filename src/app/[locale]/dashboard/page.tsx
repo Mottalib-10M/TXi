@@ -95,37 +95,13 @@ export default async function DashboardPage() {
     .filter((b) => b.status === "ACCEPTED" || b.status === "COMPLETED")
     .reduce((sum, b) => sum + (b.p2pCommissionAmount || 0), 0);
 
-  // Weekly bookings count
-  const startOfWeek = new Date(now);
-  startOfWeek.setDate(now.getDate() - now.getDay() + (now.getDay() === 0 ? -6 : 1)); // Monday
-  startOfWeek.setHours(0, 0, 0, 0);
-  const weeklyBookingsCount = await prisma.booking.count({
-    where: {
-      OR: [
-        { driverId: session.user.id },
-        { invitedDriverIds: { has: session.user.id } },
-      ],
-      createdAt: { gte: startOfWeek },
-    },
-  });
-
-  // Dernières courses (déjà passées ou closes), sous les demandes.
-  const recentBookings = await prisma.booking.findMany({
-    where: {
-      driverId: session.user.id,
-      id: { notIn: activeBookings.map((b) => b.id) },
-      status: { not: "PENDING" },
-    },
-    orderBy: { requestedDate: "desc" },
-    take: 6,
-    select: { id: true, departureName: true, arrivalName: true, requestedDate: true, lockedPrice: true, status: true, clientName: true },
-  });
-
   const td = await getTranslations("dashboard");
   const locale = await getLocale();
 
   const pendingBookings = activeBookings.filter((b) => b.status === "PENDING");
-  const acceptedBookings = activeBookings.filter((b) => b.status === "ACCEPTED");
+  // Une seule course confirmée sur cet écran : la prochaine. L'agenda complet est dans Courses.
+  const nextRide = activeBookings.find((b) => b.status === "ACCEPTED" && new Date(b.requestedDate).getTime() > now.getTime() - 60 * 60 * 1000);
+  const showRadar = radarAllowed(driver.email);
 
   // Profile completeness
   const vehicles = Array.isArray(driver.vehicles) ? (driver.vehicles as Array<{ brand?: string; model?: string }>) : [];
@@ -292,77 +268,52 @@ export default async function DashboardPage() {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-start">
-        {/* Colonne principale : demandes en attente puis courses à venir */}
+        {/* Colonne principale : ce qu'il faut faire maintenant (demandes, Radar, prochaine course) */}
         <div className="lg:col-span-2 lg:row-start-1 space-y-6 min-w-0">
-          {/* Radar des gares (en test) : ce qui amène des clients autour de vous */}
-          {radarAllowed(driver.email) && (
-            <Suspense fallback={<div className="h-48 rounded-2xl border border-neutral-200 bg-white animate-pulse" />}>
-              <RadarCard driver={driver} />
-            </Suspense>
-          )}
-          <section>
-            <div className="flex items-center justify-between mb-3">
-              <div className="flex items-center gap-2">
-                {pendingBookings.length > 0 && <div className="w-2 h-2 bg-amber-400 rounded-full animate-pulse" />}
+          {/* Demandes en attente : seulement s'il y en a */}
+          {pendingBookings.length > 0 && (
+            <section>
+              <div className="flex items-center gap-2 mb-3">
+                <div className="w-2 h-2 bg-amber-400 rounded-full animate-pulse" />
                 <h2 className="font-semibold">{td("pendingResponse")}</h2>
-                {pendingBookings.length > 0 && (
-                  <span className="text-xs font-bold bg-amber-500 text-neutral-950 rounded-full px-2 py-0.5">{pendingBookings.length}</span>
-                )}
+                <span className="text-xs font-bold bg-amber-500 text-neutral-950 rounded-full px-2 py-0.5">{pendingBookings.length}</span>
               </div>
-              <Link href="/dashboard/reservations" className="text-xs text-neutral-500 hover:text-neutral-900 transition-colors">
-                {td("seeAll")}
-              </Link>
-            </div>
-            {pendingBookings.length > 0 ? (
               <div className="space-y-3">{pendingBookings.map((b) => bookingCard(b, "pending"))}</div>
-            ) : (
-              <div className="bg-white border border-dashed border-neutral-300 rounded-2xl px-5 py-8 text-center">
-                <Icon icon="solar:bell-off-linear" className="text-3xl text-neutral-300 mx-auto mb-2" />
-                <p className="text-sm font-medium text-neutral-800">{td("noPending")}</p>
-                <p className="text-xs text-neutral-500 mt-1">{td("noPendingDesc")}</p>
-              </div>
-            )}
-          </section>
+            </section>
+          )}
 
-          {acceptedBookings.length > 0 && (
+          {nextRide && (
             <section>
               <div className="flex items-center justify-between mb-3">
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-green-500 rounded-full" />
-                  <h2 className="font-semibold">{td("upcomingRides")}</h2>
+                  <h2 className="font-semibold">{td("nextRide")}</h2>
                 </div>
                 <Link href="/dashboard/reservations" className="text-xs text-neutral-500 hover:text-neutral-900 transition-colors">
-                  {td("seeAll")}
+                  {td("allRides")}
                 </Link>
               </div>
-              <div className="space-y-3">{acceptedBookings.map((b) => bookingCard(b, "accepted"))}</div>
+              {bookingCard(nextRide, "accepted")}
             </section>
+          )}
+
+          {/* Radar des gares (en test) : ce qui amène des clients autour de vous */}
+          {showRadar && (
+            <Suspense fallback={<div className="h-48 rounded-2xl border border-neutral-200 bg-white animate-pulse" />}>
+              <RadarCard driver={driver} />
+            </Suspense>
+          )}
+          {/* Rien d'autre à montrer : une ligne, pas une grande case vide */}
+          {pendingBookings.length === 0 && !nextRide && !showRadar && (
+            <p className="flex items-start gap-2 text-sm text-neutral-500">
+              <Icon icon="solar:bell-linear" className="text-base shrink-0 mt-0.5" />
+              {td("noPendingShort")}
+            </p>
           )}
         </div>
 
         {/* Colonne de droite (sous les demandes sur mobile) */}
-        <aside className="space-y-4 min-w-0 lg:col-start-3 lg:row-start-1 lg:row-span-2">
-          <Link href="/dashboard/reservations" className="block bg-neutral-950 text-white rounded-2xl p-5 hover:bg-neutral-900 transition-colors">
-            <span className="flex items-center justify-between text-sm text-neutral-400">
-              {td("summaryTitle")}
-              <Icon icon="solar:alt-arrow-right-linear" />
-            </span>
-            <span className="grid grid-cols-3 gap-3 mt-3">
-              <span>
-                <span className="block text-2xl font-bold">{weeklyBookingsCount}</span>
-                <span className="block text-xs text-neutral-400">{td("statsWeekRides")}</span>
-              </span>
-              <span>
-                <span className="block text-2xl font-bold text-amber-400">{pendingBookings.length}</span>
-                <span className="block text-xs text-neutral-400">{td("statsPending")}</span>
-              </span>
-              <span>
-                <span className="block text-2xl font-bold">{acceptedBookings.length}</span>
-                <span className="block text-xs text-neutral-400">{td("statsAccepted")}</span>
-              </span>
-            </span>
-          </Link>
-
+        <aside className="space-y-4 min-w-0 lg:col-start-3 lg:row-start-1">
           {missingChecks.length > 0 && (
             <div className="bg-white border border-neutral-200 rounded-2xl p-4">
               <div className="flex items-center justify-between gap-2 mb-2">
@@ -439,39 +390,6 @@ export default async function DashboardPage() {
           </Link>
         </aside>
 
-          {recentBookings.length > 0 && (
-          <section className="lg:col-span-2 lg:row-start-2 min-w-0">
-            <div className="flex items-center justify-between mb-3">
-              <h2 className="font-semibold">{td("recentRides")}</h2>
-              <Link href="/dashboard/reservations" className="text-xs text-neutral-500 hover:text-neutral-900 transition-colors">
-                {td("seeAll")}
-              </Link>
-            </div>
-            <ul className="bg-white border border-neutral-200 rounded-2xl divide-y divide-neutral-100 overflow-hidden">
-              {recentBookings.map((b) => (
-                <li key={b.id}>
-                  <Link href={`/dashboard/reservations?id=${b.id}`} className="flex items-center gap-4 px-4 py-3 hover:bg-neutral-50 transition-colors">
-                    <span className="hidden sm:block w-32 shrink-0 text-xs text-neutral-500">{formatDate(b.requestedDate)}</span>
-                    <span className="flex-1 min-w-0">
-                      <span className="block text-sm font-medium text-neutral-900 truncate">{b.departureName}</span>
-                      <span className="block text-sm font-medium text-neutral-900 truncate">→ {b.arrivalName}</span>
-                      <span className="block text-xs text-neutral-500 truncate mt-0.5">
-                        <span className="sm:hidden">{formatDate(b.requestedDate)} · </span>
-                        {b.clientName}
-                      </span>
-                    </span>
-                    <span className={`hidden sm:inline text-xs font-medium px-2 py-0.5 rounded-full shrink-0 ${
-                      b.status === "COMPLETED" || b.status === "ACCEPTED" ? "bg-green-50 text-green-700" : "bg-neutral-100 text-neutral-500"
-                    }`}>
-                      {td(b.status === "COMPLETED" ? "completed" : b.status === "ACCEPTED" ? "accepted" : b.status === "REJECTED" ? "rejected" : "cancelled")}
-                    </span>
-                    {b.lockedPrice != null && <span className="text-sm font-semibold shrink-0 w-14 text-right">{b.lockedPrice.toFixed(0)}&nbsp;€</span>}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </section>
-        )}
       </div>
     </div>
   );
