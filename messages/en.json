@@ -3748,7 +3748,10 @@
       "calm": "No high demand expected in the next 2 hours.",
       "see": "Open the radar",
       "noStation": "No station in your area. Add one in the Radar settings.",
-      "source": "SNCF data"
+      "source": "SNCF data",
+      "legend": "Train arrivals per quarter hour, next 2 hours",
+      "calmShort": "Quiet",
+      "more": "+ {count} more stations in the radar"
     },
     "updated": "Updated {min} min ago",
     "updatedNow": "Updated just now",

@@ -19,7 +19,7 @@ export function TopDriverBadge({ city }: { city: string }) {
       <button
         type="button"
         onClick={() => setOpen(true)}
-        className="inline-flex items-center gap-1.5 h-8 px-3 rounded-full border border-amber-300 bg-amber-50 text-amber-800 text-sm font-semibold"
+        className="shrink-0 whitespace-nowrap inline-flex items-center gap-1.5 h-8 px-3 rounded-full border border-amber-300 bg-amber-50 text-amber-800 text-sm font-semibold"
       >
         <Icon icon="solar:shield-check-linear" className="text-base" />
         {t("badge")}

@@ -119,10 +119,10 @@ export function parisToUtc(day: string, seconds: number) {
   return new Date(utc);
 }
 
-/** « 17 h 30 », « 17 h ». */
+/** « 17 h 30 », « 17 h », avec des espaces insécables : l'heure ne se coupe jamais en fin de ligne. */
 export function hhmm(at: Date) {
   const p = parisParts(at);
-  return p.min ? `${p.h} h ${String(p.min).padStart(2, "0")}` : `${p.h} h`;
+  return p.min ? `${p.h}\u00a0h\u00a0${String(p.min).padStart(2, "0")}` : `${p.h}\u00a0h`;
 }
 
 /** « 17:30 ». */
@@ -360,10 +360,11 @@ export async function stationBoard(uic: string, from: Date, to: Date, rt: Realti
 const WEIGHT: Record<string, number> = { TGV: 3, OUIGO: 3, ICE: 3, Lyria: 3, Intercités: 2, "Intercités de nuit": 2 };
 const weight = (r: BoardRow) => WEIGHT[r.trainType] ?? 1;
 
-/** Demande par quart d'heure à partir de from (barres de la carte Radar). */
+/** Demande par quart d'heure, à partir du quart d'heure en cours (barres de la carte Radar). */
 export function demandBuckets(rows: BoardRow[], from: Date, count = 8) {
+  const first = Math.floor(from.getTime() / (15 * 60_000)) * 15 * 60_000;
   return Array.from({ length: count }, (_, i) => {
-    const start = from.getTime() + i * 15 * 60_000;
+    const start = first + i * 15 * 60_000;
     const inside = rows.filter((r) => r.status !== "cancelled" && r.expectedAt.getTime() >= start && r.expectedAt.getTime() < start + 15 * 60_000);
     return { start: new Date(start), trains: inside.length, weight: inside.reduce((n, r) => n + weight(r), 0) };
   });
@@ -375,6 +376,8 @@ export type RadarEvent = {
   stationUic: string;
   title: string;
   body: string;
+  /** Quelques mots pour la liste des gares : « Forte demande dès 19 h 29 ». */
+  short: string;
   at: Date;
   priority: number;
 };
@@ -407,6 +410,7 @@ export function stationEvents(station: Station, rows: BoardRow[], now: Date, day
         stationUic: station.uic,
         title: `Train en retard : clients potentiels à ${station.name}`,
         body: `${r.trainType} de ${r.origin} : +${r.delayMin} min, arrivée prévue à ${hhmm(r.expectedAt)}.${extra}`,
+        short: `Train en retard, arrivée ${hhmm(r.expectedAt)}`,
         at: r.expectedAt,
         priority: r.isLast ? 4 : 3,
       });
@@ -427,6 +431,7 @@ export function stationEvents(station: Station, rows: BoardRow[], now: Date, day
         stationUic: station.uic,
         title: `Train supprimé : clients potentiels à ${station.name}`,
         body: `Le ${r.trainType} de ${r.origin} prévu à ${hhmm(r.scheduledAt)} est supprimé.${extra}`,
+        short: r.isLast ? "Dernier train supprimé" : `Train de ${hhmm(r.scheduledAt)} supprimé`,
         at: next?.expectedAt ?? r.scheduledAt,
         priority: r.isLast ? 5 : 2,
       });
@@ -447,6 +452,7 @@ export function stationEvents(station: Station, rows: BoardRow[], now: Date, day
         stationUic: station.uic,
         title: `Forte demande de taxi probable · ${station.name}`,
         body: `${inside.length} trains arrivent entre ${hhmm(a)} et ${hhmm(b)} (${typeList(inside)}). Beaucoup de clients potentiels à la sortie.`,
+        short: `Forte demande dès ${hhmm(a)}`,
         at: a,
         priority: 1,
       });
@@ -464,4 +470,13 @@ export async function stationView(station: Station, rt: Realtime | null, now = n
     prisma.radarArrival.count({ where: { stationUic: station.uic, serviceDate: parisDay(now) } }),
   ]);
   return { station, rows, dayArrivals, events: stationEvents(station, rows, now, dayArrivals) };
+}
+
+type StationView = Awaited<ReturnType<typeof stationView>>;
+
+/** Gares de la plus intéressante à la plus calme : événement le plus fort, puis demande de la prochaine heure. */
+export function rankStations(views: StationView[], now = new Date()) {
+  const nextHour = (v: StationView) =>
+    v.rows.filter((r) => r.status !== "cancelled" && r.expectedAt.getTime() < now.getTime() + 3600_000).reduce((n, r) => n + weight(r), 0);
+  return [...views].sort((a, b) => (b.events[0]?.priority ?? 0) - (a.events[0]?.priority ?? 0) || nextHour(b) - nextHour(a));
 }

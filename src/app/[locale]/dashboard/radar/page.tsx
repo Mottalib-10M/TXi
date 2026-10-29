@@ -8,7 +8,7 @@ import { getTranslations } from "next-intl/server";
 import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
 import { Link } from "@/i18n/navigation";
-import { clock, followedStations, radarAllowed, realtime, stationView, type BoardRow } from "@/lib/radar";
+import { clock, followedStations, radarAllowed, rankStations, realtime, stationView, type BoardRow } from "@/lib/radar";
 import { RadarShareButton } from "@/components/radar/RadarShareButton";
 import { TopDriverBadge } from "@/components/radar/TopDriverBadge";
 
@@ -35,10 +35,12 @@ export default async function RadarPage({ searchParams }: { searchParams: { gare
 
   const t = await getTranslations("radar");
   const stations = followedStations(driver);
-  const station = stations.find((s) => s.uic === searchParams.gare) ?? stations[0];
   const now = new Date();
   const rt = await realtime();
-  const view = station ? await stationView(station, rt, now) : null;
+  // Toutes les gares suivies, de la plus intéressante à la plus calme ; sans choix, on ouvre la première.
+  const views = rankStations(await Promise.all(stations.map((s) => stationView(s, rt, now))), now);
+  const view = views.find((v) => v.station.uic === searchParams.gare) ?? views[0] ?? null;
+  const station = view?.station;
   const minutes = rt ? Math.max(0, Math.round((now.getTime() - rt.at.getTime()) / 60_000)) : null;
   // Trains d'une forte demande annoncée : repérés dans la liste.
   const wave = view?.events.find((e) => e.kind === "wave");
@@ -55,23 +57,26 @@ export default async function RadarPage({ searchParams }: { searchParams: { gare
         {driver.isTopDriver && <TopDriverBadge city={city} />}
       </div>
 
-      {stations.length > 1 && (
-        <div role="group" aria-label="Gare" className="flex gap-1 p-1 rounded-2xl bg-neutral-100 overflow-x-auto [scrollbar-width:none]">
-          {stations.map((s) => {
-            const on = s.uic === station?.uic;
+      {views.length > 1 && (
+        <nav aria-label="Gares" className="-mx-4 px-4 sm:mx-0 sm:px-0 flex gap-2 overflow-x-auto [scrollbar-width:none]">
+          {views.map((v) => {
+            const on = v.station.uic === station?.uic;
             return (
               <Link
-                key={s.uic}
-                href={`/dashboard/radar?gare=${s.uic}` as "/dashboard"}
+                key={v.station.uic}
+                href={`/dashboard/radar?gare=${v.station.uic}` as "/dashboard"}
                 scroll={false}
                 aria-current={on ? "page" : undefined}
-                className={`flex-1 min-w-max text-center px-4 py-2.5 rounded-xl text-sm whitespace-nowrap ${on ? "bg-white font-semibold shadow-sm" : "text-neutral-600"}`}
+                className={`shrink-0 inline-flex items-center gap-2 h-10 px-4 rounded-full text-sm whitespace-nowrap border ${
+                  on ? "bg-neutral-900 border-neutral-900 text-white font-semibold" : "bg-white border-neutral-200 text-neutral-700"
+                }`}
               >
-                {s.name}
+                {v.events.length > 0 && <span className="w-2 h-2 rounded-full bg-amber-500" />}
+                {v.station.name}
               </Link>
             );
           })}
-        </div>
+        </nav>
       )}
 
       <p className={`flex items-center gap-1.5 text-sm ${minutes == null ? "text-neutral-500" : "text-green-700 font-medium"}`}>
