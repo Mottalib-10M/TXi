@@ -30,7 +30,7 @@ export async function RadarCard({ driver }: { driver: Driver }) {
   const max = Math.max(1, ...lines.flatMap((l) => l.buckets.map((b) => b.weight)));
   const top = views[0]?.events[0];
   const minutes = rt ? Math.max(0, Math.round((now.getTime() - rt.at.getTime()) / 60_000)) : null;
-  const axis = lines[0]?.buckets.filter((_, i) => i % 2 === 0).map((b) => hhmm(b.start)) ?? [];
+  const axis = lines[0]?.buckets.filter((_, i) => i % 4 === 0).map((b) => hhmm(b.start)) ?? [];
 
   return (
     <section className="bg-white border border-neutral-200 rounded-2xl p-4 sm:p-5">
@@ -84,10 +84,10 @@ export async function RadarCard({ driver }: { driver: Driver }) {
             })}
           </ul>
 
-          {/* Repères d'heure, alignés sur les barres : une heure toutes les deux barres */}
+          {/* Repères d'heure, alignés sur les barres : un toutes les quatre barres (une heure) */}
           <div className="flex gap-3" aria-hidden>
             <span className="flex-1" />
-            <div className="w-32 sm:w-44 shrink-0 grid grid-cols-4 text-[10px] text-neutral-500">
+            <div className="w-32 sm:w-44 shrink-0 grid grid-cols-2 text-[11px] text-neutral-500">
               {axis.map((label) => (
                 <span key={label}>{label}</span>
               ))}

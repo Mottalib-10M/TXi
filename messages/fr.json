@@ -3749,7 +3749,7 @@
       "see": "Voir le radar",
       "noStation": "Aucune gare dans votre zone. Ajoutez-en une dans les réglages du Radar.",
       "source": "source SNCF",
-      "legend": "Arrivées de trains par quart d'heure, 2 prochaines heures",
+      "legend": "Trains attendus, 2 prochaines heures",
       "calmShort": "Calme",
       "more": "+ {count} autres gares dans le radar"
     },
