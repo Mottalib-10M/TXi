@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { Icon } from "@iconify/react";
 import { PlacesAutocomplete } from "@/components/booking/PlacesAutocomplete";
 import { useTranslations } from "next-intl";
 
@@ -49,15 +48,6 @@ export function CoverageZoneEditor({
           icon="solar:map-point-search-linear"
         />
       </div>
-
-      {lat && lng && address && (
-        <div className="bg-neutral-50 border border-neutral-200 rounded-xl p-4">
-          <div className="flex items-center gap-2 text-sm text-neutral-600">
-            <Icon icon="solar:map-point-linear" className="text-neutral-400" />
-            <span>{address}</span>
-          </div>
-        </div>
-      )}
 
       <div>
         <label className="block text-sm font-medium mb-1.5">

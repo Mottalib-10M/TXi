@@ -391,10 +391,10 @@ export default async function DashboardPage() {
           <div className="grid grid-cols-3 gap-3">
             <Link
               href="/dashboard/carte"
-              className="bg-white border border-neutral-200 rounded-xl p-3 text-center hover:border-neutral-300 transition-colors"
+              className="flex flex-col items-center justify-center bg-white border border-neutral-200 rounded-xl p-3 text-center hover:border-neutral-300 transition-colors"
             >
-              <Icon icon="solar:card-2-linear" className="text-amber-600 text-xl mx-auto mb-1" />
-              <span className="text-xs font-medium text-neutral-700">{td("quickLinkCard")}</span>
+              <Icon icon="solar:card-2-linear" className="text-amber-600 text-xl mb-1" />
+              <span className="text-xs font-medium text-neutral-700 leading-tight">{td("quickLinkCard")}</span>
             </Link>
             <QRCodeButton
               slug={driver.slug}
@@ -406,10 +406,10 @@ export default async function DashboardPage() {
             />
             <Link
               href="/dashboard/profil-public"
-              className="bg-white border border-neutral-200 rounded-xl p-3 text-center hover:border-neutral-300 transition-colors"
+              className="flex flex-col items-center justify-center bg-white border border-neutral-200 rounded-xl p-3 text-center hover:border-neutral-300 transition-colors"
             >
-              <Icon icon="solar:eye-linear" className="text-neutral-500 text-xl mx-auto mb-1" />
-              <span className="text-xs font-medium text-neutral-700">{td("quickLinkPublicProfile")}</span>
+              <Icon icon="solar:eye-linear" className="text-neutral-500 text-xl mb-1" />
+              <span className="text-xs font-medium text-neutral-700 leading-tight">{td("quickLinkPublicProfile")}</span>
             </Link>
           </div>
 
@@ -442,10 +442,14 @@ export default async function DashboardPage() {
               {recentBookings.map((b) => (
                 <li key={b.id}>
                   <Link href={`/dashboard/reservations?id=${b.id}`} className="flex items-center gap-4 px-4 py-3 hover:bg-neutral-50 transition-colors">
-                    <span className="w-20 sm:w-32 shrink-0 text-xs text-neutral-500">{formatDate(b.requestedDate)}</span>
+                    <span className="hidden sm:block w-32 shrink-0 text-xs text-neutral-500">{formatDate(b.requestedDate)}</span>
                     <span className="flex-1 min-w-0">
-                      <span className="block text-sm font-medium text-neutral-900 truncate">{b.departureName} → {b.arrivalName}</span>
-                      <span className="block text-xs text-neutral-500 truncate">{b.clientName}</span>
+                      <span className="block text-sm font-medium text-neutral-900 truncate">{b.departureName}</span>
+                      <span className="block text-sm font-medium text-neutral-900 truncate">→ {b.arrivalName}</span>
+                      <span className="block text-xs text-neutral-500 truncate mt-0.5">
+                        <span className="sm:hidden">{formatDate(b.requestedDate)} · </span>
+                        {b.clientName}
+                      </span>
                     </span>
                     <span className={`hidden sm:inline text-xs font-medium px-2 py-0.5 rounded-full shrink-0 ${
                       b.status === "COMPLETED" || b.status === "ACCEPTED" ? "bg-green-50 text-green-700" : "bg-neutral-100 text-neutral-500"

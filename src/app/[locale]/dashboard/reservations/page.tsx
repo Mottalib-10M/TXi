@@ -60,6 +60,7 @@ export default async function ReservationsPage() {
     <div>
       <RidesSwitch active="received">
         <QRCodeButton
+          variant="compact"
           slug={driver.slug}
           driverName={`${driver.firstName} ${driver.lastName}`}
           companyName={driver.companyName || ""}

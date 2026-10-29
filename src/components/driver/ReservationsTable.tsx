@@ -174,7 +174,7 @@ export function ReservationsTable({ bookings, driverName }: { bookings: Booking[
   return (
     <div>
       {/* Filters */}
-      <div className="flex gap-2 mb-6 overflow-x-auto pb-2">
+      <div className="flex gap-2 mb-6 overflow-x-auto pb-2 -mx-4 px-4 sm:mx-0 sm:px-0 [scrollbar-width:none]">
         {[
           { key: "ACTIVE", label: t("pending"), activeClass: "bg-amber-500 text-white", inactiveClass: "bg-amber-50 border border-amber-200 text-amber-700 hover:bg-amber-100" },
           { key: "COMPLETED", label: t("completed"), activeClass: "bg-neutral-600 text-white", inactiveClass: "bg-neutral-100 border border-neutral-200 text-neutral-600 hover:bg-neutral-200" },
@@ -240,12 +240,26 @@ export function ReservationsTable({ bookings, driverName }: { bookings: Booking[
               key={booking.id}
               className={`rounded-2xl p-4 sm:p-5 ${statusStyle}`}
             >
-              {/* Header: name + phone + status + ref */}
-              <div className="flex flex-wrap items-center gap-2 mb-2">
-                <p className="text-sm font-semibold">
+              {/* En-tête : nom et statut, puis téléphone, WhatsApp et itinéraire */}
+              <div className="flex items-start justify-between gap-3 mb-1">
+                <p className="text-sm font-semibold min-w-0">
                   {booking.clientName}
                   {booking.contactIsReferrer && <span className="text-xs font-normal text-violet-600"> · {t("contactReferrer")}</span>}
                 </p>
+                <span
+                  className={`shrink-0 text-xs px-2.5 py-0.5 rounded-full font-medium ${
+                    statusConfig[booking.status]?.color || ""
+                  }`}
+                >
+                  {statusConfig[booking.status]?.label || booking.status}
+                  {booking.status === "CANCELLED" && booking.cancelledBy && (
+                    <span className="ml-1 opacity-70">
+                      ({booking.cancelledBy === "SYSTEM" ? t("bySystem") : booking.cancelledBy === "CLIENT" ? t("byClient") : t("byDriver")})
+                    </span>
+                  )}
+                </span>
+              </div>
+              <div className="flex items-center gap-3 mb-3 min-h-[32px]">
                 {booking.clientPhone && (
                   <>
                     <a
@@ -260,30 +274,18 @@ export function ReservationsTable({ bookings, driverName }: { bookings: Booking[
                     <WhatsAppLink href={buildWhatsAppUrl(booking.clientPhone, getWhatsAppMessage(booking))} context="reservations" bookingId={booking.id} iconClassName="text-sm" />
                   </>
                 )}
-                <span
-                  className={`text-xs px-2.5 py-0.5 rounded-full font-medium ${
-                    statusConfig[booking.status]?.color || ""
-                  }`}
-                >
-                  {statusConfig[booking.status]?.label || booking.status}
-                  {booking.status === "CANCELLED" && booking.cancelledBy && (
-                    <span className="ml-1 opacity-70">
-                      ({booking.cancelledBy === "SYSTEM" ? t("bySystem") : booking.cancelledBy === "CLIENT" ? t("byClient") : t("byDriver")})
-                    </span>
-                  )}
-                </span>
-                <span className="text-xs text-neutral-400">
-                  #{booking.reference}
+                <span className="ml-auto shrink-0">
+                  <MapsLink origin={booking.departureName} destination={booking.arrivalName} />
                 </span>
               </div>
 
-              {/* Route */}
-              <div className="flex items-start gap-2 text-xs text-neutral-500 mb-1.5">
+              {/* Trajet */}
+              <div className="flex items-start gap-2 text-sm text-neutral-800 mb-2">
                 <Icon icon="solar:map-point-linear" className="text-neutral-400 shrink-0 mt-0.5" />
-                <span className="break-words min-w-0 flex-1">
-                  {booking.departureName} → {booking.arrivalName}
+                <span className="break-words min-w-0 flex-1 leading-snug">
+                  <span className="block">{booking.departureName}</span>
+                  <span className="block">→ {booking.arrivalName}</span>
                 </span>
-                <MapsLink origin={booking.departureName} destination={booking.arrivalName} />
               </div>
 
               {/* Metadata */}
@@ -315,6 +317,7 @@ export function ReservationsTable({ bookings, driverName }: { bookings: Booking[
                       ? `via ${booking.organizationName}`
                       : "via TaxiNeo"}
                 </span>
+                <span className="text-neutral-400">#{booking.reference}</span>
                 {today && (isPending || isAccepted) && (
                   <span className="inline-flex items-center gap-1 bg-red-100 text-red-700 text-xs font-semibold px-2 py-0.5 rounded-full">
                     <Icon icon="solar:alarm-bold" className="text-xs" />

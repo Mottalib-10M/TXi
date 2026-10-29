@@ -94,6 +94,7 @@ export default async function MoiPage() {
               <span className="block text-xs text-neutral-500">{t("cardDesc")}</span>
             </Link>
             <QRCodeButton
+              variant="compact"
               slug={driver.slug}
               driverName={fullName}
               companyName={driver.companyName || ""}

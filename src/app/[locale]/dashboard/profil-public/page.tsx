@@ -65,7 +65,7 @@ export default async function ProfilPublicPage() {
               className="inline-flex items-center gap-2 text-sm text-neutral-600 hover:text-neutral-900 border border-neutral-200 bg-white rounded-xl px-3 sm:px-4 py-2.5 hover:border-neutral-300 transition-colors"
             >
               <Icon icon="solar:pen-linear" className="text-base" />
-              <span className="hidden sm:inline">{tc("edit")}</span>
+              <span>{tc("edit")}</span>
             </Link>
             <Link
               href={publicUrl}
@@ -118,8 +118,8 @@ export default async function ProfilPublicPage() {
         </div>
 
         {/* Preview content */}
-        <div className="p-6 lg:p-8">
-          <div className="max-w-2xl mx-auto space-y-6">
+        <div className="p-3 sm:p-6 lg:p-8">
+          <div className="max-w-2xl mx-auto space-y-4 sm:space-y-6">
             <DriverHeader
               firstName={driver.firstName}
               lastName={driver.lastName}

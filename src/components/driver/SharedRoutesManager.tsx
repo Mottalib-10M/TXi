@@ -184,7 +184,7 @@ export function SharedRoutesManager({
               value={departureLocationId}
               onChange={(e) => setDepartureLocationId(e.target.value)}
               required
-              className="w-full border border-neutral-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-neutral-900"
+              className="w-full bg-neutral-100 rounded-xl px-4 py-2.5 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all"
             >
               <option value="">--</option>
               {predefinedLocations.map((l) => (
@@ -203,7 +203,7 @@ export function SharedRoutesManager({
               value={destinationLocationId}
               onChange={(e) => setDestinationLocationId(e.target.value)}
               required
-              className="w-full border border-neutral-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-neutral-900"
+              className="w-full bg-neutral-100 rounded-xl px-4 py-2.5 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all"
             >
               <option value="">--</option>
               {predefinedLocations.map((l) => (
@@ -224,7 +224,7 @@ export function SharedRoutesManager({
               onChange={(e) => setDepartureTime(e.target.value)}
               onClick={(e) => (e.target as HTMLInputElement).showPicker()}
               required
-              className="w-full border border-neutral-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-neutral-900 cursor-pointer"
+              className="w-full bg-neutral-100 rounded-xl px-4 py-2.5 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all cursor-pointer"
             />
           </div>
 
@@ -239,7 +239,7 @@ export function SharedRoutesManager({
               value={totalSeats}
               onChange={(e) => setTotalSeats(Number(e.target.value))}
               required
-              className="w-full border border-neutral-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-neutral-900"
+              className="w-full bg-neutral-100 rounded-xl px-4 py-2.5 text-sm outline-none focus:ring-2 focus:ring-neutral-900 focus:bg-white transition-all"
             />
           </div>
 

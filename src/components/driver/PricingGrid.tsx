@@ -108,10 +108,10 @@ export function PricingGrid({ pricing, onChange, departmentName, zoneAddress, on
 
       {/* Bandeau réglementaire — en bas, après les champs */}
       <div className="bg-blue-50 border border-blue-200 rounded-xl p-3 mt-3">
-        <div className="flex items-start justify-between gap-3">
-          <div className="flex items-start gap-2.5">
+        <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
+          <div className="flex items-start gap-2.5 min-w-0">
             <Icon icon="solar:shield-check-linear" className="text-blue-600 text-lg mt-0.5 shrink-0" />
-            <div>
+            <div className="min-w-0">
               <p className="text-sm font-medium text-blue-900">
                 {t("officialRatesTitle", { year: NATIONAL_TARIFFS.year })}
                 {departmentName && ` — ${departmentName}`}
@@ -146,7 +146,7 @@ export function PricingGrid({ pricing, onChange, departmentName, zoneAddress, on
           <button
             type="button"
             onClick={applyOfficialRates}
-            className="shrink-0 bg-blue-600 text-white text-xs font-medium px-3 py-1.5 rounded-lg hover:bg-blue-700 transition-colors"
+            className="shrink-0 w-full sm:w-auto bg-blue-600 text-white text-sm sm:text-xs font-medium px-3 py-2.5 sm:py-1.5 rounded-xl sm:rounded-lg hover:bg-blue-700 transition-colors"
           >
             {t("applyOfficialRates")}
           </button>

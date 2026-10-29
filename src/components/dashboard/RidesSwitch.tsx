@@ -28,14 +28,14 @@ export async function RidesSwitch({ active, children }: { active: "received" | "
         </div>
         {active === "received" && (
           <div className="flex gap-3 sm:ml-auto">
-          {children}
-          <Link
-            href="/dashboard/p2p#nouvelle-course"
-            className="flex-1 sm:flex-none h-11 px-4 rounded-xl border border-dashed border-neutral-400 bg-white text-sm font-semibold flex items-center justify-center gap-2 hover:border-neutral-900 transition-colors"
-          >
-            <Icon icon="solar:add-circle-linear" className="text-lg" />
-            {t("create")}
-          </Link>
+            {children}
+            <Link
+              href="/dashboard/p2p#nouvelle-course"
+              className="flex-1 sm:flex-none h-11 px-4 rounded-xl border border-dashed border-neutral-400 bg-white text-sm font-semibold flex items-center justify-center gap-2 whitespace-nowrap hover:border-neutral-900 transition-colors"
+            >
+              <Icon icon="solar:add-circle-linear" className="text-lg shrink-0" />
+              {t("create")}
+            </Link>
           </div>
         )}
       </div>

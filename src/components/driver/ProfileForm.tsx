@@ -273,7 +273,7 @@ export function ProfileForm({ driver }: { driver: DriverData }) {
   return (
     <div className="flex flex-col gap-4">
       {/* Form content */}
-      <div className="flex-1 bg-white border border-neutral-200 rounded-2xl p-5">
+      <div className="flex-1 bg-white border border-neutral-200 rounded-2xl p-4 sm:p-5">
         {/* Personal info */}
         {activeSection === "personal" && (
           <div className="space-y-3">
@@ -649,26 +649,29 @@ function VehicleSection({
       {vehicle.brand && (
         <div className="flex items-center p-3.5 gap-3 rounded-xl bg-neutral-50 border border-neutral-100">
           {/* Color dot + car icon */}
-          <VehicleMiniature
-            brand={vehicle.brand}
-            model={vehicle.model}
-            color={vehicle.color}
-            year={vehicle.year}
-            capacity={vehicle.capacity}
-            bare
-          />
+          <div className="min-w-0 flex-1">
+            <VehicleMiniature
+              brand={vehicle.brand}
+              model={vehicle.model}
+              color={vehicle.color}
+              year={vehicle.year}
+              capacity={vehicle.capacity}
+              bare
+            />
+          </div>
           <button
             type="button"
             onClick={() => {
               const el = document.getElementById(`vehicle-photos-${activeTab}`);
               el?.scrollIntoView({ behavior: "smooth", block: "center" });
             }}
+            aria-label={t("addPhoto")}
             className="flex items-center gap-1.5 shrink-0 ml-auto text-xs font-medium bg-neutral-900 text-white px-3 py-2 rounded-lg hover:bg-neutral-800 transition-colors"
           >
             <Icon icon="solar:camera-add-linear" className="text-sm" />
             {vehicle.photos && vehicle.photos.length > 0
               ? `${vehicle.photos.length}/5`
-              : t("addPhoto")
+              : <span className="hidden sm:inline">{t("addPhoto")}</span>
             }
           </button>
         </div>

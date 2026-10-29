@@ -58,8 +58,8 @@ export default async function SharedTaxiDashboardPage({
 
   return (
     <div>
-      <div className="mb-8">
-        <h1 className="text-2xl font-semibold tracking-tight">
+      <div className="mb-6">
+        <h1 className="text-3xl font-bold tracking-tight">
           {t("sharedRidesTitle")}
         </h1>
         <p className="text-sm text-neutral-500 font-light mt-1">

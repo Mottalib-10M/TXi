@@ -70,12 +70,12 @@ export default async function P2PPage() {
     <div className="min-w-0">
       <RidesSwitch active="transmitted" />
       {/* Header */}
-      <div className="flex items-start gap-4 mb-6">
-        <div className="w-12 h-12 bg-violet-100 rounded-2xl flex items-center justify-center shrink-0">
-          <Icon icon="solar:transfer-horizontal-linear" className="text-violet-600 text-2xl" />
+      <div className="flex items-center gap-3 mb-6">
+        <div className="w-10 h-10 bg-violet-100 rounded-xl flex items-center justify-center shrink-0">
+          <Icon icon="solar:transfer-horizontal-linear" className="text-violet-600 text-xl" />
         </div>
-        <div>
-          <h1 className="text-2xl font-semibold tracking-tight">{t("pageTitle")}</h1>
+        <div className="min-w-0">
+          <h2 className="text-lg font-semibold tracking-tight leading-snug">{t("pageTitle")}</h2>
           <p className="text-sm text-neutral-500">{t("pageSubtitle")}</p>
         </div>
         {totalCommission > 0 && (

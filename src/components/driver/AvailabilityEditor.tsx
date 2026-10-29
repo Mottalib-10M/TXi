@@ -97,7 +97,7 @@ export function AvailabilityEditor({
           return (
             <div
               key={day}
-              className={`flex flex-wrap items-center gap-2 sm:gap-3 p-2.5 rounded-xl border transition-colors ${
+              className={`flex items-center gap-2 sm:gap-3 p-2.5 rounded-xl border transition-colors ${
                 isActive ? "border-neutral-200 bg-white" : "border-neutral-100 bg-neutral-50"
               }`}
             >
@@ -113,18 +113,18 @@ export function AvailabilityEditor({
                 <Icon icon={isActive ? "solar:check-read-linear" : "solar:close-circle-linear"} className="text-sm" />
               </button>
 
-              <span className={`text-sm w-20 sm:w-24 ${isActive ? "font-medium" : "text-neutral-400"}`}>
+              <span className={`text-sm flex-1 min-w-0 truncate sm:flex-none sm:w-24 ${isActive ? "font-medium" : "text-neutral-400"}`}>
                 {day}
               </span>
 
               {isActive && slot ? (
-                <div className="flex items-center gap-2 ml-auto">
+                <div className="flex items-center gap-1.5 sm:gap-2 ml-auto shrink-0">
                   <input
                     type="time"
                     value={slot.startTime}
                     onChange={(e) => updateSlot(index, "startTime", e.target.value)}
                     onClick={(e) => (e.target as HTMLInputElement).showPicker()}
-                    className="bg-neutral-100 rounded-lg px-2 sm:px-3 py-1.5 text-sm outline-none focus:ring-2 focus:ring-neutral-900 w-24 cursor-pointer"
+                    className="bg-neutral-100 rounded-lg px-2 sm:px-3 py-1.5 text-sm outline-none focus:ring-2 focus:ring-neutral-900 w-[72px] sm:w-24 text-center cursor-pointer [&::-webkit-calendar-picker-indicator]:hidden sm:[&::-webkit-calendar-picker-indicator]:block"
                   />
                   <span className="text-neutral-400 text-xs">&rarr;</span>
                   <input
@@ -132,7 +132,7 @@ export function AvailabilityEditor({
                     value={slot.endTime}
                     onChange={(e) => updateSlot(index, "endTime", e.target.value)}
                     onClick={(e) => (e.target as HTMLInputElement).showPicker()}
-                    className="bg-neutral-100 rounded-lg px-2 sm:px-3 py-1.5 text-sm outline-none focus:ring-2 focus:ring-neutral-900 w-24 cursor-pointer"
+                    className="bg-neutral-100 rounded-lg px-2 sm:px-3 py-1.5 text-sm outline-none focus:ring-2 focus:ring-neutral-900 w-[72px] sm:w-24 text-center cursor-pointer [&::-webkit-calendar-picker-indicator]:hidden sm:[&::-webkit-calendar-picker-indicator]:block"
                   />
                 </div>
               ) : (

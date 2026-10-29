@@ -80,15 +80,15 @@ export function P2PStats() {
   return (
     <div className="mb-6">
       {/* Period pills */}
-      <div className="flex items-center gap-2 mb-4">
+      <div className="flex flex-wrap items-center gap-2 mb-4">
         <Icon icon="solar:chart-2-linear" className="text-violet-600 text-lg" />
         <h2 className="font-semibold text-sm">{t("statsTitle")}</h2>
-        <div className="flex gap-1 ml-auto">
+        <div className="grid grid-cols-3 gap-1 w-full sm:w-auto sm:ml-auto">
           {periods.map((p) => (
             <button
               key={p.key}
               onClick={() => setPeriod(p.key)}
-              className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors ${
+              className={`px-3 py-1.5 rounded-lg text-xs font-medium whitespace-nowrap transition-colors ${
                 period === p.key
                   ? "bg-violet-600 text-white"
                   : "bg-neutral-100 text-neutral-600 hover:bg-neutral-200"
