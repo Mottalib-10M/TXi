@@ -5,7 +5,7 @@
 import { Icon } from "@iconify/react";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
-import { demandBuckets, followedStations, hhmm, rankStations, realtime, stationView } from "@/lib/radar";
+import { demandBuckets, ensureSchedule, followedStations, hhmm, rankStations, realtime, stationView } from "@/lib/radar";
 
 type Driver = {
   zoneLat: number | null;
@@ -22,7 +22,7 @@ export async function RadarCard({ driver }: { driver: Driver }) {
   const t = await getTranslations("radar");
   const stations = followedStations(driver);
   const now = new Date();
-  const rt = stations.length ? await realtime() : null;
+  const [rt] = await Promise.all([stations.length ? realtime() : null, ensureSchedule(stations.map((s) => s.uic))]);
   const views = rankStations(await Promise.all(stations.map((s) => stationView(s, rt, now, 2))), now);
 
   const lines = views.map((v) => ({ view: v, buckets: demandBuckets(v.rows, now) }));

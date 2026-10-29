@@ -8,7 +8,7 @@ import { getTranslations } from "next-intl/server";
 import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
 import { Link } from "@/i18n/navigation";
-import { clock, followedStations, radarAllowed, rankStations, realtime, stationView, type BoardRow } from "@/lib/radar";
+import { clock, ensureSchedule, followedStations, radarAllowed, rankStations, realtime, stationView, type BoardRow } from "@/lib/radar";
 import { RadarShareButton } from "@/components/radar/RadarShareButton";
 import { TopDriverBadge } from "@/components/radar/TopDriverBadge";
 
@@ -36,7 +36,7 @@ export default async function RadarPage({ searchParams }: { searchParams: { gare
   const t = await getTranslations("radar");
   const stations = followedStations(driver);
   const now = new Date();
-  const rt = await realtime();
+  const [rt] = await Promise.all([realtime(), ensureSchedule(stations.map((s) => s.uic))]);
   // Toutes les gares suivies, de la plus intéressante à la plus calme ; sans choix, on ouvre la première.
   const views = rankStations(await Promise.all(stations.map((s) => stationView(s, rt, now))), now);
   const view = views.find((v) => v.station.uic === searchParams.gare) ?? views[0] ?? null;

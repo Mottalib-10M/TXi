@@ -9,6 +9,7 @@ import { notifyDriver } from "@/lib/push";
 import {
   RADAR_TESTERS,
   TOP_DRIVER_HEAD_START_MS,
+  ensureSchedule,
   followedStations,
   parisToUtc,
   parisDay,
@@ -43,6 +44,8 @@ export async function GET(request: NextRequest) {
   });
 
   let created = 0;
+  // Gares dont les horaires ne sont pas encore chargés (zone changée dans la journée).
+  await ensureSchedule(Array.from(new Set(drivers.flatMap((d) => followedStations(d).map((s) => s.uic)))));
   const rt = drivers.length ? await realtime() : null;
   if (rt) {
     // Événements de chaque gare suivie, calculés une seule fois.

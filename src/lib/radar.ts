@@ -265,6 +265,21 @@ export async function rebuildSchedule(stationUics: string[]) {
   return { stations: wanted.size, arrivals: rows.length };
 }
 
+/**
+ * Charge tout de suite les horaires des gares qui n'en ont pas encore pour aujourd'hui
+ * (zone changée, gare ajoutée), sans attendre la nuit. Ne lève jamais d'erreur.
+ */
+export async function ensureSchedule(stationUics: string[]) {
+  if (!stationUics.length) return;
+  const loaded = await prisma.radarArrival.findMany({
+    where: { stationUic: { in: stationUics }, serviceDate: parisDay(Date.now()) },
+    distinct: ["stationUic"],
+    select: { stationUic: true },
+  });
+  const missing = stationUics.filter((u) => !loaded.some((l) => l.stationUic === u));
+  if (missing.length) await rebuildSchedule(missing).catch((error) => console.error("[radar] horaires", error));
+}
+
 // ---------------------------------------------------------------------------
 // Direct
 

@@ -4,7 +4,7 @@
 import { NextResponse } from "next/server";
 import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
-import { radarAllowed, rebuildSchedule, searchStations, stationByUic, zoneStations } from "@/lib/radar";
+import { ensureSchedule, radarAllowed, searchStations, stationByUic, zoneStations } from "@/lib/radar";
 
 export const maxDuration = 60;
 
@@ -64,11 +64,7 @@ export async function PUT(request: Request) {
   });
 
   // Nouvelle gare hors zone : ses horaires sont chargés tout de suite, sans attendre la nuit.
-  const added = (extra ?? []).filter((u) => !driver.radarExtraStations.includes(u));
-  if (added.length) {
-    const known = await prisma.radarArrival.findFirst({ where: { stationUic: { in: added } }, select: { id: true } });
-    if (!known) await rebuildSchedule(added).catch((error) => console.error("[radar] horaires", error));
-  }
+  await ensureSchedule(updated.radarExtraStations);
 
   return NextResponse.json(settings(updated));
 }
