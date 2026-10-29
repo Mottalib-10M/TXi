@@ -10,7 +10,6 @@ import { WhatsAppLink } from "@/components/ui/WhatsAppLink";
 import { getTranslations, getLocale } from "next-intl/server";
 import { contactForDriver } from "@/lib/p2p";
 import { escalateIfDue } from "@/lib/escalation";
-import { driverProfileChecks } from "@/lib/driver-profile";
 import { Suspense } from "react";
 import { radarAllowed } from "@/lib/radar";
 import { RadarCard } from "@/components/radar/RadarCard";
@@ -103,10 +102,8 @@ export default async function DashboardPage() {
   const nextRide = activeBookings.find((b) => b.status === "ACCEPTED" && new Date(b.requestedDate).getTime() > now.getTime() - 60 * 60 * 1000);
   const showRadar = radarAllowed(driver.email);
 
-  // Profile completeness
   const vehicles = Array.isArray(driver.vehicles) ? (driver.vehicles as Array<{ brand?: string; model?: string }>) : [];
   const v0 = vehicles[0];
-  const { completeness, missing: missingChecks } = driverProfileChecks(driver);
 
   function formatDate(date: Date) {
     return new Date(date).toLocaleDateString(locale === "en" ? "en-US" : "fr-FR", {
@@ -314,40 +311,6 @@ export default async function DashboardPage() {
 
         {/* Colonne de droite (sous les demandes sur mobile) */}
         <aside className="space-y-4 min-w-0 lg:col-start-3 lg:row-start-1">
-          {missingChecks.length > 0 && (
-            <div className="bg-white border border-neutral-200 rounded-2xl p-4">
-              <div className="flex items-center justify-between gap-2 mb-2">
-                <h2 className="text-sm font-semibold">{td("profileFilled", { percent: completeness })}</h2>
-                <span className="text-xs text-neutral-500">
-                  {missingChecks.length === 1
-                    ? td("missingInfo", { count: missingChecks.length })
-                    : td("missingInfoPlural", { count: missingChecks.length })}
-                </span>
-              </div>
-              <div className="w-full h-1.5 bg-neutral-100 rounded-full mb-3">
-                <div className="h-1.5 bg-amber-400 rounded-full" style={{ width: `${completeness}%` }} />
-              </div>
-              <div className="space-y-1">
-                {missingChecks.map((check) => (
-                  <Link
-                    key={check.key}
-                    href={`/dashboard/profil?section=${check.section}`}
-                    className="flex items-center gap-3 p-2 rounded-xl hover:bg-amber-50 transition-colors group"
-                  >
-                    <span className="w-8 h-8 bg-amber-100 rounded-lg flex items-center justify-center shrink-0">
-                      <Icon icon={check.icon} className="text-amber-600 text-base" />
-                    </span>
-                    <span className="flex-1 min-w-0">
-                      <span className="block text-sm text-neutral-800 font-medium">{td(check.key)}</span>
-                      {check.hint && <span className="block text-xs text-neutral-500 font-light">{td(check.hint)}</span>}
-                    </span>
-                    <span className="text-xs text-amber-700 font-medium shrink-0">{td("complete")}</span>
-                  </Link>
-                ))}
-              </div>
-            </div>
-          )}
-
           <div className="grid grid-cols-3 gap-3">
             <Link
               href="/dashboard/carte"

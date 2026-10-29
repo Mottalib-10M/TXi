@@ -12,6 +12,7 @@ import { MenuRows } from "@/components/layout/MenuRows";
 import { initials } from "@/lib/initials";
 import { driverProfileChecks } from "@/lib/driver-profile";
 import { DRIVER_SETTINGS } from "@/lib/driver-settings";
+import { ProfileCompletionCard } from "@/components/driver/ProfileCompletionCard";
 
 // Onglet « Moi » du chauffeur : toutes les pages de réglage à un appui
 // (profil, véhicules, tarifs, zone, horaires, carte, page publique, parrainage, compte).
@@ -67,21 +68,8 @@ export default async function MoiPage() {
             <Icon icon="solar:pen-linear" className="text-neutral-400 shrink-0" />
           </Link>
 
-          {/* Ce qui manque encore */}
-          {missing.length > 0 && (
-            <Link
-              href={`/dashboard/profil?section=${missing[0].section}`}
-              className="flex items-center gap-3 bg-amber-50 border border-amber-200 rounded-2xl px-4 py-3 hover:border-amber-300 transition-colors"
-            >
-              <span className="flex-1 min-w-0">
-                <span className="block text-sm font-semibold">{td("profileFilled", { percent: completeness })}</span>
-                <span className="block text-xs text-neutral-600 truncate">
-                  {t("toAdd")} {missing.map((c) => td(c.key).toLowerCase()).join(", ")}
-                </span>
-              </span>
-              <Icon icon="solar:alt-arrow-right-linear" className="text-amber-600 shrink-0" />
-            </Link>
-          )}
+          {/* Ce qui manque encore, avec un lien par information */}
+          <ProfileCompletionCard completeness={completeness} missing={missing} />
 
           {/* Carte de visite */}
           <Link
