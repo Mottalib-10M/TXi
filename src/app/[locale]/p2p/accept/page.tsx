@@ -54,6 +54,7 @@ export default function P2PAcceptPage() {
 
   const [booking, setBooking] = useState<BookingInfo | null>(null);
   const [needsAuth, setNeedsAuth] = useState(false);
+  const [needsVerification, setNeedsVerification] = useState(false);
   const [driverFirstName, setDriverFirstName] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
@@ -78,6 +79,7 @@ export default function P2PAcceptPage() {
         const data = await res.json();
         setBooking(data.booking);
         setNeedsAuth(data.needsAuth);
+        setNeedsVerification(Boolean(data.needsVerification));
         setDriverFirstName(data.driverFirstName ?? null);
       })
       .catch(() => setError(t("loadError")))
@@ -99,7 +101,8 @@ export default function P2PAcceptPage() {
       const data = await res.json();
 
       if (!res.ok) {
-        setError(data.error || t("acceptError"));
+        if (data.code === "NOT_VERIFIED") setNeedsVerification(true);
+        else setError(data.error || t("acceptError"));
         return;
       }
 
@@ -166,6 +169,9 @@ export default function P2PAcceptPage() {
   if (!booking) return null;
 
   const redirectPath = `/p2p/accept?token=${token}`;
+  // Avant l'acceptation, la ville ou le lieu public ; après, l'adresse exacte.
+  const departureName = acceptedData?.booking.departureName ?? booking.departureName;
+  const arrivalName = acceptedData?.booking.arrivalName ?? booking.arrivalName;
 
   return (
     <div className="min-h-screen bg-neutral-50 flex items-center justify-center p-4">
@@ -194,12 +200,12 @@ export default function P2PAcceptPage() {
         <div className="space-y-3 mb-6">
           <div className="flex items-center gap-2 text-sm">
             <Icon icon="solar:map-point-linear" className="text-neutral-400 shrink-0" />
-            <span className="font-medium">{booking.departureName}</span>
+            <span className="font-medium">{departureName}</span>
           </div>
           <div className="flex items-center gap-2 text-sm">
             <Icon icon="solar:flag-linear" className="text-neutral-400 shrink-0" />
-            <span className="font-medium flex-1 min-w-0">{booking.arrivalName}</span>
-            <MapsLink origin={booking.departureName} destination={booking.arrivalName} />
+            <span className="font-medium flex-1 min-w-0">{arrivalName}</span>
+            <MapsLink origin={departureName} destination={arrivalName} />
           </div>
           <div className="flex items-center gap-2 text-sm">
             <Icon icon="solar:calendar-linear" className="text-neutral-400 shrink-0" />
@@ -222,6 +228,12 @@ export default function P2PAcceptPage() {
               <Icon icon="solar:hand-money-linear" className="text-neutral-400 shrink-0" />
               <span>{t("commissionFor", { name: booking.referrerDriverName })} : {booking.p2pCommissionAmount} € ({Math.round((booking.p2pCommissionRate || 0) * 100)}%)</span>
             </div>
+          )}
+          {!accepted && !booking.alreadyAccepted && (
+            <p className="flex items-center gap-2 text-xs text-neutral-500 pt-1">
+              <Icon icon="solar:lock-keyhole-minimalistic-linear" className="text-sm shrink-0" />
+              {t("exactAfter")}
+            </p>
           )}
         </div>
 
@@ -281,6 +293,17 @@ export default function P2PAcceptPage() {
             >
               <Icon icon="solar:user-plus-linear" className="text-lg" />
               {t("signup")}
+            </Link>
+          </div>
+        ) : needsVerification ? (
+          <div className="space-y-3">
+            <p className="text-sm text-neutral-600 text-center">{t("needsVerification")}</p>
+            <Link
+              href="/dashboard"
+              className="flex items-center justify-center gap-2 w-full bg-neutral-900 text-white font-semibold py-3 rounded-xl hover:bg-neutral-800 transition-colors"
+            >
+              <Icon icon="solar:shield-check-linear" className="text-lg" />
+              {t("completeAccount")}
             </Link>
           </div>
         ) : (

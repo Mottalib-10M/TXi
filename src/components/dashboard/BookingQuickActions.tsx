@@ -5,8 +5,10 @@ import { useRouter } from "@/i18n/navigation";
 import { useLocale, useTranslations } from "next-intl";
 import { Icon } from "@iconify/react";
 import { trackBookingAction } from "@/lib/analytics";
+import { RefuseRideDialog } from "@/components/dashboard/RefuseRideDialog";
 
 type Action = "ACCEPTED" | "REJECTED";
+
 
 export function BookingQuickActions({ bookingId }: { bookingId: string }) {
   const t = useTranslations("dashboard");
@@ -15,9 +17,8 @@ export function BookingQuickActions({ bookingId }: { bookingId: string }) {
   const [updating, setUpdating] = useState<string | null>(null);
   const [confirm, setConfirm] = useState<Action | null>(null);
 
-  async function updateStatus(status: Action) {
-    const actionMap = { ACCEPTED: "accept", REJECTED: "reject" } as const;
-    trackBookingAction({ action: actionMap[status], bookingId });
+  async function updateStatus(status: "ACCEPTED") {
+    trackBookingAction({ action: "accept", bookingId });
     setUpdating(status);
     setConfirm(null);
     try {
@@ -57,8 +58,13 @@ export function BookingQuickActions({ bookingId }: { bookingId: string }) {
         </button>
       </span>
 
+      {/* Refus : passer la course à un collègue, ou refuser simplement */}
+      {confirm === "REJECTED" && (
+        <RefuseRideDialog bookingId={bookingId} onClose={() => setConfirm(null)} onDone={() => { setConfirm(null); router.refresh(); }} />
+      )}
+
       {/* Confirmation modal */}
-      {confirm && (
+      {confirm === "ACCEPTED" && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/30 backdrop-blur-sm"
           onClick={(e) => { e.preventDefault(); e.stopPropagation(); setConfirm(null); }}
@@ -89,7 +95,7 @@ export function BookingQuickActions({ bookingId }: { bookingId: string }) {
                 {t("cancel")}
               </button>
               <button
-                onClick={(e) => { e.preventDefault(); e.stopPropagation(); updateStatus(confirm); }}
+                onClick={(e) => { e.preventDefault(); e.stopPropagation(); updateStatus("ACCEPTED"); }}
                 className={`px-4 py-2 text-sm font-semibold text-white rounded-lg transition-colors ${
                   confirm === "ACCEPTED"
                     ? "bg-green-600 hover:bg-green-700"

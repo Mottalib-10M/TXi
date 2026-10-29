@@ -871,7 +871,22 @@
     "sharedRidesTitle": "Shared taxi",
     "sharedRidesSubtitle": "Shared rides you offer or join",
     "publicHidden": "Your profile is hidden",
-    "publicHiddenDesc": "Your public page is not visible: clients see “Driver not found” and you don't receive new rides. Contact TaxiNeo to reactivate it."
+    "publicHiddenDesc": "Your public page is not visible: clients see “Driver not found” and you don't receive new rides. Contact TaxiNeo to reactivate it.",
+    "refuse": {
+      "title": "Decline this ride?",
+      "desc": "Rather than letting it go, pass it on to a colleague you trust.",
+      "share": "Pass it to a colleague",
+      "shareDesc": "They get the town, time and price. The client is only revealed to the verified driver who accepts.",
+      "reject": "Just decline",
+      "rejectDesc": "Taxineo offers it to other drivers in the area.",
+      "cancel": "Cancel",
+      "error": "The ride could not be updated. Please try again.",
+      "sharedTitle": "Send it to a colleague",
+      "sharedDesc": "The first verified driver to accept takes the ride. You'll be notified as soon as it's taken.",
+      "privacy": "The client's name, number and exact address are not in the message.",
+      "referent": "Every ride you pass on counts towards becoming your town's lead driver.",
+      "done": "Done"
+    }
   },
   "p2pAccept": {
     "rideProposal": "Ride proposal",
@@ -895,7 +910,10 @@
     "acceptError": "Error accepting the ride",
     "selfAcceptError": "You cannot accept your own ride",
     "commissionFor": "{name}'s commission",
-    "contactReferrer": "Contact {name}"
+    "contactReferrer": "Contact {name}",
+    "needsVerification": "Your account must be verified, with your professional card, to take a ride.",
+    "completeAccount": "Complete my account",
+    "exactAfter": "Exact addresses and client details after you accept."
   },
   "org": {
     "sidebar": {

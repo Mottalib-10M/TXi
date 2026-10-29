@@ -1,3 +1,4 @@
+import { randomUUID } from "crypto";
 import { NextResponse } from "next/server";
 import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
@@ -5,10 +6,7 @@ import { notifyBookingClient, notifyDriver } from "@/lib/push";
 import { haversineDistance } from "@/lib/geo";
 import {
   sendEmail,
-  buildBookingAcceptedClientEmail,
-  buildBookingAcceptedDriverEmail,
   buildDriverNotificationEmail,
-  buildEscalationResolvedEmail,
   buildCancelledByDriverClientEmail,
 } from "@/lib/email";
 import { sendSms } from "@/lib/sms";
@@ -17,7 +15,8 @@ import { format } from "date-fns";
 import { fr } from "date-fns/locale";
 import { driverPool, isDemoEmail } from "@/lib/demo";
 import { excludedDriversFor } from "@/lib/moderation";
-import { contactForDriver } from "@/lib/p2p";
+import { generalPlace } from "@/lib/p2p";
+import { ACCEPTED_BOOKING_INCLUDE, sendAcceptedNotices } from "@/lib/booking-accepted";
 
 export async function PATCH(
   request: Request,
@@ -40,10 +39,7 @@ export async function PATCH(
     // Verify the booking belongs to this driver OR the driver is invited
     const booking = await prisma.booking.findUnique({
       where: { id: params.id },
-      include: {
-        organization: { select: { email: true, phone: true, contactName: true, name: true } },
-        referrerDriver: { select: { firstName: true, lastName: true, phone: true, email: true } },
-      },
+      include: ACCEPTED_BOOKING_INCLUDE,
     });
 
     if (!booking) {
@@ -210,118 +206,16 @@ export async function PATCH(
         metadata: { bookingId: booking.id, reference: booking.reference, driverId: session.user.id },
       });
 
-      // Notify other drivers that the ride is taken
-      try {
-        const otherDriverIds = [
-          ...(booking.driverId && booking.driverId !== session.user.id ? [booking.driverId] : []),
-          ...booking.invitedDriverIds.filter((id) => id !== session.user.id),
-        ];
-
-        if (otherDriverIds.length > 0) {
-          const otherDrivers = await prisma.driver.findMany({
-            where: { id: { in: otherDriverIds } },
-            select: { firstName: true, email: true, notifyEmail: true },
-          });
-
-          for (const d of otherDrivers) {
-            if (d.notifyEmail) {
-              const mail = buildEscalationResolvedEmail({
-                driverName: d.firstName,
-                reference: booking.reference,
-                locale,
-              });
-              await sendEmail({ to: d.email, ...mail });
-            }
-          }
-        }
-      } catch (error) {
-        console.error("Failed to notify other drivers:", error);
-      }
-
-      // Send acceptance emails to client & driver
-      try {
-        const driver = await prisma.driver.findUnique({
-          where: { id: session.user.id },
-          select: { firstName: true, lastName: true, phone: true, email: true },
-        });
-
-        if (driver) {
-          const dateLocale = locale === "en" ? "en-US" : "fr-FR";
-          const dateFormatted = new Date(booking.requestedDate).toLocaleDateString(dateLocale, {
-            weekday: "long",
-            day: "numeric",
-            month: "long",
-            year: "numeric",
-            hour: "2-digit",
-            minute: "2-digit",
-          });
-          const driverFullName = `${driver.firstName} ${driver.lastName}`;
-
-          const isOrgBooking = Boolean(booking.organization);
-          // Course transmise ouverte aux chauffeurs proches : le contact est le chauffeur qui l'a transmise.
-          const p2pContact = contactForDriver(booking, session.user.id, booking.referrerDriver);
-          const clientEmailTo = isOrgBooking ? booking.organization!.email : booking.clientEmail;
-          const clientDisplayName = isOrgBooking
-            ? booking.organization!.contactName
-            : booking.clientName;
-          const contactPhone = isOrgBooking
-            ? booking.organization!.phone
-            : p2pContact.clientPhone;
-          const contactEmail = isOrgBooking
-            ? booking.organization!.email
-            : p2pContact.clientEmail;
-
-          // Email to client/org
-          const clientMail = buildBookingAcceptedClientEmail({
-            clientName: clientDisplayName,
-            departure: booking.departureName,
-            arrival: booking.arrivalName,
-            date: dateFormatted,
-            reference: booking.reference,
-            driverName: driverFullName,
-            driverPhone: driver.phone,
-            driverEmail: driver.email,
-            bookingId: booking.id,
-            isOrgBooking,
-            price: booking.lockedPrice,
-            locale,
-          });
-          // Course transmise : pas d'e-mail client (le chauffeur qui l'a transmise est prévenu ci-dessous).
-          if (clientEmailTo) await sendEmail({ to: clientEmailTo, ...clientMail });
-          await notifyBookingClient(booking, "accepted", { from: booking.departureName, to: booking.arrivalName, date: booking.requestedDate, driver: driverFullName });
-
-          // Email to driver
-          const driverMail = buildBookingAcceptedDriverEmail({
-            driverName: driver.firstName,
-            clientName: isOrgBooking
-              ? `${booking.clientName} (${booking.organization!.name})`
-              : p2pContact.clientName,
-            clientPhone: contactPhone,
-            clientEmail: contactEmail,
-            departure: booking.departureName,
-            arrival: booking.arrivalName,
-            date: dateFormatted,
-            reference: booking.reference,
-            bookingId: booking.id,
-            price: booking.lockedPrice,
-            locale,
-          });
-          await sendEmail({ to: driver.email, ...driverMail });
-
-          // Course transmise prise par un chauffeur proche : celui qui l'a transmise est prévenu (il garde sa commission).
-          if (booking.source === "P2P" && booking.referrerDriverId && booking.referrerDriverId !== session.user.id) {
-            await notifyDriver(booking.referrerDriverId, "p2pAccepted", { from: booking.departureName, to: booking.arrivalName, date: booking.requestedDate, driver: driverFullName }, "/dashboard/p2p");
-          }
-        }
-      } catch (error) {
-        console.error("Failed to send acceptance emails:", error);
-      }
+      await sendAcceptedNotices(booking, session.user.id, locale);
 
       return NextResponse.json({ message: "Statut mis à jour" });
     }
 
     // --- REJECTED ---
     if (status === "REJECTED") {
+      // « Passer à un collègue » : la course garde un lien à partager (sans les coordonnées du client).
+      const share = body.share === true && booking.status === "PENDING" ? await shareRide(booking, session.user.id) : null;
+
       // Case 1: Invited driver rejects -> just remove from invitedDriverIds
       if (isInvitedDriver && !isOriginalDriver) {
         await prisma.booking.update({
@@ -330,7 +224,7 @@ export async function PATCH(
             invitedDriverIds: booking.invitedDriverIds.filter((id) => id !== session.user.id),
           },
         });
-        return NextResponse.json({ message: "Statut mis à jour" });
+        return NextResponse.json({ message: "Statut mis à jour", share });
       }
 
       // Case 2: Original driver rejects (phase 0) -> escalate immediately
@@ -417,7 +311,13 @@ export async function PATCH(
         }
 
         // Do NOT send rejection email to client
-        return NextResponse.json({ message: "Statut mis à jour" });
+        return NextResponse.json({ message: "Statut mis à jour", share });
+      }
+
+      // Case 3 passée à un collègue : elle reste ouverte, le client n'est pas prévenu d'un refus.
+      if (share) {
+        await prisma.booking.update({ where: { id: params.id }, data: { driverId: null } });
+        return NextResponse.json({ message: "Statut mis à jour", share });
       }
 
       // Case 3: Original driver rejects in later phases -> just set status
@@ -486,6 +386,28 @@ export async function PATCH(
       { status: 500 }
     );
   }
+}
+
+/** Lien de la course à partager ; adresses ramenées à la ville tant que personne ne l'a acceptée. */
+async function shareRide(
+  booking: { id: string; source: string; p2pToken: string | null; sharedByDriverId: string | null; departureName: string; arrivalName: string; requestedDate: Date; lockedPrice: number | null; estimatedPrice: number | null },
+  driverId: string
+) {
+  const p2pToken = booking.p2pToken ?? randomUUID();
+  await prisma.booking.update({
+    where: { id: booking.id },
+    // Course transmise (P2P) : elle a déjà son chauffeur d'origine (referrerDriverId).
+    data: booking.source === "P2P" ? { p2pToken } : { p2pToken, sharedByDriverId: booking.sharedByDriverId ?? driverId, sharedAt: new Date() },
+  });
+  const driver = await prisma.driver.findUnique({ where: { id: driverId }, select: { firstName: true } });
+  return {
+    p2pToken,
+    departureName: generalPlace(booking.departureName),
+    arrivalName: generalPlace(booking.arrivalName),
+    requestedDate: booking.requestedDate.toISOString(),
+    lockedPrice: booking.lockedPrice ?? booking.estimatedPrice,
+    sharerFirstName: driver?.firstName ?? "",
+  };
 }
 
 async function notifyAdmin(booking: {

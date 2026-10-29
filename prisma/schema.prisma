@@ -203,6 +203,10 @@ model Booking {
   // Ouverte aux chauffeurs proches faute de réponse du collègue en 30 min (src/lib/escalation.ts) :
   // les chauffeurs invités voient alors le chauffeur qui a transmis comme contact, pas le client.
   p2pOpenedAt          DateTime?
+  // Course Taxineo refusée et passée à un collègue (« Passer à un collègue ») : le lien
+  // p2pToken est partagé, sans les coordonnées du client ; compte pour le chauffeur référent.
+  sharedByDriverId     String?
+  sharedAt             DateTime?
 
   // Rappels de la course acceptée (src/app/api/cron/ride-reminders) : la veille au soir et une heure avant
   reminderEveSentAt  DateTime?

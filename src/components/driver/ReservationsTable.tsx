@@ -9,6 +9,7 @@ import { fr, enUS } from "date-fns/locale";
 import { useTranslations, useLocale } from "next-intl";
 import { trackBookingAction } from "@/lib/analytics";
 import { WhatsAppLink } from "@/components/ui/WhatsAppLink";
+import { RefuseRideDialog } from "@/components/dashboard/RefuseRideDialog";
 
 interface Booking {
   id: string;
@@ -55,6 +56,7 @@ export function ReservationsTable({ bookings, driverName }: { bookings: Booking[
   const router = useRouter();
   const [filter, setFilter] = useState<string>("ACTIVE");
   const [updating, setUpdating] = useState<string | null>(null);
+  const [refusing, setRefusing] = useState<string | null>(null);
   const [confirmModal, setConfirmModal] = useState<{
     bookingId: string;
     title: string;
@@ -370,7 +372,7 @@ export function ReservationsTable({ bookings, driverName }: { bookings: Booking[
                     {t("accept")}
                   </button>
                   <button
-                    onClick={() => updateStatus(booking.id, "REJECTED")}
+                    onClick={() => setRefusing(booking.id)}
                     disabled={updating === booking.id}
                     className="text-xs text-neutral-400 hover:text-red-600 transition-colors disabled:opacity-50"
                   >
@@ -438,6 +440,10 @@ export function ReservationsTable({ bookings, driverName }: { bookings: Booking[
             </div>
           </div>
         </div>
+      )}
+
+      {refusing && (
+        <RefuseRideDialog bookingId={refusing} onClose={() => setRefusing(null)} onDone={() => { setRefusing(null); router.refresh(); }} />
       )}
     </div>
   );

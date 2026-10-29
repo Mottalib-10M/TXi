@@ -871,7 +871,22 @@
     "sharedRidesTitle": "Taxi partagé",
     "sharedRidesSubtitle": "Les trajets partagés que vous proposez ou rejoignez",
     "publicHidden": "Votre profil est masqué",
-    "publicHiddenDesc": "Votre page publique n'est pas visible : les clients voient « Chauffeur introuvable » et vous ne recevez pas de nouvelles courses. Contactez TaxiNeo pour la réactiver."
+    "publicHiddenDesc": "Votre page publique n'est pas visible : les clients voient « Chauffeur introuvable » et vous ne recevez pas de nouvelles courses. Contactez TaxiNeo pour la réactiver.",
+    "refuse": {
+      "title": "Refuser cette course ?",
+      "desc": "Plutôt que de la laisser filer, passez-la à un collègue de confiance.",
+      "share": "La passer à un collègue",
+      "shareDesc": "Il reçoit la ville, l'heure et le prix. Le client n'est donné qu'au chauffeur validé qui l'accepte.",
+      "reject": "Refuser simplement",
+      "rejectDesc": "Taxineo la propose aux autres chauffeurs du secteur.",
+      "cancel": "Annuler",
+      "error": "La course n'a pas pu être mise à jour. Réessayez.",
+      "sharedTitle": "Envoyez-la à un collègue",
+      "sharedDesc": "Le premier chauffeur validé qui accepte prend la course. Vous êtes prévenu dès qu'elle est prise.",
+      "privacy": "Ni le nom, ni le numéro, ni l'adresse exacte du client ne figurent dans le message.",
+      "referent": "Chaque course passée à un collègue compte pour devenir chauffeur référent de votre ville.",
+      "done": "Terminé"
+    }
   },
   "p2pAccept": {
     "rideProposal": "Course proposée",
@@ -895,7 +910,10 @@
     "acceptError": "Erreur lors de l'acceptation",
     "selfAcceptError": "Vous ne pouvez pas accepter votre propre course",
     "commissionFor": "Commission de {name}",
-    "contactReferrer": "Contacter {name}"
+    "contactReferrer": "Contacter {name}",
+    "needsVerification": "Votre compte doit être validé, avec votre carte professionnelle, pour prendre une course.",
+    "completeAccount": "Compléter mon compte",
+    "exactAfter": "Adresses exactes et client après acceptation."
   },
   "org": {
     "sidebar": {

@@ -1,11 +1,22 @@
 import { NextResponse } from "next/server";
-import { isBlockedBetweenDrivers } from "@/lib/moderation";
+import { excludedDriversFor, isBlockedBetweenDrivers } from "@/lib/moderation";
 import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
 import { notifyDriver } from "@/lib/push";
 import { createNotification } from "@/lib/notifications";
 import { escalateIfDue } from "@/lib/escalation";
-import { contactForDriver } from "@/lib/p2p";
+import { contactForDriver, generalPlace } from "@/lib/p2p";
+import { ACCEPTED_BOOKING_INCLUDE, sendAcceptedNotices } from "@/lib/booking-accepted";
+
+// Lien d'une course proposée à un collègue : course transmise (P2P, src/app/api/driver/p2p)
+// ou course Taxineo refusée et « passée à un collègue » (PATCH driver/bookings, share).
+// Avant l'acceptation, seules la ville ou le lieu public, la date et le prix sont montrés ;
+// le client n'est donné qu'au chauffeur qui accepte, validé et avec sa carte pro.
+
+/** Chauffeur qui peut prendre une course par lien : compte validé, carte pro déposée, pas suspendu. */
+function canTakeRides(driver: { isVerified: boolean; carteProUrl: string | null; suspendedAt: Date | null } | null) {
+  return Boolean(driver?.isVerified && driver.carteProUrl && !driver.suspendedAt);
+}
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
@@ -27,10 +38,12 @@ export async function GET(request: Request) {
         arrivalName: true,
         requestedDate: true,
         lockedPrice: true,
+        estimatedPrice: true,
         estimatedDistance: true,
         status: true,
         source: true,
         driverId: true,
+        sharedByDriverId: true,
         p2pCommissionRate: true,
         p2pCommissionAmount: true,
         referrerDriver: {
@@ -39,7 +52,7 @@ export async function GET(request: Request) {
       },
     });
 
-    if (!booking || booking.source !== "P2P") {
+    if (!booking) {
       return NextResponse.json({ error: "Course introuvable" }, { status: 404 });
     }
 
@@ -47,29 +60,36 @@ export async function GET(request: Request) {
     const isDriver = session?.user?.role === "driver";
 
     let driverFirstName: string | null = null;
+    let needsVerification = false;
     if (isDriver && session?.user?.id) {
       const driver = await prisma.driver.findUnique({
         where: { id: session.user.id },
-        select: { firstName: true },
+        select: { firstName: true, isVerified: true, carteProUrl: true, suspendedAt: true },
       });
       driverFirstName = driver?.firstName ?? null;
+      needsVerification = !canTakeRides(driver);
     }
+
+    const sharer = booking.source === "P2P" ? booking.referrerDriver : booking.sharedByDriverId
+      ? await prisma.driver.findUnique({ where: { id: booking.sharedByDriverId }, select: { firstName: true, lastName: true } })
+      : null;
 
     return NextResponse.json({
       booking: {
         id: booking.id,
-        departureName: booking.departureName,
-        arrivalName: booking.arrivalName,
+        departureName: generalPlace(booking.departureName),
+        arrivalName: generalPlace(booking.arrivalName),
         requestedDate: booking.requestedDate,
-        lockedPrice: booking.lockedPrice,
+        lockedPrice: booking.lockedPrice ?? booking.estimatedPrice,
         estimatedDistance: booking.estimatedDistance,
         p2pCommissionRate: booking.p2pCommissionRate,
         p2pCommissionAmount: booking.p2pCommissionAmount,
-        referrerDriverName: `${booking.referrerDriver?.firstName ?? ""} ${booking.referrerDriver?.lastName ?? ""}`.trim(),
+        referrerDriverName: `${sharer?.firstName ?? ""} ${sharer?.lastName ?? ""}`.trim(),
         alreadyAccepted: booking.status !== "PENDING",
         status: booking.status,
       },
       needsAuth: !isDriver,
+      needsVerification,
       driverFirstName,
     });
   } catch (error) {
@@ -91,27 +111,45 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Token manquant" }, { status: 400 });
     }
 
-    // Prevent referrer from accepting their own ride
+    const taker = await prisma.driver.findUnique({
+      where: { id: session.user.id },
+      select: { isVerified: true, carteProUrl: true, suspendedAt: true },
+    });
+    if (!canTakeRides(taker)) {
+      return NextResponse.json(
+        { error: "Votre compte doit être validé, avec votre carte professionnelle, pour prendre une course.", code: "NOT_VERIFIED" },
+        { status: 403 }
+      );
+    }
+
+    // Course telle qu'elle est avant l'acceptation (chauffeurs déjà sollicités, avis au client).
     const existing = await prisma.booking.findUnique({
       where: { p2pToken: token },
-      select: { referrerDriverId: true },
+      include: ACCEPTED_BOOKING_INCLUDE,
     });
-    if (existing?.referrerDriverId === session.user.id) {
+    if (!existing) {
+      return NextResponse.json({ error: "Course déjà prise ou introuvable" }, { status: 409 });
+    }
+    // Prevent referrer from accepting their own ride
+    if (existing.referrerDriverId === session.user.id || existing.sharedByDriverId === session.user.id) {
       return NextResponse.json(
         { error: "Vous ne pouvez pas accepter votre propre course" },
         { status: 403 }
       );
     }
-    // Chauffeurs bloqués entre eux (src/lib/moderation.ts) : pas de course transmise.
-    if (existing?.referrerDriverId && (await isBlockedBetweenDrivers(existing.referrerDriverId, session.user.id))) {
+    // Chauffeurs bloqués entre eux, ou écartés par l'organisation (src/lib/moderation.ts).
+    if (
+      (existing.referrerDriverId && (await isBlockedBetweenDrivers(existing.referrerDriverId, session.user.id))) ||
+      (existing.sharedByDriverId && (await isBlockedBetweenDrivers(existing.sharedByDriverId, session.user.id))) ||
+      (await excludedDriversFor(existing)).includes(session.user.id)
+    ) {
       return NextResponse.json({ error: "Cette course n'est plus disponible" }, { status: 403 });
     }
 
-    // Race condition protection: only update if still PENDING + P2P
+    // Race condition protection: only update if still PENDING
     const result = await prisma.booking.updateMany({
       where: {
         p2pToken: token,
-        source: "P2P",
         status: "PENDING",
       },
       data: {
@@ -154,7 +192,16 @@ export async function POST(request: Request) {
       select: { firstName: true, lastName: true, phone: true },
     });
 
-    if (booking) {
+    // Course Taxineo passée à un collègue : mêmes avis qu'une acceptation dans l'espace chauffeur.
+    if (booking && existing.source !== "P2P") {
+      createNotification({
+        type: "BOOKING_ACCEPTED",
+        title: `Course acceptée #${booking.reference}`,
+        body: `${booking.clientName} — ${booking.departureName} → ${booking.arrivalName} (passée par un collègue)`,
+        metadata: { bookingId: booking.id, reference: booking.reference, driverId: session.user.id },
+      });
+      await sendAcceptedNotices(existing, session.user.id, existing.clientLocale === "en" ? "en" : "fr");
+    } else if (booking) {
       createNotification({
         type: "BOOKING_ACCEPTED",
         title: "Course P2P acceptée",
@@ -168,7 +215,7 @@ export async function POST(request: Request) {
     }
 
     // Le chauffeur qui a transmis la course apprend qu'un confrère la prend.
-    if (booking && existing?.referrerDriverId) {
+    if (booking && existing.source === "P2P" && existing.referrerDriverId) {
       await notifyDriver(existing.referrerDriverId, "p2pAccepted", { from: booking.departureName, to: booking.arrivalName, date: booking.requestedDate, driver: `${driver?.firstName ?? ""} ${driver?.lastName ?? ""}`.trim() }, "/dashboard/p2p");
     }
 
