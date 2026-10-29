@@ -25,7 +25,7 @@ function Switch({ on, label, onClick }: { on: boolean; label: string; onClick: (
       onClick={onClick}
       className={`w-11 h-6 shrink-0 rounded-full transition-colors relative ${on ? "bg-neutral-900" : "bg-neutral-200"}`}
     >
-      <span className={`w-5 h-5 bg-white rounded-full shadow absolute top-0.5 transition-transform ${on ? "translate-x-5" : "translate-x-0.5"}`} />
+      <span className={`w-5 h-5 bg-white rounded-full shadow absolute left-0 top-0.5 transition-transform ${on ? "translate-x-5" : "translate-x-0.5"}`} />
     </button>
   );
 }
