@@ -44,16 +44,33 @@ export function TopDriverBadge({ city }: { city: string }) {
               </p>
             </div>
 
-            <div className="mt-5 rounded-2xl bg-neutral-50 p-4 space-y-2.5">
-              <div className="flex items-center gap-3">
-                <span className="w-16 text-xs text-neutral-600">{t("you")}</span>
-                <span className="h-1.5 flex-1 rounded-full bg-amber-500" />
-                <span className="w-10 text-right text-xs font-semibold text-amber-800">0 min</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <span className="w-16 text-xs text-neutral-600">{t("others")}</span>
-                <span className="h-1.5 flex-1 flex"><span className="w-1/3" /><span className="flex-1 rounded-full bg-neutral-300" /></span>
-                <span className="w-10 text-right text-xs font-semibold">+5 min</span>
+            {/* La même alerte sur une frise de 5 minutes : vous la recevez au début, les autres à la fin. */}
+            <div className="mt-5 rounded-2xl border border-neutral-200 p-4">
+              <p className="text-xs font-semibold uppercase tracking-wide text-neutral-500">{t("chartTitle")}</p>
+
+              <div className="mt-4 grid grid-cols-[5.5rem_1fr] items-center gap-x-3 gap-y-3">
+                <span className="text-sm font-semibold text-neutral-900">{t("you")}</span>
+                <span className="relative flex items-center h-9 rounded-full bg-amber-100">
+                  <span className="absolute left-0 w-9 h-9 rounded-full bg-amber-500 text-white flex items-center justify-center" aria-label={t("alert")}>
+                    <Icon icon="solar:bell-bing-bold" className="text-lg" />
+                  </span>
+                  <span className="w-full pl-10 pr-3 text-center text-xs font-bold text-amber-900">{t("lead")}</span>
+                </span>
+
+                <span className="text-sm leading-tight text-neutral-600">{t("others")}</span>
+                <span className="relative flex items-center h-9">
+                  <span className="absolute left-0 right-9 border-t-2 border-dashed border-neutral-300" />
+                  <span className="relative w-full pr-10 text-center text-xs text-neutral-500"><span className="bg-white px-1.5">{t("wait")}</span></span>
+                  <span className="absolute right-0 w-9 h-9 rounded-full bg-neutral-200 text-neutral-600 flex items-center justify-center" aria-label={t("alert")}>
+                    <Icon icon="solar:bell-bing-bold" className="text-lg" />
+                  </span>
+                </span>
+
+                <span />
+                <span className="flex justify-between text-xs font-semibold tabular-nums">
+                  <span className="w-9 text-center text-amber-800">{t("now")}</span>
+                  <span className="w-9 text-center text-neutral-500 whitespace-nowrap">{t("later")}</span>
+                </span>
               </div>
             </div>
 

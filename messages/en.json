@@ -3786,12 +3786,18 @@
       "title": "You are a Top driver in {city}",
       "intro": "You get Radar alerts <b>5 minutes before</b> other drivers.",
       "you": "You",
-      "others": "Others",
+      "others": "Other drivers",
       "firstT": "First on the spot.",
       "first": "Cancelled train, long delay, high demand: you know before anyone else.",
       "keepT": "To keep it.",
       "keep": "Pass the rides you don't take to colleagues, and invite them to Taxineo.",
-      "ok": "Got it"
+      "ok": "Got it",
+      "chartTitle": "When an alert comes in",
+      "lead": "5 min ahead",
+      "wait": "still waiting",
+      "alert": "Alert received",
+      "now": "0 min",
+      "later": "+5 min"
     },
     "prefs": {
       "title": "Station radar",

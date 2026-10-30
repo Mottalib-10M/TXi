@@ -13,6 +13,8 @@ import { initials } from "@/lib/initials";
 import { driverProfileChecks } from "@/lib/driver-profile";
 import { DRIVER_SETTINGS } from "@/lib/driver-settings";
 import { ProfileCompletionCard } from "@/components/driver/ProfileCompletionCard";
+import { TopDriverBadge } from "@/components/radar/TopDriverBadge";
+import { radarAllowed } from "@/lib/radar";
 
 // Onglet « Moi » du chauffeur : toutes les pages de réglage à un appui
 // (profil, véhicules, tarifs, zone, horaires, carte, page publique, parrainage, compte).
@@ -44,7 +46,12 @@ export default async function MoiPage() {
 
   return (
     <div className="min-w-0">
-      <h1 className="text-3xl font-bold tracking-tight mb-6">{t("title")}</h1>
+      <div className="flex items-start justify-between gap-3 mb-6">
+        <h1 className="text-3xl font-bold tracking-tight">{t("title")}</h1>
+        {driver.isTopDriver && radarAllowed(driver.email) && (
+          <TopDriverBadge city={(driver.zoneAddress ?? "").split(",")[0].trim()} />
+        )}
+      </div>
 
       {/* Mobile : profil, pages, compte. Ordinateur : profil et compte à gauche, pages à droite. */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">

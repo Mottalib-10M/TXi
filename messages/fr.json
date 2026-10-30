@@ -3786,12 +3786,18 @@
       "title": "Vous êtes Top chauffeur à {city}",
       "intro": "Vous recevez les alertes du Radar <b>5 minutes avant</b> les autres chauffeurs.",
       "you": "Vous",
-      "others": "Les autres",
+      "others": "Les autres chauffeurs",
       "firstT": "En premier sur place.",
       "first": "Train supprimé, gros retard, forte demande : vous le savez avant tout le monde.",
       "keepT": "Pour le rester.",
       "keep": "Passez à vos collègues les courses que vous ne prenez pas, et invitez-les sur Taxineo.",
-      "ok": "Compris"
+      "ok": "Compris",
+      "chartTitle": "Quand une alerte tombe",
+      "lead": "5 min d'avance",
+      "wait": "ils attendent encore",
+      "alert": "Alerte reçue",
+      "now": "0 min",
+      "later": "+5 min"
     },
     "prefs": {
       "title": "Radar des gares",
