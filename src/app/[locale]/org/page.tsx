@@ -38,6 +38,7 @@ interface RecentBooking {
   driver: {
     firstName: string;
     lastName: string;
+    slug: string;
     phone: string | null;
     vehicleBrand: string | null;
     vehicleModel: string | null;
@@ -195,7 +196,11 @@ export default function OrgDashboard() {
               )}
               {activeBooking.driver && (
                 <p className="text-sm text-neutral-300 mb-1">
-                  {t("driverAssigned")} : {activeBooking.driver.firstName} {activeBooking.driver.lastName}
+                  {t("driverAssigned")} :{" "}
+                  <Link href={`/taxi/${activeBooking.driver.slug}`} className="inline-flex items-center gap-0.5 font-medium text-white underline underline-offset-2 decoration-neutral-500">
+                    {activeBooking.driver.firstName} {activeBooking.driver.lastName}
+                    <Icon icon="solar:alt-arrow-right-linear" className="text-sm text-neutral-400" />
+                  </Link>
                 </p>
               )}
               <p className="text-sm text-neutral-300">

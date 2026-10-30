@@ -219,16 +219,27 @@ export default function CoursesPage() {
                   </p>
                   <p className="text-xs text-neutral-500">
                     {format(new Date(b.requestedDate), locale === "en" ? "dd MMM yyyy 'at' HH:mm" : "dd MMM yyyy 'à' HH:mm", { locale: locale === "en" ? enUS : fr })}
-                    {b.driver && ` · ${b.driver.firstName} ${b.driver.lastName}`}
-                    {b.driver && (
-                      <>
-                        {" · "}
-                        <Link href={`/signaler?chauffeur=${b.driver.slug}&course=${b.reference}`} className="underline text-neutral-400">
-                          {tr("link")}
-                        </Link>
-                      </>
-                    )}
                   </p>
+                  {/* Le chauffeur : sa fiche d'un appui, et le signalement à côté */}
+                  {b.driver && (
+                    <div className="mt-2 flex flex-wrap items-center gap-2">
+                      <Link
+                        href={`/taxi/${b.driver.slug}`}
+                        className="inline-flex items-center gap-1.5 h-8 pl-3 pr-2 rounded-full bg-neutral-100 text-xs font-medium text-neutral-800 whitespace-nowrap hover:bg-neutral-200 transition-colors"
+                      >
+                        <Icon icon="solar:user-linear" className="text-sm text-neutral-500" />
+                        {b.driver.firstName} {b.driver.lastName}
+                        <Icon icon="solar:alt-arrow-right-linear" className="text-sm text-neutral-400" />
+                      </Link>
+                      <Link
+                        href={`/signaler?chauffeur=${b.driver.slug}&course=${b.reference}`}
+                        className="inline-flex items-center gap-1.5 h-8 px-3 rounded-full border border-neutral-200 text-xs font-medium text-neutral-600 whitespace-nowrap hover:border-neutral-300 hover:text-neutral-900 transition-colors"
+                      >
+                        <Icon icon="solar:flag-linear" className="text-sm" />
+                        {tr("link")}
+                      </Link>
+                    </div>
+                  )}
                   {(b.status === "PENDING" || b.status === "ACCEPTED") && (
                     <p className="text-xs text-blue-600 font-medium mt-0.5 flex items-center gap-1">
                       <Icon icon="solar:phone-calling-linear" className="text-xs" />

@@ -10,6 +10,7 @@ import { PublicProfileClient } from "@/components/public-profile/PublicProfileCl
 import type { Vehicle } from "@/types/vehicle";
 import { alternateUrls } from "@/lib/seo";
 import { Link } from "@/i18n/navigation";
+import { Icon } from "@iconify/react";
 
 interface Props {
   params: Promise<{ locale: string; slug: string }>;
@@ -99,6 +100,16 @@ export default async function TaxiProfilePage({ params }: Props) {
             companyName={driver.companyName}
           />
 
+          {/* Signaler : visible sous la présentation, pas en bas de page. */}
+          <Link
+            href={`/signaler?chauffeur=${driver.slug}`}
+            rel="nofollow"
+            className="flex items-center justify-center gap-2 h-11 rounded-xl border border-neutral-200 bg-white text-sm font-medium text-neutral-600 hover:text-neutral-900 hover:border-neutral-300 transition-colors"
+          >
+            <Icon icon="solar:flag-linear" className="text-base" />
+            {tr("title")}
+          </Link>
+
           {vehicles.length > 0 && (
             <VehicleInfo vehicles={vehicles} />
           )}
@@ -112,12 +123,6 @@ export default async function TaxiProfilePage({ params }: Props) {
             pricePerMinute={driver.pricePerMinute}
             minimumFare={driver.minimumFare}
           />
-
-          <p className="text-center">
-            <Link href={`/signaler?chauffeur=${driver.slug}`} rel="nofollow" className="text-xs text-neutral-400 underline hover:text-neutral-600">
-              {tr("title")}
-            </Link>
-          </p>
         </div>
       </main>
 
