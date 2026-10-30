@@ -462,7 +462,7 @@ export default function InscriptionPage() {
                   <button
                     key={opt.type}
                     onClick={() => setProfileType(opt.type)}
-                    className="flex flex-col items-center gap-1.5 p-4 rounded-2xl border-2 border-neutral-200 hover:border-neutral-900 hover:bg-neutral-50 transition-all"
+                    className={`${opt.type === "particulier" ? "signup-particulier" : "signup-business"} flex flex-col items-center gap-1.5 p-4 rounded-2xl border-2 border-neutral-200 hover:border-neutral-900 hover:bg-neutral-50 transition-all`}
                   >
                     <Icon icon={opt.icon} className="text-2xl text-neutral-700" />
                     <span className="text-sm font-semibold">{opt.label}</span>

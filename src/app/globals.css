@@ -174,6 +174,9 @@ html[data-app] footer { display: none; }
 /* iOS zoome sur tout champ dont le texte fait moins de 16 px, et le pincement étant bloqué on ne peut plus dézoomer : 16 px partout dans l'app. */
 html[data-app] input, html[data-app] select, html[data-app] textarea { font-size: 16px !important; }
 html[data-app] .site-menu-toggle { display: none; }
+/* Inscription dans l'app : chauffeur ou particulier seulement ; hôtels, hôpitaux et entreprises s'inscrivent sur le site. */
+html[data-app] .signup-business { display: none; }
+html[data-app] .signup-particulier { grid-column: 1 / -1; }
 html.kb-open[data-app] .fixed.bottom-0 { display: none; }
 /* Une page courte ne se fait plus défiler dans le vide : « plein écran » = l'espace entre l'heure et la barre du bas. */
 html[data-app] .min-h-screen { min-height: calc(100dvh - env(safe-area-inset-top) - 64px - env(safe-area-inset-bottom)); }
