@@ -186,7 +186,9 @@ html[data-app] button:not(:disabled):active, html[data-app] a:active, html[data-
 
 /* Barre d'onglets de l'app (components/AppTabBar.tsx) : absente du site.
    Cinq places : Menu à gauche, l'action principale au centre, en pastille noire. */
-.app-tabbar, .app-drawer, .app-drawer-backdrop { display: none; }
+.app-tabbar, .app-drawer, .app-drawer-backdrop, .app-role-tabbar { display: none; }
+html[data-app] .app-role-tabbar { display: grid; }
+html[data-app][data-space-nav] .app-role-tabbar, html.kb-open[data-app] .app-role-tabbar { display: none; }
 html[data-app] .app-tabbar { position: fixed; inset: auto 0 0 0; z-index: 45; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); align-items: end; padding: 6px 2px calc(6px + env(safe-area-inset-bottom)); background: rgba(255, 255, 255, 0.96); backdrop-filter: saturate(140%) blur(18px); -webkit-backdrop-filter: saturate(140%) blur(18px); border-top: 1px solid rgba(10, 10, 10, 0.08); }
 html[data-app] .app-tabbar > a, html[data-app] .app-tabbar > button { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; min-height: 48px; border-radius: 12px; font-size: 10.5px; font-weight: 500; line-height: 1.1; letter-spacing: -0.01em; white-space: nowrap; color: #737373; }
 html[data-app] .app-tabbar > a.is-active { color: #0A0A0A; font-weight: 600; }

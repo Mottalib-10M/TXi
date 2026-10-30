@@ -2,13 +2,11 @@
 
 // Barre d'onglets en bas de l'écran, seulement dans l'app iPhone et Android
 // (masquée sur le site par globals.css tant que <html data-app> est absent).
-// À gauche, Menu ouvre les autres pages par la gauche ; au centre, l'action
-// principale du rôle connecté :
-// - client : ses courses, RÉSERVER, les tarifs, l'espace pro ;
-// - chauffeur : tableau de bord, COURSES REÇUES, courses transmises, profil ;
-// - organisation : tableau de bord, NOUVELLE COURSE, courses, paramètres.
-// Dans les espaces chauffeur et organisation, leur propre barre (SpaceNav) la
-// remplace ; ailleurs, Menu ouvre le menu de cette barre.
+// Sans compte : Menu (les autres pages, par la gauche), ses courses, RÉSERVER
+// au centre, les tarifs, l'espace pro.
+// Chauffeur ou organisation connecté : leurs 3 onglets habituels, ceux de
+// SpaceNav, aussi hors de leur espace (fiche d'un chauffeur, Signaler…) ;
+// dans leur espace, SpaceNav s'affiche à la place.
 
 import { useEffect, useState } from "react";
 import { Icon } from "@iconify/react";
@@ -22,6 +20,8 @@ type Tab = { href: string; label: string; icon: string; active: boolean };
 
 export function AppTabBar() {
   const t = useTranslations("appTabs");
+  const to = useTranslations("org.sidebar");
+  const td = useTranslations("dashboard.sidebar");
   const pathname = usePathname();
   const { data } = useSession();
   const role = data?.user?.role;
@@ -39,30 +39,37 @@ export function AppTabBar() {
   const is = (href: string) => pathname === href;
   const under = (href: string) => pathname === href || pathname.startsWith(`${href}/`);
 
-  let side: Tab[];
-  let main: Tab;
-  if (role === "driver") {
-    side = [
-      { href: "/dashboard", label: t("dashboard"), icon: "solar:chart-square-linear", active: is("/dashboard") },
-      { href: "/dashboard/p2p", label: t("transmitted"), icon: "solar:transfer-horizontal-linear", active: under("/dashboard/p2p") },
-      { href: "/dashboard/moi", label: t("profile"), icon: "solar:user-circle-linear", active: under("/dashboard/moi") },
-    ];
-    main = { href: "/dashboard/reservations", label: t("received"), icon: "solar:inbox-line-bold", active: under("/dashboard/reservations") };
-  } else if (role === "organization") {
-    side = [
-      { href: "/org", label: t("dashboard"), icon: "solar:chart-square-linear", active: is("/org") },
-      { href: "/org/courses", label: t("rides"), icon: "solar:calendar-linear", active: under("/org/courses") },
-      { href: "/org/compte", label: t("settings"), icon: "solar:settings-linear", active: under("/org/compte") },
-    ];
-    main = { href: "/org/nouvelle-course", label: t("order"), icon: "solar:add-circle-bold", active: under("/org/nouvelle-course") };
-  } else {
-    side = [
-      { href: "/mes-reservations", label: t("rides"), icon: "solar:calendar-linear", active: under("/mes-reservations") },
-      { href: "/tarifs", label: t("prices"), icon: "solar:tag-price-linear", active: under("/tarifs") },
-      { href: "/connexion", label: t("pro"), icon: "solar:user-circle-linear", active: under("/connexion") || under("/inscription") },
-    ];
-    main = { href: "/app", label: t("book"), icon: "solar:map-point-wave-bold", active: is("/app") || is("/") };
+  // Compte connecté hors de son espace : ses 3 onglets habituels, sans onglet actif.
+  if (role === "driver" || role === "organization") {
+    const tabs = role === "driver"
+      ? [
+          { href: "/dashboard", label: td("requests"), icon: "solar:bell-linear" },
+          { href: "/dashboard/reservations", label: td("rides"), icon: "solar:list-check-linear" },
+          { href: "/dashboard/moi", label: td("me"), icon: "solar:user-circle-linear" },
+        ]
+      : [
+          { href: "/org/nouvelle-course", label: to("order"), icon: "solar:add-circle-linear" },
+          { href: "/org", label: to("rides"), icon: "solar:list-check-linear" },
+          { href: "/org/compte", label: to("account"), icon: "solar:user-circle-linear" },
+        ];
+    return (
+      <nav aria-label={t("nav")} className="app-role-tabbar fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur border-t border-neutral-200 grid-cols-3 pb-[env(safe-area-inset-bottom)]">
+        {tabs.map((tab) => (
+          <Link key={tab.href} href={tab.href as "/dashboard"} className="flex flex-col items-center justify-center gap-1 h-16 text-xs text-neutral-500 font-medium">
+            <Icon icon={tab.icon} className="text-2xl" />
+            {tab.label}
+          </Link>
+        ))}
+      </nav>
+    );
   }
+
+  const side: Tab[] = [
+    { href: "/mes-reservations", label: t("rides"), icon: "solar:calendar-linear", active: under("/mes-reservations") },
+    { href: "/tarifs", label: t("prices"), icon: "solar:tag-price-linear", active: under("/tarifs") },
+    { href: "/connexion", label: t("pro"), icon: "solar:user-circle-linear", active: under("/connexion") || under("/inscription") },
+  ];
+  const main: Tab = { href: "/app", label: t("book"), icon: "solar:map-point-wave-bold", active: is("/app") || is("/") };
 
   const openMenu = () => {
     // Un menu latéral (chauffeur, organisation) a répondu : il s'ouvre lui-même.
