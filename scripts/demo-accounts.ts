@@ -26,12 +26,12 @@ const day = (offset: number, hour: number) => {
 };
 
 // Ce qui se voit dans l'app (captures App Store, vidéo) : des noms réalistes, sans « démo ».
-// Le téléphone est dans la plage réservée à la fiction (01 99 00 xx xx).
+// Le téléphone est dans la plage réservée à la fiction (01 99 xx xx xx).
 const DRIVER_SHOWN = {
   lastName: "Arverne",
   companyName: "Taxi Paris",
   bio: "Chauffeur de taxi à Paris depuis 12 ans. Aéroports, gares et longues distances, prix annoncé avant le départ.",
-  phone: "01 99 00 41 41",
+  phone: "01 99 99 99 99",
   vehiclePlate: "GA-418-PZ",
 };
 const ORG_SHOWN = { name: "Hôtel Opéra", contactName: "Claire Martin" };
