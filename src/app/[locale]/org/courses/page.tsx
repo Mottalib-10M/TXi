@@ -62,7 +62,7 @@ export default function CoursesPage() {
   const locale = useLocale();
   const [bookings, setBookings] = useState<Booking[]>([]);
   const [loading, setLoading] = useState(true);
-  const [activeFilter, setActiveFilter] = useState<string>("pending");
+  const [activeFilter, setActiveFilter] = useState<string>("all");
   const [alternatives, setAlternatives] = useState<Record<string, Alternative[]>>({});
   const [loadingAlts, setLoadingAlts] = useState<string | null>(null);
   const [cancellingId, setCancellingId] = useState<string | null>(null);
