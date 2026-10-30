@@ -408,7 +408,7 @@ export default function InscriptionPage() {
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
-      <main className="flex-grow bg-white flex items-center justify-center px-6 py-6">
+      <main className="flex-grow bg-white flex flex-col items-center justify-center px-6 py-6">
       <div className="w-full max-w-md">
         <div className="text-center mb-5">
           <Link href="/" className="text-2xl">
@@ -848,7 +848,9 @@ export default function InscriptionPage() {
           </Link>
         </p>
       </div>
-        <FaqAuth />
+        <div className="w-full mt-8">
+          <FaqAuth />
+        </div>
       </main>
       <Footer />
     </div>
