@@ -104,7 +104,7 @@ export function DriverHeader({
                 </a>
               )}
               {phone && (
-                <a href={`tel:${phone}`} className="flex items-center gap-2 text-sm font-medium text-neutral-700 hover:text-neutral-900 transition-colors">
+                <a href={`tel:${phone}`} className="flex items-center gap-2 whitespace-nowrap text-sm font-medium text-neutral-700 hover:text-neutral-900 transition-colors">
                   <Icon icon="solar:phone-linear" className="text-sm text-neutral-400" />
                   {phone}
                 </a>

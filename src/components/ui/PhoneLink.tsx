@@ -21,7 +21,7 @@ export function PhoneLink({
         trackPhoneClick({ phone, context: label || "phone_link" });
         window.location.href = `tel:${phone}`;
       }}
-      className={`inline-flex items-center gap-1 text-xs font-medium transition-colors ${className}`}
+      className={`inline-flex items-center gap-1 whitespace-nowrap text-xs font-medium transition-colors ${className}`}
       title={label}
     >
       <Icon icon="solar:phone-bold" className="text-sm" />

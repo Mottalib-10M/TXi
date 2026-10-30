@@ -202,7 +202,7 @@ export default function OrgDashboard() {
                 {format(new Date(activeBooking.requestedDate), locale === "en" ? "dd MMM yyyy 'at' HH:mm" : "dd MMM yyyy 'à' HH:mm", { locale: locale === "en" ? enUS : fr })}
                 {activeBooking.lockedPrice != null && ` · ${activeBooking.lockedPrice.toFixed(0)} €`}
               </p>
-              <div className="mt-3 flex items-center gap-2 text-sm">
+              <div className="mt-3 flex flex-wrap items-center gap-2 text-sm">
                 {activeBooking.status === "ACCEPTED" ? (
                   <>
                     {isDriverOnTheWay(activeBooking.requestedDate) ? (
@@ -217,7 +217,7 @@ export default function OrgDashboard() {
                       </>
                     )}
                     {activeBooking.driver?.phone && (
-                      <a href={`tel:${activeBooking.driver.phone}`} className="inline-flex items-center gap-1 bg-white/10 hover:bg-white/20 px-3 py-1 rounded-full transition-colors ml-1">
+                      <a href={`tel:${activeBooking.driver.phone}`} className="inline-flex items-center gap-1 whitespace-nowrap shrink-0 bg-white/10 hover:bg-white/20 px-3 py-1 rounded-full transition-colors">
                         <Icon icon="solar:phone-bold" className="text-sm" />
                         <span>{activeBooking.driver.phone}</span>
                       </a>
@@ -470,7 +470,7 @@ export default function OrgDashboard() {
                                   <a
                                     href={`tel:${b.driver.phone}`}
                                     onClick={(e) => e.stopPropagation()}
-                                    className="inline-flex items-center gap-1.5 bg-green-600 hover:bg-green-700 text-white text-xs font-semibold px-3 py-1 rounded-full transition-colors"
+                                    className="inline-flex items-center gap-1.5 whitespace-nowrap bg-green-600 hover:bg-green-700 text-white text-xs font-semibold px-3 py-1 rounded-full transition-colors"
                                   >
                                     <Icon icon="solar:phone-bold" className="text-sm" />
                                     {b.driver.phone}
@@ -508,7 +508,7 @@ export default function OrgDashboard() {
                                   <a
                                     href={`tel:${b.driver.phone}`}
                                     onClick={(e) => e.stopPropagation()}
-                                    className="inline-flex items-center gap-1.5 bg-amber-500 hover:bg-amber-600 text-white text-xs font-semibold px-3 py-1 rounded-full transition-colors"
+                                    className="inline-flex items-center gap-1.5 whitespace-nowrap bg-amber-500 hover:bg-amber-600 text-white text-xs font-semibold px-3 py-1 rounded-full transition-colors"
                                   >
                                     <Icon icon="solar:phone-bold" className="text-sm" />
                                     {b.driver.phone}

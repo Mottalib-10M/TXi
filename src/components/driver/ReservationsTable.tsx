@@ -291,7 +291,7 @@ export function ReservationsTable({ bookings, driverName }: { bookings: Booking[
                     <a
                       href={`tel:${booking.clientPhone}`}
                       onClick={(e) => e.stopPropagation()}
-                      className="inline-flex items-center gap-1 text-xs text-neutral-500 hover:text-neutral-900 font-medium transition-colors"
+                      className="inline-flex items-center gap-1 whitespace-nowrap text-xs text-neutral-500 hover:text-neutral-900 font-medium transition-colors"
                       title={t("callClient")}
                     >
                       <Icon icon="solar:phone-bold" className="text-sm" />
