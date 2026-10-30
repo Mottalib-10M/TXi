@@ -25,20 +25,29 @@ const day = (offset: number, hour: number) => {
   return d;
 };
 
+// Ce qui se voit dans l'app (captures App Store, vidéo) : des noms réalistes, sans « démo ».
+// Le téléphone est dans la plage réservée à la fiction (01 99 00 xx xx).
+const DRIVER_SHOWN = {
+  lastName: "Arverne",
+  companyName: "Taxi Paris",
+  bio: "Chauffeur de taxi à Paris depuis 12 ans. Aéroports, gares et longues distances, prix annoncé avant le départ.",
+  phone: "01 99 00 41 41",
+  vehiclePlate: "GA-418-PZ",
+};
+const ORG_SHOWN = { name: "Hôtel Opéra", contactName: "Claire Martin" };
+
 async function main() {
   const passwordHash = await hash(password!, 12);
 
   const driver = await prisma.driver.upsert({
     where: { email: DRIVER_EMAIL },
-    update: { passwordHash, isActive: true, emailVerified: true, isVerified: true },
+    update: { passwordHash, isActive: true, emailVerified: true, isVerified: true, ...DRIVER_SHOWN },
     create: {
       email: DRIVER_EMAIL,
       passwordHash,
       firstName: "Julien",
-      lastName: "Démo",
       slug: "julien-demo-taxineo",
-      companyName: "Taxi Démo Paris",
-      bio: "Compte de démonstration Taxineo.",
+      ...DRIVER_SHOWN,
       vehicleBrand: "Toyota",
       vehicleModel: "Corolla Hybride",
       vehicleColor: "Noir",
@@ -54,13 +63,12 @@ async function main() {
 
   const org = await prisma.organization.upsert({
     where: { email: ORG_EMAIL },
-    update: { passwordHash, emailVerified: true },
+    update: { passwordHash, emailVerified: true, ...ORG_SHOWN },
     create: {
       email: ORG_EMAIL,
       passwordHash,
-      name: "Hôtel Démo Opéra",
+      ...ORG_SHOWN,
       type: "HOTEL",
-      contactName: "Claire Démo",
       address: "10 rue Auber, 75009 Paris",
       emailVerified: true,
     },
@@ -68,12 +76,12 @@ async function main() {
 
   await prisma.booking.deleteMany({ where: { OR: [{ driverId: driver.id }, { organizationId: org.id }] } });
 
-  const opera = { departureName: "Hôtel Démo Opéra, 10 rue Auber, Paris", departureLat: 48.8718, departureLng: 2.3299 };
+  const opera = { departureName: "Hôtel Opéra, 10 rue Auber, Paris", departureLat: 48.8718, departureLng: 2.3299 };
   const rides = [
-    { ref: "TN-DEMO01", status: "PENDING", date: day(1, 9), arrivalName: "Aéroport Paris-Charles de Gaulle (CDG)", arrivalLat: 49.0097, arrivalLng: 2.5479, km: 32, price: 56, client: "M. Martin" },
-    { ref: "TN-DEMO02", status: "ACCEPTED", date: day(2, 14), arrivalName: "Gare de Lyon, Paris", arrivalLat: 48.8443, arrivalLng: 2.3744, km: 5, price: 18, client: "Mme Bernard" },
-    { ref: "TN-DEMO03", status: "COMPLETED", date: day(-2, 7), arrivalName: "Aéroport Paris-Orly (ORY)", arrivalLat: 48.7262, arrivalLng: 2.3652, km: 19, price: 44, client: "M. Petit" },
-    { ref: "TN-DEMO04", status: "COMPLETED", date: day(-5, 18), arrivalName: "Tour Eiffel, Paris", arrivalLat: 48.8584, arrivalLng: 2.2945, km: 4, price: 16, client: "Mme Durand" },
+    { ref: "TN-7K2P41", status: "PENDING", date: day(1, 9), arrivalName: "Aéroport Paris-Charles de Gaulle (CDG)", arrivalLat: 49.0097, arrivalLng: 2.5479, km: 32, price: 56, client: "M. Martin" },
+    { ref: "TN-7K2Q86", status: "ACCEPTED", date: day(2, 14), arrivalName: "Gare de Lyon, Paris", arrivalLat: 48.8443, arrivalLng: 2.3744, km: 5, price: 18, client: "Mme Bernard" },
+    { ref: "TN-7J9X12", status: "COMPLETED", date: day(-2, 7), arrivalName: "Aéroport Paris-Orly (ORY)", arrivalLat: 48.7262, arrivalLng: 2.3652, km: 19, price: 44, client: "M. Petit" },
+    { ref: "TN-7J4M58", status: "COMPLETED", date: day(-5, 18), arrivalName: "Tour Eiffel, Paris", arrivalLat: 48.8584, arrivalLng: 2.2945, km: 4, price: 16, client: "Mme Durand" },
   ] as const;
 
   for (const r of rides) {
