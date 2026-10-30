@@ -65,6 +65,11 @@ export async function POST(request: Request) {
     }
 
     let driverId = data.driverId;
+    // Compte de démo (vérification des stores) : jamais un vrai chauffeur, même choisi dans la liste.
+    if (driverId && isDemoEmail(session.user.email)) {
+      const demoDriver = await prisma.driver.count({ where: { id: driverId, ...driverPool(true) } });
+      if (!demoDriver) driverId = undefined;
+    }
     let estimatedPrice = data.estimatedPrice;
     // Chauffeurs bloqués par l'organisation (src/lib/moderation.ts) : jamais proposés.
     const blocked = await blockedForOrg(session.user.id);

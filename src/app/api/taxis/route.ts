@@ -1,7 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { haversineDistance, getRoutingDistance, estimatePrice } from "@/lib/geo";
-import { driverPool } from "@/lib/demo";
+import { driverPool, isDemoEmail } from "@/lib/demo";
+import { auth } from "@/lib/auth";
 
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
@@ -14,11 +15,15 @@ export async function GET(request: NextRequest) {
   const bookingTime = requestedTimeParam ? new Date(requestedTimeParam) : new Date();
 
   try {
+    // Compte de démo connecté (vérification des stores) : seulement les chauffeurs de démo.
+    const session = await auth();
+    const pool = driverPool(isDemoEmail(session?.user?.email));
+
     // Text search mode (for favorites search)
     if (q) {
       const drivers = await prisma.driver.findMany({
         where: {
-          ...driverPool(),
+          ...pool,
           isActive: true,
           OR: [
             { firstName: { contains: q, mode: "insensitive" } },
@@ -43,7 +48,7 @@ export async function GET(request: NextRequest) {
 
     const drivers = await prisma.driver.findMany({
       where: {
-        ...driverPool(),
+        ...pool,
         isActive: true,
         zoneLat: { not: null },
         zoneLng: { not: null },
