@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useRouter } from "@/i18n/navigation";
 import { Icon } from "@iconify/react";
 import { PlacesAutocomplete } from "@/components/booking/PlacesAutocomplete";
@@ -13,6 +13,7 @@ interface DriverResult {
   lastName: string;
   companyName: string;
   slug: string;
+  photoUrl?: string | null;
   vehicleBrand: string | null;
   vehicleModel: string | null;
   zoneAddress: string | null;
@@ -29,6 +30,14 @@ export default function NouvelleCourse() {
   const [success, setSuccess] = useState("");
   const [step, setStep] = useState<"form" | "results">("form");
   const [driverResults, setDriverResults] = useState<DriverResult[]>([]);
+  const resultsRef = useRef<HTMLDivElement>(null);
+  // Les chauffeurs s'affichent sous le formulaire : on y descend. Un message (succès, erreur) est en haut : on y remonte.
+  useEffect(() => {
+    if (step === "results") resultsRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }, [step]);
+  useEffect(() => {
+    if (success || error) window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [success, error]);
 
   const [beneficiaryName, setBeneficiaryName] = useState("");
   const [departure, setDeparture] = useState({ name: "", lat: 0, lng: 0 });
@@ -368,7 +377,7 @@ export default function NouvelleCourse() {
         )}
 
         {step === "results" && (
-          <div className="bg-white rounded-2xl border border-neutral-200 p-5 space-y-4">
+          <div ref={resultsRef} className="scroll-mt-20 bg-white rounded-2xl border border-neutral-200 p-5 space-y-4">
             <div>
               <h2 className="font-semibold">{t("availableDrivers")}</h2>
               <p className="text-xs text-neutral-500 mt-0.5">{t("availableDriversDesc")}</p>
@@ -380,58 +389,63 @@ export default function NouvelleCourse() {
                 <p className="text-sm text-neutral-500">{t("noDriversFound")}</p>
               </div>
             ) : (
-              <div className="space-y-2">
-                {driverResults.map((driver, index) => (
-                  <div
-                    key={driver.id}
-                    className={`flex items-center gap-4 rounded-xl transition-all ${
-                      index === 0
-                        ? "p-4 border-2 border-amber-300 bg-amber-50/50"
-                        : "p-3.5 border border-neutral-200"
-                    }`}
-                  >
-                    <div className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-semibold shrink-0 ${
-                      index === 0 ? "bg-amber-200 text-amber-800" : "bg-neutral-200 text-neutral-600"
-                    }`}>
-                      {driver.firstName[0]}{driver.lastName?.[0] || ""}
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <div className="flex items-center gap-2">
-                        <p className={`text-sm font-semibold ${index === 0 ? "" : "text-neutral-700"}`}>
-                          {driver.companyName || `${driver.firstName} ${driver.lastName}`}
-                        </p>
-                        {index === 0 && (
-                          <span className="text-[10px] font-semibold bg-amber-200 text-amber-800 px-1.5 py-0.5 rounded-full">
-                            {t("closest")}
-                          </span>
-                        )}
-                      </div>
-                      <p className="text-xs text-neutral-500 truncate">
-                        {driver.vehicleBrand && `${driver.vehicleBrand} ${driver.vehicleModel || ""}`}
-                        {driver.vehicleBrand && driver.zoneAddress && " · "}
-                        {driver.zoneAddress}
-                      </p>
-                    </div>
-                    <div className="text-right shrink-0">
-                      {driver.estimatedPrice && (
-                        <p className={`font-bold ${index === 0 ? "text-lg" : "text-base text-neutral-700"}`}>{driver.estimatedPrice.toFixed(0)} €</p>
-                      )}
-                      <p className="text-[10px] text-neutral-400">{t("fixedPriceLabel")}</p>
-                    </div>
-                    <button
-                      type="button"
-                      disabled={loading}
-                      onClick={() => handleConfirmBooking(driver.id)}
-                      className={`text-sm font-medium px-4 py-2 rounded-full transition-colors disabled:opacity-50 shrink-0 ${
-                        index === 0
-                          ? "bg-amber-500 text-white hover:bg-amber-600"
-                          : "bg-neutral-900 text-white hover:bg-neutral-800"
-                      }`}
+              <div className="space-y-3">
+                {driverResults.map((driver, index) => {
+                  const first = index === 0;
+                  const name = driver.companyName || `${driver.firstName} ${driver.lastName}`;
+                  const vehicle = driver.vehicleBrand ? `${driver.vehicleBrand} ${driver.vehicleModel || ""}`.trim() : "";
+                  return (
+                    <div
+                      key={driver.id}
+                      className={`rounded-2xl p-4 space-y-4 ${first ? "border-2 border-amber-300 bg-amber-50/50" : "border border-neutral-200"}`}
                     >
-                      {t("selectDriver")}
-                    </button>
-                  </div>
-                ))}
+                      {/* Qui : photo, nom, véhicule */}
+                      <div className="flex items-center gap-3 min-w-0">
+                        <span className={`w-12 h-12 rounded-full overflow-hidden flex items-center justify-center text-sm font-semibold shrink-0 ${first ? "bg-amber-200 text-amber-800" : "bg-neutral-200 text-neutral-600"}`}>
+                          {driver.photoUrl ? (
+                            // eslint-disable-next-line @next/next/no-img-element
+                            <img src={driver.photoUrl} alt="" className="w-full h-full object-cover" />
+                          ) : (
+                            <>{driver.firstName[0]}{driver.lastName?.[0] || ""}</>
+                          )}
+                        </span>
+                        <span className="flex-1 min-w-0">
+                          <span className="flex items-center gap-2 min-w-0">
+                            <span className="font-semibold truncate">{name}</span>
+                            {first && (
+                              <span className="shrink-0 whitespace-nowrap text-[11px] font-semibold bg-amber-200 text-amber-800 px-2 py-0.5 rounded-full">
+                                {t("closest")}
+                              </span>
+                            )}
+                          </span>
+                          <span className="block text-sm text-neutral-500 truncate">
+                            {[`${driver.firstName} ${driver.lastName?.[0] ? `${driver.lastName[0]}.` : ""}`.trim(), vehicle].filter(Boolean).join(" · ")}
+                          </span>
+                        </span>
+                      </div>
+
+                      {/* Combien, et le bouton */}
+                      <div className="flex items-center justify-between gap-3">
+                        <span>
+                          {driver.estimatedPrice && (
+                            <span className="block text-xl font-bold leading-none">{driver.estimatedPrice.toFixed(0)} €</span>
+                          )}
+                          <span className="block text-xs text-neutral-500 mt-1">{t("fixedPriceLabel")}</span>
+                        </span>
+                        <button
+                          type="button"
+                          disabled={loading}
+                          onClick={() => handleConfirmBooking(driver.id)}
+                          className={`h-11 px-6 rounded-full text-sm font-semibold transition-colors disabled:opacity-50 ${
+                            first ? "bg-amber-500 text-white hover:bg-amber-600" : "bg-neutral-900 text-white hover:bg-neutral-800"
+                          }`}
+                        >
+                          {t("selectDriver")}
+                        </button>
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
             )}
 
