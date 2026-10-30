@@ -51,10 +51,9 @@ export default async function DashboardPage() {
     },
   });
 
-  // Fetch active bookings including invited ones
-  // Show PENDING (future only) + ACCEPTED (up to 24h after ride date)
+  // Seulement les demandes en attente de réponse (y compris les invitations) ;
+  // les courses déjà acceptées sont dans l'onglet Courses.
   const now = new Date();
-  const oneDayAgo = new Date(now.getTime() - 24 * 60 * 60 * 1000);
   const rawActiveBookings = await prisma.booking.findMany({
     where: {
       AND: [
@@ -64,12 +63,7 @@ export default async function DashboardPage() {
             { invitedDriverIds: { has: session.user.id } },
           ],
         },
-        {
-          OR: [
-            { status: "PENDING" },
-            { status: "ACCEPTED", requestedDate: { gte: oneDayAgo } },
-          ],
-        },
+        { status: "PENDING" },
       ],
     },
     orderBy: { requestedDate: "asc" },
@@ -98,8 +92,6 @@ export default async function DashboardPage() {
   const locale = await getLocale();
 
   const pendingBookings = activeBookings.filter((b) => b.status === "PENDING");
-  // Une seule course confirmée sur cet écran : la prochaine. L'agenda complet est dans Courses.
-  const nextRide = activeBookings.find((b) => b.status === "ACCEPTED" && new Date(b.requestedDate).getTime() > now.getTime() - 60 * 60 * 1000);
   const showRadar = radarAllowed(driver.email);
 
   const vehicles = Array.isArray(driver.vehicles) ? (driver.vehicles as Array<{ brand?: string; model?: string }>) : [];
@@ -265,7 +257,7 @@ export default async function DashboardPage() {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-start">
-        {/* Colonne principale : ce qu'il faut faire maintenant (demandes, Radar, prochaine course) */}
+        {/* Colonne principale : ce qu'il faut faire maintenant (demandes, Radar) */}
         <div className="lg:col-span-2 lg:row-start-1 space-y-6 min-w-0">
           {/* Demandes en attente : seulement s'il y en a */}
           {pendingBookings.length > 0 && (
@@ -279,21 +271,6 @@ export default async function DashboardPage() {
             </section>
           )}
 
-          {nextRide && (
-            <section>
-              <div className="flex items-center justify-between mb-3">
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 bg-green-500 rounded-full" />
-                  <h2 className="font-semibold">{td("nextRide")}</h2>
-                </div>
-                <Link href="/dashboard/reservations" className="text-xs text-neutral-500 hover:text-neutral-900 transition-colors">
-                  {td("allRides")}
-                </Link>
-              </div>
-              {bookingCard(nextRide, "accepted")}
-            </section>
-          )}
-
           {/* Radar des gares (en test) : ce qui amène des clients autour de vous */}
           {showRadar && (
             <Suspense fallback={<div className="h-48 rounded-2xl border border-neutral-200 bg-white animate-pulse" />}>
@@ -301,7 +278,7 @@ export default async function DashboardPage() {
             </Suspense>
           )}
           {/* Rien d'autre à montrer : une ligne, pas une grande case vide */}
-          {pendingBookings.length === 0 && !nextRide && !showRadar && (
+          {pendingBookings.length === 0 && !showRadar && (
             <p className="flex items-start gap-2 text-sm text-neutral-500">
               <Icon icon="solar:bell-linear" className="text-base shrink-0 mt-0.5" />
               {td("noPendingShort")}
