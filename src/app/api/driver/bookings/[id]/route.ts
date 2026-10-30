@@ -17,6 +17,7 @@ import { driverPool, isDemoEmail } from "@/lib/demo";
 import { excludedDriversFor } from "@/lib/moderation";
 import { generalPlace } from "@/lib/p2p";
 import { ACCEPTED_BOOKING_INCLUDE, sendAcceptedNotices } from "@/lib/booking-accepted";
+import { serverTrack } from "@/lib/usage-server";
 
 export async function PATCH(
   request: Request,
@@ -52,6 +53,17 @@ export async function PATCH(
     if (!isOriginalDriver && !isInvitedDriver) {
       return NextResponse.json({ error: "Réservation non trouvée" }, { status: 404 });
     }
+
+    // Mesure d'usage : la réponse du chauffeur, une fois enregistrée (booking_accepted, booking_rejected…).
+    const answered = (extra: Record<string, string | number | boolean | null> = {}) =>
+      serverTrack(session.user!.id, `booking_${String(status).toLowerCase()}`, {
+        source: booking.source,
+        invited: isInvitedDriver && !isOriginalDriver,
+        escalation_phase: booking.escalationPhase,
+        minutes_since_request: Math.round((Date.now() - booking.createdAt.getTime()) / 60_000),
+        price: booking.lockedPrice ?? booking.estimatedPrice ?? null,
+        ...extra,
+      });
 
     // --- CANCELLED (by driver) ---
     if (status === "CANCELLED") {
@@ -117,6 +129,7 @@ export async function PATCH(
         console.error("Failed to send cancellation email:", error);
       }
 
+      answered();
       return NextResponse.json({ message: "Course annulée" });
     }
 
@@ -162,6 +175,7 @@ export async function PATCH(
             body: `${booking.clientName} — ${booking.departureName} → ${booking.arrivalName}`,
             metadata: { bookingId: booking.id, reference: booking.reference },
           });
+          answered();
           return NextResponse.json({ message: "Statut mis à jour, cagnotte créditée" });
         }
       }
@@ -178,6 +192,7 @@ export async function PATCH(
         metadata: { bookingId: booking.id, reference: booking.reference },
       });
 
+      answered();
       return NextResponse.json({ message: "Statut mis à jour" });
     }
 
@@ -208,6 +223,7 @@ export async function PATCH(
 
       await sendAcceptedNotices(booking, session.user.id, locale);
 
+      answered();
       return NextResponse.json({ message: "Statut mis à jour" });
     }
 
@@ -224,6 +240,7 @@ export async function PATCH(
             invitedDriverIds: booking.invitedDriverIds.filter((id) => id !== session.user.id),
           },
         });
+        answered({ shared: Boolean(share) });
         return NextResponse.json({ message: "Statut mis à jour", share });
       }
 
@@ -311,12 +328,14 @@ export async function PATCH(
         }
 
         // Do NOT send rejection email to client
+        answered({ shared: Boolean(share) });
         return NextResponse.json({ message: "Statut mis à jour", share });
       }
 
       // Case 3 passée à un collègue : elle reste ouverte, le client n'est pas prévenu d'un refus.
       if (share) {
         await prisma.booking.update({ where: { id: params.id }, data: { driverId: null } });
+        answered({ shared: Boolean(share) });
         return NextResponse.json({ message: "Statut mis à jour", share });
       }
 
@@ -375,6 +394,7 @@ export async function PATCH(
         }
       }
 
+      answered();
       return NextResponse.json({ message: "Statut mis à jour" });
     }
 

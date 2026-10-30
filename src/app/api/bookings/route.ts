@@ -17,6 +17,7 @@ import { notifyDriver } from "@/lib/push";
 import { format } from "date-fns";
 import { fr, enUS } from "date-fns/locale";
 import { driverPool, isDemoEmail } from "@/lib/demo";
+import { serverTrack } from "@/lib/usage-server";
 
 const bookingSchema = z.object({
   clientName: z.string().min(2),
@@ -211,6 +212,8 @@ export async function POST(request: Request) {
       },
       include: { driver: true },
     });
+    // Mesure d'usage : la demande reçue par le chauffeur choisi (aucune donnée du client).
+    serverTrack(driverId, "booking_received", { source: data.source, from_app: Boolean(clientDevice), price: estimatedPrice ?? null, passengers: data.passengerCount });
 
     createNotification({
       type: "BOOKING_CREATED",

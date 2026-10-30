@@ -6,6 +6,7 @@ import { generateUniqueReference } from "@/lib/reference";
 import { createNotification } from "@/lib/notifications";
 import { z } from "zod";
 import crypto from "crypto";
+import { serverTrack } from "@/lib/usage-server";
 
 const createP2PSchema = z.object({
   clientName: z.string().min(1),
@@ -81,6 +82,7 @@ export async function POST(request: Request) {
         p2pToken,
       },
     });
+    serverTrack(session.user.id, "p2p_ride_shared", { price: data.price, commission_rate: data.commissionRate });
 
     createNotification({
       type: "P2P_CREATED",

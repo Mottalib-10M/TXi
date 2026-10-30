@@ -13,6 +13,7 @@ import { format } from "date-fns";
 import { fr } from "date-fns/locale";
 import { driverPool, isDemoEmail } from "@/lib/demo";
 import { blockedForOrg } from "@/lib/moderation";
+import { serverTrack } from "@/lib/usage-server";
 
 const createBookingSchema = z.object({
   beneficiaryName: z.string().optional().default(""),
@@ -168,6 +169,8 @@ export async function POST(request: Request) {
       },
       include: { driver: true },
     });
+    serverTrack(session.user.id, "org_booking_created", { org_type: session.user.orgType ?? null, driver_chosen: Boolean(driverId), price: lockedPrice ?? estimatedPrice ?? null });
+    serverTrack(driverId, "booking_received", { source: "ORGANIZATION", price: lockedPrice ?? estimatedPrice ?? null, passengers: data.passengerCount });
 
     createNotification({
       type: "ORG_BOOKING_CREATED",

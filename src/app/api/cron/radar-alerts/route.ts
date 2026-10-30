@@ -6,6 +6,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { notifyDriver } from "@/lib/push";
+import { serverTrack } from "@/lib/usage-server";
 import {
   TOP_DRIVER_HEAD_START_MS,
   ensureSchedule,
@@ -99,6 +100,10 @@ export async function GET(request: NextRequest) {
     if (count && !drop) {
       await notifyDriver(a.driverId, "radar", { title: a.title, body: a.body }, "/dashboard/radar");
       sent++;
+    }
+    // Mesure d'usage : alertes vraiment parties (et non les essais « test: »).
+    if (count && !drop && !a.key.startsWith("test:")) {
+      serverTrack(a.driverId, "radar_alert_sent", { kind: a.key.split(":")[0], station_uic: a.stationUic, delay_min: Math.round((now.getTime() - a.createdAt.getTime()) / MIN) });
     }
   }
 

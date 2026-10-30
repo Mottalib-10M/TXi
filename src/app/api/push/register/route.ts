@@ -7,6 +7,7 @@
 import { NextResponse } from "next/server";
 import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
+import { serverTrack } from "@/lib/usage-server";
 
 export async function POST(request: Request) {
   const body = (await request.json().catch(() => null)) as { token?: unknown; platform?: unknown; locale?: unknown; bookingRef?: unknown } | null;
@@ -24,6 +25,8 @@ export async function POST(request: Request) {
     lastSeenAt: new Date(),
   };
   const device = await prisma.deviceToken.upsert({ where: { token }, create: { token, ...data }, update: data, select: { id: true } });
+  // Mesure d'usage : chaque ouverture de l'app par un compte connecté.
+  if (role) serverTrack(session!.user.id, "app_opened", { role, os: platform });
 
   // Course réservée depuis ce téléphone il y a moins de deux heures, pas encore reliée.
   const ref = typeof body?.bookingRef === "string" ? body.bookingRef.trim().slice(0, 40) : "";

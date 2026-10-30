@@ -2,6 +2,7 @@ import NextAuth from "next-auth";
 import Credentials from "next-auth/providers/credentials";
 import { compare } from "bcryptjs";
 import { prisma } from "@/lib/prisma";
+import { serverTrack } from "@/lib/usage-server";
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
   secret: process.env.NEXTAUTH_SECRET,
@@ -36,6 +37,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
             where: { id: driver.id },
             data: { lastLoginAt: new Date(), loginCount: { increment: 1 } },
           });
+          serverTrack(driver.id, "signed_in", { role: "driver" });
           return {
             id: driver.id,
             email: driver.email,
@@ -61,6 +63,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
             where: { id: org.id },
             data: { lastLoginAt: new Date(), loginCount: { increment: 1 } },
           });
+          serverTrack(org.id, "signed_in", { role: "organization", org_type: org.type });
           return {
             id: org.id,
             email: org.email,

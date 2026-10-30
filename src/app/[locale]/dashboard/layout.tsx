@@ -6,6 +6,7 @@ import { WaitlistScreen } from "@/components/dashboard/WaitlistScreen";
 import { escalateIfDue } from "@/lib/escalation";
 import { getTranslations } from "next-intl/server";
 import { SpaceBackLink } from "@/components/layout/SpaceBackLink";
+import { UsageUser } from "@/components/analytics/UsageUser";
 
 export default async function DashboardLayout({
   children,
@@ -40,6 +41,11 @@ export default async function DashboardLayout({
       vehicles: true,
       vehicleBrand: true,
       vehicleModel: true,
+      isTopDriver: true,
+      radarEnabled: true,
+      notifyPush: true,
+      loginCount: true,
+      zoneAddress: true,
     },
   });
 
@@ -83,6 +89,25 @@ export default async function DashboardLayout({
     driver.isVerified = true;
   }
 
+  // Mesure d'usage (src/lib/usage.ts) : identifiant interne et traits utiles, rien de personnel.
+  const usage = (
+    <UsageUser
+      id={session.user.id}
+      traits={{
+        role: "driver",
+        verified: driver.isVerified,
+        top_driver: driver.isTopDriver,
+        radar_enabled: driver.radarEnabled,
+        push_enabled: driver.notifyPush,
+        has_carte_pro: Boolean(driver.carteProUrl),
+        referral_count: driver.referralCount,
+        login_count: driver.loginCount,
+        zone_city: driver.zoneAddress?.split(",")[0].trim() || null,
+      }}
+      once={{ signed_up_at: driver.createdAt.toISOString(), signup_role: "driver" }}
+    />
+  );
+
   // Block entire dashboard if not verified → show waitlist screen
   if (!driver.isVerified) {
     const realPosition = await prisma.driver.count({
@@ -92,6 +117,7 @@ export default async function DashboardLayout({
 
     return (
       <div className="min-h-screen bg-neutral-50">
+        {usage}
         <main className="p-4 sm:p-6 lg:p-8 flex justify-center">
           <WaitlistScreen
             driverName={driver.firstName}
@@ -131,6 +157,7 @@ export default async function DashboardLayout({
 
   return (
     <div className="min-h-screen bg-neutral-50">
+      {usage}
       <DashboardSidebar userName={userName} pendingCount={pendingCount} qr={qr} />
       <div className="lg:pl-64 min-w-0">
         <main className="space-main p-4 sm:p-6 lg:p-8">

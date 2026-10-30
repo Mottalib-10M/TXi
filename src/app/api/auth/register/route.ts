@@ -6,6 +6,7 @@ import { z } from "zod";
 import { sendEmail, buildVerificationEmail } from "@/lib/email";
 import { applyStrictRateLimit } from "@/lib/rate-limit";
 import { verifyTurnstileToken } from "@/lib/turnstile";
+import { serverTrack } from "@/lib/usage-server";
 
 const driverSchema = z.object({
   profileType: z.literal("driver"),
@@ -271,6 +272,7 @@ export async function POST(request: Request) {
       }
 
       await sendVerificationEmail(data.email, data.firstName, locale);
+      serverTrack(driver!.id, "signed_up", { role: "driver", referred: Boolean(data.referredByCode), has_carte_pro: Boolean(carteProUrl) }, { signed_up_at: new Date().toISOString(), signup_role: "driver" });
 
       return NextResponse.json(
         { message: "OK", slug: driver!.slug },
@@ -303,6 +305,7 @@ export async function POST(request: Request) {
       });
 
       await sendVerificationEmail(data.email, data.name, locale);
+      serverTrack(org.id, "signed_up", { role: "organization", org_type: "INDIVIDUAL" }, { signed_up_at: new Date().toISOString(), signup_role: "organization" });
 
       return NextResponse.json(
         { message: "OK", profileType: data.profileType },
@@ -317,7 +320,7 @@ export async function POST(request: Request) {
       enterprise: "ENTERPRISE",
     } as const;
 
-    await prisma.organization.create({
+    const org = await prisma.organization.create({
       data: {
         name: data.name,
         contactName: data.contactName,
@@ -330,6 +333,7 @@ export async function POST(request: Request) {
     });
 
     await sendVerificationEmail(data.email, data.contactName, locale);
+    serverTrack(org.id, "signed_up", { role: "organization", org_type: org.type }, { signed_up_at: new Date().toISOString(), signup_role: "organization" });
 
     return NextResponse.json(
       { message: "OK", profileType: data.profileType },
