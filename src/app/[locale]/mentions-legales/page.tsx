@@ -242,6 +242,9 @@ export default async function LegalPage({ params }: Props) {
                 <strong>Apple Inc.</strong> &mdash; {isFr ? "Notifications de l'app iPhone (Apple Push Notification service)" : "iPhone app notifications (Apple Push Notification service)"}
               </li>
               <li>
+                <strong>Google Ireland Limited</strong> &mdash; {isFr ? "Notifications de l'app Android (Firebase Cloud Messaging)" : "Android app notifications (Firebase Cloud Messaging)"}
+              </li>
+              <li>
                 <strong>Cloudflare, Inc.</strong> &mdash; {isFr ? "Contrôle anti-robot Turnstile sur les formulaires (États-Unis, clauses contractuelles types UE)" : "Turnstile anti-bot check on forms (United States, EU standard contractual clauses)"}
               </li>
             </ul>

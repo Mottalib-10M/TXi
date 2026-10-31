@@ -24,8 +24,9 @@ type CapWindow = Window & { Capacitor?: { isNativePlatform?: () => boolean; getP
 
 const SITE_HOSTS = ["taxineo.fr", "www.taxineo.fr"];
 
-// Android : en attente du projet Firebase (android/app/google-services.json), sans lequel l'inscription planterait.
-const ANDROID_PUSH = false;
+// Android : seulement si l'app a été compilée avec le projet Firebase (android/app/google-services.json),
+// sans lequel l'inscription planterait ; l'agent le dit par « Push/1 » (capacitor.config.ts).
+const androidPush = () => /\bPush\/1\b/.test(navigator.userAgent);
 const DEVICE_KEY = "txi-device";
 
 type Push = typeof import("@capacitor/push-notifications").PushNotifications;
@@ -38,8 +39,13 @@ let pendingRef = "";
 function setupPush(platform: string): Promise<{ push: Push } | null> {
   if (pushSetup) return pushSetup;
   pushSetup = (async () => {
-    if (platform !== "ios" && !(platform === "android" && ANDROID_PUSH)) return null;
+    if (platform !== "ios" && !(platform === "android" && androidPush())) return null;
     const { PushNotifications } = await import("@capacitor/push-notifications");
+    // Android : le canal des notifications (son et bandeau), celui que désigne le manifeste.
+    if (platform === "android") {
+      const en = document.documentElement.lang === "en";
+      await PushNotifications.createChannel({ id: "default", name: en ? "Rides and bookings" : "Courses et réservations", importance: 4, visibility: 1 }).catch(() => undefined);
+    }
     await PushNotifications.addListener("registration", ({ value }) => {
       const bookingRef = pendingRef;
       pendingRef = "";

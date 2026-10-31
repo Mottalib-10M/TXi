@@ -42,6 +42,11 @@
             </intent-filter>
         </activity>
 
+        <!-- Notifications Firebase : petite icône blanche, teinte, et canal créé par le site (NativeBridge). -->
+        <meta-data android:name="com.google.firebase.messaging.default_notification_icon" android:resource="@drawable/ic_stat_notify" />
+        <meta-data android:name="com.google.firebase.messaging.default_notification_color" android:resource="@color/notify" />
+        <meta-data android:name="com.google.firebase.messaging.default_notification_channel_id" android:value="default" />
+
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="${applicationId}.fileprovider"
@@ -54,6 +59,15 @@
     <!-- Permissions -->
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Notifications (Android 13 et plus : l'autorisation est demandée par le site). -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <!-- Champ photo avec « capture » : l'app ouvre l'appareil photo (sinon, la galerie seulement). -->
+    <queries>
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE" />
+        </intent>
+    </queries>
     <!-- Adresse de départ remplie depuis la position (formulaire de réservation). -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />

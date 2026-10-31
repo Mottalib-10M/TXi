@@ -9,7 +9,7 @@ import { useEffect, useState } from "react";
 import { Icon } from "@iconify/react";
 import { useTranslations } from "next-intl";
 
-type CapWindow = Window & { Capacitor?: { isNativePlatform?: () => boolean } };
+type CapWindow = Window & { Capacitor?: { isNativePlatform?: () => boolean; getPlatform?: () => string } };
 type State = "web" | "on" | "blocked" | "unknown";
 
 export function PushStatus() {
@@ -21,6 +21,8 @@ export function PushStatus() {
       setState("web");
       return;
     }
+    // App Android compilée sans Firebase (pas de « Push/1 », voir NativeBridge) : rien à afficher.
+    if ((window as CapWindow).Capacitor?.getPlatform?.() === "android" && !/\bPush\/1\b/.test(navigator.userAgent)) return;
     import("@capacitor/push-notifications")
       .then(({ PushNotifications }) => PushNotifications.checkPermissions())
       .then((s) => setState(s.receive === "granted" ? "on" : s.receive === "denied" ? "blocked" : "unknown"))

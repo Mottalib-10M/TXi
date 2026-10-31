@@ -5,7 +5,13 @@
 // connexion, la page mobile/www/offline.html s'affiche.
 // Construire : npm run app:sync ; la compilation se fait sur GitHub Actions (.github/workflows/app.yml).
 
+import { existsSync } from "node:fs";
 import type { CapacitorConfig } from "@capacitor/cli";
+
+// Android : les notifications ne marchent qu'avec le projet Firebase
+// (android/app/google-services.json) ; sans lui, l'inscription planterait
+// l'app. L'agent « Push/1 » dit au site qu'il peut les demander (NativeBridge).
+const androidPush = existsSync("android/app/google-services.json");
 
 const url = process.env.CAP_SERVER_URL || "https://www.taxineo.fr";
 
@@ -28,6 +34,7 @@ const config: CapacitorConfig = {
   },
   android: {
     allowMixedContent: false,
+    appendUserAgent: androidPush ? "TaxineoApp/1 Push/1" : "TaxineoApp/1",
   },
   plugins: {
     SplashScreen: {
