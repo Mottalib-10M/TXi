@@ -144,6 +144,7 @@ export function PlacesAutocomplete({
           onChange={(e) => handleInputChange(e.target.value)}
           onFocus={() => suggestions.length > 0 && setShowSuggestions(true)}
           placeholder={placeholder}
+          aria-label={placeholder}
           className="bg-transparent w-full text-sm font-medium outline-none text-neutral-900 placeholder:text-neutral-500 placeholder:font-light"
         />
         {showGeolocation && (

@@ -3,6 +3,7 @@ import { prisma } from "@/lib/prisma";
 import { haversineDistance, getRoutingDistance, estimatePrice } from "@/lib/geo";
 import { driverPool, isDemoEmail } from "@/lib/demo";
 import { auth } from "@/lib/auth";
+import { forfaitPourCourse } from "@/lib/forfait-aeroport";
 
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
@@ -86,6 +87,9 @@ export async function GET(request: NextRequest) {
       tripDuration = routing.durationMinutes;
     }
 
+    // Paris ↔ CDG / Orly : forfait réglementé des taxis parisiens (+ supplément de réservation), au lieu du compteur.
+    const forfait = tripDistance > 0 ? await forfaitPourCourse(departureLat, departureLng, arrivalLat, arrivalLng, bookingTime) : null;
+
     // Filter drivers by coverage zone (haversine is fine for approximate zone check)
     // and calculate estimated price using real driving distance
     const results = drivers
@@ -100,8 +104,9 @@ export async function GET(request: NextRequest) {
         return {
           ...driver,
           distance: distanceToDriver,
-          estimatedPrice:
-            tripDistance > 0
+          estimatedPrice: forfait
+            ? forfait.total
+            : tripDistance > 0
               ? estimatePrice(tripDistance, driver.baseFare, driver.pricePerKm, driver.minimumFare, driver.pricePerKmNight, bookingTime)
               : undefined,
         };
@@ -109,7 +114,7 @@ export async function GET(request: NextRequest) {
       .filter((d) => d.distance <= d.zoneRadius)
       .sort((a, b) => a.distance - b.distance);
 
-    return NextResponse.json({ drivers: results, tripDistance, tripDuration });
+    return NextResponse.json({ drivers: results, tripDistance, tripDuration, forfait });
   } catch (error) {
     console.error("Taxi search error:", error);
     return NextResponse.json({ drivers: [], tripDistance: 0, tripDuration: 0 });

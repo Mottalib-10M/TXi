@@ -50,6 +50,8 @@ export function BookingForm({ variant = "default" }: { variant?: "default" | "ap
   const [scheduleLater, setScheduleLater] = useState(false);
   const [scheduledDate, setScheduledDate] = useState("");
   const [results, setResults] = useState<TaxiResult[]>([]);
+  // Forfait réglementé Paris ↔ CDG / Orly renvoyé par /api/taxis (src/lib/forfait-aeroport.ts).
+  const [forfait, setForfait] = useState<{ aeroport: "CDG" | "ORY"; rive: "droite" | "gauche"; forfait: number; supplement: number; reservation: "immediate" | "avance"; total: number } | null>(null);
   const [loading, setLoading] = useState(false);
   const [step, setStep] = useState<"search" | "results" | "booking">("search");
   const [selectedTaxi, setSelectedTaxi] = useState<TaxiResult | null>(null);
@@ -121,6 +123,7 @@ export function BookingForm({ variant = "default" }: { variant?: "default" | "ap
       const drivers = data.drivers || [];
       const tripDuration = data.tripDuration || 0;
       setResults(drivers);
+      setForfait(data.forfait ?? null);
       setShowAllTaxis(false);
       setStep("results");
       trackViewResults({ departure, arrival, resultCount: drivers.length });
@@ -605,7 +608,9 @@ export function BookingForm({ variant = "default" }: { variant?: "default" | "ap
 
               <div className="flex items-center justify-center gap-1.5 mt-4 text-xs text-neutral-400">
                 <Icon icon="solar:shield-check-linear" className="text-green-500" />
-                <span>{t("fixedPriceGuaranteed")}</span>
+                <span>{forfait
+                  ? t("forfaitAeroport", { aeroport: forfait.aeroport === "CDG" ? "CDG" : "Orly", rive: forfait.rive === "droite" ? t("riveDroite") : t("riveGauche"), forfait: formatPrice(forfait.forfait), supplement: formatPrice(forfait.supplement) })
+                  : t("fixedPriceGuaranteed")}</span>
               </div>
             </>
           )}

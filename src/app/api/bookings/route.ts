@@ -18,6 +18,7 @@ import { format } from "date-fns";
 import { fr, enUS } from "date-fns/locale";
 import { driverPool, isDemoEmail } from "@/lib/demo";
 import { serverTrack } from "@/lib/usage-server";
+import { forfaitPourCourse } from "@/lib/forfait-aeroport";
 
 const bookingSchema = z.object({
   clientName: z.string().min(2),
@@ -180,6 +181,12 @@ export async function POST(request: Request) {
     // Fallback: if we have distance but no price (no driver), use national regulated tariffs
     if (estimatedDistance && !estimatedPrice) {
       estimatedPrice = estimateDefaultPrice(estimatedDistance, requestedDate);
+    }
+
+    // Paris ↔ CDG / Orly : le forfait réglementé des taxis parisiens remplace toute estimation (prix du client compris).
+    if (isValidCoords(depLat, depLng) && isValidCoords(arrLat, arrLng)) {
+      const forfait = await forfaitPourCourse(depLat, depLng, arrLat, arrLng, requestedDate);
+      if (forfait) estimatedPrice = forfait.total;
     }
 
     // Create booking (lock the price at creation time)
