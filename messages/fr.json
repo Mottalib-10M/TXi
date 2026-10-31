@@ -3813,5 +3813,26 @@
       "km": "{km} km",
       "error": "Le réglage n'a pas pu être enregistré."
     }
+  },
+  "accountDeletion": {
+    "title": "Supprimer votre compte Taxineo",
+    "intro": "Vous pouvez supprimer votre compte à tout moment, depuis l'app ou le site, ou nous le demander par e-mail si vous n'avez plus accès à l'app.",
+    "passenger": {
+      "title": "Compte passager",
+      "steps": "Connectez-vous, ouvrez « Compte », puis « Paramètres », et touchez « Supprimer le compte ». Confirmez : la suppression est immédiate."
+    },
+    "driver": {
+      "title": "Compte chauffeur de taxi",
+      "steps": "Connectez-vous, ouvrez « Moi », puis touchez « Supprimer mon compte ». Confirmez : la suppression est immédiate."
+    },
+    "email": {
+      "title": "Sans l'app",
+      "text": "Écrivez à <mail>contact@taxineo.fr</mail> depuis l'adresse e-mail de votre compte, avec l'objet « Suppression de compte ». Nous supprimons le compte sous 7 jours et vous le confirmons par e-mail."
+    },
+    "data": {
+      "title": "Ce qui est supprimé",
+      "text": "Votre profil, vos coordonnées, vos photos, vos chauffeurs favoris et vos réglages sont effacés. Les courses passées restent dans l'historique de l'autre partie (chauffeur ou passager), sans être rattachées à vous. Les données comptables ou demandées par la loi sont conservées le temps légal, puis effacées."
+    },
+    "privacy": "Règles de confidentialité"
   }
 }

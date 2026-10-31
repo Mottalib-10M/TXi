@@ -3813,5 +3813,26 @@
       "km": "{km} km",
       "error": "The setting could not be saved."
     }
+  },
+  "accountDeletion": {
+    "title": "Delete your Taxineo account",
+    "intro": "You can delete your account at any time from the app or the website, or ask us by e-mail if you no longer have the app.",
+    "passenger": {
+      "title": "Passenger account",
+      "steps": "Sign in, open “Account”, then “Settings”, and tap “Delete account”. Confirm: the account is deleted straight away."
+    },
+    "driver": {
+      "title": "Taxi driver account",
+      "steps": "Sign in, open “Me”, then tap “Delete my account”. Confirm: the account is deleted straight away."
+    },
+    "email": {
+      "title": "Without the app",
+      "text": "Write to <mail>contact@taxineo.fr</mail> from your account's e-mail address, with the subject “Account deletion”. We delete the account within 7 days and confirm by e-mail."
+    },
+    "data": {
+      "title": "What is deleted",
+      "text": "Your profile, contact details, photos, favourite drivers and settings are erased. Past rides stay in the other party's history (driver or passenger), no longer linked to you. Accounting data or data required by law is kept for the legal period, then erased."
+    },
+    "privacy": "Privacy policy"
   }
 }
