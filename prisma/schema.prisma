@@ -68,6 +68,9 @@ model Driver {
   carteProAutoApprovedAt DateTime?
   // Carte refusée : la suivante attend une décision, sans autorisation automatique.
   carteProRefusedAt      DateTime?
+  // Relances par e-mail du chauffeur sans carte (0, 1 ou 2 envoyées).
+  carteProReminderCount  Int       @default(0)
+  carteProReminderAt     DateTime?
   bio          String?
   companyName  String?
 

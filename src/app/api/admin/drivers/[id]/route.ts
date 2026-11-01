@@ -1,5 +1,5 @@
 import type { Prisma } from "@prisma/client";
-import { notifyDriver } from "@/lib/push";
+import { notifyCarteProDecision } from "@/lib/carte-pro";
 import { NextResponse } from "next/server";
 import { isAdmin } from "@/lib/admin";
 import { prisma } from "@/lib/prisma";
@@ -46,11 +46,11 @@ export async function PATCH(
     const driver = await prisma.driver.update({
       where: { id: params.id },
       data,
-      select: { id: true, isActive: true, isVerified: true },
+      select: { id: true, isActive: true, isVerified: true, carteProUrl: true },
     });
 
-    if (refuseCarte) await notifyDriver(driver.id, "carteRefused", {});
-    else if (driver.isVerified && before && !before.isVerified) await notifyDriver(driver.id, "carteVerified", {});
+    if (refuseCarte) await notifyCarteProDecision(driver.id, "refused");
+    else if (driver.isVerified && driver.carteProUrl && before && !before.isVerified) await notifyCarteProDecision(driver.id, "verified");
 
     return NextResponse.json(driver);
   } catch (error) {

@@ -1060,3 +1060,118 @@ export function buildNoDriverConfirmEmail(data: {
     `,
   };
 }
+
+// E-mails de la carte professionnelle : bandeau noir, une phrase, un bouton.
+function carteProLayout(o: { preheader: string; title: string; body: string; button: string; url: string; note?: string; ticks?: string[] }) {
+  const ticks = (o.ticks || [])
+    .map((tick) => `<tr><td style="padding:5px 10px 5px 0;color:#16a34a;font-weight:700;vertical-align:top;">✓</td><td style="padding:5px 0;color:#262626;font-size:15px;line-height:22px;">${tick}</td></tr>`)
+    .join("");
+  return `
+<div style="display:none;max-height:0;overflow:hidden;opacity:0;">${o.preheader}</div>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f5f5f5;padding:24px 12px;font-family:Inter,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
+  <tr><td align="center">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:480px;background:#ffffff;border-radius:16px;overflow:hidden;">
+      <tr><td style="background:#0a0a0a;padding:28px 28px 30px;">
+        <div style="color:#facc15;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:14px;">Taxineo</div>
+        <div style="color:#ffffff;font-size:28px;line-height:34px;font-weight:700;">${o.title}</div>
+      </td></tr>
+      <tr><td style="padding:26px 28px 28px;">
+        <div style="color:#262626;font-size:16px;line-height:24px;">${o.body}</div>
+        ${ticks ? `<table role="presentation" cellpadding="0" cellspacing="0" style="margin-top:16px;">${ticks}</table>` : ""}
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-top:24px;"><tr><td align="center" bgcolor="#facc15" style="border-radius:12px;">
+          <a href="${o.url}" style="display:block;padding:15px 20px;color:#0a0a0a;font-size:16px;font-weight:700;text-decoration:none;">${o.button}</a>
+        </td></tr></table>
+        ${o.note ? `<div style="margin-top:12px;color:#737373;font-size:13px;line-height:18px;text-align:center;">${o.note}</div>` : ""}
+      </td></tr>
+    </table>
+    <div style="max-width:480px;margin-top:14px;color:#a3a3a3;font-size:12px;line-height:18px;text-align:center;">Une question ? support@taxineo.fr</div>
+  </td></tr>
+</table>`;
+}
+
+/** Ville de la zone du chauffeur pour les phrases, sinon rien : « 62240 Desvres » donne « Desvres ». */
+/** « à Lyon », « au Havre », « aux Sables-d'Olonne ». */
+function cityIn(city: string) {
+  if (/^Le\s/.test(city)) return `au ${city.slice(3)}`;
+  if (/^Les\s/.test(city)) return `aux ${city.slice(4)}`;
+  return `à ${city}`;
+}
+
+/** « de Lyon », « d'Orléans », « du Havre », « des Sables-d'Olonne ». */
+function cityOf(city: string) {
+  if (/^Le\s/.test(city)) return `du ${city.slice(3)}`;
+  if (/^Les\s/.test(city)) return `des ${city.slice(4)}`;
+  return /^[AEIOUYÉÈÊÀÂÎÏÔ]/.test(city) ? `d'${city}` : `de ${city}`;
+}
+
+function zoneCity(zoneAddress: string | null | undefined) {
+  const city = zoneAddress?.split(",")[0].replace(/^\d{5}\s+/, "").trim();
+  return city && city.length >= 3 ? city : null;
+}
+
+/** Carte professionnelle validée ou refusée : pour les chauffeurs sans notifications de l'app. */
+export function buildCarteProDecisionEmail(name: string, decision: "verified" | "refused", url: string) {
+  const first = esc(name.trim());
+  if (decision === "verified") {
+    return {
+      subject: `${name.trim()}, vous êtes référencé sur Taxineo`,
+      html: carteProLayout({
+        preheader: "Les demandes de courses peuvent arriver.",
+        title: "C'est bon, vous êtes référencé.",
+        body: `Bravo ${first}, votre carte est validée. Les clients qui cherchent un taxi dans votre zone peuvent maintenant vous trouver.`,
+        button: "Voir mes courses",
+        url,
+      }),
+    };
+  }
+  return {
+    subject: "Votre carte professionnelle est à renvoyer",
+    html: carteProLayout({
+      preheader: "Une photo nette suffit.",
+      title: "Encore une photo.",
+      body: `Bonjour ${first}, nous n'avons pas pu valider votre carte. Renvoyez-nous une photo nette et entière, et nous la regardons.`,
+      button: "Renvoyer ma carte",
+      url,
+    }),
+  };
+}
+
+/**
+ * Relances d'un chauffeur sans carte : 1re 24 h après l'inscription, 2e 3 jours plus tard.
+ */
+export function buildCarteProReminderEmail(
+  driver: { firstName: string; zoneAddress?: string | null },
+  step: 1 | 2,
+  url: string
+) {
+  const first = driver.firstName.trim();
+  const city = zoneCity(driver.zoneAddress);
+  const where = city ? cityIn(city) : "autour de vous";
+  if (step === 1) {
+    return {
+      subject: city
+        ? `${first}, les clients ${cityOf(city)} ne vous voient pas encore`
+        : `${first}, les clients ne vous voient pas encore`,
+      html: carteProLayout({
+        preheader: "Une photo de votre carte pro, et vous êtes référencé.",
+        title: "Une photo, et vous êtes référencé.",
+        body: `${esc(first)}, votre compte est prêt. Il ne manque que votre carte pro pour apparaître quand un client cherche un taxi ${esc(where)}.`,
+        ticks: ["Les demandes arrivent directement chez vous", "Vous acceptez seulement celles qui vous conviennent", "Le client vous paie à bord"],
+        button: "Être référencé",
+        url,
+        note: "1 minute depuis votre téléphone · Vérification sous 24 h",
+      }),
+    };
+  }
+  return {
+    subject: `${first}, il ne manque que votre carte`,
+    html: carteProLayout({
+      preheader: "Votre place sur Taxineo vous attend.",
+      title: "Votre place vous attend.",
+      body: `Aujourd'hui, quand un client cherche un taxi ${esc(where)}, votre nom n'apparaît pas. Une photo de votre carte pro, et ça change.`,
+      button: "Envoyer ma carte",
+      url,
+      note: "1 minute depuis votre téléphone · Vérification sous 24 h",
+    }),
+  };
+}

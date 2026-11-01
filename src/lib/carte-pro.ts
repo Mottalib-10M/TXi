@@ -3,10 +3,15 @@
 // est autorisé par le passage toutes les 10 minutes (/api/cron/escalate-bookings).
 
 import { prisma } from "@/lib/prisma";
-import { sendEmail } from "@/lib/email";
+import { buildCarteProDecisionEmail, buildCarteProReminderEmail, sendEmail } from "@/lib/email";
+import { driverPool } from "@/lib/demo";
 import { notifyDriver } from "@/lib/push";
 
 export const CARTE_PRO_WAIT_MS = 24 * 60 * 60 * 1000;
+const FIRST_REMINDER_MS = 24 * 60 * 60 * 1000;
+const SECOND_REMINDER_MS = 3 * 24 * 60 * 60 * 1000;
+/** Les relances ne concernent que les chauffeurs inscrits à partir de cette date. */
+const REMINDERS_FROM = new Date("2026-11-02T00:00:00+01:00");
 
 const PDF_PREFIX = "data:application/pdf;base64,";
 const IMAGE_PREFIXES = ["data:image/jpeg;base64,", "data:image/png;base64,", "data:image/webp;base64,"];
@@ -71,6 +76,18 @@ export async function notifyAdminsCartePro(driverId: string, autoApproval: boole
   );
 }
 
+/** Annonce la décision au chauffeur : notification de l'app et e-mail, l'échec de l'un n'empêche pas l'autre. */
+export async function notifyCarteProDecision(driverId: string, decision: "verified" | "refused") {
+  await notifyDriver(driverId, decision === "verified" ? "carteVerified" : "carteRefused", {}).catch((err) =>
+    console.error("Carte pro push failed:", err)
+  );
+  const driver = await prisma.driver.findUnique({ where: { id: driverId }, select: { email: true, firstName: true } });
+  if (!driver) return;
+  const baseUrl = process.env.NEXTAUTH_URL || "https://www.taxineo.fr";
+  const { subject, html } = buildCarteProDecisionEmail(driver.firstName, decision, `${baseUrl}/dashboard/reservations`);
+  await sendEmail({ to: driver.email, subject, html }).catch((err) => console.error("Carte pro email failed:", err));
+}
+
 /** Autorise les chauffeurs dont la carte attend depuis 24 h sans décision de l'administration. */
 export async function approveExpiredCartes() {
   const limit = new Date(Date.now() - CARTE_PRO_WAIT_MS);
@@ -91,8 +108,50 @@ export async function approveExpiredCartes() {
     });
     if (count) {
       approved++;
-      await notifyDriver(id, "carteVerified", {}).catch((err) => console.error("Carte pro push failed:", err));
+      await notifyCarteProDecision(id, "verified");
     }
   }
   return approved;
+}
+
+/** Relance par e-mail les nouveaux inscrits sans carte, en journée : 24 h après l'inscription, puis 3 jours plus tard. */
+export async function sendCarteProReminders(now = new Date()) {
+  const hour = Number(new Intl.DateTimeFormat("en-GB", { hour: "2-digit", hourCycle: "h23", timeZone: "Europe/Paris" }).format(now));
+  if (hour < 9 || hour >= 20) return 0;
+
+  const base = {
+    ...driverPool(),
+    isActive: true,
+    isVerified: false,
+    suspendedAt: null,
+    notifyEmail: true,
+    carteProUrl: null,
+    carteProRefusedAt: null,
+    createdAt: { gte: REMINDERS_FROM },
+  };
+  const due = await prisma.driver.findMany({
+    where: {
+      OR: [
+        { ...base, carteProReminderCount: 0, createdAt: { gte: REMINDERS_FROM, lte: new Date(now.getTime() - FIRST_REMINDER_MS) } },
+        { ...base, carteProReminderCount: 1, carteProReminderAt: { lte: new Date(now.getTime() - SECOND_REMINDER_MS) } },
+      ],
+    },
+    select: { id: true, email: true, firstName: true, zoneAddress: true, carteProReminderCount: true },
+  });
+
+  const baseUrl = process.env.NEXTAUTH_URL || "https://www.taxineo.fr";
+  let sent = 0;
+  for (const d of due) {
+    // Réservé avant l'envoi : deux passages ne relancent jamais deux fois.
+    const { count } = await prisma.driver.updateMany({
+      where: { id: d.id, carteProReminderCount: d.carteProReminderCount, carteProUrl: null },
+      data: { carteProReminderCount: d.carteProReminderCount + 1, carteProReminderAt: now },
+    });
+    if (!count) continue;
+    const step = d.carteProReminderCount === 0 ? 1 : 2;
+    const { subject, html } = buildCarteProReminderEmail({ firstName: d.firstName, zoneAddress: d.zoneAddress }, step, `${baseUrl}/dashboard/reservations`);
+    await sendEmail({ to: d.email, subject, html }).catch((err) => console.error("Carte pro reminder failed:", err));
+    sent++;
+  }
+  return sent;
 }

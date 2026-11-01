@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { runEscalation } from "@/lib/escalation";
-import { approveExpiredCartes } from "@/lib/carte-pro";
+import { approveExpiredCartes, sendCarteProReminders } from "@/lib/carte-pro";
 import { prisma } from "@/lib/prisma";
 
 export async function GET(request: NextRequest) {
@@ -29,10 +29,15 @@ export async function GET(request: NextRequest) {
       console.error("[Cron] Carte pro approval error:", err);
       return 0;
     });
+    const cartesReminded = await sendCarteProReminders().catch((err) => {
+      console.error("[Cron] Carte pro reminder error:", err);
+      return 0;
+    });
 
     return NextResponse.json({
       ...result,
       cartesApproved,
+      cartesReminded,
       pendingBefore: pendingByPhase,
       timestamp: new Date().toISOString(),
       resendConfigured: Boolean(process.env.RESEND_API_KEY),

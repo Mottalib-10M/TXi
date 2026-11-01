@@ -32,7 +32,8 @@ export async function POST(request: Request) {
     }
     // Une carte déjà envoyée ne se remplace pas : le chauffeur ne relance pas l'attente de 24 h
     // et une carte validée reste celle qu'on a vue. Il la renvoie après un refus.
-    if (driver.carteProUrl) {
+    // Un chauffeur déjà validé n'a rien à envoyer : un dépôt lui retirerait ses courses.
+    if (driver.carteProUrl || driver.isVerified) {
       return NextResponse.json({ error: "Carte déjà envoyée" }, { status: 409 });
     }
 
