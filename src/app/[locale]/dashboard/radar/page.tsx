@@ -4,13 +4,15 @@
 
 import { redirect } from "next/navigation";
 import { Icon } from "@iconify/react";
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
 import { Link } from "@/i18n/navigation";
 import { clock, ensureSchedule, followedStations, radarAllowed, rankStations, realtime, stationView, type BoardRow } from "@/lib/radar";
 import { RadarShareButton } from "@/components/radar/RadarShareButton";
 import { TopDriverBadge } from "@/components/radar/TopDriverBadge";
+import { VenueEventRow } from "@/components/radar/VenueEventRow";
+import { zoneEvents } from "@/lib/radar-events";
 
 export const dynamic = "force-dynamic";
 
@@ -46,6 +48,18 @@ export default async function RadarPage({ searchParams }: { searchParams: { gare
   const wave = view?.events.find((e) => e.kind === "wave");
   const inWave = (r: BoardRow) => Boolean(wave && r.status !== "cancelled" && r.expectedAt >= wave.at && r.expectedAt.getTime() < wave.at.getTime() + 30 * 60_000);
   const city = (driver.zoneAddress ?? station?.name ?? "").split(",")[0].trim();
+
+  // Grands évènements des 7 prochains jours, groupés par jour, dans l'ordre de l'heure de sortie.
+  const locale = await getLocale();
+  const week = (await zoneEvents(driver, new Date(now.getTime() - 30 * 60_000), new Date(now.getTime() + 7 * 86_400_000), now).catch(() => []))
+    .sort((a, b) => a.peakAt.getTime() - b.peakAt.getTime());
+  const dayLabel = new Intl.DateTimeFormat(locale === "fr" ? "fr-FR" : "en-GB", { timeZone: "Europe/Paris", weekday: "long", day: "numeric", month: "long" });
+  const weekDays = Array.from(new Set(week.map((e) => dayLabel.format(e.peakAt)))).map((label) => ({
+    label,
+    events: week.filter((e) => dayLabel.format(e.peakAt) === label),
+  }));
+  // Le plus intéressant de la semaine, repéré dans la liste.
+  const best = [...week].sort((a, b) => b.score - a.score)[0];
 
   return (
     <div className="min-w-0 max-w-3xl space-y-5">
@@ -156,6 +170,27 @@ export default async function RadarPage({ searchParams }: { searchParams: { gare
           </section>
         </>
       )}
+
+      <section className="bg-white border border-neutral-200 rounded-2xl overflow-hidden">
+        <div className="px-4 pt-4 pb-1">
+          <h2 className="font-semibold">{t("events.week")}</h2>
+        </div>
+        {weekDays.length === 0 ? (
+          <p className="px-4 pb-4 text-sm text-neutral-500">{t("events.none")}</p>
+        ) : (
+          weekDays.map((d) => (
+            <div key={d.label} className="px-4 pt-2">
+              <h3 className="text-xs font-semibold text-neutral-500 first-letter:uppercase">{d.label}</h3>
+              <ul className="divide-y divide-neutral-100">
+                {d.events.map((e) => (
+                  <VenueEventRow key={e.id} event={e} highlight={e.id === best?.id} />
+                ))}
+              </ul>
+            </div>
+          ))
+        )}
+        <p className="px-4 py-3 border-t border-neutral-100 text-xs text-neutral-500 leading-relaxed">{t("events.weekNote")}</p>
+      </section>
 
       <Link
         href="/dashboard/profil?section=notifications"

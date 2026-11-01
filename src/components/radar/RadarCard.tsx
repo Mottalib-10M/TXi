@@ -1,11 +1,14 @@
 // Carte « Maintenant autour de vous » en haut de l'onglet Demandes : une ligne par gare
 // suivie, de la plus intéressante à la plus calme (au plus 3), avec la demande probable
-// des 2 prochaines heures par quart d'heure, puis le fait marquant en clair.
+// des 2 prochaines heures par quart d'heure, puis le fait marquant en clair. Dessous, les
+// grands évènements de la zone (matchs, concerts, salons) dont le public sort dans les 8 heures.
 
 import { Icon } from "@iconify/react";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { demandBuckets, ensureSchedule, followedStations, hhmm, rankStations, realtime, stationView } from "@/lib/radar";
+import { zoneEvents } from "@/lib/radar-events";
+import { VenueEventRow } from "@/components/radar/VenueEventRow";
 
 type Driver = {
   zoneLat: number | null;
@@ -24,6 +27,9 @@ export async function RadarCard({ driver }: { driver: Driver }) {
   const now = new Date();
   const [rt] = await Promise.all([stations.length ? realtime() : null, ensureSchedule(stations.map((s) => s.uic))]);
   const views = rankStations(await Promise.all(stations.map((s) => stationView(s, rt, now, 2))), now);
+  // Évènements : ceux dont le public sort dans les 8 heures ; sinon le prochain des 3 jours à venir.
+  const soon = await zoneEvents(driver, new Date(now.getTime() - 30 * 60_000), new Date(now.getTime() + 8 * 3600_000), now).catch(() => []);
+  const later = soon.length ? [] : (await zoneEvents(driver, now, new Date(now.getTime() + 3 * 86_400_000), now).catch(() => [])).slice(0, 1);
 
   // Seules les gares où des trains arrivent ont une ligne : une gare vide n'apprend rien
   // (elle reste dans le radar, comptée dans « + N autres gares »).
@@ -55,7 +61,10 @@ export async function RadarCard({ driver }: { driver: Driver }) {
         <p className="text-sm text-neutral-500 mt-3">{t("card.noTrains")}</p>
       ) : (
         <>
-          <p className="text-xs text-neutral-500 mt-1">{t("card.legend")}</p>
+          <p className="text-xs text-neutral-500 mt-1">
+            {(soon.length > 0 || later.length > 0) && <span className="font-semibold text-neutral-700">{t("events.stations")} · </span>}
+            {t("card.legend")}
+          </p>
 
           <ul className="mt-3 divide-y divide-neutral-100">
             {shown.map(({ view, buckets }) => {
@@ -114,6 +123,17 @@ export async function RadarCard({ driver }: { driver: Driver }) {
             <p className="text-sm text-neutral-600 mt-4">{t("card.calm")}</p>
           )}
         </>
+      )}
+
+      {(soon.length > 0 || later.length > 0) && (
+        <div className="mt-4 pt-3 border-t border-neutral-100">
+          <h3 className="text-xs font-semibold text-neutral-700">{soon.length ? t("events.title") : t("events.next")}</h3>
+          <ul className="divide-y divide-neutral-100">
+            {(soon.length ? soon.slice(0, SHOWN) : later).map((e, i) => (
+              <VenueEventRow key={e.id} event={e} highlight={soon.length > 0 && i === 0} showDay={soon.length === 0} />
+            ))}
+          </ul>
+        </div>
       )}
 
       <Link

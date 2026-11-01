@@ -483,3 +483,23 @@ model RadarAlert {
   @@index([sendAt, sentAt])
   @@map("radar_alerts")
 }
+
+// Radar : grands évènements (matchs, concerts, salons) dans les grandes salles et stades
+// (src/data/radar-venues.json), rechargés chaque nuit (src/lib/radar-events.ts).
+model RadarVenueEvent {
+  id        String   @id @default(cuid())
+  key       String   @unique
+  venueId   String
+  title     String
+  kind      String // match | concert | spectacle | salon | sport
+  startsAt  DateTime
+  // Sortie du public, le moment où les clients cherchent un taxi
+  peakAt    DateTime
+  // false : heure non publiée, sortie estimée
+  timeKnown Boolean
+  source    String // ligue1 | paris | datatourisme
+  updatedAt DateTime @updatedAt
+
+  @@index([peakAt])
+  @@map("radar_venue_events")
+}

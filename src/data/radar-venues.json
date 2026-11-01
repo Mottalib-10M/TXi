@@ -1,0 +1,398 @@
+[
+ {
+  "id": "parc-des-princes",
+  "name": "Parc des Princes",
+  "kind": "stade",
+  "capacity": 47900,
+  "lat": 48.84136,
+  "lon": 2.25307,
+  "team": "Paris Saint-Germain FC"
+ },
+ {
+  "id": "jean-bouin",
+  "name": "Stade Jean-Bouin",
+  "kind": "stade",
+  "capacity": 19900,
+  "lat": 48.84332,
+  "lon": 2.25296,
+  "team": "Paris FC"
+ },
+ {
+  "id": "stade-de-france",
+  "name": "Stade de France",
+  "kind": "stade",
+  "capacity": 80000,
+  "lat": 48.92447,
+  "lon": 2.36013
+ },
+ {
+  "id": "accor-arena",
+  "name": "Accor Arena",
+  "kind": "salle",
+  "capacity": 20300,
+  "lat": 48.83871,
+  "lon": 2.37877
+ },
+ {
+  "id": "la-defense-arena",
+  "name": "Paris La Défense Arena",
+  "kind": "salle",
+  "capacity": 40000,
+  "lat": 48.89568,
+  "lon": 2.22966
+ },
+ {
+  "id": "zenith-paris",
+  "name": "Zénith Paris – La Villette",
+  "kind": "salle",
+  "capacity": 6300,
+  "lat": 48.89421,
+  "lon": 2.39318
+ },
+ {
+  "id": "adidas-arena",
+  "name": "Adidas Arena",
+  "kind": "salle",
+  "capacity": 8000,
+  "lat": 48.8996,
+  "lon": 2.36075
+ },
+ {
+  "id": "paris-expo",
+  "name": "Paris Expo Porte de Versailles",
+  "kind": "salon",
+  "capacity": 60000,
+  "lat": 48.82872,
+  "lon": 2.28898
+ },
+ {
+  "id": "villepinte",
+  "name": "Paris Nord Villepinte",
+  "kind": "salon",
+  "capacity": 50000,
+  "lat": 48.9702,
+  "lon": 2.52541
+ },
+ {
+  "id": "palais-congres-paris",
+  "name": "Palais des Congrès de Paris",
+  "kind": "salle",
+  "capacity": 3700,
+  "lat": 48.87923,
+  "lon": 2.28327
+ },
+ {
+  "id": "velodrome",
+  "name": "Stade Vélodrome",
+  "kind": "stade",
+  "capacity": 67000,
+  "lat": 43.26985,
+  "lon": 5.39591,
+  "team": "Olympique de Marseille"
+ },
+ {
+  "id": "dome-marseille",
+  "name": "Le Dôme",
+  "kind": "salle",
+  "capacity": 8500,
+  "lat": 43.31532,
+  "lon": 5.40442
+ },
+ {
+  "id": "parc-chanot",
+  "name": "Parc Chanot",
+  "kind": "salon",
+  "capacity": 20000,
+  "lat": 43.27285,
+  "lon": 5.39568
+ },
+ {
+  "id": "groupama-stadium",
+  "name": "Groupama Stadium",
+  "kind": "stade",
+  "capacity": 59000,
+  "lat": 45.76536,
+  "lon": 4.98205,
+  "team": "Olympique Lyonnais"
+ },
+ {
+  "id": "ldlc-arena",
+  "name": "LDLC Arena",
+  "kind": "salle",
+  "capacity": 16000,
+  "lat": 45.76952,
+  "lon": 4.97995
+ },
+ {
+  "id": "tony-garnier",
+  "name": "Halle Tony Garnier",
+  "kind": "salle",
+  "capacity": 17000,
+  "lat": 45.72989,
+  "lon": 4.82501
+ },
+ {
+  "id": "eurexpo",
+  "name": "Eurexpo Lyon",
+  "kind": "salon",
+  "capacity": 30000,
+  "lat": 45.73025,
+  "lon": 4.95131
+ },
+ {
+  "id": "louis-ii",
+  "name": "Stade Louis-II",
+  "kind": "stade",
+  "capacity": 16500,
+  "lat": 43.72757,
+  "lon": 7.41546,
+  "team": "AS Monaco FC"
+ },
+ {
+  "id": "pierre-mauroy",
+  "name": "Decathlon Arena – Stade Pierre-Mauroy",
+  "kind": "stade",
+  "capacity": 50000,
+  "lat": 50.61271,
+  "lon": 3.12783,
+  "team": "Lille OSC"
+ },
+ {
+  "id": "zenith-lille",
+  "name": "Zénith de Lille",
+  "kind": "salle",
+  "capacity": 7000,
+  "lat": 50.63351,
+  "lon": 3.07755
+ },
+ {
+  "id": "lille-grand-palais",
+  "name": "Lille Grand Palais",
+  "kind": "salon",
+  "capacity": 5000,
+  "lat": 50.62961,
+  "lon": 3.07497
+ },
+ {
+  "id": "bollaert",
+  "name": "Stade Bollaert-Delelis",
+  "kind": "stade",
+  "capacity": 38000,
+  "lat": 50.43282,
+  "lon": 2.81499,
+  "team": "Racing Club de Lens"
+ },
+ {
+  "id": "allianz-riviera",
+  "name": "Allianz Riviera",
+  "kind": "stade",
+  "capacity": 36000,
+  "lat": 43.70515,
+  "lon": 7.1926,
+  "team": "OGC Nice"
+ },
+ {
+  "id": "nikaia",
+  "name": "Palais Nikaïa",
+  "kind": "salle",
+  "capacity": 9000,
+  "lat": 43.67851,
+  "lon": 7.19899
+ },
+ {
+  "id": "roazhon-park",
+  "name": "Roazhon Park",
+  "kind": "stade",
+  "capacity": 29800,
+  "lat": 48.10757,
+  "lon": -1.71265,
+  "team": "Stade Rennais FC 1901"
+ },
+ {
+  "id": "le-liberte",
+  "name": "Le Liberté",
+  "kind": "salle",
+  "capacity": 8000,
+  "lat": 48.10691,
+  "lon": -1.67687
+ },
+ {
+  "id": "meinau",
+  "name": "Stade de la Meinau",
+  "kind": "stade",
+  "capacity": 32000,
+  "lat": 48.55995,
+  "lon": 7.75512,
+  "team": "RC Strasbourg Alsace"
+ },
+ {
+  "id": "zenith-strasbourg",
+  "name": "Zénith de Strasbourg",
+  "kind": "salle",
+  "capacity": 12000,
+  "lat": 48.59439,
+  "lon": 7.68921
+ },
+ {
+  "id": "stadium-toulouse",
+  "name": "Stadium de Toulouse",
+  "kind": "stade",
+  "capacity": 33000,
+  "lat": 43.58323,
+  "lon": 1.43406,
+  "team": "Toulouse FC"
+ },
+ {
+  "id": "zenith-toulouse",
+  "name": "Zénith de Toulouse",
+  "kind": "salle",
+  "capacity": 9000,
+  "lat": 43.59822,
+  "lon": 1.40925
+ },
+ {
+  "id": "meett",
+  "name": "MEETT",
+  "kind": "salon",
+  "capacity": 20000,
+  "lat": 43.66563,
+  "lon": 1.35389
+ },
+ {
+  "id": "ernest-wallon",
+  "name": "Stade Ernest-Wallon",
+  "kind": "stade",
+  "capacity": 19500,
+  "lat": 43.6219,
+  "lon": 1.41537
+ },
+ {
+  "id": "francis-le-ble",
+  "name": "Stade Francis-Le Blé",
+  "kind": "stade",
+  "capacity": 15000,
+  "lat": 48.40304,
+  "lon": -4.46136,
+  "team": "Stade Brestois 29"
+ },
+ {
+  "id": "moustoir",
+  "name": "Stade du Moustoir",
+  "kind": "stade",
+  "capacity": 18800,
+  "lat": 47.7488,
+  "lon": -3.36954,
+  "team": "FC Lorient"
+ },
+ {
+  "id": "oceane",
+  "name": "Stade Océane",
+  "kind": "stade",
+  "capacity": 25000,
+  "lat": 49.49875,
+  "lon": 0.16946,
+  "team": "Le Havre AC"
+ },
+ {
+  "id": "raymond-kopa",
+  "name": "Stade Raymond-Kopa",
+  "kind": "stade",
+  "capacity": 19000,
+  "lat": 47.46055,
+  "lon": -0.53069,
+  "team": "Angers SCO"
+ },
+ {
+  "id": "abbe-deschamps",
+  "name": "Stade de l'Abbé-Deschamps",
+  "kind": "stade",
+  "capacity": 18500,
+  "lat": 47.78678,
+  "lon": 3.58862,
+  "team": "AJ Auxerre"
+ },
+ {
+  "id": "stade-aube",
+  "name": "Stade de l'Aube",
+  "kind": "stade",
+  "capacity": 21000,
+  "lat": 48.30752,
+  "lon": 4.09852,
+  "team": "ES Troyes AC"
+ },
+ {
+  "id": "mmarena",
+  "name": "Stade Marie-Marvingt (MMArena)",
+  "kind": "stade",
+  "capacity": 25000,
+  "lat": 47.95917,
+  "lon": 0.22311,
+  "team": "Le Mans FC"
+ },
+ {
+  "id": "zenith-nantes",
+  "name": "Zénith Nantes Métropole",
+  "kind": "salle",
+  "capacity": 9000,
+  "lat": 47.22871,
+  "lon": -1.62798
+ },
+ {
+  "id": "beaujoire",
+  "name": "Stade de la Beaujoire",
+  "kind": "stade",
+  "capacity": 35000,
+  "lat": 47.25601,
+  "lon": -1.52476,
+  "team": "FC Nantes"
+ },
+ {
+  "id": "expo-beaujoire",
+  "name": "Parc des expositions de la Beaujoire",
+  "kind": "salon",
+  "capacity": 15000,
+  "lat": 47.2585,
+  "lon": -1.53239
+ },
+ {
+  "id": "sud-de-france-arena",
+  "name": "Sud de France Arena",
+  "kind": "salle",
+  "capacity": 14000,
+  "lat": 43.5733,
+  "lon": 3.95172
+ },
+ {
+  "id": "mosson",
+  "name": "Stade de la Mosson",
+  "kind": "stade",
+  "capacity": 32900,
+  "lat": 43.62202,
+  "lon": 3.81209,
+  "team": "Montpellier HSC"
+ },
+ {
+  "id": "arkea-arena",
+  "name": "Arkéa Arena",
+  "kind": "salle",
+  "capacity": 11300,
+  "lat": 44.82477,
+  "lon": -0.53136
+ },
+ {
+  "id": "matmut-atlantique",
+  "name": "Matmut Atlantique",
+  "kind": "stade",
+  "capacity": 42000,
+  "lat": 44.89756,
+  "lon": -0.56163
+ },
+ {
+  "id": "expo-bordeaux",
+  "name": "Parc des expositions de Bordeaux",
+  "kind": "salon",
+  "capacity": 20000,
+  "lat": 44.89331,
+  "lon": -0.56582
+ }
+]

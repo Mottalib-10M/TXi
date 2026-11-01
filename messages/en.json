@@ -3815,6 +3815,25 @@
       "noZone": "Set your work area to follow its stations.",
       "km": "{km} km",
       "error": "The setting could not be saved."
+    },
+    "events": {
+      "title": "Events and shows",
+      "stations": "Stations",
+      "exit": "crowd out around {time}",
+      "exitEstimated": "crowd out around {time} (estimate)",
+      "seats": "{count} seats",
+      "km": "{km} km",
+      "next": "Next big event",
+      "week": "Big events, next 7 days",
+      "weekNote": "Ligue 1 matches and events at the big arenas, stadiums and exhibition centres in your area (sources: Ligue 1 calendar, DATAtourisme). When the time is not published, the exit time is an estimate.",
+      "none": "No big event planned in your area this week.",
+      "kinds": {
+        "match": "Match",
+        "concert": "Concert",
+        "spectacle": "Show",
+        "salon": "Trade fair",
+        "sport": "Sport"
+      }
     }
   },
   "accountDeletion": {

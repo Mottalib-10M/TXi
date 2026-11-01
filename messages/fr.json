@@ -3815,6 +3815,25 @@
       "noZone": "Renseignez votre zone de travail pour suivre ses gares.",
       "km": "{km} km",
       "error": "Le réglage n'a pas pu être enregistré."
+    },
+    "events": {
+      "title": "Évènements et spectacles",
+      "stations": "Gares",
+      "exit": "sortie vers {time}",
+      "exitEstimated": "sortie estimée vers {time}",
+      "seats": "{count} places",
+      "km": "{km} km",
+      "next": "Prochain grand évènement",
+      "week": "Grands évènements, 7 prochains jours",
+      "weekNote": "Matchs de Ligue 1 et évènements des grandes salles, stades et parcs des expositions de votre zone (sources : calendrier de la Ligue 1, DATAtourisme). Quand l'heure n'est pas publiée, la sortie est estimée.",
+      "none": "Aucun grand évènement prévu dans votre zone cette semaine.",
+      "kinds": {
+        "match": "Match",
+        "concert": "Concert",
+        "spectacle": "Spectacle",
+        "salon": "Salon",
+        "sport": "Sport"
+      }
     }
   },
   "accountDeletion": {
