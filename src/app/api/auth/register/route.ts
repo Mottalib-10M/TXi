@@ -1,3 +1,4 @@
+import { carteProError, notifyAdminsCartePro, storeCartePro } from "@/lib/carte-pro";
 import { NextResponse } from "next/server";
 import { hash } from "bcryptjs";
 import slugify from "slugify";
@@ -144,82 +145,9 @@ export async function POST(request: Request) {
       // Handle carte pro if provided (PDF or image)
       let carteProUrl: string | undefined;
       if (data.carteProBase64) {
-        const isPdf = data.carteProBase64.startsWith("data:application/pdf;base64,");
-        const isImage = ["data:image/jpeg;base64,", "data:image/png;base64,", "data:image/webp;base64,"].some(
-          (p) => data.carteProBase64!.startsWith(p)
-        );
-        if (!isPdf && !isImage) {
-          return NextResponse.json({ error: "Format de carte pro invalide" }, { status: 400 });
-        }
-        // Limit ~10MB
-        if (data.carteProBase64.length > 14 * 1024 * 1024) {
-          return NextResponse.json({ error: "Fichier carte pro trop volumineux" }, { status: 400 });
-        }
-
-        if (process.env.CLOUDINARY_URL) {
-          try {
-            const cloudName = process.env.CLOUDINARY_CLOUD_NAME || process.env.CLOUDINARY_URL.split("@")[1];
-            const apiKey = process.env.CLOUDINARY_API_KEY || process.env.CLOUDINARY_URL.split("://")[1].split(":")[0];
-            const apiSecret = process.env.CLOUDINARY_API_SECRET || process.env.CLOUDINARY_URL.split(":")[2].split("@")[0];
-
-            if (isPdf) {
-              // PDF → raw/upload endpoint
-              const formData = new FormData();
-              formData.append("file", data.carteProBase64);
-              formData.append("upload_preset", "ml_default");
-              formData.append("folder", "carte-pro");
-              const timestamp = Math.floor(Date.now() / 1000).toString();
-              formData.append("timestamp", timestamp);
-              formData.append("api_key", apiKey);
-
-              const { createHash } = await import("crypto");
-              const signature = createHash("sha1")
-                .update(`folder=carte-pro&timestamp=${timestamp}&upload_preset=ml_default${apiSecret}`)
-                .digest("hex");
-              formData.append("signature", signature);
-
-              const cloudRes = await fetch(
-                `https://api.cloudinary.com/v1_1/${cloudName}/raw/upload`,
-                { method: "POST", body: formData }
-              );
-              if (cloudRes.ok) {
-                const cloudData = await cloudRes.json();
-                carteProUrl = cloudData.secure_url;
-              }
-            } else {
-              // Image → image/upload endpoint
-              const formData = new FormData();
-              formData.append("file", data.carteProBase64);
-              formData.append("upload_preset", "ml_default");
-              formData.append("folder", "carte-pro");
-              const timestamp = Math.floor(Date.now() / 1000).toString();
-              formData.append("timestamp", timestamp);
-              formData.append("api_key", apiKey);
-
-              const { createHash } = await import("crypto");
-              const signature = createHash("sha1")
-                .update(`folder=carte-pro&timestamp=${timestamp}&upload_preset=ml_default${apiSecret}`)
-                .digest("hex");
-              formData.append("signature", signature);
-
-              const cloudRes = await fetch(
-                `https://api.cloudinary.com/v1_1/${cloudName}/image/upload`,
-                { method: "POST", body: formData }
-              );
-              if (cloudRes.ok) {
-                const cloudData = await cloudRes.json();
-                carteProUrl = cloudData.secure_url;
-              }
-            }
-          } catch (err) {
-            console.error("Cloudinary carte pro upload failed:", err);
-          }
-        }
-
-        // Fallback: store data URL directly (dev mode)
-        if (!carteProUrl) {
-          carteProUrl = data.carteProBase64;
-        }
+        const invalid = carteProError(data.carteProBase64);
+        if (invalid) return NextResponse.json({ error: invalid }, { status: 400 });
+        carteProUrl = await storeCartePro(data.carteProBase64);
       }
 
       // Build vehicles JSON with photo if provided
@@ -256,6 +184,7 @@ export async function POST(request: Request) {
               referredByCode: data.referredByCode || undefined,
               photoUrl,
               carteProUrl,
+              carteProSubmittedAt: carteProUrl ? new Date() : undefined,
               vehicles: JSON.parse(JSON.stringify([vehicle])),
             },
           });

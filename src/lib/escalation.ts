@@ -1,3 +1,4 @@
+import { platformRidesFilter } from "@/lib/driver-verification";
 import { prisma } from "@/lib/prisma";
 import { notifyDriver } from "@/lib/push";
 import { haversineDistance } from "@/lib/geo";
@@ -56,6 +57,7 @@ export async function runEscalation(): Promise<{ phase1: number; phase2: number 
     const allDrivers = await prisma.driver.findMany({
       where: {
         ...driverPool(),
+        ...platformRidesFilter(),
         isActive: true,
         zoneLat: { not: null },
         zoneLng: { not: null },

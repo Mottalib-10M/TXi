@@ -1,3 +1,4 @@
+import { platformRidesFilter } from "@/lib/driver-verification";
 import { randomUUID } from "crypto";
 import { NextResponse } from "next/server";
 import { auth } from "@/lib/auth";
@@ -250,6 +251,7 @@ export async function PATCH(
         const allDrivers = await prisma.driver.findMany({
           where: {
             ...driverPool(isDemoEmail(booking.clientEmail)),
+            ...platformRidesFilter(isDemoEmail(booking.clientEmail)),
             isActive: true,
             zoneLat: { not: null },
             zoneLng: { not: null },

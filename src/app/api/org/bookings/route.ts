@@ -1,3 +1,4 @@
+import { platformRidesFilter } from "@/lib/driver-verification";
 import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
 import { auth } from "@/lib/auth";
@@ -74,12 +75,18 @@ export async function POST(request: Request) {
     // Chauffeurs bloqués par l'organisation (src/lib/moderation.ts) : jamais proposés.
     const blocked = await blockedForOrg(session.user.id);
     if (driverId && blocked.includes(driverId)) driverId = undefined;
+    // Favori ou chauffeur choisi qui n'est pas (ou plus) vérifié : attribution automatique.
+    if (driverId && !isDemoEmail(session.user.email)) {
+      const eligible = await prisma.driver.findFirst({ where: { id: driverId, ...platformRidesFilter() }, select: { id: true } });
+      if (!eligible) driverId = undefined;
+    }
 
     if (!driverId) {
       // Auto-assign: find nearest available driver
       const drivers = await prisma.driver.findMany({
         where: {
           ...driverPool(isDemoEmail(session.user.email)),
+          ...platformRidesFilter(isDemoEmail(session.user.email)),
           isActive: true,
           zoneLat: { not: null },
           zoneLng: { not: null },

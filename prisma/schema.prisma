@@ -63,6 +63,11 @@ model Driver {
   phone        String   @default("")
   photoUrl     String?
   carteProUrl  String?   // Carte professionnelle de taxi (PDF ou image Cloudinary)
+  // Attente de 24 h : sans décision de l'administration, le compte est autorisé (src/lib/carte-pro.ts).
+  carteProSubmittedAt    DateTime?
+  carteProAutoApprovedAt DateTime?
+  // Carte refusée : la suivante attend une décision, sans autorisation automatique.
+  carteProRefusedAt      DateTime?
   bio          String?
   companyName  String?
 

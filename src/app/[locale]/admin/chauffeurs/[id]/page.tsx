@@ -97,6 +97,8 @@ export default async function AdminDriverDetailPage({
     bio: driver.bio,
     companyName: driver.companyName,
     carteProUrl: driver.carteProUrl || null,
+    carteProSubmittedAt: driver.carteProSubmittedAt?.toISOString() || null,
+    carteProAutoApprovedAt: driver.carteProAutoApprovedAt?.toISOString() || null,
     vehicle: vehicleDisplay,
     vehicleColor: v0?.color || driver.vehicleColor || null,
     vehiclePlate: v0?.plate || driver.vehiclePlate || null,

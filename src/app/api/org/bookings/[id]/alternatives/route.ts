@@ -1,3 +1,4 @@
+import { platformRidesFilter } from "@/lib/driver-verification";
 import { NextResponse } from "next/server";
 import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
@@ -31,6 +32,7 @@ export async function GET(
     const drivers = await prisma.driver.findMany({
       where: {
         ...driverPool(isDemoEmail(booking.clientEmail)),
+        ...platformRidesFilter(isDemoEmail(booking.clientEmail)),
         isActive: true,
         zoneLat: { not: null },
         zoneLng: { not: null },

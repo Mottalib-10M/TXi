@@ -173,7 +173,7 @@ const seconds = (hms: string) => {
 /** Gares suivies par au moins un chauffeur qui a le Radar. */
 export async function radarStationsInUse() {
   const drivers = await prisma.driver.findMany({
-    where: { radarEnabled: true, isVerified: true, suspendedAt: null, zoneLat: { not: null }, zoneLng: { not: null } },
+    where: { radarEnabled: true, suspendedAt: null, zoneLat: { not: null }, zoneLng: { not: null } },
     select: { zoneLat: true, zoneLng: true, zoneRadius: true, radarOffStations: true, radarExtraStations: true },
   });
   return Array.from(new Set(drivers.flatMap((d) => followedStations(d).map((s) => s.uic))));

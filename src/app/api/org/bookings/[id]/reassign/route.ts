@@ -1,3 +1,5 @@
+import { platformRidesFilter } from "@/lib/driver-verification";
+import { isDemoEmail } from "@/lib/demo";
 import { NextResponse } from "next/server";
 import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
@@ -34,7 +36,9 @@ export async function POST(
     }
 
     // Verify driver exists
-    const driver = await prisma.driver.findUnique({ where: { id: driverId } });
+    const driver = await prisma.driver.findFirst({
+      where: { id: driverId, isActive: true, ...platformRidesFilter(isDemoEmail(booking.clientEmail)) },
+    });
     if (!driver) {
       return NextResponse.json({ error: "Chauffeur non trouvé" }, { status: 404 });
     }

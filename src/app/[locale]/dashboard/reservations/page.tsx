@@ -5,6 +5,8 @@ import { ReservationsTable } from "@/components/driver/ReservationsTable";
 import { RidesSwitch } from "@/components/dashboard/RidesSwitch";
 import { contactForDriver } from "@/lib/p2p";
 import { escalateIfDue } from "@/lib/escalation";
+import { CarteProCard } from "@/components/dashboard/CarteProCard";
+import { verificationStatus } from "@/lib/driver-verification";
 
 export default async function ReservationsPage() {
   const session = await auth();
@@ -20,7 +22,7 @@ export default async function ReservationsPage() {
 
   const driver = await prisma.driver.findUnique({
     where: { id: session.user.id },
-    select: { slug: true, firstName: true, lastName: true, companyName: true, vehicleBrand: true, vehicleModel: true, vehicles: true },
+    select: { email: true, isVerified: true, carteProUrl: true, carteProSubmittedAt: true, slug: true, firstName: true, lastName: true, companyName: true, vehicleBrand: true, vehicleModel: true, vehicles: true },
   });
 
   if (!driver) redirect("/connexion");
@@ -58,6 +60,7 @@ export default async function ReservationsPage() {
   return (
     <div>
       <RidesSwitch active="received" />
+      <CarteProCard status={verificationStatus(driver)} within24h={Boolean(driver.carteProSubmittedAt)} />
       <ReservationsTable bookings={serialized} driverName={`${driver.firstName} ${driver.lastName}`} />
     </div>
   );

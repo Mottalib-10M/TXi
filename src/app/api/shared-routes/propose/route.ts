@@ -1,3 +1,4 @@
+import { platformRidesFilter } from "@/lib/driver-verification";
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { prisma } from "@/lib/prisma";
@@ -95,6 +96,7 @@ export async function POST(request: Request) {
     const drivers = await prisma.driver.findMany({
       where: {
         ...driverPool(),
+        ...platformRidesFilter(),
         isActive: true,
         zoneLat: { not: null },
         zoneLng: { not: null },

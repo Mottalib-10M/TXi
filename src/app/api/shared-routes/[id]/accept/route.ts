@@ -1,3 +1,5 @@
+import { isDemoEmail } from "@/lib/demo";
+import { platformRidesFilter } from "@/lib/driver-verification";
 import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { auth } from "@/lib/auth";
@@ -15,6 +17,15 @@ export async function POST(
     }
 
     const { id } = await params;
+
+    // Taxi partagé : une course de Taxineo, réservée aux chauffeurs vérifiés.
+    const eligible = await prisma.driver.findFirst({
+      where: { id: session.user.id, ...platformRidesFilter(isDemoEmail(session.user.email)) },
+      select: { id: true },
+    });
+    if (!eligible) {
+      return NextResponse.json({ error: "Carte professionnelle à faire vérifier" }, { status: 403 });
+    }
 
     // Use a transaction to prevent race conditions
     const result = await prisma.$transaction(async (tx) => {

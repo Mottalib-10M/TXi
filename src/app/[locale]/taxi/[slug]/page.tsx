@@ -94,7 +94,7 @@ export default async function TaxiProfilePage({ params }: Props) {
             bio={driver.bio}
             photoUrl={driver.photoUrl}
             zoneAddress={driver.zoneAddress}
-            isVerified={driver.isVerified}
+            isVerified={driver.isVerified && Boolean(driver.carteProUrl)}
             email={driver.email}
             phone={driver.phone}
             companyName={driver.companyName}

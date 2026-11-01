@@ -840,6 +840,18 @@
     "noPendingDesc": "Les nouvelles demandes de course arrivent ici, avec une notification.",
     "summaryTitle": "Mes courses",
     "profileFilled": "Profil rempli à {percent} %",
+    "cartePro": {
+      "missingTitle": "Recevez les courses Taxineo",
+      "missingBody": "Votre compte est actif : Radar, fiche et QR code sont à vous. Pour recevoir aussi les courses de Taxineo, envoyez votre carte professionnelle.",
+      "send": "Envoyer ma carte professionnelle",
+      "sending": "Envoi…",
+      "hint": "Photo ou PDF (3 Mo maximum)",
+      "tooBig": "Fichier trop lourd (3 Mo maximum)",
+      "error": "L'envoi a échoué, réessayez.",
+      "pendingTitle": "Vous êtes sur la liste d'attente",
+      "pendingBody24h": "Nous vérifions votre carte professionnelle. Vous recevrez les courses Taxineo sous 24 h, sauf si nous devons vous demander de la renvoyer.",
+      "pendingBody": "Nous vérifions votre carte professionnelle. Vous serez prévenu dès que vous pourrez recevoir les courses Taxineo."
+    },
     "rides": {
       "title": "Courses",
       "received": "Reçues",
@@ -1240,6 +1252,9 @@
     "downloadFullSize": "Voir en taille réelle",
     "carteProReviewHint": "Vérifiez le document avant de valider le chauffeur",
     "approveDriver": "Valider le chauffeur",
+    "refuseCartePro": "Refuser la carte",
+    "carteProAutoOn": "Sans décision de votre part, autorisation automatique le {date}.",
+    "carteProAutoDone": "Autorisé automatiquement le {date}, carte non contrôlée. Validez ou refusez-la.",
     "noCartePro": "Aucune carte professionnelle téléchargée",
     "referralsSection": "Filleuls",
     "noReferrals": "Aucun filleul",

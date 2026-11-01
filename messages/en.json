@@ -840,6 +840,18 @@
     "noPendingDesc": "New ride requests show up here, with a notification.",
     "summaryTitle": "My rides",
     "profileFilled": "Profile {percent}% complete",
+    "cartePro": {
+      "missingTitle": "Receive Taxineo rides",
+      "missingBody": "Your account is active: Radar, profile and QR code are yours. To also receive Taxineo rides, send your professional card.",
+      "send": "Send my professional card",
+      "sending": "Sending…",
+      "hint": "Photo or PDF (3 MB maximum)",
+      "tooBig": "File too large (3 MB maximum)",
+      "error": "Upload failed, please try again.",
+      "pendingTitle": "You are on the waiting list",
+      "pendingBody24h": "We are checking your professional card. You will receive Taxineo rides within 24 hours, unless we need to ask you to resend it.",
+      "pendingBody": "We are checking your professional card. You will be notified as soon as you can receive Taxineo rides."
+    },
     "rides": {
       "title": "Rides",
       "received": "Received",
@@ -1240,6 +1252,9 @@
     "downloadFullSize": "View full size",
     "carteProReviewHint": "Review the document before approving the driver",
     "approveDriver": "Approve driver",
+    "refuseCartePro": "Refuse card",
+    "carteProAutoOn": "Without your decision, automatic approval on {date}.",
+    "carteProAutoDone": "Automatically approved on {date}, card not reviewed. Approve or refuse it.",
     "noCartePro": "No professional card uploaded",
     "referralsSection": "Referrals",
     "noReferrals": "No referrals",

@@ -28,6 +28,8 @@ interface DriverData {
   pricePerKm: number;
   minimumFare: number;
   carteProUrl: string | null;
+  carteProSubmittedAt: string | null;
+  carteProAutoApprovedAt: string | null;
   referralCount: number;
   referralCode: string | null;
   isActive: boolean;
@@ -114,6 +116,20 @@ export function DriverDetailView({ driver }: { driver: DriverData }) {
       console.error(e);
     } finally {
       setImpersonating(false);
+    }
+  }
+
+  async function refuseCartePro() {
+    setUpdating(true);
+    try {
+      await fetch(`/api/admin/drivers/${driver.id}`, {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ refuseCartePro: true }),
+      });
+      router.refresh();
+    } finally {
+      setUpdating(false);
     }
   }
 
@@ -387,7 +403,18 @@ export function DriverDetailView({ driver }: { driver: DriverData }) {
               </div>
             )}
             <p className="text-xs text-neutral-400 mb-3">{t("carteProReviewHint")}</p>
-            {!driver.isVerified && (
+            {driver.carteProSubmittedAt && !driver.isVerified && (
+              <p className="text-xs text-amber-700 mb-3">
+                {t("carteProAutoOn", { date: format(new Date(new Date(driver.carteProSubmittedAt).getTime() + 24 * 60 * 60 * 1000), "dd MMM yyyy HH:mm", { locale: dateFnsLocale }) })}
+              </p>
+            )}
+            {driver.carteProAutoApprovedAt && (
+              <p className="text-xs text-amber-700 mb-3">
+                {t("carteProAutoDone", { date: format(new Date(driver.carteProAutoApprovedAt), "dd MMM yyyy HH:mm", { locale: dateFnsLocale }) })}
+              </p>
+            )}
+            {(!driver.isVerified || driver.carteProAutoApprovedAt) && (
+              <div className="flex flex-wrap gap-2">
               <button
                 onClick={() => toggleField("isVerified", true)}
                 disabled={updating}
@@ -396,6 +423,14 @@ export function DriverDetailView({ driver }: { driver: DriverData }) {
                 <Icon icon="solar:shield-check-bold" />
                 {t("approveDriver")}
               </button>
+              <button
+                onClick={refuseCartePro}
+                disabled={updating}
+                className="px-4 py-2 rounded-lg text-sm font-medium border border-neutral-200 text-neutral-700 hover:bg-neutral-50 transition-colors disabled:opacity-50"
+              >
+                {t("refuseCartePro")}
+              </button>
+              </div>
             )}
           </div>
         ) : (

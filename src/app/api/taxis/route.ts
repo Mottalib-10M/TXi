@@ -1,3 +1,4 @@
+import { platformRidesFilter } from "@/lib/driver-verification";
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { haversineDistance, getRoutingDistance, estimatePrice } from "@/lib/geo";
@@ -18,7 +19,8 @@ export async function GET(request: NextRequest) {
   try {
     // Compte de démo connecté (vérification des stores) : seulement les chauffeurs de démo.
     const session = await auth();
-    const pool = driverPool(isDemoEmail(session?.user?.email));
+    const demo = isDemoEmail(session?.user?.email);
+    const pool = { ...driverPool(demo), ...platformRidesFilter(demo) };
 
     // Text search mode (for favorites search)
     if (q) {

@@ -1,3 +1,4 @@
+import { platformRidesFilter } from "@/lib/driver-verification";
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { prisma } from "@/lib/prisma";
@@ -87,6 +88,12 @@ export async function POST(request: Request) {
     const demo = isDemoEmail(data.clientEmail);
     let driverId = demo ? undefined : data.driverId;
 
+    // Chauffeur choisi dans la recherche : il doit être vérifié. Par sa fiche ou son QR code (PROFILE), c'est son client.
+    if (driverId && data.source !== "PROFILE") {
+      const eligible = await prisma.driver.findFirst({ where: { id: driverId, ...platformRidesFilter() }, select: { id: true } });
+      if (!eligible) driverId = undefined;
+    }
+
     // If a specific driver is provided (e.g. from PROFILE), calculate price using their rates
     if (driverId && estimatedDistance && !estimatedPrice) {
       const driver = await prisma.driver.findUnique({ where: { id: driverId } });
@@ -107,6 +114,7 @@ export async function POST(request: Request) {
       const drivers = await prisma.driver.findMany({
         where: {
           ...driverPool(demo),
+          ...platformRidesFilter(demo),
           isActive: true,
           zoneLat: { not: null },
           zoneLng: { not: null },

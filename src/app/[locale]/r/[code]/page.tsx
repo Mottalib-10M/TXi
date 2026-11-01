@@ -13,7 +13,7 @@ export default async function ReferralTrackingPage({ params }: Props) {
   // Find the driver who owns this referral code
   const driver = await prisma.driver.findUnique({
     where: { referralCode },
-    select: { id: true, isVerified: true, referralCount: true },
+    select: { id: true },
   });
 
   if (!driver) {
@@ -44,18 +44,9 @@ export default async function ReferralTrackingPage({ params }: Props) {
     where: { referralCode },
   });
 
-  const updateData: { referralCount: number; isVerified?: boolean } = {
-    referralCount: uniqueClicks,
-  };
-
-  // Auto-verify if 2+ unique referrals and not yet verified
-  if (uniqueClicks >= 2 && !driver.isVerified) {
-    updateData.isVerified = true;
-  }
-
   await prisma.driver.update({
     where: { id: driver.id },
-    data: updateData,
+    data: { referralCount: uniqueClicks },
   });
 
   redirect(`/${locale}/inscription?type=driver&ref=${referralCode}`);

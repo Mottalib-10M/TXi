@@ -2,7 +2,6 @@ import { redirect } from "next/navigation";
 import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
 import { DashboardSidebar } from "@/components/layout/DashboardSidebar";
-import { WaitlistScreen } from "@/components/dashboard/WaitlistScreen";
 import { escalateIfDue } from "@/lib/escalation";
 import { getTranslations } from "next-intl/server";
 import { SpaceBackLink } from "@/components/layout/SpaceBackLink";
@@ -59,8 +58,7 @@ export default async function DashboardLayout({
   }
 
   // Generate referral code for existing drivers who don't have one
-  let referralCode = driver.referralCode;
-  if (!referralCode) {
+  if (!driver.referralCode) {
     const chars = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
     for (let attempt = 0; attempt < 5; attempt++) {
       let code = "";
@@ -72,21 +70,11 @@ export default async function DashboardLayout({
           where: { id: session.user.id },
           data: { referralCode: code },
         });
-        referralCode = code;
         break;
       } catch {
         // Unique constraint collision, retry
       }
     }
-  }
-
-  // Auto-verify if referral threshold reached
-  if (!driver.isVerified && driver.referralCount >= 2) {
-    await prisma.driver.update({
-      where: { id: session.user.id },
-      data: { isVerified: true },
-    });
-    driver.isVerified = true;
   }
 
   // Mesure d'usage (src/lib/usage.ts) : identifiant interne et traits utiles, rien de personnel.
@@ -107,30 +95,6 @@ export default async function DashboardLayout({
       once={{ signed_up_at: driver.createdAt.toISOString(), signup_role: "driver" }}
     />
   );
-
-  // Block entire dashboard if not verified → show waitlist screen
-  if (!driver.isVerified) {
-    const realPosition = await prisma.driver.count({
-      where: { isVerified: false, createdAt: { lte: driver.createdAt } },
-    });
-    const position = realPosition + 27;
-
-    return (
-      <div className="min-h-screen bg-neutral-50">
-        {usage}
-        <main className="p-4 sm:p-6 lg:p-8 flex justify-center">
-          <WaitlistScreen
-            driverName={driver.firstName}
-            referralCode={referralCode || ""}
-            referralCount={driver.referralCount}
-            waitlistPosition={position}
-            slug={driver.slug}
-            hasCartePro={Boolean(driver.carteProUrl)}
-          />
-        </main>
-      </div>
-    );
-  }
 
   const userName = driver.lastName
     ? `${driver.firstName} ${driver.lastName}`

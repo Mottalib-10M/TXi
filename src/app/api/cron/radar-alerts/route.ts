@@ -38,7 +38,6 @@ export async function GET(request: NextRequest) {
       suspendedAt: null,
       zoneLat: { not: null },
       zoneLng: { not: null },
-      isVerified: true,
     },
     select: { id: true, zoneLat: true, zoneLng: true, zoneRadius: true, radarOffStations: true, radarExtraStations: true, radarMaxPerDay: true, isTopDriver: true },
   });
