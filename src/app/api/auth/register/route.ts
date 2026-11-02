@@ -201,6 +201,7 @@ export async function POST(request: Request) {
       }
 
       await sendVerificationEmail(data.email, data.firstName, locale);
+      if (carteProUrl) await notifyAdminsCartePro(driver!.id, true);
       serverTrack(driver!.id, "signed_up", { role: "driver", referred: Boolean(data.referredByCode), has_carte_pro: Boolean(carteProUrl) }, { signed_up_at: new Date().toISOString(), signup_role: "driver" });
 
       return NextResponse.json(

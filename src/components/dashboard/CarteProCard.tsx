@@ -21,7 +21,7 @@ function readAsDataUrl(file: Blob): Promise<string> {
   });
 }
 
-export function CarteProCard({ status, within24h }: { status: VerificationStatus; within24h: boolean }) {
+export function CarteProCard({ status, within24h, refused }: { status: VerificationStatus; within24h: boolean; refused: boolean }) {
   const t = useTranslations("dashboard.cartePro");
   const router = useRouter();
   const [sending, setSending] = useState(false);
@@ -64,7 +64,7 @@ export function CarteProCard({ status, within24h }: { status: VerificationStatus
         <Icon icon="solar:hourglass-linear" className="mt-0.5 shrink-0 text-xl text-amber-600" />
         <div className="min-w-0">
           <h2 className="text-sm font-semibold text-neutral-900">{t("pendingTitle")}</h2>
-          <p className="mt-0.5 text-sm text-neutral-600">{within24h || sent ? t("pendingBody24h") : t("pendingBody")}</p>
+          <p className="mt-0.5 text-sm text-neutral-600">{within24h || (sent && !refused) ? t("pendingBody24h") : t("pendingBody")}</p>
         </div>
       </div>
     );
@@ -75,15 +75,15 @@ export function CarteProCard({ status, within24h }: { status: VerificationStatus
       <div className="flex gap-3">
         <Icon icon="solar:shield-check-bold" className="mt-0.5 shrink-0 text-xl text-blue-600" />
         <div className="min-w-0">
-          <h2 className="text-sm font-semibold text-neutral-900">{t("missingTitle")}</h2>
-          <p className="mt-0.5 text-sm text-neutral-600">{t("missingBody")}</p>
+          <h2 className="text-sm font-semibold text-neutral-900">{t(refused ? "refusedTitle" : "missingTitle")}</h2>
+          <p className="mt-0.5 text-sm text-neutral-600">{t(refused ? "refusedBody" : "missingBody")}</p>
         </div>
       </div>
       <label
         className={`mt-3 flex h-11 w-full cursor-pointer items-center justify-center gap-2 rounded-xl bg-neutral-900 px-4 text-sm font-semibold text-white sm:w-auto sm:inline-flex ${sending ? "pointer-events-none opacity-60" : ""}`}
       >
         <Icon icon="solar:upload-linear" className="text-base" />
-        {sending ? t("sending") : t("send")}
+        {sending ? t("sending") : t(refused ? "resend" : "send")}
         <input type="file" accept="image/*,.heic,.heif,.pdf,application/pdf" onChange={upload} disabled={sending} className="sr-only" />
       </label>
       <p className={`mt-2 text-xs ${error ? "text-red-600" : "text-neutral-500"}`}>{error || t("hint")}</p>

@@ -61,7 +61,7 @@ export function QRCodeButton({ slug, driverName, companyName, vehicleModel, vari
           }`}
         >
           <Icon icon="solar:qr-code-linear" className="text-lg shrink-0" />
-          <span className={variant === "compact" ? "hidden sm:inline" : undefined}>{t("qrCode")}</span>
+          <span className={variant === "compact" ? "hidden sm:inline" : "max-[349px]:hidden"}>{t("qrCode")}</span>
         </button>
       )}
 

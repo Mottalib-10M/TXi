@@ -19,7 +19,9 @@ interface EmailOptions {
 
 export async function sendEmail({ to, subject, html }: EmailOptions) {
   const apiKey = process.env.RESEND_API_KEY;
-  const from = process.env.EMAIL_FROM || "noreply@taxineo.fr";
+  const address = process.env.EMAIL_FROM || "noreply@taxineo.fr";
+  // Boîte de réception : « Taxineo » plutôt que « noreply ».
+  const from = address.includes("<") ? address : `Taxineo <${address}>`;
 
   // Comptes de démonstration des stores : adresses sans boîte, rien ne part.
   if (isDemoEmail(to)) return;
@@ -1106,7 +1108,8 @@ function cityOf(city: string) {
 
 function zoneCity(zoneAddress: string | null | undefined) {
   const city = zoneAddress?.split(",")[0].replace(/^\d{5}\s+/, "").trim();
-  return city && city.length >= 3 ? city : null;
+  // Une adresse complète (« 12 rue de la Paix ») n'est pas une ville : phrase sans nom de lieu.
+  return city && city.length >= 3 && !/\d/.test(city) ? city : null;
 }
 
 /** Carte professionnelle validée ou refusée : pour les chauffeurs sans notifications de l'app. */

@@ -94,6 +94,8 @@ export async function middleware(req: NextRequest) {
   if (isProtected && !token) {
     const locale = getLocale(pathname);
     const signInUrl = new URL(`/${locale}/connexion`, req.nextUrl.origin);
+    // Lien ouvert sans être connecté (e-mail, notification) : on y revient après la connexion.
+    signInUrl.searchParams.set("redirect", pathname.replace(new RegExp(`^/${locale}(?=/|$)`), ""));
     return NextResponse.redirect(signInUrl);
   }
 

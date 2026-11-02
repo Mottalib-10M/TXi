@@ -94,6 +94,7 @@ export async function approveExpiredCartes() {
   const where = {
     isVerified: false,
     isActive: true,
+    emailVerified: true,
     suspendedAt: null,
     carteProUrl: { not: null },
     carteProSubmittedAt: { lte: limit },
@@ -123,6 +124,7 @@ export async function sendCarteProReminders(now = new Date()) {
     ...driverPool(),
     isActive: true,
     isVerified: false,
+    emailVerified: true,
     suspendedAt: null,
     notifyEmail: true,
     carteProUrl: null,

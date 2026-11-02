@@ -437,7 +437,7 @@
     "invalidLink": "Lien invalide. Veuillez refaire une demande de réinitialisation.",
     "resetSuccess": "Mot de passe modifié avec succès ! Vous pouvez maintenant vous connecter.",
     "cartePro": "Carte professionnelle de taxi",
-    "carteProHint": "Ajoutez votre carte pro pour accélérer la validation de votre compte (PDF ou photo)",
+    "carteProHint": "Facultatif, mais nécessaire pour recevoir les courses Taxineo (PDF ou photo)",
     "referralInviteTitle": "Votre collègue {name} vous invite à rejoindre TaxiNeo",
     "referralInviteSubheading": "vous invite à rejoindre TaxiNeo",
     "referralInviteSubtitle1": "Ce qui vous attend sur TaxiNeo",
@@ -843,13 +843,16 @@
     "cartePro": {
       "missingTitle": "Recevez les courses Taxineo",
       "missingBody": "Votre compte est actif : Radar, fiche et QR code sont à vous. Pour recevoir aussi les courses de Taxineo, envoyez votre carte professionnelle.",
+      "refusedTitle": "Votre carte n'a pas pu être validée",
+      "refusedBody": "Renvoyez une photo nette et entière de votre carte professionnelle pour recevoir les courses Taxineo.",
+      "resend": "Renvoyer ma carte professionnelle",
       "send": "Envoyer ma carte professionnelle",
       "sending": "Envoi…",
       "hint": "Photo ou PDF (3 Mo maximum)",
       "tooBig": "Fichier trop lourd (3 Mo maximum)",
       "error": "L'envoi a échoué, réessayez.",
       "pendingTitle": "Vous êtes sur la liste d'attente",
-      "pendingBody24h": "Nous vérifions votre carte professionnelle. Vous recevrez les courses Taxineo sous 24 h, sauf si nous devons vous demander de la renvoyer.",
+      "pendingBody24h": "Nous vérifions votre carte professionnelle. Vous recevrez les courses Taxineo sous 24 h, sauf si nous devons vous demander de la renvoyer.",
       "pendingBody": "Nous vérifions votre carte professionnelle. Vous serez prévenu dès que vous pourrez recevoir les courses Taxineo."
     },
     "rides": {

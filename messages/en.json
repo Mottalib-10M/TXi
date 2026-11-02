@@ -437,7 +437,7 @@
     "invalidLink": "Invalid link. Please request a new reset.",
     "resetSuccess": "Password changed successfully! You can now log in.",
     "cartePro": "Professional taxi card",
-    "carteProHint": "Add your professional card to speed up account validation (PDF or photo)",
+    "carteProHint": "Optional, but required to receive Taxineo rides (PDF or photo)",
     "referralInviteTitle": "Your colleague {name} invites you to join TaxiNeo",
     "referralInviteSubheading": "invites you to join TaxiNeo",
     "referralInviteSubtitle1": "What awaits you on TaxiNeo",
@@ -843,6 +843,9 @@
     "cartePro": {
       "missingTitle": "Receive Taxineo rides",
       "missingBody": "Your account is active: Radar, profile and QR code are yours. To also receive Taxineo rides, send your professional card.",
+      "refusedTitle": "Your card could not be validated",
+      "refusedBody": "Send a clear, full photo of your professional card again to receive Taxineo rides.",
+      "resend": "Send my professional card again",
       "send": "Send my professional card",
       "sending": "Sending…",
       "hint": "Photo or PDF (3 MB maximum)",

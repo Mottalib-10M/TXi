@@ -26,7 +26,7 @@ export function DashboardSidebar({ userName, pendingCount = 0, qr }: { userName:
       navLabel={t("nav")}
       logoutLabel={t("logout")}
       headerAction={<QRCodeButton variant="header" {...qr} />}
-      tag={<span className="text-xs bg-neutral-100 text-neutral-500 px-2 py-0.5 rounded-full">Pro</span>}
+      tag={<span className="max-[400px]:hidden text-xs bg-neutral-100 text-neutral-500 px-2 py-0.5 rounded-full">Pro</span>}
       tabs={[
         { href: "/dashboard", label: t("requests"), icon: "solar:bell-linear", active: pathname === "/dashboard", badge: pendingCount },
         { href: "/dashboard/reservations", label: t("rides"), icon: "solar:list-check-linear", active: under(RIDE_PAGES) },

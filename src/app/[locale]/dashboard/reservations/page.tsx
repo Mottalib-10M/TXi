@@ -22,7 +22,7 @@ export default async function ReservationsPage() {
 
   const driver = await prisma.driver.findUnique({
     where: { id: session.user.id },
-    select: { email: true, isVerified: true, carteProUrl: true, carteProSubmittedAt: true, slug: true, firstName: true, lastName: true, companyName: true, vehicleBrand: true, vehicleModel: true, vehicles: true },
+    select: { email: true, isVerified: true, carteProUrl: true, carteProSubmittedAt: true, carteProRefusedAt: true, slug: true, firstName: true, lastName: true, companyName: true, vehicleBrand: true, vehicleModel: true, vehicles: true },
   });
 
   if (!driver) redirect("/connexion");
@@ -60,7 +60,7 @@ export default async function ReservationsPage() {
   return (
     <div>
       <RidesSwitch active="received" />
-      <CarteProCard status={verificationStatus(driver)} within24h={Boolean(driver.carteProSubmittedAt)} />
+      <CarteProCard status={verificationStatus(driver)} within24h={Boolean(driver.carteProSubmittedAt)} refused={Boolean(driver.carteProRefusedAt)} />
       <ReservationsTable bookings={serialized} driverName={`${driver.firstName} ${driver.lastName}`} />
     </div>
   );
