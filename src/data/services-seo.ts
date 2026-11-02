@@ -755,15 +755,15 @@ export const services: ServiceSeo[] = [
           {
             question: "Peut-on suivre le colis en temps réel ?",
             answer:
-              "Oui, un lien de suivi GPS vous est envoyé par SMS dès l'enlèvement. Vous pouvez suivre votre colis en temps réel jusqu'à la livraison.",
+              "Oui, un lien de suivi GPS vous est envoyé par email dès l'enlèvement. Vous pouvez suivre votre colis en temps réel jusqu'à la livraison.",
           },
         ],
         detailedDescription:
-          "Le taxi colis TaxiNeo est un service de coursier premium qui utilise la rapidité et la disponibilité du réseau taxi pour assurer la livraison express de vos plis, documents et colis urgents. Contrairement aux services de livraison classiques avec des délais de 24 à 48 heures, le taxi colis garantit un enlèvement en moins de 30 minutes et une livraison le jour même, souvent en moins d'une heure en zone urbaine. Chaque envoi bénéficie d'un suivi GPS en temps réel : vous recevez un lien de tracking par SMS dès l'enlèvement et pouvez suivre votre colis jusqu'à la remise en main propre au destinataire. Une preuve de livraison avec signature électronique et horodatage vous est envoyée instantanément. Le service est particulièrement prisé par les cabinets d'avocats pour les plis confidentiels, les entreprises pour les contrats urgents, les laboratoires pour les échantillons biologiques, les pharmacies pour les médicaments sensibles et les particuliers pour les clés, papiers d'identité ou objets oubliés. Tous les colis sont couverts par notre assurance transport, avec option d'assurance complémentaire pour les objets de valeur. Le service fonctionne 7 jours sur 7, week-ends et jours fériés compris.",
+          "Le taxi colis TaxiNeo est un service de coursier premium qui utilise la rapidité et la disponibilité du réseau taxi pour assurer la livraison express de vos plis, documents et colis urgents. Contrairement aux services de livraison classiques avec des délais de 24 à 48 heures, le taxi colis garantit un enlèvement en moins de 30 minutes et une livraison le jour même, souvent en moins d'une heure en zone urbaine. Chaque envoi bénéficie d'un suivi GPS en temps réel : vous recevez un lien de tracking par email dès l'enlèvement et pouvez suivre votre colis jusqu'à la remise en main propre au destinataire. Une preuve de livraison avec signature électronique et horodatage vous est envoyée instantanément. Le service est particulièrement prisé par les cabinets d'avocats pour les plis confidentiels, les entreprises pour les contrats urgents, les laboratoires pour les échantillons biologiques, les pharmacies pour les médicaments sensibles et les particuliers pour les clés, papiers d'identité ou objets oubliés. Tous les colis sont couverts par notre assurance transport, avec option d'assurance complémentaire pour les objets de valeur. Le service fonctionne 7 jours sur 7, week-ends et jours fériés compris.",
         useCases:
           "Les entreprises et cabinets juridiques envoient des contrats, des documents notariés et des plis confidentiels nécessitant une livraison rapide et sécurisée avec preuve de remise. Les laboratoires médicaux et les pharmacies font transporter des échantillons biologiques, des résultats d'analyses ou des médicaments thermosensibles dans des conditions contrôlées. Les professionnels de l'informatique expédient des pièces détachées, disques durs ou serveurs de remplacement pour minimiser les temps d'arrêt. Les particuliers utilisent le taxi colis pour envoyer des clés à un proche, faire livrer un cadeau en urgence ou récupérer des documents oubliés dans un autre lieu.",
         howItWorks:
-          "Créez votre demande de livraison sur TaxiNeo en précisant l'adresse d'enlèvement, l'adresse de livraison, la nature du colis et son poids approximatif. Recevez un prix fixe instantané. Un chauffeur-coursier se présente à l'adresse d'enlèvement en moins de 30 minutes, prend en charge votre colis et le livre en main propre au destinataire. Vous recevez la preuve de livraison signée par SMS.",
+          "Créez votre demande de livraison sur TaxiNeo en précisant l'adresse d'enlèvement, l'adresse de livraison, la nature du colis et son poids approximatif. Recevez un prix fixe instantané. Un chauffeur-coursier se présente à l'adresse d'enlèvement en moins de 30 minutes, prend en charge votre colis et le livre en main propre au destinataire. Vous recevez la preuve de livraison signée par email.",
       },
       en: {
         metaTitle: "Parcel Taxi: express delivery for your packages | TaxiNeo",
@@ -800,15 +800,15 @@ export const services: ServiceSeo[] = [
           {
             question: "Can the parcel be tracked in real time?",
             answer:
-              "Yes, a GPS tracking link is sent to you by SMS upon collection. You can track your parcel in real time until delivery.",
+              "Yes, a GPS tracking link is sent to you by email upon collection. You can track your parcel in real time until delivery.",
           },
         ],
         detailedDescription:
-          "The TaxiNeo parcel taxi is a premium courier service that leverages the speed and availability of the taxi network to provide express delivery of your letters, documents and urgent packages. Unlike standard delivery services with 24 to 48-hour timescales, the parcel taxi guarantees collection within 30 minutes and same-day delivery, often under an hour in urban areas. Every shipment benefits from real-time GPS tracking: you receive a tracking link by SMS upon collection and can follow your parcel until hand-to-hand delivery to the recipient. A proof of delivery with electronic signature and timestamp is sent to you instantly. The service is especially valued by law firms for confidential documents, businesses for urgent contracts, laboratories for biological samples, pharmacies for sensitive medications and individuals for keys, identity papers or forgotten items. All parcels are covered by our transport insurance, with optional additional cover for high-value items. The service operates 7 days a week, including weekends and public holidays.",
+          "The TaxiNeo parcel taxi is a premium courier service that leverages the speed and availability of the taxi network to provide express delivery of your letters, documents and urgent packages. Unlike standard delivery services with 24 to 48-hour timescales, the parcel taxi guarantees collection within 30 minutes and same-day delivery, often under an hour in urban areas. Every shipment benefits from real-time GPS tracking: you receive a tracking link by email upon collection and can follow your parcel until hand-to-hand delivery to the recipient. A proof of delivery with electronic signature and timestamp is sent to you instantly. The service is especially valued by law firms for confidential documents, businesses for urgent contracts, laboratories for biological samples, pharmacies for sensitive medications and individuals for keys, identity papers or forgotten items. All parcels are covered by our transport insurance, with optional additional cover for high-value items. The service operates 7 days a week, including weekends and public holidays.",
         useCases:
           "Businesses and law firms send contracts, notarised documents and confidential letters requiring fast, secure delivery with proof of receipt. Medical laboratories and pharmacies transport biological samples, test results or temperature-sensitive medications under controlled conditions. IT professionals ship spare parts, hard drives or replacement servers to minimise downtime. Private individuals use the parcel taxi to send keys to a relative, have a gift delivered urgently or retrieve documents left at another location.",
         howItWorks:
-          "Create your delivery request on TaxiNeo by entering the collection address, delivery address, nature of the parcel and approximate weight. Receive an instant fixed price. A courier-driver arrives at the collection address within 30 minutes, takes charge of your parcel and delivers it hand-to-hand to the recipient. You receive signed proof of delivery by SMS.",
+          "Create your delivery request on TaxiNeo by entering the collection address, delivery address, nature of the parcel and approximate weight. Receive an instant fixed price. A courier-driver arrives at the collection address within 30 minutes, takes charge of your parcel and delivers it hand-to-hand to the recipient. You receive signed proof of delivery by email.",
       },
     },
   },
@@ -861,7 +861,7 @@ export const services: ServiceSeo[] = [
         useCases:
           "Les noctambules réservent le taxi de nuit pour rentrer en sécurité après une soirée entre amis, un dîner au restaurant ou une sortie en boîte de nuit, sans risquer l'alcool au volant. Les voyageurs ayant un vol matinal très tôt ou un vol retardé atterrissant tard dans la nuit l'utilisent pour rejoindre l'aéroport ou rentrer chez eux sans stress. Les professionnels de la santé — infirmières, médecins de garde, aides-soignantes — font appel au taxi de nuit pour leurs trajets domicile-hôpital lors des gardes nocturnes. Les personnes confrontées à une urgence médicale non vitale, comme une forte fièvre ou une blessure nécessitant les urgences, utilisent ce service pour un transport rapide et sûr vers l'hôpital le plus proche.",
         howItWorks:
-          "Réservez votre taxi de nuit sur TaxiNeo en indiquant l'adresse de prise en charge et la destination. La réservation est possible à l'avance ou en temps réel, même à 3 heures du matin. Le prix fixe de nuit s'affiche instantanément. Un chauffeur professionnel est assigné et ses coordonnées vous sont envoyées par SMS. Il arrive à l'adresse indiquée, vous prend en charge en toute sécurité et vous conduit à destination.",
+          "Réservez votre taxi de nuit sur TaxiNeo en indiquant l'adresse de prise en charge et la destination. La réservation est possible à l'avance ou en temps réel, même à 3 heures du matin. Le prix fixe de nuit s'affiche instantanément. Un chauffeur professionnel est assigné et ses coordonnées vous sont envoyées par email. Il arrive à l'adresse indiquée, vous prend en charge en toute sécurité et vous conduit à destination.",
       },
       en: {
         metaTitle: "Night Taxi: driver available 24/7 across France | TaxiNeo",
@@ -906,7 +906,7 @@ export const services: ServiceSeo[] = [
         useCases:
           "Night owls book the night taxi to get home safely after an evening with friends, a restaurant dinner or a nightclub outing, avoiding the risk of drink-driving. Travellers with very early morning flights or delayed flights landing late at night use it to reach the airport or get home without stress. Healthcare professionals — nurses, on-call doctors, care assistants — rely on the night taxi for home-to-hospital journeys during night shifts. People facing a non-life-threatening medical emergency, such as a high fever or an injury requiring A&E, use this service for fast, safe transport to the nearest hospital.",
         howItWorks:
-          "Book your night taxi on TaxiNeo by entering the pick-up address and destination. Booking is possible in advance or in real time, even at 3am. The fixed night fare is displayed instantly. A professional driver is assigned and their contact details are sent to you by SMS. They arrive at the specified address, collect you safely and drive you to your destination.",
+          "Book your night taxi on TaxiNeo by entering the pick-up address and destination. Booking is possible in advance or in real time, even at 3am. The fixed night fare is displayed instantly. A professional driver is assigned and their contact details are sent to you by email. They arrive at the specified address, collect you safely and drive you to your destination.",
       },
     },
   },
@@ -1027,7 +1027,7 @@ export const services: ServiceSeo[] = [
           "Sièges auto et rehausseurs fournis (0-10 ans)",
           "Chauffeurs vérifiés et bienveillants",
           "Service récurrent pour trajets école",
-          "SMS de confirmation à chaque prise en charge et dépose",
+          "Message de confirmation du chauffeur à chaque prise en charge et dépose",
           "Transport sécurisé en garde alternée",
         ],
         faq: [
@@ -1053,7 +1053,7 @@ export const services: ServiceSeo[] = [
           },
         ],
         detailedDescription:
-          "Le taxi enfant TaxiNeo est un service de transport sécurisé spécialement conçu pour les familles avec enfants, de la naissance à l'adolescence. Chaque véhicule est équipé de sièges auto homologués adaptés à l'âge et au poids de l'enfant : nacelle groupe 0 pour les nouveau-nés, siège coque groupe 0+ jusqu'à 13 kg, siège groupe 1 de 9 à 18 kg, rehausseur groupe 2/3 de 15 à 36 kg. Nos chauffeurs font l'objet d'une sélection renforcée incluant la vérification du casier judiciaire, un entretien approfondi et une formation spécifique à l'accueil des mineurs. Ils savent installer correctement chaque type de siège, adopter une conduite particulièrement douce et rassurer les enfants pendant le trajet. Pour les trajets scolaires quotidiens, TaxiNeo propose un service d'abonnement avec attribution du même chauffeur afin de créer un lien de confiance entre le conducteur, l'enfant et les parents. À chaque prise en charge et chaque dépose, les parents reçoivent un SMS de confirmation horodaté. Les enfants à partir de 6 ans peuvent voyager sans accompagnateur adulte avec une autorisation parentale écrite. Ce service est également adapté à la garde alternée, assurant le transfert régulier et ponctuel de l'enfant entre les deux domiciles parentaux.",
+          "Le taxi enfant TaxiNeo est un service de transport sécurisé spécialement conçu pour les familles avec enfants, de la naissance à l'adolescence. Chaque véhicule est équipé de sièges auto homologués adaptés à l'âge et au poids de l'enfant : nacelle groupe 0 pour les nouveau-nés, siège coque groupe 0+ jusqu'à 13 kg, siège groupe 1 de 9 à 18 kg, rehausseur groupe 2/3 de 15 à 36 kg. Nos chauffeurs font l'objet d'une sélection renforcée incluant la vérification du casier judiciaire, un entretien approfondi et une formation spécifique à l'accueil des mineurs. Ils savent installer correctement chaque type de siège, adopter une conduite particulièrement douce et rassurer les enfants pendant le trajet. Pour les trajets scolaires quotidiens, TaxiNeo propose un service d'abonnement avec attribution du même chauffeur afin de créer un lien de confiance entre le conducteur, l'enfant et les parents. À chaque prise en charge et chaque dépose, les parents reçoivent un message de confirmation du chauffeur. Les enfants à partir de 6 ans peuvent voyager sans accompagnateur adulte avec une autorisation parentale écrite. Ce service est également adapté à la garde alternée, assurant le transfert régulier et ponctuel de l'enfant entre les deux domiciles parentaux.",
         useCases:
           "Les parents débordés utilisent le taxi enfant pour les trajets école-domicile, domicile-activités extrascolaires (sport, musique, cours particuliers) lorsqu'ils ne peuvent pas se libérer. Les familles en garde alternée programment des transferts réguliers entre les deux domiciles parentaux, avec le même chauffeur de confiance chaque semaine. Les familles voyageant avec des bébés et jeunes enfants réservent le taxi enfant pour les transferts aéroport, bénéficiant de sièges auto adaptés sans avoir à transporter les leurs. Les parents d'adolescents l'utilisent pour les retours de soirée ou de fêtes d'anniversaire, garantissant un transport sûr supervisé par un chauffeur vérifié.",
         howItWorks:
@@ -1072,7 +1072,7 @@ export const services: ServiceSeo[] = [
           "Car seats and boosters provided (ages 0-10)",
           "Verified and caring drivers",
           "Recurring service for school runs",
-          "SMS confirmation at every pick-up and drop-off",
+          "Confirmation message from the driver at every pick-up and drop-off",
           "Secure transport for shared custody",
         ],
         faq: [
@@ -1098,7 +1098,7 @@ export const services: ServiceSeo[] = [
           },
         ],
         detailedDescription:
-          "The TaxiNeo child taxi is a secure transport service specifically designed for families with children, from newborns to teenagers. Every vehicle is fitted with approved child car seats matched to the child's age and weight: group 0 carrycot for newborns, group 0+ infant carrier up to 13 kg, group 1 seat from 9 to 18 kg, group 2/3 booster from 15 to 36 kg. Our drivers undergo enhanced selection including criminal record checks, in-depth interviews and specific training in transporting minors. They know how to correctly install each type of seat, adopt particularly gentle driving and reassure children during the journey. For daily school runs, TaxiNeo offers a subscription service with the same driver assigned to build a trusting relationship between driver, child and parents. At every pick-up and drop-off, parents receive a timestamped SMS confirmation. Children aged 6 and over can travel without an adult accompanier with written parental consent. This service is also suited to shared custody arrangements, ensuring regular and punctual transfers between both parental homes.",
+          "The TaxiNeo child taxi is a secure transport service specifically designed for families with children, from newborns to teenagers. Every vehicle is fitted with approved child car seats matched to the child's age and weight: group 0 carrycot for newborns, group 0+ infant carrier up to 13 kg, group 1 seat from 9 to 18 kg, group 2/3 booster from 15 to 36 kg. Our drivers undergo enhanced selection including criminal record checks, in-depth interviews and specific training in transporting minors. They know how to correctly install each type of seat, adopt particularly gentle driving and reassure children during the journey. For daily school runs, TaxiNeo offers a subscription service with the same driver assigned to build a trusting relationship between driver, child and parents. At every pick-up and drop-off, parents receive a confirmation message from the driver. Children aged 6 and over can travel without an adult accompanier with written parental consent. This service is also suited to shared custody arrangements, ensuring regular and punctual transfers between both parental homes.",
         useCases:
           "Busy parents use the child taxi for school-to-home and home-to-extracurricular activity runs (sport, music, tutoring) when they cannot get away. Shared custody families schedule regular transfers between both parental homes with the same trusted driver each week. Families travelling with babies and toddlers book the child taxi for airport transfers, benefiting from fitted child seats without having to carry their own. Parents of teenagers use it for returns from parties or birthday celebrations, ensuring safe transport supervised by a vetted driver.",
         howItWorks:
@@ -1333,7 +1333,7 @@ export const services: ServiceSeo[] = [
           {
             question: "Le chauffeur m'attend-il à l'aéroport avec un panneau ?",
             answer:
-              "Oui, pour les arrivées, votre chauffeur vous attend en zone arrivée avec un panneau à votre nom. Vous recevez ses coordonnées par SMS pour le contacter facilement.",
+              "Oui, pour les arrivées, votre chauffeur vous attend en zone arrivée avec un panneau à votre nom. Vous recevez ses coordonnées par email pour le contacter facilement.",
           },
           {
             question: "Quels aéroports sont desservis ?",
@@ -1378,7 +1378,7 @@ export const services: ServiceSeo[] = [
           {
             question: "Does the driver wait at the airport with a sign?",
             answer:
-              "Yes, for arrivals, your driver waits in the arrivals area with a sign bearing your name. You receive their contact details by SMS for easy communication.",
+              "Yes, for arrivals, your driver waits in the arrivals area with a sign bearing your name. You receive their contact details by email for easy communication.",
           },
           {
             question: "Which airports are served?",

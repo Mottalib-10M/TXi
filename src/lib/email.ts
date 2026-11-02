@@ -18,8 +18,9 @@ interface EmailOptions {
 }
 
 export async function sendEmail({ to, subject, html }: EmailOptions) {
-  const apiKey = process.env.RESEND_API_KEY;
-  const address = process.env.EMAIL_FROM || "noreply@taxineo.fr";
+  // Les valeurs de production se terminent par un retour à la ligne : il ne doit pas entrer dans l'expéditeur.
+  const apiKey = process.env.RESEND_API_KEY?.trim();
+  const address = process.env.EMAIL_FROM?.trim() || "noreply@taxineo.fr";
   // Boîte de réception : « Taxineo » plutôt que « noreply ».
   const from = address.includes("<") ? address : `Taxineo <${address}>`;
 

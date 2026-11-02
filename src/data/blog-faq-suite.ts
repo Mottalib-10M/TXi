@@ -108,8 +108,8 @@ export const blogFaqSuite: Record<string, BlogFaq[]> = {
     {
       question: { fr: "Où retrouver son chauffeur dans un grand aéroport ?", en: "Where do you meet your driver at a large airport?" },
       answer: {
-        fr: "Au point de prise en charge officiel indiqué par SMS, et non dans le hall d'arrivée lorsque l'accès y est réglementé. Le message précise le nom du chauffeur, la plaque et la couleur du véhicule. Un rabatteur qui aborde les voyageurs à l'intérieur du terminal n'exerce jamais légalement.",
-        en: "At the official pick-up point given by SMS, not in the arrivals hall where access is regulated. The message gives the driver's name, the plate and the colour of the vehicle. A tout approaching travellers inside the terminal is never operating legally.",
+        fr: "Au point de prise en charge officiel indiqué par email, et non dans le hall d'arrivée lorsque l'accès y est réglementé. Le message précise le nom du chauffeur, la plaque et la couleur du véhicule. Un rabatteur qui aborde les voyageurs à l'intérieur du terminal n'exerce jamais légalement.",
+        en: "At the official pick-up point given by email, not in the arrivals hall where access is regulated. The message gives the driver's name, the plate and the colour of the vehicle. A tout approaching travellers inside the terminal is never operating legally.",
       },
     },
     {
@@ -124,8 +124,8 @@ export const blogFaqSuite: Record<string, BlogFaq[]> = {
     {
       question: { fr: "Un collaborateur peut-il commander une course pour un client ?", en: "Can an employee book a ride for a client?" },
       answer: {
-        fr: "Oui, le compte professionnel permet de réserver pour un tiers en indiquant son nom et son numéro : le passager reçoit alors par SMS le nom du chauffeur et la plaque du véhicule, sans avoir de compte lui-même. La course est facturée à l'entreprise et rattachée au collaborateur qui l'a commandée.",
-        en: "Yes, a corporate account lets you book for someone else by giving their name and number: the passenger then receives the driver's name and the vehicle plate by SMS, without having an account themselves. The ride is invoiced to the company and linked to the employee who booked it.",
+        fr: "Oui, le compte professionnel permet de réserver pour un tiers en indiquant son nom et son numéro : vous recevez par email le nom du chauffeur et la plaque du véhicule, et le passager n'a pas besoin de compte. La course est facturée à l'entreprise et rattachée au collaborateur qui l'a commandée.",
+        en: "Yes, a corporate account lets you book for someone else by giving their name and number: you receive the driver's name and the vehicle plate by email, and the passenger doesn't need an account. The ride is invoiced to the company and linked to the employee who booked it.",
       },
     },
     {

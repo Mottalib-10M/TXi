@@ -180,7 +180,7 @@ export const guides: Guide[] = [
           {
             title: "Réserver un taxi en ligne",
             content:
-              "La réservation en ligne est la méthode la plus pratique pour garantir un taxi à l'heure souhaitée. Avec TaxiNeo, vous réservez en quelques secondes avec un prix fixe affiché à l'avance. C'est idéal pour les transferts aéroport, les rendez-vous médicaux ou tout déplacement planifié. Vous recevez une confirmation immédiate par email et SMS.",
+              "La réservation en ligne est la méthode la plus pratique pour garantir un taxi à l'heure souhaitée. Avec TaxiNeo, vous réservez en quelques secondes avec un prix fixe affiché à l'avance. C'est idéal pour les transferts aéroport, les rendez-vous médicaux ou tout déplacement planifié. Vous recevez une confirmation immédiate par email.",
           },
           {
             title: "Pendant la course",
@@ -241,7 +241,7 @@ export const guides: Guide[] = [
           {
             title: "Booking a taxi online",
             content:
-              "Online booking is the most practical way to guarantee a taxi at your preferred time. With TaxiNeo, you book in seconds with a fixed price displayed upfront. It is ideal for airport transfers, medical appointments or any planned journey. You receive instant confirmation by email and SMS.",
+              "Online booking is the most practical way to guarantee a taxi at your preferred time. With TaxiNeo, you book in seconds with a fixed price displayed upfront. It is ideal for airport transfers, medical appointments or any planned journey. You receive instant confirmation by email.",
           },
           {
             title: "During the ride",

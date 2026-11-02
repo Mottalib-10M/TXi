@@ -141,7 +141,7 @@ export const trajets: Trajet[] = [
         routeDescription: "Depuis CDG, le trajet rejoint Paris par l'autoroute A1 en direction de la Porte de la Chapelle. Le chauffeur vous dépose à l'adresse exacte de votre choix dans Paris, que ce soit un hôtel, votre domicile ou un lieu de rendez-vous.",
         faq: [
           { question: "Quel est le prix d'un taxi CDG — Paris ?", answer: "Le prix est fixé entre 50 € et 62 € selon votre adresse de destination dans Paris. Ce forfait est garanti, sans surprise." },
-          { question: "Comment retrouver mon chauffeur à CDG ?", answer: "Votre chauffeur vous attend en zone d'arrivée avec une pancarte à votre nom. Vous recevez un SMS avec ses coordonnées dès que votre vol a atterri." },
+          { question: "Comment retrouver mon chauffeur à CDG ?", answer: "Votre chauffeur vous attend en zone d'arrivée avec une pancarte à votre nom. Vous recevez ses coordonnées par email dès que la course est confirmée." },
           { question: "Que se passe-t-il si mon vol a du retard ?", answer: "Votre chauffeur suit votre vol en temps réel. En cas de retard, il ajuste automatiquement son heure d'arrivée. L'attente est gratuite jusqu'à 45 minutes après l'atterrissage." },
           { question: "Puis-je réserver pour une arrivée tardive la nuit ?", answer: "Oui, nos chauffeurs sont disponibles 24h/24. Un supplément nuit de 15% s'applique entre 19h et 7h du matin." },
         ],
@@ -155,7 +155,7 @@ export const trajets: Trajet[] = [
         routeDescription: "From CDG, the route joins Paris via the A1 motorway towards Porte de la Chapelle. Your driver drops you off at your exact chosen address in Paris, whether it's a hotel, your home or a meeting point.",
         faq: [
           { question: "What is the price of a taxi CDG — Paris?", answer: "The price is fixed between €50 and €62 depending on your destination address in Paris. This flat rate is guaranteed, with no surprises." },
-          { question: "How do I find my driver at CDG?", answer: "Your driver waits for you in the arrivals area with a name board. You receive an SMS with their contact details as soon as your flight has landed." },
+          { question: "How do I find my driver at CDG?", answer: "Your driver waits for you in the arrivals area with a name board. You receive their contact details by email as soon as the ride is confirmed." },
           { question: "What happens if my flight is delayed?", answer: "Your driver tracks your flight in real time. In case of delay, they automatically adjust their arrival time. Waiting is free for up to 45 minutes after landing." },
           { question: "Can I book for a late night arrival?", answer: "Yes, our drivers are available 24/7. A 15% night surcharge applies between 7pm and 7am." },
         ],
@@ -229,7 +229,7 @@ export const trajets: Trajet[] = [
         routeDescription: "Le trajet depuis Orly emprunte l'A6 en direction de Paris, puis rejoint le périphérique ou les portes sud de Paris selon votre destination finale.",
         faq: [
           { question: "Quel est le tarif d'un taxi Orly — Paris ?", answer: "Le tarif forfaitaire est de 35 à 45 € selon votre destination dans Paris. Prix garanti sans supplément." },
-          { question: "Où retrouver mon chauffeur à Orly ?", answer: "Votre chauffeur vous attend en zone d'arrivée avec une pancarte. Vous recevez un SMS avec ses coordonnées." },
+          { question: "Où retrouver mon chauffeur à Orly ?", answer: "Votre chauffeur vous attend en zone d'arrivée avec une pancarte. Vous recevez ses coordonnées par email." },
           { question: "L'attente est-elle facturée si mon vol a du retard ?", answer: "Non, l'attente est gratuite jusqu'à 45 minutes après l'atterrissage grâce au suivi de vol en temps réel." },
           { question: "Peut-on payer par carte bancaire ?", answer: "Oui, le paiement s'effectue par carte bancaire, Apple Pay ou espèces directement dans le véhicule." },
         ],
@@ -243,7 +243,7 @@ export const trajets: Trajet[] = [
         routeDescription: "The route from Orly takes the A6 towards Paris, then joins the ring road or the southern gates of Paris depending on your final destination.",
         faq: [
           { question: "What is the fare for a taxi Orly — Paris?", answer: "The flat rate is €35 to €45 depending on your destination in Paris. Guaranteed price with no surcharges." },
-          { question: "Where do I find my driver at Orly?", answer: "Your driver waits for you in the arrivals area with a name board. You receive an SMS with their contact details." },
+          { question: "Where do I find my driver at Orly?", answer: "Your driver waits for you in the arrivals area with a name board. You receive their contact details by email." },
           { question: "Is waiting charged if my flight is delayed?", answer: "No, waiting is free for up to 45 minutes after landing thanks to real-time flight tracking." },
           { question: "Can I pay by card?", answer: "Yes, payment can be made by bank card, Apple Pay or cash directly in the vehicle." },
         ],

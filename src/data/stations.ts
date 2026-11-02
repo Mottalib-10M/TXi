@@ -183,7 +183,7 @@ export const stations: Station[] = [
       { text: "Famille avec 3 valises, le chauffeur nous a aidés et déposés à l'hôtel en 12 minutes.", name: "Anna K.", initials: "AK", role: "Touriste allemande" },
     ],
     [
-      { question: "Où retrouver mon chauffeur à Gare du Nord ?", answer: "Votre chauffeur vous attend à la sortie principale de la gare, côté rue de Dunkerque. Les coordonnées exactes du point de rendez-vous sont envoyées par SMS." },
+      { question: "Où retrouver mon chauffeur à Gare du Nord ?", answer: "Votre chauffeur vous attend à la sortie principale de la gare, côté rue de Dunkerque. Les coordonnées exactes du point de rendez-vous sont envoyées par email." },
       { question: "Combien coûte un taxi Gare du Nord – CDG ?", answer: "Le forfait taxi Gare du Nord – Aéroport CDG est d'environ 56 €. Trajet de 30-50 minutes selon la circulation." },
     ],
     ["paris-gare-de-lyon", "paris-gare-de-l-est", "paris-saint-lazare", "paris-montparnasse"],

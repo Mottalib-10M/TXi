@@ -785,7 +785,7 @@ export const trajetsParis: Trajet[] = [
           { question: "Le taxi peut-il me déposer devant le tribunal de Bobigny ?", answer: "Oui, votre chauffeur vous dépose devant l'entrée principale du tribunal judiciaire de Bobigny, 173 avenue Paul Vaillant-Couturier. Prévoyez 15 minutes pour les contrôles de sécurité." },
           { question: "Comment rejoindre la préfecture de Seine-Saint-Denis en taxi ?", answer: "La préfecture est située 1 rue de la Résistance. Votre chauffeur vous dépose devant l'entrée principale. Munissez-vous de votre convocation et de vos documents pour gagner du temps." },
           { question: "Le trajet Paris — Bobigny est-il rapide le matin ?", answer: "Oui, le matin dans le sens Paris → Bobigny, la circulation est fluide car le flux principal va dans l'autre sens. Comptez 20 minutes hors événement exceptionnel." },
-          { question: "Peut-on réserver un taxi pour attendre pendant une audience au tribunal ?", answer: "Oui, vous pouvez réserver votre chauffeur en attente (0,50 €/min). Pour les audiences dont la durée est incertaine, nous recommandons plutôt de réserver un retour séparé par SMS." },
+          { question: "Peut-on réserver un taxi pour attendre pendant une audience au tribunal ?", answer: "Oui, vous pouvez réserver votre chauffeur en attente (0,50 €/min). Pour les audiences dont la durée est incertaine, nous recommandons plutôt de réserver un retour séparé." },
           { question: "Le taxi dessert-il l'hôpital Avicenne ?", answer: "Oui, l'hôpital Avicenne (125 rue de Stalingrad) est à 5 minutes du centre de Bobigny. Votre chauffeur vous dépose à l'entrée du bâtiment de consultation de votre choix." }
         ],
       },
@@ -804,7 +804,7 @@ export const trajetsParis: Trajet[] = [
           { question: "Can the taxi drop me at Bobigny courthouse?", answer: "Yes, your driver drops you at the main entrance, 173 Avenue Paul Vaillant-Couturier. Allow 15 minutes for security checks." },
           { question: "How to reach the Seine-Saint-Denis prefecture by taxi?", answer: "The prefecture is at 1 Rue de la Résistance. Your driver drops you at the main entrance. Bring your appointment notice and documents." },
           { question: "Is the Paris — Bobigny journey fast in the morning?", answer: "Yes, morning traffic flows smoothly Paris → Bobigny as the main flow goes the opposite direction. Allow 20 minutes." },
-          { question: "Can I book a taxi to wait during a court hearing?", answer: "Yes, waiting is available at €0.50/min. For hearings of uncertain duration, we recommend booking a separate return by SMS." },
+          { question: "Can I book a taxi to wait during a court hearing?", answer: "Yes, waiting is available at €0.50/min. For hearings of uncertain duration, we recommend booking a separate return." },
           { question: "Does the taxi serve Avicenne Hospital?", answer: "Yes, Avicenne Hospital is 5 minutes from central Bobigny. Your driver drops you at your chosen consultation building entrance." }
         ],
       },

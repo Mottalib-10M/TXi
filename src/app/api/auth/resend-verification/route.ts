@@ -37,7 +37,7 @@ export async function POST(request: Request) {
       data: { token, email, expiresAt },
     });
 
-    const baseUrl = process.env.NEXTAUTH_URL || "http://localhost:3000";
+    const baseUrl = process.env.NEXTAUTH_URL || "https://www.taxineo.fr";
     const verifyUrl = `${baseUrl}/api/auth/verify-email?token=${token}&locale=${locale}`;
     const name = driver ? driver.firstName : (org?.contactName ?? "");
     const { subject, html } = buildVerificationEmail(name, verifyUrl, locale);

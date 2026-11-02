@@ -204,8 +204,8 @@ export default async function AboutPage({ params }: Props) {
             </p>
             <p className="text-neutral-600 font-light leading-relaxed mb-4">
               {isFr
-                ? "Une fois la reservation confirmee, le passager recoit les coordonnees de son chauffeur (nom, numero de telephone, type et couleur du vehicule, numero d'immatriculation). Un SMS de rappel est envoye avant le depart. Le chauffeur, de son cote, recoit toutes les informations necessaires sur la course : lieu de prise en charge, destination, coordonnees du passager."
-                : "Once the booking is confirmed, the passenger receives their driver's details (name, phone number, vehicle type and color, license plate). A reminder SMS is sent before departure. The driver, in turn, receives all necessary trip information: pickup location, destination, passenger contact details."}
+                ? "Une fois la reservation confirmee, le passager recoit les coordonnees de son chauffeur (nom, numero de telephone, type et couleur du vehicule, numero d'immatriculation). Le chauffeur, de son cote, recoit toutes les informations necessaires sur la course : lieu de prise en charge, destination, coordonnees du passager."
+                : "Once the booking is confirmed, the passenger receives their driver's details (name, phone number, vehicle type and color, license plate). The driver, in turn, receives all necessary trip information: pickup location, destination, passenger contact details."}
             </p>
             <p className="text-neutral-600 font-light leading-relaxed">
               {isFr

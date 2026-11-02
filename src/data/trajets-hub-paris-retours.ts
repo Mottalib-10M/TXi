@@ -144,7 +144,7 @@ export const trajetsParisRetours: Trajet[] = [
         conseils: "Réservez votre retour EN MÊME TEMPS que votre aller — les taxis disponibles à la fermeture du parc sont rares et les VTC majorent leurs prix (x2 à x3). Prévoyez 15-20 minutes entre la sortie du parc et le point de prise en charge (marche + foule). Indiquez à la réservation si vous avez une poussette (coffre adapté). Les sièges enfant sont disponibles sur demande (gratuit). Si vous séjournez dans un hôtel Disney mais dînez à Paris, nous pouvons vous faire l'aller-retour dans la soirée.",
         comparaisonTransport: "Le RER A Marne-la-Vallée → Paris met 40 min pour 7,60 € mais est bondé à la fermeture, debout, avec 2 changements selon votre destination. Le bus Magical Shuttle vers les hôtels partenaires coûte 24 €/adulte. Le taxi TaxiNeo à 80-95 € pour toute la famille (jusqu'à 4 pers.) revient à 14-19 €/pers., soit moins que le bus navette — avec le confort, la porte-à-porte et les enfants endormis transportés sans les réveiller.",
         faq: [
-          { question: "Où le taxi m'attend-il à Disneyland ?", answer: "Au point taxis devant le Disney Village, côté gare, ou devant l'entrée principale. Vous recevez la localisation exacte par SMS." },
+          { question: "Où le taxi m'attend-il à Disneyland ?", answer: "Au point taxis devant le Disney Village, côté gare, ou devant l'entrée principale. Vous recevez la localisation exacte par email." },
           { question: "Disponible après la fermeture du parc (23h) ?", answer: "Oui, c'est notre créneau le plus demandé. Réservez votre retour à l'avance pour garantir un véhicule." },
           { question: "Siège enfant disponible ?", answer: "Oui, sièges bébé, enfant et rehausseur disponibles gratuitement. Précisez l'âge des enfants à la réservation." },
           { question: "La poussette rentre-t-elle dans le coffre ?", answer: "Oui, poussette pliante + 2 sacs sans problème en berline. Pour les poussettes doubles, réservez un van." },
@@ -163,7 +163,7 @@ export const trajetsParisRetours: Trajet[] = [
         conseils: "Book your return AT THE SAME TIME as your outbound — taxis at park closing are scarce and ride-hail prices surge 2-3x. Allow 15-20 min between leaving the park and reaching the pick-up point. Child seats available free on request.",
         comparaisonTransport: "The RER A takes 40 min for €7.60 but is packed at closing. Magical Shuttle bus costs €24/adult. The taxi at €80-95 for the whole family (up to 4) works out to €14-19/person — cheaper than the shuttle bus, with door-to-door comfort.",
         faq: [
-          { question: "Where does the taxi wait?", answer: "At the taxi point in front of Disney Village or main entrance. You receive the exact location by SMS." },
+          { question: "Where does the taxi wait?", answer: "At the taxi point in front of Disney Village or main entrance. You receive the exact location by email." },
           { question: "Available after 11pm closing?", answer: "Yes, our busiest slot. Book your return in advance." },
           { question: "Child seats?", answer: "Yes, baby, child and booster seats available free. Specify children's ages when booking." },
           { question: "Does the pushchair fit?", answer: "Yes, folding pushchair + 2 bags in sedan. For double pushchairs, book a van." },

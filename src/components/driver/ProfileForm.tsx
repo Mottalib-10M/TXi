@@ -480,20 +480,6 @@ export function ProfileForm({ driver, radar = false }: { driver: DriverData; rad
                       />
                     </button>
                   </label>
-                  <div className="flex items-center justify-between gap-4 py-2.5 opacity-50">
-                    <div className="min-w-0">
-                      <p className="text-sm font-medium flex items-center gap-2">
-                        {t("smsNotifications")}
-                        <span className="text-[10px] font-medium bg-neutral-100 text-neutral-500 px-1.5 py-0.5 rounded-full">{t("comingSoon")}</span>
-                      </p>
-                      <p className="text-xs text-neutral-500 font-light">
-                        {t("smsNotificationsDesc")}
-                      </p>
-                    </div>
-                    <div className="w-11 h-6 shrink-0 rounded-full bg-neutral-200 relative cursor-not-allowed">
-                      <div className="w-5 h-5 bg-white rounded-full shadow absolute top-0.5 translate-x-0.5" />
-                    </div>
-                  </div>
                   {radar && <RadarSettings />}
                 </div>
               )}

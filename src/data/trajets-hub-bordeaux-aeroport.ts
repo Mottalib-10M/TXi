@@ -40,7 +40,7 @@ export const trajetsBordeauxAeroport: Trajet[] = [
         faq: [
           { question: "Combien coûte le taxi Aéroport Bordeaux-Mérignac → Centre-ville ?", answer: "Entre 25 € et 35 €. Tarif fixe garanti, sans supplément bagages ni majoration de nuit." },
           { question: "Combien de temps dure le transfert ?", answer: "Environ 20 min en conditions normales, 30-35 min aux heures de pointe (rocade chargée)." },
-          { question: "Où mon chauffeur m'attend-il à l'aéroport ?", answer: "Votre chauffeur vous attend à la sortie du terminal avec un panneau à votre nom. Coordonnées envoyées par SMS." },
+          { question: "Où mon chauffeur m'attend-il à l'aéroport ?", answer: "Votre chauffeur vous attend à la sortie du terminal avec un panneau à votre nom. Coordonnées envoyées par email." },
           { question: "Le taxi peut-il me déposer à mon hôtel en centre-ville ?", answer: "Oui, à l'adresse exacte de votre choix : hôtel, Airbnb, gare Saint-Jean, Place de la Bourse." },
           { question: "Le service est-il disponible pour les vols matinaux ou tardifs ?", answer: "Oui, TaxiNeo fonctionne 24h/24, 7j/7. Prise en charge adaptée à l'horaire de votre vol." }
         ],
@@ -59,7 +59,7 @@ export const trajetsBordeauxAeroport: Trajet[] = [
         faq: [
           { question: "How much is the taxi from Bordeaux Airport to the centre?", answer: "€25–€30. Fixed guaranteed fare, no luggage surcharge or night supplement." },
           { question: "How long is the transfer?", answer: "About 20 min normally, 30-35 min at peak hours." },
-          { question: "Where does the driver meet me?", answer: "At the terminal exit with a name sign. Contact details sent by SMS." },
+          { question: "Where does the driver meet me?", answer: "At the terminal exit with a name sign. Contact details sent by email." },
           { question: "Can the taxi drop me at my hotel?", answer: "Yes, any address: hotel, Airbnb, Saint-Jean station, Place de la Bourse." },
           { question: "Is the service available for early or late flights?", answer: "Yes, TaxiNeo operates 24/7. Pick-up adapted to your flight time." }
         ],

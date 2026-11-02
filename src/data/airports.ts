@@ -189,7 +189,7 @@ export const airports: Airport[] = [
     ],
     [
       { question: "Quel est le forfait taxi Paris-CDG ?", answer: "Le forfait réglementé est de 56 € vers la rive droite et 65 € vers la rive gauche de Paris. Ce prix est fixe, sans supplément bagage ni variation horaire." },
-      { question: "Où retrouver mon chauffeur à CDG ?", answer: "Votre chauffeur vous attend en zone d'arrivée, après le passage des douanes et la récupération des bagages. Il tient une pancarte avec votre nom. Les coordonnées exactes du point de rendez-vous sont envoyées par SMS." },
+      { question: "Où retrouver mon chauffeur à CDG ?", answer: "Votre chauffeur vous attend en zone d'arrivée, après le passage des douanes et la récupération des bagages. Il tient une pancarte avec votre nom. Les coordonnées exactes du point de rendez-vous sont envoyées par email." },
     ],
     ["paris-orly", "paris-beauvais"],
     ["Forfait réglementé rive droite / rive gauche", "Attente gratuite jusqu'à 45 min en cas de retard de vol", "Point de rendez-vous en zone d'arrivée avec pancarte", "Sièges enfant disponibles sur demande", "Wi-Fi à bord et chargeurs USB", "Paiement par carte ou application"],
@@ -1810,7 +1810,7 @@ const AIRPORT_CONTENT: Record<string, { fr: { intro: string; description: string
       whyUs: [
         { title: "D55 littorale vers Porticcio", desc: "Nos chauffeurs empruntent la D55 littorale pour rejoindre les plages de Porticcio (Agosta, Mare e Sole) en 25 min, avec des panoramas sur le golfe d'Ajaccio." },
         { title: "Expert routes corses sinueuses", desc: "Les routes de Corse-du-Sud sont étroites et sinueuses. Nos chauffeurs locaux maîtrisent les cols vers Propriano (1h) et les Calanques de Piana (1h15) en toute sécurité." },
-        { title: "Réservation anticipée été corse", desc: "En juillet-août, la demande de taxis explose à Ajaccio. TaxiNeo garantit votre réservation 48h à l'avance avec confirmation par SMS du nom et véhicule du chauffeur." },
+        { title: "Réservation anticipée été corse", desc: "En juillet-août, la demande de taxis explose à Ajaccio. TaxiNeo garantit votre réservation 48h à l'avance avec confirmation par email du nom et véhicule du chauffeur." },
       ],
     },
     en: {
@@ -1821,7 +1821,7 @@ const AIRPORT_CONTENT: Record<string, { fr: { intro: string; description: string
       whyUs: [
         { title: "Coastal D55 to Porticcio", desc: "Our drivers take the coastal D55 to reach Porticcio beaches (Agosta, Mare e Sole) in 25 min, with panoramic views over the Gulf of Ajaccio." },
         { title: "Winding Corsican road expert", desc: "Southern Corsica roads are narrow and winding. Our local drivers master the passes to Propriano (1h) and the Calanques de Piana (1h15) safely." },
-        { title: "Advance summer Corsica booking", desc: "In July-August, taxi demand surges in Ajaccio. TaxiNeo guarantees your booking 48h ahead with SMS confirmation of driver name and vehicle." },
+        { title: "Advance summer Corsica booking", desc: "In July-August, taxi demand surges in Ajaccio. TaxiNeo guarantees your booking 48h ahead with email confirmation of driver name and vehicle." },
       ],
     }
   },
@@ -2050,7 +2050,7 @@ const AIRPORT_CONTENT: Record<string, { fr: { intro: string; description: string
       whyUs: [
         { title: "D859 vers Porto-Vecchio expert", desc: "La D859 vers Porto-Vecchio est sinueuse et étroite. Nos chauffeurs corses la pratiquent quotidiennement et rejoignent Palombaggia ou Santa Giulia en 25-30 min en sécurité." },
         { title: "Falaises Bonifacio en 20 min", desc: "Nos chauffeurs empruntent la N196 pour rallier Bonifacio et ses falaises spectaculaires en 20 min. Accès direct au port pour les navettes vers la Sardaigne (Lavezzi)." },
-        { title: "Réservation 72h haute saison", desc: "En juillet-août, les taxis sont pris d'assaut à Figari. TaxiNeo garantit votre réservation 72h à l'avance avec SMS de confirmation et suivi de vol le jour J." },
+        { title: "Réservation 72h haute saison", desc: "En juillet-août, les taxis sont pris d'assaut à Figari. TaxiNeo garantit votre réservation 72h à l'avance avec email de confirmation et suivi de vol le jour J." },
       ],
     },
     en: {
@@ -2061,7 +2061,7 @@ const AIRPORT_CONTENT: Record<string, { fr: { intro: string; description: string
       whyUs: [
         { title: "D859 Porto-Vecchio road expert", desc: "The D859 to Porto-Vecchio is winding and narrow. Our Corsican drivers use it daily and reach Palombaggia or Santa Giulia in 25-30 min safely." },
         { title: "Bonifacio cliffs in 20 min", desc: "Our drivers take the N196 to reach Bonifacio and its spectacular cliffs in 20 min. Direct access to the port for Sardinia (Lavezzi) shuttle boats." },
-        { title: "72h peak season booking", desc: "In July-August, taxis are overwhelmed at Figari. TaxiNeo guarantees your booking 72h ahead with SMS confirmation and flight tracking on the day." },
+        { title: "72h peak season booking", desc: "In July-August, taxis are overwhelmed at Figari. TaxiNeo guarantees your booking 72h ahead with email confirmation and flight tracking on the day." },
       ],
     }
   },
