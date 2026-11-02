@@ -140,6 +140,11 @@ export async function PATCH(
         return NextResponse.json({ error: "Seul le chauffeur assigné peut terminer la course" }, { status: 403 });
       }
 
+      // Seule une course acceptée se termine, et une seule fois (la cagnotte n'est créditée qu'à ce moment).
+      if (booking.status !== "ACCEPTED") {
+        return NextResponse.json({ error: "Seule une course acceptée peut être terminée" }, { status: 409 });
+      }
+
       // Credit cagnotte for org bookings (skip for INDIVIDUAL accounts)
       if (booking.organizationId && booking.lockedPrice) {
         const org = await prisma.organization.findUnique({

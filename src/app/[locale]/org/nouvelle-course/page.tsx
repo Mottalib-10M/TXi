@@ -58,6 +58,8 @@ export default function NouvelleCourse() {
         // Pré-remplir l'adresse de départ avec l'adresse de l'établissement
         if (profileData.address && profileData.type !== "INDIVIDUAL") {
           setDeparture((prev) => ({ ...prev, name: profileData.address }));
+          const dropIfUnresolved = () =>
+            setDeparture((prev) => (prev.name === profileData.address && !prev.lat ? { name: "", lat: 0, lng: 0 } : prev));
           try {
             const acRes = await fetch(`/api/places/autocomplete?input=${encodeURIComponent(profileData.address)}`);
             const acData = await acRes.json();
@@ -67,10 +69,12 @@ export default function NouvelleCourse() {
               const detData = await detRes.json();
               if (detData.lat && detData.lng) {
                 setDeparture({ name: profileData.address, lat: detData.lat, lng: detData.lng });
+                return;
               }
             }
+            dropIfUnresolved();
           } catch {
-            // Garder l'adresse texte sans coordonnées
+            dropIfUnresolved();
           }
         }
       })

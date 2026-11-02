@@ -174,15 +174,20 @@ export default async function DashboardPage() {
     const urgent = h > 0 && h < 10;
     const pending = tone === "pending";
     return (
-      <Link
+      <div
         key={booking.id}
-        href={`/dashboard/reservations?id=${booking.id}`}
-        className={`block rounded-2xl p-4 transition-colors group ${
+        className={`relative block rounded-2xl p-4 transition-colors group ${
           pending
             ? "bg-amber-50/60 border-2 border-amber-300 hover:border-amber-400 hover:bg-amber-50"
             : "bg-white border border-neutral-200 hover:border-green-300"
         }`}
       >
+        {/* Toute la carte ouvre la course ; itinéraire, appel et boutons passent au-dessus (un lien ne peut pas en contenir un autre). */}
+        <Link
+          href={`/dashboard/reservations?id=${booking.id}`}
+          aria-label={`${booking.departureName} → ${booking.arrivalName}`}
+          className="absolute inset-0 rounded-2xl"
+        />
         <span className="flex items-start justify-between gap-3 mb-2">
           <span className="min-w-0 flex-1">
             <span className="block text-sm font-semibold text-neutral-900 leading-snug">
@@ -193,7 +198,9 @@ export default async function DashboardPage() {
             </span>
           </span>
           <span className="flex items-center gap-2 shrink-0">
-            <MapsLink origin={booking.departureName} destination={booking.arrivalName} />
+            <span className="relative z-10">
+              <MapsLink origin={booking.departureName} destination={booking.arrivalName} />
+            </span>
             {booking.lockedPrice != null && (
               <span className={`text-lg font-bold ${pending ? "text-amber-700" : "text-green-700"}`}>
                 {booking.lockedPrice.toFixed(0)}&nbsp;€
@@ -226,14 +233,14 @@ export default async function DashboardPage() {
               {booking.contactIsReferrer && <span className="text-xs text-violet-600"> · {td("contactReferrer")}</span>}
             </span>
             {booking.clientPhone && (
-              <>
+              <span className="relative z-10 flex items-center gap-2 min-w-0">
                 <PhoneLink
                   phone={booking.clientPhone}
                   label={td("callClient")}
                   className={pending ? "text-amber-600 hover:text-amber-800" : "text-green-600 hover:text-green-800"}
                 />
                 <WhatsAppLink href={buildWhatsAppUrl(booking)} context={pending ? "dashboard_pending" : "dashboard_accepted"} bookingId={booking.id} />
-              </>
+              </span>
             )}
           </span>
           <Icon
@@ -241,8 +248,12 @@ export default async function DashboardPage() {
             className={`shrink-0 transition-colors ${pending ? "text-amber-400 group-hover:text-amber-600" : "text-neutral-300 group-hover:text-green-600"}`}
           />
         </span>
-        {pending && <BookingQuickActions bookingId={booking.id} />}
-      </Link>
+        {pending && (
+          <div className="relative z-10">
+            <BookingQuickActions bookingId={booking.id} />
+          </div>
+        )}
+      </div>
     );
   }
 

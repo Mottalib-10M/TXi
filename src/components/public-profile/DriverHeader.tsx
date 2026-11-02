@@ -70,9 +70,15 @@ export function DriverHeader({
             </h1>
           )}
           <div className="flex items-center justify-center gap-2 mb-1">
-            <p className={companyName ? "text-sm text-neutral-500 font-medium" : "text-xl font-semibold tracking-tight"}>
-              {firstName} {lastName}
-            </p>
+            {companyName ? (
+              <p className="text-sm text-neutral-500 font-medium">
+                {firstName} {lastName}
+              </p>
+            ) : (
+              <h1 className="text-xl font-semibold tracking-tight">
+                {firstName} {lastName}
+              </h1>
+            )}
             {isVerified && (
               <Icon
                 icon="solar:verified-check-bold"

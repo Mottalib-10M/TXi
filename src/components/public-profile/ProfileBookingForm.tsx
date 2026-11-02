@@ -114,13 +114,13 @@ export function ProfileBookingForm({
         if (isLoggedIn) {
           router.push(`/confirmation?ref=${data.reference}`);
         } else {
-          const params = new URLSearchParams({
-            type: "particulier",
-            name: clientName,
-            phone: clientPhone,
-            ...(clientEmail && { email: clientEmail }),
-          });
-          router.push(`/inscription?${params.toString()}`);
+          // Pas de nom, téléphone ni e-mail dans l'URL : ils finiraient dans les statistiques et les journaux.
+          try {
+            sessionStorage.setItem("taxineo_signup_prefill", JSON.stringify({ name: clientName, phone: clientPhone, email: clientEmail }));
+          } catch {
+            // Stockage indisponible : le client remplira le formulaire.
+          }
+          router.push("/inscription?type=particulier&from=booking");
         }
       } else {
         setError(data.error || t("bookingError"));

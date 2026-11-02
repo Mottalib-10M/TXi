@@ -19,6 +19,7 @@ type ProfileType = "driver" | "particulier" | "hotel" | "hospital" | "enterprise
 
 export default function InscriptionPage() {
   const t = useTranslations("auth");
+  const tCartePro = useTranslations("dashboard.cartePro");
   const tc = useTranslations("common");
   const locale = useLocale();
   const router = useRouter();
@@ -29,18 +30,16 @@ export default function InscriptionPage() {
     : null;
   const referralCode = searchParams.get("ref");
   const redirect = searchParams.get("redirect");
-  const prefillName = searchParams.get("name") || "";
-  const prefillPhone = searchParams.get("phone") || "";
-  const prefillEmail = searchParams.get("email") || "";
-  const isFromBooking = initialType === "particulier" && (prefillName || prefillPhone || prefillEmail);
+  const isFromBooking = initialType === "particulier" && searchParams.get("from") === "booking";
+  const [prefillName, setPrefillName] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const [profileType, setProfileType] = useState<ProfileType | null>(referralCode ? "driver" : initialType);
   const [referrerName, setReferrerName] = useState("");
   const [showReferralLanding, setShowReferralLanding] = useState(!!referralCode);
   const [orgAddress, setOrgAddress] = useState("");
-  const [formEmail, setFormEmail] = useState(prefillEmail);
-  const [formPhone, setFormPhone] = useState(prefillPhone);
+  const [formEmail, setFormEmail] = useState("");
+  const [formPhone, setFormPhone] = useState("");
   const [cityAddress, setCityAddress] = useState("");
   const [cityLat, setCityLat] = useState<number | undefined>();
   const [cityLng, setCityLng] = useState<number | undefined>();
@@ -57,6 +56,20 @@ export default function InscriptionPage() {
   const [carteProPreview, setCarteProPreview] = useState("");
   const [carteProFileName, setCarteProFileName] = useState("");
   const [carteProIsPdf, setCarteProIsPdf] = useState(false);
+
+  // Coordonnées saisies à la réservation, transmises hors de l'URL (voir ProfileBookingForm).
+  useEffect(() => {
+    if (!isFromBooking) return;
+    try {
+      const saved = JSON.parse(sessionStorage.getItem("taxineo_signup_prefill") || "null");
+      if (!saved) return;
+      setPrefillName(saved.name || "");
+      setFormEmail(saved.email || "");
+      setFormPhone(saved.phone || "");
+    } catch {
+      // Stockage indisponible ou illisible : formulaire vide.
+    }
+  }, [isFromBooking]);
 
   useEffect(() => {
     if (!referralCode) return;
@@ -164,6 +177,13 @@ export default function InscriptionPage() {
     const file = e.target.files?.[0];
     if (!file) return;
     const isPdf = file.type === "application/pdf" || /\.pdf$/i.test(file.name);
+    // Au-delà, l'inscription dépasserait la limite d'envoi de l'hébergeur.
+    if (isPdf && file.size > 3 * 1024 * 1024) {
+      e.target.value = "";
+      setError(tCartePro("tooBig"));
+      return;
+    }
+    setError("");
     setCarteProIsPdf(isPdf);
     setCarteProFileName(file.name);
 
@@ -732,18 +752,18 @@ export default function InscriptionPage() {
                 <label htmlFor="name" className="block text-sm font-medium mb-1.5">
                   {t("firstName")}
                 </label>
-                <input id="name" name="name" type="text" required className={inputClass} placeholder="Marie Martin" defaultValue={prefillName} />
+                <input id="name" name="name" type="text" required className={inputClass} placeholder="Marie Martin" key={prefillName} defaultValue={prefillName} />
               </div>
 
               <div>
                 <label htmlFor="email" className="block text-sm font-medium mb-1.5">{t("email")}</label>
-                <input id="email" name="email" type="email" required className={`${inputClass} ${emailError(formEmail) ? "ring-2 ring-red-300 bg-red-50/50" : ""}`} placeholder="marie.martin@email.com" defaultValue={prefillEmail} onChange={(e) => setFormEmail(e.target.value)} />
+                <input id="email" name="email" type="email" required className={`${inputClass} ${emailError(formEmail) ? "ring-2 ring-red-300 bg-red-50/50" : ""}`} placeholder="marie.martin@email.com" value={formEmail} onChange={(e) => setFormEmail(e.target.value)} />
                 {emailError(formEmail) && <p className="text-xs text-red-500 mt-1">{emailError(formEmail)}</p>}
               </div>
 
               <div>
                 <label htmlFor="phone" className="block text-sm font-medium mb-1.5">{t("phone")}</label>
-                <input id="phone" name="phone" type="tel" required className={`${inputClass} ${phoneError(formPhone) ? "ring-2 ring-red-300 bg-red-50/50" : ""}`} placeholder="06 12 34 56 78" defaultValue={prefillPhone} onChange={(e) => setFormPhone(e.target.value)} />
+                <input id="phone" name="phone" type="tel" required className={`${inputClass} ${phoneError(formPhone) ? "ring-2 ring-red-300 bg-red-50/50" : ""}`} placeholder="06 12 34 56 78" value={formPhone} onChange={(e) => setFormPhone(e.target.value)} />
                 {phoneError(formPhone) && <p className="text-xs text-red-500 mt-1">{phoneError(formPhone)}</p>}
               </div>
 

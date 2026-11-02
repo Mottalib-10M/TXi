@@ -57,8 +57,14 @@ export async function POST(request: Request) {
 
     const data = bookingSchema.parse(body);
 
-    const reference = await generateUniqueReference();
     const requestedDate = new Date(data.requestedDate);
+    // 24 h de marge : une course « maintenant » part légèrement avant l'heure du serveur,
+    // et une heure locale envoyée sans fuseau (outre-mer) peut paraître passée de plusieurs heures.
+    if (Number.isNaN(requestedDate.getTime()) || requestedDate.getTime() < Date.now() - 24 * 60 * 60 * 1000) {
+      return NextResponse.json({ error: "La date de la course est invalide ou déjà passée." }, { status: 400 });
+    }
+
+    const reference = await generateUniqueReference();
 
     // Resolve coordinates — fallback to Google Geocoding if (0,0) or null
     let depLat = data.departureLat;

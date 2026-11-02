@@ -8,7 +8,7 @@ import { isDemoEmail } from "@/lib/demo";
 
 /** Filtre Prisma des chauffeurs qui reçoivent les courses de Taxineo. Comptes de démo : pas de carte à fournir. */
 export function platformRidesFilter(demo = false) {
-  return demo ? {} : { isVerified: true };
+  return demo ? {} : { isVerified: true, suspendedAt: null };
 }
 
 export type VerificationStatus = "missing" | "pending" | "verified";

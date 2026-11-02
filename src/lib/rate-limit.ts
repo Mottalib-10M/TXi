@@ -104,6 +104,30 @@ function getEmailGlobalLimiter() {
   return emailGlobalLimiter;
 }
 
+// --- Limite de secours, sans Redis ---
+// Compteur en mémoire, propre à chaque instance serveur : il freine un robot sur une même IP,
+// sans remplacer Redis. Seuils larges, car une IP est souvent partagée (hôtel, réseau mobile).
+const MEMORY_LIMIT_ENABLED = isProd || process.env.RATE_LIMIT_MEMORY === "1";
+const memoryHits = new Map<string, { count: number; resetAt: number }>();
+
+function overMemoryLimit(key: string, max: number, windowMs: number): boolean {
+  if (!MEMORY_LIMIT_ENABLED) return false;
+  const now = Date.now();
+  if (memoryHits.size > 5000) {
+    memoryHits.forEach((v, k) => {
+      if (v.resetAt <= now) memoryHits.delete(k);
+    });
+    if (memoryHits.size > 5000) memoryHits.clear();
+  }
+  const hit = memoryHits.get(key);
+  if (!hit || hit.resetAt <= now) {
+    memoryHits.set(key, { count: 1, resetAt: now + windowMs });
+    return false;
+  }
+  hit.count++;
+  return hit.count > max;
+}
+
 // --- IP extraction ---
 
 export async function getClientIp(): Promise<string> {
@@ -117,28 +141,26 @@ export async function getClientIp(): Promise<string> {
 
 // --- Public API ---
 
-const RATE_LIMIT_RESPONSE = NextResponse.json(
-  { error: "Trop de requêtes. Réessayez plus tard." },
-  { status: 429 }
-);
+// Une réponse neuve à chaque fois : le corps d'une réponse ne se lit qu'une seule fois.
+const rateLimitResponse = () =>
+  NextResponse.json({ error: "Trop de requêtes. Réessayez plus tard." }, { status: 429 });
 
 /**
  * Apply strict rate limit (auth endpoints).
  * Returns a 429 NextResponse if over limit, or null if allowed.
- * If Redis is not configured, allows all requests (dev/graceful degradation).
+ * If Redis is not configured, falls back to a wider per-instance memory limit.
  */
 export async function applyStrictRateLimit(
   identifier?: string
 ): Promise<NextResponse | null> {
   const limiter = getStrictLimiter();
   if (!limiter) {
-    // No Redis configured — allow request but log warning
-    if (isProd) console.warn("[RateLimit] Strict limiter unavailable (no Redis) — allowing request");
-    return null;
+    const ip = identifier || (await getClientIp());
+    return overMemoryLimit(`strict:${ip}`, 20, 15 * 60 * 1000) ? rateLimitResponse() : null;
   }
   const ip = identifier || (await getClientIp());
   const result = await limiter.limit(ip);
-  if (!result.success) return RATE_LIMIT_RESPONSE;
+  if (!result.success) return rateLimitResponse();
   return null;
 }
 
@@ -151,12 +173,12 @@ export async function applyModerateRateLimit(
 ): Promise<NextResponse | null> {
   const limiter = getModerateLimiter();
   if (!limiter) {
-    if (isProd) console.warn("[RateLimit] Moderate limiter unavailable (no Redis) — allowing request");
-    return null;
+    const ip = identifier || (await getClientIp());
+    return overMemoryLimit(`moderate:${ip}`, 30, 60 * 60 * 1000) ? rateLimitResponse() : null;
   }
   const ip = identifier || (await getClientIp());
   const result = await limiter.limit(ip);
-  if (!result.success) return RATE_LIMIT_RESPONSE;
+  if (!result.success) return rateLimitResponse();
   return null;
 }
 
