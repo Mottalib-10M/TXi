@@ -2,22 +2,20 @@ import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { contactForDriver } from "@/lib/p2p";
 import { auth } from "@/lib/auth";
+import { bookingLinkExpired, calendarToken, sameToken } from "@/lib/booking-link";
 
 function toICSDate(date: Date): string {
   return date.toISOString().replace(/[-:]/g, "").replace(/\.\d{3}/, "");
 }
 
 export async function GET(request: NextRequest) {
-  const session = await auth();
-  if (!session?.user?.id) {
-    return NextResponse.json({ error: "Non autorisé" }, { status: 401 });
-  }
-
   const bookingId = request.nextUrl.searchParams.get("id");
 
   if (!bookingId) {
     return NextResponse.json({ error: "Missing id" }, { status: 400 });
   }
+
+  const session = await auth();
 
   const booking = await prisma.booking.findUnique({
     where: { id: bookingId },
@@ -28,12 +26,23 @@ export async function GET(request: NextRequest) {
     },
   });
 
+  // Lien du mail : vaut pour le chauffeur de la course, même non connecté dans ce navigateur.
+  const linkOpensAsDriver =
+    booking?.driverId &&
+    !bookingLinkExpired(booking.requestedDate) &&
+    sameToken(request.nextUrl.searchParams.get("t"), calendarToken(booking.id, booking.driverId));
+  const userId = linkOpensAsDriver ? booking.driverId! : session?.user?.id;
+
+  if (!userId) {
+    const target = `/dashboard/reservations?id=${bookingId}`;
+    return NextResponse.redirect(new URL(`/connexion?redirect=${encodeURIComponent(target)}`, request.url));
+  }
+
   if (!booking) {
     return NextResponse.json({ error: "Not found" }, { status: 404 });
   }
 
   // Ownership check: user must be the assigned driver, the org, or the referrer
-  const userId = session.user.id;
   const isAssignedDriver = booking.driverId === userId;
   const isOrg = booking.organizationId === userId;
   const isReferrer = booking.referrerDriverId === userId;

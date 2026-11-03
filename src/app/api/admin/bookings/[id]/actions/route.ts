@@ -199,6 +199,7 @@ export async function POST(
 
       if (booking.driver.notifyEmail) {
         const driverMail = buildBookingAcceptedDriverEmail({
+          driverId: booking.driverId!,
           driverName: booking.driver.firstName,
           clientName: booking.clientName,
           clientPhone: booking.clientPhone,

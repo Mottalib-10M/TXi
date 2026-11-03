@@ -1334,6 +1334,32 @@
     "addToContacts": "Ajouter aux contacts",
     "vehicleNumber": "Véhicule {number}"
   },
+  "bookingLink": {
+    "title": "Votre réservation",
+    "departure": "Départ",
+    "arrival": "Arrivée",
+    "date": "Date et heure",
+    "price": "Prix estimé",
+    "reference": "Référence",
+    "yourDriver": "Votre chauffeur",
+    "callDriver": "Appeler le {phone}",
+    "bookAgain": "Réserver un autre taxi",
+    "createAccount": "Créer un compte pour retrouver toutes vos courses",
+    "status": {
+      "PENDING": "En attente de confirmation",
+      "ACCEPTED": "Course confirmée",
+      "COMPLETED": "Course terminée",
+      "REJECTED": "Course non disponible",
+      "CANCELLED": "Course annulée"
+    },
+    "statusText": {
+      "PENDING": "Un chauffeur doit encore confirmer votre course. Vous recevrez un e-mail dès que c'est fait.",
+      "ACCEPTED": "Votre chauffeur a accepté la course.",
+      "COMPLETED": "Merci d'avoir voyagé avec Taxineo.",
+      "REJECTED": "Aucun chauffeur n'a pu prendre cette course.",
+      "CANCELLED": "Cette course a été annulée."
+    }
+  },
   "myBookings": {
     "title": "Mes réservations",
     "subtitle": "Suivez vos réservations en cours et passées",

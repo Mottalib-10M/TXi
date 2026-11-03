@@ -1,5 +1,6 @@
 import { checkEmailRateLimit } from "@/lib/rate-limit";
 import { isDemoEmail } from "@/lib/demo";
+import { calendarToken, clientBookingUrl } from "@/lib/booking-link";
 
 /** Escape HTML special characters to prevent XSS in email templates */
 function esc(str: string): string {
@@ -412,6 +413,7 @@ export function buildClientConfirmationEmail(data: {
   arrival: string;
   date: string;
   reference: string;
+  bookingId: string;
   driverName?: string;
   driverPhone?: string;
   price?: number | null;
@@ -420,7 +422,7 @@ export function buildClientConfirmationEmail(data: {
   const l = t[data.locale || "fr"];
   const locale = data.locale || "fr";
   const baseUrl = process.env.NEXTAUTH_URL || "https://taxineo.fr";
-  const reservationsUrl = `${baseUrl}/mes-reservations`;
+  const reservationsUrl = clientBookingUrl(baseUrl, data.bookingId, locale);
 
   const driverCardHtml = data.driverName && data.driverPhone
     ? `
@@ -485,7 +487,8 @@ export function buildBookingAcceptedClientEmail(data: {
   const l = t[data.locale || "fr"];
   const locale = data.locale || "fr";
   const baseUrl = process.env.NEXTAUTH_URL || "https://taxineo.fr";
-  const reservationsUrl = `${baseUrl}/mes-reservations`;
+  // Les organisations ont un compte : leurs courses restent dans leur espace.
+  const reservationsUrl = data.isOrgBooking ? `${baseUrl}/mes-reservations` : clientBookingUrl(baseUrl, data.bookingId, locale);
   return {
     subject: l.acceptedClientSubject(data.reference),
     html: `
@@ -557,6 +560,7 @@ export function buildBookingRejectedClientEmail(data: {
 }
 
 export function buildBookingAcceptedDriverEmail(data: {
+  driverId: string;
   driverName: string;
   clientName: string;
   clientPhone: string;
@@ -572,7 +576,7 @@ export function buildBookingAcceptedDriverEmail(data: {
   const l = t[data.locale || "fr"];
   const locale = data.locale || "fr";
   const baseUrl = process.env.NEXTAUTH_URL || "https://taxineo.fr";
-  const calendarUrl = `${baseUrl}/api/calendar?id=${data.bookingId}`;
+  const calendarUrl = `${baseUrl}/api/calendar?id=${data.bookingId}&t=${calendarToken(data.bookingId, data.driverId)}`;
   const reservationUrl = `${baseUrl}/dashboard/reservations?id=${data.bookingId}`;
 
   return {

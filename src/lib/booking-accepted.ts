@@ -106,6 +106,7 @@ export async function sendAcceptedNotices(booking: AcceptedBooking, driverId: st
 
       // Email to driver
       const driverMail = buildBookingAcceptedDriverEmail({
+        driverId,
         driverName: driver.firstName,
         clientName: isOrgBooking
           ? `${booking.clientName} (${booking.organization!.name})`

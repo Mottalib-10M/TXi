@@ -285,6 +285,7 @@ export async function POST(request: Request) {
         arrival: data.arrivalName,
         date: dateFormatted,
         reference,
+        bookingId: booking.id,
         driverName: booking.driver
           ? `${booking.driver.firstName} ${booking.driver.lastName}`
           : undefined,

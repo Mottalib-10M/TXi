@@ -1334,6 +1334,32 @@
     "addToContacts": "Add to contacts",
     "vehicleNumber": "Vehicle {number}"
   },
+  "bookingLink": {
+    "title": "Your booking",
+    "departure": "Pick-up",
+    "arrival": "Destination",
+    "date": "Date and time",
+    "price": "Estimated price",
+    "reference": "Reference",
+    "yourDriver": "Your driver",
+    "callDriver": "Call {phone}",
+    "bookAgain": "Book another taxi",
+    "createAccount": "Create an account to find all your rides",
+    "status": {
+      "PENDING": "Awaiting confirmation",
+      "ACCEPTED": "Ride confirmed",
+      "COMPLETED": "Ride completed",
+      "REJECTED": "Ride unavailable",
+      "CANCELLED": "Ride cancelled"
+    },
+    "statusText": {
+      "PENDING": "A driver still has to confirm your ride. You will receive an email as soon as they do.",
+      "ACCEPTED": "Your driver has accepted the ride.",
+      "COMPLETED": "Thank you for travelling with Taxineo.",
+      "REJECTED": "No driver was able to take this ride.",
+      "CANCELLED": "This ride has been cancelled."
+    }
+  },
   "myBookings": {
     "title": "My bookings",
     "subtitle": "Track your current and past bookings",
